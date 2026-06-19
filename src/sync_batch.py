@@ -25,6 +25,7 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 LOG_PATH = REPO_ROOT / "state" / (f"sync-shard-{SHARD_ID}.log" if NUM_SHARDS > 1 else "sync.log")
 TMP_DIR = Path("/tmp")
 DESCRIPTIONS = REPO_ROOT / "plans" / "descriptions.jsonl"
+PREPARED_SOURCES = REPO_ROOT / "plans" / "prepared-episodes.jsonl"
 
 
 def log(message: str) -> None:
@@ -95,6 +96,46 @@ def prepared_description(episode: dict, plans: dict[str, dict[int, dict]]) -> st
     if series and series.get("generated_description"):
         return series["generated_description"]
     return None
+
+
+def load_source_plans(path: Path = PREPARED_SOURCES) -> dict[int, dict]:
+    plans: dict[int, dict] = {}
+    if not path.exists():
+        return plans
+    with path.open(encoding="utf-8") as fh:
+        for line in fh:
+            if not line.strip():
+                continue
+            row = json.loads(line)
+            plans[int(row["episode_id"])] = row
+    return plans
+
+
+def apply_source_plan(episode: dict, source_plans: dict[int, dict], *, require_source_plan: bool) -> dict | None:
+    plan = source_plans.get(int(episode["episode_id"]))
+    if not plan:
+        if require_source_plan:
+            log(f"episode episode_id={episode['episode_id']} SKIP missing prepared source plan")
+            return None
+        return episode
+    selected = plan.get("selected_source")
+    if require_source_plan and not plan.get("upload_ready"):
+        verdict = selected.get("verdict") if selected else "none"
+        log(f"episode episode_id={episode['episode_id']} SKIP source plan not upload-ready verdict={verdict}")
+        return None
+    if not selected:
+        return None if require_source_plan else episode
+    selected_id = int(selected["source_id"])
+    candidates = episode.get("candidates") or []
+    ordered = [c for c in candidates if int(c["source_id"]) == selected_id]
+    ordered.extend(c for c in candidates if int(c["source_id"]) != selected_id)
+    if require_source_plan and not ordered:
+        log(f"episode episode_id={episode['episode_id']} SKIP selected source_id={selected_id} not in upload backlog")
+        return None
+    planned = {**episode, "candidates": ordered or candidates}
+    planned["source_plan_verdict"] = selected.get("verdict")
+    planned["source_plan_detected_by"] = selected.get("detected_by")
+    return planned
 
 
 def record_failure(state: dict, episode: dict, candidate: dict, reason: str, *, permanent: bool, timing: dict | None = None) -> None:
@@ -224,6 +265,7 @@ def main() -> int:
     ap.add_argument("--count", type=int, default=10)
     ap.add_argument("--allow-subtitles", action="store_true")
     ap.add_argument("--require-description", action="store_true", default=os.environ.get("REQUIRE_PREPARED_DESCRIPTIONS") == "1")
+    ap.add_argument("--require-source-plan", action="store_true", default=os.environ.get("REQUIRE_PREPARED_SOURCES") == "1")
     args = ap.parse_args()
 
     email = os.environ.get("PREHRAJTO_EMAIL")
@@ -238,8 +280,10 @@ def main() -> int:
     rows = load_backlog()
     state = load_state()
     description_plans = load_description_plans()
+    source_plans = load_source_plans()
     log(f"batch-start count={args.count} backlog={len(rows)} uploads={len(state.get('uploads', []))} failed={len(state.get('failed_attempts', []))}")
     log(f"description-plans series={len(description_plans['series'])} episodes={len(description_plans['episode'])} require={args.require_description}")
+    log(f"source-plans episodes={len(source_plans)} require={args.require_source_plan}")
     log("login")
     session = login(email, password)
     log("login done")
@@ -253,6 +297,10 @@ def main() -> int:
             log("backlog exhausted")
             break
         attempted.add(int(episode["episode_id"]))
+        episode = apply_source_plan(episode, source_plans, require_source_plan=args.require_source_plan)
+        if episode is None:
+            bad += 1
+            continue
         if process_episode(episode, session, state, allow_subtitles=args.allow_subtitles, description_plans=description_plans, require_description=args.require_description):
             ok += 1
         else:
