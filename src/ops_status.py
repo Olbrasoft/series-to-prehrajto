@@ -71,17 +71,40 @@ def unresolved_description_errors(rows: list[dict]) -> int:
     return len(err_keys - ok_keys)
 
 
+def source_ids(rows: list[dict]) -> set[int]:
+    ids: set[int] = set()
+    for row in rows:
+        try:
+            ids.add(int(row["source_id"]))
+        except (KeyError, TypeError, ValueError):
+            continue
+    return ids
+
+
+def whisper_status(row: dict) -> str:
+    return ((row.get("signals") or {}).get("whisper") or {}).get("status") or "missing"
+
+
 def main() -> int:
     backlog = load_jsonl(REPO / "backlog" / "series-episodes.jsonl.gz")
+    source_queue = load_jsonl(REPO / "backlog" / "language-audit-queue.jsonl.gz")
     state = load_json(REPO / "state" / "uploaded.json")
     descriptions = load_jsonl(REPO / "plans" / "descriptions.jsonl")
     prepared = load_jsonl(REPO / "plans" / "prepared-episodes.jsonl")
     audits = load_jsonl(REPO / "audits" / "language-audit.jsonl")
+    latest_audits = load_jsonl(REPO / "audits" / "language-audit-latest.jsonl")
     desc_series, desc_episodes = latest_descriptions(descriptions)
     uploaded = state.get("uploads", [])
     uploaded_episode_ids = {int(row["episode_id"]) for row in uploaded}
     backlog_episode_ids = {int(row["episode_id"]) for row in backlog}
     prepared_episode_ids = {int(row["episode_id"]) for row in prepared}
+    queue_source_ids = source_ids(source_queue)
+    audited_source_ids = source_ids(latest_audits or audits)
+    whisper_attempted_source_ids = {
+        int(row["source_id"])
+        for row in latest_audits
+        if row.get("source_id") is not None and whisper_status(row) not in {"disabled", "missing"}
+    }
     uploaded_missing_desc = [
         row for row in uploaded
         if int(row["episode_id"]) not in desc_episodes and int(row["series_id"]) not in desc_series
@@ -96,6 +119,10 @@ def main() -> int:
             "description_episodes": len(desc_episodes),
             "description_errors": unresolved_description_errors(descriptions),
             "language_audit_rows": len(audits),
+            "language_queue_sources": len(queue_source_ids),
+            "language_audited_sources": len(audited_source_ids),
+            "language_whisper_attempted_sources": len(whisper_attempted_source_ids),
+            "language_pending_whisper_sources": len(queue_source_ids - whisper_attempted_source_ids),
         },
         "workflow_runs": gh_runs(),
         "gaps": {
@@ -115,6 +142,7 @@ def main() -> int:
             ],
         },
         "language_verdicts": dict(Counter(row.get("verdict", "UNKNOWN") for row in audits)),
+        "language_whisper_statuses": dict(Counter(whisper_status(row) for row in latest_audits)),
     }
     out = REPO / "reports" / "ops-status.json"
     out.parent.mkdir(exist_ok=True)

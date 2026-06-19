@@ -50,6 +50,63 @@ def append_jsonl(path: Path, rows: list[dict]) -> None:
             fh.write(json.dumps(row, ensure_ascii=False) + "\n")
 
 
+def iter_jsonl(path: Path) -> list[dict]:
+    if not path.exists():
+        return []
+    rows = []
+    with path.open(encoding="utf-8") as fh:
+        for line in fh:
+            if not line.strip():
+                continue
+            try:
+                rows.append(json.loads(line))
+            except json.JSONDecodeError:
+                continue
+    return rows
+
+
+def whisper_status(row: dict) -> str | None:
+    return ((row.get("signals") or {}).get("whisper") or {}).get("status")
+
+
+def completed_source_ids(path: Path, *, require_whisper_attempt: bool) -> set[int]:
+    done: set[int] = set()
+    for row in iter_jsonl(path):
+        try:
+            source_id = int(row["source_id"])
+        except (KeyError, TypeError, ValueError):
+            continue
+        if require_whisper_attempt and whisper_status(row) in {None, "disabled"}:
+            continue
+        done.add(source_id)
+    return done
+
+
+def write_latest_index(audit_path: Path, latest_path: Path) -> None:
+    latest: dict[int, dict] = {}
+    for row in iter_jsonl(audit_path):
+        try:
+            source_id = int(row["source_id"])
+        except (KeyError, TypeError, ValueError):
+            continue
+        old = latest.get(source_id)
+        if old is None or str(row.get("audited_at") or "") >= str(old.get("audited_at") or ""):
+            latest[source_id] = row
+    rows = sorted(
+        latest.values(),
+        key=lambda item: (
+            str(item.get("series_slug") or ""),
+            int(item.get("season") or 0),
+            int(item.get("episode") or 0),
+            int(item.get("source_id") or 0),
+        ),
+    )
+    latest_path.parent.mkdir(parents=True, exist_ok=True)
+    with latest_path.open("w", encoding="utf-8") as fh:
+        for row in rows:
+            fh.write(json.dumps(row, ensure_ascii=False) + "\n")
+
+
 def title_lang_class(title: str | None) -> str:
     if not title:
         return "UNKNOWN"
@@ -94,6 +151,23 @@ def verdict_from_signals(title_class: str, audio_lang: str | None, whisper_lang:
     if title_class == "CZ_SUB":
         return "CZ_SUBTITLES_ONLY", "title", 0.50
     return "UNKNOWN", "none", 0.0
+
+
+def verification_status(verdict: str, detected_by: str, audio_lang: str | None, whisper: dict, title_class: str) -> str:
+    whisper_lang = whisper.get("language") if whisper.get("status") == "ok" else None
+    if whisper_lang in {"cs", "cz", "ces", "cze"}:
+        return "whisper_confirmed_cz_audio"
+    if whisper_lang and whisper_lang not in {"cs", "cz", "ces", "cze"}:
+        if audio_lang in CZECH_AUDIO_LANGS or title_class.startswith("CZ"):
+            return "whisper_contradicts_cz_signal"
+        return "whisper_confirmed_non_cz_audio"
+    if audio_lang in CZECH_AUDIO_LANGS:
+        return "metadata_cz_audio_whisper_unconfirmed"
+    if detected_by == "provider_tracks" and verdict == "CZ_SUBTITLES_ONLY":
+        return "provider_confirmed_cz_subtitles"
+    if title_class.startswith("CZ"):
+        return "title_cz_signal_unverified"
+    return "unverified"
 
 
 def fetch_sktorrent_page(url: str) -> dict:
@@ -224,6 +298,7 @@ def audit_one(item: dict, *, use_whisper: bool, sample_seconds: int) -> dict:
     track_langs = {track.get("lang") for track in provider_probe.get("tracks", []) if track.get("lang")}
     if verdict == "UNKNOWN" and track_langs & {"cze", "cz", "cs", "ces", "cesky", "česky"}:
         verdict, detected_by, confidence = "CZ_SUBTITLES_ONLY", "provider_tracks", 0.70
+    verification = verification_status(verdict, detected_by, audio_lang, whisper, title_class)
     mismatch = bool(title_class.startswith("CZ") and verdict == "NOT_CZ_AUDIO")
     if item.get("db_lang_class") in {"CZ_DUB", "CZ_NATIVE"} and verdict == "NOT_CZ_AUDIO":
         mismatch = True
@@ -263,8 +338,11 @@ def audit_one(item: dict, *, use_whisper: bool, sample_seconds: int) -> dict:
         "verdict": verdict,
         "detected_by": detected_by,
         "confidence": confidence,
+        "verification_status": verification,
+        "cz_audio_verified": verification == "whisper_confirmed_cz_audio",
         "needs_db_update": (
             verdict != "UNKNOWN"
+            and detected_by in {"whisper", "metadata", "provider_tracks"}
             and (
                 item.get("db_lang_class") in {None, "UNKNOWN"}
                 or item.get("db_audio_lang") != ("cs" if verdict in {"CZ_AUDIO", "PROBABLE_CZ_AUDIO"} else item.get("db_audio_lang"))
@@ -280,11 +358,13 @@ def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--queue", default="backlog/language-audit-queue.jsonl.gz")
     ap.add_argument("--out", default="audits/language-audit.jsonl")
+    ap.add_argument("--latest-out", default="audits/language-audit-latest.jsonl")
     ap.add_argument("--limit", type=int, default=50)
     ap.add_argument("--source-id", type=int, action="append")
     ap.add_argument("--series-slug")
     ap.add_argument("--use-whisper", action="store_true")
     ap.add_argument("--sample-seconds", type=int, default=45)
+    ap.add_argument("--refresh", action="store_true")
     args = ap.parse_args()
 
     rows = load_jsonl(Path(args.queue))
@@ -293,16 +373,28 @@ def main() -> int:
         rows = [row for row in rows if int(row["source_id"]) in wanted]
     if args.series_slug:
         rows = [row for row in rows if row["series_slug"] == args.series_slug]
+    if not args.refresh:
+        done = completed_source_ids(Path(args.out), require_whisper_attempt=args.use_whisper)
+        rows = [row for row in rows if int(row["source_id"]) not in done]
+    available = len(rows)
     rows = rows[: args.limit]
     results = [audit_one(row, use_whisper=args.use_whisper, sample_seconds=args.sample_seconds) for row in rows]
     append_jsonl(Path(args.out), results)
+    write_latest_index(Path(args.out), Path(args.latest_out))
     for result in results:
+        whisper = whisper_status(result) or "none"
         print(
             f"{result['source_id']} {result['series_title']} "
             f"S{int(result['season']):02d}E{int(result['episode']):02d} "
-            f"{result['verdict']} by={result['detected_by']} update={result['needs_db_update']}"
+            f"{result['verdict']} by={result['detected_by']} whisper={whisper} "
+            f"verification={result['verification_status']} "
+            f"update={result['needs_db_update']}"
         )
+    remaining = max(available - len(results), 0)
     print(f"Appended {len(results)} audit rows to {args.out}")
+    print(f"Wrote latest source index to {args.latest_out}")
+    if remaining:
+        print(f"Remaining queued rows after this batch: {remaining}")
     return 0
 
 

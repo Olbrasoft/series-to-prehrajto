@@ -1,0 +1,83 @@
+name: audit-language
+
+on:
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: "Number of sources to audit in one run"
+        required: false
+        default: "20"
+      series_slug:
+        description: "Optional series slug"
+        required: false
+        default: ""
+      sample_seconds:
+        description: "Audio sample length for Whisper"
+        required: false
+        default: "45"
+  schedule:
+    - cron: "*/30 * * * *"
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    permissions:
+      contents: write
+    concurrency:
+      group: series-to-prehrajto-language-audit
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: true
+
+      - name: Refresh to latest origin/main
+        run: |
+          git fetch origin main
+          git reset --hard origin/main
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg
+          pip install -r requirements.txt
+          pip install faster-whisper
+
+      - name: Configure git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Audit source languages
+        env:
+          CZ_PROXY_URL: ${{ secrets.CZ_PROXY_URL }}
+          CZ_PROXY_KEY: ${{ secrets.CZ_PROXY_KEY }}
+        run: |
+          ARGS=(
+            "--use-whisper"
+            "--limit" "${{ inputs.limit || '20' }}"
+            "--sample-seconds" "${{ inputs.sample_seconds || '45' }}"
+          )
+          if [ -n "${{ inputs.series_slug }}" ]; then
+            ARGS+=("--series-slug" "${{ inputs.series_slug }}")
+          fi
+          python src/audit_language_sources.py "${ARGS[@]}"
+
+      - name: Commit audit results
+        if: always()
+        run: |
+          git add audits/language-audit.jsonl audits/language-audit-latest.jsonl
+          if git diff --cached --quiet; then
+            echo "no language audit changes"
+          else
+            git commit -m "chore: audit source languages"
+            git pull --rebase origin main || true
+            git push
+          fi
