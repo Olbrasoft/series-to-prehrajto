@@ -183,7 +183,7 @@ def main() -> int:
     append_jsonl(Path(args.out), results)
     ok = sum(1 for row in results if row.get("status") == "ok")
     print(f"Prepared descriptions: ok={ok} total={len(results)} out={args.out}")
-    return 0 if ok == len(results) else 1
+    return 0 if ok > 0 or not results else 1
 
 
 if __name__ == "__main__":

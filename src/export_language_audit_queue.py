@@ -28,7 +28,8 @@ def sktorrent_url(external_id: str | None) -> str | None:
 def fetch_rows(
     conn,
     *,
-    limit: int,
+    episode_limit: int,
+    source_limit_per_episode: int,
     series_slug: str | None,
     season: int | None,
     episode: int | None,
@@ -38,7 +39,11 @@ def fetch_rows(
         "vs.episode_id IS NOT NULL",
         "vp.slug = ANY(%(providers)s)",
     ]
-    params: dict[str, Any] = {"limit": limit, "providers": ["prehrajto", "sktorrent", "sledujteto"]}
+    params: dict[str, Any] = {
+        "episode_limit": episode_limit,
+        "source_limit_per_episode": source_limit_per_episode,
+        "providers": ["prehrajto", "sktorrent", "sledujteto"],
+    }
     if series_slug:
         where.append("s.slug = %(series_slug)s")
         params["series_slug"] = series_slug
@@ -59,50 +64,87 @@ def fetch_rows(
         )
 
     sql = f"""
-        SELECT
-            s.id AS series_id,
-            s.title AS series_title,
-            s.slug AS series_slug,
-            s.imdb_rating,
-            s.imdb_votes,
-            e.id AS episode_id,
-            e.season,
-            e.episode,
-            e.title AS episode_title,
-            e.episode_name,
-            e.audio_langs AS episode_audio_langs,
-            e.subtitle_langs AS episode_subtitle_langs,
-            vp.slug AS provider,
-            vs.id AS source_id,
-            vs.external_id,
-            vs.title AS source_title,
-            vs.duration_sec,
-            vs.resolution_hint,
-            vs.filesize_bytes,
-            vs.view_count,
-            vs.lang_class,
-            vs.audio_lang,
-            vs.audio_confidence,
-            vs.audio_detected_by,
-            vs.metadata,
-            coalesce(vs.metadata->>'url', NULL) AS metadata_url
-        FROM video_sources vs
-        JOIN video_providers vp ON vp.id = vs.provider_id
-        JOIN episodes e ON e.id = vs.episode_id
-        JOIN series s ON s.id = e.series_id
-        WHERE {" AND ".join(where)}
+        WITH eligible AS (
+            SELECT
+                s.id AS series_id,
+                s.title AS series_title,
+                s.slug AS series_slug,
+                s.imdb_rating,
+                s.imdb_votes,
+                e.id AS episode_id,
+                e.season,
+                e.episode,
+                e.title AS episode_title,
+                e.episode_name,
+                e.audio_langs AS episode_audio_langs,
+                e.subtitle_langs AS episode_subtitle_langs
+            FROM episodes e
+            JOIN series s ON s.id = e.series_id
+            WHERE EXISTS (
+                SELECT 1
+                FROM video_sources vs
+                JOIN video_providers vp ON vp.id = vs.provider_id
+                WHERE vs.episode_id = e.id
+                  AND {" AND ".join(where)}
+            )
+            ORDER BY
+                CASE WHEN s.slug = 'hvezdne-mestecko' THEN 0 ELSE 1 END,
+                coalesce(s.imdb_votes, 0) DESC,
+                coalesce(s.imdb_rating, 0) DESC,
+                s.id,
+                e.season NULLS LAST,
+                e.episode NULLS LAST,
+                e.id
+            LIMIT %(episode_limit)s
+        ),
+        ranked_sources AS (
+            SELECT
+                e.*,
+                vp.slug AS provider,
+                vs.id AS source_id,
+                vs.external_id,
+                vs.title AS source_title,
+                vs.duration_sec,
+                vs.resolution_hint,
+                vs.filesize_bytes,
+                vs.view_count,
+                vs.lang_class,
+                vs.audio_lang,
+                vs.audio_confidence,
+                vs.audio_detected_by,
+                vs.metadata,
+                coalesce(vs.metadata->>'url', NULL) AS metadata_url,
+                row_number() OVER (
+                    PARTITION BY e.episode_id
+                    ORDER BY
+                        CASE vp.slug WHEN 'prehrajto' THEN 0 WHEN 'sktorrent' THEN 1 ELSE 2 END,
+                        CASE vs.lang_class WHEN 'CZ_DUB' THEN 0 WHEN 'CZ_NATIVE' THEN 1 WHEN 'CZ_SUB' THEN 2 ELSE 3 END,
+                        CASE
+                            WHEN coalesce(vs.resolution_hint, '') ~* '(2160|4k|uhd)' THEN 4
+                            WHEN coalesce(vs.resolution_hint, '') ~* '1080|full.?hd' THEN 3
+                            WHEN coalesce(vs.resolution_hint, '') ~* '720|hd' THEN 2
+                            ELSE 0
+                        END DESC,
+                        coalesce(vs.view_count, 0) DESC,
+                        vs.id
+                ) AS source_rank
+            FROM eligible e
+            JOIN video_sources vs ON vs.episode_id = e.episode_id
+            JOIN video_providers vp ON vp.id = vs.provider_id
+            WHERE vs.is_alive
+              AND vp.slug = ANY(%(providers)s)
+        )
+        SELECT *
+        FROM ranked_sources
+        WHERE source_rank <= %(source_limit_per_episode)s
         ORDER BY
-            CASE WHEN s.slug = 'hvezdne-mestecko' THEN 0 ELSE 1 END,
-            coalesce(s.imdb_votes, 0) DESC,
-            coalesce(s.imdb_rating, 0) DESC,
-            s.id,
-            e.season NULLS LAST,
-            e.episode NULLS LAST,
-            CASE vp.slug WHEN 'prehrajto' THEN 0 WHEN 'sktorrent' THEN 1 ELSE 2 END,
-            CASE vs.lang_class WHEN 'CZ_DUB' THEN 0 WHEN 'CZ_NATIVE' THEN 1 WHEN 'CZ_SUB' THEN 2 ELSE 3 END,
-            coalesce(vs.view_count, 0) DESC,
-            vs.id
-        LIMIT %(limit)s;
+            CASE WHEN series_slug = 'hvezdne-mestecko' THEN 0 ELSE 1 END,
+            coalesce(imdb_votes, 0) DESC,
+            coalesce(imdb_rating, 0) DESC,
+            series_id,
+            season NULLS LAST,
+            episode NULLS LAST,
+            source_rank;
     """
     with conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor) as cur:
         cur.execute(sql, params)
@@ -148,7 +190,9 @@ def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--out", default="backlog/language-audit-queue.jsonl.gz")
     ap.add_argument("--db-url", default=os.environ.get("DATABASE_URL"))
-    ap.add_argument("--limit", type=int, default=500)
+    ap.add_argument("--limit", type=int, default=500, help="Backward-compatible episode limit alias.")
+    ap.add_argument("--episode-limit", type=int)
+    ap.add_argument("--source-limit-per-episode", type=int, default=12)
     ap.add_argument("--series-slug")
     ap.add_argument("--season", type=int)
     ap.add_argument("--episode", type=int)
@@ -162,7 +206,8 @@ def main() -> int:
     try:
         rows = fetch_rows(
             conn,
-            limit=args.limit,
+            episode_limit=args.episode_limit or args.limit,
+            source_limit_per_episode=args.source_limit_per_episode,
             series_slug=args.series_slug,
             season=args.season,
             episode=args.episode,

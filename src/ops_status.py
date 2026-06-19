@@ -55,6 +55,22 @@ def latest_descriptions(rows: list[dict]) -> tuple[set[int], set[int]]:
     return series, episodes
 
 
+def unresolved_description_errors(rows: list[dict]) -> int:
+    ok_keys: set[tuple[str, int]] = set()
+    err_keys: set[tuple[str, int]] = set()
+    for row in rows:
+        kind = row.get("kind")
+        entity_id = row.get("episode_id") if kind == "episode" else row.get("series_id")
+        if not kind or not entity_id:
+            continue
+        key = (kind, int(entity_id))
+        if row.get("status") == "ok":
+            ok_keys.add(key)
+        elif row.get("status") == "error":
+            err_keys.add(key)
+    return len(err_keys - ok_keys)
+
+
 def main() -> int:
     backlog = load_jsonl(REPO / "backlog" / "series-episodes.jsonl.gz")
     state = load_json(REPO / "state" / "uploaded.json")
@@ -78,6 +94,7 @@ def main() -> int:
             "prepared_source_episodes": len(prepared_episode_ids),
             "description_series": len(desc_series),
             "description_episodes": len(desc_episodes),
+            "description_errors": unresolved_description_errors(descriptions),
             "language_audit_rows": len(audits),
         },
         "workflow_runs": gh_runs(),
@@ -87,6 +104,10 @@ def main() -> int:
             "uploaded_without_gemma_description": [
                 {"episode_id": row["episode_id"], "display_name": row["display_name"], "video_id": row["prehrajto_video_id"]}
                 for row in uploaded_missing_desc
+            ],
+            "uploaded_not_marked_description_updated": [
+                {"episode_id": row["episode_id"], "display_name": row["display_name"], "video_id": row["prehrajto_video_id"]}
+                for row in uploaded if not row.get("description_updated_at")
             ],
             "prepared_not_upload_ready": [
                 {"episode_id": row["episode_id"], "series_title": row["series_title"], "season": row["season"], "episode": row["episode"]}

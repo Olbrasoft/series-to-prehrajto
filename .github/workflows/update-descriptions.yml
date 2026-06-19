@@ -1,0 +1,62 @@
+name: update-descriptions
+
+on:
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: "Maximum uploaded videos to update"
+        required: false
+        default: "50"
+  schedule:
+    - cron: "50 */6 * * *"
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    permissions:
+      contents: write
+    concurrency:
+      group: series-to-prehrajto-0
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: true
+
+      - name: Refresh to latest origin/main
+        run: |
+          git fetch origin main
+          git reset --hard origin/main
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Configure git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Update uploaded descriptions
+        env:
+          PREHRAJTO_EMAIL: ${{ secrets.PREHRAJTO_EMAIL }}
+          PREHRAJTO_PASSWORD: ${{ secrets.PREHRAJTO_PASSWORD }}
+        run: python src/update_uploaded_descriptions.py --limit "${{ inputs.limit || '50' }}"
+
+      - name: Commit update state
+        if: always()
+        run: |
+          git add state/uploaded.json state/description-updates.log
+          if git diff --cached --quiet; then
+            echo "no description update changes"
+          else
+            git commit -m "chore: update uploaded descriptions"
+            git pull --rebase origin main || true
+            git push
+          fi

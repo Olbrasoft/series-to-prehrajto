@@ -222,7 +222,7 @@ def audit_one(item: dict, *, use_whisper: bool, sample_seconds: int) -> dict:
     whisper_lang = whisper.get("language") if whisper.get("status") == "ok" else None
     verdict, detected_by, confidence = verdict_from_signals(title_class, audio_lang, whisper_lang)
     track_langs = {track.get("lang") for track in provider_probe.get("tracks", []) if track.get("lang")}
-    if verdict == "UNKNOWN" and track_langs & {"cze", "cz", "cs", "ces"}:
+    if verdict == "UNKNOWN" and track_langs & {"cze", "cz", "cs", "ces", "cesky", "česky"}:
         verdict, detected_by, confidence = "CZ_SUBTITLES_ONLY", "provider_tracks", 0.70
     mismatch = bool(title_class.startswith("CZ") and verdict == "NOT_CZ_AUDIO")
     if item.get("db_lang_class") in {"CZ_DUB", "CZ_NATIVE"} and verdict == "NOT_CZ_AUDIO":
