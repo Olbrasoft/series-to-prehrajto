@@ -15,8 +15,12 @@ on:
         description: "Allow CZ subtitle-only sources"
         required: false
         default: "false"
+      continue_uploads:
+        description: "Queue another upload batch after this one when prepared episodes remain"
+        required: false
+        default: "true"
   schedule:
-    - cron: "15 */6 * * *"
+    - cron: "*/15 * * * *"
 
 jobs:
   upload-batch:
@@ -25,6 +29,7 @@ jobs:
     timeout-minutes: 350
     permissions:
       contents: write
+      actions: write
     concurrency:
       group: series-to-prehrajto-${{ matrix.shard }}
       cancel-in-progress: false
@@ -88,6 +93,14 @@ jobs:
           fi
           python src/sync_batch.py "${ARGS[@]}"
 
+      - name: Update descriptions for uploaded videos
+        if: success()
+        continue-on-error: true
+        env:
+          PREHRAJTO_EMAIL: ${{ secrets.PREHRAJTO_EMAIL }}
+          PREHRAJTO_PASSWORD: ${{ secrets.PREHRAJTO_PASSWORD }}
+        run: python src/update_uploaded_descriptions.py --limit 50
+
       - name: Commit state + log
         if: always()
         run: |
@@ -108,4 +121,43 @@ jobs:
             git commit -m "chore: sync series state, total uploads ${UP_COUNT}"
             git pull --rebase origin main || true
             git push
+          fi
+
+      - name: Queue next upload batch
+        if: success() && (github.event_name == 'schedule' || inputs.continue_uploads != 'false')
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -e
+          if python - <<'PY'
+          import json
+          from pathlib import Path
+
+          state = json.loads(Path("state/uploaded.json").read_text(encoding="utf-8"))
+          uploaded_keys = {
+              (int(row["series_id"]), int(row["season"]), int(row["episode"]))
+              for row in state.get("uploads", [])
+              if row.get("series_id") is not None and row.get("season") is not None and row.get("episode") is not None
+          }
+          remaining = 0
+          for line in Path("plans/prepared-episodes.jsonl").read_text(encoding="utf-8").splitlines():
+              if not line.strip():
+                  continue
+              row = json.loads(line)
+              if not row.get("upload_ready"):
+                  continue
+              key = (int(row["series_id"]), int(row["season"]), int(row["episode"]))
+              if key not in uploaded_keys:
+                  remaining += 1
+          print(f"remaining_upload_ready={remaining}")
+          raise SystemExit(0 if remaining > 0 else 1)
+          PY
+          then
+            gh workflow run sync.yml \
+              -f batch_size="${{ inputs.batch_size || '5' }}" \
+              -f num_shards="${{ inputs.num_shards || '1' }}" \
+              -f allow_subtitles="${{ inputs.allow_subtitles || 'false' }}" \
+              -f continue_uploads="true"
+          else
+            echo "no prepared upload-ready episodes remain; not queueing another sync"
           fi
