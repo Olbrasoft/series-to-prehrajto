@@ -88,6 +88,12 @@ def whisper_language(path: Path, *, seconds: int = 90) -> tuple[str | None, floa
     except Exception as exc:
         return None, None, f"unavailable: {type(exc).__name__}"
 
+    model_name = os.environ.get("WHISPER_MODEL", "small")
+    model = WhisperModel(model_name, device=os.environ.get("WHISPER_DEVICE", "cpu"), compute_type="int8")
+    if path.suffix.lower() in {".wav", ".mp3", ".m4a", ".flac", ".ogg"}:
+        _segments, info = model.transcribe(str(path), beam_size=1, vad_filter=True)
+        return info.language, float(info.language_probability or 0.0), "ok"
+
     with tempfile.TemporaryDirectory() as td:
         sample = Path(td) / "sample.wav"
         cmd = [
@@ -112,7 +118,5 @@ def whisper_language(path: Path, *, seconds: int = 90) -> tuple[str | None, floa
         proc = subprocess.run(cmd, capture_output=True, text=True)
         if proc.returncode != 0 or not sample.exists():
             return None, None, f"ffmpeg_failed: {proc.stderr.strip()[:200]}"
-        model_name = os.environ.get("WHISPER_MODEL", "small")
-        model = WhisperModel(model_name, device=os.environ.get("WHISPER_DEVICE", "cpu"), compute_type="int8")
         _segments, info = model.transcribe(str(sample), beam_size=1, vad_filter=True)
         return info.language, float(info.language_probability or 0.0), "ok"
