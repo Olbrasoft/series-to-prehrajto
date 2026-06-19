@@ -59,6 +59,7 @@ jobs:
         env:
           CZ_PROXY_URL: ${{ secrets.CZ_PROXY_URL }}
           CZ_PROXY_KEY: ${{ secrets.CZ_PROXY_KEY }}
+          PYTHONUNBUFFERED: "1"
         run: |
           ARGS=(
             "--use-whisper"
@@ -68,7 +69,7 @@ jobs:
           if [ -n "${{ inputs.series_slug }}" ]; then
             ARGS+=("--series-slug" "${{ inputs.series_slug }}")
           fi
-          python src/audit_language_sources.py "${ARGS[@]}"
+          python -u src/audit_language_sources.py "${ARGS[@]}"
 
       - name: Commit audit results
         if: always()
