@@ -20,13 +20,38 @@ SEC_CH_UA = '"Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"'
 ACCEPT_LANG = "cs,en;q=0.9,en-GB;q=0.8,en-US;q=0.7"
 
 
+def _redact_cookie_value(name: str, value: str) -> str:
+    if any(token in name.lower() for token in ("token", "session", "refresh", "access")):
+        return "***"
+    return value
+
+
+def _safe_cookies(cookies) -> dict[str, str]:
+    return {name: _redact_cookie_value(name, value) for name, value in dict(cookies).items()}
+
+
+def _safe_set_cookie(header: str | None) -> str:
+    if not header:
+        return ""
+    redacted_parts: list[str] = []
+    for part in header.split(", "):
+        if "=" not in part:
+            redacted_parts.append(part)
+            continue
+        name, rest = part.split("=", 1)
+        if any(token in name.lower() for token in ("token", "session", "refresh", "access")):
+            rest = "***;" + rest.split(";", 1)[1] if ";" in rest else "***"
+        redacted_parts.append(f"{name}={rest}")
+    return ", ".join(redacted_parts)
+
+
 def login(email: str, password: str) -> requests.Session:
     s = requests.Session()
     s.headers["User-Agent"] = USER_AGENT
 
     # Prime the session — visit homepage to get initial Nette cookies (csrf, session)
     prime = s.get("https://prehraj.to/")
-    print(f"[login] prime GET status={prime.status_code}, cookies={dict(s.cookies)}")
+    print(f"[login] prime GET status={prime.status_code}, cookies={_safe_cookies(s.cookies)}")
 
     r = s.post(
         "https://prehraj.to/?frm=homepageLoginForm-loginForm",
@@ -45,8 +70,8 @@ def login(email: str, password: str) -> requests.Session:
     )
     print(f"[login] status={r.status_code}, ctype={r.headers.get('content-type')}")
     print(f"[login] response text (first 500): {r.text[:500]!r}")
-    print(f"[login] set-cookie headers: {r.headers.get('set-cookie')!r}")
-    print(f"[login] session cookies after login: {dict(s.cookies)}")
+    print(f"[login] set-cookie headers: {_safe_set_cookie(r.headers.get('set-cookie'))!r}")
+    print(f"[login] session cookies after login: {_safe_cookies(s.cookies)}")
     r.raise_for_status()
 
     check = s.get("https://prehraj.to/profil", allow_redirects=False)
