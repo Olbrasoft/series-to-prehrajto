@@ -182,6 +182,8 @@ def group_rows(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
                 "imdb_votes": row["imdb_votes"],
                 "csfd_rating": row["csfd_rating"],
                 "preferred_lang_class": preferred,
+                "series_description": row["series_description"] or "",
+                "series_overview_en": row["series_overview_en"] or "",
                 "source_description": row["description"] or row["overview"] or row["series_description"] or row["series_overview_en"] or "",
                 "description": row["description"] or row["overview"] or row["series_description"] or "",
                 "candidates": [],

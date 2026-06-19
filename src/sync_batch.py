@@ -24,6 +24,7 @@ from resolve_stream import ResolveError, pick_best, resolve as resolve_stream  #
 REPO_ROOT = Path(__file__).resolve().parent.parent
 LOG_PATH = REPO_ROOT / "state" / (f"sync-shard-{SHARD_ID}.log" if NUM_SHARDS > 1 else "sync.log")
 TMP_DIR = Path("/tmp")
+DESCRIPTIONS = REPO_ROOT / "plans" / "descriptions.jsonl"
 
 
 def log(message: str) -> None:
@@ -67,6 +68,35 @@ def safe_filename(name: str) -> str:
     return re.sub(r'[\\/:"<>|*?]', "_", name)[:180]
 
 
+def load_description_plans(path: Path = DESCRIPTIONS) -> dict[str, dict[int, dict]]:
+    plans: dict[str, dict[int, dict]] = {"series": {}, "episode": {}}
+    if not path.exists():
+        return plans
+    with path.open(encoding="utf-8") as fh:
+        for line in fh:
+            if not line.strip():
+                continue
+            row = json.loads(line)
+            if row.get("status") != "ok":
+                continue
+            kind = row.get("kind")
+            if kind == "series":
+                plans["series"][int(row["series_id"])] = row
+            elif kind == "episode":
+                plans["episode"][int(row["episode_id"])] = row
+    return plans
+
+
+def prepared_description(episode: dict, plans: dict[str, dict[int, dict]]) -> str | None:
+    ep = plans["episode"].get(int(episode["episode_id"]))
+    if ep and ep.get("generated_description"):
+        return ep["generated_description"]
+    series = plans["series"].get(int(episode["series_id"]))
+    if series and series.get("generated_description"):
+        return series["generated_description"]
+    return None
+
+
 def record_failure(state: dict, episode: dict, candidate: dict, reason: str, *, permanent: bool, timing: dict | None = None) -> None:
     entry = {
         "episode_id": episode["episode_id"],
@@ -85,7 +115,7 @@ def record_failure(state: dict, episode: dict, candidate: dict, reason: str, *, 
     save_state(state)
 
 
-def try_candidate(episode: dict, candidate: dict, session, state: dict, *, allow_subtitles: bool) -> bool:
+def try_candidate(episode: dict, candidate: dict, session, state: dict, *, allow_subtitles: bool, description: str) -> bool:
     ok, reason = has_probable_czech(candidate, allow_subtitles=allow_subtitles)
     if not ok:
         log(f"  skip source_id={candidate['source_id']} language={reason}")
@@ -134,7 +164,7 @@ def try_candidate(episode: dict, candidate: dict, session, state: dict, *, allow
 
     t = time.monotonic()
     try:
-        video_id = upload_video(session, tmp_path, display_name=episode["display_name"], description=episode.get("description") or "")
+        video_id = upload_video(session, tmp_path, display_name=episode["display_name"], description=description)
     except Exception as exc:
         up_sec = round(time.monotonic() - t, 1)
         log(f"  upload FAILED after {up_sec}s: {exc}")
@@ -159,6 +189,7 @@ def try_candidate(episode: dict, candidate: dict, session, state: dict, *, allow
             "source_url": candidate.get("url"),
             "source_lang_class": candidate.get("lang_class"),
             "source_resolution": best.label,
+            "description_source": episode.get("description_source"),
             "prehrajto_video_id": video_id,
             "size_bytes": size,
             "uploaded_at": now_iso(),
@@ -170,10 +201,19 @@ def try_candidate(episode: dict, candidate: dict, session, state: dict, *, allow
     return True
 
 
-def process_episode(episode: dict, session, state: dict, *, allow_subtitles: bool) -> bool:
+def process_episode(episode: dict, session, state: dict, *, allow_subtitles: bool, description_plans: dict[str, dict[int, dict]], require_description: bool) -> bool:
     log(f"episode episode_id={episode['episode_id']} name={episode['display_name']!r} candidates={len(episode['candidates'])}")
+    description = prepared_description(episode, description_plans)
+    if description:
+        episode["description_source"] = "gemma_episode_or_series"
+    elif require_description:
+        log(f"episode episode_id={episode['episode_id']} SKIP missing prepared Gemma description")
+        return False
+    else:
+        description = episode.get("description") or ""
+        episode["description_source"] = "backlog_fallback"
     for candidate in episode["candidates"]:
-        if try_candidate(episode, candidate, session, state, allow_subtitles=allow_subtitles):
+        if try_candidate(episode, candidate, session, state, allow_subtitles=allow_subtitles, description=description):
             return True
     log(f"episode episode_id={episode['episode_id']} exhausted")
     return False
@@ -183,6 +223,7 @@ def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--count", type=int, default=10)
     ap.add_argument("--allow-subtitles", action="store_true")
+    ap.add_argument("--require-description", action="store_true", default=os.environ.get("REQUIRE_PREPARED_DESCRIPTIONS") == "1")
     args = ap.parse_args()
 
     email = os.environ.get("PREHRAJTO_EMAIL")
@@ -196,7 +237,9 @@ def main() -> int:
 
     rows = load_backlog()
     state = load_state()
+    description_plans = load_description_plans()
     log(f"batch-start count={args.count} backlog={len(rows)} uploads={len(state.get('uploads', []))} failed={len(state.get('failed_attempts', []))}")
+    log(f"description-plans series={len(description_plans['series'])} episodes={len(description_plans['episode'])} require={args.require_description}")
     log("login")
     session = login(email, password)
     log("login done")
@@ -210,7 +253,7 @@ def main() -> int:
             log("backlog exhausted")
             break
         attempted.add(int(episode["episode_id"]))
-        if process_episode(episode, session, state, allow_subtitles=args.allow_subtitles):
+        if process_episode(episode, session, state, allow_subtitles=args.allow_subtitles, description_plans=description_plans, require_description=args.require_description):
             ok += 1
         else:
             bad += 1

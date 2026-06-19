@@ -1,21 +1,29 @@
-name: language-audit
+name: prepare-sources
 
 on:
   workflow_dispatch:
     inputs:
-      limit:
-        description: "Number of queued sources to audit"
+      episode_limit:
+        description: "Number of episodes to prepare"
         required: false
-        default: "50"
+        default: "10"
+      source_limit_per_episode:
+        description: "Number of sources to check per episode"
+        required: false
+        default: "12"
+      series_slug:
+        description: "Optional series slug"
+        required: false
+        default: ""
       use_whisper:
         description: "Run Whisper on supported sources"
         required: false
         default: "false"
   schedule:
-    - cron: "40 */6 * * *"
+    - cron: "35 */6 * * *"
 
 jobs:
-  audit:
+  prepare:
     runs-on: ubuntu-latest
     timeout-minutes: 350
     permissions:
@@ -54,25 +62,31 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-      - name: Run language audit
+      - name: Prepare episode sources
         env:
           CZ_PROXY_URL: ${{ secrets.CZ_PROXY_URL }}
           CZ_PROXY_KEY: ${{ secrets.CZ_PROXY_KEY }}
         run: |
-          ARGS=("--limit" "${{ inputs.limit || '50' }}")
+          ARGS=(
+            "--episode-limit" "${{ inputs.episode_limit || '10' }}"
+            "--source-limit-per-episode" "${{ inputs.source_limit_per_episode || '12' }}"
+          )
+          if [ -n "${{ inputs.series_slug }}" ]; then
+            ARGS+=("--series-slug" "${{ inputs.series_slug }}")
+          fi
           if [ "${{ inputs.use_whisper || 'false' }}" = "true" ]; then
             ARGS+=("--use-whisper")
           fi
-          python src/audit_language_sources.py "${ARGS[@]}"
+          python src/prepare_episode_sources.py "${ARGS[@]}"
 
-      - name: Commit audit results
+      - name: Commit preparation results
         if: always()
         run: |
-          git add audits/language-audit.jsonl
+          git add plans/prepared-episodes.jsonl audits/language-audit.jsonl
           if git diff --cached --quiet; then
-            echo "no audit changes"
+            echo "no preparation changes"
           else
-            git commit -m "chore: audit series source languages"
+            git commit -m "chore: prepare series episode sources"
             git pull --rebase origin main || true
             git push
           fi

@@ -1,0 +1,70 @@
+name: prepare-descriptions
+
+on:
+  workflow_dispatch:
+    inputs:
+      series_limit:
+        description: "Number of series descriptions to prepare"
+        required: false
+        default: "8"
+      episode_limit:
+        description: "Number of episode descriptions to prepare"
+        required: false
+        default: "30"
+  schedule:
+    - cron: "25 */6 * * *"
+
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    permissions:
+      contents: write
+    concurrency:
+      group: series-to-prehrajto-0
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: true
+
+      - name: Refresh to latest origin/main
+        run: |
+          git fetch origin main
+          git reset --hard origin/main
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Configure git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Prepare descriptions
+        env:
+          GEMINI_API_KEYS: ${{ secrets.GEMINI_API_KEYS }}
+          GEMINI_MODEL: gemini-2.5-flash-lite
+        run: |
+          python src/prepare_descriptions.py \
+            --series-limit "${{ inputs.series_limit || '8' }}" \
+            --episode-limit "${{ inputs.episode_limit || '30' }}" \
+            --workers 4
+
+      - name: Commit descriptions
+        if: always()
+        run: |
+          git add plans/descriptions.jsonl
+          if git diff --cached --quiet; then
+            echo "no description changes"
+          else
+            git commit -m "chore: prepare Gemma descriptions"
+            git pull --rebase origin main || true
+            git push
+          fi

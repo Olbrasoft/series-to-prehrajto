@@ -1,0 +1,53 @@
+name: ops-status
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "*/30 * * * *"
+
+jobs:
+  status:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+      actions: read
+    concurrency:
+      group: series-to-prehrajto-status
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: true
+
+      - name: Refresh to latest origin/main
+        run: |
+          git fetch origin main
+          git reset --hard origin/main
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Configure git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Build status report
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python src/ops_status.py
+
+      - name: Commit status report
+        run: |
+          git add reports/ops-status.json
+          if git diff --cached --quiet; then
+            echo "no status changes"
+          else
+            git commit -m "chore: update ops status"
+            git pull --rebase origin main || true
+            git push
+          fi
