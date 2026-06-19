@@ -96,6 +96,45 @@ def verdict_from_signals(title_class: str, audio_lang: str | None, whisper_lang:
     return "UNKNOWN", "none", 0.0
 
 
+def fetch_sktorrent_page(url: str) -> dict:
+    import requests
+
+    resp = requests.get(
+        url,
+        timeout=30,
+        headers={"User-Agent": "Mozilla/5.0", "Accept-Encoding": "identity"},
+        stream=True,
+    )
+    raw = resp.raw.read(500_000, decode_content=False)
+    text = raw.decode("utf-8", "replace")
+    if resp.status_code >= 400:
+        return {"status": "http_error", "http_status": resp.status_code}
+    streams = []
+    for match in re.finditer(r"https?://[^\"']+/media/videos//h264/[^\"']+?_(\d+)p\.mp4", text):
+        streams.append({"url": match.group(0), "label": f"{match.group(1)}p", "res": int(match.group(1))})
+    tracks = []
+    for match in re.finditer(r"https?://[^\"']+/media/videos/vtt/\d+/([^/\"']+)\.vtt", text):
+        tracks.append({"url": match.group(0), "lang": match.group(1).lower()})
+    title_match = re.search(r'<meta property="og:title" content="([^"]+)"', text)
+    title = title_match.group(1) if title_match else None
+    return {
+        "status": "ok",
+        "title": title,
+        "streams": sorted(streams, key=lambda item: -item["res"]),
+        "tracks": tracks,
+    }
+
+
+def pick_stream(streams: list[dict]) -> dict | None:
+    if not streams:
+        return None
+    by_res = {int(s["res"]): s for s in streams}
+    for res in (1080, 720, 480):
+        if res in by_res:
+            return by_res[res]
+    return streams[0]
+
+
 def sample_audio(stream_url: str, out_path: Path, *, start_sec: int, seconds: int) -> tuple[bool, str]:
     cmd = [
         "ffmpeg",
@@ -124,36 +163,57 @@ def sample_audio(stream_url: str, out_path: Path, *, start_sec: int, seconds: in
     return True, "ok"
 
 
-def audit_stream_with_whisper(item: dict, *, sample_seconds: int) -> dict:
+def audit_provider(item: dict, *, sample_seconds: int) -> dict:
+    if item.get("provider") == "sktorrent" and item.get("source_url"):
+        probe = fetch_sktorrent_page(item["source_url"])
+        if probe.get("status") != "ok":
+            return {"provider": "sktorrent", **probe}
+        if os.environ.get("WHISPER_LANGUAGE_CHECK") != "1":
+            return {"provider": "sktorrent", **probe, "whisper": {"status": "disabled"}}
+        stream = pick_stream(probe.get("streams") or [])
+        if not stream:
+            return {"provider": "sktorrent", **probe, "whisper": {"status": "no_stream"}}
+        with tempfile.TemporaryDirectory() as td:
+            sample = Path(td) / "sample.wav"
+            ok, msg = sample_audio(stream["url"], sample, start_sec=180, seconds=sample_seconds)
+            if not ok:
+                return {"provider": "sktorrent", **probe, "whisper": {"status": "sample_failed", "error": msg, "resolution": stream["label"]}}
+            lang, prob, status = whisper_language(sample, seconds=sample_seconds)
+            return {"provider": "sktorrent", **probe, "whisper": {"status": status, "language": lang, "probability": prob, "resolution": stream["label"]}}
+
     if os.environ.get("WHISPER_LANGUAGE_CHECK") != "1":
-        return {"status": "disabled"}
+        return {"provider": item.get("provider"), "whisper": {"status": "disabled"}}
     if item.get("provider") != "prehrajto" or not item.get("source_url"):
-        return {"status": "unsupported_provider"}
+        return {"provider": item.get("provider"), "whisper": {"status": "unsupported_provider"}}
     try:
         resolved = resolve_prehrajto(item["source_url"], max_retries=1, backoff_seconds=(3,))
         best = pick_best(resolved.videos, prefer=(1080, 720))
     except ResolveError as exc:
-        return {"status": "resolve_failed", "error": str(exc), "permanent": exc.permanent}
+        return {"provider": "prehrajto", "whisper": {"status": "resolve_failed", "error": str(exc), "permanent": exc.permanent}}
     except Exception as exc:
-        return {"status": "resolve_crashed", "error": f"{type(exc).__name__}: {exc}"}
+        return {"provider": "prehrajto", "whisper": {"status": "resolve_crashed", "error": f"{type(exc).__name__}: {exc}"}}
     with tempfile.TemporaryDirectory() as td:
         sample = Path(td) / "sample.wav"
         ok, msg = sample_audio(best.url, sample, start_sec=180, seconds=sample_seconds)
         if not ok:
-            return {"status": "sample_failed", "error": msg, "resolution": best.label}
+            return {"provider": "prehrajto", "whisper": {"status": "sample_failed", "error": msg, "resolution": best.label}}
         lang, prob, status = whisper_language(sample, seconds=sample_seconds)
-        return {"status": status, "language": lang, "probability": prob, "resolution": best.label}
+        return {"provider": "prehrajto", "whisper": {"status": status, "language": lang, "probability": prob, "resolution": best.label}}
 
 
 def audit_one(item: dict, *, use_whisper: bool, sample_seconds: int) -> dict:
-    title_class = title_lang_class(item.get("source_title") or "")
-    title_hint = title_language_hint(item.get("source_title") or "")
+    provider_probe = audit_provider(item, sample_seconds=sample_seconds)
+    provider_title = provider_probe.get("title")
+    source_title = item.get("source_title") or provider_title or ""
+    title_class = title_lang_class(source_title)
+    title_hint = title_language_hint(source_title)
     audio_lang, audio_conf, audio_by = metadata_audio_lang(item)
-    whisper = {"status": "disabled"}
+    whisper = provider_probe.get("whisper") or {"status": "disabled"}
     old = os.environ.get("WHISPER_LANGUAGE_CHECK")
     if use_whisper:
         os.environ["WHISPER_LANGUAGE_CHECK"] = "1"
-        whisper = audit_stream_with_whisper(item, sample_seconds=sample_seconds)
+        provider_probe = audit_provider(item, sample_seconds=sample_seconds)
+        whisper = provider_probe.get("whisper") or {"status": "disabled"}
     if old is None:
         os.environ.pop("WHISPER_LANGUAGE_CHECK", None)
     else:
@@ -161,6 +221,9 @@ def audit_one(item: dict, *, use_whisper: bool, sample_seconds: int) -> dict:
 
     whisper_lang = whisper.get("language") if whisper.get("status") == "ok" else None
     verdict, detected_by, confidence = verdict_from_signals(title_class, audio_lang, whisper_lang)
+    track_langs = {track.get("lang") for track in provider_probe.get("tracks", []) if track.get("lang")}
+    if verdict == "UNKNOWN" and track_langs & {"cze", "cz", "cs", "ces"}:
+        verdict, detected_by, confidence = "CZ_SUBTITLES_ONLY", "provider_tracks", 0.70
     mismatch = bool(title_class.startswith("CZ") and verdict == "NOT_CZ_AUDIO")
     if item.get("db_lang_class") in {"CZ_DUB", "CZ_NATIVE"} and verdict == "NOT_CZ_AUDIO":
         mismatch = True
@@ -185,6 +248,7 @@ def audit_one(item: dict, *, use_whisper: bool, sample_seconds: int) -> dict:
         "external_id": item.get("external_id"),
         "source_url": item.get("source_url"),
         "source_title": item.get("source_title"),
+        "provider_title": provider_title,
         "db_lang_class": item.get("db_lang_class"),
         "db_audio_lang": item.get("db_audio_lang"),
         "signals": {
@@ -193,6 +257,7 @@ def audit_one(item: dict, *, use_whisper: bool, sample_seconds: int) -> dict:
             "metadata_audio_lang": audio_lang,
             "metadata_audio_confidence": audio_conf,
             "metadata_audio_detected_by": audio_by,
+            "provider_probe": provider_probe,
             "whisper": whisper,
         },
         "verdict": verdict,
