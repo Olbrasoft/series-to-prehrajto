@@ -1,0 +1,109 @@
+name: sync
+
+on:
+  workflow_dispatch:
+    inputs:
+      batch_size:
+        description: "Number of episodes to upload in one run"
+        required: false
+        default: "5"
+      num_shards:
+        description: "Total parallel shards"
+        required: false
+        default: "1"
+      allow_subtitles:
+        description: "Allow CZ subtitle-only sources"
+        required: false
+        default: "false"
+  schedule:
+    - cron: "15 */6 * * *"
+
+jobs:
+  upload-batch:
+    name: Upload series episodes
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    permissions:
+      contents: write
+    concurrency:
+      group: series-to-prehrajto-${{ matrix.shard }}
+      cancel-in-progress: false
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [0]
+    env:
+      SYNC_NUM_SHARDS: ${{ inputs.num_shards || '1' }}
+      SYNC_SHARD_ID: ${{ matrix.shard }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: true
+
+      - name: Refresh to latest origin/main
+        run: |
+          git fetch origin main
+          git reset --hard origin/main
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Configure git for state pushes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Init log entry
+        run: |
+          mkdir -p state
+          LOG="state/sync-shard-${SYNC_SHARD_ID}.log"
+          [ "$SYNC_NUM_SHARDS" = "1" ] && LOG="state/sync.log"
+          touch "$LOG"
+          RUN_TS=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
+          RUN_URL="${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          {
+            echo ""
+            echo "===== run $RUN_TS shard=${SYNC_SHARD_ID}/${SYNC_NUM_SHARDS} batch_size=${{ inputs.batch_size }} ($RUN_URL) ====="
+          } >> "$LOG"
+
+      - name: Run sync batch
+        env:
+          PREHRAJTO_EMAIL: ${{ secrets.PREHRAJTO_EMAIL }}
+          PREHRAJTO_PASSWORD: ${{ secrets.PREHRAJTO_PASSWORD }}
+          CZ_PROXY_URL: ${{ secrets.CZ_PROXY_URL }}
+          CZ_PROXY_KEY: ${{ secrets.CZ_PROXY_KEY }}
+          WHISPER_LANGUAGE_CHECK: ${{ vars.WHISPER_LANGUAGE_CHECK || '0' }}
+        run: |
+          ARGS=("--count" "${{ inputs.batch_size || '5' }}")
+          if [ "${{ inputs.allow_subtitles || 'false' }}" = "true" ]; then
+            ARGS+=("--allow-subtitles")
+          fi
+          python src/sync_batch.py "${ARGS[@]}"
+
+      - name: Commit state + log
+        if: always()
+        run: |
+          set -e
+          STATE="state/uploaded-shard-${SYNC_SHARD_ID}.json"
+          LOG="state/sync-shard-${SYNC_SHARD_ID}.log"
+          if [ "$SYNC_NUM_SHARDS" = "1" ]; then
+            STATE="state/uploaded.json"
+            LOG="state/sync.log"
+          fi
+          mkdir -p state
+          touch "$STATE" "$LOG"
+          git add "$STATE" "$LOG"
+          if git diff --cached --quiet; then
+            echo "no state changes to commit"
+          else
+            UP_COUNT=$(python -c "import json,os; p='$STATE'; d=json.load(open(p)) if os.path.getsize(p)>0 else {}; print(len(d.get('uploads',[])))")
+            git commit -m "chore: sync series state, total uploads ${UP_COUNT}"
+            git pull --rebase origin main || true
+            git push
+          fi
