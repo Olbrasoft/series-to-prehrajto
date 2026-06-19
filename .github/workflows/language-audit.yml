@@ -1,0 +1,78 @@
+name: language-audit
+
+on:
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: "Number of queued sources to audit"
+        required: false
+        default: "50"
+      use_whisper:
+        description: "Run Whisper on supported sources"
+        required: false
+        default: "false"
+  schedule:
+    - cron: "40 */6 * * *"
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    permissions:
+      contents: write
+    concurrency:
+      group: series-to-prehrajto-0
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: true
+
+      - name: Refresh to latest origin/main
+        run: |
+          git fetch origin main
+          git reset --hard origin/main
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Install Whisper dependencies
+        if: ${{ inputs.use_whisper == 'true' }}
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg
+          pip install faster-whisper
+
+      - name: Configure git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Run language audit
+        env:
+          CZ_PROXY_URL: ${{ secrets.CZ_PROXY_URL }}
+          CZ_PROXY_KEY: ${{ secrets.CZ_PROXY_KEY }}
+        run: |
+          ARGS=("--limit" "${{ inputs.limit || '50' }}")
+          if [ "${{ inputs.use_whisper || 'false' }}" = "true" ]; then
+            ARGS+=("--use-whisper")
+          fi
+          python src/audit_language_sources.py "${ARGS[@]}"
+
+      - name: Commit audit results
+        if: always()
+        run: |
+          git add audits/language-audit.jsonl
+          if git diff --cached --quiet; then
+            echo "no audit changes"
+          else
+            git commit -m "chore: audit series source languages"
+            git pull --rebase origin main || true
+            git push
+          fi
