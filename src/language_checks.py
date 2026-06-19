@@ -18,6 +18,8 @@ CZECH_SUB_RE = re.compile(
     r"(^|[\W_])(cz\s*tit|cz titulky|cztit|ceske titulky|české titulky|cz sub|czech sub)([\W_]|$)",
     re.IGNORECASE,
 )
+_WHISPER_MODEL = None
+_WHISPER_MODEL_KEY: tuple[str, str] | None = None
 
 
 def normalize_lang(value: str | None) -> str:
@@ -89,7 +91,12 @@ def whisper_language(path: Path, *, seconds: int = 90) -> tuple[str | None, floa
         return None, None, f"unavailable: {type(exc).__name__}"
 
     model_name = os.environ.get("WHISPER_MODEL", "small")
-    model = WhisperModel(model_name, device=os.environ.get("WHISPER_DEVICE", "cpu"), compute_type="int8")
+    device = os.environ.get("WHISPER_DEVICE", "cpu")
+    global _WHISPER_MODEL, _WHISPER_MODEL_KEY
+    if _WHISPER_MODEL is None or _WHISPER_MODEL_KEY != (model_name, device):
+        _WHISPER_MODEL = WhisperModel(model_name, device=device, compute_type="int8")
+        _WHISPER_MODEL_KEY = (model_name, device)
+    model = _WHISPER_MODEL
     if path.suffix.lower() in {".wav", ".mp3", ".m4a", ".flac", ".ogg"}:
         _segments, info = model.transcribe(str(path), beam_size=1, vad_filter=True)
         return info.language, float(info.language_probability or 0.0), "ok"
