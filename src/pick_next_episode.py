@@ -43,12 +43,21 @@ def uploaded_episode_ids(state: dict) -> set[int]:
     return {int(u["episode_id"]) for u in state.get("uploads", [])}
 
 
+def episode_key(row: dict) -> tuple[int, int, int]:
+    return (int(row["series_id"]), int(row["season"]), int(row["episode"]))
+
+
+def uploaded_episode_keys(state: dict) -> set[tuple[int, int, int]]:
+    return {episode_key(u) for u in state.get("uploads", [])}
+
+
 def burned_source_ids(state: dict) -> set[int]:
     return {int(a["source_id"]) for a in state.get("failed_attempts", []) if a.get("permanent")}
 
 
 def pick_next(state: dict, rows: list[dict], extra_exclude: set[int] | None = None) -> dict | None:
     done = uploaded_episode_ids(state)
+    done_keys = uploaded_episode_keys(state)
     burned = burned_source_ids(state)
     extras = extra_exclude or set()
     for item in rows:
@@ -56,6 +65,8 @@ def pick_next(state: dict, rows: list[dict], extra_exclude: set[int] | None = No
         if NUM_SHARDS > 1 and episode_id % NUM_SHARDS != SHARD_ID:
             continue
         if episode_id in done or episode_id in extras:
+            continue
+        if episode_key(item) in done_keys:
             continue
         candidates = [c for c in item["candidates"] if int(c["source_id"]) not in burned]
         if not candidates:
