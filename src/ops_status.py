@@ -87,6 +87,7 @@ def whisper_status(row: dict) -> str:
 
 def main() -> int:
     backlog = load_jsonl(REPO / "backlog" / "series-episodes.jsonl.gz")
+    manifest = load_jsonl(REPO / "manifests" / "upload-ready.jsonl.gz")
     source_queue = load_jsonl(REPO / "backlog" / "language-audit-queue.jsonl.gz")
     state = load_json(REPO / "state" / "uploaded.json")
     descriptions = load_jsonl(REPO / "plans" / "descriptions.jsonl")
@@ -113,6 +114,7 @@ def main() -> int:
     report = {
         "counts": {
             "backlog_episodes": len(backlog_episode_ids),
+            "manifest_upload_ready_episodes": len({int(row["episode_id"]) for row in manifest}),
             "uploaded_episodes": len(uploaded_episode_ids),
             "prepared_source_episodes": len(prepared_episode_ids),
             "description_series": len(desc_series),

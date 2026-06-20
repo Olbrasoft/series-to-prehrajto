@@ -89,6 +89,9 @@ def load_description_plans(path: Path = DESCRIPTIONS) -> dict[str, dict[int, dic
 
 
 def prepared_description(episode: dict, plans: dict[str, dict[int, dict]]) -> str | None:
+    manifest_description = ((episode.get("upload_manifest") or {}).get("description") or {}).get("text")
+    if manifest_description:
+        return manifest_description
     ep = plans["episode"].get(int(episode["episode_id"]))
     if ep and ep.get("generated_description"):
         return ep["generated_description"]

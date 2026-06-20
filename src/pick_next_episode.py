@@ -10,7 +10,20 @@ import sys
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
-BACKLOG = REPO_ROOT / "backlog" / "series-episodes.jsonl.gz"
+DEFAULT_BACKLOG = REPO_ROOT / "backlog" / "series-episodes.jsonl.gz"
+DEFAULT_MANIFEST = REPO_ROOT / "manifests" / "upload-ready.jsonl.gz"
+
+
+def default_backlog_path() -> Path:
+    env_path = os.environ.get("UPLOAD_BACKLOG_PATH")
+    if env_path:
+        return Path(env_path)
+    if DEFAULT_MANIFEST.exists():
+        return DEFAULT_MANIFEST
+    return DEFAULT_BACKLOG
+
+
+BACKLOG = default_backlog_path()
 
 NUM_SHARDS = int(os.environ.get("SYNC_NUM_SHARDS", "1"))
 SHARD_ID = int(os.environ.get("SYNC_SHARD_ID", "0"))

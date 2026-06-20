@@ -1,0 +1,170 @@
+name: prepare-manifest
+
+on:
+  workflow_dispatch:
+    inputs:
+      series_limit:
+        description: "Number of series to export"
+        required: false
+        default: "80"
+      episode_limit:
+        description: "Number of episodes to prepare in advance"
+        required: false
+        default: "1000"
+      source_limit_per_episode:
+        description: "Number of sources to check per episode"
+        required: false
+        default: "12"
+      use_whisper:
+        description: "Run Whisper while preparing selected sources"
+        required: false
+        default: "false"
+  schedule:
+    - cron: "10 */4 * * *"
+
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    permissions:
+      contents: write
+      actions: write
+    concurrency:
+      group: series-to-prehrajto-prepare-manifest
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: true
+
+      - name: Refresh to latest origin/main
+        run: |
+          git fetch origin main
+          git reset --hard origin/main
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y openssh-client
+          pip install -r requirements.txt
+
+      - name: Install Whisper dependencies
+        if: ${{ inputs.use_whisper == 'true' }}
+        run: |
+          sudo apt-get install -y ffmpeg
+          pip install faster-whisper
+
+      - name: Configure git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Open production DB tunnel
+        env:
+          HETZNER_SSH_PRIVATE_KEY: ${{ secrets.HETZNER_SSH_PRIVATE_KEY }}
+        run: |
+          if [ -z "$HETZNER_SSH_PRIVATE_KEY" ]; then
+            echo "HETZNER_SSH_PRIVATE_KEY secret is missing"
+            exit 2
+          fi
+          mkdir -p ~/.ssh
+          chmod 700 ~/.ssh
+          printf '%s\n' "$HETZNER_SSH_PRIVATE_KEY" > ~/.ssh/hetzner_cr
+          chmod 600 ~/.ssh/hetzner_cr
+          ssh-keyscan -p 2222 46.225.101.253 >> ~/.ssh/known_hosts
+          ssh -i ~/.ssh/hetzner_cr \
+            -p 2222 \
+            -fN \
+            -L 15432:127.0.0.1:5432 \
+            -o ExitOnForwardFailure=yes \
+            -o ServerAliveInterval=30 \
+            root@46.225.101.253
+
+      - name: Export large backlog and language queue
+        env:
+          DATABASE_URL: ${{ secrets.PRODUCTION_DATABASE_URL }}
+        run: |
+          if [ -z "$DATABASE_URL" ]; then
+            echo "PRODUCTION_DATABASE_URL secret is missing"
+            exit 2
+          fi
+          python src/export_backlog.py \
+            --series-limit "${{ inputs.series_limit || '80' }}" \
+            --episode-limit "${{ inputs.episode_limit || '1000' }}" \
+            --source-limit-per-episode "${{ inputs.source_limit_per_episode || '12' }}"
+          python src/export_language_audit_queue.py \
+            --episode-limit "${{ inputs.episode_limit || '1000' }}" \
+            --source-limit-per-episode "${{ inputs.source_limit_per_episode || '12' }}"
+
+      - name: Prepare source choices
+        env:
+          CZ_PROXY_URL: ${{ secrets.CZ_PROXY_URL }}
+          CZ_PROXY_KEY: ${{ secrets.CZ_PROXY_KEY }}
+        run: |
+          ARGS=(
+            "--episode-limit" "${{ inputs.episode_limit || '1000' }}"
+            "--source-limit-per-episode" "${{ inputs.source_limit_per_episode || '12' }}"
+          )
+          if [ "${{ inputs.use_whisper || 'false' }}" = "true" ]; then
+            ARGS+=("--use-whisper")
+          fi
+          python src/prepare_episode_sources.py "${ARGS[@]}"
+
+      - name: Prepare original descriptions
+        env:
+          GEMINI_API_KEYS: ${{ secrets.GEMINI_API_KEYS }}
+          GEMINI_MODEL: gemini-2.5-flash-lite
+        run: |
+          python src/prepare_descriptions.py \
+            --series-limit "${{ inputs.series_limit || '80' }}" \
+            --episode-limit "${{ inputs.episode_limit || '1000' }}" \
+            --workers 4
+
+      - name: Build upload manifest
+        run: |
+          python src/build_upload_manifest.py \
+            --limit "${{ inputs.episode_limit || '1000' }}"
+          python src/ops_status.py
+
+      - name: Commit manifest preparation
+        if: always()
+        run: |
+          git add \
+            backlog/series-episodes.jsonl.gz \
+            backlog/language-audit-queue.jsonl.gz \
+            plans/prepared-episodes.jsonl \
+            plans/descriptions.jsonl \
+            audits/language-audit.jsonl \
+            manifests/upload-ready.jsonl.gz \
+            reports/upload-manifest.json \
+            reports/ops-status.json
+          if git diff --cached --quiet; then
+            echo "no manifest preparation changes"
+          else
+            git commit -m "chore: prepare upload manifest"
+            git pull --rebase origin main || true
+            git push
+          fi
+
+      - name: Queue upload from manifest
+        if: success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git fetch origin main
+          git reset --hard origin/main
+          if python src/upload_queue_status.py; then
+            gh workflow run sync.yml \
+              -f batch_size="5" \
+              -f num_shards="1" \
+              -f allow_subtitles="false" \
+              -f continue_uploads="true"
+          else
+            echo "manifest has no upload-ready episodes"
+          fi

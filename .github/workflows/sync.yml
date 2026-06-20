@@ -136,9 +136,10 @@ jobs:
               -f allow_subtitles="${{ inputs.allow_subtitles || 'false' }}" \
               -f continue_uploads="true"
           else
-            echo "no prepared upload-ready episodes remain; queueing source preparation"
-            gh workflow run prepare-sources.yml \
-              -f episode_limit="60" \
+            echo "no prepared upload-ready episodes remain; queueing manifest preparation"
+            gh workflow run prepare-manifest.yml \
+              -f series_limit="80" \
+              -f episode_limit="1000" \
               -f source_limit_per_episode="12" \
               -f use_whisper="false"
           fi
