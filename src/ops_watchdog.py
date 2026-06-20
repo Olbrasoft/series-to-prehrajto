@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import gzip
 import json
 import subprocess
 import sys
@@ -39,6 +40,36 @@ def load_report() -> dict:
     if not REPORT.exists():
         return {}
     return json.loads(REPORT.read_text(encoding="utf-8"))
+
+
+def load_jsonl(path: Path) -> list[dict]:
+    if not path.exists() or path.stat().st_size == 0:
+        return []
+    opener = gzip.open if path.suffix == ".gz" else open
+    with opener(path, "rt", encoding="utf-8") as fh:
+        return [json.loads(line) for line in fh if line.strip()]
+
+
+def prepared_episode_ids() -> set[int]:
+    return {
+        int(row["episode_id"])
+        for row in load_jsonl(REPO / "plans" / "prepared-episodes.jsonl")
+        if row.get("episode_id") is not None
+    }
+
+
+def unprepared_source_queue_episodes() -> int:
+    done = prepared_episode_ids()
+    queue_episode_ids = {
+        int(row["episode_id"])
+        for path in (
+            REPO / "backlog" / "language-audit-queue.jsonl.gz",
+            REPO / "backlog" / "series-episodes.jsonl.gz",
+        )
+        for row in load_jsonl(path)
+        if row.get("episode_id") is not None
+    }
+    return len(queue_episode_ids - done)
 
 
 def queue_workflow(workflow: str, fields: dict[str, str], *, active: set[str], dry_run: bool) -> bool:
@@ -78,6 +109,7 @@ def main() -> int:
     manifest_ready = int(counts.get("manifest_upload_ready_episodes") or 0)
     prepared_source_episodes = int(counts.get("prepared_source_episodes") or 0)
     language_queue_sources = int(counts.get("language_queue_sources") or 0)
+    unprepared_queue_episodes = unprepared_source_queue_episodes()
     pending_whisper = int(counts.get("language_pending_whisper_sources") or 0)
     description_gap = len(gaps.get("backlog_without_episode_description") or [])
     uploaded_needing_desc_update = len(gaps.get("uploaded_not_marked_description_updated") or [])
@@ -92,6 +124,7 @@ def main() -> int:
                 "prepared_source_episodes": prepared_source_episodes,
                 "target_prepared_episodes": args.target_prepared_episodes,
                 "language_queue_sources": language_queue_sources,
+                "unprepared_source_queue_episodes": unprepared_queue_episodes,
                 "language_pending_whisper_sources": pending_whisper,
                 "description_gap_sample": description_gap,
                 "uploaded_needing_description_update": uploaded_needing_desc_update,
@@ -120,8 +153,9 @@ def main() -> int:
 
     if prepared_source_episodes < args.target_prepared_episodes:
         missing_prepared = args.target_prepared_episodes - prepared_source_episodes
-        if language_queue_sources < args.min_language_queue_sources:
-            queue_workflow(
+        queued_refresh = False
+        if language_queue_sources < args.min_language_queue_sources or unprepared_queue_episodes < min(args.prepare_sources_batch, missing_prepared):
+            queued_refresh = queue_workflow(
                 "refresh-backlog",
                 {
                     "series_limit": str(max(args.target_series * 3, args.target_series)),
@@ -131,16 +165,17 @@ def main() -> int:
                 active=active,
                 dry_run=args.dry_run,
             )
-        queue_workflow(
-            "prepare-sources",
-            {
-                "episode_limit": str(min(args.prepare_sources_batch, missing_prepared)),
-                "source_limit_per_episode": "12",
-                "use_whisper": "false",
-            },
-            active=active,
-            dry_run=args.dry_run,
-        )
+        if not queued_refresh:
+            queue_workflow(
+                "prepare-sources",
+                {
+                    "episode_limit": str(min(args.prepare_sources_batch, missing_prepared)),
+                    "source_limit_per_episode": "12",
+                    "use_whisper": "false",
+                },
+                active=active,
+                dry_run=args.dry_run,
+            )
 
     if upload_ready > 0:
         queue_workflow(
