@@ -61,6 +61,7 @@ jobs:
             --episode-limit "${{ inputs.episode_limit || '300' }}" \
             --workers 4 \
             --retries 2 \
+            --replace-fallback \
             ${{ (inputs.fallback_on_error || 'true') == 'true' && '--fallback-on-error' || '' }}
 
       - name: Verify saved descriptions

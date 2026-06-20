@@ -48,7 +48,7 @@ def source_hash(text: str) -> str:
     return hashlib.sha256(text.encode("utf-8")).hexdigest()
 
 
-def existing_ok(path: Path) -> set[tuple[str, int, str]]:
+def existing_ok(path: Path, *, replace_fallback: bool = False) -> set[tuple[str, int, str]]:
     out: set[tuple[str, int, str]] = set()
     if not path.exists():
         return out
@@ -58,6 +58,8 @@ def existing_ok(path: Path) -> set[tuple[str, int, str]]:
                 continue
             row = json.loads(line)
             if row.get("status") != "ok":
+                continue
+            if replace_fallback and row.get("model") == "fallback-template-v1":
                 continue
             kind = row.get("kind")
             entity_id = row.get("episode_id") if kind == "episode" else row.get("series_id")
@@ -196,10 +198,15 @@ def main() -> int:
     ap.add_argument("--model", default=DEFAULT_MODEL)
     ap.add_argument("--retries", type=int, default=3)
     ap.add_argument("--fallback-on-error", action="store_true")
+    ap.add_argument(
+        "--replace-fallback",
+        action="store_true",
+        help="Treat temporary fallback descriptions as missing so later runs can replace them with model output.",
+    )
     args = ap.parse_args()
 
     rows = load_jsonl(Path(args.backlog))
-    done = existing_ok(Path(args.out))
+    done = existing_ok(Path(args.out), replace_fallback=args.replace_fallback)
     tasks = build_tasks(rows, done, series_limit=args.series_limit, episode_limit=args.episode_limit)
     keys = api_keys()
     results: list[dict] = []
