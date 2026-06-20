@@ -74,11 +74,28 @@ jobs:
       - name: Commit audit results
         if: always()
         run: |
+          TMP_DIR="$(mktemp -d)"
+          mkdir -p "$TMP_DIR/audits"
+          cp audits/language-audit.jsonl "$TMP_DIR/audits/" 2>/dev/null || true
+          cp audits/language-audit-latest.jsonl "$TMP_DIR/audits/" 2>/dev/null || true
+          git fetch origin main
+          git reset --hard origin/main
+          mkdir -p audits
+          cp "$TMP_DIR"/audits/* audits/ 2>/dev/null || true
           git add audits/language-audit.jsonl audits/language-audit-latest.jsonl
           if git diff --cached --quiet; then
             echo "no language audit changes"
           else
             git commit -m "chore: audit source languages"
-            git pull --rebase origin main || true
-            git push
+            for attempt in 1 2 3 4 5; do
+              if git push origin HEAD:main; then
+                exit 0
+              fi
+              git fetch origin main
+              git reset --soft origin/main
+              git commit -m "chore: audit source languages" || true
+              sleep $((attempt * 2))
+            done
+            echo "failed to push language audit after retries"
+            exit 1
           fi
