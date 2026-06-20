@@ -44,8 +44,9 @@ def normalize_url(url: str | None) -> str | None:
 
 
 def fetch_rows(conn, *, series_limit: int, episode_limit: int, source_limit_per_episode: int) -> list[dict[str, Any]]:
-    sql = """
-        WITH selected_series AS (
+    with conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor) as cur:
+        cur.execute(
+            """
             SELECT
                 s.id,
                 s.title,
@@ -58,71 +59,113 @@ def fetch_rows(conn, *, series_limit: int, episode_limit: int, source_limit_per_
                 s.tmdb_id,
                 s.imdb_rating,
                 s.imdb_votes,
-                s.csfd_rating,
-                row_number() OVER (
-                    ORDER BY coalesce(s.imdb_votes, 0) DESC,
-                             coalesce(s.imdb_rating, 0) DESC,
-                             coalesce(s.csfd_rating, 0) DESC,
-                             s.id
-                ) AS series_rank
+                s.csfd_rating
             FROM series s
-            WHERE EXISTS (
-                SELECT 1
+            ORDER BY
+                coalesce(s.imdb_votes, 0) DESC,
+                coalesce(s.imdb_rating, 0) DESC,
+                coalesce(s.csfd_rating, 0) DESC,
+                s.id
+            LIMIT %s
+            """,
+            (max(series_limit * 4, series_limit),),
+        )
+        series_rows = list(cur.fetchall())
+
+    rows: list[dict[str, Any]] = []
+    episode_count = 0
+    for series_rank, series_row in enumerate(series_rows, start=1):
+        if episode_count >= episode_limit:
+            break
+        if series_rank > series_limit * 4:
+            break
+        remaining = episode_limit - episode_count
+        with conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor) as cur:
+            cur.execute(
+                """
+                SELECT
+                    e.*,
+                    %(series_rank)s AS series_rank,
+                    %(series_title)s AS series_title,
+                    %(series_original_title)s AS series_original_title,
+                    %(series_slug)s AS series_slug,
+                    %(first_air_year)s AS first_air_year,
+                    %(series_description)s AS series_description,
+                    %(series_overview_en)s AS series_overview_en,
+                    %(imdb_id)s AS imdb_id,
+                    %(tmdb_id)s AS tmdb_id,
+                    %(imdb_rating)s AS imdb_rating,
+                    %(imdb_votes)s AS imdb_votes,
+                    %(csfd_rating)s AS csfd_rating
                 FROM episodes e
-                JOIN video_sources vs ON vs.episode_id = e.id
-                WHERE e.series_id = s.id
-                  AND vs.provider_id = 2
-                  AND vs.is_alive
-                  AND vs.lang_class = ANY(%s)
-                  AND vs.metadata ? 'url'
+                WHERE e.series_id = %(series_id)s
+                  AND EXISTS (
+                      SELECT 1
+                      FROM video_sources vs
+                      WHERE vs.episode_id = e.id
+                        AND vs.provider_id = 2
+                        AND vs.is_alive
+                        AND vs.lang_class = ANY(%(lang_classes)s)
+                        AND vs.metadata ? 'url'
+                  )
+                ORDER BY e.season NULLS LAST, e.episode NULLS LAST, e.id
+                LIMIT %(remaining)s
+                """,
+                {
+                    "series_id": series_row["id"],
+                    "series_rank": series_rank,
+                    "series_title": series_row["title"],
+                    "series_original_title": series_row["original_title"],
+                    "series_slug": series_row["slug"],
+                    "first_air_year": series_row["first_air_year"],
+                    "series_description": series_row["description"],
+                    "series_overview_en": series_row["tmdb_overview_en"],
+                    "imdb_id": series_row["imdb_id"],
+                    "tmdb_id": series_row["tmdb_id"],
+                    "imdb_rating": series_row["imdb_rating"],
+                    "imdb_votes": series_row["imdb_votes"],
+                    "csfd_rating": series_row["csfd_rating"],
+                    "lang_classes": list(LANG_CLASSES),
+                    "remaining": remaining,
+                },
             )
-            LIMIT %s
-        ),
-        selected_episodes AS (
-            SELECT
-                e.*,
-                ss.series_rank,
-                ss.title AS series_title,
-                ss.original_title AS series_original_title,
-                ss.slug AS series_slug,
-                ss.first_air_year,
-                ss.description AS series_description,
-                ss.tmdb_overview_en AS series_overview_en,
-                ss.imdb_id,
-                ss.tmdb_id,
-                ss.imdb_rating,
-                ss.imdb_votes,
-                ss.csfd_rating
-            FROM selected_series ss
-            JOIN episodes e ON e.series_id = ss.id
-            WHERE EXISTS (
-                SELECT 1
-                FROM video_sources vs
-                WHERE vs.episode_id = e.id
-                  AND vs.provider_id = 2
-                  AND vs.is_alive
-                  AND vs.lang_class = ANY(%s)
-                  AND vs.metadata ? 'url'
-            )
-            ORDER BY ss.series_rank, e.season NULLS LAST, e.episode NULLS LAST, e.id
-            LIMIT %s
-        ),
-        ranked_sources AS (
-            SELECT
-                se.*,
-                vs.id AS source_id,
-                vs.external_id,
-                vs.title AS source_title,
-                vs.duration_sec AS source_duration_sec,
-                vs.resolution_hint,
-                vs.filesize_bytes,
-                vs.view_count,
-                vs.lang_class,
-                vs.audio_lang,
-                vs.audio_confidence,
-                vs.metadata->>'url' AS source_url,
-                row_number() OVER (
-                    PARTITION BY se.id
+            episode_rows = list(cur.fetchall())
+        for episode_row in episode_rows:
+            if episode_count >= episode_limit:
+                break
+            with conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor) as cur:
+                cur.execute(
+                    """
+                    SELECT
+                        vs.id AS source_id,
+                        vs.external_id,
+                        vs.title AS source_title,
+                        vs.duration_sec AS source_duration_sec,
+                        vs.resolution_hint,
+                        vs.filesize_bytes,
+                        vs.view_count,
+                        vs.lang_class,
+                        vs.audio_lang,
+                        vs.audio_confidence,
+                        vs.metadata->>'url' AS source_url,
+                        row_number() OVER (
+                            ORDER BY
+                                CASE vs.lang_class WHEN 'CZ_DUB' THEN 0 WHEN 'CZ_NATIVE' THEN 1 ELSE 2 END,
+                                CASE
+                                    WHEN coalesce(vs.resolution_hint, '') ~* '(2160|4k|uhd)' THEN 4
+                                    WHEN coalesce(vs.resolution_hint, '') ~* '1080|full.?hd' THEN 3
+                                    WHEN coalesce(vs.resolution_hint, '') ~* '720|hd' THEN 2
+                                    ELSE 0
+                                END DESC,
+                                coalesce(vs.view_count, 0) DESC,
+                                vs.id
+                        ) AS source_rank
+                    FROM video_sources vs
+                    WHERE vs.episode_id = %s
+                      AND vs.provider_id = 2
+                      AND vs.is_alive
+                      AND vs.lang_class = ANY(%s)
+                      AND vs.metadata ? 'url'
                     ORDER BY
                         CASE vs.lang_class WHEN 'CZ_DUB' THEN 0 WHEN 'CZ_NATIVE' THEN 1 ELSE 2 END,
                         CASE
@@ -133,30 +176,17 @@ def fetch_rows(conn, *, series_limit: int, episode_limit: int, source_limit_per_
                         END DESC,
                         coalesce(vs.view_count, 0) DESC,
                         vs.id
-                ) AS source_rank
-            FROM selected_episodes se
-            JOIN video_sources vs ON vs.episode_id = se.id
-            WHERE vs.provider_id = 2
-              AND vs.is_alive
-              AND vs.lang_class = ANY(%s)
-              AND vs.metadata ? 'url'
-        )
-        SELECT *
-        FROM ranked_sources
-        WHERE source_rank <= %s
-        ORDER BY series_rank, season NULLS LAST, episode NULLS LAST, id, source_rank;
-    """
-    params = (
-        list(LANG_CLASSES),
-        series_limit,
-        list(LANG_CLASSES),
-        episode_limit,
-        list(LANG_CLASSES),
-        source_limit_per_episode,
-    )
-    with conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor) as cur:
-        cur.execute(sql, params)
-        return list(cur.fetchall())
+                    LIMIT %s
+                    """,
+                    (episode_row["id"], list(LANG_CLASSES), source_limit_per_episode),
+                )
+                source_rows = list(cur.fetchall())
+            if not source_rows:
+                continue
+            episode_count += 1
+            for source_row in source_rows:
+                rows.append({**episode_row, **source_row})
+    return rows
 
 
 def resolution_score(value: str | None) -> int:

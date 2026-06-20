@@ -100,7 +100,8 @@ jobs:
             --source-limit-per-episode "${{ inputs.source_limit_per_episode || '12' }}"
           python src/export_language_audit_queue.py \
             --episode-limit "${{ inputs.episode_limit || '1000' }}" \
-            --source-limit-per-episode "${{ inputs.source_limit_per_episode || '12' }}"
+            --source-limit-per-episode "${{ inputs.source_limit_per_episode || '12' }}" \
+            || echo "language audit queue export failed; continuing with upload backlog sources"
 
       - name: Prepare source choices
         env:
