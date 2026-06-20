@@ -17,12 +17,14 @@ import os
 import re
 import sys
 from collections import defaultdict
+from pathlib import Path
 from typing import Any
 
 import psycopg2
 import psycopg2.extras
 
 LANG_CLASSES = ("CZ_DUB", "CZ_NATIVE", "CZ_SUB")
+REPO_ROOT = Path(__file__).resolve().parent.parent
 
 
 def json_default(value: Any) -> Any:
@@ -53,7 +55,33 @@ def normalize_url(url: str | None) -> str | None:
     return url.replace("https://prehrajto.cz/", "https://prehraj.to/")
 
 
-def fetch_rows(conn, *, series_limit: int, episode_limit: int, source_limit_per_episode: int) -> list[dict[str, Any]]:
+def load_uploaded_exclusions() -> tuple[set[int], set[str]]:
+    episode_ids: set[int] = set()
+    episode_keys: set[str] = set()
+    for path in sorted((REPO_ROOT / "state").glob("uploaded*.json")):
+        if not path.exists() or path.stat().st_size == 0:
+            continue
+        try:
+            data = json.loads(path.read_text(encoding="utf-8"))
+        except json.JSONDecodeError:
+            continue
+        for upload in data.get("uploads", []):
+            if upload.get("episode_id") is not None:
+                episode_ids.add(int(upload["episode_id"]))
+            if upload.get("series_id") is not None and upload.get("season") is not None and upload.get("episode") is not None:
+                episode_keys.add(f"{int(upload['series_id'])}:{int(upload['season'])}:{int(upload['episode'])}")
+    return episode_ids, episode_keys
+
+
+def fetch_rows(
+    conn,
+    *,
+    series_limit: int,
+    episode_limit: int,
+    source_limit_per_episode: int,
+    uploaded_episode_ids: set[int],
+    uploaded_episode_keys: set[str],
+) -> list[dict[str, Any]]:
     with conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor) as cur:
         cur.execute(
             """
@@ -109,6 +137,11 @@ def fetch_rows(conn, *, series_limit: int, episode_limit: int, source_limit_per_
                     %(csfd_rating)s AS csfd_rating
                 FROM episodes e
                 WHERE e.series_id = %(series_id)s
+                  AND NOT (e.id = ANY(%(uploaded_episode_ids)s))
+                  AND NOT (
+                      e.series_id::text || ':' || coalesce(e.season, -1)::text || ':' || coalesce(e.episode, -1)::text
+                      = ANY(%(uploaded_episode_keys)s)
+                  )
                   AND EXISTS (
                       SELECT 1
                       FROM video_sources vs
@@ -137,6 +170,8 @@ def fetch_rows(conn, *, series_limit: int, episode_limit: int, source_limit_per_
                     "csfd_rating": series_row["csfd_rating"],
                     "lang_classes": list(LANG_CLASSES),
                     "remaining": remaining,
+                    "uploaded_episode_ids": list(uploaded_episode_ids),
+                    "uploaded_episode_keys": list(uploaded_episode_keys),
                 },
             )
             episode_rows = list(cur.fetchall())
@@ -287,6 +322,7 @@ def main() -> int:
         print("ERROR: --db-url or DATABASE_URL required", file=sys.stderr)
         return 2
 
+    uploaded_episode_ids, uploaded_episode_keys = load_uploaded_exclusions()
     conn = psycopg2.connect(args.db_url)
     try:
         rows = fetch_rows(
@@ -294,6 +330,8 @@ def main() -> int:
             series_limit=args.series_limit,
             episode_limit=args.episode_limit,
             source_limit_per_episode=args.source_limit_per_episode,
+            uploaded_episode_ids=uploaded_episode_ids,
+            uploaded_episode_keys=uploaded_episode_keys,
         )
     finally:
         conn.close()
@@ -312,6 +350,7 @@ def main() -> int:
     for title, count in counts.items():
         print(f"  {title}: {count}")
     print(f"  total candidate sources: {sum(len(e['candidates']) for e in episodes)}")
+    print(f"  excluded uploaded episodes: ids={len(uploaded_episode_ids)} keys={len(uploaded_episode_keys)}")
     return 0
 
 
