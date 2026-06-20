@@ -6,13 +6,17 @@ on:
       series_limit:
         description: "Number of series descriptions to prepare"
         required: false
-        default: "8"
+        default: "40"
       episode_limit:
         description: "Number of episode descriptions to prepare"
         required: false
-        default: "30"
+        default: "300"
+      fallback_on_error:
+        description: "Store temporary fallback descriptions when Gemini fails"
+        required: false
+        default: "true"
   schedule:
-    - cron: "25 */6 * * *"
+    - cron: "*/30 * * * *"
 
 jobs:
   prepare:
@@ -53,9 +57,33 @@ jobs:
           GEMINI_MODEL: gemini-2.5-flash-lite
         run: |
           python src/prepare_descriptions.py \
-            --series-limit "${{ inputs.series_limit || '8' }}" \
-            --episode-limit "${{ inputs.episode_limit || '30' }}" \
-            --workers 4
+            --series-limit "${{ inputs.series_limit || '40' }}" \
+            --episode-limit "${{ inputs.episode_limit || '300' }}" \
+            --workers 4 \
+            --retries 2 \
+            ${{ (inputs.fallback_on_error || 'true') == 'true' && '--fallback-on-error' || '' }}
+
+      - name: Verify saved descriptions
+        if: always()
+        run: |
+          python - <<'PY'
+          import json
+          from collections import Counter
+          from pathlib import Path
+
+          path = Path("plans/descriptions.jsonl")
+          rows = [json.loads(line) for line in path.read_text(encoding="utf-8").splitlines() if line.strip()] if path.exists() else []
+          counts = Counter(row.get("status") for row in rows)
+          models = Counter(row.get("model") for row in rows)
+          episode_ok = {int(row["episode_id"]) for row in rows if row.get("status") == "ok" and row.get("kind") == "episode" and row.get("episode_id") is not None}
+          series_ok = {int(row["series_id"]) for row in rows if row.get("status") == "ok" and row.get("kind") == "series" and row.get("series_id") is not None}
+          print(f"descriptions_total={len(rows)}")
+          print(f"descriptions_ok={counts.get('ok', 0)}")
+          print(f"descriptions_error={counts.get('error', 0)}")
+          print(f"episode_descriptions_ok={len(episode_ok)}")
+          print(f"series_descriptions_ok={len(series_ok)}")
+          print("description_models=" + json.dumps(dict(models.most_common(10)), ensure_ascii=False))
+          PY
 
       - name: Commit descriptions
         if: always()

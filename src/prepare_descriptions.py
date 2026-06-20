@@ -194,6 +194,7 @@ def main() -> int:
     ap.add_argument("--episode-limit", type=int, default=30)
     ap.add_argument("--workers", type=int, default=4)
     ap.add_argument("--model", default=DEFAULT_MODEL)
+    ap.add_argument("--retries", type=int, default=3)
     ap.add_argument("--fallback-on-error", action="store_true")
     args = ap.parse_args()
 
@@ -204,7 +205,14 @@ def main() -> int:
     results: list[dict] = []
     with ThreadPoolExecutor(max_workers=max(1, args.workers)) as ex:
         futures = [
-            ex.submit(generate, task, keys[i % len(keys)], args.model, fallback_on_error=args.fallback_on_error)
+            ex.submit(
+                generate,
+                task,
+                keys[i % len(keys)],
+                args.model,
+                retries=args.retries,
+                fallback_on_error=args.fallback_on_error,
+            )
             for i, task in enumerate(tasks)
         ]
         for fut in as_completed(futures):

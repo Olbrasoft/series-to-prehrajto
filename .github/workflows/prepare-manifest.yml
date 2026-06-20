@@ -126,6 +126,7 @@ jobs:
             --series-limit "${{ inputs.series_limit || '80' }}" \
             --episode-limit "${{ inputs.episode_limit || '1000' }}" \
             --workers 4 \
+            --retries 1 \
             --fallback-on-error
 
       - name: Build upload manifest
