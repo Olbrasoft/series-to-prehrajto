@@ -1,0 +1,60 @@
+name: ops-watchdog
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "*/10 * * * *"
+
+jobs:
+  watchdog:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
+      actions: write
+    concurrency:
+      group: series-to-prehrajto-watchdog
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: true
+
+      - name: Refresh to latest origin/main
+        run: |
+          git fetch origin main
+          git reset --hard origin/main
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Configure git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Check and queue work
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python src/ops_watchdog.py \
+            --min-upload-ready 200 \
+            --target-episodes 1000 \
+            --target-series 80 \
+            --min-pending-whisper 100 \
+            --min-description-gap 50
+
+      - name: Commit watchdog status
+        if: always()
+        run: |
+          git add reports/ops-status.json
+          if git diff --cached --quiet; then
+            echo "no watchdog status changes"
+          else
+            git commit -m "chore: update watchdog status"
+            git pull --rebase origin main || true
+            git push
+          fi
