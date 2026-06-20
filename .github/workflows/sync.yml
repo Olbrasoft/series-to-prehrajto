@@ -87,7 +87,7 @@ jobs:
           REQUIRE_PREPARED_DESCRIPTIONS: "1"
           REQUIRE_PREPARED_SOURCES: "1"
         run: |
-          ARGS=("--count" "${{ inputs.batch_size || '5' }}")
+          ARGS=("--count" "${{ inputs.batch_size || '20' }}")
           if [ "${{ inputs.allow_subtitles || 'false' }}" = "true" ]; then
             ARGS+=("--allow-subtitles")
           fi
@@ -111,8 +111,15 @@ jobs:
           else
             UP_COUNT=$(python -c "import json,os; p='$STATE'; d=json.load(open(p)) if os.path.getsize(p)>0 else {}; print(len(d.get('uploads',[])))")
             git commit -m "chore: sync series state, total uploads ${UP_COUNT}"
-            git pull --rebase origin main || true
-            git push
+            for attempt in 1 2 3 4 5; do
+              git pull --rebase origin main || true
+              if git push; then
+                exit 0
+              fi
+              sleep $((attempt * 2))
+            done
+            echo "failed to push state after retries"
+            exit 1
           fi
 
       - name: Queue next upload batch
