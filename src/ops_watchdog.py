@@ -60,6 +60,9 @@ def main() -> int:
     ap.add_argument("--emergency-episodes", type=int, default=240)
     ap.add_argument("--small-ready-target", type=int, default=120)
     ap.add_argument("--target-series", type=int, default=80)
+    ap.add_argument("--target-prepared-episodes", type=int, default=5000)
+    ap.add_argument("--min-language-queue-sources", type=int, default=1000)
+    ap.add_argument("--prepare-sources-batch", type=int, default=500)
     ap.add_argument("--min-pending-whisper", type=int, default=100)
     ap.add_argument("--min-description-gap", type=int, default=50)
     ap.add_argument("--dry-run", action="store_true")
@@ -73,6 +76,8 @@ def main() -> int:
     upload_ready = len(upload_ready_rows())
     backlog_count = int(counts.get("backlog_episodes") or 0)
     manifest_ready = int(counts.get("manifest_upload_ready_episodes") or 0)
+    prepared_source_episodes = int(counts.get("prepared_source_episodes") or 0)
+    language_queue_sources = int(counts.get("language_queue_sources") or 0)
     pending_whisper = int(counts.get("language_pending_whisper_sources") or 0)
     description_gap = len(gaps.get("backlog_without_episode_description") or [])
     uploaded_needing_desc_update = len(gaps.get("uploaded_not_marked_description_updated") or [])
@@ -84,6 +89,9 @@ def main() -> int:
                 "upload_ready_remaining": upload_ready,
                 "backlog_episodes": backlog_count,
                 "manifest_upload_ready_episodes": manifest_ready,
+                "prepared_source_episodes": prepared_source_episodes,
+                "target_prepared_episodes": args.target_prepared_episodes,
+                "language_queue_sources": language_queue_sources,
                 "language_pending_whisper_sources": pending_whisper,
                 "description_gap_sample": description_gap,
                 "uploaded_needing_description_update": uploaded_needing_desc_update,
@@ -103,6 +111,30 @@ def main() -> int:
             {
                 "series_limit": str(prepare_series_target),
                 "episode_limit": str(prepare_episode_target),
+                "source_limit_per_episode": "12",
+                "use_whisper": "false",
+            },
+            active=active,
+            dry_run=args.dry_run,
+        )
+
+    if prepared_source_episodes < args.target_prepared_episodes:
+        missing_prepared = args.target_prepared_episodes - prepared_source_episodes
+        if language_queue_sources < args.min_language_queue_sources:
+            queue_workflow(
+                "refresh-backlog",
+                {
+                    "series_limit": str(max(args.target_series * 3, args.target_series)),
+                    "episode_limit": str(args.target_prepared_episodes),
+                    "source_limit_per_episode": "12",
+                },
+                active=active,
+                dry_run=args.dry_run,
+            )
+        queue_workflow(
+            "prepare-sources",
+            {
+                "episode_limit": str(min(args.prepare_sources_batch, missing_prepared)),
                 "source_limit_per_episode": "12",
                 "use_whisper": "false",
             },

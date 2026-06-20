@@ -6,7 +6,7 @@ on:
       episode_limit:
         description: "Number of episodes to prepare"
         required: false
-        default: "10"
+        default: "300"
       source_limit_per_episode:
         description: "Number of sources to check per episode"
         required: false
@@ -20,7 +20,7 @@ on:
         required: false
         default: "false"
   schedule:
-    - cron: "35 */6 * * *"
+    - cron: "35 * * * *"
 
 jobs:
   prepare:
@@ -69,7 +69,7 @@ jobs:
           CZ_PROXY_KEY: ${{ secrets.CZ_PROXY_KEY }}
         run: |
           ARGS=(
-            "--episode-limit" "${{ inputs.episode_limit || '10' }}"
+            "--episode-limit" "${{ inputs.episode_limit || '300' }}"
             "--source-limit-per-episode" "${{ inputs.source_limit_per_episode || '12' }}"
           )
           if [ -n "${{ inputs.series_slug }}" ]; then

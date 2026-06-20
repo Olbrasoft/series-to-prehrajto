@@ -13,10 +13,13 @@ import gzip
 import json
 import os
 import sys
+from pathlib import Path
 from typing import Any
 
 import psycopg2
 import psycopg2.extras
+
+REPO_ROOT = Path(__file__).resolve().parent.parent
 
 
 def sktorrent_url(external_id: str | None) -> str | None:
@@ -33,6 +36,7 @@ def fetch_rows(
     series_slug: str | None,
     season: int | None,
     episode: int | None,
+    excluded_source_ids: set[int],
 ) -> list[dict[str, Any]]:
     where = [
         "vs.is_alive",
@@ -43,6 +47,7 @@ def fetch_rows(
         "episode_limit": episode_limit,
         "source_limit_per_episode": source_limit_per_episode,
         "providers": ["prehrajto", "sktorrent", "sledujteto"],
+        "excluded_source_ids": list(excluded_source_ids),
     }
     if series_slug:
         where.append("s.slug = %(series_slug)s")
@@ -86,6 +91,7 @@ def fetch_rows(
                 JOIN video_providers vp ON vp.id = vs.provider_id
                 WHERE vs.episode_id = e.id
                   AND {" AND ".join(where)}
+                  AND NOT (vs.id = ANY(%(excluded_source_ids)s))
             )
             ORDER BY
                 CASE WHEN s.slug = 'hvezdne-mestecko' THEN 0 ELSE 1 END,
@@ -133,6 +139,7 @@ def fetch_rows(
             JOIN video_providers vp ON vp.id = vs.provider_id
             WHERE vs.is_alive
               AND vp.slug = ANY(%(providers)s)
+              AND NOT (vs.id = ANY(%(excluded_source_ids)s))
         )
         SELECT *
         FROM ranked_sources
@@ -186,6 +193,33 @@ def row_to_queue_item(row: dict[str, Any]) -> dict[str, Any]:
     }
 
 
+def load_jsonl(path: Path) -> list[dict[str, Any]]:
+    if not path.exists() or path.stat().st_size == 0:
+        return []
+    opener = gzip.open if path.suffix == ".gz" else open
+    with opener(path, "rt", encoding="utf-8") as fh:
+        return [json.loads(line) for line in fh if line.strip()]
+
+
+def local_audited_source_ids() -> set[int]:
+    ids: set[int] = set()
+    for path in (
+        REPO_ROOT / "audits" / "language-audit-latest.jsonl",
+        REPO_ROOT / "audits" / "language-audit.jsonl",
+    ):
+        for row in load_jsonl(path):
+            if row.get("source_id") is not None:
+                ids.add(int(row["source_id"]))
+    for row in load_jsonl(REPO_ROOT / "plans" / "prepared-episodes.jsonl"):
+        selected = row.get("selected_source") or {}
+        if selected.get("source_id") is not None:
+            ids.add(int(selected["source_id"]))
+        for source in row.get("tested_sources") or []:
+            if source.get("source_id") is not None:
+                ids.add(int(source["source_id"]))
+    return ids
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--out", default="backlog/language-audit-queue.jsonl.gz")
@@ -203,6 +237,7 @@ def main() -> int:
         return 2
 
     conn = psycopg2.connect(args.db_url)
+    excluded_source_ids = local_audited_source_ids() if not args.series_slug else set()
     try:
         rows = fetch_rows(
             conn,
@@ -211,6 +246,7 @@ def main() -> int:
             series_slug=args.series_slug,
             season=args.season,
             episode=args.episode,
+            excluded_source_ids=excluded_source_ids,
         )
     finally:
         conn.close()
@@ -222,6 +258,7 @@ def main() -> int:
         for item in items:
             fh.write(json.dumps(item, ensure_ascii=False) + "\n")
     print(f"Wrote {len(items)} sources to {args.out}")
+    print(f"Excluded locally audited/prepared sources: {len(excluded_source_ids)}")
     return 0
 
 
