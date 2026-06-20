@@ -2,24 +2,56 @@
   "counts": {
     "backlog_episodes": 1000,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 743,
+    "uploaded_episodes": 749,
     "prepared_source_episodes": 5015,
     "description_series": 82,
     "description_episodes": 2645,
     "description_errors": 148,
-    "language_audit_rows": 31091,
+    "language_audit_rows": 31111,
     "language_queue_sources": 2112,
     "language_audited_sources": 30042,
-    "language_whisper_attempted_sources": 985,
-    "language_pending_whisper_sources": 1127
+    "language_whisper_attempted_sources": 1005,
+    "language_pending_whisper_sources": 1107
   },
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-06-20T19:58:07Z",
+      "databaseId": 27882230577,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-20T19:38:31Z",
+      "databaseId": 27881765197,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-20T19:38:05Z",
+      "databaseId": 27881754077,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-20T19:37:45Z",
+      "databaseId": 27881745681,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-06-20T19:34:03Z",
       "databaseId": 27881656631,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-status"
     },
     {
@@ -39,19 +71,19 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-06-20T19:16:13Z",
       "databaseId": 27881222958,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-06-20T19:00:32Z",
       "databaseId": 27880832924,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "sync"
     },
     {
@@ -141,38 +173,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "sync"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-06-20T18:12:02Z",
-      "databaseId": 27879644572,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-20T18:04:36Z",
-      "databaseId": 27879464639,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-20T18:04:15Z",
-      "databaseId": 27879455171,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-20T18:04:14Z",
-      "databaseId": 27879454648,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-descriptions"
     }
   ],
   "gaps": {
@@ -3084,6 +3084,36 @@
         "episode_id": 25601,
         "display_name": "Ztraceni S03E21 - Největší hity CZ Dabing",
         "video_id": 26177140
+      },
+      {
+        "episode_id": 25603,
+        "display_name": "Ztraceni S03E23 - Za zrcadlem, část 2. CZ Dabing",
+        "video_id": 26177434
+      },
+      {
+        "episode_id": 25605,
+        "display_name": "Ztraceni S04E02 - Nikdo nepřežil CZ Dabing",
+        "video_id": 26177461
+      },
+      {
+        "episode_id": 25607,
+        "display_name": "Ztraceni S04E04 - Vajíčkov CZ Dabing",
+        "video_id": 26177480
+      },
+      {
+        "episode_id": 34863,
+        "display_name": "Dexter S03E02 - Hledá se Freebo CZ Dabing",
+        "video_id": 26177523
+      },
+      {
+        "episode_id": 34867,
+        "display_name": "Dexter S03E06 - Ano, jde to CZ Dabing",
+        "video_id": 26177601
+      },
+      {
+        "episode_id": 34869,
+        "display_name": "Dexter S03E08 - Efekt motýlích křídel CZ Dabing",
+        "video_id": 26177760
       }
     ],
     "prepared_not_upload_ready": [
@@ -3391,15 +3421,15 @@
   },
   "language_verdicts": {
     "UNKNOWN": 67,
-    "CZ_AUDIO": 29167,
-    "CZ_SUBTITLES_ONLY": 1713,
-    "NOT_CZ_AUDIO": 142,
+    "CZ_AUDIO": 29185,
+    "CZ_SUBTITLES_ONLY": 1714,
+    "NOT_CZ_AUDIO": 143,
     "SK_AUDIO": 2
   },
   "language_whisper_statuses": {
-    "disabled": 29057,
-    "resolve_failed": 66,
-    "ok": 911,
-    "no_stream": 8
+    "disabled": 29037,
+    "resolve_failed": 76,
+    "ok": 920,
+    "no_stream": 9
   }
 }
