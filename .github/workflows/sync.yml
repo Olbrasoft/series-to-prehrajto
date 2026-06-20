@@ -129,35 +129,16 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           set -e
-          if python - <<'PY'
-          import json
-          from pathlib import Path
-
-          state = json.loads(Path("state/uploaded.json").read_text(encoding="utf-8"))
-          uploaded_keys = {
-              (int(row["series_id"]), int(row["season"]), int(row["episode"]))
-              for row in state.get("uploads", [])
-              if row.get("series_id") is not None and row.get("season") is not None and row.get("episode") is not None
-          }
-          remaining = 0
-          for line in Path("plans/prepared-episodes.jsonl").read_text(encoding="utf-8").splitlines():
-              if not line.strip():
-                  continue
-              row = json.loads(line)
-              if not row.get("upload_ready"):
-                  continue
-              key = (int(row["series_id"]), int(row["season"]), int(row["episode"]))
-              if key not in uploaded_keys:
-                  remaining += 1
-          print(f"remaining_upload_ready={remaining}")
-          raise SystemExit(0 if remaining > 0 else 1)
-          PY
-          then
+          if python src/upload_queue_status.py; then
             gh workflow run sync.yml \
               -f batch_size="${{ inputs.batch_size || '5' }}" \
               -f num_shards="${{ inputs.num_shards || '1' }}" \
               -f allow_subtitles="${{ inputs.allow_subtitles || 'false' }}" \
               -f continue_uploads="true"
           else
-            echo "no prepared upload-ready episodes remain; not queueing another sync"
+            echo "no prepared upload-ready episodes remain; queueing source preparation"
+            gh workflow run prepare-sources.yml \
+              -f episode_limit="60" \
+              -f source_limit_per_episode="12" \
+              -f use_whisper="false"
           fi

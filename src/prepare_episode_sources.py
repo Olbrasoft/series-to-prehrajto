@@ -59,6 +59,57 @@ def latest_prepared_episode_ids(path: Path) -> set[int]:
     return ids
 
 
+def backlog_candidate_to_queue_item(episode: dict, candidate: dict) -> dict:
+    return {
+        "series_id": episode["series_id"],
+        "series_slug": episode["series_slug"],
+        "series_title": episode["series_title"],
+        "episode_id": episode["episode_id"],
+        "season": episode["season"],
+        "episode": episode["episode"],
+        "episode_title": episode.get("episode_title"),
+        "episode_name": episode.get("episode_name"),
+        "episode_audio_langs": [],
+        "episode_subtitle_langs": [],
+        "provider": "prehrajto",
+        "source_id": candidate["source_id"],
+        "external_id": candidate.get("external_id"),
+        "source_url": candidate.get("url"),
+        "source_title": candidate.get("title"),
+        "duration_sec": candidate.get("duration_sec"),
+        "resolution_hint": candidate.get("resolution_hint"),
+        "filesize_bytes": candidate.get("filesize_bytes"),
+        "view_count": candidate.get("view_count"),
+        "db_lang_class": candidate.get("lang_class"),
+        "db_audio_lang": candidate.get("audio_lang"),
+        "db_audio_confidence": candidate.get("audio_confidence"),
+        "db_audio_detected_by": None,
+        "metadata": {},
+    }
+
+
+def merge_backlog_sources(queue_rows: list[dict], backlog_path: Path) -> list[dict]:
+    if not backlog_path.exists():
+        return queue_rows
+    seen = {
+        (int(row["episode_id"]), int(row["source_id"]))
+        for row in queue_rows
+        if row.get("episode_id") is not None and row.get("source_id") is not None
+    }
+    merged = list(queue_rows)
+    for episode in load_jsonl(backlog_path):
+        for candidate in episode.get("candidates") or []:
+            key = (int(episode["episode_id"]), int(candidate["source_id"]))
+            if key in seen:
+                continue
+            url = candidate.get("url")
+            if not url:
+                continue
+            merged.append(backlog_candidate_to_queue_item(episode, candidate))
+            seen.add(key)
+    return merged
+
+
 def group_by_episode(rows: list[dict]) -> list[dict]:
     grouped: dict[int, dict] = {}
     for row in rows:
@@ -144,6 +195,7 @@ def prepare_episode(episode: dict, *, use_whisper: bool, sample_seconds: int, so
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--queue", default="backlog/language-audit-queue.jsonl.gz")
+    ap.add_argument("--backlog", default="backlog/series-episodes.jsonl.gz")
     ap.add_argument("--out", default="plans/prepared-episodes.jsonl")
     ap.add_argument("--audit-out", default="audits/language-audit.jsonl")
     ap.add_argument("--episode-limit", type=int, default=10)
@@ -154,7 +206,7 @@ def main() -> int:
     ap.add_argument("--refresh", action="store_true")
     args = ap.parse_args()
 
-    rows = load_jsonl(Path(args.queue))
+    rows = merge_backlog_sources(load_jsonl(Path(args.queue)), Path(args.backlog))
     if args.series_slug:
         rows = [row for row in rows if row["series_slug"] == args.series_slug]
     episodes = group_by_episode(rows)

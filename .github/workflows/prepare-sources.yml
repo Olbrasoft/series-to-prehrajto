@@ -28,6 +28,7 @@ jobs:
     timeout-minutes: 350
     permissions:
       contents: write
+      actions: write
     concurrency:
       group: series-to-prehrajto-prepare-sources
       cancel-in-progress: false
@@ -89,4 +90,21 @@ jobs:
             git commit -m "chore: prepare series episode sources"
             git pull --rebase origin main || true
             git push
+          fi
+
+      - name: Queue upload after source preparation
+        if: success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git fetch origin main
+          git reset --hard origin/main
+          if python src/upload_queue_status.py; then
+            gh workflow run sync.yml \
+              -f batch_size="5" \
+              -f num_shards="1" \
+              -f allow_subtitles="false" \
+              -f continue_uploads="true"
+          else
+            echo "no upload-ready episodes after source preparation"
           fi

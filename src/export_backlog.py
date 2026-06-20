@@ -66,25 +66,16 @@ def fetch_rows(conn, *, series_limit: int, episode_limit: int, source_limit_per_
                              s.id
                 ) AS series_rank
             FROM series s
-            JOIN episodes e ON e.series_id = s.id
-            JOIN video_sources vs ON vs.episode_id = e.id
-            WHERE vs.provider_id = 2
-              AND vs.is_alive
-              AND vs.lang_class = ANY(%s)
-              AND vs.metadata ? 'url'
-            GROUP BY
-                s.id,
-                s.title,
-                s.original_title,
-                s.slug,
-                s.first_air_year,
-                s.description,
-                s.tmdb_overview_en,
-                s.imdb_id,
-                s.tmdb_id,
-                s.imdb_rating,
-                s.imdb_votes,
-                s.csfd_rating
+            WHERE EXISTS (
+                SELECT 1
+                FROM episodes e
+                JOIN video_sources vs ON vs.episode_id = e.id
+                WHERE e.series_id = s.id
+                  AND vs.provider_id = 2
+                  AND vs.is_alive
+                  AND vs.lang_class = ANY(%s)
+                  AND vs.metadata ? 'url'
+            )
             LIMIT %s
         ),
         selected_episodes AS (
