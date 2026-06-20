@@ -2,24 +2,40 @@
   "counts": {
     "backlog_episodes": 1000,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 737,
+    "uploaded_episodes": 743,
     "prepared_source_episodes": 5015,
     "description_series": 82,
     "description_episodes": 2645,
     "description_errors": 148,
-    "language_audit_rows": 31051,
+    "language_audit_rows": 31091,
     "language_queue_sources": 2112,
     "language_audited_sources": 30042,
-    "language_whisper_attempted_sources": 945,
-    "language_pending_whisper_sources": 1167
+    "language_whisper_attempted_sources": 985,
+    "language_pending_whisper_sources": 1127
   },
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-06-20T19:34:03Z",
+      "databaseId": 27881656631,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-20T19:18:12Z",
+      "databaseId": 27881270381,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-06-20T19:17:52Z",
       "databaseId": 27881262611,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -157,22 +173,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-20T18:04:13Z",
-      "databaseId": 27879454103,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-20T18:04:11Z",
-      "databaseId": 27879453509,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-sources"
     }
   ],
   "gaps": {
@@ -2976,6 +2976,16 @@
         "video_id": 26176285
       },
       {
+        "episode_id": 10578,
+        "display_name": "Ztraceni S03E03 - Další instrukce CZ Dabing",
+        "video_id": 26176584
+      },
+      {
+        "episode_id": 10582,
+        "display_name": "Ztraceni S03E04 - Na vlastní triko CZ Dabing",
+        "video_id": 26176755
+      },
+      {
         "episode_id": 12879,
         "display_name": "Ztraceni S02E06 - Opuštěni CZ Dabing",
         "video_id": 26174734
@@ -3021,11 +3031,6 @@
         "video_id": 26175468
       },
       {
-        "episode_id": 10583,
-        "display_name": "Ztraceni S03E03 - Další instrukce CZ Dabing",
-        "video_id": 26175731
-      },
-      {
         "episode_id": 10581,
         "display_name": "Ztraceni S03E05 - Cena za život CZ Dabing",
         "video_id": 26175772
@@ -3054,6 +3059,31 @@
         "episode_id": 25591,
         "display_name": "Ztraceni S03E11 - Zadejte 77 CZ Dabing",
         "video_id": 26176321
+      },
+      {
+        "episode_id": 25593,
+        "display_name": "Ztraceni S03E13 - Muž z Tallahassee CZ Dabing",
+        "video_id": 26176560
+      },
+      {
+        "episode_id": 25595,
+        "display_name": "Ztraceni S03E15 - Opuštěni CZ Dabing",
+        "video_id": 26177020
+      },
+      {
+        "episode_id": 25597,
+        "display_name": "Ztraceni S03E17 - Hlava 22 CZ Dabing",
+        "video_id": 26177064
+      },
+      {
+        "episode_id": 25599,
+        "display_name": "Ztraceni S03E19 - Briga CZ Dabing",
+        "video_id": 26177113
+      },
+      {
+        "episode_id": 25601,
+        "display_name": "Ztraceni S03E21 - Největší hity CZ Dabing",
+        "video_id": 26177140
       }
     ],
     "prepared_not_upload_ready": [
@@ -3360,16 +3390,16 @@
     ]
   },
   "language_verdicts": {
-    "UNKNOWN": 66,
-    "CZ_AUDIO": 29131,
-    "CZ_SUBTITLES_ONLY": 1712,
-    "NOT_CZ_AUDIO": 140,
+    "UNKNOWN": 67,
+    "CZ_AUDIO": 29167,
+    "CZ_SUBTITLES_ONLY": 1713,
+    "NOT_CZ_AUDIO": 142,
     "SK_AUDIO": 2
   },
   "language_whisper_statuses": {
-    "disabled": 29097,
-    "resolve_failed": 46,
-    "ok": 892,
-    "no_stream": 7
+    "disabled": 29057,
+    "resolve_failed": 66,
+    "ok": 911,
+    "no_stream": 8
   }
 }
