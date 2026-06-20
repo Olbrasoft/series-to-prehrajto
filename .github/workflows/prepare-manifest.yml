@@ -125,7 +125,8 @@ jobs:
           python src/prepare_descriptions.py \
             --series-limit "${{ inputs.series_limit || '80' }}" \
             --episode-limit "${{ inputs.episode_limit || '1000' }}" \
-            --workers 4
+            --workers 4 \
+            --fallback-on-error
 
       - name: Build upload manifest
         env:

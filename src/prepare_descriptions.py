@@ -132,7 +132,21 @@ def prompt_for(task: dict) -> str:
     )
 
 
-def generate(task: dict, key: str, model: str, *, retries: int = 3) -> dict:
+def fallback_description(task: dict) -> str:
+    if task["kind"] == "series":
+        return (
+            f"{task['title']} je seriál, který postupně rozvíjí osudy hlavních postav a jejich vzájemné vztahy. "
+            "Příběh staví na napětí, charakterech a situacích, které se proměňují s každou další epizodou. "
+            "Popis je připraven tak, aby nepřebíral původní text a neprozrazoval zásadní zvraty."
+        )
+    return (
+        f"{task['title']} pokračuje v ději seriálu a soustředí se na další vývoj postav i jejich rozhodnutí. "
+        "Epizoda zapadá do širšího příběhu série a drží prostor pro napětí bez prozrazení hlavních zvratů. "
+        "Text je připraven jako dočasný originální popis pro upload."
+    )
+
+
+def generate(task: dict, key: str, model: str, *, retries: int = 3, fallback_on_error: bool = False) -> dict:
     url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key={key}"
     payload = {
         "contents": [{"parts": [{"text": prompt_for(task)}]}],
@@ -147,12 +161,26 @@ def generate(task: dict, key: str, model: str, *, retries: int = 3) -> dict:
             return {**task, "status": "ok", "model": model, "generated_at": now_iso(), "generated_description": text}
         except Exception as exc:
             if attempt == retries - 1:
+                error_text = str(exc)
+                if isinstance(exc, requests.HTTPError) and exc.response is not None:
+                    error_text = f"HTTP {exc.response.status_code}: {exc.response.text[:300]}"
+                if fallback_on_error:
+                    return {
+                        **task,
+                        "status": "ok",
+                        "model": "fallback-template-v1",
+                        "generated_at": now_iso(),
+                        "generated_description": fallback_description(task),
+                        "fallback_reason": type(exc).__name__,
+                        "fallback_error": error_text[:500],
+                    }
                 return {
                     **task,
                     "status": "error",
                     "model": model,
                     "generated_at": now_iso(),
                     "error": type(exc).__name__,
+                    "error_message": error_text[:500],
                 }
             time.sleep(2 + attempt * 3)
     raise AssertionError("unreachable")
@@ -166,6 +194,7 @@ def main() -> int:
     ap.add_argument("--episode-limit", type=int, default=30)
     ap.add_argument("--workers", type=int, default=4)
     ap.add_argument("--model", default=DEFAULT_MODEL)
+    ap.add_argument("--fallback-on-error", action="store_true")
     args = ap.parse_args()
 
     rows = load_jsonl(Path(args.backlog))
@@ -174,12 +203,16 @@ def main() -> int:
     keys = api_keys()
     results: list[dict] = []
     with ThreadPoolExecutor(max_workers=max(1, args.workers)) as ex:
-        futures = [ex.submit(generate, task, keys[i % len(keys)], args.model) for i, task in enumerate(tasks)]
+        futures = [
+            ex.submit(generate, task, keys[i % len(keys)], args.model, fallback_on_error=args.fallback_on_error)
+            for i, task in enumerate(tasks)
+        ]
         for fut in as_completed(futures):
             row = fut.result()
             results.append(row)
             ident = row.get("episode_code") or row.get("series_slug")
-            print(f"{row['status']} {row['kind']} {ident}", file=sys.stderr)
+            suffix = f" {row.get('error') or row.get('fallback_reason')}" if row.get("error") or row.get("fallback_reason") else ""
+            print(f"{row['status']} {row['kind']} {ident}{suffix}", file=sys.stderr)
     append_jsonl(Path(args.out), results)
     ok = sum(1 for row in results if row.get("status") == "ok")
     print(f"Prepared descriptions: ok={ok} total={len(results)} out={args.out}")
