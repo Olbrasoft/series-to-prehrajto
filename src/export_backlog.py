@@ -55,6 +55,21 @@ def normalize_url(url: str | None) -> str | None:
     return url.replace("https://prehrajto.cz/", "https://prehraj.to/")
 
 
+def load_jsonl(path: Path) -> list[dict[str, Any]]:
+    if not path.exists() or path.stat().st_size == 0:
+        return []
+    opener = gzip.open if path.suffix == ".gz" else open
+    with opener(path, "rt", encoding="utf-8") as fh:
+        return [json.loads(line) for line in fh if line.strip()]
+
+
+def add_episode_exclusion(row: dict[str, Any], episode_ids: set[int], episode_keys: set[str]) -> None:
+    if row.get("episode_id") is not None:
+        episode_ids.add(int(row["episode_id"]))
+    if row.get("series_id") is not None and row.get("season") is not None and row.get("episode") is not None:
+        episode_keys.add(f"{int(row['series_id'])}:{int(row['season'])}:{int(row['episode'])}")
+
+
 def load_uploaded_exclusions() -> tuple[set[int], set[str]]:
     episode_ids: set[int] = set()
     episode_keys: set[str] = set()
@@ -66,10 +81,13 @@ def load_uploaded_exclusions() -> tuple[set[int], set[str]]:
         except json.JSONDecodeError:
             continue
         for upload in data.get("uploads", []):
-            if upload.get("episode_id") is not None:
-                episode_ids.add(int(upload["episode_id"]))
-            if upload.get("series_id") is not None and upload.get("season") is not None and upload.get("episode") is not None:
-                episode_keys.add(f"{int(upload['series_id'])}:{int(upload['season'])}:{int(upload['episode'])}")
+            add_episode_exclusion(upload, episode_ids, episode_keys)
+    for path in (
+        REPO_ROOT / "manifests" / "upload-ready.jsonl.gz",
+        REPO_ROOT / "backlog" / "series-episodes.jsonl.gz",
+    ):
+        for row in load_jsonl(path):
+            add_episode_exclusion(row, episode_ids, episode_keys)
     return episode_ids, episode_keys
 
 
