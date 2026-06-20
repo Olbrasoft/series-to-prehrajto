@@ -170,7 +170,7 @@ def try_candidate(episode: dict, candidate: dict, session, state: dict, *, allow
     t = time.monotonic()
     try:
         resolved = resolve_stream(candidate["url"])
-        best = pick_best(resolved.videos, prefer=(2160, 1440, 1080, 720))
+        best = pick_best(resolved.videos, prefer=(1080, 720))
     except ResolveError as exc:
         log(f"  resolve FAILED: {exc} permanent={exc.permanent}")
         record_failure(state, episode, candidate, f"resolve_failed: {exc}", permanent=exc.permanent)

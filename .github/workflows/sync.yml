@@ -6,7 +6,7 @@ on:
       batch_size:
         description: "Number of episodes to upload in one run"
         required: false
-        default: "5"
+        default: "20"
       num_shards:
         description: "Total parallel shards"
         required: false
@@ -93,14 +93,6 @@ jobs:
           fi
           python src/sync_batch.py "${ARGS[@]}"
 
-      - name: Update descriptions for uploaded videos
-        if: success()
-        continue-on-error: true
-        env:
-          PREHRAJTO_EMAIL: ${{ secrets.PREHRAJTO_EMAIL }}
-          PREHRAJTO_PASSWORD: ${{ secrets.PREHRAJTO_PASSWORD }}
-        run: python src/update_uploaded_descriptions.py --limit 50
-
       - name: Commit state + log
         if: always()
         run: |
@@ -131,7 +123,7 @@ jobs:
           set -e
           if python src/upload_queue_status.py; then
             gh workflow run sync.yml \
-              -f batch_size="${{ inputs.batch_size || '5' }}" \
+              -f batch_size="${{ inputs.batch_size || '20' }}" \
               -f num_shards="2" \
               -f allow_subtitles="${{ inputs.allow_subtitles || 'false' }}" \
               -f continue_uploads="true"

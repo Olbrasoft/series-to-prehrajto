@@ -101,7 +101,7 @@ jobs:
           git reset --hard origin/main
           if python src/upload_queue_status.py; then
             gh workflow run sync.yml \
-              -f batch_size="5" \
+              -f batch_size="20" \
               -f num_shards="2" \
               -f allow_subtitles="false" \
               -f continue_uploads="true"

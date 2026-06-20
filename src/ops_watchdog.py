@@ -108,7 +108,7 @@ def main() -> int:
         queue_workflow(
             "sync",
             {
-                "batch_size": "5",
+                "batch_size": "20",
                 "num_shards": "2",
                 "allow_subtitles": "false",
                 "continue_uploads": "true",
