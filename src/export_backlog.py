@@ -23,7 +23,7 @@ from typing import Any
 import psycopg2
 import psycopg2.extras
 
-LANG_CLASSES = ("CZ_DUB", "CZ_NATIVE", "CZ_SUB")
+UPLOAD_LANG_CLASSES = ("CZ_DUB", "CZ_NATIVE")
 REPO_ROOT = Path(__file__).resolve().parent.parent
 
 
@@ -186,7 +186,7 @@ def fetch_rows(
                     "imdb_rating": series_row["imdb_rating"],
                     "imdb_votes": series_row["imdb_votes"],
                     "csfd_rating": series_row["csfd_rating"],
-                    "lang_classes": list(LANG_CLASSES),
+                    "lang_classes": list(UPLOAD_LANG_CLASSES),
                     "remaining": remaining,
                     "uploaded_episode_ids": list(uploaded_episode_ids),
                     "uploaded_episode_keys": list(uploaded_episode_keys),
@@ -241,7 +241,7 @@ def fetch_rows(
                         vs.id
                     LIMIT %s
                     """,
-                    (episode_row["id"], list(LANG_CLASSES), source_limit_per_episode),
+                    (episode_row["id"], list(UPLOAD_LANG_CLASSES), source_limit_per_episode),
                 )
                 source_rows = list(cur.fetchall())
             if not source_rows:
