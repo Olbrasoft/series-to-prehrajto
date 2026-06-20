@@ -128,6 +128,8 @@ jobs:
             --workers 4
 
       - name: Build upload manifest
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           python src/build_upload_manifest.py \
             --limit "${{ inputs.episode_limit || '1000' }}"
@@ -136,6 +138,32 @@ jobs:
       - name: Commit manifest preparation
         if: always()
         run: |
+          TMP_DIR="$(mktemp -d)"
+          mkdir -p \
+            "$TMP_DIR/backlog" \
+            "$TMP_DIR/plans" \
+            "$TMP_DIR/audits" \
+            "$TMP_DIR/manifests" \
+            "$TMP_DIR/reports"
+          cp backlog/series-episodes.jsonl.gz "$TMP_DIR/backlog/" 2>/dev/null || true
+          cp backlog/language-audit-queue.jsonl.gz "$TMP_DIR/backlog/" 2>/dev/null || true
+          cp plans/prepared-episodes.jsonl "$TMP_DIR/plans/" 2>/dev/null || true
+          cp plans/descriptions.jsonl "$TMP_DIR/plans/" 2>/dev/null || true
+          cp audits/language-audit.jsonl "$TMP_DIR/audits/" 2>/dev/null || true
+          cp manifests/upload-ready.jsonl.gz "$TMP_DIR/manifests/" 2>/dev/null || true
+          cp reports/upload-manifest.json "$TMP_DIR/reports/" 2>/dev/null || true
+          cp reports/ops-status.json "$TMP_DIR/reports/" 2>/dev/null || true
+
+          git fetch origin main
+          git reset --hard origin/main
+
+          mkdir -p backlog plans audits manifests reports
+          cp "$TMP_DIR"/backlog/* backlog/ 2>/dev/null || true
+          cp "$TMP_DIR"/plans/* plans/ 2>/dev/null || true
+          cp "$TMP_DIR"/audits/* audits/ 2>/dev/null || true
+          cp "$TMP_DIR"/manifests/* manifests/ 2>/dev/null || true
+          cp "$TMP_DIR"/reports/* reports/ 2>/dev/null || true
+
           git add \
             backlog/series-episodes.jsonl.gz \
             backlog/language-audit-queue.jsonl.gz \
@@ -149,8 +177,17 @@ jobs:
             echo "no manifest preparation changes"
           else
             git commit -m "chore: prepare upload manifest"
-            git pull --rebase origin main || true
-            git push
+            for attempt in 1 2 3 4 5; do
+              if git push origin HEAD:main; then
+                exit 0
+              fi
+              git fetch origin main
+              git reset --soft origin/main
+              git commit -m "chore: prepare upload manifest" || true
+              sleep $((attempt * 2))
+            done
+            echo "failed to push manifest preparation after retries"
+            exit 1
           fi
 
       - name: Queue upload from manifest
