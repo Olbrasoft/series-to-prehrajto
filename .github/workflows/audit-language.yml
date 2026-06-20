@@ -92,7 +92,10 @@ jobs:
                 exit 0
               fi
               git fetch origin main
-              git reset --soft origin/main
+              git reset --hard origin/main
+              mkdir -p audits
+              cp "$TMP_DIR"/audits/* audits/ 2>/dev/null || true
+              git add audits/language-audit.jsonl audits/language-audit-latest.jsonl
               git commit -m "chore: audit source languages" || true
               sleep $((attempt * 2))
             done

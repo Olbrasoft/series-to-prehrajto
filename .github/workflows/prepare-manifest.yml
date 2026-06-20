@@ -182,7 +182,22 @@ jobs:
                 exit 0
               fi
               git fetch origin main
-              git reset --soft origin/main
+              git reset --hard origin/main
+              mkdir -p backlog plans audits manifests reports
+              cp "$TMP_DIR"/backlog/* backlog/ 2>/dev/null || true
+              cp "$TMP_DIR"/plans/* plans/ 2>/dev/null || true
+              cp "$TMP_DIR"/audits/* audits/ 2>/dev/null || true
+              cp "$TMP_DIR"/manifests/* manifests/ 2>/dev/null || true
+              cp "$TMP_DIR"/reports/* reports/ 2>/dev/null || true
+              git add \
+                backlog/series-episodes.jsonl.gz \
+                backlog/language-audit-queue.jsonl.gz \
+                plans/prepared-episodes.jsonl \
+                plans/descriptions.jsonl \
+                audits/language-audit.jsonl \
+                manifests/upload-ready.jsonl.gz \
+                reports/upload-manifest.json \
+                reports/ops-status.json
               git commit -m "chore: prepare upload manifest" || true
               sleep $((attempt * 2))
             done

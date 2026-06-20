@@ -77,7 +77,10 @@ jobs:
                 exit 0
               fi
               git fetch origin main
-              git reset --soft origin/main
+              git reset --hard origin/main
+              mkdir -p plans
+              cp "$TMP_DIR"/plans/* plans/ 2>/dev/null || true
+              git add plans/descriptions.jsonl
               git commit -m "chore: prepare Gemma descriptions" || true
               sleep $((attempt * 2))
             done
