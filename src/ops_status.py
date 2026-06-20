@@ -9,6 +9,8 @@ import subprocess
 from collections import Counter
 from pathlib import Path
 
+from pick_next_episode import load_state
+
 REPO = Path(__file__).resolve().parent.parent
 
 
@@ -89,7 +91,7 @@ def main() -> int:
     backlog = load_jsonl(REPO / "backlog" / "series-episodes.jsonl.gz")
     manifest = load_jsonl(REPO / "manifests" / "upload-ready.jsonl.gz")
     source_queue = load_jsonl(REPO / "backlog" / "language-audit-queue.jsonl.gz")
-    state = load_json(REPO / "state" / "uploaded.json")
+    state = load_state()
     descriptions = load_jsonl(REPO / "plans" / "descriptions.jsonl")
     prepared = load_jsonl(REPO / "plans" / "prepared-episodes.jsonl")
     audits = load_jsonl(REPO / "audits" / "language-audit.jsonl")

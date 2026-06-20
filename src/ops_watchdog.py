@@ -109,7 +109,7 @@ def main() -> int:
             "sync",
             {
                 "batch_size": "5",
-                "num_shards": "1",
+                "num_shards": "2",
                 "allow_subtitles": "false",
                 "continue_uploads": "true",
             },

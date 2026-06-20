@@ -10,7 +10,7 @@ on:
       num_shards:
         description: "Total parallel shards"
         required: false
-        default: "1"
+        default: "2"
       allow_subtitles:
         description: "Allow CZ subtitle-only sources"
         required: false
@@ -36,9 +36,9 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        shard: [0]
+        shard: ${{ fromJSON((inputs.num_shards || '2') == '2' && '[0,1]' || '[0]') }}
     env:
-      SYNC_NUM_SHARDS: ${{ inputs.num_shards || '1' }}
+      SYNC_NUM_SHARDS: ${{ inputs.num_shards || '2' }}
       SYNC_SHARD_ID: ${{ matrix.shard }}
     steps:
       - uses: actions/checkout@v4
@@ -124,7 +124,7 @@ jobs:
           fi
 
       - name: Queue next upload batch
-        if: success() && (github.event_name == 'schedule' || inputs.continue_uploads != 'false')
+        if: success() && matrix.shard == 0 && (github.event_name == 'schedule' || inputs.continue_uploads != 'false')
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
@@ -132,7 +132,7 @@ jobs:
           if python src/upload_queue_status.py; then
             gh workflow run sync.yml \
               -f batch_size="${{ inputs.batch_size || '5' }}" \
-              -f num_shards="${{ inputs.num_shards || '1' }}" \
+              -f num_shards="${{ inputs.num_shards || '2' }}" \
               -f allow_subtitles="${{ inputs.allow_subtitles || 'false' }}" \
               -f continue_uploads="true"
           else

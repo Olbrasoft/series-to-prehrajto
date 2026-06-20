@@ -45,11 +45,51 @@ def load_backlog(path: Path = BACKLOG) -> list[dict]:
         return [json.loads(line) for line in fh if line.strip()]
 
 
+def _merge_states(paths: list[Path]) -> dict:
+    merged = {"schema_version": 1, "uploads": [], "failed_attempts": []}
+    upload_keys: set[tuple[int, int, int] | tuple[str, int]] = set()
+    failure_keys: set[tuple[int, int, str]] = set()
+    last_updated = None
+    for path in paths:
+        if not path.exists() or path.stat().st_size == 0:
+            continue
+        state = json.loads(path.read_text(encoding="utf-8"))
+        last_updated = max(last_updated or "", state.get("last_updated") or "") or last_updated
+        for upload in state.get("uploads", []):
+            if upload.get("series_id") is not None and upload.get("season") is not None and upload.get("episode") is not None:
+                key: tuple[int, int, int] | tuple[str, int] = episode_key(upload)
+            else:
+                key = ("episode_id", int(upload["episode_id"]))
+            if key in upload_keys:
+                continue
+            upload_keys.add(key)
+            merged["uploads"].append(upload)
+        for failure in state.get("failed_attempts", []):
+            key = (
+                int(failure.get("episode_id") or 0),
+                int(failure.get("source_id") or 0),
+                str(failure.get("reason") or ""),
+            )
+            if key in failure_keys:
+                continue
+            failure_keys.add(key)
+            merged["failed_attempts"].append(failure)
+    if last_updated:
+        merged["last_updated"] = last_updated
+    return merged
+
+
 def load_state(path: Path | None = None) -> dict:
+    if path is None:
+        paths = [REPO_ROOT / "state" / "uploaded.json"]
+        paths.extend(sorted((REPO_ROOT / "state").glob("uploaded-shard-*.json")))
+        merged = _merge_states(paths)
+        if merged["uploads"] or merged["failed_attempts"]:
+            return merged
     p = path or state_path()
     if not p.exists():
         return {"schema_version": 1, "uploads": [], "failed_attempts": []}
-    return json.loads(p.read_text())
+    return json.loads(p.read_text(encoding="utf-8"))
 
 
 def uploaded_episode_ids(state: dict) -> set[int]:

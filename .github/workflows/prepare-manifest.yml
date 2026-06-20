@@ -163,7 +163,7 @@ jobs:
           if python src/upload_queue_status.py; then
             gh workflow run sync.yml \
               -f batch_size="5" \
-              -f num_shards="1" \
+              -f num_shards="2" \
               -f allow_subtitles="false" \
               -f continue_uploads="true"
           else
