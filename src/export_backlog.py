@@ -9,6 +9,8 @@ video_sources rows and gets the upload workflow running quickly.
 from __future__ import annotations
 
 import argparse
+import datetime as dt
+import decimal
 import gzip
 import json
 import os
@@ -21,6 +23,14 @@ import psycopg2
 import psycopg2.extras
 
 LANG_CLASSES = ("CZ_DUB", "CZ_NATIVE", "CZ_SUB")
+
+
+def json_default(value: Any) -> Any:
+    if isinstance(value, decimal.Decimal):
+        return float(value)
+    if isinstance(value, (dt.date, dt.datetime)):
+        return value.isoformat()
+    raise TypeError(f"Object of type {type(value).__name__} is not JSON serializable")
 
 
 def sxe(season: int | None, episode: int | None) -> str:
@@ -293,7 +303,7 @@ def main() -> int:
     opener = gzip.open if args.out.endswith(".gz") else open
     with opener(args.out, "wt", encoding="utf-8") as fh:
         for episode in episodes:
-            fh.write(json.dumps(episode, ensure_ascii=False) + "\n")
+            fh.write(json.dumps(episode, ensure_ascii=False, default=json_default) + "\n")
 
     counts: dict[str, int] = defaultdict(int)
     for episode in episodes:
