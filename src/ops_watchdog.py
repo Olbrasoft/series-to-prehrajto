@@ -57,6 +57,7 @@ def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--min-upload-ready", type=int, default=200)
     ap.add_argument("--target-episodes", type=int, default=1000)
+    ap.add_argument("--emergency-episodes", type=int, default=160)
     ap.add_argument("--target-series", type=int, default=80)
     ap.add_argument("--min-pending-whisper", type=int, default=100)
     ap.add_argument("--min-description-gap", type=int, default=50)
@@ -91,12 +92,15 @@ def main() -> int:
         )
     )
 
+    prepare_episode_target = args.emergency_episodes if upload_ready == 0 else args.target_episodes
+    prepare_series_target = min(args.target_series, 30) if upload_ready == 0 else args.target_series
+
     if upload_ready <= args.min_upload_ready or backlog_count == 0 or manifest_ready < args.target_episodes:
         queue_workflow(
             "prepare-manifest",
             {
-                "series_limit": str(args.target_series),
-                "episode_limit": str(args.target_episodes),
+                "series_limit": str(prepare_series_target),
+                "episode_limit": str(prepare_episode_target),
                 "source_limit_per_episode": "12",
                 "use_whisper": "false",
             },
