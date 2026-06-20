@@ -1,13 +1,13 @@
 {
   "counts": {
-    "backlog_episodes": 0,
+    "backlog_episodes": 1000,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 726,
-    "prepared_source_episodes": 5000,
+    "uploaded_episodes": 727,
+    "prepared_source_episodes": 5015,
     "description_series": 82,
-    "description_episodes": 2638,
+    "description_episodes": 2645,
     "description_errors": 148,
-    "language_audit_rows": 31031,
+    "language_audit_rows": 31211,
     "language_queue_sources": 2112,
     "language_audited_sources": 30042,
     "language_whisper_attempted_sources": 925,
@@ -16,10 +16,26 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-06-20T18:43:00Z",
+      "databaseId": 27880402474,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-20T18:42:59Z",
+      "databaseId": 27880401894,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-06-20T18:42:40Z",
       "databaseId": 27880395343,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -39,11 +55,11 @@
       "workflowName": "refresh-backlog"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-06-20T18:40:11Z",
       "databaseId": 27880330524,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-descriptions"
     },
     {
@@ -157,22 +173,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-20T17:37:00Z",
-      "databaseId": 27878784853,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-20T17:33:21Z",
-      "databaseId": 27878694943,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
     }
   ],
   "gaps": {
@@ -2999,6 +2999,11 @@
         "episode_id": 25587,
         "display_name": "Ztraceni S02E23 - Žij s námi, sám zemřeš, část 1. CZ Dabing",
         "video_id": 26175468
+      },
+      {
+        "episode_id": 10585,
+        "display_name": "Ztraceni S03E01 - Příběh dvou měst CZ Dabing",
+        "video_id": 26175503
       }
     ],
     "prepared_not_upload_ready": [
@@ -3306,7 +3311,7 @@
   },
   "language_verdicts": {
     "UNKNOWN": 65,
-    "CZ_AUDIO": 29116,
+    "CZ_AUDIO": 29296,
     "CZ_SUBTITLES_ONLY": 1711,
     "NOT_CZ_AUDIO": 137,
     "SK_AUDIO": 2
