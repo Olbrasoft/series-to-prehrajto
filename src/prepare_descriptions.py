@@ -126,22 +126,28 @@ def build_tasks(backlog: list[dict], done: set[tuple[str, int, str]], *, series_
 
 
 def prompt_for(task: dict) -> str:
+    title = task["title"]
+    source = task["source_description"]
     if task["kind"] == "series":
         return (
-            "Jsi editor českých popisů pro video hosting.\n"
-            "Vrať pouze finální český popis seriálu, nic jiného.\n"
-            "Nepiš zadání, rozbor, odrážky, varianty, vysvětlení ani anglický text.\n"
-            "Nekopíruj formulace ze zdroje, zachovej fakta, neuváděj, že jde o přepis.\n"
-            "Piš přirozeně česky, 3 až 5 vět, bez spoilerů a bez marketingové omáčky.\n\n"
-            f"Seriál: {task['title']}\nZdrojový popis:\n{task['source_description']}"
+            "Napiš finální popis seriálu pro videohosting.\n"
+            "Výstup musí být jen samotný český popis v odstavci.\n"
+            "Zakázáno: rozbor, odrážky, seznam, kontrola, varianty, Draft, Task, Constraints, vysvětlení, angličtina.\n"
+            "Neopisuj zdrojové formulace, ale zachovej fakta a neprozrazuj zásadní zvraty.\n"
+            "Délka: 3 až 5 vět. Začni rovnou první větou popisu.\n\n"
+            f"Název seriálu: {title}\n"
+            f"Zdrojový obsah:\n{source}\n\n"
+            "Vrať pouze finální popis:"
         )
     return (
-        "Jsi editor českých popisů pro video hosting.\n"
-        "Vrať pouze finální český popis seriálové epizody, nic jiného.\n"
-        "Nepiš zadání, rozbor, odrážky, varianty, kontrolní seznam, vysvětlení ani anglický text.\n"
-        "Nekopíruj formulace ze zdroje, zachovej fakta, neprozrazuj pointu.\n"
-        "Piš 2 až 4 věty, přirozeně česky, bez frází typu 'v této epizodě uvidíte'.\n\n"
-        f"Epizoda: {task['title']}\nZdrojový popis:\n{task['source_description']}"
+        "Napiš finální popis seriálové epizody pro videohosting.\n"
+        "Výstup musí být jen samotný český popis v odstavci.\n"
+        "Zakázáno: rozbor, odrážky, seznam, kontrola, varianty, Draft, Task, Constraints, vysvětlení, angličtina.\n"
+        "Neopisuj zdrojové formulace, ale zachovej fakta a neprozrazuj pointu.\n"
+        "Délka: 2 až 4 věty. Nepoužívej frázi 'v této epizodě uvidíte'. Začni rovnou první větou popisu.\n\n"
+        f"Název epizody: {title}\n"
+        f"Zdrojový obsah:\n{source}\n\n"
+        "Vrať pouze finální popis:"
     )
 
 
@@ -160,7 +166,12 @@ def fallback_description(task: dict) -> str:
 
 
 def generation_config(model: str) -> dict:
-    config: dict = {"temperature": 0.45, "topP": 0.8, "maxOutputTokens": 220}
+    config: dict = {
+        "temperature": 0.25,
+        "topP": 0.7,
+        "maxOutputTokens": 180,
+        "stopSequences": ["\n*", "\n-", "\nDraft", "\nTask", "\nConstraints"],
+    }
     if DEFAULT_THINKING_BUDGET.strip() and not model.startswith("gemma-"):
         config["thinkingConfig"] = {"thinkingBudget": int(DEFAULT_THINKING_BUDGET)}
     return config
