@@ -1,13 +1,13 @@
 {
   "counts": {
-    "backlog_episodes": 240,
+    "backlog_episodes": 1000,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 2133,
-    "prepared_source_episodes": 5382,
+    "uploaded_episodes": 2142,
+    "prepared_source_episodes": 5908,
     "description_series": 82,
-    "description_episodes": 3457,
+    "description_episodes": 3983,
     "description_errors": 148,
-    "language_audit_rows": 34017,
+    "language_audit_rows": 35237,
     "language_queue_sources": 2635,
     "language_audited_sources": 32548,
     "language_whisper_attempted_sources": 1665,
@@ -16,10 +16,42 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-06-21T09:31:48Z",
+      "databaseId": 27900158922,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-21T09:28:19Z",
+      "databaseId": 27900071558,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-21T09:26:36Z",
+      "databaseId": 27900031235,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-21T09:26:20Z",
+      "databaseId": 27900025271,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-06-21T09:19:43Z",
       "databaseId": 27899870284,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-status"
     },
     {
@@ -141,38 +173,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-21T07:52:43Z",
-      "databaseId": 27897836953,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-21T07:51:32Z",
-      "databaseId": 27897807826,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-21T07:43:52Z",
-      "databaseId": 27897627586,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-21T07:42:53Z",
-      "databaseId": 27897605318,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
     }
   ],
   "gaps": {
@@ -10006,6 +10006,31 @@
         "video_id": 26196665
       },
       {
+        "episode_id": 21348,
+        "display_name": "Lovci duchů S03E08 - Velmi nadpřirozené Vánoce CZ Dabing",
+        "video_id": 26196712
+      },
+      {
+        "episode_id": 9812,
+        "display_name": "Lovci duchů S03E11 - Časová smyčka CZ Dabing",
+        "video_id": 26196740
+      },
+      {
+        "episode_id": 21354,
+        "display_name": "Lovci duchů S03E15 - Nesmrtelný doktor CZ Dabing",
+        "video_id": 26196770
+      },
+      {
+        "episode_id": 21356,
+        "display_name": "Lovci duchů S04E01 - Lazarovo vzkříšení CZ Dabing",
+        "video_id": 26196811
+      },
+      {
+        "episode_id": 21358,
+        "display_name": "Lovci duchů S04E03 - Na začátku CZ Dabing",
+        "video_id": 26196849
+      },
+      {
         "episode_id": 3867,
         "display_name": "Lovci duchů S02E22 - Otevřelo se samo peklo (2. část) CZ Dabing",
         "video_id": 26196528
@@ -10034,6 +10059,26 @@
         "episode_id": 21355,
         "display_name": "Lovci duchů S03E16 - Hříšníci nenaleznou pokoje CZ Dabing",
         "video_id": 26196678
+      },
+      {
+        "episode_id": 21357,
+        "display_name": "Lovci duchů S04E02 - Jsi tam, Bože? CZ Dabing",
+        "video_id": 26196722
+      },
+      {
+        "episode_id": 21363,
+        "display_name": "Lovci duchů S04E08 - Studna přání CZ Dabing",
+        "video_id": 26196800
+      },
+      {
+        "episode_id": 21365,
+        "display_name": "Lovci duchů S04E10 - Nebe proti peklu CZ Dabing",
+        "video_id": 26196847
+      },
+      {
+        "episode_id": 21367,
+        "display_name": "Lovci duchů S04E12 - Nesmrtelnost CZ Dabing",
+        "video_id": 26196890
       }
     ],
     "prepared_not_upload_ready": [
@@ -10341,7 +10386,7 @@
   },
   "language_verdicts": {
     "UNKNOWN": 87,
-    "CZ_AUDIO": 32007,
+    "CZ_AUDIO": 33227,
     "CZ_SUBTITLES_ONLY": 1731,
     "NOT_CZ_AUDIO": 190,
     "SK_AUDIO": 2
