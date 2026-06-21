@@ -1,41 +1,81 @@
 {
   "counts": {
-    "backlog_episodes": 240,
+    "backlog_episodes": 1000,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 1131,
-    "prepared_source_episodes": 5054,
+    "uploaded_episodes": 1168,
+    "prepared_source_episodes": 5068,
     "description_series": 82,
-    "description_episodes": 2765,
+    "description_episodes": 3020,
     "description_errors": 148,
-    "language_audit_rows": 31959,
-    "language_queue_sources": 2112,
+    "language_audit_rows": 31993,
+    "language_queue_sources": 2503,
     "language_audited_sources": 30510,
-    "language_whisper_attempted_sources": 1385,
-    "language_pending_whisper_sources": 727
+    "language_whisper_attempted_sources": 1405,
+    "language_pending_whisper_sources": 2503
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-06-21T01:00:59Z",
-      "databaseId": 27889125302,
+      "createdAt": "2026-06-21T01:28:25Z",
+      "databaseId": 27889685525,
       "headBranch": "main",
       "status": "in_progress",
-      "workflowName": "ops-status"
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-21T01:26:08Z",
+      "databaseId": 27889637735,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "refresh-backlog"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-21T01:24:46Z",
+      "databaseId": 27889609383,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-21T01:23:42Z",
+      "databaseId": 27889589105,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-descriptions"
     },
     {
       "conclusion": "",
-      "createdAt": "2026-06-21T00:42:06Z",
-      "databaseId": 27888733935,
+      "createdAt": "2026-06-21T01:08:10Z",
+      "databaseId": 27889271100,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "sync"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
+      "createdAt": "2026-06-21T01:00:59Z",
+      "databaseId": 27889125302,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-06-21T00:42:06Z",
+      "databaseId": 27888733935,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "cancelled",
       "createdAt": "2026-06-21T00:30:55Z",
       "databaseId": 27888499614,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "sync"
     },
     {
@@ -133,46 +173,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-20T23:46:03Z",
-      "databaseId": 27887524713,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-20T23:35:58Z",
-      "databaseId": 27887313112,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-20T23:34:23Z",
-      "databaseId": 27887278614,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-20T23:34:04Z",
-      "databaseId": 27887271015,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-20T23:32:17Z",
-      "databaseId": 27887232595,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
     }
   ],
   "gaps": {
@@ -4951,6 +4951,21 @@
         "video_id": 26186618
       },
       {
+        "episode_id": 20104,
+        "display_name": "Rodina Sopránů S05E05 - Nepravosti na okraji společnosti CZ Dabing",
+        "video_id": 26186660
+      },
+      {
+        "episode_id": 2712,
+        "display_name": "Rodina Sopránů S05E07 - Čas idylického štěstí CZ Dabing",
+        "video_id": 26186682
+      },
+      {
+        "episode_id": 2714,
+        "display_name": "Rodina Sopránů S05E09 - Neznámí muži tmavé pleti CZ Dabing",
+        "video_id": 26186700
+      },
+      {
         "episode_id": 2665,
         "display_name": "Rodina Sopránů S01E11 - Nikdo nic neví CZ Dabing",
         "video_id": 26186013
@@ -5024,6 +5039,176 @@
         "episode_id": 2697,
         "display_name": "Rodina Sopránů S04E04 - Váha CZ Dabing",
         "video_id": 26186639
+      },
+      {
+        "episode_id": 2703,
+        "display_name": "Rodina Sopránů S04E06 - Každý si nese svůj kříž CZ Dabing",
+        "video_id": 26186662
+      },
+      {
+        "episode_id": 2699,
+        "display_name": "Rodina Sopránů S04E07 - Škodlivý vliv televize CZ Dabing",
+        "video_id": 26186677
+      },
+      {
+        "episode_id": 2701,
+        "display_name": "Rodina Sopránů S04E09 - Někdo to musel udělat CZ Dabing",
+        "video_id": 26186684
+      },
+      {
+        "episode_id": 2707,
+        "display_name": "Rodina Sopránů S05E01 - Dvě tváře Tonyho CZ Dabing",
+        "video_id": 26186691
+      },
+      {
+        "episode_id": 2716,
+        "display_name": "Rodina Sopránů S05E11 - Zkušební sen CZ Dabing",
+        "video_id": 26186719
+      },
+      {
+        "episode_id": 2718,
+        "display_name": "Rodina Sopránů S05E13 - Nic ve zlém CZ Dabing",
+        "video_id": 26186745
+      },
+      {
+        "episode_id": 20106,
+        "display_name": "Rodina Sopránů S06E02 - Vítej v klubu CZ Dabing",
+        "video_id": 26186776
+      },
+      {
+        "episode_id": 20108,
+        "display_name": "Rodina Sopránů S06E04 - Do masitý části stehna CZ Dabing",
+        "video_id": 26186794
+      },
+      {
+        "episode_id": 20110,
+        "display_name": "Rodina Sopránů S06E06 - Žij svobodně nebo zemři CZ Dabing",
+        "video_id": 26186805
+      },
+      {
+        "episode_id": 20112,
+        "display_name": "Rodina Sopránů S06E08 - Kukuřičné placky CZ Dabing",
+        "video_id": 26186817
+      },
+      {
+        "episode_id": 20114,
+        "display_name": "Rodina Sopránů S06E10 - Moe a Joe CZ Dabing",
+        "video_id": 26186835
+      },
+      {
+        "episode_id": 20116,
+        "display_name": "Rodina Sopránů S06E12 - Kaisha CZ Dabing",
+        "video_id": 26186857
+      },
+      {
+        "episode_id": 20118,
+        "display_name": "Rodina Sopránů S06E14 - Páté stádium CZ Dabing",
+        "video_id": 26186881
+      },
+      {
+        "episode_id": 20120,
+        "display_name": "Rodina Sopránů S06E16 - Nepokoušej štěstí CZ Dabing",
+        "video_id": 26186900
+      },
+      {
+        "episode_id": 20122,
+        "display_name": "Rodina Sopránů S06E18 - Kennedy a Heidi CZ Dabing",
+        "video_id": 26186914
+      },
+      {
+        "episode_id": 20124,
+        "display_name": "Rodina Sopránů S06E20 - Modrá kometa CZ Dabing",
+        "video_id": 26186925
+      },
+      {
+        "episode_id": 42362,
+        "display_name": "Dům z karet S01E01 - 1. kapitola CZ Dabing",
+        "video_id": 26186942
+      },
+      {
+        "episode_id": 42364,
+        "display_name": "Dům z karet S01E03 - 3. kapitola CZ Dabing",
+        "video_id": 26186958
+      },
+      {
+        "episode_id": 42366,
+        "display_name": "Dům z karet S01E05 - 5. kapitola CZ Dabing",
+        "video_id": 26186975
+      },
+      {
+        "episode_id": 2715,
+        "display_name": "Rodina Sopránů S05E10 - Chladnokrevná msta CZ Dabing",
+        "video_id": 26186702
+      },
+      {
+        "episode_id": 2717,
+        "display_name": "Rodina Sopránů S05E12 - Dlouhodobé parkování CZ Dabing",
+        "video_id": 26186714
+      },
+      {
+        "episode_id": 20105,
+        "display_name": "Rodina Sopránů S06E01 - Model vyšlý z módy CZ Dabing",
+        "video_id": 26186726
+      },
+      {
+        "episode_id": 20107,
+        "display_name": "Rodina Sopránů S06E03 - Chaos CZ Dabing",
+        "video_id": 26186742
+      },
+      {
+        "episode_id": 20109,
+        "display_name": "Rodina Sopránů S06E05 - Svatba CZ Dabing",
+        "video_id": 26186766
+      },
+      {
+        "episode_id": 20111,
+        "display_name": "Rodina Sopránů S06E07 - Výstava luxusního zboží CZ Dabing",
+        "video_id": 26186784
+      },
+      {
+        "episode_id": 20113,
+        "display_name": "Rodina Sopránů S06E09 - Pouť CZ Dabing",
+        "video_id": 26186804
+      },
+      {
+        "episode_id": 20115,
+        "display_name": "Rodina Sopránů S06E11 - Studené kameny CZ Dabing",
+        "video_id": 26186831
+      },
+      {
+        "episode_id": 20117,
+        "display_name": "Rodina Sopránů S06E13 - Domácí kino Sopranů CZ Dabing",
+        "video_id": 26186853
+      },
+      {
+        "episode_id": 20121,
+        "display_name": "Rodina Sopránů S06E17 - Chovej se jako chlap CZ Dabing",
+        "video_id": 26186877
+      },
+      {
+        "episode_id": 20123,
+        "display_name": "Rodina Sopránů S06E19 - Nový příchod CZ Dabing",
+        "video_id": 26186903
+      },
+      {
+        "episode_id": 20125,
+        "display_name": "Rodina Sopránů S06E21 - Made in Amerika CZ Dabing",
+        "video_id": 26186926
+      },
+      {
+        "episode_id": 42363,
+        "display_name": "Dům z karet S01E02 - 2. kapitola CZ Dabing",
+        "video_id": 26186950
+      },
+      {
+        "episode_id": 42365,
+        "display_name": "Dům z karet S01E04 - 4. kapitola CZ Dabing",
+        "video_id": 26186960
+      },
+      {
+        "episode_id": 42367,
+        "display_name": "Dům z karet S01E06 - 6. kapitola CZ Dabing",
+        "video_id": 26186974
       }
     ],
     "prepared_not_upload_ready": [
@@ -5330,16 +5515,16 @@
     ]
   },
   "language_verdicts": {
-    "UNKNOWN": 79,
-    "CZ_AUDIO": 29973,
+    "UNKNOWN": 87,
+    "CZ_AUDIO": 29999,
     "CZ_SUBTITLES_ONLY": 1731,
     "NOT_CZ_AUDIO": 174,
     "SK_AUDIO": 2
   },
   "language_whisper_statuses": {
-    "disabled": 29125,
-    "resolve_failed": 268,
-    "ok": 1082,
-    "no_stream": 35
+    "disabled": 29105,
+    "resolve_failed": 275,
+    "ok": 1094,
+    "no_stream": 36
   }
 }
