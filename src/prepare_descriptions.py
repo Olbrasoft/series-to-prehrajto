@@ -17,26 +17,11 @@ from pathlib import Path
 
 import requests
 
+from description_quality import is_valid_generated_description
+
 DEFAULT_MODEL = os.environ.get("GEMINI_MODEL", "gemma-4-31b-it")
 DEFAULT_RETRY_SECONDS = 5.0
 DEFAULT_THINKING_BUDGET = os.environ.get("GEMINI_THINKING_BUDGET", "0")
-FORBIDDEN_DESCRIPTION_MARKERS = (
-    "task:",
-    "constraints:",
-    "source material",
-    "source text",
-    "source description",
-    "draft",
-    "fact ",
-    "plot ",
-    "original?",
-    "no copying",
-    "checked",
-    "episode:",
-    "series/episode",
-    "$\\rightarrow",
-    "→",
-)
 
 
 def now_iso() -> str:
@@ -179,23 +164,6 @@ def generation_config(model: str) -> dict:
     if DEFAULT_THINKING_BUDGET.strip() and not model.startswith("gemma-"):
         config["thinkingConfig"] = {"thinkingBudget": int(DEFAULT_THINKING_BUDGET)}
     return config
-
-
-def is_valid_generated_description(text: str) -> bool:
-    normalized = re.sub(r"\s+", " ", text or "").strip()
-    if len(normalized) < 90 or len(normalized) > 900:
-        return False
-    lowered = normalized.lower()
-    if any(marker in lowered for marker in FORBIDDEN_DESCRIPTION_MARKERS):
-        return False
-    if normalized.startswith(("*", "-", "#", "{", "[")):
-        return False
-    if "\n*" in text or "\n-" in text:
-        return False
-    if not re.search(r"[áčďéěíňóřšťúůýžÁČĎÉĚÍŇÓŘŠŤÚŮÝŽ]", normalized):
-        return False
-    sentence_count = len(re.findall(r"[.!?](?:\s|$)", normalized))
-    return 1 <= sentence_count <= 5
 
 
 def response_error(resp: requests.Response) -> tuple[str, int | None, float | None, dict[str, str]]:

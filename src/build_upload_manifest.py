@@ -9,6 +9,8 @@ import json
 from collections import Counter
 from pathlib import Path
 
+from description_quality import is_valid_generated_description
+
 REPO_ROOT = Path(__file__).resolve().parent.parent
 
 
@@ -54,6 +56,8 @@ def description_indexes(rows: list[dict]) -> tuple[dict[int, dict], dict[int, di
     episodes: dict[int, dict] = {}
     for row in rows:
         if row.get("status") != "ok":
+            continue
+        if not is_valid_generated_description(row.get("generated_description") or ""):
             continue
         if row.get("kind") == "series" and row.get("series_id") is not None:
             series[int(row["series_id"])] = row

@@ -9,6 +9,7 @@ import subprocess
 from collections import Counter
 from pathlib import Path
 
+from description_quality import is_valid_generated_description
 from pick_next_episode import load_state
 
 REPO = Path(__file__).resolve().parent.parent
@@ -50,6 +51,8 @@ def latest_descriptions(rows: list[dict]) -> tuple[set[int], set[int]]:
     for row in rows:
         if row.get("status") != "ok":
             continue
+        if not is_valid_generated_description(row.get("generated_description") or ""):
+            continue
         if row.get("kind") == "series":
             series.add(int(row["series_id"]))
         elif row.get("kind") == "episode":
@@ -67,7 +70,8 @@ def unresolved_description_errors(rows: list[dict]) -> int:
             continue
         key = (kind, int(entity_id))
         if row.get("status") == "ok":
-            ok_keys.add(key)
+            if is_valid_generated_description(row.get("generated_description") or ""):
+                ok_keys.add(key)
         elif row.get("status") == "error":
             err_keys.add(key)
     return len(err_keys - ok_keys)
