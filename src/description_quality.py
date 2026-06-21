@@ -18,6 +18,10 @@ FORBIDDEN_DESCRIPTION_MARKERS = (
     "checked",
     "episode:",
     "series/episode",
+    "pokračuje v ději seriálu",
+    "epizoda zapadá do širšího příběhu série",
+    "text je připraven jako dočasný",
+    "popis je připraven tak",
     "$\\rightarrow",
     "→",
 )

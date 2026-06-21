@@ -52,7 +52,7 @@ jobs:
       - name: Commit update state
         if: always()
         run: |
-          git add state/uploaded.json state/description-updates.log
+          git add state/uploaded*.json state/description-updates.log
           if git diff --cached --quiet; then
             echo "no description update changes"
           else

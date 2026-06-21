@@ -14,7 +14,7 @@ on:
       fallback_on_error:
         description: "Store temporary fallback descriptions when Gemini fails"
         required: false
-        default: "true"
+        default: "false"
   schedule:
     - cron: "*/30 * * * *"
 
@@ -63,7 +63,7 @@ jobs:
             --workers 1 \
             --retries 4 \
             --replace-fallback \
-            ${{ (inputs.fallback_on_error || 'true') == 'true' && '--fallback-on-error' || '' }}
+            ${{ (inputs.fallback_on_error || 'false') == 'true' && '--fallback-on-error' || '' }}
 
       - name: Verify saved descriptions
         if: always()
