@@ -2,11 +2,11 @@
   "counts": {
     "backlog_episodes": 240,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 2765,
+    "uploaded_episodes": 2776,
     "prepared_source_episodes": 6435,
     "description_series": 53,
-    "description_episodes": 531,
-    "description_errors": 442,
+    "description_episodes": 545,
+    "description_errors": 455,
     "language_audit_rows": 40874,
     "language_queue_sources": 2635,
     "language_audited_sources": 39405,
@@ -16,10 +16,42 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-06-21T22:35:06Z",
+      "databaseId": 27919649514,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-21T22:33:48Z",
+      "databaseId": 27919617361,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-21T22:33:44Z",
+      "databaseId": 27919615593,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-21T22:32:15Z",
+      "databaseId": 27919579062,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-06-21T22:29:14Z",
       "databaseId": 27919502248,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-status"
     },
     {
@@ -119,11 +151,11 @@
       "workflowName": "audit-language"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-06-21T21:36:14Z",
       "databaseId": 27918220336,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-descriptions"
     },
     {
@@ -141,38 +173,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "sync"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-21T21:22:54Z",
-      "databaseId": 27917889881,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-21T21:22:53Z",
-      "databaseId": 27917889352,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-21T21:22:30Z",
-      "databaseId": 27917880270,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-21T21:09:10Z",
-      "databaseId": 27917548211,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
     }
   ],
   "gaps": {
@@ -180,13 +180,9 @@
     "backlog_without_episode_description": [
       1958,
       1959,
-      1960,
       1961,
       1962,
-      1963,
-      1964,
       1965,
-      1966,
       1967,
       1969,
       1970,
@@ -227,7 +223,11 @@
       2005,
       2006,
       2007,
-      2008
+      2008,
+      2009,
+      2010,
+      2011,
+      2012
     ],
     "uploaded_without_gemma_description": [
       {
@@ -15318,6 +15318,41 @@
         "video_id": 26217222
       },
       {
+        "episode_id": 10024,
+        "display_name": "Daredevil S01E02 - Cut Man CZ Dabing",
+        "video_id": 26217256
+      },
+      {
+        "episode_id": 10022,
+        "display_name": "Daredevil S01E04 - V krvi CZ Dabing",
+        "video_id": 26217295
+      },
+      {
+        "episode_id": 35294,
+        "display_name": "Zápisník smrti S01E09 - Setkání CZ Dabing",
+        "video_id": 26217311
+      },
+      {
+        "episode_id": 35296,
+        "display_name": "Zápisník smrti S01E12 - Láska CZ Dabing",
+        "video_id": 26217320
+      },
+      {
+        "episode_id": 35298,
+        "display_name": "Zápisník smrti S01E14 - Přítel CZ Dabing",
+        "video_id": 26217333
+      },
+      {
+        "episode_id": 35300,
+        "display_name": "Zápisník smrti S01E16 - Rozhodnutí CZ Dabing",
+        "video_id": 26217341
+      },
+      {
+        "episode_id": 35302,
+        "display_name": "Zápisník smrti S01E18 - Spojenec CZ Dabing",
+        "video_id": 26217351
+      },
+      {
         "episode_id": 21593,
         "display_name": "Lovci duchů S14E11 - Poškozené zboží CZ Dabing",
         "video_id": 26217127
@@ -15341,6 +15376,26 @@
         "episode_id": 21601,
         "display_name": "Lovci duchů S14E19 - Jack v krabici CZ Dabing",
         "video_id": 26217223
+      },
+      {
+        "episode_id": 21605,
+        "display_name": "Lovci duchů S15E03 - Roztržka CZ Dabing",
+        "video_id": 26217257
+      },
+      {
+        "episode_id": 21607,
+        "display_name": "Lovci duchů S15E05 - Verš 17:3 CZ Dabing",
+        "video_id": 26217273
+      },
+      {
+        "episode_id": 21609,
+        "display_name": "Lovci duchů S15E07 - Poslední hovor CZ Dabing",
+        "video_id": 26217300
+      },
+      {
+        "episode_id": 21611,
+        "display_name": "Lovci duchů S15E09 - Past CZ Dabing",
+        "video_id": 26217318
       }
     ],
     "prepared_not_upload_ready": [
