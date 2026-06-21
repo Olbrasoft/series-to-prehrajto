@@ -1,12 +1,12 @@
 {
   "counts": {
-    "backlog_episodes": 240,
-    "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 2569,
+    "backlog_episodes": 1000,
+    "manifest_upload_ready_episodes": 904,
+    "uploaded_episodes": 2572,
     "prepared_source_episodes": 6435,
     "description_series": 48,
     "description_episodes": 450,
-    "description_errors": 439,
+    "description_errors": 560,
     "language_audit_rows": 40434,
     "language_queue_sources": 2635,
     "language_audited_sources": 38965,
@@ -16,10 +16,34 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-06-21T16:46:20Z",
+      "databaseId": 27910946770,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-21T16:41:50Z",
+      "databaseId": 27910827826,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-21T16:41:40Z",
+      "databaseId": 27910823248,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-06-21T16:36:45Z",
       "databaseId": 27910695029,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-status"
     },
     {
@@ -47,11 +71,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "failure",
       "createdAt": "2026-06-21T16:22:46Z",
       "databaseId": 27910340290,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -127,11 +151,11 @@
       "workflowName": "audit-language"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-06-21T15:41:44Z",
       "databaseId": 27909287453,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-descriptions"
     },
     {
@@ -149,85 +173,61 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "refresh-backlog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-21T15:37:28Z",
-      "databaseId": 27909174918,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-21T15:17:07Z",
-      "databaseId": 27908652476,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-21T15:16:47Z",
-      "databaseId": 27908644463,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-sources"
     }
   ],
   "gaps": {
     "backlog_without_source_plan": [],
     "backlog_without_episode_description": [
-      2660,
-      2671,
-      2673,
-      2676,
-      2678,
-      2686,
-      2692,
-      2698,
-      2702,
-      2705,
-      2708,
-      2709,
-      2713,
-      3035,
-      3040,
-      3058,
-      3831,
-      3832,
-      3835,
-      3851,
-      3852,
-      3856,
-      3857,
-      3924,
-      3927,
-      3929,
-      3943,
-      3944,
-      3946,
-      3947,
-      3950,
-      3952,
-      3953,
-      3954,
-      3956,
-      3965,
-      3979,
-      4947,
-      4949,
-      5222,
-      5251,
-      5253,
-      5255,
-      5257,
-      5267,
-      5269,
-      5273,
-      5684,
-      9694,
-      9695
+      1958,
+      1959,
+      1960,
+      1961,
+      1962,
+      1963,
+      1964,
+      1965,
+      1966,
+      1967,
+      1969,
+      1970,
+      1971,
+      1972,
+      1973,
+      1974,
+      1975,
+      1976,
+      1977,
+      1978,
+      1979,
+      1980,
+      1981,
+      1982,
+      1983,
+      1984,
+      1985,
+      1986,
+      1987,
+      1988,
+      1989,
+      1990,
+      1991,
+      1992,
+      1993,
+      1994,
+      1995,
+      1996,
+      1997,
+      1998,
+      1999,
+      2000,
+      2001,
+      2002,
+      2003,
+      2004,
+      2005,
+      2006,
+      2007,
+      2008
     ],
     "uploaded_without_gemma_description": [
       {
@@ -14356,6 +14356,21 @@
         "episode_id": 14614,
         "display_name": "Teorie velkého třesku S12E10 - VHS reminiscence CZ Dabing",
         "video_id": 26207885
+      },
+      {
+        "episode_id": 14616,
+        "display_name": "Teorie velkého třesku S12E12 - Skandální návrh CZ Dabing",
+        "video_id": 26208019
+      },
+      {
+        "episode_id": 14618,
+        "display_name": "Teorie velkého třesku S12E14 - Porcování meteoritu CZ Dabing",
+        "video_id": 26208210
+      },
+      {
+        "episode_id": 14620,
+        "display_name": "Teorie velkého třesku S12E16 - Hraní s celebritami CZ Dabing",
+        "video_id": 26208233
       },
       {
         "episode_id": 2859,
