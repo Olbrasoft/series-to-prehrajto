@@ -14,6 +14,7 @@ from pathlib import Path
 import requests
 
 DEFAULT_MODEL = os.environ.get("GEMINI_MODEL", "gemma-4-31b-it")
+DEFAULT_THINKING_BUDGET = os.environ.get("GEMINI_THINKING_BUDGET", "0")
 
 
 def load_jsonl(path: Path) -> list[dict]:
@@ -49,7 +50,10 @@ def rewrite_one(row: dict, key: str, model: str) -> str:
         f"Název: {title}\nZdrojový popis:\n{source}"
     )
     url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key={key}"
-    payload = {"contents": [{"parts": [{"text": prompt}]}]}
+    generation_config: dict = {}
+    if DEFAULT_THINKING_BUDGET.strip():
+        generation_config["thinkingConfig"] = {"thinkingBudget": int(DEFAULT_THINKING_BUDGET)}
+    payload = {"contents": [{"parts": [{"text": prompt}]}], "generationConfig": generation_config}
     resp = requests.post(url, json=payload, timeout=60)
     resp.raise_for_status()
     data = resp.json()

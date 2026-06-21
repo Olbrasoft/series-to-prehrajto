@@ -121,6 +121,7 @@ jobs:
         env:
           GEMINI_API_KEYS: ${{ secrets.GEMINI_API_KEYS }}
           GEMINI_MODEL: gemma-4-31b-it
+          GEMINI_THINKING_BUDGET: "0"
         run: |
           python src/prepare_descriptions.py \
             --series-limit "${{ inputs.series_limit || '80' }}" \

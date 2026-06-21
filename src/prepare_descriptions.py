@@ -19,6 +19,7 @@ import requests
 
 DEFAULT_MODEL = os.environ.get("GEMINI_MODEL", "gemma-4-31b-it")
 DEFAULT_RETRY_SECONDS = 5.0
+DEFAULT_THINKING_BUDGET = os.environ.get("GEMINI_THINKING_BUDGET", "0")
 
 
 def now_iso() -> str:
@@ -150,6 +151,13 @@ def fallback_description(task: dict) -> str:
     )
 
 
+def generation_config() -> dict:
+    config: dict = {"temperature": 0.7, "topP": 0.9, "maxOutputTokens": 512}
+    if DEFAULT_THINKING_BUDGET.strip():
+        config["thinkingConfig"] = {"thinkingBudget": int(DEFAULT_THINKING_BUDGET)}
+    return config
+
+
 def response_error(resp: requests.Response) -> tuple[str, int | None, float | None, dict[str, str]]:
     headers = {
         key: value
@@ -185,7 +193,7 @@ def generate(task: dict, key: str, model: str, *, retries: int = 3, fallback_on_
     url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key={key}"
     payload = {
         "contents": [{"parts": [{"text": prompt_for(task)}]}],
-        "generationConfig": {"temperature": 0.7, "topP": 0.9, "maxOutputTokens": 512},
+        "generationConfig": generation_config(),
     }
     last_error_status = None
     last_error_headers: dict[str, str] = {}
