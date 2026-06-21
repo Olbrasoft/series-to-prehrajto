@@ -20,6 +20,23 @@ import requests
 DEFAULT_MODEL = os.environ.get("GEMINI_MODEL", "gemma-4-31b-it")
 DEFAULT_RETRY_SECONDS = 5.0
 DEFAULT_THINKING_BUDGET = os.environ.get("GEMINI_THINKING_BUDGET", "0")
+FORBIDDEN_DESCRIPTION_MARKERS = (
+    "task:",
+    "constraints:",
+    "source material",
+    "source text",
+    "source description",
+    "draft",
+    "fact ",
+    "plot ",
+    "original?",
+    "no copying",
+    "checked",
+    "episode:",
+    "series/episode",
+    "$\\rightarrow",
+    "→",
+)
 
 
 def now_iso() -> str:
@@ -63,6 +80,8 @@ def existing_ok(path: Path, *, replace_fallback: bool = False) -> set[tuple[str,
             if row.get("status") != "ok":
                 continue
             if replace_fallback and row.get("model") == "fallback-template-v1":
+                continue
+            if replace_fallback and not is_valid_generated_description(row.get("generated_description") or ""):
                 continue
             kind = row.get("kind")
             entity_id = row.get("episode_id") if kind == "episode" else row.get("series_id")
@@ -124,14 +143,18 @@ def build_tasks(backlog: list[dict], done: set[tuple[str, int, str]], *, series_
 def prompt_for(task: dict) -> str:
     if task["kind"] == "series":
         return (
-            "Vytvoř originální český popis seriálu pro video hosting. "
-            "Nekopíruj formulace ze zdroje, zachovej fakta, neuváděj, že jde o přepis. "
+            "Jsi editor českých popisů pro video hosting.\n"
+            "Vrať pouze finální český popis seriálu, nic jiného.\n"
+            "Nepiš zadání, rozbor, odrážky, varianty, vysvětlení ani anglický text.\n"
+            "Nekopíruj formulace ze zdroje, zachovej fakta, neuváděj, že jde o přepis.\n"
             "Piš přirozeně česky, 3 až 5 vět, bez spoilerů a bez marketingové omáčky.\n\n"
             f"Seriál: {task['title']}\nZdrojový popis:\n{task['source_description']}"
         )
     return (
-        "Vytvoř originální český popis seriálové epizody pro video hosting. "
-        "Nekopíruj formulace ze zdroje, zachovej fakta, neprozrazuj pointu. "
+        "Jsi editor českých popisů pro video hosting.\n"
+        "Vrať pouze finální český popis seriálové epizody, nic jiného.\n"
+        "Nepiš zadání, rozbor, odrážky, varianty, kontrolní seznam, vysvětlení ani anglický text.\n"
+        "Nekopíruj formulace ze zdroje, zachovej fakta, neprozrazuj pointu.\n"
         "Piš 2 až 4 věty, přirozeně česky, bez frází typu 'v této epizodě uvidíte'.\n\n"
         f"Epizoda: {task['title']}\nZdrojový popis:\n{task['source_description']}"
     )
@@ -152,10 +175,27 @@ def fallback_description(task: dict) -> str:
 
 
 def generation_config(model: str) -> dict:
-    config: dict = {"temperature": 0.7, "topP": 0.9, "maxOutputTokens": 512}
+    config: dict = {"temperature": 0.45, "topP": 0.8, "maxOutputTokens": 220}
     if DEFAULT_THINKING_BUDGET.strip() and not model.startswith("gemma-"):
         config["thinkingConfig"] = {"thinkingBudget": int(DEFAULT_THINKING_BUDGET)}
     return config
+
+
+def is_valid_generated_description(text: str) -> bool:
+    normalized = re.sub(r"\s+", " ", text or "").strip()
+    if len(normalized) < 90 or len(normalized) > 900:
+        return False
+    lowered = normalized.lower()
+    if any(marker in lowered for marker in FORBIDDEN_DESCRIPTION_MARKERS):
+        return False
+    if normalized.startswith(("*", "-", "#", "{", "[")):
+        return False
+    if "\n*" in text or "\n-" in text:
+        return False
+    if not re.search(r"[áčďéěíňóřšťúůýžÁČĎÉĚÍŇÓŘŠŤÚŮÝŽ]", normalized):
+        return False
+    sentence_count = len(re.findall(r"[.!?](?:\s|$)", normalized))
+    return 1 <= sentence_count <= 5
 
 
 def response_error(resp: requests.Response) -> tuple[str, int | None, float | None, dict[str, str]]:
@@ -204,6 +244,8 @@ def generate(task: dict, key: str, model: str, *, retries: int = 3, fallback_on_
             resp.raise_for_status()
             data = resp.json()
             text = data["candidates"][0]["content"]["parts"][0]["text"].strip()
+            if not is_valid_generated_description(text):
+                raise ValueError("Generated description failed validation")
             return {**task, "status": "ok", "model": model, "generated_at": now_iso(), "generated_description": text}
         except Exception as exc:
             error_text = str(exc)
