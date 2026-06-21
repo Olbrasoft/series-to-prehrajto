@@ -262,24 +262,32 @@ def main() -> int:
     tasks = build_tasks(rows, done, series_limit=args.series_limit, episode_limit=args.episode_limit)
     keys = api_keys()
     results: list[dict] = []
+    def task(index_task: tuple[int, dict]) -> dict:
+        index, task_row = index_task
+        key_index = index % len(keys)
+        result = generate(
+            task_row,
+            keys[key_index],
+            args.model,
+            retries=args.retries,
+            fallback_on_error=args.fallback_on_error,
+        )
+        result["key_slot"] = key_index + 1
+        result["key_count"] = len(keys)
+        return result
+
     with ThreadPoolExecutor(max_workers=max(1, args.workers)) as ex:
         futures = [
-            ex.submit(
-                generate,
-                task,
-                keys[i % len(keys)],
-                args.model,
-                retries=args.retries,
-                fallback_on_error=args.fallback_on_error,
-            )
-            for i, task in enumerate(tasks)
+            ex.submit(task, item)
+            for item in enumerate(tasks)
         ]
         for fut in as_completed(futures):
             row = fut.result()
             results.append(row)
             ident = row.get("episode_code") or row.get("series_slug")
             suffix = f" {row.get('error') or row.get('fallback_reason')}" if row.get("error") or row.get("fallback_reason") else ""
-            print(f"{row['status']} {row['kind']} {ident}{suffix}", file=sys.stderr)
+            key_suffix = f" key_slot={row.get('key_slot')}/{row.get('key_count')}"
+            print(f"{row['status']} {row['kind']} {ident}{key_suffix}{suffix}", file=sys.stderr)
     append_jsonl(Path(args.out), results)
     ok = sum(1 for row in results if row.get("status") == "ok")
     print(f"Prepared descriptions: ok={ok} total={len(results)} out={args.out}")
