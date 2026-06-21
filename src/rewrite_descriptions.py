@@ -51,7 +51,7 @@ def rewrite_one(row: dict, key: str, model: str) -> str:
     )
     url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key={key}"
     generation_config: dict = {}
-    if DEFAULT_THINKING_BUDGET.strip():
+    if DEFAULT_THINKING_BUDGET.strip() and not model.startswith("gemma-"):
         generation_config["thinkingConfig"] = {"thinkingBudget": int(DEFAULT_THINKING_BUDGET)}
     payload = {"contents": [{"parts": [{"text": prompt}]}], "generationConfig": generation_config}
     resp = requests.post(url, json=payload, timeout=60)
