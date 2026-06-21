@@ -54,7 +54,7 @@ jobs:
       - name: Prepare descriptions
         env:
           GEMINI_API_KEYS: ${{ secrets.GEMINI_API_KEYS }}
-          GEMINI_MODEL: gemini-2.5-flash-lite
+          GEMINI_MODEL: gemma-4-31b-it
         run: |
           python src/prepare_descriptions.py \
             --series-limit "${{ inputs.series_limit || '40' }}" \

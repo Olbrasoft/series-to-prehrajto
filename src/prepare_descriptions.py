@@ -17,7 +17,7 @@ from pathlib import Path
 
 import requests
 
-DEFAULT_MODEL = os.environ.get("GEMINI_MODEL", "gemini-2.5-flash-lite")
+DEFAULT_MODEL = os.environ.get("GEMINI_MODEL", "gemma-4-31b-it")
 DEFAULT_RETRY_SECONDS = 5.0
 
 

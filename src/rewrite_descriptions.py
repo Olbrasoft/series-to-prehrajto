@@ -13,7 +13,7 @@ from pathlib import Path
 
 import requests
 
-DEFAULT_MODEL = os.environ.get("GEMINI_MODEL", "gemini-2.5-flash-lite")
+DEFAULT_MODEL = os.environ.get("GEMINI_MODEL", "gemma-4-31b-it")
 
 
 def load_jsonl(path: Path) -> list[dict]:
