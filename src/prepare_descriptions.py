@@ -282,7 +282,10 @@ def main() -> int:
     done = existing_ok(Path(args.out), replace_fallback=args.replace_fallback)
     tasks = build_tasks(rows, done, series_limit=args.series_limit, episode_limit=args.episode_limit)
     keys = api_keys()
-    results: list[dict] = []
+    out_path = Path(args.out)
+    ok = 0
+    total = 0
+
     def task(index_task: tuple[int, dict]) -> dict:
         index, task_row = index_task
         key_index = index % len(keys)
@@ -304,15 +307,16 @@ def main() -> int:
         ]
         for fut in as_completed(futures):
             row = fut.result()
-            results.append(row)
+            append_jsonl(out_path, [row])
+            total += 1
+            if row.get("status") == "ok":
+                ok += 1
             ident = row.get("episode_code") or row.get("series_slug")
             suffix = f" {row.get('error') or row.get('fallback_reason')}" if row.get("error") or row.get("fallback_reason") else ""
             key_suffix = f" key_slot={row.get('key_slot')}/{row.get('key_count')}"
             print(f"{row['status']} {row['kind']} {ident}{key_suffix}{suffix}", file=sys.stderr)
-    append_jsonl(Path(args.out), results)
-    ok = sum(1 for row in results if row.get("status") == "ok")
-    print(f"Prepared descriptions: ok={ok} total={len(results)} out={args.out}")
-    return 0 if ok > 0 or not results else 1
+    print(f"Prepared descriptions: ok={ok} total={total} out={args.out}")
+    return 0 if ok > 0 or not tasks else 1
 
 
 if __name__ == "__main__":

@@ -10,7 +10,7 @@ on:
       episode_limit:
         description: "Number of episode descriptions to prepare"
         required: false
-        default: "300"
+        default: "80"
       fallback_on_error:
         description: "Store temporary fallback descriptions when Gemini fails"
         required: false
@@ -57,13 +57,20 @@ jobs:
           GEMINI_MODEL: gemma-4-31b-it
           GEMINI_THINKING_BUDGET: "0"
         run: |
-          python src/prepare_descriptions.py \
+          set +e
+          timeout 50m python src/prepare_descriptions.py \
             --series-limit "${{ inputs.series_limit || '40' }}" \
-            --episode-limit "${{ inputs.episode_limit || '300' }}" \
+            --episode-limit "${{ inputs.episode_limit || '80' }}" \
             --workers 1 \
             --retries 4 \
             --replace-fallback \
             ${{ (inputs.fallback_on_error || 'false') == 'true' && '--fallback-on-error' || '' }}
+          code=$?
+          if [ "$code" = "124" ]; then
+            echo "description generation reached time limit; committing partial results"
+            exit 0
+          fi
+          exit "$code"
 
       - name: Verify saved descriptions
         if: always()

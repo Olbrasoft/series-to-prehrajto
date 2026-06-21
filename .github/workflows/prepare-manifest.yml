@@ -123,12 +123,23 @@ jobs:
           GEMINI_MODEL: gemma-4-31b-it
           GEMINI_THINKING_BUDGET: "0"
         run: |
-          python src/prepare_descriptions.py \
-            --series-limit "${{ inputs.series_limit || '80' }}" \
-            --episode-limit "${{ inputs.episode_limit || '1000' }}" \
+          set +e
+          timeout 35m python src/prepare_descriptions.py \
+            --series-limit "20" \
+            --episode-limit "120" \
             --workers 4 \
             --retries 1 \
             --replace-fallback
+          code=$?
+          if [ "$code" = "124" ]; then
+            echo "description generation reached time limit; continuing with partial results"
+            exit 0
+          fi
+          if [ "$code" = "1" ]; then
+            echo "description generation produced no usable descriptions; continuing manifest build"
+            exit 0
+          fi
+          exit "$code"
 
       - name: Build upload manifest
         env:
