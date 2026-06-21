@@ -1,33 +1,97 @@
 {
   "counts": {
-    "backlog_episodes": 240,
-    "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 2346,
-    "prepared_source_episodes": 5908,
+    "backlog_episodes": 1000,
+    "manifest_upload_ready_episodes": 653,
+    "uploaded_episodes": 2358,
+    "prepared_source_episodes": 6435,
     "description_series": 48,
     "description_episodes": 450,
-    "description_errors": 401,
-    "language_audit_rows": 35397,
+    "description_errors": 483,
+    "language_audit_rows": 40234,
     "language_queue_sources": 2635,
-    "language_audited_sources": 33928,
-    "language_whisper_attempted_sources": 1825,
-    "language_pending_whisper_sources": 2475
+    "language_audited_sources": 33948,
+    "language_whisper_attempted_sources": 1845,
+    "language_pending_whisper_sources": 2615
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-06-21T12:45:28Z",
-      "databaseId": 27904751611,
+      "createdAt": "2026-06-21T13:15:00Z",
+      "databaseId": 27905510507,
       "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "ops-status"
+      "status": "queued",
+      "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-06-21T13:14:16Z",
+      "databaseId": 27905491152,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-21T13:09:04Z",
+      "databaseId": 27905354917,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-21T13:08:48Z",
+      "databaseId": 27905348716,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-06-21T12:56:39Z",
+      "databaseId": 27905031591,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-21T12:54:53Z",
+      "databaseId": 27904985867,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-06-21T12:54:50Z",
+      "databaseId": 27904984946,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-21T12:54:42Z",
+      "databaseId": 27904981644,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "refresh-backlog"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-21T12:45:28Z",
+      "databaseId": 27904751611,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "cancelled",
       "createdAt": "2026-06-21T12:30:16Z",
       "databaseId": 27904375213,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "update-descriptions"
     },
     {
@@ -35,15 +99,15 @@
       "createdAt": "2026-06-21T12:28:10Z",
       "databaseId": 27904323804,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "sync"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-06-21T12:26:14Z",
       "databaseId": 27904276061,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-descriptions"
     },
     {
@@ -109,125 +173,61 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "sync"
-    },
-    {
-      "conclusion": "failure",
-      "createdAt": "2026-06-21T12:04:50Z",
-      "databaseId": 27903750396,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-21T11:57:09Z",
-      "databaseId": 27903555716,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-21T11:57:00Z",
-      "databaseId": 27903551627,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-21T11:56:26Z",
-      "databaseId": 27903537110,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-21T11:55:02Z",
-      "databaseId": 27903501211,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-06-21T11:41:29Z",
-      "databaseId": 27903170677,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-21T11:34:57Z",
-      "databaseId": 27903014891,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-21T11:34:42Z",
-      "databaseId": 27903010163,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
     }
   ],
   "gaps": {
     "backlog_without_source_plan": [],
     "backlog_without_episode_description": [
-      2846,
-      2847,
-      2848,
-      2849,
-      2850,
-      2851,
-      2852,
-      2853,
-      2854,
-      2855,
-      2856,
-      2857,
-      2858,
-      2859,
-      2860,
-      2861,
-      2862,
-      2863,
-      14594,
-      14595,
-      14596,
-      14597,
-      14598,
-      14599,
-      14600,
-      14601,
-      14602,
-      14603,
-      14604,
-      14605,
-      14606,
-      14607,
-      14608,
-      14609,
-      14610,
-      14611,
-      14612,
-      14613,
-      14614,
-      14615,
-      14616,
-      14617,
-      14618,
-      14619,
-      14620,
-      14621,
-      14622,
-      14623,
-      14624,
-      14625
+      2660,
+      2671,
+      2673,
+      2676,
+      2678,
+      2686,
+      2692,
+      2698,
+      2702,
+      2705,
+      2708,
+      2709,
+      2713,
+      3035,
+      3040,
+      3058,
+      3071,
+      3072,
+      3073,
+      3074,
+      3076,
+      3077,
+      3078,
+      3079,
+      3080,
+      3081,
+      3082,
+      3083,
+      3084,
+      3085,
+      3086,
+      3087,
+      3088,
+      3089,
+      3090,
+      3091,
+      3092,
+      3093,
+      3094,
+      3095,
+      3096,
+      3097,
+      3098,
+      3099,
+      3100,
+      3101,
+      3107,
+      3110,
+      3111,
+      3112
     ],
     "uploaded_without_gemma_description": [
       {
@@ -13223,6 +13223,41 @@
         "video_id": 26200941
       },
       {
+        "episode_id": 55476,
+        "display_name": "Lovci duchů S05E17 - 99 problémů CZ Dabing",
+        "video_id": 26200985
+      },
+      {
+        "episode_id": 55478,
+        "display_name": "Lovci duchů S05E19 - Kladivo bohů CZ Dabing",
+        "video_id": 26201025
+      },
+      {
+        "episode_id": 55480,
+        "display_name": "Lovci duchů S05E21 - Dvě minuty do půlnoci CZ Dabing",
+        "video_id": 26201107
+      },
+      {
+        "episode_id": 21400,
+        "display_name": "Lovci duchů S06E01 - Před minulostí neutečeš CZ Dabing",
+        "video_id": 26201159
+      },
+      {
+        "episode_id": 21402,
+        "display_name": "Lovci duchů S06E03 - Ten třetí CZ Dabing",
+        "video_id": 26201213
+      },
+      {
+        "episode_id": 21404,
+        "display_name": "Lovci duchů S06E05 - Trochu jiné stmívání CZ Dabing",
+        "video_id": 26201275
+      },
+      {
+        "episode_id": 21406,
+        "display_name": "Lovci duchů S06E07 - Rodinná záležitost CZ Dabing",
+        "video_id": 26201576
+      },
+      {
         "episode_id": 17107,
         "display_name": "Temný případ S04E06 - Noční krajina: Část 6 CZ Dabing",
         "video_id": 26200629
@@ -13246,6 +13281,31 @@
         "episode_id": 15455,
         "display_name": "Černé zrcadlo S03E01 - Pád střemhlav CZ Dabing",
         "video_id": 26200938
+      },
+      {
+        "episode_id": 15457,
+        "display_name": "Černé zrcadlo S03E04 - San Junipero CZ Dabing",
+        "video_id": 26200986
+      },
+      {
+        "episode_id": 15459,
+        "display_name": "Černé zrcadlo S03E05 - Muži pod palbou CZ Dabing",
+        "video_id": 26201053
+      },
+      {
+        "episode_id": 15461,
+        "display_name": "Černé zrcadlo S03E06 - Nenávist národa CZ Dabing",
+        "video_id": 26201155
+      },
+      {
+        "episode_id": 15463,
+        "display_name": "Černé zrcadlo S04E03 - Krokodýl CZ Dabing",
+        "video_id": 26201296
+      },
+      {
+        "episode_id": 15467,
+        "display_name": "Černé zrcadlo S04E05 - Železná vůle CZ Dabing",
+        "video_id": 26201579
       }
     ],
     "prepared_not_upload_ready": [
@@ -13553,7 +13613,7 @@
   },
   "language_verdicts": {
     "UNKNOWN": 87,
-    "CZ_AUDIO": 33379,
+    "CZ_AUDIO": 38216,
     "CZ_SUBTITLES_ONLY": 1731,
     "NOT_CZ_AUDIO": 198,
     "SK_AUDIO": 2
@@ -13561,7 +13621,7 @@
   "language_whisper_statuses": {
     "disabled": 32103,
     "resolve_failed": 276,
-    "ok": 1513,
+    "ok": 1533,
     "no_stream": 36
   }
 }
