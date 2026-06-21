@@ -2,32 +2,72 @@
   "counts": {
     "backlog_episodes": 1000,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 2627,
+    "uploaded_episodes": 2632,
     "prepared_source_episodes": 6435,
     "description_series": 48,
     "description_episodes": 450,
     "description_errors": 447,
-    "language_audit_rows": 40534,
+    "language_audit_rows": 40574,
     "language_queue_sources": 2635,
-    "language_audited_sources": 39065,
-    "language_whisper_attempted_sources": 2125,
-    "language_pending_whisper_sources": 2475
+    "language_audited_sources": 39105,
+    "language_whisper_attempted_sources": 2165,
+    "language_pending_whisper_sources": 2435
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-06-21T18:18:09Z",
-      "databaseId": 27913277211,
+      "createdAt": "2026-06-21T18:36:01Z",
+      "databaseId": 27913723671,
       "headBranch": "main",
       "status": "in_progress",
-      "workflowName": "ops-watchdog"
+      "workflowName": "ops-status"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-06-21T18:31:05Z",
+      "databaseId": 27913599244,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-06-21T18:18:30Z",
+      "databaseId": 27913285693,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-21T18:18:29Z",
+      "databaseId": 27913285306,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-21T18:18:28Z",
+      "databaseId": 27913284935,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-21T18:18:09Z",
+      "databaseId": 27913277211,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "cancelled",
       "createdAt": "2026-06-21T18:08:02Z",
       "databaseId": 27913028840,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "sync"
     },
     {
@@ -133,46 +173,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-06-21T17:12:20Z",
-      "databaseId": 27911624756,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-21T17:08:05Z",
-      "databaseId": 27911517019,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-21T17:07:44Z",
-      "databaseId": 27911508886,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-sources"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-21T17:06:03Z",
-      "databaseId": 27911468167,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-21T17:04:04Z",
-      "databaseId": 27911417189,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
     }
   ],
   "gaps": {
@@ -14623,6 +14623,16 @@
         "video_id": 26210384
       },
       {
+        "episode_id": 21440,
+        "display_name": "Lovci duchů S07E19 - Smrtelné vážně CZ Dabing",
+        "video_id": 26210840
+      },
+      {
+        "episode_id": 21442,
+        "display_name": "Lovci duchů S07E21 - Čtení je základ CZ Dabing",
+        "video_id": 26210867
+      },
+      {
         "episode_id": 21403,
         "display_name": "Lovci duchů S06E04 - Bobbyho víkend CZ Dabing",
         "video_id": 26209761
@@ -14651,6 +14661,21 @@
         "episode_id": 21413,
         "display_name": "Lovci duchů S06E14 - Pomsta figurín CZ Dabing",
         "video_id": 26210577
+      },
+      {
+        "episode_id": 21415,
+        "display_name": "Lovci duchů S06E16 - A pak nezbyl nikdo CZ Dabing",
+        "video_id": 26210871
+      },
+      {
+        "episode_id": 21417,
+        "display_name": "Lovci duchů S06E18 - Na Divokém západě CZ Dabing",
+        "video_id": 26211015
+      },
+      {
+        "episode_id": 21419,
+        "display_name": "Lovci duchů S06E20 - Dva králové CZ Dabing",
+        "video_id": 26211044
       }
     ],
     "prepared_not_upload_ready": [
@@ -14958,15 +14983,15 @@
   },
   "language_verdicts": {
     "UNKNOWN": 87,
-    "CZ_AUDIO": 38496,
+    "CZ_AUDIO": 38535,
     "CZ_SUBTITLES_ONLY": 1731,
-    "NOT_CZ_AUDIO": 218,
+    "NOT_CZ_AUDIO": 219,
     "SK_AUDIO": 2
   },
   "language_whisper_statuses": {
     "disabled": 36940,
     "resolve_failed": 276,
-    "ok": 1813,
+    "ok": 1853,
     "no_stream": 36
   }
 }
