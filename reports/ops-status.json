@@ -1,13 +1,13 @@
 {
   "counts": {
-    "backlog_episodes": 240,
+    "backlog_episodes": 1000,
     "manifest_upload_ready_episodes": 1000,
     "uploaded_episodes": 1679,
-    "prepared_source_episodes": 5068,
+    "prepared_source_episodes": 5382,
     "description_series": 82,
-    "description_episodes": 3020,
+    "description_episodes": 3457,
     "description_errors": 148,
-    "language_audit_rows": 32153,
+    "language_audit_rows": 33917,
     "language_queue_sources": 2624,
     "language_audited_sources": 30684,
     "language_whisper_attempted_sources": 1565,
@@ -16,10 +16,18 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-06-21T05:50:27Z",
+      "databaseId": 27895172528,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-06-21T05:50:05Z",
       "databaseId": 27895163373,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -31,11 +39,11 @@
       "workflowName": "prepare-manifest"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-06-21T05:47:20Z",
       "databaseId": 27895106889,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -59,15 +67,15 @@
       "createdAt": "2026-06-21T05:40:30Z",
       "databaseId": 27894963987,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "sync"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-06-21T05:29:29Z",
       "databaseId": 27894731698,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "sync"
     },
     {
@@ -165,14 +173,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-21T03:51:39Z",
-      "databaseId": 27892713459,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
     }
   ],
   "gaps": {
@@ -8071,7 +8071,7 @@
   },
   "language_verdicts": {
     "UNKNOWN": 87,
-    "CZ_AUDIO": 30147,
+    "CZ_AUDIO": 31911,
     "CZ_SUBTITLES_ONLY": 1731,
     "NOT_CZ_AUDIO": 186,
     "SK_AUDIO": 2
