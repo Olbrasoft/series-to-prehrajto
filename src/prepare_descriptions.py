@@ -19,7 +19,7 @@ import requests
 
 from description_quality import is_valid_generated_description
 
-DEFAULT_MODEL = os.environ.get("GEMINI_MODEL", "gemma-4-31b-it")
+DEFAULT_MODEL = os.environ.get("GEMINI_MODEL", "gemini-2.5-flash-lite")
 DEFAULT_RETRY_SECONDS = 5.0
 DEFAULT_THINKING_BUDGET = os.environ.get("GEMINI_THINKING_BUDGET", "0")
 
