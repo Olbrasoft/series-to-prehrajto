@@ -9,6 +9,7 @@ import gzip
 import hashlib
 import json
 import os
+import re
 import sys
 import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -17,6 +18,7 @@ from pathlib import Path
 import requests
 
 DEFAULT_MODEL = os.environ.get("GEMINI_MODEL", "gemini-2.5-flash-lite")
+DEFAULT_RETRY_SECONDS = 5.0
 
 
 def now_iso() -> str:
@@ -148,12 +150,46 @@ def fallback_description(task: dict) -> str:
     )
 
 
+def response_error(resp: requests.Response) -> tuple[str, int | None, float | None, dict[str, str]]:
+    headers = {
+        key: value
+        for key, value in resp.headers.items()
+        if key.lower() in {"retry-after", "date", "server"}
+        or key.lower().startswith("x-ratelimit")
+        or key.lower().startswith("x-goog")
+    }
+    retry_after = None
+    if resp.headers.get("Retry-After"):
+        try:
+            retry_after = float(resp.headers["Retry-After"])
+        except ValueError:
+            retry_after = None
+    try:
+        body = resp.json()
+    except ValueError:
+        text = resp.text[:500]
+        match = re.search(r"retry in ([0-9.]+)s", text, flags=re.IGNORECASE)
+        if match:
+            retry_after = float(match.group(1))
+        return text, None, retry_after, headers
+
+    error = body.get("error") or {}
+    message = str(error.get("message") or resp.text[:500])
+    match = re.search(r"retry in ([0-9.]+)s", message, flags=re.IGNORECASE)
+    if match:
+        retry_after = float(match.group(1))
+    return message[:500], int(error["code"]) if error.get("code") else None, retry_after, headers
+
+
 def generate(task: dict, key: str, model: str, *, retries: int = 3, fallback_on_error: bool = False) -> dict:
     url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key={key}"
     payload = {
         "contents": [{"parts": [{"text": prompt_for(task)}]}],
         "generationConfig": {"temperature": 0.7, "topP": 0.9, "maxOutputTokens": 512},
     }
+    last_error_status = None
+    last_error_headers: dict[str, str] = {}
+    last_retry_after = None
     for attempt in range(retries):
         try:
             resp = requests.post(url, json=payload, timeout=90)
@@ -162,10 +198,15 @@ def generate(task: dict, key: str, model: str, *, retries: int = 3, fallback_on_
             text = data["candidates"][0]["content"]["parts"][0]["text"].strip()
             return {**task, "status": "ok", "model": model, "generated_at": now_iso(), "generated_description": text}
         except Exception as exc:
+            error_text = str(exc)
+            retry_after = None
+            if isinstance(exc, requests.HTTPError) and exc.response is not None:
+                error_message, status_code, retry_after, headers = response_error(exc.response)
+                last_error_status = status_code or exc.response.status_code
+                last_error_headers = headers
+                last_retry_after = retry_after
+                error_text = f"HTTP {exc.response.status_code}: {error_message}"
             if attempt == retries - 1:
-                error_text = str(exc)
-                if isinstance(exc, requests.HTTPError) and exc.response is not None:
-                    error_text = f"HTTP {exc.response.status_code}: {exc.response.text[:300]}"
                 if fallback_on_error:
                     return {
                         **task,
@@ -183,8 +224,11 @@ def generate(task: dict, key: str, model: str, *, retries: int = 3, fallback_on_
                     "generated_at": now_iso(),
                     "error": type(exc).__name__,
                     "error_message": error_text[:500],
+                    "error_status_code": last_error_status,
+                    "error_retry_after_seconds": last_retry_after,
+                    "error_headers": last_error_headers,
                 }
-            time.sleep(2 + attempt * 3)
+            time.sleep(max(DEFAULT_RETRY_SECONDS + attempt * 3, retry_after or 0))
     raise AssertionError("unreachable")
 
 

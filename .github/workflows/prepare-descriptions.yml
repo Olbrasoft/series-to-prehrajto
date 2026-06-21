@@ -59,8 +59,8 @@ jobs:
           python src/prepare_descriptions.py \
             --series-limit "${{ inputs.series_limit || '40' }}" \
             --episode-limit "${{ inputs.episode_limit || '300' }}" \
-            --workers 4 \
-            --retries 2 \
+            --workers 1 \
+            --retries 4 \
             --replace-fallback \
             ${{ (inputs.fallback_on_error || 'true') == 'true' && '--fallback-on-error' || '' }}
 
