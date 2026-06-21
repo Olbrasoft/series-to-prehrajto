@@ -2,24 +2,40 @@
   "counts": {
     "backlog_episodes": 1000,
     "manifest_upload_ready_episodes": 904,
-    "uploaded_episodes": 2572,
+    "uploaded_episodes": 2580,
     "prepared_source_episodes": 6435,
     "description_series": 48,
     "description_episodes": 450,
     "description_errors": 560,
     "language_audit_rows": 40434,
     "language_queue_sources": 2635,
-    "language_audited_sources": 38965,
-    "language_whisper_attempted_sources": 2025,
-    "language_pending_whisper_sources": 2575
+    "language_audited_sources": 38985,
+    "language_whisper_attempted_sources": 2045,
+    "language_pending_whisper_sources": 2555
   },
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-06-21T17:02:41Z",
+      "databaseId": 27911382275,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-21T16:50:24Z",
+      "databaseId": 27911051331,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-06-21T16:46:20Z",
       "databaseId": 27910946770,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -47,11 +63,11 @@
       "workflowName": "ops-status"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-06-21T16:32:36Z",
       "databaseId": 27910590217,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "sync"
     },
     {
@@ -111,11 +127,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-06-21T15:52:54Z",
       "databaseId": 27909570118,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "sync"
     },
     {
@@ -157,22 +173,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-21T15:41:44Z",
-      "databaseId": 27909287278,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-21T15:41:41Z",
-      "databaseId": 27909286065,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "refresh-backlog"
     }
   ],
   "gaps": {
@@ -14373,9 +14373,49 @@
         "video_id": 26208233
       },
       {
+        "episode_id": 14622,
+        "display_name": "Teorie velkého třesku S12E18 - Akumulace laureátů CZ Dabing",
+        "video_id": 26208376
+      },
+      {
+        "episode_id": 14624,
+        "display_name": "Teorie velkého třesku S12E20 - Definice postačování CZ Dabing",
+        "video_id": 26208529
+      },
+      {
+        "episode_id": 14626,
+        "display_name": "Teorie velkého třesku S12E22 - Mateřská peripetie CZ Dabing",
+        "video_id": 26208559
+      },
+      {
+        "episode_id": 18536,
+        "display_name": "Teorie velkého třesku S12E24 - Rozloučení CZ Dabing",
+        "video_id": 26208593
+      },
+      {
         "episode_id": 2859,
         "display_name": "Volejte Saulovi S02E04 - Bez rukaviček CZ Dabing",
         "video_id": 26207760
+      },
+      {
+        "episode_id": 2861,
+        "display_name": "Volejte Saulovi S02E06 - Bali Hai CZ Dabing",
+        "video_id": 26208281
+      },
+      {
+        "episode_id": 2863,
+        "display_name": "Volejte Saulovi S02E08 - Fifi CZ Dabing",
+        "video_id": 26208387
+      },
+      {
+        "episode_id": 41021,
+        "display_name": "Taková moderní rodinka S08E22 - 22. epizoda CZ Dabing",
+        "video_id": 26208408
+      },
+      {
+        "episode_id": 41093,
+        "display_name": "Taková moderní rodinka S09E02 - 2. epizoda CZ Dabing",
+        "video_id": 26208418
       }
     ],
     "prepared_not_upload_ready": [
@@ -14691,7 +14731,7 @@
   "language_whisper_statuses": {
     "disabled": 36940,
     "resolve_failed": 276,
-    "ok": 1713,
+    "ok": 1733,
     "no_stream": 36
   }
 }
