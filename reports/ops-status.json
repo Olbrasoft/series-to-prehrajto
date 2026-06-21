@@ -2,40 +2,96 @@
   "counts": {
     "backlog_episodes": 1000,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 2666,
+    "uploaded_episodes": 2686,
     "prepared_source_episodes": 6435,
     "description_series": 48,
     "description_episodes": 510,
     "description_errors": 439,
-    "language_audit_rows": 40734,
+    "language_audit_rows": 40774,
     "language_queue_sources": 2635,
-    "language_audited_sources": 39285,
-    "language_whisper_attempted_sources": 2345,
-    "language_pending_whisper_sources": 2455
+    "language_audited_sources": 39305,
+    "language_whisper_attempted_sources": 2365,
+    "language_pending_whisper_sources": 2435
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-06-21T20:50:09Z",
-      "databaseId": 27917070617,
+      "createdAt": "2026-06-21T21:22:30Z",
+      "databaseId": 27917880270,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-21T21:09:10Z",
+      "databaseId": 27917548211,
       "headBranch": "main",
       "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-21T20:59:51Z",
+      "databaseId": 27917308305,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-21T20:59:33Z",
+      "databaseId": 27917301122,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-sources"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-21T20:58:55Z",
+      "databaseId": 27917286842,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-06-21T20:57:34Z",
+      "databaseId": 27917255666,
+      "headBranch": "main",
+      "status": "completed",
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
+      "createdAt": "2026-06-21T20:52:48Z",
+      "databaseId": 27917138549,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-06-21T20:50:09Z",
+      "databaseId": 27917070617,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-06-21T20:50:07Z",
       "databaseId": 27917069893,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-06-21T20:50:06Z",
       "databaseId": 27917069210,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -47,11 +103,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-06-21T20:47:46Z",
       "databaseId": 27917013077,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "sync"
     },
     {
@@ -117,62 +173,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-21T20:11:01Z",
-      "databaseId": 27916094963,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-21T20:10:44Z",
-      "databaseId": 27916088443,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-sources"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-21T20:07:39Z",
-      "databaseId": 27916012997,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-21T19:52:30Z",
-      "databaseId": 27915630989,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-21T19:38:21Z",
-      "databaseId": 27915282856,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-21T19:37:49Z",
-      "databaseId": 27915270204,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-21T19:35:44Z",
-      "databaseId": 27915220718,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
     }
   ],
   "gaps": {
@@ -14798,6 +14798,26 @@
         "video_id": 26215840
       },
       {
+        "episode_id": 21486,
+        "display_name": "Lovci duchů S09E19 - Alex Annie Alexis Ann CZ Dabing",
+        "video_id": 26215885
+      },
+      {
+        "episode_id": 21490,
+        "display_name": "Lovci duchů S09E23 - Věříš v zázraky CZ Dabing",
+        "video_id": 26215925
+      },
+      {
+        "episode_id": 21492,
+        "display_name": "Lovci duchů S10E02 - Reichenbach CZ Dabing",
+        "video_id": 26215949
+      },
+      {
+        "episode_id": 21494,
+        "display_name": "Lovci duchů S10E04 - Papírový měsíc CZ Dabing",
+        "video_id": 26215965
+      },
+      {
         "episode_id": 21437,
         "display_name": "Lovci duchů S07E16 - Haraburdí CZ Dabing",
         "video_id": 26214568
@@ -14846,6 +14866,86 @@
         "episode_id": 21459,
         "display_name": "Lovci duchů S08E15 - Nejlepší přítel člověka s výhodami CZ Dabing",
         "video_id": 26215841
+      },
+      {
+        "episode_id": 21461,
+        "display_name": "Lovci duchů S08E17 - Sbohem, cizinče CZ Dabing",
+        "video_id": 26215888
+      },
+      {
+        "episode_id": 21498,
+        "display_name": "Lovci duchů S10E08 - Hibbing 911 CZ Dabing",
+        "video_id": 26216012
+      },
+      {
+        "episode_id": 21500,
+        "display_name": "Lovci duchů S10E10 - Hry o život CZ Dabing",
+        "video_id": 26216033
+      },
+      {
+        "episode_id": 21502,
+        "display_name": "Lovci duchů S10E12 - O chlapci CZ Dabing",
+        "video_id": 26216049
+      },
+      {
+        "episode_id": 21504,
+        "display_name": "Lovci duchů S10E14 - Katova píseň CZ Dabing",
+        "video_id": 26216057
+      },
+      {
+        "episode_id": 21506,
+        "display_name": "Lovci duchů S10E16 - Natřít na černo CZ Dabing",
+        "video_id": 26216062
+      },
+      {
+        "episode_id": 21508,
+        "display_name": "Lovci duchů S10E18 - Kniha zatracených CZ Dabing",
+        "video_id": 26216090
+      },
+      {
+        "episode_id": 21510,
+        "display_name": "Lovci duchů S10E20 - Andělské srdce CZ Dabing",
+        "video_id": 26216108
+      },
+      {
+        "episode_id": 21512,
+        "display_name": "Lovci duchů S10E22 - Vězeň CZ Dabing",
+        "video_id": 26216117
+      },
+      {
+        "episode_id": 21526,
+        "display_name": "Lovci duchů S11E13 - Láska bolí CZ Dabing",
+        "video_id": 26216209
+      },
+      {
+        "episode_id": 21465,
+        "display_name": "Lovci duchů S08E21 - Velký útěk CZ Dabing",
+        "video_id": 26216011
+      },
+      {
+        "episode_id": 21469,
+        "display_name": "Lovci duchů S09E02 - Ďábel se možná postará CZ Dabing",
+        "video_id": 26216154
+      },
+      {
+        "episode_id": 21471,
+        "display_name": "Lovci duchů S09E04 - Pyžamový večírek CZ Dabing",
+        "video_id": 26216172
+      },
+      {
+        "episode_id": 21473,
+        "display_name": "Lovci duchů S09E06 - Nebe nečeká CZ Dabing",
+        "video_id": 26216178
+      },
+      {
+        "episode_id": 21475,
+        "display_name": "Lovci duchů S09E08 - Temné místo CZ Dabing",
+        "video_id": 26216206
+      },
+      {
+        "episode_id": 21481,
+        "display_name": "Lovci duchů S09E14 - Zajatci CZ Dabing",
+        "video_id": 26216216
       }
     ],
     "prepared_not_upload_ready": [
@@ -15153,15 +15253,15 @@
   },
   "language_verdicts": {
     "UNKNOWN": 87,
-    "CZ_AUDIO": 38672,
+    "CZ_AUDIO": 38706,
     "CZ_SUBTITLES_ONLY": 1731,
-    "NOT_CZ_AUDIO": 242,
+    "NOT_CZ_AUDIO": 248,
     "SK_AUDIO": 2
   },
   "language_whisper_statuses": {
     "disabled": 36940,
     "resolve_failed": 276,
-    "ok": 2033,
+    "ok": 2053,
     "no_stream": 36
   }
 }
