@@ -2,32 +2,64 @@
   "counts": {
     "backlog_episodes": 240,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 2653,
+    "uploaded_episodes": 2657,
     "prepared_source_episodes": 6435,
     "description_series": 48,
     "description_episodes": 501,
     "description_errors": 440,
-    "language_audit_rows": 40694,
+    "language_audit_rows": 40734,
     "language_queue_sources": 2635,
-    "language_audited_sources": 39225,
-    "language_whisper_attempted_sources": 2285,
-    "language_pending_whisper_sources": 2515
+    "language_audited_sources": 39265,
+    "language_whisper_attempted_sources": 2325,
+    "language_pending_whisper_sources": 2475
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-06-21T20:14:52Z",
-      "databaseId": 27916191267,
+      "createdAt": "2026-06-21T20:35:39Z",
+      "databaseId": 27916707245,
       "headBranch": "main",
       "status": "in_progress",
-      "workflowName": "ops-watchdog"
+      "workflowName": "ops-status"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-06-21T20:31:29Z",
+      "databaseId": 27916603660,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-06-21T20:15:16Z",
+      "databaseId": 27916201419,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-21T20:15:15Z",
+      "databaseId": 27916200934,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-21T20:14:52Z",
+      "databaseId": 27916191267,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "cancelled",
       "createdAt": "2026-06-21T20:11:01Z",
       "databaseId": 27916094963,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "sync"
     },
     {
@@ -141,38 +173,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-21T18:56:02Z",
-      "databaseId": 27914225307,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-21T18:56:01Z",
-      "databaseId": 27914224847,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-21T18:55:39Z",
-      "databaseId": 27914214814,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-21T18:42:33Z",
-      "databaseId": 27913887560,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "refresh-backlog"
     }
   ],
   "gaps": {
@@ -14768,6 +14768,11 @@
         "video_id": 26215213
       },
       {
+        "episode_id": 21468,
+        "display_name": "Lovci duchů S09E01 - Tady se mi bude líbit CZ Dabing",
+        "video_id": 26215400
+      },
+      {
         "episode_id": 21437,
         "display_name": "Lovci duchů S07E16 - Haraburdí CZ Dabing",
         "video_id": 26214568
@@ -14781,6 +14786,21 @@
         "episode_id": 21443,
         "display_name": "Lovci duchů S07E22 - Až na krev CZ Dabing",
         "video_id": 26215189
+      },
+      {
+        "episode_id": 21447,
+        "display_name": "Lovci duchů S08E03 - Bolavé srdce CZ Dabing",
+        "video_id": 26215311
+      },
+      {
+        "episode_id": 21449,
+        "display_name": "Lovci duchů S08E05 - Pokrevní bratr CZ Dabing",
+        "video_id": 26215363
+      },
+      {
+        "episode_id": 21451,
+        "display_name": "Lovci duchů S08E07 - Malý kousek Kevina CZ Dabing",
+        "video_id": 26215381
       }
     ],
     "prepared_not_upload_ready": [
@@ -15088,15 +15108,15 @@
   },
   "language_verdicts": {
     "UNKNOWN": 87,
-    "CZ_AUDIO": 38642,
+    "CZ_AUDIO": 38672,
     "CZ_SUBTITLES_ONLY": 1731,
-    "NOT_CZ_AUDIO": 232,
+    "NOT_CZ_AUDIO": 242,
     "SK_AUDIO": 2
   },
   "language_whisper_statuses": {
     "disabled": 36940,
     "resolve_failed": 276,
-    "ok": 1973,
+    "ok": 2013,
     "no_stream": 36
   }
 }
