@@ -44,19 +44,44 @@ def append_jsonl(path: Path, rows: list[dict]) -> None:
             fh.write(json.dumps(row, ensure_ascii=False) + "\n")
 
 
-def latest_prepared_episode_ids(path: Path) -> set[int]:
+def burned_source_ids() -> set[int]:
+    burned: set[int] = set()
+    paths = [REPO_ROOT / "state" / "uploaded.json"]
+    paths.extend(sorted((REPO_ROOT / "state").glob("uploaded-shard-*.json")))
+    for path in paths:
+        if not path.exists() or path.stat().st_size == 0:
+            continue
+        try:
+            state = json.loads(path.read_text(encoding="utf-8"))
+        except json.JSONDecodeError:
+            continue
+        for failure in state.get("failed_attempts", []):
+            if failure.get("permanent") and failure.get("source_id") is not None:
+                burned.add(int(failure["source_id"]))
+    return burned
+
+
+def latest_usable_prepared_episode_ids(path: Path, burned: set[int]) -> set[int]:
     if not path.exists():
         return set()
-    ids: set[int] = set()
+    latest: dict[int, dict] = {}
     with path.open(encoding="utf-8") as fh:
         for line in fh:
             if not line.strip():
                 continue
             try:
-                ids.add(int(json.loads(line)["episode_id"]))
+                row = json.loads(line)
+                latest[int(row["episode_id"])] = row
             except (KeyError, ValueError, json.JSONDecodeError):
                 continue
-    return ids
+    usable: set[int] = set()
+    for episode_id, row in latest.items():
+        selected = row.get("selected_source") or {}
+        source_id = selected.get("source_id")
+        if source_id is None or int(source_id) in burned:
+            continue
+        usable.add(episode_id)
+    return usable
 
 
 def backlog_candidate_to_queue_item(episode: dict, candidate: dict) -> dict:
@@ -165,8 +190,16 @@ def source_score(result: dict, source: dict) -> tuple:
     )
 
 
-def prepare_episode(episode: dict, *, use_whisper: bool, sample_seconds: int, source_limit: int) -> dict:
-    sources = episode["sources"][:source_limit] if source_limit > 0 else episode["sources"]
+def prepare_episode(
+    episode: dict,
+    *,
+    use_whisper: bool,
+    sample_seconds: int,
+    source_limit: int,
+    burned: set[int],
+) -> dict:
+    live_sources = [source for source in episode["sources"] if int(source["source_id"]) not in burned]
+    sources = live_sources[:source_limit] if source_limit > 0 else live_sources
     audited = []
     for source in sources:
         result = audit_one(source, use_whisper=use_whisper, sample_seconds=sample_seconds)
@@ -210,7 +243,8 @@ def main() -> int:
     if args.series_slug:
         rows = [row for row in rows if row["series_slug"] == args.series_slug]
     episodes = group_by_episode(rows)
-    done = set() if args.refresh else latest_prepared_episode_ids(Path(args.out))
+    burned = burned_source_ids()
+    done = set() if args.refresh else latest_usable_prepared_episode_ids(Path(args.out), burned)
     todo = [episode for episode in episodes if int(episode["episode_id"]) not in done]
     todo = todo[: args.episode_limit]
 
@@ -220,6 +254,7 @@ def main() -> int:
             use_whisper=args.use_whisper,
             sample_seconds=args.sample_seconds,
             source_limit=args.source_limit_per_episode,
+            burned=burned,
         )
         for episode in todo
     ]
@@ -238,6 +273,7 @@ def main() -> int:
             f"{episode['series_title']} S{int(episode['season']):02d}E{int(episode['episode']):02d}: "
             f"tested={episode['tested_source_count']} ready={episode['upload_ready']} {selected_text}"
         )
+    print(f"Skipped {len(burned)} permanently failed source ids")
     print(f"Prepared {len(prepared)} episodes into {args.out}")
     return 0
 

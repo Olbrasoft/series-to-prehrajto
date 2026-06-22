@@ -117,15 +117,31 @@ def load_source_plans(path: Path = PREPARED_SOURCES) -> dict[int, dict]:
     return plans
 
 
+def manifest_selected_source(episode: dict) -> dict | None:
+    source_plan = ((episode.get("upload_manifest") or {}).get("source_plan") or {})
+    selected_id = source_plan.get("selected_source_id")
+    if selected_id is None:
+        return None
+    return {
+        "source_id": int(selected_id),
+        "verdict": source_plan.get("verdict"),
+        "detected_by": source_plan.get("detected_by"),
+    }
+
+
 def apply_source_plan(episode: dict, source_plans: dict[int, dict], *, require_source_plan: bool) -> dict | None:
+    selected = manifest_selected_source(episode)
     plan = source_plans.get(int(episode["episode_id"]))
     if not plan:
-        if require_source_plan:
+        if require_source_plan and not selected:
             log(f"episode episode_id={episode['episode_id']} SKIP missing prepared source plan")
             return None
-        return episode
-    selected = plan.get("selected_source")
-    if require_source_plan and not plan.get("upload_ready"):
+        if not selected:
+            return episode
+    elif not selected:
+        selected = plan.get("selected_source")
+
+    if require_source_plan and plan and not ((episode.get("upload_manifest") or {}).get("source_plan")) and not plan.get("upload_ready"):
         verdict = selected.get("verdict") if selected else "none"
         log(f"episode episode_id={episode['episode_id']} SKIP source plan not upload-ready verdict={verdict}")
         return None

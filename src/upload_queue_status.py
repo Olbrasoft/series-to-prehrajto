@@ -26,6 +26,12 @@ def episode_key(row: dict) -> tuple[int, int, int]:
     return (int(row["series_id"]), int(row["season"]), int(row["episode"]))
 
 
+def manifest_selected_source_id(row: dict) -> int | None:
+    source_plan = ((row.get("upload_manifest") or {}).get("source_plan") or {})
+    selected_id = source_plan.get("selected_source_id")
+    return int(selected_id) if selected_id is not None else None
+
+
 def upload_ready_rows(
     *,
     require_description: bool = True,
@@ -60,11 +66,16 @@ def upload_ready_rows(
         if not live_source_ids:
             continue
         if require_source_plan:
-            plan = source_plans.get(episode_id)
-            selected = (plan or {}).get("selected_source") or {}
-            selected_id = int(selected["source_id"]) if selected.get("source_id") is not None else None
-            if not plan or not plan.get("upload_ready") or not selected_id or selected_id not in live_source_ids:
-                continue
+            selected_id = manifest_selected_source_id(row)
+            if selected_id is not None:
+                if selected_id not in live_source_ids:
+                    continue
+            else:
+                plan = source_plans.get(episode_id)
+                selected = (plan or {}).get("selected_source") or {}
+                selected_id = int(selected["source_id"]) if selected.get("source_id") is not None else None
+                if not plan or not plan.get("upload_ready") or not selected_id or selected_id not in live_source_ids:
+                    continue
         ready.append(row)
     return ready
 
