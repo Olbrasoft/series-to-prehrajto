@@ -53,9 +53,11 @@ def upload_ready_rows(
         if episode_id in done_ids or episode_key(row) in done_keys:
             continue
         if require_description:
+            upload_job = (row.get("upload_manifest") or {}).get("upload_job") or {}
             manifest_description = ((row.get("upload_manifest") or {}).get("description") or {}).get("text")
             has_description = (
-                bool(manifest_description)
+                bool(upload_job.get("description"))
+                or bool(manifest_description)
                 or episode_id in descriptions["episode"]
                 or int(row["series_id"]) in descriptions["series"]
             )
@@ -66,6 +68,9 @@ def upload_ready_rows(
         if not live_source_ids:
             continue
         if require_source_plan:
+            upload_job = (row.get("upload_manifest") or {}).get("upload_job") or {}
+            if upload_job and not upload_job.get("source_url"):
+                continue
             selected_id = manifest_selected_source_id(row)
             if selected_id is not None:
                 if selected_id not in live_source_ids:

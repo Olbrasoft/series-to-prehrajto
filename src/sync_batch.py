@@ -92,6 +92,9 @@ def load_description_plans(path: Path = DESCRIPTIONS) -> dict[str, dict[int, dic
 
 
 def prepared_description(episode: dict, plans: dict[str, dict[int, dict]]) -> str | None:
+    upload_job_description = ((episode.get("upload_manifest") or {}).get("upload_job") or {}).get("description")
+    if upload_job_description:
+        return upload_job_description
     manifest_description = ((episode.get("upload_manifest") or {}).get("description") or {}).get("text")
     if manifest_description:
         return manifest_description
@@ -265,6 +268,9 @@ def try_candidate(episode: dict, candidate: dict, session, state: dict, *, allow
 
 
 def process_episode(episode: dict, session, state: dict, *, allow_subtitles: bool, description_plans: dict[str, dict[int, dict]], require_description: bool) -> bool:
+    upload_job = (episode.get("upload_manifest") or {}).get("upload_job") or {}
+    if upload_job.get("display_name"):
+        episode["display_name"] = upload_job["display_name"]
     log(f"episode episode_id={episode['episode_id']} name={episode['display_name']!r} candidates={len(episode['candidates'])}")
     description = prepared_description(episode, description_plans)
     if description:
