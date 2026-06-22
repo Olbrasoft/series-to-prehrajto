@@ -24,6 +24,7 @@ jobs:
     timeout-minutes: 120
     permissions:
       contents: write
+      actions: write
     concurrency:
       group: series-to-prehrajto-prepare-descriptions
       cancel-in-progress: false
@@ -124,3 +125,14 @@ jobs:
             echo "failed to push prepared descriptions after retries"
             exit 1
           fi
+
+      - name: Queue manifest preparation
+        if: success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh workflow run prepare-manifest.yml \
+            -f series_limit="200" \
+            -f episode_limit="3000" \
+            -f source_limit_per_episode="12" \
+            -f use_whisper="false"
