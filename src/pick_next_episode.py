@@ -14,11 +14,19 @@ DEFAULT_BACKLOG = REPO_ROOT / "backlog" / "series-episodes.jsonl.gz"
 DEFAULT_MANIFEST = REPO_ROOT / "manifests" / "upload-ready.jsonl.gz"
 
 
+def has_rows(path: Path) -> bool:
+    if not path.exists() or path.stat().st_size == 0:
+        return False
+    opener = gzip.open if path.suffix == ".gz" else open
+    with opener(path, "rt", encoding="utf-8") as fh:
+        return any(line.strip() for line in fh)
+
+
 def default_backlog_path() -> Path:
     env_path = os.environ.get("UPLOAD_BACKLOG_PATH")
     if env_path:
         return Path(env_path)
-    if DEFAULT_MANIFEST.exists():
+    if has_rows(DEFAULT_MANIFEST):
         return DEFAULT_MANIFEST
     return DEFAULT_BACKLOG
 
