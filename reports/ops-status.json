@@ -2,32 +2,64 @@
   "counts": {
     "backlog_episodes": 3000,
     "manifest_upload_ready_episodes": 0,
-    "uploaded_episodes": 3889,
+    "uploaded_episodes": 3897,
     "prepared_source_episodes": 9049,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 2472,
-    "language_audit_rows": 70361,
+    "language_audit_rows": 70401,
     "language_queue_sources": 2287,
-    "language_audited_sources": 65895,
-    "language_whisper_attempted_sources": 3125,
-    "language_pending_whisper_sources": 2227
+    "language_audited_sources": 65875,
+    "language_whisper_attempted_sources": 3105,
+    "language_pending_whisper_sources": 2247
   },
   "workflow_runs": [
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-22T21:04:09Z",
+      "databaseId": 27983885431,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-22T20:48:04Z",
+      "databaseId": 27982967416,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-22T20:48:03Z",
+      "databaseId": 27982965931,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-22T20:48:02Z",
+      "databaseId": 27982964767,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "refresh-backlog"
+    },
     {
       "conclusion": "",
       "createdAt": "2026-06-22T20:47:33Z",
       "databaseId": 27982938079,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "sync"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-06-22T20:47:32Z",
       "databaseId": 27982938029,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -71,11 +103,11 @@
       "workflowName": "prepare-sources"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-06-22T20:24:15Z",
       "databaseId": 27981603673,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "sync"
     },
     {
@@ -141,38 +173,6 @@
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-22T19:44:55Z",
-      "databaseId": 27979338462,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-22T19:42:30Z",
-      "databaseId": 27979198603,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
-    },
-    {
-      "conclusion": "failure",
-      "createdAt": "2026-06-22T19:39:50Z",
-      "databaseId": 27979048722,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-22T19:23:43Z",
-      "databaseId": 27978129577,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
     }
   ],
   "gaps": {
@@ -19746,6 +19746,46 @@
         "episode_id": 13345,
         "display_name": "Živí mrtví S02E05 - Chupacabra CZ Dabing",
         "video_id": 26255798
+      },
+      {
+        "episode_id": 31888,
+        "display_name": "Městečko South Park S11E03 - Vší eskapády CZ Dabing",
+        "video_id": 26256523
+      },
+      {
+        "episode_id": 31892,
+        "display_name": "Městečko South Park S11E07 - Noc oživlých houmlesů CZ Dabing",
+        "video_id": 26256735
+      },
+      {
+        "episode_id": 31928,
+        "display_name": "Městečko South Park S14E01 - Léčba sexuální závislosti CZ Dabing",
+        "video_id": 26256950
+      },
+      {
+        "episode_id": 31932,
+        "display_name": "Městečko South Park S14E05 - 200 CZ Dabing",
+        "video_id": 26256974
+      },
+      {
+        "episode_id": 13355,
+        "display_name": "Živí mrtví S03E02 - Hnus CZ Dabing",
+        "video_id": 26256649
+      },
+      {
+        "episode_id": 31937,
+        "display_name": "Městečko South Park S14E10 - Hromadění CZ Dabing",
+        "video_id": 26256717
+      },
+      {
+        "episode_id": 31951,
+        "display_name": "Městečko South Park S15E10 - Odposlech CZ Dabing",
+        "video_id": 26256760
+      },
+      {
+        "episode_id": 31995,
+        "display_name": "Městečko South Park S19E06 - Tweek a Craig CZ Dabing",
+        "video_id": 26256924
       }
     ],
     "prepared_not_upload_ready": [
@@ -20053,16 +20093,16 @@
   },
   "language_verdicts": {
     "UNKNOWN": 90,
-    "CZ_AUDIO": 68123,
+    "CZ_AUDIO": 68132,
     "CZ_SUBTITLES_ONLY": 1755,
-    "NOT_CZ_AUDIO": 389,
+    "NOT_CZ_AUDIO": 420,
     "SK_AUDIO": 2,
     "PROBABLE_CZ_AUDIO": 2
   },
   "language_whisper_statuses": {
     "disabled": 62770,
     "resolve_failed": 276,
-    "ok": 2812,
+    "ok": 2792,
     "no_stream": 37
   }
 }
