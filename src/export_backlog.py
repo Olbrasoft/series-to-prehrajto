@@ -82,12 +82,6 @@ def load_uploaded_exclusions() -> tuple[set[int], set[str]]:
             continue
         for upload in data.get("uploads", []):
             add_episode_exclusion(upload, episode_ids, episode_keys)
-    for path in (
-        REPO_ROOT / "manifests" / "upload-ready.jsonl.gz",
-        REPO_ROOT / "backlog" / "series-episodes.jsonl.gz",
-    ):
-        for row in load_jsonl(path):
-            add_episode_exclusion(row, episode_ids, episode_keys)
     return episode_ids, episode_keys
 
 
