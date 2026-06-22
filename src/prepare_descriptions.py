@@ -11,6 +11,7 @@ import json
 import os
 import re
 import sys
+import threading
 import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
@@ -22,6 +23,7 @@ from description_quality import is_valid_generated_description
 DEFAULT_MODEL = os.environ.get("GEMINI_MODEL", "gemma-4-31b-it")
 DEFAULT_RETRY_SECONDS = 5.0
 DEFAULT_THINKING_BUDGET = os.environ.get("GEMINI_THINKING_BUDGET", "0")
+DEFAULT_PER_KEY_MIN_INTERVAL_SECONDS = float(os.environ.get("GEMINI_PER_KEY_MIN_INTERVAL_SECONDS", "4.2"))
 
 
 def now_iso() -> str:
@@ -53,7 +55,7 @@ def source_hash(text: str) -> str:
     return hashlib.sha256(text.encode("utf-8")).hexdigest()
 
 
-def existing_ok(path: Path, *, replace_fallback: bool = False) -> set[tuple[str, int, str]]:
+def existing_ok(path: Path, *, replace_fallback: bool = False, replace_non_gemma: bool = False) -> set[tuple[str, int, str]]:
     out: set[tuple[str, int, str]] = set()
     if not path.exists():
         return out
@@ -63,6 +65,8 @@ def existing_ok(path: Path, *, replace_fallback: bool = False) -> set[tuple[str,
                 continue
             row = json.loads(line)
             if row.get("status") != "ok":
+                continue
+            if replace_non_gemma and not str(row.get("model") or "").startswith("gemma-"):
                 continue
             if replace_fallback and row.get("model") == "fallback-template-v1":
                 continue
@@ -208,7 +212,43 @@ def response_error(resp: requests.Response) -> tuple[str, int | None, float | No
     return message[:500], int(error["code"]) if error.get("code") else None, retry_after, headers
 
 
-def generate(task: dict, key: str, model: str, *, retries: int = 3, fallback_on_error: bool = False) -> dict:
+class KeyRateLimiter:
+    def __init__(self, key_count: int, min_interval_seconds: float) -> None:
+        self.min_interval_seconds = max(0.0, min_interval_seconds)
+        self._locks = [threading.Lock() for _ in range(key_count)]
+        self._next_allowed_at = [0.0 for _ in range(key_count)]
+
+    def wait(self, key_index: int) -> None:
+        if self.min_interval_seconds <= 0:
+            return
+        with self._locks[key_index]:
+            now = time.monotonic()
+            wait_seconds = self._next_allowed_at[key_index] - now
+            if wait_seconds > 0:
+                time.sleep(wait_seconds)
+                now = time.monotonic()
+            self._next_allowed_at[key_index] = now + self.min_interval_seconds
+
+    def postpone(self, key_index: int, retry_after_seconds: float | None) -> None:
+        if retry_after_seconds is None:
+            return
+        with self._locks[key_index]:
+            self._next_allowed_at[key_index] = max(
+                self._next_allowed_at[key_index],
+                time.monotonic() + max(0.0, retry_after_seconds) + 1.0,
+            )
+
+
+def generate(
+    task: dict,
+    key: str,
+    model: str,
+    *,
+    key_index: int,
+    limiter: KeyRateLimiter,
+    retries: int = 3,
+    fallback_on_error: bool = False,
+) -> dict:
     url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key={key}"
     payload = {
         "contents": [{"parts": [{"text": prompt_for(task)}]}],
@@ -219,6 +259,7 @@ def generate(task: dict, key: str, model: str, *, retries: int = 3, fallback_on_
     last_retry_after = None
     for attempt in range(retries):
         try:
+            limiter.wait(key_index)
             resp = requests.post(url, json=payload, timeout=90)
             resp.raise_for_status()
             data = resp.json()
@@ -235,6 +276,8 @@ def generate(task: dict, key: str, model: str, *, retries: int = 3, fallback_on_
                 last_error_headers = headers
                 last_retry_after = retry_after
                 error_text = f"HTTP {exc.response.status_code}: {error_message}"
+                if exc.response.status_code == 429:
+                    limiter.postpone(key_index, retry_after)
             if attempt == retries - 1:
                 if fallback_on_error:
                     return {
@@ -270,21 +313,34 @@ def main() -> int:
     ap.add_argument("--workers", type=int, default=4)
     ap.add_argument("--model", default=DEFAULT_MODEL)
     ap.add_argument("--retries", type=int, default=3)
+    ap.add_argument("--per-key-min-interval-seconds", type=float, default=DEFAULT_PER_KEY_MIN_INTERVAL_SECONDS)
     ap.add_argument("--fallback-on-error", action="store_true")
     ap.add_argument(
         "--replace-fallback",
         action="store_true",
         help="Treat temporary fallback descriptions as missing so later runs can replace them with model output.",
     )
+    ap.add_argument(
+        "--replace-non-gemma",
+        action="store_true",
+        help="Treat older non-Gemma descriptions as missing so they can be replaced with Gemma output.",
+    )
     args = ap.parse_args()
 
     rows = load_jsonl(Path(args.backlog))
-    done = existing_ok(Path(args.out), replace_fallback=args.replace_fallback)
+    done = existing_ok(Path(args.out), replace_fallback=args.replace_fallback, replace_non_gemma=args.replace_non_gemma)
     tasks = build_tasks(rows, done, series_limit=args.series_limit, episode_limit=args.episode_limit)
     keys = api_keys()
     out_path = Path(args.out)
+    limiter = KeyRateLimiter(len(keys), args.per_key_min_interval_seconds)
     ok = 0
     total = 0
+    print(
+        "Description generation config: "
+        f"model={args.model} keys={len(keys)} workers={args.workers} "
+        f"per_key_min_interval_seconds={args.per_key_min_interval_seconds}",
+        file=sys.stderr,
+    )
 
     def task(index_task: tuple[int, dict]) -> dict:
         index, task_row = index_task
@@ -293,6 +349,8 @@ def main() -> int:
             task_row,
             keys[key_index],
             args.model,
+            key_index=key_index,
+            limiter=limiter,
             retries=args.retries,
             fallback_on_error=args.fallback_on_error,
         )

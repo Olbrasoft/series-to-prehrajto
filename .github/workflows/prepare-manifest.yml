@@ -122,6 +122,7 @@ jobs:
           GEMINI_API_KEYS: ${{ secrets.GEMINI_API_KEYS }}
           GEMINI_MODEL: gemma-4-31b-it
           GEMINI_THINKING_BUDGET: "0"
+          GEMINI_PER_KEY_MIN_INTERVAL_SECONDS: "4.2"
         run: |
           set +e
           timeout 35m python src/prepare_descriptions.py \
@@ -129,7 +130,8 @@ jobs:
             --episode-limit "800" \
             --workers 4 \
             --retries 1 \
-            --replace-fallback
+            --replace-fallback \
+            --replace-non-gemma
           code=$?
           if [ "$code" = "124" ]; then
             echo "description generation reached time limit; continuing with partial results"
