@@ -6,11 +6,11 @@ on:
       series_limit:
         description: "Number of series to export"
         required: false
-        default: "80"
+        default: "240"
       episode_limit:
         description: "Number of episodes to prepare in advance"
         required: false
-        default: "1000"
+        default: "3000"
       source_limit_per_episode:
         description: "Number of sources to check per episode"
         required: false
@@ -95,11 +95,11 @@ jobs:
             exit 2
           fi
           python src/export_backlog.py \
-            --series-limit "${{ inputs.series_limit || '80' }}" \
-            --episode-limit "${{ inputs.episode_limit || '1000' }}" \
+            --series-limit "${{ inputs.series_limit || '240' }}" \
+            --episode-limit "${{ inputs.episode_limit || '3000' }}" \
             --source-limit-per-episode "${{ inputs.source_limit_per_episode || '12' }}"
           python src/export_language_audit_queue.py \
-            --episode-limit "${{ inputs.episode_limit || '1000' }}" \
+            --episode-limit "${{ inputs.episode_limit || '3000' }}" \
             --source-limit-per-episode "${{ inputs.source_limit_per_episode || '12' }}" \
             || echo "language audit queue export failed; continuing with upload backlog sources"
 
@@ -109,7 +109,7 @@ jobs:
           CZ_PROXY_KEY: ${{ secrets.CZ_PROXY_KEY }}
         run: |
           ARGS=(
-            "--episode-limit" "${{ inputs.episode_limit || '1000' }}"
+            "--episode-limit" "${{ inputs.episode_limit || '3000' }}"
             "--source-limit-per-episode" "${{ inputs.source_limit_per_episode || '12' }}"
           )
           if [ "${{ inputs.use_whisper || 'false' }}" = "true" ]; then
@@ -148,7 +148,7 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           python src/build_upload_manifest.py \
-            --limit "${{ inputs.episode_limit || '1000' }}"
+            --limit "${{ inputs.episode_limit || '3000' }}"
           python src/ops_status.py
 
       - name: Commit manifest preparation
