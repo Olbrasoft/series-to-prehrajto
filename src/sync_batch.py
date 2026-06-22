@@ -291,10 +291,17 @@ def process_episode(episode: dict, session, state: dict, *, allow_subtitles: boo
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--count", type=int, default=10)
+    ap.add_argument(
+        "--max-episode-attempts",
+        type=int,
+        default=None,
+        help="Maximum episodes to inspect while trying to reach --count successful uploads.",
+    )
     ap.add_argument("--allow-subtitles", action="store_true")
     ap.add_argument("--require-description", action="store_true", default=os.environ.get("REQUIRE_PREPARED_DESCRIPTIONS") == "1")
     ap.add_argument("--require-source-plan", action="store_true", default=os.environ.get("REQUIRE_PREPARED_SOURCES") == "1")
     args = ap.parse_args()
+    max_episode_attempts = args.max_episode_attempts or max(args.count, args.count * 6)
 
     email = os.environ.get("PREHRAJTO_EMAIL")
     password = os.environ.get("PREHRAJTO_PASSWORD")
@@ -309,7 +316,10 @@ def main() -> int:
     state = load_state()
     description_plans = load_description_plans()
     source_plans = load_source_plans()
-    log(f"batch-start count={args.count} backlog={len(rows)} uploads={len(state.get('uploads', []))} failed={len(state.get('failed_attempts', []))}")
+    log(
+        f"batch-start count={args.count} max_episode_attempts={max_episode_attempts} "
+        f"backlog={len(rows)} uploads={len(state.get('uploads', []))} failed={len(state.get('failed_attempts', []))}"
+    )
     log(f"description-plans series={len(description_plans['series'])} episodes={len(description_plans['episode'])} require={args.require_description}")
     log(f"source-plans episodes={len(source_plans)} require={args.require_source_plan}")
     log("login")
@@ -318,8 +328,10 @@ def main() -> int:
 
     ok = bad = 0
     attempted: set[int] = set()
-    for index in range(args.count):
-        log(f"iteration {index + 1}/{args.count}")
+    for index in range(max_episode_attempts):
+        if ok >= args.count:
+            break
+        log(f"iteration {index + 1}/{max_episode_attempts} ok={ok}/{args.count}")
         episode = pick_next(state, rows, attempted)
         if not episode:
             log("backlog exhausted")
@@ -333,9 +345,6 @@ def main() -> int:
             ok += 1
         else:
             bad += 1
-            if bad >= 3 and ok == 0:
-                log("bail-out: first three episodes failed")
-                break
     log(f"batch-end ok={ok} failed={bad}")
     return 0
 
