@@ -1,8 +1,8 @@
 {
   "counts": {
-    "backlog_episodes": 1000,
+    "backlog_episodes": 240,
     "manifest_upload_ready_episodes": 896,
-    "uploaded_episodes": 3439,
+    "uploaded_episodes": 3465,
     "prepared_source_episodes": 6623,
     "description_series": 55,
     "description_episodes": 648,
@@ -11,23 +11,55 @@
     "language_queue_sources": 2641,
     "language_audited_sources": 39745,
     "language_whisper_attempted_sources": 2805,
-    "language_pending_whisper_sources": 2621
+    "language_pending_whisper_sources": 2641
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-06-22T08:09:39Z",
-      "databaseId": 27938664166,
+      "createdAt": "2026-06-22T08:26:33Z",
+      "databaseId": 27939585250,
       "headBranch": "main",
       "status": "in_progress",
-      "workflowName": "ops-status"
+      "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-06-22T08:23:58Z",
+      "databaseId": 27939443165,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-22T08:22:39Z",
+      "databaseId": 27939372882,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "refresh-backlog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-22T08:14:54Z",
+      "databaseId": 27938955460,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-22T08:09:39Z",
+      "databaseId": 27938664166,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-06-22T07:46:23Z",
       "databaseId": 27937495855,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "sync"
     },
     {
@@ -141,93 +173,61 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "sync"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-22T06:08:59Z",
-      "databaseId": 27933110361,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-22T06:08:34Z",
-      "databaseId": 27933091762,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-22T06:08:07Z",
-      "databaseId": 27933073282,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-22T06:07:40Z",
-      "databaseId": 27933054754,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
     }
   ],
   "gaps": {
     "backlog_without_source_plan": [],
     "backlog_without_episode_description": [
-      2095,
-      2096,
-      2097,
-      2098,
-      2099,
-      2100,
-      2101,
-      2102,
-      2103,
-      2104,
-      2105,
-      2106,
-      2107,
-      2108,
-      2109,
-      2110,
-      2111,
-      2112,
-      2113,
-      2114,
-      2115,
-      2116,
-      2117,
-      2118,
-      2119,
-      2120,
-      2121,
-      2122,
-      2123,
-      2124,
-      2125,
-      2126,
-      2127,
-      2128,
-      2129,
-      2130,
-      2131,
-      2132,
-      2133,
-      2134,
-      2135,
-      2136,
-      2137,
-      2138,
-      2139,
-      2140,
-      2141,
-      2142,
-      2143,
-      2144
+      2676,
+      2705,
+      2708,
+      2709,
+      3832,
+      3835,
+      3851,
+      3852,
+      3856,
+      3857,
+      3965,
+      3979,
+      9813,
+      20119,
+      21341,
+      21360,
+      21441,
+      21445,
+      21450,
+      21460,
+      21463,
+      21467,
+      21477,
+      21478,
+      21479,
+      21480,
+      21484,
+      21487,
+      21488,
+      21496,
+      21514,
+      36455,
+      36463,
+      36464,
+      36465,
+      36466,
+      36467,
+      36468,
+      36469,
+      36471,
+      42096,
+      42097,
+      42099,
+      42105,
+      55461,
+      55462,
+      55463,
+      55464,
+      55465,
+      55466
     ],
     "uploaded_without_gemma_description": [
       {
@@ -18653,6 +18653,26 @@
         "video_id": 26227857
       },
       {
+        "episode_id": 21208,
+        "display_name": "Ve jménu vlasti S03E03 - Davidova věž CZ Dabing",
+        "video_id": 26227927
+      },
+      {
+        "episode_id": 21210,
+        "display_name": "Ve jménu vlasti S03E05 - Akce jóga CZ Dabing",
+        "video_id": 26227964
+      },
+      {
+        "episode_id": 21212,
+        "display_name": "Ve jménu vlasti S03E07 - Čas se krátí CZ Dabing",
+        "video_id": 26228004
+      },
+      {
+        "episode_id": 21214,
+        "display_name": "Ve jménu vlasti S03E09 - Poslední úkol CZ Dabing",
+        "video_id": 26228044
+      },
+      {
         "episode_id": 20401,
         "display_name": "Lucifer S05E01 - Šíleně smutný ďábel CZ Dabing",
         "video_id": 26227501
@@ -18711,6 +18731,116 @@
         "episode_id": 4055,
         "display_name": "Ozark S01E05 - Nadvláda CZ Dabing",
         "video_id": 26227880
+      },
+      {
+        "episode_id": 4057,
+        "display_name": "Ozark S01E07 - Ptačí budka CZ Dabing",
+        "video_id": 26227908
+      },
+      {
+        "episode_id": 4059,
+        "display_name": "Ozark S01E09 - Černou kávu prosím CZ Dabing",
+        "video_id": 26227950
+      },
+      {
+        "episode_id": 4061,
+        "display_name": "Ozark S02E01 - Reparace CZ Dabing",
+        "video_id": 26227991
+      },
+      {
+        "episode_id": 4063,
+        "display_name": "Ozark S02E03 - Kletba rodu Langmorů CZ Dabing",
+        "video_id": 26228034
+      },
+      {
+        "episode_id": 21216,
+        "display_name": "Ve jménu vlasti S03E11 - Velké zvíře v Teheránu CZ Dabing",
+        "video_id": 26228090
+      },
+      {
+        "episode_id": 21218,
+        "display_name": "Ve jménu vlasti S04E01 - Královna dronů CZ Dabing",
+        "video_id": 26228114
+      },
+      {
+        "episode_id": 21220,
+        "display_name": "Ve jménu vlasti S04E03 - Šalvar kamíz CZ Dabing",
+        "video_id": 26228159
+      },
+      {
+        "episode_id": 21222,
+        "display_name": "Ve jménu vlasti S04E05 - Jak na věc CZ Dabing",
+        "video_id": 26228202
+      },
+      {
+        "episode_id": 21224,
+        "display_name": "Ve jménu vlasti S04E07 - Návrat CZ Dabing",
+        "video_id": 26228233
+      },
+      {
+        "episode_id": 21226,
+        "display_name": "Ve jménu vlasti S04E09 - Chystá se ještě něco dalšího CZ Dabing",
+        "video_id": 26228351
+      },
+      {
+        "episode_id": 21228,
+        "display_name": "Ve jménu vlasti S04E11 - Krieg nicht Lieb CZ Dabing",
+        "video_id": 26228389
+      },
+      {
+        "episode_id": 4065,
+        "display_name": "Ozark S02E05 - Velký den CZ Dabing",
+        "video_id": 26228062
+      },
+      {
+        "episode_id": 4067,
+        "display_name": "Ozark S02E08 - Hluboký spánek CZ Dabing",
+        "video_id": 26228097
+      },
+      {
+        "episode_id": 4069,
+        "display_name": "Ozark S02E10 - Zlaté pobřeží CZ Dabing",
+        "video_id": 26228137
+      },
+      {
+        "episode_id": 4071,
+        "display_name": "Ozark S03E01 - Ve válce CZ Dabing",
+        "video_id": 26228166
+      },
+      {
+        "episode_id": 4073,
+        "display_name": "Ozark S03E03 - Byl tu Kevin Cronin CZ Dabing",
+        "video_id": 26228191
+      },
+      {
+        "episode_id": 4075,
+        "display_name": "Ozark S03E05 - Návštěva z Michoacánu CZ Dabing",
+        "video_id": 26228215
+      },
+      {
+        "episode_id": 4077,
+        "display_name": "Ozark S03E07 - V případě nouze CZ Dabing",
+        "video_id": 26228247
+      },
+      {
+        "episode_id": 4079,
+        "display_name": "Ozark S03E09 - Fire Pink CZ Dabing",
+        "video_id": 26228288
+      },
+      {
+        "episode_id": 4081,
+        "display_name": "Ozark S04E01 - Začátek konce CZ Dabing",
+        "video_id": 26228324
+      },
+      {
+        "episode_id": 4083,
+        "display_name": "Ozark S04E03 - Město plné ambicí CZ Dabing",
+        "video_id": 26228368
+      },
+      {
+        "episode_id": 4085,
+        "display_name": "Ozark S04E05 - Ellie CZ Dabing",
+        "video_id": 26228388
       }
     ],
     "prepared_not_upload_ready": [
