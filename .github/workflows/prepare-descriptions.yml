@@ -6,11 +6,11 @@ on:
       series_limit:
         description: "Number of series descriptions to prepare"
         required: false
-        default: "40"
+        default: "160"
       episode_limit:
         description: "Number of episode descriptions to prepare"
         required: false
-        default: "80"
+        default: "800"
       fallback_on_error:
         description: "Store temporary fallback descriptions when Gemini fails"
         required: false
@@ -59,9 +59,9 @@ jobs:
         run: |
           set +e
           timeout 50m python src/prepare_descriptions.py \
-            --series-limit "${{ inputs.series_limit || '40' }}" \
-            --episode-limit "${{ inputs.episode_limit || '80' }}" \
-            --workers 1 \
+            --series-limit "${{ inputs.series_limit || '160' }}" \
+            --episode-limit "${{ inputs.episode_limit || '800' }}" \
+            --workers 4 \
             --retries 4 \
             --replace-fallback \
             ${{ (inputs.fallback_on_error || 'false') == 'true' && '--fallback-on-error' || '' }}
