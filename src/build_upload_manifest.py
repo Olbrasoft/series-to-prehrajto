@@ -66,11 +66,28 @@ def description_indexes(rows: list[dict]) -> tuple[dict[int, dict], dict[int, di
     return series, episodes
 
 
-def selected_candidate(episode: dict, selected_source_id: int) -> dict | None:
-    for candidate in episode.get("candidates") or []:
-        if int(candidate["source_id"]) == selected_source_id:
-            return candidate
-    return None
+def upload_candidate_ids(plan: dict, burned: set[int]) -> list[int]:
+    ids: list[int] = []
+    for source in [plan.get("selected_source"), *(plan.get("tested_sources") or [])]:
+        if not source:
+            continue
+        if source.get("verdict") not in {"CZ_AUDIO", "PROBABLE_CZ_AUDIO"}:
+            continue
+        source_id = int(source["source_id"])
+        if source_id in burned or source_id in ids:
+            continue
+        ids.append(source_id)
+    return ids
+
+
+def upload_candidates(episode: dict, plan: dict, burned: set[int]) -> list[dict]:
+    candidates_by_id = {int(candidate["source_id"]): candidate for candidate in episode.get("candidates") or []}
+    rows: list[dict] = []
+    for source_id in upload_candidate_ids(plan, burned):
+        candidate = candidates_by_id.get(source_id)
+        if candidate:
+            rows.append(candidate)
+    return rows
 
 
 def burned_source_ids() -> set[int]:
@@ -124,8 +141,8 @@ def build_manifest(
         if source_id in burned:
             stats["selected_source_burned"] += 1
             continue
-        candidate = selected_candidate(episode, source_id)
-        if not candidate:
+        candidates = upload_candidates(episode, plan, burned)
+        if not candidates:
             stats["selected_source_not_in_backlog"] += 1
             continue
         audit = audits.get(source_id) or selected
@@ -146,7 +163,7 @@ def build_manifest(
 
         manifest_row = {
             **episode,
-            "candidates": [candidate],
+            "candidates": candidates,
             "upload_manifest": {
                 "schema_version": 1,
                 "source_plan": {
