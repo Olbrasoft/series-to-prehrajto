@@ -73,6 +73,23 @@ def selected_candidate(episode: dict, selected_source_id: int) -> dict | None:
     return None
 
 
+def burned_source_ids() -> set[int]:
+    burned: set[int] = set()
+    paths = [REPO_ROOT / "state" / "uploaded.json"]
+    paths.extend(sorted((REPO_ROOT / "state").glob("uploaded-shard-*.json")))
+    for path in paths:
+        if not path.exists() or path.stat().st_size == 0:
+            continue
+        try:
+            state = json.loads(path.read_text(encoding="utf-8"))
+        except json.JSONDecodeError:
+            continue
+        for failure in state.get("failed_attempts", []):
+            if failure.get("permanent") and failure.get("source_id") is not None:
+                burned.add(int(failure["source_id"]))
+    return burned
+
+
 def build_manifest(
     *,
     backlog_path: Path,
@@ -87,6 +104,7 @@ def build_manifest(
     prepared = latest_by_episode(load_jsonl(prepared_path))
     desc_series, desc_episodes = description_indexes(load_jsonl(descriptions_path))
     audits = latest_audits_by_source(load_jsonl(audits_path))
+    burned = burned_source_ids()
     rows: list[dict] = []
     stats: Counter = Counter()
 
@@ -103,6 +121,9 @@ def build_manifest(
             stats["not_upload_ready"] += 1
             continue
         source_id = int(selected["source_id"])
+        if source_id in burned:
+            stats["selected_source_burned"] += 1
+            continue
         candidate = selected_candidate(episode, source_id)
         if not candidate:
             stats["selected_source_not_in_backlog"] += 1
