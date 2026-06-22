@@ -94,11 +94,31 @@ jobs:
 
       - name: Commit backlog
         run: |
-          git add backlog/series-episodes.jsonl.gz backlog/language-audit-queue.jsonl.gz
-          if git diff --cached --quiet; then
-            echo "no backlog changes"
-          else
+          TMP_DIR="$(mktemp -d)"
+          mkdir -p "$TMP_DIR/backlog"
+          cp backlog/series-episodes.jsonl.gz "$TMP_DIR/backlog/" 2>/dev/null || true
+          cp backlog/language-audit-queue.jsonl.gz "$TMP_DIR/backlog/" 2>/dev/null || true
+
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main
+            git reset --hard origin/main
+            mkdir -p backlog
+            cp "$TMP_DIR"/backlog/* backlog/ 2>/dev/null || true
+
+            git add backlog/series-episodes.jsonl.gz backlog/language-audit-queue.jsonl.gz
+            if git diff --cached --quiet; then
+              echo "no backlog changes"
+              exit 0
+            fi
+
             git commit -m "chore: refresh series backlog"
-            git pull --rebase origin main || true
-            git push
-          fi
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+
+            echo "push race on attempt ${attempt}, retrying"
+            sleep $((attempt * 3))
+          done
+
+          echo "failed to push backlog after retries" >&2
+          exit 1
