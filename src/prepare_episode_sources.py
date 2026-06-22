@@ -44,6 +44,30 @@ def append_jsonl(path: Path, rows: list[dict]) -> None:
             fh.write(json.dumps(row, ensure_ascii=False) + "\n")
 
 
+def compact_plan_row(row: dict) -> dict:
+    return {**row, "tested_sources": []}
+
+
+def write_compacted_prepared(path: Path, new_rows: list[dict]) -> None:
+    latest: dict[int, dict] = {}
+    for row in load_jsonl(path) if path.exists() else []:
+        if row.get("episode_id") is not None:
+            latest[int(row["episode_id"])] = compact_plan_row(row)
+    for row in new_rows:
+        if row.get("episode_id") is not None:
+            latest[int(row["episode_id"])] = compact_plan_row(row)
+    rows = sorted(
+        latest.values(),
+        key=lambda item: (
+            str(item.get("series_slug") or ""),
+            int(item.get("season") or 0),
+            int(item.get("episode") or 0),
+            int(item.get("episode_id") or 0),
+        ),
+    )
+    write_jsonl(path, rows)
+
+
 def burned_source_ids() -> set[int]:
     burned: set[int] = set()
     paths = [REPO_ROOT / "state" / "uploaded.json"]
@@ -273,8 +297,8 @@ def main() -> int:
         )
         for episode in todo
     ]
-    append_jsonl(Path(args.out), prepared)
     audit_rows = [source for episode in prepared for source in episode["tested_sources"]]
+    write_compacted_prepared(Path(args.out), prepared)
     append_jsonl(Path(args.audit_out), audit_rows)
 
     for episode in prepared:
