@@ -176,6 +176,7 @@ def build_manifest(
                     "resolution_score": selected.get("resolution_score"),
                     "verification_status": selected.get("verification_status"),
                     "cz_audio_verified": selected.get("cz_audio_verified"),
+                    "resolvable": bool(((selected.get("signals") or {}).get("provider_probe") or {}).get("streams")),
                 },
                 "language_audit": {
                     "audited_at": audit.get("audited_at"),

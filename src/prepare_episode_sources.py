@@ -170,6 +170,11 @@ def probe_resolution(result: dict, source: dict) -> int:
     return resolution_score(source.get("resolution_hint"))
 
 
+def is_resolvable(result: dict) -> bool:
+    probe = result.get("signals", {}).get("provider_probe") or {}
+    return probe.get("status") == "ok" and bool(probe.get("streams"))
+
+
 def source_score(result: dict, source: dict) -> tuple:
     verdict = result["verdict"]
     verdict_score = {
@@ -197,16 +202,24 @@ def prepare_episode(
     sample_seconds: int,
     source_limit: int,
     burned: set[int],
+    require_resolvable_source: bool,
 ) -> dict:
     live_sources = [source for source in episode["sources"] if int(source["source_id"]) not in burned]
     sources = live_sources[:source_limit] if source_limit > 0 else live_sources
     audited = []
     for source in sources:
-        result = audit_one(source, use_whisper=use_whisper, sample_seconds=sample_seconds)
+        result = audit_one(
+            source,
+            use_whisper=use_whisper,
+            sample_seconds=sample_seconds,
+            probe_stream=require_resolvable_source,
+        )
         result["score"] = source_score(result, source)
         result["resolution_score"] = probe_resolution(result, source)
         audited.append(result)
     acceptable = [r for r in audited if r["verdict"] in {"CZ_AUDIO", "PROBABLE_CZ_AUDIO", "CZ_SUBTITLES_ONLY"}]
+    if require_resolvable_source:
+        acceptable = [r for r in acceptable if is_resolvable(r)]
     selected = max(acceptable, key=lambda r: tuple(r["score"])) if acceptable else None
     upload_ready = bool(selected and selected["verdict"] in {"CZ_AUDIO", "PROBABLE_CZ_AUDIO"})
     return {
@@ -236,6 +249,7 @@ def main() -> int:
     ap.add_argument("--series-slug")
     ap.add_argument("--use-whisper", action="store_true")
     ap.add_argument("--sample-seconds", type=int, default=45)
+    ap.add_argument("--require-resolvable-source", action="store_true")
     ap.add_argument("--refresh", action="store_true")
     args = ap.parse_args()
 
@@ -255,6 +269,7 @@ def main() -> int:
             sample_seconds=args.sample_seconds,
             source_limit=args.source_limit_per_episode,
             burned=burned,
+            require_resolvable_source=args.require_resolvable_source,
         )
         for episode in todo
     ]

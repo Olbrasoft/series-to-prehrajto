@@ -71,6 +71,7 @@ jobs:
           ARGS=(
             "--episode-limit" "${{ inputs.episode_limit || '1500' }}"
             "--source-limit-per-episode" "${{ inputs.source_limit_per_episode || '12' }}"
+            "--require-resolvable-source"
           )
           if [ -n "${{ inputs.series_slug }}" ]; then
             ARGS+=("--series-slug" "${{ inputs.series_slug }}")
