@@ -2,24 +2,64 @@
   "counts": {
     "backlog_episodes": 10000,
     "manifest_upload_ready_episodes": 1979,
-    "uploaded_episodes": 4862,
+    "uploaded_episodes": 4876,
     "prepared_source_episodes": 9053,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 2806,
-    "language_audit_rows": 77592,
+    "language_audit_rows": 77612,
     "language_queue_sources": 99995,
-    "language_audited_sources": 81150,
-    "language_whisper_attempted_sources": 3665,
-    "language_pending_whisper_sources": 99895
+    "language_audited_sources": 72412,
+    "language_whisper_attempted_sources": 3345,
+    "language_pending_whisper_sources": 99975
   },
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-06-23T17:51:21Z",
+      "databaseId": 28045768297,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-23T17:47:56Z",
+      "databaseId": 28045570235,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-23T17:42:50Z",
+      "databaseId": 28045274339,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-23T17:42:14Z",
+      "databaseId": 28045238507,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-23T17:41:44Z",
+      "databaseId": 28045208666,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-06-23T17:38:11Z",
       "databaseId": 28044998775,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-status"
     },
     {
@@ -87,11 +127,11 @@
       "workflowName": "audit-language"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-06-23T16:57:20Z",
       "databaseId": 28042542544,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-descriptions"
     },
     {
@@ -133,46 +173,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-23T16:13:55Z",
-      "databaseId": 28039894767,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "refresh-backlog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-23T16:13:28Z",
-      "databaseId": 28039866062,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-23T16:13:09Z",
-      "databaseId": 28039845741,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "failure",
-      "createdAt": "2026-06-23T16:07:55Z",
-      "databaseId": 28039523041,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-23T16:04:37Z",
-      "databaseId": 28039322485,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "refresh-backlog"
     }
   ],
   "gaps": {
@@ -4807,6 +4807,36 @@
         "video_id": 26318375
       },
       {
+        "episode_id": 37998,
+        "display_name": "Černá listina S06E14 - Ostermanova zastřešující společnost (č. 6) CZ Dabing",
+        "video_id": 26318673
+      },
+      {
+        "episode_id": 38004,
+        "display_name": "Černá listina S06E15 - Olivia Olson (č. 115) CZ Dabing",
+        "video_id": 26318987
+      },
+      {
+        "episode_id": 38002,
+        "display_name": "Černá listina S06E18 - Vrah z Brocktonské univerzity (č. 92) CZ Dabing",
+        "video_id": 26319390
+      },
+      {
+        "episode_id": 38000,
+        "display_name": "Černá listina S06E19 - Rassvet CZ Dabing",
+        "video_id": 26319873
+      },
+      {
+        "episode_id": 38018,
+        "display_name": "Černá listina S06E21 - Anna McMahon (č. 60) CZ Dabing",
+        "video_id": 26320160
+      },
+      {
+        "episode_id": 38070,
+        "display_name": "Černá listina S07E02 - Louis T. Steinhil (č. 27): Závěr CZ Dabing",
+        "video_id": 26320404
+      },
+      {
         "episode_id": 115597,
         "display_name": "Adolescent S01E04 - 4. díl CZ Dabing",
         "video_id": 26317306
@@ -4835,6 +4865,46 @@
         "episode_id": 6677,
         "display_name": "Firefly S01E12 CZ Dabing",
         "video_id": 26318656
+      },
+      {
+        "episode_id": 6679,
+        "display_name": "Firefly S01E14 CZ Dabing",
+        "video_id": 26318679
+      },
+      {
+        "episode_id": 37875,
+        "display_name": "Černá listina S01E01 - Ranko Zamani CZ Dabing",
+        "video_id": 26319028
+      },
+      {
+        "episode_id": 37903,
+        "display_name": "Černá listina S01E03 - Wujing (č. 84) CZ Dabing",
+        "video_id": 26319214
+      },
+      {
+        "episode_id": 37877,
+        "display_name": "Černá listina S01E04 - Lazebník (č. 161) CZ Dabing",
+        "video_id": 26319309
+      },
+      {
+        "episode_id": 37905,
+        "display_name": "Černá listina S01E07 - Frederick Barnes (č. 47) CZ Dabing",
+        "video_id": 26319389
+      },
+      {
+        "episode_id": 37879,
+        "display_name": "Černá listina S01E08 - Generál Ludd (č. 109) CZ Dabing",
+        "video_id": 26319663
+      },
+      {
+        "episode_id": 37907,
+        "display_name": "Černá listina S01E10 - Anslo Garrick (č. 16) Dokončení CZ Dabing",
+        "video_id": 26319895
+      },
+      {
+        "episode_id": 37909,
+        "display_name": "Černá listina S01E13 - Kyperská agentura (č. 64) CZ Dabing",
+        "video_id": 26320397
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -20944,6 +21014,36 @@
         "video_id": 26318375
       },
       {
+        "episode_id": 37998,
+        "display_name": "Černá listina S06E14 - Ostermanova zastřešující společnost (č. 6) CZ Dabing",
+        "video_id": 26318673
+      },
+      {
+        "episode_id": 38004,
+        "display_name": "Černá listina S06E15 - Olivia Olson (č. 115) CZ Dabing",
+        "video_id": 26318987
+      },
+      {
+        "episode_id": 38002,
+        "display_name": "Černá listina S06E18 - Vrah z Brocktonské univerzity (č. 92) CZ Dabing",
+        "video_id": 26319390
+      },
+      {
+        "episode_id": 38000,
+        "display_name": "Černá listina S06E19 - Rassvet CZ Dabing",
+        "video_id": 26319873
+      },
+      {
+        "episode_id": 38018,
+        "display_name": "Černá listina S06E21 - Anna McMahon (č. 60) CZ Dabing",
+        "video_id": 26320160
+      },
+      {
+        "episode_id": 38070,
+        "display_name": "Černá listina S07E02 - Louis T. Steinhil (č. 27): Závěr CZ Dabing",
+        "video_id": 26320404
+      },
+      {
         "episode_id": 115597,
         "display_name": "Adolescent S01E04 - 4. díl CZ Dabing",
         "video_id": 26317306
@@ -20972,6 +21072,46 @@
         "episode_id": 6677,
         "display_name": "Firefly S01E12 CZ Dabing",
         "video_id": 26318656
+      },
+      {
+        "episode_id": 6679,
+        "display_name": "Firefly S01E14 CZ Dabing",
+        "video_id": 26318679
+      },
+      {
+        "episode_id": 37875,
+        "display_name": "Černá listina S01E01 - Ranko Zamani CZ Dabing",
+        "video_id": 26319028
+      },
+      {
+        "episode_id": 37903,
+        "display_name": "Černá listina S01E03 - Wujing (č. 84) CZ Dabing",
+        "video_id": 26319214
+      },
+      {
+        "episode_id": 37877,
+        "display_name": "Černá listina S01E04 - Lazebník (č. 161) CZ Dabing",
+        "video_id": 26319309
+      },
+      {
+        "episode_id": 37905,
+        "display_name": "Černá listina S01E07 - Frederick Barnes (č. 47) CZ Dabing",
+        "video_id": 26319389
+      },
+      {
+        "episode_id": 37879,
+        "display_name": "Černá listina S01E08 - Generál Ludd (č. 109) CZ Dabing",
+        "video_id": 26319663
+      },
+      {
+        "episode_id": 37907,
+        "display_name": "Černá listina S01E10 - Anslo Garrick (č. 16) Dokončení CZ Dabing",
+        "video_id": 26319895
+      },
+      {
+        "episode_id": 37909,
+        "display_name": "Černá listina S01E13 - Kyperská agentura (č. 64) CZ Dabing",
+        "video_id": 26320397
       }
     ],
     "prepared_not_upload_ready": [
@@ -21279,16 +21419,16 @@
   },
   "language_verdicts": {
     "UNKNOWN": 513,
-    "CZ_AUDIO": 74431,
+    "CZ_AUDIO": 74443,
     "CZ_SUBTITLES_ONLY": 2128,
-    "NOT_CZ_AUDIO": 516,
+    "NOT_CZ_AUDIO": 524,
     "SK_AUDIO": 2,
     "PROBABLE_CZ_AUDIO": 2
   },
   "language_whisper_statuses": {
-    "disabled": 77485,
+    "disabled": 69067,
     "resolve_failed": 276,
-    "ok": 3352,
+    "ok": 3032,
     "no_stream": 37
   }
 }
