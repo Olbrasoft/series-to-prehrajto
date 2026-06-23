@@ -126,9 +126,9 @@ jobs:
           GEMINI_PER_KEY_MIN_INTERVAL_SECONDS: "4.2"
         run: |
           set +e
-          timeout 35m python src/prepare_descriptions.py \
-            --series-limit "160" \
-            --episode-limit "800" \
+          timeout 8m python src/prepare_descriptions.py \
+            --series-limit "${{ inputs.series_limit || '160' }}" \
+            --episode-limit "${{ inputs.episode_limit || '800' }}" \
             --workers 4 \
             --retries 1 \
             --replace-fallback \
