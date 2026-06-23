@@ -57,7 +57,9 @@ jobs:
           GEMINI_API_KEYS: ${{ secrets.GEMINI_API_KEYS }}
           GEMINI_MODEL: gemma-4-31b-it
           GEMINI_THINKING_BUDGET: "0"
-          GEMINI_PER_KEY_MIN_INTERVAL_SECONDS: "4.2"
+          GEMINI_RPM_PER_KEY: "1"
+          GEMINI_RPD_PER_KEY: "1400"
+          GEMINI_DAILY_SAFETY_RESERVE: "50"
         run: |
           set +e
           timeout 50m python src/prepare_descriptions.py \
@@ -101,13 +103,16 @@ jobs:
         if: always()
         run: |
           TMP_DIR="$(mktemp -d)"
-          mkdir -p "$TMP_DIR/plans"
+          mkdir -p "$TMP_DIR/plans" "$TMP_DIR/state"
           cp plans/descriptions.jsonl "$TMP_DIR/plans/" 2>/dev/null || true
+          cp state/gemini-quota-state.json "$TMP_DIR/state/" 2>/dev/null || true
           git fetch origin main
           git reset --hard origin/main
-          mkdir -p plans
+          mkdir -p plans state
           cp "$TMP_DIR"/plans/* plans/ 2>/dev/null || true
+          cp "$TMP_DIR"/state/* state/ 2>/dev/null || true
           git add plans/descriptions.jsonl
+          [ ! -f state/gemini-quota-state.json ] || git add state/gemini-quota-state.json
           if git diff --cached --quiet; then
             echo "no description changes"
           else
@@ -118,9 +123,11 @@ jobs:
               fi
               git fetch origin main
               git reset --hard origin/main
-              mkdir -p plans
+              mkdir -p plans state
               cp "$TMP_DIR"/plans/* plans/ 2>/dev/null || true
+              cp "$TMP_DIR"/state/* state/ 2>/dev/null || true
               git add plans/descriptions.jsonl
+              [ ! -f state/gemini-quota-state.json ] || git add state/gemini-quota-state.json
               git commit -m "chore: prepare Gemma descriptions" || true
               sleep $((attempt * 2))
             done
