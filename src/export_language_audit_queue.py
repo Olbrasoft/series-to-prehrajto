@@ -13,6 +13,7 @@ import gzip
 import json
 import os
 import sys
+import time
 from pathlib import Path
 from typing import Any
 
@@ -20,6 +21,20 @@ import psycopg2
 import psycopg2.extras
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
+
+
+def connect_with_retries(db_url: str, *, attempts: int = 6, delay_seconds: float = 5.0):
+    last_exc: Exception | None = None
+    for attempt in range(1, attempts + 1):
+        try:
+            return psycopg2.connect(db_url)
+        except psycopg2.OperationalError as exc:
+            last_exc = exc
+            print(f"DB connect failed on attempt {attempt}/{attempts}: {exc}", file=sys.stderr)
+            if attempt < attempts:
+                time.sleep(delay_seconds * attempt)
+    assert last_exc is not None
+    raise last_exc
 
 
 def sktorrent_url(external_id: str | None) -> str | None:
@@ -236,7 +251,7 @@ def main() -> int:
         print("ERROR: --db-url or DATABASE_URL required", file=sys.stderr)
         return 2
 
-    conn = psycopg2.connect(args.db_url)
+    conn = connect_with_retries(args.db_url)
     excluded_source_ids = local_audited_source_ids() if not args.series_slug else set()
     try:
         rows = fetch_rows(

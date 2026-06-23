@@ -16,6 +16,7 @@ import json
 import os
 import re
 import sys
+import time
 from collections import defaultdict
 from pathlib import Path
 from typing import Any
@@ -25,6 +26,20 @@ import psycopg2.extras
 
 UPLOAD_LANG_CLASSES = ("CZ_DUB", "CZ_NATIVE")
 REPO_ROOT = Path(__file__).resolve().parent.parent
+
+
+def connect_with_retries(db_url: str, *, attempts: int = 6, delay_seconds: float = 5.0):
+    last_exc: Exception | None = None
+    for attempt in range(1, attempts + 1):
+        try:
+            return psycopg2.connect(db_url)
+        except psycopg2.OperationalError as exc:
+            last_exc = exc
+            print(f"DB connect failed on attempt {attempt}/{attempts}: {exc}", file=sys.stderr)
+            if attempt < attempts:
+                time.sleep(delay_seconds * attempt)
+    assert last_exc is not None
+    raise last_exc
 
 
 def json_default(value: Any) -> Any:
@@ -335,7 +350,7 @@ def main() -> int:
         return 2
 
     uploaded_episode_ids, uploaded_episode_keys = load_uploaded_exclusions()
-    conn = psycopg2.connect(args.db_url)
+    conn = connect_with_retries(args.db_url)
     try:
         rows = fetch_rows(
             conn,
