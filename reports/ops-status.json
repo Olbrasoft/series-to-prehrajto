@@ -2,24 +2,88 @@
   "counts": {
     "backlog_episodes": 2000,
     "manifest_upload_ready_episodes": 1979,
-    "uploaded_episodes": 4622,
+    "uploaded_episodes": 4666,
     "prepared_source_episodes": 9079,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 2795,
-    "language_audit_rows": 93830,
+    "language_audit_rows": 93870,
     "language_queue_sources": 18245,
-    "language_audited_sources": 72572,
-    "language_whisper_attempted_sources": 3505,
-    "language_pending_whisper_sources": 18245
+    "language_audited_sources": 81030,
+    "language_whisper_attempted_sources": 3545,
+    "language_pending_whisper_sources": 18205
   },
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-06-23T15:33:06Z",
+      "databaseId": 28037322232,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-23T15:29:55Z",
+      "databaseId": 28037115966,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-06-23T15:20:09Z",
+      "databaseId": 28036513604,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-23T15:16:56Z",
+      "databaseId": 28036324961,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-23T15:16:55Z",
+      "databaseId": 28036323188,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-23T15:16:53Z",
+      "databaseId": 28036321162,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-23T15:16:51Z",
+      "databaseId": 28036319200,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "refresh-backlog"
+    },
+    {
+      "conclusion": "failure",
+      "createdAt": "2026-06-23T15:16:49Z",
+      "databaseId": 28036317218,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-06-23T15:16:20Z",
       "databaseId": 28036289092,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -109,70 +173,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-23T14:01:09Z",
-      "databaseId": 28031894674,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-23T14:01:08Z",
-      "databaseId": 28031892949,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-23T14:01:06Z",
-      "databaseId": 28031890924,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "refresh-backlog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-23T14:00:40Z",
-      "databaseId": 28031860069,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "failure",
-      "createdAt": "2026-06-23T13:53:10Z",
-      "databaseId": 28031367837,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-23T13:39:53Z",
-      "databaseId": 28030507384,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-23T13:39:34Z",
-      "databaseId": 28030487753,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-23T13:31:08Z",
-      "databaseId": 28029956484,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-sources"
     }
   ],
   "gaps": {
@@ -4099,6 +4099,41 @@
         "episode_id": 32410,
         "display_name": "Euforie S03E01 - 1. epizoda CZ Dabing",
         "video_id": 26299213
+      },
+      {
+        "episode_id": 14279,
+        "display_name": "Hříšníci S03E02 - 2. epizoda CZ Dabing",
+        "video_id": 26299749
+      },
+      {
+        "episode_id": 14293,
+        "display_name": "Hříšníci S04E04 - 4. epizoda CZ Dabing",
+        "video_id": 26300024
+      },
+      {
+        "episode_id": 18205,
+        "display_name": "Euforie S01E01 - Pilot CZ Dabing",
+        "video_id": 26300879
+      },
+      {
+        "episode_id": 18203,
+        "display_name": "Euforie S01E03 - Vzhled CZ Dabing",
+        "video_id": 26301130
+      },
+      {
+        "episode_id": 18201,
+        "display_name": "Euforie S01E06 - Další epizoda CZ Dabing",
+        "video_id": 26301394
+      },
+      {
+        "episode_id": 18199,
+        "display_name": "Euforie S01E07 - Útrapy a strasti při čurání v depresi CZ Dabing",
+        "video_id": 26301670
+      },
+      {
+        "episode_id": 33113,
+        "display_name": "Euforie S01E10 CZ Dabing",
+        "video_id": 26301836
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -6196,361 +6231,6 @@
         "episode_id": 34999,
         "display_name": "Dr. House S08E21 - Vydržet CZ Dabing",
         "video_id": 26185715
-      },
-      {
-        "episode_id": 41000,
-        "display_name": "Taková moderní rodinka S06E07 - 7. epizoda CZ Dabing",
-        "video_id": 26195462
-      },
-      {
-        "episode_id": 40985,
-        "display_name": "Taková moderní rodinka S04E20 - Hledá se kupec CZ Dabing",
-        "video_id": 26195169
-      },
-      {
-        "episode_id": 41161,
-        "display_name": "Taková moderní rodinka S04E21 - Není práce jako práce CZ Dabing",
-        "video_id": 26195181
-      },
-      {
-        "episode_id": 41117,
-        "display_name": "Taková moderní rodinka S04E22 - Můj hrdina CZ Dabing",
-        "video_id": 26195200
-      },
-      {
-        "episode_id": 40987,
-        "display_name": "Taková moderní rodinka S04E24 - Sbohem, Grace CZ Dabing",
-        "video_id": 26195211
-      },
-      {
-        "episode_id": 40933,
-        "display_name": "Taková moderní rodinka S05E01 - 1. epizoda CZ Dabing",
-        "video_id": 26195230
-      },
-      {
-        "episode_id": 40989,
-        "display_name": "Taková moderní rodinka S05E03 - 3. epizoda CZ Dabing",
-        "video_id": 26195242
-      },
-      {
-        "episode_id": 41073,
-        "display_name": "Taková moderní rodinka S05E05 - 5. epizoda CZ Dabing",
-        "video_id": 26195261
-      },
-      {
-        "episode_id": 40935,
-        "display_name": "Taková moderní rodinka S05E07 - 7. epizoda CZ Dabing",
-        "video_id": 26195276
-      },
-      {
-        "episode_id": 40991,
-        "display_name": "Taková moderní rodinka S05E09 - 9. epizoda CZ Dabing",
-        "video_id": 26195290
-      },
-      {
-        "episode_id": 40993,
-        "display_name": "Taková moderní rodinka S05E11 - 11. epizoda CZ Dabing",
-        "video_id": 26195305
-      },
-      {
-        "episode_id": 41075,
-        "display_name": "Taková moderní rodinka S05E13 - 13. epizoda CZ Dabing",
-        "video_id": 26195316
-      },
-      {
-        "episode_id": 40995,
-        "display_name": "Taková moderní rodinka S05E16 - 16. epizoda CZ Dabing",
-        "video_id": 26195326
-      },
-      {
-        "episode_id": 41153,
-        "display_name": "Taková moderní rodinka S05E19 - 19. epizoda CZ Dabing",
-        "video_id": 26195342
-      },
-      {
-        "episode_id": 41139,
-        "display_name": "Taková moderní rodinka S05E20 - 20. epizoda CZ Dabing",
-        "video_id": 26195355
-      },
-      {
-        "episode_id": 41171,
-        "display_name": "Taková moderní rodinka S05E21 - 21. epizoda CZ Dabing",
-        "video_id": 26195380
-      },
-      {
-        "episode_id": 41163,
-        "display_name": "Taková moderní rodinka S05E24 - 24. epizoda CZ Dabing",
-        "video_id": 26195392
-      },
-      {
-        "episode_id": 40937,
-        "display_name": "Taková moderní rodinka S06E01 - 1. epizoda CZ Dabing",
-        "video_id": 26195405
-      },
-      {
-        "episode_id": 40997,
-        "display_name": "Taková moderní rodinka S06E02 - 2. epizoda CZ Dabing",
-        "video_id": 26195409
-      },
-      {
-        "episode_id": 40999,
-        "display_name": "Taková moderní rodinka S06E04 - 4. epizoda CZ Dabing",
-        "video_id": 26195423
-      },
-      {
-        "episode_id": 41077,
-        "display_name": "Taková moderní rodinka S06E05 - 5. epizoda CZ Dabing",
-        "video_id": 26195434
-      },
-      {
-        "episode_id": 41119,
-        "display_name": "Taková moderní rodinka S06E08 - 8. epizoda CZ Dabing",
-        "video_id": 26195440
-      },
-      {
-        "episode_id": 40939,
-        "display_name": "Taková moderní rodinka S06E11 - 11. epizoda CZ Dabing",
-        "video_id": 26195450
-      },
-      {
-        "episode_id": 41001,
-        "display_name": "Taková moderní rodinka S06E12 - 12. epizoda CZ Dabing",
-        "video_id": 26195463
-      },
-      {
-        "episode_id": 41078,
-        "display_name": "Taková moderní rodinka S06E09 - 9. epizoda CZ Dabing",
-        "video_id": 26195499
-      },
-      {
-        "episode_id": 41120,
-        "display_name": "Taková moderní rodinka S06E10 - 10. epizoda CZ Dabing",
-        "video_id": 26195519
-      },
-      {
-        "episode_id": 41002,
-        "display_name": "Taková moderní rodinka S06E14 - 14. epizoda CZ Dabing",
-        "video_id": 26195536
-      },
-      {
-        "episode_id": 41004,
-        "display_name": "Taková moderní rodinka S06E15 - 15. epizoda CZ Dabing",
-        "video_id": 26195557
-      },
-      {
-        "episode_id": 40940,
-        "display_name": "Taková moderní rodinka S06E16 - 16. epizoda CZ Dabing",
-        "video_id": 26195570
-      },
-      {
-        "episode_id": 41122,
-        "display_name": "Taková moderní rodinka S06E19 - 19. epizoda CZ Dabing",
-        "video_id": 26195592
-      },
-      {
-        "episode_id": 41006,
-        "display_name": "Taková moderní rodinka S06E22 - 22. epizoda CZ Dabing",
-        "video_id": 26195609
-      },
-      {
-        "episode_id": 41008,
-        "display_name": "Taková moderní rodinka S07E01 - 1. epizoda CZ Dabing",
-        "video_id": 26195630
-      },
-      {
-        "episode_id": 41140,
-        "display_name": "Taková moderní rodinka S07E03 - 3. epizoda CZ Dabing",
-        "video_id": 26195660
-      },
-      {
-        "episode_id": 41080,
-        "display_name": "Taková moderní rodinka S07E04 - 4. epizoda CZ Dabing",
-        "video_id": 26195676
-      },
-      {
-        "episode_id": 41124,
-        "display_name": "Taková moderní rodinka S07E05 - 5. epizoda CZ Dabing",
-        "video_id": 26195693
-      },
-      {
-        "episode_id": 41010,
-        "display_name": "Taková moderní rodinka S07E06 - 6. epizoda CZ Dabing",
-        "video_id": 26195719
-      },
-      {
-        "episode_id": 41012,
-        "display_name": "Taková moderní rodinka S07E08 - 8. epizoda CZ Dabing",
-        "video_id": 26195733
-      },
-      {
-        "episode_id": 41164,
-        "display_name": "Taková moderní rodinka S07E10 - 10. epizoda CZ Dabing",
-        "video_id": 26195753
-      },
-      {
-        "episode_id": 40942,
-        "display_name": "Taková moderní rodinka S07E11 - 11. epizoda CZ Dabing",
-        "video_id": 26195770
-      },
-      {
-        "episode_id": 41082,
-        "display_name": "Taková moderní rodinka S07E13 - 13. epizoda CZ Dabing",
-        "video_id": 26195784
-      },
-      {
-        "episode_id": 41154,
-        "display_name": "Taková moderní rodinka S07E14 - 14. epizoda CZ Dabing",
-        "video_id": 26195807
-      },
-      {
-        "episode_id": 41084,
-        "display_name": "Taková moderní rodinka S07E16 - 16. epizoda CZ Dabing",
-        "video_id": 26195819
-      },
-      {
-        "episode_id": 41014,
-        "display_name": "Taková moderní rodinka S07E19 - 19. epizoda CZ Dabing",
-        "video_id": 26195830
-      },
-      {
-        "episode_id": 41016,
-        "display_name": "Taková moderní rodinka S08E01 - 1. epizoda CZ Dabing",
-        "video_id": 26195843
-      },
-      {
-        "episode_id": 41003,
-        "display_name": "Taková moderní rodinka S06E13 - 13. epizoda CZ Dabing",
-        "video_id": 26195475
-      },
-      {
-        "episode_id": 41121,
-        "display_name": "Taková moderní rodinka S06E17 - 17. epizoda CZ Dabing",
-        "video_id": 26195485
-      },
-      {
-        "episode_id": 41005,
-        "display_name": "Taková moderní rodinka S06E18 - 18. epizoda CZ Dabing",
-        "video_id": 26195502
-      },
-      {
-        "episode_id": 41123,
-        "display_name": "Taková moderní rodinka S06E20 - 20. epizoda CZ Dabing",
-        "video_id": 26195518
-      },
-      {
-        "episode_id": 40941,
-        "display_name": "Taková moderní rodinka S06E21 - 21. epizoda CZ Dabing",
-        "video_id": 26195534
-      },
-      {
-        "episode_id": 41007,
-        "display_name": "Taková moderní rodinka S06E23 - 23. epizoda CZ Dabing",
-        "video_id": 26195552
-      },
-      {
-        "episode_id": 41079,
-        "display_name": "Taková moderní rodinka S06E24 - 24. epizoda CZ Dabing",
-        "video_id": 26195591
-      },
-      {
-        "episode_id": 41009,
-        "display_name": "Taková moderní rodinka S07E02 - 2. epizoda CZ Dabing",
-        "video_id": 26195605
-      },
-      {
-        "episode_id": 41011,
-        "display_name": "Taková moderní rodinka S07E07 - 7. epizoda CZ Dabing",
-        "video_id": 26195622
-      },
-      {
-        "episode_id": 41081,
-        "display_name": "Taková moderní rodinka S07E09 - 9. epizoda CZ Dabing",
-        "video_id": 26195635
-      },
-      {
-        "episode_id": 41141,
-        "display_name": "Taková moderní rodinka S07E12 - 12. epizoda CZ Dabing",
-        "video_id": 26195652
-      },
-      {
-        "episode_id": 41083,
-        "display_name": "Taková moderní rodinka S07E15 - 15. epizoda CZ Dabing",
-        "video_id": 26195680
-      },
-      {
-        "episode_id": 41165,
-        "display_name": "Taková moderní rodinka S07E17 - 17. epizoda CZ Dabing",
-        "video_id": 26195692
-      },
-      {
-        "episode_id": 41013,
-        "display_name": "Taková moderní rodinka S07E18 - 18. epizoda CZ Dabing",
-        "video_id": 26195709
-      },
-      {
-        "episode_id": 41015,
-        "display_name": "Taková moderní rodinka S07E20 - 20. epizoda CZ Dabing",
-        "video_id": 26195728
-      },
-      {
-        "episode_id": 41125,
-        "display_name": "Taková moderní rodinka S07E21 - 21. epizoda CZ Dabing",
-        "video_id": 26195735
-      },
-      {
-        "episode_id": 41155,
-        "display_name": "Taková moderní rodinka S07E22 - 22. epizoda CZ Dabing",
-        "video_id": 26195749
-      },
-      {
-        "episode_id": 41085,
-        "display_name": "Taková moderní rodinka S08E02 - 2. epizoda CZ Dabing",
-        "video_id": 26195763
-      },
-      {
-        "episode_id": 40943,
-        "display_name": "Taková moderní rodinka S08E05 - 5. epizoda CZ Dabing",
-        "video_id": 26195774
-      },
-      {
-        "episode_id": 41143,
-        "display_name": "Taková moderní rodinka S08E06 - 6. epizoda CZ Dabing",
-        "video_id": 26195795
-      },
-      {
-        "episode_id": 41029,
-        "display_name": "Taková moderní rodinka S10E02 - 2. epizoda CZ Dabing",
-        "video_id": 26195809
-      },
-      {
-        "episode_id": 40953,
-        "display_name": "Taková moderní rodinka S10E03 - 3. epizoda CZ Dabing",
-        "video_id": 26195818
-      },
-      {
-        "episode_id": 41099,
-        "display_name": "Taková moderní rodinka S10E04 - 4. epizoda CZ Dabing",
-        "video_id": 26195826
-      },
-      {
-        "episode_id": 41031,
-        "display_name": "Taková moderní rodinka S10E06 - 6. epizoda CZ Dabing",
-        "video_id": 26195835
-      },
-      {
-        "episode_id": 41033,
-        "display_name": "Taková moderní rodinka S10E08 - 8. epizoda CZ Dabing",
-        "video_id": 26195845
-      },
-      {
-        "episode_id": 41142,
-        "display_name": "Taková moderní rodinka S08E03 - 3. epizoda CZ Dabing",
-        "video_id": 26195853
-      },
-      {
-        "episode_id": 41126,
-        "display_name": "Taková moderní rodinka S08E04 - 4. epizoda CZ Dabing",
-        "video_id": 26195860
       },
       {
         "episode_id": 40944,
@@ -19353,6 +19033,46 @@
         "video_id": 26299842
       },
       {
+        "episode_id": 45654,
+        "display_name": "Zpátky do školy S01E23 - Moderní vedení války CZ Dabing",
+        "video_id": 26299891
+      },
+      {
+        "episode_id": 45656,
+        "display_name": "Zpátky do školy S01E24 - Angličtina jako druhý jazyk CZ Dabing",
+        "video_id": 26299981
+      },
+      {
+        "episode_id": 45658,
+        "display_name": "Zpátky do školy S02E02 - Zúčtování s právníky CZ Dabing",
+        "video_id": 26300004
+      },
+      {
+        "episode_id": 45660,
+        "display_name": "Zpátky do školy S02E04 - Základy raketové vědy CZ Dabing",
+        "video_id": 26300052
+      },
+      {
+        "episode_id": 45662,
+        "display_name": "Zpátky do školy S02E06 - Epidemiologie CZ Dabing",
+        "video_id": 26300113
+      },
+      {
+        "episode_id": 45664,
+        "display_name": "Zpátky do školy S02E08 - Kooperativní kaligrafie CZ Dabing",
+        "video_id": 26300180
+      },
+      {
+        "episode_id": 45666,
+        "display_name": "Zpátky do školy S02E10 - Diplom z mixologie CZ Dabing",
+        "video_id": 26300203
+      },
+      {
+        "episode_id": 45668,
+        "display_name": "Zpátky do školy S02E12 - Studie asijské populace CZ Dabing",
+        "video_id": 26300212
+      },
+      {
         "episode_id": 50741,
         "display_name": "Umbrella Academy S02E03 - Švédi CZ Dabing",
         "video_id": 26298093
@@ -19391,6 +19111,186 @@
         "episode_id": 50755,
         "display_name": "Umbrella Academy S03E06 - Marigold CZ Dabing",
         "video_id": 26299474
+      },
+      {
+        "episode_id": 14279,
+        "display_name": "Hříšníci S03E02 - 2. epizoda CZ Dabing",
+        "video_id": 26299749
+      },
+      {
+        "episode_id": 14293,
+        "display_name": "Hříšníci S04E04 - 4. epizoda CZ Dabing",
+        "video_id": 26300024
+      },
+      {
+        "episode_id": 50757,
+        "display_name": "Umbrella Academy S03E08 - Svatba na konci světa CZ Dabing",
+        "video_id": 26300205
+      },
+      {
+        "episode_id": 50759,
+        "display_name": "Umbrella Academy S03E10 - Zapomnění CZ Dabing",
+        "video_id": 26300281
+      },
+      {
+        "episode_id": 50761,
+        "display_name": "Umbrella Academy S04E02 - Jean a Gene CZ Dabing",
+        "video_id": 26300411
+      },
+      {
+        "episode_id": 45670,
+        "display_name": "Zpátky do školy S02E13 - Farmakologie hvězd CZ Dabing",
+        "video_id": 26300582
+      },
+      {
+        "episode_id": 45672,
+        "display_name": "Zpátky do školy S02E16 - Dokumentární film pro středně pokročilé CZ Dabing",
+        "video_id": 26300631
+      },
+      {
+        "episode_id": 45674,
+        "display_name": "Zpátky do školy S02E18 - Zákon o péči a východoevropská diplomacie CZ Dabing",
+        "video_id": 26300666
+      },
+      {
+        "episode_id": 45678,
+        "display_name": "Zpátky do školy S02E21 - Paradigmata lidské paměti CZ Dabing",
+        "video_id": 26300717
+      },
+      {
+        "episode_id": 45676,
+        "display_name": "Zpátky do školy S02E22 - Aplikovaná antropologie a kuchařské umění CZ Dabing",
+        "video_id": 26300787
+      },
+      {
+        "episode_id": 45680,
+        "display_name": "Zpátky do školy S03E01 - Úvod do biologie CZ Dabing",
+        "video_id": 26300809
+      },
+      {
+        "episode_id": 45682,
+        "display_name": "Zpátky do školy S03E02 - Geografie globálního konfliktu CZ Dabing",
+        "video_id": 26300906
+      },
+      {
+        "episode_id": 45684,
+        "display_name": "Zpátky do školy S03E04 - Ozdravná teorie chaosu CZ Dabing",
+        "video_id": 26300964
+      },
+      {
+        "episode_id": 45686,
+        "display_name": "Zpátky do školy S03E06 - Gaylogie pro pokročilé CZ Dabing",
+        "video_id": 26301029
+      },
+      {
+        "episode_id": 45688,
+        "display_name": "Zpátky do školy S03E08 - Natáčení dokumentu: Návrat CZ Dabing",
+        "video_id": 26301101
+      },
+      {
+        "episode_id": 45690,
+        "display_name": "Zpátky do školy S03E10 - Regionální vánoční hudba CZ Dabing",
+        "video_id": 26301135
+      },
+      {
+        "episode_id": 45692,
+        "display_name": "Zpátky do školy S03E12 - Současní impresionisté CZ Dabing",
+        "video_id": 26301230
+      },
+      {
+        "episode_id": 45694,
+        "display_name": "Zpátky do školy S03E14 - Polštářová bitva CZ Dabing",
+        "video_id": 26301303
+      },
+      {
+        "episode_id": 45696,
+        "display_name": "Zpátky do školy S03E17 - Základy vlčí urologie CZ Dabing",
+        "video_id": 26301386
+      },
+      {
+        "episode_id": 45698,
+        "display_name": "Zpátky do školy S03E18 - Kurz není k dispozici CZ Dabing",
+        "video_id": 26301416
+      },
+      {
+        "episode_id": 45700,
+        "display_name": "Zpátky do školy S03E20 - Digitální plánování pozůstalosti CZ Dabing",
+        "video_id": 26301459
+      },
+      {
+        "episode_id": 45702,
+        "display_name": "Zpátky do školy S03E21 - První dynastie Chang CZ Dabing",
+        "video_id": 26301509
+      },
+      {
+        "episode_id": 45704,
+        "display_name": "Zpátky do školy S04E02 - Paranormální rodičovství CZ Dabing",
+        "video_id": 26301570
+      },
+      {
+        "episode_id": 45706,
+        "display_name": "Zpátky do školy S04E04 - Válka o studovnu CZ Dabing",
+        "video_id": 26301616
+      },
+      {
+        "episode_id": 45708,
+        "display_name": "Zpátky do školy S04E06 - Pokroková dokumentární filmová tvorba CZ Dabing",
+        "video_id": 26301625
+      },
+      {
+        "episode_id": 50763,
+        "display_name": "Umbrella Academy S04E04 - Očista CZ Dabing",
+        "video_id": 26300520
+      },
+      {
+        "episode_id": 50765,
+        "display_name": "Umbrella Academy S04E05 - Šest let, pět měsíců a dva dny CZ Dabing",
+        "video_id": 26300683
+      },
+      {
+        "episode_id": 18205,
+        "display_name": "Euforie S01E01 - Pilot CZ Dabing",
+        "video_id": 26300879
+      },
+      {
+        "episode_id": 18203,
+        "display_name": "Euforie S01E03 - Vzhled CZ Dabing",
+        "video_id": 26301130
+      },
+      {
+        "episode_id": 18201,
+        "display_name": "Euforie S01E06 - Další epizoda CZ Dabing",
+        "video_id": 26301394
+      },
+      {
+        "episode_id": 45710,
+        "display_name": "Zpátky do školy S04E08 - Taneční zábava pro feministky CZ Dabing",
+        "video_id": 26301716
+      },
+      {
+        "episode_id": 45712,
+        "display_name": "Zpátky do školy S04E09 - Maňásková terapie CZ Dabing",
+        "video_id": 26301819
+      },
+      {
+        "episode_id": 45714,
+        "display_name": "Zpátky do školy S04E12 - Šílená slátanina osudu CZ Dabing",
+        "video_id": 26301829
+      },
+      {
+        "episode_id": 45716,
+        "display_name": "Zpátky do školy S05E01 - Restart CZ Dabing",
+        "video_id": 26301874
+      },
+      {
+        "episode_id": 18199,
+        "display_name": "Euforie S01E07 - Útrapy a strasti při čurání v depresi CZ Dabing",
+        "video_id": 26301670
+      },
+      {
+        "episode_id": 33113,
+        "display_name": "Euforie S01E10 CZ Dabing",
+        "video_id": 26301836
       }
     ],
     "prepared_not_upload_ready": [
@@ -19698,16 +19598,16 @@
   },
   "language_verdicts": {
     "UNKNOWN": 1677,
-    "CZ_AUDIO": 87729,
+    "CZ_AUDIO": 87738,
     "CZ_SUBTITLES_ONLY": 3788,
-    "NOT_CZ_AUDIO": 609,
+    "NOT_CZ_AUDIO": 640,
     "SK_AUDIO": 2,
     "PROBABLE_CZ_AUDIO": 25
   },
   "language_whisper_statuses": {
-    "disabled": 69067,
+    "disabled": 77485,
     "resolve_failed": 276,
-    "ok": 3192,
+    "ok": 3232,
     "no_stream": 37
   }
 }
