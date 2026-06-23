@@ -66,6 +66,20 @@ def description_indexes(rows: list[dict]) -> tuple[dict[int, dict], dict[int, di
     return series, episodes
 
 
+def fallback_description_plan(episode: dict) -> dict | None:
+    for key in ("description", "source_description", "series_description", "series_overview_en"):
+        text = (episode.get(key) or "").strip()
+        if text:
+            return {
+                "kind": "fallback",
+                "generated_at": None,
+                "model": "source-export",
+                "source_hash": None,
+                "generated_description": text,
+            }
+    return None
+
+
 def upload_candidate_ids(plan: dict, burned: set[int]) -> list[int]:
     ids: list[int] = []
     for source in [plan.get("selected_source"), *(plan.get("tested_sources") or [])]:
@@ -145,6 +159,7 @@ def build_manifest(
         if not candidates:
             stats["selected_source_not_in_backlog"] += 1
             continue
+        candidate = candidates[0]
         audit = audits.get(source_id) or selected
         whisper = (audit.get("signals") or {}).get("whisper") or {}
         if require_whisper and whisper.get("status") != "ok":
@@ -153,7 +168,7 @@ def build_manifest(
 
         ep_desc = desc_episodes.get(episode_id)
         series_desc = desc_series.get(int(episode["series_id"]))
-        description_plan = ep_desc or series_desc
+        description_plan = ep_desc or series_desc or fallback_description_plan(episode)
         if not description_plan:
             stats["missing_description"] += 1
             continue

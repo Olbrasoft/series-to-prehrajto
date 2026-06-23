@@ -119,6 +119,7 @@ jobs:
           python src/prepare_episode_sources.py "${ARGS[@]}"
 
       - name: Prepare original descriptions
+        if: ${{ false }}
         env:
           GEMINI_API_KEYS: ${{ secrets.GEMINI_API_KEYS }}
           GEMINI_MODEL: gemma-4-31b-it
