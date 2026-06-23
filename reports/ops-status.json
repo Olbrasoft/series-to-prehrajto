@@ -2,11 +2,11 @@
   "counts": {
     "backlog_episodes": 10000,
     "manifest_upload_ready_episodes": 987,
-    "uploaded_episodes": 4428,
+    "uploaded_episodes": 4486,
     "prepared_source_episodes": 9053,
     "description_series": 60,
     "description_episodes": 753,
-    "description_errors": 2600,
+    "description_errors": 2718,
     "language_audit_rows": 77652,
     "language_queue_sources": 100210,
     "language_audited_sources": 72452,
@@ -16,18 +16,58 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-06-23T12:03:00Z",
-      "databaseId": 28024747276,
+      "createdAt": "2026-06-23T13:01:46Z",
+      "databaseId": 28028134077,
       "headBranch": "main",
       "status": "in_progress",
-      "workflowName": "ops-status"
+      "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-06-23T12:37:12Z",
+      "databaseId": 28026690040,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "failure",
+      "createdAt": "2026-06-23T12:26:54Z",
+      "databaseId": 28026087774,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-06-23T12:25:25Z",
+      "databaseId": 28026003416,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-23T12:21:15Z",
+      "databaseId": 28025767438,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-23T12:03:00Z",
+      "databaseId": 28024747276,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-06-23T11:52:57Z",
       "databaseId": 28024195378,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "update-descriptions"
     },
     {
@@ -39,11 +79,11 @@
       "workflowName": "audit-language"
     },
     {
-      "conclusion": "",
+      "conclusion": "failure",
       "createdAt": "2026-06-23T11:52:55Z",
       "databaseId": 28024192784,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -63,19 +103,19 @@
       "workflowName": "prepare-sources"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-06-23T11:38:45Z",
       "databaseId": 28023435897,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "sync"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-06-23T11:36:18Z",
       "databaseId": 28023310315,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-descriptions"
     },
     {
@@ -133,46 +173,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "refresh-backlog"
-    },
-    {
-      "conclusion": "failure",
-      "createdAt": "2026-06-23T10:47:52Z",
-      "databaseId": 28020726848,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-23T10:47:23Z",
-      "databaseId": 28020700971,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-23T10:45:45Z",
-      "databaseId": 28020618986,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-23T10:42:14Z",
-      "databaseId": 28020432640,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-23T10:25:25Z",
-      "databaseId": 28019540628,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
     }
   ],
   "gaps": {
@@ -3390,6 +3390,296 @@
         "episode_id": 14320,
         "display_name": "Hříšníci S06E07 - 7. epizoda CZ Dabing",
         "video_id": 26284245
+      },
+      {
+        "episode_id": 14322,
+        "display_name": "Hříšníci S06E09 - 9. epizoda CZ Dabing",
+        "video_id": 26284267
+      },
+      {
+        "episode_id": 14324,
+        "display_name": "Hříšníci S06E11 - 11. epizoda CZ Dabing",
+        "video_id": 26284297
+      },
+      {
+        "episode_id": 14326,
+        "display_name": "Hříšníci S07E01 - 1. epizoda CZ Dabing",
+        "video_id": 26284313
+      },
+      {
+        "episode_id": 14328,
+        "display_name": "Hříšníci S07E03 - 3. epizoda CZ Dabing",
+        "video_id": 26284325
+      },
+      {
+        "episode_id": 14330,
+        "display_name": "Hříšníci S07E05 - 5. epizoda CZ Dabing",
+        "video_id": 26284332
+      },
+      {
+        "episode_id": 14332,
+        "display_name": "Hříšníci S07E07 - 7. epizoda CZ Dabing",
+        "video_id": 26284346
+      },
+      {
+        "episode_id": 14334,
+        "display_name": "Hříšníci S07E09 - 9. epizoda CZ Dabing",
+        "video_id": 26284357
+      },
+      {
+        "episode_id": 14336,
+        "display_name": "Hříšníci S07E11 - 11. epizoda CZ Dabing",
+        "video_id": 26284370
+      },
+      {
+        "episode_id": 14338,
+        "display_name": "Hříšníci S08E01 - 1. epizoda CZ Dabing",
+        "video_id": 26284383
+      },
+      {
+        "episode_id": 14255,
+        "display_name": "Hříšníci S01E02 - 2. epizoda CZ Dabing",
+        "video_id": 26284274
+      },
+      {
+        "episode_id": 14257,
+        "display_name": "Hříšníci S01E04 - 4. epizoda CZ Dabing",
+        "video_id": 26284301
+      },
+      {
+        "episode_id": 14259,
+        "display_name": "Hříšníci S01E06 - 6. epizoda CZ Dabing",
+        "video_id": 26284310
+      },
+      {
+        "episode_id": 14261,
+        "display_name": "Hříšníci S01E08 - 8. epizoda CZ Dabing",
+        "video_id": 26284318
+      },
+      {
+        "episode_id": 14263,
+        "display_name": "Hříšníci S01E10 - 10. epizoda CZ Dabing",
+        "video_id": 26284327
+      },
+      {
+        "episode_id": 14265,
+        "display_name": "Hříšníci S01E12 - 12. epizoda CZ Dabing",
+        "video_id": 26284336
+      },
+      {
+        "episode_id": 14267,
+        "display_name": "Hříšníci S02E02 - 2. epizoda CZ Dabing",
+        "video_id": 26284345
+      },
+      {
+        "episode_id": 14269,
+        "display_name": "Hříšníci S02E04 - 4. epizoda CZ Dabing",
+        "video_id": 26284354
+      },
+      {
+        "episode_id": 14271,
+        "display_name": "Hříšníci S02E06 - 6. epizoda CZ Dabing",
+        "video_id": 26284366
+      },
+      {
+        "episode_id": 14273,
+        "display_name": "Hříšníci S02E08 - 8. epizoda CZ Dabing",
+        "video_id": 26284377
+      },
+      {
+        "episode_id": 14275,
+        "display_name": "Hříšníci S02E10 - 10. epizoda CZ Dabing",
+        "video_id": 26284386
+      },
+      {
+        "episode_id": 14277,
+        "display_name": "Hříšníci S02E12 - 12. epizoda CZ Dabing",
+        "video_id": 26284395
+      },
+      {
+        "episode_id": 14340,
+        "display_name": "Hříšníci S08E03 - 3. epizoda CZ Dabing",
+        "video_id": 26284402
+      },
+      {
+        "episode_id": 14342,
+        "display_name": "Hříšníci S08E05 - 5. epizoda CZ Dabing",
+        "video_id": 26284409
+      },
+      {
+        "episode_id": 14344,
+        "display_name": "Hříšníci S08E07 - 7. epizoda CZ Dabing",
+        "video_id": 26284418
+      },
+      {
+        "episode_id": 14346,
+        "display_name": "Hříšníci S08E09 - 9. epizoda CZ Dabing",
+        "video_id": 26284429
+      },
+      {
+        "episode_id": 14348,
+        "display_name": "Hříšníci S08E11 - 11. epizoda CZ Dabing",
+        "video_id": 26284443
+      },
+      {
+        "episode_id": 30684,
+        "display_name": "Hříšníci S09E01 - 1. epizoda CZ Dabing",
+        "video_id": 26284478
+      },
+      {
+        "episode_id": 30686,
+        "display_name": "Hříšníci S09E03 - 3. epizoda CZ Dabing",
+        "video_id": 26284505
+      },
+      {
+        "episode_id": 30688,
+        "display_name": "Hříšníci S09E05 - 5. epizoda CZ Dabing",
+        "video_id": 26284540
+      },
+      {
+        "episode_id": 30690,
+        "display_name": "Hříšníci S09E07 - 7. epizoda CZ Dabing",
+        "video_id": 26284574
+      },
+      {
+        "episode_id": 30692,
+        "display_name": "Hříšníci S09E09 - 9. epizoda CZ Dabing",
+        "video_id": 26284619
+      },
+      {
+        "episode_id": 30694,
+        "display_name": "Hříšníci S09E11 - 11. epizoda CZ Dabing",
+        "video_id": 26284659
+      },
+      {
+        "episode_id": 30696,
+        "display_name": "Hříšníci S09E13 - 13. epizoda CZ Dabing",
+        "video_id": 26284696
+      },
+      {
+        "episode_id": 30698,
+        "display_name": "Hříšníci S10E01 - 1. epizoda CZ Dabing",
+        "video_id": 26284726
+      },
+      {
+        "episode_id": 30700,
+        "display_name": "Hříšníci S10E03 - 3. epizoda CZ Dabing",
+        "video_id": 26284737
+      },
+      {
+        "episode_id": 30702,
+        "display_name": "Hříšníci S10E05 - 5. epizoda CZ Dabing",
+        "video_id": 26284748
+      },
+      {
+        "episode_id": 30704,
+        "display_name": "Hříšníci S10E07 - 7. epizoda CZ Dabing",
+        "video_id": 26284758
+      },
+      {
+        "episode_id": 30706,
+        "display_name": "Hříšníci S10E09 - 9. epizoda CZ Dabing",
+        "video_id": 26284776
+      },
+      {
+        "episode_id": 14281,
+        "display_name": "Hříšníci S03E04 - 4. epizoda CZ Dabing",
+        "video_id": 26284401
+      },
+      {
+        "episode_id": 14283,
+        "display_name": "Hříšníci S03E06 - 6. epizoda CZ Dabing",
+        "video_id": 26284413
+      },
+      {
+        "episode_id": 14285,
+        "display_name": "Hříšníci S03E08 - 8. epizoda CZ Dabing",
+        "video_id": 26284419
+      },
+      {
+        "episode_id": 14287,
+        "display_name": "Hříšníci S03E10 - 10. epizoda CZ Dabing",
+        "video_id": 26284430
+      },
+      {
+        "episode_id": 14289,
+        "display_name": "Hříšníci S03E12 - 12. epizoda CZ Dabing",
+        "video_id": 26284445
+      },
+      {
+        "episode_id": 14291,
+        "display_name": "Hříšníci S04E02 - 2. epizoda CZ Dabing",
+        "video_id": 26284479
+      },
+      {
+        "episode_id": 14295,
+        "display_name": "Hříšníci S04E06 - 6. epizoda CZ Dabing",
+        "video_id": 26284502
+      },
+      {
+        "episode_id": 14297,
+        "display_name": "Hříšníci S04E08 - 8. epizoda CZ Dabing",
+        "video_id": 26284528
+      },
+      {
+        "episode_id": 14299,
+        "display_name": "Hříšníci S04E10 - 10. epizoda CZ Dabing",
+        "video_id": 26284552
+      },
+      {
+        "episode_id": 14301,
+        "display_name": "Hříšníci S04E12 - 12. epizoda CZ Dabing",
+        "video_id": 26284596
+      },
+      {
+        "episode_id": 14303,
+        "display_name": "Hříšníci S05E02 - 2. epizoda CZ Dabing",
+        "video_id": 26284624
+      },
+      {
+        "episode_id": 14305,
+        "display_name": "Hříšníci S05E04 - 4. epizoda CZ Dabing",
+        "video_id": 26284653
+      },
+      {
+        "episode_id": 14307,
+        "display_name": "Hříšníci S05E06 - 6. epizoda CZ Dabing",
+        "video_id": 26284678
+      },
+      {
+        "episode_id": 14309,
+        "display_name": "Hříšníci S05E08 - 8. epizoda CZ Dabing",
+        "video_id": 26284700
+      },
+      {
+        "episode_id": 14311,
+        "display_name": "Hříšníci S05E10 - 10. epizoda CZ Dabing",
+        "video_id": 26284722
+      },
+      {
+        "episode_id": 14313,
+        "display_name": "Hříšníci S05E12 - 12. epizoda CZ Dabing",
+        "video_id": 26284732
+      },
+      {
+        "episode_id": 14315,
+        "display_name": "Hříšníci S06E02 - 2. epizoda CZ Dabing",
+        "video_id": 26284742
+      },
+      {
+        "episode_id": 14317,
+        "display_name": "Hříšníci S06E04 - 4. epizoda CZ Dabing",
+        "video_id": 26284750
+      },
+      {
+        "episode_id": 14319,
+        "display_name": "Hříšníci S06E06 - 6. epizoda CZ Dabing",
+        "video_id": 26284757
+      },
+      {
+        "episode_id": 14321,
+        "display_name": "Hříšníci S06E08 - 8. epizoda CZ Dabing",
+        "video_id": 26284774
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -5487,361 +5777,6 @@
         "episode_id": 34999,
         "display_name": "Dr. House S08E21 - Vydržet CZ Dabing",
         "video_id": 26185715
-      },
-      {
-        "episode_id": 42093,
-        "display_name": "Kravaťáci S02E04 - Objev CZ Dabing",
-        "video_id": 26194335
-      },
-      {
-        "episode_id": 42095,
-        "display_name": "Kravaťáci S02E06 - Risk, nebo zisk CZ Dabing",
-        "video_id": 26194352
-      },
-      {
-        "episode_id": 42051,
-        "display_name": "Kravaťáci S03E02 - Je tvůj CZ Dabing",
-        "video_id": 26194368
-      },
-      {
-        "episode_id": 42053,
-        "display_name": "Kravaťáci S03E04 - Střet zájmů CZ Dabing",
-        "video_id": 26194386
-      },
-      {
-        "episode_id": 42055,
-        "display_name": "Kravaťáci S03E06 - Tenkrát CZ Dabing",
-        "video_id": 26194404
-      },
-      {
-        "episode_id": 42057,
-        "display_name": "Kravaťáci S03E08 - Koncovka CZ Dabing",
-        "video_id": 26194424
-      },
-      {
-        "episode_id": 42059,
-        "display_name": "Kravaťáci S03E10 - Zůstaň CZ Dabing",
-        "video_id": 26194446
-      },
-      {
-        "episode_id": 42061,
-        "display_name": "Kravaťáci S03E12 - Co bylo, bylo CZ Dabing",
-        "video_id": 26194512
-      },
-      {
-        "episode_id": 42058,
-        "display_name": "Kravaťáci S03E09 - Zlá víra CZ Dabing",
-        "video_id": 26194580
-      },
-      {
-        "episode_id": 42060,
-        "display_name": "Kravaťáci S03E11 - Pohřbená tajemství CZ Dabing",
-        "video_id": 26194614
-      },
-      {
-        "episode_id": 42062,
-        "display_name": "Kravaťáci S03E13 - Cvičný proces CZ Dabing",
-        "video_id": 26194634
-      },
-      {
-        "episode_id": 42106,
-        "display_name": "Kravaťáci S03E15 - Odkryté karty CZ Dabing",
-        "video_id": 26194643
-      },
-      {
-        "episode_id": 42064,
-        "display_name": "Kravaťáci S03E16 - Není cesty ven CZ Dabing",
-        "video_id": 26194657
-      },
-      {
-        "episode_id": 42000,
-        "display_name": "Kravaťáci S04E02 - K snídani, obědu i večeři CZ Dabing",
-        "video_id": 26194669
-      },
-      {
-        "episode_id": 42002,
-        "display_name": "Kravaťáci S04E04 - Na dluh CZ Dabing",
-        "video_id": 26194684
-      },
-      {
-        "episode_id": 42004,
-        "display_name": "Kravaťáci S04E06 - Kdo s koho CZ Dabing",
-        "video_id": 26194694
-      },
-      {
-        "episode_id": 42006,
-        "display_name": "Kravaťáci S04E08 - Slabiny CZ Dabing",
-        "video_id": 26194705
-      },
-      {
-        "episode_id": 42008,
-        "display_name": "Kravaťáci S04E10 - Gladiátoři CZ Dabing",
-        "video_id": 26194713
-      },
-      {
-        "episode_id": 42010,
-        "display_name": "Kravaťáci S04E12 - Respekt CZ Dabing",
-        "video_id": 26194725
-      },
-      {
-        "episode_id": 42024,
-        "display_name": "Kravaťáci S04E13 - Na rozcestí CZ Dabing",
-        "video_id": 26194734
-      },
-      {
-        "episode_id": 42012,
-        "display_name": "Kravaťáci S04E15 - Úmysl CZ Dabing",
-        "video_id": 26194753
-      },
-      {
-        "episode_id": 42114,
-        "display_name": "Kravaťáci S08E01 - Pravá ruka CZ Dabing",
-        "video_id": 26194760
-      },
-      {
-        "episode_id": 42108,
-        "display_name": "Kravaťáci S08E03 - Sliby chyby CZ Dabing",
-        "video_id": 26194775
-      },
-      {
-        "episode_id": 42110,
-        "display_name": "Kravaťáci S08E05 - Pěkný humus CZ Dabing",
-        "video_id": 26194786
-      },
-      {
-        "episode_id": 42116,
-        "display_name": "Kravaťáci S08E10 - Řídící partner CZ Dabing",
-        "video_id": 26194794
-      },
-      {
-        "episode_id": 40958,
-        "display_name": "Taková moderní rodinka S01E02 - Zloděj kol CZ Dabing",
-        "video_id": 26194806
-      },
-      {
-        "episode_id": 40924,
-        "display_name": "Taková moderní rodinka S01E05 - Blátokopka CZ Dabing",
-        "video_id": 26194816
-      },
-      {
-        "episode_id": 40960,
-        "display_name": "Taková moderní rodinka S01E06 - Utíkej jako o ženu CZ Dabing",
-        "video_id": 26194820
-      },
-      {
-        "episode_id": 42063,
-        "display_name": "Kravaťáci S03E14 - Infarkt CZ Dabing",
-        "video_id": 26194550
-      },
-      {
-        "episode_id": 41999,
-        "display_name": "Kravaťáci S04E01 - Raz, dva, tři, teď! CZ Dabing",
-        "video_id": 26194582
-      },
-      {
-        "episode_id": 42001,
-        "display_name": "Kravaťáci S04E03 - Podpásovky CZ Dabing",
-        "video_id": 26194617
-      },
-      {
-        "episode_id": 42003,
-        "display_name": "Kravaťáci S04E05 - Planý slib CZ Dabing",
-        "video_id": 26194641
-      },
-      {
-        "episode_id": 42005,
-        "display_name": "Kravaťáci S04E07 - Máš padáka CZ Dabing",
-        "video_id": 26194656
-      },
-      {
-        "episode_id": 42007,
-        "display_name": "Kravaťáci S04E09 - Odchod CZ Dabing",
-        "video_id": 26194673
-      },
-      {
-        "episode_id": 42009,
-        "display_name": "Kravaťáci S04E11 - Co je moc, to je moc CZ Dabing",
-        "video_id": 26194693
-      },
-      {
-        "episode_id": 42011,
-        "display_name": "Kravaťáci S04E14 - Marnost CZ Dabing",
-        "video_id": 26194717
-      },
-      {
-        "episode_id": 42013,
-        "display_name": "Kravaťáci S04E16 - Víc než hezká tvář CZ Dabing",
-        "video_id": 26194735
-      },
-      {
-        "episode_id": 42107,
-        "display_name": "Kravaťáci S08E02 - Mocenský řád CZ Dabing",
-        "video_id": 26194762
-      },
-      {
-        "episode_id": 42115,
-        "display_name": "Kravaťáci S08E09 - Návrh na odklad CZ Dabing",
-        "video_id": 26194774
-      },
-      {
-        "episode_id": 41145,
-        "display_name": "Taková moderní rodinka S01E01 - Pilot CZ Dabing",
-        "video_id": 26194781
-      },
-      {
-        "episode_id": 40959,
-        "display_name": "Taková moderní rodinka S01E03 - Letecký den CZ Dabing",
-        "video_id": 26194790
-      },
-      {
-        "episode_id": 40923,
-        "display_name": "Taková moderní rodinka S01E04 - Incident CZ Dabing",
-        "video_id": 26194793
-      },
-      {
-        "episode_id": 41051,
-        "display_name": "Taková moderní rodinka S01E07 - Do střehu CZ Dabing",
-        "video_id": 26194799
-      },
-      {
-        "episode_id": 40925,
-        "display_name": "Taková moderní rodinka S01E08 - Velká očekávání CZ Dabing",
-        "video_id": 26194808
-      },
-      {
-        "episode_id": 40961,
-        "display_name": "Taková moderní rodinka S01E09 - Fizbo CZ Dabing",
-        "video_id": 26194817
-      },
-      {
-        "episode_id": 40963,
-        "display_name": "Taková moderní rodinka S01E12 - Tohle v domě nestrpím CZ Dabing",
-        "video_id": 26194822
-      },
-      {
-        "episode_id": 40926,
-        "display_name": "Taková moderní rodinka S01E10 - Sundejte ozdoby CZ Dabing",
-        "video_id": 26194837
-      },
-      {
-        "episode_id": 40962,
-        "display_name": "Taková moderní rodinka S01E11 - Probdělá noc CZ Dabing",
-        "video_id": 26194844
-      },
-      {
-        "episode_id": 40964,
-        "display_name": "Taková moderní rodinka S01E13 - Patnáct procent CZ Dabing",
-        "video_id": 26194849
-      },
-      {
-        "episode_id": 41052,
-        "display_name": "Taková moderní rodinka S01E14 - Přistání na Měsíci CZ Dabing",
-        "video_id": 26194859
-      },
-      {
-        "episode_id": 41106,
-        "display_name": "Taková moderní rodinka S01E18 - Hvězdná noc CZ Dabing",
-        "video_id": 26194868
-      },
-      {
-        "episode_id": 41146,
-        "display_name": "Taková moderní rodinka S01E20 - Trenérská lavička CZ Dabing",
-        "video_id": 26194875
-      },
-      {
-        "episode_id": 41054,
-        "display_name": "Taková moderní rodinka S01E23 - Havaj CZ Dabing",
-        "video_id": 26194885
-      },
-      {
-        "episode_id": 40966,
-        "display_name": "Taková moderní rodinka S01E24 - Rodinná fotografie CZ Dabing",
-        "video_id": 26194890
-      },
-      {
-        "episode_id": 40968,
-        "display_name": "Taková moderní rodinka S02E03 - Zemětřesení CZ Dabing",
-        "video_id": 26194895
-      },
-      {
-        "episode_id": 41156,
-        "display_name": "Taková moderní rodinka S02E04 - Cizinci na běžeckém pásu CZ Dabing",
-        "video_id": 26194901
-      },
-      {
-        "episode_id": 41056,
-        "display_name": "Taková moderní rodinka S02E07 - Pípání CZ Dabing",
-        "video_id": 26194908
-      },
-      {
-        "episode_id": 41148,
-        "display_name": "Taková moderní rodinka S02E09 - Paní Tuckerová CZ Dabing",
-        "video_id": 26194913
-      },
-      {
-        "episode_id": 41058,
-        "display_name": "Taková moderní rodinka S02E10 - Školní ples CZ Dabing",
-        "video_id": 26194920
-      },
-      {
-        "episode_id": 40970,
-        "display_name": "Taková moderní rodinka S02E12 - Naše děti a my CZ Dabing",
-        "video_id": 26194927
-      },
-      {
-        "episode_id": 41060,
-        "display_name": "Taková moderní rodinka S02E14 - Bixby je zpátky CZ Dabing",
-        "video_id": 26194935
-      },
-      {
-        "episode_id": 40928,
-        "display_name": "Taková moderní rodinka S02E18 - Pánská jízda CZ Dabing",
-        "video_id": 26194943
-      },
-      {
-        "episode_id": 41136,
-        "display_name": "Taková moderní rodinka S02E19 - Muzikálová mánie CZ Dabing",
-        "video_id": 26194949
-      },
-      {
-        "episode_id": 41062,
-        "display_name": "Taková moderní rodinka S02E21 - Den matek CZ Dabing",
-        "video_id": 26194954
-      },
-      {
-        "episode_id": 41108,
-        "display_name": "Taková moderní rodinka S02E22 - Hodný polda, zlý pes CZ Dabing",
-        "video_id": 26194961
-      },
-      {
-        "episode_id": 41170,
-        "display_name": "Taková moderní rodinka S02E24 - Jayovy narozeniny CZ Dabing",
-        "video_id": 26194971
-      },
-      {
-        "episode_id": 41105,
-        "display_name": "Taková moderní rodinka S01E15 - Nevšední Valentýn CZ Dabing",
-        "video_id": 26194829
-      },
-      {
-        "episode_id": 41053,
-        "display_name": "Taková moderní rodinka S01E16 - Tváří v tvář strachu CZ Dabing",
-        "video_id": 26194836
-      },
-      {
-        "episode_id": 40965,
-        "display_name": "Taková moderní rodinka S01E17 - Lež má krátké nohy CZ Dabing",
-        "video_id": 26194842
-      },
-      {
-        "episode_id": 41169,
-        "display_name": "Taková moderní rodinka S01E19 - Nečekaný zvrat CZ Dabing",
-        "video_id": 26194850
-      },
-      {
-        "episode_id": 41107,
-        "display_name": "Taková moderní rodinka S01E21 - Skaut cestovatel CZ Dabing",
-        "video_id": 26194869
       },
       {
         "episode_id": 40927,
@@ -18369,6 +18304,51 @@
         "video_id": 26284245
       },
       {
+        "episode_id": 14322,
+        "display_name": "Hříšníci S06E09 - 9. epizoda CZ Dabing",
+        "video_id": 26284267
+      },
+      {
+        "episode_id": 14324,
+        "display_name": "Hříšníci S06E11 - 11. epizoda CZ Dabing",
+        "video_id": 26284297
+      },
+      {
+        "episode_id": 14326,
+        "display_name": "Hříšníci S07E01 - 1. epizoda CZ Dabing",
+        "video_id": 26284313
+      },
+      {
+        "episode_id": 14328,
+        "display_name": "Hříšníci S07E03 - 3. epizoda CZ Dabing",
+        "video_id": 26284325
+      },
+      {
+        "episode_id": 14330,
+        "display_name": "Hříšníci S07E05 - 5. epizoda CZ Dabing",
+        "video_id": 26284332
+      },
+      {
+        "episode_id": 14332,
+        "display_name": "Hříšníci S07E07 - 7. epizoda CZ Dabing",
+        "video_id": 26284346
+      },
+      {
+        "episode_id": 14334,
+        "display_name": "Hříšníci S07E09 - 9. epizoda CZ Dabing",
+        "video_id": 26284357
+      },
+      {
+        "episode_id": 14336,
+        "display_name": "Hříšníci S07E11 - 11. epizoda CZ Dabing",
+        "video_id": 26284370
+      },
+      {
+        "episode_id": 14338,
+        "display_name": "Hříšníci S08E01 - 1. epizoda CZ Dabing",
+        "video_id": 26284383
+      },
+      {
         "episode_id": 20447,
         "display_name": "Orange Is the New Black S06E08 - Gordonky CZ Dabing",
         "video_id": 26284050
@@ -18422,6 +18402,251 @@
         "episode_id": 20465,
         "display_name": "Orange Is the New Black S07E13 - A tady si vystoupíme CZ Dabing",
         "video_id": 26284241
+      },
+      {
+        "episode_id": 14255,
+        "display_name": "Hříšníci S01E02 - 2. epizoda CZ Dabing",
+        "video_id": 26284274
+      },
+      {
+        "episode_id": 14257,
+        "display_name": "Hříšníci S01E04 - 4. epizoda CZ Dabing",
+        "video_id": 26284301
+      },
+      {
+        "episode_id": 14259,
+        "display_name": "Hříšníci S01E06 - 6. epizoda CZ Dabing",
+        "video_id": 26284310
+      },
+      {
+        "episode_id": 14261,
+        "display_name": "Hříšníci S01E08 - 8. epizoda CZ Dabing",
+        "video_id": 26284318
+      },
+      {
+        "episode_id": 14263,
+        "display_name": "Hříšníci S01E10 - 10. epizoda CZ Dabing",
+        "video_id": 26284327
+      },
+      {
+        "episode_id": 14265,
+        "display_name": "Hříšníci S01E12 - 12. epizoda CZ Dabing",
+        "video_id": 26284336
+      },
+      {
+        "episode_id": 14267,
+        "display_name": "Hříšníci S02E02 - 2. epizoda CZ Dabing",
+        "video_id": 26284345
+      },
+      {
+        "episode_id": 14269,
+        "display_name": "Hříšníci S02E04 - 4. epizoda CZ Dabing",
+        "video_id": 26284354
+      },
+      {
+        "episode_id": 14271,
+        "display_name": "Hříšníci S02E06 - 6. epizoda CZ Dabing",
+        "video_id": 26284366
+      },
+      {
+        "episode_id": 14273,
+        "display_name": "Hříšníci S02E08 - 8. epizoda CZ Dabing",
+        "video_id": 26284377
+      },
+      {
+        "episode_id": 14275,
+        "display_name": "Hříšníci S02E10 - 10. epizoda CZ Dabing",
+        "video_id": 26284386
+      },
+      {
+        "episode_id": 14277,
+        "display_name": "Hříšníci S02E12 - 12. epizoda CZ Dabing",
+        "video_id": 26284395
+      },
+      {
+        "episode_id": 14340,
+        "display_name": "Hříšníci S08E03 - 3. epizoda CZ Dabing",
+        "video_id": 26284402
+      },
+      {
+        "episode_id": 14342,
+        "display_name": "Hříšníci S08E05 - 5. epizoda CZ Dabing",
+        "video_id": 26284409
+      },
+      {
+        "episode_id": 14344,
+        "display_name": "Hříšníci S08E07 - 7. epizoda CZ Dabing",
+        "video_id": 26284418
+      },
+      {
+        "episode_id": 14346,
+        "display_name": "Hříšníci S08E09 - 9. epizoda CZ Dabing",
+        "video_id": 26284429
+      },
+      {
+        "episode_id": 14348,
+        "display_name": "Hříšníci S08E11 - 11. epizoda CZ Dabing",
+        "video_id": 26284443
+      },
+      {
+        "episode_id": 30684,
+        "display_name": "Hříšníci S09E01 - 1. epizoda CZ Dabing",
+        "video_id": 26284478
+      },
+      {
+        "episode_id": 30686,
+        "display_name": "Hříšníci S09E03 - 3. epizoda CZ Dabing",
+        "video_id": 26284505
+      },
+      {
+        "episode_id": 30688,
+        "display_name": "Hříšníci S09E05 - 5. epizoda CZ Dabing",
+        "video_id": 26284540
+      },
+      {
+        "episode_id": 30690,
+        "display_name": "Hříšníci S09E07 - 7. epizoda CZ Dabing",
+        "video_id": 26284574
+      },
+      {
+        "episode_id": 30692,
+        "display_name": "Hříšníci S09E09 - 9. epizoda CZ Dabing",
+        "video_id": 26284619
+      },
+      {
+        "episode_id": 30694,
+        "display_name": "Hříšníci S09E11 - 11. epizoda CZ Dabing",
+        "video_id": 26284659
+      },
+      {
+        "episode_id": 30696,
+        "display_name": "Hříšníci S09E13 - 13. epizoda CZ Dabing",
+        "video_id": 26284696
+      },
+      {
+        "episode_id": 30698,
+        "display_name": "Hříšníci S10E01 - 1. epizoda CZ Dabing",
+        "video_id": 26284726
+      },
+      {
+        "episode_id": 30700,
+        "display_name": "Hříšníci S10E03 - 3. epizoda CZ Dabing",
+        "video_id": 26284737
+      },
+      {
+        "episode_id": 30702,
+        "display_name": "Hříšníci S10E05 - 5. epizoda CZ Dabing",
+        "video_id": 26284748
+      },
+      {
+        "episode_id": 30704,
+        "display_name": "Hříšníci S10E07 - 7. epizoda CZ Dabing",
+        "video_id": 26284758
+      },
+      {
+        "episode_id": 30706,
+        "display_name": "Hříšníci S10E09 - 9. epizoda CZ Dabing",
+        "video_id": 26284776
+      },
+      {
+        "episode_id": 14281,
+        "display_name": "Hříšníci S03E04 - 4. epizoda CZ Dabing",
+        "video_id": 26284401
+      },
+      {
+        "episode_id": 14283,
+        "display_name": "Hříšníci S03E06 - 6. epizoda CZ Dabing",
+        "video_id": 26284413
+      },
+      {
+        "episode_id": 14285,
+        "display_name": "Hříšníci S03E08 - 8. epizoda CZ Dabing",
+        "video_id": 26284419
+      },
+      {
+        "episode_id": 14287,
+        "display_name": "Hříšníci S03E10 - 10. epizoda CZ Dabing",
+        "video_id": 26284430
+      },
+      {
+        "episode_id": 14289,
+        "display_name": "Hříšníci S03E12 - 12. epizoda CZ Dabing",
+        "video_id": 26284445
+      },
+      {
+        "episode_id": 14291,
+        "display_name": "Hříšníci S04E02 - 2. epizoda CZ Dabing",
+        "video_id": 26284479
+      },
+      {
+        "episode_id": 14295,
+        "display_name": "Hříšníci S04E06 - 6. epizoda CZ Dabing",
+        "video_id": 26284502
+      },
+      {
+        "episode_id": 14297,
+        "display_name": "Hříšníci S04E08 - 8. epizoda CZ Dabing",
+        "video_id": 26284528
+      },
+      {
+        "episode_id": 14299,
+        "display_name": "Hříšníci S04E10 - 10. epizoda CZ Dabing",
+        "video_id": 26284552
+      },
+      {
+        "episode_id": 14301,
+        "display_name": "Hříšníci S04E12 - 12. epizoda CZ Dabing",
+        "video_id": 26284596
+      },
+      {
+        "episode_id": 14303,
+        "display_name": "Hříšníci S05E02 - 2. epizoda CZ Dabing",
+        "video_id": 26284624
+      },
+      {
+        "episode_id": 14305,
+        "display_name": "Hříšníci S05E04 - 4. epizoda CZ Dabing",
+        "video_id": 26284653
+      },
+      {
+        "episode_id": 14307,
+        "display_name": "Hříšníci S05E06 - 6. epizoda CZ Dabing",
+        "video_id": 26284678
+      },
+      {
+        "episode_id": 14309,
+        "display_name": "Hříšníci S05E08 - 8. epizoda CZ Dabing",
+        "video_id": 26284700
+      },
+      {
+        "episode_id": 14311,
+        "display_name": "Hříšníci S05E10 - 10. epizoda CZ Dabing",
+        "video_id": 26284722
+      },
+      {
+        "episode_id": 14313,
+        "display_name": "Hříšníci S05E12 - 12. epizoda CZ Dabing",
+        "video_id": 26284732
+      },
+      {
+        "episode_id": 14315,
+        "display_name": "Hříšníci S06E02 - 2. epizoda CZ Dabing",
+        "video_id": 26284742
+      },
+      {
+        "episode_id": 14317,
+        "display_name": "Hříšníci S06E04 - 4. epizoda CZ Dabing",
+        "video_id": 26284750
+      },
+      {
+        "episode_id": 14319,
+        "display_name": "Hříšníci S06E06 - 6. epizoda CZ Dabing",
+        "video_id": 26284757
+      },
+      {
+        "episode_id": 14321,
+        "display_name": "Hříšníci S06E08 - 8. epizoda CZ Dabing",
+        "video_id": 26284774
       }
     ],
     "prepared_not_upload_ready": [
