@@ -106,6 +106,23 @@ def load_uploaded_exclusions() -> tuple[set[int], set[str]]:
     return episode_ids, episode_keys
 
 
+def load_burned_source_exclusions() -> set[int]:
+    source_ids: set[int] = set()
+    paths = [REPO_ROOT / "state" / "uploaded.json"]
+    paths.extend(sorted((REPO_ROOT / "state").glob("uploaded-shard-*.json")))
+    for path in paths:
+        if not path.exists() or path.stat().st_size == 0:
+            continue
+        try:
+            data = json.loads(path.read_text(encoding="utf-8"))
+        except json.JSONDecodeError:
+            continue
+        for failure in data.get("failed_attempts", []):
+            if failure.get("permanent") and failure.get("source_id") is not None:
+                source_ids.add(int(failure["source_id"]))
+    return source_ids
+
+
 def fetch_rows(
     conn,
     *,
@@ -114,6 +131,7 @@ def fetch_rows(
     source_limit_per_episode: int,
     uploaded_episode_ids: set[int],
     uploaded_episode_keys: set[str],
+    burned_source_ids: set[int],
 ) -> list[dict[str, Any]]:
     with conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor) as cur:
         cur.execute(
@@ -183,6 +201,7 @@ def fetch_rows(
                         AND vs.is_alive
                         AND vs.lang_class = ANY(%(lang_classes)s)
                         AND vs.metadata ? 'url'
+                        AND NOT (vs.id = ANY(%(burned_source_ids)s))
                   )
                 ORDER BY e.season NULLS LAST, e.episode NULLS LAST, e.id
                 LIMIT %(remaining)s
@@ -205,6 +224,7 @@ def fetch_rows(
                     "remaining": remaining,
                     "uploaded_episode_ids": list(uploaded_episode_ids),
                     "uploaded_episode_keys": list(uploaded_episode_keys),
+                    "burned_source_ids": list(burned_source_ids),
                 },
             )
             episode_rows = list(cur.fetchall())
@@ -239,11 +259,12 @@ def fetch_rows(
                                 vs.id
                         ) AS source_rank
                     FROM video_sources vs
-                    WHERE vs.episode_id = %s
+                    WHERE vs.episode_id = %(episode_id)s
                       AND vs.provider_id = 2
                       AND vs.is_alive
-                      AND vs.lang_class = ANY(%s)
+                      AND vs.lang_class = ANY(%(lang_classes)s)
                       AND vs.metadata ? 'url'
+                      AND NOT (vs.id = ANY(%(burned_source_ids)s))
                     ORDER BY
                         CASE vs.lang_class WHEN 'CZ_DUB' THEN 0 WHEN 'CZ_NATIVE' THEN 1 ELSE 2 END,
                         CASE
@@ -254,9 +275,14 @@ def fetch_rows(
                         END DESC,
                         coalesce(vs.view_count, 0) DESC,
                         vs.id
-                    LIMIT %s
+                    LIMIT %(source_limit_per_episode)s
                     """,
-                    (episode_row["id"], list(UPLOAD_LANG_CLASSES), source_limit_per_episode),
+                    {
+                        "episode_id": episode_row["id"],
+                        "lang_classes": list(UPLOAD_LANG_CLASSES),
+                        "burned_source_ids": list(burned_source_ids),
+                        "source_limit_per_episode": source_limit_per_episode,
+                    },
                 )
                 source_rows = list(cur.fetchall())
             if not source_rows:
@@ -356,6 +382,7 @@ def main() -> int:
         return 2
 
     uploaded_episode_ids, uploaded_episode_keys = load_uploaded_exclusions()
+    burned_source_ids = load_burned_source_exclusions()
     conn = connect_with_retries(args.db_url)
     try:
         rows = fetch_rows(
@@ -365,6 +392,7 @@ def main() -> int:
             source_limit_per_episode=args.source_limit_per_episode,
             uploaded_episode_ids=uploaded_episode_ids,
             uploaded_episode_keys=uploaded_episode_keys,
+            burned_source_ids=burned_source_ids,
         )
     finally:
         conn.close()
@@ -384,6 +412,7 @@ def main() -> int:
         print(f"  {title}: {count}")
     print(f"  total candidate sources: {sum(len(e['candidates']) for e in episodes)}")
     print(f"  excluded uploaded episodes: ids={len(uploaded_episode_ids)} keys={len(uploaded_episode_keys)}")
+    print(f"  excluded permanently failed sources: {len(burned_source_ids)}")
     return 0
 
 
