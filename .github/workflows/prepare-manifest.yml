@@ -111,7 +111,6 @@ jobs:
           ARGS=(
             "--episode-limit" "${{ inputs.episode_limit || '3000' }}"
             "--source-limit-per-episode" "${{ inputs.source_limit_per_episode || '12' }}"
-            "--require-resolvable-source"
             "--refresh"
           )
           if [ "${{ inputs.use_whisper || 'false' }}" = "true" ]; then
