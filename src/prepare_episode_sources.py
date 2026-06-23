@@ -19,7 +19,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from audit_language_sources import audit_one  # noqa: E402
-from language_checks import resolution_score  # noqa: E402
+from source_quality import source_quality_score, source_quality_tier  # noqa: E402
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 
@@ -133,6 +133,9 @@ def backlog_candidate_to_queue_item(episode: dict, candidate: dict) -> dict:
         "db_audio_lang": candidate.get("audio_lang"),
         "db_audio_confidence": candidate.get("audio_confidence"),
         "db_audio_detected_by": None,
+        "source_origin": candidate.get("source_origin") or "production_db",
+        "db_source_exists": candidate.get("db_source_exists", True),
+        "quality_tier": candidate.get("quality_tier"),
         "metadata": {},
     }
 
@@ -191,7 +194,7 @@ def probe_resolution(result: dict, source: dict) -> int:
     streams = probe.get("streams") or []
     if streams:
         return max(int(stream.get("res") or 0) for stream in streams)
-    return resolution_score(source.get("resolution_hint"))
+    return source_quality_score(source)[1]
 
 
 def is_resolvable(result: dict) -> bool:
@@ -211,9 +214,15 @@ def source_score(result: dict, source: dict) -> tuple:
     }.get(verdict, 0)
     detected_bonus = {"whisper": 30, "metadata": 20, "provider_tracks": 10, "title": 5}.get(result["detected_by"], 0)
     provider_bonus = {"prehrajto": 20, "sktorrent": 10, "sledujteto": 0}.get(source.get("provider"), 0)
+    quality_bonus, quality_resolution, quality_filesize = source_quality_score(
+        source,
+        resolved_resolution=probe_resolution(result, source),
+    )
     return (
         verdict_score + detected_bonus + provider_bonus,
-        probe_resolution(result, source),
+        quality_bonus,
+        quality_resolution,
+        quality_filesize,
         int(source.get("view_count") or 0),
         -int(source["source_id"]),
     )
@@ -240,6 +249,7 @@ def prepare_episode(
         )
         result["score"] = source_score(result, source)
         result["resolution_score"] = probe_resolution(result, source)
+        result["quality_tier"] = source_quality_tier(source, resolved_resolution=result["resolution_score"])
         audited.append(result)
     acceptable = [r for r in audited if r["verdict"] in {"CZ_AUDIO", "PROBABLE_CZ_AUDIO", "CZ_SUBTITLES_ONLY"}]
     if require_resolvable_source:

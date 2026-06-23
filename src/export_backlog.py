@@ -14,7 +14,6 @@ import decimal
 import gzip
 import json
 import os
-import re
 import sys
 import time
 from collections import defaultdict
@@ -23,6 +22,8 @@ from typing import Any
 
 import psycopg2
 import psycopg2.extras
+
+from source_quality import resolution_score, source_quality_tier
 
 UPLOAD_LANG_CLASSES = ("CZ_DUB", "CZ_NATIVE")
 REPO_ROOT = Path(__file__).resolve().parent.parent
@@ -293,14 +294,6 @@ def fetch_rows(
     return rows
 
 
-def resolution_score(value: str | None) -> int:
-    text = (value or "").lower()
-    if re.search(r"2160|4k|uhd", text):
-        return 2160
-    match = re.search(r"(?<!\d)(1080|720|576|480)(?!\d)", text)
-    return int(match.group(1)) if match else 0
-
-
 def group_rows(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
     by_episode: dict[int, dict[str, Any]] = {}
     for row in rows:
@@ -339,28 +332,32 @@ def group_rows(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
         url = normalize_url(row["source_url"])
         if not url:
             continue
-        item["candidates"].append(
-            {
-                "source_id": row["source_id"],
-                "external_id": row["external_id"],
-                "url": url,
-                "title": row["source_title"],
-                "duration_sec": row["source_duration_sec"],
-                "resolution_hint": row["resolution_hint"],
-                "resolution_score": resolution_score(row["resolution_hint"]),
-                "filesize_bytes": row["filesize_bytes"],
-                "view_count": row["view_count"],
-                "lang_class": row["lang_class"],
-                "audio_lang": row["audio_lang"],
-                "audio_confidence": row["audio_confidence"],
-            }
-        )
+        candidate = {
+            "source_id": row["source_id"],
+            "external_id": row["external_id"],
+            "url": url,
+            "title": row["source_title"],
+            "duration_sec": row["source_duration_sec"],
+            "resolution_hint": row["resolution_hint"],
+            "resolution_score": resolution_score(row["resolution_hint"]),
+            "filesize_bytes": row["filesize_bytes"],
+            "view_count": row["view_count"],
+            "lang_class": row["lang_class"],
+            "audio_lang": row["audio_lang"],
+            "audio_confidence": row["audio_confidence"],
+            "source_origin": "production_db",
+            "db_source_exists": True,
+        }
+        candidate["quality_tier"] = source_quality_tier(candidate)
+        item["candidates"].append(candidate)
 
     for item in by_episode.values():
         item["candidates"].sort(
             key=lambda c: (
                 0 if c["lang_class"] in {"CZ_DUB", "CZ_NATIVE"} else 1,
+                0 if c.get("quality_tier") == "preferred" else 1,
                 -int(c.get("resolution_score") or 0),
+                -(c.get("filesize_bytes") or 0),
                 -(c.get("view_count") or 0),
                 c["source_id"],
             )

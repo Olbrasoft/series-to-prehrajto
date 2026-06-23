@@ -151,6 +151,7 @@ jobs:
         run: |
           python src/build_upload_manifest.py \
             --limit "${{ inputs.episode_limit || '3000' }}"
+          python src/update_discovered_sources.py
           python src/ops_status.py
 
       - name: Commit manifest preparation
@@ -161,6 +162,8 @@ jobs:
             "$TMP_DIR/backlog" \
             "$TMP_DIR/plans" \
             "$TMP_DIR/audits" \
+            "$TMP_DIR/sources" \
+            "$TMP_DIR/exports" \
             "$TMP_DIR/manifests" \
             "$TMP_DIR/reports"
           cp backlog/series-episodes.jsonl.gz "$TMP_DIR/backlog/" 2>/dev/null || true
@@ -168,17 +171,22 @@ jobs:
           cp plans/prepared-episodes.jsonl "$TMP_DIR/plans/" 2>/dev/null || true
           cp plans/descriptions.jsonl "$TMP_DIR/plans/" 2>/dev/null || true
           cp audits/language-audit.jsonl "$TMP_DIR/audits/" 2>/dev/null || true
+          cp sources/discovered-episode-sources.jsonl.gz "$TMP_DIR/sources/" 2>/dev/null || true
+          cp exports/video-source-import.jsonl.gz "$TMP_DIR/exports/" 2>/dev/null || true
           cp manifests/upload-ready.jsonl.gz "$TMP_DIR/manifests/" 2>/dev/null || true
           cp reports/upload-manifest.json "$TMP_DIR/reports/" 2>/dev/null || true
+          cp reports/discovered-sources.json "$TMP_DIR/reports/" 2>/dev/null || true
           cp reports/ops-status.json "$TMP_DIR/reports/" 2>/dev/null || true
 
           git fetch origin main
           git reset --hard origin/main
 
-          mkdir -p backlog plans audits manifests reports
+          mkdir -p backlog plans audits sources exports manifests reports
           cp "$TMP_DIR"/backlog/* backlog/ 2>/dev/null || true
           cp "$TMP_DIR"/plans/* plans/ 2>/dev/null || true
           cp "$TMP_DIR"/audits/* audits/ 2>/dev/null || true
+          cp "$TMP_DIR"/sources/* sources/ 2>/dev/null || true
+          cp "$TMP_DIR"/exports/* exports/ 2>/dev/null || true
           cp "$TMP_DIR"/manifests/* manifests/ 2>/dev/null || true
           cp "$TMP_DIR"/reports/* reports/ 2>/dev/null || true
 
@@ -188,8 +196,11 @@ jobs:
             plans/prepared-episodes.jsonl \
             plans/descriptions.jsonl \
             audits/language-audit.jsonl \
+            sources/discovered-episode-sources.jsonl.gz \
+            exports/video-source-import.jsonl.gz \
             manifests/upload-ready.jsonl.gz \
             reports/upload-manifest.json \
+            reports/discovered-sources.json \
             reports/ops-status.json
           if git diff --cached --quiet; then
             echo "no manifest preparation changes"
@@ -201,10 +212,12 @@ jobs:
               fi
               git fetch origin main
               git reset --hard origin/main
-              mkdir -p backlog plans audits manifests reports
+              mkdir -p backlog plans audits sources exports manifests reports
               cp "$TMP_DIR"/backlog/* backlog/ 2>/dev/null || true
               cp "$TMP_DIR"/plans/* plans/ 2>/dev/null || true
               cp "$TMP_DIR"/audits/* audits/ 2>/dev/null || true
+              cp "$TMP_DIR"/sources/* sources/ 2>/dev/null || true
+              cp "$TMP_DIR"/exports/* exports/ 2>/dev/null || true
               cp "$TMP_DIR"/manifests/* manifests/ 2>/dev/null || true
               cp "$TMP_DIR"/reports/* reports/ 2>/dev/null || true
               git add \
@@ -213,8 +226,11 @@ jobs:
                 plans/prepared-episodes.jsonl \
                 plans/descriptions.jsonl \
                 audits/language-audit.jsonl \
+                sources/discovered-episode-sources.jsonl.gz \
+                exports/video-source-import.jsonl.gz \
                 manifests/upload-ready.jsonl.gz \
                 reports/upload-manifest.json \
+                reports/discovered-sources.json \
                 reports/ops-status.json
               git commit -m "chore: prepare upload manifest" || true
               sleep $((attempt * 2))
