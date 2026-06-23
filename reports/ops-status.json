@@ -2,7 +2,7 @@
   "counts": {
     "backlog_episodes": 113,
     "manifest_upload_ready_episodes": 987,
-    "uploaded_episodes": 4509,
+    "uploaded_episodes": 4549,
     "prepared_source_episodes": 9053,
     "description_series": 60,
     "description_episodes": 753,
@@ -16,18 +16,66 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-06-23T13:27:33Z",
-      "databaseId": 28029724770,
+      "createdAt": "2026-06-23T14:00:40Z",
+      "databaseId": 28031860069,
       "headBranch": "main",
       "status": "in_progress",
-      "workflowName": "ops-status"
+      "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-06-23T13:53:10Z",
+      "databaseId": 28031367837,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-23T13:39:53Z",
+      "databaseId": 28030507384,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-23T13:39:34Z",
+      "databaseId": 28030487753,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-23T13:31:08Z",
+      "databaseId": 28029956484,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-sources"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-06-23T13:29:23Z",
+      "databaseId": 28029841005,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-23T13:27:33Z",
+      "databaseId": 28029724770,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "failure",
       "createdAt": "2026-06-23T13:15:25Z",
       "databaseId": 28028969102,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -51,15 +99,15 @@
       "createdAt": "2026-06-23T13:12:29Z",
       "databaseId": 28028781623,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "prepare-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-06-23T13:07:56Z",
       "databaseId": 28028504439,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "sync"
     },
     {
@@ -71,11 +119,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-06-23T13:02:26Z",
       "databaseId": 28028172760,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-descriptions"
     },
     {
@@ -103,11 +151,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-06-23T12:37:12Z",
       "databaseId": 28026690040,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "sync"
     },
     {
@@ -125,54 +173,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-23T12:21:15Z",
-      "databaseId": 28025767438,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-23T12:03:00Z",
-      "databaseId": 28024747276,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-23T11:52:57Z",
-      "databaseId": 28024195378,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-23T11:52:56Z",
-      "databaseId": 28024193893,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "failure",
-      "createdAt": "2026-06-23T11:52:55Z",
-      "databaseId": 28024192784,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-23T11:52:20Z",
-      "databaseId": 28024160203,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
     }
   ],
   "gaps": {
@@ -3721,6 +3721,36 @@
         "video_id": 26287444
       },
       {
+        "episode_id": 15718,
+        "display_name": "Bílý lotos S02E03 - Sloní býci CZ Dabing",
+        "video_id": 26287608
+      },
+      {
+        "episode_id": 15720,
+        "display_name": "Bílý lotos S02E05 - Díl 5 CZ Dabing",
+        "video_id": 26287919
+      },
+      {
+        "episode_id": 15722,
+        "display_name": "Bílý lotos S02E07 - Díl 7 CZ Dabing",
+        "video_id": 26288112
+      },
+      {
+        "episode_id": 15724,
+        "display_name": "Bílý lotos S03E02 - Zvláštní zacházení CZ Dabing",
+        "video_id": 26288380
+      },
+      {
+        "episode_id": 15726,
+        "display_name": "Bílý lotos S03E04 - Schovávaná CZ Dabing",
+        "video_id": 26288612
+      },
+      {
+        "episode_id": 15728,
+        "display_name": "Bílý lotos S03E06 - Popírání CZ Dabing",
+        "video_id": 26288795
+      },
+      {
         "episode_id": 14331,
         "display_name": "Hříšníci S07E06 - 6. epizoda CZ Dabing",
         "video_id": 26286261
@@ -3744,6 +3774,86 @@
         "episode_id": 14339,
         "display_name": "Hříšníci S08E02 - 2. epizoda CZ Dabing",
         "video_id": 26287459
+      },
+      {
+        "episode_id": 14341,
+        "display_name": "Hříšníci S08E04 - 4. epizoda CZ Dabing",
+        "video_id": 26287715
+      },
+      {
+        "episode_id": 14343,
+        "display_name": "Hříšníci S08E06 - 6. epizoda CZ Dabing",
+        "video_id": 26288019
+      },
+      {
+        "episode_id": 14345,
+        "display_name": "Hříšníci S08E08 - 8. epizoda CZ Dabing",
+        "video_id": 26288203
+      },
+      {
+        "episode_id": 14347,
+        "display_name": "Hříšníci S08E10 - 10. epizoda CZ Dabing",
+        "video_id": 26288547
+      },
+      {
+        "episode_id": 14349,
+        "display_name": "Hříšníci S08E12 - 12. epizoda CZ Dabing",
+        "video_id": 26288770
+      },
+      {
+        "episode_id": 18204,
+        "display_name": "Euforie S01E02 - Chovat se jako táta CZ Dabing",
+        "video_id": 26291237
+      },
+      {
+        "episode_id": 18202,
+        "display_name": "Euforie S01E04 - Shook Ones Pt. II CZ Dabing",
+        "video_id": 26291409
+      },
+      {
+        "episode_id": 18200,
+        "display_name": "Euforie S01E05 - Bonnie a Clyde CZ Dabing",
+        "video_id": 26291559
+      },
+      {
+        "episode_id": 30685,
+        "display_name": "Hříšníci S09E02 - 2. epizoda CZ Dabing",
+        "video_id": 26289023
+      },
+      {
+        "episode_id": 30687,
+        "display_name": "Hříšníci S09E04 - 4. epizoda CZ Dabing",
+        "video_id": 26289288
+      },
+      {
+        "episode_id": 30689,
+        "display_name": "Hříšníci S09E06 - 6. epizoda CZ Dabing",
+        "video_id": 26289555
+      },
+      {
+        "episode_id": 30691,
+        "display_name": "Hříšníci S09E08 - 8. epizoda CZ Dabing",
+        "video_id": 26289799
+      },
+      {
+        "episode_id": 30693,
+        "display_name": "Hříšníci S09E10 - 10. epizoda CZ Dabing",
+        "video_id": 26290046
+      },
+      {
+        "episode_id": 30695,
+        "display_name": "Hříšníci S09E12 - 12. epizoda CZ Dabing",
+        "video_id": 26290294
+      },
+      {
+        "episode_id": 30697,
+        "display_name": "Hříšníci S09E14 - 14. epizoda CZ Dabing",
+        "video_id": 26290598
+      },
+      {
+        "episode_id": 30699,
+        "display_name": "Hříšníci S10E02 - 2. epizoda CZ Dabing",
+        "video_id": 26291033
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -18803,6 +18913,51 @@
         "video_id": 26287444
       },
       {
+        "episode_id": 15718,
+        "display_name": "Bílý lotos S02E03 - Sloní býci CZ Dabing",
+        "video_id": 26287608
+      },
+      {
+        "episode_id": 15720,
+        "display_name": "Bílý lotos S02E05 - Díl 5 CZ Dabing",
+        "video_id": 26287919
+      },
+      {
+        "episode_id": 15722,
+        "display_name": "Bílý lotos S02E07 - Díl 7 CZ Dabing",
+        "video_id": 26288112
+      },
+      {
+        "episode_id": 15724,
+        "display_name": "Bílý lotos S03E02 - Zvláštní zacházení CZ Dabing",
+        "video_id": 26288380
+      },
+      {
+        "episode_id": 15726,
+        "display_name": "Bílý lotos S03E04 - Schovávaná CZ Dabing",
+        "video_id": 26288612
+      },
+      {
+        "episode_id": 15728,
+        "display_name": "Bílý lotos S03E06 - Popírání CZ Dabing",
+        "video_id": 26288795
+      },
+      {
+        "episode_id": 50734,
+        "display_name": "Umbrella Academy S01E02 - Zdrhej, chlapče! CZ Dabing",
+        "video_id": 26288960
+      },
+      {
+        "episode_id": 50730,
+        "display_name": "Umbrella Academy S01E04 - Muž na Měsíci CZ Dabing",
+        "video_id": 26288978
+      },
+      {
+        "episode_id": 50732,
+        "display_name": "Umbrella Academy S01E06 - Den, který nebyl CZ Dabing",
+        "video_id": 26289041
+      },
+      {
         "episode_id": 14331,
         "display_name": "Hříšníci S07E06 - 6. epizoda CZ Dabing",
         "video_id": 26286261
@@ -18826,6 +18981,161 @@
         "episode_id": 14339,
         "display_name": "Hříšníci S08E02 - 2. epizoda CZ Dabing",
         "video_id": 26287459
+      },
+      {
+        "episode_id": 14341,
+        "display_name": "Hříšníci S08E04 - 4. epizoda CZ Dabing",
+        "video_id": 26287715
+      },
+      {
+        "episode_id": 14343,
+        "display_name": "Hříšníci S08E06 - 6. epizoda CZ Dabing",
+        "video_id": 26288019
+      },
+      {
+        "episode_id": 14345,
+        "display_name": "Hříšníci S08E08 - 8. epizoda CZ Dabing",
+        "video_id": 26288203
+      },
+      {
+        "episode_id": 14347,
+        "display_name": "Hříšníci S08E10 - 10. epizoda CZ Dabing",
+        "video_id": 26288547
+      },
+      {
+        "episode_id": 14349,
+        "display_name": "Hříšníci S08E12 - 12. epizoda CZ Dabing",
+        "video_id": 26288770
+      },
+      {
+        "episode_id": 50738,
+        "display_name": "Umbrella Academy S01E07 - Den, který byl CZ Dabing",
+        "video_id": 26289195
+      },
+      {
+        "episode_id": 50736,
+        "display_name": "Umbrella Academy S01E10 - Bílé Housle CZ Dabing",
+        "video_id": 26289269
+      },
+      {
+        "episode_id": 50742,
+        "display_name": "Umbrella Academy S02E01 - Zpátky na začátku CZ Dabing",
+        "video_id": 26289289
+      },
+      {
+        "episode_id": 50740,
+        "display_name": "Umbrella Academy S02E02 - Frankelovy záběry CZ Dabing",
+        "video_id": 26289505
+      },
+      {
+        "episode_id": 50744,
+        "display_name": "Umbrella Academy S02E05 - Valhalla CZ Dabing",
+        "video_id": 26289665
+      },
+      {
+        "episode_id": 50746,
+        "display_name": "Umbrella Academy S02E07 - Oga Foroga CZ Dabing",
+        "video_id": 26289785
+      },
+      {
+        "episode_id": 50748,
+        "display_name": "Umbrella Academy S02E09 - 743 CZ Dabing",
+        "video_id": 26289896
+      },
+      {
+        "episode_id": 50750,
+        "display_name": "Umbrella Academy S03E02 - Největší klubko světa CZ Dabing",
+        "video_id": 26290048
+      },
+      {
+        "episode_id": 50752,
+        "display_name": "Umbrella Academy S03E03 - Nabitý Pocket CZ Dabing",
+        "video_id": 26290164
+      },
+      {
+        "episode_id": 50754,
+        "display_name": "Umbrella Academy S03E05 - Nejmilejší oběť CZ Dabing",
+        "video_id": 26290281
+      },
+      {
+        "episode_id": 50756,
+        "display_name": "Umbrella Academy S03E07 - Auf Wiedersehen CZ Dabing",
+        "video_id": 26290387
+      },
+      {
+        "episode_id": 50758,
+        "display_name": "Umbrella Academy S03E09 - Sedmero zvonů CZ Dabing",
+        "video_id": 26290534
+      },
+      {
+        "episode_id": 50760,
+        "display_name": "Umbrella Academy S04E01 - Tragický úděl těch, co mají všechno CZ Dabing",
+        "video_id": 26290607
+      },
+      {
+        "episode_id": 50762,
+        "display_name": "Umbrella Academy S04E03 - Oliheň a dívka CZ Dabing",
+        "video_id": 26290795
+      },
+      {
+        "episode_id": 50764,
+        "display_name": "Umbrella Academy S04E06 - Konec začátku CZ Dabing",
+        "video_id": 26290982
+      },
+      {
+        "episode_id": 18204,
+        "display_name": "Euforie S01E02 - Chovat se jako táta CZ Dabing",
+        "video_id": 26291237
+      },
+      {
+        "episode_id": 18202,
+        "display_name": "Euforie S01E04 - Shook Ones Pt. II CZ Dabing",
+        "video_id": 26291409
+      },
+      {
+        "episode_id": 18200,
+        "display_name": "Euforie S01E05 - Bonnie a Clyde CZ Dabing",
+        "video_id": 26291559
+      },
+      {
+        "episode_id": 30685,
+        "display_name": "Hříšníci S09E02 - 2. epizoda CZ Dabing",
+        "video_id": 26289023
+      },
+      {
+        "episode_id": 30687,
+        "display_name": "Hříšníci S09E04 - 4. epizoda CZ Dabing",
+        "video_id": 26289288
+      },
+      {
+        "episode_id": 30689,
+        "display_name": "Hříšníci S09E06 - 6. epizoda CZ Dabing",
+        "video_id": 26289555
+      },
+      {
+        "episode_id": 30691,
+        "display_name": "Hříšníci S09E08 - 8. epizoda CZ Dabing",
+        "video_id": 26289799
+      },
+      {
+        "episode_id": 30693,
+        "display_name": "Hříšníci S09E10 - 10. epizoda CZ Dabing",
+        "video_id": 26290046
+      },
+      {
+        "episode_id": 30695,
+        "display_name": "Hříšníci S09E12 - 12. epizoda CZ Dabing",
+        "video_id": 26290294
+      },
+      {
+        "episode_id": 30697,
+        "display_name": "Hříšníci S09E14 - 14. epizoda CZ Dabing",
+        "video_id": 26290598
+      },
+      {
+        "episode_id": 30699,
+        "display_name": "Hříšníci S10E02 - 2. epizoda CZ Dabing",
+        "video_id": 26291033
       }
     ],
     "prepared_not_upload_ready": [
