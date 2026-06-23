@@ -28,7 +28,13 @@ UPLOAD_LANG_CLASSES = ("CZ_DUB", "CZ_NATIVE")
 REPO_ROOT = Path(__file__).resolve().parent.parent
 
 
-def connect_with_retries(db_url: str, *, attempts: int = 6, delay_seconds: float = 5.0):
+def connect_with_retries(
+    db_url: str,
+    *,
+    attempts: int = 40,
+    delay_seconds: float = 15.0,
+    max_delay_seconds: float = 60.0,
+):
     last_exc: Exception | None = None
     for attempt in range(1, attempts + 1):
         try:
@@ -37,7 +43,7 @@ def connect_with_retries(db_url: str, *, attempts: int = 6, delay_seconds: float
             last_exc = exc
             print(f"DB connect failed on attempt {attempt}/{attempts}: {exc}", file=sys.stderr)
             if attempt < attempts:
-                time.sleep(delay_seconds * attempt)
+                time.sleep(min(max_delay_seconds, delay_seconds * attempt))
     assert last_exc is not None
     raise last_exc
 
