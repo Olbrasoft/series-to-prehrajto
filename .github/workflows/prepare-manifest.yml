@@ -10,7 +10,7 @@ on:
       episode_limit:
         description: "Episodes to prepare per run"
         required: false
-        default: "20"
+        default: "30"
       source_limit_per_episode:
         description: "Sources to evaluate per episode"
         required: false
@@ -23,6 +23,8 @@ on:
         description: "Skip DB export (always true in CI)"
         required: false
         default: "true"
+  schedule:
+    - cron: "*/20 * * * *"
 
 permissions:
   contents: write
@@ -109,4 +111,19 @@ jobs:
             done
             echo "failed to push after retries"
             exit 1
+          fi
+
+      - name: Queue upload from manifest
+        if: success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if python src/upload_queue_status.py --no-require-description; then
+            gh workflow run sync.yml \
+              -f batch_size="20" \
+              -f num_shards="2" \
+              -f allow_subtitles="false" \
+              -f continue_uploads="true"
+          else
+            echo "manifest has no upload-ready episodes"
           fi
