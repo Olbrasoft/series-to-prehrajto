@@ -27,7 +27,7 @@ from source_quality import source_quality_score, source_quality_tier  # noqa: E4
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 FAILED_RETRY_AFTER = dt.timedelta(hours=24)
-MAX_RESOLVABLE_CANDIDATE_PROBES = 4
+MAX_RESOLVABLE_CANDIDATE_PROBES = 12
 
 
 def load_jsonl(path: Path) -> list[dict]:
