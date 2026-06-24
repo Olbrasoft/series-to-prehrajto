@@ -67,6 +67,7 @@ jobs:
         env:
           CZ_PROXY_URL: ${{ secrets.CZ_PROXY_URL }}
           CZ_PROXY_KEY: ${{ secrets.CZ_PROXY_KEY }}
+          CZ_PROXY_MIN_GAP_SECONDS: "8"
         run: |
           ARGS=(
             "--queue" "backlog/enriched-audit-queue.jsonl.gz"
