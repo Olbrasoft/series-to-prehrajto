@@ -1,25 +1,25 @@
 {
   "counts": {
-    "backlog_episodes": 2,
-    "manifest_upload_ready_episodes": 0,
-    "uploaded_episodes": 6679,
+    "backlog_episodes": 10,
+    "manifest_upload_ready_episodes": 1,
+    "uploaded_episodes": 6676,
     "prepared_source_episodes": 11322,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 2806,
-    "language_audit_rows": 77592,
-    "language_queue_sources": 24,
-    "language_audited_sources": 72412,
-    "language_whisper_attempted_sources": 3345,
-    "language_pending_whisper_sources": 4
+    "language_audit_rows": 77712,
+    "language_queue_sources": 120,
+    "language_audited_sources": 72512,
+    "language_whisper_attempted_sources": 3401,
+    "language_pending_whisper_sources": 44
   },
   "workflow_runs": [
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-06-24T11:15:04Z",
       "databaseId": 28094536087,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -39,11 +39,11 @@
       "workflowName": "audit-language"
     },
     {
-      "conclusion": "",
+      "conclusion": "failure",
       "createdAt": "2026-06-24T11:08:46Z",
       "databaseId": 28094209343,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-descriptions"
     },
     {
@@ -63,11 +63,11 @@
       "workflowName": "prepare-manifest"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-06-24T11:03:54Z",
       "databaseId": 28093954619,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "sync"
     },
     {
@@ -179,7 +179,11 @@
     "backlog_without_source_plan": [],
     "backlog_without_episode_description": [
       13347,
-      13348
+      13348,
+      13352,
+      13353,
+      13354,
+      13358
     ],
     "uploaded_without_gemma_description": [
       {
@@ -13733,11 +13737,6 @@
         "video_id": 26458905
       },
       {
-        "episode_id": 12470,
-        "display_name": "Marvel's Jessica Jones S01E08 - AKA Co by udělal Ježíš? CZ Dabing",
-        "video_id": 26459359
-      },
-      {
         "episode_id": 50365,
         "display_name": "Gotham S02E14 - Kulička bláta a zloby CZ Dabing",
         "video_id": 26454555
@@ -13811,16 +13810,6 @@
         "episode_id": 63945,
         "display_name": "Cobra Kai S02E09 - Pulpo CZ Dabing",
         "video_id": 26458973
-      },
-      {
-        "episode_id": 63921,
-        "display_name": "Cobra Kai S02E10 - Žádné slitování CZ Dabing",
-        "video_id": 26459184
-      },
-      {
-        "episode_id": 63911,
-        "display_name": "Cobra Kai S03E03 - A teď za to zaplatíš CZ Dabing",
-        "video_id": 26459439
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -38600,11 +38589,6 @@
         "video_id": 26458905
       },
       {
-        "episode_id": 12470,
-        "display_name": "Marvel's Jessica Jones S01E08 - AKA Co by udělal Ježíš? CZ Dabing",
-        "video_id": 26459359
-      },
-      {
         "episode_id": 50365,
         "display_name": "Gotham S02E14 - Kulička bláta a zloby CZ Dabing",
         "video_id": 26454555
@@ -38678,16 +38662,6 @@
         "episode_id": 63945,
         "display_name": "Cobra Kai S02E09 - Pulpo CZ Dabing",
         "video_id": 26458973
-      },
-      {
-        "episode_id": 63921,
-        "display_name": "Cobra Kai S02E10 - Žádné slitování CZ Dabing",
-        "video_id": 26459184
-      },
-      {
-        "episode_id": 63911,
-        "display_name": "Cobra Kai S03E03 - A teď za to zaplatíš CZ Dabing",
-        "video_id": 26459439
       }
     ],
     "prepared_not_upload_ready": [
@@ -38994,17 +38968,17 @@
     ]
   },
   "language_verdicts": {
-    "UNKNOWN": 513,
-    "CZ_AUDIO": 74431,
+    "UNKNOWN": 519,
+    "CZ_AUDIO": 74468,
     "CZ_SUBTITLES_ONLY": 2128,
-    "NOT_CZ_AUDIO": 516,
+    "NOT_CZ_AUDIO": 588,
     "SK_AUDIO": 2,
-    "PROBABLE_CZ_AUDIO": 2
+    "PROBABLE_CZ_AUDIO": 7
   },
   "language_whisper_statuses": {
-    "disabled": 69067,
+    "disabled": 69111,
     "resolve_failed": 276,
-    "ok": 3032,
+    "ok": 3088,
     "no_stream": 37
   }
 }
