@@ -128,17 +128,26 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           set -e
-          if python src/upload_queue_status.py; then
+          if python src/upload_queue_status.py --no-require-description; then
             gh workflow run sync.yml \
               -f batch_size="${{ inputs.batch_size || '20' }}" \
               -f num_shards="2" \
               -f allow_subtitles="${{ inputs.allow_subtitles || 'false' }}" \
               -f continue_uploads="true"
+            if ! python src/upload_queue_status.py --no-require-description --min-ready 20; then
+              echo "prepared upload queue is below threshold; queueing background manifest preparation"
+              gh workflow run prepare-manifest.yml \
+                -f series_limit="1200" \
+                -f episode_limit="10" \
+                -f source_limit_per_episode="12" \
+                -f use_whisper="false" \
+                -f skip_export="true"
+            fi
           else
             echo "no prepared upload-ready episodes remain; queueing manifest preparation"
             gh workflow run prepare-manifest.yml \
               -f series_limit="1200" \
-              -f episode_limit="5" \
+              -f episode_limit="10" \
               -f source_limit_per_episode="12" \
               -f use_whisper="false" \
               -f skip_export="true"

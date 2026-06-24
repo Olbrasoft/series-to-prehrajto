@@ -6,11 +6,11 @@ on:
       series_limit:
         description: "Number of series to export"
         required: false
-        default: "240"
+        default: "1200"
       episode_limit:
         description: "Number of episodes to prepare in advance"
         required: false
-        default: "100"
+        default: "10"
       source_limit_per_episode:
         description: "Number of sources to check per episode"
         required: false
@@ -18,13 +18,13 @@ on:
       use_whisper:
         description: "Run Whisper while preparing selected sources"
         required: false
-        default: "true"
+        default: "false"
       skip_export:
         description: "Reuse the committed backlog instead of exporting from production DB"
         required: false
-        default: "false"
+        default: "true"
   schedule:
-    - cron: "10 */4 * * *"
+    - cron: "*/10 * * * *"
 
 jobs:
   prepare:
@@ -59,7 +59,7 @@ jobs:
           pip install -r requirements.txt
 
       - name: Install Whisper dependencies
-        if: ${{ inputs.use_whisper != 'false' }}
+        if: ${{ inputs.use_whisper == 'true' }}
         run: |
           sudo apt-get install -y ffmpeg
           pip install faster-whisper
@@ -70,7 +70,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
       - name: Open production DB tunnel
-        if: ${{ inputs.skip_export != 'true' }}
+        if: ${{ inputs.skip_export == 'false' }}
         env:
           HETZNER_SSH_PRIVATE_KEY: ${{ secrets.HETZNER_SSH_PRIVATE_KEY }}
         run: |
@@ -92,7 +92,7 @@ jobs:
             root@46.225.101.253
 
       - name: Export large backlog and language queue
-        if: ${{ inputs.skip_export != 'true' }}
+        if: ${{ inputs.skip_export == 'false' }}
         env:
           DATABASE_URL: ${{ secrets.PRODUCTION_DATABASE_URL }}
         run: |
@@ -124,7 +124,7 @@ jobs:
             "--require-resolvable-source"
             "--refresh"
           )
-          if [ "${{ inputs.use_whisper || 'true' }}" = "true" ]; then
+          if [ "${{ inputs.use_whisper || 'false' }}" = "true" ]; then
             ARGS+=("--use-whisper")
           fi
           python src/prepare_episode_sources.py "${ARGS[@]}"
@@ -257,7 +257,7 @@ jobs:
         run: |
           git fetch origin main
           git reset --hard origin/main
-          if python src/upload_queue_status.py; then
+          if python src/upload_queue_status.py --no-require-description; then
             gh workflow run sync.yml \
               -f batch_size="20" \
               -f num_shards="2" \

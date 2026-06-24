@@ -92,6 +92,7 @@ def main() -> int:
     ap.add_argument("--require-source-plan", action="store_true", default=True)
     ap.add_argument("--no-require-source-plan", action="store_false", dest="require_source_plan")
     ap.add_argument("--respect-shard", action="store_true")
+    ap.add_argument("--min-ready", type=int, default=1)
     ap.add_argument("--json", action="store_true")
     args = ap.parse_args()
 
@@ -101,10 +102,19 @@ def main() -> int:
         respect_shard=args.respect_shard,
     )
     if args.json:
-        print(json.dumps({"remaining_upload_ready": len(ready)}, ensure_ascii=False))
+        print(
+            json.dumps(
+                {
+                    "remaining_upload_ready": len(ready),
+                    "min_ready": args.min_ready,
+                    "threshold_met": len(ready) >= args.min_ready,
+                },
+                ensure_ascii=False,
+            )
+        )
     else:
         print(f"remaining_upload_ready={len(ready)}")
-    return 0 if ready else 1
+    return 0 if len(ready) >= args.min_ready else 1
 
 
 if __name__ == "__main__":
