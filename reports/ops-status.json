@@ -1,41 +1,113 @@
 {
   "counts": {
-    "backlog_episodes": 3000,
-    "manifest_upload_ready_episodes": 61,
-    "uploaded_episodes": 6786,
-    "prepared_source_episodes": 11693,
+    "backlog_episodes": 20000,
+    "manifest_upload_ready_episodes": 71,
+    "uploaded_episodes": 6799,
+    "prepared_source_episodes": 11713,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 2810,
-    "language_audit_rows": 77853,
+    "language_audit_rows": 77873,
     "language_queue_sources": 2644,
-    "language_audited_sources": 72738,
-    "language_whisper_attempted_sources": 3381,
-    "language_pending_whisper_sources": 2644
+    "language_audited_sources": 72687,
+    "language_whisper_attempted_sources": 3345,
+    "language_pending_whisper_sources": 2624
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-06-24T19:05:02Z",
-      "databaseId": 28122830989,
+      "createdAt": "2026-06-24T19:46:56Z",
+      "databaseId": 28125198174,
       "headBranch": "main",
       "status": "in_progress",
-      "workflowName": "ops-status"
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-24T19:38:18Z",
+      "databaseId": 28124717857,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "refresh-backlog"
     },
     {
       "conclusion": "",
-      "createdAt": "2026-06-24T19:01:25Z",
-      "databaseId": 28122616207,
+      "createdAt": "2026-06-24T19:19:51Z",
+      "databaseId": 28123662798,
       "headBranch": "main",
       "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "failure",
+      "createdAt": "2026-06-24T19:19:27Z",
+      "databaseId": 28123641840,
+      "headBranch": "main",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-06-24T19:09:41Z",
+      "databaseId": 28123095482,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-sources"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-06-24T19:08:52Z",
+      "databaseId": 28123047494,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-24T19:06:47Z",
+      "databaseId": 28122932090,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-24T19:06:37Z",
+      "databaseId": 28122923179,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-06-24T19:06:09Z",
+      "databaseId": 28122896185,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-24T19:05:02Z",
+      "databaseId": 28122830989,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "failure",
+      "createdAt": "2026-06-24T19:01:25Z",
+      "databaseId": 28122616207,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "cancelled",
       "createdAt": "2026-06-24T19:01:04Z",
       "databaseId": 28122596166,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "sync"
     },
     {
@@ -55,11 +127,11 @@
       "workflowName": "prepare-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-06-24T19:00:44Z",
       "databaseId": 28122576349,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -71,11 +143,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-06-24T18:59:03Z",
       "databaseId": 28122475736,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -101,82 +173,41 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "sync"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-24T18:33:48Z",
-      "databaseId": 28120985624,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-24T18:33:18Z",
-      "databaseId": 28120956490,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-24T18:33:07Z",
-      "databaseId": 28120944377,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-24T18:28:22Z",
-      "databaseId": 28120660733,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-24T18:28:21Z",
-      "databaseId": 28120660194,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-24T18:26:50Z",
-      "databaseId": 28120572514,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-24T18:18:57Z",
-      "databaseId": 28120112628,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-24T18:18:13Z",
-      "databaseId": 28120073217,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-24T18:17:50Z",
-      "databaseId": 28120052327,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
     }
   ],
   "gaps": {
     "backlog_without_source_plan": [
+      599,
+      632,
+      633,
+      634,
+      635,
+      636,
+      637,
+      638,
+      639,
+      640,
+      641,
+      642,
+      643,
+      644,
+      645,
+      646,
+      647,
+      648,
+      649,
+      650,
+      651,
+      652,
+      653,
+      654,
+      655,
+      657,
+      658,
+      659,
+      660,
+      661,
+      1130,
       1338,
       1339,
       1340,
@@ -195,90 +226,59 @@
       3051,
       3053,
       3055,
-      3057,
-      3075,
-      3102,
-      3103,
-      3104,
-      3105,
-      3106,
-      3108,
-      3109,
-      3113,
-      3114,
-      3116,
-      3117,
-      3119,
-      3120,
-      3121,
-      3122,
-      3123,
-      3124,
-      3340,
-      3836,
-      3845,
-      3868,
-      3982,
-      3983,
-      3984,
-      3985,
-      3986,
-      3987,
-      3988,
-      3989,
-      3990
+      3057
     ],
     "backlog_without_episode_description": [
-      1329,
-      1338,
-      1339,
-      1340,
-      1343,
-      1345,
-      1346,
-      1958,
-      1968,
-      1980,
-      1982,
-      1985,
-      1986,
-      1989,
-      1992,
-      1993,
-      1996,
-      1998,
-      1999,
-      2002,
-      2003,
-      2005,
-      2006,
-      2007,
-      2008,
-      2009,
-      2010,
-      2011,
-      2012,
-      2013,
-      2014,
-      2015,
-      2016,
-      2017,
-      2018,
-      2019,
-      2020,
-      2021,
-      2022,
-      2023,
-      2024,
-      2038,
-      2039,
-      2040,
-      2041,
-      2042,
-      2043,
-      2044,
-      2045,
-      2046
+      1,
+      2,
+      3,
+      5,
+      9,
+      11,
+      13,
+      27,
+      33,
+      37,
+      45,
+      47,
+      49,
+      53,
+      55,
+      57,
+      59,
+      67,
+      69,
+      75,
+      83,
+      85,
+      93,
+      95,
+      103,
+      107,
+      111,
+      117,
+      119,
+      121,
+      123,
+      125,
+      127,
+      129,
+      135,
+      137,
+      140,
+      145,
+      147,
+      151,
+      161,
+      163,
+      169,
+      171,
+      177,
+      179,
+      185,
+      187,
+      191,
+      193
     ],
     "uploaded_without_gemma_description": [
       {
@@ -14250,6 +14250,71 @@
         "episode_id": 52285,
         "display_name": "Chirurgové S01E09 - Kdo komu co nalhává? CZ Dabing",
         "video_id": 26510943
+      },
+      {
+        "episode_id": 52292,
+        "display_name": "Chirurgové S02E08 - Nech to být CZ Dabing",
+        "video_id": 26513173
+      },
+      {
+        "episode_id": 52294,
+        "display_name": "Chirurgové S03E02 - Jsem strom CZ Dabing",
+        "video_id": 26513369
+      },
+      {
+        "episode_id": 52296,
+        "display_name": "Chirurgové S03E05 - Ó, ta vina CZ Dabing",
+        "video_id": 26513622
+      },
+      {
+        "episode_id": 52298,
+        "display_name": "Chirurgové S03E07 - Řekni, kde ti chlapci jsou CZ Dabing",
+        "video_id": 26515291
+      },
+      {
+        "episode_id": 52268,
+        "display_name": "Chirurgové S03E10 - Blízká setkání lidského druhu CZ Dabing",
+        "video_id": 26516090
+      },
+      {
+        "episode_id": 52300,
+        "display_name": "Chirurgové S03E11 - Šest dnů – 1. část CZ Dabing",
+        "video_id": 26516227
+      },
+      {
+        "episode_id": 52302,
+        "display_name": "Chirurgové S03E13 - Velká očekávání CZ Dabing",
+        "video_id": 26516448
+      },
+      {
+        "episode_id": 52287,
+        "display_name": "Chirurgové S02E02 - Co je moc, to je moc CZ Dabing",
+        "video_id": 26513297
+      },
+      {
+        "episode_id": 52289,
+        "display_name": "Chirurgové S02E05 - Sem s bolestí! CZ Dabing",
+        "video_id": 26515323
+      },
+      {
+        "episode_id": 52291,
+        "display_name": "Chirurgové S02E07 - Ať je o čem mluvit CZ Dabing",
+        "video_id": 26515537
+      },
+      {
+        "episode_id": 52293,
+        "display_name": "Chirurgové S03E01 - Dnes přišel čas CZ Dabing",
+        "video_id": 26515686
+      },
+      {
+        "episode_id": 52295,
+        "display_name": "Chirurgové S03E03 - Všechno, co potřebuješ, je fantazie CZ Dabing",
+        "video_id": 26515854
+      },
+      {
+        "episode_id": 52297,
+        "display_name": "Chirurgové S03E06 - Odhodlání CZ Dabing",
+        "video_id": 26516505
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -36772,6 +36837,71 @@
         "episode_id": 52285,
         "display_name": "Chirurgové S01E09 - Kdo komu co nalhává? CZ Dabing",
         "video_id": 26510943
+      },
+      {
+        "episode_id": 52292,
+        "display_name": "Chirurgové S02E08 - Nech to být CZ Dabing",
+        "video_id": 26513173
+      },
+      {
+        "episode_id": 52294,
+        "display_name": "Chirurgové S03E02 - Jsem strom CZ Dabing",
+        "video_id": 26513369
+      },
+      {
+        "episode_id": 52296,
+        "display_name": "Chirurgové S03E05 - Ó, ta vina CZ Dabing",
+        "video_id": 26513622
+      },
+      {
+        "episode_id": 52298,
+        "display_name": "Chirurgové S03E07 - Řekni, kde ti chlapci jsou CZ Dabing",
+        "video_id": 26515291
+      },
+      {
+        "episode_id": 52268,
+        "display_name": "Chirurgové S03E10 - Blízká setkání lidského druhu CZ Dabing",
+        "video_id": 26516090
+      },
+      {
+        "episode_id": 52300,
+        "display_name": "Chirurgové S03E11 - Šest dnů – 1. část CZ Dabing",
+        "video_id": 26516227
+      },
+      {
+        "episode_id": 52302,
+        "display_name": "Chirurgové S03E13 - Velká očekávání CZ Dabing",
+        "video_id": 26516448
+      },
+      {
+        "episode_id": 52287,
+        "display_name": "Chirurgové S02E02 - Co je moc, to je moc CZ Dabing",
+        "video_id": 26513297
+      },
+      {
+        "episode_id": 52289,
+        "display_name": "Chirurgové S02E05 - Sem s bolestí! CZ Dabing",
+        "video_id": 26515323
+      },
+      {
+        "episode_id": 52291,
+        "display_name": "Chirurgové S02E07 - Ať je o čem mluvit CZ Dabing",
+        "video_id": 26515537
+      },
+      {
+        "episode_id": 52293,
+        "display_name": "Chirurgové S03E01 - Dnes přišel čas CZ Dabing",
+        "video_id": 26515686
+      },
+      {
+        "episode_id": 52295,
+        "display_name": "Chirurgové S03E03 - Všechno, co potřebuješ, je fantazie CZ Dabing",
+        "video_id": 26515854
+      },
+      {
+        "episode_id": 52297,
+        "display_name": "Chirurgové S03E06 - Odhodlání CZ Dabing",
+        "video_id": 26516505
       }
     ],
     "prepared_not_upload_ready": [
@@ -37078,7 +37208,7 @@
     ]
   },
   "language_verdicts": {
-    "UNKNOWN": 651,
+    "UNKNOWN": 671,
     "CZ_AUDIO": 74431,
     "CZ_SUBTITLES_ONLY": 2173,
     "NOT_CZ_AUDIO": 516,
@@ -37086,9 +37216,9 @@
     "PROBABLE_CZ_AUDIO": 80
   },
   "language_whisper_statuses": {
-    "disabled": 69357,
-    "ok": 3068,
+    "disabled": 69342,
     "resolve_failed": 276,
+    "ok": 3032,
     "no_stream": 37
   }
 }
