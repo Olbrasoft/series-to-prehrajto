@@ -39,6 +39,17 @@ def latest_by_episode(rows: list[dict]) -> dict[int, dict]:
     return latest
 
 
+def merge_manifest(existing: list[dict], refreshed: list[dict], refreshed_episode_ids: set[int]) -> list[dict]:
+    rows_by_episode = {
+        int(row["episode_id"]): row
+        for row in existing
+        if row.get("episode_id") is not None and int(row["episode_id"]) not in refreshed_episode_ids
+    }
+    for row in refreshed:
+        rows_by_episode[int(row["episode_id"])] = row
+    return list(rows_by_episode.values())
+
+
 def latest_audits_by_source(rows: list[dict]) -> dict[int, dict]:
     latest: dict[int, dict] = {}
     for row in rows:
@@ -286,13 +297,25 @@ def main() -> int:
         require_episode_description=args.require_episode_description,
         require_whisper=args.require_whisper,
     )
-    write_jsonl(REPO_ROOT / args.out, rows)
-    report = {"count": len(rows), "stats": dict(stats)}
+    output_path = REPO_ROOT / args.out
+    backlog_episode_ids = {
+        int(row["episode_id"])
+        for row in load_jsonl(REPO_ROOT / args.backlog)
+        if row.get("episode_id") is not None
+    }
+    merged_rows = merge_manifest(load_jsonl(output_path), rows, backlog_episode_ids)
+    write_jsonl(output_path, merged_rows)
+    report = {
+        "count": len(merged_rows),
+        "new_count": len(rows),
+        "retained_count": len(merged_rows) - len(rows),
+        "stats": dict(stats),
+    }
     report_path = REPO_ROOT / args.report
     report_path.parent.mkdir(exist_ok=True)
     report_path.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(json.dumps(report, ensure_ascii=False, indent=2))
-    return 0 if rows else 1
+    return 0
 
 
 if __name__ == "__main__":

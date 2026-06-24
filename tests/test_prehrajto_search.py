@@ -7,6 +7,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
 from prehrajto_search import parse_search_html  # noqa: E402
+from build_upload_manifest import merge_manifest  # noqa: E402
 from prepare_episode_sources import source_score  # noqa: E402
 from source_quality import source_quality_score, source_quality_tier  # noqa: E402
 
@@ -68,6 +69,14 @@ class PrehrajtoSearchTest(unittest.TestCase):
         self.assertGreater(
             source_score(live_result, live_source),
             source_score(database_result, database_source),
+        )
+
+    def test_small_refresh_keeps_unrelated_manifest_rows(self) -> None:
+        existing = [{"episode_id": 1, "value": "old"}, {"episode_id": 2, "value": "keep"}]
+        refreshed = [{"episode_id": 1, "value": "new"}]
+        self.assertEqual(
+            merge_manifest(existing, refreshed, {1}),
+            [{"episode_id": 2, "value": "keep"}, {"episode_id": 1, "value": "new"}],
         )
 
 
