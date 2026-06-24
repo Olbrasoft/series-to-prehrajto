@@ -1,6 +1,9 @@
 from __future__ import annotations
 
 import sys
+import gzip
+import json
+import tempfile
 import unittest
 from pathlib import Path
 
@@ -8,7 +11,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
 from prehrajto_search import parse_search_html  # noqa: E402
 from build_upload_manifest import merge_manifest  # noqa: E402
-from prepare_episode_sources import source_score  # noqa: E402
+from prepare_episode_sources import merge_backlog_sources, source_score  # noqa: E402
 from source_quality import source_quality_score, source_quality_tier  # noqa: E402
 
 
@@ -78,6 +81,17 @@ class PrehrajtoSearchTest(unittest.TestCase):
             merge_manifest(existing, refreshed, {1}),
             [{"episode_id": 2, "value": "keep"}, {"episode_id": 1, "value": "new"}],
         )
+
+    def test_language_queue_is_limited_to_current_backlog(self) -> None:
+        queue = [
+            {"episode_id": 1, "source_id": 11},
+            {"episode_id": 2, "source_id": 22},
+        ]
+        with tempfile.TemporaryDirectory() as temp_dir:
+            backlog_path = Path(temp_dir) / "backlog.jsonl.gz"
+            with gzip.open(backlog_path, "wt", encoding="utf-8") as fh:
+                fh.write(json.dumps({"episode_id": 2, "candidates": []}) + "\n")
+            self.assertEqual(merge_backlog_sources(queue, backlog_path), [queue[1]])
 
 
 if __name__ == "__main__":

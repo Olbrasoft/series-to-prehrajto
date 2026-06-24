@@ -147,13 +147,20 @@ def backlog_candidate_to_queue_item(episode: dict, candidate: dict) -> dict:
 def merge_backlog_sources(queue_rows: list[dict], backlog_path: Path) -> list[dict]:
     if not backlog_path.exists():
         return queue_rows
+    backlog = load_jsonl(backlog_path)
+    backlog_episode_ids = {int(episode["episode_id"]) for episode in backlog}
+    queue_rows = [
+        row
+        for row in queue_rows
+        if row.get("episode_id") is not None and int(row["episode_id"]) in backlog_episode_ids
+    ]
     seen = {
         (int(row["episode_id"]), int(row["source_id"]))
         for row in queue_rows
         if row.get("episode_id") is not None and row.get("source_id") is not None
     }
     merged = list(queue_rows)
-    for episode in load_jsonl(backlog_path):
+    for episode in backlog:
         for candidate in episode.get("candidates") or []:
             key = (int(episode["episode_id"]), int(candidate["source_id"]))
             if key in seen:
@@ -232,6 +239,8 @@ def live_search_candidates(episode: dict, *, limit: int) -> list[dict]:
                 ),
                 "metadata": {},
             }
+        if found:
+            break
     return sorted(
         found.values(),
         key=lambda source: source_quality_score(source),

@@ -127,7 +127,7 @@ def upload_candidates(episode: dict, plan: dict, burned: set[int]) -> list[dict]
                 or ("CZ_DUB" if source.get("verdict") in {"CZ_AUDIO", "PROBABLE_CZ_AUDIO"} else None),
                 "audio_lang": source.get("db_audio_lang")
                 or ("cs" if source.get("verdict") == "CZ_AUDIO" else None),
-                "source_origin": source.get("source_origin") or "prehrajto_search",
+                "source_origin": source.get("source_origin") or "production_db",
                 "db_source_exists": bool(source.get("db_source_exists")),
                 "quality_tier": source.get("quality_tier"),
             },
