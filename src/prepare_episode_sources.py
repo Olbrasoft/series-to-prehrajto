@@ -14,6 +14,7 @@ import json
 import os
 import re
 import sys
+import unicodedata
 from collections import defaultdict
 from pathlib import Path
 
@@ -177,16 +178,37 @@ def episode_code(episode: dict) -> str:
     return f"S{int(episode['season'] or 0):02d}E{int(episode['episode'] or 0):02d}"
 
 
+def compact_title(value: str) -> str:
+    normalized = unicodedata.normalize("NFKD", value)
+    return re.sub(r"[^a-z0-9]", "", normalized.encode("ascii", "ignore").decode().lower())
+
+
 def title_matches_episode(title: str, episode: dict) -> bool:
-    compact = re.sub(r"[^a-z0-9]", "", title.lower())
+    compact = compact_title(title)
     season = int(episode["season"] or 0)
     number = int(episode["episode"] or 0)
-    markers = {
+    markers = [
         f"s{season:02d}e{number:02d}",
         f"{season}x{number}",
         f"{season:02d}x{number:02d}",
-    }
-    return any(re.sub(r"[^a-z0-9]", "", marker) in compact for marker in markers)
+    ]
+    series_titles = [
+        compact_title(value)
+        for value in (episode.get("series_title"), episode.get("series_original_title"))
+        if value
+    ]
+    for marker in markers:
+        marker_at = compact.find(marker)
+        if marker_at < 0:
+            continue
+        for series_title in series_titles:
+            series_at = compact.find(series_title)
+            if series_at < 0 or series_at > marker_at:
+                continue
+            between = compact[series_at + len(series_title) : marker_at]
+            if not between:
+                return True
+    return False
 
 
 def live_search_candidates(episode: dict, *, limit: int) -> list[dict]:
@@ -198,12 +220,8 @@ def live_search_candidates(episode: dict, *, limit: int) -> list[dict]:
         if title
     ]
     queries = [
-        query
-        for title in titles
-        for query in (
-            f"{title} {episode_code(episode)}",
-            f"{title} {int(episode['season'])}x{int(episode['episode'])}",
-        )
+        *(f"{title} {episode_code(episode)}" for title in titles),
+        *(f"{title} {int(episode['season'])}x{int(episode['episode'])}" for title in titles),
     ]
     found: dict[str, dict] = {}
     for query in queries:

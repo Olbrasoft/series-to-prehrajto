@@ -6,6 +6,7 @@ from __future__ import annotations
 import hashlib
 import html
 import re
+import time
 import urllib.parse
 from dataclasses import dataclass
 
@@ -13,6 +14,7 @@ import requests
 
 SEARCH_URL = "https://prehraj.to/hledej/{query}"
 USER_AGENT = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/145 Safari/537.36"
+_last_search_at = 0.0
 
 _ITEM_RE = re.compile(
     r'<div class="video-wrapper">(?P<body>.*?)(?=<div class="video-wrapper">|</main>|$)',
@@ -95,17 +97,30 @@ def parse_search_html(page_html: str) -> list[SearchResult]:
     return rows
 
 
-def search(query: str, *, timeout: float = 30.0, session: requests.Session | None = None) -> list[SearchResult]:
+def search(
+    query: str,
+    *,
+    timeout: float = 30.0,
+    min_interval: float = 1.1,
+    session: requests.Session | None = None,
+) -> list[SearchResult]:
+    global _last_search_at
+    wait = min_interval - (time.monotonic() - _last_search_at)
+    if wait > 0:
+        time.sleep(wait)
     sess = session or requests.Session()
-    response = sess.get(
-        SEARCH_URL.format(query=urllib.parse.quote(query)),
-        timeout=timeout,
-        headers={
-            "User-Agent": USER_AGENT,
-            "Accept": "text/html,application/xhtml+xml",
-            "Accept-Language": "cs,en;q=0.8",
-            "Accept-Encoding": "identity",
-        },
-    )
+    try:
+        response = sess.get(
+            SEARCH_URL.format(query=urllib.parse.quote(query)),
+            timeout=timeout,
+            headers={
+                "User-Agent": USER_AGENT,
+                "Accept": "text/html,application/xhtml+xml",
+                "Accept-Language": "cs,en;q=0.8",
+                "Accept-Encoding": "identity",
+            },
+        )
+    finally:
+        _last_search_at = time.monotonic()
     response.raise_for_status()
     return parse_search_html(response.text)

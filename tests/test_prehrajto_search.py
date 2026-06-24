@@ -11,7 +11,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
 from prehrajto_search import parse_search_html  # noqa: E402
 from build_upload_manifest import merge_manifest  # noqa: E402
-from prepare_episode_sources import merge_backlog_sources, source_score  # noqa: E402
+from prepare_episode_sources import merge_backlog_sources, source_score, title_matches_episode  # noqa: E402
 from source_quality import source_quality_score, source_quality_tier  # noqa: E402
 
 
@@ -92,6 +92,16 @@ class PrehrajtoSearchTest(unittest.TestCase):
             with gzip.open(backlog_path, "wt", encoding="utf-8") as fh:
                 fh.write(json.dumps({"episode_id": 2, "candidates": []}) + "\n")
             self.assertEqual(merge_backlog_sources(queue, backlog_path), [queue[1]])
+
+    def test_spin_off_with_same_episode_code_is_rejected(self) -> None:
+        episode = {
+            "series_title": "Živí mrtví",
+            "series_original_title": "The Walking Dead",
+            "season": 2,
+            "episode": 7,
+        }
+        self.assertTrue(title_matches_episode("The Walking Dead S02E07 CZ 1080p", episode))
+        self.assertFalse(title_matches_episode("The Walking Dead Dead City S02E07 CZ 1080p", episode))
 
 
 if __name__ == "__main__":
