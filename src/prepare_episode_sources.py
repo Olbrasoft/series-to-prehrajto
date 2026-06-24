@@ -479,6 +479,8 @@ def prepare_episode(
             if verified["verdict"] not in {"CZ_AUDIO", "PROBABLE_CZ_AUDIO"}:
                 continue
             verified_acceptable.append(verified)
+            if len(verified_acceptable) >= 2:
+                break
         if verified_acceptable:
             verified_acceptable.sort(key=lambda result: tuple(result["score"]), reverse=True)
             selected = verified_acceptable[0]
