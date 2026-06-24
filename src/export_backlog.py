@@ -155,7 +155,7 @@ def fetch_rows(
                         coalesce(s.imdb_rating, 0) DESC,
                         coalesce(s.csfd_rating, 0) DESC,
                         s.id
-                    LIMIT %(series_scan_limit)s
+                    LIMIT %(series_limit)s
                 )
                 SELECT
                     e.*,
@@ -174,10 +174,6 @@ def fetch_rows(
                 FROM ranked_series s
                 JOIN episodes e ON e.series_id = s.id
                 WHERE NOT (e.id = ANY(%(uploaded_episode_ids)s))
-                  AND NOT (
-                      e.series_id::text || ':' || coalesce(e.season, -1)::text || ':' || coalesce(e.episode, -1)::text
-                      = ANY(%(uploaded_episode_keys)s)
-                  )
                 ORDER BY
                     s.series_rank,
                     e.season NULLS LAST,
@@ -186,10 +182,9 @@ def fetch_rows(
                 LIMIT %(episode_limit)s
                 """,
                 {
-                    "series_scan_limit": max(series_limit * 4, series_limit),
+                    "series_limit": series_limit,
                     "episode_limit": episode_limit,
                     "uploaded_episode_ids": list(uploaded_episode_ids),
-                    "uploaded_episode_keys": list(uploaded_episode_keys),
                 },
             )
             episode_rows = list(cur.fetchall())
