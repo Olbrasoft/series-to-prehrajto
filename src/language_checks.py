@@ -11,7 +11,7 @@ from pathlib import Path
 
 CZECH_AUDIO_LANGS = {"cs", "cz", "cze", "ces", "cs-cz", "cz-cz", "czech"}
 CZECH_AUDIO_RE = re.compile(
-    r"(^|[\W_])(cz|cesky|česky|czech|dabing|czdab|cz-dab|cz dab|czech audio)([\W_]|$)",
+    r"(^|[\W_])(cz|cs|cesky|česky|czech|dabing|czdab|cz-dab|cz dab|czech audio)([\W_]|$)",
     re.IGNORECASE,
 )
 CZECH_SUB_RE = re.compile(

@@ -243,6 +243,7 @@ def title_matches_episode(title: str, episode: dict) -> bool:
     number = int(episode["episode"] or 0)
     markers = [
         f"s{season:02d}e{number:02d}",
+        f"s{season}e{number}",
         f"{season}x{number}",
         f"{season:02d}x{number:02d}",
     ]
@@ -518,6 +519,8 @@ def main() -> int:
     ap.add_argument("--episode-limit", type=int, default=10)
     ap.add_argument("--source-limit-per-episode", type=int, default=12)
     ap.add_argument("--series-slug")
+    ap.add_argument("--season", type=int)
+    ap.add_argument("--episode", type=int)
     ap.add_argument("--use-whisper", action="store_true")
     ap.add_argument("--sample-seconds", type=int, default=45)
     ap.add_argument("--require-resolvable-source", action="store_true")
@@ -530,6 +533,12 @@ def main() -> int:
     if args.series_slug:
         rows = [row for row in rows if row["series_slug"] == args.series_slug]
     episodes = group_by_episode(rows, Path(args.backlog))
+    if args.series_slug:
+        episodes = [episode for episode in episodes if episode["series_slug"] == args.series_slug]
+    if args.season is not None:
+        episodes = [episode for episode in episodes if int(episode["season"]) == args.season]
+    if args.episode is not None:
+        episodes = [episode for episode in episodes if int(episode["episode"]) == args.episode]
     burned = burned_source_ids()
     latest = latest_prepared_rows(Path(args.out))
     done = set() if args.refresh else latest_usable_prepared_episode_ids(Path(args.out), burned)
