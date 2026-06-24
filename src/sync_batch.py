@@ -264,7 +264,7 @@ def try_candidate(episode: dict, candidate: dict, session, state: dict, *, allow
             "series_title": episode["series_title"],
             "season": episode["season"],
             "episode": episode["episode"],
-            "episode_code": episode["episode_code"],
+            "episode_code": episode.get("episode_code") or f"S{int(episode.get('season', 0)):02d}E{int(episode.get('episode', 0)):02d}",
             "display_name": episode["display_name"],
             "source_id": candidate["source_id"],
             "external_id": candidate.get("external_id"),
