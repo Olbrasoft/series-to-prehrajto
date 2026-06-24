@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import datetime as dt
 import gzip
 import json
 import subprocess
@@ -19,6 +20,7 @@ REPO = Path(__file__).resolve().parent.parent
 REPORT = REPO / "reports" / "ops-status.json"
 
 RUNNING = {"queued", "in_progress", "waiting", "pending", "requested"}
+FAILED_RETRY_AFTER = dt.timedelta(hours=24)
 
 
 def run_gh(args: list[str], *, dry_run: bool) -> None:
@@ -55,11 +57,17 @@ def prepared_episode_ids() -> set[int]:
         int(row["episode_id"])
         for row in load_jsonl(REPO / "plans" / "prepared-episodes.jsonl")
         if row.get("episode_id") is not None
+        and row.get("upload_ready")
+        and (row.get("selected_source") or {}).get("source_id") is not None
     }
 
 
 def unprepared_source_queue_episodes() -> int:
-    done = prepared_episode_ids()
+    latest = {
+        int(row["episode_id"]): row
+        for row in load_jsonl(REPO / "plans" / "prepared-episodes.jsonl")
+        if row.get("episode_id") is not None
+    }
     queue_episode_ids = {
         int(row["episode_id"])
         for path in (
@@ -69,7 +77,27 @@ def unprepared_source_queue_episodes() -> int:
         for row in load_jsonl(path)
         if row.get("episode_id") is not None
     }
-    return len(queue_episode_ids - done)
+    now = dt.datetime.now(dt.timezone.utc)
+    pending = 0
+    for episode_id in queue_episode_ids:
+        row = latest.get(episode_id)
+        if not row:
+            pending += 1
+            continue
+        if row.get("upload_ready") and (row.get("selected_source") or {}).get("source_id") is not None:
+            continue
+        prepared_at = row.get("prepared_at")
+        if not prepared_at:
+            pending += 1
+            continue
+        try:
+            prepared = dt.datetime.fromisoformat(str(prepared_at).replace("Z", "+00:00"))
+        except ValueError:
+            pending += 1
+            continue
+        if now - prepared >= FAILED_RETRY_AFTER:
+            pending += 1
+    return pending
 
 
 def queue_workflow(workflow: str, fields: dict[str, str], *, active: set[str], dry_run: bool) -> bool:

@@ -264,4 +264,22 @@ jobs:
               -f continue_uploads="true"
           else
             echo "manifest has no upload-ready episodes"
+            if python - <<'PY'
+          from src.ops_watchdog import unprepared_source_queue_episodes
+
+          remaining = unprepared_source_queue_episodes()
+          print(f"unprepared_source_queue_episodes={remaining}")
+          raise SystemExit(0 if remaining > 0 else 1)
+          PY
+            then
+              echo "continuing with the next source-preparation batch"
+              gh workflow run prepare-manifest.yml \
+                -f series_limit="1200" \
+                -f episode_limit="10" \
+                -f source_limit_per_episode="12" \
+                -f use_whisper="false" \
+                -f skip_export="true"
+            else
+              echo "all exported backlog episodes have source plans"
+            fi
           fi

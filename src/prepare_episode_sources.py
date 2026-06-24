@@ -9,6 +9,7 @@ source for later uploading.
 from __future__ import annotations
 
 import argparse
+import datetime as dt
 import gzip
 import json
 import os
@@ -25,6 +26,7 @@ from prehrajto_search import search as search_prehrajto  # noqa: E402
 from source_quality import source_quality_score, source_quality_tier  # noqa: E402
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
+FAILED_RETRY_AFTER = dt.timedelta(hours=24)
 
 
 def load_jsonl(path: Path) -> list[dict]:
@@ -99,9 +101,9 @@ def burned_source_ids() -> set[int]:
     return burned
 
 
-def latest_completed_prepared_episode_ids(path: Path, burned: set[int]) -> set[int]:
+def latest_prepared_rows(path: Path) -> dict[int, dict]:
     if not path.exists():
-        return set()
+        return {}
     latest: dict[int, dict] = {}
     with path.open(encoding="utf-8") as fh:
         for line in fh:
@@ -112,14 +114,30 @@ def latest_completed_prepared_episode_ids(path: Path, burned: set[int]) -> set[i
                 latest[int(row["episode_id"])] = row
             except (KeyError, ValueError, json.JSONDecodeError):
                 continue
+    return latest
+
+
+def latest_usable_prepared_episode_ids(path: Path, burned: set[int]) -> set[int]:
     completed: set[int] = set()
-    for episode_id, row in latest.items():
+    for episode_id, row in latest_prepared_rows(path).items():
+        if not row.get("upload_ready"):
+            continue
         selected = row.get("selected_source") or {}
         source_id = selected.get("source_id")
-        if source_id is not None and int(source_id) in burned:
+        if source_id is None or int(source_id) in burned:
             continue
         completed.add(episode_id)
     return completed
+
+
+def retry_due(row: dict | None, *, now: dt.datetime) -> bool:
+    if not row or not row.get("prepared_at"):
+        return True
+    try:
+        prepared = dt.datetime.fromisoformat(str(row["prepared_at"]).replace("Z", "+00:00"))
+    except ValueError:
+        return True
+    return now - prepared >= FAILED_RETRY_AFTER
 
 
 def uploaded_episode_exclusions() -> tuple[set[int], set[tuple[int, int, int]]]:
@@ -468,7 +486,11 @@ def prepare_episode(
 
     upload_ready = bool(selected and selected["verdict"] in {"CZ_AUDIO", "PROBABLE_CZ_AUDIO"})
     return {
-        "prepared_at": audited[-1]["audited_at"] if audited else None,
+        "prepared_at": (
+            audited[-1]["audited_at"]
+            if audited
+            else dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+        ),
         "episode_id": episode["episode_id"],
         "series_id": episode["series_id"],
         "series_slug": episode["series_slug"],
@@ -506,12 +528,15 @@ def main() -> int:
         rows = [row for row in rows if row["series_slug"] == args.series_slug]
     episodes = group_by_episode(rows, Path(args.backlog))
     burned = burned_source_ids()
-    done = set() if args.refresh else latest_completed_prepared_episode_ids(Path(args.out), burned)
+    latest = latest_prepared_rows(Path(args.out))
+    done = set() if args.refresh else latest_usable_prepared_episode_ids(Path(args.out), burned)
     uploaded_ids, uploaded_keys = uploaded_episode_exclusions()
+    now = dt.datetime.now(dt.timezone.utc)
     todo = [
         episode
         for episode in episodes
         if int(episode["episode_id"]) not in done
+        and (args.refresh or retry_due(latest.get(int(episode["episode_id"])), now=now))
         and int(episode["episode_id"]) not in uploaded_ids
         and (
             int(episode["series_id"]),
@@ -520,6 +545,15 @@ def main() -> int:
         )
         not in uploaded_keys
     ]
+    todo.sort(
+        key=lambda episode: (
+            str((latest.get(int(episode["episode_id"])) or {}).get("prepared_at") or ""),
+            str(episode.get("series_slug") or ""),
+            int(episode.get("season") or 0),
+            int(episode.get("episode") or 0),
+            int(episode["episode_id"]),
+        )
+    )
     todo = todo[: args.episode_limit]
 
     prepared = [
