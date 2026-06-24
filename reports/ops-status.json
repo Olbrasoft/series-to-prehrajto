@@ -1,33 +1,57 @@
 {
   "counts": {
-    "backlog_episodes": 3000,
+    "backlog_episodes": 240,
     "manifest_upload_ready_episodes": 0,
-    "uploaded_episodes": 6693,
+    "uploaded_episodes": 6718,
     "prepared_source_episodes": 11327,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 2806,
-    "language_audit_rows": 77597,
-    "language_queue_sources": 1192,
-    "language_audited_sources": 72397,
-    "language_whisper_attempted_sources": 3325,
-    "language_pending_whisper_sources": 1192
+    "language_audit_rows": 77592,
+    "language_queue_sources": 2644,
+    "language_audited_sources": 72412,
+    "language_whisper_attempted_sources": 3345,
+    "language_pending_whisper_sources": 2624
   },
   "workflow_runs": [
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-24T13:49:44Z",
+      "databaseId": 28103386974,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-24T13:42:08Z",
+      "databaseId": 28102895860,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-24T13:25:15Z",
+      "databaseId": 28101831583,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "sync"
+    },
     {
       "conclusion": "",
       "createdAt": "2026-06-24T13:23:54Z",
       "databaseId": 28101746851,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "prepare-sources"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-06-24T13:23:04Z",
       "databaseId": 28101693891,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -47,11 +71,11 @@
       "workflowName": "prepare-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-06-24T13:20:02Z",
       "databaseId": 28101506053,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -127,11 +151,11 @@
       "workflowName": "sync"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-06-24T13:00:27Z",
       "databaseId": 28100311480,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "refresh-backlog"
     },
     {
@@ -149,136 +173,109 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-24T12:50:29Z",
-      "databaseId": 28099716643,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-24T12:39:56Z",
-      "databaseId": 28099110233,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-24T12:37:51Z",
-      "databaseId": 28098994809,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
     }
   ],
   "gaps": {
     "backlog_without_source_plan": [
-      1968,
-      2088,
-      2090,
-      2091,
-      2092,
-      2093,
-      2094,
-      3075,
-      4784,
-      4790,
-      4791,
-      4792,
-      4793,
-      4794,
-      4795,
-      4796,
-      4797,
-      4798,
-      4799,
-      4800,
-      4801,
-      4802,
-      4803,
-      4804,
-      4805,
-      4806,
-      4807,
-      4808,
-      4809,
-      4810,
-      4811,
-      4812,
-      4813,
-      5093,
-      5094,
-      5095,
-      5096,
-      5097,
-      5098,
-      5099,
-      5100,
-      5101,
-      5102,
-      5103,
-      5104,
-      5105,
-      5106,
-      5641,
-      5642,
-      5643
+      13319,
+      14645,
+      14646,
+      14647,
+      17105,
+      18124,
+      55690,
+      55691,
+      55692,
+      55693,
+      55694,
+      55695,
+      55696,
+      55697,
+      55698,
+      55699,
+      55700,
+      55701,
+      55702,
+      55703,
+      55704,
+      55705,
+      55706,
+      55707,
+      55708,
+      55709,
+      55710,
+      55711,
+      55712,
+      55713,
+      55714,
+      57792,
+      57793,
+      57794,
+      57795,
+      57796,
+      57797,
+      57798,
+      57799,
+      57803,
+      57804,
+      57805,
+      57806,
+      57807,
+      57808,
+      57809,
+      57810
     ],
     "backlog_without_episode_description": [
-      1958,
-      1968,
-      1980,
-      1982,
-      1985,
-      1986,
-      1989,
-      1992,
-      1993,
-      1996,
-      1998,
-      1999,
-      2002,
-      2003,
-      2005,
-      2006,
-      2007,
-      2008,
-      2009,
-      2010,
-      2011,
-      2012,
-      2013,
-      2014,
-      2015,
-      2016,
-      2017,
-      2018,
-      2019,
-      2020,
-      2021,
-      2022,
-      2023,
-      2024,
-      2038,
-      2039,
-      2040,
-      2041,
-      2042,
-      2043,
-      2044,
-      2045,
-      2046,
-      2047,
-      2048,
-      2049,
-      2084,
-      2085,
-      2086,
-      2087
+      10441,
+      10442,
+      10443,
+      10444,
+      10445,
+      10446,
+      10447,
+      10448,
+      10449,
+      10451,
+      10452,
+      10453,
+      12836,
+      12837,
+      12838,
+      12839,
+      12840,
+      12841,
+      12842,
+      12843,
+      12844,
+      12845,
+      12846,
+      12847,
+      13319,
+      13323,
+      13324,
+      13326,
+      13327,
+      13328,
+      13329,
+      13330,
+      13333,
+      13347,
+      13348,
+      13352,
+      13353,
+      13354,
+      13358,
+      13360,
+      13364,
+      13367,
+      13368,
+      13369,
+      13371,
+      13373,
+      13378,
+      13379,
+      13380,
+      13382
     ],
     "uploaded_without_gemma_description": [
       {
@@ -13975,6 +13972,131 @@
         "episode_id": 63963,
         "display_name": "Cobra Kai S03E10 - 19. prosince CZ Dabing",
         "video_id": 26460169
+      },
+      {
+        "episode_id": 17518,
+        "display_name": "Euforie S02E02 - Mimo Dosah CZ Dabing",
+        "video_id": 26477613
+      },
+      {
+        "episode_id": 34070,
+        "display_name": "Euforie S03E03 - 3. epizoda CZ Dabing",
+        "video_id": 26478046
+      },
+      {
+        "episode_id": 53692,
+        "display_name": "Yellowstone S01E03 - Hodní koně nejsou CZ Dabing",
+        "video_id": 26478264
+      },
+      {
+        "episode_id": 53704,
+        "display_name": "Yellowstone S01E04 - Dlouhý černý vlak CZ Dabing",
+        "video_id": 26478529
+      },
+      {
+        "episode_id": 53718,
+        "display_name": "Yellowstone S01E05 - Návrat domů CZ Dabing",
+        "video_id": 26478825
+      },
+      {
+        "episode_id": 53706,
+        "display_name": "Yellowstone S01E06 - Vzpomínání CZ Dabing",
+        "video_id": 26479123
+      },
+      {
+        "episode_id": 53688,
+        "display_name": "Yellowstone S01E07 - Bestie mezi námi CZ Dabing",
+        "video_id": 26479300
+      },
+      {
+        "episode_id": 53720,
+        "display_name": "Yellowstone S02E02 - Nové začátky CZ Dabing",
+        "video_id": 26479713
+      },
+      {
+        "episode_id": 53722,
+        "display_name": "Yellowstone S03E01 - Teď jsi Indián CZ Dabing",
+        "video_id": 26479993
+      },
+      {
+        "episode_id": 53690,
+        "display_name": "Yellowstone S04E03 - Vše, co vidím, jsi ty CZ Dabing",
+        "video_id": 26480313
+      },
+      {
+        "episode_id": 53713,
+        "display_name": "Yellowstone S01E09 - Vyvrcholení – část 2 CZ Dabing",
+        "video_id": 26477610
+      },
+      {
+        "episode_id": 53719,
+        "display_name": "Yellowstone S02E01 - Hřmění CZ Dabing",
+        "video_id": 26477928
+      },
+      {
+        "episode_id": 53697,
+        "display_name": "Yellowstone S02E03 - Pach zoufalství CZ Dabing",
+        "video_id": 26478088
+      },
+      {
+        "episode_id": 53693,
+        "display_name": "Yellowstone S02E04 - Zůstávají jen ďáblové CZ Dabing",
+        "video_id": 26478337
+      },
+      {
+        "episode_id": 53707,
+        "display_name": "Yellowstone S02E05 - Dotknout se nepřítele CZ Dabing",
+        "video_id": 26478539
+      },
+      {
+        "episode_id": 53721,
+        "display_name": "Yellowstone S02E07 - Zmrtvýchvstání CZ Dabing",
+        "video_id": 26478757
+      },
+      {
+        "episode_id": 53723,
+        "display_name": "Yellowstone S03E02 - Nákladní vlaky a příšery CZ Dabing",
+        "video_id": 26479012
+      },
+      {
+        "episode_id": 53705,
+        "display_name": "Yellowstone S03E05 - Kovbojové a snílci CZ Dabing",
+        "video_id": 26479220
+      },
+      {
+        "episode_id": 53683,
+        "display_name": "Yellowstone S03E06 - Všechno pro nic CZ Dabing",
+        "video_id": 26479325
+      },
+      {
+        "episode_id": 53691,
+        "display_name": "Yellowstone S03E08 - Dnes jsem zabil člověka CZ Dabing",
+        "video_id": 26479517
+      },
+      {
+        "episode_id": 53725,
+        "display_name": "Yellowstone S04E06 - Chci být jím CZ Dabing",
+        "video_id": 26479699
+      },
+      {
+        "episode_id": 53699,
+        "display_name": "Yellowstone S04E08 - Žádná laskavost pro zbabělce CZ Dabing",
+        "video_id": 26479876
+      },
+      {
+        "episode_id": 53715,
+        "display_name": "Yellowstone S05E04 - Koně v nebi CZ Dabing",
+        "video_id": 26480025
+      },
+      {
+        "episode_id": 53711,
+        "display_name": "Yellowstone S05E05 - Vyprovázení CZ Dabing",
+        "video_id": 26480247
+      },
+      {
+        "episode_id": 53701,
+        "display_name": "Yellowstone S05E08 - S nožem a bez peněz CZ Dabing",
+        "video_id": 26480346
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -37702,6 +37824,131 @@
         "episode_id": 13349,
         "display_name": "Živí mrtví S02E09 - Přestřelka CZ Dabing",
         "video_id": 26474142
+      },
+      {
+        "episode_id": 17518,
+        "display_name": "Euforie S02E02 - Mimo Dosah CZ Dabing",
+        "video_id": 26477613
+      },
+      {
+        "episode_id": 34070,
+        "display_name": "Euforie S03E03 - 3. epizoda CZ Dabing",
+        "video_id": 26478046
+      },
+      {
+        "episode_id": 53692,
+        "display_name": "Yellowstone S01E03 - Hodní koně nejsou CZ Dabing",
+        "video_id": 26478264
+      },
+      {
+        "episode_id": 53704,
+        "display_name": "Yellowstone S01E04 - Dlouhý černý vlak CZ Dabing",
+        "video_id": 26478529
+      },
+      {
+        "episode_id": 53718,
+        "display_name": "Yellowstone S01E05 - Návrat domů CZ Dabing",
+        "video_id": 26478825
+      },
+      {
+        "episode_id": 53706,
+        "display_name": "Yellowstone S01E06 - Vzpomínání CZ Dabing",
+        "video_id": 26479123
+      },
+      {
+        "episode_id": 53688,
+        "display_name": "Yellowstone S01E07 - Bestie mezi námi CZ Dabing",
+        "video_id": 26479300
+      },
+      {
+        "episode_id": 53720,
+        "display_name": "Yellowstone S02E02 - Nové začátky CZ Dabing",
+        "video_id": 26479713
+      },
+      {
+        "episode_id": 53722,
+        "display_name": "Yellowstone S03E01 - Teď jsi Indián CZ Dabing",
+        "video_id": 26479993
+      },
+      {
+        "episode_id": 53690,
+        "display_name": "Yellowstone S04E03 - Vše, co vidím, jsi ty CZ Dabing",
+        "video_id": 26480313
+      },
+      {
+        "episode_id": 53713,
+        "display_name": "Yellowstone S01E09 - Vyvrcholení – část 2 CZ Dabing",
+        "video_id": 26477610
+      },
+      {
+        "episode_id": 53719,
+        "display_name": "Yellowstone S02E01 - Hřmění CZ Dabing",
+        "video_id": 26477928
+      },
+      {
+        "episode_id": 53697,
+        "display_name": "Yellowstone S02E03 - Pach zoufalství CZ Dabing",
+        "video_id": 26478088
+      },
+      {
+        "episode_id": 53693,
+        "display_name": "Yellowstone S02E04 - Zůstávají jen ďáblové CZ Dabing",
+        "video_id": 26478337
+      },
+      {
+        "episode_id": 53707,
+        "display_name": "Yellowstone S02E05 - Dotknout se nepřítele CZ Dabing",
+        "video_id": 26478539
+      },
+      {
+        "episode_id": 53721,
+        "display_name": "Yellowstone S02E07 - Zmrtvýchvstání CZ Dabing",
+        "video_id": 26478757
+      },
+      {
+        "episode_id": 53723,
+        "display_name": "Yellowstone S03E02 - Nákladní vlaky a příšery CZ Dabing",
+        "video_id": 26479012
+      },
+      {
+        "episode_id": 53705,
+        "display_name": "Yellowstone S03E05 - Kovbojové a snílci CZ Dabing",
+        "video_id": 26479220
+      },
+      {
+        "episode_id": 53683,
+        "display_name": "Yellowstone S03E06 - Všechno pro nic CZ Dabing",
+        "video_id": 26479325
+      },
+      {
+        "episode_id": 53691,
+        "display_name": "Yellowstone S03E08 - Dnes jsem zabil člověka CZ Dabing",
+        "video_id": 26479517
+      },
+      {
+        "episode_id": 53725,
+        "display_name": "Yellowstone S04E06 - Chci být jím CZ Dabing",
+        "video_id": 26479699
+      },
+      {
+        "episode_id": 53699,
+        "display_name": "Yellowstone S04E08 - Žádná laskavost pro zbabělce CZ Dabing",
+        "video_id": 26479876
+      },
+      {
+        "episode_id": 53715,
+        "display_name": "Yellowstone S05E04 - Koně v nebi CZ Dabing",
+        "video_id": 26480025
+      },
+      {
+        "episode_id": 53711,
+        "display_name": "Yellowstone S05E05 - Vyprovázení CZ Dabing",
+        "video_id": 26480247
+      },
+      {
+        "episode_id": 53701,
+        "display_name": "Yellowstone S05E08 - S nožem a bez peněz CZ Dabing",
+        "video_id": 26480346
       }
     ],
     "prepared_not_upload_ready": [
@@ -38010,15 +38257,15 @@
   "language_verdicts": {
     "UNKNOWN": 513,
     "CZ_AUDIO": 74431,
-    "CZ_SUBTITLES_ONLY": 2133,
+    "CZ_SUBTITLES_ONLY": 2128,
     "NOT_CZ_AUDIO": 516,
     "SK_AUDIO": 2,
     "PROBABLE_CZ_AUDIO": 2
   },
   "language_whisper_statuses": {
-    "disabled": 69072,
+    "disabled": 69067,
     "resolve_failed": 276,
-    "ok": 3012,
+    "ok": 3032,
     "no_stream": 37
   }
 }
