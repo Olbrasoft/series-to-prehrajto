@@ -2,40 +2,88 @@
   "counts": {
     "backlog_episodes": 20000,
     "manifest_upload_ready_episodes": 92,
-    "uploaded_episodes": 6989,
+    "uploaded_episodes": 7000,
     "prepared_source_episodes": 12063,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 2811,
     "language_audit_rows": 80374,
     "language_queue_sources": 2644,
-    "language_audited_sources": 74668,
-    "language_whisper_attempted_sources": 3365,
-    "language_pending_whisper_sources": 2604
+    "language_audited_sources": 74648,
+    "language_whisper_attempted_sources": 3345,
+    "language_pending_whisper_sources": 2624
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-06-24T23:28:46Z",
-      "databaseId": 28136273336,
+      "createdAt": "2026-06-24T23:46:32Z",
+      "databaseId": 28136980644,
       "headBranch": "main",
       "status": "in_progress",
-      "workflowName": "ops-status"
+      "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
-      "createdAt": "2026-06-24T23:23:40Z",
-      "databaseId": 28136072491,
+      "createdAt": "2026-06-24T23:39:21Z",
+      "databaseId": 28136697900,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-24T23:32:42Z",
+      "databaseId": 28136434691,
       "headBranch": "main",
       "status": "pending",
       "workflowName": "prepare-manifest"
     },
     {
+      "conclusion": "success",
+      "createdAt": "2026-06-24T23:32:37Z",
+      "databaseId": 28136430923,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
       "conclusion": "",
+      "createdAt": "2026-06-24T23:32:34Z",
+      "databaseId": 28136429073,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-06-24T23:31:15Z",
+      "databaseId": 28136374539,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-24T23:28:46Z",
+      "databaseId": 28136273336,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-06-24T23:23:40Z",
+      "databaseId": 28136072491,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "cancelled",
       "createdAt": "2026-06-24T23:18:49Z",
       "databaseId": 28135879120,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "update-descriptions"
     },
     {
@@ -63,11 +111,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-06-24T23:09:44Z",
       "databaseId": 28135510996,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "sync"
     },
     {
@@ -125,54 +173,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-24T22:41:57Z",
-      "databaseId": 28134331836,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-24T22:41:37Z",
-      "databaseId": 28134316258,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-24T22:36:54Z",
-      "databaseId": 28134108073,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-06-24T22:36:51Z",
-      "databaseId": 28134105690,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-24T22:35:54Z",
-      "databaseId": 28134062673,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-24T22:35:05Z",
-      "databaseId": 28134022782,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
     }
   ],
   "gaps": {
@@ -15147,6 +15147,51 @@
         "video_id": 26539592
       },
       {
+        "episode_id": 31212,
+        "display_name": "Advokát S02E10 - Pohřbi svoji minulost CZ Dabing",
+        "video_id": 26539818
+      },
+      {
+        "episode_id": 15994,
+        "display_name": "Advokát S03E02 - Přitěžující okolnosti CZ Dabing",
+        "video_id": 26540008
+      },
+      {
+        "episode_id": 15996,
+        "display_name": "Advokát S03E04 - Slepá místa minulosti CZ Dabing",
+        "video_id": 26540194
+      },
+      {
+        "episode_id": 15998,
+        "display_name": "Advokát S03E06 - V jednom ohni CZ Dabing",
+        "video_id": 26540382
+      },
+      {
+        "episode_id": 16000,
+        "display_name": "Advokát S03E08 - Záhadný muž CZ Dabing",
+        "video_id": 26540526
+      },
+      {
+        "episode_id": 16002,
+        "display_name": "Advokát S03E10 - Bohové viny CZ Dabing",
+        "video_id": 26540760
+      },
+      {
+        "episode_id": 16004,
+        "display_name": "Advokát S04E01 - 7211956 CZ Dabing",
+        "video_id": 26540959
+      },
+      {
+        "episode_id": 16006,
+        "display_name": "Advokát S04E03 - Čtyřicet hodin CZ Dabing",
+        "video_id": 26541085
+      },
+      {
+        "episode_id": 16008,
+        "display_name": "Advokát S04E06 - Padesát na padesát CZ Dabing",
+        "video_id": 26541357
+      },
+      {
         "episode_id": 15993,
         "display_name": "Advokát S03E01 - La Culebra CZ Dabing",
         "video_id": 26537424
@@ -15205,6 +15250,16 @@
         "episode_id": 64299,
         "display_name": "Absťák S01E03 - Pátá vitální funkce CZ Dabing",
         "video_id": 26539646
+      },
+      {
+        "episode_id": 64301,
+        "display_name": "Absťák S01E05 - Whistleblower CZ Dabing",
+        "video_id": 26539773
+      },
+      {
+        "episode_id": 64303,
+        "display_name": "Absťák S01E07 - Výstražný štítek CZ Dabing",
+        "video_id": 26539826
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -38684,6 +38739,51 @@
         "video_id": 26539592
       },
       {
+        "episode_id": 31212,
+        "display_name": "Advokát S02E10 - Pohřbi svoji minulost CZ Dabing",
+        "video_id": 26539818
+      },
+      {
+        "episode_id": 15994,
+        "display_name": "Advokát S03E02 - Přitěžující okolnosti CZ Dabing",
+        "video_id": 26540008
+      },
+      {
+        "episode_id": 15996,
+        "display_name": "Advokát S03E04 - Slepá místa minulosti CZ Dabing",
+        "video_id": 26540194
+      },
+      {
+        "episode_id": 15998,
+        "display_name": "Advokát S03E06 - V jednom ohni CZ Dabing",
+        "video_id": 26540382
+      },
+      {
+        "episode_id": 16000,
+        "display_name": "Advokát S03E08 - Záhadný muž CZ Dabing",
+        "video_id": 26540526
+      },
+      {
+        "episode_id": 16002,
+        "display_name": "Advokát S03E10 - Bohové viny CZ Dabing",
+        "video_id": 26540760
+      },
+      {
+        "episode_id": 16004,
+        "display_name": "Advokát S04E01 - 7211956 CZ Dabing",
+        "video_id": 26540959
+      },
+      {
+        "episode_id": 16006,
+        "display_name": "Advokát S04E03 - Čtyřicet hodin CZ Dabing",
+        "video_id": 26541085
+      },
+      {
+        "episode_id": 16008,
+        "display_name": "Advokát S04E06 - Padesát na padesát CZ Dabing",
+        "video_id": 26541357
+      },
+      {
         "episode_id": 15993,
         "display_name": "Advokát S03E01 - La Culebra CZ Dabing",
         "video_id": 26537424
@@ -38742,6 +38842,16 @@
         "episode_id": 64299,
         "display_name": "Absťák S01E03 - Pátá vitální funkce CZ Dabing",
         "video_id": 26539646
+      },
+      {
+        "episode_id": 64301,
+        "display_name": "Absťák S01E05 - Whistleblower CZ Dabing",
+        "video_id": 26539773
+      },
+      {
+        "episode_id": 64303,
+        "display_name": "Absťák S01E07 - Výstražný štítek CZ Dabing",
+        "video_id": 26539826
       }
     ],
     "prepared_not_upload_ready": [
@@ -39058,7 +39168,7 @@
   "language_whisper_statuses": {
     "disabled": 71303,
     "resolve_failed": 276,
-    "ok": 3052,
+    "ok": 3032,
     "no_stream": 37
   }
 }
