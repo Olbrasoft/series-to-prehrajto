@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import hashlib
 import html
+import os
 import re
 import time
 import urllib.parse
@@ -107,6 +108,20 @@ def search(
 ) -> list[SearchResult]:
     global _last_search_at
     sess = session or requests.Session()
+    search_url = SEARCH_URL.format(query=urllib.parse.quote(query))
+    proxy_base = os.environ.get("CZ_PROXY_URL", "").strip()
+    proxy_key = os.environ.get("CZ_PROXY_KEY", "").strip()
+    if proxy_base and proxy_key:
+        fetch_url = (
+            f"{proxy_base}?key={urllib.parse.quote(proxy_key, safe='')}"
+            f"&url={urllib.parse.quote(search_url, safe='')}"
+        )
+        min_interval = max(
+            min_interval,
+            float(os.environ.get("CZ_PROXY_MIN_GAP_SECONDS", "5")),
+        )
+    else:
+        fetch_url = search_url
     response: requests.Response | None = None
     for attempt in range(max(retries, 1)):
         wait = min_interval - (time.monotonic() - _last_search_at)
@@ -114,7 +129,7 @@ def search(
             time.sleep(wait)
         try:
             response = sess.get(
-                SEARCH_URL.format(query=urllib.parse.quote(query)),
+                fetch_url,
                 timeout=timeout,
                 headers={
                     "User-Agent": USER_AGENT,
