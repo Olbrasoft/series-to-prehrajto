@@ -90,7 +90,7 @@ def burned_source_ids() -> set[int]:
     return burned
 
 
-def latest_usable_prepared_episode_ids(path: Path, burned: set[int]) -> set[int]:
+def latest_completed_prepared_episode_ids(path: Path, burned: set[int]) -> set[int]:
     if not path.exists():
         return set()
     latest: dict[int, dict] = {}
@@ -103,14 +103,40 @@ def latest_usable_prepared_episode_ids(path: Path, burned: set[int]) -> set[int]
                 latest[int(row["episode_id"])] = row
             except (KeyError, ValueError, json.JSONDecodeError):
                 continue
-    usable: set[int] = set()
+    completed: set[int] = set()
     for episode_id, row in latest.items():
         selected = row.get("selected_source") or {}
         source_id = selected.get("source_id")
-        if source_id is None or int(source_id) in burned:
+        if source_id is not None and int(source_id) in burned:
             continue
-        usable.add(episode_id)
-    return usable
+        completed.add(episode_id)
+    return completed
+
+
+def uploaded_episode_exclusions() -> tuple[set[int], set[tuple[int, int, int]]]:
+    uploaded_ids: set[int] = set()
+    uploaded_keys: set[tuple[int, int, int]] = set()
+    paths = [REPO_ROOT / "state" / "uploaded.json"]
+    paths.extend(sorted((REPO_ROOT / "state").glob("uploaded-shard-*.json")))
+    for path in paths:
+        if not path.exists() or path.stat().st_size == 0:
+            continue
+        try:
+            state = json.loads(path.read_text(encoding="utf-8"))
+        except json.JSONDecodeError:
+            continue
+        for upload in state.get("uploads", []):
+            if upload.get("episode_id") is not None:
+                uploaded_ids.add(int(upload["episode_id"]))
+            if all(upload.get(key) is not None for key in ("series_id", "season", "episode")):
+                uploaded_keys.add(
+                    (
+                        int(upload["series_id"]),
+                        int(upload["season"]),
+                        int(upload["episode"]),
+                    )
+                )
+    return uploaded_ids, uploaded_keys
 
 
 def backlog_candidate_to_queue_item(episode: dict, candidate: dict) -> dict:
@@ -468,8 +494,20 @@ def main() -> int:
         rows = [row for row in rows if row["series_slug"] == args.series_slug]
     episodes = group_by_episode(rows, Path(args.backlog))
     burned = burned_source_ids()
-    done = set() if args.refresh else latest_usable_prepared_episode_ids(Path(args.out), burned)
-    todo = [episode for episode in episodes if int(episode["episode_id"]) not in done]
+    done = set() if args.refresh else latest_completed_prepared_episode_ids(Path(args.out), burned)
+    uploaded_ids, uploaded_keys = uploaded_episode_exclusions()
+    todo = [
+        episode
+        for episode in episodes
+        if int(episode["episode_id"]) not in done
+        and int(episode["episode_id"]) not in uploaded_ids
+        and (
+            int(episode["series_id"]),
+            int(episode["season"]),
+            int(episode["episode"]),
+        )
+        not in uploaded_keys
+    ]
     todo = todo[: args.episode_limit]
 
     prepared = [
