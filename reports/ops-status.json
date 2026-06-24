@@ -2,40 +2,80 @@
   "counts": {
     "backlog_episodes": 20000,
     "manifest_upload_ready_episodes": 138,
-    "uploaded_episodes": 6918,
+    "uploaded_episodes": 6936,
     "prepared_source_episodes": 12023,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 2811,
     "language_audit_rows": 80254,
     "language_queue_sources": 2644,
-    "language_audited_sources": 74528,
-    "language_whisper_attempted_sources": 3345,
-    "language_pending_whisper_sources": 2624
+    "language_audited_sources": 74548,
+    "language_whisper_attempted_sources": 3365,
+    "language_pending_whisper_sources": 2604
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-06-24T22:16:59Z",
-      "databaseId": 28133182842,
+      "createdAt": "2026-06-24T22:35:05Z",
+      "databaseId": 28134022782,
       "headBranch": "main",
       "status": "in_progress",
-      "workflowName": "ops-watchdog"
+      "workflowName": "ops-status"
     },
     {
       "conclusion": "",
-      "createdAt": "2026-06-24T22:09:22Z",
-      "databaseId": 28132833459,
+      "createdAt": "2026-06-24T22:32:57Z",
+      "databaseId": 28133921842,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-24T22:25:40Z",
+      "databaseId": 28133576220,
+      "headBranch": "main",
+      "status": "in_progress",
       "workflowName": "sync"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
+      "createdAt": "2026-06-24T22:17:34Z",
+      "databaseId": 28133208999,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-24T22:17:32Z",
+      "databaseId": 28133208045,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-24T22:16:59Z",
+      "databaseId": 28133182842,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-06-24T22:09:22Z",
+      "databaseId": 28132833459,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "failure",
       "createdAt": "2026-06-24T22:08:20Z",
       "databaseId": 28132785871,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -59,7 +99,7 @@
       "createdAt": "2026-06-24T21:59:17Z",
       "databaseId": 28132343804,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "prepare-descriptions"
     },
     {
@@ -79,11 +119,11 @@
       "workflowName": "ops-status"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-06-24T21:52:12Z",
       "databaseId": 28131998590,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "sync"
     },
     {
@@ -95,11 +135,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-06-24T21:42:19Z",
       "databaseId": 28131509067,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-descriptions"
     },
     {
@@ -119,11 +159,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-06-24T21:41:07Z",
       "databaseId": 28131448043,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "sync"
     },
     {
@@ -133,46 +173,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-24T21:36:26Z",
-      "databaseId": 28131210118,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "refresh-backlog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-24T21:32:47Z",
-      "databaseId": 28131015877,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-24T21:30:26Z",
-      "databaseId": 28130888715,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-24T21:22:53Z",
-      "databaseId": 28130488329,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-24T21:12:20Z",
-      "databaseId": 28129938401,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
     }
   ],
   "gaps": {
@@ -14767,6 +14767,36 @@
         "video_id": 26532320
       },
       {
+        "episode_id": 13536,
+        "display_name": "2 Socky S03E09 - A cukrářské porno CZ Dabing",
+        "video_id": 26532424
+      },
+      {
+        "episode_id": 13538,
+        "display_name": "2 Socky S03E12 - A francouzský polibek CZ Dabing",
+        "video_id": 26532518
+      },
+      {
+        "episode_id": 13542,
+        "display_name": "2 Socky S03E16 - A bankomat CZ Dabing",
+        "video_id": 26532706
+      },
+      {
+        "episode_id": 13544,
+        "display_name": "2 Socky S03E17 - A noc u ženáče CZ Dabing",
+        "video_id": 26532872
+      },
+      {
+        "episode_id": 13552,
+        "display_name": "2 Socky S04E01 - A reality show CZ Dabing",
+        "video_id": 26533075
+      },
+      {
+        "episode_id": 13554,
+        "display_name": "2 Socky S04E03 - A ztracené dětství CZ Dabing",
+        "video_id": 26533210
+      },
+      {
         "episode_id": 13501,
         "display_name": "2 Socky S01E21 - A masakr zaneřáděné kabelky CZ Dabing",
         "video_id": 26530456
@@ -14850,6 +14880,66 @@
         "episode_id": 6567,
         "display_name": "1923 S01E01 CZ Dabing",
         "video_id": 26532233
+      },
+      {
+        "episode_id": 6569,
+        "display_name": "1923 S01E04 - Válka a tyrkysový příliv CZ Dabing",
+        "video_id": 26532433
+      },
+      {
+        "episode_id": 6571,
+        "display_name": "1923 S01E07 - Pravidlo pěti set CZ Dabing",
+        "video_id": 26532601
+      },
+      {
+        "episode_id": 6573,
+        "display_name": "1923 S01E08 - Není co ztratit CZ Dabing",
+        "video_id": 26532767
+      },
+      {
+        "episode_id": 6575,
+        "display_name": "1923 S02E02 - Násilná příroda CZ Dabing",
+        "video_id": 26532934
+      },
+      {
+        "episode_id": 6577,
+        "display_name": "1923 S02E04 - Cesta do Železných řek CZ Dabing",
+        "video_id": 26533086
+      },
+      {
+        "episode_id": 6579,
+        "display_name": "1923 S02E06 - Zuby horských příšer CZ Dabing",
+        "video_id": 26533223
+      },
+      {
+        "episode_id": 13556,
+        "display_name": "2 Socky S04E06 - A byt pro modelky CZ Dabing",
+        "video_id": 26533782
+      },
+      {
+        "episode_id": 13560,
+        "display_name": "2 Socky S04E10 - A stěhovací pohroma CZ Dabing",
+        "video_id": 26533869
+      },
+      {
+        "episode_id": 13566,
+        "display_name": "2 Socky S04E17 - A co je ve firmě není pro mě CZ Dabing",
+        "video_id": 26534027
+      },
+      {
+        "episode_id": 13563,
+        "display_name": "2 Socky S04E15 - A tlustý kocour CZ Dabing",
+        "video_id": 26533811
+      },
+      {
+        "episode_id": 13565,
+        "display_name": "2 Socky S04E16 - A nulová tolerance CZ Dabing",
+        "video_id": 26533949
+      },
+      {
+        "episode_id": 13567,
+        "display_name": "2 Socky S04E18 - A zkouška vkusu CZ Dabing",
+        "video_id": 26534105
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -37949,6 +38039,36 @@
         "video_id": 26532320
       },
       {
+        "episode_id": 13536,
+        "display_name": "2 Socky S03E09 - A cukrářské porno CZ Dabing",
+        "video_id": 26532424
+      },
+      {
+        "episode_id": 13538,
+        "display_name": "2 Socky S03E12 - A francouzský polibek CZ Dabing",
+        "video_id": 26532518
+      },
+      {
+        "episode_id": 13542,
+        "display_name": "2 Socky S03E16 - A bankomat CZ Dabing",
+        "video_id": 26532706
+      },
+      {
+        "episode_id": 13544,
+        "display_name": "2 Socky S03E17 - A noc u ženáče CZ Dabing",
+        "video_id": 26532872
+      },
+      {
+        "episode_id": 13552,
+        "display_name": "2 Socky S04E01 - A reality show CZ Dabing",
+        "video_id": 26533075
+      },
+      {
+        "episode_id": 13554,
+        "display_name": "2 Socky S04E03 - A ztracené dětství CZ Dabing",
+        "video_id": 26533210
+      },
+      {
         "episode_id": 13501,
         "display_name": "2 Socky S01E21 - A masakr zaneřáděné kabelky CZ Dabing",
         "video_id": 26530456
@@ -38032,6 +38152,66 @@
         "episode_id": 6567,
         "display_name": "1923 S01E01 CZ Dabing",
         "video_id": 26532233
+      },
+      {
+        "episode_id": 6569,
+        "display_name": "1923 S01E04 - Válka a tyrkysový příliv CZ Dabing",
+        "video_id": 26532433
+      },
+      {
+        "episode_id": 6571,
+        "display_name": "1923 S01E07 - Pravidlo pěti set CZ Dabing",
+        "video_id": 26532601
+      },
+      {
+        "episode_id": 6573,
+        "display_name": "1923 S01E08 - Není co ztratit CZ Dabing",
+        "video_id": 26532767
+      },
+      {
+        "episode_id": 6575,
+        "display_name": "1923 S02E02 - Násilná příroda CZ Dabing",
+        "video_id": 26532934
+      },
+      {
+        "episode_id": 6577,
+        "display_name": "1923 S02E04 - Cesta do Železných řek CZ Dabing",
+        "video_id": 26533086
+      },
+      {
+        "episode_id": 6579,
+        "display_name": "1923 S02E06 - Zuby horských příšer CZ Dabing",
+        "video_id": 26533223
+      },
+      {
+        "episode_id": 13556,
+        "display_name": "2 Socky S04E06 - A byt pro modelky CZ Dabing",
+        "video_id": 26533782
+      },
+      {
+        "episode_id": 13560,
+        "display_name": "2 Socky S04E10 - A stěhovací pohroma CZ Dabing",
+        "video_id": 26533869
+      },
+      {
+        "episode_id": 13566,
+        "display_name": "2 Socky S04E17 - A co je ve firmě není pro mě CZ Dabing",
+        "video_id": 26534027
+      },
+      {
+        "episode_id": 13563,
+        "display_name": "2 Socky S04E15 - A tlustý kocour CZ Dabing",
+        "video_id": 26533811
+      },
+      {
+        "episode_id": 13565,
+        "display_name": "2 Socky S04E16 - A nulová tolerance CZ Dabing",
+        "video_id": 26533949
+      },
+      {
+        "episode_id": 13567,
+        "display_name": "2 Socky S04E18 - A zkouška vkusu CZ Dabing",
+        "video_id": 26534105
       }
     ],
     "prepared_not_upload_ready": [
@@ -38347,8 +38527,8 @@
   },
   "language_whisper_statuses": {
     "disabled": 71183,
-    "no_stream": 37,
-    "ok": 3032,
-    "resolve_failed": 276
+    "resolve_failed": 276,
+    "ok": 3052,
+    "no_stream": 37
   }
 }
