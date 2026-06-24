@@ -1,19 +1,75 @@
 {
   "counts": {
-    "backlog_episodes": 3000,
+    "backlog_episodes": 13,
     "manifest_upload_ready_episodes": 2260,
-    "uploaded_episodes": 5493,
+    "uploaded_episodes": 5586,
     "prepared_source_episodes": 10553,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 2806,
-    "language_audit_rows": 108517,
-    "language_queue_sources": 31324,
+    "language_audit_rows": 77592,
+    "language_queue_sources": 2644,
     "language_audited_sources": 72412,
     "language_whisper_attempted_sources": 3345,
-    "language_pending_whisper_sources": 31324
+    "language_pending_whisper_sources": 2624
   },
   "workflow_runs": [
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-24T01:16:14Z",
+      "databaseId": 28068376952,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-24T01:11:48Z",
+      "databaseId": 28068205647,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-24T01:09:17Z",
+      "databaseId": 28068112314,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "refresh-backlog"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-24T01:08:06Z",
+      "databaseId": 28068069689,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-24T01:06:47Z",
+      "databaseId": 28068023146,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-24T01:00:36Z",
+      "databaseId": 28067775404,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-06-24T00:53:02Z",
+      "databaseId": 28067483476,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "sync"
+    },
     {
       "conclusion": "",
       "createdAt": "2026-06-24T00:51:38Z",
@@ -31,11 +87,11 @@
       "workflowName": "ops-status"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-06-24T00:40:57Z",
       "databaseId": 28067018464,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -117,168 +173,24 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "sync"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-24T00:04:17Z",
-      "databaseId": 28065600095,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-23T23:54:59Z",
-      "databaseId": 28065224040,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-06-23T23:54:37Z",
-      "databaseId": 28065210238,
-      "headBranch": "main",
-      "status": "pending",
-      "workflowName": "prepare-sources"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-23T23:53:05Z",
-      "databaseId": 28065149577,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-23T23:51:50Z",
-      "databaseId": 28065098619,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-23T23:50:39Z",
-      "databaseId": 28065050017,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-23T23:50:12Z",
-      "databaseId": 28065029859,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
     }
   ],
   "gaps": {
-    "backlog_without_source_plan": [
-      3581,
-      3582,
-      3583,
-      3584,
-      3585,
-      3586,
-      3587,
-      3588,
-      3589,
-      3590,
-      3591,
-      3592,
-      3593,
-      3594,
-      3595,
-      3596,
-      3597,
-      3598,
-      3602,
-      3603,
-      3604,
-      3605,
-      3606,
-      3607,
-      3608,
-      3609,
-      3610,
-      3611,
-      3612,
-      3613,
-      3614,
-      3615,
-      3616,
-      3617,
-      3618,
-      3619,
-      3620,
-      3621,
-      3622,
-      3623,
-      3624,
-      3625,
-      3626,
-      3627,
-      3628,
-      4689,
-      4690,
-      4691,
-      4692,
-      4693
-    ],
+    "backlog_without_source_plan": [],
     "backlog_without_episode_description": [
-      3070,
-      3581,
-      3582,
-      3583,
-      3584,
-      3585,
-      3586,
-      3587,
-      3588,
-      3589,
-      3590,
-      3591,
-      3592,
-      3593,
-      3594,
-      3595,
-      3596,
-      3597,
-      3598,
-      3599,
-      3600,
-      3601,
-      3602,
-      3603,
-      3604,
-      3605,
-      3606,
-      3607,
-      3608,
-      3609,
-      3610,
-      3611,
-      3612,
-      3613,
-      3614,
-      3615,
-      3616,
-      3617,
-      3618,
-      3619,
-      3620,
-      3621,
-      3622,
-      3623,
-      3624,
-      3625,
-      3626,
-      3627,
-      3628,
-      3778
+      37494,
+      47271,
+      47301,
+      47302,
+      47305,
+      47310,
+      47340,
+      47344,
+      47357,
+      47373,
+      47374,
+      47379,
+      47389
     ],
     "uploaded_without_gemma_description": [
       {
@@ -7952,6 +7864,36 @@
         "video_id": 26378868
       },
       {
+        "episode_id": 162486,
+        "display_name": "It's Always Sunny in Philadelphia S01E01 - 1. epizoda CZ Dabing",
+        "video_id": 26379049
+      },
+      {
+        "episode_id": 162488,
+        "display_name": "It's Always Sunny in Philadelphia S01E04 - 4. epizoda CZ Dabing",
+        "video_id": 26379416
+      },
+      {
+        "episode_id": 162490,
+        "display_name": "It's Always Sunny in Philadelphia S01E06 - 6. epizoda CZ Dabing",
+        "video_id": 26379722
+      },
+      {
+        "episode_id": 31134,
+        "display_name": "Koruna S01E01 - Wolfertonská senzace CZ Dabing",
+        "video_id": 26379964
+      },
+      {
+        "episode_id": 31136,
+        "display_name": "Koruna S01E03 - Windsor CZ Dabing",
+        "video_id": 26380163
+      },
+      {
+        "episode_id": 31138,
+        "display_name": "Koruna S01E05 - Kouř a zrcadla CZ Dabing",
+        "video_id": 26380228
+      },
+      {
         "episode_id": 7689,
         "display_name": "Jack Reacher S03E04 - Dominique CZ Dabing",
         "video_id": 26378358
@@ -7990,6 +7932,441 @@
         "episode_id": 43769,
         "display_name": "Šílenci z Manhattanu  S01E08 - Tulákova značka CZ Dabing",
         "video_id": 26379005
+      },
+      {
+        "episode_id": 43771,
+        "display_name": "Šílenci z Manhattanu  S01E10 - Prodloužený víkend CZ Dabing",
+        "video_id": 26379059
+      },
+      {
+        "episode_id": 43777,
+        "display_name": "Šílenci z Manhattanu  S02E03 - Dobrodinec CZ Dabing",
+        "video_id": 26379083
+      },
+      {
+        "episode_id": 43779,
+        "display_name": "Šílenci z Manhattanu  S02E05 - Nová holka CZ Dabing",
+        "video_id": 26379140
+      },
+      {
+        "episode_id": 43781,
+        "display_name": "Šílenci z Manhattanu  S02E07 - Zlaté housle CZ Dabing",
+        "video_id": 26379228
+      },
+      {
+        "episode_id": 43783,
+        "display_name": "Šílenci z Manhattanu  S02E09 - Volno na půl roku CZ Dabing",
+        "video_id": 26379285
+      },
+      {
+        "episode_id": 43785,
+        "display_name": "Šílenci z Manhattanu  S02E11 - Kombinéza CZ Dabing",
+        "video_id": 26379370
+      },
+      {
+        "episode_id": 44879,
+        "display_name": "Scrubs: Doktůrci S01E14 - Moje závislost CZ Dabing",
+        "video_id": 26379436
+      },
+      {
+        "episode_id": 44881,
+        "display_name": "Scrubs: Doktůrci S01E16 - Můj těžkej nářez CZ Dabing",
+        "video_id": 26379450
+      },
+      {
+        "episode_id": 44883,
+        "display_name": "Scrubs: Doktůrci S01E18 - Moje blues CZ Dabing",
+        "video_id": 26379465
+      },
+      {
+        "episode_id": 44885,
+        "display_name": "Scrubs: Doktůrci S01E20 - Moje nejhlubší přesvědčení CZ Dabing",
+        "video_id": 26379525
+      },
+      {
+        "episode_id": 44887,
+        "display_name": "Scrubs: Doktůrci S01E22 - Moje příhoda CZ Dabing",
+        "video_id": 26379585
+      },
+      {
+        "episode_id": 45015,
+        "display_name": "Scrubs: Doktůrci S01E24 - Můj poslední den CZ Dabing",
+        "video_id": 26379659
+      },
+      {
+        "episode_id": 44889,
+        "display_name": "Scrubs: Doktůrci S02E07 - Můj první krok CZ Dabing",
+        "video_id": 26379671
+      },
+      {
+        "episode_id": 44877,
+        "display_name": "Scrubs: Doktůrci S02E09 - Můj šťastný den CZ Dabing",
+        "video_id": 26379678
+      },
+      {
+        "episode_id": 44891,
+        "display_name": "Scrubs: Doktůrci S02E11 - Můj sex bez závazků CZ Dabing",
+        "video_id": 26379721
+      },
+      {
+        "episode_id": 44893,
+        "display_name": "Scrubs: Doktůrci S02E13 - Moje filozofie CZ Dabing",
+        "video_id": 26379766
+      },
+      {
+        "episode_id": 44895,
+        "display_name": "Scrubs: Doktůrci S02E15 - Jeho příběh CZ Dabing",
+        "video_id": 26379814
+      },
+      {
+        "episode_id": 44897,
+        "display_name": "Scrubs: Doktůrci S02E17 - Můj vlastní soukromý lékař CZ Dabing",
+        "video_id": 26379864
+      },
+      {
+        "episode_id": 44899,
+        "display_name": "Scrubs: Doktůrci S02E20 - Moje překládání CZ Dabing",
+        "video_id": 26379917
+      },
+      {
+        "episode_id": 44901,
+        "display_name": "Scrubs: Doktůrci S02E22 - Moje vysněné zaměstnání CZ Dabing",
+        "video_id": 26379946
+      },
+      {
+        "episode_id": 44903,
+        "display_name": "Scrubs: Doktůrci S03E03 - Moje bílá velryba CZ Dabing",
+        "video_id": 26379960
+      },
+      {
+        "episode_id": 44905,
+        "display_name": "Scrubs: Doktůrci S03E04 - Moje šťastná noc CZ Dabing",
+        "video_id": 26379999
+      },
+      {
+        "episode_id": 44907,
+        "display_name": "Scrubs: Doktůrci S03E07 - Mých patnáct vteřin CZ Dabing",
+        "video_id": 26380059
+      },
+      {
+        "episode_id": 44909,
+        "display_name": "Scrubs: Doktůrci S03E09 - Mé nemravné tajemství CZ Dabing",
+        "video_id": 26380104
+      },
+      {
+        "episode_id": 44911,
+        "display_name": "Scrubs: Doktůrci S03E11 - Můj první rozchod CZ Dabing",
+        "video_id": 26380159
+      },
+      {
+        "episode_id": 44913,
+        "display_name": "Scrubs: Doktůrci S03E14 - Můj průšvih CZ Dabing",
+        "video_id": 26380169
+      },
+      {
+        "episode_id": 44915,
+        "display_name": "Scrubs: Doktůrci S03E19 - Mé milosrdné lži CZ Dabing",
+        "video_id": 26380178
+      },
+      {
+        "episode_id": 44917,
+        "display_name": "Scrubs: Doktůrci S04E01 - Moje nová pozice CZ Dabing",
+        "video_id": 26380217
+      },
+      {
+        "episode_id": 44919,
+        "display_name": "Scrubs: Doktůrci S04E03 - Moje nová hra CZ Dabing",
+        "video_id": 26380276
+      },
+      {
+        "episode_id": 31140,
+        "display_name": "Koruna S01E07 - Scientia potentia est CZ Dabing",
+        "video_id": 26380432
+      },
+      {
+        "episode_id": 31142,
+        "display_name": "Koruna S01E09 - Atentátníci CZ Dabing",
+        "video_id": 26380624
+      },
+      {
+        "episode_id": 15732,
+        "display_name": "Koruna S02E02 - Mezi muži CZ Dabing",
+        "video_id": 26380802
+      },
+      {
+        "episode_id": 15734,
+        "display_name": "Koruna S02E04 - Beryl CZ Dabing",
+        "video_id": 26381022
+      },
+      {
+        "episode_id": 15736,
+        "display_name": "Koruna S02E05 - Loutky CZ Dabing",
+        "video_id": 26381139
+      },
+      {
+        "episode_id": 15738,
+        "display_name": "Koruna S02E08 - Drahá Jacqueline CZ Dabing",
+        "video_id": 26381295
+      },
+      {
+        "episode_id": 15740,
+        "display_name": "Koruna S02E09 - Paterfamilias CZ Dabing",
+        "video_id": 26381539
+      },
+      {
+        "episode_id": 15742,
+        "display_name": "Koruna S03E02 - Margaretologie CZ Dabing",
+        "video_id": 26381748
+      },
+      {
+        "episode_id": 15744,
+        "display_name": "Koruna S03E04 - Bubíšek CZ Dabing",
+        "video_id": 26381845
+      },
+      {
+        "episode_id": 15746,
+        "display_name": "Koruna S03E06 - Tywysog Cymru CZ Dabing",
+        "video_id": 26381978
+      },
+      {
+        "episode_id": 15748,
+        "display_name": "Koruna S03E08 - Rozkolísaný člověk CZ Dabing",
+        "video_id": 26382064
+      },
+      {
+        "episode_id": 15750,
+        "display_name": "Koruna S03E10 - Cri de Coeur CZ Dabing",
+        "video_id": 26382197
+      },
+      {
+        "episode_id": 31144,
+        "display_name": "Koruna S04E01 - Osobní strážce CZ Dabing",
+        "video_id": 26382424
+      },
+      {
+        "episode_id": 17994,
+        "display_name": "Koruna S04E02 - Balmoralská zkouška CZ Dabing",
+        "video_id": 26382657
+      },
+      {
+        "episode_id": 31146,
+        "display_name": "Koruna S04E04 - Oblíbenci CZ Dabing",
+        "video_id": 26382933
+      },
+      {
+        "episode_id": 31148,
+        "display_name": "Koruna S04E06 - Země nikoho CZ Dabing",
+        "video_id": 26383226
+      },
+      {
+        "episode_id": 44921,
+        "display_name": "Scrubs: Doktůrci S04E05 - Její příběh CZ Dabing",
+        "video_id": 26380327
+      },
+      {
+        "episode_id": 44981,
+        "display_name": "Scrubs: Doktůrci S04E06 - Můj dort CZ Dabing",
+        "video_id": 26380361
+      },
+      {
+        "episode_id": 44923,
+        "display_name": "Scrubs: Doktůrci S04E10 - Moje potíže se ženami CZ Dabing",
+        "video_id": 26380489
+      },
+      {
+        "episode_id": 44925,
+        "display_name": "Scrubs: Doktůrci S04E12 - Můj nejlepší okamžik CZ Dabing",
+        "video_id": 26380555
+      },
+      {
+        "episode_id": 44927,
+        "display_name": "Scrubs: Doktůrci S04E15 - Má pokrytecká přísaha CZ Dabing",
+        "video_id": 26380610
+      },
+      {
+        "episode_id": 44929,
+        "display_name": "Scrubs: Doktůrci S04E16 - Moje karanténa CZ Dabing",
+        "video_id": 26380623
+      },
+      {
+        "episode_id": 44931,
+        "display_name": "Scrubs: Doktůrci S04E20 - Můj šéf a holič zdarma CZ Dabing",
+        "video_id": 26380658
+      },
+      {
+        "episode_id": 44933,
+        "display_name": "Scrubs: Doktůrci S04E22 - Můj velký krok CZ Dabing",
+        "video_id": 26380709
+      },
+      {
+        "episode_id": 44935,
+        "display_name": "Scrubs: Doktůrci S04E24 - Moje projížďka CZ Dabing",
+        "video_id": 26380770
+      },
+      {
+        "episode_id": 44937,
+        "display_name": "Scrubs: Doktůrci S05E02 - Můj rituál dospělosti CZ Dabing",
+        "video_id": 26380816
+      },
+      {
+        "episode_id": 44939,
+        "display_name": "Scrubs: Doktůrci S05E04 - Můj tenisbal CZ Dabing",
+        "video_id": 26380873
+      },
+      {
+        "episode_id": 45017,
+        "display_name": "Scrubs: Doktůrci S05E06 - Můj pokřivený pohled CZ Dabing",
+        "video_id": 26380940
+      },
+      {
+        "episode_id": 44983,
+        "display_name": "Scrubs: Doktůrci S05E07 - Moje cesta domů CZ Dabing",
+        "video_id": 26381002
+      },
+      {
+        "episode_id": 44941,
+        "display_name": "Scrubs: Doktůrci S05E09 - Moje rady do života CZ Dabing",
+        "video_id": 26381026
+      },
+      {
+        "episode_id": 44943,
+        "display_name": "Scrubs: Doktůrci S05E12 - Můj Kabrňák CZ Dabing",
+        "video_id": 26381046
+      },
+      {
+        "episode_id": 44945,
+        "display_name": "Scrubs: Doktůrci S05E14 - Moje osobní peklo CZ Dabing",
+        "video_id": 26381096
+      },
+      {
+        "episode_id": 44947,
+        "display_name": "Scrubs: Doktůrci S05E15 - Moje zvláštní péče CZ Dabing",
+        "video_id": 26381165
+      },
+      {
+        "episode_id": 44949,
+        "display_name": "Scrubs: Doktůrci S05E18 - Můj nový oblek CZ Dabing",
+        "video_id": 26381240
+      },
+      {
+        "episode_id": 44985,
+        "display_name": "Scrubs: Doktůrci S05E20 - Můj oběd CZ Dabing",
+        "video_id": 26381275
+      },
+      {
+        "episode_id": 44951,
+        "display_name": "Scrubs: Doktůrci S05E21 - Můj padlý idol CZ Dabing",
+        "video_id": 26381297
+      },
+      {
+        "episode_id": 44953,
+        "display_name": "Scrubs: Doktůrci S05E23 - Moje uroložka CZ Dabing",
+        "video_id": 26381329
+      },
+      {
+        "episode_id": 44955,
+        "display_name": "Scrubs: Doktůrci S06E03 - Moje kafe CZ Dabing",
+        "video_id": 26381394
+      },
+      {
+        "episode_id": 44957,
+        "display_name": "Scrubs: Doktůrci S06E05 - Moje bohatá kamarádka CZ Dabing",
+        "video_id": 26381567
+      },
+      {
+        "episode_id": 44959,
+        "display_name": "Scrubs: Doktůrci S06E07 - Jeho příběh IV CZ Dabing",
+        "video_id": 26381618
+      },
+      {
+        "episode_id": 44961,
+        "display_name": "Scrubs: Doktůrci S06E09 - Moje perspektiva CZ Dabing",
+        "video_id": 26381695
+      },
+      {
+        "episode_id": 44963,
+        "display_name": "Scrubs: Doktůrci S06E13 - Můj mundur CZ Dabing",
+        "video_id": 26381769
+      },
+      {
+        "episode_id": 44965,
+        "display_name": "Scrubs: Doktůrci S06E15 - Moje dlouhé loučení CZ Dabing",
+        "video_id": 26381830
+      },
+      {
+        "episode_id": 44967,
+        "display_name": "Scrubs: Doktůrci S06E17 - Jejich příběh CZ Dabing",
+        "video_id": 26381850
+      },
+      {
+        "episode_id": 44969,
+        "display_name": "Scrubs: Doktůrci S06E20 - Moje cesta za poznáním CZ Dabing",
+        "video_id": 26381878
+      },
+      {
+        "episode_id": 44987,
+        "display_name": "Scrubs: Doktůrci S06E22 - Moje bezvýchodná situace CZ Dabing",
+        "video_id": 26381957
+      },
+      {
+        "episode_id": 44971,
+        "display_name": "Scrubs: Doktůrci S07E01 - Můj největší nepřítel CZ Dabing",
+        "video_id": 26382021
+      },
+      {
+        "episode_id": 44991,
+        "display_name": "Scrubs: Doktůrci S07E07 - Moje vina CZ Dabing",
+        "video_id": 26382050
+      },
+      {
+        "episode_id": 44973,
+        "display_name": "Scrubs: Doktůrci S07E09 - Moje klika CZ Dabing",
+        "video_id": 26382067
+      },
+      {
+        "episode_id": 44989,
+        "display_name": "Scrubs: Doktůrci S07E10 - Moje ztráta času CZ Dabing",
+        "video_id": 26382109
+      },
+      {
+        "episode_id": 44993,
+        "display_name": "Scrubs: Doktůrci S08E03 - Moje obcházení systému CZ Dabing",
+        "video_id": 26382183
+      },
+      {
+        "episode_id": 45011,
+        "display_name": "Scrubs: Doktůrci S08E06 - Moje sušenkové kalhoty CZ Dabing",
+        "video_id": 26382218
+      },
+      {
+        "episode_id": 44995,
+        "display_name": "Scrubs: Doktůrci S08E07 - Moje nová role CZ Dabing",
+        "video_id": 26382253
+      },
+      {
+        "episode_id": 44997,
+        "display_name": "Scrubs: Doktůrci S08E10 - Moje komediální show CZ Dabing",
+        "video_id": 26382299
+      },
+      {
+        "episode_id": 44999,
+        "display_name": "Scrubs: Doktůrci S08E12 - Jejich příběh II CZ Dabing",
+        "video_id": 26382345
+      },
+      {
+        "episode_id": 45001,
+        "display_name": "Scrubs: Doktůrci S08E14 - Moje duše v plamenech (1) CZ Dabing",
+        "video_id": 26382402
+      },
+      {
+        "episode_id": 45003,
+        "display_name": "Scrubs: Doktůrci S08E16 - Můj bratranec CZ Dabing",
+        "video_id": 26382413
+      },
+      {
+        "episode_id": 45013,
+        "display_name": "Scrubs: Doktůrci S08E17 - Moje největší starost CZ Dabing",
+        "video_id": 26382428
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -26889,6 +27266,36 @@
         "video_id": 26378868
       },
       {
+        "episode_id": 162486,
+        "display_name": "It's Always Sunny in Philadelphia S01E01 - 1. epizoda CZ Dabing",
+        "video_id": 26379049
+      },
+      {
+        "episode_id": 162488,
+        "display_name": "It's Always Sunny in Philadelphia S01E04 - 4. epizoda CZ Dabing",
+        "video_id": 26379416
+      },
+      {
+        "episode_id": 162490,
+        "display_name": "It's Always Sunny in Philadelphia S01E06 - 6. epizoda CZ Dabing",
+        "video_id": 26379722
+      },
+      {
+        "episode_id": 31134,
+        "display_name": "Koruna S01E01 - Wolfertonská senzace CZ Dabing",
+        "video_id": 26379964
+      },
+      {
+        "episode_id": 31136,
+        "display_name": "Koruna S01E03 - Windsor CZ Dabing",
+        "video_id": 26380163
+      },
+      {
+        "episode_id": 31138,
+        "display_name": "Koruna S01E05 - Kouř a zrcadla CZ Dabing",
+        "video_id": 26380228
+      },
+      {
         "episode_id": 7689,
         "display_name": "Jack Reacher S03E04 - Dominique CZ Dabing",
         "video_id": 26378358
@@ -26927,6 +27334,441 @@
         "episode_id": 43769,
         "display_name": "Šílenci z Manhattanu  S01E08 - Tulákova značka CZ Dabing",
         "video_id": 26379005
+      },
+      {
+        "episode_id": 43771,
+        "display_name": "Šílenci z Manhattanu  S01E10 - Prodloužený víkend CZ Dabing",
+        "video_id": 26379059
+      },
+      {
+        "episode_id": 43777,
+        "display_name": "Šílenci z Manhattanu  S02E03 - Dobrodinec CZ Dabing",
+        "video_id": 26379083
+      },
+      {
+        "episode_id": 43779,
+        "display_name": "Šílenci z Manhattanu  S02E05 - Nová holka CZ Dabing",
+        "video_id": 26379140
+      },
+      {
+        "episode_id": 43781,
+        "display_name": "Šílenci z Manhattanu  S02E07 - Zlaté housle CZ Dabing",
+        "video_id": 26379228
+      },
+      {
+        "episode_id": 43783,
+        "display_name": "Šílenci z Manhattanu  S02E09 - Volno na půl roku CZ Dabing",
+        "video_id": 26379285
+      },
+      {
+        "episode_id": 43785,
+        "display_name": "Šílenci z Manhattanu  S02E11 - Kombinéza CZ Dabing",
+        "video_id": 26379370
+      },
+      {
+        "episode_id": 44879,
+        "display_name": "Scrubs: Doktůrci S01E14 - Moje závislost CZ Dabing",
+        "video_id": 26379436
+      },
+      {
+        "episode_id": 44881,
+        "display_name": "Scrubs: Doktůrci S01E16 - Můj těžkej nářez CZ Dabing",
+        "video_id": 26379450
+      },
+      {
+        "episode_id": 44883,
+        "display_name": "Scrubs: Doktůrci S01E18 - Moje blues CZ Dabing",
+        "video_id": 26379465
+      },
+      {
+        "episode_id": 44885,
+        "display_name": "Scrubs: Doktůrci S01E20 - Moje nejhlubší přesvědčení CZ Dabing",
+        "video_id": 26379525
+      },
+      {
+        "episode_id": 44887,
+        "display_name": "Scrubs: Doktůrci S01E22 - Moje příhoda CZ Dabing",
+        "video_id": 26379585
+      },
+      {
+        "episode_id": 45015,
+        "display_name": "Scrubs: Doktůrci S01E24 - Můj poslední den CZ Dabing",
+        "video_id": 26379659
+      },
+      {
+        "episode_id": 44889,
+        "display_name": "Scrubs: Doktůrci S02E07 - Můj první krok CZ Dabing",
+        "video_id": 26379671
+      },
+      {
+        "episode_id": 44877,
+        "display_name": "Scrubs: Doktůrci S02E09 - Můj šťastný den CZ Dabing",
+        "video_id": 26379678
+      },
+      {
+        "episode_id": 44891,
+        "display_name": "Scrubs: Doktůrci S02E11 - Můj sex bez závazků CZ Dabing",
+        "video_id": 26379721
+      },
+      {
+        "episode_id": 44893,
+        "display_name": "Scrubs: Doktůrci S02E13 - Moje filozofie CZ Dabing",
+        "video_id": 26379766
+      },
+      {
+        "episode_id": 44895,
+        "display_name": "Scrubs: Doktůrci S02E15 - Jeho příběh CZ Dabing",
+        "video_id": 26379814
+      },
+      {
+        "episode_id": 44897,
+        "display_name": "Scrubs: Doktůrci S02E17 - Můj vlastní soukromý lékař CZ Dabing",
+        "video_id": 26379864
+      },
+      {
+        "episode_id": 44899,
+        "display_name": "Scrubs: Doktůrci S02E20 - Moje překládání CZ Dabing",
+        "video_id": 26379917
+      },
+      {
+        "episode_id": 44901,
+        "display_name": "Scrubs: Doktůrci S02E22 - Moje vysněné zaměstnání CZ Dabing",
+        "video_id": 26379946
+      },
+      {
+        "episode_id": 44903,
+        "display_name": "Scrubs: Doktůrci S03E03 - Moje bílá velryba CZ Dabing",
+        "video_id": 26379960
+      },
+      {
+        "episode_id": 44905,
+        "display_name": "Scrubs: Doktůrci S03E04 - Moje šťastná noc CZ Dabing",
+        "video_id": 26379999
+      },
+      {
+        "episode_id": 44907,
+        "display_name": "Scrubs: Doktůrci S03E07 - Mých patnáct vteřin CZ Dabing",
+        "video_id": 26380059
+      },
+      {
+        "episode_id": 44909,
+        "display_name": "Scrubs: Doktůrci S03E09 - Mé nemravné tajemství CZ Dabing",
+        "video_id": 26380104
+      },
+      {
+        "episode_id": 44911,
+        "display_name": "Scrubs: Doktůrci S03E11 - Můj první rozchod CZ Dabing",
+        "video_id": 26380159
+      },
+      {
+        "episode_id": 44913,
+        "display_name": "Scrubs: Doktůrci S03E14 - Můj průšvih CZ Dabing",
+        "video_id": 26380169
+      },
+      {
+        "episode_id": 44915,
+        "display_name": "Scrubs: Doktůrci S03E19 - Mé milosrdné lži CZ Dabing",
+        "video_id": 26380178
+      },
+      {
+        "episode_id": 44917,
+        "display_name": "Scrubs: Doktůrci S04E01 - Moje nová pozice CZ Dabing",
+        "video_id": 26380217
+      },
+      {
+        "episode_id": 44919,
+        "display_name": "Scrubs: Doktůrci S04E03 - Moje nová hra CZ Dabing",
+        "video_id": 26380276
+      },
+      {
+        "episode_id": 31140,
+        "display_name": "Koruna S01E07 - Scientia potentia est CZ Dabing",
+        "video_id": 26380432
+      },
+      {
+        "episode_id": 31142,
+        "display_name": "Koruna S01E09 - Atentátníci CZ Dabing",
+        "video_id": 26380624
+      },
+      {
+        "episode_id": 15732,
+        "display_name": "Koruna S02E02 - Mezi muži CZ Dabing",
+        "video_id": 26380802
+      },
+      {
+        "episode_id": 15734,
+        "display_name": "Koruna S02E04 - Beryl CZ Dabing",
+        "video_id": 26381022
+      },
+      {
+        "episode_id": 15736,
+        "display_name": "Koruna S02E05 - Loutky CZ Dabing",
+        "video_id": 26381139
+      },
+      {
+        "episode_id": 15738,
+        "display_name": "Koruna S02E08 - Drahá Jacqueline CZ Dabing",
+        "video_id": 26381295
+      },
+      {
+        "episode_id": 15740,
+        "display_name": "Koruna S02E09 - Paterfamilias CZ Dabing",
+        "video_id": 26381539
+      },
+      {
+        "episode_id": 15742,
+        "display_name": "Koruna S03E02 - Margaretologie CZ Dabing",
+        "video_id": 26381748
+      },
+      {
+        "episode_id": 15744,
+        "display_name": "Koruna S03E04 - Bubíšek CZ Dabing",
+        "video_id": 26381845
+      },
+      {
+        "episode_id": 15746,
+        "display_name": "Koruna S03E06 - Tywysog Cymru CZ Dabing",
+        "video_id": 26381978
+      },
+      {
+        "episode_id": 15748,
+        "display_name": "Koruna S03E08 - Rozkolísaný člověk CZ Dabing",
+        "video_id": 26382064
+      },
+      {
+        "episode_id": 15750,
+        "display_name": "Koruna S03E10 - Cri de Coeur CZ Dabing",
+        "video_id": 26382197
+      },
+      {
+        "episode_id": 31144,
+        "display_name": "Koruna S04E01 - Osobní strážce CZ Dabing",
+        "video_id": 26382424
+      },
+      {
+        "episode_id": 17994,
+        "display_name": "Koruna S04E02 - Balmoralská zkouška CZ Dabing",
+        "video_id": 26382657
+      },
+      {
+        "episode_id": 31146,
+        "display_name": "Koruna S04E04 - Oblíbenci CZ Dabing",
+        "video_id": 26382933
+      },
+      {
+        "episode_id": 31148,
+        "display_name": "Koruna S04E06 - Země nikoho CZ Dabing",
+        "video_id": 26383226
+      },
+      {
+        "episode_id": 44921,
+        "display_name": "Scrubs: Doktůrci S04E05 - Její příběh CZ Dabing",
+        "video_id": 26380327
+      },
+      {
+        "episode_id": 44981,
+        "display_name": "Scrubs: Doktůrci S04E06 - Můj dort CZ Dabing",
+        "video_id": 26380361
+      },
+      {
+        "episode_id": 44923,
+        "display_name": "Scrubs: Doktůrci S04E10 - Moje potíže se ženami CZ Dabing",
+        "video_id": 26380489
+      },
+      {
+        "episode_id": 44925,
+        "display_name": "Scrubs: Doktůrci S04E12 - Můj nejlepší okamžik CZ Dabing",
+        "video_id": 26380555
+      },
+      {
+        "episode_id": 44927,
+        "display_name": "Scrubs: Doktůrci S04E15 - Má pokrytecká přísaha CZ Dabing",
+        "video_id": 26380610
+      },
+      {
+        "episode_id": 44929,
+        "display_name": "Scrubs: Doktůrci S04E16 - Moje karanténa CZ Dabing",
+        "video_id": 26380623
+      },
+      {
+        "episode_id": 44931,
+        "display_name": "Scrubs: Doktůrci S04E20 - Můj šéf a holič zdarma CZ Dabing",
+        "video_id": 26380658
+      },
+      {
+        "episode_id": 44933,
+        "display_name": "Scrubs: Doktůrci S04E22 - Můj velký krok CZ Dabing",
+        "video_id": 26380709
+      },
+      {
+        "episode_id": 44935,
+        "display_name": "Scrubs: Doktůrci S04E24 - Moje projížďka CZ Dabing",
+        "video_id": 26380770
+      },
+      {
+        "episode_id": 44937,
+        "display_name": "Scrubs: Doktůrci S05E02 - Můj rituál dospělosti CZ Dabing",
+        "video_id": 26380816
+      },
+      {
+        "episode_id": 44939,
+        "display_name": "Scrubs: Doktůrci S05E04 - Můj tenisbal CZ Dabing",
+        "video_id": 26380873
+      },
+      {
+        "episode_id": 45017,
+        "display_name": "Scrubs: Doktůrci S05E06 - Můj pokřivený pohled CZ Dabing",
+        "video_id": 26380940
+      },
+      {
+        "episode_id": 44983,
+        "display_name": "Scrubs: Doktůrci S05E07 - Moje cesta domů CZ Dabing",
+        "video_id": 26381002
+      },
+      {
+        "episode_id": 44941,
+        "display_name": "Scrubs: Doktůrci S05E09 - Moje rady do života CZ Dabing",
+        "video_id": 26381026
+      },
+      {
+        "episode_id": 44943,
+        "display_name": "Scrubs: Doktůrci S05E12 - Můj Kabrňák CZ Dabing",
+        "video_id": 26381046
+      },
+      {
+        "episode_id": 44945,
+        "display_name": "Scrubs: Doktůrci S05E14 - Moje osobní peklo CZ Dabing",
+        "video_id": 26381096
+      },
+      {
+        "episode_id": 44947,
+        "display_name": "Scrubs: Doktůrci S05E15 - Moje zvláštní péče CZ Dabing",
+        "video_id": 26381165
+      },
+      {
+        "episode_id": 44949,
+        "display_name": "Scrubs: Doktůrci S05E18 - Můj nový oblek CZ Dabing",
+        "video_id": 26381240
+      },
+      {
+        "episode_id": 44985,
+        "display_name": "Scrubs: Doktůrci S05E20 - Můj oběd CZ Dabing",
+        "video_id": 26381275
+      },
+      {
+        "episode_id": 44951,
+        "display_name": "Scrubs: Doktůrci S05E21 - Můj padlý idol CZ Dabing",
+        "video_id": 26381297
+      },
+      {
+        "episode_id": 44953,
+        "display_name": "Scrubs: Doktůrci S05E23 - Moje uroložka CZ Dabing",
+        "video_id": 26381329
+      },
+      {
+        "episode_id": 44955,
+        "display_name": "Scrubs: Doktůrci S06E03 - Moje kafe CZ Dabing",
+        "video_id": 26381394
+      },
+      {
+        "episode_id": 44957,
+        "display_name": "Scrubs: Doktůrci S06E05 - Moje bohatá kamarádka CZ Dabing",
+        "video_id": 26381567
+      },
+      {
+        "episode_id": 44959,
+        "display_name": "Scrubs: Doktůrci S06E07 - Jeho příběh IV CZ Dabing",
+        "video_id": 26381618
+      },
+      {
+        "episode_id": 44961,
+        "display_name": "Scrubs: Doktůrci S06E09 - Moje perspektiva CZ Dabing",
+        "video_id": 26381695
+      },
+      {
+        "episode_id": 44963,
+        "display_name": "Scrubs: Doktůrci S06E13 - Můj mundur CZ Dabing",
+        "video_id": 26381769
+      },
+      {
+        "episode_id": 44965,
+        "display_name": "Scrubs: Doktůrci S06E15 - Moje dlouhé loučení CZ Dabing",
+        "video_id": 26381830
+      },
+      {
+        "episode_id": 44967,
+        "display_name": "Scrubs: Doktůrci S06E17 - Jejich příběh CZ Dabing",
+        "video_id": 26381850
+      },
+      {
+        "episode_id": 44969,
+        "display_name": "Scrubs: Doktůrci S06E20 - Moje cesta za poznáním CZ Dabing",
+        "video_id": 26381878
+      },
+      {
+        "episode_id": 44987,
+        "display_name": "Scrubs: Doktůrci S06E22 - Moje bezvýchodná situace CZ Dabing",
+        "video_id": 26381957
+      },
+      {
+        "episode_id": 44971,
+        "display_name": "Scrubs: Doktůrci S07E01 - Můj největší nepřítel CZ Dabing",
+        "video_id": 26382021
+      },
+      {
+        "episode_id": 44991,
+        "display_name": "Scrubs: Doktůrci S07E07 - Moje vina CZ Dabing",
+        "video_id": 26382050
+      },
+      {
+        "episode_id": 44973,
+        "display_name": "Scrubs: Doktůrci S07E09 - Moje klika CZ Dabing",
+        "video_id": 26382067
+      },
+      {
+        "episode_id": 44989,
+        "display_name": "Scrubs: Doktůrci S07E10 - Moje ztráta času CZ Dabing",
+        "video_id": 26382109
+      },
+      {
+        "episode_id": 44993,
+        "display_name": "Scrubs: Doktůrci S08E03 - Moje obcházení systému CZ Dabing",
+        "video_id": 26382183
+      },
+      {
+        "episode_id": 45011,
+        "display_name": "Scrubs: Doktůrci S08E06 - Moje sušenkové kalhoty CZ Dabing",
+        "video_id": 26382218
+      },
+      {
+        "episode_id": 44995,
+        "display_name": "Scrubs: Doktůrci S08E07 - Moje nová role CZ Dabing",
+        "video_id": 26382253
+      },
+      {
+        "episode_id": 44997,
+        "display_name": "Scrubs: Doktůrci S08E10 - Moje komediální show CZ Dabing",
+        "video_id": 26382299
+      },
+      {
+        "episode_id": 44999,
+        "display_name": "Scrubs: Doktůrci S08E12 - Jejich příběh II CZ Dabing",
+        "video_id": 26382345
+      },
+      {
+        "episode_id": 45001,
+        "display_name": "Scrubs: Doktůrci S08E14 - Moje duše v plamenech (1) CZ Dabing",
+        "video_id": 26382402
+      },
+      {
+        "episode_id": 45003,
+        "display_name": "Scrubs: Doktůrci S08E16 - Můj bratranec CZ Dabing",
+        "video_id": 26382413
+      },
+      {
+        "episode_id": 45013,
+        "display_name": "Scrubs: Doktůrci S08E17 - Moje největší starost CZ Dabing",
+        "video_id": 26382428
       }
     ],
     "prepared_not_upload_ready": [
@@ -27233,12 +28075,12 @@
     ]
   },
   "language_verdicts": {
-    "UNKNOWN": 2541,
-    "CZ_AUDIO": 100327,
-    "CZ_SUBTITLES_ONLY": 5061,
+    "UNKNOWN": 513,
+    "CZ_AUDIO": 74431,
+    "CZ_SUBTITLES_ONLY": 2128,
     "NOT_CZ_AUDIO": 516,
-    "SK_AUDIO": 28,
-    "PROBABLE_CZ_AUDIO": 44
+    "SK_AUDIO": 2,
+    "PROBABLE_CZ_AUDIO": 2
   },
   "language_whisper_statuses": {
     "disabled": 69067,
