@@ -27,6 +27,7 @@ LOG_PATH = REPO_ROOT / "state" / (f"sync-shard-{SHARD_ID}.log" if NUM_SHARDS > 1
 TMP_DIR = Path("/tmp")
 DESCRIPTIONS = REPO_ROOT / "plans" / "descriptions.jsonl"
 PREPARED_SOURCES = REPO_ROOT / "plans" / "prepared-episodes.jsonl"
+MIN_UPLOAD_FILE_SIZE = 300 * 1024 * 1024
 
 
 def log(message: str) -> None:
@@ -218,6 +219,21 @@ def try_candidate(episode: dict, candidate: dict, session, state: dict, *, allow
         return False
     dl_sec = round(time.monotonic() - t, 1)
     log(f"  downloaded {size / 1_000_000:,.1f} MB in {dl_sec}s")
+    if size < MIN_UPLOAD_FILE_SIZE:
+        log(
+            f"  undersize: {size} B < {MIN_UPLOAD_FILE_SIZE} B; "
+            "trying a higher-quality candidate"
+        )
+        record_failure(
+            state,
+            episode,
+            candidate,
+            f"undersize: {size} B",
+            permanent=True,
+            timing={"resolve_sec": resolve_sec, "download_sec": dl_sec},
+        )
+        tmp_path.unlink(missing_ok=True)
+        return False
 
     lang, prob, whisper_status = whisper_language(tmp_path)
     if lang and lang not in {"cs", "cz", "sk"}:

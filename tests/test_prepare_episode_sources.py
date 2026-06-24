@@ -49,3 +49,48 @@ def test_uploaded_episode_exclusions_include_ids_and_keys(tmp_path, monkeypatch)
 
     assert uploaded_ids == {10}
     assert uploaded_keys == {(2, 3, 4)}
+
+
+def test_compact_plan_retains_verified_fallback_candidates():
+    row = {
+        "episode_id": 10,
+        "tested_sources": [
+            {
+                "source_id": 1,
+                "verdict": "CZ_AUDIO",
+                "score": [1, 1080, 100, 1_000_000_000, 0, -1],
+                "signals": {
+                    "provider_probe": {
+                        "status": "ok",
+                        "streams": [{"label": "1080p", "res": 1080}],
+                    }
+                },
+            },
+            {
+                "source_id": 2,
+                "verdict": "CZ_AUDIO",
+                "score": [1, 720, 100, 800_000_000, 0, -2],
+                "signals": {
+                    "provider_probe": {
+                        "status": "ok",
+                        "streams": [{"label": "720p", "res": 720}],
+                    }
+                },
+            },
+            {
+                "source_id": 3,
+                "verdict": "UNKNOWN",
+                "score": [1, 1080, 0, 900_000_000, 0, -3],
+                "signals": {
+                    "provider_probe": {
+                        "status": "ok",
+                        "streams": [{"label": "1080p", "res": 1080}],
+                    }
+                },
+            },
+        ],
+    }
+
+    compacted = source_preparation.compact_plan_row(row)
+
+    assert [source["source_id"] for source in compacted["tested_sources"]] == [1, 2]

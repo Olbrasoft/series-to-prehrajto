@@ -6,11 +6,11 @@ on:
       series_limit:
         description: "Number of top series to export"
         required: false
-        default: "20"
+        default: "720"
       episode_limit:
         description: "Number of episodes to export"
         required: false
-        default: "240"
+        default: "3000"
       source_limit_per_episode:
         description: "Number of sources per episode"
         required: false
@@ -84,11 +84,12 @@ jobs:
             exit 2
           fi
           python src/export_backlog.py \
-            --series-limit "${{ inputs.series_limit || '20' }}" \
-            --episode-limit "${{ inputs.episode_limit || '240' }}" \
-            --source-limit-per-episode "${{ inputs.source_limit_per_episode || '12' }}"
+            --series-limit "${{ inputs.series_limit || '720' }}" \
+            --episode-limit "${{ inputs.episode_limit || '3000' }}" \
+            --source-limit-per-episode "${{ inputs.source_limit_per_episode || '12' }}" \
+            --skip-sources
           python src/export_language_audit_queue.py \
-            --episode-limit "${{ inputs.episode_limit || '240' }}" \
+            --episode-limit "${{ inputs.episode_limit || '3000' }}" \
             --source-limit-per-episode "${{ inputs.source_limit_per_episode || '12' }}" \
             || echo "language audit queue export failed; continuing with upload backlog sources"
 

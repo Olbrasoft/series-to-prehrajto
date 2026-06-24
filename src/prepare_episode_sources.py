@@ -50,7 +50,16 @@ def append_jsonl(path: Path, rows: list[dict]) -> None:
 
 
 def compact_plan_row(row: dict) -> dict:
-    return {**row, "tested_sources": []}
+    retained = []
+    for source in row.get("tested_sources") or []:
+        probe = (source.get("signals") or {}).get("provider_probe") or {}
+        if probe.get("status") != "ok" or not probe.get("streams"):
+            continue
+        if source.get("verdict") not in {"CZ_AUDIO", "PROBABLE_CZ_AUDIO"}:
+            continue
+        retained.append(source)
+    retained.sort(key=lambda source: tuple(source.get("score") or ()), reverse=True)
+    return {**row, "tested_sources": retained[:4]}
 
 
 def write_compacted_prepared(path: Path, new_rows: list[dict]) -> None:
@@ -430,6 +439,7 @@ def prepare_episode(
     selected = None
     if require_resolvable_source or use_whisper:
         audited_by_id = {int(result["source_id"]): index for index, result in enumerate(audited)}
+        verified_acceptable = []
         for preliminary in acceptable:
             source = sources_by_id[int(preliminary["source_id"])]
             verified = audit_one(
@@ -449,8 +459,10 @@ def prepare_episode(
                 continue
             if verified["verdict"] not in {"CZ_AUDIO", "PROBABLE_CZ_AUDIO"}:
                 continue
-            selected = verified
-            break
+            verified_acceptable.append(verified)
+        if verified_acceptable:
+            verified_acceptable.sort(key=lambda result: tuple(result["score"]), reverse=True)
+            selected = verified_acceptable[0]
     elif acceptable:
         selected = acceptable[0]
 

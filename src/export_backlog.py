@@ -133,6 +133,7 @@ def fetch_rows(
     uploaded_episode_ids: set[int],
     uploaded_episode_keys: set[str],
     burned_source_ids: set[int],
+    skip_sources: bool,
 ) -> list[dict[str, Any]]:
     with conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor) as cur:
         cur.execute(
@@ -222,60 +223,63 @@ def fetch_rows(
         for episode_row in episode_rows:
             if episode_count >= episode_limit:
                 break
-            with conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor) as cur:
-                cur.execute(
-                    """
-                    SELECT
-                        vs.id AS source_id,
-                        vs.external_id,
-                        vs.title AS source_title,
-                        vs.duration_sec AS source_duration_sec,
-                        vs.resolution_hint,
-                        vs.filesize_bytes,
-                        vs.view_count,
-                        vs.lang_class,
-                        vs.audio_lang,
-                        vs.audio_confidence,
-                        vs.metadata->>'url' AS source_url,
-                        row_number() OVER (
-                            ORDER BY
-                                CASE vs.lang_class WHEN 'CZ_DUB' THEN 0 WHEN 'CZ_NATIVE' THEN 1 ELSE 2 END,
-                                CASE
-                                    WHEN coalesce(vs.resolution_hint, '') ~* '(2160|4k|uhd)' THEN 4
-                                    WHEN coalesce(vs.resolution_hint, '') ~* '1080|full.?hd' THEN 3
-                                    WHEN coalesce(vs.resolution_hint, '') ~* '720|hd' THEN 2
-                                    ELSE 0
-                                END DESC,
-                                coalesce(vs.view_count, 0) DESC,
-                                vs.id
-                        ) AS source_rank
-                    FROM video_sources vs
-                    WHERE vs.episode_id = %(episode_id)s
-                      AND vs.provider_id = 2
-                      AND vs.is_alive
-                      AND vs.lang_class = ANY(%(lang_classes)s)
-                      AND vs.metadata ? 'url'
-                      AND NOT (vs.id = ANY(%(burned_source_ids)s))
-                    ORDER BY
-                        CASE vs.lang_class WHEN 'CZ_DUB' THEN 0 WHEN 'CZ_NATIVE' THEN 1 ELSE 2 END,
-                        CASE
-                            WHEN coalesce(vs.resolution_hint, '') ~* '(2160|4k|uhd)' THEN 4
-                            WHEN coalesce(vs.resolution_hint, '') ~* '1080|full.?hd' THEN 3
-                            WHEN coalesce(vs.resolution_hint, '') ~* '720|hd' THEN 2
-                            ELSE 0
-                        END DESC,
-                        coalesce(vs.view_count, 0) DESC,
-                        vs.id
-                    LIMIT %(source_limit_per_episode)s
-                    """,
-                    {
-                        "episode_id": episode_row["id"],
-                        "lang_classes": list(UPLOAD_LANG_CLASSES),
-                        "burned_source_ids": list(burned_source_ids),
-                        "source_limit_per_episode": source_limit_per_episode,
-                    },
-                )
-                source_rows = list(cur.fetchall())
+            if skip_sources:
+                source_rows = []
+            else:
+                with conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor) as cur:
+                    cur.execute(
+                        """
+                        SELECT
+                            vs.id AS source_id,
+                            vs.external_id,
+                            vs.title AS source_title,
+                            vs.duration_sec AS source_duration_sec,
+                            vs.resolution_hint,
+                            vs.filesize_bytes,
+                            vs.view_count,
+                            vs.lang_class,
+                            vs.audio_lang,
+                            vs.audio_confidence,
+                            vs.metadata->>'url' AS source_url,
+                            row_number() OVER (
+                                ORDER BY
+                                    CASE vs.lang_class WHEN 'CZ_DUB' THEN 0 WHEN 'CZ_NATIVE' THEN 1 ELSE 2 END,
+                                    CASE
+                                        WHEN coalesce(vs.resolution_hint, '') ~* '(2160|4k|uhd)' THEN 4
+                                        WHEN coalesce(vs.resolution_hint, '') ~* '1080|full.?hd' THEN 3
+                                        WHEN coalesce(vs.resolution_hint, '') ~* '720|hd' THEN 2
+                                        ELSE 0
+                                    END DESC,
+                                    coalesce(vs.view_count, 0) DESC,
+                                    vs.id
+                            ) AS source_rank
+                        FROM video_sources vs
+                        WHERE vs.episode_id = %(episode_id)s
+                          AND vs.provider_id = 2
+                          AND vs.is_alive
+                          AND vs.lang_class = ANY(%(lang_classes)s)
+                          AND vs.metadata ? 'url'
+                          AND NOT (vs.id = ANY(%(burned_source_ids)s))
+                        ORDER BY
+                            CASE vs.lang_class WHEN 'CZ_DUB' THEN 0 WHEN 'CZ_NATIVE' THEN 1 ELSE 2 END,
+                            CASE
+                                WHEN coalesce(vs.resolution_hint, '') ~* '(2160|4k|uhd)' THEN 4
+                                WHEN coalesce(vs.resolution_hint, '') ~* '1080|full.?hd' THEN 3
+                                WHEN coalesce(vs.resolution_hint, '') ~* '720|hd' THEN 2
+                                ELSE 0
+                            END DESC,
+                            coalesce(vs.view_count, 0) DESC,
+                            vs.id
+                        LIMIT %(source_limit_per_episode)s
+                        """,
+                        {
+                            "episode_id": episode_row["id"],
+                            "lang_classes": list(UPLOAD_LANG_CLASSES),
+                            "burned_source_ids": list(burned_source_ids),
+                            "source_limit_per_episode": source_limit_per_episode,
+                        },
+                    )
+                    source_rows = list(cur.fetchall())
             episode_count += 1
             if source_rows:
                 for source_row in source_rows:
@@ -381,6 +385,7 @@ def main() -> int:
     ap.add_argument("--series-limit", type=int, default=8)
     ap.add_argument("--episode-limit", type=int, default=80)
     ap.add_argument("--source-limit-per-episode", type=int, default=8)
+    ap.add_argument("--skip-sources", action="store_true")
     args = ap.parse_args()
 
     if not args.db_url:
@@ -399,6 +404,7 @@ def main() -> int:
             uploaded_episode_ids=uploaded_episode_ids,
             uploaded_episode_keys=uploaded_episode_keys,
             burned_source_ids=burned_source_ids,
+            skip_sources=args.skip_sources,
         )
     finally:
         conn.close()
