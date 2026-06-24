@@ -39,11 +39,33 @@ def latest_by_episode(rows: list[dict]) -> dict[int, dict]:
     return latest
 
 
-def merge_manifest(existing: list[dict], refreshed: list[dict], refreshed_episode_ids: set[int]) -> list[dict]:
+def episode_key(row: dict) -> tuple[int, int, int] | None:
+    if row.get("series_id") is None or row.get("season") is None or row.get("episode") is None:
+        return None
+    return (int(row["series_id"]), int(row["season"]), int(row["episode"]))
+
+
+def row_has_burned_source(row: dict, burned: set[int]) -> bool:
+    return any(int(candidate["source_id"]) in burned for candidate in row.get("candidates") or [])
+
+
+def merge_manifest(
+    existing: list[dict],
+    refreshed: list[dict],
+    refreshed_episode_ids: set[int],
+    *,
+    uploaded_episode_ids: set[int],
+    uploaded_episode_keys: set[tuple[int, int, int]],
+    burned: set[int],
+) -> list[dict]:
     rows_by_episode = {
         int(row["episode_id"]): row
         for row in existing
-        if row.get("episode_id") is not None and int(row["episode_id"]) not in refreshed_episode_ids
+        if row.get("episode_id") is not None
+        and int(row["episode_id"]) not in refreshed_episode_ids
+        and int(row["episode_id"]) not in uploaded_episode_ids
+        and episode_key(row) not in uploaded_episode_keys
+        and not row_has_burned_source(row, burned)
     }
     for row in refreshed:
         rows_by_episode[int(row["episode_id"])] = row
@@ -60,6 +82,31 @@ def latest_audits_by_source(rows: list[dict]) -> dict[int, dict]:
         if old is None or str(row.get("audited_at") or "") >= str(old.get("audited_at") or ""):
             latest[source_id] = row
     return latest
+
+
+def load_upload_state_exclusions() -> tuple[set[int], set[tuple[int, int, int]], set[int]]:
+    uploaded_ids: set[int] = set()
+    uploaded_keys: set[tuple[int, int, int]] = set()
+    burned_sources: set[int] = set()
+    paths = [REPO_ROOT / "state" / "uploaded.json"]
+    paths.extend(sorted((REPO_ROOT / "state").glob("uploaded-shard-*.json")))
+    for path in paths:
+        if not path.exists() or path.stat().st_size == 0:
+            continue
+        try:
+            state = json.loads(path.read_text(encoding="utf-8"))
+        except json.JSONDecodeError:
+            continue
+        for upload in state.get("uploads", []):
+            if upload.get("episode_id") is not None:
+                uploaded_ids.add(int(upload["episode_id"]))
+            key = episode_key(upload)
+            if key:
+                uploaded_keys.add(key)
+        for failure in state.get("failed_attempts", []):
+            if failure.get("permanent") and failure.get("source_id") is not None:
+                burned_sources.add(int(failure["source_id"]))
+    return uploaded_ids, uploaded_keys, burned_sources
 
 
 def description_indexes(rows: list[dict]) -> tuple[dict[int, dict], dict[int, dict]]:
@@ -89,6 +136,81 @@ def fallback_description_plan(episode: dict) -> dict | None:
                 "generated_description": text,
             }
     return None
+
+
+def sxe(season: int | None, episode: int | None) -> str:
+    return f"S{int(season or 0):02d}E{int(episode or 0):02d}"
+
+
+def display_name_from_plan(plan: dict) -> str:
+    base = f"{plan['series_title']} {sxe(plan.get('season'), plan.get('episode'))}"
+    subtitle = (plan.get("episode_name") or "").strip()
+    if subtitle and subtitle.lower() != str(plan["series_title"]).lower():
+        base = f"{base} - {subtitle}"
+    return f"{base} CZ Dabing"
+
+
+def episode_from_prepared_plan(plan: dict) -> dict:
+    selected = plan.get("selected_source") or {}
+    candidate = {
+        "source_id": selected.get("source_id"),
+        "external_id": selected.get("external_id"),
+        "url": selected.get("source_url"),
+        "title": selected.get("source_title") or selected.get("provider_title"),
+        "duration_sec": selected.get("duration_sec"),
+        "resolution_hint": selected.get("resolution_hint"),
+        "resolution_score": selected.get("resolution_score"),
+        "filesize_bytes": selected.get("filesize_bytes"),
+        "view_count": selected.get("view_count"),
+        "lang_class": selected.get("db_lang_class")
+        or ("CZ_DUB" if selected.get("verdict") in {"CZ_AUDIO", "PROBABLE_CZ_AUDIO"} else None),
+        "audio_lang": selected.get("db_audio_lang") or ("cs" if selected.get("verdict") == "CZ_AUDIO" else None),
+        "source_origin": selected.get("source_origin") or "prepared_source_plan",
+        "db_source_exists": bool(selected.get("db_source_exists")),
+        "quality_tier": selected.get("quality_tier"),
+    }
+    return {
+        "episode_id": plan["episode_id"],
+        "series_id": plan["series_id"],
+        "series_slug": plan.get("series_slug"),
+        "series_title": plan["series_title"],
+        "series_original_title": plan.get("series_original_title"),
+        "first_air_year": plan.get("first_air_year"),
+        "season": plan["season"],
+        "episode": plan["episode"],
+        "episode_code": sxe(plan.get("season"), plan.get("episode")),
+        "episode_title": None,
+        "episode_name": plan.get("episode_name"),
+        "air_date": plan.get("air_date"),
+        "runtime": plan.get("runtime"),
+        "imdb_id": plan.get("imdb_id"),
+        "tmdb_id": plan.get("tmdb_id"),
+        "imdb_rating": plan.get("imdb_rating"),
+        "imdb_votes": plan.get("imdb_votes"),
+        "csfd_rating": plan.get("csfd_rating"),
+        "preferred_lang_class": candidate["lang_class"] or "CZ_DUB",
+        "series_description": plan.get("series_description") or "",
+        "series_overview_en": plan.get("series_overview_en") or "",
+        "source_description": plan.get("source_description") or "",
+        "description": plan.get("description") or "",
+        "display_name": display_name_from_plan(plan),
+        "candidates": [candidate] if candidate.get("source_id") and candidate.get("url") else [],
+    }
+
+
+def merge_backlog_with_prepared(backlog: list[dict], prepared: dict[int, dict]) -> list[dict]:
+    rows_by_episode = {
+        int(row["episode_id"]): row
+        for row in backlog
+        if row.get("episode_id") is not None
+    }
+    for episode_id, plan in prepared.items():
+        if episode_id in rows_by_episode:
+            continue
+        if not plan.get("upload_ready") or not plan.get("selected_source"):
+            continue
+        rows_by_episode[episode_id] = episode_from_prepared_plan(plan)
+    return list(rows_by_episode.values())
 
 
 def upload_candidate_ids(plan: dict, burned: set[int]) -> list[int]:
@@ -140,23 +262,6 @@ def upload_candidates(episode: dict, plan: dict, burned: set[int]) -> list[dict]
     return rows
 
 
-def burned_source_ids() -> set[int]:
-    burned: set[int] = set()
-    paths = [REPO_ROOT / "state" / "uploaded.json"]
-    paths.extend(sorted((REPO_ROOT / "state").glob("uploaded-shard-*.json")))
-    for path in paths:
-        if not path.exists() or path.stat().st_size == 0:
-            continue
-        try:
-            state = json.loads(path.read_text(encoding="utf-8"))
-        except json.JSONDecodeError:
-            continue
-        for failure in state.get("failed_attempts", []):
-            if failure.get("permanent") and failure.get("source_id") is not None:
-                burned.add(int(failure["source_id"]))
-    return burned
-
-
 def build_manifest(
     *,
     backlog_path: Path,
@@ -167,11 +272,11 @@ def build_manifest(
     require_episode_description: bool,
     require_whisper: bool,
 ) -> tuple[list[dict], Counter]:
-    backlog = load_jsonl(backlog_path)
     prepared = latest_by_episode(load_jsonl(prepared_path))
+    backlog = merge_backlog_with_prepared(load_jsonl(backlog_path), prepared)
     desc_series, desc_episodes = description_indexes(load_jsonl(descriptions_path))
     audits = latest_audits_by_source(load_jsonl(audits_path))
-    burned = burned_source_ids()
+    uploaded_episode_ids, uploaded_episode_keys, burned = load_upload_state_exclusions()
     rows: list[dict] = []
     stats: Counter = Counter()
 
@@ -179,6 +284,12 @@ def build_manifest(
         if limit and len(rows) >= limit:
             break
         episode_id = int(episode["episode_id"])
+        if episode_id in uploaded_episode_ids:
+            stats["already_uploaded_episode_id"] += 1
+            continue
+        if episode_key(episode) in uploaded_episode_keys:
+            stats["already_uploaded_episode_key"] += 1
+            continue
         plan = prepared.get(episode_id)
         if not plan:
             stats["missing_source_plan"] += 1
@@ -300,10 +411,18 @@ def main() -> int:
     output_path = REPO_ROOT / args.out
     backlog_episode_ids = {
         int(row["episode_id"])
-        for row in load_jsonl(REPO_ROOT / args.backlog)
+        for row in merge_backlog_with_prepared(load_jsonl(REPO_ROOT / args.backlog), latest_by_episode(load_jsonl(REPO_ROOT / args.prepared)))
         if row.get("episode_id") is not None
     }
-    merged_rows = merge_manifest(load_jsonl(output_path), rows, backlog_episode_ids)
+    uploaded_episode_ids, uploaded_episode_keys, burned = load_upload_state_exclusions()
+    merged_rows = merge_manifest(
+        load_jsonl(output_path),
+        rows,
+        backlog_episode_ids,
+        uploaded_episode_ids=uploaded_episode_ids,
+        uploaded_episode_keys=uploaded_episode_keys,
+        burned=burned,
+    )
     write_jsonl(output_path, merged_rows)
     report = {
         "count": len(merged_rows),
