@@ -139,7 +139,7 @@ jobs:
               echo "prepared upload queue is below threshold; queueing background manifest preparation"
               gh workflow run prepare-manifest.yml \
                 -f series_limit="1200" \
-                -f episode_limit="20" \
+                -f episode_limit="30" \
                 -f source_limit_per_episode="24" \
                 -f use_whisper="false" \
                 -f skip_export="true"
@@ -148,7 +148,7 @@ jobs:
             echo "no prepared upload-ready episodes remain; queueing manifest preparation"
             gh workflow run prepare-manifest.yml \
               -f series_limit="1200" \
-              -f episode_limit="20" \
+              -f episode_limit="30" \
               -f source_limit_per_episode="24" \
               -f use_whisper="false" \
               -f skip_export="true"
