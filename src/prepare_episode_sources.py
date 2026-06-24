@@ -190,9 +190,20 @@ def title_matches_episode(title: str, episode: dict) -> bool:
 
 
 def live_search_candidates(episode: dict, *, limit: int) -> list[dict]:
+    titles = [
+        title
+        for title in dict.fromkeys(
+            [episode.get("series_title"), episode.get("series_original_title")]
+        )
+        if title
+    ]
     queries = [
-        f"{episode['series_title']} {episode_code(episode)}",
-        f"{episode['series_title']} {int(episode['season'])}x{int(episode['episode'])}",
+        query
+        for title in titles
+        for query in (
+            f"{title} {episode_code(episode)}",
+            f"{title} {int(episode['season'])}x{int(episode['episode'])}",
+        )
     ]
     found: dict[str, dict] = {}
     for query in queries:
@@ -208,6 +219,7 @@ def live_search_candidates(episode: dict, *, limit: int) -> list[dict]:
                 "series_id": episode["series_id"],
                 "series_slug": episode["series_slug"],
                 "series_title": episode["series_title"],
+                "series_original_title": episode.get("series_original_title"),
                 "episode_id": episode["episode_id"],
                 "season": episode["season"],
                 "episode": episode["episode"],
@@ -257,6 +269,7 @@ def group_by_episode(rows: list[dict], backlog_path: Path) -> list[dict]:
             "series_id": episode["series_id"],
             "series_slug": episode["series_slug"],
             "series_title": episode["series_title"],
+            "series_original_title": episode.get("series_original_title"),
             "season": episode["season"],
             "episode": episode["episode"],
             "episode_title": episode.get("episode_title"),
@@ -271,6 +284,7 @@ def group_by_episode(rows: list[dict], backlog_path: Path) -> list[dict]:
                 "series_id": row["series_id"],
                 "series_slug": row["series_slug"],
                 "series_title": row["series_title"],
+                "series_original_title": row.get("series_original_title"),
                 "season": row["season"],
                 "episode": row["episode"],
                 "episode_name": row.get("episode_name") or row.get("episode_title"),
