@@ -218,6 +218,9 @@ def upload_candidate_ids(plan: dict, burned: set[int]) -> list[int]:
     for source in [plan.get("selected_source"), *(plan.get("tested_sources") or [])]:
         if not source:
             continue
+        provider_probe = (source.get("signals") or {}).get("provider_probe") or {}
+        if provider_probe.get("status") != "ok" or not provider_probe.get("streams"):
+            continue
         if source.get("verdict") not in {"CZ_AUDIO", "PROBABLE_CZ_AUDIO"}:
             continue
         source_id = int(source["source_id"])
