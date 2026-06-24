@@ -249,7 +249,7 @@ def audit_provider(item: dict, *, sample_seconds: int, probe_stream: bool = Fals
             return {"provider": "sktorrent", **probe, "whisper": {"status": "no_stream"}}
         with tempfile.TemporaryDirectory() as td:
             sample = Path(td) / "sample.wav"
-            ok, msg = sample_audio(stream["url"], sample, start_sec=180, seconds=sample_seconds)
+            ok, msg = sample_audio(stream["url"], sample, start_sec=60, seconds=sample_seconds)
             if not ok:
                 return {"provider": "sktorrent", **probe, "whisper": {"status": "sample_failed", "error": msg, "resolution": stream["label"]}}
             lang, prob, status = whisper_language(sample, seconds=sample_seconds)
@@ -285,7 +285,7 @@ def audit_provider(item: dict, *, sample_seconds: int, probe_stream: bool = Fals
         return {**probe, "whisper": {"status": "disabled"}}
     with tempfile.TemporaryDirectory() as td:
         sample = Path(td) / "sample.wav"
-        ok, msg = sample_audio(best.url, sample, start_sec=180, seconds=sample_seconds)
+        ok, msg = sample_audio(best.url, sample, start_sec=60, seconds=sample_seconds)
         if not ok:
             return {**probe, "whisper": {"status": "sample_failed", "error": msg, "resolution": best.label}}
         lang, prob, status = whisper_language(sample, seconds=sample_seconds)

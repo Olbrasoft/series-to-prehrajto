@@ -10,7 +10,7 @@ on:
       episode_limit:
         description: "Number of episodes to prepare in advance"
         required: false
-        default: "3000"
+        default: "100"
       source_limit_per_episode:
         description: "Number of sources to check per episode"
         required: false
@@ -110,7 +110,7 @@ jobs:
           WHISPER_MODEL: tiny
         run: |
           ARGS=(
-            "--episode-limit" "${{ inputs.episode_limit || '3000' }}"
+            "--episode-limit" "${{ inputs.episode_limit || '100' }}"
             "--source-limit-per-episode" "${{ inputs.source_limit_per_episode || '12' }}"
             "--sample-seconds" "20"
             "--live-search"
@@ -155,7 +155,7 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           python src/build_upload_manifest.py \
-            --limit "${{ inputs.episode_limit || '3000' }}"
+            --limit "${{ inputs.episode_limit || '100' }}"
           python src/update_discovered_sources.py
           python src/ops_status.py
 

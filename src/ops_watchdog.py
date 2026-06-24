@@ -135,7 +135,7 @@ def main() -> int:
     )
 
     prepare_small = upload_ready < args.small_ready_target
-    prepare_episode_target = args.emergency_episodes if prepare_small else args.target_episodes
+    prepare_episode_target = min(args.emergency_episodes if prepare_small else args.target_episodes, 100)
     prepare_series_target = min(args.target_series, 80) if prepare_small else args.target_series
 
     if upload_ready <= args.min_upload_ready or backlog_count == 0 or manifest_ready < args.target_episodes:
@@ -145,7 +145,7 @@ def main() -> int:
                 "series_limit": str(prepare_series_target),
                 "episode_limit": str(prepare_episode_target),
                 "source_limit_per_episode": "12",
-                "use_whisper": "false",
+                "use_whisper": "true",
             },
             active=active,
             dry_run=args.dry_run,
@@ -169,9 +169,9 @@ def main() -> int:
             queue_workflow(
                 "prepare-sources",
                 {
-                    "episode_limit": str(min(args.prepare_sources_batch, missing_prepared)),
+                    "episode_limit": str(min(args.prepare_sources_batch, missing_prepared, 100)),
                     "source_limit_per_episode": "12",
-                    "use_whisper": "false",
+                    "use_whisper": "true",
                 },
                 active=active,
                 dry_run=args.dry_run,
