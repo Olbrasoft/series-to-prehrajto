@@ -309,9 +309,9 @@ def source_score(result: dict, source: dict) -> tuple:
         resolved_resolution=probe_resolution(result, source),
     )
     return (
-        verdict_score + detected_bonus + provider_bonus,
         quality_bonus,
         quality_resolution,
+        verdict_score + detected_bonus + provider_bonus,
         quality_filesize,
         int(source.get("view_count") or 0),
         -int(source["source_id"]),

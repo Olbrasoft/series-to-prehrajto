@@ -18,7 +18,7 @@ on:
       use_whisper:
         description: "Run Whisper on supported sources"
         required: false
-        default: "false"
+        default: "true"
   schedule:
     - cron: "35 * * * *"
 
@@ -52,7 +52,7 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Install Whisper dependencies
-        if: ${{ inputs.use_whisper == 'true' }}
+        if: ${{ inputs.use_whisper != 'false' }}
         run: |
           sudo apt-get update
           sudo apt-get install -y ffmpeg
@@ -78,7 +78,7 @@ jobs:
           if [ -n "${{ inputs.series_slug }}" ]; then
             ARGS+=("--series-slug" "${{ inputs.series_slug }}")
           fi
-          if [ "${{ inputs.use_whisper || 'false' }}" = "true" ]; then
+          if [ "${{ inputs.use_whisper || 'true' }}" = "true" ]; then
             ARGS+=("--use-whisper")
           fi
           python src/prepare_episode_sources.py "${ARGS[@]}"

@@ -18,7 +18,7 @@ on:
       use_whisper:
         description: "Run Whisper while preparing selected sources"
         required: false
-        default: "false"
+        default: "true"
   schedule:
     - cron: "10 */4 * * *"
 
@@ -55,7 +55,7 @@ jobs:
           pip install -r requirements.txt
 
       - name: Install Whisper dependencies
-        if: ${{ inputs.use_whisper == 'true' }}
+        if: ${{ inputs.use_whisper != 'false' }}
         run: |
           sudo apt-get install -y ffmpeg
           pip install faster-whisper
@@ -116,7 +116,7 @@ jobs:
             "--require-resolvable-source"
             "--refresh"
           )
-          if [ "${{ inputs.use_whisper || 'false' }}" = "true" ]; then
+          if [ "${{ inputs.use_whisper || 'true' }}" = "true" ]; then
             ARGS+=("--use-whisper")
           fi
           python src/prepare_episode_sources.py "${ARGS[@]}"

@@ -7,6 +7,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
 from prehrajto_search import parse_search_html  # noqa: E402
+from prepare_episode_sources import source_score  # noqa: E402
 from source_quality import source_quality_score, source_quality_tier  # noqa: E402
 
 
@@ -39,6 +40,35 @@ class PrehrajtoSearchTest(unittest.TestCase):
         }
         self.assertEqual(source_quality_tier(source), "preferred")
         self.assertEqual(source_quality_score(source)[1], 1080)
+
+    def test_preferred_live_source_beats_small_database_source(self) -> None:
+        live_source = {
+            "provider": "prehrajto",
+            "source_id": -1,
+            "source_title": "Show S07E19 CZ 1080p",
+            "filesize_bytes": 300_249_251,
+        }
+        database_source = {
+            "provider": "prehrajto",
+            "source_id": 1,
+            "source_title": "Show S07E19 CZ",
+            "resolution_hint": "720p",
+            "filesize_bytes": 117_792_114,
+        }
+        live_result = {
+            "verdict": "PROBABLE_CZ_AUDIO",
+            "detected_by": "title",
+            "signals": {"provider_probe": {}},
+        }
+        database_result = {
+            "verdict": "CZ_AUDIO",
+            "detected_by": "metadata",
+            "signals": {"provider_probe": {}},
+        }
+        self.assertGreater(
+            source_score(live_result, live_source),
+            source_score(database_result, database_source),
+        )
 
 
 if __name__ == "__main__":
