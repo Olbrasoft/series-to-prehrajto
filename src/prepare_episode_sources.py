@@ -397,7 +397,7 @@ def prepare_episode(
     acceptable = [
         result
         for result in audited
-        if result["verdict"] in {"CZ_AUDIO", "PROBABLE_CZ_AUDIO", "CZ_SUBTITLES_ONLY"}
+        if result["verdict"] in {"CZ_AUDIO", "PROBABLE_CZ_AUDIO"}
     ]
     acceptable.sort(key=lambda result: tuple(result["score"]), reverse=True)
 
@@ -421,7 +421,7 @@ def prepare_episode(
             audited[audited_by_id[int(verified["source_id"])]] = verified
             if not is_resolvable(verified):
                 continue
-            if verified["verdict"] not in {"CZ_AUDIO", "PROBABLE_CZ_AUDIO", "CZ_SUBTITLES_ONLY"}:
+            if verified["verdict"] not in {"CZ_AUDIO", "PROBABLE_CZ_AUDIO"}:
                 continue
             selected = verified
             break
