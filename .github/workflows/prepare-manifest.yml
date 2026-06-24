@@ -10,11 +10,11 @@ on:
       episode_limit:
         description: "Episodes to prepare per run"
         required: false
-        default: "30"
+        default: "60"
       source_limit_per_episode:
         description: "Sources to evaluate per episode"
         required: false
-        default: "24"
+        default: "32"
       use_whisper:
         description: "Use Whisper language verification"
         required: false
@@ -73,8 +73,8 @@ jobs:
             "--queue" "backlog/enriched-audit-queue.jsonl.gz"
             "--backlog" "backlog/series-episodes.jsonl.gz"
             "--out" "plans/prepared-episodes.jsonl"
-            "--episode-limit" "${{ inputs.episode_limit || '30' }}"
-            "--source-limit-per-episode" "${{ inputs.source_limit_per_episode || '24' }}"
+            "--episode-limit" "${{ inputs.episode_limit || '60' }}"
+            "--source-limit-per-episode" "${{ inputs.source_limit_per_episode || '32' }}"
             "--sample-seconds" "20"
             "--live-search"
             "--live-search-limit" "12"
@@ -123,7 +123,7 @@ jobs:
         run: |
           if python src/upload_queue_status.py --no-require-description; then
             gh workflow run sync.yml \
-              -f batch_size="20" \
+              -f batch_size="30" \
               -f num_shards="2" \
               -f allow_subtitles="false" \
               -f continue_uploads="true"
