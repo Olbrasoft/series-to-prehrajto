@@ -101,26 +101,37 @@ def search(
     query: str,
     *,
     timeout: float = 30.0,
-    min_interval: float = 1.1,
+    min_interval: float = 3.0,
+    retries: int = 3,
     session: requests.Session | None = None,
 ) -> list[SearchResult]:
     global _last_search_at
-    wait = min_interval - (time.monotonic() - _last_search_at)
-    if wait > 0:
-        time.sleep(wait)
     sess = session or requests.Session()
-    try:
-        response = sess.get(
-            SEARCH_URL.format(query=urllib.parse.quote(query)),
-            timeout=timeout,
-            headers={
-                "User-Agent": USER_AGENT,
-                "Accept": "text/html,application/xhtml+xml",
-                "Accept-Language": "cs,en;q=0.8",
-                "Accept-Encoding": "identity",
-            },
-        )
-    finally:
-        _last_search_at = time.monotonic()
-    response.raise_for_status()
-    return parse_search_html(response.text)
+    response: requests.Response | None = None
+    for attempt in range(max(retries, 1)):
+        wait = min_interval - (time.monotonic() - _last_search_at)
+        if wait > 0:
+            time.sleep(wait)
+        try:
+            response = sess.get(
+                SEARCH_URL.format(query=urllib.parse.quote(query)),
+                timeout=timeout,
+                headers={
+                    "User-Agent": USER_AGENT,
+                    "Accept": "text/html,application/xhtml+xml",
+                    "Accept-Language": "cs,en;q=0.8",
+                    "Accept-Encoding": "identity",
+                },
+            )
+        finally:
+            _last_search_at = time.monotonic()
+        if response.status_code != 429 or attempt + 1 >= retries:
+            response.raise_for_status()
+            return parse_search_html(response.text)
+        retry_after = response.headers.get("Retry-After")
+        try:
+            retry_seconds = float(retry_after) if retry_after else 0.0
+        except ValueError:
+            retry_seconds = 0.0
+        time.sleep(max(retry_seconds, 10.0 * (attempt + 1)))
+    raise RuntimeError(f"Search failed without a response for {query!r}")
