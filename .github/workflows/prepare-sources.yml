@@ -124,7 +124,7 @@ jobs:
         run: |
           git fetch origin main
           git reset --hard origin/main
-          if python src/upload_queue_status.py; then
+          if python src/upload_queue_status.py --no-require-description; then
             gh workflow run sync.yml \
               -f batch_size="20" \
               -f num_shards="2" \
