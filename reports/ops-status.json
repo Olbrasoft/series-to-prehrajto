@@ -2,24 +2,56 @@
   "counts": {
     "backlog_episodes": 3000,
     "manifest_upload_ready_episodes": 1850,
-    "uploaded_episodes": 6610,
-    "prepared_source_episodes": 11246,
+    "uploaded_episodes": 6611,
+    "prepared_source_episodes": 11322,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 2806,
-    "language_audit_rows": 77592,
-    "language_queue_sources": 31266,
+    "language_audit_rows": 108243,
+    "language_queue_sources": 31313,
     "language_audited_sources": 72412,
     "language_whisper_attempted_sources": 3345,
-    "language_pending_whisper_sources": 31246
+    "language_pending_whisper_sources": 31313
   },
   "workflow_runs": [
     {
+      "conclusion": "success",
+      "createdAt": "2026-06-24T10:10:27Z",
+      "databaseId": 28091186713,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "refresh-backlog"
+    },
+    {
       "conclusion": "",
+      "createdAt": "2026-06-24T10:07:22Z",
+      "databaseId": 28091021232,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-24T10:07:20Z",
+      "databaseId": 28091019787,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-24T10:07:18Z",
+      "databaseId": 28091018097,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-06-24T10:06:46Z",
       "databaseId": 28090990059,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -141,38 +173,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-24T08:51:28Z",
-      "databaseId": 28086831773,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-24T08:51:27Z",
-      "databaseId": 28086830593,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-24T08:50:57Z",
-      "databaseId": 28086805379,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-24T08:47:55Z",
-      "databaseId": 28086640992,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
     }
   ],
   "gaps": {
@@ -237,7 +237,6 @@
       3585,
       3586,
       3587,
-      3588,
       3589,
       3590,
       3591,
@@ -251,17 +250,14 @@
       3600,
       3601,
       3603,
-      3604,
       3605,
       3606,
       3607,
       3608,
       3609,
-      3610,
       3611,
       3612,
       3613,
-      3614,
       3615,
       3616,
       3617,
@@ -273,12 +269,16 @@
       3623,
       3624,
       3625,
-      3626,
       3627,
       3628,
       4264,
       4265,
-      4266
+      4266,
+      4267,
+      4268,
+      4269,
+      4270,
+      4271
     ],
     "uploaded_without_gemma_description": [
       {
@@ -13575,6 +13575,11 @@
         "episode_id": 50091,
         "display_name": "Panství Downton S01E03 - 3. epizoda CZ Dabing",
         "video_id": 26450578
+      },
+      {
+        "episode_id": 50093,
+        "display_name": "Panství Downton S01E05 - 5. epizoda CZ Dabing",
+        "video_id": 26450651
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -38097,6 +38102,11 @@
         "episode_id": 50091,
         "display_name": "Panství Downton S01E03 - 3. epizoda CZ Dabing",
         "video_id": 26450578
+      },
+      {
+        "episode_id": 50093,
+        "display_name": "Panství Downton S01E05 - 5. epizoda CZ Dabing",
+        "video_id": 26450651
       }
     ],
     "prepared_not_upload_ready": [
@@ -38257,12 +38267,6 @@
         "episode": 2
       },
       {
-        "episode_id": 5045,
-        "series_title": "Dark",
-        "season": 1,
-        "episode": 3
-      },
-      {
         "episode_id": 10010,
         "series_title": "Dark",
         "season": 1,
@@ -38399,16 +38403,22 @@
         "series_title": "Dark",
         "season": 3,
         "episode": 4
+      },
+      {
+        "episode_id": 5037,
+        "series_title": "Dark",
+        "season": 3,
+        "episode": 5
       }
     ]
   },
   "language_verdicts": {
-    "UNKNOWN": 513,
-    "CZ_AUDIO": 74431,
-    "CZ_SUBTITLES_ONLY": 2128,
+    "UNKNOWN": 2541,
+    "CZ_AUDIO": 100065,
+    "CZ_SUBTITLES_ONLY": 5049,
     "NOT_CZ_AUDIO": 516,
-    "SK_AUDIO": 2,
-    "PROBABLE_CZ_AUDIO": 2
+    "SK_AUDIO": 28,
+    "PROBABLE_CZ_AUDIO": 44
   },
   "language_whisper_statuses": {
     "disabled": 69067,
