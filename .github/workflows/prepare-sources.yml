@@ -67,10 +67,12 @@ jobs:
         env:
           CZ_PROXY_URL: ${{ secrets.CZ_PROXY_URL }}
           CZ_PROXY_KEY: ${{ secrets.CZ_PROXY_KEY }}
+          WHISPER_MODEL: tiny
         run: |
           ARGS=(
             "--episode-limit" "${{ inputs.episode_limit || '1500' }}"
             "--source-limit-per-episode" "${{ inputs.source_limit_per_episode || '12' }}"
+            "--sample-seconds" "20"
             "--live-search"
             "--live-search-limit" "8"
             "--require-resolvable-source"
