@@ -2,40 +2,104 @@
   "counts": {
     "backlog_episodes": 3000,
     "manifest_upload_ready_episodes": 1850,
-    "uploaded_episodes": 6536,
+    "uploaded_episodes": 6610,
     "prepared_source_episodes": 11246,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 2806,
-    "language_audit_rows": 107868,
+    "language_audit_rows": 77592,
     "language_queue_sources": 31266,
     "language_audited_sources": 72412,
     "language_whisper_attempted_sources": 3345,
-    "language_pending_whisper_sources": 31266
+    "language_pending_whisper_sources": 31246
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-06-24T09:23:41Z",
-      "databaseId": 28088613367,
+      "createdAt": "2026-06-24T10:06:46Z",
+      "databaseId": 28090990059,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-24T10:06:20Z",
+      "databaseId": 28090966806,
+      "headBranch": "main",
+      "status": "in_progress",
       "workflowName": "sync"
     },
     {
       "conclusion": "",
-      "createdAt": "2026-06-24T09:20:47Z",
-      "databaseId": 28088453283,
+      "createdAt": "2026-06-24T09:49:21Z",
+      "databaseId": 28090027981,
       "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-manifest"
+      "status": "pending",
+      "workflowName": "prepare-sources"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-06-24T09:47:32Z",
+      "databaseId": 28089931770,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-24T09:47:30Z",
+      "databaseId": 28089930480,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-06-24T09:46:48Z",
+      "databaseId": 28089891755,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-24T09:38:48Z",
+      "databaseId": 28089451877,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-06-24T09:30:43Z",
+      "databaseId": 28089001425,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-06-24T09:23:41Z",
+      "databaseId": 28088613367,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-24T09:20:47Z",
+      "databaseId": 28088453283,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "cancelled",
       "createdAt": "2026-06-24T09:16:08Z",
       "databaseId": 28088196453,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "sync"
     },
     {
@@ -47,11 +111,11 @@
       "workflowName": "ops-status"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-06-24T09:09:14Z",
       "databaseId": 28087815541,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "sync"
     },
     {
@@ -106,70 +170,6 @@
       "conclusion": "cancelled",
       "createdAt": "2026-06-24T08:47:55Z",
       "databaseId": 28086640992,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-24T08:23:08Z",
-      "databaseId": 28085318604,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-24T08:19:30Z",
-      "databaseId": 28085125748,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-24T08:14:04Z",
-      "databaseId": 28084849044,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-24T08:14:01Z",
-      "databaseId": 28084846361,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-24T08:12:52Z",
-      "databaseId": 28084784330,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-24T08:08:57Z",
-      "databaseId": 28084575538,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-24T08:04:21Z",
-      "databaseId": 28084334146,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-24T07:56:30Z",
-      "databaseId": 28083925824,
       "headBranch": "main",
       "status": "completed",
       "workflowName": "sync"
@@ -13177,6 +13177,86 @@
         "video_id": 26444996
       },
       {
+        "episode_id": 50090,
+        "display_name": "Panství Downton S01E02 - 2. epizoda CZ Dabing",
+        "video_id": 26445143
+      },
+      {
+        "episode_id": 50092,
+        "display_name": "Panství Downton S01E04 - 4. epizoda CZ Dabing",
+        "video_id": 26445254
+      },
+      {
+        "episode_id": 50094,
+        "display_name": "Panství Downton S01E06 - 6. epizoda CZ Dabing",
+        "video_id": 26445365
+      },
+      {
+        "episode_id": 50096,
+        "display_name": "Panství Downton S02E01 - 1. epizoda CZ Dabing",
+        "video_id": 26445452
+      },
+      {
+        "episode_id": 50098,
+        "display_name": "Panství Downton S02E03 - 3. epizoda CZ Dabing",
+        "video_id": 26445609
+      },
+      {
+        "episode_id": 50100,
+        "display_name": "Panství Downton S02E05 - 5. epizoda CZ Dabing",
+        "video_id": 26445713
+      },
+      {
+        "episode_id": 71840,
+        "display_name": "Hawkeye S01E01 - Hrdinům se vyhýbej CZ Dabing",
+        "video_id": 26445895
+      },
+      {
+        "episode_id": 71838,
+        "display_name": "Hawkeye S01E04 - Parťáci, nemám pravdu? CZ Dabing",
+        "video_id": 26446153
+      },
+      {
+        "episode_id": 71842,
+        "display_name": "Hawkeye S01E05 - Ronin CZ Dabing",
+        "video_id": 26446282
+      },
+      {
+        "episode_id": 63900,
+        "display_name": "Cobra Kai S01E03 - Kostlivec CZ Dabing",
+        "video_id": 26446421
+      },
+      {
+        "episode_id": 63902,
+        "display_name": "Cobra Kai S01E07 - All Valley CZ Dabing",
+        "video_id": 26446538
+      },
+      {
+        "episode_id": 63904,
+        "display_name": "Cobra Kai S01E08 - Svlékání kůže CZ Dabing",
+        "video_id": 26446640
+      },
+      {
+        "episode_id": 63906,
+        "display_name": "Cobra Kai S01E09 - Jiní, a přece stejní CZ Dabing",
+        "video_id": 26446776
+      },
+      {
+        "episode_id": 63946,
+        "display_name": "Cobra Kai S01E10 - Slitování CZ Dabing",
+        "video_id": 26446874
+      },
+      {
+        "episode_id": 63916,
+        "display_name": "Cobra Kai S02E02 - Back In Black CZ Dabing",
+        "video_id": 26447033
+      },
+      {
+        "episode_id": 63918,
+        "display_name": "Cobra Kai S02E04 - Okamžik pravdy CZ Dabing",
+        "video_id": 26447170
+      },
+      {
         "episode_id": 66641,
         "display_name": "Bylo, nebylo S03E09 - Záchrana Henryho CZ Dabing",
         "video_id": 26443854
@@ -13205,6 +13285,296 @@
         "episode_id": 50323,
         "display_name": "Gotham S01E20 - Na ostří nože CZ Dabing",
         "video_id": 26445094
+      },
+      {
+        "episode_id": 50333,
+        "display_name": "Gotham S02E16 - Vězni CZ Dabing",
+        "video_id": 26445173
+      },
+      {
+        "episode_id": 66703,
+        "display_name": "Bylo, nebylo S03E18 - Cestička CZ Dabing",
+        "video_id": 26445467
+      },
+      {
+        "episode_id": 66705,
+        "display_name": "Bylo, nebylo S03E20 - Kansas CZ Dabing",
+        "video_id": 26445682
+      },
+      {
+        "episode_id": 66707,
+        "display_name": "Bylo, nebylo S03E22 - Všude dobře, doma nejlíp CZ Dabing",
+        "video_id": 26445818
+      },
+      {
+        "episode_id": 66725,
+        "display_name": "Bylo, nebylo S04E01 - Příběh dvou sester CZ Dabing",
+        "video_id": 26446001
+      },
+      {
+        "episode_id": 66727,
+        "display_name": "Bylo, nebylo S04E03 - Zmrzlinářka CZ Dabing",
+        "video_id": 26446214
+      },
+      {
+        "episode_id": 66729,
+        "display_name": "Bylo, nebylo S04E05 - Rozbité sklo CZ Dabing",
+        "video_id": 26446342
+      },
+      {
+        "episode_id": 84125,
+        "display_name": "Bylo, nebylo S04E09 - Nebezpečné zrcadlo 2/2 CZ Dabing",
+        "video_id": 26446534
+      },
+      {
+        "episode_id": 66731,
+        "display_name": "Bylo, nebylo S04E10 - Pád CZ Dabing",
+        "video_id": 26446644
+      },
+      {
+        "episode_id": 66733,
+        "display_name": "Bylo, nebylo S04E12 - Hrdinové a zloduši CZ Dabing",
+        "video_id": 26446839
+      },
+      {
+        "episode_id": 66735,
+        "display_name": "Bylo, nebylo S04E14 - Nesmiřitelní CZ Dabing",
+        "video_id": 26446920
+      },
+      {
+        "episode_id": 66737,
+        "display_name": "Bylo, nebylo S04E16 - Nešťastná duše CZ Dabing",
+        "video_id": 26447043
+      },
+      {
+        "episode_id": 66739,
+        "display_name": "Bylo, nebylo S04E18 - Goldovo srdce CZ Dabing",
+        "video_id": 26447187
+      },
+      {
+        "episode_id": 3604,
+        "display_name": "Městečko Twin Peaks S01E06 - Cooperovy sny CZ Dabing",
+        "video_id": 26447426
+      },
+      {
+        "episode_id": 3610,
+        "display_name": "Městečko Twin Peaks S02E04 - Lauřin tajný deník CZ Dabing",
+        "video_id": 26447730
+      },
+      {
+        "episode_id": 3614,
+        "display_name": "Městečko Twin Peaks S02E08 - Projížďka s mtrvou CZ Dabing",
+        "video_id": 26447943
+      },
+      {
+        "episode_id": 3626,
+        "display_name": "Městečko Twin Peaks S02E21 - Miss Twin Peaks CZ Dabing",
+        "video_id": 26448352
+      },
+      {
+        "episode_id": 3588,
+        "display_name": "Městečko Twin Peaks S03E08 - 8. část CZ Dabing",
+        "video_id": 26448586
+      },
+      {
+        "episode_id": 50102,
+        "display_name": "Panství Downton S02E07 - 7. epizoda CZ Dabing",
+        "video_id": 26448683
+      },
+      {
+        "episode_id": 50066,
+        "display_name": "Panství Downton S03E02 - 2. epizoda CZ Dabing",
+        "video_id": 26448755
+      },
+      {
+        "episode_id": 50068,
+        "display_name": "Panství Downton S03E04 - 4. epizoda CZ Dabing",
+        "video_id": 26448829
+      },
+      {
+        "episode_id": 63908,
+        "display_name": "Cobra Kai S02E05 - Bez váhání CZ Dabing",
+        "video_id": 26448862
+      },
+      {
+        "episode_id": 63920,
+        "display_name": "Cobra Kai S02E08 - Glory of Love CZ Dabing",
+        "video_id": 26448997
+      },
+      {
+        "episode_id": 63910,
+        "display_name": "Cobra Kai S03E01 - Následky CZ Dabing",
+        "video_id": 26449191
+      },
+      {
+        "episode_id": 63932,
+        "display_name": "Cobra Kai S03E02 - Přirozenost versus disciplína CZ Dabing",
+        "video_id": 26449326
+      },
+      {
+        "episode_id": 63912,
+        "display_name": "Cobra Kai S03E04 - Správná cesta CZ Dabing",
+        "video_id": 26449508
+      },
+      {
+        "episode_id": 63962,
+        "display_name": "Cobra Kai S03E05 - Mijagi-Do CZ Dabing",
+        "video_id": 26449591
+      },
+      {
+        "episode_id": 63934,
+        "display_name": "Cobra Kai S03E08 - Hodný, zlý a drsňácký CZ Dabing",
+        "video_id": 26449825
+      },
+      {
+        "episode_id": 63914,
+        "display_name": "Cobra Kai S03E09 - Feel The Night CZ Dabing",
+        "video_id": 26449958
+      },
+      {
+        "episode_id": 63924,
+        "display_name": "Cobra Kai S04E01 - Jdeme na to CZ Dabing",
+        "video_id": 26450124
+      },
+      {
+        "episode_id": 63928,
+        "display_name": "Cobra Kai S04E03 - Pak uč létat CZ Dabing",
+        "video_id": 26450239
+      },
+      {
+        "episode_id": 63922,
+        "display_name": "Cobra Kai S04E06 - Na karate holky letí CZ Dabing",
+        "video_id": 26450392
+      },
+      {
+        "episode_id": 63930,
+        "display_name": "Cobra Kai S04E08 - Je mi ctí CZ Dabing",
+        "video_id": 26450457
+      },
+      {
+        "episode_id": 66741,
+        "display_name": "Bylo, nebylo S04E20 - Lily CZ Dabing",
+        "video_id": 26447251
+      },
+      {
+        "episode_id": 84121,
+        "display_name": "Bylo, nebylo S04E23 - Operace Mangusta 2/2 CZ Dabing",
+        "video_id": 26447410
+      },
+      {
+        "episode_id": 66743,
+        "display_name": "Bylo, nebylo S05E01 - Černá labuť CZ Dabing",
+        "video_id": 26447486
+      },
+      {
+        "episode_id": 66745,
+        "display_name": "Bylo, nebylo S05E03 - Poslední křeslo CZ Dabing",
+        "video_id": 26447627
+      },
+      {
+        "episode_id": 66747,
+        "display_name": "Bylo, nebylo S05E05 - Lapač snů CZ Dabing",
+        "video_id": 26447718
+      },
+      {
+        "episode_id": 50317,
+        "display_name": "Gotham S01E08 - Maska CZ Dabing",
+        "video_id": 26448071
+      },
+      {
+        "episode_id": 84123,
+        "display_name": "Bylo, nebylo S05E06 - Medvěd a luk CZ Dabing",
+        "video_id": 26448163
+      },
+      {
+        "episode_id": 66749,
+        "display_name": "Bylo, nebylo S05E08 - Zrození CZ Dabing",
+        "video_id": 26448255
+      },
+      {
+        "episode_id": 66751,
+        "display_name": "Bylo, nebylo S05E11 - Labutí píseň CZ Dabing",
+        "video_id": 26448372
+      },
+      {
+        "episode_id": 66753,
+        "display_name": "Bylo, nebylo S05E13 - Úkol z lásky CZ Dabing",
+        "video_id": 26448391
+      },
+      {
+        "episode_id": 66755,
+        "display_name": "Bylo, nebylo S05E15 - Bratři Jonesovi CZ Dabing",
+        "video_id": 26448502
+      },
+      {
+        "episode_id": 66645,
+        "display_name": "Bylo, nebylo S05E17 - Její krásný hrdina CZ Dabing",
+        "video_id": 26448600
+      },
+      {
+        "episode_id": 66757,
+        "display_name": "Bylo, nebylo S05E18 - Střevíčky CZ Dabing",
+        "video_id": 26448673
+      },
+      {
+        "episode_id": 66759,
+        "display_name": "Bylo, nebylo S05E20 - Fénix CZ Dabing",
+        "video_id": 26448800
+      },
+      {
+        "episode_id": 66649,
+        "display_name": "Bylo, nebylo S06E04 - Zvláštní případ CZ Dabing",
+        "video_id": 26448861
+      },
+      {
+        "episode_id": 66761,
+        "display_name": "Bylo, nebylo S06E06 - Temné vody CZ Dabing",
+        "video_id": 26448916
+      },
+      {
+        "episode_id": 66763,
+        "display_name": "Bylo, nebylo S06E08 - Budu tvé zrcadlo CZ Dabing",
+        "video_id": 26449051
+      },
+      {
+        "episode_id": 66765,
+        "display_name": "Bylo, nebylo S06E10 - Škoda, že tu nejsi CZ Dabing",
+        "video_id": 26449280
+      },
+      {
+        "episode_id": 66767,
+        "display_name": "Bylo, nebylo S06E12 - Hodně podlý mord CZ Dabing",
+        "video_id": 26449451
+      },
+      {
+        "episode_id": 66769,
+        "display_name": "Bylo, nebylo S06E15 - Zázračné místo CZ Dabing",
+        "video_id": 26449517
+      },
+      {
+        "episode_id": 66771,
+        "display_name": "Bylo, nebylo S06E17 - Procitnutí CZ Dabing",
+        "video_id": 26449579
+      },
+      {
+        "episode_id": 66651,
+        "display_name": "Bylo, nebylo S06E18 - Tam, kde létají modří ptáčci CZ Dabing",
+        "video_id": 26449774
+      },
+      {
+        "episode_id": 84127,
+        "display_name": "Bylo, nebylo S06E21 - Konečná bitva 1/2 CZ Dabing",
+        "video_id": 26450023
+      },
+      {
+        "episode_id": 50089,
+        "display_name": "Panství Downton S01E01 - 1. epizoda CZ Dabing",
+        "video_id": 26450476
+      },
+      {
+        "episode_id": 50091,
+        "display_name": "Panství Downton S01E03 - 3. epizoda CZ Dabing",
+        "video_id": 26450578
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -37329,6 +37699,86 @@
         "video_id": 26444996
       },
       {
+        "episode_id": 50090,
+        "display_name": "Panství Downton S01E02 - 2. epizoda CZ Dabing",
+        "video_id": 26445143
+      },
+      {
+        "episode_id": 50092,
+        "display_name": "Panství Downton S01E04 - 4. epizoda CZ Dabing",
+        "video_id": 26445254
+      },
+      {
+        "episode_id": 50094,
+        "display_name": "Panství Downton S01E06 - 6. epizoda CZ Dabing",
+        "video_id": 26445365
+      },
+      {
+        "episode_id": 50096,
+        "display_name": "Panství Downton S02E01 - 1. epizoda CZ Dabing",
+        "video_id": 26445452
+      },
+      {
+        "episode_id": 50098,
+        "display_name": "Panství Downton S02E03 - 3. epizoda CZ Dabing",
+        "video_id": 26445609
+      },
+      {
+        "episode_id": 50100,
+        "display_name": "Panství Downton S02E05 - 5. epizoda CZ Dabing",
+        "video_id": 26445713
+      },
+      {
+        "episode_id": 71840,
+        "display_name": "Hawkeye S01E01 - Hrdinům se vyhýbej CZ Dabing",
+        "video_id": 26445895
+      },
+      {
+        "episode_id": 71838,
+        "display_name": "Hawkeye S01E04 - Parťáci, nemám pravdu? CZ Dabing",
+        "video_id": 26446153
+      },
+      {
+        "episode_id": 71842,
+        "display_name": "Hawkeye S01E05 - Ronin CZ Dabing",
+        "video_id": 26446282
+      },
+      {
+        "episode_id": 63900,
+        "display_name": "Cobra Kai S01E03 - Kostlivec CZ Dabing",
+        "video_id": 26446421
+      },
+      {
+        "episode_id": 63902,
+        "display_name": "Cobra Kai S01E07 - All Valley CZ Dabing",
+        "video_id": 26446538
+      },
+      {
+        "episode_id": 63904,
+        "display_name": "Cobra Kai S01E08 - Svlékání kůže CZ Dabing",
+        "video_id": 26446640
+      },
+      {
+        "episode_id": 63906,
+        "display_name": "Cobra Kai S01E09 - Jiní, a přece stejní CZ Dabing",
+        "video_id": 26446776
+      },
+      {
+        "episode_id": 63946,
+        "display_name": "Cobra Kai S01E10 - Slitování CZ Dabing",
+        "video_id": 26446874
+      },
+      {
+        "episode_id": 63916,
+        "display_name": "Cobra Kai S02E02 - Back In Black CZ Dabing",
+        "video_id": 26447033
+      },
+      {
+        "episode_id": 63918,
+        "display_name": "Cobra Kai S02E04 - Okamžik pravdy CZ Dabing",
+        "video_id": 26447170
+      },
+      {
         "episode_id": 66641,
         "display_name": "Bylo, nebylo S03E09 - Záchrana Henryho CZ Dabing",
         "video_id": 26443854
@@ -37357,6 +37807,296 @@
         "episode_id": 50323,
         "display_name": "Gotham S01E20 - Na ostří nože CZ Dabing",
         "video_id": 26445094
+      },
+      {
+        "episode_id": 50333,
+        "display_name": "Gotham S02E16 - Vězni CZ Dabing",
+        "video_id": 26445173
+      },
+      {
+        "episode_id": 66703,
+        "display_name": "Bylo, nebylo S03E18 - Cestička CZ Dabing",
+        "video_id": 26445467
+      },
+      {
+        "episode_id": 66705,
+        "display_name": "Bylo, nebylo S03E20 - Kansas CZ Dabing",
+        "video_id": 26445682
+      },
+      {
+        "episode_id": 66707,
+        "display_name": "Bylo, nebylo S03E22 - Všude dobře, doma nejlíp CZ Dabing",
+        "video_id": 26445818
+      },
+      {
+        "episode_id": 66725,
+        "display_name": "Bylo, nebylo S04E01 - Příběh dvou sester CZ Dabing",
+        "video_id": 26446001
+      },
+      {
+        "episode_id": 66727,
+        "display_name": "Bylo, nebylo S04E03 - Zmrzlinářka CZ Dabing",
+        "video_id": 26446214
+      },
+      {
+        "episode_id": 66729,
+        "display_name": "Bylo, nebylo S04E05 - Rozbité sklo CZ Dabing",
+        "video_id": 26446342
+      },
+      {
+        "episode_id": 84125,
+        "display_name": "Bylo, nebylo S04E09 - Nebezpečné zrcadlo 2/2 CZ Dabing",
+        "video_id": 26446534
+      },
+      {
+        "episode_id": 66731,
+        "display_name": "Bylo, nebylo S04E10 - Pád CZ Dabing",
+        "video_id": 26446644
+      },
+      {
+        "episode_id": 66733,
+        "display_name": "Bylo, nebylo S04E12 - Hrdinové a zloduši CZ Dabing",
+        "video_id": 26446839
+      },
+      {
+        "episode_id": 66735,
+        "display_name": "Bylo, nebylo S04E14 - Nesmiřitelní CZ Dabing",
+        "video_id": 26446920
+      },
+      {
+        "episode_id": 66737,
+        "display_name": "Bylo, nebylo S04E16 - Nešťastná duše CZ Dabing",
+        "video_id": 26447043
+      },
+      {
+        "episode_id": 66739,
+        "display_name": "Bylo, nebylo S04E18 - Goldovo srdce CZ Dabing",
+        "video_id": 26447187
+      },
+      {
+        "episode_id": 3604,
+        "display_name": "Městečko Twin Peaks S01E06 - Cooperovy sny CZ Dabing",
+        "video_id": 26447426
+      },
+      {
+        "episode_id": 3610,
+        "display_name": "Městečko Twin Peaks S02E04 - Lauřin tajný deník CZ Dabing",
+        "video_id": 26447730
+      },
+      {
+        "episode_id": 3614,
+        "display_name": "Městečko Twin Peaks S02E08 - Projížďka s mtrvou CZ Dabing",
+        "video_id": 26447943
+      },
+      {
+        "episode_id": 3626,
+        "display_name": "Městečko Twin Peaks S02E21 - Miss Twin Peaks CZ Dabing",
+        "video_id": 26448352
+      },
+      {
+        "episode_id": 3588,
+        "display_name": "Městečko Twin Peaks S03E08 - 8. část CZ Dabing",
+        "video_id": 26448586
+      },
+      {
+        "episode_id": 50102,
+        "display_name": "Panství Downton S02E07 - 7. epizoda CZ Dabing",
+        "video_id": 26448683
+      },
+      {
+        "episode_id": 50066,
+        "display_name": "Panství Downton S03E02 - 2. epizoda CZ Dabing",
+        "video_id": 26448755
+      },
+      {
+        "episode_id": 50068,
+        "display_name": "Panství Downton S03E04 - 4. epizoda CZ Dabing",
+        "video_id": 26448829
+      },
+      {
+        "episode_id": 63908,
+        "display_name": "Cobra Kai S02E05 - Bez váhání CZ Dabing",
+        "video_id": 26448862
+      },
+      {
+        "episode_id": 63920,
+        "display_name": "Cobra Kai S02E08 - Glory of Love CZ Dabing",
+        "video_id": 26448997
+      },
+      {
+        "episode_id": 63910,
+        "display_name": "Cobra Kai S03E01 - Následky CZ Dabing",
+        "video_id": 26449191
+      },
+      {
+        "episode_id": 63932,
+        "display_name": "Cobra Kai S03E02 - Přirozenost versus disciplína CZ Dabing",
+        "video_id": 26449326
+      },
+      {
+        "episode_id": 63912,
+        "display_name": "Cobra Kai S03E04 - Správná cesta CZ Dabing",
+        "video_id": 26449508
+      },
+      {
+        "episode_id": 63962,
+        "display_name": "Cobra Kai S03E05 - Mijagi-Do CZ Dabing",
+        "video_id": 26449591
+      },
+      {
+        "episode_id": 63934,
+        "display_name": "Cobra Kai S03E08 - Hodný, zlý a drsňácký CZ Dabing",
+        "video_id": 26449825
+      },
+      {
+        "episode_id": 63914,
+        "display_name": "Cobra Kai S03E09 - Feel The Night CZ Dabing",
+        "video_id": 26449958
+      },
+      {
+        "episode_id": 63924,
+        "display_name": "Cobra Kai S04E01 - Jdeme na to CZ Dabing",
+        "video_id": 26450124
+      },
+      {
+        "episode_id": 63928,
+        "display_name": "Cobra Kai S04E03 - Pak uč létat CZ Dabing",
+        "video_id": 26450239
+      },
+      {
+        "episode_id": 63922,
+        "display_name": "Cobra Kai S04E06 - Na karate holky letí CZ Dabing",
+        "video_id": 26450392
+      },
+      {
+        "episode_id": 63930,
+        "display_name": "Cobra Kai S04E08 - Je mi ctí CZ Dabing",
+        "video_id": 26450457
+      },
+      {
+        "episode_id": 66741,
+        "display_name": "Bylo, nebylo S04E20 - Lily CZ Dabing",
+        "video_id": 26447251
+      },
+      {
+        "episode_id": 84121,
+        "display_name": "Bylo, nebylo S04E23 - Operace Mangusta 2/2 CZ Dabing",
+        "video_id": 26447410
+      },
+      {
+        "episode_id": 66743,
+        "display_name": "Bylo, nebylo S05E01 - Černá labuť CZ Dabing",
+        "video_id": 26447486
+      },
+      {
+        "episode_id": 66745,
+        "display_name": "Bylo, nebylo S05E03 - Poslední křeslo CZ Dabing",
+        "video_id": 26447627
+      },
+      {
+        "episode_id": 66747,
+        "display_name": "Bylo, nebylo S05E05 - Lapač snů CZ Dabing",
+        "video_id": 26447718
+      },
+      {
+        "episode_id": 50317,
+        "display_name": "Gotham S01E08 - Maska CZ Dabing",
+        "video_id": 26448071
+      },
+      {
+        "episode_id": 84123,
+        "display_name": "Bylo, nebylo S05E06 - Medvěd a luk CZ Dabing",
+        "video_id": 26448163
+      },
+      {
+        "episode_id": 66749,
+        "display_name": "Bylo, nebylo S05E08 - Zrození CZ Dabing",
+        "video_id": 26448255
+      },
+      {
+        "episode_id": 66751,
+        "display_name": "Bylo, nebylo S05E11 - Labutí píseň CZ Dabing",
+        "video_id": 26448372
+      },
+      {
+        "episode_id": 66753,
+        "display_name": "Bylo, nebylo S05E13 - Úkol z lásky CZ Dabing",
+        "video_id": 26448391
+      },
+      {
+        "episode_id": 66755,
+        "display_name": "Bylo, nebylo S05E15 - Bratři Jonesovi CZ Dabing",
+        "video_id": 26448502
+      },
+      {
+        "episode_id": 66645,
+        "display_name": "Bylo, nebylo S05E17 - Její krásný hrdina CZ Dabing",
+        "video_id": 26448600
+      },
+      {
+        "episode_id": 66757,
+        "display_name": "Bylo, nebylo S05E18 - Střevíčky CZ Dabing",
+        "video_id": 26448673
+      },
+      {
+        "episode_id": 66759,
+        "display_name": "Bylo, nebylo S05E20 - Fénix CZ Dabing",
+        "video_id": 26448800
+      },
+      {
+        "episode_id": 66649,
+        "display_name": "Bylo, nebylo S06E04 - Zvláštní případ CZ Dabing",
+        "video_id": 26448861
+      },
+      {
+        "episode_id": 66761,
+        "display_name": "Bylo, nebylo S06E06 - Temné vody CZ Dabing",
+        "video_id": 26448916
+      },
+      {
+        "episode_id": 66763,
+        "display_name": "Bylo, nebylo S06E08 - Budu tvé zrcadlo CZ Dabing",
+        "video_id": 26449051
+      },
+      {
+        "episode_id": 66765,
+        "display_name": "Bylo, nebylo S06E10 - Škoda, že tu nejsi CZ Dabing",
+        "video_id": 26449280
+      },
+      {
+        "episode_id": 66767,
+        "display_name": "Bylo, nebylo S06E12 - Hodně podlý mord CZ Dabing",
+        "video_id": 26449451
+      },
+      {
+        "episode_id": 66769,
+        "display_name": "Bylo, nebylo S06E15 - Zázračné místo CZ Dabing",
+        "video_id": 26449517
+      },
+      {
+        "episode_id": 66771,
+        "display_name": "Bylo, nebylo S06E17 - Procitnutí CZ Dabing",
+        "video_id": 26449579
+      },
+      {
+        "episode_id": 66651,
+        "display_name": "Bylo, nebylo S06E18 - Tam, kde létají modří ptáčci CZ Dabing",
+        "video_id": 26449774
+      },
+      {
+        "episode_id": 84127,
+        "display_name": "Bylo, nebylo S06E21 - Konečná bitva 1/2 CZ Dabing",
+        "video_id": 26450023
+      },
+      {
+        "episode_id": 50089,
+        "display_name": "Panství Downton S01E01 - 1. epizoda CZ Dabing",
+        "video_id": 26450476
+      },
+      {
+        "episode_id": 50091,
+        "display_name": "Panství Downton S01E03 - 3. epizoda CZ Dabing",
+        "video_id": 26450578
       }
     ],
     "prepared_not_upload_ready": [
@@ -37663,12 +38403,12 @@
     ]
   },
   "language_verdicts": {
-    "UNKNOWN": 2544,
-    "CZ_AUDIO": 99664,
-    "CZ_SUBTITLES_ONLY": 5105,
+    "UNKNOWN": 513,
+    "CZ_AUDIO": 74431,
+    "CZ_SUBTITLES_ONLY": 2128,
     "NOT_CZ_AUDIO": 516,
-    "SK_AUDIO": 28,
-    "PROBABLE_CZ_AUDIO": 11
+    "SK_AUDIO": 2,
+    "PROBABLE_CZ_AUDIO": 2
   },
   "language_whisper_statuses": {
     "disabled": 69067,
