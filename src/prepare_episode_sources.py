@@ -127,12 +127,17 @@ def latest_usable_prepared_episode_ids(path: Path, burned: set[int]) -> set[int]
         source_id = selected.get("source_id")
         if source_id is None or int(source_id) in burned:
             continue
+        if not is_resolvable(selected):
+            continue
         completed.add(episode_id)
     return completed
 
 
 def retry_due(row: dict | None, *, now: dt.datetime) -> bool:
     if not row or not row.get("prepared_at"):
+        return True
+    selected = row.get("selected_source") or {}
+    if selected and not is_resolvable(selected):
         return True
     try:
         prepared = dt.datetime.fromisoformat(str(row["prepared_at"]).replace("Z", "+00:00"))
