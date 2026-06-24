@@ -27,6 +27,7 @@ from source_quality import source_quality_score, source_quality_tier  # noqa: E4
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 FAILED_RETRY_AFTER = dt.timedelta(hours=24)
+MAX_RESOLVABLE_CANDIDATE_PROBES = 4
 
 
 def load_jsonl(path: Path) -> list[dict]:
@@ -458,7 +459,7 @@ def prepare_episode(
     if require_resolvable_source or use_whisper:
         audited_by_id = {int(result["source_id"]): index for index, result in enumerate(audited)}
         verified_acceptable = []
-        for preliminary in acceptable:
+        for preliminary in acceptable[:MAX_RESOLVABLE_CANDIDATE_PROBES]:
             source = sources_by_id[int(preliminary["source_id"])]
             verified = audit_one(
                 source,
