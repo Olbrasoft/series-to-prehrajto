@@ -1,33 +1,57 @@
 {
   "counts": {
-    "backlog_episodes": 3000,
-    "manifest_upload_ready_episodes": 1850,
-    "uploaded_episodes": 6646,
+    "backlog_episodes": 100,
+    "manifest_upload_ready_episodes": 5,
+    "uploaded_episodes": 6656,
     "prepared_source_episodes": 11322,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 2806,
-    "language_audit_rows": 77592,
-    "language_queue_sources": 31313,
-    "language_audited_sources": 72412,
-    "language_whisper_attempted_sources": 3345,
-    "language_pending_whisper_sources": 31313
+    "language_audit_rows": 78784,
+    "language_queue_sources": 1192,
+    "language_audited_sources": 73584,
+    "language_whisper_attempted_sources": 3329,
+    "language_pending_whisper_sources": 1188
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-06-24T10:32:17Z",
-      "databaseId": 28092332601,
+      "createdAt": "2026-06-24T10:40:57Z",
+      "databaseId": 28092772417,
       "headBranch": "main",
       "status": "in_progress",
-      "workflowName": "ops-status"
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-06-24T10:38:12Z",
+      "databaseId": 28092637276,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-06-24T10:33:57Z",
+      "databaseId": 28092420490,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-24T10:32:17Z",
+      "databaseId": 28092332601,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "cancelled",
       "createdAt": "2026-06-24T10:31:08Z",
       "databaseId": 28092271937,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "sync"
     },
     {
@@ -79,11 +103,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-06-24T10:06:20Z",
       "databaseId": 28090966806,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "sync"
     },
     {
@@ -95,11 +119,11 @@
       "workflowName": "prepare-sources"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-06-24T09:47:32Z",
       "databaseId": 28089931770,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-descriptions"
     },
     {
@@ -149,136 +173,61 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-24T09:16:08Z",
-      "databaseId": 28088196453,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-24T09:11:37Z",
-      "databaseId": 28087948163,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-24T09:09:14Z",
-      "databaseId": 28087815541,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
     }
   ],
   "gaps": {
-    "backlog_without_source_plan": [
-      4689,
-      4690,
-      4691,
-      4692,
-      4693,
-      4694,
-      4695,
-      4696,
-      4698,
-      4699,
-      4700,
-      4702,
-      4704,
-      4705,
-      4706,
-      4708,
-      4710,
-      4711,
-      4714,
-      4715,
-      4717,
-      4719,
-      4720,
-      5754,
-      5755,
-      5756,
-      5757,
-      5758,
-      5759,
-      5760,
-      5761,
-      5762,
-      5763,
-      5808,
-      5809,
-      5810,
-      5811,
-      5812,
-      5813,
-      5814,
-      5816,
-      5819,
-      5820,
-      5821,
-      5822,
-      5823,
-      5825,
-      5826,
-      5827,
-      5828
-    ],
+    "backlog_without_source_plan": [],
     "backlog_without_episode_description": [
-      3070,
-      3581,
-      3582,
-      3583,
-      3584,
-      3585,
-      3586,
-      3587,
-      3589,
-      3590,
-      3591,
-      3593,
-      3594,
-      3595,
-      3596,
-      3597,
-      3598,
-      3599,
-      3600,
-      3601,
-      3603,
-      3605,
-      3606,
-      3607,
-      3608,
-      3609,
-      3611,
-      3612,
-      3613,
-      3615,
-      3616,
-      3617,
-      3618,
-      3619,
-      3620,
-      3621,
-      3622,
-      3623,
-      3624,
-      3625,
-      3627,
-      3628,
-      4264,
-      4265,
-      4266,
-      4267,
-      4268,
-      4269,
-      4270,
-      4271
+      13347,
+      13348,
+      13352,
+      13353,
+      13354,
+      13358,
+      13360,
+      13364,
+      13367,
+      13368,
+      13369,
+      13371,
+      13373,
+      13378,
+      13379,
+      13380,
+      13382,
+      13388,
+      13389,
+      13390,
+      13391,
+      13392,
+      13393,
+      13394,
+      13395,
+      13399,
+      13402,
+      13403,
+      13404,
+      13406,
+      13407,
+      13408,
+      13412,
+      13413,
+      13414,
+      13416,
+      13417,
+      13418,
+      13419,
+      13423,
+      13424,
+      13425,
+      13426,
+      13427,
+      13429,
+      13430,
+      13431,
+      13432,
+      13433,
+      13434
     ],
     "uploaded_without_gemma_description": [
       {
@@ -13662,6 +13611,21 @@
         "video_id": 26453951
       },
       {
+        "episode_id": 63398,
+        "display_name": "Myšlenky zločince S01E08 - Takoví normální zabijáci CZ Dabing",
+        "video_id": 26454041
+      },
+      {
+        "episode_id": 63400,
+        "display_name": "Myšlenky zločince S01E10 - Populární děti CZ Dabing",
+        "video_id": 26454127
+      },
+      {
+        "episode_id": 63402,
+        "display_name": "Myšlenky zločince S01E12 - Co za peklo? CZ Dabing",
+        "video_id": 26454178
+      },
+      {
         "episode_id": 50093,
         "display_name": "Panství Downton S01E05 - 5. epizoda CZ Dabing",
         "video_id": 26450651
@@ -13755,6 +13719,41 @@
         "episode_id": 63917,
         "display_name": "Cobra Kai S02E03 - Oheň a led CZ Dabing",
         "video_id": 26453945
+      },
+      {
+        "episode_id": 63909,
+        "display_name": "Cobra Kai S02E06 - Koukni doprava CZ Dabing",
+        "video_id": 26454095
+      },
+      {
+        "episode_id": 3600,
+        "display_name": "Městečko Twin Peaks S01E02 - Stopy nikam CZ Dabing",
+        "video_id": 26454518
+      },
+      {
+        "episode_id": 3616,
+        "display_name": "Městečko Twin Peaks S02E10 - Roztržka mezi bratry CZ Dabing",
+        "video_id": 26454925
+      },
+      {
+        "episode_id": 50365,
+        "display_name": "Gotham S02E14 - Kulička bláta a zloby CZ Dabing",
+        "video_id": 26454555
+      },
+      {
+        "episode_id": 50373,
+        "display_name": "Gotham S05E02 - Vetřelci CZ Dabing",
+        "video_id": 26454845
+      },
+      {
+        "episode_id": 50369,
+        "display_name": "Gotham S05E07 - Špičkové chemikálie CZ Dabing",
+        "video_id": 26455075
+      },
+      {
+        "episode_id": 66647,
+        "display_name": "Bylo, nebylo S05E23 - Neznámý příběh CZ Dabing",
+        "video_id": 26455271
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -38364,6 +38363,21 @@
         "video_id": 26453951
       },
       {
+        "episode_id": 63398,
+        "display_name": "Myšlenky zločince S01E08 - Takoví normální zabijáci CZ Dabing",
+        "video_id": 26454041
+      },
+      {
+        "episode_id": 63400,
+        "display_name": "Myšlenky zločince S01E10 - Populární děti CZ Dabing",
+        "video_id": 26454127
+      },
+      {
+        "episode_id": 63402,
+        "display_name": "Myšlenky zločince S01E12 - Co za peklo? CZ Dabing",
+        "video_id": 26454178
+      },
+      {
         "episode_id": 50093,
         "display_name": "Panství Downton S01E05 - 5. epizoda CZ Dabing",
         "video_id": 26450651
@@ -38457,6 +38471,41 @@
         "episode_id": 63917,
         "display_name": "Cobra Kai S02E03 - Oheň a led CZ Dabing",
         "video_id": 26453945
+      },
+      {
+        "episode_id": 63909,
+        "display_name": "Cobra Kai S02E06 - Koukni doprava CZ Dabing",
+        "video_id": 26454095
+      },
+      {
+        "episode_id": 3600,
+        "display_name": "Městečko Twin Peaks S01E02 - Stopy nikam CZ Dabing",
+        "video_id": 26454518
+      },
+      {
+        "episode_id": 3616,
+        "display_name": "Městečko Twin Peaks S02E10 - Roztržka mezi bratry CZ Dabing",
+        "video_id": 26454925
+      },
+      {
+        "episode_id": 50365,
+        "display_name": "Gotham S02E14 - Kulička bláta a zloby CZ Dabing",
+        "video_id": 26454555
+      },
+      {
+        "episode_id": 50373,
+        "display_name": "Gotham S05E02 - Vetřelci CZ Dabing",
+        "video_id": 26454845
+      },
+      {
+        "episode_id": 50369,
+        "display_name": "Gotham S05E07 - Špičkové chemikálie CZ Dabing",
+        "video_id": 26455075
+      },
+      {
+        "episode_id": 66647,
+        "display_name": "Bylo, nebylo S05E23 - Neznámý příběh CZ Dabing",
+        "video_id": 26455271
       }
     ],
     "prepared_not_upload_ready": [
@@ -38763,17 +38812,17 @@
     ]
   },
   "language_verdicts": {
-    "UNKNOWN": 513,
-    "CZ_AUDIO": 74431,
-    "CZ_SUBTITLES_ONLY": 2128,
+    "UNKNOWN": 521,
+    "CZ_AUDIO": 75547,
+    "CZ_SUBTITLES_ONLY": 2188,
     "NOT_CZ_AUDIO": 516,
     "SK_AUDIO": 2,
-    "PROBABLE_CZ_AUDIO": 2
+    "PROBABLE_CZ_AUDIO": 10
   },
   "language_whisper_statuses": {
-    "disabled": 69067,
-    "resolve_failed": 276,
-    "ok": 3032,
+    "disabled": 70255,
+    "resolve_failed": 280,
+    "ok": 3012,
     "no_stream": 37
   }
 }
