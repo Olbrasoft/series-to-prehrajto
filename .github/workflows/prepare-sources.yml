@@ -71,6 +71,8 @@ jobs:
           ARGS=(
             "--episode-limit" "${{ inputs.episode_limit || '1500' }}"
             "--source-limit-per-episode" "${{ inputs.source_limit_per_episode || '12' }}"
+            "--live-search"
+            "--live-search-limit" "8"
             "--require-resolvable-source"
           )
           if [ -n "${{ inputs.series_slug }}" ]; then
@@ -85,15 +87,17 @@ jobs:
         if: always()
         run: |
           TMP_DIR="$(mktemp -d)"
-          mkdir -p "$TMP_DIR/plans"
+          mkdir -p "$TMP_DIR/plans" "$TMP_DIR/audits"
           cp plans/prepared-episodes.jsonl "$TMP_DIR/plans/prepared-episodes.jsonl"
+          cp audits/language-audit-latest.jsonl "$TMP_DIR/audits/language-audit-latest.jsonl"
 
           for attempt in 1 2 3 4 5; do
             git fetch origin main
             git reset --hard origin/main
             cp "$TMP_DIR/plans/prepared-episodes.jsonl" plans/prepared-episodes.jsonl
+            cp "$TMP_DIR/audits/language-audit-latest.jsonl" audits/language-audit-latest.jsonl
 
-            git add plans/prepared-episodes.jsonl
+            git add plans/prepared-episodes.jsonl audits/language-audit-latest.jsonl
             if git diff --cached --quiet; then
               echo "no preparation changes"
               exit 0

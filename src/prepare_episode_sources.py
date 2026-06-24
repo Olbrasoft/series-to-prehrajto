@@ -12,19 +12,23 @@ import argparse
 import gzip
 import json
 import os
+import re
 import sys
 from collections import defaultdict
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from audit_language_sources import audit_one  # noqa: E402
+from audit_language_sources import audit_one, write_latest_index  # noqa: E402
+from prehrajto_search import search as search_prehrajto  # noqa: E402
 from source_quality import source_quality_score, source_quality_tier  # noqa: E402
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 
 
 def load_jsonl(path: Path) -> list[dict]:
+    if not path.exists() or path.stat().st_size == 0:
+        return []
     opener = gzip.open if path.suffix == ".gz" else open
     with opener(path, "rt", encoding="utf-8") as fh:
         return [json.loads(line) for line in fh if line.strip()]
@@ -162,8 +166,94 @@ def merge_backlog_sources(queue_rows: list[dict], backlog_path: Path) -> list[di
     return merged
 
 
-def group_by_episode(rows: list[dict]) -> list[dict]:
+def episode_code(episode: dict) -> str:
+    return f"S{int(episode['season'] or 0):02d}E{int(episode['episode'] or 0):02d}"
+
+
+def title_matches_episode(title: str, episode: dict) -> bool:
+    compact = re.sub(r"[^a-z0-9]", "", title.lower())
+    season = int(episode["season"] or 0)
+    number = int(episode["episode"] or 0)
+    markers = {
+        f"s{season:02d}e{number:02d}",
+        f"{season}x{number}",
+        f"{season:02d}x{number:02d}",
+    }
+    return any(re.sub(r"[^a-z0-9]", "", marker) in compact for marker in markers)
+
+
+def live_search_candidates(episode: dict, *, limit: int) -> list[dict]:
+    queries = [
+        f"{episode['series_title']} {episode_code(episode)}",
+        f"{episode['series_title']} {int(episode['season'])}x{int(episode['episode'])}",
+    ]
+    found: dict[str, dict] = {}
+    for query in queries:
+        try:
+            results = search_prehrajto(query)
+        except Exception as exc:
+            print(f"Live search failed for {query!r}: {type(exc).__name__}: {exc}", file=sys.stderr)
+            continue
+        for result in results:
+            if not title_matches_episode(result.title, episode):
+                continue
+            found[result.external_id] = {
+                "series_id": episode["series_id"],
+                "series_slug": episode["series_slug"],
+                "series_title": episode["series_title"],
+                "episode_id": episode["episode_id"],
+                "season": episode["season"],
+                "episode": episode["episode"],
+                "episode_title": episode.get("episode_title"),
+                "episode_name": episode.get("episode_name"),
+                "episode_audio_langs": [],
+                "episode_subtitle_langs": [],
+                "provider": "prehrajto",
+                "source_id": result.source_id,
+                "external_id": result.external_id,
+                "source_url": result.url,
+                "source_title": result.title,
+                "duration_sec": result.duration_sec,
+                "resolution_hint": result.resolution_hint,
+                "filesize_bytes": result.filesize_bytes,
+                "view_count": None,
+                "db_lang_class": None,
+                "db_audio_lang": None,
+                "db_audio_confidence": None,
+                "db_audio_detected_by": None,
+                "source_origin": "prehrajto_search",
+                "db_source_exists": False,
+                "quality_tier": source_quality_tier(
+                    {
+                        "source_title": result.title,
+                        "resolution_hint": result.resolution_hint,
+                        "filesize_bytes": result.filesize_bytes,
+                    }
+                ),
+                "metadata": {},
+            }
+    return sorted(
+        found.values(),
+        key=lambda source: source_quality_score(source),
+        reverse=True,
+    )[:limit]
+
+
+def group_by_episode(rows: list[dict], backlog_path: Path) -> list[dict]:
     grouped: dict[int, dict] = {}
+    for episode in load_jsonl(backlog_path):
+        eid = int(episode["episode_id"])
+        grouped[eid] = {
+            "episode_id": eid,
+            "series_id": episode["series_id"],
+            "series_slug": episode["series_slug"],
+            "series_title": episode["series_title"],
+            "season": episode["season"],
+            "episode": episode["episode"],
+            "episode_title": episode.get("episode_title"),
+            "episode_name": episode.get("episode_name") or episode.get("episode_title"),
+            "sources": [],
+        }
     for row in rows:
         eid = int(row["episode_id"])
         if eid not in grouped:
@@ -236,25 +326,67 @@ def prepare_episode(
     source_limit: int,
     burned: set[int],
     require_resolvable_source: bool,
+    live_search: bool,
+    live_search_limit: int,
 ) -> dict:
     live_sources = [source for source in episode["sources"] if int(source["source_id"]) not in burned]
+    if live_search:
+        known_external_ids = {source.get("external_id") for source in live_sources}
+        discovered = [
+            source
+            for source in live_search_candidates(episode, limit=live_search_limit)
+            if source.get("external_id") not in known_external_ids
+        ]
+        live_sources = discovered + live_sources
     sources = live_sources[:source_limit] if source_limit > 0 else live_sources
     audited = []
     for source in sources:
         result = audit_one(
             source,
-            use_whisper=use_whisper,
+            use_whisper=False,
             sample_seconds=sample_seconds,
-            probe_stream=require_resolvable_source,
+            probe_stream=False,
         )
         result["score"] = source_score(result, source)
         result["resolution_score"] = probe_resolution(result, source)
         result["quality_tier"] = source_quality_tier(source, resolved_resolution=result["resolution_score"])
         audited.append(result)
-    acceptable = [r for r in audited if r["verdict"] in {"CZ_AUDIO", "PROBABLE_CZ_AUDIO", "CZ_SUBTITLES_ONLY"}]
-    if require_resolvable_source:
-        acceptable = [r for r in acceptable if is_resolvable(r)]
-    selected = max(acceptable, key=lambda r: tuple(r["score"])) if acceptable else None
+
+    sources_by_id = {int(source["source_id"]): source for source in sources}
+    acceptable = [
+        result
+        for result in audited
+        if result["verdict"] in {"CZ_AUDIO", "PROBABLE_CZ_AUDIO", "CZ_SUBTITLES_ONLY"}
+    ]
+    acceptable.sort(key=lambda result: tuple(result["score"]), reverse=True)
+
+    selected = None
+    if require_resolvable_source or use_whisper:
+        audited_by_id = {int(result["source_id"]): index for index, result in enumerate(audited)}
+        for preliminary in acceptable:
+            source = sources_by_id[int(preliminary["source_id"])]
+            verified = audit_one(
+                source,
+                use_whisper=use_whisper,
+                sample_seconds=sample_seconds,
+                probe_stream=True,
+            )
+            verified["score"] = source_score(verified, source)
+            verified["resolution_score"] = probe_resolution(verified, source)
+            verified["quality_tier"] = source_quality_tier(
+                source,
+                resolved_resolution=verified["resolution_score"],
+            )
+            audited[audited_by_id[int(verified["source_id"])]] = verified
+            if not is_resolvable(verified):
+                continue
+            if verified["verdict"] not in {"CZ_AUDIO", "PROBABLE_CZ_AUDIO", "CZ_SUBTITLES_ONLY"}:
+                continue
+            selected = verified
+            break
+    elif acceptable:
+        selected = acceptable[0]
+
     upload_ready = bool(selected and selected["verdict"] in {"CZ_AUDIO", "PROBABLE_CZ_AUDIO"})
     return {
         "prepared_at": audited[-1]["audited_at"] if audited else None,
@@ -278,19 +410,22 @@ def main() -> int:
     ap.add_argument("--backlog", default="backlog/series-episodes.jsonl.gz")
     ap.add_argument("--out", default="plans/prepared-episodes.jsonl")
     ap.add_argument("--audit-out", default="audits/language-audit.jsonl")
+    ap.add_argument("--audit-latest-out", default="audits/language-audit-latest.jsonl")
     ap.add_argument("--episode-limit", type=int, default=10)
     ap.add_argument("--source-limit-per-episode", type=int, default=12)
     ap.add_argument("--series-slug")
     ap.add_argument("--use-whisper", action="store_true")
     ap.add_argument("--sample-seconds", type=int, default=45)
     ap.add_argument("--require-resolvable-source", action="store_true")
+    ap.add_argument("--live-search", action="store_true")
+    ap.add_argument("--live-search-limit", type=int, default=8)
     ap.add_argument("--refresh", action="store_true")
     args = ap.parse_args()
 
     rows = merge_backlog_sources(load_jsonl(Path(args.queue)), Path(args.backlog))
     if args.series_slug:
         rows = [row for row in rows if row["series_slug"] == args.series_slug]
-    episodes = group_by_episode(rows)
+    episodes = group_by_episode(rows, Path(args.backlog))
     burned = burned_source_ids()
     done = set() if args.refresh else latest_usable_prepared_episode_ids(Path(args.out), burned)
     todo = [episode for episode in episodes if int(episode["episode_id"]) not in done]
@@ -304,12 +439,15 @@ def main() -> int:
             source_limit=args.source_limit_per_episode,
             burned=burned,
             require_resolvable_source=args.require_resolvable_source,
+            live_search=args.live_search,
+            live_search_limit=args.live_search_limit,
         )
         for episode in todo
     ]
     audit_rows = [source for episode in prepared for source in episode["tested_sources"]]
     write_compacted_prepared(Path(args.out), prepared)
     append_jsonl(Path(args.audit_out), audit_rows)
+    write_latest_index(Path(args.audit_out), Path(args.audit_latest_out))
 
     for episode in prepared:
         selected = episode.get("selected_source")

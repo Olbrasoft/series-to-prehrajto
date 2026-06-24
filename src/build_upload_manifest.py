@@ -96,10 +96,35 @@ def upload_candidate_ids(plan: dict, burned: set[int]) -> list[int]:
 
 def upload_candidates(episode: dict, plan: dict, burned: set[int]) -> list[dict]:
     candidates_by_id = {int(candidate["source_id"]): candidate for candidate in episode.get("candidates") or []}
+    for source in [plan.get("selected_source"), *(plan.get("tested_sources") or [])]:
+        if not source or source.get("source_id") is None:
+            continue
+        source_id = int(source["source_id"])
+        candidates_by_id.setdefault(
+            source_id,
+            {
+                "source_id": source_id,
+                "external_id": source.get("external_id"),
+                "url": source.get("source_url"),
+                "title": source.get("source_title") or source.get("provider_title"),
+                "duration_sec": source.get("duration_sec"),
+                "resolution_hint": source.get("resolution_hint"),
+                "resolution_score": source.get("resolution_score"),
+                "filesize_bytes": source.get("filesize_bytes"),
+                "view_count": source.get("view_count"),
+                "lang_class": source.get("db_lang_class")
+                or ("CZ_DUB" if source.get("verdict") in {"CZ_AUDIO", "PROBABLE_CZ_AUDIO"} else None),
+                "audio_lang": source.get("db_audio_lang")
+                or ("cs" if source.get("verdict") == "CZ_AUDIO" else None),
+                "source_origin": source.get("source_origin") or "prehrajto_search",
+                "db_source_exists": bool(source.get("db_source_exists")),
+                "quality_tier": source.get("quality_tier"),
+            },
+        )
     rows: list[dict] = []
     for source_id in upload_candidate_ids(plan, burned):
         candidate = candidates_by_id.get(source_id)
-        if candidate:
+        if candidate and candidate.get("url"):
             rows.append(candidate)
     return rows
 

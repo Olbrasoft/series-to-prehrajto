@@ -133,6 +133,26 @@ def catalog_row(
     }
 
 
+def candidate_from_audit(audit: dict[str, Any]) -> dict[str, Any]:
+    return {
+        "provider": audit.get("provider") or "prehrajto",
+        "source_id": audit.get("source_id"),
+        "external_id": audit.get("external_id"),
+        "url": audit.get("source_url"),
+        "title": audit.get("source_title") or audit.get("provider_title"),
+        "duration_sec": audit.get("duration_sec"),
+        "resolution_hint": audit.get("resolution_hint"),
+        "resolution_score": audit.get("resolution_score"),
+        "filesize_bytes": audit.get("filesize_bytes"),
+        "view_count": audit.get("view_count"),
+        "quality_tier": audit.get("quality_tier"),
+        "source_origin": audit.get("source_origin") or "prehrajto_search",
+        "db_source_exists": bool(audit.get("db_source_exists")),
+        "lang_class": audit.get("db_lang_class"),
+        "audio_lang": audit.get("db_audio_lang"),
+    }
+
+
 def build_catalog(backlog_path: Path, audits_path: Path) -> list[dict[str, Any]]:
     uploaded, dead = load_uploaded_state()
     audits = latest_audits(audits_path)
@@ -147,6 +167,27 @@ def build_catalog(backlog_path: Path, audits_path: Path) -> list[dict[str, Any]]
                 dead=dead,
             )
             rows_by_key[row["source_key"]] = row
+    for audit in audits.values():
+        if not audit.get("source_url") or audit.get("episode_id") is None:
+            continue
+        episode = {
+            "series_id": audit.get("series_id"),
+            "series_slug": audit.get("series_slug"),
+            "series_title": audit.get("series_title"),
+            "episode_id": audit.get("episode_id"),
+            "season": audit.get("season"),
+            "episode": audit.get("episode"),
+            "episode_name": audit.get("episode_name"),
+        }
+        candidate = candidate_from_audit(audit)
+        row = catalog_row(
+            episode,
+            candidate,
+            audit=audit,
+            uploaded=uploaded,
+            dead=dead,
+        )
+        rows_by_key[row["source_key"]] = row
     return sorted(
         rows_by_key.values(),
         key=lambda row: (

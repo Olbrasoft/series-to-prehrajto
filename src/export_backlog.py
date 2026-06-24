@@ -194,16 +194,6 @@ def fetch_rows(
                       e.series_id::text || ':' || coalesce(e.season, -1)::text || ':' || coalesce(e.episode, -1)::text
                       = ANY(%(uploaded_episode_keys)s)
                   )
-                  AND EXISTS (
-                      SELECT 1
-                      FROM video_sources vs
-                      WHERE vs.episode_id = e.id
-                        AND vs.provider_id = 2
-                        AND vs.is_alive
-                        AND vs.lang_class = ANY(%(lang_classes)s)
-                        AND vs.metadata ? 'url'
-                        AND NOT (vs.id = ANY(%(burned_source_ids)s))
-                  )
                 ORDER BY e.season NULLS LAST, e.episode NULLS LAST, e.id
                 LIMIT %(remaining)s
                 """,
@@ -286,11 +276,28 @@ def fetch_rows(
                     },
                 )
                 source_rows = list(cur.fetchall())
-            if not source_rows:
-                continue
             episode_count += 1
-            for source_row in source_rows:
-                rows.append({**episode_row, **source_row})
+            if source_rows:
+                for source_row in source_rows:
+                    rows.append({**episode_row, **source_row})
+            else:
+                rows.append(
+                    {
+                        **episode_row,
+                        "source_id": None,
+                        "external_id": None,
+                        "source_title": None,
+                        "source_duration_sec": None,
+                        "resolution_hint": None,
+                        "filesize_bytes": None,
+                        "view_count": None,
+                        "lang_class": None,
+                        "audio_lang": None,
+                        "audio_confidence": None,
+                        "source_url": None,
+                        "source_rank": None,
+                    }
+                )
     return rows
 
 
@@ -299,7 +306,7 @@ def group_rows(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
     for row in rows:
         eid = row["id"]
         if eid not in by_episode:
-            preferred = row["lang_class"]
+            preferred = row["lang_class"] or "UNKNOWN"
             item = {
                 "episode_id": eid,
                 "series_id": row["series_id"],
@@ -329,6 +336,8 @@ def group_rows(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
             item["display_name"] = display_name(item)
             by_episode[eid] = item
         item = by_episode[eid]
+        if row["source_id"] is None:
+            continue
         url = normalize_url(row["source_url"])
         if not url:
             continue

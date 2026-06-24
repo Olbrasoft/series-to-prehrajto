@@ -17,7 +17,12 @@ def resolution_score(value: str | None) -> int:
 
 
 def source_quality_tier(source: dict[str, Any], *, resolved_resolution: int | None = None) -> str:
-    resolution = int(resolved_resolution or 0) or resolution_score(source.get("resolution_hint"))
+    resolution = int(resolved_resolution or 0) or resolution_score(
+        " ".join(
+            str(value or "")
+            for value in (source.get("resolution_hint"), source.get("title"), source.get("source_title"))
+        )
+    )
     filesize = int(source.get("filesize_bytes") or 0)
     if resolution >= 1080 or filesize >= MIN_PREFERRED_FILESIZE_BYTES:
         return "preferred"
@@ -25,7 +30,12 @@ def source_quality_tier(source: dict[str, Any], *, resolved_resolution: int | No
 
 
 def source_quality_score(source: dict[str, Any], *, resolved_resolution: int | None = None) -> tuple[int, int, int]:
-    resolution = int(resolved_resolution or 0) or resolution_score(source.get("resolution_hint"))
+    resolution = int(resolved_resolution or 0) or resolution_score(
+        " ".join(
+            str(value or "")
+            for value in (source.get("resolution_hint"), source.get("title"), source.get("source_title"))
+        )
+    )
     filesize = int(source.get("filesize_bytes") or 0)
     preferred_bonus = 1 if source_quality_tier(source, resolved_resolution=resolution) == "preferred" else 0
     return preferred_bonus, resolution, filesize
