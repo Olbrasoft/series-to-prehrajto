@@ -1,33 +1,89 @@
 {
   "counts": {
     "backlog_episodes": 20000,
-    "manifest_upload_ready_episodes": 138,
-    "uploaded_episodes": 6936,
-    "prepared_source_episodes": 12023,
+    "manifest_upload_ready_episodes": 92,
+    "uploaded_episodes": 6951,
+    "prepared_source_episodes": 12033,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 2811,
-    "language_audit_rows": 80254,
+    "language_audit_rows": 80374,
     "language_queue_sources": 2644,
-    "language_audited_sources": 74548,
-    "language_whisper_attempted_sources": 3365,
-    "language_pending_whisper_sources": 2604
+    "language_audited_sources": 74528,
+    "language_whisper_attempted_sources": 3345,
+    "language_pending_whisper_sources": 2624
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-06-24T22:35:05Z",
-      "databaseId": 28134022782,
+      "createdAt": "2026-06-24T22:48:38Z",
+      "databaseId": 28134618189,
       "headBranch": "main",
       "status": "in_progress",
-      "workflowName": "ops-status"
+      "workflowName": "prepare-manifest"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-06-24T22:48:36Z",
+      "databaseId": 28134616678,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-24T22:41:57Z",
+      "databaseId": 28134331836,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-06-24T22:41:37Z",
+      "databaseId": 28134316258,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-24T22:36:54Z",
+      "databaseId": 28134108073,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-24T22:36:51Z",
+      "databaseId": 28134105690,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-06-24T22:35:54Z",
+      "databaseId": 28134062673,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-24T22:35:05Z",
+      "databaseId": 28134022782,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-06-24T22:32:57Z",
       "databaseId": 28133921842,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -117,62 +173,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-status"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-24T21:52:12Z",
-      "databaseId": 28131998590,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-24T21:42:21Z",
-      "databaseId": 28131510266,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-24T21:42:19Z",
-      "databaseId": 28131509067,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-24T21:42:18Z",
-      "databaseId": 28131507787,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-24T21:41:48Z",
-      "databaseId": 28131482018,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-24T21:41:07Z",
-      "databaseId": 28131448043,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "failure",
-      "createdAt": "2026-06-24T21:36:33Z",
-      "databaseId": 28131216011,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
     }
   ],
   "gaps": {
@@ -14927,6 +14927,56 @@
         "video_id": 26534027
       },
       {
+        "episode_id": 13580,
+        "display_name": "2 Socky S05E09 - A problém se saxíkem CZ Dabing",
+        "video_id": 26534427
+      },
+      {
+        "episode_id": 13584,
+        "display_name": "2 Socky S05E13 - A ztracený kufr CZ Dabing",
+        "video_id": 26534586
+      },
+      {
+        "episode_id": 13586,
+        "display_name": "2 Socky S05E15 - A velký útěk CZ Dabing",
+        "video_id": 26534634
+      },
+      {
+        "episode_id": 13588,
+        "display_name": "2 Socky S05E18 - A skulina CZ Dabing",
+        "video_id": 26534751
+      },
+      {
+        "episode_id": 13594,
+        "display_name": "2 Socky S06E01 - A dvojí zahájení CZ Dabing",
+        "video_id": 26534917
+      },
+      {
+        "episode_id": 13596,
+        "display_name": "2 Socky S06E03 - A křtiny CZ Dabing",
+        "video_id": 26535016
+      },
+      {
+        "episode_id": 13600,
+        "display_name": "2 Socky S06E08 - A z očí do očí CZ Dabing",
+        "video_id": 26535148
+      },
+      {
+        "episode_id": 13602,
+        "display_name": "2 Socky S06E09 - A dokonalá bouře CZ Dabing",
+        "video_id": 26535241
+      },
+      {
+        "episode_id": 13608,
+        "display_name": "2 Socky S06E15 - A čas škádlení CZ Dabing",
+        "video_id": 26535370
+      },
+      {
+        "episode_id": 13614,
+        "display_name": "2 Socky S06E21 - A 2 $ocky: Film CZ Dabing",
+        "video_id": 26535566
+      },
+      {
         "episode_id": 13563,
         "display_name": "2 Socky S04E15 - A tlustý kocour CZ Dabing",
         "video_id": 26533811
@@ -14940,6 +14990,31 @@
         "episode_id": 13567,
         "display_name": "2 Socky S04E18 - A zkouška vkusu CZ Dabing",
         "video_id": 26534105
+      },
+      {
+        "episode_id": 13571,
+        "display_name": "2 Socky S04E22 - A velké selhání CZ Dabing",
+        "video_id": 26534231
+      },
+      {
+        "episode_id": 13581,
+        "display_name": "2 Socky S05E10 - A žádní noví přátelé CZ Dabing",
+        "video_id": 26534479
+      },
+      {
+        "episode_id": 13587,
+        "display_name": "2 Socky S05E16 - A smutný autobus CZ Dabing",
+        "video_id": 26534674
+      },
+      {
+        "episode_id": 13607,
+        "display_name": "2 Socky S06E14 - A želví instinkt CZ Dabing",
+        "video_id": 26535311
+      },
+      {
+        "episode_id": 31193,
+        "display_name": "Advokát S01E01 - Zpátky v sedle CZ Dabing",
+        "video_id": 26535590
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -38199,6 +38274,56 @@
         "video_id": 26534027
       },
       {
+        "episode_id": 13580,
+        "display_name": "2 Socky S05E09 - A problém se saxíkem CZ Dabing",
+        "video_id": 26534427
+      },
+      {
+        "episode_id": 13584,
+        "display_name": "2 Socky S05E13 - A ztracený kufr CZ Dabing",
+        "video_id": 26534586
+      },
+      {
+        "episode_id": 13586,
+        "display_name": "2 Socky S05E15 - A velký útěk CZ Dabing",
+        "video_id": 26534634
+      },
+      {
+        "episode_id": 13588,
+        "display_name": "2 Socky S05E18 - A skulina CZ Dabing",
+        "video_id": 26534751
+      },
+      {
+        "episode_id": 13594,
+        "display_name": "2 Socky S06E01 - A dvojí zahájení CZ Dabing",
+        "video_id": 26534917
+      },
+      {
+        "episode_id": 13596,
+        "display_name": "2 Socky S06E03 - A křtiny CZ Dabing",
+        "video_id": 26535016
+      },
+      {
+        "episode_id": 13600,
+        "display_name": "2 Socky S06E08 - A z očí do očí CZ Dabing",
+        "video_id": 26535148
+      },
+      {
+        "episode_id": 13602,
+        "display_name": "2 Socky S06E09 - A dokonalá bouře CZ Dabing",
+        "video_id": 26535241
+      },
+      {
+        "episode_id": 13608,
+        "display_name": "2 Socky S06E15 - A čas škádlení CZ Dabing",
+        "video_id": 26535370
+      },
+      {
+        "episode_id": 13614,
+        "display_name": "2 Socky S06E21 - A 2 $ocky: Film CZ Dabing",
+        "video_id": 26535566
+      },
+      {
         "episode_id": 13563,
         "display_name": "2 Socky S04E15 - A tlustý kocour CZ Dabing",
         "video_id": 26533811
@@ -38212,6 +38337,31 @@
         "episode_id": 13567,
         "display_name": "2 Socky S04E18 - A zkouška vkusu CZ Dabing",
         "video_id": 26534105
+      },
+      {
+        "episode_id": 13571,
+        "display_name": "2 Socky S04E22 - A velké selhání CZ Dabing",
+        "video_id": 26534231
+      },
+      {
+        "episode_id": 13581,
+        "display_name": "2 Socky S05E10 - A žádní noví přátelé CZ Dabing",
+        "video_id": 26534479
+      },
+      {
+        "episode_id": 13587,
+        "display_name": "2 Socky S05E16 - A smutný autobus CZ Dabing",
+        "video_id": 26534674
+      },
+      {
+        "episode_id": 13607,
+        "display_name": "2 Socky S06E14 - A želví instinkt CZ Dabing",
+        "video_id": 26535311
+      },
+      {
+        "episode_id": 31193,
+        "display_name": "Advokát S01E01 - Zpátky v sedle CZ Dabing",
+        "video_id": 26535590
       }
     ],
     "prepared_not_upload_ready": [
@@ -38518,17 +38668,17 @@
     ]
   },
   "language_verdicts": {
-    "UNKNOWN": 978,
+    "UNKNOWN": 984,
     "CZ_AUDIO": 74431,
-    "CZ_SUBTITLES_ONLY": 2312,
+    "CZ_SUBTITLES_ONLY": 2327,
     "NOT_CZ_AUDIO": 516,
     "SK_AUDIO": 2,
-    "PROBABLE_CZ_AUDIO": 2015
+    "PROBABLE_CZ_AUDIO": 2114
   },
   "language_whisper_statuses": {
     "disabled": 71183,
     "resolve_failed": 276,
-    "ok": 3052,
+    "ok": 3032,
     "no_stream": 37
   }
 }
