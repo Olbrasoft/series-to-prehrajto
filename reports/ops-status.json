@@ -1,25 +1,41 @@
 {
   "counts": {
     "backlog_episodes": 240,
-    "manifest_upload_ready_episodes": 0,
+    "manifest_upload_ready_episodes": 7,
     "uploaded_episodes": 6722,
     "prepared_source_episodes": 11420,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 2806,
-    "language_audit_rows": 77592,
+    "language_audit_rows": 77658,
     "language_queue_sources": 2644,
-    "language_audited_sources": 72574,
-    "language_whisper_attempted_sources": 3352,
+    "language_audited_sources": 72458,
+    "language_whisper_attempted_sources": 3325,
     "language_pending_whisper_sources": 2644
   },
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-06-24T13:55:02Z",
+      "databaseId": 28103729256,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-24T13:55:00Z",
+      "databaseId": 28103727904,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-06-24T13:54:28Z",
       "databaseId": 28103692926,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -157,22 +173,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-24T13:01:31Z",
-      "databaseId": 28100378136,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-24T13:00:27Z",
-      "databaseId": 28100311480,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "refresh-backlog"
     }
   ],
   "gaps": {
@@ -38295,17 +38295,17 @@
     ]
   },
   "language_verdicts": {
-    "UNKNOWN": 513,
+    "UNKNOWN": 557,
     "CZ_AUDIO": 74431,
-    "CZ_SUBTITLES_ONLY": 2128,
+    "CZ_SUBTITLES_ONLY": 2135,
     "NOT_CZ_AUDIO": 516,
     "SK_AUDIO": 2,
-    "PROBABLE_CZ_AUDIO": 2
+    "PROBABLE_CZ_AUDIO": 17
   },
   "language_whisper_statuses": {
-    "disabled": 69222,
-    "ok": 3035,
-    "resolve_failed": 280,
+    "disabled": 69133,
+    "resolve_failed": 276,
+    "ok": 3012,
     "no_stream": 37
   }
 }
