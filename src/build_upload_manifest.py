@@ -135,7 +135,19 @@ def fallback_description_plan(episode: dict) -> dict | None:
                 "source_hash": None,
                 "generated_description": text,
             }
-    return None
+    series_title = str(episode.get("series_title") or "seriálu").strip()
+    code = sxe(episode.get("season"), episode.get("episode"))
+    subtitle = str(episode.get("episode_name") or episode.get("episode_title") or "").strip()
+    text = f"Epizoda {code} seriálu {series_title}."
+    if subtitle:
+        text = f"{text[:-1]} s názvem {subtitle}."
+    return {
+        "kind": "temporary",
+        "generated_at": None,
+        "model": "deterministic-fallback",
+        "source_hash": None,
+        "generated_description": text,
+    }
 
 
 def sxe(season: int | None, episode: int | None) -> str:
@@ -281,6 +293,7 @@ def build_manifest(
     audits = latest_audits_by_source(load_jsonl(audits_path))
     uploaded_episode_ids, uploaded_episode_keys, burned = load_upload_state_exclusions()
     rows: list[dict] = []
+    queued_episode_keys: set[tuple[int, int, int]] = set()
     stats: Counter = Counter()
 
     for episode in backlog:
@@ -292,6 +305,10 @@ def build_manifest(
             continue
         if episode_key(episode) in uploaded_episode_keys:
             stats["already_uploaded_episode_key"] += 1
+            continue
+        key = episode_key(episode)
+        if key in queued_episode_keys:
+            stats["duplicate_episode_key"] += 1
             continue
         plan = prepared.get(episode_id)
         if not plan:
@@ -382,6 +399,8 @@ def build_manifest(
             },
         }
         rows.append(manifest_row)
+        if key:
+            queued_episode_keys.add(key)
         stats["ready"] += 1
         stats[f"description_{description_plan.get('kind')}"] += 1
         stats[f"language_{selected.get('detected_by') or 'unknown'}"] += 1
