@@ -1,41 +1,73 @@
 {
   "counts": {
-    "backlog_episodes": 3000,
+    "backlog_episodes": 13,
     "manifest_upload_ready_episodes": 1850,
-    "uploaded_episodes": 6336,
+    "uploaded_episodes": 6390,
     "prepared_source_episodes": 11042,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 2806,
-    "language_audit_rows": 107270,
-    "language_queue_sources": 31313,
+    "language_audit_rows": 77592,
+    "language_queue_sources": 2645,
     "language_audited_sources": 72412,
     "language_whisper_attempted_sources": 3345,
-    "language_pending_whisper_sources": 31313
+    "language_pending_whisper_sources": 2645
   },
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-06-24T07:46:22Z",
+      "databaseId": 28083419358,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-24T07:46:11Z",
+      "databaseId": 28083410021,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-24T07:39:18Z",
+      "databaseId": 28083062148,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-24T07:27:19Z",
+      "databaseId": 28082461480,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-06-24T07:26:17Z",
       "databaseId": 28082410415,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "refresh-backlog"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-06-24T07:13:41Z",
       "databaseId": 28081796363,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-06-24T07:02:30Z",
       "databaseId": 28081257299,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "sync"
     },
     {
@@ -141,144 +173,24 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "sync"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-06-24T05:56:33Z",
-      "databaseId": 28078415572,
-      "headBranch": "main",
-      "status": "pending",
-      "workflowName": "prepare-sources"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-24T05:54:25Z",
-      "databaseId": 28078331976,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-24T05:43:51Z",
-      "databaseId": 28077922797,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-24T05:35:28Z",
-      "databaseId": 28077611725,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
     }
   ],
   "gaps": {
-    "backlog_without_source_plan": [
-      4689,
-      4690,
-      4691,
-      4692,
-      4693,
-      4694,
-      4695,
-      4696,
-      4698,
-      4699,
-      4700,
-      4702,
-      4704,
-      4705,
-      4706,
-      4708,
-      4710,
-      4711,
-      4714,
-      4715,
-      4717,
-      4719,
-      4720,
-      5754,
-      5755,
-      5756,
-      5757,
-      5758,
-      5759,
-      5760,
-      5761,
-      5762,
-      5763,
-      5808,
-      5809,
-      5810,
-      5811,
-      5812,
-      5813,
-      5814,
-      5816,
-      5819,
-      5820,
-      5821,
-      5822,
-      5823,
-      5825,
-      5826,
-      5827,
-      5828
-    ],
+    "backlog_without_source_plan": [],
     "backlog_without_episode_description": [
-      3070,
-      3581,
-      3582,
-      3583,
-      3584,
-      3585,
-      3586,
-      3587,
-      3588,
-      3589,
-      3590,
-      3591,
-      3592,
-      3593,
-      3594,
-      3595,
-      3596,
-      3597,
-      3598,
-      3599,
-      3600,
-      3601,
-      3602,
-      3603,
-      3604,
-      3605,
-      3606,
-      3607,
-      3608,
-      3609,
-      3610,
-      3611,
-      3612,
-      3613,
-      3614,
-      3615,
-      3616,
-      3617,
-      3618,
-      3619,
-      3620,
-      3621,
-      3622,
-      3623,
-      3624,
-      3625,
-      3626,
-      3627,
-      3628,
-      3800
+      37494,
+      47271,
+      47301,
+      47302,
+      47305,
+      47310,
+      47340,
+      47344,
+      47357,
+      47373,
+      47374,
+      47379,
+      47389
     ],
     "uploaded_without_gemma_description": [
       {
@@ -12132,6 +12044,76 @@
         "video_id": 26429645
       },
       {
+        "episode_id": 66722,
+        "display_name": "Bylo, nebylo S02E05 - Doktor CZ Dabing",
+        "video_id": 26429968
+      },
+      {
+        "episode_id": 66680,
+        "display_name": "Bylo, nebylo S02E07 - Dítě měsíčního svitu CZ Dabing",
+        "video_id": 26430148
+      },
+      {
+        "episode_id": 66630,
+        "display_name": "Bylo, nebylo S02E10 - Cvrček CZ Dabing",
+        "video_id": 26430329
+      },
+      {
+        "episode_id": 66628,
+        "display_name": "Bylo, nebylo S02E11 - Z druhé strany CZ Dabing",
+        "video_id": 26430491
+      },
+      {
+        "episode_id": 66632,
+        "display_name": "Bylo, nebylo S02E13 - Drobek CZ Dabing",
+        "video_id": 26430744
+      },
+      {
+        "episode_id": 66682,
+        "display_name": "Bylo, nebylo S02E14 - Manhattan CZ Dabing",
+        "video_id": 26430937
+      },
+      {
+        "episode_id": 66684,
+        "display_name": "Bylo, nebylo S02E17 - Vítejte ve Storybrooke CZ Dabing",
+        "video_id": 26431086
+      },
+      {
+        "episode_id": 66686,
+        "display_name": "Bylo, nebylo S02E19 - Lacey CZ Dabing",
+        "video_id": 26431265
+      },
+      {
+        "episode_id": 66688,
+        "display_name": "Bylo, nebylo S02E21 - Druhá hvězda napravo CZ Dabing",
+        "video_id": 26431505
+      },
+      {
+        "episode_id": 66690,
+        "display_name": "Bylo, nebylo S03E01 - Srdce, které věří nejvíc CZ Dabing",
+        "video_id": 26431729
+      },
+      {
+        "episode_id": 66692,
+        "display_name": "Bylo, nebylo S03E03 - Úplně normální víla CZ Dabing",
+        "video_id": 26431857
+      },
+      {
+        "episode_id": 66694,
+        "display_name": "Bylo, nebylo S03E06 - Ariel CZ Dabing",
+        "video_id": 26432101
+      },
+      {
+        "episode_id": 66696,
+        "display_name": "Bylo, nebylo S03E08 - Mysli na něco hezkýho CZ Dabing",
+        "video_id": 26432433
+      },
+      {
+        "episode_id": 66642,
+        "display_name": "Bylo, nebylo S03E10 - Nová Země Nezemě CZ Dabing",
+        "video_id": 26432710
+      },
+      {
         "episode_id": 45563,
         "display_name": "Hrdinové S01E11 - Spad CZ Dabing",
         "video_id": 26428439
@@ -12205,6 +12187,206 @@
         "episode_id": 45591,
         "display_name": "Hrdinové S03E05 - Andělé a zrůdy CZ Dabing",
         "video_id": 26429782
+      },
+      {
+        "episode_id": 45593,
+        "display_name": "Hrdinové S03E07 - Eris quod sum CZ Dabing",
+        "video_id": 26429970
+      },
+      {
+        "episode_id": 45595,
+        "display_name": "Hrdinové S03E09 - Už se to blíží CZ Dabing",
+        "video_id": 26430150
+      },
+      {
+        "episode_id": 45597,
+        "display_name": "Hrdinové S03E11 - Zatmění (2. část) CZ Dabing",
+        "video_id": 26430282
+      },
+      {
+        "episode_id": 45599,
+        "display_name": "Hrdinové S03E13 - Dualita CZ Dabing",
+        "video_id": 26430339
+      },
+      {
+        "episode_id": 45601,
+        "display_name": "Hrdinové S03E15 - Důvěra a krev CZ Dabing",
+        "video_id": 26430454
+      },
+      {
+        "episode_id": 45603,
+        "display_name": "Hrdinové S03E17 - Studená válka CZ Dabing",
+        "video_id": 26430514
+      },
+      {
+        "episode_id": 45605,
+        "display_name": "Hrdinové S03E19 - Odstíny šedi CZ Dabing",
+        "video_id": 26430520
+      },
+      {
+        "episode_id": 45607,
+        "display_name": "Hrdinové S03E21 - Azyl CZ Dabing",
+        "video_id": 26430644
+      },
+      {
+        "episode_id": 45609,
+        "display_name": "Hrdinové S03E23 - 1961 CZ Dabing",
+        "video_id": 26430865
+      },
+      {
+        "episode_id": 45611,
+        "display_name": "Hrdinové S03E25 - Neviditelné pouto CZ Dabing",
+        "video_id": 26431062
+      },
+      {
+        "episode_id": 45631,
+        "display_name": "Hrdinové S04E02 - Nové začátky (2. část) CZ Dabing",
+        "video_id": 26431219
+      },
+      {
+        "episode_id": 45613,
+        "display_name": "Hrdinové S04E03 - Inkoust CZ Dabing",
+        "video_id": 26431264
+      },
+      {
+        "episode_id": 45615,
+        "display_name": "Hrdinové S04E05 - Hysterická slepota CZ Dabing",
+        "video_id": 26431410
+      },
+      {
+        "episode_id": 45617,
+        "display_name": "Hrdinové S04E07 - Protiklady se přitahují CZ Dabing",
+        "video_id": 26431461
+      },
+      {
+        "episode_id": 45619,
+        "display_name": "Hrdinové S04E09 - Neviditelný protivník CZ Dabing",
+        "video_id": 26431571
+      },
+      {
+        "episode_id": 45621,
+        "display_name": "Hrdinové S04E11 - Díkůvzdání CZ Dabing",
+        "video_id": 26431655
+      },
+      {
+        "episode_id": 45623,
+        "display_name": "Hrdinové S04E13 - Na této skále CZ Dabing",
+        "video_id": 26431734
+      },
+      {
+        "episode_id": 45625,
+        "display_name": "Hrdinové S04E15 - Tobě nablízku CZ Dabing",
+        "video_id": 26431807
+      },
+      {
+        "episode_id": 45627,
+        "display_name": "Hrdinové S04E17 - Umění klamu CZ Dabing",
+        "video_id": 26431889
+      },
+      {
+        "episode_id": 45629,
+        "display_name": "Hrdinové S04E19 - Konec epochy CZ Dabing",
+        "video_id": 26432007
+      },
+      {
+        "episode_id": 41641,
+        "display_name": "Futurama S00E01 - Benderovo parádní terno CZ Dabing",
+        "video_id": 26432299
+      },
+      {
+        "episode_id": 41533,
+        "display_name": "Futurama S07E21 - Zadečku, vrať se CZ Dabing",
+        "video_id": 26432711
+      },
+      {
+        "episode_id": 41642,
+        "display_name": "Futurama S00E02 - Hypnožábu má každý rád CZ Dabing",
+        "video_id": 26432948
+      },
+      {
+        "episode_id": 41644,
+        "display_name": "Futurama S00E04 - Ztracené dobrodružství CZ Dabing",
+        "video_id": 26433046
+      },
+      {
+        "episode_id": 41564,
+        "display_name": "Futurama S02E01 - Zkáza Titanicu CZ Dabing",
+        "video_id": 26433153
+      },
+      {
+        "episode_id": 41628,
+        "display_name": "Futurama S02E06 - Brannigan vrací úder CZ Dabing",
+        "video_id": 26433218
+      },
+      {
+        "episode_id": 41630,
+        "display_name": "Futurama S02E12 - Zuřící Bender CZ Dabing",
+        "video_id": 26433234
+      },
+      {
+        "episode_id": 41632,
+        "display_name": "Futurama S02E14 - Ve spárech byrokracie CZ Dabing",
+        "video_id": 26433247
+      },
+      {
+        "episode_id": 41640,
+        "display_name": "Futurama S02E17 - Mafián Bender CZ Dabing",
+        "video_id": 26433305
+      },
+      {
+        "episode_id": 41634,
+        "display_name": "Futurama S02E19 - Den Matky CZ Dabing",
+        "video_id": 26433375
+      },
+      {
+        "episode_id": 41612,
+        "display_name": "Futurama S03E02 - Zachraňte vojína Bendera CZ Dabing",
+        "video_id": 26433425
+      },
+      {
+        "episode_id": 41636,
+        "display_name": "Futurama S03E08 - Humrův humor CZ Dabing",
+        "video_id": 26433498
+      },
+      {
+        "episode_id": 41626,
+        "display_name": "Futurama S04E08 - Božský Bender CZ Dabing",
+        "video_id": 26433549
+      },
+      {
+        "episode_id": 41608,
+        "display_name": "Futurama S05E07 - Leela běží o životy CZ Dabing",
+        "video_id": 26433619
+      },
+      {
+        "episode_id": 41584,
+        "display_name": "Futurama S05E12 - Afryodisiakum CZ Dabing",
+        "video_id": 26433744
+      },
+      {
+        "episode_id": 50295,
+        "display_name": "Gotham S01E02 - Selina Kyleová CZ Dabing",
+        "video_id": 26432761
+      },
+      {
+        "episode_id": 50287,
+        "display_name": "Gotham S01E05 - Viper CZ Dabing",
+        "video_id": 26432857
+      },
+      {
+        "episode_id": 50347,
+        "display_name": "Gotham S01E06 - Vtělení Goata CZ Dabing",
+        "video_id": 26433018
+      },
+      {
+        "episode_id": 50371,
+        "display_name": "Gotham S01E07 - Penguinův deštník CZ Dabing",
+        "video_id": 26433222
+      },
+      {
+        "episode_id": 50321,
+        "display_name": "Gotham S01E14 - Strašlivý doktor Crane CZ Dabing",
+        "video_id": 26433392
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -35284,6 +35466,76 @@
         "video_id": 26429645
       },
       {
+        "episode_id": 66722,
+        "display_name": "Bylo, nebylo S02E05 - Doktor CZ Dabing",
+        "video_id": 26429968
+      },
+      {
+        "episode_id": 66680,
+        "display_name": "Bylo, nebylo S02E07 - Dítě měsíčního svitu CZ Dabing",
+        "video_id": 26430148
+      },
+      {
+        "episode_id": 66630,
+        "display_name": "Bylo, nebylo S02E10 - Cvrček CZ Dabing",
+        "video_id": 26430329
+      },
+      {
+        "episode_id": 66628,
+        "display_name": "Bylo, nebylo S02E11 - Z druhé strany CZ Dabing",
+        "video_id": 26430491
+      },
+      {
+        "episode_id": 66632,
+        "display_name": "Bylo, nebylo S02E13 - Drobek CZ Dabing",
+        "video_id": 26430744
+      },
+      {
+        "episode_id": 66682,
+        "display_name": "Bylo, nebylo S02E14 - Manhattan CZ Dabing",
+        "video_id": 26430937
+      },
+      {
+        "episode_id": 66684,
+        "display_name": "Bylo, nebylo S02E17 - Vítejte ve Storybrooke CZ Dabing",
+        "video_id": 26431086
+      },
+      {
+        "episode_id": 66686,
+        "display_name": "Bylo, nebylo S02E19 - Lacey CZ Dabing",
+        "video_id": 26431265
+      },
+      {
+        "episode_id": 66688,
+        "display_name": "Bylo, nebylo S02E21 - Druhá hvězda napravo CZ Dabing",
+        "video_id": 26431505
+      },
+      {
+        "episode_id": 66690,
+        "display_name": "Bylo, nebylo S03E01 - Srdce, které věří nejvíc CZ Dabing",
+        "video_id": 26431729
+      },
+      {
+        "episode_id": 66692,
+        "display_name": "Bylo, nebylo S03E03 - Úplně normální víla CZ Dabing",
+        "video_id": 26431857
+      },
+      {
+        "episode_id": 66694,
+        "display_name": "Bylo, nebylo S03E06 - Ariel CZ Dabing",
+        "video_id": 26432101
+      },
+      {
+        "episode_id": 66696,
+        "display_name": "Bylo, nebylo S03E08 - Mysli na něco hezkýho CZ Dabing",
+        "video_id": 26432433
+      },
+      {
+        "episode_id": 66642,
+        "display_name": "Bylo, nebylo S03E10 - Nová Země Nezemě CZ Dabing",
+        "video_id": 26432710
+      },
+      {
         "episode_id": 45563,
         "display_name": "Hrdinové S01E11 - Spad CZ Dabing",
         "video_id": 26428439
@@ -35357,6 +35609,206 @@
         "episode_id": 45591,
         "display_name": "Hrdinové S03E05 - Andělé a zrůdy CZ Dabing",
         "video_id": 26429782
+      },
+      {
+        "episode_id": 45593,
+        "display_name": "Hrdinové S03E07 - Eris quod sum CZ Dabing",
+        "video_id": 26429970
+      },
+      {
+        "episode_id": 45595,
+        "display_name": "Hrdinové S03E09 - Už se to blíží CZ Dabing",
+        "video_id": 26430150
+      },
+      {
+        "episode_id": 45597,
+        "display_name": "Hrdinové S03E11 - Zatmění (2. část) CZ Dabing",
+        "video_id": 26430282
+      },
+      {
+        "episode_id": 45599,
+        "display_name": "Hrdinové S03E13 - Dualita CZ Dabing",
+        "video_id": 26430339
+      },
+      {
+        "episode_id": 45601,
+        "display_name": "Hrdinové S03E15 - Důvěra a krev CZ Dabing",
+        "video_id": 26430454
+      },
+      {
+        "episode_id": 45603,
+        "display_name": "Hrdinové S03E17 - Studená válka CZ Dabing",
+        "video_id": 26430514
+      },
+      {
+        "episode_id": 45605,
+        "display_name": "Hrdinové S03E19 - Odstíny šedi CZ Dabing",
+        "video_id": 26430520
+      },
+      {
+        "episode_id": 45607,
+        "display_name": "Hrdinové S03E21 - Azyl CZ Dabing",
+        "video_id": 26430644
+      },
+      {
+        "episode_id": 45609,
+        "display_name": "Hrdinové S03E23 - 1961 CZ Dabing",
+        "video_id": 26430865
+      },
+      {
+        "episode_id": 45611,
+        "display_name": "Hrdinové S03E25 - Neviditelné pouto CZ Dabing",
+        "video_id": 26431062
+      },
+      {
+        "episode_id": 45631,
+        "display_name": "Hrdinové S04E02 - Nové začátky (2. část) CZ Dabing",
+        "video_id": 26431219
+      },
+      {
+        "episode_id": 45613,
+        "display_name": "Hrdinové S04E03 - Inkoust CZ Dabing",
+        "video_id": 26431264
+      },
+      {
+        "episode_id": 45615,
+        "display_name": "Hrdinové S04E05 - Hysterická slepota CZ Dabing",
+        "video_id": 26431410
+      },
+      {
+        "episode_id": 45617,
+        "display_name": "Hrdinové S04E07 - Protiklady se přitahují CZ Dabing",
+        "video_id": 26431461
+      },
+      {
+        "episode_id": 45619,
+        "display_name": "Hrdinové S04E09 - Neviditelný protivník CZ Dabing",
+        "video_id": 26431571
+      },
+      {
+        "episode_id": 45621,
+        "display_name": "Hrdinové S04E11 - Díkůvzdání CZ Dabing",
+        "video_id": 26431655
+      },
+      {
+        "episode_id": 45623,
+        "display_name": "Hrdinové S04E13 - Na této skále CZ Dabing",
+        "video_id": 26431734
+      },
+      {
+        "episode_id": 45625,
+        "display_name": "Hrdinové S04E15 - Tobě nablízku CZ Dabing",
+        "video_id": 26431807
+      },
+      {
+        "episode_id": 45627,
+        "display_name": "Hrdinové S04E17 - Umění klamu CZ Dabing",
+        "video_id": 26431889
+      },
+      {
+        "episode_id": 45629,
+        "display_name": "Hrdinové S04E19 - Konec epochy CZ Dabing",
+        "video_id": 26432007
+      },
+      {
+        "episode_id": 41641,
+        "display_name": "Futurama S00E01 - Benderovo parádní terno CZ Dabing",
+        "video_id": 26432299
+      },
+      {
+        "episode_id": 41533,
+        "display_name": "Futurama S07E21 - Zadečku, vrať se CZ Dabing",
+        "video_id": 26432711
+      },
+      {
+        "episode_id": 41642,
+        "display_name": "Futurama S00E02 - Hypnožábu má každý rád CZ Dabing",
+        "video_id": 26432948
+      },
+      {
+        "episode_id": 41644,
+        "display_name": "Futurama S00E04 - Ztracené dobrodružství CZ Dabing",
+        "video_id": 26433046
+      },
+      {
+        "episode_id": 41564,
+        "display_name": "Futurama S02E01 - Zkáza Titanicu CZ Dabing",
+        "video_id": 26433153
+      },
+      {
+        "episode_id": 41628,
+        "display_name": "Futurama S02E06 - Brannigan vrací úder CZ Dabing",
+        "video_id": 26433218
+      },
+      {
+        "episode_id": 41630,
+        "display_name": "Futurama S02E12 - Zuřící Bender CZ Dabing",
+        "video_id": 26433234
+      },
+      {
+        "episode_id": 41632,
+        "display_name": "Futurama S02E14 - Ve spárech byrokracie CZ Dabing",
+        "video_id": 26433247
+      },
+      {
+        "episode_id": 41640,
+        "display_name": "Futurama S02E17 - Mafián Bender CZ Dabing",
+        "video_id": 26433305
+      },
+      {
+        "episode_id": 41634,
+        "display_name": "Futurama S02E19 - Den Matky CZ Dabing",
+        "video_id": 26433375
+      },
+      {
+        "episode_id": 41612,
+        "display_name": "Futurama S03E02 - Zachraňte vojína Bendera CZ Dabing",
+        "video_id": 26433425
+      },
+      {
+        "episode_id": 41636,
+        "display_name": "Futurama S03E08 - Humrův humor CZ Dabing",
+        "video_id": 26433498
+      },
+      {
+        "episode_id": 41626,
+        "display_name": "Futurama S04E08 - Božský Bender CZ Dabing",
+        "video_id": 26433549
+      },
+      {
+        "episode_id": 41608,
+        "display_name": "Futurama S05E07 - Leela běží o životy CZ Dabing",
+        "video_id": 26433619
+      },
+      {
+        "episode_id": 41584,
+        "display_name": "Futurama S05E12 - Afryodisiakum CZ Dabing",
+        "video_id": 26433744
+      },
+      {
+        "episode_id": 50295,
+        "display_name": "Gotham S01E02 - Selina Kyleová CZ Dabing",
+        "video_id": 26432761
+      },
+      {
+        "episode_id": 50287,
+        "display_name": "Gotham S01E05 - Viper CZ Dabing",
+        "video_id": 26432857
+      },
+      {
+        "episode_id": 50347,
+        "display_name": "Gotham S01E06 - Vtělení Goata CZ Dabing",
+        "video_id": 26433018
+      },
+      {
+        "episode_id": 50371,
+        "display_name": "Gotham S01E07 - Penguinův deštník CZ Dabing",
+        "video_id": 26433222
+      },
+      {
+        "episode_id": 50321,
+        "display_name": "Gotham S01E14 - Strašlivý doktor Crane CZ Dabing",
+        "video_id": 26433392
       }
     ],
     "prepared_not_upload_ready": [
@@ -35663,12 +36115,12 @@
     ]
   },
   "language_verdicts": {
-    "UNKNOWN": 2541,
-    "CZ_AUDIO": 99092,
-    "CZ_SUBTITLES_ONLY": 5049,
+    "UNKNOWN": 513,
+    "CZ_AUDIO": 74431,
+    "CZ_SUBTITLES_ONLY": 2128,
     "NOT_CZ_AUDIO": 516,
-    "SK_AUDIO": 28,
-    "PROBABLE_CZ_AUDIO": 44
+    "SK_AUDIO": 2,
+    "PROBABLE_CZ_AUDIO": 2
   },
   "language_whisper_statuses": {
     "disabled": 69067,
