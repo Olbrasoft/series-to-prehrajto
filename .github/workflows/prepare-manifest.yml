@@ -46,6 +46,7 @@ jobs:
 
       - name: Refresh to latest origin/main
         run: |
+          git fetch --unshallow origin main 2>/dev/null || true
           git fetch origin main
           git reset --hard origin/main
 
