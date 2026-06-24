@@ -2,40 +2,88 @@
   "counts": {
     "backlog_episodes": 20000,
     "manifest_upload_ready_episodes": 92,
-    "uploaded_episodes": 7000,
-    "prepared_source_episodes": 12063,
+    "uploaded_episodes": 7003,
+    "prepared_source_episodes": 12163,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 2811,
     "language_audit_rows": 80374,
     "language_queue_sources": 2644,
-    "language_audited_sources": 74648,
-    "language_whisper_attempted_sources": 3345,
-    "language_pending_whisper_sources": 2624
+    "language_audited_sources": 74668,
+    "language_whisper_attempted_sources": 3365,
+    "language_pending_whisper_sources": 2604
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-06-24T23:46:32Z",
-      "databaseId": 28136980644,
+      "createdAt": "2026-06-24T23:55:11Z",
+      "databaseId": 28137323012,
       "headBranch": "main",
       "status": "in_progress",
-      "workflowName": "ops-watchdog"
+      "workflowName": "ops-status"
     },
     {
       "conclusion": "",
-      "createdAt": "2026-06-24T23:39:21Z",
-      "databaseId": 28136697900,
+      "createdAt": "2026-06-24T23:51:03Z",
+      "databaseId": 28137161245,
       "headBranch": "main",
       "status": "pending",
       "workflowName": "sync"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-06-24T23:48:03Z",
+      "databaseId": 28137042771,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-24T23:48:00Z",
+      "databaseId": 28137039856,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-06-24T23:47:01Z",
+      "databaseId": 28136999602,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-24T23:47:00Z",
+      "databaseId": 28136998904,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-24T23:46:32Z",
+      "databaseId": 28136980644,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-06-24T23:39:21Z",
+      "databaseId": 28136697900,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "cancelled",
       "createdAt": "2026-06-24T23:32:42Z",
       "databaseId": 28136434691,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -119,60 +167,12 @@
       "workflowName": "sync"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-06-24T23:02:07Z",
       "databaseId": 28135189344,
       "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-06-24T22:56:34Z",
-      "databaseId": 28134956822,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-sources"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-24T22:49:06Z",
-      "databaseId": 28134637752,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-24T22:49:04Z",
-      "databaseId": 28134636579,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-24T22:49:03Z",
-      "databaseId": 28134635863,
-      "headBranch": "main",
       "status": "completed",
       "workflowName": "sync"
-    },
-    {
-      "conclusion": "failure",
-      "createdAt": "2026-06-24T22:48:38Z",
-      "databaseId": 28134618189,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-24T22:48:36Z",
-      "databaseId": 28134616678,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
     }
   ],
   "gaps": {
@@ -15192,6 +15192,11 @@
         "video_id": 26541357
       },
       {
+        "episode_id": 16012,
+        "display_name": "Advokát S04E07 - Čest mezi zloději CZ Dabing",
+        "video_id": 26541502
+      },
+      {
         "episode_id": 15993,
         "display_name": "Advokát S03E01 - La Culebra CZ Dabing",
         "video_id": 26537424
@@ -15260,6 +15265,16 @@
         "episode_id": 64303,
         "display_name": "Absťák S01E07 - Výstražný štítek CZ Dabing",
         "video_id": 26539826
+      },
+      {
+        "episode_id": 16010,
+        "display_name": "Advokát S04E08 - Konfirmační zkreslení CZ Dabing",
+        "video_id": 26542167
+      },
+      {
+        "episode_id": 64298,
+        "display_name": "Absťák S01E02 - Průlomová bolest CZ Dabing",
+        "video_id": 26542257
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -38784,6 +38799,11 @@
         "video_id": 26541357
       },
       {
+        "episode_id": 16012,
+        "display_name": "Advokát S04E07 - Čest mezi zloději CZ Dabing",
+        "video_id": 26541502
+      },
+      {
         "episode_id": 15993,
         "display_name": "Advokát S03E01 - La Culebra CZ Dabing",
         "video_id": 26537424
@@ -38852,6 +38872,16 @@
         "episode_id": 64303,
         "display_name": "Absťák S01E07 - Výstražný štítek CZ Dabing",
         "video_id": 26539826
+      },
+      {
+        "episode_id": 16010,
+        "display_name": "Advokát S04E08 - Konfirmační zkreslení CZ Dabing",
+        "video_id": 26542167
+      },
+      {
+        "episode_id": 64298,
+        "display_name": "Absťák S01E02 - Průlomová bolest CZ Dabing",
+        "video_id": 26542257
       }
     ],
     "prepared_not_upload_ready": [
@@ -39168,7 +39198,7 @@
   "language_whisper_statuses": {
     "disabled": 71303,
     "resolve_failed": 276,
-    "ok": 3032,
+    "ok": 3052,
     "no_stream": 37
   }
 }
