@@ -137,8 +137,9 @@ jobs:
           else
             echo "no prepared upload-ready episodes remain; queueing manifest preparation"
             gh workflow run prepare-manifest.yml \
-              -f series_limit="80" \
-              -f episode_limit="100" \
+              -f series_limit="1200" \
+              -f episode_limit="5" \
               -f source_limit_per_episode="12" \
-              -f use_whisper="true"
+              -f use_whisper="false" \
+              -f skip_export="true"
           fi
