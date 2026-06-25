@@ -84,6 +84,16 @@ def latest_audits_by_source(rows: list[dict]) -> dict[int, dict]:
     return latest
 
 
+def failed_availability_urls(path: Path) -> set[str]:
+    if not path.exists() or path.stat().st_size == 0:
+        return set()
+    failed: set[str] = set()
+    for row in load_jsonl(path):
+        if row.get("ok") is False and row.get("source_url"):
+            failed.add(str(row["source_url"]))
+    return failed
+
+
 def load_upload_state_exclusions() -> tuple[set[int], set[tuple[int, int, int]], set[int]]:
     uploaded_ids: set[int] = set()
     uploaded_keys: set[tuple[int, int, int]] = set()
@@ -286,6 +296,7 @@ def build_manifest(
     limit: int,
     require_episode_description: bool,
     require_whisper: bool,
+    failed_availability: set[str] | None = None,
 ) -> tuple[list[dict], Counter]:
     prepared = latest_by_episode(load_jsonl(prepared_path))
     backlog = merge_backlog_with_prepared(load_jsonl(backlog_path), prepared)
@@ -295,6 +306,7 @@ def build_manifest(
     rows: list[dict] = []
     queued_episode_keys: set[tuple[int, int, int]] = set()
     stats: Counter = Counter()
+    failed_availability = failed_availability or set()
 
     for episode in backlog:
         if limit and len(rows) >= limit:
@@ -323,6 +335,10 @@ def build_manifest(
             stats["selected_source_burned"] += 1
             continue
         candidates = upload_candidates(episode, plan, burned)
+        if failed_availability:
+            before = len(candidates)
+            candidates = [candidate for candidate in candidates if candidate.get("url") not in failed_availability]
+            stats["github_availability_failed"] += before - len(candidates)
         if not candidates:
             stats["selected_source_not_in_backlog"] += 1
             continue
@@ -419,6 +435,7 @@ def main() -> int:
     ap.add_argument("--limit", type=int, default=1000)
     ap.add_argument("--require-episode-description", action="store_true")
     ap.add_argument("--require-whisper", action="store_true")
+    ap.add_argument("--availability-report", default="reports/source-availability.jsonl")
     args = ap.parse_args()
 
     rows, stats = build_manifest(
@@ -429,6 +446,7 @@ def main() -> int:
         limit=args.limit,
         require_episode_description=args.require_episode_description,
         require_whisper=args.require_whisper,
+        failed_availability=failed_availability_urls(REPO_ROOT / args.availability_report),
     )
     output_path = REPO_ROOT / args.out
     backlog_episode_ids = {
