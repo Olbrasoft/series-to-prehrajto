@@ -69,6 +69,19 @@ def manifest_items(path: Path, limit: int) -> list[dict[str, Any]]:
     return items
 
 
+def merge_existing_results(path: Path, results: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    merged: dict[str, dict[str, Any]] = {}
+    for row in load_jsonl(path):
+        url = row.get("source_url")
+        if url:
+            merged[str(url)] = row
+    for row in results:
+        url = row.get("source_url")
+        if url:
+            merged[str(url)] = row
+    return list(merged.values())
+
+
 def url_items(urls: list[str]) -> list[dict[str, Any]]:
     return [{"source_url": url} for url in urls]
 
@@ -133,6 +146,7 @@ def main() -> int:
         for item in items
     ]
     out_path = REPO_ROOT / args.out
+    results = merge_existing_results(out_path, results)
     out_path.parent.mkdir(parents=True, exist_ok=True)
     with out_path.open("w", encoding="utf-8") as fh:
         for row in results:
