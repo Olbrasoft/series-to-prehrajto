@@ -1,33 +1,105 @@
 {
   "counts": {
     "backlog_episodes": 20000,
-    "manifest_upload_ready_episodes": 96,
-    "uploaded_episodes": 7024,
-    "prepared_source_episodes": 12263,
+    "manifest_upload_ready_episodes": 104,
+    "uploaded_episodes": 7038,
+    "prepared_source_episodes": 12273,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 2811,
-    "language_audit_rows": 80735,
+    "language_audit_rows": 80754,
     "language_queue_sources": 2644,
-    "language_audited_sources": 75352,
-    "language_whisper_attempted_sources": 3468,
-    "language_pending_whisper_sources": 2644
+    "language_audited_sources": 75009,
+    "language_whisper_attempted_sources": 3345,
+    "language_pending_whisper_sources": 2624
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-06-25T00:55:25Z",
-      "databaseId": 28139581288,
+      "createdAt": "2026-06-25T01:21:39Z",
+      "databaseId": 28140508040,
       "headBranch": "main",
       "status": "in_progress",
-      "workflowName": "ops-status"
+      "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-06-25T01:21:31Z",
+      "databaseId": 28140503065,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-25T01:17:23Z",
+      "databaseId": 28140357937,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-06-25T01:14:32Z",
+      "databaseId": 28140258069,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-25T01:13:33Z",
+      "databaseId": 28140225097,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "refresh-backlog"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-25T01:12:15Z",
+      "databaseId": 28140179150,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-25T01:11:07Z",
+      "databaseId": 28140137385,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-25T01:04:59Z",
+      "databaseId": 28139922507,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-06-25T01:04:47Z",
+      "databaseId": 28139915968,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-25T00:55:25Z",
+      "databaseId": 28139581288,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "cancelled",
       "createdAt": "2026-06-25T00:46:50Z",
       "databaseId": 28139274206,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "sync"
     },
     {
@@ -101,78 +173,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-25T00:02:47Z",
-      "databaseId": 28137617396,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-24T23:57:53Z",
-      "databaseId": 28137421383,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-24T23:56:19Z",
-      "databaseId": 28137364439,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-sources"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-24T23:55:11Z",
-      "databaseId": 28137323012,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-24T23:51:03Z",
-      "databaseId": 28137161245,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-24T23:48:03Z",
-      "databaseId": 28137042771,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-24T23:48:00Z",
-      "databaseId": 28137039856,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-24T23:47:01Z",
-      "databaseId": 28136999602,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-24T23:47:00Z",
-      "databaseId": 28136998904,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
     }
   ],
   "gaps": {
@@ -15342,6 +15342,41 @@
         "video_id": 26548125
       },
       {
+        "episode_id": 44064,
+        "display_name": "Agentura Jasno S02E09 - Lovci odměn CZ Dabing",
+        "video_id": 26548427
+      },
+      {
+        "episode_id": 44066,
+        "display_name": "Agentura Jasno S02E11 - Něco na té Miře je CZ Dabing",
+        "video_id": 26548854
+      },
+      {
+        "episode_id": 44070,
+        "display_name": "Agentura Jasno S02E15 - Vražedná móda CZ Dabing",
+        "video_id": 26549314
+      },
+      {
+        "episode_id": 44130,
+        "display_name": "Agentura Jasno S03E01 - Duchové CZ Dabing",
+        "video_id": 26549666
+      },
+      {
+        "episode_id": 44072,
+        "display_name": "Agentura Jasno S03E02 - Třídní setkání po 13 letech CZ Dabing",
+        "video_id": 26550037
+      },
+      {
+        "episode_id": 44074,
+        "display_name": "Agentura Jasno S03E05 - Disko nezemřelo, bylo zavražděno CZ Dabing",
+        "video_id": 26550313
+      },
+      {
+        "episode_id": 44078,
+        "display_name": "Agentura Jasno S03E07 - Bruslařské závody CZ Dabing",
+        "video_id": 26550479
+      },
+      {
         "episode_id": 44049,
         "display_name": "Agentura Jasno S01E01 - Pilot CZ Dabing",
         "video_id": 26544947
@@ -15380,6 +15415,41 @@
         "episode_id": 44135,
         "display_name": "Agentura Jasno S02E01 - Americké duo CZ Dabing",
         "video_id": 26547818
+      },
+      {
+        "episode_id": 44059,
+        "display_name": "Agentura Jasno S02E03 - Médium proti médiu CZ Dabing",
+        "video_id": 26548209
+      },
+      {
+        "episode_id": 44061,
+        "display_name": "Agentura Jasno S02E06 - Maso je vražda, ale vražda je taky vražda CZ Dabing",
+        "video_id": 26548587
+      },
+      {
+        "episode_id": 44063,
+        "display_name": "Agentura Jasno S02E08 - Lupičská ukolébavka CZ Dabing",
+        "video_id": 26548937
+      },
+      {
+        "episode_id": 44065,
+        "display_name": "Agentura Jasno S02E10 - Gusův otec možná zabil souseda CZ Dabing",
+        "video_id": 26549304
+      },
+      {
+        "episode_id": 44067,
+        "display_name": "Agentura Jasno S02E12 - Staří a neklidní CZ Dabing",
+        "video_id": 26549728
+      },
+      {
+        "episode_id": 44069,
+        "display_name": "Agentura Jasno S02E14 - Vražda v tajném klubu CZ Dabing",
+        "video_id": 26550169
+      },
+      {
+        "episode_id": 44071,
+        "display_name": "Agentura Jasno S02E16 - Soumrak mrtvých CZ Dabing",
+        "video_id": 26550536
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -39054,6 +39124,41 @@
         "video_id": 26548125
       },
       {
+        "episode_id": 44064,
+        "display_name": "Agentura Jasno S02E09 - Lovci odměn CZ Dabing",
+        "video_id": 26548427
+      },
+      {
+        "episode_id": 44066,
+        "display_name": "Agentura Jasno S02E11 - Něco na té Miře je CZ Dabing",
+        "video_id": 26548854
+      },
+      {
+        "episode_id": 44070,
+        "display_name": "Agentura Jasno S02E15 - Vražedná móda CZ Dabing",
+        "video_id": 26549314
+      },
+      {
+        "episode_id": 44130,
+        "display_name": "Agentura Jasno S03E01 - Duchové CZ Dabing",
+        "video_id": 26549666
+      },
+      {
+        "episode_id": 44072,
+        "display_name": "Agentura Jasno S03E02 - Třídní setkání po 13 letech CZ Dabing",
+        "video_id": 26550037
+      },
+      {
+        "episode_id": 44074,
+        "display_name": "Agentura Jasno S03E05 - Disko nezemřelo, bylo zavražděno CZ Dabing",
+        "video_id": 26550313
+      },
+      {
+        "episode_id": 44078,
+        "display_name": "Agentura Jasno S03E07 - Bruslařské závody CZ Dabing",
+        "video_id": 26550479
+      },
+      {
         "episode_id": 44049,
         "display_name": "Agentura Jasno S01E01 - Pilot CZ Dabing",
         "video_id": 26544947
@@ -39092,6 +39197,41 @@
         "episode_id": 44135,
         "display_name": "Agentura Jasno S02E01 - Americké duo CZ Dabing",
         "video_id": 26547818
+      },
+      {
+        "episode_id": 44059,
+        "display_name": "Agentura Jasno S02E03 - Médium proti médiu CZ Dabing",
+        "video_id": 26548209
+      },
+      {
+        "episode_id": 44061,
+        "display_name": "Agentura Jasno S02E06 - Maso je vražda, ale vražda je taky vražda CZ Dabing",
+        "video_id": 26548587
+      },
+      {
+        "episode_id": 44063,
+        "display_name": "Agentura Jasno S02E08 - Lupičská ukolébavka CZ Dabing",
+        "video_id": 26548937
+      },
+      {
+        "episode_id": 44065,
+        "display_name": "Agentura Jasno S02E10 - Gusův otec možná zabil souseda CZ Dabing",
+        "video_id": 26549304
+      },
+      {
+        "episode_id": 44067,
+        "display_name": "Agentura Jasno S02E12 - Staří a neklidní CZ Dabing",
+        "video_id": 26549728
+      },
+      {
+        "episode_id": 44069,
+        "display_name": "Agentura Jasno S02E14 - Vražda v tajném klubu CZ Dabing",
+        "video_id": 26550169
+      },
+      {
+        "episode_id": 44071,
+        "display_name": "Agentura Jasno S02E16 - Soumrak mrtvých CZ Dabing",
+        "video_id": 26550536
       }
     ],
     "prepared_not_upload_ready": [
@@ -39398,17 +39538,17 @@
     ]
   },
   "language_verdicts": {
-    "UNKNOWN": 1074,
+    "UNKNOWN": 1079,
     "CZ_AUDIO": 74431,
-    "CZ_SUBTITLES_ONLY": 2562,
+    "CZ_SUBTITLES_ONLY": 2569,
     "NOT_CZ_AUDIO": 516,
     "SK_AUDIO": 2,
-    "PROBABLE_CZ_AUDIO": 2150
+    "PROBABLE_CZ_AUDIO": 2157
   },
   "language_whisper_statuses": {
-    "disabled": 71884,
-    "ok": 3155,
+    "disabled": 71664,
     "resolve_failed": 276,
+    "ok": 3032,
     "no_stream": 37
   }
 }
