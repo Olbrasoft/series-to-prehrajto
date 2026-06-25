@@ -123,23 +123,51 @@ jobs:
             exit 1
           fi
 
-      - name: Queue next upload batch
-        if: success() && matrix.shard == 0 && (github.event_name == 'schedule' || inputs.continue_uploads != 'false')
+  queue-next:
+    name: Queue next upload and preparation
+    runs-on: ubuntu-latest
+    needs: upload-batch
+    if: always() && (github.event_name == 'schedule' || inputs.continue_uploads != 'false')
+    permissions:
+      contents: read
+      actions: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: true
+
+      - name: Refresh to latest origin/main
+        run: |
+          git fetch --unshallow origin main 2>/dev/null || true
+          git fetch origin main
+          git reset --hard origin/main
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Queue next work
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           set -e
           if python src/upload_queue_status.py --no-require-description; then
+            echo "upload-ready episodes remain; queueing next upload batch"
             gh workflow run sync.yml \
               -f batch_size="${{ inputs.batch_size || '20' }}" \
-              -f num_shards="2" \
+              -f num_shards="${{ inputs.num_shards || '2' }}" \
               -f allow_subtitles="${{ inputs.allow_subtitles || 'false' }}" \
               -f continue_uploads="true"
             if ! python src/upload_queue_status.py --no-require-description --min-ready 20; then
               echo "prepared upload queue is below threshold; queueing background manifest preparation"
               gh workflow run prepare-manifest.yml \
                 -f series_limit="1200" \
-                -f episode_limit="30" \
+                -f episode_limit="40" \
                 -f source_limit_per_episode="24" \
                 -f use_whisper="false" \
                 -f skip_export="true"
@@ -148,7 +176,7 @@ jobs:
             echo "no prepared upload-ready episodes remain; queueing manifest preparation"
             gh workflow run prepare-manifest.yml \
               -f series_limit="1200" \
-              -f episode_limit="30" \
+              -f episode_limit="40" \
               -f source_limit_per_episode="24" \
               -f use_whisper="false" \
               -f skip_export="true"
