@@ -44,11 +44,11 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: main
+          fetch-depth: 0
           persist-credentials: true
 
       - name: Refresh to latest origin/main
         run: |
-          git fetch --unshallow origin main 2>/dev/null || true
           git fetch origin main
           git reset --hard origin/main
 
@@ -135,11 +135,11 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: main
+          fetch-depth: 0
           persist-credentials: true
 
       - name: Refresh to latest origin/main
         run: |
-          git fetch --unshallow origin main 2>/dev/null || true
           git fetch origin main
           git reset --hard origin/main
 
