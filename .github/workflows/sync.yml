@@ -168,11 +168,11 @@ jobs:
             else
               echo "upload-ready episodes remain, but another sync is already active or queued"
             fi
-            if ! python src/upload_queue_status.py --no-require-description --min-ready 20; then
-              echo "prepared upload queue is below threshold; queueing background manifest preparation"
+            if ! python src/upload_queue_status.py --no-require-description --min-ready 800; then
+              echo "prepared upload queue is below overnight threshold; queueing background manifest preparation"
               gh workflow run prepare-manifest.yml \
                 -f series_limit="1200" \
-                -f episode_limit="15" \
+                -f episode_limit="100" \
                 -f source_limit_per_episode="12" \
                 -f use_whisper="false" \
                 -f skip_export="true"
