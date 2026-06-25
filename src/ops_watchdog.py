@@ -30,6 +30,28 @@ def run_gh(args: list[str], *, dry_run: bool) -> None:
     subprocess.run(["gh", *args], check=True)
 
 
+def workflow_has_active_run(workflow: str) -> bool:
+    try:
+        out = subprocess.check_output(
+            [
+                "gh",
+                "run",
+                "list",
+                "--workflow",
+                f"{workflow}.yml",
+                "--limit",
+                "20",
+                "--json",
+                "status",
+            ],
+            text=True,
+        )
+        rows = json.loads(out)
+    except Exception:
+        return False
+    return any(row.get("status") in RUNNING for row in rows)
+
+
 def active_workflows(report: dict) -> set[str]:
     active: set[str] = set()
     for row in report.get("workflow_runs") or []:
@@ -101,7 +123,7 @@ def unprepared_source_queue_episodes() -> int:
 
 
 def queue_workflow(workflow: str, fields: dict[str, str], *, active: set[str], dry_run: bool) -> bool:
-    if workflow in active:
+    if workflow in active or workflow_has_active_run(workflow):
         print(f"{workflow}: already active")
         return False
     args = ["workflow", "run", f"{workflow}.yml"]
