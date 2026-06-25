@@ -1,33 +1,65 @@
 {
   "counts": {
     "backlog_episodes": 20000,
-    "manifest_upload_ready_episodes": 51,
-    "uploaded_episodes": 7544,
-    "prepared_source_episodes": 13672,
+    "manifest_upload_ready_episodes": 84,
+    "uploaded_episodes": 7546,
+    "prepared_source_episodes": 13712,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 2817,
-    "language_audit_rows": 84414,
+    "language_audit_rows": 84436,
     "language_queue_sources": 2644,
-    "language_audited_sources": 78340,
-    "language_whisper_attempted_sources": 3345,
-    "language_pending_whisper_sources": 2624
+    "language_audited_sources": 78342,
+    "language_whisper_attempted_sources": 3325,
+    "language_pending_whisper_sources": 2644
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-06-25T19:51:36Z",
-      "databaseId": 28196449567,
+      "createdAt": "2026-06-25T20:02:48Z",
+      "databaseId": 28197067308,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-06-25T19:58:02Z",
+      "databaseId": 28196800354,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-06-25T19:52:13Z",
+      "databaseId": 28196482811,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-25T19:52:11Z",
+      "databaseId": 28196480967,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-25T19:51:36Z",
+      "databaseId": 28196449567,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-06-25T19:45:12Z",
       "databaseId": 28196105960,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -43,7 +75,7 @@
       "createdAt": "2026-06-25T19:40:38Z",
       "databaseId": 28195845781,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "sync"
     },
     {
@@ -141,38 +173,6 @@
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-25T18:55:16Z",
-      "databaseId": 28193330866,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "refresh-backlog"
-    },
-    {
-      "conclusion": "failure",
-      "createdAt": "2026-06-25T18:55:07Z",
-      "databaseId": 28193321455,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-25T18:55:01Z",
-      "databaseId": 28193314573,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-25T18:54:34Z",
-      "databaseId": 28193287587,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-descriptions"
     }
   ],
   "gaps": {
@@ -17980,6 +17980,16 @@
         "episode_id": 58871,
         "display_name": "Boku no Hero Academia S04E10 - 10. epizoda CZ Dabing",
         "video_id": 26652939
+      },
+      {
+        "episode_id": 58879,
+        "display_name": "Boku no Hero Academia S04E11 - 11. epizoda CZ Dabing",
+        "video_id": 26653990
+      },
+      {
+        "episode_id": 58881,
+        "display_name": "Boku no Hero Academia S04E12 - 12. epizoda CZ Dabing",
+        "video_id": 26654032
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -44292,6 +44302,16 @@
         "episode_id": 58871,
         "display_name": "Boku no Hero Academia S04E10 - 10. epizoda CZ Dabing",
         "video_id": 26652939
+      },
+      {
+        "episode_id": 58879,
+        "display_name": "Boku no Hero Academia S04E11 - 11. epizoda CZ Dabing",
+        "video_id": 26653990
+      },
+      {
+        "episode_id": 58881,
+        "display_name": "Boku no Hero Academia S04E12 - 12. epizoda CZ Dabing",
+        "video_id": 26654032
       }
     ],
     "prepared_not_upload_ready": [
@@ -44598,17 +44618,17 @@
     ]
   },
   "language_verdicts": {
-    "UNKNOWN": 2759,
+    "UNKNOWN": 2769,
     "CZ_AUDIO": 74431,
     "CZ_SUBTITLES_ONLY": 2976,
     "NOT_CZ_AUDIO": 516,
     "SK_AUDIO": 2,
-    "PROBABLE_CZ_AUDIO": 3730
+    "PROBABLE_CZ_AUDIO": 3742
   },
   "language_whisper_statuses": {
-    "disabled": 74995,
+    "disabled": 75017,
     "resolve_failed": 276,
-    "ok": 3032,
+    "ok": 3012,
     "no_stream": 37
   }
 }
