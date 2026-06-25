@@ -98,6 +98,41 @@ def parse_search_html(page_html: str) -> list[SearchResult]:
     return rows
 
 
+def _split_env_list(name: str) -> list[str]:
+    return [value.strip() for value in os.environ.get(name, "").split(",") if value.strip()]
+
+
+def _proxy_fetch_urls(search_url: str) -> list[tuple[str, str]]:
+    pairs: list[tuple[str, str, str]] = []
+    base = os.environ.get("CZ_PROXY_URL", "").strip()
+    key = os.environ.get("CZ_PROXY_KEY", "").strip()
+    if base and key:
+        pairs.append(("cz_proxy_1", base, key))
+    base = os.environ.get("CZ_PROXY_URL_2", "").strip()
+    key = os.environ.get("CZ_PROXY_KEY_2", "").strip()
+    if base and key:
+        pairs.append(("cz_proxy_2", base, key))
+    for index, (base, key) in enumerate(zip(_split_env_list("CZ_PROXY_URLS"), _split_env_list("CZ_PROXY_KEYS")), start=1):
+        if base and key:
+            pairs.append((f"cz_proxy_list_{index}", base, key))
+
+    seen: set[tuple[str, str]] = set()
+    urls: list[tuple[str, str]] = []
+    for label, base, key in pairs:
+        pair_key = (base, key)
+        if pair_key in seen:
+            continue
+        seen.add(pair_key)
+        urls.append(
+            (
+                label,
+                f"{base}?key={urllib.parse.quote(key, safe='')}"
+                f"&url={urllib.parse.quote(search_url, safe='')}",
+            )
+        )
+    return urls
+
+
 def search(
     query: str,
     *,
@@ -109,44 +144,43 @@ def search(
     global _last_search_at
     sess = session or requests.Session()
     search_url = SEARCH_URL.format(query=urllib.parse.quote(query))
-    proxy_base = os.environ.get("CZ_PROXY_URL", "").strip()
-    proxy_key = os.environ.get("CZ_PROXY_KEY", "").strip()
-    if proxy_base and proxy_key:
-        fetch_url = (
-            f"{proxy_base}?key={urllib.parse.quote(proxy_key, safe='')}"
-            f"&url={urllib.parse.quote(search_url, safe='')}"
-        )
+    fetch_urls = _proxy_fetch_urls(search_url)
+    if fetch_urls:
         min_interval = max(
             min_interval,
             float(os.environ.get("CZ_PROXY_MIN_GAP_SECONDS", "5")),
         )
     else:
-        fetch_url = search_url
+        fetch_urls = [("direct", search_url)]
     response: requests.Response | None = None
     for attempt in range(max(retries, 1)):
-        wait = min_interval - (time.monotonic() - _last_search_at)
-        if wait > 0:
-            time.sleep(wait)
-        try:
-            response = sess.get(
-                fetch_url,
-                timeout=timeout,
-                headers={
-                    "User-Agent": USER_AGENT,
-                    "Accept": "text/html,application/xhtml+xml",
-                    "Accept-Language": "cs,en;q=0.8",
-                    "Accept-Encoding": "identity",
-                },
-            )
-        finally:
-            _last_search_at = time.monotonic()
-        if response.status_code != 429 or attempt + 1 >= retries:
-            response.raise_for_status()
-            return parse_search_html(response.text)
+        for _fetch_label, fetch_url in fetch_urls:
+            wait = min_interval - (time.monotonic() - _last_search_at)
+            if wait > 0:
+                time.sleep(wait)
+            try:
+                response = sess.get(
+                    fetch_url,
+                    timeout=timeout,
+                    headers={
+                        "User-Agent": USER_AGENT,
+                        "Accept": "text/html,application/xhtml+xml",
+                        "Accept-Language": "cs,en;q=0.8",
+                        "Accept-Encoding": "identity",
+                    },
+                )
+            finally:
+                _last_search_at = time.monotonic()
+            if response.ok:
+                return parse_search_html(response.text)
+            if response.status_code != 429 or attempt + 1 >= retries:
+                continue
         retry_after = response.headers.get("Retry-After")
         try:
             retry_seconds = float(retry_after) if retry_after else 0.0
         except ValueError:
             retry_seconds = 0.0
         time.sleep(max(retry_seconds, 10.0 * (attempt + 1)))
+    if response is not None:
+        response.raise_for_status()
     raise RuntimeError(f"Search failed without a response for {query!r}")

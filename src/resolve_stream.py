@@ -101,6 +101,7 @@ class ResolvedUpload:
     duration_sec: Optional[int]
     videos: list[StreamVariant]
     tracks: list[SubtitleTrack]
+    fetch_via: str = "direct"
 
 
 class ResolveError(Exception):
@@ -146,7 +147,7 @@ def _parse_video_block(body: str) -> Optional[StreamVariant]:
     )
 
 
-def parse_html(html: str, upload_url: str) -> ResolvedUpload:
+def parse_html(html: str, upload_url: str, *, fetch_via: str = "direct") -> ResolvedUpload:
     videos: list[StreamVariant] = []
     for m in _VIDEOS_PUSH_RE.finditer(html):
         v = _parse_video_block(m.group("body"))
@@ -171,22 +172,50 @@ def parse_html(html: str, upload_url: str) -> ResolvedUpload:
         duration_sec=duration,
         videos=sorted(videos, key=lambda v: -v.res),
         tracks=tracks,
+        fetch_via=fetch_via,
     )
 
 
-def _via_cz_proxy(upload_url: str) -> str | None:
-    """Build a CZ-proxy URL if CZ_PROXY_URL + CZ_PROXY_KEY are set, else None.
+def _split_env_list(name: str) -> list[str]:
+    return [value.strip() for value in os.environ.get(name, "").split(",") if value.strip()]
+
+
+def _cz_proxy_fetch_urls(upload_url: str) -> list[tuple[str, str]]:
+    """Build CZ-proxy URLs from configured proxy env vars.
 
     prehraj.to website geofences datacenter / non-CZ-residential ASNs (404).
     The shared `chobotnice.aspfree.cz/Proxy.ashx` handler runs on a Czech
     ASP host and transparently relays HTML — same pattern that cr-web's
     movies_api/prehrajto.rs uses for its stream resolver.
     """
+    pairs: list[tuple[str, str, str]] = []
     base = os.environ.get("CZ_PROXY_URL", "").strip()
     key = os.environ.get("CZ_PROXY_KEY", "").strip()
-    if not base or not key:
-        return None
-    return f"{base}?key={urllib.parse.quote(key, safe='')}&url={urllib.parse.quote(upload_url, safe='')}"
+    if base and key:
+        pairs.append(("cz_proxy_1", base, key))
+    base = os.environ.get("CZ_PROXY_URL_2", "").strip()
+    key = os.environ.get("CZ_PROXY_KEY_2", "").strip()
+    if base and key:
+        pairs.append(("cz_proxy_2", base, key))
+    for index, (base, key) in enumerate(zip(_split_env_list("CZ_PROXY_URLS"), _split_env_list("CZ_PROXY_KEYS")), start=1):
+        if base and key:
+            pairs.append((f"cz_proxy_list_{index}", base, key))
+
+    seen: set[tuple[str, str]] = set()
+    urls: list[tuple[str, str]] = []
+    for label, base, key in pairs:
+        pair_key = (base, key)
+        if pair_key in seen:
+            continue
+        seen.add(pair_key)
+        urls.append(
+            (
+                label,
+                f"{base}?key={urllib.parse.quote(key, safe='')}"
+                f"&url={urllib.parse.quote(upload_url, safe='')}",
+            )
+        )
+    return urls
 
 
 def _googlebot_headers() -> dict[str, str]:
@@ -243,33 +272,36 @@ def resolve(
     global _last_resolve_at
     sess = session or requests.Session()
     sess.headers.update(_googlebot_headers())
-    proxy_url = _via_cz_proxy(upload_url)
     localhost_url = _localhost_fetch_url(upload_url)
-    fetch_url = localhost_url or proxy_url or upload_url
-    via_proxy = localhost_url is None and proxy_url is not None
+    if localhost_url:
+        fetch_urls = [("localhost", localhost_url)]
+    else:
+        fetch_urls = _cz_proxy_fetch_urls(upload_url) or [("direct", upload_url)]
 
     last_err: str = "no attempts"
     for attempt in range(max_retries + 1):
-        # Pace consecutive proxy GETs. The first call in the batch hits
-        # `wait <= 0` and goes through immediately; later calls wait out
-        # the remaining gap. Retries DO honor the gap too — if proxy is
-        # in 502 mode we want to be even gentler, not hammer it.
-        if via_proxy:
-            wait = RESOLVE_MIN_GAP - (time.monotonic() - _last_resolve_at)
-            if wait > 0:
-                time.sleep(wait)
-        try:
-            resp = sess.get(fetch_url, timeout=timeout, allow_redirects=True)
+        for fetch_label, fetch_url in fetch_urls:
+            via_proxy = fetch_label.startswith("cz_proxy")
+            # Pace consecutive proxy GETs. The first call in the batch hits
+            # `wait <= 0` and goes through immediately; later calls wait out
+            # the remaining gap. Retries DO honor the gap too — if proxy is
+            # in 502 mode we want to be even gentler, not hammer it.
             if via_proxy:
-                _last_resolve_at = time.monotonic()
-        except requests.RequestException as e:
-            last_err = f"network error: {e}"
-        else:
+                wait = RESOLVE_MIN_GAP - (time.monotonic() - _last_resolve_at)
+                if wait > 0:
+                    time.sleep(wait)
+            try:
+                resp = sess.get(fetch_url, timeout=timeout, allow_redirects=True)
+                if via_proxy:
+                    _last_resolve_at = time.monotonic()
+            except requests.RequestException as e:
+                last_err = f"{fetch_label} network error: {e}"
+                continue
             if resp.status_code == 404:
                 # Upload truly gone — give up immediately, burn the upload_id.
                 raise ResolveError(f"upload not found (404): {upload_url}", permanent=True)
             if resp.ok:
-                return parse_html(resp.text, upload_url)
+                return parse_html(resp.text, upload_url, fetch_via=fetch_label)
             if 500 <= resp.status_code < 600:
                 # Diagnostic: dump response so we can tell a real gateway
                 # 502 (proxy / upstream truly down — retry helps) from the
@@ -282,17 +314,19 @@ def resolve(
                 # When we see that signature, this upload_id is dead.
                 body_preview = (resp.text or "")[:300].replace("\n", " ")
                 ct = resp.headers.get("Content-Type", "")
-                print(f"[resolve] HTTP {resp.status_code} ct={ct!r} body[0:300]={body_preview!r}", flush=True)
+                print(
+                    f"[resolve] {fetch_label} HTTP {resp.status_code} ct={ct!r} body[0:300]={body_preview!r}",
+                    flush=True,
+                )
                 permanent_markers = ("Upstream NotFound", "WebException:")
                 if any(m in body_preview for m in permanent_markers):
                     raise ResolveError(
                         f"HTTP {resp.status_code} wrapping permanent upstream error: {upload_url}",
                         permanent=True,
                     )
-                last_err = f"HTTP {resp.status_code}"
-            else:
-                # Other 4xx — auth, forbidden, malformed URL. Don't retry.
-                raise ResolveError(f"HTTP {resp.status_code}: {upload_url}", permanent=True)
+                last_err = f"{fetch_label} HTTP {resp.status_code}"
+                continue
+            last_err = f"{fetch_label} HTTP {resp.status_code}"
 
         if attempt < max_retries:
             sleep_s = backoff_seconds[attempt] if attempt < len(backoff_seconds) else backoff_seconds[-1]
