@@ -1,25 +1,49 @@
 {
   "counts": {
     "backlog_episodes": 20000,
-    "manifest_upload_ready_episodes": 84,
-    "uploaded_episodes": 7546,
-    "prepared_source_episodes": 13712,
+    "manifest_upload_ready_episodes": 96,
+    "uploaded_episodes": 7548,
+    "prepared_source_episodes": 13732,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 2817,
     "language_audit_rows": 84436,
     "language_queue_sources": 2644,
-    "language_audited_sources": 78342,
-    "language_whisper_attempted_sources": 3325,
-    "language_pending_whisper_sources": 2644
+    "language_audited_sources": 78360,
+    "language_whisper_attempted_sources": 3365,
+    "language_pending_whisper_sources": 2604
   },
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-06-25T20:11:43Z",
+      "databaseId": 28197550408,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-25T20:03:30Z",
+      "databaseId": 28197105842,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-25T20:03:27Z",
+      "databaseId": 28197103187,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-06-25T20:02:48Z",
       "databaseId": 28197067308,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -27,7 +51,7 @@
       "createdAt": "2026-06-25T19:58:02Z",
       "databaseId": 28196800354,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "sync"
     },
     {
@@ -39,11 +63,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-06-25T19:52:11Z",
       "databaseId": 28196480967,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -149,30 +173,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-25T19:11:07Z",
-      "databaseId": 28194239094,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-25T19:09:16Z",
-      "databaseId": 28194135686,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-06-25T18:57:48Z",
-      "databaseId": 28193475875,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "sync"
     }
   ],
   "gaps": {
@@ -17982,6 +17982,11 @@
         "video_id": 26652939
       },
       {
+        "episode_id": 62412,
+        "display_name": "Námořní vyšetřovací služba S01E09 - Hlas ze záhrobí CZ Dabing",
+        "video_id": 26654297
+      },
+      {
         "episode_id": 58879,
         "display_name": "Boku no Hero Academia S04E11 - 11. epizoda CZ Dabing",
         "video_id": 26653990
@@ -17990,6 +17995,11 @@
         "episode_id": 58881,
         "display_name": "Boku no Hero Academia S04E12 - 12. epizoda CZ Dabing",
         "video_id": 26654032
+      },
+      {
+        "episode_id": 58869,
+        "display_name": "Boku no Hero Academia S04E15 - 15. epizoda CZ Dabing",
+        "video_id": 26654540
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -44304,6 +44314,11 @@
         "video_id": 26652939
       },
       {
+        "episode_id": 62412,
+        "display_name": "Námořní vyšetřovací služba S01E09 - Hlas ze záhrobí CZ Dabing",
+        "video_id": 26654297
+      },
+      {
         "episode_id": 58879,
         "display_name": "Boku no Hero Academia S04E11 - 11. epizoda CZ Dabing",
         "video_id": 26653990
@@ -44312,6 +44327,11 @@
         "episode_id": 58881,
         "display_name": "Boku no Hero Academia S04E12 - 12. epizoda CZ Dabing",
         "video_id": 26654032
+      },
+      {
+        "episode_id": 58869,
+        "display_name": "Boku no Hero Academia S04E15 - 15. epizoda CZ Dabing",
+        "video_id": 26654540
       }
     ],
     "prepared_not_upload_ready": [
@@ -44626,9 +44646,9 @@
     "PROBABLE_CZ_AUDIO": 3742
   },
   "language_whisper_statuses": {
-    "disabled": 75017,
+    "disabled": 74995,
     "resolve_failed": 276,
-    "ok": 3012,
+    "ok": 3052,
     "no_stream": 37
   }
 }
