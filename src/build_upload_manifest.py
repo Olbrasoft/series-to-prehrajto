@@ -237,24 +237,50 @@ def merge_backlog_with_prepared(backlog: list[dict], prepared: dict[int, dict]) 
 
 
 def upload_candidate_ids(plan: dict, burned: set[int]) -> list[int]:
-    ids: list[int] = []
-    for source in [plan.get("selected_source"), *(plan.get("tested_sources") or [])]:
-        if not source:
-            continue
+    def passes(source):
         if source.get("verdict") not in {"CZ_AUDIO", "PROBABLE_CZ_AUDIO"}:
-            continue
-        source_id = int(source["source_id"])
-        if source_id in burned or source_id in ids:
-            continue
+            return False
+        sid = int(source["source_id"])
+        if sid in burned:
+            return False
         fsize = source.get("filesize_bytes")
         if fsize is not None and fsize < MIN_UPLOAD_FILE_SIZE:
+            return False
+        return True
+
+    sources = [plan.get("selected_source"), *(plan.get("tested_sources") or [])]
+
+    # Pass 1: only sources with valid provider_probe (resolvable)
+    ids: list[int] = []
+    seen: set[int] = set()
+    for source in sources:
+        if not source or not passes(source):
             continue
         provider_probe = (source.get("signals") or {}).get("provider_probe") or {}
-        is_resolvable = provider_probe.get("status") == "ok" and bool(provider_probe.get("streams"))
-        has_url = bool(source.get("source_url"))
-        if not is_resolvable and not has_url:
+        if provider_probe.get("status") != "ok":
             continue
-        ids.append(source_id)
+        sid = int(source["source_id"])
+        if sid in seen:
+            continue
+        seen.add(sid)
+        ids.append(sid)
+    if ids:
+        return ids
+
+    # Pass 2: fallback – sources with valid URL and known filesize >= 300 MB
+    for source in sources:
+        if not source or not passes(source):
+            continue
+        fsize = source.get("filesize_bytes")
+        if fsize is None or fsize < MIN_UPLOAD_FILE_SIZE:
+            continue
+        if not source.get("source_url"):
+            continue
+        sid = int(source["source_id"])
+        if sid in seen:
+            continue
+        seen.add(sid)
+        ids.append(sid)
     return ids
 
 
