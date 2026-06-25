@@ -1,41 +1,145 @@
 {
   "counts": {
     "backlog_episodes": 20000,
-    "manifest_upload_ready_episodes": 64,
-    "uploaded_episodes": 7228,
-    "prepared_source_episodes": 12823,
+    "manifest_upload_ready_episodes": 51,
+    "uploaded_episodes": 7311,
+    "prepared_source_episodes": 12923,
     "description_series": 60,
     "description_episodes": 753,
-    "description_errors": 2811,
-    "language_audit_rows": 82857,
+    "description_errors": 2817,
+    "language_audit_rows": 83255,
     "language_queue_sources": 2644,
-    "language_audited_sources": 76951,
-    "language_whisper_attempted_sources": 3325,
+    "language_audited_sources": 77455,
+    "language_whisper_attempted_sources": 3525,
     "language_pending_whisper_sources": 2644
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-06-25T07:54:47Z",
-      "databaseId": 28155440603,
+      "createdAt": "2026-06-25T09:09:59Z",
+      "databaseId": 28159516480,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
-      "createdAt": "2026-06-25T07:52:06Z",
-      "databaseId": 28155303660,
+      "createdAt": "2026-06-25T08:56:11Z",
+      "databaseId": 28158741316,
       "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-sources"
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "failure",
+      "createdAt": "2026-06-25T08:40:10Z",
+      "databaseId": 28157865414,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-06-25T08:38:17Z",
+      "databaseId": 28157757964,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-25T08:36:00Z",
+      "databaseId": 28157632488,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-25T08:35:35Z",
+      "databaseId": 28157610849,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-06-25T08:27:17Z",
+      "databaseId": 28157150985,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-25T08:16:52Z",
+      "databaseId": 28156596524,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-06-25T08:12:41Z",
+      "databaseId": 28156373153,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-06-25T08:08:04Z",
+      "databaseId": 28156133099,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-06-25T08:04:45Z",
+      "databaseId": 28155955516,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-06-25T07:55:23Z",
+      "databaseId": 28155473186,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-25T07:55:22Z",
+      "databaseId": 28155471787,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-25T07:54:47Z",
+      "databaseId": 28155440603,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-25T07:52:06Z",
+      "databaseId": 28155303660,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-sources"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-06-25T07:49:39Z",
       "databaseId": 28155181043,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "sync"
     },
     {
@@ -47,11 +151,11 @@
       "workflowName": "ops-status"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-06-25T07:44:04Z",
       "databaseId": 28154905336,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -69,110 +173,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-25T07:27:19Z",
-      "databaseId": 28154085291,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "refresh-backlog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-25T07:26:53Z",
-      "databaseId": 28154065278,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-25T07:26:40Z",
-      "databaseId": 28154055555,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-06-25T07:26:07Z",
-      "databaseId": 28154028257,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-25T07:14:46Z",
-      "databaseId": 28153477526,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-25T06:56:13Z",
-      "databaseId": 28152593635,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-25T06:53:08Z",
-      "databaseId": 28152451057,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "failure",
-      "createdAt": "2026-06-25T06:51:18Z",
-      "databaseId": 28152367603,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-25T06:46:01Z",
-      "databaseId": 28152131743,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-25T06:36:18Z",
-      "databaseId": 28151706959,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-25T06:36:17Z",
-      "databaseId": 28151705983,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-25T06:35:53Z",
-      "databaseId": 28151688093,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-25T06:25:37Z",
-      "databaseId": 28151244044,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
     }
   ],
   "gaps": {
@@ -16400,6 +16400,421 @@
         "episode_id": 103165,
         "display_name": "Avatar: Legenda o Aangovi S01E08 - Legendy CZ Dabing",
         "video_id": 26584760
+      },
+      {
+        "episode_id": 4478,
+        "display_name": "Banshee S03E09 - Každý ví, co jsi zač CZ Dabing",
+        "video_id": 26586212
+      },
+      {
+        "episode_id": 4480,
+        "display_name": "Banshee S04E01 - Úkaz z Bible CZ Dabing",
+        "video_id": 26586514
+      },
+      {
+        "episode_id": 4456,
+        "display_name": "Banshee S04E02 - Tíha krásy CZ Dabing",
+        "video_id": 26586719
+      },
+      {
+        "episode_id": 4458,
+        "display_name": "Banshee S04E05 - Trochu pozdě CZ Dabing",
+        "video_id": 26587025
+      },
+      {
+        "episode_id": 4460,
+        "display_name": "Banshee S04E07 - Jiná pravda CZ Dabing",
+        "video_id": 26587175
+      },
+      {
+        "episode_id": 59660,
+        "display_name": "Barry S01E02 - Využij to CZ Dabing",
+        "video_id": 26587409
+      },
+      {
+        "episode_id": 59672,
+        "display_name": "Barry S01E04 - Vsaď… na sebe CZ Dabing",
+        "video_id": 26587479
+      },
+      {
+        "episode_id": 59662,
+        "display_name": "Barry S01E06 - Poslouchej ušima, reaguj výrazem CZ Dabing",
+        "video_id": 26587623
+      },
+      {
+        "episode_id": 59682,
+        "display_name": "Barry S02E04 - Co? CZ Dabing",
+        "video_id": 26587681
+      },
+      {
+        "episode_id": 59664,
+        "display_name": "Barry S02E07 - Konkurz CZ Dabing",
+        "video_id": 26587814
+      },
+      {
+        "episode_id": 59652,
+        "display_name": "Barry S03E01 - Odpouštím Jeffovi CZ Dabing",
+        "video_id": 26587929
+      },
+      {
+        "episode_id": 59654,
+        "display_name": "Barry S03E03 - Ben Mendelsohn CZ Dabing",
+        "video_id": 26588041
+      },
+      {
+        "episode_id": 59656,
+        "display_name": "Barry S03E05 - Neuvěřitelná šílenost CZ Dabing",
+        "video_id": 26588169
+      },
+      {
+        "episode_id": 59658,
+        "display_name": "Barry S03E08 - Starting Now CZ Dabing",
+        "video_id": 26588209
+      },
+      {
+        "episode_id": 59668,
+        "display_name": "Barry S04E03 - Jsi okouzlující CZ Dabing",
+        "video_id": 26588348
+      },
+      {
+        "episode_id": 59670,
+        "display_name": "Barry S04E05 - Ošidné odkazy CZ Dabing",
+        "video_id": 26588399
+      },
+      {
+        "episode_id": 59674,
+        "display_name": "Barry S04E07 - Dobré jídlo CZ Dabing",
+        "video_id": 26588542
+      },
+      {
+        "episode_id": 51134,
+        "display_name": "Batesův motel S01E01 - Nejdřív máš sen, pak zemřeš CZ Dabing",
+        "video_id": 26588666
+      },
+      {
+        "episode_id": 51136,
+        "display_name": "Batesův motel S01E03 - Co je to s Normanem CZ Dabing",
+        "video_id": 26588842
+      },
+      {
+        "episode_id": 51138,
+        "display_name": "Batesův motel S01E05 - Výhled na oceán CZ Dabing",
+        "video_id": 26589023
+      },
+      {
+        "episode_id": 51140,
+        "display_name": "Batesův motel S01E07 - Muž v čísle 9 CZ Dabing",
+        "video_id": 26589237
+      },
+      {
+        "episode_id": 51142,
+        "display_name": "Batesův motel S01E10 - Půlnoc CZ Dabing",
+        "video_id": 26589484
+      },
+      {
+        "episode_id": 51144,
+        "display_name": "Batesův motel S02E02 - Stín pochybnosti CZ Dabing",
+        "video_id": 26589669
+      },
+      {
+        "episode_id": 51170,
+        "display_name": "Batesův motel S02E04 - Odchod CZ Dabing",
+        "video_id": 26589799
+      },
+      {
+        "episode_id": 51146,
+        "display_name": "Batesův motel S02E06 - Skok do vody CZ Dabing",
+        "video_id": 26590015
+      },
+      {
+        "episode_id": 4477,
+        "display_name": "Banshee S03E08 - Mám to na háku CZ Dabing",
+        "video_id": 26586216
+      },
+      {
+        "episode_id": 4479,
+        "display_name": "Banshee S03E10 - Zaplatíme všichni CZ Dabing",
+        "video_id": 26586501
+      },
+      {
+        "episode_id": 4457,
+        "display_name": "Banshee S04E03 - Kšeft CZ Dabing",
+        "video_id": 26586703
+      },
+      {
+        "episode_id": 4481,
+        "display_name": "Banshee S04E04 - Může být nevinný CZ Dabing",
+        "video_id": 26586868
+      },
+      {
+        "episode_id": 4459,
+        "display_name": "Banshee S04E06 - Jednosměrka a konec CZ Dabing",
+        "video_id": 26587030
+      },
+      {
+        "episode_id": 4461,
+        "display_name": "Banshee S04E08 - Requiem CZ Dabing",
+        "video_id": 26587204
+      },
+      {
+        "episode_id": 59671,
+        "display_name": "Barry S01E03 - Udělej riskantní rozhodnutí CZ Dabing",
+        "video_id": 26587466
+      },
+      {
+        "episode_id": 59663,
+        "display_name": "Barry S01E07 - Poslouchej ušima, reaguj výrazem CZ Dabing",
+        "video_id": 26587554
+      },
+      {
+        "episode_id": 59683,
+        "display_name": "Barry S01E08 - Poznej svou pravdu CZ Dabing",
+        "video_id": 26587649
+      },
+      {
+        "episode_id": 59665,
+        "display_name": "Barry S02E08 - Berkman > Block CZ Dabing",
+        "video_id": 26587794
+      },
+      {
+        "episode_id": 59653,
+        "display_name": "Barry S03E02 - Limonáda CZ Dabing",
+        "video_id": 26587849
+      },
+      {
+        "episode_id": 59655,
+        "display_name": "Barry S03E04 - Všechny omáčky CZ Dabing",
+        "video_id": 26587987
+      },
+      {
+        "episode_id": 59657,
+        "display_name": "Barry S03E06 - 710N CZ Dabing",
+        "video_id": 26588113
+      },
+      {
+        "episode_id": 59659,
+        "display_name": "Barry S03E07 - Zbabělí sráči CZ Dabing",
+        "video_id": 26588199
+      },
+      {
+        "episode_id": 59667,
+        "display_name": "Barry S04E02 - Nejlepšejší místo na zemi CZ Dabing",
+        "video_id": 26588307
+      },
+      {
+        "episode_id": 59669,
+        "display_name": "Barry S04E04 - Chce to být psycho CZ Dabing",
+        "video_id": 26588367
+      },
+      {
+        "episode_id": 59673,
+        "display_name": "Barry S04E06 - Čaroděj CZ Dabing",
+        "video_id": 26588484
+      },
+      {
+        "episode_id": 59675,
+        "display_name": "Barry S04E08 - Wow CZ Dabing",
+        "video_id": 26588567
+      },
+      {
+        "episode_id": 51135,
+        "display_name": "Batesův motel S01E02 - Hezké město jsi vybrala, Normo... CZ Dabing",
+        "video_id": 26588735
+      },
+      {
+        "episode_id": 51137,
+        "display_name": "Batesův motel S01E04 - Věř mi... CZ Dabing",
+        "video_id": 26588886
+      },
+      {
+        "episode_id": 51139,
+        "display_name": "Batesův motel S01E06 - Pravda CZ Dabing",
+        "video_id": 26589027
+      },
+      {
+        "episode_id": 51175,
+        "display_name": "Batesův motel S01E08 - Chlapec a jeho pes CZ Dabing",
+        "video_id": 26589269
+      },
+      {
+        "episode_id": 51141,
+        "display_name": "Batesův motel S01E09 - Pod vodou CZ Dabing",
+        "video_id": 26589488
+      },
+      {
+        "episode_id": 51143,
+        "display_name": "Batesův motel S02E01 - Mrtvá, ale ne zapomenutá CZ Dabing",
+        "video_id": 26589732
+      },
+      {
+        "episode_id": 51145,
+        "display_name": "Batesův motel S02E03 - Caleb CZ Dabing",
+        "video_id": 26589852
+      },
+      {
+        "episode_id": 51171,
+        "display_name": "Batesův motel S02E05 - Mistr útěků CZ Dabing",
+        "video_id": 26590031
+      },
+      {
+        "episode_id": 51147,
+        "display_name": "Batesův motel S02E07 - Presumpce neviny CZ Dabing",
+        "video_id": 26590193
+      },
+      {
+        "episode_id": 51148,
+        "display_name": "Batesův motel S02E08 - Kolaps CZ Dabing",
+        "video_id": 26590840
+      },
+      {
+        "episode_id": 51150,
+        "display_name": "Batesův motel S03E01 - Smrt v rodině CZ Dabing",
+        "video_id": 26591001
+      },
+      {
+        "episode_id": 51152,
+        "display_name": "Batesův motel S03E04 - Heslo CZ Dabing",
+        "video_id": 26591160
+      },
+      {
+        "episode_id": 51154,
+        "display_name": "Batesův motel S03E06 - Norma Louise CZ Dabing",
+        "video_id": 26591319
+      },
+      {
+        "episode_id": 51156,
+        "display_name": "Batesův motel S03E07 - Poslední večeře CZ Dabing",
+        "video_id": 26591470
+      },
+      {
+        "episode_id": 51158,
+        "display_name": "Batesův motel S03E09 - Šílenství CZ Dabing",
+        "video_id": 26591690
+      },
+      {
+        "episode_id": 51160,
+        "display_name": "Batesův motel S04E01 - Nebezpečný sobě i okolí CZ Dabing",
+        "video_id": 26591786
+      },
+      {
+        "episode_id": 51162,
+        "display_name": "Batesův motel S04E03 - Dokud vás smrt nerozdělí CZ Dabing",
+        "video_id": 26591913
+      },
+      {
+        "episode_id": 51164,
+        "display_name": "Batesův motel S04E05 - Jak se láme světlo CZ Dabing",
+        "video_id": 26592061
+      },
+      {
+        "episode_id": 51166,
+        "display_name": "Batesův motel S04E07 - Všude dobře, doma nejlíp CZ Dabing",
+        "video_id": 26592213
+      },
+      {
+        "episode_id": 51168,
+        "display_name": "Batesův motel S04E09 - Navždy CZ Dabing",
+        "video_id": 26592384
+      },
+      {
+        "episode_id": 51172,
+        "display_name": "Batesův motel S05E01 - Temný ráj CZ Dabing",
+        "video_id": 26592470
+      },
+      {
+        "episode_id": 51180,
+        "display_name": "Batesův motel S05E03 - Zlá krev CZ Dabing",
+        "video_id": 26592600
+      },
+      {
+        "episode_id": 51176,
+        "display_name": "Batesův motel S05E04 - V skrytu CZ Dabing",
+        "video_id": 26592757
+      },
+      {
+        "episode_id": 51174,
+        "display_name": "Batesův motel S05E07 - Nerozlučně spjati CZ Dabing",
+        "video_id": 26592877
+      },
+      {
+        "episode_id": 51178,
+        "display_name": "Batesův motel S05E09 - Návštěvní hodiny CZ Dabing",
+        "video_id": 26592996
+      },
+      {
+        "episode_id": 51149,
+        "display_name": "Batesův motel S02E09 - Bedna CZ Dabing",
+        "video_id": 26591010
+      },
+      {
+        "episode_id": 51183,
+        "display_name": "Batesův motel S02E10 - Neměnná pravda CZ Dabing",
+        "video_id": 26591211
+      },
+      {
+        "episode_id": 51151,
+        "display_name": "Batesův motel S03E02 - Klub Arkánum CZ Dabing",
+        "video_id": 26591383
+      },
+      {
+        "episode_id": 51153,
+        "display_name": "Batesův motel S03E03 - Přesvědčování CZ Dabing",
+        "video_id": 26591526
+      },
+      {
+        "episode_id": 51155,
+        "display_name": "Batesův motel S03E05 - Dohoda CZ Dabing",
+        "video_id": 26591711
+      },
+      {
+        "episode_id": 51157,
+        "display_name": "Batesův motel S03E08 - Jáma CZ Dabing",
+        "video_id": 26591813
+      },
+      {
+        "episode_id": 51159,
+        "display_name": "Batesův motel S03E10 - Bezvědomí CZ Dabing",
+        "video_id": 26591941
+      },
+      {
+        "episode_id": 51161,
+        "display_name": "Batesův motel S04E02 - Dobrou noc, máti CZ Dabing",
+        "video_id": 26592068
+      },
+      {
+        "episode_id": 51163,
+        "display_name": "Batesův motel S04E04 - Zimní světla CZ Dabing",
+        "video_id": 26592254
+      },
+      {
+        "episode_id": 51165,
+        "display_name": "Batesův motel S04E06 - Trezor CZ Dabing",
+        "video_id": 26592396
+      },
+      {
+        "episode_id": 51167,
+        "display_name": "Batesův motel S04E08 - Nevěrná CZ Dabing",
+        "video_id": 26592564
+      },
+      {
+        "episode_id": 51169,
+        "display_name": "Batesův motel S04E10 - Norman CZ Dabing",
+        "video_id": 26592700
+      },
+      {
+        "episode_id": 51173,
+        "display_name": "Batesův motel S05E02 - Sbližování CZ Dabing",
+        "video_id": 26592808
+      },
+      {
+        "episode_id": 51181,
+        "display_name": "Batesův motel S05E05 - Sny umírají první CZ Dabing",
+        "video_id": 26592957
+      },
+      {
+        "episode_id": 51177,
+        "display_name": "Batesův motel S05E06 - Marion CZ Dabing",
+        "video_id": 26593087
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -41132,6 +41547,421 @@
         "episode_id": 103165,
         "display_name": "Avatar: Legenda o Aangovi S01E08 - Legendy CZ Dabing",
         "video_id": 26584760
+      },
+      {
+        "episode_id": 4478,
+        "display_name": "Banshee S03E09 - Každý ví, co jsi zač CZ Dabing",
+        "video_id": 26586212
+      },
+      {
+        "episode_id": 4480,
+        "display_name": "Banshee S04E01 - Úkaz z Bible CZ Dabing",
+        "video_id": 26586514
+      },
+      {
+        "episode_id": 4456,
+        "display_name": "Banshee S04E02 - Tíha krásy CZ Dabing",
+        "video_id": 26586719
+      },
+      {
+        "episode_id": 4458,
+        "display_name": "Banshee S04E05 - Trochu pozdě CZ Dabing",
+        "video_id": 26587025
+      },
+      {
+        "episode_id": 4460,
+        "display_name": "Banshee S04E07 - Jiná pravda CZ Dabing",
+        "video_id": 26587175
+      },
+      {
+        "episode_id": 59660,
+        "display_name": "Barry S01E02 - Využij to CZ Dabing",
+        "video_id": 26587409
+      },
+      {
+        "episode_id": 59672,
+        "display_name": "Barry S01E04 - Vsaď… na sebe CZ Dabing",
+        "video_id": 26587479
+      },
+      {
+        "episode_id": 59662,
+        "display_name": "Barry S01E06 - Poslouchej ušima, reaguj výrazem CZ Dabing",
+        "video_id": 26587623
+      },
+      {
+        "episode_id": 59682,
+        "display_name": "Barry S02E04 - Co? CZ Dabing",
+        "video_id": 26587681
+      },
+      {
+        "episode_id": 59664,
+        "display_name": "Barry S02E07 - Konkurz CZ Dabing",
+        "video_id": 26587814
+      },
+      {
+        "episode_id": 59652,
+        "display_name": "Barry S03E01 - Odpouštím Jeffovi CZ Dabing",
+        "video_id": 26587929
+      },
+      {
+        "episode_id": 59654,
+        "display_name": "Barry S03E03 - Ben Mendelsohn CZ Dabing",
+        "video_id": 26588041
+      },
+      {
+        "episode_id": 59656,
+        "display_name": "Barry S03E05 - Neuvěřitelná šílenost CZ Dabing",
+        "video_id": 26588169
+      },
+      {
+        "episode_id": 59658,
+        "display_name": "Barry S03E08 - Starting Now CZ Dabing",
+        "video_id": 26588209
+      },
+      {
+        "episode_id": 59668,
+        "display_name": "Barry S04E03 - Jsi okouzlující CZ Dabing",
+        "video_id": 26588348
+      },
+      {
+        "episode_id": 59670,
+        "display_name": "Barry S04E05 - Ošidné odkazy CZ Dabing",
+        "video_id": 26588399
+      },
+      {
+        "episode_id": 59674,
+        "display_name": "Barry S04E07 - Dobré jídlo CZ Dabing",
+        "video_id": 26588542
+      },
+      {
+        "episode_id": 51134,
+        "display_name": "Batesův motel S01E01 - Nejdřív máš sen, pak zemřeš CZ Dabing",
+        "video_id": 26588666
+      },
+      {
+        "episode_id": 51136,
+        "display_name": "Batesův motel S01E03 - Co je to s Normanem CZ Dabing",
+        "video_id": 26588842
+      },
+      {
+        "episode_id": 51138,
+        "display_name": "Batesův motel S01E05 - Výhled na oceán CZ Dabing",
+        "video_id": 26589023
+      },
+      {
+        "episode_id": 51140,
+        "display_name": "Batesův motel S01E07 - Muž v čísle 9 CZ Dabing",
+        "video_id": 26589237
+      },
+      {
+        "episode_id": 51142,
+        "display_name": "Batesův motel S01E10 - Půlnoc CZ Dabing",
+        "video_id": 26589484
+      },
+      {
+        "episode_id": 51144,
+        "display_name": "Batesův motel S02E02 - Stín pochybnosti CZ Dabing",
+        "video_id": 26589669
+      },
+      {
+        "episode_id": 51170,
+        "display_name": "Batesův motel S02E04 - Odchod CZ Dabing",
+        "video_id": 26589799
+      },
+      {
+        "episode_id": 51146,
+        "display_name": "Batesův motel S02E06 - Skok do vody CZ Dabing",
+        "video_id": 26590015
+      },
+      {
+        "episode_id": 4477,
+        "display_name": "Banshee S03E08 - Mám to na háku CZ Dabing",
+        "video_id": 26586216
+      },
+      {
+        "episode_id": 4479,
+        "display_name": "Banshee S03E10 - Zaplatíme všichni CZ Dabing",
+        "video_id": 26586501
+      },
+      {
+        "episode_id": 4457,
+        "display_name": "Banshee S04E03 - Kšeft CZ Dabing",
+        "video_id": 26586703
+      },
+      {
+        "episode_id": 4481,
+        "display_name": "Banshee S04E04 - Může být nevinný CZ Dabing",
+        "video_id": 26586868
+      },
+      {
+        "episode_id": 4459,
+        "display_name": "Banshee S04E06 - Jednosměrka a konec CZ Dabing",
+        "video_id": 26587030
+      },
+      {
+        "episode_id": 4461,
+        "display_name": "Banshee S04E08 - Requiem CZ Dabing",
+        "video_id": 26587204
+      },
+      {
+        "episode_id": 59671,
+        "display_name": "Barry S01E03 - Udělej riskantní rozhodnutí CZ Dabing",
+        "video_id": 26587466
+      },
+      {
+        "episode_id": 59663,
+        "display_name": "Barry S01E07 - Poslouchej ušima, reaguj výrazem CZ Dabing",
+        "video_id": 26587554
+      },
+      {
+        "episode_id": 59683,
+        "display_name": "Barry S01E08 - Poznej svou pravdu CZ Dabing",
+        "video_id": 26587649
+      },
+      {
+        "episode_id": 59665,
+        "display_name": "Barry S02E08 - Berkman > Block CZ Dabing",
+        "video_id": 26587794
+      },
+      {
+        "episode_id": 59653,
+        "display_name": "Barry S03E02 - Limonáda CZ Dabing",
+        "video_id": 26587849
+      },
+      {
+        "episode_id": 59655,
+        "display_name": "Barry S03E04 - Všechny omáčky CZ Dabing",
+        "video_id": 26587987
+      },
+      {
+        "episode_id": 59657,
+        "display_name": "Barry S03E06 - 710N CZ Dabing",
+        "video_id": 26588113
+      },
+      {
+        "episode_id": 59659,
+        "display_name": "Barry S03E07 - Zbabělí sráči CZ Dabing",
+        "video_id": 26588199
+      },
+      {
+        "episode_id": 59667,
+        "display_name": "Barry S04E02 - Nejlepšejší místo na zemi CZ Dabing",
+        "video_id": 26588307
+      },
+      {
+        "episode_id": 59669,
+        "display_name": "Barry S04E04 - Chce to být psycho CZ Dabing",
+        "video_id": 26588367
+      },
+      {
+        "episode_id": 59673,
+        "display_name": "Barry S04E06 - Čaroděj CZ Dabing",
+        "video_id": 26588484
+      },
+      {
+        "episode_id": 59675,
+        "display_name": "Barry S04E08 - Wow CZ Dabing",
+        "video_id": 26588567
+      },
+      {
+        "episode_id": 51135,
+        "display_name": "Batesův motel S01E02 - Hezké město jsi vybrala, Normo... CZ Dabing",
+        "video_id": 26588735
+      },
+      {
+        "episode_id": 51137,
+        "display_name": "Batesův motel S01E04 - Věř mi... CZ Dabing",
+        "video_id": 26588886
+      },
+      {
+        "episode_id": 51139,
+        "display_name": "Batesův motel S01E06 - Pravda CZ Dabing",
+        "video_id": 26589027
+      },
+      {
+        "episode_id": 51175,
+        "display_name": "Batesův motel S01E08 - Chlapec a jeho pes CZ Dabing",
+        "video_id": 26589269
+      },
+      {
+        "episode_id": 51141,
+        "display_name": "Batesův motel S01E09 - Pod vodou CZ Dabing",
+        "video_id": 26589488
+      },
+      {
+        "episode_id": 51143,
+        "display_name": "Batesův motel S02E01 - Mrtvá, ale ne zapomenutá CZ Dabing",
+        "video_id": 26589732
+      },
+      {
+        "episode_id": 51145,
+        "display_name": "Batesův motel S02E03 - Caleb CZ Dabing",
+        "video_id": 26589852
+      },
+      {
+        "episode_id": 51171,
+        "display_name": "Batesův motel S02E05 - Mistr útěků CZ Dabing",
+        "video_id": 26590031
+      },
+      {
+        "episode_id": 51147,
+        "display_name": "Batesův motel S02E07 - Presumpce neviny CZ Dabing",
+        "video_id": 26590193
+      },
+      {
+        "episode_id": 51148,
+        "display_name": "Batesův motel S02E08 - Kolaps CZ Dabing",
+        "video_id": 26590840
+      },
+      {
+        "episode_id": 51150,
+        "display_name": "Batesův motel S03E01 - Smrt v rodině CZ Dabing",
+        "video_id": 26591001
+      },
+      {
+        "episode_id": 51152,
+        "display_name": "Batesův motel S03E04 - Heslo CZ Dabing",
+        "video_id": 26591160
+      },
+      {
+        "episode_id": 51154,
+        "display_name": "Batesův motel S03E06 - Norma Louise CZ Dabing",
+        "video_id": 26591319
+      },
+      {
+        "episode_id": 51156,
+        "display_name": "Batesův motel S03E07 - Poslední večeře CZ Dabing",
+        "video_id": 26591470
+      },
+      {
+        "episode_id": 51158,
+        "display_name": "Batesův motel S03E09 - Šílenství CZ Dabing",
+        "video_id": 26591690
+      },
+      {
+        "episode_id": 51160,
+        "display_name": "Batesův motel S04E01 - Nebezpečný sobě i okolí CZ Dabing",
+        "video_id": 26591786
+      },
+      {
+        "episode_id": 51162,
+        "display_name": "Batesův motel S04E03 - Dokud vás smrt nerozdělí CZ Dabing",
+        "video_id": 26591913
+      },
+      {
+        "episode_id": 51164,
+        "display_name": "Batesův motel S04E05 - Jak se láme světlo CZ Dabing",
+        "video_id": 26592061
+      },
+      {
+        "episode_id": 51166,
+        "display_name": "Batesův motel S04E07 - Všude dobře, doma nejlíp CZ Dabing",
+        "video_id": 26592213
+      },
+      {
+        "episode_id": 51168,
+        "display_name": "Batesův motel S04E09 - Navždy CZ Dabing",
+        "video_id": 26592384
+      },
+      {
+        "episode_id": 51172,
+        "display_name": "Batesův motel S05E01 - Temný ráj CZ Dabing",
+        "video_id": 26592470
+      },
+      {
+        "episode_id": 51180,
+        "display_name": "Batesův motel S05E03 - Zlá krev CZ Dabing",
+        "video_id": 26592600
+      },
+      {
+        "episode_id": 51176,
+        "display_name": "Batesův motel S05E04 - V skrytu CZ Dabing",
+        "video_id": 26592757
+      },
+      {
+        "episode_id": 51174,
+        "display_name": "Batesův motel S05E07 - Nerozlučně spjati CZ Dabing",
+        "video_id": 26592877
+      },
+      {
+        "episode_id": 51178,
+        "display_name": "Batesův motel S05E09 - Návštěvní hodiny CZ Dabing",
+        "video_id": 26592996
+      },
+      {
+        "episode_id": 51149,
+        "display_name": "Batesův motel S02E09 - Bedna CZ Dabing",
+        "video_id": 26591010
+      },
+      {
+        "episode_id": 51183,
+        "display_name": "Batesův motel S02E10 - Neměnná pravda CZ Dabing",
+        "video_id": 26591211
+      },
+      {
+        "episode_id": 51151,
+        "display_name": "Batesův motel S03E02 - Klub Arkánum CZ Dabing",
+        "video_id": 26591383
+      },
+      {
+        "episode_id": 51153,
+        "display_name": "Batesův motel S03E03 - Přesvědčování CZ Dabing",
+        "video_id": 26591526
+      },
+      {
+        "episode_id": 51155,
+        "display_name": "Batesův motel S03E05 - Dohoda CZ Dabing",
+        "video_id": 26591711
+      },
+      {
+        "episode_id": 51157,
+        "display_name": "Batesův motel S03E08 - Jáma CZ Dabing",
+        "video_id": 26591813
+      },
+      {
+        "episode_id": 51159,
+        "display_name": "Batesův motel S03E10 - Bezvědomí CZ Dabing",
+        "video_id": 26591941
+      },
+      {
+        "episode_id": 51161,
+        "display_name": "Batesův motel S04E02 - Dobrou noc, máti CZ Dabing",
+        "video_id": 26592068
+      },
+      {
+        "episode_id": 51163,
+        "display_name": "Batesův motel S04E04 - Zimní světla CZ Dabing",
+        "video_id": 26592254
+      },
+      {
+        "episode_id": 51165,
+        "display_name": "Batesův motel S04E06 - Trezor CZ Dabing",
+        "video_id": 26592396
+      },
+      {
+        "episode_id": 51167,
+        "display_name": "Batesův motel S04E08 - Nevěrná CZ Dabing",
+        "video_id": 26592564
+      },
+      {
+        "episode_id": 51169,
+        "display_name": "Batesův motel S04E10 - Norman CZ Dabing",
+        "video_id": 26592700
+      },
+      {
+        "episode_id": 51173,
+        "display_name": "Batesův motel S05E02 - Sbližování CZ Dabing",
+        "video_id": 26592808
+      },
+      {
+        "episode_id": 51181,
+        "display_name": "Batesův motel S05E05 - Sny umírají první CZ Dabing",
+        "video_id": 26592957
+      },
+      {
+        "episode_id": 51177,
+        "display_name": "Batesův motel S05E06 - Marion CZ Dabing",
+        "video_id": 26593087
       }
     ],
     "prepared_not_upload_ready": [
@@ -41438,17 +42268,17 @@
     ]
   },
   "language_verdicts": {
-    "UNKNOWN": 2119,
+    "UNKNOWN": 2169,
     "CZ_AUDIO": 74431,
-    "CZ_SUBTITLES_ONLY": 2766,
+    "CZ_SUBTITLES_ONLY": 2787,
     "NOT_CZ_AUDIO": 516,
     "SK_AUDIO": 2,
-    "PROBABLE_CZ_AUDIO": 3023
+    "PROBABLE_CZ_AUDIO": 3350
   },
   "language_whisper_statuses": {
-    "disabled": 73626,
+    "disabled": 73930,
+    "ok": 3212,
     "resolve_failed": 276,
-    "ok": 3012,
     "no_stream": 37
   }
 }
