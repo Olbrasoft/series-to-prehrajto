@@ -12,6 +12,7 @@ from pathlib import Path
 from description_quality import is_valid_generated_description
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
+MIN_UPLOAD_FILE_SIZE = 300 * 1024 * 1024
 
 
 def load_jsonl(path: Path) -> list[dict]:
@@ -248,6 +249,9 @@ def upload_candidate_ids(plan: dict, burned: set[int]) -> list[int]:
         source_id = int(source["source_id"])
         if source_id in burned or source_id in ids:
             continue
+        fsize = source.get("filesize_bytes")
+        if fsize is not None and fsize < MIN_UPLOAD_FILE_SIZE:
+            continue
         ids.append(source_id)
     return ids
 
@@ -333,6 +337,10 @@ def build_manifest(
         source_id = int(selected["source_id"])
         if source_id in burned:
             stats["selected_source_burned"] += 1
+            continue
+        fsize = selected.get("filesize_bytes")
+        if fsize is not None and fsize < MIN_UPLOAD_FILE_SIZE:
+            stats["selected_source_undersize"] += 1
             continue
         candidates = upload_candidates(episode, plan, burned)
         if failed_availability:

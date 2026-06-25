@@ -26,8 +26,9 @@ from prehrajto_search import search as search_prehrajto  # noqa: E402
 from source_quality import source_quality_score, source_quality_tier  # noqa: E402
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
+MIN_UPLOAD_FILE_SIZE = 300 * 1024 * 1024
 FAILED_RETRY_AFTER = dt.timedelta(hours=24)
-MAX_RESOLVABLE_CANDIDATE_PROBES = 16
+MAX_RESOLVABLE_CANDIDATE_PROBES = 8
 
 
 def load_jsonl(path: Path) -> list[dict]:
@@ -458,6 +459,7 @@ def prepare_episode(
         result
         for result in audited
         if result["verdict"] in {"CZ_AUDIO", "PROBABLE_CZ_AUDIO"}
+        and (result.get("filesize_bytes") is None or result["filesize_bytes"] >= MIN_UPLOAD_FILE_SIZE)
     ]
     acceptable.sort(key=lambda result: tuple(result["score"]), reverse=True)
 
