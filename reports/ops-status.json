@@ -1,41 +1,145 @@
 {
   "counts": {
     "backlog_episodes": 20000,
-    "manifest_upload_ready_episodes": 51,
-    "uploaded_episodes": 7313,
-    "prepared_source_episodes": 12923,
+    "manifest_upload_ready_episodes": 5,
+    "uploaded_episodes": 7316,
+    "prepared_source_episodes": 12953,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 2817,
-    "language_audit_rows": 83255,
+    "language_audit_rows": 83295,
     "language_queue_sources": 2644,
-    "language_audited_sources": 77455,
-    "language_whisper_attempted_sources": 3525,
-    "language_pending_whisper_sources": 2644
+    "language_audited_sources": 77409,
+    "language_whisper_attempted_sources": 3345,
+    "language_pending_whisper_sources": 2624
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-06-25T09:11:15Z",
-      "databaseId": 28159587661,
+      "createdAt": "2026-06-25T10:19:47Z",
+      "databaseId": 28163340778,
       "headBranch": "main",
       "status": "in_progress",
-      "workflowName": "ops-status"
+      "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
-      "createdAt": "2026-06-25T09:10:55Z",
-      "databaseId": 28159569272,
+      "createdAt": "2026-06-25T10:18:43Z",
+      "databaseId": 28163284950,
       "headBranch": "main",
       "status": "pending",
       "workflowName": "prepare-manifest"
     },
     {
+      "conclusion": "success",
+      "createdAt": "2026-06-25T10:09:24Z",
+      "databaseId": 28162793586,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "refresh-backlog"
+    },
+    {
       "conclusion": "",
+      "createdAt": "2026-06-25T10:09:02Z",
+      "databaseId": 28162774656,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-25T10:08:53Z",
+      "databaseId": 28162766675,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-25T10:08:34Z",
+      "databaseId": 28162750285,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-25T10:05:31Z",
+      "databaseId": 28162585583,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-25T09:45:57Z",
+      "databaseId": 28161512992,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-sources"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-25T09:42:54Z",
+      "databaseId": 28161347758,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-25T09:29:36Z",
+      "databaseId": 28160619646,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-06-25T09:26:15Z",
+      "databaseId": 28160436007,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-25T09:23:06Z",
+      "databaseId": 28160256562,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-06-25T09:16:34Z",
+      "databaseId": 28159890030,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-25T09:11:15Z",
+      "databaseId": 28159587661,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-06-25T09:10:55Z",
+      "databaseId": 28159569272,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-06-25T09:10:50Z",
       "databaseId": 28159565394,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "sync"
     },
     {
@@ -47,129 +151,25 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-06-25T09:10:35Z",
       "databaseId": 28159551278,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
-      "conclusion": "",
+      "conclusion": "failure",
       "createdAt": "2026-06-25T09:10:33Z",
       "databaseId": 28159549801,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
       "conclusion": "success",
       "createdAt": "2026-06-25T09:09:59Z",
       "databaseId": 28159516480,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-25T08:56:11Z",
-      "databaseId": 28158741316,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "failure",
-      "createdAt": "2026-06-25T08:40:10Z",
-      "databaseId": 28157865414,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-25T08:38:17Z",
-      "databaseId": 28157757964,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-25T08:36:00Z",
-      "databaseId": 28157632488,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-06-25T08:35:35Z",
-      "databaseId": 28157610849,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-25T08:27:17Z",
-      "databaseId": 28157150985,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-25T08:16:52Z",
-      "databaseId": 28156596524,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-25T08:12:41Z",
-      "databaseId": 28156373153,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-25T08:08:04Z",
-      "databaseId": 28156133099,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-25T08:04:45Z",
-      "databaseId": 28155955516,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-25T07:55:23Z",
-      "databaseId": 28155473186,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-25T07:55:22Z",
-      "databaseId": 28155471787,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-25T07:54:47Z",
-      "databaseId": 28155440603,
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-watchdog"
@@ -16825,6 +16825,21 @@
         "episode_id": 51179,
         "display_name": "Batesův motel S05E08 - Tělo CZ Dabing",
         "video_id": 26593174
+      },
+      {
+        "episode_id": 160870,
+        "display_name": "Battlestar Galactica S00E02 - 2. epizoda CZ Dabing",
+        "video_id": 26599001
+      },
+      {
+        "episode_id": 160872,
+        "display_name": "Battlestar Galactica S01E02 - část 2 CZ Dabing",
+        "video_id": 26599364
+      },
+      {
+        "episode_id": 160869,
+        "display_name": "Battlestar Galactica S00E01 - 1. epizoda CZ Dabing",
+        "video_id": 26599005
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -41982,6 +41997,21 @@
         "episode_id": 51179,
         "display_name": "Batesův motel S05E08 - Tělo CZ Dabing",
         "video_id": 26593174
+      },
+      {
+        "episode_id": 160870,
+        "display_name": "Battlestar Galactica S00E02 - 2. epizoda CZ Dabing",
+        "video_id": 26599001
+      },
+      {
+        "episode_id": 160872,
+        "display_name": "Battlestar Galactica S01E02 - část 2 CZ Dabing",
+        "video_id": 26599364
+      },
+      {
+        "episode_id": 160869,
+        "display_name": "Battlestar Galactica S00E01 - 1. epizoda CZ Dabing",
+        "video_id": 26599005
       }
     ],
     "prepared_not_upload_ready": [
@@ -42288,17 +42318,17 @@
     ]
   },
   "language_verdicts": {
-    "UNKNOWN": 2169,
+    "UNKNOWN": 2183,
     "CZ_AUDIO": 74431,
-    "CZ_SUBTITLES_ONLY": 2787,
+    "CZ_SUBTITLES_ONLY": 2811,
     "NOT_CZ_AUDIO": 516,
     "SK_AUDIO": 2,
-    "PROBABLE_CZ_AUDIO": 3350
+    "PROBABLE_CZ_AUDIO": 3352
   },
   "language_whisper_statuses": {
-    "disabled": 73930,
-    "ok": 3212,
+    "disabled": 74064,
     "resolve_failed": 276,
+    "ok": 3032,
     "no_stream": 37
   }
 }
