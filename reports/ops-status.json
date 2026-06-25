@@ -2,32 +2,120 @@
   "counts": {
     "backlog_episodes": 20000,
     "manifest_upload_ready_episodes": 60,
-    "uploaded_episodes": 7402,
+    "uploaded_episodes": 7405,
     "prepared_source_episodes": 13185,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 2817,
     "language_audit_rows": 84290,
     "language_queue_sources": 2644,
-    "language_audited_sources": 78236,
-    "language_whisper_attempted_sources": 3365,
-    "language_pending_whisper_sources": 2604
+    "language_audited_sources": 78216,
+    "language_whisper_attempted_sources": 3345,
+    "language_pending_whisper_sources": 2624
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-06-25T13:17:30Z",
-      "databaseId": 28172942298,
+      "createdAt": "2026-06-25T13:30:12Z",
+      "databaseId": 28173733620,
       "headBranch": "main",
       "status": "in_progress",
-      "workflowName": "ops-status"
+      "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-06-25T13:30:00Z",
+      "databaseId": 28173719964,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-06-25T13:27:37Z",
+      "databaseId": 28173570506,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-06-25T13:23:38Z",
+      "databaseId": 28173318401,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-25T13:23:00Z",
+      "databaseId": 28173278223,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-sources"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-06-25T13:21:40Z",
+      "databaseId": 28173195215,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-25T13:19:37Z",
+      "databaseId": 28173068462,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-25T13:19:20Z",
+      "databaseId": 28173051235,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-25T13:19:00Z",
+      "databaseId": 28173031192,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-06-25T13:18:09Z",
+      "databaseId": 28172980453,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-25T13:18:06Z",
+      "databaseId": 28172977323,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-25T13:17:30Z",
+      "databaseId": 28172942298,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "cancelled",
       "createdAt": "2026-06-25T13:15:52Z",
       "databaseId": 28172843983,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "sync"
     },
     {
@@ -39,11 +127,11 @@
       "workflowName": "prepare-manifest"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-06-25T13:12:29Z",
       "databaseId": 28172635303,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "sync"
     },
     {
@@ -71,11 +159,11 @@
       "workflowName": "prepare-manifest"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-06-25T13:11:19Z",
       "databaseId": 28172564750,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "sync"
     },
     {
@@ -85,94 +173,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-25T13:05:02Z",
-      "databaseId": 28172182948,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-06-25T13:04:59Z",
-      "databaseId": 28172179128,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-25T13:03:03Z",
-      "databaseId": 28172061626,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-06-25T13:03:00Z",
-      "databaseId": 28172059369,
-      "headBranch": "main",
-      "status": "pending",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-25T13:02:59Z",
-      "databaseId": 28172057846,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-25T13:02:23Z",
-      "databaseId": 28172022923,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-25T13:01:21Z",
-      "databaseId": 28171959900,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-25T13:00:15Z",
-      "databaseId": 28171892976,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "refresh-backlog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-25T12:59:17Z",
-      "databaseId": 28171833745,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-25T12:59:13Z",
-      "databaseId": 28171830669,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-25T12:53:25Z",
-      "databaseId": 28171490642,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
     }
   ],
   "gaps": {
@@ -17230,6 +17230,21 @@
         "episode_id": 12412,
         "display_name": "12 opic S04E08 - Démoni CZ Dabing",
         "video_id": 26613375
+      },
+      {
+        "episode_id": 12374,
+        "display_name": "12 opic S04E09 - Ještě minutu CZ Dabing",
+        "video_id": 26613490
+      },
+      {
+        "episode_id": 12370,
+        "display_name": "12 opic S04E10 - Začátek 1/2 CZ Dabing",
+        "video_id": 26613692
+      },
+      {
+        "episode_id": 7044,
+        "display_name": "13. okrsek S01E01 - 1. epizoda CZ Dabing",
+        "video_id": 26613818
       },
       {
         "episode_id": 12375,
@@ -42834,6 +42849,21 @@
         "video_id": 26613375
       },
       {
+        "episode_id": 12374,
+        "display_name": "12 opic S04E09 - Ještě minutu CZ Dabing",
+        "video_id": 26613490
+      },
+      {
+        "episode_id": 12370,
+        "display_name": "12 opic S04E10 - Začátek 1/2 CZ Dabing",
+        "video_id": 26613692
+      },
+      {
+        "episode_id": 7044,
+        "display_name": "13. okrsek S01E01 - 1. epizoda CZ Dabing",
+        "video_id": 26613818
+      },
+      {
         "episode_id": 12375,
         "display_name": "12 opic S03E01 - Matka CZ Dabing",
         "video_id": 26610983
@@ -43188,7 +43218,7 @@
   "language_whisper_statuses": {
     "disabled": 74871,
     "resolve_failed": 276,
-    "ok": 3052,
+    "ok": 3032,
     "no_stream": 37
   }
 }
