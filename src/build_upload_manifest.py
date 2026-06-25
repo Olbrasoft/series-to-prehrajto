@@ -241,9 +241,6 @@ def upload_candidate_ids(plan: dict, burned: set[int]) -> list[int]:
     for source in [plan.get("selected_source"), *(plan.get("tested_sources") or [])]:
         if not source:
             continue
-        provider_probe = (source.get("signals") or {}).get("provider_probe") or {}
-        if provider_probe.get("status") != "ok" or not provider_probe.get("streams"):
-            continue
         if source.get("verdict") not in {"CZ_AUDIO", "PROBABLE_CZ_AUDIO"}:
             continue
         source_id = int(source["source_id"])
@@ -251,6 +248,11 @@ def upload_candidate_ids(plan: dict, burned: set[int]) -> list[int]:
             continue
         fsize = source.get("filesize_bytes")
         if fsize is not None and fsize < MIN_UPLOAD_FILE_SIZE:
+            continue
+        provider_probe = (source.get("signals") or {}).get("provider_probe") or {}
+        is_resolvable = provider_probe.get("status") == "ok" and bool(provider_probe.get("streams"))
+        has_url = bool(source.get("source_url"))
+        if not is_resolvable and not has_url:
             continue
         ids.append(source_id)
     return ids
