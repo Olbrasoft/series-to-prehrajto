@@ -173,6 +173,17 @@ def uploaded_episode_exclusions() -> tuple[set[int], set[tuple[int, int, int]]]:
     return uploaded_ids, uploaded_keys
 
 
+def queued_episode_exclusions(path: Path) -> tuple[set[int], set[tuple[int, int, int]]]:
+    queued_ids: set[int] = set()
+    queued_keys: set[tuple[int, int, int]] = set()
+    for row in load_jsonl(path):
+        if row.get("episode_id") is not None:
+            queued_ids.add(int(row["episode_id"]))
+        if all(row.get(key) is not None for key in ("series_id", "season", "episode")):
+            queued_keys.add((int(row["series_id"]), int(row["season"]), int(row["episode"])))
+    return queued_ids, queued_keys
+
+
 def backlog_candidate_to_queue_item(episode: dict, candidate: dict) -> dict:
     return {
         "series_id": episode["series_id"],
@@ -533,6 +544,8 @@ def main() -> int:
     ap.add_argument("--require-resolvable-source", action="store_true")
     ap.add_argument("--live-search", action="store_true")
     ap.add_argument("--live-search-limit", type=int, default=8)
+    ap.add_argument("--upload-manifest", default="manifests/upload-ready.jsonl.gz")
+    ap.add_argument("--include-upload-manifest", action="store_true")
     ap.add_argument("--refresh", action="store_true")
     args = ap.parse_args()
 
@@ -550,6 +563,11 @@ def main() -> int:
     latest = latest_prepared_rows(Path(args.out))
     done = set() if args.refresh else latest_usable_prepared_episode_ids(Path(args.out), burned)
     uploaded_ids, uploaded_keys = uploaded_episode_exclusions()
+    queued_ids, queued_keys = (
+        (set(), set())
+        if args.include_upload_manifest
+        else queued_episode_exclusions(Path(args.upload_manifest))
+    )
     now = dt.datetime.now(dt.timezone.utc)
     todo = [
         episode
@@ -563,6 +581,13 @@ def main() -> int:
             int(episode["episode"]),
         )
         not in uploaded_keys
+        and int(episode["episode_id"]) not in queued_ids
+        and (
+            int(episode["series_id"]),
+            int(episode["season"]),
+            int(episode["episode"]),
+        )
+        not in queued_keys
     ]
     todo.sort(
         key=lambda episode: (
