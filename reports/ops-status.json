@@ -2,24 +2,80 @@
   "counts": {
     "backlog_episodes": 20000,
     "manifest_upload_ready_episodes": 181,
-    "uploaded_episodes": 7591,
-    "prepared_source_episodes": 13889,
+    "uploaded_episodes": 7603,
+    "prepared_source_episodes": 13841,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 2817,
     "language_audit_rows": 84481,
     "language_queue_sources": 2644,
-    "language_audited_sources": 78427,
-    "language_whisper_attempted_sources": 3365,
-    "language_pending_whisper_sources": 2604
+    "language_audited_sources": 79094,
+    "language_whisper_attempted_sources": 3558,
+    "language_pending_whisper_sources": 2644
   },
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-06-25T21:50:14Z",
+      "databaseId": 28202716611,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-25T21:50:07Z",
+      "databaseId": 28202710691,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-25T21:50:07Z",
+      "databaseId": 28202710139,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-25T21:39:41Z",
+      "databaseId": 28202203531,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "refresh-backlog"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-25T21:38:59Z",
+      "databaseId": 28202169419,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-25T21:38:43Z",
+      "databaseId": 28202156952,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "failure",
+      "createdAt": "2026-06-25T21:37:25Z",
+      "databaseId": 28202092857,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-06-25T21:35:16Z",
       "databaseId": 28201988069,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-status"
     },
     {
@@ -31,11 +87,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-06-25T21:31:58Z",
       "databaseId": 28201818745,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -99,7 +155,7 @@
       "createdAt": "2026-06-25T21:10:27Z",
       "databaseId": 28200727147,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "prepare-sources"
     },
     {
@@ -117,62 +173,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "failure",
-      "createdAt": "2026-06-25T20:51:20Z",
-      "databaseId": 28199701390,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-25T20:50:46Z",
-      "databaseId": 28199670166,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-25T20:48:43Z",
-      "databaseId": 28199561168,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-25T20:47:44Z",
-      "databaseId": 28199510580,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-06-25T20:47:41Z",
-      "databaseId": 28199507462,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-25T20:45:56Z",
-      "databaseId": 28199414866,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-25T20:43:10Z",
-      "databaseId": 28199263142,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
     }
   ],
   "gaps": {
@@ -18215,6 +18215,66 @@
         "episode_id": 56101,
         "display_name": "Californication S01E09 - Špinavý kšeft CZ Dabing",
         "video_id": 26663222
+      },
+      {
+        "episode_id": 56093,
+        "display_name": "Californication S06E11 - Abby CZ Dabing",
+        "video_id": 26663386
+      },
+      {
+        "episode_id": 62311,
+        "display_name": "Námořní vyšetřovací služba S05E01 - Pohřbít své mrtvé CZ Dabing",
+        "video_id": 26663533
+      },
+      {
+        "episode_id": 62357,
+        "display_name": "Námořní vyšetřovací služba S05E02 - Rodina CZ Dabing",
+        "video_id": 26663581
+      },
+      {
+        "episode_id": 62329,
+        "display_name": "Námořní vyšetřovací služba S05E03 - Akta Ex CZ Dabing",
+        "video_id": 26663699
+      },
+      {
+        "episode_id": 62371,
+        "display_name": "Námořní vyšetřovací služba S05E04 - Krize identity CZ Dabing",
+        "video_id": 26663760
+      },
+      {
+        "episode_id": 62251,
+        "display_name": "Námořní vyšetřovací služba S05E09 - Ztráty a nálezy CZ Dabing",
+        "video_id": 26663917
+      },
+      {
+        "episode_id": 62429,
+        "display_name": "Námořní vyšetřovací služba S05E15 - V zóně CZ Dabing",
+        "video_id": 26663959
+      },
+      {
+        "episode_id": 62253,
+        "display_name": "Námořní vyšetřovací služba S05E18 - Soudný den (1) CZ Dabing",
+        "video_id": 26664092
+      },
+      {
+        "episode_id": 62377,
+        "display_name": "Námořní vyšetřovací služba S06E05 - Devět životů CZ Dabing",
+        "video_id": 26664287
+      },
+      {
+        "episode_id": 62417,
+        "display_name": "Námořní vyšetřovací služba S07E02 - Znovushledání CZ Dabing",
+        "video_id": 26664485
+      },
+      {
+        "episode_id": 62255,
+        "display_name": "Námořní vyšetřovací služba S07E12 - Rodina CZ Dabing",
+        "video_id": 26664615
+      },
+      {
+        "episode_id": 35527,
+        "display_name": "Bosch S01E02 - Ztracené světlo CZ Dabing",
+        "video_id": 26664775
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -44762,6 +44822,66 @@
         "episode_id": 56101,
         "display_name": "Californication S01E09 - Špinavý kšeft CZ Dabing",
         "video_id": 26663222
+      },
+      {
+        "episode_id": 56093,
+        "display_name": "Californication S06E11 - Abby CZ Dabing",
+        "video_id": 26663386
+      },
+      {
+        "episode_id": 62311,
+        "display_name": "Námořní vyšetřovací služba S05E01 - Pohřbít své mrtvé CZ Dabing",
+        "video_id": 26663533
+      },
+      {
+        "episode_id": 62357,
+        "display_name": "Námořní vyšetřovací služba S05E02 - Rodina CZ Dabing",
+        "video_id": 26663581
+      },
+      {
+        "episode_id": 62329,
+        "display_name": "Námořní vyšetřovací služba S05E03 - Akta Ex CZ Dabing",
+        "video_id": 26663699
+      },
+      {
+        "episode_id": 62371,
+        "display_name": "Námořní vyšetřovací služba S05E04 - Krize identity CZ Dabing",
+        "video_id": 26663760
+      },
+      {
+        "episode_id": 62251,
+        "display_name": "Námořní vyšetřovací služba S05E09 - Ztráty a nálezy CZ Dabing",
+        "video_id": 26663917
+      },
+      {
+        "episode_id": 62429,
+        "display_name": "Námořní vyšetřovací služba S05E15 - V zóně CZ Dabing",
+        "video_id": 26663959
+      },
+      {
+        "episode_id": 62253,
+        "display_name": "Námořní vyšetřovací služba S05E18 - Soudný den (1) CZ Dabing",
+        "video_id": 26664092
+      },
+      {
+        "episode_id": 62377,
+        "display_name": "Námořní vyšetřovací služba S06E05 - Devět životů CZ Dabing",
+        "video_id": 26664287
+      },
+      {
+        "episode_id": 62417,
+        "display_name": "Námořní vyšetřovací služba S07E02 - Znovushledání CZ Dabing",
+        "video_id": 26664485
+      },
+      {
+        "episode_id": 62255,
+        "display_name": "Námořní vyšetřovací služba S07E12 - Rodina CZ Dabing",
+        "video_id": 26664615
+      },
+      {
+        "episode_id": 35527,
+        "display_name": "Bosch S01E02 - Ztracené světlo CZ Dabing",
+        "video_id": 26664775
       }
     ],
     "prepared_not_upload_ready": [
@@ -45076,9 +45196,9 @@
     "PROBABLE_CZ_AUDIO": 3767
   },
   "language_whisper_statuses": {
-    "disabled": 75062,
+    "disabled": 75536,
+    "ok": 3245,
     "resolve_failed": 276,
-    "ok": 3052,
     "no_stream": 37
   }
 }
