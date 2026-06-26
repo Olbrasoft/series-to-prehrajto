@@ -142,7 +142,7 @@ def main() -> int:
     ap.add_argument("--small-ready-target", type=int, default=600)
     ap.add_argument("--target-series", type=int, default=240)
     ap.add_argument("--target-backlog-series", type=int, default=10000)
-    ap.add_argument("--target-backlog-episodes", type=int, default=100000)
+    ap.add_argument("--target-backlog-episodes", type=int, default=1000000)
     ap.add_argument("--target-prepared-episodes", type=int, default=10000)
     ap.add_argument("--min-language-queue-sources", type=int, default=1000)
     ap.add_argument("--prepare-sources-batch", type=int, default=1500)

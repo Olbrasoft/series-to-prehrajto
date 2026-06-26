@@ -10,7 +10,7 @@ on:
       episode_limit:
         description: "Number of episodes to export"
         required: false
-        default: "100000"
+        default: "1000000"
       source_limit_per_episode:
         description: "Number of sources per episode"
         required: false
@@ -84,8 +84,8 @@ jobs:
             exit 2
           fi
             python src/export_backlog.py \
-            --series-limit "${{ inputs.series_limit || '3000' }}" \
-            --episode-limit "${{ inputs.episode_limit || '20000' }}" \
+            --series-limit "${{ inputs.series_limit || '10000' }}" \
+            --episode-limit "${{ inputs.episode_limit || '1000000' }}" \
             --source-limit-per-episode "${{ inputs.source_limit_per_episode || '12' }}" \
             --skip-sources
 
