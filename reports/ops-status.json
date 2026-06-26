@@ -2,32 +2,80 @@
   "counts": {
     "backlog_episodes": 20000,
     "manifest_upload_ready_episodes": 189,
-    "uploaded_episodes": 7797,
+    "uploaded_episodes": 7822,
     "prepared_source_episodes": 14483,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 2817,
     "language_audit_rows": 84735,
     "language_queue_sources": 2644,
-    "language_audited_sources": 78681,
-    "language_whisper_attempted_sources": 3365,
-    "language_pending_whisper_sources": 2604
+    "language_audited_sources": 78661,
+    "language_whisper_attempted_sources": 3345,
+    "language_pending_whisper_sources": 2624
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-06-26T03:52:11Z",
-      "databaseId": 28215978528,
+      "createdAt": "2026-06-26T04:27:58Z",
+      "databaseId": 28217141051,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-06-26T04:23:36Z",
+      "databaseId": 28217001987,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-06-26T04:17:41Z",
+      "databaseId": 28216812611,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-26T04:07:10Z",
+      "databaseId": 28216458202,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-26T03:54:00Z",
+      "databaseId": 28216036487,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-sources"
+    },
+    {
+      "conclusion": "failure",
+      "createdAt": "2026-06-26T03:52:48Z",
+      "databaseId": 28215998645,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-26T03:52:11Z",
+      "databaseId": 28215978528,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-06-26T03:50:44Z",
       "databaseId": 28215934263,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -35,7 +83,7 @@
       "createdAt": "2026-06-26T03:50:09Z",
       "databaseId": 28215915764,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "prepare-descriptions"
     },
     {
@@ -47,11 +95,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "failure",
       "createdAt": "2026-06-26T03:34:46Z",
       "databaseId": 28215437627,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -63,11 +111,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-06-26T03:32:58Z",
       "databaseId": 28215381495,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-descriptions"
     },
     {
@@ -125,54 +173,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "failure",
-      "createdAt": "2026-06-26T02:58:44Z",
-      "databaseId": 28214257644,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-26T02:58:15Z",
-      "databaseId": 28214242848,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-06-26T02:58:10Z",
-      "databaseId": 28214240325,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-26T02:39:18Z",
-      "databaseId": 28213637127,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-26T02:28:12Z",
-      "databaseId": 28213275211,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-26T02:27:32Z",
-      "databaseId": 28213253971,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
     }
   ],
   "gaps": {
@@ -19240,6 +19240,106 @@
         "episode_id": 68829,
         "display_name": "Pravá krev S03E03 - Mě to taky bolí CZ Dabing",
         "video_id": 26702562
+      },
+      {
+        "episode_id": 68811,
+        "display_name": "Pravá krev S03E06 - Mám právo zpívat blues CZ Dabing",
+        "video_id": 26702862
+      },
+      {
+        "episode_id": 68835,
+        "display_name": "Pravá krev S06E01 - Kdo skutečně jsi? CZ Dabing",
+        "video_id": 26703142
+      },
+      {
+        "episode_id": 68827,
+        "display_name": "Pravá krev S06E09 - Na životě záleží CZ Dabing",
+        "video_id": 26703488
+      },
+      {
+        "episode_id": 68815,
+        "display_name": "Pravá krev S07E07 - Možná naposledy CZ Dabing",
+        "video_id": 26703863
+      },
+      {
+        "episode_id": 203093,
+        "display_name": "Cesta ven S04E07 - 7. epizoda CZ Dabing",
+        "video_id": 26704025
+      },
+      {
+        "episode_id": 40373,
+        "display_name": "Smallville S10E08 - Opuštění CZ Dabing",
+        "video_id": 26704182
+      },
+      {
+        "episode_id": 40401,
+        "display_name": "Smallville S10E11 - Icarus CZ Dabing",
+        "video_id": 26704353
+      },
+      {
+        "episode_id": 40369,
+        "display_name": "Smallville S10E13 - Naděje CZ Dabing",
+        "video_id": 26704501
+      },
+      {
+        "episode_id": 40331,
+        "display_name": "Smallville S10E14 - Masky CZ Dabing",
+        "video_id": 26704693
+      },
+      {
+        "episode_id": 47417,
+        "display_name": "Živí mrtví: Počátek konce S04E05 - Laura CZ Dabing",
+        "video_id": 26704852
+      },
+      {
+        "episode_id": 68830,
+        "display_name": "Pravá krev S01E05 - Začíná to jiskřit CZ Dabing",
+        "video_id": 26705249
+      },
+      {
+        "episode_id": 68798,
+        "display_name": "Pravá krev S01E08 - Čtvrtý muž v ohni CZ Dabing",
+        "video_id": 26705533
+      },
+      {
+        "episode_id": 68800,
+        "display_name": "Pravá krev S02E01 - Nic než krev CZ Dabing",
+        "video_id": 26705757
+      },
+      {
+        "episode_id": 68804,
+        "display_name": "Pravá krev S02E05 - Nikdy mě nenech odejít CZ Dabing",
+        "video_id": 26706258
+      },
+      {
+        "episode_id": 47517,
+        "display_name": "Živí mrtví: Počátek konce S04E06 - Pro tento případ CZ Dabing",
+        "video_id": 26705029
+      },
+      {
+        "episode_id": 47515,
+        "display_name": "Živí mrtví: Počátek konce S04E10 - Zavři oči CZ Dabing",
+        "video_id": 26705235
+      },
+      {
+        "episode_id": 47505,
+        "display_name": "Živí mrtví: Počátek konce S04E11 - Kodex CZ Dabing",
+        "video_id": 26705297
+      },
+      {
+        "episode_id": 47411,
+        "display_name": "Živí mrtví: Počátek konce S02E13 - U skomírajícího ohně CZ Dabing",
+        "video_id": 26706195
+      },
+      {
+        "episode_id": 47507,
+        "display_name": "Živí mrtví: Počátek konce S04E13 - Blackjack CZ Dabing",
+        "video_id": 26706518
+      },
+      {
+        "episode_id": 47451,
+        "display_name": "Živí mrtví: Počátek konce S04E14 - MM 54 CZ Dabing",
+        "video_id": 26706969
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -46817,6 +46917,131 @@
         "episode_id": 68829,
         "display_name": "Pravá krev S03E03 - Mě to taky bolí CZ Dabing",
         "video_id": 26702562
+      },
+      {
+        "episode_id": 68811,
+        "display_name": "Pravá krev S03E06 - Mám právo zpívat blues CZ Dabing",
+        "video_id": 26702862
+      },
+      {
+        "episode_id": 68835,
+        "display_name": "Pravá krev S06E01 - Kdo skutečně jsi? CZ Dabing",
+        "video_id": 26703142
+      },
+      {
+        "episode_id": 68827,
+        "display_name": "Pravá krev S06E09 - Na životě záleží CZ Dabing",
+        "video_id": 26703488
+      },
+      {
+        "episode_id": 68815,
+        "display_name": "Pravá krev S07E07 - Možná naposledy CZ Dabing",
+        "video_id": 26703863
+      },
+      {
+        "episode_id": 203093,
+        "display_name": "Cesta ven S04E07 - 7. epizoda CZ Dabing",
+        "video_id": 26704025
+      },
+      {
+        "episode_id": 40373,
+        "display_name": "Smallville S10E08 - Opuštění CZ Dabing",
+        "video_id": 26704182
+      },
+      {
+        "episode_id": 40401,
+        "display_name": "Smallville S10E11 - Icarus CZ Dabing",
+        "video_id": 26704353
+      },
+      {
+        "episode_id": 40369,
+        "display_name": "Smallville S10E13 - Naděje CZ Dabing",
+        "video_id": 26704501
+      },
+      {
+        "episode_id": 40331,
+        "display_name": "Smallville S10E14 - Masky CZ Dabing",
+        "video_id": 26704693
+      },
+      {
+        "episode_id": 47417,
+        "display_name": "Živí mrtví: Počátek konce S04E05 - Laura CZ Dabing",
+        "video_id": 26704852
+      },
+      {
+        "episode_id": 19364,
+        "display_name": "Simpsonovi S06E02 - Lízina rivalka CZ Dabing",
+        "video_id": 26705024
+      },
+      {
+        "episode_id": 19366,
+        "display_name": "Simpsonovi S06E04 - Návštěva Drsnolandu CZ Dabing",
+        "video_id": 26705127
+      },
+      {
+        "episode_id": 68830,
+        "display_name": "Pravá krev S01E05 - Začíná to jiskřit CZ Dabing",
+        "video_id": 26705249
+      },
+      {
+        "episode_id": 68798,
+        "display_name": "Pravá krev S01E08 - Čtvrtý muž v ohni CZ Dabing",
+        "video_id": 26705533
+      },
+      {
+        "episode_id": 68800,
+        "display_name": "Pravá krev S02E01 - Nic než krev CZ Dabing",
+        "video_id": 26705757
+      },
+      {
+        "episode_id": 68804,
+        "display_name": "Pravá krev S02E05 - Nikdy mě nenech odejít CZ Dabing",
+        "video_id": 26706258
+      },
+      {
+        "episode_id": 47517,
+        "display_name": "Živí mrtví: Počátek konce S04E06 - Pro tento případ CZ Dabing",
+        "video_id": 26705029
+      },
+      {
+        "episode_id": 47515,
+        "display_name": "Živí mrtví: Počátek konce S04E10 - Zavři oči CZ Dabing",
+        "video_id": 26705235
+      },
+      {
+        "episode_id": 47505,
+        "display_name": "Živí mrtví: Počátek konce S04E11 - Kodex CZ Dabing",
+        "video_id": 26705297
+      },
+      {
+        "episode_id": 19363,
+        "display_name": "Simpsonovi S06E01 - Bart temnoty CZ Dabing",
+        "video_id": 26705823
+      },
+      {
+        "episode_id": 19365,
+        "display_name": "Simpsonovi S06E03 - Tentokrát o lásce CZ Dabing",
+        "video_id": 26705937
+      },
+      {
+        "episode_id": 19367,
+        "display_name": "Simpsonovi S06E05 - Návrat Leváka Boba CZ Dabing",
+        "video_id": 26706033
+      },
+      {
+        "episode_id": 47411,
+        "display_name": "Živí mrtví: Počátek konce S02E13 - U skomírajícího ohně CZ Dabing",
+        "video_id": 26706195
+      },
+      {
+        "episode_id": 47507,
+        "display_name": "Živí mrtví: Počátek konce S04E13 - Blackjack CZ Dabing",
+        "video_id": 26706518
+      },
+      {
+        "episode_id": 47451,
+        "display_name": "Živí mrtví: Počátek konce S04E14 - MM 54 CZ Dabing",
+        "video_id": 26706969
       }
     ],
     "prepared_not_upload_ready": [
@@ -47133,7 +47358,7 @@
   "language_whisper_statuses": {
     "disabled": 75316,
     "resolve_failed": 276,
-    "ok": 3052,
+    "ok": 3032,
     "no_stream": 37
   }
 }
