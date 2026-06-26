@@ -2,32 +2,80 @@
   "counts": {
     "backlog_episodes": 185203,
     "manifest_upload_ready_episodes": 96,
-    "uploaded_episodes": 8248,
+    "uploaded_episodes": 8264,
     "prepared_source_episodes": 15208,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 2817,
     "language_audit_rows": 86386,
     "language_queue_sources": 2644,
-    "language_audited_sources": 80172,
-    "language_whisper_attempted_sources": 3326,
-    "language_pending_whisper_sources": 2644
+    "language_audited_sources": 80212,
+    "language_whisper_attempted_sources": 3365,
+    "language_pending_whisper_sources": 2604
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-06-26T14:33:30Z",
-      "databaseId": 28244771340,
+      "createdAt": "2026-06-26T14:57:32Z",
+      "databaseId": 28246135508,
       "headBranch": "main",
       "status": "in_progress",
-      "workflowName": "ops-watchdog"
+      "workflowName": "ops-status"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-06-26T14:47:18Z",
+      "databaseId": 28245550781,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-06-26T14:46:40Z",
+      "databaseId": 28245516898,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-06-26T14:40:55Z",
+      "databaseId": 28245191515,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-06-26T14:37:24Z",
+      "databaseId": 28244992809,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-26T14:34:23Z",
+      "databaseId": 28244821034,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-26T14:33:30Z",
+      "databaseId": 28244771340,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "cancelled",
       "createdAt": "2026-06-26T14:33:24Z",
       "databaseId": 28244765485,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "sync"
     },
     {
@@ -39,11 +87,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-06-26T14:27:04Z",
       "databaseId": 28244409943,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -55,11 +103,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-06-26T14:26:01Z",
       "databaseId": 28244351046,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -71,11 +119,11 @@
       "workflowName": "prepare-sources"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-06-26T14:22:12Z",
       "databaseId": 28244137290,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "sync"
     },
     {
@@ -122,54 +170,6 @@
       "conclusion": "cancelled",
       "createdAt": "2026-06-26T14:13:10Z",
       "databaseId": 28243627081,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-06-26T14:12:34Z",
-      "databaseId": 28243592847,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-26T14:10:25Z",
-      "databaseId": 28243469943,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-26T14:09:34Z",
-      "databaseId": 28243422864,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-26T13:57:24Z",
-      "databaseId": 28242738809,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-26T13:56:32Z",
-      "databaseId": 28242693757,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-26T13:56:27Z",
-      "databaseId": 28242689657,
       "headBranch": "main",
       "status": "completed",
       "workflowName": "prepare-manifest"
@@ -21417,6 +21417,81 @@
         "video_id": 26760903
       },
       {
+        "episode_id": 202924,
+        "display_name": "24 hodin: Nezastavitelný S01E12 - 23:00 - 00:00 CZ Dabing",
+        "video_id": 26761071
+      },
+      {
+        "episode_id": 139796,
+        "display_name": "4 bloky S01E03 - Ibrahim CZ Dabing",
+        "video_id": 26761172
+      },
+      {
+        "episode_id": 139780,
+        "display_name": "4 bloky S01E04 - Zrada CZ Dabing",
+        "video_id": 26761326
+      },
+      {
+        "episode_id": 139782,
+        "display_name": "4 bloky S02E01 - Oheň CZ Dabing",
+        "video_id": 26761460
+      },
+      {
+        "episode_id": 139794,
+        "display_name": "4 bloky S02E03 - Krev CZ Dabing",
+        "video_id": 26761627
+      },
+      {
+        "episode_id": 139784,
+        "display_name": "4 bloky S02E04 - Volný CZ Dabing",
+        "video_id": 26761824
+      },
+      {
+        "episode_id": 139786,
+        "display_name": "4 bloky S02E06 - Odčinění CZ Dabing",
+        "video_id": 26761968
+      },
+      {
+        "episode_id": 139788,
+        "display_name": "4 bloky S03E01 - Ali CZ Dabing",
+        "video_id": 26762119
+      },
+      {
+        "episode_id": 139790,
+        "display_name": "4 bloky S03E03 - Důvěrný přítel CZ Dabing",
+        "video_id": 26762269
+      },
+      {
+        "episode_id": 139792,
+        "display_name": "4 bloky S03E05 - Pakt s ďáblem CZ Dabing",
+        "video_id": 26762413
+      },
+      {
+        "episode_id": 35860,
+        "display_name": "1670 S01E01 - Sněmík CZ Dabing",
+        "video_id": 26762523
+      },
+      {
+        "episode_id": 35862,
+        "display_name": "1670 S01E03 - Jaro CZ Dabing",
+        "video_id": 26762564
+      },
+      {
+        "episode_id": 35864,
+        "display_name": "1670 S01E05 - Mor CZ Dabing",
+        "video_id": 26762663
+      },
+      {
+        "episode_id": 35866,
+        "display_name": "1670 S01E07 - Lov CZ Dabing",
+        "video_id": 26762743
+      },
+      {
+        "episode_id": 99246,
+        "display_name": "1670 S02E01 - Al Inkluziv CZ Dabing",
+        "video_id": 26762807
+      },
+      {
         "episode_id": 35863,
         "display_name": "1670 S01E04 - Pochod rovnoprávnosti CZ Dabing",
         "video_id": 26759351
@@ -21470,6 +21545,11 @@
         "episode_id": 152675,
         "display_name": "24 tváří Billyho Milligana S01E03 - Zlaté časy CZ Dabing",
         "video_id": 26760771
+      },
+      {
+        "episode_id": 147197,
+        "display_name": "1890 S01E12 - Krysa CZ Dabing",
+        "video_id": 26761693
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -51249,6 +51329,81 @@
         "video_id": 26760903
       },
       {
+        "episode_id": 202924,
+        "display_name": "24 hodin: Nezastavitelný S01E12 - 23:00 - 00:00 CZ Dabing",
+        "video_id": 26761071
+      },
+      {
+        "episode_id": 139796,
+        "display_name": "4 bloky S01E03 - Ibrahim CZ Dabing",
+        "video_id": 26761172
+      },
+      {
+        "episode_id": 139780,
+        "display_name": "4 bloky S01E04 - Zrada CZ Dabing",
+        "video_id": 26761326
+      },
+      {
+        "episode_id": 139782,
+        "display_name": "4 bloky S02E01 - Oheň CZ Dabing",
+        "video_id": 26761460
+      },
+      {
+        "episode_id": 139794,
+        "display_name": "4 bloky S02E03 - Krev CZ Dabing",
+        "video_id": 26761627
+      },
+      {
+        "episode_id": 139784,
+        "display_name": "4 bloky S02E04 - Volný CZ Dabing",
+        "video_id": 26761824
+      },
+      {
+        "episode_id": 139786,
+        "display_name": "4 bloky S02E06 - Odčinění CZ Dabing",
+        "video_id": 26761968
+      },
+      {
+        "episode_id": 139788,
+        "display_name": "4 bloky S03E01 - Ali CZ Dabing",
+        "video_id": 26762119
+      },
+      {
+        "episode_id": 139790,
+        "display_name": "4 bloky S03E03 - Důvěrný přítel CZ Dabing",
+        "video_id": 26762269
+      },
+      {
+        "episode_id": 139792,
+        "display_name": "4 bloky S03E05 - Pakt s ďáblem CZ Dabing",
+        "video_id": 26762413
+      },
+      {
+        "episode_id": 35860,
+        "display_name": "1670 S01E01 - Sněmík CZ Dabing",
+        "video_id": 26762523
+      },
+      {
+        "episode_id": 35862,
+        "display_name": "1670 S01E03 - Jaro CZ Dabing",
+        "video_id": 26762564
+      },
+      {
+        "episode_id": 35864,
+        "display_name": "1670 S01E05 - Mor CZ Dabing",
+        "video_id": 26762663
+      },
+      {
+        "episode_id": 35866,
+        "display_name": "1670 S01E07 - Lov CZ Dabing",
+        "video_id": 26762743
+      },
+      {
+        "episode_id": 99246,
+        "display_name": "1670 S02E01 - Al Inkluziv CZ Dabing",
+        "video_id": 26762807
+      },
+      {
         "episode_id": 35863,
         "display_name": "1670 S01E04 - Pochod rovnoprávnosti CZ Dabing",
         "video_id": 26759351
@@ -51302,6 +51457,11 @@
         "episode_id": 152675,
         "display_name": "24 tváří Billyho Milligana S01E03 - Zlaté časy CZ Dabing",
         "video_id": 26760771
+      },
+      {
+        "episode_id": 147197,
+        "display_name": "1890 S01E12 - Krysa CZ Dabing",
+        "video_id": 26761693
       }
     ],
     "prepared_not_upload_ready": [
@@ -51616,9 +51776,9 @@
     "PROBABLE_CZ_AUDIO": 5041
   },
   "language_whisper_statuses": {
-    "disabled": 76846,
-    "ok": 3013,
+    "disabled": 76847,
     "resolve_failed": 276,
+    "ok": 3052,
     "no_stream": 37
   }
 }
