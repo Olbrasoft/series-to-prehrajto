@@ -143,6 +143,7 @@ def search(
 ) -> list[SearchResult]:
     global _last_search_at
     sess = session or requests.Session()
+    min_interval = max(min_interval, float(os.environ.get("PREHRAJTO_SEARCH_MIN_INTERVAL", "0") or 0))
     search_url = SEARCH_URL.format(query=urllib.parse.quote(query))
     fetch_urls = _proxy_fetch_urls(search_url)
     if fetch_urls:

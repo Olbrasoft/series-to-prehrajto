@@ -67,6 +67,8 @@ jobs:
         env:
           CZ_PROXY_URL: ${{ secrets.CZ_PROXY_URL }}
           CZ_PROXY_KEY: ${{ secrets.CZ_PROXY_KEY }}
+          CZ_PROXY_MIN_GAP_SECONDS: "20"
+          PREHRAJTO_SEARCH_MIN_INTERVAL: "20"
           WHISPER_MODEL: tiny
         run: |
           ARGS=(
@@ -74,7 +76,8 @@ jobs:
             "--source-limit-per-episode" "${{ inputs.source_limit_per_episode || '12' }}"
             "--sample-seconds" "20"
             "--live-search"
-            "--live-search-limit" "8"
+            "--live-search-limit" "6"
+            "--live-search-query-limit" "1"
             "--require-resolvable-source"
           )
           if [ -n "${{ inputs.series_slug }}" ]; then

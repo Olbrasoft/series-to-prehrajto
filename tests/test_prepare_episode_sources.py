@@ -126,3 +126,30 @@ def test_compact_plan_retains_verified_fallback_candidates():
     compacted = source_preparation.compact_plan_row(row)
 
     assert [source["source_id"] for source in compacted["tested_sources"]] == [1, 2]
+
+
+def test_source_precheck_requires_czech_audio_hint_and_upload_quality():
+    good = {
+        "source_title": "Dexter S07E04 CZ Dabing",
+        "filesize_bytes": 550 * 1024 * 1024,
+    }
+    too_small = {
+        "source_title": "Dexter S07E04 CZ Dabing",
+        "filesize_bytes": 120 * 1024 * 1024,
+    }
+    not_czech = {
+        "source_title": "Dexter S07E04 1080p",
+        "filesize_bytes": 800 * 1024 * 1024,
+    }
+    db_czech = {
+        "source_title": "Dexter S07E04",
+        "db_lang_class": "CZ_DUB",
+        "resolution_hint": "1080p",
+    }
+
+    assert source_preparation.source_has_cz_audio_hint(good)
+    assert source_preparation.source_has_upload_quality_hint(good)
+    assert not source_preparation.source_has_upload_quality_hint(too_small)
+    assert not source_preparation.source_has_cz_audio_hint(not_czech)
+    assert source_preparation.source_has_cz_audio_hint(db_czech)
+    assert source_preparation.source_has_upload_quality_hint(db_czech)

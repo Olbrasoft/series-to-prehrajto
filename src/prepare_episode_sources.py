@@ -22,6 +22,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from audit_language_sources import audit_one, write_latest_index  # noqa: E402
+from language_checks import metadata_language_hint, title_language_hint  # noqa: E402
 from prehrajto_search import search as search_prehrajto  # noqa: E402
 from source_quality import source_quality_score, source_quality_tier  # noqa: E402
 
@@ -29,6 +30,32 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 MIN_UPLOAD_FILE_SIZE = 300 * 1024 * 1024
 FAILED_RETRY_AFTER = dt.timedelta(hours=24)
 MAX_RESOLVABLE_CANDIDATE_PROBES = 8
+
+
+def source_has_cz_audio_hint(source: dict) -> bool:
+    normalized = {
+        **source,
+        "lang_class": source.get("lang_class") or source.get("db_lang_class"),
+        "audio_lang": source.get("audio_lang") or source.get("db_audio_lang"),
+    }
+    return (metadata_language_hint(normalized) or title_language_hint(source.get("source_title") or source.get("title"))) in {
+        "cz_audio_metadata",
+        "cz_audio_lang_class",
+        "cz_audio_title",
+    }
+
+
+def source_has_upload_quality_hint(source: dict) -> bool:
+    filesize = source.get("filesize_bytes")
+    if filesize is not None and int(filesize) >= MIN_UPLOAD_FILE_SIZE:
+        return True
+    return source_quality_score(source)[1] >= 1080
+
+
+def source_precheck_score(source: dict) -> tuple[int, int, int, int]:
+    cz_bonus = 1 if source_has_cz_audio_hint(source) else 0
+    quality_bonus, resolution, filesize = source_quality_score(source)
+    return cz_bonus, quality_bonus, resolution, filesize
 
 
 def load_jsonl(path: Path) -> list[dict]:
@@ -283,7 +310,7 @@ def title_matches_episode(title: str, episode: dict) -> bool:
     return False
 
 
-def live_search_candidates(episode: dict, *, limit: int) -> list[dict]:
+def live_search_candidates(episode: dict, *, limit: int, query_limit: int) -> list[dict]:
     titles = [
         title
         for title in dict.fromkeys(
@@ -296,7 +323,7 @@ def live_search_candidates(episode: dict, *, limit: int) -> list[dict]:
         *(f"{title} {int(episode['season'])}x{int(episode['episode'])}" for title in titles),
     ]
     found: dict[str, dict] = {}
-    for query in queries:
+    for query in queries[: max(query_limit, 1)]:
         try:
             results = search_prehrajto(query)
         except Exception as exc:
@@ -343,11 +370,12 @@ def live_search_candidates(episode: dict, *, limit: int) -> list[dict]:
             }
         if found:
             break
-    return sorted(
-        found.values(),
-        key=lambda source: source_quality_score(source),
-        reverse=True,
-    )[:limit]
+    candidates = [
+        source
+        for source in found.values()
+        if source_has_cz_audio_hint(source) and source_has_upload_quality_hint(source)
+    ]
+    return sorted(candidates, key=source_precheck_score, reverse=True)[:limit]
 
 
 def group_by_episode(rows: list[dict], backlog_path: Path) -> list[dict]:
@@ -441,16 +469,30 @@ def prepare_episode(
     require_resolvable_source: bool,
     live_search: bool,
     live_search_limit: int,
+    live_search_query_limit: int,
 ) -> dict:
     live_sources = [source for source in episode["sources"] if int(source["source_id"]) not in burned]
     if live_search:
         known_external_ids = {source.get("external_id") for source in live_sources}
         discovered = [
             source
-            for source in live_search_candidates(episode, limit=live_search_limit)
+            for source in live_search_candidates(
+                episode,
+                limit=live_search_limit,
+                query_limit=live_search_query_limit,
+            )
             if source.get("external_id") not in known_external_ids
         ]
         live_sources = discovered + live_sources
+    prioritized = [
+        source
+        for source in live_sources
+        if source_has_cz_audio_hint(source) and source_has_upload_quality_hint(source)
+    ]
+    fallback = [source for source in live_sources if source not in prioritized]
+    prioritized.sort(key=source_precheck_score, reverse=True)
+    fallback.sort(key=source_precheck_score, reverse=True)
+    live_sources = prioritized + fallback
     sources = live_sources[:source_limit] if source_limit > 0 else live_sources
     audited = []
     for source in sources:
@@ -470,7 +512,10 @@ def prepare_episode(
         result
         for result in audited
         if result["verdict"] in {"CZ_AUDIO", "PROBABLE_CZ_AUDIO"}
-        and (result.get("filesize_bytes") is None or result["filesize_bytes"] >= MIN_UPLOAD_FILE_SIZE)
+        and (
+            source_has_upload_quality_hint(sources_by_id[int(result["source_id"])])
+            or result["resolution_score"] >= 1080
+        )
     ]
     acceptable.sort(key=lambda result: tuple(result["score"]), reverse=True)
 
@@ -544,6 +589,7 @@ def main() -> int:
     ap.add_argument("--require-resolvable-source", action="store_true")
     ap.add_argument("--live-search", action="store_true")
     ap.add_argument("--live-search-limit", type=int, default=8)
+    ap.add_argument("--live-search-query-limit", type=int, default=1)
     ap.add_argument("--upload-manifest", default="manifests/upload-ready.jsonl.gz")
     ap.add_argument("--include-upload-manifest", action="store_true")
     ap.add_argument("--refresh", action="store_true")
@@ -610,6 +656,7 @@ def main() -> int:
             require_resolvable_source=args.require_resolvable_source,
             live_search=args.live_search,
             live_search_limit=args.live_search_limit,
+            live_search_query_limit=args.live_search_query_limit,
         )
         for episode in todo
     ]
