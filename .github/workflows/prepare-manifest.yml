@@ -95,26 +95,47 @@ jobs:
       - name: Commit and push changes
         run: |
           set -e
-          git add plans/prepared-episodes.jsonl
-          git add manifests/upload-ready.jsonl.gz
-          git add reports/upload-manifest.json
-          git add audits/
-          if git diff --cached --quiet; then
-            echo "no changes to commit"
-          else
+          TMP_DIR="$(mktemp -d)"
+          mkdir -p "$TMP_DIR/plans" "$TMP_DIR/audits"
+          cp plans/prepared-episodes.jsonl "$TMP_DIR/plans/prepared-episodes.jsonl"
+          cp audits/language-audit-latest.jsonl "$TMP_DIR/audits/language-audit-latest.jsonl" 2>/dev/null || true
+          cp audits/language-audit.jsonl "$TMP_DIR/audits/language-audit.jsonl" 2>/dev/null || true
+
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main
+            git reset --hard origin/main
+
+            mkdir -p plans audits manifests reports
+            cp "$TMP_DIR/plans/prepared-episodes.jsonl" plans/prepared-episodes.jsonl
+            cp "$TMP_DIR/audits/language-audit-latest.jsonl" audits/language-audit-latest.jsonl 2>/dev/null || true
+            cp "$TMP_DIR/audits/language-audit.jsonl" audits/language-audit.jsonl 2>/dev/null || true
+
+            python src/build_upload_manifest.py \
+              --limit 1000 \
+              --out manifests/upload-ready.jsonl.gz \
+              --report reports/upload-manifest.json
+
+            git add plans/prepared-episodes.jsonl
+            git add manifests/upload-ready.jsonl.gz
+            git add reports/upload-manifest.json
+            git add audits/
+            if git diff --cached --quiet; then
+              echo "no changes to commit"
+              exit 0
+            fi
+
             EP_COUNT=$(python -c "import json; d=json.load(open('reports/upload-manifest.json')); print(d.get('new_count',0))")
             git commit -m "chore: prepare manifest (${EP_COUNT} new episodes)"
-            for attempt in 1 2 3 4 5; do
-              git pull --rebase origin main || true
-              if git push; then
-                echo "push successful"
-                exit 0
-              fi
-              sleep $((attempt * 2))
-            done
-            echo "failed to push after retries"
-            exit 1
-          fi
+            if git push origin HEAD:main; then
+              echo "push successful"
+              exit 0
+            fi
+            echo "push race on attempt ${attempt}, retrying"
+            sleep $((attempt * 3))
+          done
+
+          echo "failed to push after retries"
+          exit 1
 
       - name: Queue upload from manifest
         if: success()
