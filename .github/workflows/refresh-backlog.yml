@@ -6,11 +6,11 @@ on:
       series_limit:
         description: "Number of top series to export"
         required: false
-        default: "3000"
+        default: "10000"
       episode_limit:
         description: "Number of episodes to export"
         required: false
-        default: "20000"
+        default: "100000"
       source_limit_per_episode:
         description: "Number of sources per episode"
         required: false
@@ -21,7 +21,7 @@ on:
 jobs:
   refresh:
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 120
     permissions:
       contents: write
     concurrency:

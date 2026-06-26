@@ -141,6 +141,8 @@ def main() -> int:
     ap.add_argument("--emergency-episodes", type=int, default=500)
     ap.add_argument("--small-ready-target", type=int, default=600)
     ap.add_argument("--target-series", type=int, default=240)
+    ap.add_argument("--target-backlog-series", type=int, default=10000)
+    ap.add_argument("--target-backlog-episodes", type=int, default=100000)
     ap.add_argument("--target-prepared-episodes", type=int, default=10000)
     ap.add_argument("--min-language-queue-sources", type=int, default=1000)
     ap.add_argument("--prepare-sources-batch", type=int, default=1500)
@@ -173,6 +175,7 @@ def main() -> int:
                 "manifest_upload_ready_episodes": manifest_ready,
                 "prepared_source_episodes": prepared_source_episodes,
                 "target_prepared_episodes": args.target_prepared_episodes,
+                "target_backlog_episodes": args.target_backlog_episodes,
                 "language_queue_sources": language_queue_sources,
                 "unprepared_source_queue_episodes": unprepared_queue_episodes,
                 "language_pending_whisper_sources": pending_whisper,
@@ -185,7 +188,7 @@ def main() -> int:
     )
 
     prepare_small = upload_ready < args.small_ready_target
-    prepare_episode_target = min(args.emergency_episodes if prepare_small else args.target_episodes, 100)
+    prepare_episode_target = min(args.emergency_episodes if prepare_small else args.target_episodes, 200)
     prepare_series_target = min(args.target_series, 80) if prepare_small else args.target_series
 
     if upload_ready <= args.min_upload_ready or backlog_count == 0 or manifest_ready < args.target_episodes:
@@ -205,12 +208,16 @@ def main() -> int:
     if prepared_source_episodes < args.target_prepared_episodes:
         missing_prepared = args.target_prepared_episodes - prepared_source_episodes
         queued_refresh = False
-        if language_queue_sources < args.min_language_queue_sources or unprepared_queue_episodes < min(args.prepare_sources_batch, missing_prepared):
+        if (
+            backlog_count < args.target_backlog_episodes
+            or language_queue_sources < args.min_language_queue_sources
+            or unprepared_queue_episodes < min(args.prepare_sources_batch, missing_prepared)
+        ):
             queued_refresh = queue_workflow(
                 "refresh-backlog",
                 {
-                    "series_limit": str(max(args.target_series * 3, args.target_series)),
-                    "episode_limit": str(args.target_prepared_episodes),
+                    "series_limit": str(args.target_backlog_series),
+                    "episode_limit": str(args.target_backlog_episodes),
                     "source_limit_per_episode": "12",
                 },
                 active=active,
