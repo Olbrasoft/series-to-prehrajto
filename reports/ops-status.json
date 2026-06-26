@@ -1,33 +1,97 @@
 {
   "counts": {
     "backlog_episodes": 20000,
-    "manifest_upload_ready_episodes": 6,
-    "uploaded_episodes": 7695,
-    "prepared_source_episodes": 14179,
+    "manifest_upload_ready_episodes": 8,
+    "uploaded_episodes": 7701,
+    "prepared_source_episodes": 14241,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 2817,
     "language_audit_rows": 84735,
     "language_queue_sources": 2644,
-    "language_audited_sources": 78681,
-    "language_whisper_attempted_sources": 3365,
-    "language_pending_whisper_sources": 2604
+    "language_audited_sources": 79000,
+    "language_whisper_attempted_sources": 3371,
+    "language_pending_whisper_sources": 2644
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-06-26T01:12:42Z",
-      "databaseId": 28210745256,
+      "createdAt": "2026-06-26T01:25:28Z",
+      "databaseId": 28211188047,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-06-26T01:25:21Z",
+      "databaseId": 28211184078,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-26T01:16:09Z",
+      "databaseId": 28210864822,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "refresh-backlog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-26T01:15:28Z",
+      "databaseId": 28210840534,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-26T01:15:08Z",
+      "databaseId": 28210827065,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-26T01:14:06Z",
+      "databaseId": 28210794689,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-26T01:13:15Z",
+      "databaseId": 28210766175,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-26T01:13:14Z",
+      "databaseId": 28210765093,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-26T01:12:42Z",
+      "databaseId": 28210745256,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "cancelled",
       "createdAt": "2026-06-26T01:12:37Z",
       "databaseId": 28210742339,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -109,70 +173,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-06-26T00:51:37Z",
-      "databaseId": 28210024760,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-26T00:51:35Z",
-      "databaseId": 28210023657,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-26T00:51:05Z",
-      "databaseId": 28210006588,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-26T00:51:00Z",
-      "databaseId": 28210003755,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-26T00:50:42Z",
-      "databaseId": 28209994011,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-26T00:42:46Z",
-      "databaseId": 28209718721,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-26T00:39:32Z",
-      "databaseId": 28209607901,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-26T00:39:26Z",
-      "databaseId": 28209604646,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
     }
   ],
   "gaps": {
@@ -18735,6 +18735,36 @@
         "episode_id": 38501,
         "display_name": "Čarodějky S05E13 - Lidské slabosti CZ Dabing",
         "video_id": 26682089
+      },
+      {
+        "episode_id": 11724,
+        "display_name": "Hvězdná brána S01E22 - V sevření hada CZ Dabing",
+        "video_id": 26686428
+      },
+      {
+        "episode_id": 11770,
+        "display_name": "Hvězdná brána S02E01 - V hadím hnízdě CZ Dabing",
+        "video_id": 26686549
+      },
+      {
+        "episode_id": 11586,
+        "display_name": "Hvězdná brána S02E03 - Ve vězení CZ Dabing",
+        "video_id": 26686730
+      },
+      {
+        "episode_id": 11584,
+        "display_name": "Hvězdná brána S02E05 - Závislost CZ Dabing",
+        "video_id": 26687000
+      },
+      {
+        "episode_id": 11559,
+        "display_name": "Hvězdná brána S02E02 - Při výkonu služby CZ Dabing",
+        "video_id": 26686476
+      },
+      {
+        "episode_id": 11585,
+        "display_name": "Hvězdná brána S02E04 - Správce CZ Dabing",
+        "video_id": 26686610
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -45802,6 +45832,36 @@
         "episode_id": 38501,
         "display_name": "Čarodějky S05E13 - Lidské slabosti CZ Dabing",
         "video_id": 26682089
+      },
+      {
+        "episode_id": 11724,
+        "display_name": "Hvězdná brána S01E22 - V sevření hada CZ Dabing",
+        "video_id": 26686428
+      },
+      {
+        "episode_id": 11770,
+        "display_name": "Hvězdná brána S02E01 - V hadím hnízdě CZ Dabing",
+        "video_id": 26686549
+      },
+      {
+        "episode_id": 11586,
+        "display_name": "Hvězdná brána S02E03 - Ve vězení CZ Dabing",
+        "video_id": 26686730
+      },
+      {
+        "episode_id": 11584,
+        "display_name": "Hvězdná brána S02E05 - Závislost CZ Dabing",
+        "video_id": 26687000
+      },
+      {
+        "episode_id": 11559,
+        "display_name": "Hvězdná brána S02E02 - Při výkonu služby CZ Dabing",
+        "video_id": 26686476
+      },
+      {
+        "episode_id": 11585,
+        "display_name": "Hvězdná brána S02E04 - Správce CZ Dabing",
+        "video_id": 26686610
       }
     ],
     "prepared_not_upload_ready": [
@@ -46116,9 +46176,9 @@
     "PROBABLE_CZ_AUDIO": 3992
   },
   "language_whisper_statuses": {
-    "disabled": 75316,
+    "disabled": 75629,
+    "ok": 3058,
     "resolve_failed": 276,
-    "ok": 3052,
     "no_stream": 37
   }
 }
