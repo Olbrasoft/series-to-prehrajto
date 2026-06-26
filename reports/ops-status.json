@@ -1,41 +1,81 @@
 {
   "counts": {
     "backlog_episodes": 20000,
-    "manifest_upload_ready_episodes": 62,
-    "uploaded_episodes": 7741,
-    "prepared_source_episodes": 14379,
+    "manifest_upload_ready_episodes": 109,
+    "uploaded_episodes": 7765,
+    "prepared_source_episodes": 14479,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 2817,
     "language_audit_rows": 84735,
     "language_queue_sources": 2644,
-    "language_audited_sources": 78681,
-    "language_whisper_attempted_sources": 3365,
-    "language_pending_whisper_sources": 2604
+    "language_audited_sources": 79115,
+    "language_whisper_attempted_sources": 3369,
+    "language_pending_whisper_sources": 2644
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-06-26T02:27:32Z",
-      "databaseId": 28213253971,
+      "createdAt": "2026-06-26T02:58:44Z",
+      "databaseId": 28214257644,
+      "headBranch": "main",
+      "status": "queued",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-26T02:58:15Z",
+      "databaseId": 28214242848,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
-      "createdAt": "2026-06-26T02:26:28Z",
-      "databaseId": 28213219844,
+      "createdAt": "2026-06-26T02:58:10Z",
+      "databaseId": 28214240325,
       "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-sources"
+      "status": "pending",
+      "workflowName": "sync"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-06-26T02:39:18Z",
+      "databaseId": 28213637127,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-26T02:28:12Z",
+      "databaseId": 28213275211,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-26T02:27:32Z",
+      "databaseId": 28213253971,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-26T02:26:28Z",
+      "databaseId": 28213219844,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-sources"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-06-26T02:26:04Z",
       "databaseId": 28213206172,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -55,11 +95,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "failure",
       "createdAt": "2026-06-26T02:24:17Z",
       "databaseId": 28213144641,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -71,11 +111,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-06-26T02:20:59Z",
       "databaseId": 28213031454,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -133,46 +173,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-26T01:56:31Z",
-      "databaseId": 28212221288,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-26T01:55:54Z",
-      "databaseId": 28212203370,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-06-26T01:51:13Z",
-      "databaseId": 28212046039,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-26T01:51:10Z",
-      "databaseId": 28212044515,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-26T01:48:59Z",
-      "databaseId": 28211972548,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
     }
   ],
   "gaps": {
@@ -18960,6 +18960,126 @@
         "episode_id": 40357,
         "display_name": "Smallville S08E08 - Vlastní krev CZ Dabing",
         "video_id": 26693854
+      },
+      {
+        "episode_id": 40351,
+        "display_name": "Smallville S08E09 - Propast CZ Dabing",
+        "video_id": 26694075
+      },
+      {
+        "episode_id": 40323,
+        "display_name": "Smallville S08E12 - Neprůstřelný CZ Dabing",
+        "video_id": 26694279
+      },
+      {
+        "episode_id": 40359,
+        "display_name": "Smallville S08E14 - Rekviem CZ Dabing",
+        "video_id": 26694459
+      },
+      {
+        "episode_id": 40301,
+        "display_name": "Smallville S08E15 - Pochybná sláva CZ Dabing",
+        "video_id": 26694614
+      },
+      {
+        "episode_id": 40389,
+        "display_name": "Smallville S08E17 - Kouzlo CZ Dabing",
+        "video_id": 26694785
+      },
+      {
+        "episode_id": 40337,
+        "display_name": "Smallville S08E19 - Stiletto CZ Dabing",
+        "video_id": 26695023
+      },
+      {
+        "episode_id": 40391,
+        "display_name": "Smallville S08E21 - Nespravedlnost CZ Dabing",
+        "video_id": 26695158
+      },
+      {
+        "episode_id": 40347,
+        "display_name": "Smallville S09E06 - Průnik CZ Dabing",
+        "video_id": 26695372
+      },
+      {
+        "episode_id": 25444,
+        "display_name": "Castle na zabití S08E02 - Láska je přítěž CZ Dabing",
+        "video_id": 26696041
+      },
+      {
+        "episode_id": 25446,
+        "display_name": "Castle na zabití S08E04 - Pod povrchem CZ Dabing",
+        "video_id": 26696159
+      },
+      {
+        "episode_id": 25448,
+        "display_name": "Castle na zabití S08E06 - Životní vzor CZ Dabing",
+        "video_id": 26696270
+      },
+      {
+        "episode_id": 25452,
+        "display_name": "Castle na zabití S08E10 - Svědek obžaloby CZ Dabing",
+        "video_id": 26696390
+      },
+      {
+        "episode_id": 25458,
+        "display_name": "Castle na zabití S08E16 - Zlomené srdce CZ Dabing",
+        "video_id": 26696462
+      },
+      {
+        "episode_id": 25462,
+        "display_name": "Castle na zabití S08E20 - Mnoho povyku pro vraždu CZ Dabing",
+        "video_id": 26696663
+      },
+      {
+        "episode_id": 40336,
+        "display_name": "Smallville S10E19 - Nadvláda CZ Dabing",
+        "video_id": 26696778
+      },
+      {
+        "episode_id": 40382,
+        "display_name": "Smallville S10E21 - Závěr CZ Dabing",
+        "video_id": 26697060
+      },
+      {
+        "episode_id": 40321,
+        "display_name": "Smallville S09E08 - Idol CZ Dabing",
+        "video_id": 26695607
+      },
+      {
+        "episode_id": 40383,
+        "display_name": "Smallville S09E09 - Pandora CZ Dabing",
+        "video_id": 26695757
+      },
+      {
+        "episode_id": 40231,
+        "display_name": "Smallville S09E13 - Přesvědčivost CZ Dabing",
+        "video_id": 26695836
+      },
+      {
+        "episode_id": 40341,
+        "display_name": "Smallville S09E14 - Spiknutí CZ Dabing",
+        "video_id": 26696026
+      },
+      {
+        "episode_id": 40233,
+        "display_name": "Smallville S09E17 - Vylepšení CZ Dabing",
+        "video_id": 26696177
+      },
+      {
+        "episode_id": 40395,
+        "display_name": "Smallville S09E18 - Šaráda CZ Dabing",
+        "video_id": 26696365
+      },
+      {
+        "episode_id": 40399,
+        "display_name": "Smallville S10E04 - Návrat domů CZ Dabing",
+        "video_id": 26696483
+      },
+      {
+        "episode_id": 40381,
+        "display_name": "Smallville S10E06 - Dožínky CZ Dabing",
+        "video_id": 26696706
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -46257,6 +46377,126 @@
         "episode_id": 40357,
         "display_name": "Smallville S08E08 - Vlastní krev CZ Dabing",
         "video_id": 26693854
+      },
+      {
+        "episode_id": 40351,
+        "display_name": "Smallville S08E09 - Propast CZ Dabing",
+        "video_id": 26694075
+      },
+      {
+        "episode_id": 40323,
+        "display_name": "Smallville S08E12 - Neprůstřelný CZ Dabing",
+        "video_id": 26694279
+      },
+      {
+        "episode_id": 40359,
+        "display_name": "Smallville S08E14 - Rekviem CZ Dabing",
+        "video_id": 26694459
+      },
+      {
+        "episode_id": 40301,
+        "display_name": "Smallville S08E15 - Pochybná sláva CZ Dabing",
+        "video_id": 26694614
+      },
+      {
+        "episode_id": 40389,
+        "display_name": "Smallville S08E17 - Kouzlo CZ Dabing",
+        "video_id": 26694785
+      },
+      {
+        "episode_id": 40337,
+        "display_name": "Smallville S08E19 - Stiletto CZ Dabing",
+        "video_id": 26695023
+      },
+      {
+        "episode_id": 40391,
+        "display_name": "Smallville S08E21 - Nespravedlnost CZ Dabing",
+        "video_id": 26695158
+      },
+      {
+        "episode_id": 40347,
+        "display_name": "Smallville S09E06 - Průnik CZ Dabing",
+        "video_id": 26695372
+      },
+      {
+        "episode_id": 25444,
+        "display_name": "Castle na zabití S08E02 - Láska je přítěž CZ Dabing",
+        "video_id": 26696041
+      },
+      {
+        "episode_id": 25446,
+        "display_name": "Castle na zabití S08E04 - Pod povrchem CZ Dabing",
+        "video_id": 26696159
+      },
+      {
+        "episode_id": 25448,
+        "display_name": "Castle na zabití S08E06 - Životní vzor CZ Dabing",
+        "video_id": 26696270
+      },
+      {
+        "episode_id": 25452,
+        "display_name": "Castle na zabití S08E10 - Svědek obžaloby CZ Dabing",
+        "video_id": 26696390
+      },
+      {
+        "episode_id": 25458,
+        "display_name": "Castle na zabití S08E16 - Zlomené srdce CZ Dabing",
+        "video_id": 26696462
+      },
+      {
+        "episode_id": 25462,
+        "display_name": "Castle na zabití S08E20 - Mnoho povyku pro vraždu CZ Dabing",
+        "video_id": 26696663
+      },
+      {
+        "episode_id": 40336,
+        "display_name": "Smallville S10E19 - Nadvláda CZ Dabing",
+        "video_id": 26696778
+      },
+      {
+        "episode_id": 40382,
+        "display_name": "Smallville S10E21 - Závěr CZ Dabing",
+        "video_id": 26697060
+      },
+      {
+        "episode_id": 40321,
+        "display_name": "Smallville S09E08 - Idol CZ Dabing",
+        "video_id": 26695607
+      },
+      {
+        "episode_id": 40383,
+        "display_name": "Smallville S09E09 - Pandora CZ Dabing",
+        "video_id": 26695757
+      },
+      {
+        "episode_id": 40231,
+        "display_name": "Smallville S09E13 - Přesvědčivost CZ Dabing",
+        "video_id": 26695836
+      },
+      {
+        "episode_id": 40341,
+        "display_name": "Smallville S09E14 - Spiknutí CZ Dabing",
+        "video_id": 26696026
+      },
+      {
+        "episode_id": 40233,
+        "display_name": "Smallville S09E17 - Vylepšení CZ Dabing",
+        "video_id": 26696177
+      },
+      {
+        "episode_id": 40395,
+        "display_name": "Smallville S09E18 - Šaráda CZ Dabing",
+        "video_id": 26696365
+      },
+      {
+        "episode_id": 40399,
+        "display_name": "Smallville S10E04 - Návrat domů CZ Dabing",
+        "video_id": 26696483
+      },
+      {
+        "episode_id": 40381,
+        "display_name": "Smallville S10E06 - Dožínky CZ Dabing",
+        "video_id": 26696706
       }
     ],
     "prepared_not_upload_ready": [
@@ -46571,9 +46811,9 @@
     "PROBABLE_CZ_AUDIO": 3992
   },
   "language_whisper_statuses": {
-    "disabled": 75316,
+    "disabled": 75746,
+    "ok": 3056,
     "resolve_failed": 276,
-    "ok": 3052,
     "no_stream": 37
   }
 }
