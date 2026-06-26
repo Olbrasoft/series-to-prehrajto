@@ -2,48 +2,96 @@
   "counts": {
     "backlog_episodes": 20000,
     "manifest_upload_ready_episodes": 67,
-    "uploaded_episodes": 7954,
+    "uploaded_episodes": 7959,
     "prepared_source_episodes": 14693,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 2817,
     "language_audit_rows": 84771,
     "language_queue_sources": 2644,
-    "language_audited_sources": 78939,
-    "language_whisper_attempted_sources": 3460,
-    "language_pending_whisper_sources": 2644
+    "language_audited_sources": 78717,
+    "language_whisper_attempted_sources": 3365,
+    "language_pending_whisper_sources": 2604
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-06-26T07:01:47Z",
-      "databaseId": 28222702724,
-      "headBranch": "main",
-      "status": "pending",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-06-26T07:01:43Z",
-      "databaseId": 28222699878,
+      "createdAt": "2026-06-26T07:12:37Z",
+      "databaseId": 28223163693,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
-      "createdAt": "2026-06-26T07:01:38Z",
-      "databaseId": 28222696338,
+      "createdAt": "2026-06-26T07:12:31Z",
+      "databaseId": 28223159201,
       "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "sync"
+      "status": "pending",
+      "workflowName": "prepare-manifest"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-06-26T07:08:44Z",
+      "databaseId": 28222998430,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-26T07:02:26Z",
+      "databaseId": 28222729770,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-26T07:02:24Z",
+      "databaseId": 28222728430,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-26T07:02:22Z",
+      "databaseId": 28222726970,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-06-26T07:01:47Z",
+      "databaseId": 28222702724,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-26T07:01:43Z",
+      "databaseId": 28222699878,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-06-26T07:01:38Z",
+      "databaseId": 28222696338,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "cancelled",
       "createdAt": "2026-06-26T06:56:35Z",
       "databaseId": 28222484723,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -125,54 +173,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-26T06:28:41Z",
-      "databaseId": 28221358531,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-06-26T06:28:39Z",
-      "databaseId": 28221357638,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-26T06:23:02Z",
-      "databaseId": 28221137421,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-26T06:05:50Z",
-      "databaseId": 28220490583,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-26T05:57:12Z",
-      "databaseId": 28220160060,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-sources"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-26T05:40:03Z",
-      "databaseId": 28219560166,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
     }
   ],
   "gaps": {
@@ -20000,6 +20000,31 @@
         "episode_id": 47486,
         "display_name": "Živí mrtví: Počátek konce S06E15 - USS Pennsylvania CZ Dabing",
         "video_id": 26721560
+      },
+      {
+        "episode_id": 47436,
+        "display_name": "Živí mrtví: Počátek konce S07E01 - Maják CZ Dabing",
+        "video_id": 26721701
+      },
+      {
+        "episode_id": 47438,
+        "display_name": "Živí mrtví: Počátek konce S07E04 - Dýchej se mnou CZ Dabing",
+        "video_id": 26721877
+      },
+      {
+        "episode_id": 47444,
+        "display_name": "Živí mrtví: Počátek konce S07E08 - PADRE CZ Dabing",
+        "video_id": 26722030
+      },
+      {
+        "episode_id": 47440,
+        "display_name": "Živí mrtví: Počátek konce S07E09 - Za mnou CZ Dabing",
+        "video_id": 26722169
+      },
+      {
+        "episode_id": 47442,
+        "display_name": "Živí mrtví: Počátek konce S07E12 - Chlapeček CZ Dabing",
+        "video_id": 26722304
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -48362,6 +48387,31 @@
         "episode_id": 47486,
         "display_name": "Živí mrtví: Počátek konce S06E15 - USS Pennsylvania CZ Dabing",
         "video_id": 26721560
+      },
+      {
+        "episode_id": 47436,
+        "display_name": "Živí mrtví: Počátek konce S07E01 - Maják CZ Dabing",
+        "video_id": 26721701
+      },
+      {
+        "episode_id": 47438,
+        "display_name": "Živí mrtví: Počátek konce S07E04 - Dýchej se mnou CZ Dabing",
+        "video_id": 26721877
+      },
+      {
+        "episode_id": 47444,
+        "display_name": "Živí mrtví: Počátek konce S07E08 - PADRE CZ Dabing",
+        "video_id": 26722030
+      },
+      {
+        "episode_id": 47440,
+        "display_name": "Živí mrtví: Počátek konce S07E09 - Za mnou CZ Dabing",
+        "video_id": 26722169
+      },
+      {
+        "episode_id": 47442,
+        "display_name": "Živí mrtví: Počátek konce S07E12 - Chlapeček CZ Dabing",
+        "video_id": 26722304
       }
     ],
     "prepared_not_upload_ready": [
@@ -48676,9 +48726,9 @@
     "PROBABLE_CZ_AUDIO": 3995
   },
   "language_whisper_statuses": {
-    "disabled": 75479,
-    "ok": 3147,
+    "disabled": 75352,
     "resolve_failed": 276,
+    "ok": 3052,
     "no_stream": 37
   }
 }
