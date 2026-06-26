@@ -2,24 +2,40 @@
   "counts": {
     "backlog_episodes": 20000,
     "manifest_upload_ready_episodes": 78,
-    "uploaded_episodes": 8016,
+    "uploaded_episodes": 8017,
     "prepared_source_episodes": 14793,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 2817,
     "language_audit_rows": 85449,
     "language_queue_sources": 2644,
-    "language_audited_sources": 79174,
-    "language_whisper_attempted_sources": 3554,
-    "language_pending_whisper_sources": 2644
+    "language_audited_sources": 79255,
+    "language_whisper_attempted_sources": 3345,
+    "language_pending_whisper_sources": 2624
   },
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-06-26T09:22:42Z",
+      "databaseId": 28229246246,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-26T09:22:34Z",
+      "databaseId": 28229240369,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-06-26T09:22:00Z",
       "databaseId": 28229212075,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -31,11 +47,11 @@
       "workflowName": "sync"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-06-26T09:18:01Z",
       "databaseId": 28229014788,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -157,22 +173,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-26T08:08:09Z",
-      "databaseId": 28225670335,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-26T08:07:26Z",
-      "databaseId": 28225637897,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
     }
   ],
   "gaps": {
@@ -20275,6 +20275,11 @@
         "episode_id": 68140,
         "display_name": "Cyberpunk: Edgerunners S01E01 - Nezklamu tě CZ Dabing",
         "video_id": 26734410
+      },
+      {
+        "episode_id": 68146,
+        "display_name": "Cyberpunk: Edgerunners S01E08 - Zůstaň CZ Dabing",
+        "video_id": 26734509
       },
       {
         "episode_id": 32041,
@@ -48949,6 +48954,11 @@
         "video_id": 26734410
       },
       {
+        "episode_id": 68146,
+        "display_name": "Cyberpunk: Edgerunners S01E08 - Zůstaň CZ Dabing",
+        "video_id": 26734509
+      },
+      {
         "episode_id": 32041,
         "display_name": "Dexter: Nová krev S01E01 - Studený start CZ Dabing",
         "video_id": 26731151
@@ -49296,9 +49306,9 @@
     "PROBABLE_CZ_AUDIO": 4565
   },
   "language_whisper_statuses": {
-    "disabled": 75620,
-    "ok": 3241,
+    "disabled": 75910,
     "resolve_failed": 276,
+    "ok": 3032,
     "no_stream": 37
   }
 }
