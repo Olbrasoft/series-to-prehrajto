@@ -2,24 +2,72 @@
   "counts": {
     "backlog_episodes": 184928,
     "manifest_upload_ready_episodes": 50,
-    "uploaded_episodes": 8483,
+    "uploaded_episodes": 8487,
     "prepared_source_episodes": 16018,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 2817,
     "language_audit_rows": 86673,
     "language_queue_sources": 2644,
-    "language_audited_sources": 80471,
-    "language_whisper_attempted_sources": 3365,
-    "language_pending_whisper_sources": 2604
+    "language_audited_sources": 80465,
+    "language_whisper_attempted_sources": 3345,
+    "language_pending_whisper_sources": 2624
   },
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-06-26T22:40:26Z",
+      "databaseId": 28269264042,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-26T22:36:29Z",
+      "databaseId": 28269120759,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-26T22:33:41Z",
+      "databaseId": 28269016446,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-26T22:33:30Z",
+      "databaseId": 28269010133,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-06-26T22:32:09Z",
+      "databaseId": 28268956826,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-26T22:31:53Z",
+      "databaseId": 28268946450,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-06-26T22:29:12Z",
       "databaseId": 28268839893,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-status"
     },
     {
@@ -27,23 +75,23 @@
       "createdAt": "2026-06-26T22:28:03Z",
       "databaseId": 28268797024,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "sync"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-06-26T22:19:44Z",
       "databaseId": 28268475902,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-06-26T22:15:34Z",
       "databaseId": 28268316735,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "sync"
     },
     {
@@ -119,60 +167,12 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-06-26T22:05:07Z",
       "databaseId": 28267891783,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-26T22:05:04Z",
-      "databaseId": 28267889254,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-26T22:01:08Z",
-      "databaseId": 28267720778,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-26T22:01:04Z",
-      "databaseId": 28267717118,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-26T22:00:49Z",
-      "databaseId": 28267706110,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-26T21:59:58Z",
-      "databaseId": 28267665336,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-26T21:59:52Z",
-      "databaseId": 28267661632,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
     }
   ],
   "gaps": {
@@ -53602,6 +53602,26 @@
         "episode_id": 203007,
         "display_name": "Rick a Morty S09E01 - 1. epizoda CZ Dabing",
         "video_id": 26799209
+      },
+      {
+        "episode_id": 42045,
+        "display_name": "Kravaťáci S06E15 - Quid pro quo CZ Dabing",
+        "video_id": 26799378
+      },
+      {
+        "episode_id": 42122,
+        "display_name": "Kravaťáci S08E16 - Harvey CZ Dabing",
+        "video_id": 26799695
+      },
+      {
+        "episode_id": 42119,
+        "display_name": "Kravaťáci S08E14 - Jako vejce vejci CZ Dabing",
+        "video_id": 26799918
+      },
+      {
+        "episode_id": 42121,
+        "display_name": "Kravaťáci S08E15 - Loutka CZ Dabing",
+        "video_id": 26800012
       }
     ],
     "prepared_not_upload_ready": [
@@ -53916,9 +53936,9 @@
     "PROBABLE_CZ_AUDIO": 5274
   },
   "language_whisper_statuses": {
-    "disabled": 77106,
+    "disabled": 77120,
     "resolve_failed": 276,
-    "ok": 3052,
+    "ok": 3032,
     "no_stream": 37
   }
 }
