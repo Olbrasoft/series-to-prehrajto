@@ -2,32 +2,80 @@
   "counts": {
     "backlog_episodes": 20000,
     "manifest_upload_ready_episodes": 78,
-    "uploaded_episodes": 8017,
+    "uploaded_episodes": 8031,
     "prepared_source_episodes": 14793,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 2817,
     "language_audit_rows": 85449,
     "language_queue_sources": 2644,
-    "language_audited_sources": 79255,
-    "language_whisper_attempted_sources": 3345,
-    "language_pending_whisper_sources": 2624
+    "language_audited_sources": 79275,
+    "language_whisper_attempted_sources": 3365,
+    "language_pending_whisper_sources": 2604
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-06-26T09:22:42Z",
-      "databaseId": 28229246246,
+      "createdAt": "2026-06-26T09:48:29Z",
+      "databaseId": 28230494634,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-06-26T09:48:25Z",
+      "databaseId": 28230491602,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-26T09:44:26Z",
+      "databaseId": 28230299725,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-06-26T09:33:55Z",
+      "databaseId": 28229798951,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-26T09:25:35Z",
+      "databaseId": 28229389583,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-26T09:23:19Z",
+      "databaseId": 28229277846,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-26T09:22:42Z",
+      "databaseId": 28229246246,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-06-26T09:22:34Z",
       "databaseId": 28229240369,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "update-descriptions"
     },
     {
@@ -39,11 +87,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-06-26T09:21:54Z",
       "databaseId": 28229206945,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "sync"
     },
     {
@@ -71,19 +119,19 @@
       "workflowName": "ops-status"
     },
     {
-      "conclusion": "",
+      "conclusion": "failure",
       "createdAt": "2026-06-26T09:00:02Z",
       "databaseId": 28228129578,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-06-26T08:56:24Z",
       "databaseId": 28227949278,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "sync"
     },
     {
@@ -122,54 +170,6 @@
       "conclusion": "success",
       "createdAt": "2026-06-26T08:39:30Z",
       "databaseId": 28227145814,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-26T08:33:25Z",
-      "databaseId": 28226860424,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-26T08:33:22Z",
-      "databaseId": 28226857834,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-26T08:32:43Z",
-      "databaseId": 28226826455,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-26T08:32:37Z",
-      "databaseId": 28226822069,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-26T08:25:08Z",
-      "databaseId": 28226465591,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-26T08:08:12Z",
-      "databaseId": 28225672812,
       "headBranch": "main",
       "status": "completed",
       "workflowName": "update-descriptions"
@@ -20282,6 +20282,36 @@
         "video_id": 26734509
       },
       {
+        "episode_id": 4600,
+        "display_name": "Daredevil: Znovuzrození S01E01 - V Nebi o půl hoďky dřív CZ Dabing",
+        "video_id": 26734675
+      },
+      {
+        "episode_id": 4604,
+        "display_name": "Daredevil: Znovuzrození S01E06 - Nepřiměřená síla CZ Dabing",
+        "video_id": 26734846
+      },
+      {
+        "episode_id": 21776,
+        "display_name": "Daredevil: Znovuzrození S02E01 - Severka CZ Dabing",
+        "video_id": 26734932
+      },
+      {
+        "episode_id": 34084,
+        "display_name": "Daredevil: Znovuzrození S02E07 - 7. epizoda CZ Dabing",
+        "video_id": 26735029
+      },
+      {
+        "episode_id": 203190,
+        "display_name": "Avatar: Legenda o Aangovi S02E04 - Voda opadá a odhaluje kameny CZ Dabing",
+        "video_id": 26735150
+      },
+      {
+        "episode_id": 203192,
+        "display_name": "Avatar: Legenda o Aangovi S02E06 - Podobenství o dvou dracích CZ Dabing",
+        "video_id": 26735198
+      },
+      {
         "episode_id": 32041,
         "display_name": "Dexter: Nová krev S01E01 - Studený start CZ Dabing",
         "video_id": 26731151
@@ -20315,6 +20345,46 @@
         "episode_id": 16833,
         "display_name": "Dexter: Nová krev S09E06 CZ Dabing",
         "video_id": 26733684
+      },
+      {
+        "episode_id": 16835,
+        "display_name": "Dexter: Nová krev S09E08 CZ Dabing",
+        "video_id": 26734591
+      },
+      {
+        "episode_id": 16837,
+        "display_name": "Dexter: Nová krev S09E10 CZ Dabing",
+        "video_id": 26734928
+      },
+      {
+        "episode_id": 15773,
+        "display_name": "Dexter: Vzkříšení S01E01 - Tlukoucí srdce… CZ Dabing",
+        "video_id": 26735148
+      },
+      {
+        "episode_id": 15775,
+        "display_name": "Dexter: Vzkříšení S01E03 - Sedadlo za řidičem CZ Dabing",
+        "video_id": 26735807
+      },
+      {
+        "episode_id": 15777,
+        "display_name": "Dexter: Vzkříšení S01E05 - Nadrženost na vraždu CZ Dabing",
+        "video_id": 26736066
+      },
+      {
+        "episode_id": 16989,
+        "display_name": "Den Šakala S01E01 - 1. epizoda CZ Dabing",
+        "video_id": 26736260
+      },
+      {
+        "episode_id": 16991,
+        "display_name": "Den Šakala S01E04 - 4. epizoda CZ Dabing",
+        "video_id": 26736452
+      },
+      {
+        "episode_id": 16993,
+        "display_name": "Den Šakala S01E05 - 5. epizoda CZ Dabing",
+        "video_id": 26736623
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -48959,6 +49029,36 @@
         "video_id": 26734509
       },
       {
+        "episode_id": 4600,
+        "display_name": "Daredevil: Znovuzrození S01E01 - V Nebi o půl hoďky dřív CZ Dabing",
+        "video_id": 26734675
+      },
+      {
+        "episode_id": 4604,
+        "display_name": "Daredevil: Znovuzrození S01E06 - Nepřiměřená síla CZ Dabing",
+        "video_id": 26734846
+      },
+      {
+        "episode_id": 21776,
+        "display_name": "Daredevil: Znovuzrození S02E01 - Severka CZ Dabing",
+        "video_id": 26734932
+      },
+      {
+        "episode_id": 34084,
+        "display_name": "Daredevil: Znovuzrození S02E07 - 7. epizoda CZ Dabing",
+        "video_id": 26735029
+      },
+      {
+        "episode_id": 203190,
+        "display_name": "Avatar: Legenda o Aangovi S02E04 - Voda opadá a odhaluje kameny CZ Dabing",
+        "video_id": 26735150
+      },
+      {
+        "episode_id": 203192,
+        "display_name": "Avatar: Legenda o Aangovi S02E06 - Podobenství o dvou dracích CZ Dabing",
+        "video_id": 26735198
+      },
+      {
         "episode_id": 32041,
         "display_name": "Dexter: Nová krev S01E01 - Studený start CZ Dabing",
         "video_id": 26731151
@@ -48992,6 +49092,46 @@
         "episode_id": 16833,
         "display_name": "Dexter: Nová krev S09E06 CZ Dabing",
         "video_id": 26733684
+      },
+      {
+        "episode_id": 16835,
+        "display_name": "Dexter: Nová krev S09E08 CZ Dabing",
+        "video_id": 26734591
+      },
+      {
+        "episode_id": 16837,
+        "display_name": "Dexter: Nová krev S09E10 CZ Dabing",
+        "video_id": 26734928
+      },
+      {
+        "episode_id": 15773,
+        "display_name": "Dexter: Vzkříšení S01E01 - Tlukoucí srdce… CZ Dabing",
+        "video_id": 26735148
+      },
+      {
+        "episode_id": 15775,
+        "display_name": "Dexter: Vzkříšení S01E03 - Sedadlo za řidičem CZ Dabing",
+        "video_id": 26735807
+      },
+      {
+        "episode_id": 15777,
+        "display_name": "Dexter: Vzkříšení S01E05 - Nadrženost na vraždu CZ Dabing",
+        "video_id": 26736066
+      },
+      {
+        "episode_id": 16989,
+        "display_name": "Den Šakala S01E01 - 1. epizoda CZ Dabing",
+        "video_id": 26736260
+      },
+      {
+        "episode_id": 16991,
+        "display_name": "Den Šakala S01E04 - 4. epizoda CZ Dabing",
+        "video_id": 26736452
+      },
+      {
+        "episode_id": 16993,
+        "display_name": "Den Šakala S01E05 - 5. epizoda CZ Dabing",
+        "video_id": 26736623
       }
     ],
     "prepared_not_upload_ready": [
@@ -49308,7 +49448,7 @@
   "language_whisper_statuses": {
     "disabled": 75910,
     "resolve_failed": 276,
-    "ok": 3032,
+    "ok": 3052,
     "no_stream": 37
   }
 }
