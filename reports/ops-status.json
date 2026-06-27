@@ -1,33 +1,65 @@
 {
   "counts": {
-    "backlog_episodes": 184928,
+    "backlog_episodes": 184693,
     "manifest_upload_ready_episodes": 99,
-    "uploaded_episodes": 8668,
+    "uploaded_episodes": 8676,
     "prepared_source_episodes": 16049,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 2817,
     "language_audit_rows": 86912,
     "language_queue_sources": 2644,
-    "language_audited_sources": 80674,
-    "language_whisper_attempted_sources": 3325,
-    "language_pending_whisper_sources": 2644
+    "language_audited_sources": 80694,
+    "language_whisper_attempted_sources": 3345,
+    "language_pending_whisper_sources": 2624
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-06-27T01:10:47Z",
-      "databaseId": 28273984431,
+      "createdAt": "2026-06-27T01:19:32Z",
+      "databaseId": 28274214331,
       "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "audit-language"
+      "status": "queued",
+      "workflowName": "prepare-manifest"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-06-27T01:18:57Z",
+      "databaseId": 28274199233,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-27T01:11:58Z",
+      "databaseId": 28274014563,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "refresh-backlog"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-27T01:11:24Z",
+      "databaseId": 28274000060,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-27T01:10:47Z",
+      "databaseId": 28273984431,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-06-27T01:10:46Z",
       "databaseId": 28273983811,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -141,38 +173,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-27T00:19:44Z",
-      "databaseId": 28272590786,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-27T00:19:40Z",
-      "databaseId": 28272588740,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-27T00:15:05Z",
-      "databaseId": 28272446042,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-27T00:15:02Z",
-      "databaseId": 28272444600,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
     }
   ],
   "gaps": {
@@ -54527,6 +54527,46 @@
         "episode_id": 19443,
         "display_name": "Simpsonovi S09E18 - Hrátky s Ralphem CZ Dabing",
         "video_id": 26812280
+      },
+      {
+        "episode_id": 19445,
+        "display_name": "Simpsonovi S09E20 - Trable s triliony CZ Dabing",
+        "video_id": 26812766
+      },
+      {
+        "episode_id": 19447,
+        "display_name": "Simpsonovi S09E22 - Kam s odpadem CZ Dabing",
+        "video_id": 26812880
+      },
+      {
+        "episode_id": 19449,
+        "display_name": "Simpsonovi S09E24 - Ztracená Líza CZ Dabing",
+        "video_id": 26812947
+      },
+      {
+        "episode_id": 19451,
+        "display_name": "Simpsonovi S10E01 - Školní večírek CZ Dabing",
+        "video_id": 26813070
+      },
+      {
+        "episode_id": 19453,
+        "display_name": "Simpsonovi S10E03 - Bart v úloze matky CZ Dabing",
+        "video_id": 26813120
+      },
+      {
+        "episode_id": 19455,
+        "display_name": "Simpsonovi S10E05 - Dojezdy pro hvězdy CZ Dabing",
+        "video_id": 26813221
+      },
+      {
+        "episode_id": 19457,
+        "display_name": "Simpsonovi S10E07 - Líza má jedničku CZ Dabing",
+        "video_id": 26813378
+      },
+      {
+        "episode_id": 19459,
+        "display_name": "Simpsonovi S10E09 - Střet s mafií CZ Dabing",
+        "video_id": 26813427
       }
     ],
     "prepared_not_upload_ready": [
@@ -54843,7 +54883,7 @@
   "language_whisper_statuses": {
     "disabled": 77349,
     "resolve_failed": 276,
-    "ok": 3012,
+    "ok": 3032,
     "no_stream": 37
   }
 }
