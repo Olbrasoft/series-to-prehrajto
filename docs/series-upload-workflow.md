@@ -107,7 +107,11 @@ zpetny import do produkcni databaze.
 
 ## 4. Prvni filtr kvality zdroje
 
-Nejdrive se zdroje seradi podle kvality. Preferovany zdroj je:
+Hned po hledani na Prehraj.to se vysledky vyfiltruji na zaklade signalu
+viditelnych v HTML: cesky nazev a velikost alespon 300 MB. Z takto
+zuzeneho seznamu se pripravi kandidati k probe.
+
+Preferovany zdroj je:
 
 - cesky dabing nebo cesky zvuk,
 - 1080p nebo vyssi,
@@ -115,9 +119,8 @@ Nejdrive se zdroje seradi podle kvality. Preferovany zdroj je:
 - funkcni detail stranka a rozbalitelny stream,
 - pokud mozno zdroj z Prehraj.to, ne jen odkaz z jineho poskytovatele.
 
-Zdroje mensi nez 300 MB se nemaji vybirat, pokud pro stejnou epizodu existuje
-lepsi zdroj. Mensi zdroj muze byt nouzovy fallback, ale v beznem uploadu ma byt
-odmitnut.
+Zdroje mensi nez 300 MB se nemaji vybirat ani probeovat, pokud existuje
+jina varianta. Samotny vyber kandidata pro upload resi az krok 6.
 
 ## 5. Odhad a overeni jazyka
 
@@ -139,16 +142,18 @@ Druha vrstva jsou metadata:
 - titulky nebo tracky nalezene pri rozbaleni detailu,
 - informace z predchozich auditu.
 
-Treti vrstva je Whisper:
+Treti vrstva je Whisper (volitelna):
 
 - rozbalit stream,
 - vytahnout kratky audio vzorek,
 - detekovat jazyk,
 - ulozit jazyk, pravdepodobnost a stav kontroly.
 
-Whisper je nejdulezitejsi pro pripady, kdy se video podle nazvu tvari jako
+Whisper je nejužitečnějsi pro pripady, kdy se video podle nazvu tvari jako
 ceske, ale ve skutecnosti cesky neni. Pokud Whisper odporuje nazvu nebo metadatum,
 ma mit prednost Whisper a zdroj se nema nahravat jako cesky dabing.
+Whisper se standardne nepouziva — vyzaduje `--use-whisper`. Pro bezny provoz
+staci prvni dve vrstvy (nazev + metadata) a overeni streamu.
 
 Vystupy jazykove kontroly:
 
@@ -157,16 +162,28 @@ audits/language-audit.jsonl
 audits/language-audit-latest.jsonl
 ```
 
-## 6. Vyber nejlepsiho zdroje pro epizodu
+## 6. Vyber zdroje pro epizodu
 
-Po kontrole zdroju se pro epizodu vybere nejlepsi zdroj. Vyber ma preferovat:
+Kandidati z hledani se seradi podle skore (cesky bonus + kvalita). Pokkud je
+k dispozici i fronta drive naleznych zdroju (napr. z drivejsiho exportu), tyto
+se pripoji k live vysledkum. Vysledkem je jeden serazeny seznam od
+nejlepsiho po nejhorsi.
+
+Vyber preferuje:
 
 1. potvrzeny cesky zvuk,
 2. pravdepodobny cesky zvuk,
 3. vyssi rozliseni,
 4. vetsi velikost souboru,
-5. funkcni a rozbalitelny stream,
-6. zdroj, ktery jeste nebyl neuspesne vyzkousen.
+5. zdroj, ktery jeste nebyl neuspesne vyzkousen.
+
+K epizode se vybere **prvni probe-overeny kandidat**. Znamena to:
+
+- kandidati se probeuji v poradi podle skore (od nejlepsiho),
+- prvni kandidat s funkcnim streamem a ceskym zvukem vyhrava,
+- dalsi kandidati se neprobeuji — prvni fungujici staci,
+- pokud zadny kandidat neprojde, epizoda neni `upload_ready` a zkusi se
+  znovu za 24 hodin (muze se objevit novy zdroj).
 
 K epizode se ulozi:
 
@@ -175,14 +192,6 @@ K epizode se ulozi:
 - vysledek jazykove kontroly,
 - informace o rozliseni a velikosti,
 - zda je epizoda `upload_ready`.
-
-K epizode se vybere prvni prověřený kandidat, ktery:
-
-- je cesky (podle nazvu nebo metadat),
-- ma velikost alespon 300 MB,
-- ma funkcni a rozbalitelny stream.
-
-Neni nutne prověřovat vsechny kandidaty — prvni fungujici staci.
 
 Vystupem pripravy zdroju je:
 
@@ -238,8 +247,8 @@ Do manifestu se dostane jen epizoda, ktera:
 - neni mensi nez 300 MB, pokud je velikost znama,
 - ma alespon fallback popis,
 - ma nazev ve spravnem formatu,
-- zdroj neni vyloucen, protoze v backlogu chybi kandidati — zdroj z live search
-  se akceptuje na zaklade URL, ne podle existence v backlogu.
+- zdroj neni vyloucen, i kdyz v backlogu chybi jeho zaznam — zdroj z live search
+  se akceptuje podle URL, ne podle toho, jestli existuje v backlog kandidatech.
 
 Vystupem je:
 
@@ -250,12 +259,16 @@ reports/upload-manifest.json
 
 Manifest je fronta pro samotne nahravani.
 
-## 9. Overeni dostupnosti zdroje z GitHubu
+## 9. Overeni dostupnosti zdroje z GitHubu (nerealizovano)
 
 Protoze hledani muze fungovat lokalne nebo pres ceskou proxy, ale samotny upload
-bezi na GitHubu, je potreba overit, ze GitHub dokaze zdroj skutecne rozbalit.
+bezi na GitHubu, bylo by potreba overit, ze GitHub runner dokaze zdroj rozbalit.
 
-Kontrola ma u vybranych zdroju overit:
+Tento krok neni v soucasnosti implementovany v CI. V praxi se nefunkcni zdroje
+odfiltruji az pri uploadu — pokud zdroj nelze rozbalit, upload selze a zdroj se
+oznaci jako spaleny. Dalsi manifest ho pak vylouci.
+
+Pokud by se kontrola implementovala, mela by overit:
 
 - detail stranka jde nacist,
 - stream jde rozbalit,
@@ -263,14 +276,11 @@ Kontrola ma u vybranych zdroju overit:
 - `HEAD` na stream vraci velikost alespon 300 MB,
 - zdroj neni geoblokovany pro GitHub runner.
 
-Vystupem je:
+Vystup by byl:
 
 ```text
 reports/source-availability.jsonl
 ```
-
-Zdroje, ktere z GitHubu nejdou rozbalit nebo jsou prilis male, se nemaji v
-dalsim manifestu pouzit.
 
 ## 10. Upload na Prehraj.to
 
@@ -372,12 +382,15 @@ Doporucene urovne:
 
 `upload-ready` zde znamena epizodu, ktera uz ma:
 
-- vybrany funkcni zdroj,
-- velikost alespon 300 MB nebo rozliseni alespon 1080p,
+- vybrany zdroj,
 - jazykovy verdikt alespon `PROBABLE_CZ_AUDIO`,
-- rozbalitelny stream,
+- pokud je velikost zdroje znama, tak alespon 300 MB,
 - nazev pro upload,
 - popis nebo docasny fallback popis.
+
+Stream se overuje az pri uploadu. Pokud zdroj neni rozbalitelny, upload selze a
+zdroj se oznaci jako spaleny. U pripravenych planu s `--require-resolvable-source`
+je stream overeny jiz behem pripravy.
 
 Pokud upload-ready fronta klesne pod varovny stav, nesmi se jen spustit jeden
 dalsi GitHub prepare job a cekat. Musi se zkontrolovat, jestli priprava realne
@@ -479,10 +492,11 @@ bezech uz nebude nutne vsechny zdroje dohledavat znovu.
 
 ## Otevrene body k domluve
 
-- Jak velka ma byt minimalni upload-ready fronta, aby nehrozily prostoje.
 - Jestli se ma upload zastavit, kdyz neni Whisper potvrzeni, nebo staci
   metadata a nazev.
 - Jestli mensi zdroj pod 300 MB smi byt nekdy nouzove nahran.
 - Kde presne brat popisy epizod, ktere nejsou v TMDB.
 - Jak casto delat export z produkcni databaze.
 - Jak presne formatovat importni soubor pro zpetny import zdroju do produkce.
+- Jestli implementovat kontrolu dostupnosti zdroje z GitHubu (kapitola 9),
+  nebo staci spolehat na to, ze nefunkcni zdroj selze az pri uploadu.
