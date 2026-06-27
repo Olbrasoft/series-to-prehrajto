@@ -74,12 +74,12 @@ jobs:
             "--queue" "backlog/enriched-audit-queue.jsonl.gz"
             "--backlog" "backlog/series-episodes.jsonl.gz"
             "--out" "plans/prepared-episodes.jsonl"
-            "--episode-limit" "${{ inputs.episode_limit || '60' }}"
-            "--source-limit-per-episode" "${{ inputs.source_limit_per_episode || '32' }}"
+            "--episode-limit" "${{ inputs.episode_limit || '120' }}"
+            "--source-limit-per-episode" "${{ inputs.source_limit_per_episode || '48' }}"
             "--sample-seconds" "20"
             "--live-search"
-            "--live-search-limit" "6"
-            "--live-search-query-limit" "1"
+            "--live-search-limit" "8"
+            "--live-search-query-limit" "2"
             "--require-resolvable-source"
           )
           if [ "${{ inputs.use_whisper }}" = "true" ]; then

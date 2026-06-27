@@ -72,12 +72,12 @@ jobs:
           WHISPER_MODEL: tiny
         run: |
           ARGS=(
-            "--episode-limit" "${{ inputs.episode_limit || '100' }}"
-            "--source-limit-per-episode" "${{ inputs.source_limit_per_episode || '12' }}"
+            "--episode-limit" "${{ inputs.episode_limit || '120' }}"
+            "--source-limit-per-episode" "${{ inputs.source_limit_per_episode || '24' }}"
             "--sample-seconds" "20"
             "--live-search"
-            "--live-search-limit" "6"
-            "--live-search-query-limit" "1"
+            "--live-search-limit" "8"
+            "--live-search-query-limit" "2"
             "--require-resolvable-source"
           )
           if [ -n "${{ inputs.series_slug }}" ]; then

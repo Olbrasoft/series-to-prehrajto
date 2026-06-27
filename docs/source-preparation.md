@@ -2,12 +2,26 @@
 
 Before uploading an episode, prepare its source choices:
 
-1. Walk series, seasons, episodes in order.
-2. Check every available source candidate for that episode.
-3. Record language evidence from title, DB metadata, provider page tracks, and
-   optionally Whisper.
-4. Pick one best source for upload, preferring Czech audio and 1080p+.
-5. Store both the selected source and rejected alternatives in the repository.
+1. Load episode metadata from backlog — series title, season, episode number.
+   No DB source candidates are required; the episode title alone is enough.
+2. Search Prehraj.to for the episode by title + episode code
+   (e.g. `Dexter S07E04`, `Dexter 7x4`).
+3. From the HTML search results, filter candidates that:
+   - match the episode title and code (`SxxExx` or `x` format),
+   - look Czech (title contains `CZ Dabing`, `CZ`, `český dabing`, etc.),
+   - have filesize ≥ 300 MB (visible in search HTML).
+4. Audit language signals (title, metadata) and probe the stream of the first
+   qualifying candidate.
+5. If the stream is resolvable and Czech audio is confirmed, mark the episode
+   as `upload_ready`. The first working candidate is selected — no need to probe
+   all options.
+6. Store both the selected source and rejected alternatives in the repository.
+
+The source queue files (`language-audit-queue.jsonl.gz`,
+`enriched-audit-queue.jsonl.gz`) are ancillary. They can provide extra known
+candidates from a previous DB export, but the primary source discovery is the
+live search on Prehraj.to. Without any queue file, the pipeline takes episode
+metadata from the backlog, searches Prehraj.to, and produces prepared plans.
 
 Output:
 

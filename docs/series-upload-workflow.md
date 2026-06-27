@@ -1,0 +1,488 @@
+# Workflow nahravani serialovych epizod na Prehraj.to
+
+Tento dokument popisuje cilovy obecny workflow. Neni to detailni popis jednoho
+skriptu, ale domluveny tok dat a rozhodovani, podle ktereho se maji skripty a
+GitHub Actions chovat.
+
+## Cil
+
+Cilem je mit nepretrzite nahravani serialovych epizod na ucet
+`serialy.prehrajto@seznam.cz` a soucasne si stale dopredu pripravovat dalsi
+epizody. Nahravani nesmi cekat na dlouhe dohledavani zdroju nebo popisu, pokud
+je mozne mit pripravenou frontu dopredu.
+
+Kazda epizoda, ktera jde do uploadu, ma mit pripraveno:
+
+- nazev videa ve formatu `Nazev serialu SxxExx - Nazev epizody CZ Dabing`,
+- zdrojove video z Prehraj.to,
+- informaci, proc byl zdroj vybran,
+- jazykove dukazy, idealne potvrzene metadaty nebo Whispers,
+- velikost nebo rozliseni zdroje,
+- popis epizody nebo alespon popis serialu jako docasny fallback.
+
+## 1. Export zakladnich epizod z produkcni databaze
+
+Prvni krok je exportovat z produkcni databaze zakladni seznam serialu a epizod.
+Produkce se pouziva pouze pro cteni.
+
+Z databaze potrebujeme hlavne:
+
+- ID serialu a epizody,
+- slug serialu,
+- cesky a puvodni nazev serialu,
+- cislo serie a epizody,
+- nazev epizody, pokud existuje,
+- TMDB/IMDB metadata,
+- hodnoceni a popularitu pro razeni,
+- existujici ceske nebo anglicke popisy, pokud jsou k dispozici.
+
+Zdroje videi ulozene v produkcni databazi se mohou pouzit jako pomocny vstup,
+ale nemaji byt hlavni pravdou. Hlavni zdroje pro upload se maji dohledavat
+aktualne na Prehraj.to, protoze databaze muze obsahovat stare nebo nekompletni
+zdroje.
+
+Vystupem exportu je backlog epizod v repozitari:
+
+```text
+backlog/series-episodes.jsonl.gz
+```
+
+Backlog slouzi jako lokalni kopie produkcnich dat, aby se pri kazdem dalsim
+kroku nemuselo chodit do produkcni databaze.
+
+## 2. Vyber poradi serialu a epizod
+
+Epizody se maji pripravovat a nahravat prioritne podle popularity serialu.
+Prakticky to znamena radit serialy podle dostupnych signalu, napriklad:
+
+- pocet IMDB hlasu,
+- IMDB hodnoceni,
+- CSFD hodnoceni,
+- interni sledovanost, pokud je dostupna.
+
+U vybraneho serialu je idealni snazit se pripravovat cele serie nebo cely
+serial, ne nahodne jednotlive epizody. Duvod je uzivatelsky: na cilovem uctu
+ma byt pokud mozno kompletni serial, ne jen roztrousene epizody.
+
+## 3. Aktualni hledani zdroju na Prehraj.to
+
+Pro kazdou epizodu se musi zkusit aktualni hledani na Prehraj.to. Zdroj se
+nebere z produkcni databaze — ta poskytuje pouze metadata epizody (nazev,
+serial, cislo epizody). Samotny zdroj videa se vzdy dohledava na Prehraj.to.
+
+Dotazy maji obsahovat nazev serialu a kod epizody, napriklad:
+
+```text
+Dexter S07E04
+Dexter 7x4
+```
+
+Pouzivat se ma cesky i originalni nazev serialu, pokud jsou dostupne.
+
+Z vysledku hledani se ulozi vsechny kandidati, kteri vypadaji jako stejna
+epizoda. Shoda se overuje podle:
+
+- nazvu serialu,
+- kodu epizody `SxxExx` nebo `x` formatu,
+- pripadne nazvu epizody,
+- detailni URL zdroje.
+
+Z hledani se ziskavaji take dulezite metadata:
+
+- URL detailu na Prehraj.to,
+- externi ID zdroje,
+- nazev videa,
+- delka,
+- velikost souboru,
+- format nebo rozliseni, pokud je ve vysledku,
+- pripadne dalsi signal kvality.
+
+Z hledani se vyfiltruji kandidati, kteri:
+
+- vypadaji cesky (nazev obsahuje `CZ Dabing`, `CZ`, `český dabing` atd.),
+- maji velikost alespon 300 MB (velikost je zřejmá již z HTML výsledků hledani).
+
+Tyto nalezene zdroje se musi ukladat, protoze pozdeji mohou slouzit i pro
+zpetny import do produkcni databaze.
+
+## 4. Prvni filtr kvality zdroje
+
+Nejdrive se zdroje seradi podle kvality. Preferovany zdroj je:
+
+- cesky dabing nebo cesky zvuk,
+- 1080p nebo vyssi,
+- pokud rozliseni neni jasne, tak velikost alespon 300 MB,
+- funkcni detail stranka a rozbalitelny stream,
+- pokud mozno zdroj z Prehraj.to, ne jen odkaz z jineho poskytovatele.
+
+Zdroje mensi nez 300 MB se nemaji vybirat, pokud pro stejnou epizodu existuje
+lepsi zdroj. Mensi zdroj muze byt nouzovy fallback, ale v beznem uploadu ma byt
+odmitnut.
+
+## 5. Odhad a overeni jazyka
+
+Jazyk se kontroluje ve vice vrstvach. Kazda vrstva se uklada jako dukaz, aby
+bylo pozdeji jasne, proc byl zdroj vybran nebo odmitnut.
+
+Prvni rychla vrstva je nazev souboru:
+
+- `CZ Dabing`,
+- `CZ`,
+- `cesky dabing`,
+- `CZ titulky`,
+- `SK dabing`.
+
+Druha vrstva jsou metadata:
+
+- jazyk zvuku z databaze, pokud existuje,
+- jazyk z provider stranky,
+- titulky nebo tracky nalezene pri rozbaleni detailu,
+- informace z predchozich auditu.
+
+Treti vrstva je Whisper:
+
+- rozbalit stream,
+- vytahnout kratky audio vzorek,
+- detekovat jazyk,
+- ulozit jazyk, pravdepodobnost a stav kontroly.
+
+Whisper je nejdulezitejsi pro pripady, kdy se video podle nazvu tvari jako
+ceske, ale ve skutecnosti cesky neni. Pokud Whisper odporuje nazvu nebo metadatum,
+ma mit prednost Whisper a zdroj se nema nahravat jako cesky dabing.
+
+Vystupy jazykove kontroly:
+
+```text
+audits/language-audit.jsonl
+audits/language-audit-latest.jsonl
+```
+
+## 6. Vyber nejlepsiho zdroje pro epizodu
+
+Po kontrole zdroju se pro epizodu vybere nejlepsi zdroj. Vyber ma preferovat:
+
+1. potvrzeny cesky zvuk,
+2. pravdepodobny cesky zvuk,
+3. vyssi rozliseni,
+4. vetsi velikost souboru,
+5. funkcni a rozbalitelny stream,
+6. zdroj, ktery jeste nebyl neuspesne vyzkousen.
+
+K epizode se ulozi:
+
+- `selected_source`,
+- seznam testovanych zdroju,
+- vysledek jazykove kontroly,
+- informace o rozliseni a velikosti,
+- zda je epizoda `upload_ready`.
+
+K epizode se vybere prvni prověřený kandidat, ktery:
+
+- je cesky (podle nazvu nebo metadat),
+- ma velikost alespon 300 MB,
+- ma funkcni a rozbalitelny stream.
+
+Neni nutne prověřovat vsechny kandidaty — prvni fungujici staci.
+
+Vystupem pripravy zdroju je:
+
+```text
+plans/prepared-episodes.jsonl
+```
+
+Tento soubor je jedna z nejdulezitejsich front. Musi se prubezne doplnovat,
+aby upload nemel prostoje.
+
+## 7. Priprava popisu
+
+Popisy jsou samostatny paralelni workflow. Nemaji blokovat dohledavani zdroju,
+ale idealne maji byt hotove driv, nez epizoda prijde na upload.
+
+Poradi zdroju pro popis:
+
+1. popis konkretni epizody z TMDB nebo produkcni databaze,
+2. anglicky popis epizody z TMDB,
+3. popis epizody z jineho spolehliveho serialoveho webu,
+4. popis serialu, pokud epizoda vlastni popis nema,
+5. docasny kratky fallback, pokud nic lepsiho neni.
+
+Gemma nema vymyslet dej bez podkladu. Ma dostat existujici zdrojovy popis a
+prepsat ho do kratkeho originalniho ceskeho popisu. Vystup ma byt pouze hotovy
+popis, bez rozboru, variant, odrazek nebo vysvetlovani.
+
+Vystupem je:
+
+```text
+plans/descriptions.jsonl
+```
+
+Popis se generuje jednou pro dany zdrojovy text. Pokud zdroj videa neprojde,
+popis epizody se nema zahazovat ani generovat znovu. Meni se jen zdroj videa.
+
+## 8. Sestaveni upload manifestu
+
+Upload manifest spoji dohromady:
+
+- backlog epizod,
+- pripravene zdroje,
+- jazykove audity,
+- vygenerovane popisy,
+- stav uz nahranych epizod,
+- seznam zdroju, ktere uz selhaly.
+
+Do manifestu se dostane jen epizoda, ktera:
+
+- jeste nebyla nahrana,
+- ma pripraveny upload-ready zdroj,
+- nema vybrany spaleny nebo nefunkcni zdroj,
+- neni mensi nez 300 MB, pokud je velikost znama,
+- ma alespon fallback popis,
+- ma nazev ve spravnem formatu,
+- zdroj neni vyloucen, protoze v backlogu chybi kandidati — zdroj z live search
+  se akceptuje na zaklade URL, ne podle existence v backlogu.
+
+Vystupem je:
+
+```text
+manifests/upload-ready.jsonl.gz
+reports/upload-manifest.json
+```
+
+Manifest je fronta pro samotne nahravani.
+
+## 9. Overeni dostupnosti zdroje z GitHubu
+
+Protoze hledani muze fungovat lokalne nebo pres ceskou proxy, ale samotny upload
+bezi na GitHubu, je potreba overit, ze GitHub dokaze zdroj skutecne rozbalit.
+
+Kontrola ma u vybranych zdroju overit:
+
+- detail stranka jde nacist,
+- stream jde rozbalit,
+- nejlepsi varianta ma alespon 1080p,
+- `HEAD` na stream vraci velikost alespon 300 MB,
+- zdroj neni geoblokovany pro GitHub runner.
+
+Vystupem je:
+
+```text
+reports/source-availability.jsonl
+```
+
+Zdroje, ktere z GitHubu nejdou rozbalit nebo jsou prilis male, se nemaji v
+dalsim manifestu pouzit.
+
+## 10. Upload na Prehraj.to
+
+Upload job bere epizody z manifestu. Pro kazdou epizodu:
+
+1. prihlaseni na cilovy ucet Prehraj.to,
+2. vyber dalsi epizody podle manifestu a shardu,
+3. rozbaleni detailu zdroje na stream,
+4. vyber nejlepsi stream varianty,
+5. kontrola velikosti,
+6. stazeni videa,
+7. volitelna kontrola jazyka pres Whisper,
+8. upload na cilovy ucet,
+9. zapis vysledku do state.
+
+Stav uploadu se uklada do:
+
+```text
+state/uploaded.json
+state/uploaded-shard-0.json
+state/uploaded-shard-1.json
+state/sync.log
+state/sync-shard-0.log
+state/sync-shard-1.log
+```
+
+Po uspesnem uploadu se ulozi:
+
+- ID epizody,
+- nazev videa,
+- zdrojove URL,
+- ID zdroje,
+- jazykovy signal,
+- rozliseni,
+- velikost,
+- ID nahraneho videa na Prehraj.to,
+- casy resolve, download a upload.
+
+Po neuspechu se ulozi duvod. Permanentne spatne zdroje se uz nemaji zkouset.
+
+## 11. Kontinualni provoz
+
+Workflow musi bezet ve trech paralelnich liniich:
+
+1. Upload nahrava pripraveny manifest.
+2. Priprava zdroju dohledava dalsi epizody a zdroje.
+3. Popisy a jazykove audity postupne doplnuji kvalitu dat.
+
+Tyto linie nejsou sekvencni. Neni spravne cekat, az sync dojede, a teprve
+potom zacinat prepare. Prepare musi bezet dopredu porad, dokud existuji
+nenahrane epizody, pro ktere jeste nemame ulozeny pouzitelny zdroj.
+
+Upload nesmi cekat na idealni stav vsech metadat. Pokud je pripraveny kvalitni
+zdroj a alespon pouzitelny popis, epizoda muze jit do uploadu. Popisy nebo
+jazykove audity se mohou zlepsovat dodatecne, ale zdroj videa musi byt vybran
+spravne uz pred uploadem.
+
+Hlavni pravidlo provozu:
+
+- sync ma porad nahravat z hotove upload fronty,
+- prepare ma porad doplnovat dalsi hotove zdroje do zasoby,
+- audit jazyka ma porad zpresnovat jazykove dukazy,
+- generovani popisu ma porad doplnovat popisy k pripravenym i nahranym
+  epizodam,
+- pokud GitHub nestaci pripravovat dost rychle, stejna priprava musi bezet i
+  lokalne a vysledky se musi prubezne zapisovat do repozitare.
+
+Hlidan musi byt minimalne tento stav:
+
+- kolik epizod je ve frontě pro upload,
+- kolik epizod ma pripraveny zdroj,
+- kolik zdroju ceka na Whisper,
+- kolik epizod nema popis,
+- jestli bezi sync,
+- jestli bezi priprava zdroju,
+- jestli bezi generovani popisu,
+- jestli posledni GitHub Actions neskoncily chybou.
+
+Stavovy report je:
+
+```text
+reports/ops-status.json
+```
+
+Watchdog ma pri nedostatku fronty spustit pripravu zdroju nebo manifestu a pri
+existujici upload-ready fronte spustit sync.
+
+## 12. Buffer pred uploadem
+
+Provoz nesmi byt postaveny tak, ze jedna mala davka dojede a az potom se zacne
+hledat dalsi. Musi existovat buffer pripravenych epizod.
+
+Doporucene urovne:
+
+- kriticky stav: mene nez 100 upload-ready epizod,
+- varovny stav: mene nez 500 upload-ready epizod,
+- bezny cil: alespon 1000 upload-ready epizod,
+- dlouhodoby cil: tisice pripravenych zdroju napric serialy.
+
+`upload-ready` zde znamena epizodu, ktera uz ma:
+
+- vybrany funkcni zdroj,
+- velikost alespon 300 MB nebo rozliseni alespon 1080p,
+- jazykovy verdikt alespon `PROBABLE_CZ_AUDIO`,
+- rozbalitelny stream,
+- nazev pro upload,
+- popis nebo docasny fallback popis.
+
+Pokud upload-ready fronta klesne pod varovny stav, nesmi se jen spustit jeden
+dalsi GitHub prepare job a cekat. Musi se zkontrolovat, jestli priprava realne
+pribyva. Pokud nepribyva, ma se spustit lokalni priprava.
+
+## 13. Lokalni priprava jako zaloha GitHubu
+
+GitHub Actions nejsou jediny misto, kde se smi pripravovat zdroje. Pokud
+GitHub nestaci, narazi na 429, ceka ve fronte, nebo bezi dlouho bez novych
+vystupu, ma se priprava spustit lokalne.
+
+Lokalni priprava smi delat hlavne tyto prace:
+
+- aktualni hledani zdroju na Prehraj.to,
+- zapis nalezenych zdroju k epizodam,
+- kontrolu velikosti a rozliseni z vysledku hledani,
+- rozbaleni detailu a overeni streamu,
+- Whisper audit malych vzorku,
+- pripravu `plans/prepared-episodes.jsonl`,
+- pripravu nebo doplneni `audits/language-audit-latest.jsonl`,
+- sestaveni `manifests/upload-ready.jsonl.gz`.
+
+Lokalni priprava nesmi menit produkcni databazi. Pokud potrebuje nova data,
+vezme je z exportu v repozitari nebo z read-only exportu produkce.
+
+Lokalni priprava musi zapisovat vysledky prubezne, ne az na konci velke davky.
+Kdyz proces spadne, nesmi se ztratit hodiny prace. Stejne pravidlo plati pro
+popisy a jazykove audity.
+
+Z GitHubu pak muze bezet hlavne upload, protoze upload je nejpomalejsi cast.
+GitHub prepare zustava uzitecny, ale nesmi byt jediny zdroj pripravenych
+epizod, pokud kvuli nemu vznikaji prostoje.
+
+## 14. Kdy se smi spustit sync
+
+Sync se ma spoustet automaticky vzdy, kdyz existuje upload-ready fronta a
+nebezi jiny sync pro stejne shardy.
+
+Pokud sync dobehne a upload-ready fronta neni prazdna, dalsi sync se ma
+zaradit hned. Pokud sync dobehne a fronta je prazdna, je to provozni chyba
+pripravy, ne normalni stav. V takovem pripade se ma:
+
+1. zkontrolovat, proc se nevytvoril dalsi manifest,
+2. okamzite spustit maly prepare pro rychle doplneni nekolika epizod,
+3. soucasne spustit vetsi lokalni pripravu pro doplneni bufferu,
+4. po prvnich pripravenych epizodach hned spustit sync,
+5. pokracovat v lokalni nebo GitHub priprave, dokud buffer neni zpet nad
+   varovnym stavem.
+
+Toto znamena, ze reakce na "sync nebezi" nema byt jen "spust prepare". Spravna
+reakce je nejdriv zjistit, zda existuje upload-ready fronta. Pokud existuje,
+spustit sync. Pokud neexistuje, rychle pripravit malou davku pro okamzity
+upload a vedle toho rozjet velkou pripravu do zasoby.
+
+## 15. Stavove metriky pro rozhodovani
+
+Pro rozhodovani je potreba sledovat oddelene tyto pocty:
+
+- epizody v backlogu,
+- epizody s nalezenym alespon jednim zdrojem,
+- epizody s upload-ready zdrojem,
+- epizody ve skutecnem upload manifestu,
+- epizody uz nahrane,
+- zdroje cekajici na Whisper,
+- epizody bez popisu,
+- epizody s docasnym fallback popisem,
+- posledni cas, kdy pribyl upload,
+- posledni cas, kdy pribyl pripraveny zdroj,
+- posledni cas, kdy pribyl popis.
+
+Nestaci videt, ze "nejaky prepare job bezi". Musi byt videt, ze se zvysuje
+pocet pripravenych epizod nebo ze se meni konkretni vystupni soubor. Beznici
+job bez noveho vystupu neresi problem s prazdnou upload frontou.
+
+## 16. Import zpet do produkcni databaze
+
+Protoze se pri priprave dohledavaji aktualni zdroje na Prehraj.to, maji se tyto
+informace ukladat tak, aby je bylo mozne pozdeji importovat zpet do produkcni
+databaze.
+
+Importovatelna data:
+
+- serial,
+- serie,
+- epizoda,
+- zdrojove URL,
+- externi ID Prehraj.to,
+- nazev zdroje,
+- velikost,
+- rozliseni,
+- jazykovy verdikt,
+- jak byl jazyk zjisten,
+- stav Whisper kontroly,
+- zda zdroj fungoval,
+- zda byl zdroj pouzit pro upload.
+
+Tim se zlepsi vyhledavani a filtrovani jazyka na produkcnim webu a pri dalsich
+bezech uz nebude nutne vsechny zdroje dohledavat znovu.
+
+## Otevrene body k domluve
+
+- Jak velka ma byt minimalni upload-ready fronta, aby nehrozily prostoje.
+- Jestli se ma upload zastavit, kdyz neni Whisper potvrzeni, nebo staci
+  metadata a nazev.
+- Jestli mensi zdroj pod 300 MB smi byt nekdy nouzove nahran.
+- Kde presne brat popisy epizod, ktere nejsou v TMDB.
+- Jak casto delat export z produkcni databaze.
+- Jak presne formatovat importni soubor pro zpetny import zdroju do produkce.

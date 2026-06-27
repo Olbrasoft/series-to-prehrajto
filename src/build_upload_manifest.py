@@ -281,6 +281,20 @@ def upload_candidate_ids(plan: dict, burned: set[int]) -> list[int]:
             continue
         seen.add(sid)
         ids.append(sid)
+    if ids:
+        return ids
+
+    # Pass 3: fallback – sources with valid URL (no probe/filesize available)
+    for source in sources:
+        if not source or not passes(source):
+            continue
+        if not source.get("source_url"):
+            continue
+        sid = int(source["source_id"])
+        if sid in seen:
+            continue
+        seen.add(sid)
+        ids.append(sid)
     return ids
 
 
