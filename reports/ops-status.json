@@ -1,33 +1,57 @@
 {
   "counts": {
     "backlog_episodes": 184693,
-    "manifest_upload_ready_episodes": 35,
+    "manifest_upload_ready_episodes": 1,
     "uploaded_episodes": 8865,
     "prepared_source_episodes": 16050,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 2817,
-    "language_audit_rows": 87072,
+    "language_audit_rows": 87073,
     "language_queue_sources": 2644,
-    "language_audited_sources": 80853,
-    "language_whisper_attempted_sources": 3365,
-    "language_pending_whisper_sources": 2604
+    "language_audited_sources": 80835,
+    "language_whisper_attempted_sources": 3325,
+    "language_pending_whisper_sources": 2644
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-06-27T03:11:14Z",
-      "databaseId": 28276865335,
+      "createdAt": "2026-06-27T03:28:10Z",
+      "databaseId": 28277247473,
       "headBranch": "main",
       "status": "in_progress",
-      "workflowName": "ops-status"
+      "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-06-27T03:25:30Z",
+      "databaseId": 28277189938,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-27T03:14:47Z",
+      "databaseId": 28276945173,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-27T03:11:14Z",
+      "databaseId": 28276865335,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "cancelled",
       "createdAt": "2026-06-27T02:58:02Z",
       "databaseId": 28276560403,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -39,11 +63,11 @@
       "workflowName": "prepare-manifest"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-06-27T02:48:26Z",
       "databaseId": 28276348226,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "update-descriptions"
     },
     {
@@ -71,11 +95,11 @@
       "workflowName": "prepare-manifest"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-06-27T02:44:49Z",
       "databaseId": 28276268301,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "sync"
     },
     {
@@ -135,11 +159,11 @@
       "workflowName": "audit-language"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-06-27T02:24:49Z",
       "databaseId": 28275803161,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -149,30 +173,6 @@
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-27T02:23:14Z",
-      "databaseId": 28275767565,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-27T02:20:31Z",
-      "databaseId": 28275705937,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-27T02:12:54Z",
-      "databaseId": 28275528262,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
     }
   ],
   "gaps": {
@@ -55823,12 +55823,12 @@
     "CZ_SUBTITLES_ONLY": 3163,
     "NOT_CZ_AUDIO": 516,
     "SK_AUDIO": 2,
-    "PROBABLE_CZ_AUDIO": 5670
+    "PROBABLE_CZ_AUDIO": 5671
   },
   "language_whisper_statuses": {
-    "disabled": 77488,
+    "disabled": 77510,
     "resolve_failed": 276,
-    "ok": 3052,
+    "ok": 3012,
     "no_stream": 37
   }
 }
