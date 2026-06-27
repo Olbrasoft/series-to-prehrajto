@@ -2,18 +2,42 @@
   "counts": {
     "backlog_episodes": 184093,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 9302,
+    "uploaded_episodes": 9305,
     "prepared_source_episodes": 17165,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 88381,
     "language_queue_sources": 2644,
-    "language_audited_sources": 82069,
-    "language_whisper_attempted_sources": 3325,
-    "language_pending_whisper_sources": 2644
+    "language_audited_sources": 82019,
+    "language_whisper_attempted_sources": 3365,
+    "language_pending_whisper_sources": 2604
   },
   "workflow_runs": [
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-27T20:33:15Z",
+      "databaseId": 28301006402,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-27T20:31:52Z",
+      "databaseId": 28300971956,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-27T20:31:36Z",
+      "databaseId": 28300965320,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-descriptions"
+    },
     {
       "conclusion": "",
       "createdAt": "2026-06-27T20:30:08Z",
@@ -31,11 +55,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-06-27T20:29:39Z",
       "databaseId": 28300911775,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -95,11 +119,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-06-27T20:20:02Z",
       "databaseId": 28300678312,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -111,11 +135,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-06-27T20:13:58Z",
       "databaseId": 28300531794,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "sync"
     },
     {
@@ -149,30 +173,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-27T19:54:44Z",
-      "databaseId": 28300062135,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-27T19:54:28Z",
-      "databaseId": 28300056109,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-27T19:45:00Z",
-      "databaseId": 28299827540,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
     }
   ],
   "gaps": {
@@ -24465,6 +24465,21 @@
         "episode_id": 14217,
         "display_name": "Lovci zločinců S03E21 - Zkouška CZ Dabing",
         "video_id": 26871170
+      },
+      {
+        "episode_id": 14219,
+        "display_name": "Lovci zločinců S03E23 - Umělá inteligence CZ Dabing",
+        "video_id": 26871312
+      },
+      {
+        "episode_id": 14221,
+        "display_name": "Lovci zločinců S04E02 - Loděnka CZ Dabing",
+        "video_id": 26871331
+      },
+      {
+        "episode_id": 14223,
+        "display_name": "Lovci zločinců S04E04 - Bratrstvo CZ Dabing",
+        "video_id": 26871350
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -59567,6 +59582,21 @@
         "episode_id": 14217,
         "display_name": "Lovci zločinců S03E21 - Zkouška CZ Dabing",
         "video_id": 26871170
+      },
+      {
+        "episode_id": 14219,
+        "display_name": "Lovci zločinců S03E23 - Umělá inteligence CZ Dabing",
+        "video_id": 26871312
+      },
+      {
+        "episode_id": 14221,
+        "display_name": "Lovci zločinců S04E02 - Loděnka CZ Dabing",
+        "video_id": 26871331
+      },
+      {
+        "episode_id": 14223,
+        "display_name": "Lovci zločinců S04E04 - Bratrstvo CZ Dabing",
+        "video_id": 26871350
       }
     ],
     "prepared_not_upload_ready": [
@@ -59881,9 +59911,9 @@
     "PROBABLE_CZ_AUDIO": 6507
   },
   "language_whisper_statuses": {
-    "disabled": 78744,
+    "disabled": 78654,
     "resolve_failed": 276,
-    "ok": 3012,
+    "ok": 3052,
     "no_stream": 37
   }
 }
