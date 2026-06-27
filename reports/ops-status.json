@@ -2,24 +2,80 @@
   "counts": {
     "backlog_episodes": 184465,
     "manifest_upload_ready_episodes": 15,
-    "uploaded_episodes": 8902,
+    "uploaded_episodes": 8912,
     "prepared_source_episodes": 16123,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 87270,
     "language_queue_sources": 2644,
-    "language_audited_sources": 81030,
-    "language_whisper_attempted_sources": 3325,
-    "language_pending_whisper_sources": 2644
+    "language_audited_sources": 81050,
+    "language_whisper_attempted_sources": 3345,
+    "language_pending_whisper_sources": 2624
   },
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-06-27T08:14:38Z",
+      "databaseId": 28283580808,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-27T08:14:34Z",
+      "databaseId": 28283579244,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-27T08:01:33Z",
+      "databaseId": 28283290659,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-27T08:01:32Z",
+      "databaseId": 28283290508,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-27T08:00:31Z",
+      "databaseId": 28283263355,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-27T07:54:35Z",
+      "databaseId": 28283125006,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-27T07:54:33Z",
+      "databaseId": 28283124416,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-06-27T07:53:40Z",
       "databaseId": 28283099433,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -27,15 +83,15 @@
       "createdAt": "2026-06-27T07:53:36Z",
       "databaseId": 28283097347,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "sync"
     },
     {
-      "conclusion": "",
+      "conclusion": "failure",
       "createdAt": "2026-06-27T07:52:11Z",
       "databaseId": 28283065853,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-descriptions"
     },
     {
@@ -111,68 +167,12 @@
       "workflowName": "prepare-manifest"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-06-27T07:40:18Z",
       "databaseId": 28282798300,
       "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-06-27T07:36:46Z",
-      "databaseId": 28282722328,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-sources"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-27T07:33:23Z",
-      "databaseId": 28282648697,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-27T07:32:06Z",
-      "databaseId": 28282618469,
-      "headBranch": "main",
       "status": "completed",
       "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-27T07:26:11Z",
-      "databaseId": 28282481695,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-27T07:26:09Z",
-      "databaseId": 28282480942,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-27T07:25:17Z",
-      "databaseId": 28282462662,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-27T07:18:07Z",
-      "databaseId": 28282300571,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "refresh-backlog"
     }
   ],
   "gaps": {
@@ -22605,6 +22605,46 @@
         "episode_id": 44735,
         "display_name": "Agenti S.H.I.E.L.D. S01E04 - Kdo se dívá CZ Dabing",
         "video_id": 26849110
+      },
+      {
+        "episode_id": 44733,
+        "display_name": "Agenti S.H.I.E.L.D. S01E06 - Výboj CZ Dabing",
+        "video_id": 26849293
+      },
+      {
+        "episode_id": 44739,
+        "display_name": "Agenti S.H.I.E.L.D. S01E07 - Hub CZ Dabing",
+        "video_id": 26849461
+      },
+      {
+        "episode_id": 44731,
+        "display_name": "Agenti S.H.I.E.L.D. S01E09 - Škody CZ Dabing",
+        "video_id": 26849611
+      },
+      {
+        "episode_id": 44729,
+        "display_name": "Agenti S.H.I.E.L.D. S01E11 - Zázračné místo CZ Dabing",
+        "video_id": 26849840
+      },
+      {
+        "episode_id": 44727,
+        "display_name": "Agenti S.H.I.E.L.D. S01E13 - Vlak CZ Dabing",
+        "video_id": 26850069
+      },
+      {
+        "episode_id": 44725,
+        "display_name": "Agenti S.H.I.E.L.D. S01E15 - Služebníci CZ Dabing",
+        "video_id": 26850268
+      },
+      {
+        "episode_id": 44723,
+        "display_name": "Agenti S.H.I.E.L.D. S01E17 - Časy se mění CZ Dabing",
+        "video_id": 26850445
+      },
+      {
+        "episode_id": 44721,
+        "display_name": "Agenti S.H.I.E.L.D. S01E19 - Jediné světlo v temnotě CZ Dabing",
+        "video_id": 26850586
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -55707,6 +55747,56 @@
         "episode_id": 44735,
         "display_name": "Agenti S.H.I.E.L.D. S01E04 - Kdo se dívá CZ Dabing",
         "video_id": 26849110
+      },
+      {
+        "episode_id": 44733,
+        "display_name": "Agenti S.H.I.E.L.D. S01E06 - Výboj CZ Dabing",
+        "video_id": 26849293
+      },
+      {
+        "episode_id": 44739,
+        "display_name": "Agenti S.H.I.E.L.D. S01E07 - Hub CZ Dabing",
+        "video_id": 26849461
+      },
+      {
+        "episode_id": 32016,
+        "display_name": "Městečko South Park S21E07 - Lež vítězí CZ Dabing",
+        "video_id": 26849687
+      },
+      {
+        "episode_id": 32028,
+        "display_name": "Městečko South Park S22E09 - Neuspokojení CZ Dabing",
+        "video_id": 26849763
+      },
+      {
+        "episode_id": 44731,
+        "display_name": "Agenti S.H.I.E.L.D. S01E09 - Škody CZ Dabing",
+        "video_id": 26849611
+      },
+      {
+        "episode_id": 44729,
+        "display_name": "Agenti S.H.I.E.L.D. S01E11 - Zázračné místo CZ Dabing",
+        "video_id": 26849840
+      },
+      {
+        "episode_id": 44727,
+        "display_name": "Agenti S.H.I.E.L.D. S01E13 - Vlak CZ Dabing",
+        "video_id": 26850069
+      },
+      {
+        "episode_id": 44725,
+        "display_name": "Agenti S.H.I.E.L.D. S01E15 - Služebníci CZ Dabing",
+        "video_id": 26850268
+      },
+      {
+        "episode_id": 44723,
+        "display_name": "Agenti S.H.I.E.L.D. S01E17 - Časy se mění CZ Dabing",
+        "video_id": 26850445
+      },
+      {
+        "episode_id": 44721,
+        "display_name": "Agenti S.H.I.E.L.D. S01E19 - Jediné světlo v temnotě CZ Dabing",
+        "video_id": 26850586
       }
     ],
     "prepared_not_upload_ready": [
@@ -56023,7 +56113,7 @@
   "language_whisper_statuses": {
     "disabled": 77705,
     "resolve_failed": 276,
-    "ok": 3012,
+    "ok": 3032,
     "no_stream": 37
   }
 }
