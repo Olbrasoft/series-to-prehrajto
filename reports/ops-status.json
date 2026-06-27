@@ -1,41 +1,81 @@
 {
   "counts": {
     "backlog_episodes": 184422,
-    "manifest_upload_ready_episodes": 1,
-    "uploaded_episodes": 8972,
-    "prepared_source_episodes": 16423,
+    "manifest_upload_ready_episodes": 0,
+    "uploaded_episodes": 8973,
+    "prepared_source_episodes": 16433,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 87716,
     "language_queue_sources": 2644,
-    "language_audited_sources": 81436,
-    "language_whisper_attempted_sources": 3325,
-    "language_pending_whisper_sources": 2644
+    "language_audited_sources": 81476,
+    "language_whisper_attempted_sources": 3365,
+    "language_pending_whisper_sources": 2604
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-06-27T12:20:00Z",
-      "databaseId": 28289004365,
+      "createdAt": "2026-06-27T12:32:34Z",
+      "databaseId": 28289299508,
       "headBranch": "main",
       "status": "in_progress",
-      "workflowName": "ops-watchdog"
+      "workflowName": "ops-status"
     },
     {
       "conclusion": "",
-      "createdAt": "2026-06-27T12:19:56Z",
-      "databaseId": 28289002794,
+      "createdAt": "2026-06-27T12:31:57Z",
+      "databaseId": 28289283572,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-27T12:26:17Z",
+      "databaseId": 28289152596,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "sync"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
+      "createdAt": "2026-06-27T12:20:54Z",
+      "databaseId": 28289026086,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-27T12:20:52Z",
+      "databaseId": 28289025419,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-27T12:20:00Z",
+      "databaseId": 28289004365,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-27T12:19:56Z",
+      "databaseId": 28289002794,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-06-27T12:16:07Z",
       "databaseId": 28288918278,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -133,46 +173,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-27T11:47:56Z",
-      "databaseId": 28288283836,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-27T11:45:36Z",
-      "databaseId": 28288231612,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-27T11:34:04Z",
-      "databaseId": 28287972717,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-27T11:34:02Z",
-      "databaseId": 28287971663,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-27T11:33:08Z",
-      "databaseId": 28287951326,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
     }
   ],
   "gaps": {
@@ -56327,6 +56327,11 @@
         "episode_id": 10851,
         "display_name": "Griffinovi S17E15 - Otec na baterky CZ Dabing",
         "video_id": 26863392
+      },
+      {
+        "episode_id": 42828,
+        "display_name": "Flash S08E20 - 20. epizoda CZ Dabing",
+        "video_id": 26864496
       }
     ],
     "prepared_not_upload_ready": [
@@ -56643,7 +56648,7 @@
   "language_whisper_statuses": {
     "disabled": 78111,
     "resolve_failed": 276,
-    "ok": 3012,
+    "ok": 3052,
     "no_stream": 37
   }
 }
