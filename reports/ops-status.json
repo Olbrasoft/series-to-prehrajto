@@ -1,33 +1,81 @@
 {
   "counts": {
     "backlog_episodes": 184693,
-    "manifest_upload_ready_episodes": 100,
-    "uploaded_episodes": 8724,
+    "manifest_upload_ready_episodes": 107,
+    "uploaded_episodes": 8750,
     "prepared_source_episodes": 16049,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 2817,
-    "language_audit_rows": 86996,
+    "language_audit_rows": 87051,
     "language_queue_sources": 2644,
-    "language_audited_sources": 80714,
-    "language_whisper_attempted_sources": 3365,
-    "language_pending_whisper_sources": 2604
+    "language_audited_sources": 80813,
+    "language_whisper_attempted_sources": 3325,
+    "language_pending_whisper_sources": 2644
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-06-27T01:50:12Z",
-      "databaseId": 28274982900,
+      "createdAt": "2026-06-27T02:04:04Z",
+      "databaseId": 28275313667,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-06-27T02:03:59Z",
+      "databaseId": 28275311653,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-27T02:01:03Z",
+      "databaseId": 28275236637,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-06-27T02:00:24Z",
+      "databaseId": 28275217235,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-06-27T01:51:00Z",
+      "databaseId": 28275002983,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-27T01:50:58Z",
+      "databaseId": 28275002126,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-27T01:50:12Z",
+      "databaseId": 28274982900,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "cancelled",
       "createdAt": "2026-06-27T01:50:06Z",
       "databaseId": 28274980312,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -51,7 +99,7 @@
       "createdAt": "2026-06-27T01:37:05Z",
       "databaseId": 28274657625,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "sync"
     },
     {
@@ -79,11 +127,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-06-27T01:31:27Z",
       "databaseId": 28274522271,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "sync"
     },
     {
@@ -119,57 +167,9 @@
       "workflowName": "audit-language"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-06-27T01:19:32Z",
       "databaseId": 28274214331,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-27T01:18:57Z",
-      "databaseId": 28274199233,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-27T01:11:58Z",
-      "databaseId": 28274014563,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "refresh-backlog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-27T01:11:24Z",
-      "databaseId": 28274000060,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-27T01:10:47Z",
-      "databaseId": 28273984431,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-27T01:10:46Z",
-      "databaseId": 28273983811,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-27T01:10:40Z",
-      "databaseId": 28273981575,
       "headBranch": "main",
       "status": "completed",
       "workflowName": "prepare-manifest"
@@ -54804,9 +54804,139 @@
         "video_id": 26816336
       },
       {
+        "episode_id": 19488,
+        "display_name": "Simpsonovi S11E15 - Nemožný misionář CZ Dabing",
+        "video_id": 26816490
+      },
+      {
+        "episode_id": 19490,
+        "display_name": "Simpsonovi S11E17 - Nebárt se budoucnosti CZ Dabing",
+        "video_id": 26816603
+      },
+      {
+        "episode_id": 19492,
+        "display_name": "Simpsonovi S11E19 - Zabij krokodýla a uteč CZ Dabing",
+        "video_id": 26816725
+      },
+      {
+        "episode_id": 19494,
+        "display_name": "Simpsonovi S11E21 - Šílená a ještě šílenější Marge CZ Dabing",
+        "video_id": 26816818
+      },
+      {
+        "episode_id": 19498,
+        "display_name": "Simpsonovi S12E03 - Napravení šíleného klauna CZ Dabing",
+        "video_id": 26816924
+      },
+      {
+        "episode_id": 19514,
+        "display_name": "Simpsonovi S12E19 - Vzhůru do Svatoparku! CZ Dabing",
+        "video_id": 26817025
+      },
+      {
+        "episode_id": 19516,
+        "display_name": "Simpsonovi S12E21 - Tulácké báchorky CZ Dabing",
+        "video_id": 26817105
+      },
+      {
+        "episode_id": 19518,
+        "display_name": "Simpsonovi S13E02 - Rodičovské pouto CZ Dabing",
+        "video_id": 26817231
+      },
+      {
+        "episode_id": 19520,
+        "display_name": "Simpsonovi S13E04 - Zamilovaný Burns CZ Dabing",
+        "video_id": 26817267
+      },
+      {
+        "episode_id": 19522,
+        "display_name": "Simpsonovi S13E06 - Malověrná Líza CZ Dabing",
+        "video_id": 26817356
+      },
+      {
+        "episode_id": 19524,
+        "display_name": "Simpsonovi S13E08 - Sladkosti a zahořklá Marge CZ Dabing",
+        "video_id": 26817393
+      },
+      {
+        "episode_id": 19526,
+        "display_name": "Simpsonovi S13E10 - Napůl slušný návrh CZ Dabing",
+        "video_id": 26817490
+      },
+      {
+        "episode_id": 19528,
+        "display_name": "Simpsonovi S13E12 - Poslední pistolník na Západě CZ Dabing",
+        "video_id": 26817613
+      },
+      {
+        "episode_id": 19530,
+        "display_name": "Simpsonovi S13E14 - Příběhy z nevrácené knihy CZ Dabing",
+        "video_id": 26817739
+      },
+      {
+        "episode_id": 19534,
+        "display_name": "Simpsonovi S13E18 - Jsem cholerik, ale léčím se CZ Dabing",
+        "video_id": 26817872
+      },
+      {
         "episode_id": 19523,
         "display_name": "Simpsonovi S13E07 - Rozkol v rodině CZ Dabing",
         "video_id": 26816384
+      },
+      {
+        "episode_id": 19525,
+        "display_name": "Simpsonovi S13E09 - Sdrátovaná čelist CZ Dabing",
+        "video_id": 26816481
+      },
+      {
+        "episode_id": 19527,
+        "display_name": "Simpsonovi S13E11 - Srdci neporučíš CZ Dabing",
+        "video_id": 26816591
+      },
+      {
+        "episode_id": 19529,
+        "display_name": "Simpsonovi S13E13 - Stařec a hoře CZ Dabing",
+        "video_id": 26816682
+      },
+      {
+        "episode_id": 19531,
+        "display_name": "Simpsonovi S13E15 - Může za to Líza CZ Dabing",
+        "video_id": 26816785
+      },
+      {
+        "episode_id": 19533,
+        "display_name": "Simpsonovi S13E17 - Na pranýři CZ Dabing",
+        "video_id": 26816835
+      },
+      {
+        "episode_id": 19535,
+        "display_name": "Simpsonovi S13E19 - Záletník Apu CZ Dabing",
+        "video_id": 26816937
+      },
+      {
+        "episode_id": 19537,
+        "display_name": "Simpsonovi S13E21 - Křeslo pro Homera CZ Dabing",
+        "video_id": 26817026
+      },
+      {
+        "episode_id": 19539,
+        "display_name": "Simpsonovi S14E01 - Speciální čarodějnický díl CZ Dabing",
+        "video_id": 26817069
+      },
+      {
+        "episode_id": 19541,
+        "display_name": "Simpsonovi S14E03 - Bart versus Líza versus 3. A CZ Dabing",
+        "video_id": 26817601
+      },
+      {
+        "episode_id": 19543,
+        "display_name": "Simpsonovi S14E05 - Zkáza domu Simpsonů CZ Dabing",
+        "video_id": 26817722
+      },
+      {
+        "episode_id": 19547,
+        "display_name": "Simpsonovi S14E09 - Namakaná máma CZ Dabing",
+        "video_id": 26817864
       }
     ],
     "prepared_not_upload_ready": [
@@ -55118,12 +55248,12 @@
     "CZ_SUBTITLES_ONLY": 3163,
     "NOT_CZ_AUDIO": 516,
     "SK_AUDIO": 2,
-    "PROBABLE_CZ_AUDIO": 5594
+    "PROBABLE_CZ_AUDIO": 5649
   },
   "language_whisper_statuses": {
-    "disabled": 77349,
+    "disabled": 77488,
     "resolve_failed": 276,
-    "ok": 3052,
+    "ok": 3012,
     "no_stream": 37
   }
 }
