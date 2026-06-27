@@ -3,31 +3,63 @@
     "backlog_episodes": 184422,
     "manifest_upload_ready_episodes": 0,
     "uploaded_episodes": 8972,
-    "prepared_source_episodes": 16338,
+    "prepared_source_episodes": 16463,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
-    "language_audit_rows": 87673,
+    "language_audit_rows": 87690,
     "language_queue_sources": 2644,
-    "language_audited_sources": 81393,
-    "language_whisper_attempted_sources": 3325,
+    "language_audited_sources": 81390,
+    "language_whisper_attempted_sources": 3326,
     "language_pending_whisper_sources": 2644
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-06-27T11:33:08Z",
-      "databaseId": 28287951326,
+      "createdAt": "2026-06-27T11:47:56Z",
+      "databaseId": 28288283836,
       "headBranch": "main",
       "status": "in_progress",
-      "workflowName": "ops-status"
+      "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-06-27T11:45:36Z",
+      "databaseId": 28288231612,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-27T11:34:04Z",
+      "databaseId": 28287972717,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-27T11:34:02Z",
+      "databaseId": 28287971663,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-27T11:33:08Z",
+      "databaseId": 28287951326,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-06-27T11:33:06Z",
       "databaseId": 28287950543,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -35,7 +67,7 @@
       "createdAt": "2026-06-27T11:25:16Z",
       "databaseId": 28287772460,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "prepare-manifest"
     },
     {
@@ -55,19 +87,19 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-06-27T11:18:19Z",
       "databaseId": 28287620957,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-06-27T11:09:58Z",
       "databaseId": 28287441163,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-sources"
     },
     {
@@ -141,38 +173,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-27T11:02:03Z",
-      "databaseId": 28287268022,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-27T11:01:23Z",
-      "databaseId": 28287253673,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-27T10:54:53Z",
-      "databaseId": 28287106460,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-27T10:54:50Z",
-      "databaseId": 28287105629,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
     }
   ],
   "gaps": {
@@ -56635,15 +56635,15 @@
   "language_verdicts": {
     "UNKNOWN": 3290,
     "CZ_AUDIO": 74431,
-    "CZ_SUBTITLES_ONLY": 3286,
+    "CZ_SUBTITLES_ONLY": 3303,
     "NOT_CZ_AUDIO": 516,
     "SK_AUDIO": 2,
     "PROBABLE_CZ_AUDIO": 6148
   },
   "language_whisper_statuses": {
-    "disabled": 78068,
+    "disabled": 78064,
+    "ok": 3013,
     "resolve_failed": 276,
-    "ok": 3012,
     "no_stream": 37
   }
 }
