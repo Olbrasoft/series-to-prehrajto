@@ -260,7 +260,10 @@ def is_daily_quota(details: list[dict], message: str, retry_after: float | None)
         return True
     if any(marker in haystack for marker in minute_markers):
         return False
-    return retry_after is None
+    # Generic RESOURCE_EXHAUSTED responses can indicate temporary model
+    # capacity. Only explicit daily quota metadata is safe to persist until
+    # the next Pacific-day reset.
+    return False
 
 
 def pacific_day() -> str:
@@ -327,6 +330,13 @@ class KeyQuotaLimiter:
             row.clear()
             row["pacific_day"] = day
             row["requests_today"] = 0
+        if (
+            row.get("disabled_until_epoch")
+            and not row.get("quota_names")
+            and row.get("disabled_reason") == "Resource has been exhausted (e.g. check quota)."
+        ):
+            for field in ("disabled_until_epoch", "disabled_reason", "disabled_at", "quota_names"):
+                row.pop(field, None)
         return row
 
     def key_available(self, key_index: int) -> bool:
