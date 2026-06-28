@@ -2,32 +2,72 @@
   "counts": {
     "backlog_episodes": 183692,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 9803,
-    "prepared_source_episodes": 17755,
+    "uploaded_episodes": 9852,
+    "prepared_source_episodes": 17965,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
-    "language_audit_rows": 90439,
+    "language_audit_rows": 90758,
     "language_queue_sources": 2644,
-    "language_audited_sources": 84002,
-    "language_whisper_attempted_sources": 3365,
-    "language_pending_whisper_sources": 2604
+    "language_audited_sources": 84281,
+    "language_whisper_attempted_sources": 3325,
+    "language_pending_whisper_sources": 2644
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-06-28T06:49:39Z",
-      "databaseId": 28314273032,
+      "createdAt": "2026-06-28T07:31:51Z",
+      "databaseId": 28315216157,
       "headBranch": "main",
       "status": "in_progress",
-      "workflowName": "ops-status"
+      "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-06-28T07:31:47Z",
+      "databaseId": 28315214462,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-06-28T07:31:41Z",
+      "databaseId": 28315211715,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-28T07:30:48Z",
+      "databaseId": 28315191158,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-28T06:54:33Z",
+      "databaseId": 28314381827,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-28T06:49:39Z",
+      "databaseId": 28314273032,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "cancelled",
       "createdAt": "2026-06-28T06:46:16Z",
       "databaseId": 28314202231,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "update-descriptions"
     },
     {
@@ -39,11 +79,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-06-28T06:45:19Z",
       "databaseId": 28314180830,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "sync"
     },
     {
@@ -55,11 +95,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-06-28T06:39:58Z",
       "databaseId": 28314062964,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-descriptions"
     },
     {
@@ -79,11 +119,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-06-28T06:30:34Z",
       "databaseId": 28313862642,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -119,11 +159,11 @@
       "workflowName": "prepare-sources"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-06-28T06:00:40Z",
       "databaseId": 28313218777,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "sync"
     },
     {
@@ -133,46 +173,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-28T05:52:59Z",
-      "databaseId": 28313063640,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-28T05:52:07Z",
-      "databaseId": 28313046758,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-06-28T05:50:39Z",
-      "databaseId": 28313018107,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-28T05:46:23Z",
-      "databaseId": 28312935232,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-28T05:39:55Z",
-      "databaseId": 28312794057,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
     }
   ],
   "gaps": {
@@ -26970,6 +26970,251 @@
         "episode_id": 5755,
         "display_name": "Sandman S01E02 - Nedokonalí hostitelé CZ Dabing",
         "video_id": 26880290
+      },
+      {
+        "episode_id": 5757,
+        "display_name": "Sandman S01E04 - Naděje v pekle CZ Dabing",
+        "video_id": 26880302
+      },
+      {
+        "episode_id": 49772,
+        "display_name": "Super drbna S02E08 - V zajetí módy CZ Dabing",
+        "video_id": 26880322
+      },
+      {
+        "episode_id": 49768,
+        "display_name": "Super drbna S02E10 - Souboj s ješitností CZ Dabing",
+        "video_id": 26880335
+      },
+      {
+        "episode_id": 49770,
+        "display_name": "Super drbna S02E11 - Archibaldův osud CZ Dabing",
+        "video_id": 26880342
+      },
+      {
+        "episode_id": 49774,
+        "display_name": "Super drbna S02E12 - Báječná lež CZ Dabing",
+        "video_id": 26880358
+      },
+      {
+        "episode_id": 49802,
+        "display_name": "Super drbna S02E15 - Proti vůli CZ Dabing",
+        "video_id": 26880379
+      },
+      {
+        "episode_id": 49776,
+        "display_name": "Super drbna S02E18 - Věk proradnosti CZ Dabing",
+        "video_id": 26880386
+      },
+      {
+        "episode_id": 49798,
+        "display_name": "Super drbna S02E19 - Potíže s dědečkem CZ Dabing",
+        "video_id": 26880404
+      },
+      {
+        "episode_id": 49780,
+        "display_name": "Super drbna S02E21 - O sederu je možné všechno CZ Dabing",
+        "video_id": 26880414
+      },
+      {
+        "episode_id": 49778,
+        "display_name": "Super drbna S02E24 - Holky z valley CZ Dabing",
+        "video_id": 26880427
+      },
+      {
+        "episode_id": 49712,
+        "display_name": "Super drbna S03E01 - Osudové zvraty CZ Dabing",
+        "video_id": 26880435
+      },
+      {
+        "episode_id": 49714,
+        "display_name": "Super drbna S03E04 - Dan a hvězda CZ Dabing",
+        "video_id": 26880450
+      },
+      {
+        "episode_id": 49716,
+        "display_name": "Super drbna S03E06 - Dost o Evě CZ Dabing",
+        "video_id": 26880466
+      },
+      {
+        "episode_id": 49718,
+        "display_name": "Super drbna S03E08 - Další potíže s dědečkem CZ Dabing",
+        "video_id": 26880484
+      },
+      {
+        "episode_id": 49720,
+        "display_name": "Super drbna S03E09 - Prokletí jménem Humphrey CZ Dabing",
+        "video_id": 26880506
+      },
+      {
+        "episode_id": 49722,
+        "display_name": "Super drbna S03E11 - Serenino tajemství CZ Dabing",
+        "video_id": 26880525
+      },
+      {
+        "episode_id": 49724,
+        "display_name": "Super drbna S03E14 - Ztracená dáma CZ Dabing",
+        "video_id": 26880541
+      },
+      {
+        "episode_id": 49726,
+        "display_name": "Super drbna S03E16 - Jack vrací úder CZ Dabing",
+        "video_id": 26880549
+      },
+      {
+        "episode_id": 49728,
+        "display_name": "Super drbna S03E17 - Hanební Bassové CZ Dabing",
+        "video_id": 26880556
+      },
+      {
+        "episode_id": 49730,
+        "display_name": "Super drbna S03E20 - Svět patří otcům CZ Dabing",
+        "video_id": 26880575
+      },
+      {
+        "episode_id": 49732,
+        "display_name": "Super drbna S03E21 - Bývalí manželé a manželky CZ Dabing",
+        "video_id": 26880588
+      },
+      {
+        "episode_id": 5759,
+        "display_name": "Sandman S01E06 - Zvuk jejích křídel CZ Dabing",
+        "video_id": 26880306
+      },
+      {
+        "episode_id": 5761,
+        "display_name": "Sandman S01E08 - Hrací dům CZ Dabing",
+        "video_id": 26880323
+      },
+      {
+        "episode_id": 5763,
+        "display_name": "Sandman S01E10 - Ztracená srdce CZ Dabing",
+        "video_id": 26880334
+      },
+      {
+        "episode_id": 12667,
+        "display_name": "Sandman S02E02 - Vládce pekel CZ Dabing",
+        "video_id": 26880340
+      },
+      {
+        "episode_id": 12663,
+        "display_name": "Sandman S02E04 - Jepičí životy CZ Dabing",
+        "video_id": 26880353
+      },
+      {
+        "episode_id": 12661,
+        "display_name": "Sandman S02E07 - Čas a Noc CZ Dabing",
+        "video_id": 26880372
+      },
+      {
+        "episode_id": 12665,
+        "display_name": "Sandman S02E08 - Křest ohněm CZ Dabing",
+        "video_id": 26880380
+      },
+      {
+        "episode_id": 12657,
+        "display_name": "Sandman S02E09 - Blahovolné CZ Dabing",
+        "video_id": 26880388
+      },
+      {
+        "episode_id": 12659,
+        "display_name": "Sandman S02E11 - Vznešený příběh CZ Dabing",
+        "video_id": 26880403
+      },
+      {
+        "episode_id": 5809,
+        "display_name": "Řím S01E02 - Jak Titus Pullo způsobil pád Republiky CZ Dabing",
+        "video_id": 26880417
+      },
+      {
+        "episode_id": 5811,
+        "display_name": "Řím S01E04 - Krádež ze Saturnova chrámu CZ Dabing",
+        "video_id": 26880430
+      },
+      {
+        "episode_id": 5813,
+        "display_name": "Řím S01E06 - Egeria CZ Dabing",
+        "video_id": 26880440
+      },
+      {
+        "episode_id": 5815,
+        "display_name": "Řím S01E08 - Caesarion CZ Dabing",
+        "video_id": 26880456
+      },
+      {
+        "episode_id": 5817,
+        "display_name": "Řím S01E10 - Slavnost CZ Dabing",
+        "video_id": 26880478
+      },
+      {
+        "episode_id": 5819,
+        "display_name": "Řím S01E12 - Únorové kalendy CZ Dabing",
+        "video_id": 26880505
+      },
+      {
+        "episode_id": 5821,
+        "display_name": "Řím S02E02 - Syn Hádův CZ Dabing",
+        "video_id": 26880568
+      },
+      {
+        "episode_id": 5823,
+        "display_name": "Řím S02E04 - Želva a zajíc CZ Dabing",
+        "video_id": 26880587
+      },
+      {
+        "episode_id": 5825,
+        "display_name": "Řím S02E06 - Bitva u Philippi CZ Dabing",
+        "video_id": 26880619
+      },
+      {
+        "episode_id": 5827,
+        "display_name": "Řím S02E08 - Nezbytný výmysl CZ Dabing",
+        "video_id": 26880648
+      },
+      {
+        "episode_id": 49734,
+        "display_name": "Super drbna S04E02 - Dvojí identita CZ Dabing",
+        "video_id": 26880675
+      },
+      {
+        "episode_id": 49738,
+        "display_name": "Super drbna S04E06 - Snadná práce CZ Dabing",
+        "video_id": 26880704
+      },
+      {
+        "episode_id": 49742,
+        "display_name": "Super drbna S04E10 - Pod svícnem bývá tma CZ Dabing",
+        "video_id": 26880724
+      },
+      {
+        "episode_id": 49744,
+        "display_name": "Super drbna S04E12 - Tyhle děti nejsou v pohodě CZ Dabing",
+        "video_id": 26880742
+      },
+      {
+        "episode_id": 5829,
+        "display_name": "Řím S02E10 - Pokud jde o tvého otce... CZ Dabing",
+        "video_id": 26880669
+      },
+      {
+        "episode_id": 16089,
+        "display_name": "Půjčovna masa S01E02 - Padlý anděl CZ Dabing",
+        "video_id": 26880699
+      },
+      {
+        "episode_id": 16091,
+        "display_name": "Půjčovna masa S01E03 - Na opuštěném místě CZ Dabing",
+        "video_id": 26880715
+      },
+      {
+        "episode_id": 16093,
+        "display_name": "Půjčovna masa S01E05 - Nepravý muž CZ Dabing",
+        "video_id": 26880728
+      },
+      {
+        "episode_id": 16095,
+        "display_name": "Půjčovna masa S01E07 - Nora Inu CZ Dabing",
+        "video_id": 26880747
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -64577,6 +64822,251 @@
         "episode_id": 5755,
         "display_name": "Sandman S01E02 - Nedokonalí hostitelé CZ Dabing",
         "video_id": 26880290
+      },
+      {
+        "episode_id": 5757,
+        "display_name": "Sandman S01E04 - Naděje v pekle CZ Dabing",
+        "video_id": 26880302
+      },
+      {
+        "episode_id": 49772,
+        "display_name": "Super drbna S02E08 - V zajetí módy CZ Dabing",
+        "video_id": 26880322
+      },
+      {
+        "episode_id": 49768,
+        "display_name": "Super drbna S02E10 - Souboj s ješitností CZ Dabing",
+        "video_id": 26880335
+      },
+      {
+        "episode_id": 49770,
+        "display_name": "Super drbna S02E11 - Archibaldův osud CZ Dabing",
+        "video_id": 26880342
+      },
+      {
+        "episode_id": 49774,
+        "display_name": "Super drbna S02E12 - Báječná lež CZ Dabing",
+        "video_id": 26880358
+      },
+      {
+        "episode_id": 49802,
+        "display_name": "Super drbna S02E15 - Proti vůli CZ Dabing",
+        "video_id": 26880379
+      },
+      {
+        "episode_id": 49776,
+        "display_name": "Super drbna S02E18 - Věk proradnosti CZ Dabing",
+        "video_id": 26880386
+      },
+      {
+        "episode_id": 49798,
+        "display_name": "Super drbna S02E19 - Potíže s dědečkem CZ Dabing",
+        "video_id": 26880404
+      },
+      {
+        "episode_id": 49780,
+        "display_name": "Super drbna S02E21 - O sederu je možné všechno CZ Dabing",
+        "video_id": 26880414
+      },
+      {
+        "episode_id": 49778,
+        "display_name": "Super drbna S02E24 - Holky z valley CZ Dabing",
+        "video_id": 26880427
+      },
+      {
+        "episode_id": 49712,
+        "display_name": "Super drbna S03E01 - Osudové zvraty CZ Dabing",
+        "video_id": 26880435
+      },
+      {
+        "episode_id": 49714,
+        "display_name": "Super drbna S03E04 - Dan a hvězda CZ Dabing",
+        "video_id": 26880450
+      },
+      {
+        "episode_id": 49716,
+        "display_name": "Super drbna S03E06 - Dost o Evě CZ Dabing",
+        "video_id": 26880466
+      },
+      {
+        "episode_id": 49718,
+        "display_name": "Super drbna S03E08 - Další potíže s dědečkem CZ Dabing",
+        "video_id": 26880484
+      },
+      {
+        "episode_id": 49720,
+        "display_name": "Super drbna S03E09 - Prokletí jménem Humphrey CZ Dabing",
+        "video_id": 26880506
+      },
+      {
+        "episode_id": 49722,
+        "display_name": "Super drbna S03E11 - Serenino tajemství CZ Dabing",
+        "video_id": 26880525
+      },
+      {
+        "episode_id": 49724,
+        "display_name": "Super drbna S03E14 - Ztracená dáma CZ Dabing",
+        "video_id": 26880541
+      },
+      {
+        "episode_id": 49726,
+        "display_name": "Super drbna S03E16 - Jack vrací úder CZ Dabing",
+        "video_id": 26880549
+      },
+      {
+        "episode_id": 49728,
+        "display_name": "Super drbna S03E17 - Hanební Bassové CZ Dabing",
+        "video_id": 26880556
+      },
+      {
+        "episode_id": 49730,
+        "display_name": "Super drbna S03E20 - Svět patří otcům CZ Dabing",
+        "video_id": 26880575
+      },
+      {
+        "episode_id": 49732,
+        "display_name": "Super drbna S03E21 - Bývalí manželé a manželky CZ Dabing",
+        "video_id": 26880588
+      },
+      {
+        "episode_id": 5759,
+        "display_name": "Sandman S01E06 - Zvuk jejích křídel CZ Dabing",
+        "video_id": 26880306
+      },
+      {
+        "episode_id": 5761,
+        "display_name": "Sandman S01E08 - Hrací dům CZ Dabing",
+        "video_id": 26880323
+      },
+      {
+        "episode_id": 5763,
+        "display_name": "Sandman S01E10 - Ztracená srdce CZ Dabing",
+        "video_id": 26880334
+      },
+      {
+        "episode_id": 12667,
+        "display_name": "Sandman S02E02 - Vládce pekel CZ Dabing",
+        "video_id": 26880340
+      },
+      {
+        "episode_id": 12663,
+        "display_name": "Sandman S02E04 - Jepičí životy CZ Dabing",
+        "video_id": 26880353
+      },
+      {
+        "episode_id": 12661,
+        "display_name": "Sandman S02E07 - Čas a Noc CZ Dabing",
+        "video_id": 26880372
+      },
+      {
+        "episode_id": 12665,
+        "display_name": "Sandman S02E08 - Křest ohněm CZ Dabing",
+        "video_id": 26880380
+      },
+      {
+        "episode_id": 12657,
+        "display_name": "Sandman S02E09 - Blahovolné CZ Dabing",
+        "video_id": 26880388
+      },
+      {
+        "episode_id": 12659,
+        "display_name": "Sandman S02E11 - Vznešený příběh CZ Dabing",
+        "video_id": 26880403
+      },
+      {
+        "episode_id": 5809,
+        "display_name": "Řím S01E02 - Jak Titus Pullo způsobil pád Republiky CZ Dabing",
+        "video_id": 26880417
+      },
+      {
+        "episode_id": 5811,
+        "display_name": "Řím S01E04 - Krádež ze Saturnova chrámu CZ Dabing",
+        "video_id": 26880430
+      },
+      {
+        "episode_id": 5813,
+        "display_name": "Řím S01E06 - Egeria CZ Dabing",
+        "video_id": 26880440
+      },
+      {
+        "episode_id": 5815,
+        "display_name": "Řím S01E08 - Caesarion CZ Dabing",
+        "video_id": 26880456
+      },
+      {
+        "episode_id": 5817,
+        "display_name": "Řím S01E10 - Slavnost CZ Dabing",
+        "video_id": 26880478
+      },
+      {
+        "episode_id": 5819,
+        "display_name": "Řím S01E12 - Únorové kalendy CZ Dabing",
+        "video_id": 26880505
+      },
+      {
+        "episode_id": 5821,
+        "display_name": "Řím S02E02 - Syn Hádův CZ Dabing",
+        "video_id": 26880568
+      },
+      {
+        "episode_id": 5823,
+        "display_name": "Řím S02E04 - Želva a zajíc CZ Dabing",
+        "video_id": 26880587
+      },
+      {
+        "episode_id": 5825,
+        "display_name": "Řím S02E06 - Bitva u Philippi CZ Dabing",
+        "video_id": 26880619
+      },
+      {
+        "episode_id": 5827,
+        "display_name": "Řím S02E08 - Nezbytný výmysl CZ Dabing",
+        "video_id": 26880648
+      },
+      {
+        "episode_id": 49734,
+        "display_name": "Super drbna S04E02 - Dvojí identita CZ Dabing",
+        "video_id": 26880675
+      },
+      {
+        "episode_id": 49738,
+        "display_name": "Super drbna S04E06 - Snadná práce CZ Dabing",
+        "video_id": 26880704
+      },
+      {
+        "episode_id": 49742,
+        "display_name": "Super drbna S04E10 - Pod svícnem bývá tma CZ Dabing",
+        "video_id": 26880724
+      },
+      {
+        "episode_id": 49744,
+        "display_name": "Super drbna S04E12 - Tyhle děti nejsou v pohodě CZ Dabing",
+        "video_id": 26880742
+      },
+      {
+        "episode_id": 5829,
+        "display_name": "Řím S02E10 - Pokud jde o tvého otce... CZ Dabing",
+        "video_id": 26880669
+      },
+      {
+        "episode_id": 16089,
+        "display_name": "Půjčovna masa S01E02 - Padlý anděl CZ Dabing",
+        "video_id": 26880699
+      },
+      {
+        "episode_id": 16091,
+        "display_name": "Půjčovna masa S01E03 - Na opuštěném místě CZ Dabing",
+        "video_id": 26880715
+      },
+      {
+        "episode_id": 16093,
+        "display_name": "Půjčovna masa S01E05 - Nepravý muž CZ Dabing",
+        "video_id": 26880728
+      },
+      {
+        "episode_id": 16095,
+        "display_name": "Půjčovna masa S01E07 - Nora Inu CZ Dabing",
+        "video_id": 26880747
       }
     ],
     "prepared_not_upload_ready": [
@@ -64888,12 +65378,12 @@
     "CZ_SUBTITLES_ONLY": 4307,
     "NOT_CZ_AUDIO": 516,
     "SK_AUDIO": 2,
-    "PROBABLE_CZ_AUDIO": 7893
+    "PROBABLE_CZ_AUDIO": 8212
   },
   "language_whisper_statuses": {
-    "disabled": 80637,
+    "disabled": 80956,
     "resolve_failed": 276,
-    "ok": 3052,
+    "ok": 3012,
     "no_stream": 37
   }
 }
