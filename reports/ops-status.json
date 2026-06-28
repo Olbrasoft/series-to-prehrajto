@@ -2,24 +2,56 @@
   "counts": {
     "backlog_episodes": 183178,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 10189,
+    "uploaded_episodes": 10191,
     "prepared_source_episodes": 18455,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 93698,
     "language_queue_sources": 2644,
-    "language_audited_sources": 86636,
-    "language_whisper_attempted_sources": 3345,
-    "language_pending_whisper_sources": 2624
+    "language_audited_sources": 86904,
+    "language_whisper_attempted_sources": 3365,
+    "language_pending_whisper_sources": 2604
   },
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-06-28T19:19:57Z",
+      "databaseId": 28333200460,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-28T19:09:05Z",
+      "databaseId": 28332915350,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-28T19:05:48Z",
+      "databaseId": 28332832552,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-28T18:56:52Z",
+      "databaseId": 28332591985,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-sources"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-06-28T18:55:57Z",
       "databaseId": 28332567905,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-status"
     },
     {
@@ -55,11 +87,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-06-28T18:46:48Z",
       "databaseId": 28332329568,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -95,11 +127,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-06-28T18:44:15Z",
       "databaseId": 28332260383,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "sync"
     },
     {
@@ -141,38 +173,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-28T18:34:38Z",
-      "databaseId": 28332001186,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-06-28T18:34:34Z",
-      "databaseId": 28331999827,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-28T18:32:25Z",
-      "databaseId": 28331943693,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-28T18:28:43Z",
-      "databaseId": 28331843465,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
     }
   ],
   "gaps": {
@@ -28900,6 +28900,16 @@
         "episode_id": 45825,
         "display_name": "Chuck S02E14 - Chuck a nejlepší přítel CZ Dabing",
         "video_id": 26899132
+      },
+      {
+        "episode_id": 36822,
+        "display_name": "Sběratelé kostí S04E14 - Hrobník znovu na scéně CZ Dabing",
+        "video_id": 26909661
+      },
+      {
+        "episode_id": 36824,
+        "display_name": "Sběratelé kostí S04E16 - Kost, která pěnila CZ Dabing",
+        "video_id": 26909810
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -68437,6 +68447,16 @@
         "episode_id": 45825,
         "display_name": "Chuck S02E14 - Chuck a nejlepší přítel CZ Dabing",
         "video_id": 26899132
+      },
+      {
+        "episode_id": 36822,
+        "display_name": "Sběratelé kostí S04E14 - Hrobník znovu na scéně CZ Dabing",
+        "video_id": 26909661
+      },
+      {
+        "episode_id": 36824,
+        "display_name": "Sběratelé kostí S04E16 - Kost, která pěnila CZ Dabing",
+        "video_id": 26909810
       }
     ],
     "prepared_not_upload_ready": [
@@ -68751,9 +68771,9 @@
     "PROBABLE_CZ_AUDIO": 10989
   },
   "language_whisper_statuses": {
-    "disabled": 83291,
+    "disabled": 83539,
     "resolve_failed": 276,
-    "ok": 3032,
+    "ok": 3052,
     "no_stream": 37
   }
 }
