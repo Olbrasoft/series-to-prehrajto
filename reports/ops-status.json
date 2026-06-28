@@ -2,24 +2,80 @@
   "counts": {
     "backlog_episodes": 184043,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 9479,
-    "prepared_source_episodes": 17395,
+    "uploaded_episodes": 9509,
+    "prepared_source_episodes": 17405,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 89045,
     "language_queue_sources": 2644,
-    "language_audited_sources": 82563,
-    "language_whisper_attempted_sources": 3421,
+    "language_audited_sources": 82569,
+    "language_whisper_attempted_sources": 3325,
     "language_pending_whisper_sources": 2644
   },
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-06-28T01:18:34Z",
+      "databaseId": 28307402712,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-28T01:18:20Z",
+      "databaseId": 28307398065,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-28T01:18:18Z",
+      "databaseId": 28307397351,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "refresh-backlog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-28T01:17:59Z",
+      "databaseId": 28307390389,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-28T01:17:36Z",
+      "databaseId": 28307383365,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-28T01:10:10Z",
+      "databaseId": 28307234013,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-28T00:59:17Z",
+      "databaseId": 28307008092,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-06-28T00:55:52Z",
       "databaseId": 28306939992,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -31,19 +87,19 @@
       "workflowName": "ops-status"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-06-28T00:51:26Z",
       "databaseId": 28306849744,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-06-28T00:51:23Z",
       "databaseId": 28306848955,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -111,68 +167,12 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-06-28T00:08:31Z",
       "databaseId": 28305946373,
       "headBranch": "main",
-      "status": "pending",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-28T00:07:00Z",
-      "databaseId": 28305913638,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-28T00:04:09Z",
-      "databaseId": 28305849141,
-      "headBranch": "main",
       "status": "completed",
       "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-27T23:56:43Z",
-      "databaseId": 28305674832,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-27T23:56:31Z",
-      "databaseId": 28305670960,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-27T23:55:59Z",
-      "databaseId": 28305660490,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-06-27T23:55:59Z",
-      "databaseId": 28305660486,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-27T23:55:56Z",
-      "databaseId": 28305659490,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
     }
   ],
   "gaps": {
@@ -25350,6 +25350,156 @@
         "episode_id": 18217,
         "display_name": "Jack Ryan S03E03 - Kdo běhá s vlky CZ Dabing",
         "video_id": 26874350
+      },
+      {
+        "episode_id": 50076,
+        "display_name": "Panství Downton S04E04 - 4. epizoda CZ Dabing",
+        "video_id": 26874422
+      },
+      {
+        "episode_id": 50078,
+        "display_name": "Panství Downton S04E06 - 6. epizoda CZ Dabing",
+        "video_id": 26874445
+      },
+      {
+        "episode_id": 50080,
+        "display_name": "Panství Downton S04E08 - 8. epizoda CZ Dabing",
+        "video_id": 26874472
+      },
+      {
+        "episode_id": 50082,
+        "display_name": "Panství Downton S05E02 - 2. epizoda CZ Dabing",
+        "video_id": 26874513
+      },
+      {
+        "episode_id": 50084,
+        "display_name": "Panství Downton S05E04 - 4. epizoda CZ Dabing",
+        "video_id": 26874546
+      },
+      {
+        "episode_id": 50086,
+        "display_name": "Panství Downton S05E06 - 6. epizoda CZ Dabing",
+        "video_id": 26874584
+      },
+      {
+        "episode_id": 50088,
+        "display_name": "Panství Downton S05E08 - 8. epizoda CZ Dabing",
+        "video_id": 26874626
+      },
+      {
+        "episode_id": 50058,
+        "display_name": "Panství Downton S06E02 - 2. epizoda CZ Dabing",
+        "video_id": 26874669
+      },
+      {
+        "episode_id": 50060,
+        "display_name": "Panství Downton S06E04 - 4. epizoda CZ Dabing",
+        "video_id": 26874701
+      },
+      {
+        "episode_id": 50062,
+        "display_name": "Panství Downton S06E06 - 6. epizoda CZ Dabing",
+        "video_id": 26874727
+      },
+      {
+        "episode_id": 18215,
+        "display_name": "Jack Ryan S03E05 - Druzja i Vragi CZ Dabing",
+        "video_id": 26874408
+      },
+      {
+        "episode_id": 18213,
+        "display_name": "Jack Ryan S03E07 - Moskevská pravidla CZ Dabing",
+        "video_id": 26874420
+      },
+      {
+        "episode_id": 17569,
+        "display_name": "Jack Ryan S04E01 - Triáž CZ Dabing",
+        "video_id": 26874429
+      },
+      {
+        "episode_id": 17571,
+        "display_name": "Jack Ryan S04E03 - Oběti CZ Dabing",
+        "video_id": 26874436
+      },
+      {
+        "episode_id": 17573,
+        "display_name": "Jack Ryan S04E05 - Wukong CZ Dabing",
+        "video_id": 26874455
+      },
+      {
+        "episode_id": 42293,
+        "display_name": "Expanze S01E01 - Dulcinea CZ Dabing",
+        "video_id": 26874474
+      },
+      {
+        "episode_id": 42295,
+        "display_name": "Expanze S01E03 - Nezapomeňte na Cant CZ Dabing",
+        "video_id": 26874495
+      },
+      {
+        "episode_id": 42297,
+        "display_name": "Expanze S01E05 - Zpět k Řezníkovi CZ Dabing",
+        "video_id": 26874514
+      },
+      {
+        "episode_id": 42299,
+        "display_name": "Expanze S01E07 - Větrné mlýny CZ Dabing",
+        "video_id": 26874531
+      },
+      {
+        "episode_id": 42301,
+        "display_name": "Expanze S01E09 - Kritická hmota CZ Dabing",
+        "video_id": 26874557
+      },
+      {
+        "episode_id": 42303,
+        "display_name": "Expanze S02E01 - Sejf CZ Dabing",
+        "video_id": 26874598
+      },
+      {
+        "episode_id": 42305,
+        "display_name": "Expanze S02E03 - Statické CZ Dabing",
+        "video_id": 26874619
+      },
+      {
+        "episode_id": 42315,
+        "display_name": "Expanze S02E05 - Domov CZ Dabing",
+        "video_id": 26874627
+      },
+      {
+        "episode_id": 42307,
+        "display_name": "Expanze S02E08 - Pohřební hranice CZ Dabing",
+        "video_id": 26874643
+      },
+      {
+        "episode_id": 42309,
+        "display_name": "Expanze S02E10 - Kaskáda CZ Dabing",
+        "video_id": 26874658
+      },
+      {
+        "episode_id": 42317,
+        "display_name": "Expanze S02E12 - Monstrum a raketa CZ Dabing",
+        "video_id": 26874675
+      },
+      {
+        "episode_id": 42319,
+        "display_name": "Expanze S03E01 - Bojovat nebo utéct CZ Dabing",
+        "video_id": 26874689
+      },
+      {
+        "episode_id": 42321,
+        "display_name": "Expanze S03E03 - Zaručené zničení CZ Dabing",
+        "video_id": 26874710
+      },
+      {
+        "episode_id": 42311,
+        "display_name": "Expanze S03E04 - Nabít CZ Dabing",
+        "video_id": 26874726
+      },
+      {
+        "episode_id": 42323,
+        "display_name": "Expanze S03E06 - Upálení CZ Dabing",
+        "video_id": 26874734
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -61337,6 +61487,156 @@
         "episode_id": 18217,
         "display_name": "Jack Ryan S03E03 - Kdo běhá s vlky CZ Dabing",
         "video_id": 26874350
+      },
+      {
+        "episode_id": 50076,
+        "display_name": "Panství Downton S04E04 - 4. epizoda CZ Dabing",
+        "video_id": 26874422
+      },
+      {
+        "episode_id": 50078,
+        "display_name": "Panství Downton S04E06 - 6. epizoda CZ Dabing",
+        "video_id": 26874445
+      },
+      {
+        "episode_id": 50080,
+        "display_name": "Panství Downton S04E08 - 8. epizoda CZ Dabing",
+        "video_id": 26874472
+      },
+      {
+        "episode_id": 50082,
+        "display_name": "Panství Downton S05E02 - 2. epizoda CZ Dabing",
+        "video_id": 26874513
+      },
+      {
+        "episode_id": 50084,
+        "display_name": "Panství Downton S05E04 - 4. epizoda CZ Dabing",
+        "video_id": 26874546
+      },
+      {
+        "episode_id": 50086,
+        "display_name": "Panství Downton S05E06 - 6. epizoda CZ Dabing",
+        "video_id": 26874584
+      },
+      {
+        "episode_id": 50088,
+        "display_name": "Panství Downton S05E08 - 8. epizoda CZ Dabing",
+        "video_id": 26874626
+      },
+      {
+        "episode_id": 50058,
+        "display_name": "Panství Downton S06E02 - 2. epizoda CZ Dabing",
+        "video_id": 26874669
+      },
+      {
+        "episode_id": 50060,
+        "display_name": "Panství Downton S06E04 - 4. epizoda CZ Dabing",
+        "video_id": 26874701
+      },
+      {
+        "episode_id": 50062,
+        "display_name": "Panství Downton S06E06 - 6. epizoda CZ Dabing",
+        "video_id": 26874727
+      },
+      {
+        "episode_id": 18215,
+        "display_name": "Jack Ryan S03E05 - Druzja i Vragi CZ Dabing",
+        "video_id": 26874408
+      },
+      {
+        "episode_id": 18213,
+        "display_name": "Jack Ryan S03E07 - Moskevská pravidla CZ Dabing",
+        "video_id": 26874420
+      },
+      {
+        "episode_id": 17569,
+        "display_name": "Jack Ryan S04E01 - Triáž CZ Dabing",
+        "video_id": 26874429
+      },
+      {
+        "episode_id": 17571,
+        "display_name": "Jack Ryan S04E03 - Oběti CZ Dabing",
+        "video_id": 26874436
+      },
+      {
+        "episode_id": 17573,
+        "display_name": "Jack Ryan S04E05 - Wukong CZ Dabing",
+        "video_id": 26874455
+      },
+      {
+        "episode_id": 42293,
+        "display_name": "Expanze S01E01 - Dulcinea CZ Dabing",
+        "video_id": 26874474
+      },
+      {
+        "episode_id": 42295,
+        "display_name": "Expanze S01E03 - Nezapomeňte na Cant CZ Dabing",
+        "video_id": 26874495
+      },
+      {
+        "episode_id": 42297,
+        "display_name": "Expanze S01E05 - Zpět k Řezníkovi CZ Dabing",
+        "video_id": 26874514
+      },
+      {
+        "episode_id": 42299,
+        "display_name": "Expanze S01E07 - Větrné mlýny CZ Dabing",
+        "video_id": 26874531
+      },
+      {
+        "episode_id": 42301,
+        "display_name": "Expanze S01E09 - Kritická hmota CZ Dabing",
+        "video_id": 26874557
+      },
+      {
+        "episode_id": 42303,
+        "display_name": "Expanze S02E01 - Sejf CZ Dabing",
+        "video_id": 26874598
+      },
+      {
+        "episode_id": 42305,
+        "display_name": "Expanze S02E03 - Statické CZ Dabing",
+        "video_id": 26874619
+      },
+      {
+        "episode_id": 42315,
+        "display_name": "Expanze S02E05 - Domov CZ Dabing",
+        "video_id": 26874627
+      },
+      {
+        "episode_id": 42307,
+        "display_name": "Expanze S02E08 - Pohřební hranice CZ Dabing",
+        "video_id": 26874643
+      },
+      {
+        "episode_id": 42309,
+        "display_name": "Expanze S02E10 - Kaskáda CZ Dabing",
+        "video_id": 26874658
+      },
+      {
+        "episode_id": 42317,
+        "display_name": "Expanze S02E12 - Monstrum a raketa CZ Dabing",
+        "video_id": 26874675
+      },
+      {
+        "episode_id": 42319,
+        "display_name": "Expanze S03E01 - Bojovat nebo utéct CZ Dabing",
+        "video_id": 26874689
+      },
+      {
+        "episode_id": 42321,
+        "display_name": "Expanze S03E03 - Zaručené zničení CZ Dabing",
+        "video_id": 26874710
+      },
+      {
+        "episode_id": 42311,
+        "display_name": "Expanze S03E04 - Nabít CZ Dabing",
+        "video_id": 26874726
+      },
+      {
+        "episode_id": 42323,
+        "display_name": "Expanze S03E06 - Upálení CZ Dabing",
+        "video_id": 26874734
       }
     ],
     "prepared_not_upload_ready": [
@@ -61651,9 +61951,9 @@
     "PROBABLE_CZ_AUDIO": 7049
   },
   "language_whisper_statuses": {
-    "disabled": 79142,
+    "disabled": 79244,
     "resolve_failed": 276,
-    "ok": 3108,
+    "ok": 3012,
     "no_stream": 37
   }
 }
