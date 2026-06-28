@@ -2,32 +2,48 @@
   "counts": {
     "backlog_episodes": 183199,
     "manifest_upload_ready_episodes": 982,
-    "uploaded_episodes": 10182,
+    "uploaded_episodes": 10183,
     "prepared_source_episodes": 18135,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 92726,
     "language_queue_sources": 2644,
-    "language_audited_sources": 85932,
-    "language_whisper_attempted_sources": 3365,
-    "language_pending_whisper_sources": 2604
+    "language_audited_sources": 85912,
+    "language_whisper_attempted_sources": 3345,
+    "language_pending_whisper_sources": 2624
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-06-28T16:40:33Z",
-      "databaseId": 28328967991,
+      "createdAt": "2026-06-28T16:47:54Z",
+      "databaseId": 28329166701,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-06-28T16:41:38Z",
+      "databaseId": 28328995845,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-28T16:40:33Z",
+      "databaseId": 28328967991,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-06-28T16:35:08Z",
       "databaseId": 28328823129,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -39,11 +55,11 @@
       "workflowName": "prepare-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-06-28T16:34:51Z",
       "databaseId": 28328814499,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "update-descriptions"
     },
     {
@@ -63,11 +79,11 @@
       "workflowName": "ops-status"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-06-28T16:11:53Z",
       "databaseId": 28328196906,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "sync"
     },
     {
@@ -157,22 +173,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-06-28T15:42:51Z",
-      "databaseId": 28327406787,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-28T15:38:47Z",
-      "databaseId": 28327295749,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
     }
   ],
   "gaps": {
@@ -28820,6 +28820,11 @@
         "episode_id": 69982,
         "display_name": "Sobík S01E07 - 7. díl CZ Dabing",
         "video_id": 26899386
+      },
+      {
+        "episode_id": 35090,
+        "display_name": "Sběratelé kostí S02E06 - Dívka v pokoji 2103 CZ Dabing",
+        "video_id": 26900936
       },
       {
         "episode_id": 45757,
@@ -68324,6 +68329,11 @@
         "video_id": 26899386
       },
       {
+        "episode_id": 35090,
+        "display_name": "Sběratelé kostí S02E06 - Dívka v pokoji 2103 CZ Dabing",
+        "video_id": 26900936
+      },
+      {
         "episode_id": 45757,
         "display_name": "Chuck S01E04 - Chuck a chlupáč CZ Dabing",
         "video_id": 26897053
@@ -68683,7 +68693,7 @@
   "language_whisper_statuses": {
     "disabled": 82567,
     "resolve_failed": 276,
-    "ok": 3052,
+    "ok": 3032,
     "no_stream": 37
   }
 }
