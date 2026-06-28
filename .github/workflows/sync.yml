@@ -127,7 +127,7 @@ jobs:
     name: Queue next upload and preparation
     runs-on: ubuntu-latest
     needs: upload-batch
-    if: always() && (github.event_name == 'schedule' || inputs.continue_uploads != 'false')
+    if: always() && needs.upload-batch.result != 'cancelled' && (github.event_name == 'schedule' || inputs.continue_uploads != 'false')
     permissions:
       contents: read
       actions: write
