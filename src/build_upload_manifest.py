@@ -384,6 +384,10 @@ def build_manifest(
         if fsize is not None and fsize < MIN_UPLOAD_FILE_SIZE:
             stats["selected_source_undersize"] += 1
             continue
+        resolvable = bool(((selected.get("signals") or {}).get("provider_probe") or {}).get("streams"))
+        if fsize is None and not resolvable:
+            stats["selected_source_no_size_info"] += 1
+            continue
         candidates = upload_candidates(episode, plan, burned)
         if failed_availability:
             before = len(candidates)

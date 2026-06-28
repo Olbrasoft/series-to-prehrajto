@@ -206,6 +206,10 @@ def try_candidate(episode: dict, candidate: dict, session, state: dict, *, allow
         log(f"  oversize: {expected} B > {MAX_FILE_SIZE} B")
         record_failure(state, episode, candidate, f"oversize: {expected} B", permanent=True)
         return False
+    if expected is not None and expected < MIN_UPLOAD_FILE_SIZE:
+        log(f"  undersize head: {expected} B < {MIN_UPLOAD_FILE_SIZE} B")
+        record_failure(state, episode, candidate, f"undersize: {expected} B (head)", permanent=True)
+        return False
 
     tmp_path = TMP_DIR / f"{safe_filename(episode['display_name'])}.mp4"
     t = time.monotonic()
@@ -222,7 +226,7 @@ def try_candidate(episode: dict, candidate: dict, session, state: dict, *, allow
     if size < MIN_UPLOAD_FILE_SIZE:
         log(
             f"  undersize: {size} B < {MIN_UPLOAD_FILE_SIZE} B; "
-            "trying a higher-quality candidate"
+            "skipping"
         )
         record_failure(
             state,
@@ -297,10 +301,14 @@ def process_episode(episode: dict, session, state: dict, *, allow_subtitles: boo
     else:
         description = episode.get("description") or ""
         episode["description_source"] = "backlog_fallback"
-    for candidate in episode["candidates"]:
-        if try_candidate(episode, candidate, session, state, allow_subtitles=allow_subtitles, description=description):
-            return True
-    log(f"episode episode_id={episode['episode_id']} exhausted")
+    candidates = episode.get("candidates") or []
+    if not candidates:
+        log(f"episode episode_id={episode['episode_id']} SKIP no candidates")
+        return False
+    candidate = candidates[0]
+    if try_candidate(episode, candidate, session, state, allow_subtitles=allow_subtitles, description=description):
+        return True
+    log(f"episode episode_id={episode['episode_id']} exhausted (single candidate)")
     return False
 
 
