@@ -170,7 +170,20 @@ def display_name_from_plan(plan: dict) -> str:
     subtitle = (plan.get("episode_name") or "").strip()
     if subtitle and subtitle.lower() != str(plan["series_title"]).lower():
         base = f"{base} - {subtitle}"
-    return f"{base} CZ Dabing"
+    suffix = "CZ Titulky" if plan.get("needs_subtitles_after_upload") or plan.get("upload_kind") == "subtitles" else "CZ Dabing"
+    return f"{base} {suffix}"
+
+
+def lang_class_from_verdict(verdict: str | None) -> str | None:
+    if verdict in {"CZ_AUDIO", "PROBABLE_CZ_AUDIO"}:
+        return "CZ_DUB"
+    if verdict == "CZ_SUBTITLES_ONLY":
+        return "CZ_SUB"
+    return None
+
+
+def audio_lang_from_verdict(verdict: str | None) -> str | None:
+    return "cs" if verdict == "CZ_AUDIO" else None
 
 
 def episode_from_prepared_plan(plan: dict) -> dict:
@@ -185,9 +198,8 @@ def episode_from_prepared_plan(plan: dict) -> dict:
         "resolution_score": selected.get("resolution_score"),
         "filesize_bytes": selected.get("filesize_bytes"),
         "view_count": selected.get("view_count"),
-        "lang_class": selected.get("db_lang_class")
-        or ("CZ_DUB" if selected.get("verdict") in {"CZ_AUDIO", "PROBABLE_CZ_AUDIO"} else None),
-        "audio_lang": selected.get("db_audio_lang") or ("cs" if selected.get("verdict") == "CZ_AUDIO" else None),
+        "lang_class": selected.get("db_lang_class") or lang_class_from_verdict(selected.get("verdict")),
+        "audio_lang": selected.get("db_audio_lang") or audio_lang_from_verdict(selected.get("verdict")),
         "source_origin": selected.get("source_origin") or "prepared_source_plan",
         "db_source_exists": bool(selected.get("db_source_exists")),
         "quality_tier": selected.get("quality_tier"),
@@ -238,7 +250,7 @@ def merge_backlog_with_prepared(backlog: list[dict], prepared: dict[int, dict]) 
 
 def upload_candidate_ids(plan: dict, burned: set[int]) -> list[int]:
     def passes(source):
-        if source.get("verdict") not in {"CZ_AUDIO", "PROBABLE_CZ_AUDIO"}:
+        if source.get("verdict") not in {"CZ_AUDIO", "PROBABLE_CZ_AUDIO", "CZ_SUBTITLES_ONLY"}:
             return False
         sid = int(source["source_id"])
         if sid in burned:
@@ -316,10 +328,8 @@ def upload_candidates(episode: dict, plan: dict, burned: set[int]) -> list[dict]
                 "resolution_score": source.get("resolution_score"),
                 "filesize_bytes": source.get("filesize_bytes"),
                 "view_count": source.get("view_count"),
-                "lang_class": source.get("db_lang_class")
-                or ("CZ_DUB" if source.get("verdict") in {"CZ_AUDIO", "PROBABLE_CZ_AUDIO"} else None),
-                "audio_lang": source.get("db_audio_lang")
-                or ("cs" if source.get("verdict") == "CZ_AUDIO" else None),
+                "lang_class": source.get("db_lang_class") or lang_class_from_verdict(source.get("verdict")),
+                "audio_lang": source.get("db_audio_lang") or audio_lang_from_verdict(source.get("verdict")),
                 "source_origin": source.get("source_origin") or "production_db",
                 "db_source_exists": bool(source.get("db_source_exists")),
                 "quality_tier": source.get("quality_tier"),
@@ -432,6 +442,8 @@ def build_manifest(
                     "external_id": candidate.get("external_id"),
                     "lang_class": candidate.get("lang_class"),
                     "resolution_hint": candidate.get("resolution_hint"),
+                    "upload_kind": plan.get("upload_kind") or ("subtitles" if selected.get("verdict") == "CZ_SUBTITLES_ONLY" else "audio"),
+                    "needs_subtitles_after_upload": bool(plan.get("needs_subtitles_after_upload")),
                 },
                 "source_plan": {
                     "prepared_at": plan.get("prepared_at"),
@@ -446,6 +458,8 @@ def build_manifest(
                     "verification_status": selected.get("verification_status"),
                     "cz_audio_verified": selected.get("cz_audio_verified"),
                     "resolvable": bool(((selected.get("signals") or {}).get("provider_probe") or {}).get("streams")),
+                    "upload_kind": plan.get("upload_kind") or ("subtitles" if selected.get("verdict") == "CZ_SUBTITLES_ONLY" else "audio"),
+                    "needs_subtitles_after_upload": bool(plan.get("needs_subtitles_after_upload")),
                 },
                 "language_audit": {
                     "audited_at": audit.get("audited_at"),

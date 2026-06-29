@@ -85,10 +85,29 @@ vybrat jen kandidaty, kteri maji alespon 300 MB a podle nazvu vypadaji jako
 cesky dabing nebo cesky zvuk. Teprve takovy kandidat se probeuje pres detail a
 jazykovou kontrolu.
 
+Search request musi vypadat jako bezny browser request. Minimalne se maji
+posilat realisticke hlavicky `User-Agent`, `Accept`, `Accept-Language`,
+`Accept-Encoding`, `Referer`, `Upgrade-Insecure-Requests` a `Sec-Fetch-*`.
+Prilis strohe HTTP hlavicky mohou lokalne vracet 429, i kdyz stejna URL v
+prohlizeci normalne vraci vysledky.
+
 Pokud vyhledavani vrati vice stranek vysledku, nejdriv se zpracuje pouze prvni
 stranka. Druha stranka se nacita az ve chvili, kdy na prvni strance neni zadny
 vhodny kandidat. Cilem je setrit requesty na Prehraj.to a nevytvaret zbytecnou
 zatez.
+
+Pokud neni nalezen vhodny zdroj s ceskym zvukem, smi se jako fallback vybrat
+zdroj s ceskymi titulky, pokud ma spravnou epizodu a velikost alespon 300 MB.
+Takovy upload musi mit v nazvu jasne uvedeno `CZ Titulky`, ne `CZ Dabing`.
+Soucasne se musi zapsat follow-up zaznam do fronty pro pozdejsi nastaveni
+titulku, protoze titulky lze k videu doplnit az po zpracovani nahraneho videa
+na Prehraj.to.
+
+Fronta epizod, ktere potrebuji dodatecne nastavit titulky:
+
+```text
+plans/subtitle-followup-queue.jsonl
+```
 
 Z vysledku hledani se ulozi vsechny kandidati, kteri vypadaji jako stejna
 epizoda. Shoda se overuje podle:

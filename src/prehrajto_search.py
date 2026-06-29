@@ -10,11 +10,38 @@ import re
 import time
 import urllib.parse
 from dataclasses import dataclass
+from typing import Callable
 
 import requests
 
+BASE_URL = "https://prehraj.to"
 SEARCH_URL = "https://prehraj.to/hledej/{query}"
 USER_AGENT = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/145 Safari/537.36"
+BROWSER_HEADERS = {
+    "User-Agent": (
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
+        "(KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0"
+    ),
+    "Accept": (
+        "text/html,application/xhtml+xml,application/xml;q=0.9,"
+        "image/avif,image/webp,image/apng,*/*;q=0.8,"
+        "application/signed-exchange;v=b3;q=0.7"
+    ),
+    "Accept-Language": "cs-CZ,cs;q=0.9,en;q=0.8,en-US;q=0.7",
+    "Accept-Encoding": "gzip, deflate, br, zstd",
+    "Cache-Control": "no-cache",
+    "Pragma": "no-cache",
+    "Priority": "u=0, i",
+    "Referer": "https://prehraj.to/",
+    "Sec-Ch-Ua": '"Microsoft Edge";v="145", "Chromium";v="145", "Not A(Brand";v="24"',
+    "Sec-Ch-Ua-Mobile": "?0",
+    "Sec-Ch-Ua-Platform": '"Linux"',
+    "Sec-Fetch-Dest": "document",
+    "Sec-Fetch-Mode": "navigate",
+    "Sec-Fetch-Site": "same-origin",
+    "Sec-Fetch-User": "?1",
+    "Upgrade-Insecure-Requests": "1",
+}
 _last_search_at = 0.0
 
 _ITEM_RE = re.compile(
@@ -98,6 +125,36 @@ def parse_search_html(page_html: str) -> list[SearchResult]:
     return rows
 
 
+def next_page_url(page_html: str, current_url: str) -> str | None:
+    match = re.search(
+        r'<div[^>]+id="snippet-videoListing-paginatorWrapper"[^>]*>(?P<body>.*?)</div>',
+        page_html,
+        re.IGNORECASE | re.DOTALL,
+    )
+    if not match:
+        return None
+    body = match.group("body")
+    links: list[tuple[str, str, str]] = []
+    for link in re.finditer(r'<a\b(?P<attrs>[^>]*)href="(?P<href>[^"]+)"[^>]*>(?P<text>.*?)</a>', body, re.IGNORECASE | re.DOTALL):
+        attrs = link.group("attrs")
+        href = html.unescape(link.group("href"))
+        text = re.sub(r"<.*?>", "", link.group("text")).strip()
+        links.append((attrs, text, href))
+    for attrs, _text, href in links:
+        if re.search(r'\brel=["\']?next\b', attrs, re.IGNORECASE):
+            return urllib.parse.urljoin(BASE_URL, href)
+    for _attrs, text, href in links:
+        if text in {"2", "›", "»", "Další"}:
+            return urllib.parse.urljoin(BASE_URL, href)
+    current = urllib.parse.urlparse(current_url)
+    for _attrs, _text, href in links:
+        absolute = urllib.parse.urljoin(BASE_URL, href)
+        parsed = urllib.parse.urlparse(absolute)
+        if parsed.path == current.path and absolute != current_url:
+            return absolute
+    return None
+
+
 def _split_env_list(name: str) -> list[str]:
     return [value.strip() for value in os.environ.get(name, "").split(",") if value.strip()]
 
@@ -141,6 +198,33 @@ def search(
     retries: int = 3,
     session: requests.Session | None = None,
 ) -> list[SearchResult]:
+    pages = search_pages(
+        query,
+        timeout=timeout,
+        min_interval=min_interval,
+        retries=retries,
+        session=session,
+        max_pages=1,
+    )
+    return pages[0] if pages else []
+
+
+def search_pages(
+    query: str,
+    *,
+    timeout: float = 30.0,
+    min_interval: float = 3.0,
+    retries: int = 3,
+    session: requests.Session | None = None,
+    max_pages: int = 2,
+    should_fetch_next: Callable[[list[SearchResult]], bool] | None = None,
+) -> list[list[SearchResult]]:
+    """Fetch search results page by page.
+
+    Callers can inspect page 1 first and request page 2 only when the first
+    page has no usable candidate. The function itself never fetches more than
+    max_pages.
+    """
     global _last_search_at
     sess = session or requests.Session()
     min_interval = max(min_interval, float(os.environ.get("PREHRAJTO_SEARCH_MIN_INTERVAL", "0") or 0))
@@ -153,35 +237,48 @@ def search(
         )
     else:
         fetch_urls = [("direct", search_url)]
-    response: requests.Response | None = None
-    for attempt in range(max(retries, 1)):
-        for _fetch_label, fetch_url in fetch_urls:
-            wait = min_interval - (time.monotonic() - _last_search_at)
-            if wait > 0:
-                time.sleep(wait)
+    pages: list[list[SearchResult]] = []
+    next_url: str | None = search_url
+    for page_index in range(max(max_pages, 1)):
+        if not next_url:
+            break
+        page_fetch_urls = fetch_urls if page_index == 0 else (_proxy_fetch_urls(next_url) or [("direct", next_url)])
+        response: requests.Response | None = None
+        for attempt in range(max(retries, 1)):
+            for _fetch_label, fetch_url in page_fetch_urls:
+                wait = min_interval - (time.monotonic() - _last_search_at)
+                if wait > 0:
+                    time.sleep(wait)
+                try:
+                    response = sess.get(
+                        fetch_url,
+                        timeout=timeout,
+                        headers=BROWSER_HEADERS,
+                    )
+                finally:
+                    _last_search_at = time.monotonic()
+                if response.ok:
+                    results = parse_search_html(response.text)
+                    pages.append(results)
+                    candidate_next_url = next_page_url(response.text, response.url)
+                    next_url = (
+                        candidate_next_url
+                        if candidate_next_url and (should_fetch_next is None or should_fetch_next(results))
+                        else None
+                    )
+                    break
+                if response.status_code != 429 or attempt + 1 >= retries:
+                    continue
+            if response is not None and response.ok:
+                break
+            retry_after = response.headers.get("Retry-After") if response is not None else None
             try:
-                response = sess.get(
-                    fetch_url,
-                    timeout=timeout,
-                    headers={
-                        "User-Agent": USER_AGENT,
-                        "Accept": "text/html,application/xhtml+xml",
-                        "Accept-Language": "cs,en;q=0.8",
-                        "Accept-Encoding": "identity",
-                    },
-                )
-            finally:
-                _last_search_at = time.monotonic()
-            if response.ok:
-                return parse_search_html(response.text)
-            if response.status_code != 429 or attempt + 1 >= retries:
-                continue
-        retry_after = response.headers.get("Retry-After")
-        try:
-            retry_seconds = float(retry_after) if retry_after else 0.0
-        except ValueError:
-            retry_seconds = 0.0
-        time.sleep(max(retry_seconds, 10.0 * (attempt + 1)))
-    if response is not None:
-        response.raise_for_status()
-    raise RuntimeError(f"Search failed without a response for {query!r}")
+                retry_seconds = float(retry_after) if retry_after else 0.0
+            except ValueError:
+                retry_seconds = 0.0
+            time.sleep(max(retry_seconds, 10.0 * (attempt + 1)))
+        else:
+            if response is not None:
+                response.raise_for_status()
+            raise RuntimeError(f"Search failed without a response for {query!r}")
+    return pages

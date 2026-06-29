@@ -23,7 +23,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from audit_language_sources import audit_one, write_latest_index  # noqa: E402
 from language_checks import metadata_language_hint, title_language_hint  # noqa: E402
-from prehrajto_search import search as search_prehrajto  # noqa: E402
+from prehrajto_search import SearchResult, search_pages as search_prehrajto_pages  # noqa: E402
 from source_quality import source_quality_score, source_quality_tier  # noqa: E402
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
@@ -42,6 +42,18 @@ def source_has_cz_audio_hint(source: dict) -> bool:
         "cz_audio_metadata",
         "cz_audio_lang_class",
         "cz_audio_title",
+    }
+
+
+def source_has_cz_subtitle_hint(source: dict) -> bool:
+    normalized = {
+        **source,
+        "lang_class": source.get("lang_class") or source.get("db_lang_class"),
+        "audio_lang": source.get("audio_lang") or source.get("db_audio_lang"),
+    }
+    return (metadata_language_hint(normalized) or title_language_hint(source.get("source_title") or source.get("title"))) in {
+        "cz_subtitle_lang_class",
+        "cz_subtitle_title",
     }
 
 
@@ -111,6 +123,51 @@ def write_compacted_prepared(path: Path, new_rows: list[dict]) -> None:
         ),
     )
     write_jsonl(path, rows)
+
+
+def update_subtitle_followup_queue(path: Path, prepared_rows: list[dict]) -> None:
+    latest: dict[int, dict] = {
+        int(row["episode_id"]): row
+        for row in load_jsonl(path)
+        if row.get("episode_id") is not None
+    }
+    for row in prepared_rows:
+        if row.get("episode_id") is None:
+            continue
+        episode_id = int(row["episode_id"])
+        if not row.get("needs_subtitles_after_upload"):
+            latest.pop(episode_id, None)
+            continue
+        selected = row.get("selected_source") or {}
+        latest[episode_id] = {
+            "created_at": row.get("prepared_at"),
+            "episode_id": episode_id,
+            "series_id": int(row["series_id"]),
+            "series_slug": row.get("series_slug"),
+            "series_title": row.get("series_title"),
+            "season": int(row["season"]),
+            "episode": int(row["episode"]),
+            "episode_code": episode_code(row),
+            "episode_name": row.get("episode_name"),
+            "upload_display_suffix": "CZ Titulky",
+            "source_id": selected.get("source_id"),
+            "source_url": selected.get("source_url"),
+            "source_title": selected.get("source_title"),
+            "subtitle_status": "needs_subtitle_setup_after_prehrajto_processing",
+            "reason": "selected source has Czech subtitles but no Czech audio source was found",
+        }
+    write_jsonl(
+        path,
+        sorted(
+            latest.values(),
+            key=lambda item: (
+                str(item.get("series_slug") or ""),
+                int(item.get("season") or 0),
+                int(item.get("episode") or 0),
+                int(item.get("episode_id") or 0),
+            ),
+        ),
+    )
 
 
 def burned_source_ids() -> set[int]:
@@ -310,6 +367,59 @@ def title_matches_episode(title: str, episode: dict) -> bool:
     return False
 
 
+def search_result_to_queue_item(result: SearchResult, episode: dict) -> dict:
+    return {
+        "series_id": episode["series_id"],
+        "series_slug": episode["series_slug"],
+        "series_title": episode["series_title"],
+        "series_original_title": episode.get("series_original_title"),
+        "episode_id": episode["episode_id"],
+        "season": episode["season"],
+        "episode": episode["episode"],
+        "episode_title": episode.get("episode_title"),
+        "episode_name": episode.get("episode_name"),
+        "episode_audio_langs": [],
+        "episode_subtitle_langs": [],
+        "provider": "prehrajto",
+        "source_id": result.source_id,
+        "external_id": result.external_id,
+        "source_url": result.url,
+        "source_title": result.title,
+        "duration_sec": result.duration_sec,
+        "resolution_hint": result.resolution_hint,
+        "filesize_bytes": result.filesize_bytes,
+        "view_count": None,
+        "db_lang_class": None,
+        "db_audio_lang": None,
+        "db_audio_confidence": None,
+        "db_audio_detected_by": None,
+        "source_origin": "prehrajto_search",
+        "db_source_exists": False,
+        "quality_tier": source_quality_tier(
+            {
+                "source_title": result.title,
+                "resolution_hint": result.resolution_hint,
+                "filesize_bytes": result.filesize_bytes,
+            }
+        ),
+        "metadata": {},
+    }
+
+
+def usable_search_sources(results: list[SearchResult], episode: dict) -> list[dict]:
+    sources = [
+        search_result_to_queue_item(result, episode)
+        for result in results
+        if title_matches_episode(result.title, episode)
+    ]
+    return [
+        source
+        for source in sources
+        if (source_has_cz_audio_hint(source) or source_has_cz_subtitle_hint(source))
+        and source_has_upload_quality_hint(source)
+    ]
+
+
 def live_search_candidates(episode: dict, *, limit: int, query_limit: int) -> list[dict]:
     titles = [
         title
@@ -321,62 +431,26 @@ def live_search_candidates(episode: dict, *, limit: int, query_limit: int) -> li
     queries = [
         *(f"{title} {episode_code(episode)}" for title in titles),
         *(f"{title} {int(episode['season'])}x{int(episode['episode'])}" for title in titles),
-        *(f"{title} {int(episode['season']):02d}x{int(episode['episode']):02d}" for title in titles),
     ]
     found: dict[str, dict] = {}
     for query in queries[: max(query_limit, 1)]:
         try:
-            results = search_prehrajto(query)
+            pages = search_prehrajto_pages(
+                query,
+                max_pages=2,
+                should_fetch_next=lambda results: not usable_search_sources(results, episode),
+            )
         except Exception as exc:
             print(f"Live search failed for {query!r}: {type(exc).__name__}: {exc}", file=sys.stderr)
             continue
-        for result in results:
-            if not title_matches_episode(result.title, episode):
-                continue
-            found[result.external_id] = {
-                "series_id": episode["series_id"],
-                "series_slug": episode["series_slug"],
-                "series_title": episode["series_title"],
-                "series_original_title": episode.get("series_original_title"),
-                "episode_id": episode["episode_id"],
-                "season": episode["season"],
-                "episode": episode["episode"],
-                "episode_title": episode.get("episode_title"),
-                "episode_name": episode.get("episode_name"),
-                "episode_audio_langs": [],
-                "episode_subtitle_langs": [],
-                "provider": "prehrajto",
-                "source_id": result.source_id,
-                "external_id": result.external_id,
-                "source_url": result.url,
-                "source_title": result.title,
-                "duration_sec": result.duration_sec,
-                "resolution_hint": result.resolution_hint,
-                "filesize_bytes": result.filesize_bytes,
-                "view_count": None,
-                "db_lang_class": None,
-                "db_audio_lang": None,
-                "db_audio_confidence": None,
-                "db_audio_detected_by": None,
-                "source_origin": "prehrajto_search",
-                "db_source_exists": False,
-                "quality_tier": source_quality_tier(
-                    {
-                        "source_title": result.title,
-                        "resolution_hint": result.resolution_hint,
-                        "filesize_bytes": result.filesize_bytes,
-                    }
-                ),
-                "metadata": {},
-            }
+        for page in pages:
+            for source in usable_search_sources(page, episode):
+                found[source["external_id"]] = source
+            if found:
+                break
         if found:
             break
-    candidates = [
-        source
-        for source in found.values()
-        if source_has_cz_audio_hint(source) and source_has_upload_quality_hint(source)
-    ]
-    return sorted(candidates, key=source_precheck_score, reverse=True)[:limit]
+    return sorted(found.values(), key=source_precheck_score, reverse=True)[:limit]
 
 
 def group_by_episode(rows: list[dict], backlog_path: Path) -> list[dict]:
@@ -499,10 +573,18 @@ def prepare_episode(
         for source in live_sources
         if source_has_cz_audio_hint(source) and source_has_upload_quality_hint(source)
     ]
-    fallback = [source for source in live_sources if source not in prioritized]
+    subtitle_fallback = [
+        source
+        for source in live_sources
+        if source not in prioritized
+        and source_has_cz_subtitle_hint(source)
+        and source_has_upload_quality_hint(source)
+    ]
+    fallback = [source for source in live_sources if source not in prioritized and source not in subtitle_fallback]
     prioritized.sort(key=source_precheck_score, reverse=True)
+    subtitle_fallback.sort(key=source_precheck_score, reverse=True)
     fallback.sort(key=source_precheck_score, reverse=True)
-    live_sources = prioritized + fallback
+    live_sources = prioritized + subtitle_fallback + fallback
     sources = live_sources[:source_limit] if source_limit > 0 else live_sources
     audited = []
     for source in sources:
@@ -528,6 +610,13 @@ def prepare_episode(
         )
     ]
     acceptable.sort(key=lambda result: tuple(result["score"]), reverse=True)
+    subtitle_acceptable = [
+        result
+        for result in audited
+        if result["verdict"] == "CZ_SUBTITLES_ONLY"
+        and source_has_upload_quality_hint(sources_by_id[int(result["source_id"])])
+    ]
+    subtitle_acceptable.sort(key=lambda result: tuple(result["score"]), reverse=True)
 
     selected = None
     if require_resolvable_source or use_whisper:
@@ -558,10 +647,38 @@ def prepare_episode(
         if verified_acceptable:
             verified_acceptable.sort(key=lambda result: tuple(result["score"]), reverse=True)
             selected = verified_acceptable[0]
+        if selected is None and subtitle_acceptable:
+            verified_subtitles = []
+            for preliminary in subtitle_acceptable[:MAX_RESOLVABLE_CANDIDATE_PROBES]:
+                source = sources_by_id[int(preliminary["source_id"])]
+                verified = audit_one(
+                    source,
+                    use_whisper=False,
+                    sample_seconds=sample_seconds,
+                    probe_stream=True,
+                )
+                verified["score"] = source_score(verified, source)
+                verified["resolution_score"] = probe_resolution(verified, source)
+                verified["quality_tier"] = source_quality_tier(
+                    source,
+                    resolved_resolution=verified["resolution_score"],
+                )
+                audited[audited_by_id[int(verified["source_id"])]] = verified
+                if not is_resolvable(verified):
+                    continue
+                if verified["verdict"] != "CZ_SUBTITLES_ONLY":
+                    continue
+                verified_subtitles.append(verified)
+                break
+            if verified_subtitles:
+                selected = verified_subtitles[0]
     elif acceptable:
         selected = acceptable[0]
+    elif subtitle_acceptable:
+        selected = subtitle_acceptable[0]
 
-    upload_ready = bool(selected and selected["verdict"] in {"CZ_AUDIO", "PROBABLE_CZ_AUDIO"})
+    upload_ready = bool(selected and selected["verdict"] in {"CZ_AUDIO", "PROBABLE_CZ_AUDIO", "CZ_SUBTITLES_ONLY"})
+    needs_subtitles_after_upload = bool(selected and selected["verdict"] == "CZ_SUBTITLES_ONLY")
     return {
         "prepared_at": (
             audited[-1]["audited_at"]
@@ -580,34 +697,11 @@ def prepare_episode(
         "episode_name": episode.get("episode_name"),
         "tested_source_count": len(audited),
         "upload_ready": upload_ready,
+        "upload_kind": "subtitles" if needs_subtitles_after_upload else ("audio" if selected else None),
+        "needs_subtitles_after_upload": needs_subtitles_after_upload,
         "selected_source": selected,
         "tested_sources": audited,
     }
-
-
-def diversify_episode_batch(episodes: list[dict], limit: int) -> list[dict]:
-    if limit <= 0:
-        return episodes
-    selected: list[dict] = []
-    selected_ids: set[int] = set()
-    seen_series: set[int] = set()
-    for episode in episodes:
-        series_id = int(episode["series_id"])
-        if series_id in seen_series:
-            continue
-        selected.append(episode)
-        selected_ids.add(int(episode["episode_id"]))
-        seen_series.add(series_id)
-        if len(selected) >= limit:
-            return selected
-    for episode in episodes:
-        episode_id = int(episode["episode_id"])
-        if episode_id in selected_ids:
-            continue
-        selected.append(episode)
-        if len(selected) >= limit:
-            break
-    return selected
 
 
 def main() -> int:
@@ -617,6 +711,7 @@ def main() -> int:
     ap.add_argument("--out", default="plans/prepared-episodes.jsonl")
     ap.add_argument("--audit-out", default="audits/language-audit.jsonl")
     ap.add_argument("--audit-latest-out", default="audits/language-audit-latest.jsonl")
+    ap.add_argument("--subtitle-followup-out", default="plans/subtitle-followup-queue.jsonl")
     ap.add_argument("--episode-limit", type=int, default=10)
     ap.add_argument("--source-limit-per-episode", type=int, default=12)
     ap.add_argument("--series-slug")
@@ -684,7 +779,7 @@ def main() -> int:
             int(episode["episode_id"]),
         )
     )
-    todo = diversify_episode_batch(todo, args.episode_limit)
+    todo = todo[: args.episode_limit]
 
     prepared = [
         prepare_episode(
@@ -702,6 +797,7 @@ def main() -> int:
     ]
     audit_rows = [source for episode in prepared for source in episode["tested_sources"]]
     write_compacted_prepared(Path(args.out), prepared)
+    update_subtitle_followup_queue(Path(args.subtitle_followup_out), prepared)
     append_jsonl(Path(args.audit_out), audit_rows)
     write_latest_index(Path(args.audit_out), Path(args.audit_latest_out))
 

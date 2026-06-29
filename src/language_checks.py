@@ -15,7 +15,7 @@ CZECH_AUDIO_RE = re.compile(
     re.IGNORECASE,
 )
 CZECH_SUB_RE = re.compile(
-    r"(^|[\W_])(cz\s*tit|cz titulky|cztit|ceske titulky|české titulky|cz sub|czech sub)([\W_]|$)",
+    r"(^|[\W_])(cz\s*tit|cz titulky|cztit|tit[-_\s]*cz|ceske titulky|české titulky|cz sub|czech sub)([\W_]|$)",
     re.IGNORECASE,
 )
 _WHISPER_MODEL = None
@@ -42,10 +42,10 @@ def resolution_score(value: str | None) -> int:
 def title_language_hint(title: str | None) -> str | None:
     if not title:
         return None
-    if CZECH_AUDIO_RE.search(title):
-        return "cz_audio_title"
     if CZECH_SUB_RE.search(title):
         return "cz_subtitle_title"
+    if CZECH_AUDIO_RE.search(title):
+        return "cz_audio_title"
     return None
 
 
