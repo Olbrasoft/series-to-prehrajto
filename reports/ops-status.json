@@ -1,29 +1,85 @@
 {
   "counts": {
     "backlog_episodes": 182512,
-    "manifest_upload_ready_episodes": 144,
-    "uploaded_episodes": 10956,
-    "prepared_source_episodes": 19915,
+    "manifest_upload_ready_episodes": 148,
+    "uploaded_episodes": 10979,
+    "prepared_source_episodes": 19929,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 40,
-    "language_whisper_attempted_sources": 40,
-    "language_pending_whisper_sources": 2604,
+    "language_audited_sources": 20,
+    "language_whisper_attempted_sources": 20,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 382,
-    "whisper_review_pending_sources": 338,
-    "subtitle_followup_sources": 118,
-    "subtitle_followup_pending_sources": 118
+    "whisper_review_pending_sources": 318,
+    "subtitle_followup_sources": 124,
+    "subtitle_followup_pending_sources": 124
   },
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-06-29T23:38:53Z",
+      "databaseId": 28409906850,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-29T23:34:50Z",
+      "databaseId": 28409744003,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-29T23:30:53Z",
+      "databaseId": 28409581120,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-29T23:28:29Z",
+      "databaseId": 28409483701,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-29T23:28:25Z",
+      "databaseId": 28409481060,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-29T23:27:59Z",
+      "databaseId": 28409463809,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-29T23:26:29Z",
+      "databaseId": 28409404982,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-06-29T23:24:42Z",
       "databaseId": 28409331497,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-status"
     },
     {
@@ -35,11 +91,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-06-29T23:12:25Z",
       "databaseId": 28408818597,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
@@ -75,11 +131,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-06-29T22:56:34Z",
       "databaseId": 28408148426,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-descriptions"
     },
     {
@@ -118,62 +174,6 @@
       "conclusion": "success",
       "createdAt": "2026-06-29T22:42:23Z",
       "databaseId": 28407520042,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-06-29T22:40:02Z",
-      "databaseId": 28407411995,
-      "headBranch": "main",
-      "status": "pending",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-29T22:35:50Z",
-      "databaseId": 28407220085,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-29T22:34:20Z",
-      "databaseId": 28407149832,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-29T22:31:10Z",
-      "databaseId": 28406995977,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-29T22:31:07Z",
-      "databaseId": 28406993891,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-29T22:30:44Z",
-      "databaseId": 28406976109,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-29T22:30:23Z",
-      "databaseId": 28406958572,
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-watchdog"
@@ -32709,6 +32709,121 @@
         "episode_id": 23719,
         "display_name": "Původní S05E05 - Jen ti to zlomí srdce CZ Titulky",
         "video_id": 27003865
+      },
+      {
+        "episode_id": 23721,
+        "display_name": "Původní S05E07 - Bůh zčeří vody CZ Dabing",
+        "video_id": 27003872
+      },
+      {
+        "episode_id": 23723,
+        "display_name": "Původní S05E09 - Naší lásce již mnoho nezbývá CZ Dabing",
+        "video_id": 27003879
+      },
+      {
+        "episode_id": 23725,
+        "display_name": "Původní S05E11 - Dokud nás smrt nerozdělí CZ Dabing",
+        "video_id": 27003888
+      },
+      {
+        "episode_id": 23727,
+        "display_name": "Původní S05E13 - Když svatí pochodují CZ Dabing",
+        "video_id": 27003894
+      },
+      {
+        "episode_id": 60509,
+        "display_name": "Malcolm v nesnázích S01E02 - 2. epizoda CZ Titulky",
+        "video_id": 27003901
+      },
+      {
+        "episode_id": 60511,
+        "display_name": "Malcolm v nesnázích S01E04 - 4. epizoda CZ Titulky",
+        "video_id": 27003907
+      },
+      {
+        "episode_id": 78659,
+        "display_name": "Malcolm v nesnázích S01E07 - 7. epizoda CZ Titulky",
+        "video_id": 27003914
+      },
+      {
+        "episode_id": 60513,
+        "display_name": "Malcolm v nesnázích S01E08 - 8. epizoda CZ Titulky",
+        "video_id": 27003916
+      },
+      {
+        "episode_id": 60502,
+        "display_name": "Malcolm v nesnázích S03E03 - 3. epizoda CZ Titulky",
+        "video_id": 27003918
+      },
+      {
+        "episode_id": 78676,
+        "display_name": "Malcolm v nesnázích S03E08 - 8. epizoda CZ Titulky",
+        "video_id": 27003922
+      },
+      {
+        "episode_id": 78678,
+        "display_name": "Malcolm v nesnázích S03E12 - 12. epizoda CZ Titulky",
+        "video_id": 27003931
+      },
+      {
+        "episode_id": 78680,
+        "display_name": "Malcolm v nesnázích S03E14 - 14. epizoda CZ Titulky",
+        "video_id": 27003935
+      },
+      {
+        "episode_id": 60456,
+        "display_name": "Malcolm v nesnázích S03E15 - 15. epizoda CZ Titulky",
+        "video_id": 27003938
+      },
+      {
+        "episode_id": 60534,
+        "display_name": "Malcolm v nesnázích S03E16 - 16. epizoda CZ Titulky",
+        "video_id": 27003943
+      },
+      {
+        "episode_id": 78682,
+        "display_name": "Malcolm v nesnázích S03E19 - 19. epizoda CZ Titulky",
+        "video_id": 27003948
+      },
+      {
+        "episode_id": 78684,
+        "display_name": "Malcolm v nesnázích S03E21 - 21. epizoda CZ Titulky",
+        "video_id": 27003954
+      },
+      {
+        "episode_id": 60515,
+        "display_name": "Malcolm v nesnázích S01E10 - 10. epizoda CZ Titulky",
+        "video_id": 27003919
+      },
+      {
+        "episode_id": 60517,
+        "display_name": "Malcolm v nesnázích S01E12 - 12. epizoda CZ Titulky",
+        "video_id": 27003927
+      },
+      {
+        "episode_id": 60519,
+        "display_name": "Malcolm v nesnázích S01E14 - 14. epizoda CZ Titulky",
+        "video_id": 27003934
+      },
+      {
+        "episode_id": 78663,
+        "display_name": "Malcolm v nesnázích S01E15 - 15. epizoda CZ Titulky",
+        "video_id": 27003937
+      },
+      {
+        "episode_id": 78661,
+        "display_name": "Malcolm v nesnázích S02E02 - 2. epizoda CZ Titulky",
+        "video_id": 27003944
+      },
+      {
+        "episode_id": 78657,
+        "display_name": "Malcolm v nesnázích S02E03 - 3. epizoda CZ Titulky",
+        "video_id": 27003950
+      },
+      {
+        "episode_id": 60521,
+        "display_name": "Malcolm v nesnázích S02E06 - 6. epizoda CZ Titulky",
+        "video_id": 27003957
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -76081,6 +76196,121 @@
         "episode_id": 23719,
         "display_name": "Původní S05E05 - Jen ti to zlomí srdce CZ Titulky",
         "video_id": 27003865
+      },
+      {
+        "episode_id": 23721,
+        "display_name": "Původní S05E07 - Bůh zčeří vody CZ Dabing",
+        "video_id": 27003872
+      },
+      {
+        "episode_id": 23723,
+        "display_name": "Původní S05E09 - Naší lásce již mnoho nezbývá CZ Dabing",
+        "video_id": 27003879
+      },
+      {
+        "episode_id": 23725,
+        "display_name": "Původní S05E11 - Dokud nás smrt nerozdělí CZ Dabing",
+        "video_id": 27003888
+      },
+      {
+        "episode_id": 23727,
+        "display_name": "Původní S05E13 - Když svatí pochodují CZ Dabing",
+        "video_id": 27003894
+      },
+      {
+        "episode_id": 60509,
+        "display_name": "Malcolm v nesnázích S01E02 - 2. epizoda CZ Titulky",
+        "video_id": 27003901
+      },
+      {
+        "episode_id": 60511,
+        "display_name": "Malcolm v nesnázích S01E04 - 4. epizoda CZ Titulky",
+        "video_id": 27003907
+      },
+      {
+        "episode_id": 78659,
+        "display_name": "Malcolm v nesnázích S01E07 - 7. epizoda CZ Titulky",
+        "video_id": 27003914
+      },
+      {
+        "episode_id": 60513,
+        "display_name": "Malcolm v nesnázích S01E08 - 8. epizoda CZ Titulky",
+        "video_id": 27003916
+      },
+      {
+        "episode_id": 60502,
+        "display_name": "Malcolm v nesnázích S03E03 - 3. epizoda CZ Titulky",
+        "video_id": 27003918
+      },
+      {
+        "episode_id": 78676,
+        "display_name": "Malcolm v nesnázích S03E08 - 8. epizoda CZ Titulky",
+        "video_id": 27003922
+      },
+      {
+        "episode_id": 78678,
+        "display_name": "Malcolm v nesnázích S03E12 - 12. epizoda CZ Titulky",
+        "video_id": 27003931
+      },
+      {
+        "episode_id": 78680,
+        "display_name": "Malcolm v nesnázích S03E14 - 14. epizoda CZ Titulky",
+        "video_id": 27003935
+      },
+      {
+        "episode_id": 60456,
+        "display_name": "Malcolm v nesnázích S03E15 - 15. epizoda CZ Titulky",
+        "video_id": 27003938
+      },
+      {
+        "episode_id": 60534,
+        "display_name": "Malcolm v nesnázích S03E16 - 16. epizoda CZ Titulky",
+        "video_id": 27003943
+      },
+      {
+        "episode_id": 78682,
+        "display_name": "Malcolm v nesnázích S03E19 - 19. epizoda CZ Titulky",
+        "video_id": 27003948
+      },
+      {
+        "episode_id": 78684,
+        "display_name": "Malcolm v nesnázích S03E21 - 21. epizoda CZ Titulky",
+        "video_id": 27003954
+      },
+      {
+        "episode_id": 60515,
+        "display_name": "Malcolm v nesnázích S01E10 - 10. epizoda CZ Titulky",
+        "video_id": 27003919
+      },
+      {
+        "episode_id": 60517,
+        "display_name": "Malcolm v nesnázích S01E12 - 12. epizoda CZ Titulky",
+        "video_id": 27003927
+      },
+      {
+        "episode_id": 60519,
+        "display_name": "Malcolm v nesnázích S01E14 - 14. epizoda CZ Titulky",
+        "video_id": 27003934
+      },
+      {
+        "episode_id": 78663,
+        "display_name": "Malcolm v nesnázích S01E15 - 15. epizoda CZ Titulky",
+        "video_id": 27003937
+      },
+      {
+        "episode_id": 78661,
+        "display_name": "Malcolm v nesnázích S02E02 - 2. epizoda CZ Titulky",
+        "video_id": 27003944
+      },
+      {
+        "episode_id": 78657,
+        "display_name": "Malcolm v nesnázích S02E03 - 3. epizoda CZ Titulky",
+        "video_id": 27003950
+      },
+      {
+        "episode_id": 60521,
+        "display_name": "Malcolm v nesnázích S02E06 - 6. epizoda CZ Titulky",
+        "video_id": 27003957
       }
     ],
     "prepared_not_upload_ready": [
@@ -76387,166 +76617,6 @@
     ],
     "whisper_review_pending": [
       {
-        "episode_id": 56636,
-        "source_id": -60631076231158859,
-        "series_title": "Glee",
-        "episode_code": "S02E22",
-        "source_title": "Glee S2E22 New York",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 56593,
-        "source_id": -55657498810250655,
-        "series_title": "Glee",
-        "episode_code": "S03E01",
-        "source_title": "Glee - S3E1 The Purple Piano Project EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 56593,
-        "source_id": -42467763724795634,
-        "series_title": "Glee",
-        "episode_code": "S03E01",
-        "source_title": "Glee - S03E01 - The Purple Piano Project",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 56593,
-        "source_id": -62357544737742411,
-        "series_title": "Glee",
-        "episode_code": "S03E01",
-        "source_title": "Glee - s03e01",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 56594,
-        "source_id": -24850174099960830,
-        "series_title": "Glee",
-        "episode_code": "S03E02",
-        "source_title": "Glee - S03E02 - I am Unicorn",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 56594,
-        "source_id": -23609003262441201,
-        "series_title": "Glee",
-        "episode_code": "S03E02",
-        "source_title": "Glee - S3E2 I am Unicorn EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 56594,
-        "source_id": -50182742961482131,
-        "series_title": "Glee",
-        "episode_code": "S03E02",
-        "source_title": "Glee - s03e02",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 56561,
-        "source_id": -66359253284145103,
-        "series_title": "Glee",
-        "episode_code": "S03E03",
-        "source_title": "Glee - S03E03 - Asian F",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 56561,
-        "source_id": -63932362443164291,
-        "series_title": "Glee",
-        "episode_code": "S03E03",
-        "source_title": "Glee - S3E3 Asian F EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 56561,
-        "source_id": -47788616450758531,
-        "series_title": "Glee",
-        "episode_code": "S03E03",
-        "source_title": "Glee-03x03-Asijská-pětka",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 56561,
-        "source_id": -46765128643070794,
-        "series_title": "Glee",
-        "episode_code": "S03E03",
-        "source_title": "Glee - s03e03",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 56562,
-        "source_id": -37743252139726216,
-        "series_title": "Glee",
-        "episode_code": "S03E04",
-        "source_title": "Glee - S3E4 Pot O´Gold EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 56562,
-        "source_id": -37608239734311410,
-        "series_title": "Glee",
-        "episode_code": "S03E04",
-        "source_title": "Glee - S03E04 - Pot O´Gold",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 56562,
-        "source_id": -68069719547471435,
-        "series_title": "Glee",
-        "episode_code": "S03E04",
-        "source_title": "Glee-03x04-Hrnec",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 56562,
-        "source_id": -198632329009514,
-        "series_title": "Glee",
-        "episode_code": "S03E04",
-        "source_title": "Glee - s03e04",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 56595,
-        "source_id": -62076728748139049,
-        "series_title": "Glee",
-        "episode_code": "S03E05",
-        "source_title": "Glee - S03E05 - The First Time",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 56595,
-        "source_id": -37049167957022078,
-        "series_title": "Glee",
-        "episode_code": "S03E05",
-        "source_title": "Glee S3E5 The First Time",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 56595,
-        "source_id": -43189744945024637,
-        "series_title": "Glee",
-        "episode_code": "S03E05",
-        "source_title": "Glee - s03e05",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 56596,
-        "source_id": -63976783695625853,
-        "series_title": "Glee",
-        "episode_code": "S03E06",
-        "source_title": "Glee - S03E06 - Mash Off",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 56596,
-        "source_id": -30592254134878187,
-        "series_title": "Glee",
-        "episode_code": "S03E06",
-        "source_title": "Glee - S3E6 Mash Off EN",
-        "status": "needs_whisper"
-      },
-      {
         "episode_id": 56596,
         "source_id": -17585711218896188,
         "series_title": "Glee",
@@ -76785,6 +76855,166 @@
         "episode_code": "S03E16",
         "source_title": "Glee - S03E16 - Saturday Night Glee-ver",
         "status": "needs_whisper"
+      },
+      {
+        "episode_id": 56603,
+        "source_id": -18175200488979869,
+        "series_title": "Glee",
+        "episode_code": "S03E16",
+        "source_title": "Glee - s03e16",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 56565,
+        "source_id": -54753001575106267,
+        "series_title": "Glee",
+        "episode_code": "S03E17",
+        "source_title": "Glee - S3E17 Dance with Somebody EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 56565,
+        "source_id": -8496326484772819,
+        "series_title": "Glee",
+        "episode_code": "S03E17",
+        "source_title": "Glee - S03E17 - Dance with Somebody",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 56565,
+        "source_id": -43412274423425135,
+        "series_title": "Glee",
+        "episode_code": "S03E17",
+        "source_title": "Glee-03x17-Mít-s-kým-tančit",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 56566,
+        "source_id": -36710941398768370,
+        "series_title": "Glee",
+        "episode_code": "S03E18",
+        "source_title": "Glee - S3E18 Choke EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 56566,
+        "source_id": -17092226060460643,
+        "series_title": "Glee",
+        "episode_code": "S03E18",
+        "source_title": "Glee - S03E18 - Choke",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 56566,
+        "source_id": -31823009110095878,
+        "series_title": "Glee",
+        "episode_code": "S03E18",
+        "source_title": "Glee-03x18-Přijímačky",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 56567,
+        "source_id": -65267105383186075,
+        "series_title": "Glee",
+        "episode_code": "S03E19",
+        "source_title": "Glee - S3E19 Prom-asaurus EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 56567,
+        "source_id": -64123820944961883,
+        "series_title": "Glee",
+        "episode_code": "S03E19",
+        "source_title": "Glee - S03E19 - Prom-asaurus",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 56567,
+        "source_id": -43057119695869110,
+        "series_title": "Glee",
+        "episode_code": "S03E19",
+        "source_title": "Glee-03x19-Plesosaurus",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 56567,
+        "source_id": -30717868204507432,
+        "series_title": "Glee",
+        "episode_code": "S03E19",
+        "source_title": "Glee - s03e19",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 56568,
+        "source_id": -54934202870103864,
+        "series_title": "Glee",
+        "episode_code": "S03E20",
+        "source_title": "Glee - S3E20 Props EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 56568,
+        "source_id": -11248114079563582,
+        "series_title": "Glee",
+        "episode_code": "S03E20",
+        "source_title": "Glee - S03E20 - Props",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 56568,
+        "source_id": -50226157606761465,
+        "series_title": "Glee",
+        "episode_code": "S03E20",
+        "source_title": "Glee-03x20-Poslední-pokus",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 56569,
+        "source_id": -69071880901724933,
+        "series_title": "Glee",
+        "episode_code": "S03E21",
+        "source_title": "Glee - S3E21 Nationals EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 56569,
+        "source_id": -58864845284175290,
+        "series_title": "Glee",
+        "episode_code": "S03E21",
+        "source_title": "Glee - S03E21 - Nationals",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 56569,
+        "source_id": -46927992171882553,
+        "series_title": "Glee",
+        "episode_code": "S03E21",
+        "source_title": "Glee S3E21 Nationals",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 56569,
+        "source_id": -19301585453163312,
+        "series_title": "Glee",
+        "episode_code": "S03E21",
+        "source_title": "Glee - s03e21",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 56569,
+        "source_id": -66183177213228823,
+        "series_title": "Glee",
+        "episode_code": "S03E21",
+        "source_title": "Glee-03x21-Finále",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 56569,
+        "source_id": -10587356462465066,
+        "series_title": "Glee",
+        "episode_code": "S03E21",
+        "source_title": "Glee 3x21",
+        "status": "needs_whisper"
       }
     ],
     "subtitle_followup_pending": [
@@ -76868,6 +77098,60 @@
         "source_title": "GLEE-2x14-s-CZ-TITULKY",
         "subtitle_status": "needs_subtitle_setup_after_prehrajto_processing",
         "reason": "selected source has Czech subtitles but no Czech audio source was found"
+      },
+      {
+        "episode_id": 56593,
+        "source_id": -62357544737742411,
+        "series_title": "Glee",
+        "episode_code": "S03E01",
+        "source_title": "Glee - s03e01",
+        "subtitle_status": "needs_subtitle_setup_after_prehrajto_processing",
+        "reason": "selected source needs Czech subtitles after Whisper detected non-Czech audio"
+      },
+      {
+        "episode_id": 56594,
+        "source_id": -50182742961482131,
+        "series_title": "Glee",
+        "episode_code": "S03E02",
+        "source_title": "Glee - s03e02",
+        "subtitle_status": "needs_subtitle_setup_after_prehrajto_processing",
+        "reason": "selected source needs Czech subtitles after Whisper detected non-Czech audio"
+      },
+      {
+        "episode_id": 56561,
+        "source_id": -46765128643070794,
+        "series_title": "Glee",
+        "episode_code": "S03E03",
+        "source_title": "Glee - s03e03",
+        "subtitle_status": "needs_subtitle_setup_after_prehrajto_processing",
+        "reason": "selected source needs Czech subtitles after Whisper detected non-Czech audio"
+      },
+      {
+        "episode_id": 56562,
+        "source_id": -198632329009514,
+        "series_title": "Glee",
+        "episode_code": "S03E04",
+        "source_title": "Glee - s03e04",
+        "subtitle_status": "needs_subtitle_setup_after_prehrajto_processing",
+        "reason": "selected source needs Czech subtitles after Whisper detected non-Czech audio"
+      },
+      {
+        "episode_id": 56595,
+        "source_id": -43189744945024637,
+        "series_title": "Glee",
+        "episode_code": "S03E05",
+        "source_title": "Glee - s03e05",
+        "subtitle_status": "needs_subtitle_setup_after_prehrajto_processing",
+        "reason": "selected source needs Czech subtitles after Whisper detected non-Czech audio"
+      },
+      {
+        "episode_id": 56596,
+        "source_id": -30592254134878187,
+        "series_title": "Glee",
+        "episode_code": "S03E06",
+        "source_title": "Glee - S3E6 Mash Off EN",
+        "subtitle_status": "needs_subtitle_setup_after_prehrajto_processing",
+        "reason": "selected source needs Czech subtitles after Whisper detected non-Czech audio"
       },
       {
         "episode_id": 56576,
@@ -77183,73 +77467,19 @@
         "source_title": "Malcolm in the Middle S01E12.mkv",
         "subtitle_status": "needs_subtitle_setup_after_prehrajto_processing",
         "reason": "selected source needs Czech subtitles after Whisper detected non-Czech audio"
-      },
-      {
-        "episode_id": 60518,
-        "source_id": -57085660499137377,
-        "series_title": "Malcolm v nesnázích",
-        "episode_code": "S01E13",
-        "source_title": "Malcolm in the Middle S01E13.mkv",
-        "subtitle_status": "needs_subtitle_setup_after_prehrajto_processing",
-        "reason": "selected source needs Czech subtitles after Whisper detected non-Czech audio"
-      },
-      {
-        "episode_id": 60519,
-        "source_id": -58456255968309388,
-        "series_title": "Malcolm v nesnázích",
-        "episode_code": "S01E14",
-        "source_title": "Malcolm in the Middle S01E14.mkv",
-        "subtitle_status": "needs_subtitle_setup_after_prehrajto_processing",
-        "reason": "selected source needs Czech subtitles after Whisper detected non-Czech audio"
-      },
-      {
-        "episode_id": 78663,
-        "source_id": -1338048517258992,
-        "series_title": "Malcolm v nesnázích",
-        "episode_code": "S01E15",
-        "source_title": "Malcolm in the Middle S01E15.mkv",
-        "subtitle_status": "needs_subtitle_setup_after_prehrajto_processing",
-        "reason": "selected source needs Czech subtitles after Whisper detected non-Czech audio"
-      },
-      {
-        "episode_id": 60520,
-        "source_id": -12325455380540539,
-        "series_title": "Malcolm v nesnázích",
-        "episode_code": "S01E16",
-        "source_title": "Malcolm in the Middle S01E16.mkv",
-        "subtitle_status": "needs_subtitle_setup_after_prehrajto_processing",
-        "reason": "selected source needs Czech subtitles after Whisper detected non-Czech audio"
-      },
-      {
-        "episode_id": 78664,
-        "source_id": -54391995953420068,
-        "series_title": "Malcolm v nesnázích",
-        "episode_code": "S02E01",
-        "source_title": "Malcolm in the Middle S02E01.mkv",
-        "subtitle_status": "needs_subtitle_setup_after_prehrajto_processing",
-        "reason": "selected source needs Czech subtitles after Whisper detected non-Czech audio"
-      },
-      {
-        "episode_id": 78661,
-        "source_id": -49908215186004001,
-        "series_title": "Malcolm v nesnázích",
-        "episode_code": "S02E02",
-        "source_title": "Malcolm in the Middle S02E02.mkv",
-        "subtitle_status": "needs_subtitle_setup_after_prehrajto_processing",
-        "reason": "selected source needs Czech subtitles after Whisper detected non-Czech audio"
       }
     ]
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 40
+    "ok": 20
   },
   "whisper_review_statuses": {
-    "whisper_confirmed_cz": 27,
-    "whisper_non_cz_needs_subtitles": 17,
-    "needs_whisper": 338
+    "whisper_confirmed_cz": 30,
+    "whisper_non_cz_needs_subtitles": 34,
+    "needs_whisper": 318
   },
   "subtitle_followup_statuses": {
-    "needs_subtitle_setup_after_prehrajto_processing": 118
+    "needs_subtitle_setup_after_prehrajto_processing": 124
   }
 }
