@@ -321,6 +321,7 @@ def live_search_candidates(episode: dict, *, limit: int, query_limit: int) -> li
     queries = [
         *(f"{title} {episode_code(episode)}" for title in titles),
         *(f"{title} {int(episode['season'])}x{int(episode['episode'])}" for title in titles),
+        *(f"{title} {int(episode['season']):02d}x{int(episode['episode']):02d}" for title in titles),
     ]
     found: dict[str, dict] = {}
     for query in queries[: max(query_limit, 1)]:
@@ -584,6 +585,31 @@ def prepare_episode(
     }
 
 
+def diversify_episode_batch(episodes: list[dict], limit: int) -> list[dict]:
+    if limit <= 0:
+        return episodes
+    selected: list[dict] = []
+    selected_ids: set[int] = set()
+    seen_series: set[int] = set()
+    for episode in episodes:
+        series_id = int(episode["series_id"])
+        if series_id in seen_series:
+            continue
+        selected.append(episode)
+        selected_ids.add(int(episode["episode_id"]))
+        seen_series.add(series_id)
+        if len(selected) >= limit:
+            return selected
+    for episode in episodes:
+        episode_id = int(episode["episode_id"])
+        if episode_id in selected_ids:
+            continue
+        selected.append(episode)
+        if len(selected) >= limit:
+            break
+    return selected
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--queue", default="backlog/language-audit-queue.jsonl.gz")
@@ -658,7 +684,7 @@ def main() -> int:
             int(episode["episode_id"]),
         )
     )
-    todo = todo[: args.episode_limit]
+    todo = diversify_episode_batch(todo, args.episode_limit)
 
     prepared = [
         prepare_episode(
