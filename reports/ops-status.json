@@ -1,9 +1,9 @@
 {
   "counts": {
-    "backlog_episodes": 182568,
-    "manifest_upload_ready_episodes": 185,
-    "uploaded_episodes": 10838,
-    "prepared_source_episodes": 19855,
+    "backlog_episodes": 182512,
+    "manifest_upload_ready_episodes": 195,
+    "uploaded_episodes": 10863,
+    "prepared_source_episodes": 19913,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
@@ -11,43 +11,99 @@
     "language_queue_sources": 2644,
     "language_audited_sources": 20,
     "language_whisper_attempted_sources": 20,
-    "language_pending_whisper_sources": 2644,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 411,
-    "whisper_review_pending_sources": 307,
-    "subtitle_followup_sources": 47,
-    "subtitle_followup_pending_sources": 47
+    "whisper_review_pending_sources": 287,
+    "subtitle_followup_sources": 52,
+    "subtitle_followup_pending_sources": 52
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-06-29T21:11:17Z",
-      "databaseId": 28402960628,
+      "createdAt": "2026-06-29T21:46:49Z",
+      "databaseId": 28404823093,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
-      "createdAt": "2026-06-29T21:09:26Z",
-      "databaseId": 28402862805,
+      "createdAt": "2026-06-29T21:43:45Z",
+      "databaseId": 28404659210,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-29T21:37:04Z",
+      "databaseId": 28404320698,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "refresh-backlog"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-29T21:36:49Z",
+      "databaseId": 28404308238,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-29T21:36:35Z",
+      "databaseId": 28404296206,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-29T21:35:19Z",
+      "databaseId": 28404229036,
       "headBranch": "main",
       "status": "pending",
       "workflowName": "update-descriptions"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-06-29T21:22:52Z",
+      "databaseId": 28403567124,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-29T21:11:17Z",
+      "databaseId": 28402960628,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-06-29T21:09:26Z",
+      "databaseId": 28402862805,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-06-29T21:09:23Z",
       "databaseId": 28402860584,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-06-29T21:09:21Z",
       "databaseId": 28402858165,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -75,11 +131,11 @@
       "workflowName": "ops-status"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-06-29T21:03:23Z",
       "databaseId": 28402528842,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "sync"
     },
     {
@@ -121,62 +177,6 @@
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-29T20:42:08Z",
-      "databaseId": 28401329488,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-29T20:33:00Z",
-      "databaseId": 28400820461,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-29T20:32:57Z",
-      "databaseId": 28400818039,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-29T20:32:55Z",
-      "databaseId": 28400815998,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-29T20:32:13Z",
-      "databaseId": 28400777033,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-29T20:28:33Z",
-      "databaseId": 28400573531,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-06-29T20:19:56Z",
-      "databaseId": 28400100830,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "sync"
     }
   ],
   "gaps": {
@@ -32086,6 +32086,56 @@
         "video_id": 27002827
       },
       {
+        "episode_id": 5804,
+        "display_name": "Původní S01E20 - Procházka s tebou CZ Dabing",
+        "video_id": 27002932
+      },
+      {
+        "episode_id": 5806,
+        "display_name": "Původní S01E22 - Z kolébky do hrobu CZ Dabing",
+        "video_id": 27002946
+      },
+      {
+        "episode_id": 23658,
+        "display_name": "Původní S02E01 - Znovuzrození CZ Dabing",
+        "video_id": 27002955
+      },
+      {
+        "episode_id": 23660,
+        "display_name": "Původní S02E03 - Syn každé matky CZ Dabing",
+        "video_id": 27002969
+      },
+      {
+        "episode_id": 23662,
+        "display_name": "Původní S02E05 - Červené dveře CZ Dabing",
+        "video_id": 27002981
+      },
+      {
+        "episode_id": 23664,
+        "display_name": "Původní S02E07 - Honit se za ďáblem CZ Dabing",
+        "video_id": 27002995
+      },
+      {
+        "episode_id": 23666,
+        "display_name": "Původní S02E09 - Mapa momentů CZ Dabing",
+        "video_id": 27003001
+      },
+      {
+        "episode_id": 23668,
+        "display_name": "Původní S02E11 - Bratrství zatracených CZ Dabing",
+        "video_id": 27003018
+      },
+      {
+        "episode_id": 23670,
+        "display_name": "Původní S02E13 - Ďábel je prokletý CZ Dabing",
+        "video_id": 27003032
+      },
+      {
+        "episode_id": 23672,
+        "display_name": "Původní S02E15 - Ptali se po tobě CZ Dabing",
+        "video_id": 27003041
+      },
+      {
         "episode_id": 5801,
         "display_name": "Původní S01E16 - Sbohem, Storryville CZ Dabing",
         "video_id": 27002473
@@ -32119,6 +32169,81 @@
         "episode_id": 23663,
         "display_name": "Původní S02E06 - Začarovaný kruh CZ Dabing",
         "video_id": 27002875
+      },
+      {
+        "episode_id": 23665,
+        "display_name": "Původní S02E08 - Pečující bratři zapomenou CZ Dabing",
+        "video_id": 27002910
+      },
+      {
+        "episode_id": 23667,
+        "display_name": "Původní S02E10 - Zapálím tvou vlajku CZ Dabing",
+        "video_id": 27002917
+      },
+      {
+        "episode_id": 23669,
+        "display_name": "Původní S02E12 - Svatyně CZ Dabing",
+        "video_id": 27002933
+      },
+      {
+        "episode_id": 23671,
+        "display_name": "Původní S02E14 - Miluji tě, sbohem CZ Dabing",
+        "video_id": 27003027
+      },
+      {
+        "episode_id": 23673,
+        "display_name": "Původní S02E16 - Zachraň moji duši CZ Dabing",
+        "video_id": 27003047
+      },
+      {
+        "episode_id": 56598,
+        "display_name": "Glee S03E08 - Drž si svých 16 CZ Titulky",
+        "video_id": 27003114
+      },
+      {
+        "episode_id": 56606,
+        "display_name": "Glee S04E03 - Proměna CZ Titulky",
+        "video_id": 27003134
+      },
+      {
+        "episode_id": 23674,
+        "display_name": "Původní S02E17 - Nádherná mrtvola CZ Dabing",
+        "video_id": 27003148
+      },
+      {
+        "episode_id": 23676,
+        "display_name": "Původní S02E19 - Když se protrhne hráz CZ Dabing",
+        "video_id": 27003165
+      },
+      {
+        "episode_id": 23678,
+        "display_name": "Původní S02E21 - Oheň k ohni CZ Dabing",
+        "video_id": 27003198
+      },
+      {
+        "episode_id": 56569,
+        "display_name": "Glee S03E21 - Finále CZ Dabing",
+        "video_id": 27003128
+      },
+      {
+        "episode_id": 56575,
+        "display_name": "Glee S03E22 - Sbohem a šáteček CZ Titulky",
+        "video_id": 27003153
+      },
+      {
+        "episode_id": 23675,
+        "display_name": "Původní S02E18 - Noc má tisíc očí CZ Dabing",
+        "video_id": 27003167
+      },
+      {
+        "episode_id": 23677,
+        "display_name": "Původní S02E20 - Město pod mořem CZ Dabing",
+        "video_id": 27003186
+      },
+      {
+        "episode_id": 23679,
+        "display_name": "Původní S02E22 - Popel popelu CZ Dabing",
+        "video_id": 27003209
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -74868,6 +74993,56 @@
         "video_id": 27002827
       },
       {
+        "episode_id": 5804,
+        "display_name": "Původní S01E20 - Procházka s tebou CZ Dabing",
+        "video_id": 27002932
+      },
+      {
+        "episode_id": 5806,
+        "display_name": "Původní S01E22 - Z kolébky do hrobu CZ Dabing",
+        "video_id": 27002946
+      },
+      {
+        "episode_id": 23658,
+        "display_name": "Původní S02E01 - Znovuzrození CZ Dabing",
+        "video_id": 27002955
+      },
+      {
+        "episode_id": 23660,
+        "display_name": "Původní S02E03 - Syn každé matky CZ Dabing",
+        "video_id": 27002969
+      },
+      {
+        "episode_id": 23662,
+        "display_name": "Původní S02E05 - Červené dveře CZ Dabing",
+        "video_id": 27002981
+      },
+      {
+        "episode_id": 23664,
+        "display_name": "Původní S02E07 - Honit se za ďáblem CZ Dabing",
+        "video_id": 27002995
+      },
+      {
+        "episode_id": 23666,
+        "display_name": "Původní S02E09 - Mapa momentů CZ Dabing",
+        "video_id": 27003001
+      },
+      {
+        "episode_id": 23668,
+        "display_name": "Původní S02E11 - Bratrství zatracených CZ Dabing",
+        "video_id": 27003018
+      },
+      {
+        "episode_id": 23670,
+        "display_name": "Původní S02E13 - Ďábel je prokletý CZ Dabing",
+        "video_id": 27003032
+      },
+      {
+        "episode_id": 23672,
+        "display_name": "Původní S02E15 - Ptali se po tobě CZ Dabing",
+        "video_id": 27003041
+      },
+      {
         "episode_id": 5801,
         "display_name": "Původní S01E16 - Sbohem, Storryville CZ Dabing",
         "video_id": 27002473
@@ -74901,6 +75076,81 @@
         "episode_id": 23663,
         "display_name": "Původní S02E06 - Začarovaný kruh CZ Dabing",
         "video_id": 27002875
+      },
+      {
+        "episode_id": 23665,
+        "display_name": "Původní S02E08 - Pečující bratři zapomenou CZ Dabing",
+        "video_id": 27002910
+      },
+      {
+        "episode_id": 23667,
+        "display_name": "Původní S02E10 - Zapálím tvou vlajku CZ Dabing",
+        "video_id": 27002917
+      },
+      {
+        "episode_id": 23669,
+        "display_name": "Původní S02E12 - Svatyně CZ Dabing",
+        "video_id": 27002933
+      },
+      {
+        "episode_id": 23671,
+        "display_name": "Původní S02E14 - Miluji tě, sbohem CZ Dabing",
+        "video_id": 27003027
+      },
+      {
+        "episode_id": 23673,
+        "display_name": "Původní S02E16 - Zachraň moji duši CZ Dabing",
+        "video_id": 27003047
+      },
+      {
+        "episode_id": 56598,
+        "display_name": "Glee S03E08 - Drž si svých 16 CZ Titulky",
+        "video_id": 27003114
+      },
+      {
+        "episode_id": 56606,
+        "display_name": "Glee S04E03 - Proměna CZ Titulky",
+        "video_id": 27003134
+      },
+      {
+        "episode_id": 23674,
+        "display_name": "Původní S02E17 - Nádherná mrtvola CZ Dabing",
+        "video_id": 27003148
+      },
+      {
+        "episode_id": 23676,
+        "display_name": "Původní S02E19 - Když se protrhne hráz CZ Dabing",
+        "video_id": 27003165
+      },
+      {
+        "episode_id": 23678,
+        "display_name": "Původní S02E21 - Oheň k ohni CZ Dabing",
+        "video_id": 27003198
+      },
+      {
+        "episode_id": 56569,
+        "display_name": "Glee S03E21 - Finále CZ Dabing",
+        "video_id": 27003128
+      },
+      {
+        "episode_id": 56575,
+        "display_name": "Glee S03E22 - Sbohem a šáteček CZ Titulky",
+        "video_id": 27003153
+      },
+      {
+        "episode_id": 23675,
+        "display_name": "Původní S02E18 - Noc má tisíc očí CZ Dabing",
+        "video_id": 27003167
+      },
+      {
+        "episode_id": 23677,
+        "display_name": "Původní S02E20 - Město pod mořem CZ Dabing",
+        "video_id": 27003186
+      },
+      {
+        "episode_id": 23679,
+        "display_name": "Původní S02E22 - Popel popelu CZ Dabing",
+        "video_id": 27003209
       }
     ],
     "prepared_not_upload_ready": [
@@ -75207,166 +75457,6 @@
     ],
     "whisper_review_pending": [
       {
-        "episode_id": 56567,
-        "source_id": -30717868204507432,
-        "series_title": "Glee",
-        "episode_code": "S03E19",
-        "source_title": "Glee - s03e19",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 56568,
-        "source_id": -54934202870103864,
-        "series_title": "Glee",
-        "episode_code": "S03E20",
-        "source_title": "Glee - S3E20 Props EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 56568,
-        "source_id": -11248114079563582,
-        "series_title": "Glee",
-        "episode_code": "S03E20",
-        "source_title": "Glee - S03E20 - Props",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 56568,
-        "source_id": -50226157606761465,
-        "series_title": "Glee",
-        "episode_code": "S03E20",
-        "source_title": "Glee-03x20-Poslední-pokus",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 56569,
-        "source_id": -69071880901724933,
-        "series_title": "Glee",
-        "episode_code": "S03E21",
-        "source_title": "Glee - S3E21 Nationals EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 56569,
-        "source_id": -58864845284175290,
-        "series_title": "Glee",
-        "episode_code": "S03E21",
-        "source_title": "Glee - S03E21 - Nationals",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 56569,
-        "source_id": -46927992171882553,
-        "series_title": "Glee",
-        "episode_code": "S03E21",
-        "source_title": "Glee S3E21 Nationals",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 56569,
-        "source_id": -19301585453163312,
-        "series_title": "Glee",
-        "episode_code": "S03E21",
-        "source_title": "Glee - s03e21",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 56569,
-        "source_id": -66183177213228823,
-        "series_title": "Glee",
-        "episode_code": "S03E21",
-        "source_title": "Glee-03x21-Finále",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 56569,
-        "source_id": -10587356462465066,
-        "series_title": "Glee",
-        "episode_code": "S03E21",
-        "source_title": "Glee 3x21",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 56575,
-        "source_id": -7119898046295837,
-        "series_title": "Glee",
-        "episode_code": "S03E22",
-        "source_title": "Glee - S03E22 - Goodbye",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 56575,
-        "source_id": -6267988803635603,
-        "series_title": "Glee",
-        "episode_code": "S03E22",
-        "source_title": "Glee - S3E22 Goodbye EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 56604,
-        "source_id": -68764929810641363,
-        "series_title": "Glee",
-        "episode_code": "S04E01",
-        "source_title": "Glee - S04E01 - The New Rachel",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 56604,
-        "source_id": -54778875999584551,
-        "series_title": "Glee",
-        "episode_code": "S04E01",
-        "source_title": "Glee - S4E1 The New Rachel EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 56604,
-        "source_id": -949537396531806,
-        "series_title": "Glee",
-        "episode_code": "S04E01",
-        "source_title": "Glee - s04e01",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 56605,
-        "source_id": -40537659777396557,
-        "series_title": "Glee",
-        "episode_code": "S04E02",
-        "source_title": "Glee - S4E2 Britney 2",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 56605,
-        "source_id": -6603250143671726,
-        "series_title": "Glee",
-        "episode_code": "S04E02",
-        "source_title": "Glee - S04E02 - Britney 2.0",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 56605,
-        "source_id": -14158182854614309,
-        "series_title": "Glee",
-        "episode_code": "S04E02",
-        "source_title": "Glee - s04e02",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 56606,
-        "source_id": -29031544036848301,
-        "series_title": "Glee",
-        "episode_code": "S04E03",
-        "source_title": "Glee - S04E03 - Makeover",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 56606,
-        "source_id": -23675706844241900,
-        "series_title": "Glee",
-        "episode_code": "S04E03",
-        "source_title": "Glee - S4E3 Makeover EN",
-        "status": "needs_whisper"
-      },
-      {
         "episode_id": 56607,
         "source_id": -44512922952062869,
         "series_title": "Glee",
@@ -75605,6 +75695,166 @@
         "episode_code": "S04E15",
         "source_title": "Glee - S04E15 - Girls (and Boys) On Film",
         "status": "needs_whisper"
+      },
+      {
+        "episode_id": 56615,
+        "source_id": -44912252106567044,
+        "series_title": "Glee",
+        "episode_code": "S04E16",
+        "source_title": "Glee - S4E16 Feud EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 56615,
+        "source_id": -4920489643677300,
+        "series_title": "Glee",
+        "episode_code": "S04E16",
+        "source_title": "Glee - S04E16 - Feud",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 56616,
+        "source_id": -63280256734747186,
+        "series_title": "Glee",
+        "episode_code": "S04E17",
+        "source_title": "Glee - S04E17 - Guilty Pleasures",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 56616,
+        "source_id": -39771924175240447,
+        "series_title": "Glee",
+        "episode_code": "S04E17",
+        "source_title": "Glee - S4E17 Guilty Pleasures EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 56616,
+        "source_id": -3662993891738457,
+        "series_title": "Glee",
+        "episode_code": "S04E17",
+        "source_title": "Glee S4E17 Guilty Pleasures",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 56616,
+        "source_id": -71036244003888703,
+        "series_title": "Glee",
+        "episode_code": "S04E17",
+        "source_title": "Glee - s04e17",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 56617,
+        "source_id": -21913505250164327,
+        "series_title": "Glee",
+        "episode_code": "S04E18",
+        "source_title": "Glee - S04E18 - Shooting Star",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 56617,
+        "source_id": -11820810184718214,
+        "series_title": "Glee",
+        "episode_code": "S04E18",
+        "source_title": "Glee - S4E18 Shooting Star EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 56618,
+        "source_id": -52543319166113597,
+        "series_title": "Glee",
+        "episode_code": "S04E19",
+        "source_title": "Glee - S4E19 Sweet Dreams EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 56618,
+        "source_id": -2211635778723875,
+        "series_title": "Glee",
+        "episode_code": "S04E19",
+        "source_title": "Glee - S04E19 - Sweet Dreams",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 56619,
+        "source_id": -46986567709535692,
+        "series_title": "Glee",
+        "episode_code": "S04E20",
+        "source_title": "Glee - S04E20 - Lights Out",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 56619,
+        "source_id": -3977954351477030,
+        "series_title": "Glee",
+        "episode_code": "S04E20",
+        "source_title": "Glee - S4E20 Lights Out EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 56576,
+        "source_id": -47004804209146292,
+        "series_title": "Glee",
+        "episode_code": "S04E21",
+        "source_title": "Glee S4E21 Wonder-ful",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 56576,
+        "source_id": -27137695063835726,
+        "series_title": "Glee",
+        "episode_code": "S04E21",
+        "source_title": "Glee - S04E21 - Wonder-ful",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 56576,
+        "source_id": -15295233625282786,
+        "series_title": "Glee",
+        "episode_code": "S04E21",
+        "source_title": "Glee - S4E21 Wonder-ful EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 56620,
+        "source_id": -50449098760811705,
+        "series_title": "Glee",
+        "episode_code": "S04E22",
+        "source_title": "Glee - S4E22 All or Nothing EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 56620,
+        "source_id": -41808808079155658,
+        "series_title": "Glee",
+        "episode_code": "S04E22",
+        "source_title": "Glee S4E22 All or Nothing",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 56620,
+        "source_id": -8750846589436163,
+        "series_title": "Glee",
+        "episode_code": "S04E22",
+        "source_title": "Glee - S04E22 - All or Nothing",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 56620,
+        "source_id": -11275157152626085,
+        "series_title": "Glee",
+        "episode_code": "S04E22",
+        "source_title": "Glee - s04e22",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 56577,
+        "source_id": -51110704594883217,
+        "series_title": "Glee",
+        "episode_code": "S05E01",
+        "source_title": "Glee - S05E01 - Love, Love, Love",
+        "status": "needs_whisper"
       }
     ],
     "subtitle_followup_pending": [
@@ -75825,6 +76075,51 @@
         "reason": "selected source needs Czech subtitles after Whisper detected non-Czech audio"
       },
       {
+        "episode_id": 56567,
+        "source_id": -30717868204507432,
+        "series_title": "Glee",
+        "episode_code": "S03E19",
+        "source_title": "Glee - s03e19",
+        "subtitle_status": "needs_subtitle_setup_after_prehrajto_processing",
+        "reason": "selected source needs Czech subtitles after Whisper detected non-Czech audio"
+      },
+      {
+        "episode_id": 56575,
+        "source_id": -6267988803635603,
+        "series_title": "Glee",
+        "episode_code": "S03E22",
+        "source_title": "Glee - S3E22 Goodbye EN",
+        "subtitle_status": "needs_subtitle_setup_after_prehrajto_processing",
+        "reason": "selected source needs Czech subtitles after Whisper detected non-Czech audio"
+      },
+      {
+        "episode_id": 56604,
+        "source_id": -949537396531806,
+        "series_title": "Glee",
+        "episode_code": "S04E01",
+        "source_title": "Glee - s04e01",
+        "subtitle_status": "needs_subtitle_setup_after_prehrajto_processing",
+        "reason": "selected source needs Czech subtitles after Whisper detected non-Czech audio"
+      },
+      {
+        "episode_id": 56605,
+        "source_id": -14158182854614309,
+        "series_title": "Glee",
+        "episode_code": "S04E02",
+        "source_title": "Glee - s04e02",
+        "subtitle_status": "needs_subtitle_setup_after_prehrajto_processing",
+        "reason": "selected source needs Czech subtitles after Whisper detected non-Czech audio"
+      },
+      {
+        "episode_id": 56606,
+        "source_id": -23675706844241900,
+        "series_title": "Glee",
+        "episode_code": "S04E03",
+        "source_title": "Glee - S4E3 Makeover EN",
+        "subtitle_status": "needs_subtitle_setup_after_prehrajto_processing",
+        "reason": "selected source needs Czech subtitles after Whisper detected non-Czech audio"
+      },
+      {
         "episode_id": 56576,
         "source_id": -9798189543012824,
         "series_title": "Glee",
@@ -76012,24 +76307,6 @@
         "source_title": "Glee S06E12 CZtit V OBRAZE",
         "subtitle_status": "needs_subtitle_setup_after_prehrajto_processing",
         "reason": "selected source has Czech subtitles but no Czech audio source was found"
-      },
-      {
-        "episode_id": 56551,
-        "source_id": -19629331092856777,
-        "series_title": "Glee",
-        "episode_code": "S06E13",
-        "source_title": "Glee-S06E13---cz-tit.",
-        "subtitle_status": "needs_subtitle_setup_after_prehrajto_processing",
-        "reason": "selected source has Czech subtitles but no Czech audio source was found"
-      },
-      {
-        "episode_id": 40810,
-        "source_id": -50813237356143884,
-        "series_title": "Kriminálka Las Vegas",
-        "episode_code": "S01E16",
-        "source_title": "Kriminálka-Las-Vegas-01x16-Příliš-tuhý-kořínek",
-        "subtitle_status": "needs_subtitle_setup_after_prehrajto_processing",
-        "reason": "selected source has Czech subtitles but no Czech audio source was found"
       }
     ]
   },
@@ -76038,11 +76315,11 @@
     "ok": 20
   },
   "whisper_review_statuses": {
-    "whisper_confirmed_cz": 34,
-    "whisper_non_cz_needs_subtitles": 70,
-    "needs_whisper": 307
+    "whisper_confirmed_cz": 37,
+    "whisper_non_cz_needs_subtitles": 87,
+    "needs_whisper": 287
   },
   "subtitle_followup_statuses": {
-    "needs_subtitle_setup_after_prehrajto_processing": 47
+    "needs_subtitle_setup_after_prehrajto_processing": 52
   }
 }
