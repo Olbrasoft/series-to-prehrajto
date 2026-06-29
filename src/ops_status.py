@@ -91,6 +91,10 @@ def whisper_status(row: dict) -> str:
     return ((row.get("signals") or {}).get("whisper") or {}).get("status") or "missing"
 
 
+def row_status(row: dict) -> str:
+    return str(row.get("status") or "missing")
+
+
 def main() -> int:
     backlog = load_jsonl(REPO / "backlog" / "series-episodes.jsonl.gz")
     manifest = load_jsonl(REPO / "manifests" / "upload-ready.jsonl.gz")
@@ -99,7 +103,9 @@ def main() -> int:
     descriptions = load_jsonl(REPO / "plans" / "descriptions.jsonl")
     prepared = load_jsonl(REPO / "plans" / "prepared-episodes.jsonl")
     audits = load_jsonl(REPO / "audits" / "language-audit.jsonl")
-    latest_    audits = load_jsonl(REPO / "audits" / "language-audit-latest.jsonl.gz")
+    latest_audits = load_jsonl(REPO / "audits" / "language-audit-latest.jsonl.gz")
+    subtitle_followup = load_jsonl(REPO / "plans" / "subtitle-followup-queue.jsonl")
+    whisper_review = load_jsonl(REPO / "plans" / "whisper-review-queue.jsonl")
     desc_series, desc_episodes = latest_descriptions(descriptions)
     uploaded = state.get("uploads", [])
     uploaded_episode_ids = {int(row["episode_id"]) for row in uploaded}
@@ -117,6 +123,17 @@ def main() -> int:
         if int(row["episode_id"]) not in desc_episodes and int(row["series_id"]) not in desc_series
     ]
     not_ready = [row for row in prepared if not row.get("upload_ready")]
+    pending_subtitles = [
+        row
+        for row in subtitle_followup
+        if row_status(row) not in {"done", "completed", "subtitle_attached", "closed"}
+        and str(row.get("subtitle_status") or "") != "done"
+    ]
+    pending_whisper_review = [
+        row
+        for row in whisper_review
+        if row_status(row) in {"missing", "needs_whisper", "whisper_failed"}
+    ]
     report = {
         "counts": {
             "backlog_episodes": len(backlog_episode_ids),
@@ -131,6 +148,10 @@ def main() -> int:
             "language_audited_sources": len(audited_source_ids),
             "language_whisper_attempted_sources": len(whisper_attempted_source_ids),
             "language_pending_whisper_sources": len(queue_source_ids - whisper_attempted_source_ids),
+            "whisper_review_sources": len(whisper_review),
+            "whisper_review_pending_sources": len(pending_whisper_review),
+            "subtitle_followup_sources": len(subtitle_followup),
+            "subtitle_followup_pending_sources": len(pending_subtitles),
         },
         "workflow_runs": gh_runs(),
         "gaps": {
@@ -148,9 +169,34 @@ def main() -> int:
                 {"episode_id": row["episode_id"], "series_title": row["series_title"], "season": row["season"], "episode": row["episode"]}
                 for row in not_ready[:50]
             ],
+            "whisper_review_pending": [
+                {
+                    "episode_id": row.get("episode_id"),
+                    "source_id": row.get("source_id"),
+                    "series_title": row.get("series_title"),
+                    "episode_code": row.get("episode_code"),
+                    "source_title": row.get("source_title"),
+                    "status": row_status(row),
+                }
+                for row in pending_whisper_review[:50]
+            ],
+            "subtitle_followup_pending": [
+                {
+                    "episode_id": row.get("episode_id"),
+                    "source_id": row.get("source_id"),
+                    "series_title": row.get("series_title"),
+                    "episode_code": row.get("episode_code"),
+                    "source_title": row.get("source_title"),
+                    "subtitle_status": row.get("subtitle_status"),
+                    "reason": row.get("reason"),
+                }
+                for row in pending_subtitles[:50]
+            ],
         },
         "language_verdicts": dict(Counter(row.get("verdict", "UNKNOWN") for row in audits)),
         "language_whisper_statuses": dict(Counter(whisper_status(row) for row in latest_audits)),
+        "whisper_review_statuses": dict(Counter(row_status(row) for row in whisper_review)),
+        "subtitle_followup_statuses": dict(Counter(row.get("subtitle_status") or row_status(row) for row in subtitle_followup)),
     }
     out = REPO / "reports" / "ops-status.json"
     out.parent.mkdir(exist_ok=True)
@@ -159,6 +205,8 @@ def main() -> int:
     print(f"uploaded_without_gemma_description={len(uploaded_missing_desc)}")
     print(f"backlog_without_source_plan={len(backlog_episode_ids - prepared_episode_ids)}")
     print(f"backlog_without_episode_description={len(backlog_episode_ids - desc_episodes)}")
+    print(f"whisper_review_pending_sources={len(pending_whisper_review)}")
+    print(f"subtitle_followup_pending_sources={len(pending_subtitles)}")
     print(f"wrote {out}")
     return 0
 

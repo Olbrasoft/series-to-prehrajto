@@ -147,6 +147,7 @@ def main() -> int:
     ap.add_argument("--min-language-queue-sources", type=int, default=1000)
     ap.add_argument("--prepare-sources-batch", type=int, default=1500)
     ap.add_argument("--min-pending-whisper", type=int, default=100)
+    ap.add_argument("--min-whisper-review", type=int, default=1)
     ap.add_argument("--min-description-gap", type=int, default=50)
     ap.add_argument("--dry-run", action="store_true")
     args = ap.parse_args()
@@ -163,6 +164,8 @@ def main() -> int:
     language_queue_sources = int(counts.get("language_queue_sources") or 0)
     unprepared_queue_episodes = unprepared_source_queue_episodes()
     pending_whisper = int(counts.get("language_pending_whisper_sources") or 0)
+    whisper_review_pending = int(counts.get("whisper_review_pending_sources") or 0)
+    subtitle_followup_pending = int(counts.get("subtitle_followup_pending_sources") or 0)
     description_gap = len(gaps.get("backlog_without_episode_description") or [])
     uploaded_needing_desc_update = len(gaps.get("uploaded_not_marked_description_updated") or [])
 
@@ -179,6 +182,8 @@ def main() -> int:
                 "language_queue_sources": language_queue_sources,
                 "unprepared_source_queue_episodes": unprepared_queue_episodes,
                 "language_pending_whisper_sources": pending_whisper,
+                "whisper_review_pending_sources": whisper_review_pending,
+                "subtitle_followup_pending_sources": subtitle_followup_pending,
                 "description_gap_sample": description_gap,
                 "uploaded_needing_description_update": uploaded_needing_desc_update,
             },
@@ -252,6 +257,14 @@ def main() -> int:
         queue_workflow(
             "audit-language",
             {"limit": "40", "sample_seconds": "45"},
+            active=active,
+            dry_run=args.dry_run,
+        )
+
+    if whisper_review_pending >= args.min_whisper_review:
+        queue_workflow(
+            "process-whisper-review",
+            {"limit": "20", "sample_seconds": "30"},
             active=active,
             dry_run=args.dry_run,
         )

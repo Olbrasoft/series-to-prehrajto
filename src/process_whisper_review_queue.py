@@ -95,7 +95,7 @@ def main() -> int:
     ap.add_argument("--queue", default="plans/whisper-review-queue.jsonl")
     ap.add_argument("--prepared", default="plans/prepared-episodes.jsonl")
     ap.add_argument("--audit-out", default="audits/language-audit.jsonl")
-    ap.add_argument("--audit-latest-out", default="audits/language-audit-latest.jsonl")
+    ap.add_argument("--audit-latest-out", default="audits/language-audit-latest.jsonl.gz")
     ap.add_argument("--subtitle-followup-out", default="plans/subtitle-followup-queue.jsonl")
     ap.add_argument("--limit", type=int, default=10)
     ap.add_argument("--series-slug")

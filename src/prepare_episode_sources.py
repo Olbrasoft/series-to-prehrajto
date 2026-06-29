@@ -154,7 +154,11 @@ def update_subtitle_followup_queue(path: Path, prepared_rows: list[dict]) -> Non
             "source_url": selected.get("source_url"),
             "source_title": selected.get("source_title"),
             "subtitle_status": "needs_subtitle_setup_after_prehrajto_processing",
-            "reason": "selected source has Czech subtitles but no Czech audio source was found",
+            "reason": (
+                "selected source needs Czech subtitles after Whisper detected non-Czech audio"
+                if selected.get("verification_status") == "whisper_confirmed_non_cz_audio_needs_cz_subtitles"
+                else "selected source has Czech subtitles but no Czech audio source was found"
+            ),
         }
     write_jsonl(
         path,
