@@ -146,8 +146,7 @@ jobs:
           mkdir -p "$TMP_DIR/plans" "$TMP_DIR/audits"
           cp plans/prepared-episodes.jsonl "$TMP_DIR/plans/prepared-episodes.jsonl"
           cp plans/subtitle-followup-queue.jsonl "$TMP_DIR/plans/subtitle-followup-queue.jsonl"
-          cp audits/language-audit-latest.jsonl "$TMP_DIR/audits/language-audit-latest.jsonl" 2>/dev/null || true
-          cp audits/language-audit.jsonl "$TMP_DIR/audits/language-audit.jsonl" 2>/dev/null || true
+          cp audits/language-audit-latest.jsonl.gz "$TMP_DIR/audits/language-audit-latest.jsonl.gz" 2>/dev/null || true
 
           for attempt in 1 2 3 4 5; do
             git fetch origin main
@@ -156,8 +155,7 @@ jobs:
             mkdir -p plans audits manifests reports
             cp "$TMP_DIR/plans/prepared-episodes.jsonl" plans/prepared-episodes.jsonl
             cp "$TMP_DIR/plans/subtitle-followup-queue.jsonl" plans/subtitle-followup-queue.jsonl
-            cp "$TMP_DIR/audits/language-audit-latest.jsonl" audits/language-audit-latest.jsonl 2>/dev/null || true
-            cp "$TMP_DIR/audits/language-audit.jsonl" audits/language-audit.jsonl 2>/dev/null || true
+            cp "$TMP_DIR/audits/language-audit-latest.jsonl.gz" audits/language-audit-latest.jsonl.gz 2>/dev/null || true
 
             python src/build_upload_manifest.py \
               --limit 1000 \
@@ -166,6 +164,7 @@ jobs:
 
             git add plans/prepared-episodes.jsonl
             git add plans/subtitle-followup-queue.jsonl
+            git add audits/language-audit-latest.jsonl.gz
             git add manifests/upload-ready.jsonl.gz
             git add reports/upload-manifest.json
             if git diff --cached --quiet; then

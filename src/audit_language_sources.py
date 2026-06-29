@@ -54,7 +54,8 @@ def iter_jsonl(path: Path) -> list[dict]:
     if not path.exists():
         return []
     rows = []
-    with path.open(encoding="utf-8") as fh:
+    opener = gzip.open if path.suffix == ".gz" else open
+    with opener(path, "rt", encoding="utf-8") as fh:
         for line in fh:
             if not line.strip():
                 continue
@@ -102,7 +103,8 @@ def write_latest_index(audit_path: Path, latest_path: Path) -> None:
         ),
     )
     latest_path.parent.mkdir(parents=True, exist_ok=True)
-    with latest_path.open("w", encoding="utf-8") as fh:
+    opener = gzip.open if latest_path.suffix == ".gz" else open
+    with opener(latest_path, "wt", encoding="utf-8") as fh:
         for row in rows:
             fh.write(json.dumps(row, ensure_ascii=False) + "\n")
 
@@ -384,7 +386,7 @@ def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--queue", default="backlog/language-audit-queue.jsonl.gz")
     ap.add_argument("--out", default="audits/language-audit.jsonl")
-    ap.add_argument("--latest-out", default="audits/language-audit-latest.jsonl")
+    ap.add_argument("--latest-out", default="audits/language-audit-latest.jsonl.gz")
     ap.add_argument("--limit", type=int, default=50)
     ap.add_argument("--source-id", type=int, action="append")
     ap.add_argument("--series-slug")

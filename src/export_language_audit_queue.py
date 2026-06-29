@@ -225,7 +225,7 @@ def load_jsonl(path: Path) -> list[dict[str, Any]]:
 def local_audited_source_ids() -> set[int]:
     ids: set[int] = set()
     for path in (
-        REPO_ROOT / "audits" / "language-audit-latest.jsonl",
+        REPO_ROOT / "audits" / "language-audit-latest.jsonl.gz",
         REPO_ROOT / "audits" / "language-audit.jsonl",
     ):
         for row in load_jsonl(path):

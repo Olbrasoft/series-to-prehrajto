@@ -497,7 +497,7 @@ def main() -> int:
     ap.add_argument("--backlog", default="backlog/series-episodes.jsonl.gz")
     ap.add_argument("--prepared", default="plans/prepared-episodes.jsonl")
     ap.add_argument("--descriptions", default="plans/descriptions.jsonl")
-    ap.add_argument("--audits", default="audits/language-audit-latest.jsonl")
+    ap.add_argument("--audits", default="audits/language-audit-latest.jsonl.gz")
     ap.add_argument("--out", default="manifests/upload-ready.jsonl.gz")
     ap.add_argument("--report", default="reports/upload-manifest.json")
     ap.add_argument("--limit", type=int, default=1000)

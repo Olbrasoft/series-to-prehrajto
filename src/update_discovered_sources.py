@@ -229,7 +229,7 @@ def write_report(path: Path, catalog: list[dict[str, Any]], export_rows: list[di
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--backlog", default="backlog/series-episodes.jsonl.gz")
-    ap.add_argument("--audits", default="audits/language-audit-latest.jsonl")
+    ap.add_argument("--audits", default="audits/language-audit-latest.jsonl.gz")
     ap.add_argument("--catalog-out", default="sources/discovered-episode-sources.jsonl.gz")
     ap.add_argument("--import-out", default="exports/video-source-import.jsonl.gz")
     ap.add_argument("--report", default="reports/discovered-sources.json")

@@ -99,7 +99,7 @@ def main() -> int:
     descriptions = load_jsonl(REPO / "plans" / "descriptions.jsonl")
     prepared = load_jsonl(REPO / "plans" / "prepared-episodes.jsonl")
     audits = load_jsonl(REPO / "audits" / "language-audit.jsonl")
-    latest_audits = load_jsonl(REPO / "audits" / "language-audit-latest.jsonl")
+    latest_    audits = load_jsonl(REPO / "audits" / "language-audit-latest.jsonl.gz")
     desc_series, desc_episodes = latest_descriptions(descriptions)
     uploaded = state.get("uploads", [])
     uploaded_episode_ids = {int(row["episode_id"]) for row in uploaded}

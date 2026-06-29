@@ -76,12 +76,12 @@ jobs:
         run: |
           TMP_DIR="$(mktemp -d)"
           mkdir -p "$TMP_DIR/audits"
-          cp audits/language-audit-latest.jsonl "$TMP_DIR/audits/" 2>/dev/null || true
+          cp audits/language-audit-latest.jsonl.gz "$TMP_DIR/audits/" 2>/dev/null || true
           git fetch origin main
           git reset --hard origin/main
           mkdir -p audits
           cp "$TMP_DIR"/audits/* audits/ 2>/dev/null || true
-          git add audits/language-audit-latest.jsonl
+          git add audits/language-audit-latest.jsonl.gz
           if git diff --cached --quiet; then
             echo "no language audit changes"
           else
@@ -94,7 +94,7 @@ jobs:
               git reset --hard origin/main
               mkdir -p audits
               cp "$TMP_DIR"/audits/* audits/ 2>/dev/null || true
-              git add audits/language-audit-latest.jsonl
+              git add audits/language-audit-latest.jsonl.gz
               git commit -m "chore: audit source languages" || true
               sleep $((attempt * 2))
             done
