@@ -1,9 +1,9 @@
 {
   "counts": {
     "backlog_episodes": 182568,
-    "manifest_upload_ready_episodes": 110,
-    "uploaded_episodes": 10808,
-    "prepared_source_episodes": 19720,
+    "manifest_upload_ready_episodes": 103,
+    "uploaded_episodes": 10814,
+    "prepared_source_episodes": 19740,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
@@ -11,27 +11,107 @@
     "language_queue_sources": 2644,
     "language_audited_sources": 20,
     "language_whisper_attempted_sources": 20,
-    "language_pending_whisper_sources": 2644,
-    "whisper_review_sources": 382,
-    "whisper_review_pending_sources": 358,
+    "language_pending_whisper_sources": 2624,
+    "whisper_review_sources": 411,
+    "whisper_review_pending_sources": 387,
     "subtitle_followup_sources": 27,
     "subtitle_followup_pending_sources": 27
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-06-29T19:12:56Z",
-      "databaseId": 28396413641,
+      "createdAt": "2026-06-29T19:50:25Z",
+      "databaseId": 28398457277,
       "headBranch": "main",
       "status": "in_progress",
-      "workflowName": "ops-status"
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-29T19:39:39Z",
+      "databaseId": 28397871060,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-06-29T19:39:24Z",
+      "databaseId": 28397857572,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-29T19:38:09Z",
+      "databaseId": 28397791981,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-29T19:38:00Z",
+      "databaseId": 28397783216,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-06-29T19:30:10Z",
+      "databaseId": 28397347582,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-06-29T19:23:09Z",
+      "databaseId": 28396969337,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-29T19:17:16Z",
+      "databaseId": 28396654830,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-29T19:15:49Z",
+      "databaseId": 28396576775,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-sources"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-06-29T19:15:22Z",
+      "databaseId": 28396551879,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-29T19:12:56Z",
+      "databaseId": 28396413641,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "cancelled",
       "createdAt": "2026-06-29T19:09:37Z",
       "databaseId": 28396233863,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "sync"
     },
     {
@@ -59,11 +139,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-06-29T19:02:19Z",
       "databaseId": 28395835023,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -97,86 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "refresh-backlog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-29T18:51:29Z",
-      "databaseId": 28395234697,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-06-29T18:51:19Z",
-      "databaseId": 28395225565,
-      "headBranch": "main",
-      "status": "pending",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-29T18:49:15Z",
-      "databaseId": 28395108550,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-29T18:30:44Z",
-      "databaseId": 28394092703,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-06-29T18:26:34Z",
-      "databaseId": 28393863786,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-06-29T18:19:30Z",
-      "databaseId": 28393476123,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-sources"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-29T18:17:30Z",
-      "databaseId": 28393368009,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-29T18:17:27Z",
-      "databaseId": 28393365442,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-29T18:17:25Z",
-      "databaseId": 28393363371,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-29T18:16:43Z",
-      "databaseId": 28393326344,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
     }
   ],
   "gaps": {
@@ -31921,6 +31921,21 @@
         "video_id": 27001343
       },
       {
+        "episode_id": 15806,
+        "display_name": "Noční agent S03E04 - Orion CZ Dabing",
+        "video_id": 27001590
+      },
+      {
+        "episode_id": 15808,
+        "display_name": "Noční agent S03E06 - Kalné vody CZ Dabing",
+        "video_id": 27001623
+      },
+      {
+        "episode_id": 15810,
+        "display_name": "Noční agent S03E08 - S pravdou ven CZ Dabing",
+        "video_id": 27001972
+      },
+      {
         "episode_id": 15793,
         "display_name": "Noční agent S02E01 - Sledování telefonu CZ Dabing",
         "video_id": 27000636
@@ -31969,6 +31984,21 @@
         "episode_id": 15811,
         "display_name": "Noční agent S03E10 - Smršť CZ Dabing",
         "video_id": 27001432
+      },
+      {
+        "episode_id": 56547,
+        "display_name": "Glee S06E09 - Dětská hvězda CZ Titulky",
+        "video_id": 27001613
+      },
+      {
+        "episode_id": 5787,
+        "display_name": "Původní S01E02 - Dům povstalého syna CZ Dabing",
+        "video_id": 27001886
+      },
+      {
+        "episode_id": 5789,
+        "display_name": "Původní S01E04 - Dívka v New Orleans CZ Dabing",
+        "video_id": 27001900
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -74553,6 +74583,21 @@
         "video_id": 27001343
       },
       {
+        "episode_id": 15806,
+        "display_name": "Noční agent S03E04 - Orion CZ Dabing",
+        "video_id": 27001590
+      },
+      {
+        "episode_id": 15808,
+        "display_name": "Noční agent S03E06 - Kalné vody CZ Dabing",
+        "video_id": 27001623
+      },
+      {
+        "episode_id": 15810,
+        "display_name": "Noční agent S03E08 - S pravdou ven CZ Dabing",
+        "video_id": 27001972
+      },
+      {
         "episode_id": 15793,
         "display_name": "Noční agent S02E01 - Sledování telefonu CZ Dabing",
         "video_id": 27000636
@@ -74601,6 +74646,21 @@
         "episode_id": 15811,
         "display_name": "Noční agent S03E10 - Smršť CZ Dabing",
         "video_id": 27001432
+      },
+      {
+        "episode_id": 56547,
+        "display_name": "Glee S06E09 - Dětská hvězda CZ Titulky",
+        "video_id": 27001613
+      },
+      {
+        "episode_id": 5787,
+        "display_name": "Původní S01E02 - Dům povstalého syna CZ Dabing",
+        "video_id": 27001886
+      },
+      {
+        "episode_id": 5789,
+        "display_name": "Původní S01E04 - Dívka v New Orleans CZ Dabing",
+        "video_id": 27001900
       }
     ],
     "prepared_not_upload_ready": [
@@ -75560,7 +75620,7 @@
   "whisper_review_statuses": {
     "whisper_confirmed_cz": 15,
     "whisper_non_cz_needs_subtitles": 9,
-    "needs_whisper": 358
+    "needs_whisper": 387
   },
   "subtitle_followup_statuses": {
     "needs_subtitle_setup_after_prehrajto_processing": 27
