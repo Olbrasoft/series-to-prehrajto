@@ -422,9 +422,11 @@ def build_manifest(
         if require_episode_description and not ep_desc:
             stats["missing_episode_description"] += 1
             continue
+        display_name = display_name_from_plan(plan)
 
         manifest_row = {
             **episode,
+            "display_name": display_name,
             "candidates": candidates,
             "upload_manifest": {
                 "schema_version": 1,
@@ -434,7 +436,7 @@ def build_manifest(
                     "season": episode.get("season"),
                     "episode": episode.get("episode"),
                     "episode_id": episode_id,
-                    "display_name": episode.get("display_name"),
+                    "display_name": display_name,
                     "description": description_plan.get("generated_description"),
                     "source_id": source_id,
                     "source_url": candidate.get("url"),

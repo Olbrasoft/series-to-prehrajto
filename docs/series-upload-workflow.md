@@ -176,14 +176,64 @@ Treti vrstva je Whisper (volitelna):
 
 - rozbalit stream,
 - vytahnout kratky audio vzorek,
-- detekovat jazyk,
+- detekovat jazyk pomoci Whisper/faster-whisper language detection,
 - ulozit jazyk, pravdepodobnost a stav kontroly.
+
+V tomto kroku se Whisper nepouziva na tvorbu titulku ani na analyzu obsahu.
+Pouziva se jen jeho detekce jazyka z audio vzorku, protoze model je pro tento
+typ rozpoznavani vhodny. Vystupem je jazyk, pravdepodobnost a technicky stav
+kontroly.
 
 Whisper je nejužitečnějsi pro pripady, kdy se video podle nazvu tvari jako
 ceske, ale ve skutecnosti cesky neni. Pokud Whisper odporuje nazvu nebo metadatum,
 ma mit prednost Whisper a zdroj se nema nahravat jako cesky dabing.
-Whisper se standardne nepouziva — vyzaduje `--use-whisper`. Pro bezny provoz
-staci prvni dve vrstvy (nazev + metadata) a overeni streamu.
+Whisper je potreba i v opacnem pripade: kdyz vysledek hledani sedi na serial,
+serii a epizodu, ma dostatecnou velikost nebo rozliseni, ale v nazvu neni
+`CZ`, `CS`, `CZ dabing` ani jiny jazykovy hint. Takovy zdroj se nesmi zahodit
+jako `no acceptable source`. Musi se ulozit do fronty pro Whisper a pozdeji
+overit zvukem.
+
+Fronta kandidatu cekajicich na Whisper je:
+
+```text
+plans/whisper-review-queue.jsonl
+```
+
+Do teto fronty patri napr. zdroje typu `Kriminalka Las Vegas 01x16`, pokud:
+
+- nazev odpovida hledane epizode,
+- velikost je alespon 300 MB nebo probe ukaze aspon 1080p,
+- zdroj jde rozbalit na stream,
+- chybi jazykovy hint v nazvu nebo metadatech.
+
+Pravidlo je tedy: kandidat, ktery splnuje kvalitu a shodu epizody, ale nema
+primarne napsano, ze je cesky, postupuje do Whisper fronty. Tam se zjisti, zda
+je zvuk v cestine nebo v jinem jazyce. Podle vysledku se s nim zachazi takto:
+
+- Whisper potvrdi cestinu: epizoda se pripravi jako `CZ Dabing`.
+- Whisper potvrdi jiny jazyk: epizoda se pripravi jako `CZ Titulky` a zaroven
+  se zapise do `plans/subtitle-followup-queue.jsonl`.
+- Whisper selze: kandidat zustava v review fronte se stavem chyby a muze se
+  zkusit znovu nebo rucne prověřit.
+
+Samostatny Whisper krok musi tuto frontu prubezne odbavovat:
+
+1. vzit nekolik kandidatu z `plans/whisper-review-queue.jsonl`,
+2. rozbalit stream,
+3. vytahnout kratky audio vzorek,
+4. detekovat jazyk,
+5. zapsat vysledek do `audits/language-audit.jsonl`,
+6. aktualizovat `audits/language-audit-latest.jsonl`,
+7. pokud je jazyk cesky, prevest zdroj z review fronty do
+   `plans/prepared-episodes.jsonl` jako upload-ready kandidat.
+8. pokud je zdroj funkcni a kvalitni, ale Whisper potvrdi jiny jazyk nez
+   cestinu, nezahazovat ho; pripravit ho jako upload typu `CZ Titulky` a
+   zapsat ho do `plans/subtitle-followup-queue.jsonl`, aby bylo jasne, ze po
+   zpracovani na Prehraj.to potrebuje doplnit ceske titulky.
+
+Whisper se pro bezny rychly prepare nemusi poustet na vsechno. Nesmime ale
+ztracet kvalitni kandidaty bez jazykoveho hintu; ty musi zustat v review fronte,
+dokud je nepotvrdi nebo nevyradi Whisper.
 
 Vystupy jazykove kontroly:
 
@@ -383,6 +433,8 @@ Hlidan musi byt minimalne tento stav:
 - kolik epizod je ve frontě pro upload,
 - kolik epizod ma pripraveny zdroj,
 - kolik zdroju ceka na Whisper,
+- jestli se Whisper review fronta prubezne zmensuje nebo prevadi na
+  upload-ready epizody,
 - kolik epizod nema popis,
 - jestli bezi sync,
 - jestli bezi priprava zdroju,

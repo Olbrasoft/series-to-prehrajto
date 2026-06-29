@@ -170,6 +170,59 @@ def update_subtitle_followup_queue(path: Path, prepared_rows: list[dict]) -> Non
     )
 
 
+def update_whisper_review_queue(path: Path, prepared_rows: list[dict]) -> None:
+    latest: dict[tuple[int, int], dict] = {}
+    for row in load_jsonl(path):
+        if row.get("episode_id") is None or row.get("source_id") is None:
+            continue
+        latest[(int(row["episode_id"]), int(row["source_id"]))] = row
+
+    for row in prepared_rows:
+        for source in row.get("whisper_review_sources") or []:
+            if source.get("source_id") is None:
+                continue
+            source_id = int(source["source_id"])
+            latest[(int(row["episode_id"]), source_id)] = {
+                "created_at": row.get("prepared_at"),
+                "status": "needs_whisper",
+                "reason": source.get("whisper_review_reason") or "quality candidate has no Czech title or metadata signal",
+                "episode_id": int(row["episode_id"]),
+                "series_id": int(row["series_id"]),
+                "series_slug": row.get("series_slug"),
+                "series_title": row.get("series_title"),
+                "season": int(row["season"]),
+                "episode": int(row["episode"]),
+                "episode_code": episode_code(row),
+                "episode_name": row.get("episode_name"),
+                "provider": source.get("provider"),
+                "source_id": source_id,
+                "external_id": source.get("external_id"),
+                "source_url": source.get("source_url"),
+                "source_title": source.get("source_title"),
+                "filesize_bytes": source.get("filesize_bytes"),
+                "resolution_hint": source.get("resolution_hint"),
+                "duration_sec": source.get("duration_sec"),
+                "quality_tier": source.get("quality_tier"),
+                "verdict": source.get("verdict"),
+                "detected_by": source.get("detected_by"),
+                "verification_status": source.get("verification_status"),
+            }
+
+    write_jsonl(
+        path,
+        sorted(
+            latest.values(),
+            key=lambda item: (
+                str(item.get("series_slug") or ""),
+                int(item.get("season") or 0),
+                int(item.get("episode") or 0),
+                -int(item.get("filesize_bytes") or 0),
+                int(item.get("source_id") or 0),
+            ),
+        ),
+    )
+
+
 def burned_source_ids() -> set[int]:
     burned: set[int] = set()
     paths = [REPO_ROOT / "state" / "uploaded.json"]
@@ -415,8 +468,7 @@ def usable_search_sources(results: list[SearchResult], episode: dict) -> list[di
     return [
         source
         for source in sources
-        if (source_has_cz_audio_hint(source) or source_has_cz_subtitle_hint(source))
-        and source_has_upload_quality_hint(source)
+        if source_has_upload_quality_hint(source)
     ]
 
 
@@ -580,11 +632,25 @@ def prepare_episode(
         and source_has_cz_subtitle_hint(source)
         and source_has_upload_quality_hint(source)
     ]
-    fallback = [source for source in live_sources if source not in prioritized and source not in subtitle_fallback]
+    whisper_candidates = [
+        source
+        for source in live_sources
+        if source not in prioritized
+        and source not in subtitle_fallback
+        and source_has_upload_quality_hint(source)
+    ]
+    fallback = [
+        source
+        for source in live_sources
+        if source not in prioritized
+        and source not in subtitle_fallback
+        and source not in whisper_candidates
+    ]
     prioritized.sort(key=source_precheck_score, reverse=True)
     subtitle_fallback.sort(key=source_precheck_score, reverse=True)
+    whisper_candidates.sort(key=source_precheck_score, reverse=True)
     fallback.sort(key=source_precheck_score, reverse=True)
-    live_sources = prioritized + subtitle_fallback + fallback
+    live_sources = prioritized + subtitle_fallback + whisper_candidates + fallback
     sources = live_sources[:source_limit] if source_limit > 0 else live_sources
     audited = []
     for source in sources:
@@ -672,6 +738,38 @@ def prepare_episode(
                 break
             if verified_subtitles:
                 selected = verified_subtitles[0]
+        if selected is None and use_whisper:
+            whisper_acceptable = []
+            unknown_quality = [
+                result
+                for result in audited
+                if result["verdict"] == "UNKNOWN"
+                and source_has_upload_quality_hint(sources_by_id[int(result["source_id"])])
+            ]
+            unknown_quality.sort(key=lambda result: tuple(result["score"]), reverse=True)
+            for preliminary in unknown_quality[:MAX_RESOLVABLE_CANDIDATE_PROBES]:
+                source = sources_by_id[int(preliminary["source_id"])]
+                verified = audit_one(
+                    source,
+                    use_whisper=True,
+                    sample_seconds=sample_seconds,
+                    probe_stream=True,
+                )
+                verified["score"] = source_score(verified, source)
+                verified["resolution_score"] = probe_resolution(verified, source)
+                verified["quality_tier"] = source_quality_tier(
+                    source,
+                    resolved_resolution=verified["resolution_score"],
+                )
+                audited[audited_by_id[int(verified["source_id"])]] = verified
+                if not is_resolvable(verified):
+                    continue
+                if verified["verdict"] != "CZ_AUDIO":
+                    continue
+                whisper_acceptable.append(verified)
+                break
+            if whisper_acceptable:
+                selected = whisper_acceptable[0]
     elif acceptable:
         selected = acceptable[0]
     elif subtitle_acceptable:
@@ -679,6 +777,23 @@ def prepare_episode(
 
     upload_ready = bool(selected and selected["verdict"] in {"CZ_AUDIO", "PROBABLE_CZ_AUDIO", "CZ_SUBTITLES_ONLY"})
     needs_subtitles_after_upload = bool(selected and selected["verdict"] == "CZ_SUBTITLES_ONLY")
+    selected_source_id = int(selected["source_id"]) if selected and selected.get("source_id") is not None else None
+    whisper_review_sources = []
+    if not use_whisper:
+        for result in audited:
+            if selected_source_id is not None and int(result["source_id"]) == selected_source_id:
+                continue
+            source = sources_by_id.get(int(result["source_id"]))
+            if not source or not source_has_upload_quality_hint(source):
+                continue
+            if result["verdict"] != "UNKNOWN":
+                continue
+            whisper_review_sources.append(
+                {
+                    **result,
+                    "whisper_review_reason": "quality candidate matches episode but has no Czech title or metadata signal",
+                }
+            )
     return {
         "prepared_at": (
             audited[-1]["audited_at"]
@@ -701,6 +816,7 @@ def prepare_episode(
         "needs_subtitles_after_upload": needs_subtitles_after_upload,
         "selected_source": selected,
         "tested_sources": audited,
+        "whisper_review_sources": whisper_review_sources,
     }
 
 
@@ -712,6 +828,7 @@ def main() -> int:
     ap.add_argument("--audit-out", default="audits/language-audit.jsonl")
     ap.add_argument("--audit-latest-out", default="audits/language-audit-latest.jsonl.gz")
     ap.add_argument("--subtitle-followup-out", default="plans/subtitle-followup-queue.jsonl")
+    ap.add_argument("--whisper-review-out", default="plans/whisper-review-queue.jsonl")
     ap.add_argument("--episode-limit", type=int, default=10)
     ap.add_argument("--source-limit-per-episode", type=int, default=12)
     ap.add_argument("--series-slug")
@@ -798,6 +915,7 @@ def main() -> int:
     audit_rows = [source for episode in prepared for source in episode["tested_sources"]]
     write_compacted_prepared(Path(args.out), prepared)
     update_subtitle_followup_queue(Path(args.subtitle_followup_out), prepared)
+    update_whisper_review_queue(Path(args.whisper_review_out), prepared)
     append_jsonl(Path(args.audit_out), audit_rows)
     write_latest_index(Path(args.audit_out), Path(args.audit_latest_out))
 
