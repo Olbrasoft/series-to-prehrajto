@@ -63,6 +63,51 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
+      - name: Build upload manifest from existing prepared sources
+        run: |
+          python src/build_upload_manifest.py \
+            --limit 1000 \
+            --out manifests/upload-ready.jsonl.gz \
+            --report reports/upload-manifest.json
+
+      - name: Commit fast manifest
+        run: |
+          set -e
+          git add manifests/upload-ready.jsonl.gz reports/upload-manifest.json
+          if git diff --cached --quiet; then
+            echo "no fast manifest changes"
+            exit 0
+          fi
+
+          EP_COUNT=$(python -c "import json; d=json.load(open('reports/upload-manifest.json')); print(d.get('new_count',0))")
+          git commit -m "chore: refresh upload manifest (${EP_COUNT} ready episodes)"
+          for attempt in 1 2 3 4 5; do
+            git pull --rebase origin main || true
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            sleep $((attempt * 3))
+          done
+
+          echo "failed to push fast manifest after retries"
+          exit 1
+
+      - name: Queue upload from existing manifest
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git fetch origin main
+          git reset --hard origin/main
+          if python src/upload_queue_status.py --no-require-description; then
+            gh workflow run sync.yml \
+              -f batch_size="30" \
+              -f num_shards="2" \
+              -f allow_subtitles="false" \
+              -f continue_uploads="true"
+          else
+            echo "fast manifest has no upload-ready episodes"
+          fi
+
       - name: Prepare episode sources
         env:
           CZ_PROXY_URL: ${{ secrets.CZ_PROXY_URL }}

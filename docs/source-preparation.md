@@ -10,12 +10,16 @@ Before uploading an episode, prepare its source choices:
    - match the episode title and code (`SxxExx` or `x` format),
    - look Czech (title contains `CZ Dabing`, `CZ`, `český dabing`, etc.),
    - have filesize ≥ 300 MB (visible in search HTML).
-4. Audit language signals (title, metadata) and probe the stream of the first
+4. Only fetch the second search result page when the first page has no suitable
+   candidate. This keeps request volume low because the first HTML response
+   already contains the candidate names and file sizes needed for the first
+   filter.
+5. Audit language signals (title, metadata) and probe the stream of the first
    qualifying candidate.
-5. If the stream is resolvable and Czech audio is confirmed, mark the episode
+6. If the stream is resolvable and Czech audio is confirmed, mark the episode
    as `upload_ready`. The first working candidate is selected — no need to probe
    all options.
-6. Store both the selected source and rejected alternatives in the repository.
+7. Store both the selected source and rejected alternatives in the repository.
 
 The source queue files (`language-audit-queue.jsonl.gz`,
 `enriched-audit-queue.jsonl.gz`) are ancillary. They can provide extra known

@@ -78,6 +78,17 @@ Dexter 7x4
 ```
 
 Pouzivat se ma cesky i originalni nazev serialu, pokud jsou dostupne.
+Pro konkretni nazev epizody a cislo epizody se nejdriv udela jeden search
+request na Prehraj.to. Vracene HTML obsahuje seznam kandidatu vcetne velikosti
+souboru, takze se nemaji naslepo probeovat vsechny vysledky. Nejdri lze z HTML
+vybrat jen kandidaty, kteri maji alespon 300 MB a podle nazvu vypadaji jako
+cesky dabing nebo cesky zvuk. Teprve takovy kandidat se probeuje pres detail a
+jazykovou kontrolu.
+
+Pokud vyhledavani vrati vice stranek vysledku, nejdriv se zpracuje pouze prvni
+stranka. Druha stranka se nacita az ve chvili, kdy na prvni strance neni zadny
+vhodny kandidat. Cilem je setrit requesty na Prehraj.to a nevytvaret zbytecnou
+zatez.
 
 Z vysledku hledani se ulozi vsechny kandidati, kteri vypadaji jako stejna
 epizoda. Shoda se overuje podle:
