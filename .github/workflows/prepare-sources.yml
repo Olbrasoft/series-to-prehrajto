@@ -95,6 +95,7 @@ jobs:
           mkdir -p "$TMP_DIR/plans" "$TMP_DIR/audits"
           cp plans/prepared-episodes.jsonl "$TMP_DIR/plans/prepared-episodes.jsonl"
           cp plans/subtitle-followup-queue.jsonl "$TMP_DIR/plans/subtitle-followup-queue.jsonl"
+          cp plans/whisper-review-queue.jsonl "$TMP_DIR/plans/whisper-review-queue.jsonl" 2>/dev/null || true
           cp audits/language-audit-latest.jsonl.gz "$TMP_DIR/audits/language-audit-latest.jsonl.gz" 2>/dev/null || true
 
           for attempt in 1 2 3 4 5; do
@@ -102,9 +103,10 @@ jobs:
             git reset --hard origin/main
             cp "$TMP_DIR/plans/prepared-episodes.jsonl" plans/prepared-episodes.jsonl
             cp "$TMP_DIR/plans/subtitle-followup-queue.jsonl" plans/subtitle-followup-queue.jsonl
+            cp "$TMP_DIR/plans/whisper-review-queue.jsonl" plans/whisper-review-queue.jsonl 2>/dev/null || true
             cp "$TMP_DIR/audits/language-audit-latest.jsonl.gz" audits/language-audit-latest.jsonl.gz 2>/dev/null || true
 
-            git add plans/prepared-episodes.jsonl plans/subtitle-followup-queue.jsonl audits/language-audit-latest.jsonl.gz
+            git add plans/prepared-episodes.jsonl plans/subtitle-followup-queue.jsonl plans/whisper-review-queue.jsonl audits/language-audit-latest.jsonl.gz
             if git diff --cached --quiet; then
               echo "no preparation changes"
               exit 0

@@ -740,10 +740,11 @@ def prepare_episode(
                 selected = verified_subtitles[0]
         if selected is None and use_whisper:
             whisper_acceptable = []
+            whisper_subtitle_fallback = []
             unknown_quality = [
                 result
                 for result in audited
-                if result["verdict"] == "UNKNOWN"
+                if result["verdict"] not in {"CZ_AUDIO", "PROBABLE_CZ_AUDIO", "CZ_SUBTITLES_ONLY"}
                 and source_has_upload_quality_hint(sources_by_id[int(result["source_id"])])
             ]
             unknown_quality.sort(key=lambda result: tuple(result["score"]), reverse=True)
@@ -764,12 +765,24 @@ def prepare_episode(
                 audited[audited_by_id[int(verified["source_id"])]] = verified
                 if not is_resolvable(verified):
                     continue
-                if verified["verdict"] != "CZ_AUDIO":
-                    continue
-                whisper_acceptable.append(verified)
-                break
+                if verified["verdict"] == "CZ_AUDIO":
+                    whisper_acceptable.append(verified)
+                    break
+                whisper = (verified.get("signals") or {}).get("whisper") or {}
+                if whisper.get("status") == "ok":
+                    subtitle_verified = {
+                        **verified,
+                        "original_verdict": verified.get("verdict"),
+                        "verdict": "CZ_SUBTITLES_ONLY",
+                        "verification_status": "whisper_confirmed_non_cz_audio_needs_cz_subtitles",
+                    }
+                    subtitle_verified["score"] = source_score(subtitle_verified, source)
+                    whisper_subtitle_fallback.append(subtitle_verified)
             if whisper_acceptable:
                 selected = whisper_acceptable[0]
+            elif whisper_subtitle_fallback:
+                whisper_subtitle_fallback.sort(key=lambda result: tuple(result["score"]), reverse=True)
+                selected = whisper_subtitle_fallback[0]
     elif acceptable:
         selected = acceptable[0]
     elif subtitle_acceptable:
@@ -786,12 +799,12 @@ def prepare_episode(
             source = sources_by_id.get(int(result["source_id"]))
             if not source or not source_has_upload_quality_hint(source):
                 continue
-            if result["verdict"] != "UNKNOWN":
+            if result["verdict"] in {"CZ_AUDIO", "PROBABLE_CZ_AUDIO", "CZ_SUBTITLES_ONLY"}:
                 continue
             whisper_review_sources.append(
                 {
                     **result,
-                    "whisper_review_reason": "quality candidate matches episode but has no Czech title or metadata signal",
+                    "whisper_review_reason": "quality candidate matches episode but has no Czech title or metadata signal, or has another language signal",
                 }
             )
     return {

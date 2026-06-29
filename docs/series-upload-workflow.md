@@ -13,7 +13,8 @@ je mozne mit pripravenou frontu dopredu.
 
 Kazda epizoda, ktera jde do uploadu, ma mit pripraveno:
 
-- nazev videa ve formatu `Nazev serialu SxxExx - Nazev epizody CZ Dabing`,
+- nazev videa ve formatu `Nazev serialu SxxExx - Nazev epizody CZ Dabing`
+  nebo `Nazev serialu SxxExx - Nazev epizody CZ Titulky`,
 - zdrojove video z Prehraj.to,
 - informaci, proc byl zdroj vybran,
 - jazykove dukazy, idealne potvrzene metadaty nebo Whispers,
@@ -80,10 +81,13 @@ Dexter 7x4
 Pouzivat se ma cesky i originalni nazev serialu, pokud jsou dostupne.
 Pro konkretni nazev epizody a cislo epizody se nejdriv udela jeden search
 request na Prehraj.to. Vracene HTML obsahuje seznam kandidatu vcetne velikosti
-souboru, takze se nemaji naslepo probeovat vsechny vysledky. Nejdri lze z HTML
-vybrat jen kandidaty, kteri maji alespon 300 MB a podle nazvu vypadaji jako
-cesky dabing nebo cesky zvuk. Teprve takovy kandidat se probeuje pres detail a
-jazykovou kontrolu.
+souboru, takze se nemaji naslepo probeovat vsechny vysledky. Z HTML se nejdriv
+vyberou kandidati, kteri odpovidaji hledane epizode a maji alespon 300 MB nebo
+jasny signal vyssi kvality. Kandidat s `CZ`, `CS`, `CZ dabing`, `CS dabing`
+nebo podobnym ceskym hintem se muze brat jako pravdepodobny cesky dabing a
+nemusi kvuli tomu hned na Whisper. Kandidat bez ceskeho hintu, nebo s jinym
+jazykovym signalem, se nesmi zahodit, pokud sedi serial, serie a epizoda a
+splnuje velikost nebo rozliseni; takovy kandidat jde do Whisper review fronty.
 
 Search request musi vypadat jako bezny browser request. Minimalne se maji
 posilat realisticke hlavicky `User-Agent`, `Accept`, `Accept-Language`,
@@ -127,10 +131,12 @@ Z hledani se ziskavaji take dulezite metadata:
 - format nebo rozliseni, pokud je ve vysledku,
 - pripadne dalsi signal kvality.
 
-Z hledani se vyfiltruji kandidati, kteri:
+Z hledani se ukladaji kandidati, kteri:
 
-- vypadaji cesky (nazev obsahuje `CZ Dabing`, `CZ`, `český dabing` atd.),
-- maji velikost alespon 300 MB (velikost je zřejmá již z HTML výsledků hledani).
+- odpovidaji hledane epizode,
+- maji velikost alespon 300 MB nebo jasny signal vysokeho rozliseni,
+- maji cesky hint v nazvu, nemaji zadny jazykovy hint, nebo maji jiny jazykovy
+  signal, ktery se ma overit Whisprem.
 
 Tyto nalezene zdroje se musi ukladat, protoze pozdeji mohou slouzit i pro
 zpetny import do produkcni databaze.
@@ -138,8 +144,11 @@ zpetny import do produkcni databaze.
 ## 4. Prvni filtr kvality zdroje
 
 Hned po hledani na Prehraj.to se vysledky vyfiltruji na zaklade signalu
-viditelnych v HTML: cesky nazev a velikost alespon 300 MB. Z takto
-zuzeneho seznamu se pripravi kandidati k probe.
+viditelnych v HTML: shoda epizody a kvalita zdroje. Do dalsiho kroku jdou
+kandidati, kteri maji alespon 300 MB, nebo u nich probe pozdeji ukaze aspon
+1080p. Cesky jazykovy hint v nazvu urcuje, ze se kandidat muze brat jako
+pravdepodobny dabing. Chybejici nebo jiny jazykovy hint znamena, ze kandidat
+ma jit do Whisper review fronty, ne ze se zahodi.
 
 Preferovany zdroj je:
 
@@ -149,8 +158,10 @@ Preferovany zdroj je:
 - funkcni detail stranka a rozbalitelny stream,
 - pokud mozno zdroj z Prehraj.to, ne jen odkaz z jineho poskytovatele.
 
-Zdroje mensi nez 300 MB se nemaji vybirat ani probeovat, pokud existuje
-jina varianta. Samotny vyber kandidata pro upload resi az krok 6.
+Zdroje mensi nez 300 MB se nemaji vybirat pro upload, pokud existuje jina
+varianta. Kvalitni zdroj bez ceskeho jazykoveho hintu nebo s jinym jazykovym
+signalem se probeuje nebo ulozi do Whisper review fronty, misto aby se oznacil
+jako `no acceptable source`. Samotny vyber kandidata pro upload resi az krok 6.
 
 ## 5. Odhad a overeni jazyka
 
@@ -204,11 +215,13 @@ Do teto fronty patri napr. zdroje typu `Kriminalka Las Vegas 01x16`, pokud:
 - nazev odpovida hledane epizode,
 - velikost je alespon 300 MB nebo probe ukaze aspon 1080p,
 - zdroj jde rozbalit na stream,
-- chybi jazykovy hint v nazvu nebo metadatech.
+- chybi cesky jazykovy hint v nazvu nebo metadatech, pripadne existuje jiny
+  jazykovy signal, ktery je potreba overit.
 
 Pravidlo je tedy: kandidat, ktery splnuje kvalitu a shodu epizody, ale nema
-primarne napsano, ze je cesky, postupuje do Whisper fronty. Tam se zjisti, zda
-je zvuk v cestine nebo v jinem jazyce. Podle vysledku se s nim zachazi takto:
+primarne napsano, ze je cesky, nebo ma signal jineho jazyka, postupuje do
+Whisper fronty. Tam se zjisti, zda je zvuk v cestine nebo v jinem jazyce.
+Podle vysledku se s nim zachazi takto:
 
 - Whisper potvrdi cestinu: epizoda se pripravi jako `CZ Dabing`.
 - Whisper potvrdi jiny jazyk: epizoda se pripravi jako `CZ Titulky` a zaroven
@@ -230,6 +243,18 @@ Samostatny Whisper krok musi tuto frontu prubezne odbavovat:
    cestinu, nezahazovat ho; pripravit ho jako upload typu `CZ Titulky` a
    zapsat ho do `plans/subtitle-followup-queue.jsonl`, aby bylo jasne, ze po
    zpracovani na Prehraj.to potrebuje doplnit ceske titulky.
+
+Tento krok je implementovan lokalnim skriptem:
+
+```text
+src/process_whisper_review_queue.py
+```
+
+Skript pouziva `faster-whisper` pouze pro detekci jazyka. Cesky vysledek
+promuje zdroj do `plans/prepared-episodes.jsonl` jako `upload_kind=audio`.
+Necesky vysledek promuje funkcni a dost velky zdroj jako
+`upload_kind=subtitles`, nastavuje `needs_subtitles_after_upload=true` a
+zapise follow-up do `plans/subtitle-followup-queue.jsonl`.
 
 Whisper se pro bezny rychly prepare nemusi poustet na vsechno. Nesmime ale
 ztracet kvalitni kandidaty bez jazykoveho hintu; ty musi zustat v review fronte,
@@ -253,14 +278,20 @@ Vyber preferuje:
 
 1. potvrzeny cesky zvuk,
 2. pravdepodobny cesky zvuk,
-3. vyssi rozliseni,
-4. vetsi velikost souboru,
-5. zdroj, ktery jeste nebyl neuspesne vyzkousen.
+3. ceske titulky nebo necesky zvuk pripraveny jako `CZ Titulky`,
+4. kandidata bez jazykoveho hintu cekajiciho na Whisper,
+5. vyssi rozliseni,
+6. vetsi velikost souboru,
+7. zdroj, ktery jeste nebyl neuspesne vyzkousen.
 
 K epizode se vybere **prvni probe-overeny kandidat**. Znamena to:
 
 - kandidati se probeuji v poradi podle skore (od nejlepsiho),
 - prvni kandidat s funkcnim streamem a ceskym zvukem vyhrava,
+- pokud neni cesky zvuk a kandidat bez jazykoveho hintu ceka na jazyk, ulozi se
+  do `plans/whisper-review-queue.jsonl`,
+- pokud Whisper potvrdi jiny jazyk, ale zdroj je funkcni a kvalitni, muze jit
+  do uploadu jako `CZ Titulky`,
 - dalsi kandidati se neprobeuji — prvni fungujici staci,
 - pokud zadny kandidat neprojde, epizoda neni `upload_ready` a zkusi se
   znovu za 24 hodin (muze se objevit novy zdroj).
@@ -465,7 +496,7 @@ Doporucene urovne:
 `upload-ready` zde znamena epizodu, ktera uz ma:
 
 - vybrany zdroj,
-- jazykovy verdikt alespon `PROBABLE_CZ_AUDIO`,
+- jazykovy verdikt `CZ_AUDIO`, `PROBABLE_CZ_AUDIO` nebo `CZ_SUBTITLES_ONLY`,
 - pokud je velikost zdroje znama, tak alespon 300 MB,
 - nazev pro upload,
 - popis nebo docasny fallback popis.
