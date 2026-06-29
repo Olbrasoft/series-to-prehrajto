@@ -1,33 +1,81 @@
 {
   "counts": {
     "backlog_episodes": 183144,
-    "manifest_upload_ready_episodes": 221,
-    "uploaded_episodes": 10352,
-    "prepared_source_episodes": 18605,
+    "manifest_upload_ready_episodes": 240,
+    "uploaded_episodes": 10383,
+    "prepared_source_episodes": 18715,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
-    "language_audit_rows": 94710,
+    "language_audit_rows": 95229,
     "language_queue_sources": 2644,
-    "language_audited_sources": 87292,
-    "language_whisper_attempted_sources": 3365,
-    "language_pending_whisper_sources": 2604
+    "language_audited_sources": 87715,
+    "language_whisper_attempted_sources": 3325,
+    "language_pending_whisper_sources": 2644
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-06-29T00:27:32Z",
-      "databaseId": 28341254883,
+      "createdAt": "2026-06-29T00:56:11Z",
+      "databaseId": 28342046702,
       "headBranch": "main",
       "status": "in_progress",
-      "workflowName": "ops-watchdog"
+      "workflowName": "ops-status"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-06-29T00:46:36Z",
+      "databaseId": 28341784891,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-06-29T00:32:30Z",
+      "databaseId": 28341387976,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-29T00:31:18Z",
+      "databaseId": 28341355390,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-06-29T00:28:24Z",
+      "databaseId": 28341276569,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-29T00:28:21Z",
+      "databaseId": 28341275479,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-29T00:27:32Z",
+      "databaseId": 28341254883,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "cancelled",
       "createdAt": "2026-06-29T00:27:28Z",
       "databaseId": 28341253414,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -95,11 +143,11 @@
       "workflowName": "prepare-manifest"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-06-28T23:31:04Z",
       "databaseId": 28339719939,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-descriptions"
     },
     {
@@ -125,54 +173,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-28T23:27:07Z",
-      "databaseId": 28339617425,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-28T23:13:52Z",
-      "databaseId": 28339291504,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-28T23:13:46Z",
-      "databaseId": 28339289215,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-28T23:12:04Z",
-      "databaseId": 28339247414,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-28T23:12:02Z",
-      "databaseId": 28339246637,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-28T23:11:08Z",
-      "databaseId": 28339224926,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
     }
   ],
   "gaps": {
@@ -29715,6 +29715,161 @@
         "episode_id": 45515,
         "display_name": "Prolhané krásky S04E21 - Přichází zpět CZ Dabing",
         "video_id": 26940500
+      },
+      {
+        "episode_id": 45492,
+        "display_name": "Prolhané krásky S04E04 - Čas tváře CZ Dabing",
+        "video_id": 26941705
+      },
+      {
+        "episode_id": 45402,
+        "display_name": "Prolhané krásky S04E06 - Pod zbraní CZ Dabing",
+        "video_id": 26941778
+      },
+      {
+        "episode_id": 45422,
+        "display_name": "Prolhané krásky S04E08 - Vinařská příručka dívky CZ Dabing",
+        "video_id": 26941894
+      },
+      {
+        "episode_id": 45426,
+        "display_name": "Prolhané krásky S04E11 - Sundejte motyku CZ Dabing",
+        "video_id": 26942041
+      },
+      {
+        "episode_id": 45404,
+        "display_name": "Prolhané krásky S04E15 - Chatrč lásky, zlato CZ Dabing",
+        "video_id": 26942135
+      },
+      {
+        "episode_id": 45398,
+        "display_name": "Prolhané krásky S04E17 - Kousnout se do jazyka CZ Dabing",
+        "video_id": 26942221
+      },
+      {
+        "episode_id": 45406,
+        "display_name": "Prolhané krásky S04E18 - Zakoukaná do učitele CZ Dabing",
+        "video_id": 26942372
+      },
+      {
+        "episode_id": 45400,
+        "display_name": "Prolhané krásky S04E22 - Kryt pro mě CZ Dabing",
+        "video_id": 26942453
+      },
+      {
+        "episode_id": 45428,
+        "display_name": "Prolhané krásky S04E24 - A je pro odpovědi CZ Dabing",
+        "video_id": 26942550
+      },
+      {
+        "episode_id": 45544,
+        "display_name": "Prolhané krásky S05E02 - Vrtošivá dívka CZ Dabing",
+        "video_id": 26942669
+      },
+      {
+        "episode_id": 45424,
+        "display_name": "Prolhané krásky S05E03 - Surfování afrodisů CZ Dabing",
+        "video_id": 26942740
+      },
+      {
+        "episode_id": 45494,
+        "display_name": "Prolhané krásky S05E04 - Vyhozený z jízdy CZ Dabing",
+        "video_id": 26942849
+      },
+      {
+        "episode_id": 45516,
+        "display_name": "Prolhané krásky S05E05 - Chybíš mi 100x CZ Dabing",
+        "video_id": 26942987
+      },
+      {
+        "episode_id": 45496,
+        "display_name": "Prolhané krásky S05E07 - Ticho E. Lamba CZ Dabing",
+        "video_id": 26943064
+      },
+      {
+        "episode_id": 45498,
+        "display_name": "Prolhané krásky S05E08 - Křičet pro mě CZ Dabing",
+        "video_id": 26943170
+      },
+      {
+        "episode_id": 45448,
+        "display_name": "Prolhané krásky S05E10 - Temný Ali CZ Dabing",
+        "video_id": 26943231
+      },
+      {
+        "episode_id": 45416,
+        "display_name": "Prolhané krásky S05E12 - Vezmeme to do hrobu CZ Dabing",
+        "video_id": 26943327
+      },
+      {
+        "episode_id": 45522,
+        "display_name": "Prolhané krásky S05E15 - Čerstvé maso CZ Dabing",
+        "video_id": 26943448
+      },
+      {
+        "episode_id": 45427,
+        "display_name": "Prolhané krásky S04E23 - Neschopný CZ Dabing",
+        "video_id": 26941723
+      },
+      {
+        "episode_id": 45533,
+        "display_name": "Prolhané krásky S05E01 - Útěk z New Yorku CZ Dabing",
+        "video_id": 26941887
+      },
+      {
+        "episode_id": 45495,
+        "display_name": "Prolhané krásky S05E06 - Běž, Ali, Běž CZ Dabing",
+        "video_id": 26942032
+      },
+      {
+        "episode_id": 45497,
+        "display_name": "Prolhané krásky S05E09 - Březen zločinů CZ Dabing",
+        "video_id": 26942128
+      },
+      {
+        "episode_id": 45531,
+        "display_name": "Prolhané krásky S05E11 - Nikdo zde mě nemůže milovat nebo pochopit CZ Dabing",
+        "video_id": 26942223
+      },
+      {
+        "episode_id": 45519,
+        "display_name": "Prolhané krásky S05E13 - Jak „A“ ukradl Vánoce CZ Dabing",
+        "video_id": 26942382
+      },
+      {
+        "episode_id": 45429,
+        "display_name": "Prolhané krásky S05E14 - Skrz sklo, tmavé CZ Dabing",
+        "video_id": 26942548
+      },
+      {
+        "episode_id": 45499,
+        "display_name": "Prolhané krásky S05E16 - Přes hlaveň CZ Dabing",
+        "video_id": 26942708
+      },
+      {
+        "episode_id": 45463,
+        "display_name": "Prolhané krásky S07E09 - Khanův hněv CZ Dabing",
+        "video_id": 26942873
+      },
+      {
+        "episode_id": 45413,
+        "display_name": "Prolhané krásky S07E15 - Oko do duše okno CZ Dabing",
+        "video_id": 26943073
+      },
+      {
+        "episode_id": 45511,
+        "display_name": "Prolhané krásky S07E17 - Řidič slečny šílené CZ Dabing",
+        "video_id": 26943176
+      },
+      {
+        "episode_id": 45443,
+        "display_name": "Prolhané krásky S07E19 - Sbohem, má milovaná CZ Dabing",
+        "video_id": 26943282
+      },
+      {
+        "episode_id": 45431,
+        "display_name": "Prolhané krásky S07E20 - Dokud nás smrt nerozdělí CZ Dabing",
+        "video_id": 26943326
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -70067,6 +70222,161 @@
         "episode_id": 45515,
         "display_name": "Prolhané krásky S04E21 - Přichází zpět CZ Dabing",
         "video_id": 26940500
+      },
+      {
+        "episode_id": 45492,
+        "display_name": "Prolhané krásky S04E04 - Čas tváře CZ Dabing",
+        "video_id": 26941705
+      },
+      {
+        "episode_id": 45402,
+        "display_name": "Prolhané krásky S04E06 - Pod zbraní CZ Dabing",
+        "video_id": 26941778
+      },
+      {
+        "episode_id": 45422,
+        "display_name": "Prolhané krásky S04E08 - Vinařská příručka dívky CZ Dabing",
+        "video_id": 26941894
+      },
+      {
+        "episode_id": 45426,
+        "display_name": "Prolhané krásky S04E11 - Sundejte motyku CZ Dabing",
+        "video_id": 26942041
+      },
+      {
+        "episode_id": 45404,
+        "display_name": "Prolhané krásky S04E15 - Chatrč lásky, zlato CZ Dabing",
+        "video_id": 26942135
+      },
+      {
+        "episode_id": 45398,
+        "display_name": "Prolhané krásky S04E17 - Kousnout se do jazyka CZ Dabing",
+        "video_id": 26942221
+      },
+      {
+        "episode_id": 45406,
+        "display_name": "Prolhané krásky S04E18 - Zakoukaná do učitele CZ Dabing",
+        "video_id": 26942372
+      },
+      {
+        "episode_id": 45400,
+        "display_name": "Prolhané krásky S04E22 - Kryt pro mě CZ Dabing",
+        "video_id": 26942453
+      },
+      {
+        "episode_id": 45428,
+        "display_name": "Prolhané krásky S04E24 - A je pro odpovědi CZ Dabing",
+        "video_id": 26942550
+      },
+      {
+        "episode_id": 45544,
+        "display_name": "Prolhané krásky S05E02 - Vrtošivá dívka CZ Dabing",
+        "video_id": 26942669
+      },
+      {
+        "episode_id": 45424,
+        "display_name": "Prolhané krásky S05E03 - Surfování afrodisů CZ Dabing",
+        "video_id": 26942740
+      },
+      {
+        "episode_id": 45494,
+        "display_name": "Prolhané krásky S05E04 - Vyhozený z jízdy CZ Dabing",
+        "video_id": 26942849
+      },
+      {
+        "episode_id": 45516,
+        "display_name": "Prolhané krásky S05E05 - Chybíš mi 100x CZ Dabing",
+        "video_id": 26942987
+      },
+      {
+        "episode_id": 45496,
+        "display_name": "Prolhané krásky S05E07 - Ticho E. Lamba CZ Dabing",
+        "video_id": 26943064
+      },
+      {
+        "episode_id": 45498,
+        "display_name": "Prolhané krásky S05E08 - Křičet pro mě CZ Dabing",
+        "video_id": 26943170
+      },
+      {
+        "episode_id": 45448,
+        "display_name": "Prolhané krásky S05E10 - Temný Ali CZ Dabing",
+        "video_id": 26943231
+      },
+      {
+        "episode_id": 45416,
+        "display_name": "Prolhané krásky S05E12 - Vezmeme to do hrobu CZ Dabing",
+        "video_id": 26943327
+      },
+      {
+        "episode_id": 45522,
+        "display_name": "Prolhané krásky S05E15 - Čerstvé maso CZ Dabing",
+        "video_id": 26943448
+      },
+      {
+        "episode_id": 45427,
+        "display_name": "Prolhané krásky S04E23 - Neschopný CZ Dabing",
+        "video_id": 26941723
+      },
+      {
+        "episode_id": 45533,
+        "display_name": "Prolhané krásky S05E01 - Útěk z New Yorku CZ Dabing",
+        "video_id": 26941887
+      },
+      {
+        "episode_id": 45495,
+        "display_name": "Prolhané krásky S05E06 - Běž, Ali, Běž CZ Dabing",
+        "video_id": 26942032
+      },
+      {
+        "episode_id": 45497,
+        "display_name": "Prolhané krásky S05E09 - Březen zločinů CZ Dabing",
+        "video_id": 26942128
+      },
+      {
+        "episode_id": 45531,
+        "display_name": "Prolhané krásky S05E11 - Nikdo zde mě nemůže milovat nebo pochopit CZ Dabing",
+        "video_id": 26942223
+      },
+      {
+        "episode_id": 45519,
+        "display_name": "Prolhané krásky S05E13 - Jak „A“ ukradl Vánoce CZ Dabing",
+        "video_id": 26942382
+      },
+      {
+        "episode_id": 45429,
+        "display_name": "Prolhané krásky S05E14 - Skrz sklo, tmavé CZ Dabing",
+        "video_id": 26942548
+      },
+      {
+        "episode_id": 45499,
+        "display_name": "Prolhané krásky S05E16 - Přes hlaveň CZ Dabing",
+        "video_id": 26942708
+      },
+      {
+        "episode_id": 45463,
+        "display_name": "Prolhané krásky S07E09 - Khanův hněv CZ Dabing",
+        "video_id": 26942873
+      },
+      {
+        "episode_id": 45413,
+        "display_name": "Prolhané krásky S07E15 - Oko do duše okno CZ Dabing",
+        "video_id": 26943073
+      },
+      {
+        "episode_id": 45511,
+        "display_name": "Prolhané krásky S07E17 - Řidič slečny šílené CZ Dabing",
+        "video_id": 26943176
+      },
+      {
+        "episode_id": 45443,
+        "display_name": "Prolhané krásky S07E19 - Sbohem, má milovaná CZ Dabing",
+        "video_id": 26943282
+      },
+      {
+        "episode_id": 45431,
+        "display_name": "Prolhané krásky S07E20 - Dokud nás smrt nerozdělí CZ Dabing",
+        "video_id": 26943326
       }
     ],
     "prepared_not_upload_ready": [
@@ -70378,12 +70688,12 @@
     "CZ_SUBTITLES_ONLY": 4527,
     "NOT_CZ_AUDIO": 516,
     "SK_AUDIO": 2,
-    "PROBABLE_CZ_AUDIO": 11944
+    "PROBABLE_CZ_AUDIO": 12463
   },
   "language_whisper_statuses": {
-    "disabled": 83927,
+    "disabled": 84390,
     "resolve_failed": 276,
-    "ok": 3052,
+    "ok": 3012,
     "no_stream": 37
   }
 }
