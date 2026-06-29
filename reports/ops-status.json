@@ -2,40 +2,96 @@
   "counts": {
     "backlog_episodes": 182962,
     "manifest_upload_ready_episodes": 156,
-    "uploaded_episodes": 10539,
+    "uploaded_episodes": 10555,
     "prepared_source_episodes": 18715,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 95322,
     "language_queue_sources": 2644,
-    "language_audited_sources": 87808,
-    "language_whisper_attempted_sources": 3415,
-    "language_pending_whisper_sources": 2644
+    "language_audited_sources": 87828,
+    "language_whisper_attempted_sources": 3345,
+    "language_pending_whisper_sources": 2624
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-06-29T03:41:26Z",
-      "databaseId": 28347106984,
+      "createdAt": "2026-06-29T03:56:17Z",
+      "databaseId": 28347561134,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
-      "createdAt": "2026-06-29T03:41:21Z",
-      "databaseId": 28347104547,
+      "createdAt": "2026-06-29T03:56:13Z",
+      "databaseId": 28347559296,
       "headBranch": "main",
       "status": "pending",
-      "workflowName": "sync"
+      "workflowName": "prepare-manifest"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-06-29T03:54:15Z",
+      "databaseId": 28347496280,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-sources"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-29T03:51:59Z",
+      "databaseId": 28347421159,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-29T03:51:07Z",
+      "databaseId": 28347396605,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-29T03:49:01Z",
+      "databaseId": 28347335207,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-06-29T03:42:20Z",
+      "databaseId": 28347133278,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-29T03:41:26Z",
+      "databaseId": 28347106984,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-06-29T03:41:21Z",
+      "databaseId": 28347104547,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "cancelled",
       "createdAt": "2026-06-29T03:35:08Z",
       "databaseId": 28346920469,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -47,11 +103,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-06-29T03:32:56Z",
       "databaseId": 28346845589,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -114,62 +170,6 @@
       "conclusion": "success",
       "createdAt": "2026-06-29T02:39:29Z",
       "databaseId": 28345180641,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-29T02:39:24Z",
-      "databaseId": 28345178635,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-06-29T02:27:16Z",
-      "databaseId": 28344809181,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-sources"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-29T02:26:37Z",
-      "databaseId": 28344791146,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-06-29T02:26:08Z",
-      "databaseId": 28344777035,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-29T02:24:34Z",
-      "databaseId": 28344729127,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-29T02:19:07Z",
-      "databaseId": 28344562022,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-29T02:18:07Z",
-      "databaseId": 28344533314,
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-watchdog"
@@ -30650,6 +30650,86 @@
         "episode_id": 48144,
         "display_name": "Vlčí mládě S03E17 - Stříbrný prst CZ Dabing",
         "video_id": 26953476
+      },
+      {
+        "episode_id": 48146,
+        "display_name": "Vlčí mládě S03E20 - Domov ech CZ Dabing",
+        "video_id": 26953500
+      },
+      {
+        "episode_id": 48148,
+        "display_name": "Vlčí mládě S03E22 - Nicota CZ Dabing",
+        "video_id": 26953534
+      },
+      {
+        "episode_id": 48150,
+        "display_name": "Vlčí mládě S03E24 - Božský tah CZ Dabing",
+        "video_id": 26953549
+      },
+      {
+        "episode_id": 48152,
+        "display_name": "Vlčí mládě S04E02 - 117 CZ Dabing",
+        "video_id": 26953575
+      },
+      {
+        "episode_id": 48154,
+        "display_name": "Vlčí mládě S04E04 - Mecenáš CZ Dabing",
+        "video_id": 26953593
+      },
+      {
+        "episode_id": 48156,
+        "display_name": "Vlčí mládě S04E06 - Sirotci CZ Dabing",
+        "video_id": 26953607
+      },
+      {
+        "episode_id": 48158,
+        "display_name": "Vlčí mládě S04E09 - Pomíjivé CZ Dabing",
+        "video_id": 26953629
+      },
+      {
+        "episode_id": 48160,
+        "display_name": "Vlčí mládě S04E11 - Slib mrtvým CZ Dabing",
+        "video_id": 26953654
+      },
+      {
+        "episode_id": 48162,
+        "display_name": "Vlčí mládě S05E02 - Parasomnie CZ Dabing",
+        "video_id": 26953678
+      },
+      {
+        "episode_id": 48164,
+        "display_name": "Vlčí mládě S05E04 - Smrtelný stav CZ Dabing",
+        "video_id": 26953706
+      },
+      {
+        "episode_id": 48196,
+        "display_name": "Vlčí mládě S05E06 - Povinná četba CZ Dabing",
+        "video_id": 26953734
+      },
+      {
+        "episode_id": 48204,
+        "display_name": "Vlčí mládě S05E08 - Uroboros CZ Dabing",
+        "video_id": 26953766
+      },
+      {
+        "episode_id": 48188,
+        "display_name": "Vlčí mládě S05E09 - Milosrdné lži CZ Dabing",
+        "video_id": 26953795
+      },
+      {
+        "episode_id": 48190,
+        "display_name": "Vlčí mládě S05E11 - Poslední přízrak CZ Dabing",
+        "video_id": 26953822
+      },
+      {
+        "episode_id": 48202,
+        "display_name": "Vlčí mládě S05E15 - Zesílení CZ Dabing",
+        "video_id": 26953858
+      },
+      {
+        "episode_id": 48192,
+        "display_name": "Vlčí mládě S05E17 - Věrohodná hrozba CZ Dabing",
+        "video_id": 26953883
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -71937,6 +72017,86 @@
         "episode_id": 48144,
         "display_name": "Vlčí mládě S03E17 - Stříbrný prst CZ Dabing",
         "video_id": 26953476
+      },
+      {
+        "episode_id": 48146,
+        "display_name": "Vlčí mládě S03E20 - Domov ech CZ Dabing",
+        "video_id": 26953500
+      },
+      {
+        "episode_id": 48148,
+        "display_name": "Vlčí mládě S03E22 - Nicota CZ Dabing",
+        "video_id": 26953534
+      },
+      {
+        "episode_id": 48150,
+        "display_name": "Vlčí mládě S03E24 - Božský tah CZ Dabing",
+        "video_id": 26953549
+      },
+      {
+        "episode_id": 48152,
+        "display_name": "Vlčí mládě S04E02 - 117 CZ Dabing",
+        "video_id": 26953575
+      },
+      {
+        "episode_id": 48154,
+        "display_name": "Vlčí mládě S04E04 - Mecenáš CZ Dabing",
+        "video_id": 26953593
+      },
+      {
+        "episode_id": 48156,
+        "display_name": "Vlčí mládě S04E06 - Sirotci CZ Dabing",
+        "video_id": 26953607
+      },
+      {
+        "episode_id": 48158,
+        "display_name": "Vlčí mládě S04E09 - Pomíjivé CZ Dabing",
+        "video_id": 26953629
+      },
+      {
+        "episode_id": 48160,
+        "display_name": "Vlčí mládě S04E11 - Slib mrtvým CZ Dabing",
+        "video_id": 26953654
+      },
+      {
+        "episode_id": 48162,
+        "display_name": "Vlčí mládě S05E02 - Parasomnie CZ Dabing",
+        "video_id": 26953678
+      },
+      {
+        "episode_id": 48164,
+        "display_name": "Vlčí mládě S05E04 - Smrtelný stav CZ Dabing",
+        "video_id": 26953706
+      },
+      {
+        "episode_id": 48196,
+        "display_name": "Vlčí mládě S05E06 - Povinná četba CZ Dabing",
+        "video_id": 26953734
+      },
+      {
+        "episode_id": 48204,
+        "display_name": "Vlčí mládě S05E08 - Uroboros CZ Dabing",
+        "video_id": 26953766
+      },
+      {
+        "episode_id": 48188,
+        "display_name": "Vlčí mládě S05E09 - Milosrdné lži CZ Dabing",
+        "video_id": 26953795
+      },
+      {
+        "episode_id": 48190,
+        "display_name": "Vlčí mládě S05E11 - Poslední přízrak CZ Dabing",
+        "video_id": 26953822
+      },
+      {
+        "episode_id": 48202,
+        "display_name": "Vlčí mládě S05E15 - Zesílení CZ Dabing",
+        "video_id": 26953858
+      },
+      {
+        "episode_id": 48192,
+        "display_name": "Vlčí mládě S05E17 - Věrohodná hrozba CZ Dabing",
+        "video_id": 26953883
       }
     ],
     "prepared_not_upload_ready": [
@@ -72251,9 +72411,9 @@
     "PROBABLE_CZ_AUDIO": 12556
   },
   "language_whisper_statuses": {
-    "disabled": 84393,
+    "disabled": 84483,
     "resolve_failed": 276,
-    "ok": 3102,
+    "ok": 3032,
     "no_stream": 37
   }
 }
