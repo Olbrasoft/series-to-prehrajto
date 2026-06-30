@@ -29,7 +29,7 @@ from source_quality import source_quality_score, source_quality_tier  # noqa: E4
 REPO_ROOT = Path(__file__).resolve().parent.parent
 MIN_UPLOAD_FILE_SIZE = 300 * 1024 * 1024
 FAILED_RETRY_AFTER = dt.timedelta(hours=24)
-MAX_RESOLVABLE_CANDIDATE_PROBES = 8
+MAX_RESOLVABLE_CANDIDATE_PROBES = 1
 
 
 def source_has_cz_audio_hint(source: dict) -> bool:
@@ -847,7 +847,7 @@ def main() -> int:
     ap.add_argument("--subtitle-followup-out", default="plans/subtitle-followup-queue.jsonl")
     ap.add_argument("--whisper-review-out", default="plans/whisper-review-queue.jsonl")
     ap.add_argument("--episode-limit", type=int, default=10)
-    ap.add_argument("--source-limit-per-episode", type=int, default=12)
+    ap.add_argument("--source-limit-per-episode", type=int, default=8)
     ap.add_argument("--series-slug")
     ap.add_argument("--season", type=int)
     ap.add_argument("--episode", type=int)

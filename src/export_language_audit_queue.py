@@ -247,7 +247,7 @@ def main() -> int:
     ap.add_argument("--db-url", default=os.environ.get("DATABASE_URL"))
     ap.add_argument("--limit", type=int, default=500, help="Backward-compatible episode limit alias.")
     ap.add_argument("--episode-limit", type=int)
-    ap.add_argument("--source-limit-per-episode", type=int, default=12)
+    ap.add_argument("--source-limit-per-episode", type=int, default=8)
     ap.add_argument("--series-slug")
     ap.add_argument("--season", type=int)
     ap.add_argument("--episode", type=int)
