@@ -10,7 +10,7 @@ on:
       episode_limit:
         description: "Episodes to prepare per run"
         required: false
-        default: "15"
+        default: "30"
       source_limit_per_episode:
         description: "Sources to evaluate per episode"
         required: false
@@ -71,10 +71,10 @@ jobs:
             --queue backlog/enriched-audit-queue.jsonl.gz \
             --backlog backlog/series-episodes.jsonl.gz \
             --out plans/prepared-episodes.jsonl \
-            --episode-limit "${{ inputs.episode_limit || '15' }}" \
+            --episode-limit "${{ inputs.episode_limit || '30' }}" \
             --claim-file plans/preparation-claims.jsonl \
             --claim-batch-id "$BATCH_ID" \
-            --claim-shard-count 3 \
+            --claim-shard-count 4 \
             --claim-ttl-minutes 180 \
             --claim-only
           CLAIM_COUNT=$(jq -s --arg batch "$BATCH_ID" '[.[] | select(.claim_batch_id == $batch)] | length' plans/preparation-claims.jsonl)
@@ -109,7 +109,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        selection_shard_index: [0, 1, 2]
+        selection_shard_index: [0, 1, 2, 3]
     steps:
       - uses: actions/checkout@v4
         with:
@@ -194,7 +194,7 @@ jobs:
             "--queue" "backlog/enriched-audit-queue.jsonl.gz"
             "--backlog" "backlog/series-episodes.jsonl.gz"
             "--out" "plans/prepared-episodes.jsonl"
-            "--episode-limit" "${{ inputs.episode_limit || '15' }}"
+            "--episode-limit" "${{ inputs.episode_limit || '30' }}"
             "--claim-file" "plans/preparation-claims.jsonl"
             "--claim-batch-id" "${{ needs.claim.outputs.batch_id }}"
             "--claim-shard-index" "${{ matrix.selection_shard_index }}"

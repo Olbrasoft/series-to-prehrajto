@@ -152,10 +152,10 @@ def queue_workflow(
 
 def main() -> int:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--min-upload-ready", type=int, default=800)
+    ap.add_argument("--min-upload-ready", type=int, default=1000)
     ap.add_argument("--target-episodes", type=int, default=3000)
-    ap.add_argument("--emergency-episodes", type=int, default=15)
-    ap.add_argument("--small-ready-target", type=int, default=600)
+    ap.add_argument("--emergency-episodes", type=int, default=30)
+    ap.add_argument("--small-ready-target", type=int, default=1200)
     ap.add_argument("--target-series", type=int, default=240)
     ap.add_argument("--target-backlog-series", type=int, default=10000)
     ap.add_argument("--target-backlog-episodes", type=int, default=1000000)
