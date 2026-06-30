@@ -124,11 +124,17 @@ jobs:
           git fetch origin main
           git reset --hard origin/main
           if python src/upload_queue_status.py --no-require-description; then
-            gh workflow run sync.yml \
-              -f batch_size="20" \
-              -f num_shards="2" \
-              -f allow_subtitles="true" \
-              -f continue_uploads="true"
+            ACTIVE_SYNC=$(gh run list --workflow sync.yml --limit 20 --json status \
+              --jq '[.[] | select(.status == "queued" or .status == "in_progress" or .status == "waiting" or .status == "pending" or .status == "requested")] | length')
+            if [ "$ACTIVE_SYNC" -eq 0 ]; then
+              gh workflow run sync.yml \
+                -f batch_size="20" \
+                -f num_shards="2" \
+                -f allow_subtitles="true" \
+                -f continue_uploads="true"
+            else
+              echo "sync already active or queued"
+            fi
           else
             echo "no upload-ready episodes after Whisper review"
           fi

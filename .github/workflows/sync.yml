@@ -22,6 +22,13 @@ on:
   schedule:
     - cron: "*/10 * * * *"
 
+# Keep one complete two-shard upload active and one successor queued. GitHub
+# replaces an older pending run when another trigger arrives, but never stops
+# the run that is currently uploading.
+concurrency:
+  group: series-to-prehrajto-sync
+  cancel-in-progress: false
+
 jobs:
   upload-batch:
     name: Upload series episodes
@@ -30,9 +37,6 @@ jobs:
     permissions:
       contents: write
       actions: write
-    concurrency:
-      group: series-to-prehrajto-${{ matrix.shard }}
-      cancel-in-progress: false
     strategy:
       fail-fast: false
       matrix:
