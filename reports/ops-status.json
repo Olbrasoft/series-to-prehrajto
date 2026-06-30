@@ -1,29 +1,61 @@
 {
   "counts": {
     "backlog_episodes": 181543,
-    "manifest_upload_ready_episodes": 1170,
-    "uploaded_episodes": 11855,
-    "prepared_source_episodes": 22458,
+    "manifest_upload_ready_episodes": 1169,
+    "uploaded_episodes": 11857,
+    "prepared_source_episodes": 22488,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 20,
+    "language_audited_sources": 114,
     "language_whisper_attempted_sources": 20,
     "language_pending_whisper_sources": 2624,
-    "whisper_review_sources": 2962,
-    "whisper_review_pending_sources": 2782,
+    "whisper_review_sources": 2994,
+    "whisper_review_pending_sources": 2814,
     "subtitle_followup_sources": 679,
     "subtitle_followup_pending_sources": 679
   },
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-06-30T20:39:36Z",
+      "databaseId": 28474367568,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-30T20:25:19Z",
+      "databaseId": 28473572433,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-30T20:25:16Z",
+      "databaseId": 28473569801,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-30T20:25:14Z",
+      "databaseId": 28473567538,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-06-30T20:24:28Z",
       "databaseId": 28473525430,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -145,38 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-30T19:38:33Z",
-      "databaseId": 28470985903,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-30T19:38:29Z",
-      "databaseId": 28470982767,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-30T19:38:27Z",
-      "databaseId": 28470980399,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-30T19:37:38Z",
-      "databaseId": 28470937857,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
     }
   ],
   "gaps": {
@@ -37104,6 +37104,16 @@
         "episode_id": 95508,
         "display_name": "Pozůstalí S02E01 - Axis Mundi CZ Dabing",
         "video_id": 27025245
+      },
+      {
+        "episode_id": 10032,
+        "display_name": "Penny Dreadful S01E07 - Na prahu pekla CZ Dabing",
+        "video_id": 27025701
+      },
+      {
+        "episode_id": 16112,
+        "display_name": "Zelenáč S01E06 - Mentor Hawke CZ Dabing",
+        "video_id": 27025748
       },
       {
         "episode_id": 48469,
@@ -84973,6 +84983,16 @@
         "video_id": 27025245
       },
       {
+        "episode_id": 10032,
+        "display_name": "Penny Dreadful S01E07 - Na prahu pekla CZ Dabing",
+        "video_id": 27025701
+      },
+      {
+        "episode_id": 16112,
+        "display_name": "Zelenáč S01E06 - Mentor Hawke CZ Dabing",
+        "video_id": 27025748
+      },
+      {
         "episode_id": 48469,
         "display_name": "Zločin S02E07 - Keylela CZ Dabing",
         "video_id": 27022540
@@ -86232,12 +86252,13 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
+    "disabled": 94,
     "ok": 20
   },
   "whisper_review_statuses": {
     "whisper_confirmed_cz": 43,
     "whisper_non_cz_needs_subtitles": 137,
-    "needs_whisper": 2782
+    "needs_whisper": 2814
   },
   "subtitle_followup_statuses": {
     "needs_subtitle_setup_after_prehrajto_processing": 679
