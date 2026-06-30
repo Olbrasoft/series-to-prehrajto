@@ -522,6 +522,8 @@ cislo shardu, cas prideleni a expiraci.
   zdroj neprosel kontrolou; nesmi vzniknout kvuli prekryvu s jinym jobem,
 - claim po padu procesu expiruje, aby epizoda nezustala trvale zablokovana,
 - lokalni priprava musi respektovat stejny claim soubor jako GitHub Actions.
+- GitHub prepare workflow nesmi skoncit uspesne, pokud zadna claimovana epizoda
+  nevytvorila novy upload-ready zaznam.
 
 ## 13. Lokalni priprava jako zaloha GitHubu
 

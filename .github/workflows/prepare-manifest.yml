@@ -288,3 +288,35 @@ jobs:
           else
             echo "manifest has no upload-ready episodes"
           fi
+
+  verify-growth:
+    needs: [claim, prepare]
+    if: always() && needs.claim.outputs.claim_count != '0'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+
+      - name: Verify claimed episodes produced upload-ready rows
+        env:
+          BATCH_ID: ${{ needs.claim.outputs.batch_id }}
+          PREPARE_RESULT: ${{ needs.prepare.result }}
+        run: |
+          if [ "$PREPARE_RESULT" != "success" ]; then
+            echo "one or more preparation shards failed" >&2
+            exit 1
+          fi
+          READY_COUNT=$(jq -n \
+            --slurpfile claims plans/preparation-claims.jsonl \
+            --slurpfile prepared plans/prepared-episodes.jsonl \
+            --arg batch "$BATCH_ID" \
+            '([$claims[] | select(.claim_batch_id == $batch) | .episode_id] | unique) as $ids
+             | [$prepared[] | select(.upload_ready == true and (.episode_id as $id | $ids | index($id)))]
+             | length')
+          echo "claimed upload-ready episodes: $READY_COUNT"
+          if [ "$READY_COUNT" -lt 1 ]; then
+            echo "preparation completed without adding an upload-ready episode" >&2
+            exit 1
+          fi
