@@ -210,7 +210,7 @@ def main() -> int:
             {
                 "series_limit": str(prepare_series_target),
                 "episode_limit": str(prepare_episode_target),
-                "source_limit_per_episode": "12",
+                "source_limit_per_episode": "8",
                 "use_whisper": "false",
                 "skip_export": "true",
             },
@@ -232,7 +232,7 @@ def main() -> int:
                 {
                     "series_limit": str(args.target_backlog_series),
                     "episode_limit": str(args.target_backlog_episodes),
-                    "source_limit_per_episode": "12",
+                    "source_limit_per_episode": "8",
                 },
                 active=active,
                 dry_run=args.dry_run,
@@ -242,7 +242,7 @@ def main() -> int:
                 "prepare-sources",
                 {
                     "episode_limit": str(min(args.prepare_sources_batch, missing_prepared, 100)),
-                    "source_limit_per_episode": "12",
+                    "source_limit_per_episode": "8",
                     "use_whisper": "true",
                 },
                 active=active,

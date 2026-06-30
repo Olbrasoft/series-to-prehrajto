@@ -124,7 +124,7 @@ jobs:
             "--sample-seconds" "20"
             "--live-search"
             "--live-search-limit" "8"
-            "--live-search-query-limit" "2"
+            "--live-search-query-limit" "1"
             "--require-resolvable-source"
           )
           if [ "${{ inputs.use_whisper }}" = "true" ]; then
@@ -154,10 +154,7 @@ jobs:
             git reset --hard origin/main
 
             mkdir -p plans audits manifests reports
-            cp "$TMP_DIR/plans/prepared-episodes.jsonl" plans/prepared-episodes.jsonl
-            cp "$TMP_DIR/plans/subtitle-followup-queue.jsonl" plans/subtitle-followup-queue.jsonl
-            cp "$TMP_DIR/plans/whisper-review-queue.jsonl" plans/whisper-review-queue.jsonl 2>/dev/null || true
-            cp "$TMP_DIR/audits/language-audit-latest.jsonl.gz" audits/language-audit-latest.jsonl.gz 2>/dev/null || true
+            python src/merge_preparation_results.py --incoming-dir "$TMP_DIR"
 
             python src/build_upload_manifest.py \
               --limit 1000 \
