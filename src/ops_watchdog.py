@@ -31,6 +31,10 @@ def run_gh(args: list[str], *, dry_run: bool) -> None:
 
 
 def workflow_has_active_run(workflow: str) -> bool:
+    return workflow_active_run_count(workflow) > 0
+
+
+def workflow_active_run_count(workflow: str) -> int:
     try:
         out = subprocess.check_output(
             [
@@ -48,8 +52,8 @@ def workflow_has_active_run(workflow: str) -> bool:
         )
         rows = json.loads(out)
     except Exception:
-        return False
-    return any(row.get("status") in RUNNING for row in rows)
+        return 0
+    return sum(1 for row in rows if row.get("status") in RUNNING)
 
 
 def active_workflows(report: dict) -> set[str]:
@@ -129,8 +133,13 @@ def queue_workflow(
     active: set[str],
     dry_run: bool,
     allow_active: bool = False,
+    max_active: int | None = None,
 ) -> bool:
-    if not allow_active and (workflow in active or workflow_has_active_run(workflow)):
+    active_count = workflow_active_run_count(workflow)
+    if max_active is not None and active_count >= max_active:
+        print(f"{workflow}: active count {active_count} >= {max_active}")
+        return False
+    if not allow_active and (workflow in active or active_count > 0):
         print(f"{workflow}: already active")
         return False
     args = ["workflow", "run", f"{workflow}.yml"]
@@ -217,6 +226,7 @@ def main() -> int:
             active=active,
             dry_run=args.dry_run,
             allow_active=prepare_emergency,
+            max_active=3 if prepare_emergency else 1,
         )
 
     if prepared_source_episodes < args.target_prepared_episodes:

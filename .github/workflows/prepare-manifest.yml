@@ -31,7 +31,7 @@ permissions:
   actions: write
 
 concurrency:
-  group: series-to-prehrajto-prepare-${{ inputs.episode_limit || 'scheduled' }}
+  group: series-to-prehrajto-prepare-${{ github.run_id }}
   cancel-in-progress: false
 
 jobs:
