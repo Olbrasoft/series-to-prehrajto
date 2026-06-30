@@ -1,37 +1,61 @@
 {
   "counts": {
     "backlog_episodes": 181659,
-    "manifest_upload_ready_episodes": 870,
+    "manifest_upload_ready_episodes": 879,
     "uploaded_episodes": 11801,
-    "prepared_source_episodes": 21938,
+    "prepared_source_episodes": 21958,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 801,
-    "language_whisper_attempted_sources": 87,
+    "language_audited_sources": 958,
+    "language_whisper_attempted_sources": 107,
     "language_pending_whisper_sources": 2624,
-    "whisper_review_sources": 2436,
-    "whisper_review_pending_sources": 2292,
+    "whisper_review_sources": 2513,
+    "whisper_review_pending_sources": 2373,
     "subtitle_followup_sources": 538,
     "subtitle_followup_pending_sources": 538
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-06-30T17:38:10Z",
-      "databaseId": 28464034490,
+      "createdAt": "2026-06-30T17:42:44Z",
+      "databaseId": 28464303849,
       "headBranch": "main",
       "status": "in_progress",
-      "workflowName": "ops-status"
+      "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-06-30T17:42:19Z",
+      "databaseId": 28464278157,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-30T17:41:03Z",
+      "databaseId": 28464202611,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-06-30T17:38:10Z",
+      "databaseId": 28464034490,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-06-30T17:38:09Z",
       "databaseId": 28464033408,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "update-descriptions"
     },
     {
@@ -59,11 +83,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-06-30T17:24:50Z",
       "databaseId": 28463247448,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
@@ -75,11 +99,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-06-30T17:23:55Z",
       "databaseId": 28463191664,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -153,30 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-06-30T17:11:03Z",
-      "databaseId": 28462437130,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-30T16:56:18Z",
-      "databaseId": 28461559182,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-30T16:56:02Z",
-      "databaseId": 28461544323,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
     }
   ],
   "gaps": {
@@ -84837,6 +84837,38 @@
     ],
     "whisper_review_pending": [
       {
+        "episode_id": 56605,
+        "source_id": -14158182854614309,
+        "series_title": "Glee",
+        "episode_code": "S04E02",
+        "source_title": "Glee - s04e02",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 56606,
+        "source_id": -29031544036848301,
+        "series_title": "Glee",
+        "episode_code": "S04E03",
+        "source_title": "Glee - S04E03 - Makeover",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 56606,
+        "source_id": -23675706844241900,
+        "series_title": "Glee",
+        "episode_code": "S04E03",
+        "source_title": "Glee - S4E3 Makeover EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 56607,
+        "source_id": -44512922952062869,
+        "series_title": "Glee",
+        "episode_code": "S04E04",
+        "source_title": "Glee - S4E4 The Break-Up EN",
+        "status": "needs_whisper"
+      },
+      {
         "episode_id": 56607,
         "source_id": -6816229182500888,
         "series_title": "Glee",
@@ -85203,38 +85235,6 @@
         "episode_code": "S04E22",
         "source_title": "Glee S4E22 All or Nothing",
         "status": "needs_whisper"
-      },
-      {
-        "episode_id": 56620,
-        "source_id": -8750846589436163,
-        "series_title": "Glee",
-        "episode_code": "S04E22",
-        "source_title": "Glee - S04E22 - All or Nothing",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 56620,
-        "source_id": -11275157152626085,
-        "series_title": "Glee",
-        "episode_code": "S04E22",
-        "source_title": "Glee - s04e22",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 56577,
-        "source_id": -51110704594883217,
-        "series_title": "Glee",
-        "episode_code": "S05E01",
-        "source_title": "Glee - S05E01 - Love, Love, Love",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 56577,
-        "source_id": -10146753063164803,
-        "series_title": "Glee",
-        "episode_code": "S05E01",
-        "source_title": "Glee - S5E1 Love, Love, Love EN",
-        "status": "needs_whisper"
       }
     ],
     "subtitle_followup_pending": [
@@ -85591,10 +85591,10 @@
       },
       {
         "episode_id": 56605,
-        "source_id": -14158182854614309,
+        "source_id": -6603250143671726,
         "series_title": "Glee",
         "episode_code": "S04E02",
-        "source_title": "Glee - s04e02",
+        "source_title": "Glee - S04E02 - Britney 2.0",
         "subtitle_status": "needs_subtitle_setup_after_prehrajto_processing",
         "reason": "selected source needs Czech subtitles after Whisper detected non-Czech audio"
       },
@@ -85609,10 +85609,10 @@
       },
       {
         "episode_id": 56607,
-        "source_id": -44512922952062869,
+        "source_id": -6816229182500888,
         "series_title": "Glee",
         "episode_code": "S04E04",
-        "source_title": "Glee - S4E4 The Break-Up EN",
+        "source_title": "Glee - S04E04 - The Break-Up",
         "subtitle_status": "needs_subtitle_setup_after_prehrajto_processing",
         "reason": "selected source needs Czech subtitles after Whisper detected non-Czech audio"
       },
@@ -85692,13 +85692,13 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 714,
-    "ok": 87
+    "disabled": 851,
+    "ok": 107
   },
   "whisper_review_statuses": {
     "whisper_confirmed_cz": 43,
-    "whisper_non_cz_needs_subtitles": 101,
-    "needs_whisper": 2292
+    "whisper_non_cz_needs_subtitles": 97,
+    "needs_whisper": 2373
   },
   "subtitle_followup_statuses": {
     "needs_subtitle_setup_after_prehrajto_processing": 538
