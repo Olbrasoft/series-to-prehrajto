@@ -2,15 +2,15 @@
   "counts": {
     "backlog_episodes": 181937,
     "manifest_upload_ready_episodes": 254,
-    "uploaded_episodes": 11458,
+    "uploaded_episodes": 11460,
     "prepared_source_episodes": 20475,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 636,
-    "language_whisper_attempted_sources": 60,
+    "language_audited_sources": 40,
+    "language_whisper_attempted_sources": 40,
     "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 1011,
     "whisper_review_pending_sources": 887,
@@ -20,10 +20,34 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-06-30T10:45:15Z",
+      "databaseId": 28438615754,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-30T10:44:48Z",
+      "databaseId": 28438589849,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-06-30T10:44:42Z",
+      "databaseId": 28438584359,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-06-30T10:44:05Z",
       "databaseId": 28438553110,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -47,7 +71,7 @@
       "createdAt": "2026-06-30T10:40:25Z",
       "databaseId": 28438359154,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "audit-language"
     },
     {
@@ -107,11 +131,11 @@
       "workflowName": "process-whisper-review"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-06-30T10:36:14Z",
       "databaseId": 28438142214,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -153,30 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "sync"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-06-30T10:22:37Z",
-      "databaseId": 28437406847,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-06-30T10:17:57Z",
-      "databaseId": 28437151832,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "refresh-backlog"
-    },
-    {
-      "conclusion": "failure",
-      "createdAt": "2026-06-30T10:17:17Z",
-      "databaseId": 28437116021,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
     }
   ],
   "gaps": {
@@ -35166,6 +35166,11 @@
         "video_id": 27010400
       },
       {
+        "episode_id": 43284,
+        "display_name": "Zoufalé manželky S06E15 - Drahoušek CZ Dabing",
+        "video_id": 27010406
+      },
+      {
         "episode_id": 43205,
         "display_name": "Zoufalé manželky S04E04 - Jestli něco nesnáším CZ Dabing",
         "video_id": 27010051
@@ -35219,6 +35224,11 @@
         "episode_id": 43223,
         "display_name": "Zoufalé manželky S05E06 - Za vším hledej ženu CZ Dabing",
         "video_id": 27010388
+      },
+      {
+        "episode_id": 43225,
+        "display_name": "Zoufalé manželky S05E08 - Město v plamenech CZ Dabing",
+        "video_id": 27010403
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -81048,6 +81058,11 @@
         "video_id": 27010400
       },
       {
+        "episode_id": 43284,
+        "display_name": "Zoufalé manželky S06E15 - Drahoušek CZ Dabing",
+        "video_id": 27010406
+      },
+      {
         "episode_id": 43205,
         "display_name": "Zoufalé manželky S04E04 - Jestli něco nesnáším CZ Dabing",
         "video_id": 27010051
@@ -81101,6 +81116,11 @@
         "episode_id": 43223,
         "display_name": "Zoufalé manželky S05E06 - Za vším hledej ženu CZ Dabing",
         "video_id": 27010388
+      },
+      {
+        "episode_id": 43225,
+        "display_name": "Zoufalé manželky S05E08 - Město v plamenech CZ Dabing",
+        "video_id": 27010403
       }
     ],
     "prepared_not_upload_ready": [
@@ -82262,8 +82282,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 576,
-    "ok": 60
+    "ok": 40
   },
   "whisper_review_statuses": {
     "whisper_confirmed_cz": 37,
