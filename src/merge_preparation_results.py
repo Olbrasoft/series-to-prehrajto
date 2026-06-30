@@ -11,6 +11,7 @@ from __future__ import annotations
 import argparse
 import gzip
 import json
+from gzip import BadGzipFile
 from pathlib import Path
 from typing import Callable, Iterable
 
@@ -18,8 +19,13 @@ from typing import Callable, Iterable
 def load_jsonl(path: Path) -> list[dict]:
     if not path.exists() or path.stat().st_size == 0:
         return []
-    opener = gzip.open if path.suffix == ".gz" else open
-    with opener(path, "rt", encoding="utf-8") as fh:
+    if path.suffix == ".gz":
+        try:
+            with gzip.open(path, "rt", encoding="utf-8") as fh:
+                return [json.loads(line) for line in fh if line.strip()]
+        except BadGzipFile:
+            pass
+    with path.open("rt", encoding="utf-8") as fh:
         return [json.loads(line) for line in fh if line.strip()]
 
 
