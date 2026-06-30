@@ -208,12 +208,11 @@ def main() -> int:
         )
     )
 
-    prepare_small = upload_ready < args.small_ready_target
-    prepare_parallel = upload_ready < args.min_upload_ready
-    prepare_episode_target = min(args.emergency_episodes if prepare_small else args.target_episodes, 200)
-    prepare_series_target = min(args.target_series, 80) if prepare_small else args.target_series
+    has_preparation_work = unprepared_queue_episodes > 0
+    prepare_episode_target = min(args.emergency_episodes, 200)
+    prepare_series_target = min(args.target_series, 80)
 
-    if upload_ready <= args.min_upload_ready or backlog_count == 0 or manifest_ready < args.target_episodes:
+    if has_preparation_work:
         queue_workflow(
             "prepare-manifest",
             {
@@ -225,8 +224,8 @@ def main() -> int:
             },
             active=active,
             dry_run=args.dry_run,
-            allow_active=prepare_parallel,
-            max_active=3 if prepare_parallel else 1,
+            allow_active=True,
+            max_active=3,
         )
 
     if prepared_source_episodes < args.target_prepared_episodes:
