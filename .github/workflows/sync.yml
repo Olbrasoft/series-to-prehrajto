@@ -178,7 +178,7 @@ jobs:
               echo "prepared upload queue is below overnight threshold; queueing background manifest preparation"
               gh workflow run prepare-manifest.yml \
                 -f series_limit="1200" \
-                -f episode_limit="80" \
+                -f episode_limit="30" \
                 -f source_limit_per_episode="8" \
                 -f use_whisper="false" \
                 -f skip_export="true"
