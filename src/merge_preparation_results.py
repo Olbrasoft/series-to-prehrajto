@@ -52,6 +52,7 @@ def merge_by_key(
     *,
     key_fn: Callable[[dict], tuple | None],
     sort_fn: Callable[[dict], tuple] | None = None,
+    winner_fn: Callable[[dict, dict], dict] | None = None,
 ) -> int:
     current = load_jsonl(current_path)
     incoming = load_jsonl(incoming_path)
@@ -66,14 +67,24 @@ def merge_by_key(
         if key is None:
             continue
         old = rows.get(key)
-        if old != row:
+        winner = winner_fn(old, row) if old is not None and winner_fn else row
+        if old != winner:
             changed += 1
-        rows[key] = row
+        rows[key] = winner
     values = list(rows.values())
     if sort_fn:
         values.sort(key=sort_fn)
     write_jsonl(current_path, values)
     return changed
+
+
+def newer_timestamp_wins(field: str) -> Callable[[dict, dict], dict]:
+    def choose(current: dict, incoming: dict) -> dict:
+        current_timestamp = str(current.get(field) or "")
+        incoming_timestamp = str(incoming.get(field) or "")
+        return incoming if incoming_timestamp > current_timestamp else current
+
+    return choose
 
 
 def prepared_key(row: dict) -> tuple | None:
@@ -114,6 +125,7 @@ def main() -> int:
             incoming / "plans" / "prepared-episodes.jsonl",
             key_fn=prepared_key,
             sort_fn=episode_sort_key,
+            winner_fn=newer_timestamp_wins("prepared_at"),
         ),
         "subtitle_followup": merge_by_key(
             repo / "plans" / "subtitle-followup-queue.jsonl",
@@ -138,6 +150,7 @@ def main() -> int:
             incoming / "audits" / "language-audit-latest.jsonl.gz",
             key_fn=audit_key,
             sort_fn=lambda row: (int(row.get("source_id") or 0),),
+            winner_fn=newer_timestamp_wins("audited_at"),
         ),
     }
     print(json.dumps(changes, ensure_ascii=False, sort_keys=True))
