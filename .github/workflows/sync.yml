@@ -93,6 +93,7 @@ jobs:
           WHISPER_LANGUAGE_CHECK: ${{ vars.WHISPER_LANGUAGE_CHECK || '0' }}
           REQUIRE_PREPARED_DESCRIPTIONS: "0"
           REQUIRE_PREPARED_SOURCES: "1"
+          SYNC_DOWNLOAD_TIMEOUT_SECONDS: "900"
         run: |
           ARGS=("--count" "${{ inputs.batch_size || '20' }}")
           if [ "${{ inputs.allow_subtitles || 'true' }}" = "true" ]; then

@@ -28,6 +28,7 @@ TMP_DIR = Path("/tmp")
 DESCRIPTIONS = REPO_ROOT / "plans" / "descriptions.jsonl"
 PREPARED_SOURCES = REPO_ROOT / "plans" / "prepared-episodes.jsonl"
 MIN_UPLOAD_FILE_SIZE = 300 * 1024 * 1024
+DOWNLOAD_TIMEOUT_SECONDS = int(os.environ.get("SYNC_DOWNLOAD_TIMEOUT_SECONDS", "900"))
 
 
 def log(message: str) -> None:
@@ -214,7 +215,7 @@ def try_candidate(episode: dict, candidate: dict, session, state: dict, *, allow
     tmp_path = TMP_DIR / f"{safe_filename(episode['display_name'])}.mp4"
     t = time.monotonic()
     try:
-        size = download_to(best.url, tmp_path)
+        size = download_to(best.url, tmp_path, timeout_sec=DOWNLOAD_TIMEOUT_SECONDS)
     except DownloadError as exc:
         dl_sec = round(time.monotonic() - t, 1)
         log(f"  download FAILED after {dl_sec}s: {exc}")
