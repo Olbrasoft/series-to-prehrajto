@@ -174,10 +174,21 @@ jobs:
 
             EP_COUNT=$(python -c "import json; d=json.load(open('reports/upload-manifest.json')); print(d.get('new_count',0))")
             git commit -m "chore: prepare manifest (${EP_COUNT} new episodes)"
-            if git push origin HEAD:main; then
-              echo "push successful"
-              exit 0
-            fi
+            for push_attempt in 1 2 3 4 5 6 7 8 9 10; do
+              if git push origin HEAD:main; then
+                echo "push successful"
+                exit 0
+              fi
+
+              # Upload shards only change state files. Rebase those commits
+              # quickly instead of rebuilding the manifest on every race.
+              git fetch origin main
+              if ! git rebase origin/main; then
+                git rebase --abort
+                break
+              fi
+              sleep 1
+            done
             echo "push race on attempt ${attempt}, retrying"
             sleep $((attempt * 3))
           done
