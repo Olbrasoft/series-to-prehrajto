@@ -51,9 +51,9 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           python src/ops_watchdog.py \
-            --min-upload-ready 800 \
+            --min-upload-ready 500 \
             --target-episodes 3000 \
-            --emergency-episodes 500 \
+            --emergency-episodes 60 \
             --small-ready-target 600 \
             --target-series 240 \
             --target-backlog-series 10000 \

@@ -23,15 +23,15 @@ on:
         description: "Skip DB export (always true in CI)"
         required: false
         default: "true"
-  # schedule:
-  #   - cron: "*/20 * * * *"
+  schedule:
+    - cron: "*/10 * * * *"
 
 permissions:
   contents: write
   actions: write
 
 concurrency:
-  group: series-to-prehrajto-prepare
+  group: series-to-prehrajto-prepare-${{ inputs.episode_limit || 'scheduled' }}
   cancel-in-progress: false
 
 jobs:

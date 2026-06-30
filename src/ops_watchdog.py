@@ -122,8 +122,15 @@ def unprepared_source_queue_episodes() -> int:
     return pending
 
 
-def queue_workflow(workflow: str, fields: dict[str, str], *, active: set[str], dry_run: bool) -> bool:
-    if workflow in active or workflow_has_active_run(workflow):
+def queue_workflow(
+    workflow: str,
+    fields: dict[str, str],
+    *,
+    active: set[str],
+    dry_run: bool,
+    allow_active: bool = False,
+) -> bool:
+    if not allow_active and (workflow in active or workflow_has_active_run(workflow)):
         print(f"{workflow}: already active")
         return False
     args = ["workflow", "run", f"{workflow}.yml"]
@@ -193,6 +200,7 @@ def main() -> int:
     )
 
     prepare_small = upload_ready < args.small_ready_target
+    prepare_emergency = upload_ready < max(50, args.min_upload_ready // 5)
     prepare_episode_target = min(args.emergency_episodes if prepare_small else args.target_episodes, 200)
     prepare_series_target = min(args.target_series, 80) if prepare_small else args.target_series
 
@@ -208,6 +216,7 @@ def main() -> int:
             },
             active=active,
             dry_run=args.dry_run,
+            allow_active=prepare_emergency,
         )
 
     if prepared_source_episodes < args.target_prepared_episodes:
