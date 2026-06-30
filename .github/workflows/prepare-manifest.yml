@@ -31,13 +31,85 @@ permissions:
   actions: write
 
 concurrency:
-  group: series-to-prehrajto-prepare-${{ github.run_id }}
+  group: series-to-prehrajto-prepare
   cancel-in-progress: false
 
 jobs:
+  claim:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    outputs:
+      batch_id: ${{ steps.allocate.outputs.batch_id }}
+      claim_count: ${{ steps.allocate.outputs.claim_count }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+          persist-credentials: true
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Configure git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Claim unprocessed episodes
+        id: allocate
+        run: |
+          set -e
+          git fetch origin main
+          git reset --hard origin/main
+          BATCH_ID="${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
+          python src/prepare_episode_sources.py \
+            --queue backlog/enriched-audit-queue.jsonl.gz \
+            --backlog backlog/series-episodes.jsonl.gz \
+            --out plans/prepared-episodes.jsonl \
+            --episode-limit "${{ inputs.episode_limit || '15' }}" \
+            --claim-file plans/preparation-claims.jsonl \
+            --claim-batch-id "$BATCH_ID" \
+            --claim-shard-count 3 \
+            --claim-ttl-minutes 180 \
+            --claim-only
+          CLAIM_COUNT=$(jq -s --arg batch "$BATCH_ID" '[.[] | select(.claim_batch_id == $batch)] | length' plans/preparation-claims.jsonl)
+          echo "batch_id=$BATCH_ID" >> "$GITHUB_OUTPUT"
+          echo "claim_count=$CLAIM_COUNT" >> "$GITHUB_OUTPUT"
+
+      - name: Commit claims
+        run: |
+          set -e
+          git add plans/preparation-claims.jsonl
+          if git diff --cached --quiet; then
+            echo "no episodes available to claim"
+            exit 0
+          fi
+          git commit -m "chore: claim episode preparation batch"
+          for attempt in 1 2 3 4 5 6 7 8 9 10; do
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            git fetch origin main
+            git rebase origin/main
+            sleep 1
+          done
+          echo "failed to persist preparation claims" >&2
+          exit 1
+
   prepare:
+    needs: claim
+    if: needs.claim.outputs.claim_count != '0'
     runs-on: ubuntu-latest
     timeout-minutes: 180
+    strategy:
+      fail-fast: false
+      matrix:
+        selection_shard_index: [0, 1, 2]
     steps:
       - uses: actions/checkout@v4
         with:
@@ -64,6 +136,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
       - name: Build upload manifest from existing prepared sources
+        if: matrix.selection_shard_index == 0
         run: |
           python src/build_upload_manifest.py \
             --limit 1000 \
@@ -71,6 +144,7 @@ jobs:
             --report reports/upload-manifest.json
 
       - name: Commit fast manifest
+        if: matrix.selection_shard_index == 0
         run: |
           set -e
           git add manifests/upload-ready.jsonl.gz reports/upload-manifest.json
@@ -93,6 +167,7 @@ jobs:
           exit 1
 
       - name: Queue upload from existing manifest
+        if: matrix.selection_shard_index == 0
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
@@ -119,7 +194,10 @@ jobs:
             "--queue" "backlog/enriched-audit-queue.jsonl.gz"
             "--backlog" "backlog/series-episodes.jsonl.gz"
             "--out" "plans/prepared-episodes.jsonl"
-            "--episode-limit" "${{ inputs.episode_limit || '60' }}"
+            "--episode-limit" "${{ inputs.episode_limit || '15' }}"
+            "--claim-file" "plans/preparation-claims.jsonl"
+            "--claim-batch-id" "${{ needs.claim.outputs.batch_id }}"
+            "--claim-shard-index" "${{ matrix.selection_shard_index }}"
             "--source-limit-per-episode" "${{ inputs.source_limit_per_episode || '8' }}"
             "--sample-seconds" "20"
             "--live-search"

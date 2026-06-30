@@ -314,6 +314,90 @@ def uploaded_episode_exclusions() -> tuple[set[int], set[tuple[int, int, int]]]:
     return uploaded_ids, uploaded_keys
 
 
+def select_todo_shard(
+    episodes: list[dict],
+    *,
+    shard_index: int,
+    shard_count: int,
+    limit: int,
+) -> list[dict]:
+    if shard_count < 1:
+        raise ValueError("selection shard count must be at least 1")
+    if shard_index < 0 or shard_index >= shard_count:
+        raise ValueError("selection shard index must be between 0 and shard count - 1")
+    return [
+        episode
+        for position, episode in enumerate(episodes)
+        if position % shard_count == shard_index
+    ][:limit]
+
+
+def active_preparation_claims(path: Path, *, now: dt.datetime) -> list[dict]:
+    active = []
+    for row in load_jsonl(path):
+        expires_at = row.get("expires_at")
+        if not expires_at:
+            continue
+        try:
+            expires = dt.datetime.fromisoformat(str(expires_at).replace("Z", "+00:00"))
+        except ValueError:
+            continue
+        if expires > now and row.get("episode_id") is not None:
+            active.append(row)
+    return active
+
+
+def claim_episode_batch(
+    episodes: list[dict],
+    *,
+    path: Path,
+    batch_id: str,
+    shard_count: int,
+    limit_per_shard: int,
+    ttl_minutes: int,
+    now: dt.datetime,
+) -> list[dict]:
+    if shard_count < 1:
+        raise ValueError("claim shard count must be at least 1")
+    if ttl_minutes < 1:
+        raise ValueError("claim TTL must be at least 1 minute")
+    existing = active_preparation_claims(path, now=now)
+    claimed_ids = {int(row["episode_id"]) for row in existing}
+    selected = [episode for episode in episodes if int(episode["episode_id"]) not in claimed_ids][
+        : limit_per_shard * shard_count
+    ]
+    claimed_at = now.strftime("%Y-%m-%dT%H:%M:%SZ")
+    expires_at = (now + dt.timedelta(minutes=ttl_minutes)).strftime("%Y-%m-%dT%H:%M:%SZ")
+    new_claims = [
+        {
+            "episode_id": int(episode["episode_id"]),
+            "series_id": int(episode["series_id"]),
+            "series_slug": episode["series_slug"],
+            "series_title": episode["series_title"],
+            "season": int(episode["season"]),
+            "episode": int(episode["episode"]),
+            "claim_batch_id": batch_id,
+            "claim_shard_index": position % shard_count,
+            "claimed_at": claimed_at,
+            "expires_at": expires_at,
+            "status": "claimed",
+        }
+        for position, episode in enumerate(selected)
+    ]
+    write_jsonl(
+        path,
+        sorted(
+            [*existing, *new_claims],
+            key=lambda row: (
+                str(row.get("claim_batch_id") or ""),
+                int(row.get("claim_shard_index") or 0),
+                int(row.get("episode_id") or 0),
+            ),
+        ),
+    )
+    return new_claims
+
+
 def queued_episode_exclusions(path: Path) -> tuple[set[int], set[tuple[int, int, int]]]:
     queued_ids: set[int] = set()
     queued_keys: set[tuple[int, int, int]] = set()
@@ -847,6 +931,14 @@ def main() -> int:
     ap.add_argument("--subtitle-followup-out", default="plans/subtitle-followup-queue.jsonl")
     ap.add_argument("--whisper-review-out", default="plans/whisper-review-queue.jsonl")
     ap.add_argument("--episode-limit", type=int, default=10)
+    ap.add_argument("--selection-shard-index", type=int, default=0)
+    ap.add_argument("--selection-shard-count", type=int, default=1)
+    ap.add_argument("--claim-file", default="plans/preparation-claims.jsonl")
+    ap.add_argument("--claim-batch-id")
+    ap.add_argument("--claim-shard-index", type=int)
+    ap.add_argument("--claim-shard-count", type=int, default=1)
+    ap.add_argument("--claim-ttl-minutes", type=int, default=180)
+    ap.add_argument("--claim-only", action="store_true")
     ap.add_argument("--source-limit-per-episode", type=int, default=8)
     ap.add_argument("--series-slug")
     ap.add_argument("--season", type=int)
@@ -882,6 +974,17 @@ def main() -> int:
         else queued_episode_exclusions(Path(args.upload_manifest))
     )
     now = dt.datetime.now(dt.timezone.utc)
+    active_claims = active_preparation_claims(Path(args.claim_file), now=now)
+    own_claims = [
+        row
+        for row in active_claims
+        if args.claim_batch_id and row.get("claim_batch_id") == args.claim_batch_id
+    ]
+    claimed_elsewhere = {
+        int(row["episode_id"])
+        for row in active_claims
+        if not args.claim_batch_id or row.get("claim_batch_id") != args.claim_batch_id
+    }
     todo = [
         episode
         for episode in episodes
@@ -901,6 +1004,7 @@ def main() -> int:
             int(episode["episode"]),
         )
         not in queued_keys
+        and int(episode["episode_id"]) not in claimed_elsewhere
     ]
     todo.sort(
         key=lambda episode: (
@@ -913,7 +1017,38 @@ def main() -> int:
             int(episode["episode_id"]),
         )
     )
-    todo = todo[: args.episode_limit]
+    if args.claim_only:
+        if not args.claim_batch_id:
+            ap.error("--claim-only requires --claim-batch-id")
+        claims = claim_episode_batch(
+            todo,
+            path=Path(args.claim_file),
+            batch_id=args.claim_batch_id,
+            shard_count=args.claim_shard_count,
+            limit_per_shard=args.episode_limit,
+            ttl_minutes=args.claim_ttl_minutes,
+            now=now,
+        )
+        print(f"Claimed {len(claims)} episodes for batch {args.claim_batch_id}")
+        return 0
+    if args.claim_batch_id:
+        claim_order = [
+            int(row["episode_id"])
+            for row in own_claims
+            if args.claim_shard_index is None
+            or int(row.get("claim_shard_index") or 0) == args.claim_shard_index
+        ]
+        todo_by_id = {int(episode["episode_id"]): episode for episode in todo}
+        todo = [todo_by_id[episode_id] for episode_id in claim_order if episode_id in todo_by_id][
+            : args.episode_limit
+        ]
+    else:
+        todo = select_todo_shard(
+            todo,
+            shard_index=args.selection_shard_index,
+            shard_count=args.selection_shard_count,
+            limit=args.episode_limit,
+        )
 
     prepared = [
         prepare_episode(

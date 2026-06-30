@@ -8,6 +8,75 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 import prepare_episode_sources as source_preparation  # noqa: E402
 
 
+def test_select_todo_shard_partitions_ranked_candidates_without_overlap():
+    episodes = [{"episode_id": episode_id} for episode_id in range(1, 13)]
+
+    shards = [
+        source_preparation.select_todo_shard(
+            episodes,
+            shard_index=index,
+            shard_count=3,
+            limit=3,
+        )
+        for index in range(3)
+    ]
+
+    assert [[row["episode_id"] for row in shard] for shard in shards] == [
+        [1, 4, 7],
+        [2, 5, 8],
+        [3, 6, 9],
+    ]
+    selected_ids = [row["episode_id"] for shard in shards for row in shard]
+    assert len(selected_ids) == len(set(selected_ids))
+
+
+def test_claim_episode_batch_persists_unique_shard_assignments(tmp_path):
+    now = source_preparation.dt.datetime(
+        2026,
+        6,
+        30,
+        12,
+        tzinfo=source_preparation.dt.timezone.utc,
+    )
+    path = tmp_path / "claims.jsonl"
+    episodes = [
+        {
+            "episode_id": episode_id,
+            "series_id": 10,
+            "series_slug": "example",
+            "series_title": "Example",
+            "season": 1,
+            "episode": episode_id,
+        }
+        for episode_id in range(1, 10)
+    ]
+
+    claims = source_preparation.claim_episode_batch(
+        episodes,
+        path=path,
+        batch_id="batch-1",
+        shard_count=3,
+        limit_per_shard=2,
+        ttl_minutes=180,
+        now=now,
+    )
+
+    assert [row["episode_id"] for row in claims] == [1, 2, 3, 4, 5, 6]
+    assert [row["claim_shard_index"] for row in claims] == [0, 1, 2, 0, 1, 2]
+    assert len(source_preparation.active_preparation_claims(path, now=now)) == 6
+
+    second = source_preparation.claim_episode_batch(
+        episodes,
+        path=path,
+        batch_id="batch-2",
+        shard_count=3,
+        limit_per_shard=2,
+        ttl_minutes=180,
+        now=now,
+    )
+    assert [row["episode_id"] for row in second] == [7, 8, 9]
+
+
 def test_usable_prepared_episodes_exclude_no_source_results(tmp_path):
     path = tmp_path / "prepared.jsonl"
     path.write_text(
@@ -15,17 +84,33 @@ def test_usable_prepared_episodes_exclude_no_source_results(tmp_path):
             [
                 json.dumps({"episode_id": 1, "selected_source": None}),
                 json.dumps(
-                    {
-                        "episode_id": 2,
-                        "upload_ready": True,
-                        "selected_source": {"source_id": 20},
+                        {
+                            "episode_id": 2,
+                            "upload_ready": True,
+                            "selected_source": {
+                                "source_id": 20,
+                                "signals": {
+                                    "provider_probe": {
+                                        "status": "ok",
+                                        "streams": [{"res": 1080}],
+                                    }
+                                },
+                            },
                     }
                 ),
                 json.dumps(
-                    {
-                        "episode_id": 3,
-                        "upload_ready": True,
-                        "selected_source": {"source_id": 30},
+                        {
+                            "episode_id": 3,
+                            "upload_ready": True,
+                            "selected_source": {
+                                "source_id": 30,
+                                "signals": {
+                                    "provider_probe": {
+                                        "status": "ok",
+                                        "streams": [{"res": 1080}],
+                                    }
+                                },
+                            },
                     }
                 ),
             ]

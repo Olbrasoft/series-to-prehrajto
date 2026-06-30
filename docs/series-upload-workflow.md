@@ -509,6 +509,20 @@ Pokud upload-ready fronta klesne pod varovny stav, nesmi se jen spustit jeden
 dalsi GitHub prepare job a cekat. Musi se zkontrolovat, jestli priprava realne
 pribyva. Pokud nepribyva, ma se spustit lokalni priprava.
 
+### Claim epizod pred pripravou
+
+Epizoda se musi pred hledanim zdroju nejdriv zapsat do
+`plans/preparation-claims.jsonl`. Claim obsahuje ID epizody, vlastnika davky,
+cislo shardu, cas prideleni a expiraci.
+
+- aktivne claimovana epizoda se nesmi nabidnout zadnemu jinemu prepare procesu,
+- prepare job smi zpracovat pouze epizody pridelene jeho davce a shardu,
+- jedna GitHub davka rozdeli kandidaty mezi tri navzajem disjunktni shardy,
+- dokonceni jobu bez noveho vysledku je v poradku jen tehdy, kdyz prideleny
+  zdroj neprosel kontrolou; nesmi vzniknout kvuli prekryvu s jinym jobem,
+- claim po padu procesu expiruje, aby epizoda nezustala trvale zablokovana,
+- lokalni priprava musi respektovat stejny claim soubor jako GitHub Actions.
+
 ## 13. Lokalni priprava jako zaloha GitHubu
 
 GitHub Actions nejsou jediny misto, kde se smi pripravovat zdroje. Pokud

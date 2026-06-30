@@ -224,8 +224,8 @@ def main() -> int:
             },
             active=active,
             dry_run=args.dry_run,
-            allow_active=True,
-            max_active=3,
+            allow_active=False,
+            max_active=1,
         )
 
     if prepared_source_episodes < args.target_prepared_episodes:
