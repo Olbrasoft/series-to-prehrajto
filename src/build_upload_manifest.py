@@ -519,16 +519,16 @@ def main() -> int:
         failed_availability=failed_availability_urls(REPO_ROOT / args.availability_report),
     )
     output_path = REPO_ROOT / args.out
-    backlog_episode_ids = {
+    refreshed_episode_ids = {
         int(row["episode_id"])
-        for row in merge_backlog_with_prepared(load_jsonl(REPO_ROOT / args.backlog), latest_by_episode(load_jsonl(REPO_ROOT / args.prepared)))
+        for row in rows
         if row.get("episode_id") is not None
     }
     uploaded_episode_ids, uploaded_episode_keys, burned = load_upload_state_exclusions()
     merged_rows = merge_manifest(
         load_jsonl(output_path),
         rows,
-        backlog_episode_ids,
+        refreshed_episode_ids,
         uploaded_episode_ids=uploaded_episode_ids,
         uploaded_episode_keys=uploaded_episode_keys,
         burned=burned,

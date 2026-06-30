@@ -78,7 +78,14 @@ class PrehrajtoSearchTest(unittest.TestCase):
         existing = [{"episode_id": 1, "value": "old"}, {"episode_id": 2, "value": "keep"}]
         refreshed = [{"episode_id": 1, "value": "new"}]
         self.assertEqual(
-            merge_manifest(existing, refreshed, {1}),
+            merge_manifest(
+                existing,
+                refreshed,
+                {1},
+                uploaded_episode_ids=set(),
+                uploaded_episode_keys=set(),
+                burned=set(),
+            ),
             [{"episode_id": 2, "value": "keep"}, {"episode_id": 1, "value": "new"}],
         )
 
