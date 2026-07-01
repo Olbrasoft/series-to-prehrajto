@@ -3,6 +3,10 @@
 Uploads selected series episodes from the CR production catalog to the
 `serialy.prehrajto@seznam.cz` Přehraj.to account.
 
+For the current production architecture, persisted state, health checks and
+handoff instructions, read [`docs/operations-handoff.md`](docs/operations-handoff.md)
+first. The rest of this README describes the original minimal workflow.
+
 The first version is deliberately small and operational:
 
 - export a limited backlog of top series episodes from the production DB,
