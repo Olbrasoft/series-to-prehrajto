@@ -2,28 +2,84 @@
   "counts": {
     "backlog_episodes": 180483,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 12933,
-    "prepared_source_episodes": 25218,
+    "uploaded_episodes": 12942,
+    "prepared_source_episodes": 25248,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 292,
-    "language_whisper_attempted_sources": 20,
-    "language_pending_whisper_sources": 2624,
-    "whisper_review_sources": 8053,
-    "whisper_review_pending_sources": 7733,
-    "subtitle_followup_sources": 1352,
-    "subtitle_followup_pending_sources": 1352
+    "language_audited_sources": 40,
+    "language_whisper_attempted_sources": 40,
+    "language_pending_whisper_sources": 2604,
+    "whisper_review_sources": 8098,
+    "whisper_review_pending_sources": 7778,
+    "subtitle_followup_sources": 1357,
+    "subtitle_followup_pending_sources": 1357
   },
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-07-01T14:17:09Z",
+      "databaseId": 28524242841,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-01T14:17:05Z",
+      "databaseId": 28524237796,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-07-01T14:03:06Z",
+      "databaseId": 28523339764,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-01T14:02:20Z",
+      "databaseId": 28523289340,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-01T14:02:17Z",
+      "databaseId": 28523285878,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-01T14:02:14Z",
+      "databaseId": 28523283296,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-01T14:02:11Z",
+      "databaseId": 28523279759,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-01T14:01:24Z",
       "databaseId": 28523228408,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -55,7 +111,7 @@
       "createdAt": "2026-07-01T13:28:37Z",
       "databaseId": 28521135903,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "sync"
     },
     {
@@ -115,68 +171,12 @@
       "workflowName": "prepare-manifest"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-01T13:25:11Z",
       "databaseId": 28520912301,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "sync"
-    },
-    {
-      "conclusion": "failure",
-      "createdAt": "2026-07-01T13:12:09Z",
-      "databaseId": 28520093902,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-01T13:11:50Z",
-      "databaseId": 28520073542,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-01T13:11:13Z",
-      "databaseId": 28520035262,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-01T13:10:34Z",
-      "databaseId": 28519993750,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-01T13:10:29Z",
-      "databaseId": 28519989014,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-01T13:10:27Z",
-      "databaseId": 28519986069,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-01T13:10:07Z",
-      "databaseId": 28519963067,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "refresh-backlog"
     }
   ],
   "gaps": {
@@ -42501,6 +42501,46 @@
         "video_id": 27047511
       },
       {
+        "episode_id": 95446,
+        "display_name": "Světlo a stíny S01E04 - Otkazat’sja CZ Dabing",
+        "video_id": 27047655
+      },
+      {
+        "episode_id": 95448,
+        "display_name": "Světlo a stíny S01E06 - Srdce je jako šíp CZ Dabing",
+        "video_id": 27047707
+      },
+      {
+        "episode_id": 95450,
+        "display_name": "Světlo a stíny S01E08 - Žádný slzy CZ Titulky",
+        "video_id": 27047755
+      },
+      {
+        "episode_id": 63876,
+        "display_name": "Světlo a stíny S02E02 - Rusalye CZ Dabing",
+        "video_id": 27047801
+      },
+      {
+        "episode_id": 63878,
+        "display_name": "Světlo a stíny S02E04 - Každá obludnost CZ Dabing",
+        "video_id": 27047848
+      },
+      {
+        "episode_id": 63880,
+        "display_name": "Světlo a stíny S02E06 - Nemám srdce CZ Dabing",
+        "video_id": 27047895
+      },
+      {
+        "episode_id": 63882,
+        "display_name": "Světlo a stíny S02E08 - Žádný pohřby CZ Titulky",
+        "video_id": 27047945
+      },
+      {
+        "episode_id": 49642,
+        "display_name": "Orphan Black S01E03 - Variation Under Nature CZ Titulky",
+        "video_id": 27048000
+      },
+      {
         "episode_id": 50535,
         "display_name": "Pod černou vlajkou S02E09 - Nepříjemné pravdy CZ Dabing",
         "video_id": 27046638
@@ -42594,6 +42634,11 @@
         "episode_id": 49651,
         "display_name": "Orphan Black S02E02 - Governed By Sound Reason and True Religion CZ Titulky",
         "video_id": 27047588
+      },
+      {
+        "episode_id": 49653,
+        "display_name": "Orphan Black S02E04 - Governed As It Were By Chance CZ Titulky",
+        "video_id": 27047645
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -95758,6 +95803,46 @@
         "video_id": 27047511
       },
       {
+        "episode_id": 95446,
+        "display_name": "Světlo a stíny S01E04 - Otkazat’sja CZ Dabing",
+        "video_id": 27047655
+      },
+      {
+        "episode_id": 95448,
+        "display_name": "Světlo a stíny S01E06 - Srdce je jako šíp CZ Dabing",
+        "video_id": 27047707
+      },
+      {
+        "episode_id": 95450,
+        "display_name": "Světlo a stíny S01E08 - Žádný slzy CZ Titulky",
+        "video_id": 27047755
+      },
+      {
+        "episode_id": 63876,
+        "display_name": "Světlo a stíny S02E02 - Rusalye CZ Dabing",
+        "video_id": 27047801
+      },
+      {
+        "episode_id": 63878,
+        "display_name": "Světlo a stíny S02E04 - Každá obludnost CZ Dabing",
+        "video_id": 27047848
+      },
+      {
+        "episode_id": 63880,
+        "display_name": "Světlo a stíny S02E06 - Nemám srdce CZ Dabing",
+        "video_id": 27047895
+      },
+      {
+        "episode_id": 63882,
+        "display_name": "Světlo a stíny S02E08 - Žádný pohřby CZ Titulky",
+        "video_id": 27047945
+      },
+      {
+        "episode_id": 49642,
+        "display_name": "Orphan Black S01E03 - Variation Under Nature CZ Titulky",
+        "video_id": 27048000
+      },
+      {
         "episode_id": 50535,
         "display_name": "Pod černou vlajkou S02E09 - Nepříjemné pravdy CZ Dabing",
         "video_id": 27046638
@@ -95851,6 +95936,11 @@
         "episode_id": 49651,
         "display_name": "Orphan Black S02E02 - Governed By Sound Reason and True Religion CZ Titulky",
         "video_id": 27047588
+      },
+      {
+        "episode_id": 49653,
+        "display_name": "Orphan Black S02E04 - Governed As It Were By Chance CZ Titulky",
+        "video_id": 27047645
       }
     ],
     "prepared_not_upload_ready": [
@@ -97012,15 +97102,14 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 272,
-    "ok": 20
+    "ok": 40
   },
   "whisper_review_statuses": {
     "whisper_non_cz_needs_subtitles": 277,
-    "needs_whisper": 7733,
+    "needs_whisper": 7778,
     "whisper_confirmed_cz": 43
   },
   "subtitle_followup_statuses": {
-    "needs_subtitle_setup_after_prehrajto_processing": 1352
+    "needs_subtitle_setup_after_prehrajto_processing": 1357
   }
 }
