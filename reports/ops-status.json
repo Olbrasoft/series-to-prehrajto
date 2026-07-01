@@ -1,37 +1,109 @@
 {
   "counts": {
-    "backlog_episodes": 180830,
+    "backlog_episodes": 180664,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 12699,
-    "prepared_source_episodes": 24598,
+    "uploaded_episodes": 12742,
+    "prepared_source_episodes": 24658,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 336,
+    "language_audited_sources": 602,
     "language_whisper_attempted_sources": 40,
     "language_pending_whisper_sources": 2604,
-    "whisper_review_sources": 6794,
-    "whisper_review_pending_sources": 6494,
-    "subtitle_followup_sources": 1231,
-    "subtitle_followup_pending_sources": 1231
+    "whisper_review_sources": 6889,
+    "whisper_review_pending_sources": 6589,
+    "subtitle_followup_sources": 1241,
+    "subtitle_followup_pending_sources": 1241
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-07-01T10:23:27Z",
-      "databaseId": 28510709717,
+      "createdAt": "2026-07-01T10:50:22Z",
+      "databaseId": 28512165053,
       "headBranch": "main",
       "status": "in_progress",
-      "workflowName": "ops-status"
+      "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-07-01T10:50:16Z",
+      "databaseId": 28512159385,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-01T10:50:12Z",
+      "databaseId": 28512155471,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-01T10:47:13Z",
+      "databaseId": 28511998099,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-01T10:47:10Z",
+      "databaseId": 28511994963,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-01T10:46:41Z",
+      "databaseId": 28511968619,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-01T10:41:31Z",
+      "databaseId": 28511691296,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-01T10:26:32Z",
+      "databaseId": 28510882351,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-01T10:25:57Z",
+      "databaseId": 28510849651,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "refresh-backlog"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-01T10:23:27Z",
+      "databaseId": 28510709717,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-01T10:01:14Z",
       "databaseId": 28509493007,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "sync"
     },
     {
@@ -75,11 +147,11 @@
       "workflowName": "prepare-manifest"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-01T09:50:45Z",
       "databaseId": 28508904423,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "sync"
     },
     {
@@ -102,78 +174,6 @@
       "conclusion": "success",
       "createdAt": "2026-07-01T09:42:07Z",
       "databaseId": 28508410288,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-01T09:41:15Z",
-      "databaseId": 28508362868,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-01T09:37:54Z",
-      "databaseId": 28508175923,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-01T09:23:05Z",
-      "databaseId": 28507332114,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-01T09:22:14Z",
-      "databaseId": 28507283409,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-01T09:22:11Z",
-      "databaseId": 28507280559,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-01T09:21:21Z",
-      "databaseId": 28507230473,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-01T09:21:16Z",
-      "databaseId": 28507225611,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-01T09:21:12Z",
-      "databaseId": 28507221483,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-01T09:20:23Z",
-      "databaseId": 28507171223,
       "headBranch": "main",
       "status": "completed",
       "workflowName": "audit-language"
@@ -41331,6 +41331,16 @@
         "video_id": 27043607
       },
       {
+        "episode_id": 64330,
+        "display_name": "Pomsta S02E17 - Vítěztví CZ Titulky",
+        "video_id": 27043653
+      },
+      {
+        "episode_id": 64364,
+        "display_name": "Pomsta S03E01 - Fear CZ Titulky",
+        "video_id": 27043677
+      },
+      {
         "episode_id": 31341,
         "display_name": "Zelenáč S07E09 - Polibek CZ Dabing",
         "video_id": 27043155
@@ -41424,6 +41434,211 @@
         "episode_id": 64319,
         "display_name": "Pomsta S01E17 - Pochybnost CZ Dabing",
         "video_id": 27043638
+      },
+      {
+        "episode_id": 64321,
+        "display_name": "Pomsta S01E20 - Odkaz CZ Dabing",
+        "video_id": 27043656
+      },
+      {
+        "episode_id": 64384,
+        "display_name": "Pomsta S03E03 - Confession CZ Titulky",
+        "video_id": 27043718
+      },
+      {
+        "episode_id": 64366,
+        "display_name": "Pomsta S03E05 - Control CZ Titulky",
+        "video_id": 27043735
+      },
+      {
+        "episode_id": 64336,
+        "display_name": "Pomsta S03E11 - Homecoming CZ Titulky",
+        "video_id": 27043748
+      },
+      {
+        "episode_id": 64368,
+        "display_name": "Pomsta S03E13 - Hatred CZ Titulky",
+        "video_id": 27043759
+      },
+      {
+        "episode_id": 64338,
+        "display_name": "Pomsta S03E15 - Struggle CZ Titulky",
+        "video_id": 27043775
+      },
+      {
+        "episode_id": 64342,
+        "display_name": "Pomsta S03E18 - Blood CZ Titulky",
+        "video_id": 27043790
+      },
+      {
+        "episode_id": 64388,
+        "display_name": "Pomsta S03E19 - Allegiance CZ Titulky",
+        "video_id": 27043802
+      },
+      {
+        "episode_id": 64340,
+        "display_name": "Pomsta S03E22 - Execution CZ Titulky",
+        "video_id": 27043814
+      },
+      {
+        "episode_id": 64344,
+        "display_name": "Pomsta S04E03 - Ashes CZ Titulky",
+        "video_id": 27043831
+      },
+      {
+        "episode_id": 64372,
+        "display_name": "Pomsta S04E08 - Contact CZ Titulky",
+        "video_id": 27043841
+      },
+      {
+        "episode_id": 64392,
+        "display_name": "Pomsta S04E09 - Intel CZ Titulky",
+        "video_id": 27043848
+      },
+      {
+        "episode_id": 64348,
+        "display_name": "Pomsta S04E10 - Atonement CZ Titulky",
+        "video_id": 27043863
+      },
+      {
+        "episode_id": 64346,
+        "display_name": "Pomsta S04E11 - Epitaph CZ Titulky",
+        "video_id": 27043879
+      },
+      {
+        "episode_id": 64374,
+        "display_name": "Pomsta S04E13 - Abduction CZ Titulky",
+        "video_id": 27043889
+      },
+      {
+        "episode_id": 64390,
+        "display_name": "Pomsta S04E15 - Bait CZ Titulky",
+        "video_id": 27043901
+      },
+      {
+        "episode_id": 64350,
+        "display_name": "Pomsta S04E16 - Retaliation CZ Titulky",
+        "video_id": 27043921
+      },
+      {
+        "episode_id": 64352,
+        "display_name": "Pomsta S04E19 - Exposure CZ Titulky",
+        "video_id": 27043950
+      },
+      {
+        "episode_id": 64354,
+        "display_name": "Pomsta S04E21 - Aftermath CZ Titulky",
+        "video_id": 27043995
+      },
+      {
+        "episode_id": 64376,
+        "display_name": "Pomsta S04E22 - Plea CZ Titulky",
+        "video_id": 27044007
+      },
+      {
+        "episode_id": 61898,
+        "display_name": "Na seznamu smrti S01E01 - Engram CZ Titulky",
+        "video_id": 27044029
+      },
+      {
+        "episode_id": 64305,
+        "display_name": "Pomsta S02E03 - Sebedůvěra CZ Dabing",
+        "video_id": 27043723
+      },
+      {
+        "episode_id": 64323,
+        "display_name": "Pomsta S02E04 - Intuice CZ Dabing",
+        "video_id": 27043766
+      },
+      {
+        "episode_id": 64327,
+        "display_name": "Pomsta S02E16 - Osvícení CZ Titulky",
+        "video_id": 27043832
+      },
+      {
+        "episode_id": 64331,
+        "display_name": "Pomsta S02E18 - Maškaráda CZ Titulky",
+        "video_id": 27043842
+      },
+      {
+        "episode_id": 64363,
+        "display_name": "Pomsta S02E19 - Identita CZ Titulky",
+        "video_id": 27043852
+      },
+      {
+        "episode_id": 64383,
+        "display_name": "Pomsta S03E02 - Sin CZ Titulky",
+        "video_id": 27043862
+      },
+      {
+        "episode_id": 64333,
+        "display_name": "Pomsta S03E04 - Mercy CZ Titulky",
+        "video_id": 27043876
+      },
+      {
+        "episode_id": 64371,
+        "display_name": "Pomsta S03E06 - Dissolution CZ Titulky",
+        "video_id": 27043891
+      },
+      {
+        "episode_id": 64367,
+        "display_name": "Pomsta S03E08 - Secrecy CZ Titulky",
+        "video_id": 27043906
+      },
+      {
+        "episode_id": 64365,
+        "display_name": "Pomsta S03E09 - Surrender CZ Titulky",
+        "video_id": 27043927
+      },
+      {
+        "episode_id": 64393,
+        "display_name": "Pomsta S03E10 - Exodus CZ Titulky",
+        "video_id": 27043984
+      },
+      {
+        "episode_id": 64373,
+        "display_name": "Pomsta S03E12 - Endurance CZ Titulky",
+        "video_id": 27044001
+      },
+      {
+        "episode_id": 64339,
+        "display_name": "Pomsta S03E16 - Disgrace CZ Titulky",
+        "video_id": 27044015
+      },
+      {
+        "episode_id": 64391,
+        "display_name": "Pomsta S03E17 - Addiction CZ Titulky",
+        "video_id": 27044030
+      },
+      {
+        "episode_id": 64369,
+        "display_name": "Pomsta S03E20 - Revolution CZ Titulky",
+        "video_id": 27044039
+      },
+      {
+        "episode_id": 64389,
+        "display_name": "Pomsta S03E21 - Impetus CZ Titulky",
+        "video_id": 27044051
+      },
+      {
+        "episode_id": 64341,
+        "display_name": "Pomsta S04E01 - Renaissance CZ Titulky",
+        "video_id": 27044063
+      },
+      {
+        "episode_id": 64345,
+        "display_name": "Pomsta S04E02 - Disclosure CZ Titulky",
+        "video_id": 27044076
+      },
+      {
+        "episode_id": 64375,
+        "display_name": "Pomsta S04E06 - Damage CZ Titulky",
+        "video_id": 27044096
+      },
+      {
+        "episode_id": 64385,
+        "display_name": "Pomsta S04E07 - Ambush CZ Titulky",
+        "video_id": 27044109
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -93418,6 +93633,16 @@
         "video_id": 27043607
       },
       {
+        "episode_id": 64330,
+        "display_name": "Pomsta S02E17 - Vítěztví CZ Titulky",
+        "video_id": 27043653
+      },
+      {
+        "episode_id": 64364,
+        "display_name": "Pomsta S03E01 - Fear CZ Titulky",
+        "video_id": 27043677
+      },
+      {
         "episode_id": 31341,
         "display_name": "Zelenáč S07E09 - Polibek CZ Dabing",
         "video_id": 27043155
@@ -93511,6 +93736,211 @@
         "episode_id": 64319,
         "display_name": "Pomsta S01E17 - Pochybnost CZ Dabing",
         "video_id": 27043638
+      },
+      {
+        "episode_id": 64321,
+        "display_name": "Pomsta S01E20 - Odkaz CZ Dabing",
+        "video_id": 27043656
+      },
+      {
+        "episode_id": 64384,
+        "display_name": "Pomsta S03E03 - Confession CZ Titulky",
+        "video_id": 27043718
+      },
+      {
+        "episode_id": 64366,
+        "display_name": "Pomsta S03E05 - Control CZ Titulky",
+        "video_id": 27043735
+      },
+      {
+        "episode_id": 64336,
+        "display_name": "Pomsta S03E11 - Homecoming CZ Titulky",
+        "video_id": 27043748
+      },
+      {
+        "episode_id": 64368,
+        "display_name": "Pomsta S03E13 - Hatred CZ Titulky",
+        "video_id": 27043759
+      },
+      {
+        "episode_id": 64338,
+        "display_name": "Pomsta S03E15 - Struggle CZ Titulky",
+        "video_id": 27043775
+      },
+      {
+        "episode_id": 64342,
+        "display_name": "Pomsta S03E18 - Blood CZ Titulky",
+        "video_id": 27043790
+      },
+      {
+        "episode_id": 64388,
+        "display_name": "Pomsta S03E19 - Allegiance CZ Titulky",
+        "video_id": 27043802
+      },
+      {
+        "episode_id": 64340,
+        "display_name": "Pomsta S03E22 - Execution CZ Titulky",
+        "video_id": 27043814
+      },
+      {
+        "episode_id": 64344,
+        "display_name": "Pomsta S04E03 - Ashes CZ Titulky",
+        "video_id": 27043831
+      },
+      {
+        "episode_id": 64372,
+        "display_name": "Pomsta S04E08 - Contact CZ Titulky",
+        "video_id": 27043841
+      },
+      {
+        "episode_id": 64392,
+        "display_name": "Pomsta S04E09 - Intel CZ Titulky",
+        "video_id": 27043848
+      },
+      {
+        "episode_id": 64348,
+        "display_name": "Pomsta S04E10 - Atonement CZ Titulky",
+        "video_id": 27043863
+      },
+      {
+        "episode_id": 64346,
+        "display_name": "Pomsta S04E11 - Epitaph CZ Titulky",
+        "video_id": 27043879
+      },
+      {
+        "episode_id": 64374,
+        "display_name": "Pomsta S04E13 - Abduction CZ Titulky",
+        "video_id": 27043889
+      },
+      {
+        "episode_id": 64390,
+        "display_name": "Pomsta S04E15 - Bait CZ Titulky",
+        "video_id": 27043901
+      },
+      {
+        "episode_id": 64350,
+        "display_name": "Pomsta S04E16 - Retaliation CZ Titulky",
+        "video_id": 27043921
+      },
+      {
+        "episode_id": 64352,
+        "display_name": "Pomsta S04E19 - Exposure CZ Titulky",
+        "video_id": 27043950
+      },
+      {
+        "episode_id": 64354,
+        "display_name": "Pomsta S04E21 - Aftermath CZ Titulky",
+        "video_id": 27043995
+      },
+      {
+        "episode_id": 64376,
+        "display_name": "Pomsta S04E22 - Plea CZ Titulky",
+        "video_id": 27044007
+      },
+      {
+        "episode_id": 61898,
+        "display_name": "Na seznamu smrti S01E01 - Engram CZ Titulky",
+        "video_id": 27044029
+      },
+      {
+        "episode_id": 64305,
+        "display_name": "Pomsta S02E03 - Sebedůvěra CZ Dabing",
+        "video_id": 27043723
+      },
+      {
+        "episode_id": 64323,
+        "display_name": "Pomsta S02E04 - Intuice CZ Dabing",
+        "video_id": 27043766
+      },
+      {
+        "episode_id": 64327,
+        "display_name": "Pomsta S02E16 - Osvícení CZ Titulky",
+        "video_id": 27043832
+      },
+      {
+        "episode_id": 64331,
+        "display_name": "Pomsta S02E18 - Maškaráda CZ Titulky",
+        "video_id": 27043842
+      },
+      {
+        "episode_id": 64363,
+        "display_name": "Pomsta S02E19 - Identita CZ Titulky",
+        "video_id": 27043852
+      },
+      {
+        "episode_id": 64383,
+        "display_name": "Pomsta S03E02 - Sin CZ Titulky",
+        "video_id": 27043862
+      },
+      {
+        "episode_id": 64333,
+        "display_name": "Pomsta S03E04 - Mercy CZ Titulky",
+        "video_id": 27043876
+      },
+      {
+        "episode_id": 64371,
+        "display_name": "Pomsta S03E06 - Dissolution CZ Titulky",
+        "video_id": 27043891
+      },
+      {
+        "episode_id": 64367,
+        "display_name": "Pomsta S03E08 - Secrecy CZ Titulky",
+        "video_id": 27043906
+      },
+      {
+        "episode_id": 64365,
+        "display_name": "Pomsta S03E09 - Surrender CZ Titulky",
+        "video_id": 27043927
+      },
+      {
+        "episode_id": 64393,
+        "display_name": "Pomsta S03E10 - Exodus CZ Titulky",
+        "video_id": 27043984
+      },
+      {
+        "episode_id": 64373,
+        "display_name": "Pomsta S03E12 - Endurance CZ Titulky",
+        "video_id": 27044001
+      },
+      {
+        "episode_id": 64339,
+        "display_name": "Pomsta S03E16 - Disgrace CZ Titulky",
+        "video_id": 27044015
+      },
+      {
+        "episode_id": 64391,
+        "display_name": "Pomsta S03E17 - Addiction CZ Titulky",
+        "video_id": 27044030
+      },
+      {
+        "episode_id": 64369,
+        "display_name": "Pomsta S03E20 - Revolution CZ Titulky",
+        "video_id": 27044039
+      },
+      {
+        "episode_id": 64389,
+        "display_name": "Pomsta S03E21 - Impetus CZ Titulky",
+        "video_id": 27044051
+      },
+      {
+        "episode_id": 64341,
+        "display_name": "Pomsta S04E01 - Renaissance CZ Titulky",
+        "video_id": 27044063
+      },
+      {
+        "episode_id": 64345,
+        "display_name": "Pomsta S04E02 - Disclosure CZ Titulky",
+        "video_id": 27044076
+      },
+      {
+        "episode_id": 64375,
+        "display_name": "Pomsta S04E06 - Damage CZ Titulky",
+        "video_id": 27044096
+      },
+      {
+        "episode_id": 64385,
+        "display_name": "Pomsta S04E07 - Ambush CZ Titulky",
+        "video_id": 27044109
       }
     ],
     "prepared_not_upload_ready": [
@@ -93817,6 +94247,318 @@
     ],
     "whisper_review_pending": [
       {
+        "episode_id": 61176,
+        "source_id": -12736313450155969,
+        "series_title": "Dragon Ball Z",
+        "episode_code": "S01E01",
+        "source_title": "Dragon.Ball.Z.S01E01.1080p.Bluray.x264-ZER0",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 61176,
+        "source_id": -56524549734994086,
+        "series_title": "Dragon Ball Z",
+        "episode_code": "S01E01",
+        "source_title": "Dragon Ball Z s01e01⭐Koi⭐",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 61176,
+        "source_id": -53391740362125095,
+        "series_title": "Dragon Ball Z",
+        "episode_code": "S01E01",
+        "source_title": "⭐Dragon⭐Ball⭐Z⭐s01e01⭐Top-od-Draculy",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 61176,
+        "source_id": -1866271646794408,
+        "series_title": "Dragon Ball Z",
+        "episode_code": "S01E01",
+        "source_title": "Dragon-Ball-Z-s01e01-apu-",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 60987,
+        "source_id": -28407893915705790,
+        "series_title": "Dragon Ball Z",
+        "episode_code": "S01E02",
+        "source_title": "Dragon.Ball.Z.S01E02.1080p.Bluray.x264-ZER0",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 60987,
+        "source_id": -54857412132186565,
+        "series_title": "Dragon Ball Z",
+        "episode_code": "S01E02",
+        "source_title": "Dragon-Ball-Z-s01e02-apu-",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 60987,
+        "source_id": -18737916263735873,
+        "series_title": "Dragon Ball Z",
+        "episode_code": "S01E02",
+        "source_title": "⭐Dragon⭐Ball⭐Z⭐s01e02⭐Top-od-Draculy",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 60987,
+        "source_id": -13064805497551599,
+        "series_title": "Dragon Ball Z",
+        "episode_code": "S01E02",
+        "source_title": "Dragon Ball Z s01e02⭐Koi⭐",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 60980,
+        "source_id": -10854662905765442,
+        "series_title": "Dragon Ball Z",
+        "episode_code": "S01E03",
+        "source_title": "Dragon.Ball.Z.S01E03.1080p.Bluray.x264-ZER0",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 60980,
+        "source_id": -60663295239926859,
+        "series_title": "Dragon Ball Z",
+        "episode_code": "S01E03",
+        "source_title": "Dragon-Ball-Z-s01e03-apu-",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 60980,
+        "source_id": -60412169462709910,
+        "series_title": "Dragon Ball Z",
+        "episode_code": "S01E03",
+        "source_title": "Dragon Ball Z s01e03⭐Koi⭐",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 60980,
+        "source_id": -56853706631030703,
+        "series_title": "Dragon Ball Z",
+        "episode_code": "S01E03",
+        "source_title": "⭐Dragon⭐Ball⭐Z⭐s01e03⭐Top-od-Draculy",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 61216,
+        "source_id": -54084807730849779,
+        "series_title": "Dragon Ball Z",
+        "episode_code": "S01E04",
+        "source_title": "Dragon.Ball.Z.S01E04.1080p.Bluray.x264-ZER0",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 61216,
+        "source_id": -50686153394083681,
+        "series_title": "Dragon Ball Z",
+        "episode_code": "S01E04",
+        "source_title": "Dragon Ball Z s01e04⭐Koi⭐",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 61216,
+        "source_id": -36210271510451717,
+        "series_title": "Dragon Ball Z",
+        "episode_code": "S01E04",
+        "source_title": "⭐Dragon⭐Ball⭐Z⭐s01e04⭐Top-od-Draculy",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 61216,
+        "source_id": -14204625757345115,
+        "series_title": "Dragon Ball Z",
+        "episode_code": "S01E04",
+        "source_title": "Dragon-Ball-Z-s01e04-apu-",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 61221,
+        "source_id": -31443766325322511,
+        "series_title": "Dragon Ball Z",
+        "episode_code": "S01E05",
+        "source_title": "Dragon.Ball.Z.S01E05.1080p.Bluray.x264-ZER0",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 61221,
+        "source_id": -37430790500125405,
+        "series_title": "Dragon Ball Z",
+        "episode_code": "S01E05",
+        "source_title": "Dragon-Ball-Z-s01e05-apu-",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 61221,
+        "source_id": -11026095009371519,
+        "series_title": "Dragon Ball Z",
+        "episode_code": "S01E05",
+        "source_title": "Dragon Ball Z s01e05⭐Koi⭐",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 61221,
+        "source_id": -6616190230250352,
+        "series_title": "Dragon Ball Z",
+        "episode_code": "S01E05",
+        "source_title": "⭐Dragon⭐Ball⭐Z⭐s01e05⭐Top-od-Draculy",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 61012,
+        "source_id": -9398196316992793,
+        "series_title": "Dragon Ball Z",
+        "episode_code": "S01E06",
+        "source_title": "Dragon.Ball.Z.S01E06.1080p.Bluray.x264-ZER0",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 61012,
+        "source_id": -62148666864239511,
+        "series_title": "Dragon Ball Z",
+        "episode_code": "S01E06",
+        "source_title": "Dragon Ball Z s01e06⭐Koi⭐",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 61012,
+        "source_id": -51222173964218178,
+        "series_title": "Dragon Ball Z",
+        "episode_code": "S01E06",
+        "source_title": "⭐Dragon⭐Ball⭐Z⭐s01e06⭐Top-od-Draculy",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 61012,
+        "source_id": -6915019054324469,
+        "series_title": "Dragon Ball Z",
+        "episode_code": "S01E06",
+        "source_title": "Dragon-Ball-Z-s01e06-apu-",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 61189,
+        "source_id": -35296812267873657,
+        "series_title": "Dragon Ball Z",
+        "episode_code": "S01E07",
+        "source_title": "Dragon.Ball.Z.S01E07.1080p.Bluray.x264-ZER0",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 61189,
+        "source_id": -68630208679896843,
+        "series_title": "Dragon Ball Z",
+        "episode_code": "S01E07",
+        "source_title": "⭐Dragon⭐Ball⭐Z⭐s01e07⭐Top-od-Draculy",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 61189,
+        "source_id": -36956958491853619,
+        "series_title": "Dragon Ball Z",
+        "episode_code": "S01E07",
+        "source_title": "Dragon Ball Z s01e07⭐Koi⭐",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 61189,
+        "source_id": -34029927405564041,
+        "series_title": "Dragon Ball Z",
+        "episode_code": "S01E07",
+        "source_title": "Dragon-Ball-Z-s01e07-apu-",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 61173,
+        "source_id": -43416678095348758,
+        "series_title": "Dragon Ball Z",
+        "episode_code": "S01E08",
+        "source_title": "Dragon.Ball.Z.S01E08.1080p.Bluray.x264-ZER0",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 61173,
+        "source_id": -50999701527514553,
+        "series_title": "Dragon Ball Z",
+        "episode_code": "S01E08",
+        "source_title": "⭐Dragon⭐Ball⭐Z⭐s01e08⭐Top-od-Draculy",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 61173,
+        "source_id": -42646590943060467,
+        "series_title": "Dragon Ball Z",
+        "episode_code": "S01E08",
+        "source_title": "Dragon Ball Z s01e08⭐Koi⭐",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 61173,
+        "source_id": -42422194001636114,
+        "series_title": "Dragon Ball Z",
+        "episode_code": "S01E08",
+        "source_title": "Dragon-Ball-Z-s01e08-apu-",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 61084,
+        "source_id": -54603991496866485,
+        "series_title": "Dragon Ball Z",
+        "episode_code": "S01E09",
+        "source_title": "⭐Dragon⭐Ball⭐Z⭐s01e09⭐Top-od-Draculy",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 61084,
+        "source_id": -33976223901002245,
+        "series_title": "Dragon Ball Z",
+        "episode_code": "S01E09",
+        "source_title": "Dragon Ball Z s01e09⭐Koi⭐",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 61084,
+        "source_id": -1806943426723278,
+        "series_title": "Dragon Ball Z",
+        "episode_code": "S01E09",
+        "source_title": "Dragon-Ball-Z-s01e09-apu-",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 61001,
+        "source_id": -59499773418284506,
+        "series_title": "Dragon Ball Z",
+        "episode_code": "S01E10",
+        "source_title": "Dragon.Ball.Z.S01E10.1080p.Bluray.x264-ZER0",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 61001,
+        "source_id": -58036704903341402,
+        "series_title": "Dragon Ball Z",
+        "episode_code": "S01E10",
+        "source_title": "Dragon Ball Z s01e10⭐Koi⭐",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 61001,
+        "source_id": -56003096173136117,
+        "series_title": "Dragon Ball Z",
+        "episode_code": "S01E10",
+        "source_title": "⭐Dragon⭐Ball⭐Z⭐s01e10⭐Top-od-Draculy",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 61001,
+        "source_id": -145094922810444,
+        "series_title": "Dragon Ball Z",
+        "episode_code": "S01E10",
+        "source_title": "Dragon-Ball-Z-s01e10-apu-",
+        "status": "needs_whisper"
+      },
+      {
         "episode_id": 83999,
         "source_id": -34757054978212258,
         "series_title": "Ginny a Georgia",
@@ -93903,321 +94645,99 @@
         "episode_code": "S05E22",
         "source_title": "Grimm - S05E22 - Ep 22 Začátek konce II",
         "status": "needs_whisper"
-      },
-      {
-        "episode_id": 10166,
-        "source_id": -46380369218442197,
-        "series_title": "Grimm",
-        "episode_code": "S05E22",
-        "source_title": "Grimm - S05E22 - The Beginning of the End",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 7813,
-        "source_id": -3550245458922370,
-        "series_title": "Halo",
-        "episode_code": "S02E02",
-        "source_title": "halo.s02e02.hdr.2160p.web.h265-nhtfs",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 7814,
-        "source_id": -3343096485273594,
-        "series_title": "Halo",
-        "episode_code": "S02E03",
-        "source_title": "Halo.S02E03.2160p.Dolby.Vision.Profile.5",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 7814,
-        "source_id": -15011192472739017,
-        "series_title": "Halo",
-        "episode_code": "S02E03",
-        "source_title": "Halo S02E03 Visegrad",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 7814,
-        "source_id": -14170797189221348,
-        "series_title": "Halo",
-        "episode_code": "S02E03",
-        "source_title": "Halo S02E03 Visegrad.mkv",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 7816,
-        "source_id": -33175440905990270,
-        "series_title": "Halo",
-        "episode_code": "S02E05",
-        "source_title": "Halo.S02E05.HDR.2160p.WEB.h265-ETHEL",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 153055,
-        "source_id": -68663177880670042,
-        "series_title": "Idol",
-        "episode_code": "S01E01",
-        "source_title": "Idol - S1E1 Pop Tarts & Rat Tales EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 153054,
-        "source_id": -67518606287883584,
-        "series_title": "Idol",
-        "episode_code": "S01E02",
-        "source_title": "Idol - S1E2 Double Fantasy EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 153056,
-        "source_id": -13086249416495528,
-        "series_title": "Idol",
-        "episode_code": "S01E03",
-        "source_title": "Idol - S1E3 Daybreak EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 153057,
-        "source_id": -60747358599011675,
-        "series_title": "Idol",
-        "episode_code": "S01E04",
-        "source_title": "The.Idol.S01E04.1080p.WEB.h264-ETHEL",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 153057,
-        "source_id": -25319573021398258,
-        "series_title": "Idol",
-        "episode_code": "S01E04",
-        "source_title": "The.Idol.S01E04.720p.WEB.h264-ETHEL",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 153057,
-        "source_id": -48531647954943497,
-        "series_title": "Idol",
-        "episode_code": "S01E04",
-        "source_title": "The.Idol.S01E04.1080p.HEVC.x265-MeGusta",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 153057,
-        "source_id": -11344557871445953,
-        "series_title": "Idol",
-        "episode_code": "S01E04",
-        "source_title": "Idol - S1E4 Stars Belong To The World EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 153058,
-        "source_id": -39293656817815119,
-        "series_title": "Idol",
-        "episode_code": "S01E05",
-        "source_title": "The.Idol.S01E05.DV.HDR.2160p.WEB.h265-ETHEL",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 153058,
-        "source_id": -48915074599784210,
-        "series_title": "Idol",
-        "episode_code": "S01E05",
-        "source_title": "The.Idol.S01E05.1080p.WEB.h264-ETHEL",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 153058,
-        "source_id": -19392049842711743,
-        "series_title": "Idol",
-        "episode_code": "S01E05",
-        "source_title": "The.Heavenly.Idol.S01E05.Those.With.Woo.Yeon.Woo.Shall.Be.Healed.1080p.VIU.WEB-DL.AAC.H.264",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 153058,
-        "source_id": -53562679859780965,
-        "series_title": "Idol",
-        "episode_code": "S01E05",
-        "source_title": "The.Idol.S01E05.720p.WEB.h264-ETHEL",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 153058,
-        "source_id": -31831140827482889,
-        "series_title": "Idol",
-        "episode_code": "S01E05",
-        "source_title": "Idol - S1E5 Tight Girl EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 45158,
-        "source_id": -3087342709196693,
-        "series_title": "Jak prosté",
-        "episode_code": "S01E02",
-        "source_title": "Sherlock Holmes - Jak prosté - S01E02 - Zatím co jsi spala",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 45138,
-        "source_id": -27415977964877456,
-        "series_title": "Jak prosté",
-        "episode_code": "S01E04",
-        "source_title": "Sherlock Holmes - Jak prosté - S01E04 - Nekonečná hra",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 45144,
-        "source_id": -70601913276892333,
-        "series_title": "Jak prosté",
-        "episode_code": "S01E05",
-        "source_title": "Sherlock Holmes - Jak prosté - S01E05 - Anděl smrti",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 45159,
-        "source_id": -71012333948671455,
-        "series_title": "Jak prosté",
-        "episode_code": "S01E06",
-        "source_title": "Jak prosté - S01E06 - Flight Risk",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 45159,
-        "source_id": -70889142170976369,
-        "series_title": "Jak prosté",
-        "episode_code": "S01E06",
-        "source_title": "Jak prosté - S01E06 - Flight Risk",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 45159,
-        "source_id": -12923878474664566,
-        "series_title": "Jak prosté",
-        "episode_code": "S01E06",
-        "source_title": "Sherlock Holmes - Jak prosté - S01E06 - Nebezpečné létání",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 45113,
-        "source_id": -7739672634629103,
-        "series_title": "Jak prosté",
-        "episode_code": "S01E07",
-        "source_title": "Sherlock Holmes - Jak prosté - S01E07 - Úniková cesta",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 45102,
-        "source_id": -55706822153570909,
-        "series_title": "Jak prosté",
-        "episode_code": "S01E08",
-        "source_title": "Jak prosté - S01E08 - The Long Fuse",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 45102,
-        "source_id": -2022755491049301,
-        "series_title": "Jak prosté",
-        "episode_code": "S01E08",
-        "source_title": "Sherlock Holmes - Jak prosté - S01E08 - Zapomenutá bomba",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 45111,
-        "source_id": -62259540047228743,
-        "series_title": "Jak prosté",
-        "episode_code": "S01E10",
-        "source_title": "Sherlock Holmes - Jak prosté - S01E10 - Nedobytný trezor",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 49690,
-        "source_id": -71484706545962260,
-        "series_title": "Jak prosté",
-        "episode_code": "S01E12",
-        "source_title": "Jak prosté - S1E12 M",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 49690,
-        "source_id": -51441336652474411,
-        "series_title": "Jak prosté",
-        "episode_code": "S01E12",
-        "source_title": "Sherlock Holmes - Jak prosté - S01E12 - Tajemný M.",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 45152,
-        "source_id": -4290610597147571,
-        "series_title": "Jak prosté",
-        "episode_code": "S01E13",
-        "source_title": "Sherlock Holmes - Jak prosté - S01E13 - Rudý tým",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 49693,
-        "source_id": -58374367942134225,
-        "series_title": "Jak prosté",
-        "episode_code": "S01E14",
-        "source_title": "Jak prosté S1E14 The Deductionist",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 49693,
-        "source_id": -14471308802957181,
-        "series_title": "Jak prosté",
-        "episode_code": "S01E14",
-        "source_title": "Sherlock Holmes - Jak prosté - S01E14 - Mistr Dedukce",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 49694,
-        "source_id": -22343286574569951,
-        "series_title": "Jak prosté",
-        "episode_code": "S01E15",
-        "source_title": "Sherlock Holmes - Jak prosté - S01E15 - Drogová rozbuška",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 45126,
-        "source_id": -9270550963860549,
-        "series_title": "Jak prosté",
-        "episode_code": "S01E16",
-        "source_title": "Sherlock Holmes - Jak prosté - S01E16 - Tajný úkol",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 45116,
-        "source_id": -46490902966143666,
-        "series_title": "Jak prosté",
-        "episode_code": "S01E17",
-        "source_title": "Sherlock Holmes - Jak prosté - S01E17 - Druhá možnost",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 45104,
-        "source_id": -11293135173616874,
-        "series_title": "Jak prosté",
-        "episode_code": "S01E18",
-        "source_title": "Jak prosté - S01E18 - Déjà Vu All Over Again",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 45104,
-        "source_id": -29735637245317675,
-        "series_title": "Jak prosté",
-        "episode_code": "S01E18",
-        "source_title": "Jak prosté - S01E18 - Déjà Vu All Over Again",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 45046,
-        "source_id": -5934148363074193,
-        "series_title": "Jak prosté",
-        "episode_code": "S01E20",
-        "source_title": "Sherlock Holmes - Jak prosté - S01E20 - Záskok za mrtvého",
-        "status": "needs_whisper"
       }
     ],
     "subtitle_followup_pending": [
+      {
+        "episode_id": 61176,
+        "source_id": -28503715789562201,
+        "series_title": "Dragon Ball Z",
+        "episode_code": "S01E01",
+        "source_title": "Dragon Ball Z - s01e01 (CZ TIT)",
+        "subtitle_status": "needs_subtitle_setup_after_prehrajto_processing",
+        "reason": "selected source has Czech subtitles but no Czech audio source was found"
+      },
+      {
+        "episode_id": 60987,
+        "source_id": -64070519631187092,
+        "series_title": "Dragon Ball Z",
+        "episode_code": "S01E02",
+        "source_title": "Dragon Ball Z - s01e02 (CZ TIT)",
+        "subtitle_status": "needs_subtitle_setup_after_prehrajto_processing",
+        "reason": "selected source has Czech subtitles but no Czech audio source was found"
+      },
+      {
+        "episode_id": 60980,
+        "source_id": -11501154398560272,
+        "series_title": "Dragon Ball Z",
+        "episode_code": "S01E03",
+        "source_title": "Dragon Ball Z - s01e03 (CZ TIT)",
+        "subtitle_status": "needs_subtitle_setup_after_prehrajto_processing",
+        "reason": "selected source has Czech subtitles but no Czech audio source was found"
+      },
+      {
+        "episode_id": 61216,
+        "source_id": -46651998500907565,
+        "series_title": "Dragon Ball Z",
+        "episode_code": "S01E04",
+        "source_title": "Dragon Ball Z - s01e04 (CZ TIT)",
+        "subtitle_status": "needs_subtitle_setup_after_prehrajto_processing",
+        "reason": "selected source has Czech subtitles but no Czech audio source was found"
+      },
+      {
+        "episode_id": 61221,
+        "source_id": -43185690952434371,
+        "series_title": "Dragon Ball Z",
+        "episode_code": "S01E05",
+        "source_title": "Dragon Ball Z - s01e05 (CZ TIT)",
+        "subtitle_status": "needs_subtitle_setup_after_prehrajto_processing",
+        "reason": "selected source has Czech subtitles but no Czech audio source was found"
+      },
+      {
+        "episode_id": 61012,
+        "source_id": -13087375367501342,
+        "series_title": "Dragon Ball Z",
+        "episode_code": "S01E06",
+        "source_title": "Dragon Ball Z - s01e06 (CZ TIT)",
+        "subtitle_status": "needs_subtitle_setup_after_prehrajto_processing",
+        "reason": "selected source has Czech subtitles but no Czech audio source was found"
+      },
+      {
+        "episode_id": 61189,
+        "source_id": -16218024525670367,
+        "series_title": "Dragon Ball Z",
+        "episode_code": "S01E07",
+        "source_title": "Dragon Ball Z - s01e07 (CZ TIT)",
+        "subtitle_status": "needs_subtitle_setup_after_prehrajto_processing",
+        "reason": "selected source has Czech subtitles but no Czech audio source was found"
+      },
+      {
+        "episode_id": 61173,
+        "source_id": -4117255818419138,
+        "series_title": "Dragon Ball Z",
+        "episode_code": "S01E08",
+        "source_title": "Dragon Ball Z - s01e08 (CZ TIT)",
+        "subtitle_status": "needs_subtitle_setup_after_prehrajto_processing",
+        "reason": "selected source has Czech subtitles but no Czech audio source was found"
+      },
+      {
+        "episode_id": 61084,
+        "source_id": -39698879736173379,
+        "series_title": "Dragon Ball Z",
+        "episode_code": "S01E09",
+        "source_title": "Dragon Ball Z - s01e09 (CZ TIT)",
+        "subtitle_status": "needs_subtitle_setup_after_prehrajto_processing",
+        "reason": "selected source has Czech subtitles but no Czech audio source was found"
+      },
+      {
+        "episode_id": 61001,
+        "source_id": -29888892694690686,
+        "series_title": "Dragon Ball Z",
+        "episode_code": "S01E10",
+        "source_title": "Dragon Ball Z - s01e10 (CZ TIT)",
+        "subtitle_status": "needs_subtitle_setup_after_prehrajto_processing",
+        "reason": "selected source has Czech subtitles but no Czech audio source was found"
+      },
       {
         "episode_id": 67622,
         "source_id": -49851728774759148,
@@ -94577,110 +95097,20 @@
         "source_title": "Glee - s03e02",
         "subtitle_status": "needs_subtitle_setup_after_prehrajto_processing",
         "reason": "selected source needs Czech subtitles after Whisper detected non-Czech audio"
-      },
-      {
-        "episode_id": 56561,
-        "source_id": -46765128643070794,
-        "series_title": "Glee",
-        "episode_code": "S03E03",
-        "source_title": "Glee - s03e03",
-        "subtitle_status": "needs_subtitle_setup_after_prehrajto_processing",
-        "reason": "selected source needs Czech subtitles after Whisper detected non-Czech audio"
-      },
-      {
-        "episode_id": 56562,
-        "source_id": -198632329009514,
-        "series_title": "Glee",
-        "episode_code": "S03E04",
-        "source_title": "Glee - s03e04",
-        "subtitle_status": "needs_subtitle_setup_after_prehrajto_processing",
-        "reason": "selected source needs Czech subtitles after Whisper detected non-Czech audio"
-      },
-      {
-        "episode_id": 56595,
-        "source_id": -43189744945024637,
-        "series_title": "Glee",
-        "episode_code": "S03E05",
-        "source_title": "Glee - s03e05",
-        "subtitle_status": "needs_subtitle_setup_after_prehrajto_processing",
-        "reason": "selected source needs Czech subtitles after Whisper detected non-Czech audio"
-      },
-      {
-        "episode_id": 56596,
-        "source_id": -17585711218896188,
-        "series_title": "Glee",
-        "episode_code": "S03E06",
-        "source_title": "Glee - s03e06",
-        "subtitle_status": "needs_subtitle_setup_after_prehrajto_processing",
-        "reason": "selected source needs Czech subtitles after Whisper detected non-Czech audio"
-      },
-      {
-        "episode_id": 56597,
-        "source_id": -24544140985299978,
-        "series_title": "Glee",
-        "episode_code": "S03E07",
-        "source_title": "Glee - s03e07",
-        "subtitle_status": "needs_subtitle_setup_after_prehrajto_processing",
-        "reason": "selected source needs Czech subtitles after Whisper detected non-Czech audio"
-      },
-      {
-        "episode_id": 56598,
-        "source_id": -280290339149341,
-        "series_title": "Glee",
-        "episode_code": "S03E08",
-        "source_title": "Glee - S03E08 - Hold On To Sixteen",
-        "subtitle_status": "needs_subtitle_setup_after_prehrajto_processing",
-        "reason": "selected source needs Czech subtitles after Whisper detected non-Czech audio"
-      },
-      {
-        "episode_id": 56563,
-        "source_id": -45969615149273948,
-        "series_title": "Glee",
-        "episode_code": "S03E09",
-        "source_title": "Glee - s03e09",
-        "subtitle_status": "needs_subtitle_setup_after_prehrajto_processing",
-        "reason": "selected source needs Czech subtitles after Whisper detected non-Czech audio"
-      },
-      {
-        "episode_id": 56599,
-        "source_id": -19580062048922106,
-        "series_title": "Glee",
-        "episode_code": "S03E10",
-        "source_title": "Glee - s03e10",
-        "subtitle_status": "needs_subtitle_setup_after_prehrajto_processing",
-        "reason": "selected source needs Czech subtitles after Whisper detected non-Czech audio"
-      },
-      {
-        "episode_id": 56600,
-        "source_id": -65057615057654719,
-        "series_title": "Glee",
-        "episode_code": "S03E11",
-        "source_title": "Glee - s03e11",
-        "subtitle_status": "needs_subtitle_setup_after_prehrajto_processing",
-        "reason": "selected source needs Czech subtitles after Whisper detected non-Czech audio"
-      },
-      {
-        "episode_id": 56601,
-        "source_id": -12736604955846119,
-        "series_title": "Glee",
-        "episode_code": "S03E13",
-        "source_title": "Glee - s03e13",
-        "subtitle_status": "needs_subtitle_setup_after_prehrajto_processing",
-        "reason": "selected source needs Czech subtitles after Whisper detected non-Czech audio"
       }
     ]
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 296,
+    "disabled": 562,
     "ok": 40
   },
   "whisper_review_statuses": {
+    "needs_whisper": 6589,
     "whisper_confirmed_cz": 43,
-    "whisper_non_cz_needs_subtitles": 257,
-    "needs_whisper": 6494
+    "whisper_non_cz_needs_subtitles": 257
   },
   "subtitle_followup_statuses": {
-    "needs_subtitle_setup_after_prehrajto_processing": 1231
+    "needs_subtitle_setup_after_prehrajto_processing": 1241
   }
 }
