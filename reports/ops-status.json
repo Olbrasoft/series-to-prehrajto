@@ -2,22 +2,62 @@
   "counts": {
     "backlog_episodes": 180361,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 13022,
-    "prepared_source_episodes": 25498,
+    "uploaded_episodes": 13033,
+    "prepared_source_episodes": 25558,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 474,
-    "language_whisper_attempted_sources": 162,
+    "language_audited_sources": 145,
+    "language_whisper_attempted_sources": 40,
     "language_pending_whisper_sources": 2604,
-    "whisper_review_sources": 8405,
-    "whisper_review_pending_sources": 8085,
-    "subtitle_followup_sources": 1460,
-    "subtitle_followup_pending_sources": 1460
+    "whisper_review_sources": 8501,
+    "whisper_review_pending_sources": 8181,
+    "subtitle_followup_sources": 1487,
+    "subtitle_followup_pending_sources": 1487
   },
   "workflow_runs": [
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-01T17:06:32Z",
+      "databaseId": 28534544027,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-01T16:49:41Z",
+      "databaseId": 28533592174,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-01T16:49:38Z",
+      "databaseId": 28533590082,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-01T16:49:36Z",
+      "databaseId": 28533587832,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-01T16:49:34Z",
+      "databaseId": 28533585666,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
     {
       "conclusion": "",
       "createdAt": "2026-07-01T16:48:42Z",
@@ -35,19 +75,19 @@
       "workflowName": "sync"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-01T16:48:38Z",
       "databaseId": 28533528396,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-01T16:48:35Z",
       "databaseId": 28533525729,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -137,46 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "prepare-sources"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-01T16:24:30Z",
-      "databaseId": 28532168998,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-07-01T16:24:29Z",
-      "databaseId": 28532167531,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "failure",
-      "createdAt": "2026-07-01T16:23:16Z",
-      "databaseId": 28532097505,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-01T16:20:50Z",
-      "databaseId": 28531959580,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-01T16:20:45Z",
-      "databaseId": 28531952778,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
     }
   ],
   "gaps": {
@@ -43039,6 +43039,61 @@
         "episode_id": 43569,
         "display_name": "Takoví normální Američané  S02E05 - The Deal CZ Titulky",
         "video_id": 27051059
+      },
+      {
+        "episode_id": 35212,
+        "display_name": "Muž z Vysokého zámku S01E05 - Nový normál CZ Titulky",
+        "video_id": 27051981
+      },
+      {
+        "episode_id": 43596,
+        "display_name": "Takoví normální Američané  S01E05 - COMINT CZ Dabing",
+        "video_id": 27052018
+      },
+      {
+        "episode_id": 43606,
+        "display_name": "Takoví normální Američané  S01E08 - Mutually Assured Destruction CZ Dabing",
+        "video_id": 27052063
+      },
+      {
+        "episode_id": 43600,
+        "display_name": "Takoví normální Američané  S01E10 - Only You CZ Dabing",
+        "video_id": 27052118
+      },
+      {
+        "episode_id": 43602,
+        "display_name": "Takoví normální Američané  S01E11 - Covert War CZ Dabing",
+        "video_id": 27052134
+      },
+      {
+        "episode_id": 43570,
+        "display_name": "Takoví normální Američané  S02E07 - ARPANET CZ Titulky",
+        "video_id": 27052184
+      },
+      {
+        "episode_id": 203205,
+        "display_name": "Cesta ven S04E10 - 10. epizoda CZ Dabing",
+        "video_id": 27051913
+      },
+      {
+        "episode_id": 43607,
+        "display_name": "Takoví normální Američané  S02E06 - Behind the Red Door CZ Titulky",
+        "video_id": 27051965
+      },
+      {
+        "episode_id": 43571,
+        "display_name": "Takoví normální Američané  S02E08 - New Car CZ Titulky",
+        "video_id": 27052048
+      },
+      {
+        "episode_id": 43573,
+        "display_name": "Takoví normální Američané  S02E11 - Stealth CZ Titulky",
+        "video_id": 27052169
+      },
+      {
+        "episode_id": 43575,
+        "display_name": "Takoví normální Američané  S03E01 - EST Men CZ Titulky",
+        "video_id": 27052251
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -96741,6 +96796,61 @@
         "episode_id": 43569,
         "display_name": "Takoví normální Američané  S02E05 - The Deal CZ Titulky",
         "video_id": 27051059
+      },
+      {
+        "episode_id": 35212,
+        "display_name": "Muž z Vysokého zámku S01E05 - Nový normál CZ Titulky",
+        "video_id": 27051981
+      },
+      {
+        "episode_id": 43596,
+        "display_name": "Takoví normální Američané  S01E05 - COMINT CZ Dabing",
+        "video_id": 27052018
+      },
+      {
+        "episode_id": 43606,
+        "display_name": "Takoví normální Američané  S01E08 - Mutually Assured Destruction CZ Dabing",
+        "video_id": 27052063
+      },
+      {
+        "episode_id": 43600,
+        "display_name": "Takoví normální Američané  S01E10 - Only You CZ Dabing",
+        "video_id": 27052118
+      },
+      {
+        "episode_id": 43602,
+        "display_name": "Takoví normální Američané  S01E11 - Covert War CZ Dabing",
+        "video_id": 27052134
+      },
+      {
+        "episode_id": 43570,
+        "display_name": "Takoví normální Američané  S02E07 - ARPANET CZ Titulky",
+        "video_id": 27052184
+      },
+      {
+        "episode_id": 203205,
+        "display_name": "Cesta ven S04E10 - 10. epizoda CZ Dabing",
+        "video_id": 27051913
+      },
+      {
+        "episode_id": 43607,
+        "display_name": "Takoví normální Američané  S02E06 - Behind the Red Door CZ Titulky",
+        "video_id": 27051965
+      },
+      {
+        "episode_id": 43571,
+        "display_name": "Takoví normální Američané  S02E08 - New Car CZ Titulky",
+        "video_id": 27052048
+      },
+      {
+        "episode_id": 43573,
+        "display_name": "Takoví normální Američané  S02E11 - Stealth CZ Titulky",
+        "video_id": 27052169
+      },
+      {
+        "episode_id": 43575,
+        "display_name": "Takoví normální Američané  S03E01 - EST Men CZ Titulky",
+        "video_id": 27052251
       }
     ],
     "prepared_not_upload_ready": [
@@ -97449,6 +97559,15 @@
     ],
     "subtitle_followup_pending": [
       {
+        "episode_id": 203205,
+        "source_id": -47475037803850660,
+        "series_title": "Cesta ven",
+        "episode_code": "S04E10",
+        "source_title": "Cesta Ven S04E10 EN 4K.mkv",
+        "subtitle_status": "needs_subtitle_setup_after_prehrajto_processing",
+        "reason": "selected source needs Czech subtitles after Whisper detected non-Czech audio"
+      },
+      {
         "episode_id": 61176,
         "source_id": -1866271646794408,
         "series_title": "Dragon Ball Z",
@@ -97888,30 +98007,20 @@
         "source_title": "Dragon Ball Z - s02e10 (CZ TIT)",
         "subtitle_status": "needs_subtitle_setup_after_prehrajto_processing",
         "reason": "selected source has Czech subtitles but no Czech audio source was found"
-      },
-      {
-        "episode_id": 61105,
-        "source_id": -35772268440600364,
-        "series_title": "Dragon Ball Z",
-        "episode_code": "S02E11",
-        "source_title": "Dragon Ball Z - s02e11 (CZ TIT)",
-        "subtitle_status": "needs_subtitle_setup_after_prehrajto_processing",
-        "reason": "selected source has Czech subtitles but no Czech audio source was found"
       }
     ]
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 148,
-    "disabled": 312,
-    "resolve_failed": 14
+    "disabled": 105,
+    "ok": 40
   },
   "whisper_review_statuses": {
-    "needs_whisper": 8085,
+    "needs_whisper": 8181,
     "whisper_non_cz_needs_subtitles": 277,
     "whisper_confirmed_cz": 43
   },
   "subtitle_followup_statuses": {
-    "needs_subtitle_setup_after_prehrajto_processing": 1460
+    "needs_subtitle_setup_after_prehrajto_processing": 1487
   }
 }
