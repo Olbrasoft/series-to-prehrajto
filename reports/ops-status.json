@@ -2,8 +2,8 @@
   "counts": {
     "backlog_episodes": 181018,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 12499,
-    "prepared_source_episodes": 24138,
+    "uploaded_episodes": 12504,
+    "prepared_source_episodes": 24158,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
@@ -13,25 +13,73 @@
     "language_whisper_attempted_sources": 64,
     "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 6385,
-    "whisper_review_pending_sources": 6145,
+    "whisper_review_pending_sources": 6125,
     "subtitle_followup_sources": 1145,
     "subtitle_followup_pending_sources": 1145
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-07-01T07:14:30Z",
-      "databaseId": 28500349475,
+      "createdAt": "2026-07-01T07:22:24Z",
+      "databaseId": 28500744656,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-07-01T07:20:20Z",
+      "databaseId": 28500641817,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-01T07:15:25Z",
+      "databaseId": 28500396290,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-01T07:15:22Z",
+      "databaseId": 28500394267,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-01T07:15:20Z",
+      "databaseId": 28500392460,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-01T07:15:18Z",
+      "databaseId": 28500390426,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-01T07:14:30Z",
+      "databaseId": 28500349475,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "cancelled",
       "createdAt": "2026-07-01T07:12:07Z",
       "databaseId": 28500230655,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -47,7 +95,7 @@
       "createdAt": "2026-07-01T06:56:17Z",
       "databaseId": 28499468107,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "sync"
     },
     {
@@ -75,11 +123,11 @@
       "workflowName": "audit-language"
     },
     {
-      "conclusion": "",
+      "conclusion": "failure",
       "createdAt": "2026-07-01T06:48:30Z",
       "databaseId": 28499110268,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -99,11 +147,11 @@
       "workflowName": "prepare-manifest"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-01T06:39:33Z",
       "databaseId": 28498700475,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "sync"
     },
     {
@@ -129,54 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-01T06:02:31Z",
-      "databaseId": 28497093124,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-01T06:01:46Z",
-      "databaseId": 28497062942,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-01T06:01:41Z",
-      "databaseId": 28497059195,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-01T06:01:36Z",
-      "databaseId": 28497056235,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "failure",
-      "createdAt": "2026-07-01T05:48:27Z",
-      "databaseId": 28496526219,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-01T05:48:21Z",
-      "databaseId": 28496522349,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
     }
   ],
   "gaps": {
@@ -40326,6 +40326,21 @@
         "video_id": 27040763
       },
       {
+        "episode_id": 48488,
+        "display_name": "Zločin S04E05 - Pravda CZ Titulky",
+        "video_id": 27040784
+      },
+      {
+        "episode_id": 118254,
+        "display_name": "Kancl S01E02 - 2. epizoda CZ Dabing",
+        "video_id": 27040808
+      },
+      {
+        "episode_id": 118258,
+        "display_name": "Kancl S01E03 - 3. epizoda CZ Dabing",
+        "video_id": 27040824
+      },
+      {
         "episode_id": 52429,
         "display_name": "Newsroom S01E07 - 1. květen CZ Dabing",
         "video_id": 27040283
@@ -40424,6 +40439,16 @@
         "episode_id": 118261,
         "display_name": "Kancl S01E01 - 1. epizoda CZ Dabing",
         "video_id": 27040604
+      },
+      {
+        "episode_id": 118259,
+        "display_name": "Kancl S01E04 - 4. epizoda CZ Dabing",
+        "video_id": 27040837
+      },
+      {
+        "episode_id": 118257,
+        "display_name": "Kancl S02E02 - 2. epizoda CZ Dabing",
+        "video_id": 27040842
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -91413,6 +91438,21 @@
         "video_id": 27040763
       },
       {
+        "episode_id": 48488,
+        "display_name": "Zločin S04E05 - Pravda CZ Titulky",
+        "video_id": 27040784
+      },
+      {
+        "episode_id": 118254,
+        "display_name": "Kancl S01E02 - 2. epizoda CZ Dabing",
+        "video_id": 27040808
+      },
+      {
+        "episode_id": 118258,
+        "display_name": "Kancl S01E03 - 3. epizoda CZ Dabing",
+        "video_id": 27040824
+      },
+      {
         "episode_id": 52429,
         "display_name": "Newsroom S01E07 - 1. květen CZ Dabing",
         "video_id": 27040283
@@ -91511,6 +91551,16 @@
         "episode_id": 118261,
         "display_name": "Kancl S01E01 - 1. epizoda CZ Dabing",
         "video_id": 27040604
+      },
+      {
+        "episode_id": 118259,
+        "display_name": "Kancl S01E04 - 4. epizoda CZ Dabing",
+        "video_id": 27040837
+      },
+      {
+        "episode_id": 118257,
+        "display_name": "Kancl S02E02 - 2. epizoda CZ Dabing",
+        "video_id": 27040842
       }
     ],
     "prepared_not_upload_ready": [
@@ -91817,166 +91867,6 @@
     ],
     "whisper_review_pending": [
       {
-        "episode_id": 56630,
-        "source_id": -69368778857224487,
-        "series_title": "Glee",
-        "episode_code": "S05E19",
-        "source_title": "Glee - S05E19 - Old Dog New Tricks",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 56630,
-        "source_id": -43354156678166074,
-        "series_title": "Glee",
-        "episode_code": "S05E19",
-        "source_title": "Glee - S5E19 Old Dog New Tricks EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 56630,
-        "source_id": -18372193927666846,
-        "series_title": "Glee",
-        "episode_code": "S05E19",
-        "source_title": "Glee - s05e19",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 56631,
-        "source_id": -56447951853982160,
-        "series_title": "Glee",
-        "episode_code": "S05E20",
-        "source_title": "Glee - S05E20 - The Untitled Rachel Berry Project",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 56631,
-        "source_id": -17726461073529752,
-        "series_title": "Glee",
-        "episode_code": "S05E20",
-        "source_title": "Glee - S5E20 The Untitled Rachel Berry Project EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 56631,
-        "source_id": -35556477749920925,
-        "series_title": "Glee",
-        "episode_code": "S05E20",
-        "source_title": "Glee - s05e20",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 56586,
-        "source_id": -61614832772292176,
-        "series_title": "Glee",
-        "episode_code": "S06E01",
-        "source_title": "Glee - S06E01 - Loser Like Me",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 56586,
-        "source_id": -58943445459076852,
-        "series_title": "Glee",
-        "episode_code": "S06E01",
-        "source_title": "Glee - S6E1 Loser Like Me EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 56586,
-        "source_id": -47121296251489611,
-        "series_title": "Glee",
-        "episode_code": "S06E01",
-        "source_title": "Glee - s06e01",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 56587,
-        "source_id": -57293571425827576,
-        "series_title": "Glee",
-        "episode_code": "S06E02",
-        "source_title": "Glee - S6E2 Homecoming EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 56587,
-        "source_id": -12817932482713997,
-        "series_title": "Glee",
-        "episode_code": "S06E02",
-        "source_title": "Glee - S06E02 - Homecoming",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 56587,
-        "source_id": -67571280443700751,
-        "series_title": "Glee",
-        "episode_code": "S06E02",
-        "source_title": "Glee - s06e02",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 56588,
-        "source_id": -66418496148044119,
-        "series_title": "Glee",
-        "episode_code": "S06E03",
-        "source_title": "Glee - S6E3 Jagged Little Tapestry EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 56588,
-        "source_id": -32115881271617973,
-        "series_title": "Glee",
-        "episode_code": "S06E03",
-        "source_title": "Glee - S06E03 - Jagged Little Tapestry",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 56588,
-        "source_id": -38718984958856462,
-        "series_title": "Glee",
-        "episode_code": "S06E03",
-        "source_title": "Glee - s06e03",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 56589,
-        "source_id": -57681874213667464,
-        "series_title": "Glee",
-        "episode_code": "S06E04",
-        "source_title": "Glee - S06E04 - The Hurt Locker, Part One",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 56589,
-        "source_id": -53589980249990412,
-        "series_title": "Glee",
-        "episode_code": "S06E04",
-        "source_title": "Glee - S6E4 The Hurt Locker, Part One EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 56589,
-        "source_id": -42575966068355991,
-        "series_title": "Glee",
-        "episode_code": "S06E04",
-        "source_title": "Glee - s06e04",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 56590,
-        "source_id": -18979270053515163,
-        "series_title": "Glee",
-        "episode_code": "S06E05",
-        "source_title": "Glee - S6E5 The Hurt Locker, Part Two EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 56590,
-        "source_id": -5857908671348023,
-        "series_title": "Glee",
-        "episode_code": "S06E05",
-        "source_title": "Glee - s06e05",
-        "status": "needs_whisper"
-      },
-      {
         "episode_id": 56591,
         "source_id": -29238856466936204,
         "series_title": "Glee",
@@ -92214,6 +92104,166 @@
         "series_title": "Halo",
         "episode_code": "S02E03",
         "source_title": "Halo S02E03 Visegrad",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 7814,
+        "source_id": -14170797189221348,
+        "series_title": "Halo",
+        "episode_code": "S02E03",
+        "source_title": "Halo S02E03 Visegrad.mkv",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 7816,
+        "source_id": -33175440905990270,
+        "series_title": "Halo",
+        "episode_code": "S02E05",
+        "source_title": "Halo.S02E05.HDR.2160p.WEB.h265-ETHEL",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 153055,
+        "source_id": -68663177880670042,
+        "series_title": "Idol",
+        "episode_code": "S01E01",
+        "source_title": "Idol - S1E1 Pop Tarts & Rat Tales EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 153054,
+        "source_id": -67518606287883584,
+        "series_title": "Idol",
+        "episode_code": "S01E02",
+        "source_title": "Idol - S1E2 Double Fantasy EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 153056,
+        "source_id": -13086249416495528,
+        "series_title": "Idol",
+        "episode_code": "S01E03",
+        "source_title": "Idol - S1E3 Daybreak EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 153057,
+        "source_id": -60747358599011675,
+        "series_title": "Idol",
+        "episode_code": "S01E04",
+        "source_title": "The.Idol.S01E04.1080p.WEB.h264-ETHEL",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 153057,
+        "source_id": -25319573021398258,
+        "series_title": "Idol",
+        "episode_code": "S01E04",
+        "source_title": "The.Idol.S01E04.720p.WEB.h264-ETHEL",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 153057,
+        "source_id": -48531647954943497,
+        "series_title": "Idol",
+        "episode_code": "S01E04",
+        "source_title": "The.Idol.S01E04.1080p.HEVC.x265-MeGusta",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 153057,
+        "source_id": -11344557871445953,
+        "series_title": "Idol",
+        "episode_code": "S01E04",
+        "source_title": "Idol - S1E4 Stars Belong To The World EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 153058,
+        "source_id": -39293656817815119,
+        "series_title": "Idol",
+        "episode_code": "S01E05",
+        "source_title": "The.Idol.S01E05.DV.HDR.2160p.WEB.h265-ETHEL",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 153058,
+        "source_id": -48915074599784210,
+        "series_title": "Idol",
+        "episode_code": "S01E05",
+        "source_title": "The.Idol.S01E05.1080p.WEB.h264-ETHEL",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 153058,
+        "source_id": -19392049842711743,
+        "series_title": "Idol",
+        "episode_code": "S01E05",
+        "source_title": "The.Heavenly.Idol.S01E05.Those.With.Woo.Yeon.Woo.Shall.Be.Healed.1080p.VIU.WEB-DL.AAC.H.264",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 153058,
+        "source_id": -53562679859780965,
+        "series_title": "Idol",
+        "episode_code": "S01E05",
+        "source_title": "The.Idol.S01E05.720p.WEB.h264-ETHEL",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 153058,
+        "source_id": -31831140827482889,
+        "series_title": "Idol",
+        "episode_code": "S01E05",
+        "source_title": "Idol - S1E5 Tight Girl EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 45158,
+        "source_id": -3087342709196693,
+        "series_title": "Jak prosté",
+        "episode_code": "S01E02",
+        "source_title": "Sherlock Holmes - Jak prosté - S01E02 - Zatím co jsi spala",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 45138,
+        "source_id": -27415977964877456,
+        "series_title": "Jak prosté",
+        "episode_code": "S01E04",
+        "source_title": "Sherlock Holmes - Jak prosté - S01E04 - Nekonečná hra",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 45144,
+        "source_id": -70601913276892333,
+        "series_title": "Jak prosté",
+        "episode_code": "S01E05",
+        "source_title": "Sherlock Holmes - Jak prosté - S01E05 - Anděl smrti",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 45159,
+        "source_id": -71012333948671455,
+        "series_title": "Jak prosté",
+        "episode_code": "S01E06",
+        "source_title": "Jak prosté - S01E06 - Flight Risk",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 45159,
+        "source_id": -70889142170976369,
+        "series_title": "Jak prosté",
+        "episode_code": "S01E06",
+        "source_title": "Jak prosté - S01E06 - Flight Risk",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 45159,
+        "source_id": -12923878474664566,
+        "series_title": "Jak prosté",
+        "episode_code": "S01E06",
+        "source_title": "Sherlock Holmes - Jak prosté - S01E06 - Nebezpečné létání",
         "status": "needs_whisper"
       }
     ],
@@ -92677,8 +92727,8 @@
   },
   "whisper_review_statuses": {
     "whisper_confirmed_cz": 43,
-    "whisper_non_cz_needs_subtitles": 197,
-    "needs_whisper": 6145
+    "whisper_non_cz_needs_subtitles": 217,
+    "needs_whisper": 6125
   },
   "subtitle_followup_statuses": {
     "needs_subtitle_setup_after_prehrajto_processing": 1145
