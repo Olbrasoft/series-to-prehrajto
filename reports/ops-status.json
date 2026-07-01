@@ -1,9 +1,9 @@
 {
   "counts": {
-    "backlog_episodes": 180483,
+    "backlog_episodes": 180361,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 12993,
-    "prepared_source_episodes": 25418,
+    "uploaded_episodes": 13014,
+    "prepared_source_episodes": 25438,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
@@ -11,19 +11,83 @@
     "language_queue_sources": 2644,
     "language_audited_sources": 40,
     "language_whisper_attempted_sources": 40,
-    "language_pending_whisper_sources": 2604,
-    "whisper_review_sources": 8323,
-    "whisper_review_pending_sources": 8003,
+    "language_pending_whisper_sources": 2624,
+    "whisper_review_sources": 8346,
+    "whisper_review_pending_sources": 8006,
     "subtitle_followup_sources": 1408,
     "subtitle_followup_pending_sources": 1408
   },
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-07-01T16:08:01Z",
+      "databaseId": 28531217361,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-01T16:05:31Z",
+      "databaseId": 28531069441,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-01T16:02:40Z",
+      "databaseId": 28530901559,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-01T15:56:53Z",
+      "databaseId": 28530552762,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "refresh-backlog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-01T15:30:26Z",
+      "databaseId": 28528932552,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-sources"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-01T15:28:03Z",
+      "databaseId": 28528782310,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-01T15:28:01Z",
+      "databaseId": 28528780360,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-01T15:27:35Z",
+      "databaseId": 28528750741,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-01T15:26:27Z",
       "databaseId": 28528678607,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-status"
     },
     {
@@ -59,19 +123,19 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-01T15:18:49Z",
       "databaseId": 28528185703,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-01T15:13:06Z",
       "databaseId": 28527825515,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
@@ -107,76 +171,12 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-01T15:09:26Z",
       "databaseId": 28527589935,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-01T15:09:23Z",
-      "databaseId": 28527586779,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-01T15:08:38Z",
-      "databaseId": 28527538743,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-01T15:08:32Z",
-      "databaseId": 28527532820,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-01T14:27:57Z",
-      "databaseId": 28524933809,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-01T14:25:17Z",
-      "databaseId": 28524760585,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-sources"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-01T14:24:02Z",
-      "databaseId": 28524683925,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-01T14:23:49Z",
-      "databaseId": 28524670416,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-01T14:23:39Z",
-      "databaseId": 28524659602,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-descriptions"
     }
   ],
   "gaps": {
@@ -42856,6 +42856,51 @@
         "video_id": 27050017
       },
       {
+        "episode_id": 35214,
+        "display_name": "Muž z Vysokého zámku S01E07 - Pravda CZ Titulky",
+        "video_id": 27050483
+      },
+      {
+        "episode_id": 35226,
+        "display_name": "Muž z Vysokého zámku S02E09 - Výbuch CZ Titulky",
+        "video_id": 27050522
+      },
+      {
+        "episode_id": 35228,
+        "display_name": "Muž z Vysokého zámku S03E01 - Nyní o vás pečujeme víc než kdy jindy CZ Dabing",
+        "video_id": 27050556
+      },
+      {
+        "episode_id": 35230,
+        "display_name": "Muž z Vysokého zámku S03E03 - Sensó kói CZ Titulky",
+        "video_id": 27050644
+      },
+      {
+        "episode_id": 35232,
+        "display_name": "Muž z Vysokého zámku S03E05 - Nový kolos CZ Titulky",
+        "video_id": 27050778
+      },
+      {
+        "episode_id": 35234,
+        "display_name": "Muž z Vysokého zámku S03E07 - Nadměrný animus CZ Titulky",
+        "video_id": 27050848
+      },
+      {
+        "episode_id": 35236,
+        "display_name": "Muž z Vysokého zámku S03E09 - Baku CZ Titulky",
+        "video_id": 27050884
+      },
+      {
+        "episode_id": 35238,
+        "display_name": "Muž z Vysokého zámku S04E01 - Hexagram 64 CZ Dabing",
+        "video_id": 27050920
+      },
+      {
+        "episode_id": 35240,
+        "display_name": "Muž z Vysokého zámku S04E03 - Bedna CZ Titulky",
+        "video_id": 27051219
+      },
+      {
         "episode_id": 35227,
         "display_name": "Muž z Vysokého zámku S02E10 - Spad CZ Titulky",
         "video_id": 27049799
@@ -42894,6 +42939,66 @@
         "episode_id": 35241,
         "display_name": "Muž z Vysokého zámku S04E04 - Šťastnou cestu CZ Dabing",
         "video_id": 27050255
+      },
+      {
+        "episode_id": 35243,
+        "display_name": "Muž z Vysokého zámku S04E06 - Vše vskutku troufalé CZ Dabing",
+        "video_id": 27050315
+      },
+      {
+        "episode_id": 35245,
+        "display_name": "Muž z Vysokého zámku S04E08 - Hitler jen jedno varle má CZ Dabing",
+        "video_id": 27050389
+      },
+      {
+        "episode_id": 35247,
+        "display_name": "Muž z Vysokého zámku S04E10 - Oheň ukradený bohům CZ Titulky",
+        "video_id": 27050458
+      },
+      {
+        "episode_id": 43603,
+        "display_name": "Takoví normální Američané  S01E03 - Gregory CZ Dabing",
+        "video_id": 27050489
+      },
+      {
+        "episode_id": 43595,
+        "display_name": "Takoví normální Američané  S01E04 - In Control CZ Dabing",
+        "video_id": 27050621
+      },
+      {
+        "episode_id": 43597,
+        "display_name": "Takoví normální Američané  S01E06 - Trust Me CZ Dabing",
+        "video_id": 27050647
+      },
+      {
+        "episode_id": 43599,
+        "display_name": "Takoví normální Američané  S01E07 - Duty and Honor CZ Dabing",
+        "video_id": 27050750
+      },
+      {
+        "episode_id": 43601,
+        "display_name": "Takoví normální Američané  S01E09 - Safe House CZ Dabing",
+        "video_id": 27050858
+      },
+      {
+        "episode_id": 43605,
+        "display_name": "Takoví normální Američané  S01E12 - The Oath CZ Titulky",
+        "video_id": 27050889
+      },
+      {
+        "episode_id": 43565,
+        "display_name": "Takoví normální Američané  S02E01 - Comrades CZ Titulky",
+        "video_id": 27050935
+      },
+      {
+        "episode_id": 43567,
+        "display_name": "Takoví normální Američané  S02E03 - The Walk In CZ Titulky",
+        "video_id": 27051003
+      },
+      {
+        "episode_id": 43569,
+        "display_name": "Takoví normální Američané  S02E05 - The Deal CZ Titulky",
+        "video_id": 27051059
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -96413,6 +96518,51 @@
         "video_id": 27050017
       },
       {
+        "episode_id": 35214,
+        "display_name": "Muž z Vysokého zámku S01E07 - Pravda CZ Titulky",
+        "video_id": 27050483
+      },
+      {
+        "episode_id": 35226,
+        "display_name": "Muž z Vysokého zámku S02E09 - Výbuch CZ Titulky",
+        "video_id": 27050522
+      },
+      {
+        "episode_id": 35228,
+        "display_name": "Muž z Vysokého zámku S03E01 - Nyní o vás pečujeme víc než kdy jindy CZ Dabing",
+        "video_id": 27050556
+      },
+      {
+        "episode_id": 35230,
+        "display_name": "Muž z Vysokého zámku S03E03 - Sensó kói CZ Titulky",
+        "video_id": 27050644
+      },
+      {
+        "episode_id": 35232,
+        "display_name": "Muž z Vysokého zámku S03E05 - Nový kolos CZ Titulky",
+        "video_id": 27050778
+      },
+      {
+        "episode_id": 35234,
+        "display_name": "Muž z Vysokého zámku S03E07 - Nadměrný animus CZ Titulky",
+        "video_id": 27050848
+      },
+      {
+        "episode_id": 35236,
+        "display_name": "Muž z Vysokého zámku S03E09 - Baku CZ Titulky",
+        "video_id": 27050884
+      },
+      {
+        "episode_id": 35238,
+        "display_name": "Muž z Vysokého zámku S04E01 - Hexagram 64 CZ Dabing",
+        "video_id": 27050920
+      },
+      {
+        "episode_id": 35240,
+        "display_name": "Muž z Vysokého zámku S04E03 - Bedna CZ Titulky",
+        "video_id": 27051219
+      },
+      {
         "episode_id": 35227,
         "display_name": "Muž z Vysokého zámku S02E10 - Spad CZ Titulky",
         "video_id": 27049799
@@ -96451,6 +96601,66 @@
         "episode_id": 35241,
         "display_name": "Muž z Vysokého zámku S04E04 - Šťastnou cestu CZ Dabing",
         "video_id": 27050255
+      },
+      {
+        "episode_id": 35243,
+        "display_name": "Muž z Vysokého zámku S04E06 - Vše vskutku troufalé CZ Dabing",
+        "video_id": 27050315
+      },
+      {
+        "episode_id": 35245,
+        "display_name": "Muž z Vysokého zámku S04E08 - Hitler jen jedno varle má CZ Dabing",
+        "video_id": 27050389
+      },
+      {
+        "episode_id": 35247,
+        "display_name": "Muž z Vysokého zámku S04E10 - Oheň ukradený bohům CZ Titulky",
+        "video_id": 27050458
+      },
+      {
+        "episode_id": 43603,
+        "display_name": "Takoví normální Američané  S01E03 - Gregory CZ Dabing",
+        "video_id": 27050489
+      },
+      {
+        "episode_id": 43595,
+        "display_name": "Takoví normální Američané  S01E04 - In Control CZ Dabing",
+        "video_id": 27050621
+      },
+      {
+        "episode_id": 43597,
+        "display_name": "Takoví normální Američané  S01E06 - Trust Me CZ Dabing",
+        "video_id": 27050647
+      },
+      {
+        "episode_id": 43599,
+        "display_name": "Takoví normální Američané  S01E07 - Duty and Honor CZ Dabing",
+        "video_id": 27050750
+      },
+      {
+        "episode_id": 43601,
+        "display_name": "Takoví normální Američané  S01E09 - Safe House CZ Dabing",
+        "video_id": 27050858
+      },
+      {
+        "episode_id": 43605,
+        "display_name": "Takoví normální Američané  S01E12 - The Oath CZ Titulky",
+        "video_id": 27050889
+      },
+      {
+        "episode_id": 43565,
+        "display_name": "Takoví normální Američané  S02E01 - Comrades CZ Titulky",
+        "video_id": 27050935
+      },
+      {
+        "episode_id": 43567,
+        "display_name": "Takoví normální Američané  S02E03 - The Walk In CZ Titulky",
+        "video_id": 27051003
+      },
+      {
+        "episode_id": 43569,
+        "display_name": "Takoví normální Američané  S02E05 - The Deal CZ Titulky",
+        "video_id": 27051059
       }
     ],
     "prepared_not_upload_ready": [
@@ -96757,166 +96967,6 @@
     ],
     "whisper_review_pending": [
       {
-        "episode_id": 61012,
-        "source_id": -9398196316992793,
-        "series_title": "Dragon Ball Z",
-        "episode_code": "S01E06",
-        "source_title": "Dragon.Ball.Z.S01E06.1080p.Bluray.x264-ZER0",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 61012,
-        "source_id": -62148666864239511,
-        "series_title": "Dragon Ball Z",
-        "episode_code": "S01E06",
-        "source_title": "Dragon Ball Z s01e06⭐Koi⭐",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 61012,
-        "source_id": -51222173964218178,
-        "series_title": "Dragon Ball Z",
-        "episode_code": "S01E06",
-        "source_title": "⭐Dragon⭐Ball⭐Z⭐s01e06⭐Top-od-Draculy",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 61012,
-        "source_id": -6915019054324469,
-        "series_title": "Dragon Ball Z",
-        "episode_code": "S01E06",
-        "source_title": "Dragon-Ball-Z-s01e06-apu-",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 61189,
-        "source_id": -35296812267873657,
-        "series_title": "Dragon Ball Z",
-        "episode_code": "S01E07",
-        "source_title": "Dragon.Ball.Z.S01E07.1080p.Bluray.x264-ZER0",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 61189,
-        "source_id": -68630208679896843,
-        "series_title": "Dragon Ball Z",
-        "episode_code": "S01E07",
-        "source_title": "⭐Dragon⭐Ball⭐Z⭐s01e07⭐Top-od-Draculy",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 61189,
-        "source_id": -36956958491853619,
-        "series_title": "Dragon Ball Z",
-        "episode_code": "S01E07",
-        "source_title": "Dragon Ball Z s01e07⭐Koi⭐",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 61189,
-        "source_id": -34029927405564041,
-        "series_title": "Dragon Ball Z",
-        "episode_code": "S01E07",
-        "source_title": "Dragon-Ball-Z-s01e07-apu-",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 61173,
-        "source_id": -43416678095348758,
-        "series_title": "Dragon Ball Z",
-        "episode_code": "S01E08",
-        "source_title": "Dragon.Ball.Z.S01E08.1080p.Bluray.x264-ZER0",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 61173,
-        "source_id": -50999701527514553,
-        "series_title": "Dragon Ball Z",
-        "episode_code": "S01E08",
-        "source_title": "⭐Dragon⭐Ball⭐Z⭐s01e08⭐Top-od-Draculy",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 61173,
-        "source_id": -42646590943060467,
-        "series_title": "Dragon Ball Z",
-        "episode_code": "S01E08",
-        "source_title": "Dragon Ball Z s01e08⭐Koi⭐",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 61173,
-        "source_id": -42422194001636114,
-        "series_title": "Dragon Ball Z",
-        "episode_code": "S01E08",
-        "source_title": "Dragon-Ball-Z-s01e08-apu-",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 61084,
-        "source_id": -54603991496866485,
-        "series_title": "Dragon Ball Z",
-        "episode_code": "S01E09",
-        "source_title": "⭐Dragon⭐Ball⭐Z⭐s01e09⭐Top-od-Draculy",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 61084,
-        "source_id": -33976223901002245,
-        "series_title": "Dragon Ball Z",
-        "episode_code": "S01E09",
-        "source_title": "Dragon Ball Z s01e09⭐Koi⭐",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 61084,
-        "source_id": -1806943426723278,
-        "series_title": "Dragon Ball Z",
-        "episode_code": "S01E09",
-        "source_title": "Dragon-Ball-Z-s01e09-apu-",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 61001,
-        "source_id": -59499773418284506,
-        "series_title": "Dragon Ball Z",
-        "episode_code": "S01E10",
-        "source_title": "Dragon.Ball.Z.S01E10.1080p.Bluray.x264-ZER0",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 61001,
-        "source_id": -58036704903341402,
-        "series_title": "Dragon Ball Z",
-        "episode_code": "S01E10",
-        "source_title": "Dragon Ball Z s01e10⭐Koi⭐",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 61001,
-        "source_id": -56003096173136117,
-        "series_title": "Dragon Ball Z",
-        "episode_code": "S01E10",
-        "source_title": "⭐Dragon⭐Ball⭐Z⭐s01e10⭐Top-od-Draculy",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 61001,
-        "source_id": -145094922810444,
-        "series_title": "Dragon Ball Z",
-        "episode_code": "S01E10",
-        "source_title": "Dragon-Ball-Z-s01e10-apu-",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 61067,
-        "source_id": -45345944886504450,
-        "series_title": "Dragon Ball Z",
-        "episode_code": "S01E11",
-        "source_title": "Dragon.Ball.Z.S01E11.1080p.Bluray.x264-ZER0",
-        "status": "needs_whisper"
-      },
-      {
         "episode_id": 61067,
         "source_id": -25916127575634251,
         "series_title": "Dragon Ball Z",
@@ -97155,6 +97205,166 @@
         "episode_code": "S01E19",
         "source_title": "Dragon.Ball.Z.S01E19.1080p.Bluray.x264-ZER0",
         "status": "needs_whisper"
+      },
+      {
+        "episode_id": 61174,
+        "source_id": -50873480705967224,
+        "series_title": "Dragon Ball Z",
+        "episode_code": "S01E19",
+        "source_title": "Dragon Ball Z s01e19⭐Koi⭐",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 61174,
+        "source_id": -26280222716684767,
+        "series_title": "Dragon Ball Z",
+        "episode_code": "S01E19",
+        "source_title": "Dragon-Ball-Z-s01e19-apu-",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 61174,
+        "source_id": -22303143937151402,
+        "series_title": "Dragon Ball Z",
+        "episode_code": "S01E19",
+        "source_title": "⭐Dragon⭐Ball⭐Z⭐s01e19⭐Top-od-Draculy",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 61230,
+        "source_id": -29826369068071817,
+        "series_title": "Dragon Ball Z",
+        "episode_code": "S01E20",
+        "source_title": "Dragon.Ball.Z.S01E20.1080p.Bluray.x264-ZER0",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 61230,
+        "source_id": -62698429567759043,
+        "series_title": "Dragon Ball Z",
+        "episode_code": "S01E20",
+        "source_title": "⭐Dragon⭐Ball⭐Z⭐s01e20⭐Top-od-Draculy",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 61230,
+        "source_id": -31306524139018134,
+        "series_title": "Dragon Ball Z",
+        "episode_code": "S01E20",
+        "source_title": "Dragon-Ball-Z-s01e20-apu-",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 61230,
+        "source_id": -19824384941635136,
+        "series_title": "Dragon Ball Z",
+        "episode_code": "S01E20",
+        "source_title": "Dragon Ball Z s01e20⭐Koi⭐",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 61017,
+        "source_id": -48324203562308778,
+        "series_title": "Dragon Ball Z",
+        "episode_code": "S01E21",
+        "source_title": "Dragon.Ball.Z.S01E21.1080p.Bluray.x264-ZER0",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 61017,
+        "source_id": -52424963143112546,
+        "series_title": "Dragon Ball Z",
+        "episode_code": "S01E21",
+        "source_title": "⭐Dragon⭐Ball⭐Z⭐s01e21⭐Top-od-Draculy",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 61017,
+        "source_id": -46261445201721473,
+        "series_title": "Dragon Ball Z",
+        "episode_code": "S01E21",
+        "source_title": "Dragon-Ball-Z-s01e21-apu-",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 61017,
+        "source_id": -32715880957185684,
+        "series_title": "Dragon Ball Z",
+        "episode_code": "S01E21",
+        "source_title": "Dragon Ball Z s01e21⭐Koi⭐",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 61133,
+        "source_id": -7188435027005013,
+        "series_title": "Dragon Ball Z",
+        "episode_code": "S01E22",
+        "source_title": "Dragon.Ball.Z.S01E22.1080p.Bluray.x264-ZER0",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 61133,
+        "source_id": -63372733292976505,
+        "series_title": "Dragon Ball Z",
+        "episode_code": "S01E22",
+        "source_title": "⭐Dragon⭐Ball⭐Z⭐s01e22⭐Top-od-Draculy",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 61133,
+        "source_id": -59197590014704200,
+        "series_title": "Dragon Ball Z",
+        "episode_code": "S01E22",
+        "source_title": "Dragon Ball Z s01e22⭐Koi⭐",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 61133,
+        "source_id": -36888870505645804,
+        "series_title": "Dragon Ball Z",
+        "episode_code": "S01E22",
+        "source_title": "Dragon-Ball-Z-s01e22-apu-",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 61123,
+        "source_id": -53660696518837473,
+        "series_title": "Dragon Ball Z",
+        "episode_code": "S01E23",
+        "source_title": "Dragon.Ball.Z.S01E23.1080p.Bluray.x264-ZER0",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 61123,
+        "source_id": -56791963822615819,
+        "series_title": "Dragon Ball Z",
+        "episode_code": "S01E23",
+        "source_title": "⭐Dragon⭐Ball⭐Z⭐s01e23⭐Top-od-Draculy",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 61123,
+        "source_id": -42725255520158789,
+        "series_title": "Dragon Ball Z",
+        "episode_code": "S01E23",
+        "source_title": "Dragon-Ball-Z-s01e23-apu-",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 61123,
+        "source_id": -24920487981766083,
+        "series_title": "Dragon Ball Z",
+        "episode_code": "S01E23",
+        "source_title": "Dragon Ball Z s01e23⭐Koi⭐",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 61122,
+        "source_id": -565445797424797,
+        "series_title": "Dragon Ball Z",
+        "episode_code": "S01E24",
+        "source_title": "Dragon.Ball.Z.S01E24.1080p.Bluray.x264-ZER0",
+        "status": "needs_whisper"
       }
     ],
     "subtitle_followup_pending": [
@@ -97205,57 +97415,57 @@
       },
       {
         "episode_id": 61012,
-        "source_id": -13087375367501342,
+        "source_id": -6915019054324469,
         "series_title": "Dragon Ball Z",
         "episode_code": "S01E06",
-        "source_title": "Dragon Ball Z - s01e06 (CZ TIT)",
+        "source_title": "Dragon-Ball-Z-s01e06-apu-",
         "subtitle_status": "needs_subtitle_setup_after_prehrajto_processing",
-        "reason": "selected source has Czech subtitles but no Czech audio source was found"
+        "reason": "selected source needs Czech subtitles after Whisper detected non-Czech audio"
       },
       {
         "episode_id": 61189,
-        "source_id": -16218024525670367,
+        "source_id": -34029927405564041,
         "series_title": "Dragon Ball Z",
         "episode_code": "S01E07",
-        "source_title": "Dragon Ball Z - s01e07 (CZ TIT)",
+        "source_title": "Dragon-Ball-Z-s01e07-apu-",
         "subtitle_status": "needs_subtitle_setup_after_prehrajto_processing",
-        "reason": "selected source has Czech subtitles but no Czech audio source was found"
+        "reason": "selected source needs Czech subtitles after Whisper detected non-Czech audio"
       },
       {
         "episode_id": 61173,
-        "source_id": -4117255818419138,
+        "source_id": -42422194001636114,
         "series_title": "Dragon Ball Z",
         "episode_code": "S01E08",
-        "source_title": "Dragon Ball Z - s01e08 (CZ TIT)",
+        "source_title": "Dragon-Ball-Z-s01e08-apu-",
         "subtitle_status": "needs_subtitle_setup_after_prehrajto_processing",
-        "reason": "selected source has Czech subtitles but no Czech audio source was found"
+        "reason": "selected source needs Czech subtitles after Whisper detected non-Czech audio"
       },
       {
         "episode_id": 61084,
-        "source_id": -39698879736173379,
+        "source_id": -1806943426723278,
         "series_title": "Dragon Ball Z",
         "episode_code": "S01E09",
-        "source_title": "Dragon Ball Z - s01e09 (CZ TIT)",
+        "source_title": "Dragon-Ball-Z-s01e09-apu-",
         "subtitle_status": "needs_subtitle_setup_after_prehrajto_processing",
-        "reason": "selected source has Czech subtitles but no Czech audio source was found"
+        "reason": "selected source needs Czech subtitles after Whisper detected non-Czech audio"
       },
       {
         "episode_id": 61001,
-        "source_id": -29888892694690686,
+        "source_id": -145094922810444,
         "series_title": "Dragon Ball Z",
         "episode_code": "S01E10",
-        "source_title": "Dragon Ball Z - s01e10 (CZ TIT)",
+        "source_title": "Dragon-Ball-Z-s01e10-apu-",
         "subtitle_status": "needs_subtitle_setup_after_prehrajto_processing",
-        "reason": "selected source has Czech subtitles but no Czech audio source was found"
+        "reason": "selected source needs Czech subtitles after Whisper detected non-Czech audio"
       },
       {
         "episode_id": 61067,
-        "source_id": -41802420023456531,
+        "source_id": -45345944886504450,
         "series_title": "Dragon Ball Z",
         "episode_code": "S01E11",
-        "source_title": "Dragon Ball Z - s01e11 (CZ TIT)",
+        "source_title": "Dragon.Ball.Z.S01E11.1080p.Bluray.x264-ZER0",
         "subtitle_status": "needs_subtitle_setup_after_prehrajto_processing",
-        "reason": "selected source has Czech subtitles but no Czech audio source was found"
+        "reason": "selected source needs Czech subtitles after Whisper detected non-Czech audio"
       },
       {
         "episode_id": 61179,
@@ -97615,8 +97825,8 @@
     "ok": 40
   },
   "whisper_review_statuses": {
-    "whisper_non_cz_needs_subtitles": 277,
-    "needs_whisper": 8003,
+    "whisper_non_cz_needs_subtitles": 297,
+    "needs_whisper": 8006,
     "whisper_confirmed_cz": 43
   },
   "subtitle_followup_statuses": {
