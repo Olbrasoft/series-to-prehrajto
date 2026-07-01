@@ -2,28 +2,84 @@
   "counts": {
     "backlog_episodes": 180664,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 12761,
-    "prepared_source_episodes": 24738,
+    "uploaded_episodes": 12784,
+    "prepared_source_episodes": 24798,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 270,
+    "language_audited_sources": 85,
     "language_whisper_attempted_sources": 40,
     "language_pending_whisper_sources": 2604,
-    "whisper_review_sources": 7141,
-    "whisper_review_pending_sources": 6841,
+    "whisper_review_sources": 7186,
+    "whisper_review_pending_sources": 6886,
     "subtitle_followup_sources": 1313,
     "subtitle_followup_pending_sources": 1313
   },
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-07-01T11:35:00Z",
+      "databaseId": 28514565162,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-01T11:32:35Z",
+      "databaseId": 28514436226,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-01T11:21:12Z",
+      "databaseId": 28513830208,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-01T11:18:38Z",
+      "databaseId": 28513696157,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "failure",
+      "createdAt": "2026-07-01T11:10:26Z",
+      "databaseId": 28513250069,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-01T11:10:21Z",
+      "databaseId": 28513245192,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "failure",
+      "createdAt": "2026-07-01T11:10:17Z",
+      "databaseId": 28513241047,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-01T11:09:27Z",
       "databaseId": 28513193682,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -67,11 +123,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-01T10:51:14Z",
       "databaseId": 28512210044,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
@@ -91,11 +147,11 @@
       "workflowName": "prepare-manifest"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-01T10:50:12Z",
       "databaseId": 28512155471,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "sync"
     },
     {
@@ -121,62 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-01T10:41:31Z",
-      "databaseId": 28511691296,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-01T10:26:32Z",
-      "databaseId": 28510882351,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-01T10:25:57Z",
-      "databaseId": 28510849651,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "refresh-backlog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-01T10:23:27Z",
-      "databaseId": 28510709717,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-01T10:01:14Z",
-      "databaseId": 28509493007,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-01T09:55:05Z",
-      "databaseId": 28509144598,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-01T09:55:01Z",
-      "databaseId": 28509140337,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
     }
   ],
   "gaps": {
@@ -41681,6 +41681,66 @@
         "video_id": 27044399
       },
       {
+        "episode_id": 125570,
+        "display_name": "Marvel's The Defenders S01E07 - Ryba ve vězení CZ Titulky",
+        "video_id": 27044460
+      },
+      {
+        "episode_id": 17930,
+        "display_name": "Nadace S01E05 - Po probuzení CZ Titulky",
+        "video_id": 27044490
+      },
+      {
+        "episode_id": 17928,
+        "display_name": "Nadace S01E07 - Záhady a mučedníci CZ Titulky",
+        "video_id": 27044518
+      },
+      {
+        "episode_id": 17926,
+        "display_name": "Nadace S01E09 - První krize CZ Titulky",
+        "video_id": 27044541
+      },
+      {
+        "episode_id": 15926,
+        "display_name": "Nadace S03E04 - Její všudypřítomný dohled CZ Titulky",
+        "video_id": 27044573
+      },
+      {
+        "episode_id": 15930,
+        "display_name": "Nadace S03E08 - Nasadit vlastní kůži CZ Titulky",
+        "video_id": 27044601
+      },
+      {
+        "episode_id": 15932,
+        "display_name": "Nadace S03E10 - Období temna CZ Titulky",
+        "video_id": 27044629
+      },
+      {
+        "episode_id": 45112,
+        "display_name": "Jak prosté S01E01 - Vražda v zastoupení CZ Dabing",
+        "video_id": 27044660
+      },
+      {
+        "episode_id": 45158,
+        "display_name": "Jak prosté S01E02 - Zatímco jsi spala CZ Dabing",
+        "video_id": 27044703
+      },
+      {
+        "episode_id": 45138,
+        "display_name": "Jak prosté S01E04 - Nekonečná hra CZ Dabing",
+        "video_id": 27044745
+      },
+      {
+        "episode_id": 45144,
+        "display_name": "Jak prosté S01E05 - Anděl smrti CZ Dabing",
+        "video_id": 27044790
+      },
+      {
+        "episode_id": 45102,
+        "display_name": "Jak prosté S01E08 - Zapomenutá bomba CZ Dabing",
+        "video_id": 27044821
+      },
+      {
         "episode_id": 64349,
         "display_name": "Pomsta S04E14 - Kindred CZ Titulky",
         "video_id": 27044136
@@ -41734,6 +41794,61 @@
         "episode_id": 125571,
         "display_name": "Marvel's The Defenders S01E08 - Defenders CZ Titulky",
         "video_id": 27044403
+      },
+      {
+        "episode_id": 17933,
+        "display_name": "Nadace S01E01 - Císařův mír CZ Titulky",
+        "video_id": 27044439
+      },
+      {
+        "episode_id": 15917,
+        "display_name": "Nadace S02E01 - Ve stínu Seldona CZ Titulky",
+        "video_id": 27044464
+      },
+      {
+        "episode_id": 15925,
+        "display_name": "Nadace S03E03 - Když si kniha najde vás CZ Titulky",
+        "video_id": 27044475
+      },
+      {
+        "episode_id": 15927,
+        "display_name": "Nadace S03E05 - Kam tyrani odcházejí na věčnost CZ Titulky",
+        "video_id": 27044487
+      },
+      {
+        "episode_id": 15929,
+        "display_name": "Nadace S03E07 - Konec Nadace CZ Titulky",
+        "video_id": 27044510
+      },
+      {
+        "episode_id": 15931,
+        "display_name": "Nadace S03E09 - Cesty, které si vybírají nás CZ Titulky",
+        "video_id": 27044551
+      },
+      {
+        "episode_id": 45159,
+        "display_name": "Jak prosté S01E06 - Nebezpečné létání CZ Dabing",
+        "video_id": 27044571
+      },
+      {
+        "episode_id": 45113,
+        "display_name": "Jak prosté S01E07 - Úniková cesta CZ Dabing",
+        "video_id": 27044596
+      },
+      {
+        "episode_id": 45111,
+        "display_name": "Jak prosté S01E10 - Nedobytný trezor CZ Dabing",
+        "video_id": 27044613
+      },
+      {
+        "episode_id": 45152,
+        "display_name": "Jak prosté S01E13 - Rudý tým CZ Dabing",
+        "video_id": 27044871
+      },
+      {
+        "episode_id": 49693,
+        "display_name": "Jak prosté S01E14 - Mistr Dedukce CZ Dabing",
+        "video_id": 27044863
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -94078,6 +94193,66 @@
         "video_id": 27044399
       },
       {
+        "episode_id": 125570,
+        "display_name": "Marvel's The Defenders S01E07 - Ryba ve vězení CZ Titulky",
+        "video_id": 27044460
+      },
+      {
+        "episode_id": 17930,
+        "display_name": "Nadace S01E05 - Po probuzení CZ Titulky",
+        "video_id": 27044490
+      },
+      {
+        "episode_id": 17928,
+        "display_name": "Nadace S01E07 - Záhady a mučedníci CZ Titulky",
+        "video_id": 27044518
+      },
+      {
+        "episode_id": 17926,
+        "display_name": "Nadace S01E09 - První krize CZ Titulky",
+        "video_id": 27044541
+      },
+      {
+        "episode_id": 15926,
+        "display_name": "Nadace S03E04 - Její všudypřítomný dohled CZ Titulky",
+        "video_id": 27044573
+      },
+      {
+        "episode_id": 15930,
+        "display_name": "Nadace S03E08 - Nasadit vlastní kůži CZ Titulky",
+        "video_id": 27044601
+      },
+      {
+        "episode_id": 15932,
+        "display_name": "Nadace S03E10 - Období temna CZ Titulky",
+        "video_id": 27044629
+      },
+      {
+        "episode_id": 45112,
+        "display_name": "Jak prosté S01E01 - Vražda v zastoupení CZ Dabing",
+        "video_id": 27044660
+      },
+      {
+        "episode_id": 45158,
+        "display_name": "Jak prosté S01E02 - Zatímco jsi spala CZ Dabing",
+        "video_id": 27044703
+      },
+      {
+        "episode_id": 45138,
+        "display_name": "Jak prosté S01E04 - Nekonečná hra CZ Dabing",
+        "video_id": 27044745
+      },
+      {
+        "episode_id": 45144,
+        "display_name": "Jak prosté S01E05 - Anděl smrti CZ Dabing",
+        "video_id": 27044790
+      },
+      {
+        "episode_id": 45102,
+        "display_name": "Jak prosté S01E08 - Zapomenutá bomba CZ Dabing",
+        "video_id": 27044821
+      },
+      {
         "episode_id": 64349,
         "display_name": "Pomsta S04E14 - Kindred CZ Titulky",
         "video_id": 27044136
@@ -94131,6 +94306,61 @@
         "episode_id": 125571,
         "display_name": "Marvel's The Defenders S01E08 - Defenders CZ Titulky",
         "video_id": 27044403
+      },
+      {
+        "episode_id": 17933,
+        "display_name": "Nadace S01E01 - Císařův mír CZ Titulky",
+        "video_id": 27044439
+      },
+      {
+        "episode_id": 15917,
+        "display_name": "Nadace S02E01 - Ve stínu Seldona CZ Titulky",
+        "video_id": 27044464
+      },
+      {
+        "episode_id": 15925,
+        "display_name": "Nadace S03E03 - Když si kniha najde vás CZ Titulky",
+        "video_id": 27044475
+      },
+      {
+        "episode_id": 15927,
+        "display_name": "Nadace S03E05 - Kam tyrani odcházejí na věčnost CZ Titulky",
+        "video_id": 27044487
+      },
+      {
+        "episode_id": 15929,
+        "display_name": "Nadace S03E07 - Konec Nadace CZ Titulky",
+        "video_id": 27044510
+      },
+      {
+        "episode_id": 15931,
+        "display_name": "Nadace S03E09 - Cesty, které si vybírají nás CZ Titulky",
+        "video_id": 27044551
+      },
+      {
+        "episode_id": 45159,
+        "display_name": "Jak prosté S01E06 - Nebezpečné létání CZ Dabing",
+        "video_id": 27044571
+      },
+      {
+        "episode_id": 45113,
+        "display_name": "Jak prosté S01E07 - Úniková cesta CZ Dabing",
+        "video_id": 27044596
+      },
+      {
+        "episode_id": 45111,
+        "display_name": "Jak prosté S01E10 - Nedobytný trezor CZ Dabing",
+        "video_id": 27044613
+      },
+      {
+        "episode_id": 45152,
+        "display_name": "Jak prosté S01E13 - Rudý tým CZ Dabing",
+        "video_id": 27044871
+      },
+      {
+        "episode_id": 49693,
+        "display_name": "Jak prosté S01E14 - Mistr Dedukce CZ Dabing",
+        "video_id": 27044863
       }
     ],
     "prepared_not_upload_ready": [
@@ -95292,11 +95522,11 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 230,
+    "disabled": 45,
     "ok": 40
   },
   "whisper_review_statuses": {
-    "needs_whisper": 6841,
+    "needs_whisper": 6886,
     "whisper_confirmed_cz": 43,
     "whisper_non_cz_needs_subtitles": 257
   },
