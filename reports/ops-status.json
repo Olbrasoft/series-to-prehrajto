@@ -2,44 +2,100 @@
   "counts": {
     "backlog_episodes": 180276,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 13125,
-    "prepared_source_episodes": 26278,
+    "uploaded_episodes": 13162,
+    "prepared_source_episodes": 26338,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 40,
-    "language_whisper_attempted_sources": 40,
-    "language_pending_whisper_sources": 2604,
-    "whisper_review_sources": 9252,
-    "whisper_review_pending_sources": 8852,
-    "subtitle_followup_sources": 1637,
-    "subtitle_followup_pending_sources": 1637
+    "language_audited_sources": 115,
+    "language_whisper_attempted_sources": 20,
+    "language_pending_whisper_sources": 2624,
+    "whisper_review_sources": 9265,
+    "whisper_review_pending_sources": 8865,
+    "subtitle_followup_sources": 1639,
+    "subtitle_followup_pending_sources": 1639
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-07-01T22:14:40Z",
-      "databaseId": 28551265773,
+      "createdAt": "2026-07-01T22:39:34Z",
+      "databaseId": 28552437399,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
-      "createdAt": "2026-07-01T22:13:30Z",
-      "databaseId": 28551210162,
+      "createdAt": "2026-07-01T22:39:30Z",
+      "databaseId": 28552434268,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-01T22:30:50Z",
+      "databaseId": 28552034980,
+      "headBranch": "main",
+      "status": "completed",
       "workflowName": "update-descriptions"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-07-01T22:28:54Z",
+      "databaseId": 28551942434,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-01T22:26:26Z",
+      "databaseId": 28551824508,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-01T22:16:35Z",
+      "databaseId": 28551361108,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-01T22:16:07Z",
+      "databaseId": 28551337108,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-01T22:14:40Z",
+      "databaseId": 28551265773,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-01T22:13:30Z",
+      "databaseId": 28551210162,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-01T22:13:27Z",
       "databaseId": 28551207304,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -51,11 +107,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-01T22:12:34Z",
       "databaseId": 28551164938,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -83,11 +139,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-01T22:01:28Z",
       "databaseId": 28550614642,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
@@ -121,62 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-01T21:55:42Z",
-      "databaseId": 28550322705,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-01T21:45:25Z",
-      "databaseId": 28549805420,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-01T21:45:06Z",
-      "databaseId": 28549788872,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-07-01T21:44:59Z",
-      "databaseId": 28549782011,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-01T21:44:25Z",
-      "databaseId": 28549754712,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-01T21:43:46Z",
-      "databaseId": 28549721991,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-01T21:43:43Z",
-      "databaseId": 28549719530,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "sync"
     }
   ],
   "gaps": {
@@ -43546,6 +43546,101 @@
         "video_id": 27061424
       },
       {
+        "episode_id": 48854,
+        "display_name": "Tráva S04E06 - Vynikající poklady CZ Titulky",
+        "video_id": 27061444
+      },
+      {
+        "episode_id": 48816,
+        "display_name": "Tráva S04E07 - Ano, můžu CZ Dabing",
+        "video_id": 27061465
+      },
+      {
+        "episode_id": 48856,
+        "display_name": "Tráva S04E12 - Než se znovu sejdeme CZ Dabing",
+        "video_id": 27061493
+      },
+      {
+        "episode_id": 48806,
+        "display_name": "Tráva S04E13 - Když pracuješ, aby ses uživil, proč se zabíjíš prací? CZ Dabing",
+        "video_id": 27061522
+      },
+      {
+        "episode_id": 48818,
+        "display_name": "Tráva S05E02 - Mačety až nahoru CZ Dabing",
+        "video_id": 27061544
+      },
+      {
+        "episode_id": 48804,
+        "display_name": "Tráva S05E05 - Van Nuys CZ Dabing",
+        "video_id": 27061575
+      },
+      {
+        "episode_id": 48808,
+        "display_name": "Tráva S05E07 - Kde končí chodník CZ Dabing",
+        "video_id": 27061819
+      },
+      {
+        "episode_id": 48760,
+        "display_name": "Tráva S05E08 - Charakteristický klakson CZ Dabing",
+        "video_id": 27061875
+      },
+      {
+        "episode_id": 48792,
+        "display_name": "Tráva S05E13 - Všechno o mé mámě CZ Dabing",
+        "video_id": 27061898
+      },
+      {
+        "episode_id": 48794,
+        "display_name": "Tráva S06E02 - Kácení a kleštění CZ Dabing",
+        "video_id": 27061925
+      },
+      {
+        "episode_id": 48762,
+        "display_name": "Tráva S06E03 - Dětský kočárek CZ Dabing",
+        "video_id": 27061946
+      },
+      {
+        "episode_id": 48796,
+        "display_name": "Tráva S06E05 - Bumerang CZ Dabing",
+        "video_id": 27061975
+      },
+      {
+        "episode_id": 48798,
+        "display_name": "Tráva S06E08 - Něžná štěňata CZ Dabing",
+        "video_id": 27062001
+      },
+      {
+        "episode_id": 48764,
+        "display_name": "Tráva S06E10 - Zpátky v rodném městě CZ Dabing",
+        "video_id": 27062027
+      },
+      {
+        "episode_id": 48766,
+        "display_name": "Tráva S07E01 - Zavazadla CZ Dabing",
+        "video_id": 27062055
+      },
+      {
+        "episode_id": 48770,
+        "display_name": "Tráva S07E06 - Pomíjivost věcí CZ Dabing",
+        "video_id": 27062084
+      },
+      {
+        "episode_id": 48772,
+        "display_name": "Tráva S07E08 - Umělá vlákna CZ Dabing",
+        "video_id": 27062120
+      },
+      {
+        "episode_id": 48774,
+        "display_name": "Tráva S07E11 - Tráva MILF CZ Dabing",
+        "video_id": 27062145
+      },
+      {
+        "episode_id": 48776,
+        "display_name": "Tráva S07E13 - Rozdat si to s ní, nerozdat si to s ní CZ Dabing",
+        "video_id": 27062169
+      },
+      {
         "episode_id": 48815,
         "display_name": "Tráva S04E04 - Tři, co přináší smůlu CZ Titulky",
         "video_id": 27061420
@@ -43554,6 +43649,96 @@
         "episode_id": 48793,
         "display_name": "Tráva S06E01 - Rána CZ Dabing",
         "video_id": 27061439
+      },
+      {
+        "episode_id": 48795,
+        "display_name": "Tráva S06E04 - Blaženost CZ Dabing",
+        "video_id": 27061455
+      },
+      {
+        "episode_id": 48763,
+        "display_name": "Tráva S06E06 - Něco za něco CZ Dabing",
+        "video_id": 27061488
+      },
+      {
+        "episode_id": 48797,
+        "display_name": "Tráva S06E07 - Na horské dráze CZ Dabing",
+        "video_id": 27061504
+      },
+      {
+        "episode_id": 48765,
+        "display_name": "Tráva S06E12 - Fran Tarkenton CZ Titulky",
+        "video_id": 27061530
+      },
+      {
+        "episode_id": 48771,
+        "display_name": "Tráva S07E07 - Zápas mezi firmami CZ Dabing",
+        "video_id": 27061550
+      },
+      {
+        "episode_id": 48773,
+        "display_name": "Tráva S07E09 - Kočky, kočky CZ Dabing",
+        "video_id": 27061587
+      },
+      {
+        "episode_id": 48775,
+        "display_name": "Tráva S07E10 - Vzhůru nohama CZ Dabing",
+        "video_id": 27061771
+      },
+      {
+        "episode_id": 48779,
+        "display_name": "Tráva S08E02 - Sluneční paprsek CZ Titulky",
+        "video_id": 27061867
+      },
+      {
+        "episode_id": 48787,
+        "display_name": "Tráva S08E10 - Přes práh CZ Dabing",
+        "video_id": 27061893
+      },
+      {
+        "episode_id": 48789,
+        "display_name": "Tráva S08E12 - Je čas, část první CZ Dabing",
+        "video_id": 27061912
+      },
+      {
+        "episode_id": 70339,
+        "display_name": "Služka S01E01 - Za babku CZ Titulky",
+        "video_id": 27061935
+      },
+      {
+        "episode_id": 70333,
+        "display_name": "Služka S01E04 - Kašmír CZ Dabing",
+        "video_id": 27061957
+      },
+      {
+        "episode_id": 70335,
+        "display_name": "Služka S01E07 - Malý koník CZ Dabing",
+        "video_id": 27061983
+      },
+      {
+        "episode_id": 70337,
+        "display_name": "Služka S01E09 - Nebeská modř CZ Dabing",
+        "video_id": 27062010
+      },
+      {
+        "episode_id": 4223,
+        "display_name": "Titans S01E11 - Dick Grayson CZ Dabing",
+        "video_id": 27062061
+      },
+      {
+        "episode_id": 4229,
+        "display_name": "Titans S02E04 - Aqualad CZ Dabing",
+        "video_id": 27062095
+      },
+      {
+        "episode_id": 4239,
+        "display_name": "Titans S03E04 - Blackfire CZ Dabing",
+        "video_id": 27062121
+      },
+      {
+        "episode_id": 9861,
+        "display_name": "Titans S03E05 - Lazarus CZ Titulky",
+        "video_id": 27062141
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -97763,6 +97948,101 @@
         "video_id": 27061424
       },
       {
+        "episode_id": 48854,
+        "display_name": "Tráva S04E06 - Vynikající poklady CZ Titulky",
+        "video_id": 27061444
+      },
+      {
+        "episode_id": 48816,
+        "display_name": "Tráva S04E07 - Ano, můžu CZ Dabing",
+        "video_id": 27061465
+      },
+      {
+        "episode_id": 48856,
+        "display_name": "Tráva S04E12 - Než se znovu sejdeme CZ Dabing",
+        "video_id": 27061493
+      },
+      {
+        "episode_id": 48806,
+        "display_name": "Tráva S04E13 - Když pracuješ, aby ses uživil, proč se zabíjíš prací? CZ Dabing",
+        "video_id": 27061522
+      },
+      {
+        "episode_id": 48818,
+        "display_name": "Tráva S05E02 - Mačety až nahoru CZ Dabing",
+        "video_id": 27061544
+      },
+      {
+        "episode_id": 48804,
+        "display_name": "Tráva S05E05 - Van Nuys CZ Dabing",
+        "video_id": 27061575
+      },
+      {
+        "episode_id": 48808,
+        "display_name": "Tráva S05E07 - Kde končí chodník CZ Dabing",
+        "video_id": 27061819
+      },
+      {
+        "episode_id": 48760,
+        "display_name": "Tráva S05E08 - Charakteristický klakson CZ Dabing",
+        "video_id": 27061875
+      },
+      {
+        "episode_id": 48792,
+        "display_name": "Tráva S05E13 - Všechno o mé mámě CZ Dabing",
+        "video_id": 27061898
+      },
+      {
+        "episode_id": 48794,
+        "display_name": "Tráva S06E02 - Kácení a kleštění CZ Dabing",
+        "video_id": 27061925
+      },
+      {
+        "episode_id": 48762,
+        "display_name": "Tráva S06E03 - Dětský kočárek CZ Dabing",
+        "video_id": 27061946
+      },
+      {
+        "episode_id": 48796,
+        "display_name": "Tráva S06E05 - Bumerang CZ Dabing",
+        "video_id": 27061975
+      },
+      {
+        "episode_id": 48798,
+        "display_name": "Tráva S06E08 - Něžná štěňata CZ Dabing",
+        "video_id": 27062001
+      },
+      {
+        "episode_id": 48764,
+        "display_name": "Tráva S06E10 - Zpátky v rodném městě CZ Dabing",
+        "video_id": 27062027
+      },
+      {
+        "episode_id": 48766,
+        "display_name": "Tráva S07E01 - Zavazadla CZ Dabing",
+        "video_id": 27062055
+      },
+      {
+        "episode_id": 48770,
+        "display_name": "Tráva S07E06 - Pomíjivost věcí CZ Dabing",
+        "video_id": 27062084
+      },
+      {
+        "episode_id": 48772,
+        "display_name": "Tráva S07E08 - Umělá vlákna CZ Dabing",
+        "video_id": 27062120
+      },
+      {
+        "episode_id": 48774,
+        "display_name": "Tráva S07E11 - Tráva MILF CZ Dabing",
+        "video_id": 27062145
+      },
+      {
+        "episode_id": 48776,
+        "display_name": "Tráva S07E13 - Rozdat si to s ní, nerozdat si to s ní CZ Dabing",
+        "video_id": 27062169
+      },
+      {
         "episode_id": 48815,
         "display_name": "Tráva S04E04 - Tři, co přináší smůlu CZ Titulky",
         "video_id": 27061420
@@ -97771,6 +98051,96 @@
         "episode_id": 48793,
         "display_name": "Tráva S06E01 - Rána CZ Dabing",
         "video_id": 27061439
+      },
+      {
+        "episode_id": 48795,
+        "display_name": "Tráva S06E04 - Blaženost CZ Dabing",
+        "video_id": 27061455
+      },
+      {
+        "episode_id": 48763,
+        "display_name": "Tráva S06E06 - Něco za něco CZ Dabing",
+        "video_id": 27061488
+      },
+      {
+        "episode_id": 48797,
+        "display_name": "Tráva S06E07 - Na horské dráze CZ Dabing",
+        "video_id": 27061504
+      },
+      {
+        "episode_id": 48765,
+        "display_name": "Tráva S06E12 - Fran Tarkenton CZ Titulky",
+        "video_id": 27061530
+      },
+      {
+        "episode_id": 48771,
+        "display_name": "Tráva S07E07 - Zápas mezi firmami CZ Dabing",
+        "video_id": 27061550
+      },
+      {
+        "episode_id": 48773,
+        "display_name": "Tráva S07E09 - Kočky, kočky CZ Dabing",
+        "video_id": 27061587
+      },
+      {
+        "episode_id": 48775,
+        "display_name": "Tráva S07E10 - Vzhůru nohama CZ Dabing",
+        "video_id": 27061771
+      },
+      {
+        "episode_id": 48779,
+        "display_name": "Tráva S08E02 - Sluneční paprsek CZ Titulky",
+        "video_id": 27061867
+      },
+      {
+        "episode_id": 48787,
+        "display_name": "Tráva S08E10 - Přes práh CZ Dabing",
+        "video_id": 27061893
+      },
+      {
+        "episode_id": 48789,
+        "display_name": "Tráva S08E12 - Je čas, část první CZ Dabing",
+        "video_id": 27061912
+      },
+      {
+        "episode_id": 70339,
+        "display_name": "Služka S01E01 - Za babku CZ Titulky",
+        "video_id": 27061935
+      },
+      {
+        "episode_id": 70333,
+        "display_name": "Služka S01E04 - Kašmír CZ Dabing",
+        "video_id": 27061957
+      },
+      {
+        "episode_id": 70335,
+        "display_name": "Služka S01E07 - Malý koník CZ Dabing",
+        "video_id": 27061983
+      },
+      {
+        "episode_id": 70337,
+        "display_name": "Služka S01E09 - Nebeská modř CZ Dabing",
+        "video_id": 27062010
+      },
+      {
+        "episode_id": 4223,
+        "display_name": "Titans S01E11 - Dick Grayson CZ Dabing",
+        "video_id": 27062061
+      },
+      {
+        "episode_id": 4229,
+        "display_name": "Titans S02E04 - Aqualad CZ Dabing",
+        "video_id": 27062095
+      },
+      {
+        "episode_id": 4239,
+        "display_name": "Titans S03E04 - Blackfire CZ Dabing",
+        "video_id": 27062121
+      },
+      {
+        "episode_id": 9861,
+        "display_name": "Titans S03E05 - Lazarus CZ Titulky",
+        "video_id": 27062141
       }
     ],
     "prepared_not_upload_ready": [
@@ -98932,14 +99302,15 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 40
+    "disabled": 95,
+    "ok": 20
   },
   "whisper_review_statuses": {
     "whisper_non_cz_needs_subtitles": 357,
-    "needs_whisper": 8852,
+    "needs_whisper": 8865,
     "whisper_confirmed_cz": 43
   },
   "subtitle_followup_statuses": {
-    "needs_subtitle_setup_after_prehrajto_processing": 1637
+    "needs_subtitle_setup_after_prehrajto_processing": 1639
   }
 }
