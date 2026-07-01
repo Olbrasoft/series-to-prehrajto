@@ -2,44 +2,108 @@
   "counts": {
     "backlog_episodes": 180483,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 12942,
-    "prepared_source_episodes": 25248,
+    "uploaded_episodes": 12982,
+    "prepared_source_episodes": 25358,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 40,
-    "language_whisper_attempted_sources": 40,
-    "language_pending_whisper_sources": 2604,
-    "whisper_review_sources": 8098,
-    "whisper_review_pending_sources": 7778,
-    "subtitle_followup_sources": 1357,
-    "subtitle_followup_pending_sources": 1357
+    "language_audited_sources": 161,
+    "language_whisper_attempted_sources": 20,
+    "language_pending_whisper_sources": 2624,
+    "whisper_review_sources": 8258,
+    "whisper_review_pending_sources": 7938,
+    "subtitle_followup_sources": 1382,
+    "subtitle_followup_pending_sources": 1382
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-07-01T14:18:40Z",
-      "databaseId": 28524341200,
+      "createdAt": "2026-07-01T15:08:38Z",
+      "databaseId": 28527538743,
       "headBranch": "main",
       "status": "in_progress",
-      "workflowName": "ops-status"
+      "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
-      "createdAt": "2026-07-01T14:18:06Z",
-      "databaseId": 28524303586,
+      "createdAt": "2026-07-01T15:08:32Z",
+      "databaseId": 28527532820,
       "headBranch": "main",
       "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-01T14:27:57Z",
+      "databaseId": 28524933809,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-01T14:25:17Z",
+      "databaseId": 28524760585,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-sources"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-01T14:24:02Z",
+      "databaseId": 28524683925,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-01T14:23:49Z",
+      "databaseId": 28524670416,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-01T14:23:39Z",
+      "databaseId": 28524659602,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-01T14:21:23Z",
+      "databaseId": 28524514621,
+      "headBranch": "main",
+      "status": "completed",
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
+      "createdAt": "2026-07-01T14:18:40Z",
+      "databaseId": 28524341200,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-01T14:18:06Z",
+      "databaseId": 28524303586,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-01T14:18:02Z",
       "databaseId": 28524299568,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -51,11 +115,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-01T14:17:05Z",
       "databaseId": 28524237796,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -75,11 +139,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-01T14:02:17Z",
       "databaseId": 28523285878,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
@@ -91,11 +155,11 @@
       "workflowName": "audit-language"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-01T14:02:11Z",
       "databaseId": 28523279759,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -113,70 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-01T13:29:37Z",
-      "databaseId": 28521198810,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-01T13:28:45Z",
-      "databaseId": 28521145500,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-01T13:28:37Z",
-      "databaseId": 28521135903,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-01T13:27:37Z",
-      "databaseId": 28521071107,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-sources"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-01T13:27:17Z",
-      "databaseId": 28521050836,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-01T13:27:11Z",
-      "databaseId": 28521043745,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-01T13:26:12Z",
-      "databaseId": 28520977335,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-01T13:25:59Z",
-      "databaseId": 28520963484,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
     }
   ],
   "gaps": {
@@ -42639,6 +42639,206 @@
         "episode_id": 49653,
         "display_name": "Orphan Black S02E04 - Governed As It Were By Chance CZ Titulky",
         "video_id": 27047645
+      },
+      {
+        "episode_id": 49644,
+        "display_name": "Orphan Black S01E05 - Conditions of Existence CZ Titulky",
+        "video_id": 27048077
+      },
+      {
+        "episode_id": 49646,
+        "display_name": "Orphan Black S01E07 - Parts Developed in an Unusual Manner CZ Titulky",
+        "video_id": 27048145
+      },
+      {
+        "episode_id": 49648,
+        "display_name": "Orphan Black S01E09 - Unconscious Selection CZ Titulky",
+        "video_id": 27048204
+      },
+      {
+        "episode_id": 49650,
+        "display_name": "Orphan Black S02E01 - Nature Under Constraint and Vexed CZ Titulky",
+        "video_id": 27048275
+      },
+      {
+        "episode_id": 49652,
+        "display_name": "Orphan Black S02E03 - Mingling Its Own Nature with It CZ Titulky",
+        "video_id": 27048339
+      },
+      {
+        "episode_id": 49654,
+        "display_name": "Orphan Black S02E05 - Ipsa Scientia Potestas Est CZ Titulky",
+        "video_id": 27048416
+      },
+      {
+        "episode_id": 49674,
+        "display_name": "Orphan Black S02E07 - Knowledge of Causes, and Secret Motion of Things CZ Titulky",
+        "video_id": 27048471
+      },
+      {
+        "episode_id": 49656,
+        "display_name": "Orphan Black S02E08 - Variable and Full of Perturbation CZ Titulky",
+        "video_id": 27048525
+      },
+      {
+        "episode_id": 49658,
+        "display_name": "Orphan Black S02E10 - By Means Which Have Never Yet Been Tried CZ Titulky",
+        "video_id": 27048592
+      },
+      {
+        "episode_id": 49676,
+        "display_name": "Orphan Black S03E02 - Transitory Sacrifices of Crisis CZ Titulky",
+        "video_id": 27048707
+      },
+      {
+        "episode_id": 49660,
+        "display_name": "Orphan Black S03E03 - Formalized, Complex, and Costly CZ Titulky",
+        "video_id": 27048800
+      },
+      {
+        "episode_id": 49662,
+        "display_name": "Orphan Black S03E05 - Scarred by Many Past Frustrations CZ Titulky",
+        "video_id": 27048905
+      },
+      {
+        "episode_id": 49664,
+        "display_name": "Orphan Black S03E07 - Community of Dreadful Fear and Hate CZ Titulky",
+        "video_id": 27048978
+      },
+      {
+        "episode_id": 49666,
+        "display_name": "Orphan Black S03E09 - Insolvent Phantom of Tomorrow CZ Titulky",
+        "video_id": 27049054
+      },
+      {
+        "episode_id": 49672,
+        "display_name": "Orphan Black S04E01 - The Collapse of Nature CZ Titulky",
+        "video_id": 27049127
+      },
+      {
+        "episode_id": 49668,
+        "display_name": "Orphan Black S04E03 - The Stigmata of Progress CZ Titulky",
+        "video_id": 27049205
+      },
+      {
+        "episode_id": 49678,
+        "display_name": "Orphan Black S04E05 - Human Raw Material CZ Titulky",
+        "video_id": 27049270
+      },
+      {
+        "episode_id": 49670,
+        "display_name": "Orphan Black S04E07 - The Antisocialism of Sex CZ Titulky",
+        "video_id": 27049341
+      },
+      {
+        "episode_id": 49680,
+        "display_name": "Orphan Black S05E01 - The Few Who Dare CZ Titulky",
+        "video_id": 27049453
+      },
+      {
+        "episode_id": 49682,
+        "display_name": "Orphan Black S05E03 - Beneath Her Heart CZ Titulky",
+        "video_id": 27049606
+      },
+      {
+        "episode_id": 49655,
+        "display_name": "Orphan Black S02E06 - To Hound Nature in Her Wanderings CZ Titulky",
+        "video_id": 27048073
+      },
+      {
+        "episode_id": 49657,
+        "display_name": "Orphan Black S02E09 - Things Which Have Never Yet Been Done CZ Titulky",
+        "video_id": 27048127
+      },
+      {
+        "episode_id": 49659,
+        "display_name": "Orphan Black S03E01 - The Weight of This Combination CZ Titulky",
+        "video_id": 27048177
+      },
+      {
+        "episode_id": 49661,
+        "display_name": "Orphan Black S03E04 - Newer Elements of Our Defense CZ Titulky",
+        "video_id": 27048229
+      },
+      {
+        "episode_id": 49663,
+        "display_name": "Orphan Black S03E06 - Certain Agony of the Battlefield CZ Titulky",
+        "video_id": 27048281
+      },
+      {
+        "episode_id": 49665,
+        "display_name": "Orphan Black S03E08 - Ruthless in Purpose, and Insidious in Method CZ Titulky",
+        "video_id": 27048326
+      },
+      {
+        "episode_id": 49667,
+        "display_name": "Orphan Black S03E10 - History Yet to Be Written CZ Titulky",
+        "video_id": 27048381
+      },
+      {
+        "episode_id": 49675,
+        "display_name": "Orphan Black S04E02 - Transgressive Border Crossing CZ Titulky",
+        "video_id": 27048483
+      },
+      {
+        "episode_id": 49669,
+        "display_name": "Orphan Black S04E04 - From Instinct to Rational Control CZ Titulky",
+        "video_id": 27048549
+      },
+      {
+        "episode_id": 49679,
+        "display_name": "Orphan Black S04E06 - The Scandal of Altruism CZ Titulky",
+        "video_id": 27048615
+      },
+      {
+        "episode_id": 49671,
+        "display_name": "Orphan Black S04E08 - The Redesign of Natural Objects CZ Titulky",
+        "video_id": 27048773
+      },
+      {
+        "episode_id": 49673,
+        "display_name": "Orphan Black S04E09 - The Mitigation of Competition CZ Titulky",
+        "video_id": 27048839
+      },
+      {
+        "episode_id": 49677,
+        "display_name": "Orphan Black S04E10 - From Dancing Mice to Psychopaths CZ Titulky",
+        "video_id": 27048925
+      },
+      {
+        "episode_id": 49681,
+        "display_name": "Orphan Black S05E02 - Clutch of Greed CZ Titulky",
+        "video_id": 27049051
+      },
+      {
+        "episode_id": 49683,
+        "display_name": "Orphan Black S05E04 - Let the Children and Childbearers Toil CZ Titulky",
+        "video_id": 27049297
+      },
+      {
+        "episode_id": 49685,
+        "display_name": "Orphan Black S05E06 - Manacled Slim Wrists CZ Titulky",
+        "video_id": 27049365
+      },
+      {
+        "episode_id": 35213,
+        "display_name": "Muž z Vysokého zámku S01E06 - Tři opice CZ Titulky",
+        "video_id": 27049435
+      },
+      {
+        "episode_id": 35215,
+        "display_name": "Muž z Vysokého zámku S01E08 - Konec světa CZ Dabing",
+        "video_id": 27049557
+      },
+      {
+        "episode_id": 35221,
+        "display_name": "Muž z Vysokého zámku S02E04 - Zostření CZ Titulky",
+        "video_id": 27049649
+      },
+      {
+        "episode_id": 35225,
+        "display_name": "Muž z Vysokého zámku S02E08 - Nepřítel naslouchá CZ Titulky",
+        "video_id": 27049720
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -95941,6 +96141,206 @@
         "episode_id": 49653,
         "display_name": "Orphan Black S02E04 - Governed As It Were By Chance CZ Titulky",
         "video_id": 27047645
+      },
+      {
+        "episode_id": 49644,
+        "display_name": "Orphan Black S01E05 - Conditions of Existence CZ Titulky",
+        "video_id": 27048077
+      },
+      {
+        "episode_id": 49646,
+        "display_name": "Orphan Black S01E07 - Parts Developed in an Unusual Manner CZ Titulky",
+        "video_id": 27048145
+      },
+      {
+        "episode_id": 49648,
+        "display_name": "Orphan Black S01E09 - Unconscious Selection CZ Titulky",
+        "video_id": 27048204
+      },
+      {
+        "episode_id": 49650,
+        "display_name": "Orphan Black S02E01 - Nature Under Constraint and Vexed CZ Titulky",
+        "video_id": 27048275
+      },
+      {
+        "episode_id": 49652,
+        "display_name": "Orphan Black S02E03 - Mingling Its Own Nature with It CZ Titulky",
+        "video_id": 27048339
+      },
+      {
+        "episode_id": 49654,
+        "display_name": "Orphan Black S02E05 - Ipsa Scientia Potestas Est CZ Titulky",
+        "video_id": 27048416
+      },
+      {
+        "episode_id": 49674,
+        "display_name": "Orphan Black S02E07 - Knowledge of Causes, and Secret Motion of Things CZ Titulky",
+        "video_id": 27048471
+      },
+      {
+        "episode_id": 49656,
+        "display_name": "Orphan Black S02E08 - Variable and Full of Perturbation CZ Titulky",
+        "video_id": 27048525
+      },
+      {
+        "episode_id": 49658,
+        "display_name": "Orphan Black S02E10 - By Means Which Have Never Yet Been Tried CZ Titulky",
+        "video_id": 27048592
+      },
+      {
+        "episode_id": 49676,
+        "display_name": "Orphan Black S03E02 - Transitory Sacrifices of Crisis CZ Titulky",
+        "video_id": 27048707
+      },
+      {
+        "episode_id": 49660,
+        "display_name": "Orphan Black S03E03 - Formalized, Complex, and Costly CZ Titulky",
+        "video_id": 27048800
+      },
+      {
+        "episode_id": 49662,
+        "display_name": "Orphan Black S03E05 - Scarred by Many Past Frustrations CZ Titulky",
+        "video_id": 27048905
+      },
+      {
+        "episode_id": 49664,
+        "display_name": "Orphan Black S03E07 - Community of Dreadful Fear and Hate CZ Titulky",
+        "video_id": 27048978
+      },
+      {
+        "episode_id": 49666,
+        "display_name": "Orphan Black S03E09 - Insolvent Phantom of Tomorrow CZ Titulky",
+        "video_id": 27049054
+      },
+      {
+        "episode_id": 49672,
+        "display_name": "Orphan Black S04E01 - The Collapse of Nature CZ Titulky",
+        "video_id": 27049127
+      },
+      {
+        "episode_id": 49668,
+        "display_name": "Orphan Black S04E03 - The Stigmata of Progress CZ Titulky",
+        "video_id": 27049205
+      },
+      {
+        "episode_id": 49678,
+        "display_name": "Orphan Black S04E05 - Human Raw Material CZ Titulky",
+        "video_id": 27049270
+      },
+      {
+        "episode_id": 49670,
+        "display_name": "Orphan Black S04E07 - The Antisocialism of Sex CZ Titulky",
+        "video_id": 27049341
+      },
+      {
+        "episode_id": 49680,
+        "display_name": "Orphan Black S05E01 - The Few Who Dare CZ Titulky",
+        "video_id": 27049453
+      },
+      {
+        "episode_id": 49682,
+        "display_name": "Orphan Black S05E03 - Beneath Her Heart CZ Titulky",
+        "video_id": 27049606
+      },
+      {
+        "episode_id": 49655,
+        "display_name": "Orphan Black S02E06 - To Hound Nature in Her Wanderings CZ Titulky",
+        "video_id": 27048073
+      },
+      {
+        "episode_id": 49657,
+        "display_name": "Orphan Black S02E09 - Things Which Have Never Yet Been Done CZ Titulky",
+        "video_id": 27048127
+      },
+      {
+        "episode_id": 49659,
+        "display_name": "Orphan Black S03E01 - The Weight of This Combination CZ Titulky",
+        "video_id": 27048177
+      },
+      {
+        "episode_id": 49661,
+        "display_name": "Orphan Black S03E04 - Newer Elements of Our Defense CZ Titulky",
+        "video_id": 27048229
+      },
+      {
+        "episode_id": 49663,
+        "display_name": "Orphan Black S03E06 - Certain Agony of the Battlefield CZ Titulky",
+        "video_id": 27048281
+      },
+      {
+        "episode_id": 49665,
+        "display_name": "Orphan Black S03E08 - Ruthless in Purpose, and Insidious in Method CZ Titulky",
+        "video_id": 27048326
+      },
+      {
+        "episode_id": 49667,
+        "display_name": "Orphan Black S03E10 - History Yet to Be Written CZ Titulky",
+        "video_id": 27048381
+      },
+      {
+        "episode_id": 49675,
+        "display_name": "Orphan Black S04E02 - Transgressive Border Crossing CZ Titulky",
+        "video_id": 27048483
+      },
+      {
+        "episode_id": 49669,
+        "display_name": "Orphan Black S04E04 - From Instinct to Rational Control CZ Titulky",
+        "video_id": 27048549
+      },
+      {
+        "episode_id": 49679,
+        "display_name": "Orphan Black S04E06 - The Scandal of Altruism CZ Titulky",
+        "video_id": 27048615
+      },
+      {
+        "episode_id": 49671,
+        "display_name": "Orphan Black S04E08 - The Redesign of Natural Objects CZ Titulky",
+        "video_id": 27048773
+      },
+      {
+        "episode_id": 49673,
+        "display_name": "Orphan Black S04E09 - The Mitigation of Competition CZ Titulky",
+        "video_id": 27048839
+      },
+      {
+        "episode_id": 49677,
+        "display_name": "Orphan Black S04E10 - From Dancing Mice to Psychopaths CZ Titulky",
+        "video_id": 27048925
+      },
+      {
+        "episode_id": 49681,
+        "display_name": "Orphan Black S05E02 - Clutch of Greed CZ Titulky",
+        "video_id": 27049051
+      },
+      {
+        "episode_id": 49683,
+        "display_name": "Orphan Black S05E04 - Let the Children and Childbearers Toil CZ Titulky",
+        "video_id": 27049297
+      },
+      {
+        "episode_id": 49685,
+        "display_name": "Orphan Black S05E06 - Manacled Slim Wrists CZ Titulky",
+        "video_id": 27049365
+      },
+      {
+        "episode_id": 35213,
+        "display_name": "Muž z Vysokého zámku S01E06 - Tři opice CZ Titulky",
+        "video_id": 27049435
+      },
+      {
+        "episode_id": 35215,
+        "display_name": "Muž z Vysokého zámku S01E08 - Konec světa CZ Dabing",
+        "video_id": 27049557
+      },
+      {
+        "episode_id": 35221,
+        "display_name": "Muž z Vysokého zámku S02E04 - Zostření CZ Titulky",
+        "video_id": 27049649
+      },
+      {
+        "episode_id": 35225,
+        "display_name": "Muž z Vysokého zámku S02E08 - Nepřítel naslouchá CZ Titulky",
+        "video_id": 27049720
       }
     ],
     "prepared_not_upload_ready": [
@@ -97102,14 +97502,15 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 40
+    "disabled": 141,
+    "ok": 20
   },
   "whisper_review_statuses": {
     "whisper_non_cz_needs_subtitles": 277,
-    "needs_whisper": 7778,
+    "needs_whisper": 7938,
     "whisper_confirmed_cz": 43
   },
   "subtitle_followup_statuses": {
-    "needs_subtitle_setup_after_prehrajto_processing": 1357
+    "needs_subtitle_setup_after_prehrajto_processing": 1382
   }
 }
