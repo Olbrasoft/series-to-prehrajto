@@ -1,37 +1,77 @@
 {
   "counts": {
-    "backlog_episodes": 181273,
+    "backlog_episodes": 181018,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 12342,
-    "prepared_source_episodes": 23728,
+    "uploaded_episodes": 12375,
+    "prepared_source_episodes": 23778,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 80,
+    "language_audited_sources": 75,
     "language_whisper_attempted_sources": 40,
     "language_pending_whisper_sources": 2604,
-    "whisper_review_sources": 6045,
-    "whisper_review_pending_sources": 5805,
+    "whisper_review_sources": 6118,
+    "whisper_review_pending_sources": 5878,
     "subtitle_followup_sources": 1052,
     "subtitle_followup_pending_sources": 1052
   },
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-07-01T05:03:29Z",
+      "databaseId": 28494793767,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-01T04:39:07Z",
+      "databaseId": 28493920445,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "refresh-backlog"
+    },
+    {
+      "conclusion": "failure",
+      "createdAt": "2026-07-01T04:33:23Z",
+      "databaseId": 28493716105,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-01T04:32:50Z",
+      "databaseId": 28493696035,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-01T04:32:46Z",
+      "databaseId": 28493693873,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-01T04:31:54Z",
       "databaseId": 28493663306,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-07-01T04:31:50Z",
       "databaseId": 28493660771,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -51,11 +91,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-01T04:18:27Z",
       "databaseId": 28493188190,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
@@ -67,11 +107,11 @@
       "workflowName": "audit-language"
     },
     {
-      "conclusion": "",
+      "conclusion": "failure",
       "createdAt": "2026-07-01T04:18:23Z",
       "databaseId": 28493185517,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -103,7 +143,7 @@
       "createdAt": "2026-07-01T03:51:07Z",
       "databaseId": 28492220826,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "prepare-descriptions"
     },
     {
@@ -134,46 +174,6 @@
       "conclusion": "success",
       "createdAt": "2026-07-01T03:42:42Z",
       "databaseId": 28491932142,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-01T03:42:40Z",
-      "databaseId": 28491931192,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-01T03:41:51Z",
-      "databaseId": 28491902430,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-07-01T03:41:46Z",
-      "databaseId": 28491899831,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-07-01T03:37:21Z",
-      "databaseId": 28491751337,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-01T03:36:35Z",
-      "databaseId": 28491725435,
       "headBranch": "main",
       "status": "completed",
       "workflowName": "update-descriptions"
@@ -39639,6 +39639,171 @@
         "episode_id": 10211,
         "display_name": "Grimm S04E04 - Ochránce z dávných dob CZ Dabing",
         "video_id": 27037040
+      },
+      {
+        "episode_id": 10204,
+        "display_name": "Grimm S04E11 - Smrt nás rozdělí CZ Dabing",
+        "video_id": 27037118
+      },
+      {
+        "episode_id": 10174,
+        "display_name": "Grimm S04E14 - Pacička pro štěstí CZ Dabing",
+        "video_id": 27037164
+      },
+      {
+        "episode_id": 10202,
+        "display_name": "Grimm S04E15 - Jedno tělo, jedna duše CZ Dabing",
+        "video_id": 27037218
+      },
+      {
+        "episode_id": 10200,
+        "display_name": "Grimm S04E17 - Hibernakulum CZ Dabing",
+        "video_id": 27037282
+      },
+      {
+        "episode_id": 10198,
+        "display_name": "Grimm S04E19 - Iron Hans CZ Dabing",
+        "video_id": 27037329
+      },
+      {
+        "episode_id": 10196,
+        "display_name": "Grimm S04E21 - Portál CZ Dabing",
+        "video_id": 27037373
+      },
+      {
+        "episode_id": 10194,
+        "display_name": "Grimm S05E01 - Totožnost: Grimm CZ Dabing",
+        "video_id": 27037412
+      },
+      {
+        "episode_id": 10192,
+        "display_name": "Grimm S05E03 - Ztracení chlapci CZ Dabing",
+        "video_id": 27037460
+      },
+      {
+        "episode_id": 10190,
+        "display_name": "Grimm S05E05 - Král krys CZ Dabing",
+        "video_id": 27037505
+      },
+      {
+        "episode_id": 10188,
+        "display_name": "Grimm S05E07 - V předvečer zkázy CZ Dabing",
+        "video_id": 27037552
+      },
+      {
+        "episode_id": 10186,
+        "display_name": "Grimm S05E08 - Jezerní příšera CZ Dabing",
+        "video_id": 27037601
+      },
+      {
+        "episode_id": 10172,
+        "display_name": "Grimm S05E11 - Klíčový krok CZ Dabing",
+        "video_id": 27037649
+      },
+      {
+        "episode_id": 10170,
+        "display_name": "Grimm S05E13 - Mocná maska CZ Dabing",
+        "video_id": 27037696
+      },
+      {
+        "episode_id": 10184,
+        "display_name": "Grimm S05E15 - Elixír mládí CZ Dabing",
+        "video_id": 27037737
+      },
+      {
+        "episode_id": 10182,
+        "display_name": "Grimm S05E17 - Inugami CZ Dabing",
+        "video_id": 27037790
+      },
+      {
+        "episode_id": 10168,
+        "display_name": "Grimm S05E20 - Zlá noc CZ Dabing",
+        "video_id": 27037830
+      },
+      {
+        "episode_id": 10209,
+        "display_name": "Grimm S04E06 - Dálnice plná slz CZ Dabing",
+        "video_id": 27037122
+      },
+      {
+        "episode_id": 10207,
+        "display_name": "Grimm S04E08 - Chupacabra CZ Dabing",
+        "video_id": 27037178
+      },
+      {
+        "episode_id": 10205,
+        "display_name": "Grimm S04E10 - Tribunál CZ Dabing",
+        "video_id": 27037226
+      },
+      {
+        "episode_id": 10203,
+        "display_name": "Grimm S04E12 - Lovec odměn CZ Dabing",
+        "video_id": 27037272
+      },
+      {
+        "episode_id": 10175,
+        "display_name": "Grimm S04E13 - Zkouška ohněm CZ Dabing",
+        "video_id": 27037310
+      },
+      {
+        "episode_id": 10201,
+        "display_name": "Grimm S04E16 - Políbit žábu CZ Dabing",
+        "video_id": 27037361
+      },
+      {
+        "episode_id": 10199,
+        "display_name": "Grimm S04E18 - Pouť síly CZ Dabing",
+        "video_id": 27037404
+      },
+      {
+        "episode_id": 10197,
+        "display_name": "Grimm S04E20 - To neznáte Jacka CZ Dabing",
+        "video_id": 27037448
+      },
+      {
+        "episode_id": 10195,
+        "display_name": "Grimm S04E22 - Za matku CZ Dabing",
+        "video_id": 27037486
+      },
+      {
+        "episode_id": 10193,
+        "display_name": "Grimm S05E02 - Wesen znamená nebezpečí CZ Dabing",
+        "video_id": 27037525
+      },
+      {
+        "episode_id": 10191,
+        "display_name": "Grimm S05E04 - Souboj o krásnou pannu CZ Dabing",
+        "video_id": 27037571
+      },
+      {
+        "episode_id": 10189,
+        "display_name": "Grimm S05E06 - Noc Wesenů CZ Dabing",
+        "video_id": 27037612
+      },
+      {
+        "episode_id": 10187,
+        "display_name": "Grimm S05E09 - Ukřižování CZ Dabing",
+        "video_id": 27037656
+      },
+      {
+        "episode_id": 10173,
+        "display_name": "Grimm S05E10 - Mapa sedmi rytířů CZ Dabing",
+        "video_id": 27037700
+      },
+      {
+        "episode_id": 10171,
+        "display_name": "Grimm S05E12 - V černém lese CZ Dabing",
+        "video_id": 27037745
+      },
+      {
+        "episode_id": 10185,
+        "display_name": "Grimm S05E14 - Lycanthropia CZ Dabing",
+        "video_id": 27037798
+      },
+      {
+        "episode_id": 10183,
+        "display_name": "Grimm S05E16 - Věřící CZ Dabing",
+        "video_id": 27037849
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -89941,6 +90106,171 @@
         "episode_id": 10211,
         "display_name": "Grimm S04E04 - Ochránce z dávných dob CZ Dabing",
         "video_id": 27037040
+      },
+      {
+        "episode_id": 10204,
+        "display_name": "Grimm S04E11 - Smrt nás rozdělí CZ Dabing",
+        "video_id": 27037118
+      },
+      {
+        "episode_id": 10174,
+        "display_name": "Grimm S04E14 - Pacička pro štěstí CZ Dabing",
+        "video_id": 27037164
+      },
+      {
+        "episode_id": 10202,
+        "display_name": "Grimm S04E15 - Jedno tělo, jedna duše CZ Dabing",
+        "video_id": 27037218
+      },
+      {
+        "episode_id": 10200,
+        "display_name": "Grimm S04E17 - Hibernakulum CZ Dabing",
+        "video_id": 27037282
+      },
+      {
+        "episode_id": 10198,
+        "display_name": "Grimm S04E19 - Iron Hans CZ Dabing",
+        "video_id": 27037329
+      },
+      {
+        "episode_id": 10196,
+        "display_name": "Grimm S04E21 - Portál CZ Dabing",
+        "video_id": 27037373
+      },
+      {
+        "episode_id": 10194,
+        "display_name": "Grimm S05E01 - Totožnost: Grimm CZ Dabing",
+        "video_id": 27037412
+      },
+      {
+        "episode_id": 10192,
+        "display_name": "Grimm S05E03 - Ztracení chlapci CZ Dabing",
+        "video_id": 27037460
+      },
+      {
+        "episode_id": 10190,
+        "display_name": "Grimm S05E05 - Král krys CZ Dabing",
+        "video_id": 27037505
+      },
+      {
+        "episode_id": 10188,
+        "display_name": "Grimm S05E07 - V předvečer zkázy CZ Dabing",
+        "video_id": 27037552
+      },
+      {
+        "episode_id": 10186,
+        "display_name": "Grimm S05E08 - Jezerní příšera CZ Dabing",
+        "video_id": 27037601
+      },
+      {
+        "episode_id": 10172,
+        "display_name": "Grimm S05E11 - Klíčový krok CZ Dabing",
+        "video_id": 27037649
+      },
+      {
+        "episode_id": 10170,
+        "display_name": "Grimm S05E13 - Mocná maska CZ Dabing",
+        "video_id": 27037696
+      },
+      {
+        "episode_id": 10184,
+        "display_name": "Grimm S05E15 - Elixír mládí CZ Dabing",
+        "video_id": 27037737
+      },
+      {
+        "episode_id": 10182,
+        "display_name": "Grimm S05E17 - Inugami CZ Dabing",
+        "video_id": 27037790
+      },
+      {
+        "episode_id": 10168,
+        "display_name": "Grimm S05E20 - Zlá noc CZ Dabing",
+        "video_id": 27037830
+      },
+      {
+        "episode_id": 10209,
+        "display_name": "Grimm S04E06 - Dálnice plná slz CZ Dabing",
+        "video_id": 27037122
+      },
+      {
+        "episode_id": 10207,
+        "display_name": "Grimm S04E08 - Chupacabra CZ Dabing",
+        "video_id": 27037178
+      },
+      {
+        "episode_id": 10205,
+        "display_name": "Grimm S04E10 - Tribunál CZ Dabing",
+        "video_id": 27037226
+      },
+      {
+        "episode_id": 10203,
+        "display_name": "Grimm S04E12 - Lovec odměn CZ Dabing",
+        "video_id": 27037272
+      },
+      {
+        "episode_id": 10175,
+        "display_name": "Grimm S04E13 - Zkouška ohněm CZ Dabing",
+        "video_id": 27037310
+      },
+      {
+        "episode_id": 10201,
+        "display_name": "Grimm S04E16 - Políbit žábu CZ Dabing",
+        "video_id": 27037361
+      },
+      {
+        "episode_id": 10199,
+        "display_name": "Grimm S04E18 - Pouť síly CZ Dabing",
+        "video_id": 27037404
+      },
+      {
+        "episode_id": 10197,
+        "display_name": "Grimm S04E20 - To neznáte Jacka CZ Dabing",
+        "video_id": 27037448
+      },
+      {
+        "episode_id": 10195,
+        "display_name": "Grimm S04E22 - Za matku CZ Dabing",
+        "video_id": 27037486
+      },
+      {
+        "episode_id": 10193,
+        "display_name": "Grimm S05E02 - Wesen znamená nebezpečí CZ Dabing",
+        "video_id": 27037525
+      },
+      {
+        "episode_id": 10191,
+        "display_name": "Grimm S05E04 - Souboj o krásnou pannu CZ Dabing",
+        "video_id": 27037571
+      },
+      {
+        "episode_id": 10189,
+        "display_name": "Grimm S05E06 - Noc Wesenů CZ Dabing",
+        "video_id": 27037612
+      },
+      {
+        "episode_id": 10187,
+        "display_name": "Grimm S05E09 - Ukřižování CZ Dabing",
+        "video_id": 27037656
+      },
+      {
+        "episode_id": 10173,
+        "display_name": "Grimm S05E10 - Mapa sedmi rytířů CZ Dabing",
+        "video_id": 27037700
+      },
+      {
+        "episode_id": 10171,
+        "display_name": "Grimm S05E12 - V černém lese CZ Dabing",
+        "video_id": 27037745
+      },
+      {
+        "episode_id": 10185,
+        "display_name": "Grimm S05E14 - Lycanthropia CZ Dabing",
+        "video_id": 27037798
+      },
+      {
+        "episode_id": 10183,
+        "display_name": "Grimm S05E16 - Věřící CZ Dabing",
+        "video_id": 27037849
       }
     ],
     "prepared_not_upload_ready": [
@@ -91102,13 +91432,13 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 40,
+    "disabled": 35,
     "ok": 40
   },
   "whisper_review_statuses": {
     "whisper_confirmed_cz": 43,
     "whisper_non_cz_needs_subtitles": 197,
-    "needs_whisper": 5805
+    "needs_whisper": 5878
   },
   "subtitle_followup_statuses": {
     "needs_subtitle_setup_after_prehrajto_processing": 1052
