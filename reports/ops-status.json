@@ -1,37 +1,85 @@
 {
   "counts": {
-    "backlog_episodes": 180664,
+    "backlog_episodes": 180483,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 12882,
-    "prepared_source_episodes": 25048,
+    "uploaded_episodes": 12884,
+    "prepared_source_episodes": 25078,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 781,
+    "language_audited_sources": 929,
     "language_whisper_attempted_sources": 110,
     "language_pending_whisper_sources": 2604,
-    "whisper_review_sources": 7591,
-    "whisper_review_pending_sources": 7291,
+    "whisper_review_sources": 7688,
+    "whisper_review_pending_sources": 7388,
     "subtitle_followup_sources": 1352,
     "subtitle_followup_pending_sources": 1352
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-07-01T13:10:07Z",
-      "databaseId": 28519963067,
+      "createdAt": "2026-07-01T13:12:09Z",
+      "databaseId": 28520093902,
       "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "refresh-backlog"
+      "status": "pending",
+      "workflowName": "process-whisper-review"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-07-01T13:11:50Z",
+      "databaseId": 28520073542,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-01T13:11:13Z",
+      "databaseId": 28520035262,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-01T13:10:34Z",
+      "databaseId": 28519993750,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-01T13:10:29Z",
+      "databaseId": 28519989014,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-01T13:10:27Z",
+      "databaseId": 28519986069,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-01T13:10:07Z",
+      "databaseId": 28519963067,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "refresh-backlog"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-01T13:09:34Z",
       "databaseId": 28519928721,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -43,11 +91,11 @@
       "workflowName": "ops-status"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-01T12:53:56Z",
       "databaseId": 28518967750,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -129,54 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-01T12:05:16Z",
-      "databaseId": 28516198766,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-01T12:04:53Z",
-      "databaseId": 28516177437,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-01T12:04:45Z",
-      "databaseId": 28516170191,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-01T12:04:34Z",
-      "databaseId": 28516159323,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-01T12:01:26Z",
-      "databaseId": 28515987991,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "failure",
-      "createdAt": "2026-07-01T11:55:31Z",
-      "databaseId": 28515660309,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
     }
   ],
   "gaps": {
@@ -42276,6 +42276,11 @@
         "video_id": 27046076
       },
       {
+        "episode_id": 45096,
+        "display_name": "Jak prosté S07E03 - Cena za dodání CZ Dabing",
+        "video_id": 27046148
+      },
+      {
         "episode_id": 45121,
         "display_name": "Jak prosté S07E05 - Lesní incident CZ Dabing",
         "video_id": 27045728
@@ -42339,6 +42344,11 @@
         "episode_id": 15663,
         "display_name": "Terapie pravdou S02E09 - Výraz dospělýho chlapa CZ Titulky",
         "video_id": 27046141
+      },
+      {
+        "episode_id": 31121,
+        "display_name": "Terapie pravdou S03E01 - Moje chyba CZ Titulky",
+        "video_id": 27046168
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -95278,6 +95288,11 @@
         "video_id": 27046076
       },
       {
+        "episode_id": 45096,
+        "display_name": "Jak prosté S07E03 - Cena za dodání CZ Dabing",
+        "video_id": 27046148
+      },
+      {
         "episode_id": 45121,
         "display_name": "Jak prosté S07E05 - Lesní incident CZ Dabing",
         "video_id": 27045728
@@ -95341,6 +95356,11 @@
         "episode_id": 15663,
         "display_name": "Terapie pravdou S02E09 - Výraz dospělýho chlapa CZ Titulky",
         "video_id": 27046141
+      },
+      {
+        "episode_id": 31121,
+        "display_name": "Terapie pravdou S03E01 - Moje chyba CZ Titulky",
+        "video_id": 27046168
       }
     ],
     "prepared_not_upload_ready": [
@@ -96502,11 +96522,11 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 671,
+    "disabled": 819,
     "ok": 110
   },
   "whisper_review_statuses": {
-    "needs_whisper": 7291,
+    "needs_whisper": 7388,
     "whisper_confirmed_cz": 43,
     "whisper_non_cz_needs_subtitles": 257
   },
