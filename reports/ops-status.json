@@ -2,36 +2,92 @@
   "counts": {
     "backlog_episodes": 179648,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 13731,
-    "prepared_source_episodes": 27818,
+    "uploaded_episodes": 13746,
+    "prepared_source_episodes": 27878,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 225,
+    "language_audited_sources": 40,
     "language_whisper_attempted_sources": 40,
     "language_pending_whisper_sources": 2604,
-    "whisper_review_sources": 10609,
-    "whisper_review_pending_sources": 10169,
-    "subtitle_followup_sources": 2073,
-    "subtitle_followup_pending_sources": 2073
+    "whisper_review_sources": 10666,
+    "whisper_review_pending_sources": 10226,
+    "subtitle_followup_sources": 2086,
+    "subtitle_followup_pending_sources": 2086
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-07-02T07:28:18Z",
-      "databaseId": 28573102047,
+      "createdAt": "2026-07-02T07:41:57Z",
+      "databaseId": 28573808322,
       "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "ops-watchdog"
+      "status": "pending",
+      "workflowName": "sync"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-07-02T07:41:38Z",
+      "databaseId": 28573791780,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-02T07:41:19Z",
+      "databaseId": 28573775384,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-02T07:40:41Z",
+      "databaseId": 28573741328,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-02T07:39:53Z",
+      "databaseId": 28573698615,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-02T07:29:14Z",
+      "databaseId": 28573152310,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-02T07:29:10Z",
+      "databaseId": 28573148172,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-02T07:28:18Z",
+      "databaseId": 28573102047,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-02T07:22:57Z",
       "databaseId": 28572824499,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
@@ -43,11 +99,11 @@
       "workflowName": "refresh-backlog"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-02T07:10:08Z",
       "databaseId": 28572173121,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -121,62 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-02T06:53:23Z",
-      "databaseId": 28571340070,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-07-02T06:52:10Z",
-      "databaseId": 28571281357,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-02T06:26:17Z",
-      "databaseId": 28570103281,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-02T06:18:51Z",
-      "databaseId": 28569769166,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-02T06:18:29Z",
-      "databaseId": 28569755997,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-02T06:18:25Z",
-      "databaseId": 28569752957,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-02T06:18:20Z",
-      "databaseId": 28569748690,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
     }
   ],
   "gaps": {
@@ -46536,6 +46536,46 @@
         "video_id": 27073715
       },
       {
+        "episode_id": 83984,
+        "display_name": "Ginny a Georgia S01E01 - Pilotní díl CZ Dabing",
+        "video_id": 27073754
+      },
+      {
+        "episode_id": 83986,
+        "display_name": "Ginny a Georgia S01E03 - Pěkná pracháčská krávovina CZ Dabing",
+        "video_id": 27073813
+      },
+      {
+        "episode_id": 83988,
+        "display_name": "Ginny a Georgia S01E05 - Bafiky baf CZ Titulky",
+        "video_id": 27073858
+      },
+      {
+        "episode_id": 83990,
+        "display_name": "Ginny a Georgia S01E07 - Veselý šestnáctiny, nádivo CZ Titulky",
+        "video_id": 27073891
+      },
+      {
+        "episode_id": 83992,
+        "display_name": "Ginny a Georgia S01E10 - Nejhorší zrada od dob Jordyn a Kylie CZ Titulky",
+        "video_id": 27073929
+      },
+      {
+        "episode_id": 83994,
+        "display_name": "Ginny a Georgia S02E02 - Proč musí být všechno pořád tak strašně příšerný? CZ Titulky",
+        "video_id": 27073973
+      },
+      {
+        "episode_id": 83996,
+        "display_name": "Ginny a Georgia S02E04 - Všechno nejlepší pro mě vám přeju CZ Titulky",
+        "video_id": 27074004
+      },
+      {
+        "episode_id": 83998,
+        "display_name": "Ginny a Georgia S02E06 - Ginny a Georgia, veselej vánoční speciál CZ Titulky",
+        "video_id": 27074049
+      },
+      {
         "episode_id": 83987,
         "display_name": "Ginny a Georgia S01E04 - Lydie Bennettová je stopro feministka CZ Titulky",
         "video_id": 27073491
@@ -46584,6 +46624,41 @@
         "episode_id": 84005,
         "display_name": "Ginny a Georgia S03E02 - Zatracený pípání CZ Dabing",
         "video_id": 27073686
+      },
+      {
+        "episode_id": 84007,
+        "display_name": "Ginny a Georgia S03E04 - Potvora je zpátky CZ Dabing",
+        "video_id": 27073741
+      },
+      {
+        "episode_id": 84009,
+        "display_name": "Ginny a Georgia S03E06 - Aspoň to už nemůže být horší CZ Dabing",
+        "video_id": 27073790
+      },
+      {
+        "episode_id": 84013,
+        "display_name": "Ginny a Georgia S03E07 - To je úlet CZ Dabing",
+        "video_id": 27073850
+      },
+      {
+        "episode_id": 84011,
+        "display_name": "Ginny a Georgia S03E09 - Teď přijde moje sólo CZ Dabing",
+        "video_id": 27073913
+      },
+      {
+        "episode_id": 90139,
+        "display_name": "Jak vyrobit vraha S02E03 - 3. epizoda CZ Titulky",
+        "video_id": 27074000
+      },
+      {
+        "episode_id": 90141,
+        "display_name": "Jak vyrobit vraha S02E05 - 5. epizoda CZ Titulky",
+        "video_id": 27074030
+      },
+      {
+        "episode_id": 90135,
+        "display_name": "Jak vyrobit vraha S02E06 - 6. epizoda CZ Titulky",
+        "video_id": 27074053
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -103783,6 +103858,46 @@
         "video_id": 27073715
       },
       {
+        "episode_id": 83984,
+        "display_name": "Ginny a Georgia S01E01 - Pilotní díl CZ Dabing",
+        "video_id": 27073754
+      },
+      {
+        "episode_id": 83986,
+        "display_name": "Ginny a Georgia S01E03 - Pěkná pracháčská krávovina CZ Dabing",
+        "video_id": 27073813
+      },
+      {
+        "episode_id": 83988,
+        "display_name": "Ginny a Georgia S01E05 - Bafiky baf CZ Titulky",
+        "video_id": 27073858
+      },
+      {
+        "episode_id": 83990,
+        "display_name": "Ginny a Georgia S01E07 - Veselý šestnáctiny, nádivo CZ Titulky",
+        "video_id": 27073891
+      },
+      {
+        "episode_id": 83992,
+        "display_name": "Ginny a Georgia S01E10 - Nejhorší zrada od dob Jordyn a Kylie CZ Titulky",
+        "video_id": 27073929
+      },
+      {
+        "episode_id": 83994,
+        "display_name": "Ginny a Georgia S02E02 - Proč musí být všechno pořád tak strašně příšerný? CZ Titulky",
+        "video_id": 27073973
+      },
+      {
+        "episode_id": 83996,
+        "display_name": "Ginny a Georgia S02E04 - Všechno nejlepší pro mě vám přeju CZ Titulky",
+        "video_id": 27074004
+      },
+      {
+        "episode_id": 83998,
+        "display_name": "Ginny a Georgia S02E06 - Ginny a Georgia, veselej vánoční speciál CZ Titulky",
+        "video_id": 27074049
+      },
+      {
         "episode_id": 83987,
         "display_name": "Ginny a Georgia S01E04 - Lydie Bennettová je stopro feministka CZ Titulky",
         "video_id": 27073491
@@ -103831,6 +103946,41 @@
         "episode_id": 84005,
         "display_name": "Ginny a Georgia S03E02 - Zatracený pípání CZ Dabing",
         "video_id": 27073686
+      },
+      {
+        "episode_id": 84007,
+        "display_name": "Ginny a Georgia S03E04 - Potvora je zpátky CZ Dabing",
+        "video_id": 27073741
+      },
+      {
+        "episode_id": 84009,
+        "display_name": "Ginny a Georgia S03E06 - Aspoň to už nemůže být horší CZ Dabing",
+        "video_id": 27073790
+      },
+      {
+        "episode_id": 84013,
+        "display_name": "Ginny a Georgia S03E07 - To je úlet CZ Dabing",
+        "video_id": 27073850
+      },
+      {
+        "episode_id": 84011,
+        "display_name": "Ginny a Georgia S03E09 - Teď přijde moje sólo CZ Dabing",
+        "video_id": 27073913
+      },
+      {
+        "episode_id": 90139,
+        "display_name": "Jak vyrobit vraha S02E03 - 3. epizoda CZ Titulky",
+        "video_id": 27074000
+      },
+      {
+        "episode_id": 90141,
+        "display_name": "Jak vyrobit vraha S02E05 - 5. epizoda CZ Titulky",
+        "video_id": 27074030
+      },
+      {
+        "episode_id": 90135,
+        "display_name": "Jak vyrobit vraha S02E06 - 6. epizoda CZ Titulky",
+        "video_id": 27074053
       }
     ],
     "prepared_not_upload_ready": [
@@ -104992,15 +105142,14 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 185,
     "ok": 40
   },
   "whisper_review_statuses": {
     "whisper_non_cz_needs_subtitles": 397,
-    "needs_whisper": 10169,
+    "needs_whisper": 10226,
     "whisper_confirmed_cz": 43
   },
   "subtitle_followup_statuses": {
-    "needs_subtitle_setup_after_prehrajto_processing": 2073
+    "needs_subtitle_setup_after_prehrajto_processing": 2086
   }
 }
