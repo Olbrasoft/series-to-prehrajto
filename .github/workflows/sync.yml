@@ -119,6 +119,7 @@ jobs:
           cp "$LOG" "$TMP_DIR/$LOG"
 
           for attempt in 1 2 3 4 5; do
+            rm -rf .git/rebase-merge .git/rebase-apply
             git fetch origin main
             git reset --hard origin/main
             mkdir -p state
