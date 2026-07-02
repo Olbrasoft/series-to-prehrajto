@@ -2,28 +2,84 @@
   "counts": {
     "backlog_episodes": 179514,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 13941,
-    "prepared_source_episodes": 28538,
+    "uploaded_episodes": 13968,
+    "prepared_source_episodes": 28598,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 20,
-    "language_whisper_attempted_sources": 20,
-    "language_pending_whisper_sources": 2624,
-    "whisper_review_sources": 11157,
-    "whisper_review_pending_sources": 10617,
-    "subtitle_followup_sources": 2172,
-    "subtitle_followup_pending_sources": 2172
+    "language_audited_sources": 229,
+    "language_whisper_attempted_sources": 60,
+    "language_pending_whisper_sources": 2604,
+    "whisper_review_sources": 11298,
+    "whisper_review_pending_sources": 10738,
+    "subtitle_followup_sources": 2175,
+    "subtitle_followup_pending_sources": 2175
   },
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-07-02T12:49:25Z",
+      "databaseId": 28591277041,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "refresh-backlog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-02T12:49:17Z",
+      "databaseId": 28591269019,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-02T12:49:11Z",
+      "databaseId": 28591262791,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-02T12:31:03Z",
+      "databaseId": 28590146027,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-02T12:24:58Z",
+      "databaseId": 28589782462,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-02T12:24:55Z",
+      "databaseId": 28589778855,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-02T12:24:52Z",
+      "databaseId": 28589775880,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-02T12:23:52Z",
       "databaseId": 28589716216,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -107,11 +163,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-02T12:06:59Z",
       "databaseId": 28588724400,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -121,62 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-02T12:03:24Z",
-      "databaseId": 28588505274,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-02T11:57:22Z",
-      "databaseId": 28588146737,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-02T11:48:00Z",
-      "databaseId": 28587617372,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-02T11:38:16Z",
-      "databaseId": 28587076097,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-02T11:37:19Z",
-      "databaseId": 28587024138,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-02T11:37:16Z",
-      "databaseId": 28587021245,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-02T11:37:13Z",
-      "databaseId": 28587018955,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
     }
   ],
   "gaps": {
@@ -47601,6 +47601,76 @@
         "video_id": 27081147
       },
       {
+        "episode_id": 5066,
+        "display_name": "Legion S01E01 - Kapitola 1 CZ Titulky",
+        "video_id": 27081211
+      },
+      {
+        "episode_id": 5068,
+        "display_name": "Legion S01E04 - Kapitola 4 CZ Titulky",
+        "video_id": 27081216
+      },
+      {
+        "episode_id": 5070,
+        "display_name": "Legion S01E07 - Kapitola 7 CZ Titulky",
+        "video_id": 27081224
+      },
+      {
+        "episode_id": 5054,
+        "display_name": "Legion S02E02 - Kapitola 10 CZ Dabing",
+        "video_id": 27081242
+      },
+      {
+        "episode_id": 5056,
+        "display_name": "Legion S02E04 - Kapitola 12 CZ Dabing",
+        "video_id": 27081264
+      },
+      {
+        "episode_id": 5062,
+        "display_name": "Legion S02E10 - Kapitola 18 CZ Titulky",
+        "video_id": 27081288
+      },
+      {
+        "episode_id": 5074,
+        "display_name": "Legion S03E03 - Kapitola 22 CZ Dabing",
+        "video_id": 27081298
+      },
+      {
+        "episode_id": 5076,
+        "display_name": "Legion S03E05 - Kapitola 24 CZ Titulky",
+        "video_id": 27081322
+      },
+      {
+        "episode_id": 5078,
+        "display_name": "Legion S03E07 - Kapitola 26 CZ Titulky",
+        "video_id": 27081367
+      },
+      {
+        "episode_id": 23848,
+        "display_name": "Frasier S01E03 - Večeři platí snob CZ Dabing",
+        "video_id": 27081387
+      },
+      {
+        "episode_id": 23850,
+        "display_name": "Frasier S01E05 - Dalekohled CZ Dabing",
+        "video_id": 27081408
+      },
+      {
+        "episode_id": 23852,
+        "display_name": "Frasier S01E07 - Říkejte mi nezodpovědný CZ Dabing",
+        "video_id": 27081415
+      },
+      {
+        "episode_id": 23854,
+        "display_name": "Frasier S01E09 - Morální dilema CZ Dabing",
+        "video_id": 27081428
+      },
+      {
+        "episode_id": 23856,
+        "display_name": "Frasier S01E11 - Smrt mu sluší CZ Dabing",
+        "video_id": 27081434
+      },
+      {
         "episode_id": 52583,
         "display_name": "O.C. S01E11 - Návrat domů CZ Dabing",
         "video_id": 27081013
@@ -47634,6 +47704,71 @@
         "episode_id": 52601,
         "display_name": "O.C. S02E03 - Nováčci CZ Dabing",
         "video_id": 27081148
+      },
+      {
+        "episode_id": 52603,
+        "display_name": "O.C. S02E05 - Zimní ples CZ Titulky",
+        "video_id": 27081184
+      },
+      {
+        "episode_id": 52607,
+        "display_name": "O.C. S02E10 - Komplic CZ Dabing",
+        "video_id": 27081209
+      },
+      {
+        "episode_id": 52609,
+        "display_name": "O.C. S02E11 - Druhá šance CZ Dabing",
+        "video_id": 27081221
+      },
+      {
+        "episode_id": 52613,
+        "display_name": "O.C. S02E15 - Obchodní dům CZ Dabing",
+        "video_id": 27081244
+      },
+      {
+        "episode_id": 52615,
+        "display_name": "O.C. S02E17 - Chmurní bratři CZ Dabing",
+        "video_id": 27081281
+      },
+      {
+        "episode_id": 52617,
+        "display_name": "O.C. S02E20 - Tajná operace CZ Dabing",
+        "video_id": 27081302
+      },
+      {
+        "episode_id": 52619,
+        "display_name": "O.C. S02E22 - Zúčtování CZ Titulky",
+        "video_id": 27081326
+      },
+      {
+        "episode_id": 52621,
+        "display_name": "O.C. S02E24 - Loučení CZ Dabing",
+        "video_id": 27081388
+      },
+      {
+        "episode_id": 52653,
+        "display_name": "O.C. S03E02 - Tvar věcí, co přijdou CZ Titulky",
+        "video_id": 27081431
+      },
+      {
+        "episode_id": 52657,
+        "display_name": "O.C. S03E07 - Sebeovládání CZ Dabing",
+        "video_id": 27081472
+      },
+      {
+        "episode_id": 52647,
+        "display_name": "O.C. S03E11 - Bezpečný přístav CZ Dabing",
+        "video_id": 27081511
+      },
+      {
+        "episode_id": 52631,
+        "display_name": "O.C. S03E12 - Sestra v akci CZ Dabing",
+        "video_id": 27081543
+      },
+      {
+        "episode_id": 52643,
+        "display_name": "O.C. S03E15 - Těžká váha CZ Titulky",
+        "video_id": 27081569
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -105898,6 +106033,76 @@
         "video_id": 27081147
       },
       {
+        "episode_id": 5066,
+        "display_name": "Legion S01E01 - Kapitola 1 CZ Titulky",
+        "video_id": 27081211
+      },
+      {
+        "episode_id": 5068,
+        "display_name": "Legion S01E04 - Kapitola 4 CZ Titulky",
+        "video_id": 27081216
+      },
+      {
+        "episode_id": 5070,
+        "display_name": "Legion S01E07 - Kapitola 7 CZ Titulky",
+        "video_id": 27081224
+      },
+      {
+        "episode_id": 5054,
+        "display_name": "Legion S02E02 - Kapitola 10 CZ Dabing",
+        "video_id": 27081242
+      },
+      {
+        "episode_id": 5056,
+        "display_name": "Legion S02E04 - Kapitola 12 CZ Dabing",
+        "video_id": 27081264
+      },
+      {
+        "episode_id": 5062,
+        "display_name": "Legion S02E10 - Kapitola 18 CZ Titulky",
+        "video_id": 27081288
+      },
+      {
+        "episode_id": 5074,
+        "display_name": "Legion S03E03 - Kapitola 22 CZ Dabing",
+        "video_id": 27081298
+      },
+      {
+        "episode_id": 5076,
+        "display_name": "Legion S03E05 - Kapitola 24 CZ Titulky",
+        "video_id": 27081322
+      },
+      {
+        "episode_id": 5078,
+        "display_name": "Legion S03E07 - Kapitola 26 CZ Titulky",
+        "video_id": 27081367
+      },
+      {
+        "episode_id": 23848,
+        "display_name": "Frasier S01E03 - Večeři platí snob CZ Dabing",
+        "video_id": 27081387
+      },
+      {
+        "episode_id": 23850,
+        "display_name": "Frasier S01E05 - Dalekohled CZ Dabing",
+        "video_id": 27081408
+      },
+      {
+        "episode_id": 23852,
+        "display_name": "Frasier S01E07 - Říkejte mi nezodpovědný CZ Dabing",
+        "video_id": 27081415
+      },
+      {
+        "episode_id": 23854,
+        "display_name": "Frasier S01E09 - Morální dilema CZ Dabing",
+        "video_id": 27081428
+      },
+      {
+        "episode_id": 23856,
+        "display_name": "Frasier S01E11 - Smrt mu sluší CZ Dabing",
+        "video_id": 27081434
+      },
+      {
         "episode_id": 52583,
         "display_name": "O.C. S01E11 - Návrat domů CZ Dabing",
         "video_id": 27081013
@@ -105931,6 +106136,71 @@
         "episode_id": 52601,
         "display_name": "O.C. S02E03 - Nováčci CZ Dabing",
         "video_id": 27081148
+      },
+      {
+        "episode_id": 52603,
+        "display_name": "O.C. S02E05 - Zimní ples CZ Titulky",
+        "video_id": 27081184
+      },
+      {
+        "episode_id": 52607,
+        "display_name": "O.C. S02E10 - Komplic CZ Dabing",
+        "video_id": 27081209
+      },
+      {
+        "episode_id": 52609,
+        "display_name": "O.C. S02E11 - Druhá šance CZ Dabing",
+        "video_id": 27081221
+      },
+      {
+        "episode_id": 52613,
+        "display_name": "O.C. S02E15 - Obchodní dům CZ Dabing",
+        "video_id": 27081244
+      },
+      {
+        "episode_id": 52615,
+        "display_name": "O.C. S02E17 - Chmurní bratři CZ Dabing",
+        "video_id": 27081281
+      },
+      {
+        "episode_id": 52617,
+        "display_name": "O.C. S02E20 - Tajná operace CZ Dabing",
+        "video_id": 27081302
+      },
+      {
+        "episode_id": 52619,
+        "display_name": "O.C. S02E22 - Zúčtování CZ Titulky",
+        "video_id": 27081326
+      },
+      {
+        "episode_id": 52621,
+        "display_name": "O.C. S02E24 - Loučení CZ Dabing",
+        "video_id": 27081388
+      },
+      {
+        "episode_id": 52653,
+        "display_name": "O.C. S03E02 - Tvar věcí, co přijdou CZ Titulky",
+        "video_id": 27081431
+      },
+      {
+        "episode_id": 52657,
+        "display_name": "O.C. S03E07 - Sebeovládání CZ Dabing",
+        "video_id": 27081472
+      },
+      {
+        "episode_id": 52647,
+        "display_name": "O.C. S03E11 - Bezpečný přístav CZ Dabing",
+        "video_id": 27081511
+      },
+      {
+        "episode_id": 52631,
+        "display_name": "O.C. S03E12 - Sestra v akci CZ Dabing",
+        "video_id": 27081543
+      },
+      {
+        "episode_id": 52643,
+        "display_name": "O.C. S03E15 - Těžká váha CZ Titulky",
+        "video_id": 27081569
       }
     ],
     "prepared_not_upload_ready": [
@@ -106237,166 +106507,6 @@
     ],
     "whisper_review_pending": [
       {
-        "episode_id": 45178,
-        "source_id": -45797273028640628,
-        "series_title": "Angel",
-        "episode_code": "S01E14",
-        "source_title": "Angel S01E14 - Mám tě pod kůží. ©PM",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 45178,
-        "source_id": -8833863198682946,
-        "series_title": "Angel",
-        "episode_code": "S01E14",
-        "source_title": "Angel S01E14 - Mám tě pod kůží ⭐",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 45178,
-        "source_id": -51716767174223310,
-        "series_title": "Angel",
-        "episode_code": "S01E14",
-        "source_title": "Angel - s01e14",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 45179,
-        "source_id": -62943070481370834,
-        "series_title": "Angel",
-        "episode_code": "S01E15",
-        "source_title": "Angel 1x15",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 45179,
-        "source_id": -32934357503775178,
-        "series_title": "Angel",
-        "episode_code": "S01E15",
-        "source_title": "Angel - s01e15",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 45180,
-        "source_id": -59988450640992152,
-        "series_title": "Angel",
-        "episode_code": "S01E16",
-        "source_title": "Angel - s01e16",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 45180,
-        "source_id": -20645809619238229,
-        "series_title": "Angel",
-        "episode_code": "S01E16",
-        "source_title": "Angel 1x16",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 45264,
-        "source_id": -51701242793420958,
-        "series_title": "Angel",
-        "episode_code": "S01E17",
-        "source_title": "Angel - s01e17",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 45264,
-        "source_id": -11590397432384721,
-        "series_title": "Angel",
-        "episode_code": "S01E17",
-        "source_title": "Angel 1x17",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 45181,
-        "source_id": -32998311783898471,
-        "series_title": "Angel",
-        "episode_code": "S01E18",
-        "source_title": "Angel 1x18",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 45181,
-        "source_id": -5187991144238998,
-        "series_title": "Angel",
-        "episode_code": "S01E18",
-        "source_title": "Angel - s01e18",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 45182,
-        "source_id": -39019450162451150,
-        "series_title": "Angel",
-        "episode_code": "S01E19",
-        "source_title": "Angel 1x19",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 45182,
-        "source_id": -8123820251303962,
-        "series_title": "Angel",
-        "episode_code": "S01E19",
-        "source_title": "Angel - s01e19",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 45185,
-        "source_id": -5201363227963739,
-        "series_title": "Angel",
-        "episode_code": "S01E22",
-        "source_title": "Angel S01E22 - Proroctví ⭐",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 45266,
-        "source_id": -36573991732541379,
-        "series_title": "Angel",
-        "episode_code": "S02E01",
-        "source_title": "Touched.by.an.Angel.S02E01r.Interview.With.an.Angel",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 45266,
-        "source_id": -68485138718104292,
-        "series_title": "Angel",
-        "episode_code": "S02E01",
-        "source_title": "Angel S02E01 - Soud ⭐",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 45266,
-        "source_id": -61105111025922242,
-        "series_title": "Angel",
-        "episode_code": "S02E01",
-        "source_title": "Angel 2x1",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 45266,
-        "source_id": -56939766977545542,
-        "series_title": "Angel",
-        "episode_code": "S02E01",
-        "source_title": "Angel S02E01 - Soud. ©PM",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 45266,
-        "source_id": -36010960196985324,
-        "series_title": "Angel",
-        "episode_code": "S02E01",
-        "source_title": "Angel S02E01",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 45266,
-        "source_id": -11482767656272830,
-        "series_title": "Angel",
-        "episode_code": "S02E01",
-        "source_title": "Angel - s02e01",
-        "status": "needs_whisper"
-      },
-      {
         "episode_id": 45186,
         "source_id": -64459185337850297,
         "series_title": "Angel",
@@ -106635,6 +106745,166 @@
         "episode_code": "S02E12",
         "source_title": "Angel S02E12,",
         "status": "needs_whisper"
+      },
+      {
+        "episode_id": 45194,
+        "source_id": -45082800804826239,
+        "series_title": "Angel",
+        "episode_code": "S02E13",
+        "source_title": "Angel S02E13,",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 45194,
+        "source_id": -8881719334536900,
+        "series_title": "Angel",
+        "episode_code": "S02E13",
+        "source_title": "Angel S02E13 - Vsechno nejlepsi k vyročí ❤️",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 45195,
+        "source_id": -5825305653595657,
+        "series_title": "Angel",
+        "episode_code": "S02E14",
+        "source_title": "Angel S02E14",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 45195,
+        "source_id": -41039619842918621,
+        "series_title": "Angel",
+        "episode_code": "S02E14",
+        "source_title": "Angel - s02e14",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 45268,
+        "source_id": -53853161468552078,
+        "series_title": "Angel",
+        "episode_code": "S02E15",
+        "source_title": "Angel S02E15",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 45268,
+        "source_id": -6554530861558654,
+        "series_title": "Angel",
+        "episode_code": "S02E15",
+        "source_title": "Touched.by.an.Angel.S02E15.Indigo.Angel",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 45268,
+        "source_id": -3908792186454938,
+        "series_title": "Angel",
+        "episode_code": "S02E15",
+        "source_title": "Angel - s02e15",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 45268,
+        "source_id": -2530396518693942,
+        "series_title": "Angel",
+        "episode_code": "S02E15",
+        "source_title": "Angel 2x15",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 45260,
+        "source_id": -10880258954128901,
+        "series_title": "Angel",
+        "episode_code": "S02E16",
+        "source_title": "Angel---2x16---Zjeveni",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 45260,
+        "source_id": -29137151735769334,
+        "series_title": "Angel",
+        "episode_code": "S02E16",
+        "source_title": "Touched.by.an.Angel.S02E16.Jacob_s.Ladder",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 45260,
+        "source_id": -64889626689637527,
+        "series_title": "Angel",
+        "episode_code": "S02E16",
+        "source_title": "Angel - s02e16",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 45260,
+        "source_id": -31024144857337869,
+        "series_title": "Angel",
+        "episode_code": "S02E16",
+        "source_title": "Angel 2x16",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 45260,
+        "source_id": -5001862993917525,
+        "series_title": "Angel",
+        "episode_code": "S02E16",
+        "source_title": "Angel S02E16",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 45196,
+        "source_id": -4767887905703193,
+        "series_title": "Angel",
+        "episode_code": "S02E17",
+        "source_title": "Touched.by.an.Angel.S02E17.Out.of.the.Darkness",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 45196,
+        "source_id": -34159667780584611,
+        "series_title": "Angel",
+        "episode_code": "S02E17",
+        "source_title": "Angel 2x17",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 45197,
+        "source_id": -62919876963903391,
+        "series_title": "Angel",
+        "episode_code": "S02E18",
+        "source_title": "Angel S02E18,",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 45197,
+        "source_id": -44715035661992886,
+        "series_title": "Angel",
+        "episode_code": "S02E18",
+        "source_title": "Angel S02E18",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 45198,
+        "source_id": -20714605407363416,
+        "series_title": "Angel",
+        "episode_code": "S02E19",
+        "source_title": "Angel S02E19",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 45198,
+        "source_id": -36177452275586399,
+        "series_title": "Angel",
+        "episode_code": "S02E19",
+        "source_title": "Angel - s02e19",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 45199,
+        "source_id": -61046990407437815,
+        "series_title": "Angel",
+        "episode_code": "S02E20",
+        "source_title": "Angel S02E20",
+        "status": "needs_whisper"
       }
     ],
     "subtitle_followup_pending": [
@@ -106653,6 +106923,33 @@
         "series_title": "Angel",
         "episode_code": "S01E13",
         "source_title": "Angel - s01e13",
+        "subtitle_status": "needs_subtitle_setup_after_prehrajto_processing",
+        "reason": "selected source needs Czech subtitles after Whisper detected non-Czech audio"
+      },
+      {
+        "episode_id": 45264,
+        "source_id": -11590397432384721,
+        "series_title": "Angel",
+        "episode_code": "S01E17",
+        "source_title": "Angel 1x17",
+        "subtitle_status": "needs_subtitle_setup_after_prehrajto_processing",
+        "reason": "selected source needs Czech subtitles after Whisper detected non-Czech audio"
+      },
+      {
+        "episode_id": 45181,
+        "source_id": -5187991144238998,
+        "series_title": "Angel",
+        "episode_code": "S01E18",
+        "source_title": "Angel - s01e18",
+        "subtitle_status": "needs_subtitle_setup_after_prehrajto_processing",
+        "reason": "selected source needs Czech subtitles after Whisper detected non-Czech audio"
+      },
+      {
+        "episode_id": 45182,
+        "source_id": -8123820251303962,
+        "series_title": "Angel",
+        "episode_code": "S01E19",
+        "source_title": "Angel - s01e19",
         "subtitle_status": "needs_subtitle_setup_after_prehrajto_processing",
         "reason": "selected source needs Czech subtitles after Whisper detected non-Czech audio"
       },
@@ -107060,46 +107357,20 @@
         "source_title": "Dragon-Ball-Z-s01e07-apu-",
         "subtitle_status": "needs_subtitle_setup_after_prehrajto_processing",
         "reason": "selected source needs Czech subtitles after Whisper detected non-Czech audio"
-      },
-      {
-        "episode_id": 61173,
-        "source_id": -42422194001636114,
-        "series_title": "Dragon Ball Z",
-        "episode_code": "S01E08",
-        "source_title": "Dragon-Ball-Z-s01e08-apu-",
-        "subtitle_status": "needs_subtitle_setup_after_prehrajto_processing",
-        "reason": "selected source needs Czech subtitles after Whisper detected non-Czech audio"
-      },
-      {
-        "episode_id": 61084,
-        "source_id": -1806943426723278,
-        "series_title": "Dragon Ball Z",
-        "episode_code": "S01E09",
-        "source_title": "Dragon-Ball-Z-s01e09-apu-",
-        "subtitle_status": "needs_subtitle_setup_after_prehrajto_processing",
-        "reason": "selected source needs Czech subtitles after Whisper detected non-Czech audio"
-      },
-      {
-        "episode_id": 61001,
-        "source_id": -145094922810444,
-        "series_title": "Dragon Ball Z",
-        "episode_code": "S01E10",
-        "source_title": "Dragon-Ball-Z-s01e10-apu-",
-        "subtitle_status": "needs_subtitle_setup_after_prehrajto_processing",
-        "reason": "selected source needs Czech subtitles after Whisper detected non-Czech audio"
       }
     ]
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 20
+    "disabled": 169,
+    "ok": 60
   },
   "whisper_review_statuses": {
-    "whisper_non_cz_needs_subtitles": 475,
-    "whisper_confirmed_cz": 65,
-    "needs_whisper": 10617
+    "whisper_non_cz_needs_subtitles": 482,
+    "whisper_confirmed_cz": 78,
+    "needs_whisper": 10738
   },
   "subtitle_followup_statuses": {
-    "needs_subtitle_setup_after_prehrajto_processing": 2172
+    "needs_subtitle_setup_after_prehrajto_processing": 2175
   }
 }
