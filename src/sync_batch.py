@@ -54,15 +54,25 @@ def push_state(reason: str) -> None:
     if not os.environ.get("CI"):
         return
     try:
-        subprocess.run(["git", "add", str(STATE.relative_to(REPO_ROOT)), str(LOG_PATH.relative_to(REPO_ROOT))], check=True)
-        if subprocess.run(["git", "diff", "--cached", "--quiet"]).returncode == 0:
-            return
+        state_rel = str(STATE.relative_to(REPO_ROOT))
+        log_rel = str(LOG_PATH.relative_to(REPO_ROOT))
+        state_bytes = STATE.read_bytes() if STATE.exists() else b""
+        log_bytes = LOG_PATH.read_bytes() if LOG_PATH.exists() else b""
         tag = f"shard {SHARD_ID}/{NUM_SHARDS}" if NUM_SHARDS > 1 else "sync"
-        subprocess.run(["git", "commit", "-m", f"chore({tag}): {reason}"], check=True)
         for _ in range(5):
-            subprocess.run(["git", "pull", "--rebase", "origin", "main"], check=False)
+            subprocess.run(["git", "fetch", "origin", "main"], check=False)
+            subprocess.run(["git", "reset", "--hard", "origin/main"], check=False)
+            STATE.parent.mkdir(parents=True, exist_ok=True)
+            LOG_PATH.parent.mkdir(parents=True, exist_ok=True)
+            STATE.write_bytes(state_bytes)
+            LOG_PATH.write_bytes(log_bytes)
+            subprocess.run(["git", "add", state_rel, log_rel], check=True)
+            if subprocess.run(["git", "diff", "--cached", "--quiet"]).returncode == 0:
+                return
+            subprocess.run(["git", "commit", "-m", f"chore({tag}): {reason}"], check=True)
             if subprocess.run(["git", "push", "origin", "HEAD:main"], check=False).returncode == 0:
                 return
+            time.sleep(2)
         log("push_state failed after retries; continuing")
     except Exception as exc:
         log(f"push_state non-fatal: {type(exc).__name__}: {exc}")
