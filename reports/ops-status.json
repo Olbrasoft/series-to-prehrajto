@@ -2,28 +2,76 @@
   "counts": {
     "backlog_episodes": 179792,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 13648,
-    "prepared_source_episodes": 27508,
+    "uploaded_episodes": 13665,
+    "prepared_source_episodes": 27598,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 1371,
-    "language_whisper_attempted_sources": 140,
-    "language_pending_whisper_sources": 2624,
-    "whisper_review_sources": 10194,
-    "whisper_review_pending_sources": 9774,
+    "language_audited_sources": 265,
+    "language_whisper_attempted_sources": 40,
+    "language_pending_whisper_sources": 2604,
+    "whisper_review_sources": 10335,
+    "whisper_review_pending_sources": 9915,
     "subtitle_followup_sources": 1932,
     "subtitle_followup_pending_sources": 1932
   },
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-07-02T06:01:37Z",
+      "databaseId": 28569023784,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-02T05:55:49Z",
+      "databaseId": 28568775858,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-sources"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-02T05:45:29Z",
+      "databaseId": 28568345745,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-02T05:44:38Z",
+      "databaseId": 28568311442,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-02T05:44:35Z",
+      "databaseId": 28568309416,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-02T05:44:33Z",
+      "databaseId": 28568307986,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-02T05:43:40Z",
       "databaseId": 28568272181,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -35,19 +83,19 @@
       "workflowName": "process-whisper-review"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-02T05:31:33Z",
       "databaseId": 28567796637,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-02T05:25:14Z",
       "databaseId": 28567552116,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -99,11 +147,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-02T04:48:40Z",
       "databaseId": 28566167275,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-descriptions"
     },
     {
@@ -129,54 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-02T04:45:20Z",
-      "databaseId": 28566051457,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-02T04:44:30Z",
-      "databaseId": 28566018842,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-02T04:44:26Z",
-      "databaseId": 28566016102,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-02T04:44:21Z",
-      "databaseId": 28566013453,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-02T04:30:39Z",
-      "databaseId": 28565512164,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "refresh-backlog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-02T04:03:59Z",
-      "databaseId": 28564509219,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
     }
   ],
   "gaps": {
@@ -46116,6 +46116,51 @@
         "video_id": 27072098
       },
       {
+        "episode_id": 15620,
+        "display_name": "TO: Vítejte v Derry S01E08 - Oheň v zimě CZ Dabing",
+        "video_id": 27072135
+      },
+      {
+        "episode_id": 15314,
+        "display_name": "Smrt nás spojí S02E06 - Nemusíš CZ Dabing",
+        "video_id": 27072190
+      },
+      {
+        "episode_id": 15316,
+        "display_name": "Smrt nás spojí S02E07 - Nemáš ani tušení CZ Dabing",
+        "video_id": 27072211
+      },
+      {
+        "episode_id": 15320,
+        "display_name": "Smrt nás spojí S03E01 - A znovu to samé CZ Dabing",
+        "video_id": 27072241
+      },
+      {
+        "episode_id": 15322,
+        "display_name": "Smrt nás spojí S03E03 - Copak to tu máme CZ Dabing",
+        "video_id": 27072268
+      },
+      {
+        "episode_id": 15324,
+        "display_name": "Smrt nás spojí S03E05 - To jsme teda nedomyslely CZ Dabing",
+        "video_id": 27072296
+      },
+      {
+        "episode_id": 15326,
+        "display_name": "Smrt nás spojí S03E07 - Upřímnost nade vše CZ Dabing",
+        "video_id": 27072330
+      },
+      {
+        "episode_id": 15328,
+        "display_name": "Smrt nás spojí S03E09 - Nezbývá nám moc času CZ Dabing",
+        "video_id": 27072349
+      },
+      {
+        "episode_id": 10746,
+        "display_name": "Halo S01E03 - Uvědomění CZ Dabing",
+        "video_id": 27072377
+      },
+      {
         "episode_id": 15319,
         "display_name": "Smrt nás spojí S02E10 - Co s nami bude dál CZ Dabing",
         "video_id": 27071876
@@ -46169,6 +46214,46 @@
         "episode_id": 10753,
         "display_name": "Halo S01E07 - Odkaz CZ Dabing",
         "video_id": 27072097
+      },
+      {
+        "episode_id": 7813,
+        "display_name": "Halo S02E02 - Meč CZ Titulky",
+        "video_id": 27072114
+      },
+      {
+        "episode_id": 7815,
+        "display_name": "Halo S02E04 - Cíl CZ Dabing",
+        "video_id": 27072126
+      },
+      {
+        "episode_id": 7817,
+        "display_name": "Halo S02E06 - Onyx CZ Dabing",
+        "video_id": 27072142
+      },
+      {
+        "episode_id": 7819,
+        "display_name": "Halo S02E08 CZ Dabing",
+        "video_id": 27072159
+      },
+      {
+        "episode_id": 25025,
+        "display_name": "Landman S01E03 - Peklo má předzahrádku CZ Dabing",
+        "video_id": 27072187
+      },
+      {
+        "episode_id": 6833,
+        "display_name": "Landman S02E02 - Otcovy hříchy CZ Dabing",
+        "video_id": 27072245
+      },
+      {
+        "episode_id": 6835,
+        "display_name": "Landman S02E04 - Tančící duhy CZ Dabing",
+        "video_id": 27072295
+      },
+      {
+        "episode_id": 6839,
+        "display_name": "Landman S02E08 - Dotkl se mě pohledný CZ Dabing",
+        "video_id": 27072371
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -102948,6 +103033,51 @@
         "video_id": 27072098
       },
       {
+        "episode_id": 15620,
+        "display_name": "TO: Vítejte v Derry S01E08 - Oheň v zimě CZ Dabing",
+        "video_id": 27072135
+      },
+      {
+        "episode_id": 15314,
+        "display_name": "Smrt nás spojí S02E06 - Nemusíš CZ Dabing",
+        "video_id": 27072190
+      },
+      {
+        "episode_id": 15316,
+        "display_name": "Smrt nás spojí S02E07 - Nemáš ani tušení CZ Dabing",
+        "video_id": 27072211
+      },
+      {
+        "episode_id": 15320,
+        "display_name": "Smrt nás spojí S03E01 - A znovu to samé CZ Dabing",
+        "video_id": 27072241
+      },
+      {
+        "episode_id": 15322,
+        "display_name": "Smrt nás spojí S03E03 - Copak to tu máme CZ Dabing",
+        "video_id": 27072268
+      },
+      {
+        "episode_id": 15324,
+        "display_name": "Smrt nás spojí S03E05 - To jsme teda nedomyslely CZ Dabing",
+        "video_id": 27072296
+      },
+      {
+        "episode_id": 15326,
+        "display_name": "Smrt nás spojí S03E07 - Upřímnost nade vše CZ Dabing",
+        "video_id": 27072330
+      },
+      {
+        "episode_id": 15328,
+        "display_name": "Smrt nás spojí S03E09 - Nezbývá nám moc času CZ Dabing",
+        "video_id": 27072349
+      },
+      {
+        "episode_id": 10746,
+        "display_name": "Halo S01E03 - Uvědomění CZ Dabing",
+        "video_id": 27072377
+      },
+      {
         "episode_id": 15319,
         "display_name": "Smrt nás spojí S02E10 - Co s nami bude dál CZ Dabing",
         "video_id": 27071876
@@ -103001,6 +103131,46 @@
         "episode_id": 10753,
         "display_name": "Halo S01E07 - Odkaz CZ Dabing",
         "video_id": 27072097
+      },
+      {
+        "episode_id": 7813,
+        "display_name": "Halo S02E02 - Meč CZ Titulky",
+        "video_id": 27072114
+      },
+      {
+        "episode_id": 7815,
+        "display_name": "Halo S02E04 - Cíl CZ Dabing",
+        "video_id": 27072126
+      },
+      {
+        "episode_id": 7817,
+        "display_name": "Halo S02E06 - Onyx CZ Dabing",
+        "video_id": 27072142
+      },
+      {
+        "episode_id": 7819,
+        "display_name": "Halo S02E08 CZ Dabing",
+        "video_id": 27072159
+      },
+      {
+        "episode_id": 25025,
+        "display_name": "Landman S01E03 - Peklo má předzahrádku CZ Dabing",
+        "video_id": 27072187
+      },
+      {
+        "episode_id": 6833,
+        "display_name": "Landman S02E02 - Otcovy hříchy CZ Dabing",
+        "video_id": 27072245
+      },
+      {
+        "episode_id": 6835,
+        "display_name": "Landman S02E04 - Tančící duhy CZ Dabing",
+        "video_id": 27072295
+      },
+      {
+        "episode_id": 6839,
+        "display_name": "Landman S02E08 - Dotkl se mě pohledný CZ Dabing",
+        "video_id": 27072371
       }
     ],
     "prepared_not_upload_ready": [
@@ -104162,12 +104332,12 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 1231,
-    "ok": 140
+    "disabled": 225,
+    "ok": 40
   },
   "whisper_review_statuses": {
     "whisper_non_cz_needs_subtitles": 377,
-    "needs_whisper": 9774,
+    "needs_whisper": 9915,
     "whisper_confirmed_cz": 43
   },
   "subtitle_followup_statuses": {
