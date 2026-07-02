@@ -52,11 +52,30 @@ jobs:
       - name: Commit update state
         if: always()
         run: |
-          git add state/uploaded*.json state/description-updates.log
-          if git diff --cached --quiet; then
-            echo "no description update changes"
-          else
+          TMP_DIR="$(mktemp -d)"
+          mkdir -p "$TMP_DIR/state"
+          cp state/uploaded*.json "$TMP_DIR/state/" 2>/dev/null || true
+          cp state/description-updates.log "$TMP_DIR/state/" 2>/dev/null || true
+
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main
+            git reset --hard origin/main
+            mkdir -p state
+            cp "$TMP_DIR"/state/* state/ 2>/dev/null || true
+
+            git add state/uploaded*.json state/description-updates.log
+            if git diff --cached --quiet; then
+              echo "no description update changes"
+              exit 0
+            fi
+
             git commit -m "chore: update uploaded descriptions"
-            git pull --rebase origin main || true
-            git push
-          fi
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            echo "push race on attempt ${attempt}, retrying"
+            sleep $((attempt * 2))
+          done
+
+          echo "failed to push description update state"
+          exit 1
