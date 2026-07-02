@@ -1,53 +1,125 @@
 {
   "counts": {
-    "backlog_episodes": 179404,
+    "backlog_episodes": 179187,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 14167,
-    "prepared_source_episodes": 29018,
+    "uploaded_episodes": 14211,
+    "prepared_source_episodes": 29038,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 191,
-    "language_whisper_attempted_sources": 40,
-    "language_pending_whisper_sources": 2624,
-    "whisper_review_sources": 11759,
-    "whisper_review_pending_sources": 11139,
-    "subtitle_followup_sources": 2341,
-    "subtitle_followup_pending_sources": 2341
+    "language_audited_sources": 125,
+    "language_whisper_attempted_sources": 80,
+    "language_pending_whisper_sources": 2604,
+    "whisper_review_sources": 11764,
+    "whisper_review_pending_sources": 11104,
+    "subtitle_followup_sources": 2343,
+    "subtitle_followup_pending_sources": 2343
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-07-02T15:40:13Z",
-      "databaseId": 28602607225,
+      "createdAt": "2026-07-02T16:13:10Z",
+      "databaseId": 28604706620,
       "headBranch": "main",
       "status": "in_progress",
-      "workflowName": "ops-watchdog"
+      "workflowName": "ops-status"
     },
     {
       "conclusion": "",
-      "createdAt": "2026-07-02T15:40:04Z",
-      "databaseId": 28602596684,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-02T15:39:17Z",
-      "databaseId": 28602546685,
+      "createdAt": "2026-07-02T16:12:54Z",
+      "databaseId": 28604689332,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "update-descriptions"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-07-02T16:12:12Z",
+      "databaseId": 28604644615,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-02T16:11:21Z",
+      "databaseId": 28604591738,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-02T16:07:04Z",
+      "databaseId": 28604327086,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-02T16:06:19Z",
+      "databaseId": 28604281636,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-02T15:56:10Z",
+      "databaseId": 28603633084,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-02T15:52:53Z",
+      "databaseId": 28603422827,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "refresh-backlog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-02T15:49:59Z",
+      "databaseId": 28603236681,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-02T15:40:13Z",
+      "databaseId": 28602607225,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-02T15:40:04Z",
+      "databaseId": 28602596684,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-02T15:39:17Z",
+      "databaseId": 28602546685,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-02T15:39:13Z",
       "databaseId": 28602543301,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
@@ -75,11 +147,11 @@
       "workflowName": "process-whisper-review"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-02T15:30:17Z",
       "databaseId": 28601962991,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -91,11 +163,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-02T15:27:10Z",
       "databaseId": 28601760764,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -105,78 +177,6 @@
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "prepare-sources"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-02T15:18:22Z",
-      "databaseId": 28601186972,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-02T15:17:00Z",
-      "databaseId": 28601094644,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-02T15:16:32Z",
-      "databaseId": 28601064131,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-02T15:15:50Z",
-      "databaseId": 28601025600,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-02T15:14:51Z",
-      "databaseId": 28600957781,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-02T15:02:04Z",
-      "databaseId": 28600110772,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-02T14:58:44Z",
-      "databaseId": 28599877818,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-02T14:56:33Z",
-      "databaseId": 28599730538,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-02T14:46:47Z",
-      "databaseId": 28599069412,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
     }
   ],
   "gaps": {
@@ -48764,6 +48764,226 @@
         "episode_id": 24019,
         "display_name": "Frasier S08E06 - Něžná zákonná péče CZ Dabing",
         "video_id": 27083801
+      },
+      {
+        "episode_id": 24064,
+        "display_name": "Frasier S10E03 - Zaskakující předseda CZ Dabing",
+        "video_id": 27084022
+      },
+      {
+        "episode_id": 24066,
+        "display_name": "Frasier S10E05 - Při natáčení této epizody nebyli zranění žádní zombie CZ Dabing",
+        "video_id": 27084046
+      },
+      {
+        "episode_id": 24068,
+        "display_name": "Frasier S10E07 - Jedna ku deseti tisícům CZ Dabing",
+        "video_id": 27084071
+      },
+      {
+        "episode_id": 24070,
+        "display_name": "Frasier S10E09 - Niles má křehké srdce CZ Dabing",
+        "video_id": 27084105
+      },
+      {
+        "episode_id": 24072,
+        "display_name": "Frasier S10E11 - Honba za zlatými dveřmi CZ Titulky",
+        "video_id": 27084132
+      },
+      {
+        "episode_id": 24074,
+        "display_name": "Frasier S10E13 - Podivná žádost CZ Dabing",
+        "video_id": 27084152
+      },
+      {
+        "episode_id": 24076,
+        "display_name": "Frasier S10E15 - Přítelkyně jako trofej CZ Dabing",
+        "video_id": 27084182
+      },
+      {
+        "episode_id": 24082,
+        "display_name": "Frasier S10E21 - Ďábel v ženském těle CZ Titulky",
+        "video_id": 27084208
+      },
+      {
+        "episode_id": 24084,
+        "display_name": "Frasier S10E23 - Nebezpeční kamarádi CZ Dabing",
+        "video_id": 27084242
+      },
+      {
+        "episode_id": 24086,
+        "display_name": "Frasier S11E01 - Jsme plaší, ale léčíme se CZ Dabing",
+        "video_id": 27084256
+      },
+      {
+        "episode_id": 24088,
+        "display_name": "Frasier S11E03 - A je to venku doktore CZ Dabing",
+        "video_id": 27084265
+      },
+      {
+        "episode_id": 24090,
+        "display_name": "Frasier S11E05 - Nezávazná známost CZ Dabing",
+        "video_id": 27084274
+      },
+      {
+        "episode_id": 24094,
+        "display_name": "Frasier S11E09 - Vůně růží a střelného prachu CZ Titulky",
+        "video_id": 27084292
+      },
+      {
+        "episode_id": 24102,
+        "display_name": "Frasier S11E17 - Záchvat kleptomanie CZ Dabing",
+        "video_id": 27084299
+      },
+      {
+        "episode_id": 24106,
+        "display_name": "Frasier S11E21 - Zajížďka CZ Dabing",
+        "video_id": 27084308
+      },
+      {
+        "episode_id": 24108,
+        "display_name": "Frasier S11E23 - Dobrou noc, Seattle, část první CZ Dabing",
+        "video_id": 27084320
+      },
+      {
+        "episode_id": 5998,
+        "display_name": "Frasier S12E02 CZ Dabing",
+        "video_id": 27084340
+      },
+      {
+        "episode_id": 6002,
+        "display_name": "Frasier S12E06 CZ Titulky",
+        "video_id": 27084349
+      },
+      {
+        "episode_id": 6004,
+        "display_name": "Frasier S12E08 CZ Dabing",
+        "video_id": 27084374
+      },
+      {
+        "episode_id": 6006,
+        "display_name": "Frasier S12E09 CZ Dabing",
+        "video_id": 27084389
+      },
+      {
+        "episode_id": 24021,
+        "display_name": "Frasier S08E08 - Maryiny Vánoce CZ Dabing",
+        "video_id": 27084024
+      },
+      {
+        "episode_id": 24023,
+        "display_name": "Frasier S08E10 - Víkend s Frederickem CZ Dabing",
+        "video_id": 27084045
+      },
+      {
+        "episode_id": 24025,
+        "display_name": "Frasier S08E12 - Producenti CZ Dabing",
+        "video_id": 27084066
+      },
+      {
+        "episode_id": 24027,
+        "display_name": "Frasier S08E14 - Jak zachránit manželství CZ Dabing",
+        "video_id": 27084099
+      },
+      {
+        "episode_id": 24029,
+        "display_name": "Frasier S08E16 - Hvězdné války CZ Dabing",
+        "video_id": 27084122
+      },
+      {
+        "episode_id": 24031,
+        "display_name": "Frasier S08E18 - Pravidla, zákony a víno CZ Dabing",
+        "video_id": 27084144
+      },
+      {
+        "episode_id": 24033,
+        "display_name": "Frasier S08E20 - Roz a psychiatři CZ Dabing",
+        "video_id": 27084169
+      },
+      {
+        "episode_id": 24035,
+        "display_name": "Frasier S08E22 - Něco za něco CZ Dabing",
+        "video_id": 27084194
+      },
+      {
+        "episode_id": 24041,
+        "display_name": "Frasier S09E04 - Martin Crane zpět ve službě CZ Dabing",
+        "video_id": 27084214
+      },
+      {
+        "episode_id": 24045,
+        "display_name": "Frasier S09E08 - Dvoutisícovka CZ Dabing",
+        "video_id": 27084240
+      },
+      {
+        "episode_id": 24047,
+        "display_name": "Frasier S09E10 - Kariéra v ohrožení CZ Dabing",
+        "video_id": 27084254
+      },
+      {
+        "episode_id": 24049,
+        "display_name": "Frasier S09E12 - Návštěva z Anglie, část první CZ Dabing",
+        "video_id": 27084266
+      },
+      {
+        "episode_id": 24051,
+        "display_name": "Frasier S09E14 - Mládí vpřed CZ Dabing",
+        "video_id": 27084279
+      },
+      {
+        "episode_id": 24053,
+        "display_name": "Frasier S09E16 - Kola štěstí CZ Dabing",
+        "video_id": 27084296
+      },
+      {
+        "episode_id": 24055,
+        "display_name": "Frasier S09E18 - Fredieho národní šampionát CZ Dabing",
+        "video_id": 27084307
+      },
+      {
+        "episode_id": 24057,
+        "display_name": "Frasier S09E20 - Předstíraná láska CZ Dabing",
+        "video_id": 27084314
+      },
+      {
+        "episode_id": 24059,
+        "display_name": "Frasier S09E22 - Tak řekl Frasier CZ Dabing",
+        "video_id": 27084333
+      },
+      {
+        "episode_id": 24061,
+        "display_name": "Frasier S09E24 - Válka Moonových CZ Dabing",
+        "video_id": 27084345
+      },
+      {
+        "episode_id": 24063,
+        "display_name": "Frasier S10E02 - Nepřítel před branami CZ Dabing",
+        "video_id": 27084355
+      },
+      {
+        "episode_id": 24065,
+        "display_name": "Frasier S10E04 - Rebelka bez příčiny CZ Dabing",
+        "video_id": 27084370
+      },
+      {
+        "episode_id": 6010,
+        "display_name": "Frasier S13E04 CZ Dabing",
+        "video_id": 27084429
+      },
+      {
+        "episode_id": 6012,
+        "display_name": "Frasier S13E05 CZ Dabing",
+        "video_id": 27084447
+      },
+      {
+        "episode_id": 24067,
+        "display_name": "Frasier S10E06 - Hvězdný Mitzvah CZ Titulky",
+        "video_id": 27084416
+      },
+      {
+        "episode_id": 24069,
+        "display_name": "Frasier S10E08 - Čekání je nejhorší CZ Dabing",
+        "video_id": 27084457
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -108191,6 +108411,226 @@
         "episode_id": 24019,
         "display_name": "Frasier S08E06 - Něžná zákonná péče CZ Dabing",
         "video_id": 27083801
+      },
+      {
+        "episode_id": 24064,
+        "display_name": "Frasier S10E03 - Zaskakující předseda CZ Dabing",
+        "video_id": 27084022
+      },
+      {
+        "episode_id": 24066,
+        "display_name": "Frasier S10E05 - Při natáčení této epizody nebyli zranění žádní zombie CZ Dabing",
+        "video_id": 27084046
+      },
+      {
+        "episode_id": 24068,
+        "display_name": "Frasier S10E07 - Jedna ku deseti tisícům CZ Dabing",
+        "video_id": 27084071
+      },
+      {
+        "episode_id": 24070,
+        "display_name": "Frasier S10E09 - Niles má křehké srdce CZ Dabing",
+        "video_id": 27084105
+      },
+      {
+        "episode_id": 24072,
+        "display_name": "Frasier S10E11 - Honba za zlatými dveřmi CZ Titulky",
+        "video_id": 27084132
+      },
+      {
+        "episode_id": 24074,
+        "display_name": "Frasier S10E13 - Podivná žádost CZ Dabing",
+        "video_id": 27084152
+      },
+      {
+        "episode_id": 24076,
+        "display_name": "Frasier S10E15 - Přítelkyně jako trofej CZ Dabing",
+        "video_id": 27084182
+      },
+      {
+        "episode_id": 24082,
+        "display_name": "Frasier S10E21 - Ďábel v ženském těle CZ Titulky",
+        "video_id": 27084208
+      },
+      {
+        "episode_id": 24084,
+        "display_name": "Frasier S10E23 - Nebezpeční kamarádi CZ Dabing",
+        "video_id": 27084242
+      },
+      {
+        "episode_id": 24086,
+        "display_name": "Frasier S11E01 - Jsme plaší, ale léčíme se CZ Dabing",
+        "video_id": 27084256
+      },
+      {
+        "episode_id": 24088,
+        "display_name": "Frasier S11E03 - A je to venku doktore CZ Dabing",
+        "video_id": 27084265
+      },
+      {
+        "episode_id": 24090,
+        "display_name": "Frasier S11E05 - Nezávazná známost CZ Dabing",
+        "video_id": 27084274
+      },
+      {
+        "episode_id": 24094,
+        "display_name": "Frasier S11E09 - Vůně růží a střelného prachu CZ Titulky",
+        "video_id": 27084292
+      },
+      {
+        "episode_id": 24102,
+        "display_name": "Frasier S11E17 - Záchvat kleptomanie CZ Dabing",
+        "video_id": 27084299
+      },
+      {
+        "episode_id": 24106,
+        "display_name": "Frasier S11E21 - Zajížďka CZ Dabing",
+        "video_id": 27084308
+      },
+      {
+        "episode_id": 24108,
+        "display_name": "Frasier S11E23 - Dobrou noc, Seattle, část první CZ Dabing",
+        "video_id": 27084320
+      },
+      {
+        "episode_id": 5998,
+        "display_name": "Frasier S12E02 CZ Dabing",
+        "video_id": 27084340
+      },
+      {
+        "episode_id": 6002,
+        "display_name": "Frasier S12E06 CZ Titulky",
+        "video_id": 27084349
+      },
+      {
+        "episode_id": 6004,
+        "display_name": "Frasier S12E08 CZ Dabing",
+        "video_id": 27084374
+      },
+      {
+        "episode_id": 6006,
+        "display_name": "Frasier S12E09 CZ Dabing",
+        "video_id": 27084389
+      },
+      {
+        "episode_id": 24021,
+        "display_name": "Frasier S08E08 - Maryiny Vánoce CZ Dabing",
+        "video_id": 27084024
+      },
+      {
+        "episode_id": 24023,
+        "display_name": "Frasier S08E10 - Víkend s Frederickem CZ Dabing",
+        "video_id": 27084045
+      },
+      {
+        "episode_id": 24025,
+        "display_name": "Frasier S08E12 - Producenti CZ Dabing",
+        "video_id": 27084066
+      },
+      {
+        "episode_id": 24027,
+        "display_name": "Frasier S08E14 - Jak zachránit manželství CZ Dabing",
+        "video_id": 27084099
+      },
+      {
+        "episode_id": 24029,
+        "display_name": "Frasier S08E16 - Hvězdné války CZ Dabing",
+        "video_id": 27084122
+      },
+      {
+        "episode_id": 24031,
+        "display_name": "Frasier S08E18 - Pravidla, zákony a víno CZ Dabing",
+        "video_id": 27084144
+      },
+      {
+        "episode_id": 24033,
+        "display_name": "Frasier S08E20 - Roz a psychiatři CZ Dabing",
+        "video_id": 27084169
+      },
+      {
+        "episode_id": 24035,
+        "display_name": "Frasier S08E22 - Něco za něco CZ Dabing",
+        "video_id": 27084194
+      },
+      {
+        "episode_id": 24041,
+        "display_name": "Frasier S09E04 - Martin Crane zpět ve službě CZ Dabing",
+        "video_id": 27084214
+      },
+      {
+        "episode_id": 24045,
+        "display_name": "Frasier S09E08 - Dvoutisícovka CZ Dabing",
+        "video_id": 27084240
+      },
+      {
+        "episode_id": 24047,
+        "display_name": "Frasier S09E10 - Kariéra v ohrožení CZ Dabing",
+        "video_id": 27084254
+      },
+      {
+        "episode_id": 24049,
+        "display_name": "Frasier S09E12 - Návštěva z Anglie, část první CZ Dabing",
+        "video_id": 27084266
+      },
+      {
+        "episode_id": 24051,
+        "display_name": "Frasier S09E14 - Mládí vpřed CZ Dabing",
+        "video_id": 27084279
+      },
+      {
+        "episode_id": 24053,
+        "display_name": "Frasier S09E16 - Kola štěstí CZ Dabing",
+        "video_id": 27084296
+      },
+      {
+        "episode_id": 24055,
+        "display_name": "Frasier S09E18 - Fredieho národní šampionát CZ Dabing",
+        "video_id": 27084307
+      },
+      {
+        "episode_id": 24057,
+        "display_name": "Frasier S09E20 - Předstíraná láska CZ Dabing",
+        "video_id": 27084314
+      },
+      {
+        "episode_id": 24059,
+        "display_name": "Frasier S09E22 - Tak řekl Frasier CZ Dabing",
+        "video_id": 27084333
+      },
+      {
+        "episode_id": 24061,
+        "display_name": "Frasier S09E24 - Válka Moonových CZ Dabing",
+        "video_id": 27084345
+      },
+      {
+        "episode_id": 24063,
+        "display_name": "Frasier S10E02 - Nepřítel před branami CZ Dabing",
+        "video_id": 27084355
+      },
+      {
+        "episode_id": 24065,
+        "display_name": "Frasier S10E04 - Rebelka bez příčiny CZ Dabing",
+        "video_id": 27084370
+      },
+      {
+        "episode_id": 6010,
+        "display_name": "Frasier S13E04 CZ Dabing",
+        "video_id": 27084429
+      },
+      {
+        "episode_id": 6012,
+        "display_name": "Frasier S13E05 CZ Dabing",
+        "video_id": 27084447
+      },
+      {
+        "episode_id": 24067,
+        "display_name": "Frasier S10E06 - Hvězdný Mitzvah CZ Titulky",
+        "video_id": 27084416
+      },
+      {
+        "episode_id": 24069,
+        "display_name": "Frasier S10E08 - Čekání je nejhorší CZ Dabing",
+        "video_id": 27084457
       }
     ],
     "prepared_not_upload_ready": [
@@ -108497,326 +108937,6 @@
     ],
     "whisper_review_pending": [
       {
-        "episode_id": 45203,
-        "source_id": -37866101356740258,
-        "series_title": "Angel",
-        "episode_code": "S03E02",
-        "source_title": "Touched.by.an.Angel.S03E02.A.Joyful.Noise",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 45203,
-        "source_id": -62448826799797889,
-        "series_title": "Angel",
-        "episode_code": "S03E02",
-        "source_title": "Angel 3x2",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 45204,
-        "source_id": -17652878556872367,
-        "series_title": "Angel",
-        "episode_code": "S03E03",
-        "source_title": "Touched.by.an.Angel.S03E03.Random.Acts",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 45204,
-        "source_id": -31379563418378032,
-        "series_title": "Angel",
-        "episode_code": "S03E03",
-        "source_title": "Angel - s03e03",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 45269,
-        "source_id": -28624636803494367,
-        "series_title": "Angel",
-        "episode_code": "S03E04",
-        "source_title": "Touched.by.an.Angel.S03E04.Sins.of.the.Father",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 45269,
-        "source_id": -15481871197476503,
-        "series_title": "Angel",
-        "episode_code": "S03E04",
-        "source_title": "Angel - s03e04",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 45269,
-        "source_id": -7079891802501646,
-        "series_title": "Angel",
-        "episode_code": "S03E04",
-        "source_title": "Angel 3x4",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 45205,
-        "source_id": -25085132000979924,
-        "series_title": "Angel",
-        "episode_code": "S03E05",
-        "source_title": "Touched.by.an.Angel.S03E05.Written.In.Dust",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 45205,
-        "source_id": -26567023900244319,
-        "series_title": "Angel",
-        "episode_code": "S03E05",
-        "source_title": "Angel 3x5",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 45206,
-        "source_id": -58488235400676063,
-        "series_title": "Angel",
-        "episode_code": "S03E06",
-        "source_title": "Touched.by.an.Angel.S03E06r.Secret.Service",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 45206,
-        "source_id": -16181962354920107,
-        "series_title": "Angel",
-        "episode_code": "S03E06",
-        "source_title": "Angel - s03e06",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 45207,
-        "source_id": -10884863776618331,
-        "series_title": "Angel",
-        "episode_code": "S03E08",
-        "source_title": "Touched.by.an.Angel.S03E08r.The.Sky.is.Falling",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 45207,
-        "source_id": -20474129849127698,
-        "series_title": "Angel",
-        "episode_code": "S03E08",
-        "source_title": "Angel 3x8",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 45210,
-        "source_id": -18416289732921113,
-        "series_title": "Angel",
-        "episode_code": "S03E10",
-        "source_title": "Touched.by.an.Angel.S03E10r.Into.the.Light",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 45210,
-        "source_id": -4071329169258634,
-        "series_title": "Angel",
-        "episode_code": "S03E10",
-        "source_title": "Angel - s03e10",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 45212,
-        "source_id": -19255358992712996,
-        "series_title": "Angel",
-        "episode_code": "S03E12",
-        "source_title": "Touched.by.an.Angel.S03E12r.The.Homecoming.Part2",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 45212,
-        "source_id": -22909377042914572,
-        "series_title": "Angel",
-        "episode_code": "S03E12",
-        "source_title": "Angel - s03e12",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 45214,
-        "source_id": -68394026719604710,
-        "series_title": "Angel",
-        "episode_code": "S03E14",
-        "source_title": "Angel S03E14",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 45214,
-        "source_id": -57918365263555115,
-        "series_title": "Angel",
-        "episode_code": "S03E14",
-        "source_title": "Touched.by.an.Angel.S03E14r.The.Violin.Lesson",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 45216,
-        "source_id": -48293214781304966,
-        "series_title": "Angel",
-        "episode_code": "S03E16",
-        "source_title": "Angel S03E16",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 45216,
-        "source_id": -40677212413585750,
-        "series_title": "Angel",
-        "episode_code": "S03E16",
-        "source_title": "Touched.by.an.Angel.S03E16.Smokescreen",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 45218,
-        "source_id": -52768273546941118,
-        "series_title": "Angel",
-        "episode_code": "S03E18",
-        "source_title": "Angel S03E18",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 45218,
-        "source_id": -16577244158192310,
-        "series_title": "Angel",
-        "episode_code": "S03E18",
-        "source_title": "Touched.by.an.Angel.S03E18.Angel.of.Death",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 45220,
-        "source_id": -20147789661322640,
-        "series_title": "Angel",
-        "episode_code": "S03E20",
-        "source_title": "Angel S03E20",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 45220,
-        "source_id": -2130227155774796,
-        "series_title": "Angel",
-        "episode_code": "S03E20",
-        "source_title": "Touched.by.an.Angel.S03E20r.Amazing.Grace.Part1",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 45221,
-        "source_id": -33129544091924969,
-        "series_title": "Angel",
-        "episode_code": "S03E22",
-        "source_title": "Angel S03E22",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 45221,
-        "source_id": -2841143031589125,
-        "series_title": "Angel",
-        "episode_code": "S03E22",
-        "source_title": "Touched.by.an.Angel.S03E22r.Labor.of.Love",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 45222,
-        "source_id": -16834654986797784,
-        "series_title": "Angel",
-        "episode_code": "S04E02",
-        "source_title": "Angel S04E02",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 45222,
-        "source_id": -33748381060630462,
-        "series_title": "Angel",
-        "episode_code": "S04E02",
-        "source_title": "Touched.by.an.Angel.S04E02.Great.Expectations",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 45222,
-        "source_id": -56645617201367046,
-        "series_title": "Angel",
-        "episode_code": "S04E02",
-        "source_title": "Angel - s04e02",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 45224,
-        "source_id": -67040423564958704,
-        "series_title": "Angel",
-        "episode_code": "S04E04",
-        "source_title": "Angel S04E04,",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 45224,
-        "source_id": -1582566931917114,
-        "series_title": "Angel",
-        "episode_code": "S04E04",
-        "source_title": "Touched.by.an.Angel.S04E04.Children.of.the.Night",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 45224,
-        "source_id": -23056237846942085,
-        "series_title": "Angel",
-        "episode_code": "S04E04",
-        "source_title": "Angel - s04e04",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 45271,
-        "source_id": -1480065923964195,
-        "series_title": "Angel",
-        "episode_code": "S04E05",
-        "source_title": "Touched.by.an.Angel.S04E05.Jones.Vs.God",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 45271,
-        "source_id": -59194917451041782,
-        "series_title": "Angel",
-        "episode_code": "S04E05",
-        "source_title": "Angel - s04e05",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 45271,
-        "source_id": -31698286882401431,
-        "series_title": "Angel",
-        "episode_code": "S04E05",
-        "source_title": "Angel 4x5",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 45225,
-        "source_id": -65331491639345470,
-        "series_title": "Angel",
-        "episode_code": "S04E06",
-        "source_title": "Angel S04E06",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 45225,
-        "source_id": -12359310245893599,
-        "series_title": "Angel",
-        "episode_code": "S04E06",
-        "source_title": "Touched.by.an.Angel.S04E06.The.Pact",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 45225,
-        "source_id": -58506876092439086,
-        "series_title": "Angel",
-        "episode_code": "S04E06",
-        "source_title": "Angel - s04e06",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 45226,
-        "source_id": -24863544333714967,
-        "series_title": "Angel",
-        "episode_code": "S04E07",
-        "source_title": "Angel S04E07",
-        "status": "needs_whisper"
-      },
-      {
         "episode_id": 45226,
         "source_id": -30302437718553367,
         "series_title": "Angel",
@@ -108894,6 +109014,326 @@
         "series_title": "Angel",
         "episode_code": "S04E10",
         "source_title": "Angel-4x10_Probuzení",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 45228,
+        "source_id": -54277839757730867,
+        "series_title": "Angel",
+        "episode_code": "S04E10",
+        "source_title": "Angel 4x10",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 45261,
+        "source_id": -39944832490411386,
+        "series_title": "Angel",
+        "episode_code": "S04E11",
+        "source_title": "Touched.by.an.Angel.S04E11r.Venice",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 45261,
+        "source_id": -7081419145461916,
+        "series_title": "Angel",
+        "episode_code": "S04E11",
+        "source_title": "Angel---4x11---Bez-duse",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 45230,
+        "source_id": -58962003097578858,
+        "series_title": "Angel",
+        "episode_code": "S04E12",
+        "source_title": "Touched.by.an.Angel.S04E12.It.Came.Upon.a.Midnight.Clear",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 45230,
+        "source_id": -66537424136767025,
+        "series_title": "Angel",
+        "episode_code": "S04E12",
+        "source_title": "Angel-4x12-Kalvárie",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 45230,
+        "source_id": -44930707545455337,
+        "series_title": "Angel",
+        "episode_code": "S04E12",
+        "source_title": "Angel S04E12",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 45232,
+        "source_id": -47512851172177227,
+        "series_title": "Angel",
+        "episode_code": "S04E13",
+        "source_title": "Angel-4x13_-Zachrana",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 45232,
+        "source_id": -9274608996428827,
+        "series_title": "Angel",
+        "episode_code": "S04E13",
+        "source_title": "Angel S04E13",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 45232,
+        "source_id": -56612905252399001,
+        "series_title": "Angel",
+        "episode_code": "S04E13",
+        "source_title": "Touched.by.an.Angel.S04E13.Deconstructing.Harry",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 45231,
+        "source_id": -25434227377585781,
+        "series_title": "Angel",
+        "episode_code": "S04E14",
+        "source_title": "Touched.by.an.Angel.S04E14.The.Trigger",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 45231,
+        "source_id": -60704419053511845,
+        "series_title": "Angel",
+        "episode_code": "S04E14",
+        "source_title": "Angel - s04e14",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 45231,
+        "source_id": -45632339071337228,
+        "series_title": "Angel",
+        "episode_code": "S04E14",
+        "source_title": "Angel 4x14",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 45231,
+        "source_id": -11078172428392677,
+        "series_title": "Angel",
+        "episode_code": "S04E14",
+        "source_title": "Angel S04E14",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 45262,
+        "source_id": -71465970885536322,
+        "series_title": "Angel",
+        "episode_code": "S04E15",
+        "source_title": "Angel---4x15---Orpheus",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 45262,
+        "source_id": -70757709509478860,
+        "series_title": "Angel",
+        "episode_code": "S04E15",
+        "source_title": "Touched.by.an.Angel.S04E15r.Doodlebugs",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 45262,
+        "source_id": -64649875753136324,
+        "series_title": "Angel",
+        "episode_code": "S04E15",
+        "source_title": "Angel 4x15",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 45262,
+        "source_id": -55831389598746291,
+        "series_title": "Angel",
+        "episode_code": "S04E15",
+        "source_title": "Angel S04E15",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 45262,
+        "source_id": -25117880052945522,
+        "series_title": "Angel",
+        "episode_code": "S04E15",
+        "source_title": "Angel - s04e15",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 45234,
+        "source_id": -47341493201805517,
+        "series_title": "Angel",
+        "episode_code": "S04E16",
+        "source_title": "Angel S04E16",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 45234,
+        "source_id": -8835851840210612,
+        "series_title": "Angel",
+        "episode_code": "S04E16",
+        "source_title": "Angel-4x16_-Hraci",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 45234,
+        "source_id": -15410005306388468,
+        "series_title": "Angel",
+        "episode_code": "S04E16",
+        "source_title": "Touched.by.an.Angel.S04E16.Redeeming.Love",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 45233,
+        "source_id": -70336667108806448,
+        "series_title": "Angel",
+        "episode_code": "S04E17",
+        "source_title": "Angel-4x17_Naruby",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 45233,
+        "source_id": -28668161787943618,
+        "series_title": "Angel",
+        "episode_code": "S04E17",
+        "source_title": "Angel S04E17",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 45233,
+        "source_id": -52851267390800750,
+        "series_title": "Angel",
+        "episode_code": "S04E17",
+        "source_title": "Touched.by.an.Angel.S04E17r.Flights.of.Angels",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 45236,
+        "source_id": -70842250502485919,
+        "series_title": "Angel",
+        "episode_code": "S04E18",
+        "source_title": "Angel-4x18_Prestastni-lide",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 45236,
+        "source_id": -57813120473651847,
+        "series_title": "Angel",
+        "episode_code": "S04E18",
+        "source_title": "Angel S04E18",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 45236,
+        "source_id": -48985643261478326,
+        "series_title": "Angel",
+        "episode_code": "S04E18",
+        "source_title": "Touched.by.an.Angel.S04E18.Breaking.Bread",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 45263,
+        "source_id": -52979814420488455,
+        "series_title": "Angel",
+        "episode_code": "S04E19",
+        "source_title": "Angel---4x19---Kouzelna-kulka",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 45263,
+        "source_id": -56508309761837458,
+        "series_title": "Angel",
+        "episode_code": "S04E19",
+        "source_title": "Touched.by.an.Angel.S04E19.God.and.Country",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 45263,
+        "source_id": -64699803985491641,
+        "series_title": "Angel",
+        "episode_code": "S04E19",
+        "source_title": "Angel-4x19_Čistá krev",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 45263,
+        "source_id": -70804574148845161,
+        "series_title": "Angel",
+        "episode_code": "S04E19",
+        "source_title": "Angel S04E19",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 45263,
+        "source_id": -27866476558522536,
+        "series_title": "Angel",
+        "episode_code": "S04E19",
+        "source_title": "Angel 4x19",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 45263,
+        "source_id": -16443345009506694,
+        "series_title": "Angel",
+        "episode_code": "S04E19",
+        "source_title": "Angel - s04e19",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 45235,
+        "source_id": -66759828787749653,
+        "series_title": "Angel",
+        "episode_code": "S04E20",
+        "source_title": "Angel-4x20-Bestie",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 45235,
+        "source_id": -9523981803705323,
+        "series_title": "Angel",
+        "episode_code": "S04E20",
+        "source_title": "Angel S04E20",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 45235,
+        "source_id": -38827755951923101,
+        "series_title": "Angel",
+        "episode_code": "S04E20",
+        "source_title": "Touched.by.an.Angel.S04E20.How.Do.You.Spell.Faith",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 45168,
+        "source_id": -72030331864491480,
+        "series_title": "Angel",
+        "episode_code": "S04E21",
+        "source_title": "Angel S04E21",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 45168,
+        "source_id": -18152613927840833,
+        "series_title": "Angel",
+        "episode_code": "S04E21",
+        "source_title": "Touched.by.an.Angel.S04E21r.Seek.and.Ye.Shall.Find",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 45167,
+        "source_id": -28876392975178654,
+        "series_title": "Angel",
+        "episode_code": "S04E22",
+        "source_title": "Angel-4x22-Rodina",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 45167,
+        "source_id": -14450219814206969,
+        "series_title": "Angel",
+        "episode_code": "S04E22",
+        "source_title": "Angel---4x22---Domov",
         "status": "needs_whisper"
       }
     ],
@@ -109044,10 +109484,10 @@
       },
       {
         "episode_id": 45216,
-        "source_id": -70316465066012993,
+        "source_id": -40677212413585750,
         "series_title": "Angel",
         "episode_code": "S03E16",
-        "source_title": "Angel S03E16, CZ dabing (TUTA)",
+        "source_title": "Touched.by.an.Angel.S03E16.Smokescreen",
         "subtitle_status": "needs_subtitle_setup_after_prehrajto_processing",
         "reason": "selected source needs Czech subtitles after Whisper detected non-Czech audio"
       },
@@ -109061,11 +109501,29 @@
         "reason": "selected source needs Czech subtitles after Whisper detected non-Czech audio"
       },
       {
+        "episode_id": 45218,
+        "source_id": -16577244158192310,
+        "series_title": "Angel",
+        "episode_code": "S03E18",
+        "source_title": "Touched.by.an.Angel.S03E18.Angel.of.Death",
+        "subtitle_status": "needs_subtitle_setup_after_prehrajto_processing",
+        "reason": "selected source needs Czech subtitles after Whisper detected non-Czech audio"
+      },
+      {
         "episode_id": 45220,
-        "source_id": -52305372694792143,
+        "source_id": -2130227155774796,
         "series_title": "Angel",
         "episode_code": "S03E20",
-        "source_title": "Angel S03E20, CZ dabing",
+        "source_title": "Touched.by.an.Angel.S03E20r.Amazing.Grace.Part1",
+        "subtitle_status": "needs_subtitle_setup_after_prehrajto_processing",
+        "reason": "selected source needs Czech subtitles after Whisper detected non-Czech audio"
+      },
+      {
+        "episode_id": 45221,
+        "source_id": -2841143031589125,
+        "series_title": "Angel",
+        "episode_code": "S03E22",
+        "source_title": "Touched.by.an.Angel.S03E22r.Labor.of.Love",
         "subtitle_status": "needs_subtitle_setup_after_prehrajto_processing",
         "reason": "selected source needs Czech subtitles after Whisper detected non-Czech audio"
       },
@@ -109329,38 +109787,20 @@
         "source_title": "Anne s E na konci S03E08 CZtitulky",
         "subtitle_status": "needs_subtitle_setup_after_prehrajto_processing",
         "reason": "selected source has Czech subtitles but no Czech audio source was found"
-      },
-      {
-        "episode_id": 84651,
-        "source_id": -31449208880387984,
-        "series_title": "Anne s E na konci",
-        "episode_code": "S03E09",
-        "source_title": "Anne s E na konci S03E09 CZtitulky",
-        "subtitle_status": "needs_subtitle_setup_after_prehrajto_processing",
-        "reason": "selected source has Czech subtitles but no Czech audio source was found"
-      },
-      {
-        "episode_id": 84652,
-        "source_id": -36776826065986488,
-        "series_title": "Anne s E na konci",
-        "episode_code": "S03E10",
-        "source_title": "Anne s E na konci S03E10 CZtitulky",
-        "subtitle_status": "needs_subtitle_setup_after_prehrajto_processing",
-        "reason": "selected source has Czech subtitles but no Czech audio source was found"
       }
     ]
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 151,
-    "ok": 40
+    "disabled": 45,
+    "ok": 80
   },
   "whisper_review_statuses": {
-    "whisper_non_cz_needs_subtitles": 504,
-    "whisper_confirmed_cz": 116,
-    "needs_whisper": 11139
+    "whisper_non_cz_needs_subtitles": 522,
+    "whisper_confirmed_cz": 138,
+    "needs_whisper": 11104
   },
   "subtitle_followup_statuses": {
-    "needs_subtitle_setup_after_prehrajto_processing": 2341
+    "needs_subtitle_setup_after_prehrajto_processing": 2343
   }
 }
