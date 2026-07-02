@@ -2,36 +2,76 @@
   "counts": {
     "backlog_episodes": 179404,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 14063,
-    "prepared_source_episodes": 28758,
+    "uploaded_episodes": 14087,
+    "prepared_source_episodes": 28818,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 40,
-    "language_whisper_attempted_sources": 40,
-    "language_pending_whisper_sources": 2604,
-    "whisper_review_sources": 11416,
-    "whisper_review_pending_sources": 10816,
-    "subtitle_followup_sources": 2266,
-    "subtitle_followup_pending_sources": 2266
+    "language_audited_sources": 267,
+    "language_whisper_attempted_sources": 20,
+    "language_pending_whisper_sources": 2624,
+    "whisper_review_sources": 11494,
+    "whisper_review_pending_sources": 10894,
+    "subtitle_followup_sources": 2294,
+    "subtitle_followup_pending_sources": 2294
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-07-02T14:16:30Z",
-      "databaseId": 28597014624,
+      "createdAt": "2026-07-02T14:34:42Z",
+      "databaseId": 28598243939,
       "headBranch": "main",
       "status": "in_progress",
-      "workflowName": "ops-status"
+      "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-07-02T14:34:23Z",
+      "databaseId": 28598209725,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-02T14:34:18Z",
+      "databaseId": 28598202824,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-02T14:26:24Z",
+      "databaseId": 28597683858,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-02T14:23:46Z",
+      "databaseId": 28597504701,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-sources"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-02T14:16:30Z",
+      "databaseId": 28597014624,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-02T14:15:53Z",
       "databaseId": 28596972867,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "update-descriptions"
     },
     {
@@ -43,11 +83,11 @@
       "workflowName": "prepare-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-02T14:13:43Z",
       "databaseId": 28596826502,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -83,19 +123,19 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-02T14:05:12Z",
       "databaseId": 28596249826,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-02T14:02:13Z",
       "databaseId": 28596042077,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "sync"
     },
     {
@@ -137,46 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-02T13:46:17Z",
-      "databaseId": 28594972704,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-02T13:46:14Z",
-      "databaseId": 28594969633,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-02T13:45:17Z",
-      "databaseId": 28594906015,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "failure",
-      "createdAt": "2026-07-02T13:45:10Z",
-      "databaseId": 28594897841,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-07-02T13:34:48Z",
-      "databaseId": 28594199714,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
     }
   ],
   "gaps": {
@@ -48211,6 +48211,61 @@
         "video_id": 27082843
       },
       {
+        "episode_id": 23958,
+        "display_name": "Frasier S05E17 - Dokonalý muž CZ Dabing",
+        "video_id": 27082858
+      },
+      {
+        "episode_id": 23960,
+        "display_name": "Frasier S05E19 - Frasier to musí mít CZ Dabing",
+        "video_id": 27082876
+      },
+      {
+        "episode_id": 23962,
+        "display_name": "Frasier S05E21 - Roz a rypáci CZ Dabing",
+        "video_id": 27082892
+      },
+      {
+        "episode_id": 23964,
+        "display_name": "Frasier S05E23 - Co muž neudělá pro ženu CZ Dabing",
+        "video_id": 27082916
+      },
+      {
+        "episode_id": 23966,
+        "display_name": "Frasier S06E01 - Nezaměstnaný CZ Dabing",
+        "video_id": 27082933
+      },
+      {
+        "episode_id": 23968,
+        "display_name": "Frasier S06E03 - Podvědomé úmysly CZ Dabing",
+        "video_id": 27082943
+      },
+      {
+        "episode_id": 23970,
+        "display_name": "Frasier S06E05 - Terapeut nebo přítel CZ Dabing",
+        "video_id": 27082968
+      },
+      {
+        "episode_id": 23972,
+        "display_name": "Frasier S06E07 - Jak pohřbít milionáře CZ Dabing",
+        "video_id": 27082984
+      },
+      {
+        "episode_id": 23974,
+        "display_name": "Frasier S06E09 - Půjčka CZ Dabing",
+        "video_id": 27083007
+      },
+      {
+        "episode_id": 23976,
+        "display_name": "Frasier S06E11 - Frasier dělá dobré skutky CZ Dabing",
+        "video_id": 27083023
+      },
+      {
+        "episode_id": 23978,
+        "display_name": "Frasier S06E13 - Woodyho návštěva CZ Dabing",
+        "video_id": 27083050
+      },
+      {
         "episode_id": 23891,
         "display_name": "Frasier S02E22 - Agenti v Americe CZ Dabing",
         "video_id": 27082667
@@ -48244,6 +48299,71 @@
         "episode_id": 23903,
         "display_name": "Frasier S03E10 - Je těžké se loučit, když neodjíždíš CZ Dabing",
         "video_id": 27082834
+      },
+      {
+        "episode_id": 23905,
+        "display_name": "Frasier S03E12 - Vyhnání z ráje CZ Dabing",
+        "video_id": 27082862
+      },
+      {
+        "episode_id": 23907,
+        "display_name": "Frasier S03E14 - Stará láska nerezaví CZ Dabing",
+        "video_id": 27082890
+      },
+      {
+        "episode_id": 23909,
+        "display_name": "Frasier S03E16 - Dívej se kam skáčeš CZ Dabing",
+        "video_id": 27082925
+      },
+      {
+        "episode_id": 23911,
+        "display_name": "Frasier S03E18 - Šachy bolí CZ Dabing",
+        "video_id": 27082940
+      },
+      {
+        "episode_id": 23913,
+        "display_name": "Frasier S03E20 - Policejní příběh CZ Dabing",
+        "video_id": 27082959
+      },
+      {
+        "episode_id": 23915,
+        "display_name": "Frasier S03E22 - Frasier miluje Roz CZ Dabing",
+        "video_id": 27082971
+      },
+      {
+        "episode_id": 23917,
+        "display_name": "Frasier S03E24 - Začátky jsou vždycky těžké CZ Dabing",
+        "video_id": 27083003
+      },
+      {
+        "episode_id": 23919,
+        "display_name": "Frasier S04E02 - Zamilovaný Buldog CZ Dabing",
+        "video_id": 27083021
+      },
+      {
+        "episode_id": 23921,
+        "display_name": "Frasier S04E04 - Kritika bratří Craneů CZ Dabing",
+        "video_id": 27083030
+      },
+      {
+        "episode_id": 23923,
+        "display_name": "Frasier S04E06 - Smíšené páry CZ Dabing",
+        "video_id": 27083066
+      },
+      {
+        "episode_id": 23925,
+        "display_name": "Frasier S04E08 - Náš otec, jehož umění není nebezké CZ Dabing",
+        "video_id": 27083085
+      },
+      {
+        "episode_id": 23927,
+        "display_name": "Frasier S04E10 - Lhář! lhář! CZ Dabing",
+        "video_id": 27083101
+      },
+      {
+        "episode_id": 23929,
+        "display_name": "Frasier S04E12 - Smrt a psík CZ Dabing",
+        "video_id": 27083108
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -107118,6 +107238,61 @@
         "video_id": 27082843
       },
       {
+        "episode_id": 23958,
+        "display_name": "Frasier S05E17 - Dokonalý muž CZ Dabing",
+        "video_id": 27082858
+      },
+      {
+        "episode_id": 23960,
+        "display_name": "Frasier S05E19 - Frasier to musí mít CZ Dabing",
+        "video_id": 27082876
+      },
+      {
+        "episode_id": 23962,
+        "display_name": "Frasier S05E21 - Roz a rypáci CZ Dabing",
+        "video_id": 27082892
+      },
+      {
+        "episode_id": 23964,
+        "display_name": "Frasier S05E23 - Co muž neudělá pro ženu CZ Dabing",
+        "video_id": 27082916
+      },
+      {
+        "episode_id": 23966,
+        "display_name": "Frasier S06E01 - Nezaměstnaný CZ Dabing",
+        "video_id": 27082933
+      },
+      {
+        "episode_id": 23968,
+        "display_name": "Frasier S06E03 - Podvědomé úmysly CZ Dabing",
+        "video_id": 27082943
+      },
+      {
+        "episode_id": 23970,
+        "display_name": "Frasier S06E05 - Terapeut nebo přítel CZ Dabing",
+        "video_id": 27082968
+      },
+      {
+        "episode_id": 23972,
+        "display_name": "Frasier S06E07 - Jak pohřbít milionáře CZ Dabing",
+        "video_id": 27082984
+      },
+      {
+        "episode_id": 23974,
+        "display_name": "Frasier S06E09 - Půjčka CZ Dabing",
+        "video_id": 27083007
+      },
+      {
+        "episode_id": 23976,
+        "display_name": "Frasier S06E11 - Frasier dělá dobré skutky CZ Dabing",
+        "video_id": 27083023
+      },
+      {
+        "episode_id": 23978,
+        "display_name": "Frasier S06E13 - Woodyho návštěva CZ Dabing",
+        "video_id": 27083050
+      },
+      {
         "episode_id": 23891,
         "display_name": "Frasier S02E22 - Agenti v Americe CZ Dabing",
         "video_id": 27082667
@@ -107151,6 +107326,71 @@
         "episode_id": 23903,
         "display_name": "Frasier S03E10 - Je těžké se loučit, když neodjíždíš CZ Dabing",
         "video_id": 27082834
+      },
+      {
+        "episode_id": 23905,
+        "display_name": "Frasier S03E12 - Vyhnání z ráje CZ Dabing",
+        "video_id": 27082862
+      },
+      {
+        "episode_id": 23907,
+        "display_name": "Frasier S03E14 - Stará láska nerezaví CZ Dabing",
+        "video_id": 27082890
+      },
+      {
+        "episode_id": 23909,
+        "display_name": "Frasier S03E16 - Dívej se kam skáčeš CZ Dabing",
+        "video_id": 27082925
+      },
+      {
+        "episode_id": 23911,
+        "display_name": "Frasier S03E18 - Šachy bolí CZ Dabing",
+        "video_id": 27082940
+      },
+      {
+        "episode_id": 23913,
+        "display_name": "Frasier S03E20 - Policejní příběh CZ Dabing",
+        "video_id": 27082959
+      },
+      {
+        "episode_id": 23915,
+        "display_name": "Frasier S03E22 - Frasier miluje Roz CZ Dabing",
+        "video_id": 27082971
+      },
+      {
+        "episode_id": 23917,
+        "display_name": "Frasier S03E24 - Začátky jsou vždycky těžké CZ Dabing",
+        "video_id": 27083003
+      },
+      {
+        "episode_id": 23919,
+        "display_name": "Frasier S04E02 - Zamilovaný Buldog CZ Dabing",
+        "video_id": 27083021
+      },
+      {
+        "episode_id": 23921,
+        "display_name": "Frasier S04E04 - Kritika bratří Craneů CZ Dabing",
+        "video_id": 27083030
+      },
+      {
+        "episode_id": 23923,
+        "display_name": "Frasier S04E06 - Smíšené páry CZ Dabing",
+        "video_id": 27083066
+      },
+      {
+        "episode_id": 23925,
+        "display_name": "Frasier S04E08 - Náš otec, jehož umění není nebezké CZ Dabing",
+        "video_id": 27083085
+      },
+      {
+        "episode_id": 23927,
+        "display_name": "Frasier S04E10 - Lhář! lhář! CZ Dabing",
+        "video_id": 27083101
+      },
+      {
+        "episode_id": 23929,
+        "display_name": "Frasier S04E12 - Smrt a psík CZ Dabing",
+        "video_id": 27083108
       }
     ],
     "prepared_not_upload_ready": [
@@ -108312,14 +108552,15 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 40
+    "disabled": 247,
+    "ok": 20
   },
   "whisper_review_statuses": {
     "whisper_non_cz_needs_subtitles": 497,
     "whisper_confirmed_cz": 103,
-    "needs_whisper": 10816
+    "needs_whisper": 10894
   },
   "subtitle_followup_statuses": {
-    "needs_subtitle_setup_after_prehrajto_processing": 2266
+    "needs_subtitle_setup_after_prehrajto_processing": 2294
   }
 }
