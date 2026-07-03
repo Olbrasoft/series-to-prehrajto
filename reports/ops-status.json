@@ -2,36 +2,68 @@
   "counts": {
     "backlog_episodes": 177800,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 15597,
+    "uploaded_episodes": 15611,
     "prepared_source_episodes": 33038,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 40,
-    "language_whisper_attempted_sources": 40,
+    "language_audited_sources": 60,
+    "language_whisper_attempted_sources": 60,
     "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 15140,
-    "whisper_review_pending_sources": 14220,
-    "subtitle_followup_sources": 3063,
-    "subtitle_followup_pending_sources": 3063
+    "whisper_review_pending_sources": 14180,
+    "subtitle_followup_sources": 3068,
+    "subtitle_followup_pending_sources": 3068
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-07-03T16:03:51Z",
-      "databaseId": 28671565443,
+      "createdAt": "2026-07-03T16:16:36Z",
+      "databaseId": 28672136746,
       "headBranch": "main",
       "status": "in_progress",
-      "workflowName": "ops-status"
+      "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-07-03T16:10:46Z",
+      "databaseId": 28671878080,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-03T16:07:57Z",
+      "databaseId": 28671752617,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-sources"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-07-03T16:06:04Z",
+      "databaseId": 28671670312,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-03T16:03:51Z",
+      "databaseId": 28671565443,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-03T16:03:26Z",
       "databaseId": 28671543979,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "update-descriptions"
     },
     {
@@ -39,15 +71,15 @@
       "createdAt": "2026-07-03T16:02:57Z",
       "databaseId": 28671521728,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "prepare-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-03T15:51:43Z",
       "databaseId": 28670998023,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
@@ -63,7 +95,7 @@
       "createdAt": "2026-07-03T15:47:23Z",
       "databaseId": 28670796465,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "sync"
     },
     {
@@ -139,44 +171,12 @@
       "workflowName": "prepare-manifest"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-03T15:32:32Z",
       "databaseId": 28670067707,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-03T15:27:36Z",
-      "databaseId": 28669824632,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-03T15:27:33Z",
-      "databaseId": 28669822052,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-03T15:27:30Z",
-      "databaseId": 28669820176,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-03T15:26:38Z",
-      "databaseId": 28669779077,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
     }
   ],
   "gaps": {
@@ -55816,6 +55816,11 @@
         "video_id": 27116097
       },
       {
+        "episode_id": 76196,
+        "display_name": "Havaj 5-0 S09E07 - Sen o vraždě CZ Titulky",
+        "video_id": 27116122
+      },
+      {
         "episode_id": 100443,
         "display_name": "Havaj 5-0 S07E23 - Předehra CZ Dabing",
         "video_id": 27115451
@@ -55914,6 +55919,71 @@
         "episode_id": 76185,
         "display_name": "Havaj 5-0 S10E18 - Ztraceni v příboji CZ Dabing",
         "video_id": 27116035
+      },
+      {
+        "episode_id": 76174,
+        "display_name": "Havaj 5-0 S09E08 - Ptáci s peřím CZ Titulky",
+        "video_id": 27116197
+      },
+      {
+        "episode_id": 76176,
+        "display_name": "Havaj 5-0 S09E10 - Dávná pomsta CZ Titulky",
+        "video_id": 27116231
+      },
+      {
+        "episode_id": 76198,
+        "display_name": "Havaj 5-0 S09E18 - Doktor smrt CZ Titulky",
+        "video_id": 27116267
+      },
+      {
+        "episode_id": 76178,
+        "display_name": "Havaj 5-0 S09E19 - Síla barev CZ Titulky",
+        "video_id": 27116303
+      },
+      {
+        "episode_id": 76148,
+        "display_name": "Havaj 5-0 S10E01 - Zásah oštěpem CZ Dabing",
+        "video_id": 27116343
+      },
+      {
+        "episode_id": 76190,
+        "display_name": "Havaj 5-0 S10E02 - Nečekaná katastrofa CZ Dabing",
+        "video_id": 27116373
+      },
+      {
+        "episode_id": 76187,
+        "display_name": "Havaj 5-0 S10E20 - Ve spárech sépie CZ Dabing",
+        "video_id": 27116189
+      },
+      {
+        "episode_id": 76189,
+        "display_name": "Havaj 5-0 S10E22 - Aloha CZ Titulky",
+        "video_id": 27116230
+      },
+      {
+        "episode_id": 69919,
+        "display_name": "Raymonda má každý rád S06E05 - 5. epizoda CZ Dabing",
+        "video_id": 27116266
+      },
+      {
+        "episode_id": 15973,
+        "display_name": "Tohle nikdo nechce S01E01 - Pilotní díl CZ Dabing",
+        "video_id": 27116295
+      },
+      {
+        "episode_id": 15975,
+        "display_name": "Tohle nikdo nechce S01E03 - Aura CZ Dabing",
+        "video_id": 27116321
+      },
+      {
+        "episode_id": 15977,
+        "display_name": "Tohle nikdo nechce S01E05 - Moje kamarádka Joanne CZ Dabing",
+        "video_id": 27116349
+      },
+      {
+        "episode_id": 15979,
+        "display_name": "Tohle nikdo nechce S01E07 - Manželky a kámošky CZ Dabing",
+        "video_id": 27116386
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -122393,6 +122463,11 @@
         "video_id": 27116097
       },
       {
+        "episode_id": 76196,
+        "display_name": "Havaj 5-0 S09E07 - Sen o vraždě CZ Titulky",
+        "video_id": 27116122
+      },
+      {
         "episode_id": 100443,
         "display_name": "Havaj 5-0 S07E23 - Předehra CZ Dabing",
         "video_id": 27115451
@@ -122491,6 +122566,71 @@
         "episode_id": 76185,
         "display_name": "Havaj 5-0 S10E18 - Ztraceni v příboji CZ Dabing",
         "video_id": 27116035
+      },
+      {
+        "episode_id": 76174,
+        "display_name": "Havaj 5-0 S09E08 - Ptáci s peřím CZ Titulky",
+        "video_id": 27116197
+      },
+      {
+        "episode_id": 76176,
+        "display_name": "Havaj 5-0 S09E10 - Dávná pomsta CZ Titulky",
+        "video_id": 27116231
+      },
+      {
+        "episode_id": 76198,
+        "display_name": "Havaj 5-0 S09E18 - Doktor smrt CZ Titulky",
+        "video_id": 27116267
+      },
+      {
+        "episode_id": 76178,
+        "display_name": "Havaj 5-0 S09E19 - Síla barev CZ Titulky",
+        "video_id": 27116303
+      },
+      {
+        "episode_id": 76148,
+        "display_name": "Havaj 5-0 S10E01 - Zásah oštěpem CZ Dabing",
+        "video_id": 27116343
+      },
+      {
+        "episode_id": 76190,
+        "display_name": "Havaj 5-0 S10E02 - Nečekaná katastrofa CZ Dabing",
+        "video_id": 27116373
+      },
+      {
+        "episode_id": 76187,
+        "display_name": "Havaj 5-0 S10E20 - Ve spárech sépie CZ Dabing",
+        "video_id": 27116189
+      },
+      {
+        "episode_id": 76189,
+        "display_name": "Havaj 5-0 S10E22 - Aloha CZ Titulky",
+        "video_id": 27116230
+      },
+      {
+        "episode_id": 69919,
+        "display_name": "Raymonda má každý rád S06E05 - 5. epizoda CZ Dabing",
+        "video_id": 27116266
+      },
+      {
+        "episode_id": 15973,
+        "display_name": "Tohle nikdo nechce S01E01 - Pilotní díl CZ Dabing",
+        "video_id": 27116295
+      },
+      {
+        "episode_id": 15975,
+        "display_name": "Tohle nikdo nechce S01E03 - Aura CZ Dabing",
+        "video_id": 27116321
+      },
+      {
+        "episode_id": 15977,
+        "display_name": "Tohle nikdo nechce S01E05 - Moje kamarádka Joanne CZ Dabing",
+        "video_id": 27116349
+      },
+      {
+        "episode_id": 15979,
+        "display_name": "Tohle nikdo nechce S01E07 - Manželky a kámošky CZ Dabing",
+        "video_id": 27116386
       }
     ],
     "prepared_not_upload_ready": [
@@ -122797,326 +122937,6 @@
     ],
     "whisper_review_pending": [
       {
-        "episode_id": 53149,
-        "source_id": -50764184149632726,
-        "series_title": "Black Books",
-        "episode_code": "S01E01",
-        "source_title": "Black Books S01E01 Jak napalit bernak",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 53149,
-        "source_id": -41952778457159124,
-        "series_title": "Black Books",
-        "episode_code": "S01E01",
-        "source_title": "Black Books S01E01 ENtit",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 53150,
-        "source_id": -40058276940511656,
-        "series_title": "Black Books",
-        "episode_code": "S01E06",
-        "source_title": "Black Books S01E06 Sbohem domove by_UgarE",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 53150,
-        "source_id": -14195400345447286,
-        "series_title": "Black Books",
-        "episode_code": "S01E06",
-        "source_title": "Black Books S01E06 Sbohem domove",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 53151,
-        "source_id": -21745459727395171,
-        "series_title": "Black Books",
-        "episode_code": "S02E02",
-        "source_title": "Black Books S02E02 Letni horecka",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 53151,
-        "source_id": -38546449716395902,
-        "series_title": "Black Books",
-        "episode_code": "S02E02",
-        "source_title": "Black Books S02E02 ENtit",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 53152,
-        "source_id": -62193240530113854,
-        "series_title": "Black Books",
-        "episode_code": "S02E04",
-        "source_title": "Black Books S02E04 Příbuzní",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 53152,
-        "source_id": -38810025631273678,
-        "series_title": "Black Books",
-        "episode_code": "S02E04",
-        "source_title": "Black Books S02E04 Krev by_UgarE",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 53152,
-        "source_id": -11547943729217182,
-        "series_title": "Black Books",
-        "episode_code": "S02E04",
-        "source_title": "Black Books S02E04 Krev",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 53152,
-        "source_id": -15606149301067249,
-        "series_title": "Black Books",
-        "episode_code": "S02E04",
-        "source_title": "Black Books S02E04 ENtit",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 53153,
-        "source_id": -41781976245165899,
-        "series_title": "Black Books",
-        "episode_code": "S02E05",
-        "source_title": "Black Books S02E05 Pozdrav slunci",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 53153,
-        "source_id": -41829137185848792,
-        "series_title": "Black Books",
-        "episode_code": "S02E05",
-        "source_title": "Black Books S02E05 Ahoj slunce",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 53153,
-        "source_id": -20556388397171504,
-        "series_title": "Black Books",
-        "episode_code": "S02E05",
-        "source_title": "Black Books S02E05 Ahoj slunce by_UgarE",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 53153,
-        "source_id": -40869422789299638,
-        "series_title": "Black Books",
-        "episode_code": "S02E05",
-        "source_title": "Black Books S02E05 ENtit",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 53148,
-        "source_id": -67283228294399217,
-        "series_title": "Black Books",
-        "episode_code": "S02E06",
-        "source_title": "Black Books S02E06 Zasloužená dovolená",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 53148,
-        "source_id": -18427041033154670,
-        "series_title": "Black Books",
-        "episode_code": "S02E06",
-        "source_title": "Black Books S02E06 Zaslouzena dovolena by_UgarE",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 53148,
-        "source_id": -6287146752506727,
-        "series_title": "Black Books",
-        "episode_code": "S02E06",
-        "source_title": "Black Books S02E06 Zaslouzena dovolena",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 53148,
-        "source_id": -8200463315051241,
-        "series_title": "Black Books",
-        "episode_code": "S02E06",
-        "source_title": "Black Books S02E06 ENtit",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 53156,
-        "source_id": -18566402543878047,
-        "series_title": "Black Books",
-        "episode_code": "S03E01",
-        "source_title": "Black Books S03E01 Manny se vrací",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 53156,
-        "source_id": -27938280495336561,
-        "series_title": "Black Books",
-        "episode_code": "S03E01",
-        "source_title": "Black Books S03E01 Manny vrat se domu by_UgarE",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 53156,
-        "source_id": -23003120864881644,
-        "series_title": "Black Books",
-        "episode_code": "S03E01",
-        "source_title": "Black Books S03E01 Manny vrat se domu",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 53156,
-        "source_id": -35681218122938769,
-        "series_title": "Black Books",
-        "episode_code": "S03E01",
-        "source_title": "Black Books S03E01",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 53156,
-        "source_id": -63890899221649344,
-        "series_title": "Black Books",
-        "episode_code": "S03E01",
-        "source_title": "Black Books S03E01 ENtit",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 53155,
-        "source_id": -39383513061743588,
-        "series_title": "Black Books",
-        "episode_code": "S03E02",
-        "source_title": "Black Books S03E02 Sloni a slepice",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 53155,
-        "source_id": -64385373706027624,
-        "series_title": "Black Books",
-        "episode_code": "S03E02",
-        "source_title": "Black Books S03E02 Sloni a slepice by_UgarE",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 53155,
-        "source_id": -4549998010061841,
-        "series_title": "Black Books",
-        "episode_code": "S03E02",
-        "source_title": "Black Books S03E02 Sloni a slepice",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 53155,
-        "source_id": -17135920333090356,
-        "series_title": "Black Books",
-        "episode_code": "S03E02",
-        "source_title": "Black Books S03E02",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 53158,
-        "source_id": -2471892480349752,
-        "series_title": "Black Books",
-        "episode_code": "S03E03",
-        "source_title": "Black Books S03E03 Mamula a taťula",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 53158,
-        "source_id": -64348648025567530,
-        "series_title": "Black Books",
-        "episode_code": "S03E03",
-        "source_title": "Black Books S03E03 Mamuska a tatuska by_UgarE",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 53158,
-        "source_id": -39599186542248293,
-        "series_title": "Black Books",
-        "episode_code": "S03E03",
-        "source_title": "Black Books S03E03 Mamuska a tatuska",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 53158,
-        "source_id": -39718632844053100,
-        "series_title": "Black Books",
-        "episode_code": "S03E03",
-        "source_title": "Black Books S03E03",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 53157,
-        "source_id": -3596875950953747,
-        "series_title": "Black Books",
-        "episode_code": "S03E04",
-        "source_title": "Black Books S03E04 Malá sázka",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 53157,
-        "source_id": -8179274491286693,
-        "series_title": "Black Books",
-        "episode_code": "S03E04",
-        "source_title": "Black Books S03E04 Mala sazka",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 53157,
-        "source_id": -60281111386701661,
-        "series_title": "Black Books",
-        "episode_code": "S03E04",
-        "source_title": "Black Books S03E04",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 53159,
-        "source_id": -46993972194706848,
-        "series_title": "Black Books",
-        "episode_code": "S03E05",
-        "source_title": "Black Books S03E05 Cestopisec",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 53159,
-        "source_id": -49272350662998411,
-        "series_title": "Black Books",
-        "episode_code": "S03E05",
-        "source_title": "Black Books S03E05 Cestopisec",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 53159,
-        "source_id": -26750820218828271,
-        "series_title": "Black Books",
-        "episode_code": "S03E05",
-        "source_title": "Black Books S03E05 Cestopisec by_UgarE",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 53159,
-        "source_id": -29398572289878877,
-        "series_title": "Black Books",
-        "episode_code": "S03E05",
-        "source_title": "Black Books S03E05",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 53154,
-        "source_id": -3612675815204865,
-        "series_title": "Black Books",
-        "episode_code": "S03E06",
-        "source_title": "Black Books S03E06 Mejdan",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 53154,
-        "source_id": -31205624328351294,
-        "series_title": "Black Books",
-        "episode_code": "S03E06",
-        "source_title": "Black Books S03E06 Vecirek",
-        "status": "needs_whisper"
-      },
-      {
         "episode_id": 53154,
         "source_id": -12536944733207077,
         "series_title": "Black Books",
@@ -123194,6 +123014,326 @@
         "series_title": "Chicago Fire",
         "episode_code": "S03E03",
         "source_title": "Chicago Fire_S03E03_Řídit náklaďák",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 38162,
+        "source_id": -13014989480885900,
+        "series_title": "Chicago Fire",
+        "episode_code": "S03E03",
+        "source_title": "Chicago Fire S03E03 SKdab",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 38163,
+        "source_id": -35915916981284165,
+        "series_title": "Chicago Fire",
+        "episode_code": "S03E04",
+        "source_title": "Chicago Fire_S03E04_Omluvy jsou nebezpečné",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 38163,
+        "source_id": -44484741765399797,
+        "series_title": "Chicago Fire",
+        "episode_code": "S03E04",
+        "source_title": "Chicago Fire S03E04 SKdab",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 38166,
+        "source_id": -60280835391420357,
+        "series_title": "Chicago Fire",
+        "episode_code": "S03E05",
+        "source_title": "Chicago Fire_S03E05_Nukleární varianta",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 38166,
+        "source_id": -22123869402803248,
+        "series_title": "Chicago Fire",
+        "episode_code": "S03E05",
+        "source_title": "Chicago Fire S03E05 SKdab",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 38164,
+        "source_id": -61916578735212148,
+        "series_title": "Chicago Fire",
+        "episode_code": "S03E07",
+        "source_title": "Chicago Fire_S03E07_Na nic nesahat",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 38164,
+        "source_id": -36097909942723160,
+        "series_title": "Chicago Fire",
+        "episode_code": "S03E07",
+        "source_title": "Chicago Fire S03E07 SKdab",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 38165,
+        "source_id": -39902114808179309,
+        "series_title": "Chicago Fire",
+        "episode_code": "S03E08",
+        "source_title": "Chicago Fire_S03E08_Vrtulník",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 38165,
+        "source_id": -17264787826287835,
+        "series_title": "Chicago Fire",
+        "episode_code": "S03E08",
+        "source_title": "Chicago Fire S03E08 SKdab",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 38167,
+        "source_id": -68230621213152155,
+        "series_title": "Chicago Fire",
+        "episode_code": "S03E09",
+        "source_title": "Chicago Fire_S03E09_Zastavení dopravy",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 38167,
+        "source_id": -25659429995370402,
+        "series_title": "Chicago Fire",
+        "episode_code": "S03E09",
+        "source_title": "Chicago Fire S03E09 SKdab",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 38168,
+        "source_id": -35976771774230711,
+        "series_title": "Chicago Fire",
+        "episode_code": "S03E10",
+        "source_title": "Chicago Fire_S03E10_Santovo kousnutí",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 38168,
+        "source_id": -18155423816803907,
+        "series_title": "Chicago Fire",
+        "episode_code": "S03E10",
+        "source_title": "Chicago Fire S03E10 SKdab",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 38169,
+        "source_id": -57569987987426404,
+        "series_title": "Chicago Fire",
+        "episode_code": "S03E11",
+        "source_title": "Chicago Fire_S03E11_Nech ho zemřít",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 38170,
+        "source_id": -32307778925425795,
+        "series_title": "Chicago Fire",
+        "episode_code": "S03E12",
+        "source_title": "Chicago Fire_S03E12_Dopadnout dravce",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 38172,
+        "source_id": -69358693882309651,
+        "series_title": "Chicago Fire",
+        "episode_code": "S03E13",
+        "source_title": "Chicago Fire S03E13 SKdab",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 38172,
+        "source_id": -16376333382178936,
+        "series_title": "Chicago Fire",
+        "episode_code": "S03E13",
+        "source_title": "Chicago Fire_S03E13_Tři zvonečky",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 38171,
+        "source_id": -60065666245588000,
+        "series_title": "Chicago Fire",
+        "episode_code": "S03E14",
+        "source_title": "Chicago Fire_S03E14_Jako v ráji",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 38171,
+        "source_id": -59245399649976517,
+        "series_title": "Chicago Fire",
+        "episode_code": "S03E14",
+        "source_title": "Chicago Fire S03E14 SKdab",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 38173,
+        "source_id": -71706393488779128,
+        "series_title": "Chicago Fire",
+        "episode_code": "S03E15",
+        "source_title": "Chicago Fire_S03E15_Střemhlav do katastrofy",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 38173,
+        "source_id": -22713085662228886,
+        "series_title": "Chicago Fire",
+        "episode_code": "S03E15",
+        "source_title": "Chicago Fire S03E15 SKdab",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 38174,
+        "source_id": -9509541143547139,
+        "series_title": "Chicago Fire",
+        "episode_code": "S03E16",
+        "source_title": "Chicago Fire_S03E16_Dráždění býka",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 38175,
+        "source_id": -23759018834180044,
+        "series_title": "Chicago Fire",
+        "episode_code": "S03E17",
+        "source_title": "Chicago Fire_S03E17_Odpustím ti cokoli",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 38176,
+        "source_id": -7017089753229634,
+        "series_title": "Chicago Fire",
+        "episode_code": "S03E18",
+        "source_title": "Chicago Fire_S03E18_Shovívavý, neústupný, absolutní",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 38176,
+        "source_id": -3001680517482236,
+        "series_title": "Chicago Fire",
+        "episode_code": "S03E18",
+        "source_title": "Chicago Fire S03E18 SKdab",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 38179,
+        "source_id": -3088222926182229,
+        "series_title": "Chicago Fire",
+        "episode_code": "S03E19",
+        "source_title": "Chicago Fire_S03E19_Já, Apokalypsa",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 38177,
+        "source_id": -48928696443563775,
+        "series_title": "Chicago Fire",
+        "episode_code": "S03E20",
+        "source_title": "Chicago Fire_S03E20_Víš, kde mě najít",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 38178,
+        "source_id": -22316582572839246,
+        "series_title": "Chicago Fire",
+        "episode_code": "S03E21",
+        "source_title": "Chicago Fire_S03E21_Říkali jsme jí Beruška",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 38180,
+        "source_id": -4486688090848393,
+        "series_title": "Chicago Fire",
+        "episode_code": "S03E22",
+        "source_title": "Chicago Fire_S03E22_Pátá kategorie",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 38182,
+        "source_id": -58365791689226577,
+        "series_title": "Chicago Fire",
+        "episode_code": "S03E23",
+        "source_title": "Chicago Fire_S03E23_Spartacus",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 38214,
+        "source_id": -65394127216475444,
+        "series_title": "Chicago Fire",
+        "episode_code": "S04E01",
+        "source_title": "Chicago Fire_S04E01_Ať hoří",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 38214,
+        "source_id": -57714306211167603,
+        "series_title": "Chicago Fire",
+        "episode_code": "S04E01",
+        "source_title": "Chicago Fire S04E01 SKdab",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 38214,
+        "source_id": -18250780318971994,
+        "series_title": "Chicago Fire",
+        "episode_code": "S04E01",
+        "source_title": "Chicago Fire S04E01 SKdab",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 38135,
+        "source_id": -70110212435488995,
+        "series_title": "Chicago Fire",
+        "episode_code": "S04E02",
+        "source_title": "Chicago Fire_S04E02_Chuť Panama City",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 38135,
+        "source_id": -63926749347212687,
+        "series_title": "Chicago Fire",
+        "episode_code": "S04E02",
+        "source_title": "Chicago Fire S04E02 SKdab",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 38135,
+        "source_id": -37603961989433447,
+        "series_title": "Chicago Fire",
+        "episode_code": "S04E02",
+        "source_title": "Chicago Fire S04E02 SKdab",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 38181,
+        "source_id": -56475078623176223,
+        "series_title": "Chicago Fire",
+        "episode_code": "S04E03",
+        "source_title": "Chicago Fire_S04E03_Jdu pryč",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 38136,
+        "source_id": -16971811622236366,
+        "series_title": "Chicago Fire",
+        "episode_code": "S04E04",
+        "source_title": "Chicago Fire_S04E04_Tvůj den přichází",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 38136,
+        "source_id": -23612955157361791,
+        "series_title": "Chicago Fire",
+        "episode_code": "S04E04",
+        "source_title": "Chicago Fire S04E04 SKdab",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 38136,
+        "source_id": -19552023447977456,
+        "series_title": "Chicago Fire",
+        "episode_code": "S04E04",
+        "source_title": "Chicago Fire S04E04 SKdab",
         "status": "needs_whisper"
       }
     ],
@@ -123652,14 +123792,14 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 40
+    "ok": 60
   },
   "whisper_review_statuses": {
-    "whisper_non_cz_needs_subtitles": 622,
-    "whisper_confirmed_cz": 298,
-    "needs_whisper": 14220
+    "whisper_non_cz_needs_subtitles": 642,
+    "whisper_confirmed_cz": 318,
+    "needs_whisper": 14180
   },
   "subtitle_followup_statuses": {
-    "needs_subtitle_setup_after_prehrajto_processing": 3063
+    "needs_subtitle_setup_after_prehrajto_processing": 3068
   }
 }
