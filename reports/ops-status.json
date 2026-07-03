@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 177599,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 15917,
+    "uploaded_episodes": 15918,
     "prepared_source_episodes": 34288,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 227,
-    "language_whisper_attempted_sources": 40,
-    "language_pending_whisper_sources": 2604,
+    "language_audited_sources": 20,
+    "language_whisper_attempted_sources": 20,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 16346,
     "whisper_review_pending_sources": 15286,
     "subtitle_followup_sources": 3460,
@@ -20,10 +20,26 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-07-03T23:54:54Z",
+      "databaseId": 28688444472,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-03T23:54:49Z",
+      "databaseId": 28688442510,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-03T23:50:50Z",
       "databaseId": 28688338888,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-status"
     },
     {
@@ -35,11 +51,11 @@
       "workflowName": "process-whisper-review"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-03T23:50:15Z",
       "databaseId": 28688322401,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "update-descriptions"
     },
     {
@@ -67,19 +83,19 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-07-03T23:49:15Z",
       "databaseId": 28688296742,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-03T23:48:35Z",
       "databaseId": 28688280966,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -135,7 +151,7 @@
       "createdAt": "2026-07-03T23:34:11Z",
       "databaseId": 28687917714,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "sync"
     },
     {
@@ -161,22 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-03T23:23:55Z",
-      "databaseId": 28687635159,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-03T23:22:44Z",
-      "databaseId": 28687600835,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-descriptions"
     }
   ],
   "gaps": {
@@ -57514,6 +57514,11 @@
         "episode_id": 53453,
         "display_name": "Pohotovost S06E07 - Smutný případ CZ Dabing",
         "video_id": 27124875
+      },
+      {
+        "episode_id": 53457,
+        "display_name": "Pohotovost S06E11 - Putovní srdce CZ Dabing",
+        "video_id": 27124907
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -125691,6 +125696,11 @@
         "episode_id": 53453,
         "display_name": "Pohotovost S06E07 - Smutný případ CZ Dabing",
         "video_id": 27124875
+      },
+      {
+        "episode_id": 53457,
+        "display_name": "Pohotovost S06E11 - Putovní srdce CZ Dabing",
+        "video_id": 27124907
       }
     ],
     "prepared_not_upload_ready": [
@@ -126852,8 +126862,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 187,
-    "ok": 40
+    "ok": 20
   },
   "whisper_review_statuses": {
     "whisper_non_cz_needs_subtitles": 741,
