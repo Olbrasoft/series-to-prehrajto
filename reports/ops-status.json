@@ -2,28 +2,36 @@
   "counts": {
     "backlog_episodes": 177800,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 15638,
-    "prepared_source_episodes": 33128,
+    "uploaded_episodes": 15640,
+    "prepared_source_episodes": 33158,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 611,
+    "language_audited_sources": 615,
     "language_whisper_attempted_sources": 111,
     "language_pending_whisper_sources": 2624,
-    "whisper_review_sources": 15143,
-    "whisper_review_pending_sources": 14223,
+    "whisper_review_sources": 15147,
+    "whisper_review_pending_sources": 14227,
     "subtitle_followup_sources": 3104,
     "subtitle_followup_pending_sources": 3104
   },
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-07-03T16:48:35Z",
+      "databaseId": 28673502367,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-03T16:44:51Z",
       "databaseId": 28673344811,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -31,7 +39,7 @@
       "createdAt": "2026-07-03T16:44:47Z",
       "databaseId": 28673341662,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "prepare-manifest"
     },
     {
@@ -43,11 +51,11 @@
       "workflowName": "process-whisper-review"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-03T16:44:20Z",
       "databaseId": 28673322397,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "update-descriptions"
     },
     {
@@ -107,11 +115,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "failure",
       "createdAt": "2026-07-03T16:23:33Z",
       "databaseId": 28672432768,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -169,14 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-07-03T16:10:46Z",
-      "databaseId": 28671878080,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
     }
   ],
   "gaps": {
@@ -56119,6 +56119,16 @@
         "episode_id": 82233,
         "display_name": "Status: Nežádoucí  S01E12 - 12. epizoda CZ Dabing",
         "video_id": 27116947
+      },
+      {
+        "episode_id": 71645,
+        "display_name": "Status: Nežádoucí  S02E01 - 1. epizoda CZ Dabing",
+        "video_id": 27116998
+      },
+      {
+        "episode_id": 71651,
+        "display_name": "Status: Nežádoucí  S02E04 - 4. epizoda CZ Dabing",
+        "video_id": 27117039
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -122901,6 +122911,16 @@
         "episode_id": 82233,
         "display_name": "Status: Nežádoucí  S01E12 - 12. epizoda CZ Dabing",
         "video_id": 27116947
+      },
+      {
+        "episode_id": 71645,
+        "display_name": "Status: Nežádoucí  S02E01 - 1. epizoda CZ Dabing",
+        "video_id": 27116998
+      },
+      {
+        "episode_id": 71651,
+        "display_name": "Status: Nežádoucí  S02E04 - 4. epizoda CZ Dabing",
+        "video_id": 27117039
       }
     ],
     "prepared_not_upload_ready": [
@@ -124062,13 +124082,13 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 500,
+    "disabled": 504,
     "ok": 111
   },
   "whisper_review_statuses": {
     "whisper_non_cz_needs_subtitles": 622,
     "whisper_confirmed_cz": 298,
-    "needs_whisper": 14223
+    "needs_whisper": 14227
   },
   "subtitle_followup_statuses": {
     "needs_subtitle_setup_after_prehrajto_processing": 3104
