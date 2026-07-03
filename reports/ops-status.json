@@ -2,36 +2,84 @@
   "counts": {
     "backlog_episodes": 178042,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 15506,
-    "prepared_source_episodes": 32838,
+    "uploaded_episodes": 15518,
+    "prepared_source_episodes": 32898,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 40,
-    "language_whisper_attempted_sources": 40,
-    "language_pending_whisper_sources": 2624,
+    "language_audited_sources": 60,
+    "language_whisper_attempted_sources": 60,
+    "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 15098,
-    "whisper_review_pending_sources": 14198,
-    "subtitle_followup_sources": 3011,
-    "subtitle_followup_pending_sources": 3011
+    "whisper_review_pending_sources": 14178,
+    "subtitle_followup_sources": 3013,
+    "subtitle_followup_pending_sources": 3013
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-07-03T14:57:47Z",
-      "databaseId": 28668323123,
+      "createdAt": "2026-07-03T15:09:19Z",
+      "databaseId": 28668924374,
       "headBranch": "main",
       "status": "in_progress",
-      "workflowName": "process-whisper-review"
+      "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-07-03T15:09:13Z",
+      "databaseId": 28668918885,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-03T15:06:11Z",
+      "databaseId": 28668766371,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-03T15:02:42Z",
+      "databaseId": 28668582436,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-03T14:58:12Z",
+      "databaseId": 28668342417,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-03T14:58:08Z",
+      "databaseId": 28668339156,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-03T14:57:47Z",
+      "databaseId": 28668323123,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-03T14:57:19Z",
       "databaseId": 28668297672,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -67,11 +115,11 @@
       "workflowName": "audit-language"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-03T14:34:41Z",
       "databaseId": 28667142581,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -129,54 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-03T14:16:25Z",
-      "databaseId": 28666205217,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-03T14:15:54Z",
-      "databaseId": 28666180124,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-03T14:15:16Z",
-      "databaseId": 28666145747,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-03T14:15:02Z",
-      "databaseId": 28666131614,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-03T14:07:01Z",
-      "databaseId": 28665715119,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-03T14:06:19Z",
-      "databaseId": 28665680028,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
     }
   ],
   "gaps": {
@@ -55386,6 +55386,41 @@
         "video_id": 27114526
       },
       {
+        "episode_id": 76118,
+        "display_name": "Havaj 5-0 S03E21 - Pohled do duše CZ Dabing",
+        "video_id": 27114581
+      },
+      {
+        "episode_id": 76102,
+        "display_name": "Havaj 5-0 S03E22 - Vězeňkyně CZ Dabing",
+        "video_id": 27114636
+      },
+      {
+        "episode_id": 76200,
+        "display_name": "Havaj 5-0 S03E23 - Rodinný podnik CZ Dabing",
+        "video_id": 27114673
+      },
+      {
+        "episode_id": 76096,
+        "display_name": "Havaj 5-0 S04E01 - Musíme si pomáhat CZ Dabing",
+        "video_id": 27114725
+      },
+      {
+        "episode_id": 76104,
+        "display_name": "Havaj 5-0 S04E04 - Dokud vás smrt nerozdělí CZ Dabing",
+        "video_id": 27114760
+      },
+      {
+        "episode_id": 76144,
+        "display_name": "Havaj 5-0 S04E08 - Nechtěný parťák CZ Dabing",
+        "video_id": 27114793
+      },
+      {
+        "episode_id": 76098,
+        "display_name": "Havaj 5-0 S04E11 - Upomínka CZ Dabing",
+        "video_id": 27114838
+      },
+      {
         "episode_id": 76141,
         "display_name": "Havaj 5-0 S02E14 - Balíček CZ Dabing",
         "video_id": 27114053
@@ -55459,6 +55494,31 @@
         "episode_id": 76097,
         "display_name": "Havaj 5-0 S04E09 - Šťastné díkůvzdání CZ Dabing",
         "video_id": 27114541
+      },
+      {
+        "episode_id": 76145,
+        "display_name": "Havaj 5-0 S04E13 - Výpomoc CZ Dabing",
+        "video_id": 27114577
+      },
+      {
+        "episode_id": 76135,
+        "display_name": "Havaj 5-0 S04E15 - Pohřbená tajemství CZ Dabing",
+        "video_id": 27114617
+      },
+      {
+        "episode_id": 76137,
+        "display_name": "Havaj 5-0 S04E21 - Na území nepřítele CZ Dabing",
+        "video_id": 27114648
+      },
+      {
+        "episode_id": 76109,
+        "display_name": "Havaj 5-0 S05E01 - Není úniku CZ Dabing",
+        "video_id": 27114685
+      },
+      {
+        "episode_id": 76201,
+        "display_name": "Havaj 5-0 S05E07 - Co kdyby CZ Dabing",
+        "video_id": 27114730
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -121508,6 +121568,41 @@
         "video_id": 27114526
       },
       {
+        "episode_id": 76118,
+        "display_name": "Havaj 5-0 S03E21 - Pohled do duše CZ Dabing",
+        "video_id": 27114581
+      },
+      {
+        "episode_id": 76102,
+        "display_name": "Havaj 5-0 S03E22 - Vězeňkyně CZ Dabing",
+        "video_id": 27114636
+      },
+      {
+        "episode_id": 76200,
+        "display_name": "Havaj 5-0 S03E23 - Rodinný podnik CZ Dabing",
+        "video_id": 27114673
+      },
+      {
+        "episode_id": 76096,
+        "display_name": "Havaj 5-0 S04E01 - Musíme si pomáhat CZ Dabing",
+        "video_id": 27114725
+      },
+      {
+        "episode_id": 76104,
+        "display_name": "Havaj 5-0 S04E04 - Dokud vás smrt nerozdělí CZ Dabing",
+        "video_id": 27114760
+      },
+      {
+        "episode_id": 76144,
+        "display_name": "Havaj 5-0 S04E08 - Nechtěný parťák CZ Dabing",
+        "video_id": 27114793
+      },
+      {
+        "episode_id": 76098,
+        "display_name": "Havaj 5-0 S04E11 - Upomínka CZ Dabing",
+        "video_id": 27114838
+      },
+      {
         "episode_id": 76141,
         "display_name": "Havaj 5-0 S02E14 - Balíček CZ Dabing",
         "video_id": 27114053
@@ -121581,6 +121676,31 @@
         "episode_id": 76097,
         "display_name": "Havaj 5-0 S04E09 - Šťastné díkůvzdání CZ Dabing",
         "video_id": 27114541
+      },
+      {
+        "episode_id": 76145,
+        "display_name": "Havaj 5-0 S04E13 - Výpomoc CZ Dabing",
+        "video_id": 27114577
+      },
+      {
+        "episode_id": 76135,
+        "display_name": "Havaj 5-0 S04E15 - Pohřbená tajemství CZ Dabing",
+        "video_id": 27114617
+      },
+      {
+        "episode_id": 76137,
+        "display_name": "Havaj 5-0 S04E21 - Na území nepřítele CZ Dabing",
+        "video_id": 27114648
+      },
+      {
+        "episode_id": 76109,
+        "display_name": "Havaj 5-0 S05E01 - Není úniku CZ Dabing",
+        "video_id": 27114685
+      },
+      {
+        "episode_id": 76201,
+        "display_name": "Havaj 5-0 S05E07 - Co kdyby CZ Dabing",
+        "video_id": 27114730
       }
     ],
     "prepared_not_upload_ready": [
@@ -121887,166 +122007,6 @@
     ],
     "whisper_review_pending": [
       {
-        "episode_id": 38149,
-        "source_id": -16498369648057933,
-        "series_title": "Chicago Fire",
-        "episode_code": "S02E12",
-        "source_title": "Chicago Fire S02E12 SKdab",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 38150,
-        "source_id": -55453150679840511,
-        "series_title": "Chicago Fire",
-        "episode_code": "S02E13",
-        "source_title": "Chicago Fire_S02E13_Noc s velkým N",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 38151,
-        "source_id": -36280481445792127,
-        "series_title": "Chicago Fire",
-        "episode_code": "S02E14",
-        "source_title": "Chicago Fire_S02E14_Panenská kůže",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 38151,
-        "source_id": -10608674160155166,
-        "series_title": "Chicago Fire",
-        "episode_code": "S02E14",
-        "source_title": "Chicago Fire S02E14 SKdab",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 38151,
-        "source_id": -3593114700121846,
-        "series_title": "Chicago Fire",
-        "episode_code": "S02E14",
-        "source_title": "Chicago Fire - s02e14 SK",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 38154,
-        "source_id": -60632239463290648,
-        "series_title": "Chicago Fire",
-        "episode_code": "S02E15",
-        "source_title": "Chicago Fire_S02E15_Drž pusu zavřenou",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 38154,
-        "source_id": -51674317869044738,
-        "series_title": "Chicago Fire",
-        "episode_code": "S02E15",
-        "source_title": "Chicago Fire - s02e15 SK",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 38154,
-        "source_id": -34022916702967456,
-        "series_title": "Chicago Fire",
-        "episode_code": "S02E15",
-        "source_title": "Chicago Fire S02E15 SKdab",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 38152,
-        "source_id": -10801127146955961,
-        "series_title": "Chicago Fire",
-        "episode_code": "S02E16",
-        "source_title": "Chicago Fire_S02E16_Odpálení rakety",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 38152,
-        "source_id": -68477150447438863,
-        "series_title": "Chicago Fire",
-        "episode_code": "S02E16",
-        "source_title": "Chicago Fire - s02e16 SK",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 38152,
-        "source_id": -16186176721783628,
-        "series_title": "Chicago Fire",
-        "episode_code": "S02E16",
-        "source_title": "Chicago Fire S02E16 SKdab",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 38153,
-        "source_id": -52531083724030520,
-        "series_title": "Chicago Fire",
-        "episode_code": "S02E17",
-        "source_title": "Chicago Fire_S02E17_Když jde do tuhého",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 38153,
-        "source_id": -24255841433300167,
-        "series_title": "Chicago Fire",
-        "episode_code": "S02E17",
-        "source_title": "Chicago Fire - s02e17 SK",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 38155,
-        "source_id": -50588782149677,
-        "series_title": "Chicago Fire",
-        "episode_code": "S02E18",
-        "source_title": "Chicago Fire_S02E18_Než vzlétneš",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 38155,
-        "source_id": -56110209148380957,
-        "series_title": "Chicago Fire",
-        "episode_code": "S02E18",
-        "source_title": "Chicago Fire - s02e18 SK",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 38157,
-        "source_id": -31449972398876071,
-        "series_title": "Chicago Fire",
-        "episode_code": "S02E19",
-        "source_title": "Chicago Fire_S02E19_Těžká váha",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 38157,
-        "source_id": -24542179409490824,
-        "series_title": "Chicago Fire",
-        "episode_code": "S02E19",
-        "source_title": "Chicago Fire - s02e19 SK",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 38156,
-        "source_id": -28813238220365876,
-        "series_title": "Chicago Fire",
-        "episode_code": "S02E20",
-        "source_title": "Chicago Fire_S02E20_Temný den",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 38156,
-        "source_id": -55500011619244799,
-        "series_title": "Chicago Fire",
-        "episode_code": "S02E20",
-        "source_title": "Chicago Fire - s02e20 SK",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 38158,
-        "source_id": -68967102339739389,
-        "series_title": "Chicago Fire",
-        "episode_code": "S02E21",
-        "source_title": "Chicago Fire_S02E21_Ještě jeden pokus",
-        "status": "needs_whisper"
-      },
-      {
         "episode_id": 38158,
         "source_id": -47799745842340982,
         "series_title": "Chicago Fire",
@@ -122284,6 +122244,166 @@
         "series_title": "Chicago Fire",
         "episode_code": "S03E16",
         "source_title": "Chicago Fire_S03E16_Dráždění býka",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 38175,
+        "source_id": -23759018834180044,
+        "series_title": "Chicago Fire",
+        "episode_code": "S03E17",
+        "source_title": "Chicago Fire_S03E17_Odpustím ti cokoli",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 38176,
+        "source_id": -7017089753229634,
+        "series_title": "Chicago Fire",
+        "episode_code": "S03E18",
+        "source_title": "Chicago Fire_S03E18_Shovívavý, neústupný, absolutní",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 38176,
+        "source_id": -3001680517482236,
+        "series_title": "Chicago Fire",
+        "episode_code": "S03E18",
+        "source_title": "Chicago Fire S03E18 SKdab",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 38179,
+        "source_id": -3088222926182229,
+        "series_title": "Chicago Fire",
+        "episode_code": "S03E19",
+        "source_title": "Chicago Fire_S03E19_Já, Apokalypsa",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 38177,
+        "source_id": -48928696443563775,
+        "series_title": "Chicago Fire",
+        "episode_code": "S03E20",
+        "source_title": "Chicago Fire_S03E20_Víš, kde mě najít",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 38178,
+        "source_id": -22316582572839246,
+        "series_title": "Chicago Fire",
+        "episode_code": "S03E21",
+        "source_title": "Chicago Fire_S03E21_Říkali jsme jí Beruška",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 38180,
+        "source_id": -4486688090848393,
+        "series_title": "Chicago Fire",
+        "episode_code": "S03E22",
+        "source_title": "Chicago Fire_S03E22_Pátá kategorie",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 38182,
+        "source_id": -58365791689226577,
+        "series_title": "Chicago Fire",
+        "episode_code": "S03E23",
+        "source_title": "Chicago Fire_S03E23_Spartacus",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 38214,
+        "source_id": -65394127216475444,
+        "series_title": "Chicago Fire",
+        "episode_code": "S04E01",
+        "source_title": "Chicago Fire_S04E01_Ať hoří",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 38214,
+        "source_id": -57714306211167603,
+        "series_title": "Chicago Fire",
+        "episode_code": "S04E01",
+        "source_title": "Chicago Fire S04E01 SKdab",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 38214,
+        "source_id": -18250780318971994,
+        "series_title": "Chicago Fire",
+        "episode_code": "S04E01",
+        "source_title": "Chicago Fire S04E01 SKdab",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 38135,
+        "source_id": -70110212435488995,
+        "series_title": "Chicago Fire",
+        "episode_code": "S04E02",
+        "source_title": "Chicago Fire_S04E02_Chuť Panama City",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 38135,
+        "source_id": -63926749347212687,
+        "series_title": "Chicago Fire",
+        "episode_code": "S04E02",
+        "source_title": "Chicago Fire S04E02 SKdab",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 38135,
+        "source_id": -37603961989433447,
+        "series_title": "Chicago Fire",
+        "episode_code": "S04E02",
+        "source_title": "Chicago Fire S04E02 SKdab",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 38181,
+        "source_id": -56475078623176223,
+        "series_title": "Chicago Fire",
+        "episode_code": "S04E03",
+        "source_title": "Chicago Fire_S04E03_Jdu pryč",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 38136,
+        "source_id": -16971811622236366,
+        "series_title": "Chicago Fire",
+        "episode_code": "S04E04",
+        "source_title": "Chicago Fire_S04E04_Tvůj den přichází",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 38136,
+        "source_id": -23612955157361791,
+        "series_title": "Chicago Fire",
+        "episode_code": "S04E04",
+        "source_title": "Chicago Fire S04E04 SKdab",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 38136,
+        "source_id": -19552023447977456,
+        "series_title": "Chicago Fire",
+        "episode_code": "S04E04",
+        "source_title": "Chicago Fire S04E04 SKdab",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 38137,
+        "source_id": -24184442135776174,
+        "series_title": "Chicago Fire",
+        "episode_code": "S04E05",
+        "source_title": "Chicago Fire_S04E05_Kvůli svatbě",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 38137,
+        "source_id": -60458272715512900,
+        "series_title": "Chicago Fire",
+        "episode_code": "S04E05",
+        "source_title": "Chicago Fire S04E05 SKdab",
         "status": "needs_whisper"
       }
     ],
@@ -122742,14 +122862,14 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 40
+    "ok": 60
   },
   "whisper_review_statuses": {
-    "whisper_non_cz_needs_subtitles": 618,
-    "whisper_confirmed_cz": 282,
-    "needs_whisper": 14198
+    "whisper_non_cz_needs_subtitles": 622,
+    "whisper_confirmed_cz": 298,
+    "needs_whisper": 14178
   },
   "subtitle_followup_statuses": {
-    "needs_subtitle_setup_after_prehrajto_processing": 3011
+    "needs_subtitle_setup_after_prehrajto_processing": 3013
   }
 }
