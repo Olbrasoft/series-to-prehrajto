@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 177800,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 15645,
+    "uploaded_episodes": 15659,
     "prepared_source_episodes": 33158,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 615,
-    "language_whisper_attempted_sources": 111,
-    "language_pending_whisper_sources": 2624,
+    "language_audited_sources": 40,
+    "language_whisper_attempted_sources": 40,
+    "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 15147,
     "whisper_review_pending_sources": 14227,
     "subtitle_followup_sources": 3104,
@@ -20,18 +20,58 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-07-03T16:50:13Z",
-      "databaseId": 28673569862,
+      "createdAt": "2026-07-03T16:59:12Z",
+      "databaseId": 28673934921,
       "headBranch": "main",
       "status": "in_progress",
-      "workflowName": "ops-watchdog"
+      "workflowName": "ops-status"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-07-03T16:58:47Z",
+      "databaseId": 28673917522,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-03T16:58:47Z",
+      "databaseId": 28673917511,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-03T16:58:04Z",
+      "databaseId": 28673888712,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-03T16:58:02Z",
+      "databaseId": 28673887093,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-03T16:50:13Z",
+      "databaseId": 28673569862,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-03T16:49:33Z",
       "databaseId": 28673542422,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "update-descriptions"
     },
     {
@@ -83,11 +123,11 @@
       "workflowName": "process-whisper-review"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-03T16:44:14Z",
       "databaseId": 28673318645,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -137,46 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-03T16:23:27Z",
-      "databaseId": 28672428740,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-03T16:22:22Z",
-      "databaseId": 28672381986,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-03T16:20:20Z",
-      "databaseId": 28672294062,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-03T16:17:38Z",
-      "databaseId": 28672179828,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-03T16:17:35Z",
-      "databaseId": 28672177517,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
     }
   ],
   "gaps": {
@@ -56141,6 +56141,41 @@
         "video_id": 27117070
       },
       {
+        "episode_id": 6620,
+        "display_name": "I Am Not Okay with This S01E06 - Jaký otec, taková dcera CZ Dabing",
+        "video_id": 27117081
+      },
+      {
+        "episode_id": 71658,
+        "display_name": "Status: Nežádoucí  S01E01 - 1. epizoda CZ Dabing",
+        "video_id": 27117124
+      },
+      {
+        "episode_id": 71652,
+        "display_name": "Status: Nežádoucí  S01E02 - 2. epizoda CZ Dabing",
+        "video_id": 27117144
+      },
+      {
+        "episode_id": 71662,
+        "display_name": "Status: Nežádoucí  S01E04 - 4. epizoda CZ Dabing",
+        "video_id": 27117164
+      },
+      {
+        "episode_id": 71628,
+        "display_name": "Status: Nežádoucí  S01E05 - 5. epizoda CZ Dabing",
+        "video_id": 27117191
+      },
+      {
+        "episode_id": 71636,
+        "display_name": "Status: Nežádoucí  S01E07 - 7. epizoda CZ Dabing",
+        "video_id": 27117213
+      },
+      {
+        "episode_id": 71640,
+        "display_name": "Status: Nežádoucí  S01E08 - 8. epizoda CZ Dabing",
+        "video_id": 27117242
+      },
+      {
         "episode_id": 71645,
         "display_name": "Status: Nežádoucí  S02E01 - 1. epizoda CZ Dabing",
         "video_id": 27116998
@@ -56154,6 +56189,41 @@
         "episode_id": 71659,
         "display_name": "Status: Nežádoucí  S02E09 - 9. epizoda CZ Dabing",
         "video_id": 27117060
+      },
+      {
+        "episode_id": 71649,
+        "display_name": "Status: Nežádoucí  S02E10 - 10. epizoda CZ Dabing",
+        "video_id": 27117080
+      },
+      {
+        "episode_id": 71639,
+        "display_name": "Status: Nežádoucí  S02E12 - 12. epizoda CZ Dabing",
+        "video_id": 27117102
+      },
+      {
+        "episode_id": 71623,
+        "display_name": "Status: Nežádoucí  S02E16 - 16. epizoda CZ Titulky",
+        "video_id": 27117130
+      },
+      {
+        "episode_id": 71661,
+        "display_name": "Status: Nežádoucí  S03E01 - 1. epizoda CZ Dabing",
+        "video_id": 27117148
+      },
+      {
+        "episode_id": 71655,
+        "display_name": "Status: Nežádoucí  S03E02 - 2. epizoda CZ Dabing",
+        "video_id": 27117194
+      },
+      {
+        "episode_id": 71635,
+        "display_name": "Status: Nežádoucí  S03E04 - 4. epizoda CZ Dabing",
+        "video_id": 27117223
+      },
+      {
+        "episode_id": 71641,
+        "display_name": "Status: Nežádoucí  S03E05 - 5. epizoda CZ Dabing",
+        "video_id": 27117237
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -122958,6 +123028,41 @@
         "video_id": 27117070
       },
       {
+        "episode_id": 6620,
+        "display_name": "I Am Not Okay with This S01E06 - Jaký otec, taková dcera CZ Dabing",
+        "video_id": 27117081
+      },
+      {
+        "episode_id": 71658,
+        "display_name": "Status: Nežádoucí  S01E01 - 1. epizoda CZ Dabing",
+        "video_id": 27117124
+      },
+      {
+        "episode_id": 71652,
+        "display_name": "Status: Nežádoucí  S01E02 - 2. epizoda CZ Dabing",
+        "video_id": 27117144
+      },
+      {
+        "episode_id": 71662,
+        "display_name": "Status: Nežádoucí  S01E04 - 4. epizoda CZ Dabing",
+        "video_id": 27117164
+      },
+      {
+        "episode_id": 71628,
+        "display_name": "Status: Nežádoucí  S01E05 - 5. epizoda CZ Dabing",
+        "video_id": 27117191
+      },
+      {
+        "episode_id": 71636,
+        "display_name": "Status: Nežádoucí  S01E07 - 7. epizoda CZ Dabing",
+        "video_id": 27117213
+      },
+      {
+        "episode_id": 71640,
+        "display_name": "Status: Nežádoucí  S01E08 - 8. epizoda CZ Dabing",
+        "video_id": 27117242
+      },
+      {
         "episode_id": 71645,
         "display_name": "Status: Nežádoucí  S02E01 - 1. epizoda CZ Dabing",
         "video_id": 27116998
@@ -122971,6 +123076,41 @@
         "episode_id": 71659,
         "display_name": "Status: Nežádoucí  S02E09 - 9. epizoda CZ Dabing",
         "video_id": 27117060
+      },
+      {
+        "episode_id": 71649,
+        "display_name": "Status: Nežádoucí  S02E10 - 10. epizoda CZ Dabing",
+        "video_id": 27117080
+      },
+      {
+        "episode_id": 71639,
+        "display_name": "Status: Nežádoucí  S02E12 - 12. epizoda CZ Dabing",
+        "video_id": 27117102
+      },
+      {
+        "episode_id": 71623,
+        "display_name": "Status: Nežádoucí  S02E16 - 16. epizoda CZ Titulky",
+        "video_id": 27117130
+      },
+      {
+        "episode_id": 71661,
+        "display_name": "Status: Nežádoucí  S03E01 - 1. epizoda CZ Dabing",
+        "video_id": 27117148
+      },
+      {
+        "episode_id": 71655,
+        "display_name": "Status: Nežádoucí  S03E02 - 2. epizoda CZ Dabing",
+        "video_id": 27117194
+      },
+      {
+        "episode_id": 71635,
+        "display_name": "Status: Nežádoucí  S03E04 - 4. epizoda CZ Dabing",
+        "video_id": 27117223
+      },
+      {
+        "episode_id": 71641,
+        "display_name": "Status: Nežádoucí  S03E05 - 5. epizoda CZ Dabing",
+        "video_id": 27117237
       }
     ],
     "prepared_not_upload_ready": [
@@ -124132,8 +124272,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 504,
-    "ok": 111
+    "ok": 40
   },
   "whisper_review_statuses": {
     "whisper_non_cz_needs_subtitles": 622,
