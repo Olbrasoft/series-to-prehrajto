@@ -2,36 +2,68 @@
   "counts": {
     "backlog_episodes": 178183,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 15202,
-    "prepared_source_episodes": 32078,
+    "uploaded_episodes": 15238,
+    "prepared_source_episodes": 32198,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 40,
-    "language_whisper_attempted_sources": 40,
-    "language_pending_whisper_sources": 2604,
-    "whisper_review_sources": 14317,
-    "whisper_review_pending_sources": 13517,
-    "subtitle_followup_sources": 2785,
-    "subtitle_followup_pending_sources": 2785
+    "language_audited_sources": 20,
+    "language_whisper_attempted_sources": 20,
+    "language_pending_whisper_sources": 2624,
+    "whisper_review_sources": 14521,
+    "whisper_review_pending_sources": 13701,
+    "subtitle_followup_sources": 2810,
+    "subtitle_followup_pending_sources": 2810
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-07-03T10:21:00Z",
-      "databaseId": 28654300855,
+      "createdAt": "2026-07-03T11:00:48Z",
+      "databaseId": 28656250971,
       "headBranch": "main",
       "status": "in_progress",
-      "workflowName": "ops-status"
+      "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-07-03T11:00:43Z",
+      "databaseId": 28656246234,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-03T11:00:38Z",
+      "databaseId": 28656241822,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-03T10:51:54Z",
+      "databaseId": 28655807719,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-03T10:21:00Z",
+      "databaseId": 28654300855,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-03T10:20:40Z",
       "databaseId": 28654284194,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "update-descriptions"
     },
     {
@@ -59,11 +91,11 @@
       "workflowName": "prepare-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-03T10:13:43Z",
       "databaseId": 28653934404,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
@@ -75,11 +107,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-03T10:12:44Z",
       "databaseId": 28653882382,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -91,11 +123,11 @@
       "workflowName": "prepare-manifest"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-03T10:10:06Z",
       "databaseId": 28653745074,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "sync"
     },
     {
@@ -131,11 +163,11 @@
       "workflowName": "audit-language"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-03T10:06:32Z",
       "databaseId": 28653567074,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -145,38 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "refresh-backlog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-03T10:05:36Z",
-      "databaseId": 28653517920,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-03T09:45:59Z",
-      "databaseId": 28652482711,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-03T09:45:56Z",
-      "databaseId": 28652480437,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-03T09:45:54Z",
-      "databaseId": 28652478794,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
     }
   ],
   "gaps": {
@@ -53931,6 +53931,96 @@
         "video_id": 27104211
       },
       {
+        "episode_id": 4332,
+        "display_name": "Tudorovci S01E03 - Wolsey, Wolsey, Wolsey! CZ Titulky",
+        "video_id": 27104295
+      },
+      {
+        "episode_id": 4334,
+        "display_name": "Tudorovci S01E05 - Povstaňte, můj pane CZ Titulky",
+        "video_id": 27104354
+      },
+      {
+        "episode_id": 4336,
+        "display_name": "Tudorovci S01E07 - Zpráva Císaři CZ Titulky",
+        "video_id": 27104400
+      },
+      {
+        "episode_id": 4338,
+        "display_name": "Tudorovci S01E09 - Nejprve se obrať k bohu CZ Titulky",
+        "video_id": 27104468
+      },
+      {
+        "episode_id": 4340,
+        "display_name": "Tudorovci S02E01 - Vše je nádherné CZ Titulky",
+        "video_id": 27104546
+      },
+      {
+        "episode_id": 4342,
+        "display_name": "Tudorovci S02E03 - Šach-mat CZ Titulky",
+        "video_id": 27104593
+      },
+      {
+        "episode_id": 4346,
+        "display_name": "Tudorovci S02E07 - Státní záležitosti CZ Dabing",
+        "video_id": 27104651
+      },
+      {
+        "episode_id": 4348,
+        "display_name": "Tudorovci S02E09 - Akt zrady CZ Dabing",
+        "video_id": 27104714
+      },
+      {
+        "episode_id": 4350,
+        "display_name": "Tudorovci S03E01 - Občanské nepokoje CZ Dabing",
+        "video_id": 27104783
+      },
+      {
+        "episode_id": 4352,
+        "display_name": "Tudorovci S03E03 - Neshoda a trest CZ Dabing",
+        "video_id": 27104851
+      },
+      {
+        "episode_id": 4354,
+        "display_name": "Tudorovci S03E05 - Problémy s reformací CZ Dabing",
+        "video_id": 27104901
+      },
+      {
+        "episode_id": 4356,
+        "display_name": "Tudorovci S03E07 - Protestantská Anna Klévská CZ Dabing",
+        "video_id": 27104953
+      },
+      {
+        "episode_id": 4358,
+        "display_name": "Tudorovci S04E01 - Okamžik nostalgie CZ Dabing",
+        "video_id": 27105113
+      },
+      {
+        "episode_id": 4360,
+        "display_name": "Tudorovci S04E03 - Něco pro Tebe CZ Dabing",
+        "video_id": 27105165
+      },
+      {
+        "episode_id": 4362,
+        "display_name": "Tudorovci S04E05 - Dno hrnce CZ Dabing",
+        "video_id": 27105208
+      },
+      {
+        "episode_id": 4364,
+        "display_name": "Tudorovci S04E07 - Šestá a poslední manželka CZ Dabing",
+        "video_id": 27105268
+      },
+      {
+        "episode_id": 4366,
+        "display_name": "Tudorovci S04E09 - Tajemství srdce CZ Dabing",
+        "video_id": 27105321
+      },
+      {
+        "episode_id": 35166,
+        "display_name": "Kazatel S01E02 - See CZ Dabing",
+        "video_id": 27105365
+      },
+      {
         "episode_id": 172043,
         "display_name": "Královna Kleopatra S01E01 - Sokové CZ Dabing",
         "video_id": 27104153
@@ -53939,6 +54029,96 @@
         "episode_id": 172045,
         "display_name": "Královna Kleopatra S01E03 - Je to nevyhnutelné CZ Dabing",
         "video_id": 27104264
+      },
+      {
+        "episode_id": 4333,
+        "display_name": "Tudorovci S01E04 - Jeho veličenstvo Král CZ Titulky",
+        "video_id": 27104379
+      },
+      {
+        "episode_id": 4335,
+        "display_name": "Tudorovci S01E06 - Pravá láska CZ Titulky",
+        "video_id": 27104446
+      },
+      {
+        "episode_id": 4337,
+        "display_name": "Tudorovci S01E08 - Pravda a spravedlnost CZ Titulky",
+        "video_id": 27104520
+      },
+      {
+        "episode_id": 4339,
+        "display_name": "Tudorovci S01E10 - Wolseyho smrt CZ Titulky",
+        "video_id": 27104569
+      },
+      {
+        "episode_id": 4341,
+        "display_name": "Tudorovci S02E02 - Krvavé slzy CZ Titulky",
+        "video_id": 27104642
+      },
+      {
+        "episode_id": 4347,
+        "display_name": "Tudorovci S02E08 - Dáma v očekávání CZ Dabing",
+        "video_id": 27104703
+      },
+      {
+        "episode_id": 4349,
+        "display_name": "Tudorovci S02E10 - Osud a štěstí CZ Dabing",
+        "video_id": 27104756
+      },
+      {
+        "episode_id": 4351,
+        "display_name": "Tudorovci S03E02 - Povstání na severu CZ Dabing",
+        "video_id": 27104817
+      },
+      {
+        "episode_id": 4353,
+        "display_name": "Tudorovci S03E04 - Smrt královny CZ Dabing",
+        "video_id": 27104878
+      },
+      {
+        "episode_id": 4355,
+        "display_name": "Tudorovci S03E06 - Hledání nové královny CZ Dabing",
+        "video_id": 27104929
+      },
+      {
+        "episode_id": 4357,
+        "display_name": "Tudorovci S03E08 - Cromwellův pád CZ Dabing",
+        "video_id": 27105075
+      },
+      {
+        "episode_id": 4359,
+        "display_name": "Tudorovci S04E02 - Sestra CZ Dabing",
+        "video_id": 27105135
+      },
+      {
+        "episode_id": 4361,
+        "display_name": "Tudorovci S04E04 - Přirozený spojenec CZ Dabing",
+        "video_id": 27105175
+      },
+      {
+        "episode_id": 4363,
+        "display_name": "Tudorovci S04E06 - Máte mé svolení CZ Dabing",
+        "video_id": 27105218
+      },
+      {
+        "episode_id": 4365,
+        "display_name": "Tudorovci S04E08 - Vše jak má být CZ Dabing",
+        "video_id": 27105312
+      },
+      {
+        "episode_id": 4367,
+        "display_name": "Tudorovci S04E10 - Smrt monarchie CZ Dabing",
+        "video_id": 27105358
+      },
+      {
+        "episode_id": 35165,
+        "display_name": "Kazatel S01E01 - Pilot CZ Dabing",
+        "video_id": 27105395
+      },
+      {
+        "episode_id": 35167,
+        "display_name": "Kazatel S01E03 - The Possibilities CZ Dabing",
+        "video_id": 27105440
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -118533,6 +118713,96 @@
         "video_id": 27104211
       },
       {
+        "episode_id": 4332,
+        "display_name": "Tudorovci S01E03 - Wolsey, Wolsey, Wolsey! CZ Titulky",
+        "video_id": 27104295
+      },
+      {
+        "episode_id": 4334,
+        "display_name": "Tudorovci S01E05 - Povstaňte, můj pane CZ Titulky",
+        "video_id": 27104354
+      },
+      {
+        "episode_id": 4336,
+        "display_name": "Tudorovci S01E07 - Zpráva Císaři CZ Titulky",
+        "video_id": 27104400
+      },
+      {
+        "episode_id": 4338,
+        "display_name": "Tudorovci S01E09 - Nejprve se obrať k bohu CZ Titulky",
+        "video_id": 27104468
+      },
+      {
+        "episode_id": 4340,
+        "display_name": "Tudorovci S02E01 - Vše je nádherné CZ Titulky",
+        "video_id": 27104546
+      },
+      {
+        "episode_id": 4342,
+        "display_name": "Tudorovci S02E03 - Šach-mat CZ Titulky",
+        "video_id": 27104593
+      },
+      {
+        "episode_id": 4346,
+        "display_name": "Tudorovci S02E07 - Státní záležitosti CZ Dabing",
+        "video_id": 27104651
+      },
+      {
+        "episode_id": 4348,
+        "display_name": "Tudorovci S02E09 - Akt zrady CZ Dabing",
+        "video_id": 27104714
+      },
+      {
+        "episode_id": 4350,
+        "display_name": "Tudorovci S03E01 - Občanské nepokoje CZ Dabing",
+        "video_id": 27104783
+      },
+      {
+        "episode_id": 4352,
+        "display_name": "Tudorovci S03E03 - Neshoda a trest CZ Dabing",
+        "video_id": 27104851
+      },
+      {
+        "episode_id": 4354,
+        "display_name": "Tudorovci S03E05 - Problémy s reformací CZ Dabing",
+        "video_id": 27104901
+      },
+      {
+        "episode_id": 4356,
+        "display_name": "Tudorovci S03E07 - Protestantská Anna Klévská CZ Dabing",
+        "video_id": 27104953
+      },
+      {
+        "episode_id": 4358,
+        "display_name": "Tudorovci S04E01 - Okamžik nostalgie CZ Dabing",
+        "video_id": 27105113
+      },
+      {
+        "episode_id": 4360,
+        "display_name": "Tudorovci S04E03 - Něco pro Tebe CZ Dabing",
+        "video_id": 27105165
+      },
+      {
+        "episode_id": 4362,
+        "display_name": "Tudorovci S04E05 - Dno hrnce CZ Dabing",
+        "video_id": 27105208
+      },
+      {
+        "episode_id": 4364,
+        "display_name": "Tudorovci S04E07 - Šestá a poslední manželka CZ Dabing",
+        "video_id": 27105268
+      },
+      {
+        "episode_id": 4366,
+        "display_name": "Tudorovci S04E09 - Tajemství srdce CZ Dabing",
+        "video_id": 27105321
+      },
+      {
+        "episode_id": 35166,
+        "display_name": "Kazatel S01E02 - See CZ Dabing",
+        "video_id": 27105365
+      },
+      {
         "episode_id": 172043,
         "display_name": "Královna Kleopatra S01E01 - Sokové CZ Dabing",
         "video_id": 27104153
@@ -118541,6 +118811,96 @@
         "episode_id": 172045,
         "display_name": "Královna Kleopatra S01E03 - Je to nevyhnutelné CZ Dabing",
         "video_id": 27104264
+      },
+      {
+        "episode_id": 4333,
+        "display_name": "Tudorovci S01E04 - Jeho veličenstvo Král CZ Titulky",
+        "video_id": 27104379
+      },
+      {
+        "episode_id": 4335,
+        "display_name": "Tudorovci S01E06 - Pravá láska CZ Titulky",
+        "video_id": 27104446
+      },
+      {
+        "episode_id": 4337,
+        "display_name": "Tudorovci S01E08 - Pravda a spravedlnost CZ Titulky",
+        "video_id": 27104520
+      },
+      {
+        "episode_id": 4339,
+        "display_name": "Tudorovci S01E10 - Wolseyho smrt CZ Titulky",
+        "video_id": 27104569
+      },
+      {
+        "episode_id": 4341,
+        "display_name": "Tudorovci S02E02 - Krvavé slzy CZ Titulky",
+        "video_id": 27104642
+      },
+      {
+        "episode_id": 4347,
+        "display_name": "Tudorovci S02E08 - Dáma v očekávání CZ Dabing",
+        "video_id": 27104703
+      },
+      {
+        "episode_id": 4349,
+        "display_name": "Tudorovci S02E10 - Osud a štěstí CZ Dabing",
+        "video_id": 27104756
+      },
+      {
+        "episode_id": 4351,
+        "display_name": "Tudorovci S03E02 - Povstání na severu CZ Dabing",
+        "video_id": 27104817
+      },
+      {
+        "episode_id": 4353,
+        "display_name": "Tudorovci S03E04 - Smrt královny CZ Dabing",
+        "video_id": 27104878
+      },
+      {
+        "episode_id": 4355,
+        "display_name": "Tudorovci S03E06 - Hledání nové královny CZ Dabing",
+        "video_id": 27104929
+      },
+      {
+        "episode_id": 4357,
+        "display_name": "Tudorovci S03E08 - Cromwellův pád CZ Dabing",
+        "video_id": 27105075
+      },
+      {
+        "episode_id": 4359,
+        "display_name": "Tudorovci S04E02 - Sestra CZ Dabing",
+        "video_id": 27105135
+      },
+      {
+        "episode_id": 4361,
+        "display_name": "Tudorovci S04E04 - Přirozený spojenec CZ Dabing",
+        "video_id": 27105175
+      },
+      {
+        "episode_id": 4363,
+        "display_name": "Tudorovci S04E06 - Máte mé svolení CZ Dabing",
+        "video_id": 27105218
+      },
+      {
+        "episode_id": 4365,
+        "display_name": "Tudorovci S04E08 - Vše jak má být CZ Dabing",
+        "video_id": 27105312
+      },
+      {
+        "episode_id": 4367,
+        "display_name": "Tudorovci S04E10 - Smrt monarchie CZ Dabing",
+        "video_id": 27105358
+      },
+      {
+        "episode_id": 35165,
+        "display_name": "Kazatel S01E01 - Pilot CZ Dabing",
+        "video_id": 27105395
+      },
+      {
+        "episode_id": 35167,
+        "display_name": "Kazatel S01E03 - The Possibilities CZ Dabing",
+        "video_id": 27105440
       }
     ],
     "prepared_not_upload_ready": [
@@ -118847,166 +119207,6 @@
     ],
     "whisper_review_pending": [
       {
-        "episode_id": 15578,
-        "source_id": -54585425052709203,
-        "series_title": "Cestovatelé",
-        "episode_code": "S01E03",
-        "source_title": "Cestovatelé_S01E03_Aleksander",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 15579,
-        "source_id": -70756285343390553,
-        "series_title": "Cestovatelé",
-        "episode_code": "S01E04",
-        "source_title": "Cestovatelé_S01E04_Hall",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 15579,
-        "source_id": -1396913751475697,
-        "series_title": "Cestovatelé",
-        "episode_code": "S01E04",
-        "source_title": "Cestovatelé S01E04 Hall byDejv",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 15580,
-        "source_id": -66934185308702944,
-        "series_title": "Cestovatelé",
-        "episode_code": "S01E05",
-        "source_title": "Cestovatelé_S01E05_Pokoj 101",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 15580,
-        "source_id": -60031685255276675,
-        "series_title": "Cestovatelé",
-        "episode_code": "S01E05",
-        "source_title": "Cestovatelé S01E05 Pokoj 101 byDejv",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 15581,
-        "source_id": -40597317648607771,
-        "series_title": "Cestovatelé",
-        "episode_code": "S01E06",
-        "source_title": "Cestovatelé S01E06 Helios 685 byDejv",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 15581,
-        "source_id": -29270726655991949,
-        "series_title": "Cestovatelé",
-        "episode_code": "S01E06",
-        "source_title": "Cestovatelé_S01E06_Helios 685",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 15583,
-        "source_id": -70404275880890009,
-        "series_title": "Cestovatelé",
-        "episode_code": "S01E07",
-        "source_title": "Cestovatelé S01E07 Protokol 5 byDejv",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 15583,
-        "source_id": -32503514370808632,
-        "series_title": "Cestovatelé",
-        "episode_code": "S01E07",
-        "source_title": "Cestovatelé_S01E07_Protokol 5",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 15582,
-        "source_id": -66751340249444810,
-        "series_title": "Cestovatelé",
-        "episode_code": "S01E08",
-        "source_title": "Cestovatelé_S01E08_Donner",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 15582,
-        "source_id": -38809546282878566,
-        "series_title": "Cestovatelé",
-        "episode_code": "S01E08",
-        "source_title": "Cestovatelé S01E08 Donner byDejv",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 15585,
-        "source_id": -62196891468338618,
-        "series_title": "Cestovatelé",
-        "episode_code": "S01E09",
-        "source_title": "Cestovatelé S01E09 Bishop byDejv",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 15585,
-        "source_id": -58941014359408617,
-        "series_title": "Cestovatelé",
-        "episode_code": "S01E09",
-        "source_title": "Cestovatelé_S01E09_Bishop",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 15586,
-        "source_id": -55896411692234764,
-        "series_title": "Cestovatelé",
-        "episode_code": "S01E10",
-        "source_title": "Cestovatelé_S01E10_Kathryn",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 15586,
-        "source_id": -48421042010894178,
-        "series_title": "Cestovatelé",
-        "episode_code": "S01E10",
-        "source_title": "Cestovatelé S01E10 Kathryn byDejv",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 15587,
-        "source_id": -24779710124107501,
-        "series_title": "Cestovatelé",
-        "episode_code": "S01E11",
-        "source_title": "Cestovatelé S01E11 Marcy byDejv",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 15587,
-        "source_id": -1848636676234701,
-        "series_title": "Cestovatelé",
-        "episode_code": "S01E11",
-        "source_title": "Cestovatelé_S01E11_Marcy",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 15588,
-        "source_id": -69374252739873828,
-        "series_title": "Cestovatelé",
-        "episode_code": "S01E12",
-        "source_title": "Cestovatelé S01E12 Grace byDejv",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 15588,
-        "source_id": -7007137773983022,
-        "series_title": "Cestovatelé",
-        "episode_code": "S01E12",
-        "source_title": "Cestovatelé_S01E12_Grace",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 15584,
-        "source_id": -5493308890320136,
-        "series_title": "Cestovatelé",
-        "episode_code": "S02E01",
-        "source_title": "Cestovatele+casem+-+Travelers.S02E01.1080p.10bit.NF.WEBRip.AC3.x265.HEVC-QmanUTR-CzAudio",
-        "status": "needs_whisper"
-      },
-      {
         "episode_id": 38139,
         "source_id": -61841561427078016,
         "series_title": "Chicago Fire",
@@ -119244,6 +119444,166 @@
         "series_title": "Chicago Fire",
         "episode_code": "S01E15",
         "source_title": "Chicago Fire - s01e15",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 38124,
+        "source_id": -31255188693964913,
+        "series_title": "Chicago Fire",
+        "episode_code": "S01E16",
+        "source_title": "Chicago Fire_S01E16_Sourozenci",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 38124,
+        "source_id": -52187988634078038,
+        "series_title": "Chicago Fire",
+        "episode_code": "S01E16",
+        "source_title": "Chicago Fire S01E16 SKdab",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 38125,
+        "source_id": -13952908311640100,
+        "series_title": "Chicago Fire",
+        "episode_code": "S01E17",
+        "source_title": "Chicago Fire_S01E17_Milosrdná lež",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 38125,
+        "source_id": -52588507211397433,
+        "series_title": "Chicago Fire",
+        "episode_code": "S01E17",
+        "source_title": "Chicago Fire S01E17 SKdab",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 38125,
+        "source_id": -33319770758837697,
+        "series_title": "Chicago Fire",
+        "episode_code": "S01E17",
+        "source_title": "Chicago Fire - s01e17",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 38127,
+        "source_id": -71434921689209307,
+        "series_title": "Chicago Fire",
+        "episode_code": "S01E18",
+        "source_title": "Chicago Fire S01E18 SKdab",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 38127,
+        "source_id": -59527404319359250,
+        "series_title": "Chicago Fire",
+        "episode_code": "S01E18",
+        "source_title": "Chicago Fire - s01e18",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 38127,
+        "source_id": -65581132771055834,
+        "series_title": "Chicago Fire",
+        "episode_code": "S01E18",
+        "source_title": "Chicago Fire - S1E18 Fireworks EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 38127,
+        "source_id": -718610808373548,
+        "series_title": "Chicago Fire",
+        "episode_code": "S01E18",
+        "source_title": "Chicago Fire S01E18 SKdab",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 38128,
+        "source_id": -12261923365271197,
+        "series_title": "Chicago Fire",
+        "episode_code": "S01E19",
+        "source_title": "Chicago Fire_S01E19_Na poslední cestu",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 38128,
+        "source_id": -29063158064119966,
+        "series_title": "Chicago Fire",
+        "episode_code": "S01E19",
+        "source_title": "Chicago Fire S01E19 SKdab",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 38128,
+        "source_id": -9407110726612717,
+        "series_title": "Chicago Fire",
+        "episode_code": "S01E19",
+        "source_title": "Chicago Fire S01E19 (Seria 1) SK - HD (15.6. 2021)",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 38126,
+        "source_id": -15442312876808269,
+        "series_title": "Chicago Fire",
+        "episode_code": "S01E20",
+        "source_title": "Chicago Fire_S01E20_Ctižádost",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 38126,
+        "source_id": -68173898259688540,
+        "series_title": "Chicago Fire",
+        "episode_code": "S01E20",
+        "source_title": "Chicago Fire S01E20 SKdab",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 38126,
+        "source_id": -7990214964259978,
+        "series_title": "Chicago Fire",
+        "episode_code": "S01E20",
+        "source_title": "Chicago Fire S01E20 (Seria 1) SK - HD (15.6. 2021)",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 38130,
+        "source_id": -69138807209626731,
+        "series_title": "Chicago Fire",
+        "episode_code": "S01E21",
+        "source_title": "Chicago Fire_S01E21_Odvetný úder",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 38130,
+        "source_id": -48117705609625201,
+        "series_title": "Chicago Fire",
+        "episode_code": "S01E21",
+        "source_title": "Chicago Fire S01E21 SKdab",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 38130,
+        "source_id": -14061372153355489,
+        "series_title": "Chicago Fire",
+        "episode_code": "S01E21",
+        "source_title": "Chicago Fire S01E21 (Seria 1) SK - HD (16.6. 2021)",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 38129,
+        "source_id": -63768941362449099,
+        "series_title": "Chicago Fire",
+        "episode_code": "S01E22",
+        "source_title": "Chicago Fire_S01E22_Osamělost velitelů",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 38129,
+        "source_id": -25129059749322666,
+        "series_title": "Chicago Fire",
+        "episode_code": "S01E22",
+        "source_title": "Chicago Fire S01E22 SKdab",
         "status": "needs_whisper"
       }
     ],
@@ -119702,14 +120062,14 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 40
+    "ok": 20
   },
   "whisper_review_statuses": {
-    "whisper_non_cz_needs_subtitles": 594,
-    "whisper_confirmed_cz": 206,
-    "needs_whisper": 13517
+    "whisper_non_cz_needs_subtitles": 599,
+    "whisper_confirmed_cz": 221,
+    "needs_whisper": 13701
   },
   "subtitle_followup_statuses": {
-    "needs_subtitle_setup_after_prehrajto_processing": 2785
+    "needs_subtitle_setup_after_prehrajto_processing": 2810
   }
 }
