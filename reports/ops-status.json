@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 178808,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 14684,
-    "prepared_source_episodes": 30818,
+    "uploaded_episodes": 14719,
+    "prepared_source_episodes": 30878,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 20,
-    "language_whisper_attempted_sources": 20,
-    "language_pending_whisper_sources": 2624,
+    "language_audited_sources": 60,
+    "language_whisper_attempted_sources": 60,
+    "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 13663,
     "whisper_review_pending_sources": 12943,
     "subtitle_followup_sources": 2637,
@@ -20,18 +20,82 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-07-03T02:24:07Z",
-      "databaseId": 28634292657,
+      "createdAt": "2026-07-03T02:54:13Z",
+      "databaseId": 28635286483,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-07-03T02:49:46Z",
+      "databaseId": 28635138907,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-03T02:47:00Z",
+      "databaseId": 28635049513,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-03T02:34:50Z",
+      "databaseId": 28634647757,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-03T02:26:17Z",
+      "databaseId": 28634361400,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-sources"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-03T02:25:03Z",
+      "databaseId": 28634322603,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-03T02:25:00Z",
+      "databaseId": 28634321107,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-03T02:24:58Z",
+      "databaseId": 28634320134,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-03T02:24:07Z",
+      "databaseId": 28634292657,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "failure",
       "createdAt": "2026-07-03T02:24:01Z",
       "databaseId": 28634289555,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -113,70 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "failure",
-      "createdAt": "2026-07-03T01:50:44Z",
-      "databaseId": 28633162250,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-03T01:50:30Z",
-      "databaseId": 28633154098,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-03T01:47:37Z",
-      "databaseId": 28633059201,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-07-03T01:43:48Z",
-      "databaseId": 28632930248,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-03T01:42:12Z",
-      "databaseId": 28632873868,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-03T01:36:56Z",
-      "databaseId": 28632692700,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-03T01:35:45Z",
-      "databaseId": 28632652627,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-03T01:34:13Z",
-      "databaseId": 28632598621,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-descriptions"
     }
   ],
   "gaps": {
@@ -51349,6 +51349,181 @@
         "episode_id": 83795,
         "display_name": "Marvel's Agent Carter S02E01 - Dáma v jezeře CZ Titulky",
         "video_id": 27091596
+      },
+      {
+        "episode_id": 62592,
+        "display_name": "Dva z Queensu S04E09 - 9. epizoda CZ Dabing",
+        "video_id": 27091631
+      },
+      {
+        "episode_id": 62598,
+        "display_name": "Dva z Queensu S04E16 - 16. epizoda CZ Dabing",
+        "video_id": 27091651
+      },
+      {
+        "episode_id": 62608,
+        "display_name": "Dva z Queensu S04E18 - 18. epizoda CZ Dabing",
+        "video_id": 27091676
+      },
+      {
+        "episode_id": 62602,
+        "display_name": "Dva z Queensu S04E21 - 21. epizoda CZ Dabing",
+        "video_id": 27091698
+      },
+      {
+        "episode_id": 62606,
+        "display_name": "Dva z Queensu S04E25 - 25. epizoda CZ Dabing",
+        "video_id": 27091739
+      },
+      {
+        "episode_id": 62692,
+        "display_name": "Dva z Queensu S05E04 - 4. epizoda CZ Dabing",
+        "video_id": 27091768
+      },
+      {
+        "episode_id": 62694,
+        "display_name": "Dva z Queensu S05E09 - 9. epizoda CZ Dabing",
+        "video_id": 27091795
+      },
+      {
+        "episode_id": 62690,
+        "display_name": "Dva z Queensu S05E12 - 12. epizoda CZ Dabing",
+        "video_id": 27091821
+      },
+      {
+        "episode_id": 62696,
+        "display_name": "Dva z Queensu S05E13 - 13. epizoda CZ Dabing",
+        "video_id": 27091843
+      },
+      {
+        "episode_id": 62698,
+        "display_name": "Dva z Queensu S05E18 - 18. epizoda CZ Dabing",
+        "video_id": 27091874
+      },
+      {
+        "episode_id": 62700,
+        "display_name": "Dva z Queensu S05E21 - 21. epizoda CZ Dabing",
+        "video_id": 27091910
+      },
+      {
+        "episode_id": 62702,
+        "display_name": "Dva z Queensu S05E23 - 23. epizoda CZ Dabing",
+        "video_id": 27091931
+      },
+      {
+        "episode_id": 62610,
+        "display_name": "Dva z Queensu S06E02 - 2. epizoda CZ Dabing",
+        "video_id": 27091950
+      },
+      {
+        "episode_id": 62612,
+        "display_name": "Dva z Queensu S06E04 - 4. epizoda CZ Dabing",
+        "video_id": 27091967
+      },
+      {
+        "episode_id": 62614,
+        "display_name": "Dva z Queensu S06E06 - 6. epizoda CZ Dabing",
+        "video_id": 27091985
+      },
+      {
+        "episode_id": 62620,
+        "display_name": "Dva z Queensu S06E12 - 12. epizoda CZ Dabing",
+        "video_id": 27092001
+      },
+      {
+        "episode_id": 62622,
+        "display_name": "Dva z Queensu S06E14 - 14. epizoda CZ Dabing",
+        "video_id": 27092026
+      },
+      {
+        "episode_id": 83797,
+        "display_name": "Marvel's Agent Carter S02E04 - Zdání a klam CZ Titulky",
+        "video_id": 27091640
+      },
+      {
+        "episode_id": 83799,
+        "display_name": "Marvel's Agent Carter S02E05 - Atomová záležitost CZ Titulky",
+        "video_id": 27091663
+      },
+      {
+        "episode_id": 83785,
+        "display_name": "Marvel's Agent Carter S02E08 - Na hraně tajemství CZ Titulky",
+        "video_id": 27091685
+      },
+      {
+        "episode_id": 83801,
+        "display_name": "Marvel's Agent Carter S02E09 - Velký humbuk CZ Titulky",
+        "video_id": 27091743
+      },
+      {
+        "episode_id": 62527,
+        "display_name": "Dva z Queensu S01E15 - 15. epizoda CZ Dabing",
+        "video_id": 27091767
+      },
+      {
+        "episode_id": 62533,
+        "display_name": "Dva z Queensu S01E21 - 21. epizoda CZ Dabing",
+        "video_id": 27091784
+      },
+      {
+        "episode_id": 62537,
+        "display_name": "Dva z Queensu S01E25 - 25. epizoda CZ Dabing",
+        "video_id": 27091809
+      },
+      {
+        "episode_id": 62545,
+        "display_name": "Dva z Queensu S02E08 - 8. epizoda CZ Dabing",
+        "video_id": 27091832
+      },
+      {
+        "episode_id": 62561,
+        "display_name": "Dva z Queensu S02E24 - 24. epizoda CZ Dabing",
+        "video_id": 27091863
+      },
+      {
+        "episode_id": 62565,
+        "display_name": "Dva z Queensu S03E03 - 3. epizoda CZ Dabing",
+        "video_id": 27091883
+      },
+      {
+        "episode_id": 62567,
+        "display_name": "Dva z Queensu S03E05 - 5. epizoda CZ Dabing",
+        "video_id": 27091916
+      },
+      {
+        "episode_id": 62575,
+        "display_name": "Dva z Queensu S03E13 - 13. epizoda CZ Dabing",
+        "video_id": 27091927
+      },
+      {
+        "episode_id": 62577,
+        "display_name": "Dva z Queensu S03E15 - 15. epizoda CZ Dabing",
+        "video_id": 27091939
+      },
+      {
+        "episode_id": 62579,
+        "display_name": "Dva z Queensu S03E17 - 17. epizoda CZ Dabing",
+        "video_id": 27091955
+      },
+      {
+        "episode_id": 62581,
+        "display_name": "Dva z Queensu S03E22 - 22. epizoda CZ Dabing",
+        "video_id": 27091972
+      },
+      {
+        "episode_id": 62583,
+        "display_name": "Dva z Queensu S03E24 - 24. epizoda CZ Dabing",
+        "video_id": 27091987
+      },
+      {
+        "episode_id": 62587,
+        "display_name": "Dva z Queensu S04E04 - 4. epizoda CZ Dabing",
+        "video_id": 27092005
+      },
+      {
+        "episode_id": 62589,
+        "display_name": "Dva z Queensu S04E06 - 6. epizoda CZ Dabing",
+        "video_id": 27092036
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -113361,6 +113536,181 @@
         "episode_id": 83795,
         "display_name": "Marvel's Agent Carter S02E01 - Dáma v jezeře CZ Titulky",
         "video_id": 27091596
+      },
+      {
+        "episode_id": 62592,
+        "display_name": "Dva z Queensu S04E09 - 9. epizoda CZ Dabing",
+        "video_id": 27091631
+      },
+      {
+        "episode_id": 62598,
+        "display_name": "Dva z Queensu S04E16 - 16. epizoda CZ Dabing",
+        "video_id": 27091651
+      },
+      {
+        "episode_id": 62608,
+        "display_name": "Dva z Queensu S04E18 - 18. epizoda CZ Dabing",
+        "video_id": 27091676
+      },
+      {
+        "episode_id": 62602,
+        "display_name": "Dva z Queensu S04E21 - 21. epizoda CZ Dabing",
+        "video_id": 27091698
+      },
+      {
+        "episode_id": 62606,
+        "display_name": "Dva z Queensu S04E25 - 25. epizoda CZ Dabing",
+        "video_id": 27091739
+      },
+      {
+        "episode_id": 62692,
+        "display_name": "Dva z Queensu S05E04 - 4. epizoda CZ Dabing",
+        "video_id": 27091768
+      },
+      {
+        "episode_id": 62694,
+        "display_name": "Dva z Queensu S05E09 - 9. epizoda CZ Dabing",
+        "video_id": 27091795
+      },
+      {
+        "episode_id": 62690,
+        "display_name": "Dva z Queensu S05E12 - 12. epizoda CZ Dabing",
+        "video_id": 27091821
+      },
+      {
+        "episode_id": 62696,
+        "display_name": "Dva z Queensu S05E13 - 13. epizoda CZ Dabing",
+        "video_id": 27091843
+      },
+      {
+        "episode_id": 62698,
+        "display_name": "Dva z Queensu S05E18 - 18. epizoda CZ Dabing",
+        "video_id": 27091874
+      },
+      {
+        "episode_id": 62700,
+        "display_name": "Dva z Queensu S05E21 - 21. epizoda CZ Dabing",
+        "video_id": 27091910
+      },
+      {
+        "episode_id": 62702,
+        "display_name": "Dva z Queensu S05E23 - 23. epizoda CZ Dabing",
+        "video_id": 27091931
+      },
+      {
+        "episode_id": 62610,
+        "display_name": "Dva z Queensu S06E02 - 2. epizoda CZ Dabing",
+        "video_id": 27091950
+      },
+      {
+        "episode_id": 62612,
+        "display_name": "Dva z Queensu S06E04 - 4. epizoda CZ Dabing",
+        "video_id": 27091967
+      },
+      {
+        "episode_id": 62614,
+        "display_name": "Dva z Queensu S06E06 - 6. epizoda CZ Dabing",
+        "video_id": 27091985
+      },
+      {
+        "episode_id": 62620,
+        "display_name": "Dva z Queensu S06E12 - 12. epizoda CZ Dabing",
+        "video_id": 27092001
+      },
+      {
+        "episode_id": 62622,
+        "display_name": "Dva z Queensu S06E14 - 14. epizoda CZ Dabing",
+        "video_id": 27092026
+      },
+      {
+        "episode_id": 83797,
+        "display_name": "Marvel's Agent Carter S02E04 - Zdání a klam CZ Titulky",
+        "video_id": 27091640
+      },
+      {
+        "episode_id": 83799,
+        "display_name": "Marvel's Agent Carter S02E05 - Atomová záležitost CZ Titulky",
+        "video_id": 27091663
+      },
+      {
+        "episode_id": 83785,
+        "display_name": "Marvel's Agent Carter S02E08 - Na hraně tajemství CZ Titulky",
+        "video_id": 27091685
+      },
+      {
+        "episode_id": 83801,
+        "display_name": "Marvel's Agent Carter S02E09 - Velký humbuk CZ Titulky",
+        "video_id": 27091743
+      },
+      {
+        "episode_id": 62527,
+        "display_name": "Dva z Queensu S01E15 - 15. epizoda CZ Dabing",
+        "video_id": 27091767
+      },
+      {
+        "episode_id": 62533,
+        "display_name": "Dva z Queensu S01E21 - 21. epizoda CZ Dabing",
+        "video_id": 27091784
+      },
+      {
+        "episode_id": 62537,
+        "display_name": "Dva z Queensu S01E25 - 25. epizoda CZ Dabing",
+        "video_id": 27091809
+      },
+      {
+        "episode_id": 62545,
+        "display_name": "Dva z Queensu S02E08 - 8. epizoda CZ Dabing",
+        "video_id": 27091832
+      },
+      {
+        "episode_id": 62561,
+        "display_name": "Dva z Queensu S02E24 - 24. epizoda CZ Dabing",
+        "video_id": 27091863
+      },
+      {
+        "episode_id": 62565,
+        "display_name": "Dva z Queensu S03E03 - 3. epizoda CZ Dabing",
+        "video_id": 27091883
+      },
+      {
+        "episode_id": 62567,
+        "display_name": "Dva z Queensu S03E05 - 5. epizoda CZ Dabing",
+        "video_id": 27091916
+      },
+      {
+        "episode_id": 62575,
+        "display_name": "Dva z Queensu S03E13 - 13. epizoda CZ Dabing",
+        "video_id": 27091927
+      },
+      {
+        "episode_id": 62577,
+        "display_name": "Dva z Queensu S03E15 - 15. epizoda CZ Dabing",
+        "video_id": 27091939
+      },
+      {
+        "episode_id": 62579,
+        "display_name": "Dva z Queensu S03E17 - 17. epizoda CZ Dabing",
+        "video_id": 27091955
+      },
+      {
+        "episode_id": 62581,
+        "display_name": "Dva z Queensu S03E22 - 22. epizoda CZ Dabing",
+        "video_id": 27091972
+      },
+      {
+        "episode_id": 62583,
+        "display_name": "Dva z Queensu S03E24 - 24. epizoda CZ Dabing",
+        "video_id": 27091987
+      },
+      {
+        "episode_id": 62587,
+        "display_name": "Dva z Queensu S04E04 - 4. epizoda CZ Dabing",
+        "video_id": 27092005
+      },
+      {
+        "episode_id": 62589,
+        "display_name": "Dva z Queensu S04E06 - 6. epizoda CZ Dabing",
+        "video_id": 27092036
       }
     ],
     "prepared_not_upload_ready": [
@@ -114522,7 +114872,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 20
+    "ok": 60
   },
   "whisper_review_statuses": {
     "whisper_non_cz_needs_subtitles": 551,
