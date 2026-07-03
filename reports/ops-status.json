@@ -2,36 +2,76 @@
   "counts": {
     "backlog_episodes": 178379,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 15158,
-    "prepared_source_episodes": 32018,
+    "uploaded_episodes": 15189,
+    "prepared_source_episodes": 32078,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 20,
-    "language_whisper_attempted_sources": 20,
-    "language_pending_whisper_sources": 2624,
-    "whisper_review_sources": 14255,
-    "whisper_review_pending_sources": 13475,
-    "subtitle_followup_sources": 2784,
-    "subtitle_followup_pending_sources": 2784
+    "language_audited_sources": 398,
+    "language_whisper_attempted_sources": 60,
+    "language_pending_whisper_sources": 2604,
+    "whisper_review_sources": 14317,
+    "whisper_review_pending_sources": 13537,
+    "subtitle_followup_sources": 2785,
+    "subtitle_followup_pending_sources": 2785
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-07-03T09:45:02Z",
-      "databaseId": 28652431063,
+      "createdAt": "2026-07-03T10:06:00Z",
+      "databaseId": 28653538646,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "refresh-backlog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-03T10:05:36Z",
+      "databaseId": 28653517920,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
+      "createdAt": "2026-07-03T09:45:59Z",
+      "databaseId": 28652482711,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-03T09:45:56Z",
+      "databaseId": 28652480437,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-03T09:45:54Z",
+      "databaseId": 28652478794,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-03T09:45:02Z",
+      "databaseId": 28652431063,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-03T09:44:58Z",
       "databaseId": 28652427067,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -137,46 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-07-03T09:05:30Z",
-      "databaseId": 28650343813,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-03T09:05:30Z",
-      "databaseId": 28650343729,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-03T09:03:21Z",
-      "databaseId": 28650225351,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-03T09:03:12Z",
-      "databaseId": 28650218081,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-03T08:59:19Z",
-      "databaseId": 28650004718,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
     }
   ],
   "gaps": {
@@ -53719,6 +53719,161 @@
         "episode_id": 51553,
         "display_name": "Terra Nova S01E03 - Nákaza CZ Dabing",
         "video_id": 27102963
+      },
+      {
+        "episode_id": 51554,
+        "display_name": "Terra Nova S01E04 - Uprchlice CZ Dabing",
+        "video_id": 27103342
+      },
+      {
+        "episode_id": 51556,
+        "display_name": "Terra Nova S01E07 - Důkaz CZ Dabing",
+        "video_id": 27103388
+      },
+      {
+        "episode_id": 51558,
+        "display_name": "Terra Nova S01E09 - Teď mě vidíš CZ Dabing",
+        "video_id": 27103426
+      },
+      {
+        "episode_id": 51560,
+        "display_name": "Terra Nova S01E11 - Soukromá armáda / Hnutí odporu CZ Dabing",
+        "video_id": 27103465
+      },
+      {
+        "episode_id": 89824,
+        "display_name": "Lioness S01E05 - Pravda je ta nejchytřejší lež CZ Dabing",
+        "video_id": 27103508
+      },
+      {
+        "episode_id": 202502,
+        "display_name": "Lioness S02E02 - Miluji svou vlast CZ Dabing",
+        "video_id": 27103543
+      },
+      {
+        "episode_id": 202500,
+        "display_name": "Lioness S02E06 - 2831 CZ Dabing",
+        "video_id": 27103565
+      },
+      {
+        "episode_id": 202498,
+        "display_name": "Lioness S02E08 - Kompas nás vede domů CZ Dabing",
+        "video_id": 27103591
+      },
+      {
+        "episode_id": 46528,
+        "display_name": "Revoluce S01E03 - Bez milosti CZ Dabing",
+        "video_id": 27103641
+      },
+      {
+        "episode_id": 46530,
+        "display_name": "Revoluce S01E05 - Vlak do Philadelphie CZ Dabing",
+        "video_id": 27103679
+      },
+      {
+        "episode_id": 46532,
+        "display_name": "Revoluce S01E07 - Dětská křížová výprava CZ Dabing",
+        "video_id": 27103718
+      },
+      {
+        "episode_id": 46534,
+        "display_name": "Revoluce S01E08 - Pevné pouto CZ Dabing",
+        "video_id": 27103759
+      },
+      {
+        "episode_id": 46536,
+        "display_name": "Revoluce S01E11 - Boj CZ Dabing",
+        "video_id": 27103800
+      },
+      {
+        "episode_id": 46542,
+        "display_name": "Revoluce S01E17 - Nejdelší den CZ Titulky",
+        "video_id": 27103835
+      },
+      {
+        "episode_id": 46544,
+        "display_name": "Revoluce S01E19 - Potomci lidí CZ Titulky",
+        "video_id": 27103863
+      },
+      {
+        "episode_id": 51555,
+        "display_name": "Terra Nova S01E05 - Vyhoštění CZ Dabing",
+        "video_id": 27103338
+      },
+      {
+        "episode_id": 51561,
+        "display_name": "Terra Nova S01E06 - Soumrak CZ Dabing",
+        "video_id": 27103364
+      },
+      {
+        "episode_id": 51557,
+        "display_name": "Terra Nova S01E08 - Střet CZ Dabing",
+        "video_id": 27103402
+      },
+      {
+        "episode_id": 51559,
+        "display_name": "Terra Nova S01E10 - Odhalený zvěd CZ Dabing",
+        "video_id": 27103447
+      },
+      {
+        "episode_id": 89825,
+        "display_name": "Lioness S01E06 - Lež je pravdou CZ Dabing",
+        "video_id": 27103484
+      },
+      {
+        "episode_id": 89819,
+        "display_name": "Lioness S01E08 - Iluze řádu je pryč CZ Dabing",
+        "video_id": 27103532
+      },
+      {
+        "episode_id": 46529,
+        "display_name": "Revoluce S01E04 - Vzteklí psi CZ Titulky",
+        "video_id": 27103602
+      },
+      {
+        "episode_id": 46531,
+        "display_name": "Revoluce S01E06 - Sex a drogy CZ Titulky",
+        "video_id": 27103634
+      },
+      {
+        "episode_id": 46533,
+        "display_name": "Revoluce S01E09 - Kašmír CZ Dabing",
+        "video_id": 27103658
+      },
+      {
+        "episode_id": 46535,
+        "display_name": "Revoluce S01E10 - Je to jen moje chyba CZ Dabing",
+        "video_id": 27103685
+      },
+      {
+        "episode_id": 46537,
+        "display_name": "Revoluce S01E12 - Duchové CZ Dabing",
+        "video_id": 27103714
+      },
+      {
+        "episode_id": 46543,
+        "display_name": "Revoluce S01E18 - Stopa CZ Titulky",
+        "video_id": 27103742
+      },
+      {
+        "episode_id": 46545,
+        "display_name": "Revoluce S01E20 - Temná věž CZ Dabing",
+        "video_id": 27103768
+      },
+      {
+        "episode_id": 46505,
+        "display_name": "Revoluce S02E01 - Narozeni v USA CZ Dabing",
+        "video_id": 27103808
+      },
+      {
+        "episode_id": 46507,
+        "display_name": "Revoluce S02E03 - Milostný příběh CZ Dabing",
+        "video_id": 27103850
+      },
+      {
+        "episode_id": 46509,
+        "display_name": "Revoluce S02E06 - Mrtvý muž přichází CZ Dabing",
+        "video_id": 27103879
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -118101,6 +118256,161 @@
         "episode_id": 51553,
         "display_name": "Terra Nova S01E03 - Nákaza CZ Dabing",
         "video_id": 27102963
+      },
+      {
+        "episode_id": 51554,
+        "display_name": "Terra Nova S01E04 - Uprchlice CZ Dabing",
+        "video_id": 27103342
+      },
+      {
+        "episode_id": 51556,
+        "display_name": "Terra Nova S01E07 - Důkaz CZ Dabing",
+        "video_id": 27103388
+      },
+      {
+        "episode_id": 51558,
+        "display_name": "Terra Nova S01E09 - Teď mě vidíš CZ Dabing",
+        "video_id": 27103426
+      },
+      {
+        "episode_id": 51560,
+        "display_name": "Terra Nova S01E11 - Soukromá armáda / Hnutí odporu CZ Dabing",
+        "video_id": 27103465
+      },
+      {
+        "episode_id": 89824,
+        "display_name": "Lioness S01E05 - Pravda je ta nejchytřejší lež CZ Dabing",
+        "video_id": 27103508
+      },
+      {
+        "episode_id": 202502,
+        "display_name": "Lioness S02E02 - Miluji svou vlast CZ Dabing",
+        "video_id": 27103543
+      },
+      {
+        "episode_id": 202500,
+        "display_name": "Lioness S02E06 - 2831 CZ Dabing",
+        "video_id": 27103565
+      },
+      {
+        "episode_id": 202498,
+        "display_name": "Lioness S02E08 - Kompas nás vede domů CZ Dabing",
+        "video_id": 27103591
+      },
+      {
+        "episode_id": 46528,
+        "display_name": "Revoluce S01E03 - Bez milosti CZ Dabing",
+        "video_id": 27103641
+      },
+      {
+        "episode_id": 46530,
+        "display_name": "Revoluce S01E05 - Vlak do Philadelphie CZ Dabing",
+        "video_id": 27103679
+      },
+      {
+        "episode_id": 46532,
+        "display_name": "Revoluce S01E07 - Dětská křížová výprava CZ Dabing",
+        "video_id": 27103718
+      },
+      {
+        "episode_id": 46534,
+        "display_name": "Revoluce S01E08 - Pevné pouto CZ Dabing",
+        "video_id": 27103759
+      },
+      {
+        "episode_id": 46536,
+        "display_name": "Revoluce S01E11 - Boj CZ Dabing",
+        "video_id": 27103800
+      },
+      {
+        "episode_id": 46542,
+        "display_name": "Revoluce S01E17 - Nejdelší den CZ Titulky",
+        "video_id": 27103835
+      },
+      {
+        "episode_id": 46544,
+        "display_name": "Revoluce S01E19 - Potomci lidí CZ Titulky",
+        "video_id": 27103863
+      },
+      {
+        "episode_id": 51555,
+        "display_name": "Terra Nova S01E05 - Vyhoštění CZ Dabing",
+        "video_id": 27103338
+      },
+      {
+        "episode_id": 51561,
+        "display_name": "Terra Nova S01E06 - Soumrak CZ Dabing",
+        "video_id": 27103364
+      },
+      {
+        "episode_id": 51557,
+        "display_name": "Terra Nova S01E08 - Střet CZ Dabing",
+        "video_id": 27103402
+      },
+      {
+        "episode_id": 51559,
+        "display_name": "Terra Nova S01E10 - Odhalený zvěd CZ Dabing",
+        "video_id": 27103447
+      },
+      {
+        "episode_id": 89825,
+        "display_name": "Lioness S01E06 - Lež je pravdou CZ Dabing",
+        "video_id": 27103484
+      },
+      {
+        "episode_id": 89819,
+        "display_name": "Lioness S01E08 - Iluze řádu je pryč CZ Dabing",
+        "video_id": 27103532
+      },
+      {
+        "episode_id": 46529,
+        "display_name": "Revoluce S01E04 - Vzteklí psi CZ Titulky",
+        "video_id": 27103602
+      },
+      {
+        "episode_id": 46531,
+        "display_name": "Revoluce S01E06 - Sex a drogy CZ Titulky",
+        "video_id": 27103634
+      },
+      {
+        "episode_id": 46533,
+        "display_name": "Revoluce S01E09 - Kašmír CZ Dabing",
+        "video_id": 27103658
+      },
+      {
+        "episode_id": 46535,
+        "display_name": "Revoluce S01E10 - Je to jen moje chyba CZ Dabing",
+        "video_id": 27103685
+      },
+      {
+        "episode_id": 46537,
+        "display_name": "Revoluce S01E12 - Duchové CZ Dabing",
+        "video_id": 27103714
+      },
+      {
+        "episode_id": 46543,
+        "display_name": "Revoluce S01E18 - Stopa CZ Titulky",
+        "video_id": 27103742
+      },
+      {
+        "episode_id": 46545,
+        "display_name": "Revoluce S01E20 - Temná věž CZ Dabing",
+        "video_id": 27103768
+      },
+      {
+        "episode_id": 46505,
+        "display_name": "Revoluce S02E01 - Narozeni v USA CZ Dabing",
+        "video_id": 27103808
+      },
+      {
+        "episode_id": 46507,
+        "display_name": "Revoluce S02E03 - Milostný příběh CZ Dabing",
+        "video_id": 27103850
+      },
+      {
+        "episode_id": 46509,
+        "display_name": "Revoluce S02E06 - Mrtvý muž přichází CZ Dabing",
+        "video_id": 27103879
       }
     ],
     "prepared_not_upload_ready": [
@@ -119262,14 +119572,15 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 20
+    "ok": 60,
+    "disabled": 338
   },
   "whisper_review_statuses": {
     "whisper_non_cz_needs_subtitles": 581,
     "whisper_confirmed_cz": 199,
-    "needs_whisper": 13475
+    "needs_whisper": 13537
   },
   "subtitle_followup_statuses": {
-    "needs_subtitle_setup_after_prehrajto_processing": 2784
+    "needs_subtitle_setup_after_prehrajto_processing": 2785
   }
 }
