@@ -2,36 +2,84 @@
   "counts": {
     "backlog_episodes": 178042,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 15333,
-    "prepared_source_episodes": 32518,
+    "uploaded_episodes": 15358,
+    "prepared_source_episodes": 32578,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 782,
-    "language_whisper_attempted_sources": 93,
-    "language_pending_whisper_sources": 2624,
-    "whisper_review_sources": 14999,
-    "whisper_review_pending_sources": 14139,
-    "subtitle_followup_sources": 2967,
-    "subtitle_followup_pending_sources": 2967
+    "language_audited_sources": 408,
+    "language_whisper_attempted_sources": 40,
+    "language_pending_whisper_sources": 2604,
+    "whisper_review_sources": 15060,
+    "whisper_review_pending_sources": 14200,
+    "subtitle_followup_sources": 2976,
+    "subtitle_followup_pending_sources": 2976
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-07-03T12:52:37Z",
-      "databaseId": 28661799906,
+      "createdAt": "2026-07-03T13:10:40Z",
+      "databaseId": 28662735491,
       "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "process-whisper-review"
+      "status": "pending",
+      "workflowName": "prepare-manifest"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-07-03T13:10:10Z",
+      "databaseId": 28662707633,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-03T13:09:42Z",
+      "databaseId": 28662682247,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-03T13:08:55Z",
+      "databaseId": 28662642899,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-03T12:53:36Z",
+      "databaseId": 28661850942,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-03T12:53:33Z",
+      "databaseId": 28661848073,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-03T12:52:37Z",
+      "databaseId": 28661799906,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-03T12:52:36Z",
       "databaseId": 28661798711,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -39,7 +87,7 @@
       "createdAt": "2026-07-03T12:49:40Z",
       "databaseId": 28661645107,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "prepare-manifest"
     },
     {
@@ -47,7 +95,7 @@
       "createdAt": "2026-07-03T12:49:37Z",
       "databaseId": 28661642932,
       "headBranch": "main",
-      "status": "pending",
+      "status": "queued",
       "workflowName": "sync"
     },
     {
@@ -99,11 +147,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-03T12:34:57Z",
       "databaseId": 28660890836,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -129,54 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-03T12:23:40Z",
-      "databaseId": 28660320563,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-03T12:23:37Z",
-      "databaseId": 28660318261,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-03T12:22:40Z",
-      "databaseId": 28660268301,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-03T12:19:04Z",
-      "databaseId": 28660087922,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-sources"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-03T12:15:21Z",
-      "databaseId": 28659906169,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-03T12:15:07Z",
-      "databaseId": 28659893153,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
     }
   ],
   "gaps": {
@@ -54561,6 +54561,66 @@
         "video_id": 27111122
       },
       {
+        "episode_id": 36808,
+        "display_name": "Star Trek: Voyager S07E09 - Vlastní krev (1) CZ Dabing",
+        "video_id": 27111258
+      },
+      {
+        "episode_id": 41440,
+        "display_name": "Skandál S01E01 - Neviňátko CZ Dabing",
+        "video_id": 27111316
+      },
+      {
+        "episode_id": 41442,
+        "display_name": "Skandál S01E04 - Nepřítel státu CZ Dabing",
+        "video_id": 27111342
+      },
+      {
+        "episode_id": 41444,
+        "display_name": "Skandál S01E07 - Grant: Pro lidi CZ Dabing",
+        "video_id": 27111367
+      },
+      {
+        "episode_id": 41446,
+        "display_name": "Skandál S02E01 - Rukavičky dolů CZ Dabing",
+        "video_id": 27111400
+      },
+      {
+        "episode_id": 41450,
+        "display_name": "Skandál S02E02 - Jiná žena CZ Dabing",
+        "video_id": 27111428
+      },
+      {
+        "episode_id": 41448,
+        "display_name": "Skandál S02E05 - Všechny cesty vedou k Fitzovi CZ Dabing",
+        "video_id": 27111453
+      },
+      {
+        "episode_id": 41454,
+        "display_name": "Skandál S02E07 - Vzdor CZ Dabing",
+        "video_id": 27111477
+      },
+      {
+        "episode_id": 41452,
+        "display_name": "Skandál S02E10 - Vlastenecký zákon CZ Dabing",
+        "video_id": 27111498
+      },
+      {
+        "episode_id": 41456,
+        "display_name": "Skandál S02E12 - Pravdu, nebo následky CZ Dabing",
+        "video_id": 27111525
+      },
+      {
+        "episode_id": 41458,
+        "display_name": "Skandál S02E15 - Výbuch CZ Dabing",
+        "video_id": 27111548
+      },
+      {
+        "episode_id": 41460,
+        "display_name": "Skandál S02E17 - Dýkou do zad CZ Dabing",
+        "video_id": 27111573
+      },
+      {
         "episode_id": 10711,
         "display_name": "Most S04E07 - 7. epizoda CZ Titulky",
         "video_id": 27110139
@@ -54594,6 +54654,71 @@
         "episode_id": 41441,
         "display_name": "Skandál S01E03 - Pekelná zloba CZ Dabing",
         "video_id": 27111240
+      },
+      {
+        "episode_id": 41443,
+        "display_name": "Skandál S01E05 - Prudký pád CZ Dabing",
+        "video_id": 27111263
+      },
+      {
+        "episode_id": 41447,
+        "display_name": "Skandál S01E06 - Stopa CZ Dabing",
+        "video_id": 27111292
+      },
+      {
+        "episode_id": 41445,
+        "display_name": "Skandál S02E03 - Lovecká sezóna CZ Dabing",
+        "video_id": 27111317
+      },
+      {
+        "episode_id": 41455,
+        "display_name": "Skandál S02E04 - Pohřešovaná CZ Dabing",
+        "video_id": 27111355
+      },
+      {
+        "episode_id": 41449,
+        "display_name": "Skandál S02E06 - Špióni jako my CZ Dabing",
+        "video_id": 27111387
+      },
+      {
+        "episode_id": 41451,
+        "display_name": "Skandál S02E08 - Všechno nejlepší, pane prezidente CZ Dabing",
+        "video_id": 27111423
+      },
+      {
+        "episode_id": 41453,
+        "display_name": "Skandál S02E09 - Viceprezidentka CZ Dabing",
+        "video_id": 27111476
+      },
+      {
+        "episode_id": 41463,
+        "display_name": "Skandál S02E11 - Kriminál, děvka, idiot a lhář CZ Dabing",
+        "video_id": 27111522
+      },
+      {
+        "episode_id": 41457,
+        "display_name": "Skandál S02E13 - Mimina nemá nikdo rád CZ Dabing",
+        "video_id": 27111567
+      },
+      {
+        "episode_id": 41459,
+        "display_name": "Skandál S02E14 - Whisky, tango, foxtrot CZ Dabing",
+        "video_id": 27111599
+      },
+      {
+        "episode_id": 41461,
+        "display_name": "Skandál S02E16 - Na čas CZ Dabing",
+        "video_id": 27111631
+      },
+      {
+        "episode_id": 41465,
+        "display_name": "Skandál S02E20 - Opovrhovaná žena CZ Dabing",
+        "video_id": 27111659
+      },
+      {
+        "episode_id": 41469,
+        "display_name": "Skandál S02E21 - Nějaké otázky? CZ Dabing",
+        "video_id": 27111682
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -119818,6 +119943,66 @@
         "video_id": 27111122
       },
       {
+        "episode_id": 36808,
+        "display_name": "Star Trek: Voyager S07E09 - Vlastní krev (1) CZ Dabing",
+        "video_id": 27111258
+      },
+      {
+        "episode_id": 41440,
+        "display_name": "Skandál S01E01 - Neviňátko CZ Dabing",
+        "video_id": 27111316
+      },
+      {
+        "episode_id": 41442,
+        "display_name": "Skandál S01E04 - Nepřítel státu CZ Dabing",
+        "video_id": 27111342
+      },
+      {
+        "episode_id": 41444,
+        "display_name": "Skandál S01E07 - Grant: Pro lidi CZ Dabing",
+        "video_id": 27111367
+      },
+      {
+        "episode_id": 41446,
+        "display_name": "Skandál S02E01 - Rukavičky dolů CZ Dabing",
+        "video_id": 27111400
+      },
+      {
+        "episode_id": 41450,
+        "display_name": "Skandál S02E02 - Jiná žena CZ Dabing",
+        "video_id": 27111428
+      },
+      {
+        "episode_id": 41448,
+        "display_name": "Skandál S02E05 - Všechny cesty vedou k Fitzovi CZ Dabing",
+        "video_id": 27111453
+      },
+      {
+        "episode_id": 41454,
+        "display_name": "Skandál S02E07 - Vzdor CZ Dabing",
+        "video_id": 27111477
+      },
+      {
+        "episode_id": 41452,
+        "display_name": "Skandál S02E10 - Vlastenecký zákon CZ Dabing",
+        "video_id": 27111498
+      },
+      {
+        "episode_id": 41456,
+        "display_name": "Skandál S02E12 - Pravdu, nebo následky CZ Dabing",
+        "video_id": 27111525
+      },
+      {
+        "episode_id": 41458,
+        "display_name": "Skandál S02E15 - Výbuch CZ Dabing",
+        "video_id": 27111548
+      },
+      {
+        "episode_id": 41460,
+        "display_name": "Skandál S02E17 - Dýkou do zad CZ Dabing",
+        "video_id": 27111573
+      },
+      {
         "episode_id": 10711,
         "display_name": "Most S04E07 - 7. epizoda CZ Titulky",
         "video_id": 27110139
@@ -119851,6 +120036,71 @@
         "episode_id": 41441,
         "display_name": "Skandál S01E03 - Pekelná zloba CZ Dabing",
         "video_id": 27111240
+      },
+      {
+        "episode_id": 41443,
+        "display_name": "Skandál S01E05 - Prudký pád CZ Dabing",
+        "video_id": 27111263
+      },
+      {
+        "episode_id": 41447,
+        "display_name": "Skandál S01E06 - Stopa CZ Dabing",
+        "video_id": 27111292
+      },
+      {
+        "episode_id": 41445,
+        "display_name": "Skandál S02E03 - Lovecká sezóna CZ Dabing",
+        "video_id": 27111317
+      },
+      {
+        "episode_id": 41455,
+        "display_name": "Skandál S02E04 - Pohřešovaná CZ Dabing",
+        "video_id": 27111355
+      },
+      {
+        "episode_id": 41449,
+        "display_name": "Skandál S02E06 - Špióni jako my CZ Dabing",
+        "video_id": 27111387
+      },
+      {
+        "episode_id": 41451,
+        "display_name": "Skandál S02E08 - Všechno nejlepší, pane prezidente CZ Dabing",
+        "video_id": 27111423
+      },
+      {
+        "episode_id": 41453,
+        "display_name": "Skandál S02E09 - Viceprezidentka CZ Dabing",
+        "video_id": 27111476
+      },
+      {
+        "episode_id": 41463,
+        "display_name": "Skandál S02E11 - Kriminál, děvka, idiot a lhář CZ Dabing",
+        "video_id": 27111522
+      },
+      {
+        "episode_id": 41457,
+        "display_name": "Skandál S02E13 - Mimina nemá nikdo rád CZ Dabing",
+        "video_id": 27111567
+      },
+      {
+        "episode_id": 41459,
+        "display_name": "Skandál S02E14 - Whisky, tango, foxtrot CZ Dabing",
+        "video_id": 27111599
+      },
+      {
+        "episode_id": 41461,
+        "display_name": "Skandál S02E16 - Na čas CZ Dabing",
+        "video_id": 27111631
+      },
+      {
+        "episode_id": 41465,
+        "display_name": "Skandál S02E20 - Opovrhovaná žena CZ Dabing",
+        "video_id": 27111659
+      },
+      {
+        "episode_id": 41469,
+        "display_name": "Skandál S02E21 - Nějaké otázky? CZ Dabing",
+        "video_id": 27111682
       }
     ],
     "prepared_not_upload_ready": [
@@ -121012,15 +121262,15 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 93,
-    "disabled": 689
+    "disabled": 368,
+    "ok": 40
   },
   "whisper_review_statuses": {
     "whisper_non_cz_needs_subtitles": 609,
     "whisper_confirmed_cz": 251,
-    "needs_whisper": 14139
+    "needs_whisper": 14200
   },
   "subtitle_followup_statuses": {
-    "needs_subtitle_setup_after_prehrajto_processing": 2967
+    "needs_subtitle_setup_after_prehrajto_processing": 2976
   }
 }
