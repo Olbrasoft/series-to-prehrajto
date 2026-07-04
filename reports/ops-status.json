@@ -2,28 +2,44 @@
   "counts": {
     "backlog_episodes": 176383,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 17006,
+    "uploaded_episodes": 17007,
     "prepared_source_episodes": 37678,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 115,
-    "language_whisper_attempted_sources": 40,
+    "language_audited_sources": 154,
+    "language_whisper_attempted_sources": 51,
     "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 19519,
     "whisper_review_pending_sources": 18259,
-    "subtitle_followup_sources": 4098,
-    "subtitle_followup_pending_sources": 4098
+    "subtitle_followup_sources": 4109,
+    "subtitle_followup_pending_sources": 4109
   },
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-07-04T21:08:43Z",
+      "databaseId": 28719716281,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-04T21:07:50Z",
+      "databaseId": 28719696376,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-04T21:06:53Z",
       "databaseId": 28719673986,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -161,22 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-04T20:32:12Z",
-      "databaseId": 28718804715,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-07-04T20:31:33Z",
-      "databaseId": 28718787841,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
     }
   ],
   "gaps": {
@@ -62879,6 +62879,11 @@
         "episode_id": 35888,
         "display_name": "Těla S01E05 - Jsme si navzájem duchy CZ Dabing",
         "video_id": 27144126
+      },
+      {
+        "episode_id": 35890,
+        "display_name": "Těla S01E07 - Tak si mě chyťte CZ Dabing",
+        "video_id": 27144177
       },
       {
         "episode_id": 107713,
@@ -136503,6 +136508,11 @@
         "video_id": 27144126
       },
       {
+        "episode_id": 35890,
+        "display_name": "Těla S01E07 - Tak si mě chyťte CZ Dabing",
+        "video_id": 27144177
+      },
+      {
         "episode_id": 107713,
         "display_name": "Podruhé mě neoklameš S01E04 - 4. díl CZ Dabing",
         "video_id": 27139526
@@ -137742,8 +137752,8 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 75,
-    "ok": 40
+    "disabled": 103,
+    "ok": 51
   },
   "whisper_review_statuses": {
     "whisper_confirmed_cz": 340,
@@ -137751,6 +137761,6 @@
     "needs_whisper": 18259
   },
   "subtitle_followup_statuses": {
-    "needs_subtitle_setup_after_prehrajto_processing": 4098
+    "needs_subtitle_setup_after_prehrajto_processing": 4109
   }
 }
