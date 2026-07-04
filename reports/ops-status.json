@@ -2,28 +2,76 @@
   "counts": {
     "backlog_episodes": 176467,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 16950,
+    "uploaded_episodes": 16951,
     "prepared_source_episodes": 36978,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 159,
-    "language_whisper_attempted_sources": 66,
+    "language_audited_sources": 378,
+    "language_whisper_attempted_sources": 133,
     "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 19125,
-    "whisper_review_pending_sources": 17885,
-    "subtitle_followup_sources": 3927,
-    "subtitle_followup_pending_sources": 3927
+    "whisper_review_pending_sources": 17865,
+    "subtitle_followup_sources": 3994,
+    "subtitle_followup_pending_sources": 3994
   },
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-07-04T17:01:05Z",
+      "databaseId": 28713332086,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-04T17:00:58Z",
+      "databaseId": 28713328053,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-04T17:00:17Z",
+      "databaseId": 28713305183,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-04T17:00:15Z",
+      "databaseId": 28713304066,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-04T17:00:13Z",
+      "databaseId": 28713303233,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-04T17:00:10Z",
+      "databaseId": 28713302062,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-04T16:59:17Z",
       "databaseId": 28713277199,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -129,54 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-04T16:32:01Z",
-      "databaseId": 28712561555,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-04T16:31:58Z",
-      "databaseId": 28712560655,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-04T16:31:56Z",
-      "databaseId": 28712559922,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-07-04T16:31:25Z",
-      "databaseId": 28712544533,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-04T16:31:06Z",
-      "databaseId": 28712535757,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-04T16:31:03Z",
-      "databaseId": 28712534544,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "sync"
     }
   ],
   "gaps": {
@@ -62679,6 +62679,11 @@
         "episode_id": 53085,
         "display_name": "Poslední loď S03E03 - Shanzhai CZ Dabing",
         "video_id": 27137846
+      },
+      {
+        "episode_id": 53067,
+        "display_name": "Poslední loď S03E05 - Minové pole CZ Dabing",
+        "video_id": 27137875
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -136021,6 +136026,11 @@
         "episode_id": 53085,
         "display_name": "Poslední loď S03E03 - Shanzhai CZ Dabing",
         "video_id": 27137846
+      },
+      {
+        "episode_id": 53067,
+        "display_name": "Poslední loď S03E05 - Minové pole CZ Dabing",
+        "video_id": 27137875
       }
     ],
     "prepared_not_upload_ready": [
@@ -136327,166 +136337,6 @@
     ],
     "whisper_review_pending": [
       {
-        "episode_id": 81938,
-        "source_id": -39249885453732208,
-        "series_title": "Borci z Blue Mountain State",
-        "episode_code": "S03E11",
-        "source_title": "Borci z Blue Mountain State - S03E11 - Death Penalty",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 81941,
-        "source_id": -47011893780307385,
-        "series_title": "Borci z Blue Mountain State",
-        "episode_code": "S03E12",
-        "source_title": "Borci z Blue Mountain State - S3E12 The Corn Field, Part I EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 81941,
-        "source_id": -53145248025833822,
-        "series_title": "Borci z Blue Mountain State",
-        "episode_code": "S03E12",
-        "source_title": "Borci z Blue Mountain State - S3E12 Corn Field (1) EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 81941,
-        "source_id": -37912751107967968,
-        "series_title": "Borci z Blue Mountain State",
-        "episode_code": "S03E12",
-        "source_title": "Borci z Blue Mountain State - S03E12 - Corn Field (1)",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 15420,
-        "source_id": -37414696985877397,
-        "series_title": "Borgiové",
-        "episode_code": "S01E01",
-        "source_title": "Borgiové - S1E1 The Poisoned Chalice + The Assassin EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 15421,
-        "source_id": -16105367955086781,
-        "series_title": "Borgiové",
-        "episode_code": "S01E02",
-        "source_title": "Borgiové S01E02",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 15422,
-        "source_id": -8865293755023973,
-        "series_title": "Borgiové",
-        "episode_code": "S01E03",
-        "source_title": "Borgiové S1E3 Maur",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 15426,
-        "source_id": -21120299772049995,
-        "series_title": "Borgiové",
-        "episode_code": "S01E07",
-        "source_title": "Borgiové - S01E07 - Smrt na sinavém koni",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 15428,
-        "source_id": -55616227804852343,
-        "series_title": "Borgiové",
-        "episode_code": "S01E09",
-        "source_title": "Borgiové - S1E9 Nikdo EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 15430,
-        "source_id": -64819262629121441,
-        "series_title": "Borgiové",
-        "episode_code": "S02E02",
-        "source_title": "Borgiové - S2E2 Paolo EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 15431,
-        "source_id": -40512725199771435,
-        "series_title": "Borgiové",
-        "episode_code": "S02E03",
-        "source_title": "Borgiové - S2E3 The Beautiful Deception EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 15435,
-        "source_id": -53427300069664973,
-        "series_title": "Borgiové",
-        "episode_code": "S02E07",
-        "source_title": "Borgiové - S2E7 The Siege At Forli EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 15437,
-        "source_id": -50774570766077362,
-        "series_title": "Borgiové",
-        "episode_code": "S02E09",
-        "source_title": "Borgiové - S2E9 World Of Wonders EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 15438,
-        "source_id": -28305864202452082,
-        "series_title": "Borgiové",
-        "episode_code": "S02E10",
-        "source_title": "Borgiové - S2E10 The Confession EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 15439,
-        "source_id": -5303007235102678,
-        "series_title": "Borgiové",
-        "episode_code": "S03E01",
-        "source_title": "Borgiové - S3E1 The Face Of Death EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 15440,
-        "source_id": -49639227658649207,
-        "series_title": "Borgiové",
-        "episode_code": "S03E02",
-        "source_title": "Borgiové - S3E2 The Purge EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 15441,
-        "source_id": -31576066684976746,
-        "series_title": "Borgiové",
-        "episode_code": "S03E03",
-        "source_title": "Borgiové - S3E3 Siblings EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 15448,
-        "source_id": -46126530602368827,
-        "series_title": "Borgiové",
-        "episode_code": "S03E10",
-        "source_title": "Borgiové - S3E10 The Prince EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 97534,
-        "source_id": -60587523446845741,
-        "series_title": "Bořiči mýtů",
-        "episode_code": "S01E01",
-        "source_title": "Borici mytu 01x01 - Ledová kulka.avi",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 97534,
-        "source_id": -9814177167626434,
-        "series_title": "Bořiči mýtů",
-        "episode_code": "S01E01",
-        "source_title": "Borici Mytů 01x01 - Ledová kulka",
-        "status": "needs_whisper"
-      },
-      {
         "episode_id": 97535,
         "source_id": -41242910229376412,
         "series_title": "Bořiči mýtů",
@@ -136724,6 +136574,166 @@
         "series_title": "Bořiči mýtů",
         "episode_code": "S01E11",
         "source_title": "Borici Mytu S01E11 - Potopeni Titaniku",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 97543,
+        "source_id": -7454784863698522,
+        "series_title": "Bořiči mýtů",
+        "episode_code": "S01E11",
+        "source_title": "Borici mytu 01x11 - Potopeni Titaniku.avi",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 97543,
+        "source_id": -7052756407245686,
+        "series_title": "Bořiči mýtů",
+        "episode_code": "S01E11",
+        "source_title": "Borici Mytu 01x11 - Potopeni Titaniku",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 97543,
+        "source_id": -6358332125804627,
+        "series_title": "Bořiči mýtů",
+        "episode_code": "S01E11",
+        "source_title": "Borici-Mytu-S1E11---Potopeni-Titaniku",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 97506,
+        "source_id": -29004599478350545,
+        "series_title": "Bořiči mýtů",
+        "episode_code": "S02E01",
+        "source_title": "Bořiči mýtů S02E01 MythBusters S02E01",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 97506,
+        "source_id": -42395993138225271,
+        "series_title": "Bořiči mýtů",
+        "episode_code": "S02E01",
+        "source_title": "Bořiči mýtu S02E01 - Revidovne myty",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 97506,
+        "source_id": -37192777293788032,
+        "series_title": "Bořiči mýtů",
+        "episode_code": "S02E01",
+        "source_title": "Borici mytu 02x01 - Revidovne myty.avi",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 97506,
+        "source_id": -34222722686706494,
+        "series_title": "Bořiči mýtů",
+        "episode_code": "S02E01",
+        "source_title": "Bořiči mýtu 02x01-Revidovne myty",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 97506,
+        "source_id": -29643840747699037,
+        "series_title": "Bořiči mýtů",
+        "episode_code": "S02E01",
+        "source_title": "Borici mytu 02x01 -Myths-Revisited.avi",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 97507,
+        "source_id": -59119805900352387,
+        "series_title": "Bořiči mýtů",
+        "episode_code": "S02E02",
+        "source_title": "Borici mytu 02x02 - Nasaty potapec.avi",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 97507,
+        "source_id": -57892617231818708,
+        "series_title": "Bořiči mýtů",
+        "episode_code": "S02E02",
+        "source_title": "Borici mytu 02x02 -Scuba-Diver,-Car-Capers.avi",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 97507,
+        "source_id": -33806888832381912,
+        "series_title": "Bořiči mýtů",
+        "episode_code": "S02E02",
+        "source_title": "Bořiči mýtu S02E02 - Nasaty potapec",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 97507,
+        "source_id": -12400416194200999,
+        "series_title": "Bořiči mýtů",
+        "episode_code": "S02E02",
+        "source_title": "Bořiči mýtu 02x02-Nasaty potapec",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 97508,
+        "source_id": -33869725583196218,
+        "series_title": "Bořiči mýtů",
+        "episode_code": "S02E03",
+        "source_title": "Bořiči mýtů S02E03 MythBusters S02E03",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 97508,
+        "source_id": -66389238093450358,
+        "series_title": "Bořiči mýtů",
+        "episode_code": "S02E03",
+        "source_title": "Borici mytu 02x03 -Ancient-Death-Ray,-Skunk-Cleaning,-What-Is-Bulletproof.avi",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 97508,
+        "source_id": -14174955778067320,
+        "series_title": "Bořiči mýtů",
+        "episode_code": "S02E03",
+        "source_title": "Borici mytu 02x03 - Staroveke paprsky smrti.avi",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 97508,
+        "source_id": -13203921273269398,
+        "series_title": "Bořiči mýtů",
+        "episode_code": "S02E03",
+        "source_title": "Bořiči Mýtů 02x03 - Staroveke paprsky smrti",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 97508,
+        "source_id": -4741214790917135,
+        "series_title": "Bořiči mýtů",
+        "episode_code": "S02E03",
+        "source_title": "Bořiči Mýtů S02E03 - Staroveke paprsky smrti",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 97509,
+        "source_id": -31840114023002727,
+        "series_title": "Bořiči mýtů",
+        "episode_code": "S02E04",
+        "source_title": "Bořiči mýtů S02E04 MythBusters S02E04",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 97509,
+        "source_id": -54271847663398004,
+        "series_title": "Bořiči mýtů",
+        "episode_code": "S02E04",
+        "source_title": "Borici mytu 02x04 -Elevator-of-Death,-Levitation-Machine.avi",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 97509,
+        "source_id": -53366979531905168,
+        "series_title": "Bořiči mýtů",
+        "episode_code": "S02E04",
+        "source_title": "Bořiči Mýtů 02x04 - Vytah smrti",
         "status": "needs_whisper"
       }
     ],
@@ -137182,15 +137192,15 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 93,
-    "ok": 66
+    "disabled": 245,
+    "ok": 133
   },
   "whisper_review_statuses": {
-    "whisper_confirmed_cz": 336,
-    "whisper_non_cz_needs_subtitles": 904,
-    "needs_whisper": 17885
+    "whisper_confirmed_cz": 340,
+    "whisper_non_cz_needs_subtitles": 920,
+    "needs_whisper": 17865
   },
   "subtitle_followup_statuses": {
-    "needs_subtitle_setup_after_prehrajto_processing": 3927
+    "needs_subtitle_setup_after_prehrajto_processing": 3994
   }
 }
