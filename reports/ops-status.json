@@ -1,17 +1,17 @@
 {
   "counts": {
-    "backlog_episodes": 176862,
+    "backlog_episodes": 176658,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 16701,
+    "uploaded_episodes": 16706,
     "prepared_source_episodes": 36238,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 81,
-    "language_whisper_attempted_sources": 40,
-    "language_pending_whisper_sources": 2604,
+    "language_audited_sources": 20,
+    "language_whisper_attempted_sources": 20,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 18238,
     "whisper_review_pending_sources": 16998,
     "subtitle_followup_sources": 3790,
@@ -20,10 +20,66 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-07-04T12:38:42Z",
+      "databaseId": 28706470615,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-04T12:38:37Z",
+      "databaseId": 28706468801,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-04T12:38:33Z",
+      "databaseId": 28706466867,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-04T12:38:30Z",
+      "databaseId": 28706465951,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-04T12:34:32Z",
+      "databaseId": 28706363043,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "refresh-backlog"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-04T12:34:07Z",
+      "databaseId": 28706352534,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-04T12:34:04Z",
+      "databaseId": 28706350995,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-04T12:33:08Z",
       "databaseId": 28706327788,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -35,11 +91,11 @@
       "workflowName": "ops-status"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-04T12:29:07Z",
       "databaseId": 28706225254,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -87,7 +143,7 @@
       "createdAt": "2026-07-04T12:19:41Z",
       "databaseId": 28705999243,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "prepare-manifest"
     },
     {
@@ -121,62 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-04T12:13:07Z",
-      "databaseId": 28705840131,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-04T12:12:48Z",
-      "databaseId": 28705832097,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-04T12:07:13Z",
-      "databaseId": 28705698698,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-04T12:07:10Z",
-      "databaseId": 28705697347,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-04T12:07:08Z",
-      "databaseId": 28705696310,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-04T12:06:10Z",
-      "databaseId": 28705674290,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-04T11:58:17Z",
-      "databaseId": 28705473388,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-sources"
     }
   ],
   "gaps": {
@@ -61434,6 +61434,31 @@
         "episode_id": 38245,
         "display_name": "Chicago Fire S07E19 - Než se změní počasí CZ Dabing",
         "video_id": 27131082
+      },
+      {
+        "episode_id": 38323,
+        "display_name": "Chicago Fire S07E20 - Ze všech sil CZ Dabing",
+        "video_id": 27131095
+      },
+      {
+        "episode_id": 38249,
+        "display_name": "Chicago Fire S08E01 - Posvátná půda CZ Dabing",
+        "video_id": 27131110
+      },
+      {
+        "episode_id": 38251,
+        "display_name": "Chicago Fire S08E03 - Neúrodná půda CZ Dabing",
+        "video_id": 27131120
+      },
+      {
+        "episode_id": 38253,
+        "display_name": "Chicago Fire S08E05 - Připoutejte se CZ Dabing",
+        "video_id": 27131131
+      },
+      {
+        "episode_id": 38259,
+        "display_name": "Chicago Fire S08E07 - Město šílenců CZ Dabing",
+        "video_id": 27131142
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -133531,6 +133556,31 @@
         "episode_id": 38245,
         "display_name": "Chicago Fire S07E19 - Než se změní počasí CZ Dabing",
         "video_id": 27131082
+      },
+      {
+        "episode_id": 38323,
+        "display_name": "Chicago Fire S07E20 - Ze všech sil CZ Dabing",
+        "video_id": 27131095
+      },
+      {
+        "episode_id": 38249,
+        "display_name": "Chicago Fire S08E01 - Posvátná půda CZ Dabing",
+        "video_id": 27131110
+      },
+      {
+        "episode_id": 38251,
+        "display_name": "Chicago Fire S08E03 - Neúrodná půda CZ Dabing",
+        "video_id": 27131120
+      },
+      {
+        "episode_id": 38253,
+        "display_name": "Chicago Fire S08E05 - Připoutejte se CZ Dabing",
+        "video_id": 27131131
+      },
+      {
+        "episode_id": 38259,
+        "display_name": "Chicago Fire S08E07 - Město šílenců CZ Dabing",
+        "video_id": 27131142
       }
     ],
     "prepared_not_upload_ready": [
@@ -134692,8 +134742,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 41,
-    "ok": 40
+    "ok": 20
   },
   "whisper_review_statuses": {
     "whisper_confirmed_cz": 336,
