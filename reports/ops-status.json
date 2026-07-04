@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 176862,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 16619,
-    "prepared_source_episodes": 36098,
+    "uploaded_episodes": 16626,
+    "prepared_source_episodes": 36108,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 40,
-    "language_whisper_attempted_sources": 40,
-    "language_pending_whisper_sources": 2604,
+    "language_audited_sources": 20,
+    "language_whisper_attempted_sources": 20,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 18210,
     "whisper_review_pending_sources": 16990,
     "subtitle_followup_sources": 3790,
@@ -20,18 +20,74 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-07-04T11:39:08Z",
-      "databaseId": 28705016150,
+      "createdAt": "2026-07-04T11:46:00Z",
+      "databaseId": 28705183326,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-04T11:45:59Z",
+      "databaseId": 28705182980,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-07-04T11:45:55Z",
+      "databaseId": 28705181630,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-04T11:44:46Z",
+      "databaseId": 28705151345,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-07-04T11:42:43Z",
+      "databaseId": 28705105044,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-04T11:42:18Z",
+      "databaseId": 28705094004,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-04T11:40:07Z",
+      "databaseId": 28705040359,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-04T11:39:08Z",
+      "databaseId": 28705016150,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-04T11:29:03Z",
       "databaseId": 28704772465,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -43,11 +99,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "failure",
       "createdAt": "2026-07-04T11:28:44Z",
       "databaseId": 28704764958,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
@@ -121,62 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-04T11:15:31Z",
-      "databaseId": 28704460521,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-04T11:07:33Z",
-      "databaseId": 28704270126,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-sources"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-04T11:03:48Z",
-      "databaseId": 28704178363,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
-    },
-    {
-      "conclusion": "failure",
-      "createdAt": "2026-07-04T11:03:34Z",
-      "databaseId": 28704171966,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-04T11:03:34Z",
-      "databaseId": 28704171892,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-04T11:03:01Z",
-      "databaseId": 28704157116,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-04T11:00:26Z",
-      "databaseId": 28704083105,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "sync"
     }
   ],
   "gaps": {
@@ -60956,6 +60956,11 @@
         "video_id": 27130666
       },
       {
+        "episode_id": 38132,
+        "display_name": "Chicago Fire S01E24 - Pořádná jízda CZ Dabing",
+        "video_id": 27130675
+      },
+      {
         "episode_id": 38143,
         "display_name": "Chicago Fire S02E05 - Síla moci CZ Dabing",
         "video_id": 27130508
@@ -61024,6 +61029,36 @@
         "episode_id": 38167,
         "display_name": "Chicago Fire S03E09 - Zastavení dopravy CZ Dabing",
         "video_id": 27130669
+      },
+      {
+        "episode_id": 38169,
+        "display_name": "Chicago Fire S03E11 - Nech ho zemřít CZ Dabing",
+        "video_id": 27130680
+      },
+      {
+        "episode_id": 38173,
+        "display_name": "Chicago Fire S03E15 - Střemhlav do katastrofy CZ Dabing",
+        "video_id": 27130689
+      },
+      {
+        "episode_id": 38179,
+        "display_name": "Chicago Fire S03E19 - Já, Apokalypsa CZ Dabing",
+        "video_id": 27130696
+      },
+      {
+        "episode_id": 38135,
+        "display_name": "Chicago Fire S04E02 - Chuť Panama City CZ Dabing",
+        "video_id": 27130703
+      },
+      {
+        "episode_id": 38137,
+        "display_name": "Chicago Fire S04E05 - Kvůli svatbě CZ Dabing",
+        "video_id": 27130709
+      },
+      {
+        "episode_id": 38093,
+        "display_name": "Chicago Fire S04E06 - 2112 CZ Dabing",
+        "video_id": 27130712
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -132643,6 +132678,11 @@
         "video_id": 27130666
       },
       {
+        "episode_id": 38132,
+        "display_name": "Chicago Fire S01E24 - Pořádná jízda CZ Dabing",
+        "video_id": 27130675
+      },
+      {
         "episode_id": 38143,
         "display_name": "Chicago Fire S02E05 - Síla moci CZ Dabing",
         "video_id": 27130508
@@ -132711,6 +132751,36 @@
         "episode_id": 38167,
         "display_name": "Chicago Fire S03E09 - Zastavení dopravy CZ Dabing",
         "video_id": 27130669
+      },
+      {
+        "episode_id": 38169,
+        "display_name": "Chicago Fire S03E11 - Nech ho zemřít CZ Dabing",
+        "video_id": 27130680
+      },
+      {
+        "episode_id": 38173,
+        "display_name": "Chicago Fire S03E15 - Střemhlav do katastrofy CZ Dabing",
+        "video_id": 27130689
+      },
+      {
+        "episode_id": 38179,
+        "display_name": "Chicago Fire S03E19 - Já, Apokalypsa CZ Dabing",
+        "video_id": 27130696
+      },
+      {
+        "episode_id": 38135,
+        "display_name": "Chicago Fire S04E02 - Chuť Panama City CZ Dabing",
+        "video_id": 27130703
+      },
+      {
+        "episode_id": 38137,
+        "display_name": "Chicago Fire S04E05 - Kvůli svatbě CZ Dabing",
+        "video_id": 27130709
+      },
+      {
+        "episode_id": 38093,
+        "display_name": "Chicago Fire S04E06 - 2112 CZ Dabing",
+        "video_id": 27130712
       }
     ],
     "prepared_not_upload_ready": [
@@ -133872,7 +133942,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 40
+    "ok": 20
   },
   "whisper_review_statuses": {
     "whisper_confirmed_cz": 336,
