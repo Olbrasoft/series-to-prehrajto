@@ -9,9 +9,9 @@
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 40,
-    "language_whisper_attempted_sources": 40,
-    "language_pending_whisper_sources": 2604,
+    "language_audited_sources": 20,
+    "language_whisper_attempted_sources": 20,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 19117,
     "whisper_review_pending_sources": 17817,
     "subtitle_followup_sources": 3895,
@@ -20,18 +20,42 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-07-04T16:24:07Z",
-      "databaseId": 28712349171,
+      "createdAt": "2026-07-04T16:31:25Z",
+      "databaseId": 28712544533,
       "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "ops-status"
+      "status": "pending",
+      "workflowName": "prepare-manifest"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-07-04T16:31:06Z",
+      "databaseId": 28712535757,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-04T16:31:03Z",
+      "databaseId": 28712534544,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-04T16:24:07Z",
+      "databaseId": 28712349171,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-04T16:22:52Z",
       "databaseId": 28712315818,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "update-descriptions"
     },
     {
@@ -43,11 +67,11 @@
       "workflowName": "prepare-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-04T16:19:31Z",
       "databaseId": 28712205559,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -83,11 +107,11 @@
       "workflowName": "prepare-manifest"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-07-04T16:00:45Z",
       "databaseId": 28711729830,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "sync"
     },
     {
@@ -153,30 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-04T15:47:49Z",
-      "databaseId": 28711380567,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-04T15:47:45Z",
-      "databaseId": 28711378868,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-04T15:45:31Z",
-      "databaseId": 28711318325,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
     }
   ],
   "gaps": {
@@ -62511,6 +62511,11 @@
         "video_id": 27137327
       },
       {
+        "episode_id": 74150,
+        "display_name": "Vyvolení S04E08 - 8. epizoda CZ Titulky",
+        "video_id": 27137432
+      },
+      {
         "episode_id": 74149,
         "display_name": "Vyvolení S04E07 - 7. epizoda CZ Titulky",
         "video_id": 27136825
@@ -62604,11 +62609,6 @@
         "episode_id": 53053,
         "display_name": "Poslední loď S02E04 - Solace CZ Dabing",
         "video_id": 27137354
-      },
-      {
-        "episode_id": 53043,
-        "display_name": "Poslední loď S02E06 - Dlouhá cesta CZ Dabing",
-        "video_id": 27137383
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -135783,6 +135783,11 @@
         "video_id": 27137327
       },
       {
+        "episode_id": 74150,
+        "display_name": "Vyvolení S04E08 - 8. epizoda CZ Titulky",
+        "video_id": 27137432
+      },
+      {
         "episode_id": 74149,
         "display_name": "Vyvolení S04E07 - 7. epizoda CZ Titulky",
         "video_id": 27136825
@@ -135876,11 +135881,6 @@
         "episode_id": 53053,
         "display_name": "Poslední loď S02E04 - Solace CZ Dabing",
         "video_id": 27137354
-      },
-      {
-        "episode_id": 53043,
-        "display_name": "Poslední loď S02E06 - Dlouhá cesta CZ Dabing",
-        "video_id": 27137383
       }
     ],
     "prepared_not_upload_ready": [
@@ -137042,7 +137042,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 40
+    "ok": 20
   },
   "whisper_review_statuses": {
     "whisper_confirmed_cz": 380,
