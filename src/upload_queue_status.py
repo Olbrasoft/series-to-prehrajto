@@ -14,6 +14,7 @@ from pick_next_episode import (  # noqa: E402
     SHARD_ID,
     NUM_SHARDS,
     burned_source_ids,
+    cooling_down_source_ids,
     load_backlog,
     load_state,
     uploaded_episode_ids,
@@ -42,7 +43,7 @@ def upload_ready_rows(
     state = load_state()
     done_ids = uploaded_episode_ids(state)
     done_keys = uploaded_episode_keys(state)
-    burned = burned_source_ids(state)
+    unavailable = burned_source_ids(state) | cooling_down_source_ids(state)
     source_plans = load_source_plans()
     descriptions = load_description_plans()
     ready = []
@@ -64,7 +65,7 @@ def upload_ready_rows(
             if not has_description:
                 continue
         candidates = row.get("candidates") or []
-        live_source_ids = {int(candidate["source_id"]) for candidate in candidates if int(candidate["source_id"]) not in burned}
+        live_source_ids = {int(candidate["source_id"]) for candidate in candidates if int(candidate["source_id"]) not in unavailable}
         if not live_source_ids:
             continue
         if require_source_plan:

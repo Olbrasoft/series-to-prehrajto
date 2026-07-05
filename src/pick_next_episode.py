@@ -7,6 +7,7 @@ import gzip
 import json
 import os
 import sys
+from datetime import datetime, timezone
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
@@ -35,6 +36,7 @@ BACKLOG = default_backlog_path()
 
 NUM_SHARDS = int(os.environ.get("SYNC_NUM_SHARDS", "1"))
 SHARD_ID = int(os.environ.get("SYNC_SHARD_ID", "0"))
+TRANSIENT_FAILURE_COOLDOWN_SECONDS = int(os.environ.get("SYNC_TRANSIENT_FAILURE_COOLDOWN_SECONDS", "21600"))
 
 
 def state_path(shard_id: int | None = None) -> Path:
@@ -116,10 +118,36 @@ def burned_source_ids(state: dict) -> set[int]:
     return {int(a["source_id"]) for a in state.get("failed_attempts", []) if a.get("permanent")}
 
 
+def _parse_failed_at(value: str | None) -> datetime | None:
+    if not value:
+        return None
+    try:
+        return datetime.fromisoformat(value.replace("Z", "+00:00"))
+    except ValueError:
+        return None
+
+
+def cooling_down_source_ids(state: dict, *, now: datetime | None = None) -> set[int]:
+    if TRANSIENT_FAILURE_COOLDOWN_SECONDS <= 0:
+        return set()
+    current = now or datetime.now(timezone.utc)
+    cooling: set[int] = set()
+    for attempt in state.get("failed_attempts", []):
+        if attempt.get("permanent"):
+            continue
+        failed_at = _parse_failed_at(attempt.get("failed_at"))
+        if not failed_at:
+            continue
+        age = (current - failed_at).total_seconds()
+        if 0 <= age < TRANSIENT_FAILURE_COOLDOWN_SECONDS:
+            cooling.add(int(attempt["source_id"]))
+    return cooling
+
+
 def pick_next(state: dict, rows: list[dict], extra_exclude: set[int] | None = None) -> dict | None:
     done = uploaded_episode_ids(state)
     done_keys = uploaded_episode_keys(state)
-    burned = burned_source_ids(state)
+    unavailable = burned_source_ids(state) | cooling_down_source_ids(state)
     extras = extra_exclude or set()
     for item in rows:
         episode_id = int(item["episode_id"])
@@ -129,7 +157,7 @@ def pick_next(state: dict, rows: list[dict], extra_exclude: set[int] | None = No
             continue
         if episode_key(item) in done_keys:
             continue
-        candidates = [c for c in item["candidates"] if int(c["source_id"]) not in burned]
+        candidates = [c for c in item["candidates"] if int(c["source_id"]) not in unavailable]
         if not candidates:
             continue
         return {**item, "candidates": candidates}

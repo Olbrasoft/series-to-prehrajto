@@ -175,7 +175,16 @@ def apply_source_plan(episode: dict, source_plans: dict[int, dict], *, require_s
     return planned
 
 
-def record_failure(state: dict, episode: dict, candidate: dict, reason: str, *, permanent: bool, timing: dict | None = None) -> None:
+def record_failure(
+    state: dict,
+    episode: dict,
+    candidate: dict,
+    reason: str,
+    *,
+    permanent: bool,
+    timing: dict | None = None,
+    push_reason: str | None = None,
+) -> None:
     entry = {
         "episode_id": episode["episode_id"],
         "series_id": episode["series_id"],
@@ -191,6 +200,8 @@ def record_failure(state: dict, episode: dict, candidate: dict, reason: str, *, 
         entry["timing"] = timing
     state.setdefault("failed_attempts", []).append(entry)
     save_state(state)
+    if push_reason:
+        push_state(push_reason)
 
 
 def try_candidate(episode: dict, candidate: dict, session, state: dict, *, allow_subtitles: bool, description: str) -> bool:
@@ -229,7 +240,15 @@ def try_candidate(episode: dict, candidate: dict, session, state: dict, *, allow
     except DownloadError as exc:
         dl_sec = round(time.monotonic() - t, 1)
         log(f"  download FAILED after {dl_sec}s: {exc}")
-        record_failure(state, episode, candidate, f"download_failed: {exc}", permanent=False, timing={"resolve_sec": resolve_sec, "download_sec": dl_sec})
+        record_failure(
+            state,
+            episode,
+            candidate,
+            f"download_failed: {exc}",
+            permanent=False,
+            timing={"resolve_sec": resolve_sec, "download_sec": dl_sec},
+            push_reason=f"temporarily skip {episode['display_name']}",
+        )
         tmp_path.unlink(missing_ok=True)
         return False
     dl_sec = round(time.monotonic() - t, 1)
