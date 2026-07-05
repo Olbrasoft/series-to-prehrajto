@@ -95,20 +95,20 @@ jobs:
             if [ -f reports/subtitle-backfill-status.jsonl ]; then
               cat "$TMP_DIR/subtitle-backfill-status.jsonl" >> reports/subtitle-backfill-status.jsonl
               python - <<'PY'
-import json
-from pathlib import Path
+          import json
+          from pathlib import Path
 
-path = Path("reports/subtitle-backfill-status.jsonl")
-latest = {}
-for line in path.read_text(encoding="utf-8").splitlines():
-    if not line.strip():
-        continue
-    row = json.loads(line)
-    latest[int(row["episode_id"])] = row
-with path.open("w", encoding="utf-8") as fh:
-    for row in sorted(latest.values(), key=lambda item: (str(item.get("series_title") or ""), int(item.get("season") or 0), int(item.get("episode") or 0), int(item.get("episode_id") or 0))):
-        fh.write(json.dumps(row, ensure_ascii=False, sort_keys=True) + "\n")
-PY
+          path = Path("reports/subtitle-backfill-status.jsonl")
+          latest = {}
+          for line in path.read_text(encoding="utf-8").splitlines():
+              if not line.strip():
+                  continue
+              row = json.loads(line)
+              latest[int(row["episode_id"])] = row
+          with path.open("w", encoding="utf-8") as fh:
+              for row in sorted(latest.values(), key=lambda item: (str(item.get("series_title") or ""), int(item.get("season") or 0), int(item.get("episode") or 0), int(item.get("episode_id") or 0))):
+                  fh.write(json.dumps(row, ensure_ascii=False, sort_keys=True) + "\n")
+          PY
             else
               cp "$TMP_DIR/subtitle-backfill-status.jsonl" reports/subtitle-backfill-status.jsonl
             fi
@@ -120,10 +120,10 @@ PY
             fi
 
             COUNT=$(python - <<'PY'
-from pathlib import Path
-print(sum(1 for line in Path("reports/subtitle-backfill-status.jsonl").read_text(encoding="utf-8").splitlines() if line.strip()))
-PY
-)
+          from pathlib import Path
+          print(sum(1 for line in Path("reports/subtitle-backfill-status.jsonl").read_text(encoding="utf-8").splitlines() if line.strip()))
+          PY
+            )
             git commit -m "chore: update subtitle backfill report (${COUNT} rows)"
             if git push origin HEAD:main; then
               exit 0
