@@ -2,14 +2,14 @@
   "counts": {
     "backlog_episodes": 176349,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 17142,
+    "uploaded_episodes": 17155,
     "prepared_source_episodes": 38258,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 100,
+    "language_audited_sources": 40,
     "language_whisper_attempted_sources": 40,
     "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 19820,
@@ -20,26 +20,66 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-07-05T00:05:25Z",
-      "databaseId": 28723886273,
+      "createdAt": "2026-07-05T00:13:21Z",
+      "databaseId": 28724058993,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
-      "createdAt": "2026-07-05T00:01:56Z",
-      "databaseId": 28723806014,
+      "createdAt": "2026-07-05T00:13:17Z",
+      "databaseId": 28724057541,
       "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "process-whisper-review"
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-07-05T00:11:06Z",
+      "databaseId": 28724010743,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-05T00:06:23Z",
+      "databaseId": 28723908662,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-07-05T00:06:18Z",
+      "databaseId": 28723906970,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-05T00:05:25Z",
+      "databaseId": 28723886273,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "failure",
+      "createdAt": "2026-07-05T00:01:56Z",
+      "databaseId": 28723806014,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-05T00:01:54Z",
       "databaseId": 28723805235,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -134,46 +174,6 @@
       "conclusion": "success",
       "createdAt": "2026-07-04T23:48:58Z",
       "databaseId": 28723516264,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-04T23:48:13Z",
-      "databaseId": 28723500891,
-      "headBranch": "main",
-      "status": "pending",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-04T23:47:32Z",
-      "databaseId": 28723485644,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-04T23:40:52Z",
-      "databaseId": 28723337070,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-04T23:37:08Z",
-      "databaseId": 28723257010,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-04T23:35:15Z",
-      "databaseId": 28723216249,
       "headBranch": "main",
       "status": "completed",
       "workflowName": "update-descriptions"
@@ -63631,6 +63631,36 @@
         "video_id": 27146920
       },
       {
+        "episode_id": 60252,
+        "display_name": "Archive 81 S01E08 - Co se skrývá pod povrchem CZ Dabing",
+        "video_id": 27146948
+      },
+      {
+        "episode_id": 68136,
+        "display_name": "Kaštánek S01E01 - 1. epizoda CZ Dabing",
+        "video_id": 27146964
+      },
+      {
+        "episode_id": 68138,
+        "display_name": "Kaštánek S01E06 - 6. epizoda CZ Dabing",
+        "video_id": 27146996
+      },
+      {
+        "episode_id": 34122,
+        "display_name": "Kaštánek S02E03 - 3. epizoda CZ Dabing",
+        "video_id": 27147149
+      },
+      {
+        "episode_id": 34124,
+        "display_name": "Kaštánek S02E05 - 5. epizoda CZ Dabing",
+        "video_id": 27147204
+      },
+      {
+        "episode_id": 34126,
+        "display_name": "Kaštánek S02E06 - 6. epizoda CZ Dabing",
+        "video_id": 27147220
+      },
+      {
         "episode_id": 86449,
         "display_name": "Hodný holky S04E16 - Nevada CZ Titulky",
         "video_id": 27146907
@@ -63639,6 +63669,41 @@
         "episode_id": 114719,
         "display_name": "Clickbait S01E05 - Reportér CZ Titulky",
         "video_id": 27146924
+      },
+      {
+        "episode_id": 114721,
+        "display_name": "Clickbait S01E07 - Syn CZ Titulky",
+        "video_id": 27146944
+      },
+      {
+        "episode_id": 8591,
+        "display_name": "Ironheart S01E03 - Jde nám o krk, holka CZ Dabing",
+        "video_id": 27146962
+      },
+      {
+        "episode_id": 67187,
+        "display_name": "Star Wars: Vadná várka S01E01 - Následky CZ Dabing",
+        "video_id": 27147092
+      },
+      {
+        "episode_id": 17987,
+        "display_name": "Star Wars: Vadná várka S01E02 - Cut a zběhové CZ Titulky",
+        "video_id": 27147196
+      },
+      {
+        "episode_id": 17985,
+        "display_name": "Star Wars: Vadná várka S01E04 - V úzkých CZ Dabing",
+        "video_id": 27147206
+      },
+      {
+        "episode_id": 17981,
+        "display_name": "Star Wars: Vadná várka S01E07 - Jizvy z bitev CZ Dabing",
+        "video_id": 27147214
+      },
+      {
+        "episode_id": 67189,
+        "display_name": "Star Wars: Vadná várka S01E10 - Společná řeč CZ Dabing",
+        "video_id": 27147224
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -137933,6 +137998,36 @@
         "video_id": 27146920
       },
       {
+        "episode_id": 60252,
+        "display_name": "Archive 81 S01E08 - Co se skrývá pod povrchem CZ Dabing",
+        "video_id": 27146948
+      },
+      {
+        "episode_id": 68136,
+        "display_name": "Kaštánek S01E01 - 1. epizoda CZ Dabing",
+        "video_id": 27146964
+      },
+      {
+        "episode_id": 68138,
+        "display_name": "Kaštánek S01E06 - 6. epizoda CZ Dabing",
+        "video_id": 27146996
+      },
+      {
+        "episode_id": 34122,
+        "display_name": "Kaštánek S02E03 - 3. epizoda CZ Dabing",
+        "video_id": 27147149
+      },
+      {
+        "episode_id": 34124,
+        "display_name": "Kaštánek S02E05 - 5. epizoda CZ Dabing",
+        "video_id": 27147204
+      },
+      {
+        "episode_id": 34126,
+        "display_name": "Kaštánek S02E06 - 6. epizoda CZ Dabing",
+        "video_id": 27147220
+      },
+      {
         "episode_id": 86449,
         "display_name": "Hodný holky S04E16 - Nevada CZ Titulky",
         "video_id": 27146907
@@ -137941,6 +138036,41 @@
         "episode_id": 114719,
         "display_name": "Clickbait S01E05 - Reportér CZ Titulky",
         "video_id": 27146924
+      },
+      {
+        "episode_id": 114721,
+        "display_name": "Clickbait S01E07 - Syn CZ Titulky",
+        "video_id": 27146944
+      },
+      {
+        "episode_id": 8591,
+        "display_name": "Ironheart S01E03 - Jde nám o krk, holka CZ Dabing",
+        "video_id": 27146962
+      },
+      {
+        "episode_id": 67187,
+        "display_name": "Star Wars: Vadná várka S01E01 - Následky CZ Dabing",
+        "video_id": 27147092
+      },
+      {
+        "episode_id": 17987,
+        "display_name": "Star Wars: Vadná várka S01E02 - Cut a zběhové CZ Titulky",
+        "video_id": 27147196
+      },
+      {
+        "episode_id": 17985,
+        "display_name": "Star Wars: Vadná várka S01E04 - V úzkých CZ Dabing",
+        "video_id": 27147206
+      },
+      {
+        "episode_id": 17981,
+        "display_name": "Star Wars: Vadná várka S01E07 - Jizvy z bitev CZ Dabing",
+        "video_id": 27147214
+      },
+      {
+        "episode_id": 67189,
+        "display_name": "Star Wars: Vadná várka S01E10 - Společná řeč CZ Dabing",
+        "video_id": 27147224
       }
     ],
     "prepared_not_upload_ready": [
@@ -139102,7 +139232,6 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 60,
     "ok": 40
   },
   "whisper_review_statuses": {
