@@ -2,36 +2,60 @@
   "counts": {
     "backlog_episodes": 175761,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 17687,
-    "prepared_source_episodes": 40038,
+    "uploaded_episodes": 17704,
+    "prepared_source_episodes": 40158,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 60,
-    "language_whisper_attempted_sources": 60,
-    "language_pending_whisper_sources": 2604,
-    "whisper_review_sources": 21650,
-    "whisper_review_pending_sources": 20330,
-    "subtitle_followup_sources": 4482,
-    "subtitle_followup_pending_sources": 4482
+    "language_audited_sources": 20,
+    "language_whisper_attempted_sources": 20,
+    "language_pending_whisper_sources": 2624,
+    "whisper_review_sources": 21710,
+    "whisper_review_pending_sources": 20410,
+    "subtitle_followup_sources": 4501,
+    "subtitle_followup_pending_sources": 4501
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-07-05T11:58:47Z",
-      "databaseId": 28740006483,
+      "createdAt": "2026-07-05T12:24:29Z",
+      "databaseId": 28740675287,
       "headBranch": "main",
       "status": "in_progress",
-      "workflowName": "ops-status"
+      "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-07-05T12:05:42Z",
+      "databaseId": 28740195614,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-05T12:03:43Z",
+      "databaseId": 28740142988,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-sources"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-05T11:58:47Z",
+      "databaseId": 28740006483,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-05T11:58:19Z",
       "databaseId": 28739996028,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "update-descriptions"
     },
     {
@@ -43,19 +67,19 @@
       "workflowName": "prepare-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-05T11:57:50Z",
       "databaseId": 28739983708,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-05T11:57:39Z",
       "databaseId": 28739979062,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -67,19 +91,19 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "failure",
       "createdAt": "2026-07-05T11:50:03Z",
       "databaseId": 28739790700,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-05T11:46:01Z",
       "databaseId": 28739688698,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
@@ -131,11 +155,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-05T11:39:55Z",
       "databaseId": 28739532637,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -153,30 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-05T11:24:22Z",
-      "databaseId": 28739142643,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-05T11:24:19Z",
-      "databaseId": 28739141602,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-05T11:23:20Z",
-      "databaseId": 28739117548,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
     }
   ],
   "gaps": {
@@ -66326,6 +66326,51 @@
         "video_id": 27159269
       },
       {
+        "episode_id": 14922,
+        "display_name": "Goliáš S01E06 - Pod palbou CZ Dabing",
+        "video_id": 27159401
+      },
+      {
+        "episode_id": 14926,
+        "display_name": "Goliáš S02E01 - La Mano CZ Dabing",
+        "video_id": 27159435
+      },
+      {
+        "episode_id": 14924,
+        "display_name": "Goliáš S02E03 - Čerstvé květiny CZ Dabing",
+        "video_id": 27159574
+      },
+      {
+        "episode_id": 14930,
+        "display_name": "Goliáš S02E05 - Kdo je Gabriel? CZ Dabing",
+        "video_id": 27159612
+      },
+      {
+        "episode_id": 14928,
+        "display_name": "Goliáš S02E06 - Dvě Popelky CZ Dabing",
+        "video_id": 27159702
+      },
+      {
+        "episode_id": 14934,
+        "display_name": "Goliáš S03E02 - Štěstí roste ze země CZ Dabing",
+        "video_id": 27159764
+      },
+      {
+        "episode_id": 14932,
+        "display_name": "Goliáš S03E04 - Kruh se uzavírá CZ Dabing",
+        "video_id": 27159783
+      },
+      {
+        "episode_id": 14936,
+        "display_name": "Goliáš S03E06 - V čele CZ Dabing",
+        "video_id": 27159804
+      },
+      {
+        "episode_id": 14938,
+        "display_name": "Goliáš S03E07 - Vědomý rozchod CZ Dabing",
+        "video_id": 27159891
+      },
+      {
         "episode_id": 81939,
         "display_name": "Borci z Blue Mountain State S03E01 - Kapitán CZ Titulky",
         "video_id": 27158965
@@ -66364,6 +66409,46 @@
         "episode_id": 117345,
         "display_name": "Tým Škorpion S03E06 - Šílení netopýři CZ Dabing",
         "video_id": 27159220
+      },
+      {
+        "episode_id": 104275,
+        "display_name": "Tým Škorpion S04E21 - Černý pasažér CZ Titulky",
+        "video_id": 27159451
+      },
+      {
+        "episode_id": 17333,
+        "display_name": "Rezidence S01E02 - Vražda na objednávku CZ Dabing",
+        "video_id": 27159544
+      },
+      {
+        "episode_id": 17335,
+        "display_name": "Rezidence S01E04 - Konec Sheily CZ Dabing",
+        "video_id": 27159591
+      },
+      {
+        "episode_id": 17337,
+        "display_name": "Rezidence S01E06 - Třetí muž CZ Dabing",
+        "video_id": 27159697
+      },
+      {
+        "episode_id": 17339,
+        "display_name": "Rezidence S01E08 - Záhada žlutého pokoje CZ Dabing",
+        "video_id": 27159726
+      },
+      {
+        "episode_id": 14917,
+        "display_name": "Goliáš S01E01 - O myších a lidech CZ Dabing",
+        "video_id": 27159750
+      },
+      {
+        "episode_id": 14919,
+        "display_name": "Goliáš S01E04 - To je Donald CZ Dabing",
+        "video_id": 27159876
+      },
+      {
+        "episode_id": 14923,
+        "display_name": "Goliáš S01E07 - Kráska a zvíře CZ Dabing",
+        "video_id": 27159949
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -143353,6 +143438,51 @@
         "video_id": 27159269
       },
       {
+        "episode_id": 14922,
+        "display_name": "Goliáš S01E06 - Pod palbou CZ Dabing",
+        "video_id": 27159401
+      },
+      {
+        "episode_id": 14926,
+        "display_name": "Goliáš S02E01 - La Mano CZ Dabing",
+        "video_id": 27159435
+      },
+      {
+        "episode_id": 14924,
+        "display_name": "Goliáš S02E03 - Čerstvé květiny CZ Dabing",
+        "video_id": 27159574
+      },
+      {
+        "episode_id": 14930,
+        "display_name": "Goliáš S02E05 - Kdo je Gabriel? CZ Dabing",
+        "video_id": 27159612
+      },
+      {
+        "episode_id": 14928,
+        "display_name": "Goliáš S02E06 - Dvě Popelky CZ Dabing",
+        "video_id": 27159702
+      },
+      {
+        "episode_id": 14934,
+        "display_name": "Goliáš S03E02 - Štěstí roste ze země CZ Dabing",
+        "video_id": 27159764
+      },
+      {
+        "episode_id": 14932,
+        "display_name": "Goliáš S03E04 - Kruh se uzavírá CZ Dabing",
+        "video_id": 27159783
+      },
+      {
+        "episode_id": 14936,
+        "display_name": "Goliáš S03E06 - V čele CZ Dabing",
+        "video_id": 27159804
+      },
+      {
+        "episode_id": 14938,
+        "display_name": "Goliáš S03E07 - Vědomý rozchod CZ Dabing",
+        "video_id": 27159891
+      },
+      {
         "episode_id": 81939,
         "display_name": "Borci z Blue Mountain State S03E01 - Kapitán CZ Titulky",
         "video_id": 27158965
@@ -143391,6 +143521,46 @@
         "episode_id": 117345,
         "display_name": "Tým Škorpion S03E06 - Šílení netopýři CZ Dabing",
         "video_id": 27159220
+      },
+      {
+        "episode_id": 104275,
+        "display_name": "Tým Škorpion S04E21 - Černý pasažér CZ Titulky",
+        "video_id": 27159451
+      },
+      {
+        "episode_id": 17333,
+        "display_name": "Rezidence S01E02 - Vražda na objednávku CZ Dabing",
+        "video_id": 27159544
+      },
+      {
+        "episode_id": 17335,
+        "display_name": "Rezidence S01E04 - Konec Sheily CZ Dabing",
+        "video_id": 27159591
+      },
+      {
+        "episode_id": 17337,
+        "display_name": "Rezidence S01E06 - Třetí muž CZ Dabing",
+        "video_id": 27159697
+      },
+      {
+        "episode_id": 17339,
+        "display_name": "Rezidence S01E08 - Záhada žlutého pokoje CZ Dabing",
+        "video_id": 27159726
+      },
+      {
+        "episode_id": 14917,
+        "display_name": "Goliáš S01E01 - O myších a lidech CZ Dabing",
+        "video_id": 27159750
+      },
+      {
+        "episode_id": 14919,
+        "display_name": "Goliáš S01E04 - To je Donald CZ Dabing",
+        "video_id": 27159876
+      },
+      {
+        "episode_id": 14923,
+        "display_name": "Goliáš S01E07 - Kráska a zvíře CZ Dabing",
+        "video_id": 27159949
       }
     ],
     "prepared_not_upload_ready": [
@@ -143697,6 +143867,166 @@
     ],
     "whisper_review_pending": [
       {
+        "episode_id": 54819,
+        "source_id": -18607324703674147,
+        "series_title": "Aféra",
+        "episode_code": "S01E02",
+        "source_title": "Aféra - 01x02",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 54820,
+        "source_id": -1566150690543891,
+        "series_title": "Aféra",
+        "episode_code": "S01E03",
+        "source_title": "Aféra - 01x03",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 54844,
+        "source_id": -62271639500946849,
+        "series_title": "Aféra",
+        "episode_code": "S01E05",
+        "source_title": "Aféra - 01x05",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 54839,
+        "source_id": -14707316944385017,
+        "series_title": "Aféra",
+        "episode_code": "S01E07",
+        "source_title": "Aféra - S1E7 Episode #7 EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 54803,
+        "source_id": -18077629389545140,
+        "series_title": "Aféra",
+        "episode_code": "S01E08",
+        "source_title": "Aféra - 01x08",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 54835,
+        "source_id": -36167706139845294,
+        "series_title": "Aféra",
+        "episode_code": "S01E10",
+        "source_title": "Aféra - S1E10 Episode #10 EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 54815,
+        "source_id": -24680811976921176,
+        "series_title": "Aféra",
+        "episode_code": "S02E08",
+        "source_title": "Aféra - S2E8 Episode #8 EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 54822,
+        "source_id": -21189894158259248,
+        "series_title": "Aféra",
+        "episode_code": "S02E09",
+        "source_title": "Aféra - S2E9 Episode #9 EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 54837,
+        "source_id": -55990602833072979,
+        "series_title": "Aféra",
+        "episode_code": "S03E01",
+        "source_title": "Aféra - S3E1 Episode 1 EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 54817,
+        "source_id": -13598131590776376,
+        "series_title": "Aféra",
+        "episode_code": "S04E01",
+        "source_title": "Aféra - S4E1 Episode 1 EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 54809,
+        "source_id": -30951164955512549,
+        "series_title": "Aféra",
+        "episode_code": "S04E05",
+        "source_title": "Aféra - S4E5 Episode 5 EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 54814,
+        "source_id": -45429700856795095,
+        "series_title": "Aféra",
+        "episode_code": "S04E08",
+        "source_title": "Aféra - S4E8 Episode 8 EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 54805,
+        "source_id": -40232081927714670,
+        "series_title": "Aféra",
+        "episode_code": "S04E10",
+        "source_title": "Aféra - S4E10 Episode 10 EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 54850,
+        "source_id": -40055550056986796,
+        "series_title": "Aféra",
+        "episode_code": "S05E01",
+        "source_title": "Aféra - S5E1 Episode 1 EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 88039,
+        "source_id": -59994919813753437,
+        "series_title": "Aféra",
+        "episode_code": "S05E03",
+        "source_title": "Aféra - S5E3 Episode 3 EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 54851,
+        "source_id": -40075460146494794,
+        "series_title": "Aféra",
+        "episode_code": "S05E04",
+        "source_title": "Aféra - S5E4 Episode 4 EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 54847,
+        "source_id": -22906270605562155,
+        "series_title": "Aféra",
+        "episode_code": "S05E05",
+        "source_title": "Aféra - S5E5 Episode 5 EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 54833,
+        "source_id": -36920768919725613,
+        "series_title": "Aféra",
+        "episode_code": "S05E06",
+        "source_title": "Aféra - S5E6 Episode 6 EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 54849,
+        "source_id": -52336926002052466,
+        "series_title": "Aféra",
+        "episode_code": "S05E08",
+        "source_title": "Aféra - S5E8 Episode 8 EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 54848,
+        "source_id": -44153004051772025,
+        "series_title": "Aféra",
+        "episode_code": "S05E10",
+        "source_title": "Aféra - S5E10 Episode 10 EN",
+        "status": "needs_whisper"
+      },
+      {
         "episode_id": 54854,
         "source_id": -69932160281719750,
         "series_title": "Aféra",
@@ -143934,166 +144264,6 @@
         "series_title": "Black Clover",
         "episode_code": "S01E31",
         "source_title": "Black.Clover.S01E31.1080p.Blu-Ray.10-Bit.Dual-Audio.TrueHD.x265-iAHD",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 84979,
-        "source_id": -58068783989115100,
-        "series_title": "Black Clover",
-        "episode_code": "S01E32",
-        "source_title": "Black.Clover.S01E32.1080p.Blu-Ray.10-Bit.Dual-Audio.TrueHD.x265-iAHD",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 85002,
-        "source_id": -28640563637339790,
-        "series_title": "Black Clover",
-        "episode_code": "S01E34",
-        "source_title": "Black.Clover.S01E34.1080p.Blu-Ray.10-Bit.Dual-Audio.TrueHD.x265-iAHD",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 85003,
-        "source_id": -23286876619784492,
-        "series_title": "Black Clover",
-        "episode_code": "S01E36",
-        "source_title": "Black.Clover.S01E36.1080p.Blu-Ray.10-Bit.Dual-Audio.TrueHD.x265-iAHD",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 84990,
-        "source_id": -8078256217790155,
-        "series_title": "Black Clover",
-        "episode_code": "S01E37",
-        "source_title": "Black.Clover.S01E37.1080p.Blu-Ray.10-Bit.Dual-Audio.TrueHD.x265-iAHD",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 84973,
-        "source_id": -19667888843550544,
-        "series_title": "Black Clover",
-        "episode_code": "S01E38",
-        "source_title": "Black.Clover.S01E38.1080p.Blu-Ray.10-Bit.Dual-Audio.TrueHD.x265-iAHD",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 85010,
-        "source_id": -6152060309987716,
-        "series_title": "Black Clover",
-        "episode_code": "S01E39",
-        "source_title": "Black.Clover.S01E39.1080p.Blu-Ray.10-Bit.Dual-Audio.TrueHD.x265-iAHD",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 84994,
-        "source_id": -43078540428375133,
-        "series_title": "Black Clover",
-        "episode_code": "S01E40",
-        "source_title": "Black.Clover.S01E40.1080p.Blu-Ray.10-Bit.Dual-Audio.TrueHD.x265-iAHD",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 84972,
-        "source_id": -58605728677915143,
-        "series_title": "Black Clover",
-        "episode_code": "S01E41",
-        "source_title": "Black.Clover.S01E41.1080p.Blu-Ray.10-Bit.Dual-Audio.TrueHD.x265-iAHD",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 84989,
-        "source_id": -12271631378055987,
-        "series_title": "Black Clover",
-        "episode_code": "S01E42",
-        "source_title": "Black.Clover.S01E42.1080p.Blu-Ray.10-Bit.Dual-Audio.TrueHD.x265-iAHD",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 85000,
-        "source_id": -59227157807815661,
-        "series_title": "Black Clover",
-        "episode_code": "S01E43",
-        "source_title": "Black.Clover.S01E43.1080p.Blu-Ray.10-Bit.Dual-Audio.TrueHD.x265-iAHD",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 85013,
-        "source_id": -34640560627894335,
-        "series_title": "Black Clover",
-        "episode_code": "S01E44",
-        "source_title": "Black.Clover.S01E44.1080p.Blu-Ray.10-Bit.Dual-Audio.TrueHD.x265-iAHD",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 85008,
-        "source_id": -14376965790206702,
-        "series_title": "Black Clover",
-        "episode_code": "S01E45",
-        "source_title": "Black.Clover.S01E45.1080p.Blu-Ray.10-Bit.Dual-Audio.TrueHD.x265-iAHD",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 84966,
-        "source_id": -3051598544889581,
-        "series_title": "Black Clover",
-        "episode_code": "S01E46",
-        "source_title": "Black.Clover.S01E46.1080p.Blu-Ray.10-Bit.Dual-Audio.TrueHD.x265-iAHD",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 84970,
-        "source_id": -52515096425707940,
-        "series_title": "Black Clover",
-        "episode_code": "S01E47",
-        "source_title": "Black.Clover.S01E47.1080p.Blu-Ray.10-Bit.Dual-Audio.TrueHD.x265-iAHD",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 84997,
-        "source_id": -20199526146686624,
-        "series_title": "Black Clover",
-        "episode_code": "S01E48",
-        "source_title": "Black.Clover.S01E48.1080p.Blu-Ray.10-Bit.Dual-Audio.TrueHD.x265-iAHD",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 84983,
-        "source_id": -21007773369139507,
-        "series_title": "Black Clover",
-        "episode_code": "S01E49",
-        "source_title": "Black.Clover.S01E49.1080p.Blu-Ray.10-Bit.Dual-Audio.TrueHD.x265-iAHD",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 85025,
-        "source_id": -2232236695734365,
-        "series_title": "Black Clover",
-        "episode_code": "S01E50",
-        "source_title": "Black.Clover.S01E50.1080p.Blu-Ray.10-Bit.Dual-Audio.TrueHD.x265-iAHD",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 84961,
-        "source_id": -16241439989094271,
-        "series_title": "Black Clover",
-        "episode_code": "S01E51",
-        "source_title": "Black.Clover.S01E51.1080p.Blu-Ray.10-Bit.Dual-Audio.TrueHD.x265-iAHD",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 18083,
-        "source_id": -39644990550737681,
-        "series_title": "Bojovník",
-        "episode_code": "S01E01",
-        "source_title": "Bojovnik - Warrior S01E01  .mkv",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 18083,
-        "source_id": -12360745933782769,
-        "series_title": "Bojovník",
-        "episode_code": "S01E01",
-        "source_title": "Bojovník - S1E1 The Itchy Onion EN",
         "status": "needs_whisper"
       }
     ],
@@ -144552,14 +144722,14 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 60
+    "ok": 20
   },
   "whisper_review_statuses": {
-    "whisper_confirmed_cz": 383,
-    "whisper_non_cz_needs_subtitles": 937,
-    "needs_whisper": 20330
+    "needs_whisper": 20410,
+    "whisper_confirmed_cz": 380,
+    "whisper_non_cz_needs_subtitles": 920
   },
   "subtitle_followup_statuses": {
-    "needs_subtitle_setup_after_prehrajto_processing": 4482
+    "needs_subtitle_setup_after_prehrajto_processing": 4501
   }
 }
