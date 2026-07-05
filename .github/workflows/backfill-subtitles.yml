@@ -24,6 +24,10 @@ on:
         description: "Retry episodes already recorded in the backfill report"
         required: false
         default: "false"
+      continue_backfill:
+        description: "Queue another bounded subtitle backfill run when pending rows remain"
+        required: false
+        default: "false"
 
 concurrency:
   group: series-to-prehrajto-backfill-subtitles
@@ -35,6 +39,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 350
     permissions:
+      actions: write
       contents: write
     steps:
       - uses: actions/checkout@v4
@@ -139,3 +144,64 @@ jobs:
 
           echo "failed to push subtitle report after retries"
           exit 1
+
+      - name: Queue next subtitle backfill
+        if: always() && (inputs.continue_backfill || 'false') == 'true' && (inputs.dry_run || 'false') != 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          PENDING=$(python - <<'PY'
+          import json
+          from pathlib import Path
+
+          terminal = {
+              "already_has_tracks",
+              "source_track_not_found",
+              "target_detail_missing",
+              "target_not_found",
+              "target_processing",
+              "target_unresolved",
+              "uploaded",
+              "unsupported_subtitle_format",
+          }
+
+          def load_jsonl(path):
+              p = Path(path)
+              if not p.exists():
+                  return []
+              return [json.loads(line) for line in p.read_text(encoding="utf-8").splitlines() if line.strip()]
+
+          def load_json(path):
+              p = Path(path)
+              return json.loads(p.read_text(encoding="utf-8")) if p.exists() else {}
+
+          reported = {}
+          for row in load_jsonl("reports/subtitle-backfill-status.jsonl"):
+              reported[int(row["episode_id"])] = row.get("status")
+
+          uploads = set()
+          for path in sorted(Path("state").glob("uploaded-shard-*.json")):
+              for upload in load_json(path).get("uploads", []):
+                  if "Titulky" in str(upload.get("display_name") or ""):
+                      uploads.add(int(upload.get("episode_id") or 0))
+
+          pending = 0
+          for row in load_jsonl("plans/subtitle-followup-queue.jsonl"):
+              episode_id = int(row.get("episode_id") or 0)
+              if episode_id not in uploads:
+                  continue
+              if reported.get(episode_id) in terminal:
+                  continue
+              pending += 1
+          print(pending)
+          PY
+          )
+          echo "pending subtitle rows: ${PENDING}"
+          if [ "${PENDING}" -gt 0 ]; then
+            gh workflow run backfill-subtitles.yml \
+              -f limit="${{ inputs.limit || '3' }}" \
+              -f max_rows="${{ inputs.max_rows || '80' }}" \
+              -f dry_run="false" \
+              -f retry_reported="false" \
+              -f continue_backfill="true"
+          fi
