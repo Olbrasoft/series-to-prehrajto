@@ -2,76 +2,100 @@
   "counts": {
     "backlog_episodes": 175460,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 17956,
+    "uploaded_episodes": 17965,
     "prepared_source_episodes": 41958,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 20,
-    "language_whisper_attempted_sources": 20,
+    "language_audited_sources": 40,
+    "language_whisper_attempted_sources": 40,
     "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 24123,
-    "whisper_review_pending_sources": 22743,
+    "whisper_review_pending_sources": 22723,
     "subtitle_followup_sources": 4878,
     "subtitle_followup_pending_sources": 4878
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-07-05T23:35:38Z",
-      "databaseId": 28758789558,
-      "headBranch": "main",
-      "status": "pending",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-05T23:35:04Z",
-      "databaseId": 28758773352,
+      "createdAt": "2026-07-05T23:42:10Z",
+      "databaseId": 28758954813,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
-      "createdAt": "2026-07-05T23:34:59Z",
-      "databaseId": 28758770537,
+      "createdAt": "2026-07-05T23:38:58Z",
+      "databaseId": 28758871996,
       "headBranch": "main",
       "status": "pending",
       "workflowName": "prepare-manifest"
     },
     {
       "conclusion": "",
-      "createdAt": "2026-07-05T23:34:02Z",
-      "databaseId": 28758747925,
+      "createdAt": "2026-07-05T23:37:44Z",
+      "databaseId": 28758842357,
       "headBranch": "main",
       "status": "in_progress",
-      "workflowName": "update-descriptions"
+      "workflowName": "backfill-subtitles"
     },
     {
       "conclusion": "",
-      "createdAt": "2026-07-05T23:33:59Z",
-      "databaseId": 28758746678,
+      "createdAt": "2026-07-05T23:35:38Z",
+      "databaseId": 28758789558,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "process-whisper-review"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
+      "createdAt": "2026-07-05T23:35:04Z",
+      "databaseId": 28758773352,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-07-05T23:34:59Z",
+      "databaseId": 28758770537,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-05T23:34:02Z",
+      "databaseId": 28758747925,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-05T23:33:59Z",
+      "databaseId": 28758746678,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-05T23:33:57Z",
       "databaseId": 28758745759,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-05T23:33:25Z",
       "databaseId": 28758730735,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "backfill-subtitles"
     },
     {
@@ -135,7 +159,7 @@
       "createdAt": "2026-07-05T23:22:48Z",
       "databaseId": 28758454189,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "prepare-descriptions"
     },
     {
@@ -153,30 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "backfill-subtitles"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-05T23:17:36Z",
-      "databaseId": 28758322025,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-05T23:17:32Z",
-      "databaseId": 28758320836,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-05T23:17:30Z",
-      "databaseId": 28758320049,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
     }
   ],
   "gaps": {
@@ -67709,6 +67709,51 @@
         "episode_id": 46605,
         "display_name": "Heuréka – město divů S05E08 - Hloubka vztahu CZ Dabing",
         "video_id": 27179678
+      },
+      {
+        "episode_id": 44640,
+        "display_name": "Skladiště 13 S04E05 - Bez práce nejsou koláče CZ Dabing",
+        "video_id": 27179809
+      },
+      {
+        "episode_id": 44642,
+        "display_name": "Skladiště 13 S04E07 - Nekonečný zázrak CZ Dabing",
+        "video_id": 27179837
+      },
+      {
+        "episode_id": 44644,
+        "display_name": "Skladiště 13 S04E09 - Naši blízcí CZ Dabing",
+        "video_id": 27179870
+      },
+      {
+        "episode_id": 44646,
+        "display_name": "Skladiště 13 S04E11 - Živí a mrtví CZ Dabing",
+        "video_id": 27179902
+      },
+      {
+        "episode_id": 44648,
+        "display_name": "Skladiště 13 S04E13 - Líbej mě, navždy CZ Dabing",
+        "video_id": 27179932
+      },
+      {
+        "episode_id": 46607,
+        "display_name": "Heuréka – město divů S05E09 - Génius Carter CZ Dabing",
+        "video_id": 27179813
+      },
+      {
+        "episode_id": 46609,
+        "display_name": "Heuréka – město divů S05E12 - Přetvářka CZ Dabing",
+        "video_id": 27179854
+      },
+      {
+        "episode_id": 33101,
+        "display_name": "Sousedská tajemství S01E02 - Shoda CZ Titulky",
+        "video_id": 27179895
+      },
+      {
+        "episode_id": 33103,
+        "display_name": "Sousedská tajemství S01E04 - Opravdoví draci CZ Titulky",
+        "video_id": 27179920
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -94808,11 +94853,6 @@
         "video_id": 26686610
       },
       {
-        "episode_id": 2030,
-        "display_name": "Simpsonovi S01E06 - Smutná Líza CZ Dabing",
-        "video_id": 26687807
-      },
-      {
         "episode_id": 47684,
         "display_name": "Čas na dobrodružství S10E13 - 13. epizoda CZ Dabing",
         "video_id": 26688328
@@ -95338,16 +95378,6 @@
         "video_id": 26704852
       },
       {
-        "episode_id": 19364,
-        "display_name": "Simpsonovi S06E02 - Lízina rivalka CZ Dabing",
-        "video_id": 26705024
-      },
-      {
-        "episode_id": 19366,
-        "display_name": "Simpsonovi S06E04 - Návštěva Drsnolandu CZ Dabing",
-        "video_id": 26705127
-      },
-      {
         "episode_id": 68830,
         "display_name": "Pravá krev S01E05 - Začíná to jiskřit CZ Dabing",
         "video_id": 26705249
@@ -95451,21 +95481,6 @@
         "episode_id": 47505,
         "display_name": "Živí mrtví: Počátek konce S04E11 - Kodex CZ Dabing",
         "video_id": 26705297
-      },
-      {
-        "episode_id": 19363,
-        "display_name": "Simpsonovi S06E01 - Bart temnoty CZ Dabing",
-        "video_id": 26705823
-      },
-      {
-        "episode_id": 19365,
-        "display_name": "Simpsonovi S06E03 - Tentokrát o lásce CZ Dabing",
-        "video_id": 26705937
-      },
-      {
-        "episode_id": 19367,
-        "display_name": "Simpsonovi S06E05 - Návrat Leváka Boba CZ Dabing",
-        "video_id": 26706033
       },
       {
         "episode_id": 47411,
@@ -98473,39 +98488,9 @@
         "video_id": 26787683
       },
       {
-        "episode_id": 2032,
-        "display_name": "Simpsonovi S01E08 - Mluvící hlava CZ Dabing",
-        "video_id": 26795187
-      },
-      {
-        "episode_id": 2034,
-        "display_name": "Simpsonovi S01E10 - Světák Homer CZ Dabing",
-        "video_id": 26795230
-      },
-      {
-        "episode_id": 2036,
-        "display_name": "Simpsonovi S01E12 - Je Šáša vinen? CZ Dabing",
-        "video_id": 26795314
-      },
-      {
-        "episode_id": 19274,
-        "display_name": "Simpsonovi S02E02 - Homerova dobrá víla CZ Dabing",
-        "video_id": 26795387
-      },
-      {
         "episode_id": 632,
         "display_name": "Malý Sheldon S05E16 - Kufřík plný peněz a Žluté klaunské auto CZ Dabing",
         "video_id": 26795492
-      },
-      {
-        "episode_id": 2037,
-        "display_name": "Simpsonovi S01E13 - Hezkej večer CZ Dabing",
-        "video_id": 26795585
-      },
-      {
-        "episode_id": 19273,
-        "display_name": "Simpsonovi S02E01 - Bart propadá CZ Dabing",
-        "video_id": 26795613
       },
       {
         "episode_id": 599,
@@ -98626,16 +98611,6 @@
         "episode_id": 55552,
         "display_name": "Šingeki no kjodžin S04E27 - Retrospektiva CZ Dabing",
         "video_id": 26798969
-      },
-      {
-        "episode_id": 203042,
-        "display_name": "Rick a Morty S09E02 - 2. epizoda CZ Dabing",
-        "video_id": 26799012
-      },
-      {
-        "episode_id": 203088,
-        "display_name": "Rick a Morty S09E03 - 3. epizoda CZ Dabing",
-        "video_id": 26799094
       },
       {
         "episode_id": 42046,
@@ -146081,6 +146056,51 @@
         "episode_id": 46605,
         "display_name": "Heuréka – město divů S05E08 - Hloubka vztahu CZ Dabing",
         "video_id": 27179678
+      },
+      {
+        "episode_id": 44640,
+        "display_name": "Skladiště 13 S04E05 - Bez práce nejsou koláče CZ Dabing",
+        "video_id": 27179809
+      },
+      {
+        "episode_id": 44642,
+        "display_name": "Skladiště 13 S04E07 - Nekonečný zázrak CZ Dabing",
+        "video_id": 27179837
+      },
+      {
+        "episode_id": 44644,
+        "display_name": "Skladiště 13 S04E09 - Naši blízcí CZ Dabing",
+        "video_id": 27179870
+      },
+      {
+        "episode_id": 44646,
+        "display_name": "Skladiště 13 S04E11 - Živí a mrtví CZ Dabing",
+        "video_id": 27179902
+      },
+      {
+        "episode_id": 44648,
+        "display_name": "Skladiště 13 S04E13 - Líbej mě, navždy CZ Dabing",
+        "video_id": 27179932
+      },
+      {
+        "episode_id": 46607,
+        "display_name": "Heuréka – město divů S05E09 - Génius Carter CZ Dabing",
+        "video_id": 27179813
+      },
+      {
+        "episode_id": 46609,
+        "display_name": "Heuréka – město divů S05E12 - Přetvářka CZ Dabing",
+        "video_id": 27179854
+      },
+      {
+        "episode_id": 33101,
+        "display_name": "Sousedská tajemství S01E02 - Shoda CZ Titulky",
+        "video_id": 27179895
+      },
+      {
+        "episode_id": 33103,
+        "display_name": "Sousedská tajemství S01E04 - Opravdoví draci CZ Titulky",
+        "video_id": 27179920
       }
     ],
     "prepared_not_upload_ready": [
@@ -146387,166 +146407,6 @@
     ],
     "whisper_review_pending": [
       {
-        "episode_id": 183465,
-        "source_id": -10458204911990134,
-        "series_title": "Blue",
-        "episode_code": "S01E08",
-        "source_title": "Shades of Blue - S01E08 - Good Cop Bad Cop",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183465,
-        "source_id": -56953341772151547,
-        "series_title": "Blue",
-        "episode_code": "S01E08",
-        "source_title": "Code Blue - S1E8 JA",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183465,
-        "source_id": -21268016959095202,
-        "series_title": "Blue",
-        "episode_code": "S01E08",
-        "source_title": "Big.Blue.S01E08.A.Royal.Mistake.1080p.ROKU.WEB-DL.DD5.1.H.264-NTb",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183466,
-        "source_id": -23893910793829981,
-        "series_title": "Blue",
-        "episode_code": "S01E09",
-        "source_title": "Shades of Blue - s01e09",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183466,
-        "source_id": -20674810925250257,
-        "series_title": "Blue",
-        "episode_code": "S01E09",
-        "source_title": "Shades of Blue - S01E09 - Live Wire Act",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183466,
-        "source_id": -43472972278882641,
-        "series_title": "Blue",
-        "episode_code": "S01E09",
-        "source_title": "Big.Blue.S01E09.Let.it.Go.Lemo.1080p.ROKU.WEB-DL.DD5.1.H.264-NTb",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183467,
-        "source_id": -7894361430004824,
-        "series_title": "Blue",
-        "episode_code": "S01E10",
-        "source_title": "Shades of Blue - s01e10",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183467,
-        "source_id": -53483824862522219,
-        "series_title": "Blue",
-        "episode_code": "S01E10",
-        "source_title": "Shades of Blue - S01E10 - Alea Iacta Est",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183467,
-        "source_id": -65678928111243532,
-        "series_title": "Blue",
-        "episode_code": "S01E10",
-        "source_title": "Code Blue - S1E10 JA",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183467,
-        "source_id": -42535740485390412,
-        "series_title": "Blue",
-        "episode_code": "S01E10",
-        "source_title": "Big.Blue.S01E10.Arlo.and.Me.1080p.ROKU.WEB-DL.DD5.1.H.264-NTb",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183468,
-        "source_id": -29098068739262713,
-        "series_title": "Blue",
-        "episode_code": "S01E11",
-        "source_title": "Shades of Blue - s01e11",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183468,
-        "source_id": -53340364302772468,
-        "series_title": "Blue",
-        "episode_code": "S01E11",
-        "source_title": "Shades of Blue - S01E11 - The Breach",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183468,
-        "source_id": -25388418341505872,
-        "series_title": "Blue",
-        "episode_code": "S01E11",
-        "source_title": "Code Blue - S1E11 JA",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183468,
-        "source_id": -47892230966119229,
-        "series_title": "Blue",
-        "episode_code": "S01E11",
-        "source_title": "Big.Blue.S01E11.Coral.Circuit.1080p.ROKU.WEB-DL.DD5.1.H.264-NTb",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183469,
-        "source_id": -30168091002034902,
-        "series_title": "Blue",
-        "episode_code": "S01E12",
-        "source_title": "Shades of Blue - s01e12",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183469,
-        "source_id": -49942994022849015,
-        "series_title": "Blue",
-        "episode_code": "S01E12",
-        "source_title": "Shades of Blue - S01E12 - For I Have Sinned",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183469,
-        "source_id": -65579446539734110,
-        "series_title": "Blue",
-        "episode_code": "S01E12",
-        "source_title": "Big.Blue.S01E12.Sub-Divided.1080p.ROKU.WEB-DL.DD5.1.H.264-NTb",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183470,
-        "source_id": -6010359924098675,
-        "series_title": "Blue",
-        "episode_code": "S01E13",
-        "source_title": "Shades of Blue - s01e13",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183470,
-        "source_id": -18866678474918549,
-        "series_title": "Blue",
-        "episode_code": "S01E13",
-        "source_title": "Shades of Blue - s01e13",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183470,
-        "source_id": -9906972110243847,
-        "series_title": "Blue",
-        "episode_code": "S01E13",
-        "source_title": "Shades of Blue 1x13",
-        "status": "needs_whisper"
-      },
-      {
         "episode_id": 183470,
         "source_id": -40618578454807981,
         "series_title": "Blue",
@@ -146784,6 +146644,166 @@
         "series_title": "Blue",
         "episode_code": "S01E30",
         "source_title": "Big.Blue.S01E30.The.Experiment.1080p.ROKU.WEB-DL.DD5.1.H.264-NTb",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 183488,
+        "source_id": -1513925176598149,
+        "series_title": "Blue",
+        "episode_code": "S01E31",
+        "source_title": "Big.Blue.S01E31.Revenge.of.the.Sibs.1080p.ROKU.WEB-DL.DD5.1.H.264-NTb",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 183490,
+        "source_id": -45585878716318221,
+        "series_title": "Blue",
+        "episode_code": "S01E33",
+        "source_title": "Big.Blue.S01E33.Truthfully.Yours.1080p.ROKU.WEB-DL.DD5.1.H.264-NTb",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 183491,
+        "source_id": -27523767688760974,
+        "series_title": "Blue",
+        "episode_code": "S01E34",
+        "source_title": "Big.Blue.S01E34.Dodge.Bubble.1080p.ROKU.WEB-DL.DD5.1.H.264-NTb",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 183492,
+        "source_id": -15635123407790044,
+        "series_title": "Blue",
+        "episode_code": "S01E35",
+        "source_title": "Big.Blue.S01E35.Mini.Mira.1080p.ROKU.WEB-DL.DD5.1.H.264-NTb",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 183493,
+        "source_id": -24174983316242751,
+        "series_title": "Blue",
+        "episode_code": "S01E36",
+        "source_title": "Big.Blue.S01E36.Understudy.Buddy.1080p.ROKU.WEB-DL.DD5.1.H.264-NTb",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 183494,
+        "source_id": -70895949248314188,
+        "series_title": "Blue",
+        "episode_code": "S01E37",
+        "source_title": "Big.Blue.S01E37.Better.Never.Than.Late.1080p.ROKU.WEB-DL.DD5.1.H.264-NTb",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 183495,
+        "source_id": -26580512201543543,
+        "series_title": "Blue",
+        "episode_code": "S01E38",
+        "source_title": "Big.Blue.S01E38.Faith.in.Freddie.1080p.ROKU.WEB-DL.DD5.1.H.264-NTb",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 183496,
+        "source_id": -49769764621688643,
+        "series_title": "Blue",
+        "episode_code": "S01E39",
+        "source_title": "Big.Blue.S01E39.Game.Nightmare.1080p.ROKU.WEB-DL.DD5.1.H.264-NTb",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 183497,
+        "source_id": -64651507827776117,
+        "series_title": "Blue",
+        "episode_code": "S01E40",
+        "source_title": "Big.Blue.S01E40.Captain.Lemo.1080p.ROKU.WEB-DL.DD5.1.H.264-NTb",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 183498,
+        "source_id": -283427478517711,
+        "series_title": "Blue",
+        "episode_code": "S01E41",
+        "source_title": "Big.Blue.S01E41.My.Dinner.With.Krill.1080p.ROKU.WEB-DL.DD5.1.H.264-NTb",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 183499,
+        "source_id": -42876141846025959,
+        "series_title": "Blue",
+        "episode_code": "S01E42",
+        "source_title": "Big.Blue.S01E42.What's.Your.Vector.Collector.1080p.ROKU.WEB-DL.DD5.1.H.264-NTb",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 183500,
+        "source_id": -47940899213925091,
+        "series_title": "Blue",
+        "episode_code": "S01E43",
+        "source_title": "Big.Blue.S01E43.A.Night.at.the.TheatRRR.1080p.ROKU.WEB-DL.DD5.1.H.264-NTb",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 183501,
+        "source_id": -19191677500780966,
+        "series_title": "Blue",
+        "episode_code": "S01E44",
+        "source_title": "Big.Blue.S01E44.Hero.Boy.1080p.ROKU.WEB-DL.DD5.1.H.264-NTb",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 183502,
+        "source_id": -9241124262070869,
+        "series_title": "Blue",
+        "episode_code": "S01E45",
+        "source_title": "Big.Blue.S01E45.Lemo.Vs.Phil.1080p.ROKU.WEB-DL.DD5.1.H.264-NTb",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 183503,
+        "source_id": -57183970315456900,
+        "series_title": "Blue",
+        "episode_code": "S01E46",
+        "source_title": "Big.Blue.S01E46.Busted.1080p.ROKU.WEB-DL.DD5.1.H.264-NTb",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 183504,
+        "source_id": -68461963706917345,
+        "series_title": "Blue",
+        "episode_code": "S01E47",
+        "source_title": "Big.Blue.S01E47.The.Incredible.Lemo.and.his.Dancing.Sea.Flea.Sloan.1080p.ROKU.WEB-DL.DD5.1.H.264-NTb",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 183505,
+        "source_id": -41267691425302687,
+        "series_title": "Blue",
+        "episode_code": "S01E48",
+        "source_title": "Big.Blue.S01E48.Baby.Bro.No.More.1080p.ROKU.WEB-DL.DD5.1.H.264-NTb",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 183506,
+        "source_id": -41717517290831524,
+        "series_title": "Blue",
+        "episode_code": "S01E49",
+        "source_title": "Big.Blue.S01E49.Now.You.Sea.Ghosts.Now.You.Don't.1080p.ROKU.WEB-DL.DD5.1.H.264-NTb",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 183507,
+        "source_id": -63058241259676588,
+        "series_title": "Blue",
+        "episode_code": "S01E50",
+        "source_title": "Bluey.S01E50.1080p.WEB.h264-SALT",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 183507,
+        "source_id": -43794747783381650,
+        "series_title": "Blue",
+        "episode_code": "S01E50",
+        "source_title": "Big.Blue.S01E50.Captain.Bossy.Fins.1080p.ROKU.WEB-DL.DD5.1.H.264-NTb",
         "status": "needs_whisper"
       }
     ],
@@ -147242,13 +147262,13 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 19,
+    "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
-    "whisper_non_cz_needs_subtitles": 991,
-    "whisper_confirmed_cz": 389,
-    "needs_whisper": 22743
+    "whisper_non_cz_needs_subtitles": 1008,
+    "whisper_confirmed_cz": 392,
+    "needs_whisper": 22723
   },
   "subtitle_followup_statuses": {
     "needs_subtitle_setup_after_prehrajto_processing": 4878
