@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 175644,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 17748,
+    "uploaded_episodes": 17753,
     "prepared_source_episodes": 40278,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 61,
-    "language_whisper_attempted_sources": 61,
-    "language_pending_whisper_sources": 2624,
+    "language_audited_sources": 40,
+    "language_whisper_attempted_sources": 40,
+    "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 21711,
     "whisper_review_pending_sources": 20371,
     "subtitle_followup_sources": 4556,
@@ -20,10 +20,50 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-07-05T13:24:39Z",
+      "databaseId": 28742277656,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-05T13:24:33Z",
+      "databaseId": 28742274967,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-05T13:18:57Z",
+      "databaseId": 28742117134,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-05T13:18:54Z",
+      "databaseId": 28742115943,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-05T13:18:51Z",
+      "databaseId": 28742114734,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-05T13:17:46Z",
       "databaseId": 28742088115,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -31,7 +71,7 @@
       "createdAt": "2026-07-05T13:16:47Z",
       "databaseId": 28742061960,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "sync"
     },
     {
@@ -123,11 +163,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-05T12:40:42Z",
       "databaseId": 28741096441,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "sync"
     },
     {
@@ -137,46 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-status"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-05T12:38:40Z",
-      "databaseId": 28741041297,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-05T12:38:24Z",
-      "databaseId": 28741034603,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "refresh-backlog"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-05T12:38:23Z",
-      "databaseId": 28741033882,
-      "headBranch": "main",
-      "status": "pending",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-05T12:37:45Z",
-      "databaseId": 28741017066,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-05T12:36:29Z",
-      "databaseId": 28740985295,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
     }
   ],
   "gaps": {
@@ -66669,6 +66669,31 @@
         "episode_id": 72529,
         "display_name": "Bloodline S03E05 - 5. epizoda CZ Titulky",
         "video_id": 27161604
+      },
+      {
+        "episode_id": 6461,
+        "display_name": "Doom Patrol S01E01 - Pilot CZ Titulky",
+        "video_id": 27161654
+      },
+      {
+        "episode_id": 6463,
+        "display_name": "Doom Patrol S01E03 - Puppet Patrol CZ Dabing",
+        "video_id": 27161690
+      },
+      {
+        "episode_id": 6465,
+        "display_name": "Doom Patrol S01E05 - Paw Patrol CZ Dabing",
+        "video_id": 27161720
+      },
+      {
+        "episode_id": 6471,
+        "display_name": "Doom Patrol S01E11 - Frances Patrol CZ Dabing",
+        "video_id": 27161742
+      },
+      {
+        "episode_id": 6473,
+        "display_name": "Doom Patrol S01E13 - Flex Patrol CZ Dabing",
+        "video_id": 27161765
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -144001,6 +144026,31 @@
         "episode_id": 72529,
         "display_name": "Bloodline S03E05 - 5. epizoda CZ Titulky",
         "video_id": 27161604
+      },
+      {
+        "episode_id": 6461,
+        "display_name": "Doom Patrol S01E01 - Pilot CZ Titulky",
+        "video_id": 27161654
+      },
+      {
+        "episode_id": 6463,
+        "display_name": "Doom Patrol S01E03 - Puppet Patrol CZ Dabing",
+        "video_id": 27161690
+      },
+      {
+        "episode_id": 6465,
+        "display_name": "Doom Patrol S01E05 - Paw Patrol CZ Dabing",
+        "video_id": 27161720
+      },
+      {
+        "episode_id": 6471,
+        "display_name": "Doom Patrol S01E11 - Frances Patrol CZ Dabing",
+        "video_id": 27161742
+      },
+      {
+        "episode_id": 6473,
+        "display_name": "Doom Patrol S01E13 - Flex Patrol CZ Dabing",
+        "video_id": 27161765
       }
     ],
     "prepared_not_upload_ready": [
@@ -145162,7 +145212,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 61
+    "ok": 40
   },
   "whisper_review_statuses": {
     "whisper_confirmed_cz": 383,
