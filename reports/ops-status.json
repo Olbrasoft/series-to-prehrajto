@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 175761,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 17715,
+    "uploaded_episodes": 17714,
     "prepared_source_episodes": 40158,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 181,
-    "language_whisper_attempted_sources": 83,
-    "language_pending_whisper_sources": 2624,
+    "language_audited_sources": 40,
+    "language_whisper_attempted_sources": 40,
+    "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 21710,
     "whisper_review_pending_sources": 20410,
     "subtitle_followup_sources": 4550,
@@ -20,10 +20,26 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-07-05T12:36:29Z",
+      "databaseId": 28740985295,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-05T12:36:26Z",
+      "databaseId": 28740983887,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-05T12:35:39Z",
       "databaseId": 28740964041,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -31,15 +47,15 @@
       "createdAt": "2026-07-05T12:34:54Z",
       "databaseId": 28740944013,
       "headBranch": "main",
-      "status": "queued",
+      "status": "in_progress",
       "workflowName": "audit-language"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-05T12:34:08Z",
       "databaseId": 28740924137,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "update-descriptions"
     },
     {
@@ -51,11 +67,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-07-05T12:30:28Z",
       "databaseId": 28740827794,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -135,7 +151,7 @@
       "createdAt": "2026-07-05T11:58:05Z",
       "databaseId": 28739990811,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "prepare-descriptions"
     },
     {
@@ -161,22 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "failure",
-      "createdAt": "2026-07-05T11:50:03Z",
-      "databaseId": 28739790700,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-05T11:46:01Z",
-      "databaseId": 28739688698,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
     }
   ],
   "gaps": {
@@ -66399,11 +66399,6 @@
         "episode_id": 72502,
         "display_name": "Bloodline S01E02 - 2. epizoda CZ Titulky",
         "video_id": 27160287
-      },
-      {
-        "episode_id": 72504,
-        "display_name": "Bloodline S01E04 - 4. epizoda CZ Titulky",
-        "video_id": 27160324
       },
       {
         "episode_id": 81939,
@@ -143568,11 +143563,6 @@
         "video_id": 27160287
       },
       {
-        "episode_id": 72504,
-        "display_name": "Bloodline S01E04 - 4. epizoda CZ Titulky",
-        "video_id": 27160324
-      },
-      {
         "episode_id": 81939,
         "display_name": "Borci z Blue Mountain State S03E01 - Kapitán CZ Titulky",
         "video_id": 27158965
@@ -144832,8 +144822,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 98,
-    "ok": 83
+    "ok": 40
   },
   "whisper_review_statuses": {
     "needs_whisper": 20410,
