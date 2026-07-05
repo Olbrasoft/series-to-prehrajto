@@ -61,7 +61,13 @@ jobs:
             git fetch origin main
             git reset --hard origin/main
             mkdir -p state
-            cp "$TMP_DIR"/state/* state/ 2>/dev/null || true
+            for state_file in "$TMP_DIR"/state/uploaded*.json; do
+              [ -e "$state_file" ] || continue
+              python src/upload_state_merge.py --target "state/$(basename "$state_file")" --incoming "$state_file"
+            done
+            if [ -f "$TMP_DIR/state/description-updates.log" ]; then
+              cp "$TMP_DIR/state/description-updates.log" state/description-updates.log
+            fi
 
             git add state/uploaded*.json state/description-updates.log
             if git diff --cached --quiet; then

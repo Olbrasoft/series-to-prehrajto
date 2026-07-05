@@ -21,6 +21,7 @@ from language_checks import has_probable_czech, whisper_language  # noqa: E402
 from pick_next_episode import BACKLOG, NUM_SHARDS, SHARD_ID, STATE, load_backlog, load_state, pick_next  # noqa: E402
 from prehrajto_upload import login, upload_video  # noqa: E402
 from resolve_stream import ResolveError, pick_best, resolve as resolve_stream  # noqa: E402
+from upload_state_merge import merge_state  # noqa: E402
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 LOG_PATH = REPO_ROOT / "state" / (f"sync-shard-{SHARD_ID}.log" if NUM_SHARDS > 1 else "sync.log")
@@ -56,7 +57,7 @@ def push_state(reason: str) -> None:
     try:
         state_rel = str(STATE.relative_to(REPO_ROOT))
         log_rel = str(LOG_PATH.relative_to(REPO_ROOT))
-        state_bytes = STATE.read_bytes() if STATE.exists() else b""
+        state_snapshot = json.loads(STATE.read_text(encoding="utf-8")) if STATE.exists() and STATE.stat().st_size > 0 else {}
         log_bytes = LOG_PATH.read_bytes() if LOG_PATH.exists() else b""
         tag = f"shard {SHARD_ID}/{NUM_SHARDS}" if NUM_SHARDS > 1 else "sync"
         for _ in range(5):
@@ -64,7 +65,9 @@ def push_state(reason: str) -> None:
             subprocess.run(["git", "reset", "--hard", "origin/main"], check=False)
             STATE.parent.mkdir(parents=True, exist_ok=True)
             LOG_PATH.parent.mkdir(parents=True, exist_ok=True)
-            STATE.write_bytes(state_bytes)
+            current_state = json.loads(STATE.read_text(encoding="utf-8")) if STATE.exists() and STATE.stat().st_size > 0 else {}
+            merged_state = merge_state(current_state, state_snapshot)
+            STATE.write_text(json.dumps(merged_state, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
             LOG_PATH.write_bytes(log_bytes)
             subprocess.run(["git", "add", state_rel, log_rel], check=True)
             if subprocess.run(["git", "diff", "--cached", "--quiet"]).returncode == 0:

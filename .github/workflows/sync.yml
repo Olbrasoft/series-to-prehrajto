@@ -133,7 +133,7 @@ jobs:
             git fetch origin main
             git reset --hard origin/main
             mkdir -p state
-            cp "$TMP_DIR/$STATE" "$STATE"
+            python src/upload_state_merge.py --target "$STATE" --incoming "$TMP_DIR/$STATE"
             cp "$TMP_DIR/$LOG" "$LOG"
 
             git add "$STATE" "$LOG"
