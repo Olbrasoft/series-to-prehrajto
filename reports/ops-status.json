@@ -1,37 +1,85 @@
 {
   "counts": {
-    "backlog_episodes": 175545,
+    "backlog_episodes": 175495,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 17863,
-    "prepared_source_episodes": 41118,
+    "uploaded_episodes": 17866,
+    "prepared_source_episodes": 41148,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 387,
+    "language_audited_sources": 112,
     "language_whisper_attempted_sources": 20,
     "language_pending_whisper_sources": 2624,
-    "whisper_review_sources": 23524,
-    "whisper_review_pending_sources": 22184,
-    "subtitle_followup_sources": 4714,
-    "subtitle_followup_pending_sources": 4714
+    "whisper_review_sources": 23564,
+    "whisper_review_pending_sources": 22224,
+    "subtitle_followup_sources": 4717,
+    "subtitle_followup_pending_sources": 4717
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-07-05T18:25:46Z",
-      "databaseId": 28750551241,
+      "createdAt": "2026-07-05T18:40:24Z",
+      "databaseId": 28750951005,
       "headBranch": "main",
       "status": "in_progress",
-      "workflowName": "ops-status"
+      "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-07-05T18:36:15Z",
+      "databaseId": 28750842956,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-05T18:33:44Z",
+      "databaseId": 28750774065,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-07-05T18:33:06Z",
+      "databaseId": 28750756957,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-05T18:30:29Z",
+      "databaseId": 28750681955,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "refresh-backlog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-05T18:29:19Z",
+      "databaseId": 28750645923,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "backfill-subtitles"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-05T18:25:46Z",
+      "databaseId": 28750551241,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-05T18:24:25Z",
       "databaseId": 28750513401,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "update-descriptions"
     },
     {
@@ -39,7 +87,7 @@
       "createdAt": "2026-07-05T18:22:56Z",
       "databaseId": 28750473706,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "prepare-descriptions"
     },
     {
@@ -67,11 +115,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-05T18:20:11Z",
       "databaseId": 28750397373,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -83,27 +131,27 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-05T18:13:07Z",
       "databaseId": 28750208366,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-05T18:13:05Z",
       "databaseId": 28750207541,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-05T18:13:03Z",
       "databaseId": 28750206561,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "backfill-subtitles"
     },
     {
@@ -129,54 +177,6 @@
       "headBranch": "main",
       "status": "pending",
       "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-05T18:01:44Z",
-      "databaseId": 28749878093,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-05T17:56:29Z",
-      "databaseId": 28749727563,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-sources"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-05T17:53:30Z",
-      "databaseId": 28749648923,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-05T17:53:19Z",
-      "databaseId": 28749644400,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "backfill-subtitles"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-05T17:52:26Z",
-      "databaseId": 28749621208,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-05T17:51:40Z",
-      "databaseId": 28749600397,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "backfill-subtitles"
     }
   ],
   "gaps": {
@@ -67244,6 +67244,21 @@
         "episode_id": 203011,
         "display_name": "Teror S03E03 - 3. epizoda CZ Dabing",
         "video_id": 27170616
+      },
+      {
+        "episode_id": 203047,
+        "display_name": "Teror S03E04 CZ Dabing",
+        "video_id": 27170903
+      },
+      {
+        "episode_id": 52557,
+        "display_name": "Řekni, kdo tě zabil S01E06 - Dokonalé plemeno CZ Dabing",
+        "video_id": 27170930
+      },
+      {
+        "episode_id": 52559,
+        "display_name": "Řekni, kdo tě zabil S01E08 - 8. epizoda CZ Dabing",
+        "video_id": 27170956
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -145151,6 +145166,21 @@
         "episode_id": 203011,
         "display_name": "Teror S03E03 - 3. epizoda CZ Dabing",
         "video_id": 27170616
+      },
+      {
+        "episode_id": 203047,
+        "display_name": "Teror S03E04 CZ Dabing",
+        "video_id": 27170903
+      },
+      {
+        "episode_id": 52557,
+        "display_name": "Řekni, kdo tě zabil S01E06 - Dokonalé plemeno CZ Dabing",
+        "video_id": 27170930
+      },
+      {
+        "episode_id": 52559,
+        "display_name": "Řekni, kdo tě zabil S01E08 - 8. epizoda CZ Dabing",
+        "video_id": 27170956
       }
     ],
     "prepared_not_upload_ready": [
@@ -146312,16 +146342,16 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 367,
+    "disabled": 92,
     "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
     "whisper_non_cz_needs_subtitles": 956,
     "whisper_confirmed_cz": 384,
-    "needs_whisper": 22184
+    "needs_whisper": 22224
   },
   "subtitle_followup_statuses": {
-    "needs_subtitle_setup_after_prehrajto_processing": 4714
+    "needs_subtitle_setup_after_prehrajto_processing": 4717
   }
 }
