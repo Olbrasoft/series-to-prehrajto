@@ -2,28 +2,44 @@
   "counts": {
     "backlog_episodes": 175545,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 17835,
-    "prepared_source_episodes": 40808,
+    "uploaded_episodes": 17837,
+    "prepared_source_episodes": 40838,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 40,
+    "language_audited_sources": 192,
     "language_whisper_attempted_sources": 40,
     "language_pending_whisper_sources": 2604,
-    "whisper_review_sources": 22998,
-    "whisper_review_pending_sources": 21658,
-    "subtitle_followup_sources": 4670,
-    "subtitle_followup_pending_sources": 4670
+    "whisper_review_sources": 23050,
+    "whisper_review_pending_sources": 21710,
+    "subtitle_followup_sources": 4679,
+    "subtitle_followup_pending_sources": 4679
   },
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-07-05T16:32:27Z",
+      "databaseId": 28747461689,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-05T16:32:24Z",
+      "databaseId": 28747460215,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-05T16:27:26Z",
       "databaseId": 28747321219,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-status"
     },
     {
@@ -79,7 +95,7 @@
       "createdAt": "2026-07-05T16:17:54Z",
       "databaseId": 28747061567,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "prepare-manifest"
     },
     {
@@ -131,11 +147,11 @@
       "workflowName": "backfill-subtitles"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-05T16:02:37Z",
       "databaseId": 28746642490,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -161,22 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-05T15:57:18Z",
-      "databaseId": 28746485162,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-sources"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-05T15:56:09Z",
-      "databaseId": 28746453589,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
     }
   ],
   "gaps": {
@@ -67099,6 +67099,16 @@
         "episode_id": 52562,
         "display_name": "Řekni, kdo tě zabil S02E02 - 2. epizoda CZ Dabing",
         "video_id": 27167099
+      },
+      {
+        "episode_id": 52564,
+        "display_name": "Řekni, kdo tě zabil S02E04 - 4. epizoda CZ Dabing",
+        "video_id": 27167134
+      },
+      {
+        "episode_id": 52568,
+        "display_name": "Řekni, kdo tě zabil S02E08 - 8. epizoda CZ Dabing",
+        "video_id": 27167355
       },
       {
         "episode_id": 53221,
@@ -144868,6 +144878,16 @@
         "video_id": 27167099
       },
       {
+        "episode_id": 52564,
+        "display_name": "Řekni, kdo tě zabil S02E04 - 4. epizoda CZ Dabing",
+        "video_id": 27167134
+      },
+      {
+        "episode_id": 52568,
+        "display_name": "Řekni, kdo tě zabil S02E08 - 8. epizoda CZ Dabing",
+        "video_id": 27167355
+      },
+      {
         "episode_id": 53221,
         "display_name": "Dirk Gently's Holistic Detective Agency S01E07 - 7. epizoda CZ Titulky",
         "video_id": 27167006
@@ -146032,15 +146052,16 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
+    "disabled": 152,
     "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
     "whisper_non_cz_needs_subtitles": 956,
     "whisper_confirmed_cz": 384,
-    "needs_whisper": 21658
+    "needs_whisper": 21710
   },
   "subtitle_followup_statuses": {
-    "needs_subtitle_setup_after_prehrajto_processing": 4670
+    "needs_subtitle_setup_after_prehrajto_processing": 4679
   }
 }
