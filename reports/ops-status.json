@@ -3,27 +3,59 @@
     "backlog_episodes": 175761,
     "manifest_upload_ready_episodes": 1000,
     "uploaded_episodes": 17597,
-    "prepared_source_episodes": 39418,
+    "prepared_source_episodes": 39558,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 20,
-    "language_whisper_attempted_sources": 20,
-    "language_pending_whisper_sources": 2624,
-    "whisper_review_sources": 20908,
-    "whisper_review_pending_sources": 19588,
-    "subtitle_followup_sources": 4376,
-    "subtitle_followup_pending_sources": 4376
+    "language_audited_sources": 343,
+    "language_whisper_attempted_sources": 40,
+    "language_pending_whisper_sources": 2604,
+    "whisper_review_sources": 21087,
+    "whisper_review_pending_sources": 19767,
+    "subtitle_followup_sources": 4394,
+    "subtitle_followup_pending_sources": 4394
   },
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-07-05T08:45:01Z",
+      "databaseId": 28735190340,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-05T08:23:10Z",
+      "databaseId": 28734653930,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-05T08:18:00Z",
+      "databaseId": 28734528933,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-05T08:04:22Z",
+      "databaseId": 28734205480,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-05T08:03:25Z",
       "databaseId": 28734182613,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -35,27 +67,27 @@
       "workflowName": "sync"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-05T08:02:49Z",
       "databaseId": 28734167760,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-05T08:02:46Z",
       "databaseId": 28734166623,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-05T08:02:43Z",
       "databaseId": 28734165187,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -103,7 +135,7 @@
       "createdAt": "2026-07-05T07:37:25Z",
       "databaseId": 28733568447,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "prepare-descriptions"
     },
     {
@@ -145,38 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-05T07:27:08Z",
-      "databaseId": 28733330759,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-05T07:27:05Z",
-      "databaseId": 28733329636,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-05T07:25:58Z",
-      "databaseId": 28733304818,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-05T07:22:34Z",
-      "databaseId": 28733226276,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
     }
   ],
   "gaps": {
@@ -143352,6 +143352,15 @@
         "reason": "selected source needs Czech subtitles after Whisper detected non-Czech audio"
       },
       {
+        "episode_id": 54854,
+        "source_id": -69932160281719750,
+        "series_title": "Aféra",
+        "episode_code": "S05E11",
+        "source_title": "Aféra - S5E11 Episode 11 EN",
+        "subtitle_status": "needs_subtitle_setup_after_prehrajto_processing",
+        "reason": "selected source needs Czech subtitles after Whisper detected non-Czech audio"
+      },
+      {
         "episode_id": 91538,
         "source_id": -27193524954385518,
         "series_title": "Alias",
@@ -143638,28 +143647,20 @@
         "source_title": "Angel S01E21, CZ dabing (KATIKAA)",
         "subtitle_status": "needs_subtitle_setup_after_prehrajto_processing",
         "reason": "selected source needs Czech subtitles after Whisper detected non-Czech audio"
-      },
-      {
-        "episode_id": 45186,
-        "source_id": -27726717170933758,
-        "series_title": "Angel",
-        "episode_code": "S02E02",
-        "source_title": "Touched.by.an.Angel.S02E02.Trust",
-        "subtitle_status": "needs_subtitle_setup_after_prehrajto_processing",
-        "reason": "selected source needs Czech subtitles after Whisper detected non-Czech audio"
       }
     ]
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 20
+    "disabled": 303,
+    "ok": 40
   },
   "whisper_review_statuses": {
     "whisper_confirmed_cz": 383,
     "whisper_non_cz_needs_subtitles": 937,
-    "needs_whisper": 19588
+    "needs_whisper": 19767
   },
   "subtitle_followup_statuses": {
-    "needs_subtitle_setup_after_prehrajto_processing": 4376
+    "needs_subtitle_setup_after_prehrajto_processing": 4394
   }
 }
