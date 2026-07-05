@@ -2,28 +2,44 @@
   "counts": {
     "backlog_episodes": 175644,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 17760,
-    "prepared_source_episodes": 40338,
+    "uploaded_episodes": 17763,
+    "prepared_source_episodes": 40358,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 96,
+    "language_audited_sources": 142,
     "language_whisper_attempted_sources": 40,
-    "language_pending_whisper_sources": 2604,
-    "whisper_review_sources": 21711,
-    "whisper_review_pending_sources": 20411,
+    "language_pending_whisper_sources": 2624,
+    "whisper_review_sources": 21788,
+    "whisper_review_pending_sources": 20488,
     "subtitle_followup_sources": 4586,
     "subtitle_followup_pending_sources": 4586
   },
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-07-05T13:43:39Z",
+      "databaseId": 28742793621,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-05T13:36:43Z",
+      "databaseId": 28742606391,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-05T13:35:45Z",
       "databaseId": 28742580272,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -51,19 +67,19 @@
       "workflowName": "prepare-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-05T13:30:01Z",
       "databaseId": 28742416404,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-05T13:27:28Z",
       "databaseId": 28742352047,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -107,11 +123,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-05T13:18:54Z",
       "databaseId": 28742115943,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
@@ -161,22 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-05T13:03:33Z",
-      "databaseId": 28741712297,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-05T12:58:10Z",
-      "databaseId": 28741562652,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-sources"
     }
   ],
   "gaps": {
@@ -66711,6 +66711,11 @@
         "video_id": 27162040
       },
       {
+        "episode_id": 146696,
+        "display_name": "Naše planeta S01E03 - Džungle CZ Titulky",
+        "video_id": 27162241
+      },
+      {
         "episode_id": 6475,
         "display_name": "Doom Patrol S01E15 - Ezekiel Patrol CZ Dabing",
         "video_id": 27161837
@@ -66729,6 +66734,16 @@
         "episode_id": 10293,
         "display_name": "Doom Patrol S02E08 - Dad Patrol CZ Titulky",
         "video_id": 27161943
+      },
+      {
+        "episode_id": 10281,
+        "display_name": "Doom Patrol S04E08 - Fame Patrol CZ Titulky",
+        "video_id": 27162210
+      },
+      {
+        "episode_id": 109525,
+        "display_name": "Komparz S01E06 - Patrick Stewart CZ Titulky",
+        "video_id": 27162279
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -144103,6 +144118,11 @@
         "video_id": 27162040
       },
       {
+        "episode_id": 146696,
+        "display_name": "Naše planeta S01E03 - Džungle CZ Titulky",
+        "video_id": 27162241
+      },
+      {
         "episode_id": 6475,
         "display_name": "Doom Patrol S01E15 - Ezekiel Patrol CZ Dabing",
         "video_id": 27161837
@@ -144121,6 +144141,16 @@
         "episode_id": 10293,
         "display_name": "Doom Patrol S02E08 - Dad Patrol CZ Titulky",
         "video_id": 27161943
+      },
+      {
+        "episode_id": 10281,
+        "display_name": "Doom Patrol S04E08 - Fame Patrol CZ Titulky",
+        "video_id": 27162210
+      },
+      {
+        "episode_id": 109525,
+        "display_name": "Komparz S01E06 - Patrick Stewart CZ Titulky",
+        "video_id": 27162279
       }
     ],
     "prepared_not_upload_ready": [
@@ -145282,11 +145312,11 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 56,
+    "disabled": 102,
     "ok": 40
   },
   "whisper_review_statuses": {
-    "needs_whisper": 20411,
+    "needs_whisper": 20488,
     "whisper_confirmed_cz": 380,
     "whisper_non_cz_needs_subtitles": 920
   },
