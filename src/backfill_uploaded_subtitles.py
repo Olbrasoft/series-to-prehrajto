@@ -454,7 +454,10 @@ def build_tasks(args: argparse.Namespace, session: requests.Session | None) -> l
         if upload:
             matched.append((row, upload))
     tasks: list[tuple[dict, dict, dict]] = []
-    for row, upload in matched:
+    for inspected, (row, upload) in enumerate(matched, 1):
+        if args.max_rows and inspected > args.max_rows:
+            log(f"stop max_rows={args.max_rows} inspected={inspected - 1}")
+            break
         video_id = int(upload["prehrajto_video_id"])
         if args.lookup == "profile":
             if session is None:
@@ -497,6 +500,7 @@ def build_tasks(args: argparse.Namespace, session: requests.Session | None) -> l
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--limit", type=int, default=3)
+    ap.add_argument("--max-rows", type=int, default=0)
     ap.add_argument("--max-profile-pages", type=int, default=40)
     ap.add_argument("--verify-timeout", type=int, default=70)
     ap.add_argument("--search-min-interval", type=float, default=10.0)

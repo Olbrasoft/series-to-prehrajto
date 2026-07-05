@@ -11,7 +11,11 @@ on:
       limit:
         description: "Maximum missing-subtitle uploads to attempt"
         required: false
-        default: "20"
+        default: "3"
+      max_rows:
+        description: "Maximum uploaded subtitle-followup rows to inspect"
+        required: false
+        default: "80"
       dry_run:
         description: "Only inspect targets and write report rows"
         required: false
@@ -65,7 +69,8 @@ jobs:
           CZ_PROXY_KEY: ${{ secrets.CZ_PROXY_KEY }}
         run: |
           ARGS=(
-            "--limit" "${{ inputs.limit || '20' }}"
+            "--limit" "${{ inputs.limit || '3' }}"
+            "--max-rows" "${{ inputs.max_rows || '80' }}"
             "--search-min-interval" "10"
             "--verify-timeout" "120"
             "--allow-partial"
