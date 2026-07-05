@@ -1,0 +1,131 @@
+name: backfill-subtitles
+
+on:
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: "Maximum missing-subtitle uploads to attempt"
+        required: false
+        default: "20"
+      dry_run:
+        description: "Only inspect targets and write report rows"
+        required: false
+        default: "false"
+      retry_reported:
+        description: "Retry episodes already recorded in the backfill report"
+        required: false
+        default: "false"
+
+concurrency:
+  group: series-to-prehrajto-backfill-subtitles
+  cancel-in-progress: false
+
+jobs:
+  backfill:
+    name: Backfill uploaded subtitles
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+          persist-credentials: true
+
+      - name: Refresh to latest origin/main
+        run: |
+          git fetch origin main
+          git reset --hard origin/main
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Configure git for report pushes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Run subtitle backfill
+        env:
+          PREHRAJTO_EMAIL: ${{ secrets.PREHRAJTO_EMAIL }}
+          PREHRAJTO_PASSWORD: ${{ secrets.PREHRAJTO_PASSWORD }}
+          CZ_PROXY_URL: ${{ secrets.CZ_PROXY_URL }}
+          CZ_PROXY_KEY: ${{ secrets.CZ_PROXY_KEY }}
+        run: |
+          ARGS=(
+            "--limit" "${{ inputs.limit || '20' }}"
+            "--search-min-interval" "10"
+            "--verify-timeout" "120"
+            "--allow-partial"
+          )
+          if [ "${{ inputs.dry_run || 'false' }}" = "true" ]; then
+            ARGS+=("--dry-run")
+          fi
+          if [ "${{ inputs.retry_reported || 'false' }}" = "true" ]; then
+            ARGS+=("--retry-reported")
+          fi
+          python src/backfill_uploaded_subtitles.py "${ARGS[@]}"
+
+      - name: Commit subtitle report
+        if: always()
+        run: |
+          set -e
+          mkdir -p reports
+          touch reports/subtitle-backfill-status.jsonl
+          TMP_DIR="$(mktemp -d)"
+          cp reports/subtitle-backfill-status.jsonl "$TMP_DIR/subtitle-backfill-status.jsonl"
+
+          for attempt in 1 2 3 4 5; do
+            rm -rf .git/rebase-merge .git/rebase-apply
+            git fetch origin main
+            git reset --hard origin/main
+            mkdir -p reports
+            if [ -f reports/subtitle-backfill-status.jsonl ]; then
+              cat "$TMP_DIR/subtitle-backfill-status.jsonl" >> reports/subtitle-backfill-status.jsonl
+              python - <<'PY'
+import json
+from pathlib import Path
+
+path = Path("reports/subtitle-backfill-status.jsonl")
+latest = {}
+for line in path.read_text(encoding="utf-8").splitlines():
+    if not line.strip():
+        continue
+    row = json.loads(line)
+    latest[int(row["episode_id"])] = row
+with path.open("w", encoding="utf-8") as fh:
+    for row in sorted(latest.values(), key=lambda item: (str(item.get("series_title") or ""), int(item.get("season") or 0), int(item.get("episode") or 0), int(item.get("episode_id") or 0))):
+        fh.write(json.dumps(row, ensure_ascii=False, sort_keys=True) + "\n")
+PY
+            else
+              cp "$TMP_DIR/subtitle-backfill-status.jsonl" reports/subtitle-backfill-status.jsonl
+            fi
+
+            git add reports/subtitle-backfill-status.jsonl
+            if git diff --cached --quiet; then
+              echo "no subtitle report changes to commit"
+              exit 0
+            fi
+
+            COUNT=$(python - <<'PY'
+from pathlib import Path
+print(sum(1 for line in Path("reports/subtitle-backfill-status.jsonl").read_text(encoding="utf-8").splitlines() if line.strip()))
+PY
+)
+            git commit -m "chore: update subtitle backfill report (${COUNT} rows)"
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            echo "push race on attempt ${attempt}, retrying"
+            sleep $((attempt * 2))
+          done
+
+          echo "failed to push subtitle report after retries"
+          exit 1
