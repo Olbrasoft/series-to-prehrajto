@@ -2,7 +2,7 @@
   "counts": {
     "backlog_episodes": 174560,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 18832,
+    "uploaded_episodes": 18833,
     "prepared_source_episodes": 43708,
     "description_series": 60,
     "description_episodes": 753,
@@ -20,18 +20,82 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-07-06T17:47:36Z",
-      "databaseId": 28811635644,
+      "createdAt": "2026-07-06T17:52:32Z",
+      "databaseId": 28811927205,
       "headBranch": "main",
       "status": "in_progress",
-      "workflowName": "ops-watchdog"
+      "workflowName": "ops-status"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-07-06T17:52:20Z",
+      "databaseId": 28811914457,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-06T17:51:45Z",
+      "databaseId": 28811878977,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-06T17:48:49Z",
+      "databaseId": 28811705669,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-06T17:48:45Z",
+      "databaseId": 28811702310,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-06T17:48:43Z",
+      "databaseId": 28811699965,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-06T17:48:42Z",
+      "databaseId": 28811699431,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "backfill-subtitles"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-06T17:48:39Z",
+      "databaseId": 28811696114,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-06T17:47:36Z",
+      "databaseId": 28811635644,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-06T17:42:39Z",
       "databaseId": 28811340833,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "backfill-subtitles"
     },
     {
@@ -113,70 +177,6 @@
       "headBranch": "main",
       "status": "pending",
       "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-06T17:09:43Z",
-      "databaseId": 28809384309,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "backfill-subtitles"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-06T17:09:30Z",
-      "databaseId": 28809372018,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-06T17:09:27Z",
-      "databaseId": 28809368862,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-06T17:09:25Z",
-      "databaseId": 28809366665,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-06T17:08:23Z",
-      "databaseId": 28809308657,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "failure",
-      "createdAt": "2026-07-06T17:05:04Z",
-      "databaseId": 28809110450,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-06T17:02:44Z",
-      "databaseId": 28808966745,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "backfill-subtitles"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-06T16:58:39Z",
-      "databaseId": 28808711066,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "backfill-subtitles"
     }
   ],
   "gaps": {
@@ -72089,6 +72089,11 @@
         "episode_id": 38935,
         "display_name": "Pokémon S15E19 - Cilan ve víru zápasu! CZ Dabing",
         "video_id": 27200769
+      },
+      {
+        "episode_id": 39287,
+        "display_name": "Pokémon S15E22 - Klub-exploze začíná! CZ Dabing",
+        "video_id": 27201169
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -74186,506 +74191,6 @@
         "episode_id": 34999,
         "display_name": "Dr. House S08E21 - Vydržet CZ Dabing",
         "video_id": 26185715
-      },
-      {
-        "episode_id": 20402,
-        "display_name": "Lucifer S05E02 - Lucifer! Lucifer! Lucifer! CZ Dabing",
-        "video_id": 26226433
-      },
-      {
-        "episode_id": 20404,
-        "display_name": "Lucifer S05E04 - S kuřaty to vždycky špatně skončí CZ Dabing",
-        "video_id": 26226463
-      },
-      {
-        "episode_id": 20412,
-        "display_name": "Lucifer S05E12 - Daniel Espinoza: nahý a vyděšený CZ Dabing",
-        "video_id": 26226512
-      },
-      {
-        "episode_id": 20416,
-        "display_name": "Lucifer S05E16 - Šance na šťastný konec CZ Dabing",
-        "video_id": 26226554
-      },
-      {
-        "episode_id": 20418,
-        "display_name": "Lucifer S06E02 - Těžká minulost CZ Dabing",
-        "video_id": 26226602
-      },
-      {
-        "episode_id": 5421,
-        "display_name": "Fallout S02E06 - Neznámý hráč CZ Dabing",
-        "video_id": 26226335
-      },
-      {
-        "episode_id": 3071,
-        "display_name": "Lucifer S01E01 - Pilot CZ Dabing",
-        "video_id": 26226356
-      },
-      {
-        "episode_id": 3073,
-        "display_name": "Lucifer S01E03 - Budoucí vládce temnoty CZ Dabing",
-        "video_id": 26226386
-      },
-      {
-        "episode_id": 3077,
-        "display_name": "Lucifer S01E07 - Parťák CZ Dabing",
-        "video_id": 26226418
-      },
-      {
-        "episode_id": 20420,
-        "display_name": "Lucifer S06E04 - Otcovství CZ Dabing",
-        "video_id": 26226647
-      },
-      {
-        "episode_id": 20422,
-        "display_name": "Lucifer S06E06 - S tím si dneska nevystačíš CZ Dabing",
-        "video_id": 26226676
-      },
-      {
-        "episode_id": 20424,
-        "display_name": "Lucifer S06E08 - Zachraň ďábla a zachráníš svět CZ Dabing",
-        "video_id": 26226708
-      },
-      {
-        "episode_id": 4052,
-        "display_name": "Ozark S01E02 - Modrá kočka CZ Dabing",
-        "video_id": 26226737
-      },
-      {
-        "episode_id": 4054,
-        "display_name": "Ozark S01E04 - Dnes večer improvizujeme CZ Dabing",
-        "video_id": 26226766
-      },
-      {
-        "episode_id": 4056,
-        "display_name": "Ozark S01E06 - Kniha Ruth CZ Dabing",
-        "video_id": 26226791
-      },
-      {
-        "episode_id": 4058,
-        "display_name": "Ozark S01E08 - Kaleidoskop CZ Dabing",
-        "video_id": 26226822
-      },
-      {
-        "episode_id": 4060,
-        "display_name": "Ozark S01E10 - Hrana CZ Dabing",
-        "video_id": 26226855
-      },
-      {
-        "episode_id": 4062,
-        "display_name": "Ozark S02E02 - Drahocenná krev Ježíšova CZ Dabing",
-        "video_id": 26226902
-      },
-      {
-        "episode_id": 4064,
-        "display_name": "Ozark S02E04 - Osamělost CZ Dabing",
-        "video_id": 26226935
-      },
-      {
-        "episode_id": 4070,
-        "display_name": "Ozark S02E06 - Vnější temnota CZ Dabing",
-        "video_id": 26226967
-      },
-      {
-        "episode_id": 4066,
-        "display_name": "Ozark S02E07 - Jediná cesta ven CZ Dabing",
-        "video_id": 26227014
-      },
-      {
-        "episode_id": 4068,
-        "display_name": "Ozark S02E09 - Jezevec CZ Dabing",
-        "video_id": 26227052
-      },
-      {
-        "episode_id": 4072,
-        "display_name": "Ozark S03E02 - Partnerství CZ Dabing",
-        "video_id": 26227083
-      },
-      {
-        "episode_id": 4074,
-        "display_name": "Ozark S03E04 - Souboj šéfů CZ Dabing",
-        "video_id": 26227108
-      },
-      {
-        "episode_id": 4076,
-        "display_name": "Ozark S03E06 - Tvůj dům je i můj dům CZ Dabing",
-        "video_id": 26227136
-      },
-      {
-        "episode_id": 4078,
-        "display_name": "Ozark S03E08 - Nerozluční přátelé CZ Dabing",
-        "video_id": 26227170
-      },
-      {
-        "episode_id": 4080,
-        "display_name": "Ozark S03E10 - Všechno, nebo nic CZ Dabing",
-        "video_id": 26227185
-      },
-      {
-        "episode_id": 4082,
-        "display_name": "Ozark S04E02 - Co svět světem stojí CZ Dabing",
-        "video_id": 26227214
-      },
-      {
-        "episode_id": 9761,
-        "display_name": "Lucifer S02E04 - Kousky dámy CZ Dabing",
-        "video_id": 26226661
-      },
-      {
-        "episode_id": 3089,
-        "display_name": "Lucifer S02E06 - Monstrum CZ Dabing",
-        "video_id": 26226704
-      },
-      {
-        "episode_id": 3097,
-        "display_name": "Lucifer S02E14 - Candy Morningstar CZ Dabing",
-        "video_id": 26226761
-      },
-      {
-        "episode_id": 3107,
-        "display_name": "Lucifer S03E06 - Vegas s hvězdičkou CZ Dabing",
-        "video_id": 26226829
-      },
-      {
-        "episode_id": 9745,
-        "display_name": "Lucifer S03E07 - Mimo záznam CZ Dabing",
-        "video_id": 26226890
-      },
-      {
-        "episode_id": 4084,
-        "display_name": "Ozark S04E04 - Bez vítěze CZ Dabing",
-        "video_id": 26227240
-      },
-      {
-        "episode_id": 4086,
-        "display_name": "Ozark S04E06 - Sangre Sobre Todo CZ Dabing",
-        "video_id": 26227266
-      },
-      {
-        "episode_id": 4088,
-        "display_name": "Ozark S04E08 - Bratranec smrti CZ Dabing",
-        "video_id": 26227294
-      },
-      {
-        "episode_id": 4090,
-        "display_name": "Ozark S04E10 - Ty jsi šéf CZ Dabing",
-        "video_id": 26227325
-      },
-      {
-        "episode_id": 4092,
-        "display_name": "Ozark S04E12 - Když se voda čeří CZ Dabing",
-        "video_id": 26227359
-      },
-      {
-        "episode_id": 4094,
-        "display_name": "Ozark S04E14 - Smutný konec CZ Dabing",
-        "video_id": 26227392
-      },
-      {
-        "episode_id": 9737,
-        "display_name": "Lucifer S03E16 - Pekelný pokusný králík CZ Dabing",
-        "video_id": 26227242
-      },
-      {
-        "episode_id": 9735,
-        "display_name": "Lucifer S03E17 - Ať to pako zazpívá! CZ Dabing",
-        "video_id": 26227276
-      },
-      {
-        "episode_id": 9721,
-        "display_name": "Lucifer S03E26 - Bylo nebylo CZ Dabing",
-        "video_id": 26227335
-      },
-      {
-        "episode_id": 3115,
-        "display_name": "Lucifer S04E01 - Všechno je v pořádku CZ Dabing",
-        "video_id": 26227390
-      },
-      {
-        "episode_id": 9715,
-        "display_name": "Lucifer S04E06 - Nemravné kalhoty do práce CZ Dabing",
-        "video_id": 26227427
-      },
-      {
-        "episode_id": 9713,
-        "display_name": "Lucifer S04E07 - Ďábelské způsoby CZ Dabing",
-        "video_id": 26227464
-      },
-      {
-        "episode_id": 42812,
-        "display_name": "Flash S01E06 - Zrodil se Flash CZ Dabing",
-        "video_id": 26227502
-      },
-      {
-        "episode_id": 42762,
-        "display_name": "Flash S01E23 - Dostatečná rychlost CZ Dabing",
-        "video_id": 26227519
-      },
-      {
-        "episode_id": 9800,
-        "display_name": "Ve jménu vlasti S01E02 - Modlitba CZ Dabing",
-        "video_id": 26227551
-      },
-      {
-        "episode_id": 9798,
-        "display_name": "Ve jménu vlasti S01E04 - Věrný sobě CZ Dabing",
-        "video_id": 26227576
-      },
-      {
-        "episode_id": 9796,
-        "display_name": "Ve jménu vlasti S01E06 - Dobrý voják CZ Dabing",
-        "video_id": 26227589
-      },
-      {
-        "episode_id": 9794,
-        "display_name": "Ve jménu vlasti S01E08 - Achillova pata CZ Dabing",
-        "video_id": 26227610
-      },
-      {
-        "episode_id": 9792,
-        "display_name": "Ve jménu vlasti S01E10 - Kongresman Brody CZ Dabing",
-        "video_id": 26227625
-      },
-      {
-        "episode_id": 9790,
-        "display_name": "Ve jménu vlasti S01E12 - Marine One CZ Dabing",
-        "video_id": 26227658
-      },
-      {
-        "episode_id": 21194,
-        "display_name": "Ve jménu vlasti S02E01 - Úsměv CZ Dabing",
-        "video_id": 26227693
-      },
-      {
-        "episode_id": 21196,
-        "display_name": "Ve jménu vlasti S02E03 - Stav nezávislosti CZ Dabing",
-        "video_id": 26227731
-      },
-      {
-        "episode_id": 21198,
-        "display_name": "Ve jménu vlasti S02E05 - Otázky a odpovědi CZ Dabing",
-        "video_id": 26227751
-      },
-      {
-        "episode_id": 21200,
-        "display_name": "Ve jménu vlasti S02E07 - Mýtina CZ Dabing",
-        "video_id": 26227789
-      },
-      {
-        "episode_id": 21202,
-        "display_name": "Ve jménu vlasti S02E09 - Dvě role CZ Dabing",
-        "video_id": 26227817
-      },
-      {
-        "episode_id": 21204,
-        "display_name": "Ve jménu vlasti S02E11 - In memoriam CZ Dabing",
-        "video_id": 26227843
-      },
-      {
-        "episode_id": 21206,
-        "display_name": "Ve jménu vlasti S03E01 - Plecháč zlikvidován CZ Dabing",
-        "video_id": 26227857
-      },
-      {
-        "episode_id": 21208,
-        "display_name": "Ve jménu vlasti S03E03 - Davidova věž CZ Dabing",
-        "video_id": 26227927
-      },
-      {
-        "episode_id": 21210,
-        "display_name": "Ve jménu vlasti S03E05 - Akce jóga CZ Dabing",
-        "video_id": 26227964
-      },
-      {
-        "episode_id": 21212,
-        "display_name": "Ve jménu vlasti S03E07 - Čas se krátí CZ Dabing",
-        "video_id": 26228004
-      },
-      {
-        "episode_id": 21214,
-        "display_name": "Ve jménu vlasti S03E09 - Poslední úkol CZ Dabing",
-        "video_id": 26228044
-      },
-      {
-        "episode_id": 20401,
-        "display_name": "Lucifer S05E01 - Šíleně smutný ďábel CZ Dabing",
-        "video_id": 26227501
-      },
-      {
-        "episode_id": 20403,
-        "display_name": "Lucifer S05E03 - Diablo! CZ Dabing",
-        "video_id": 26227535
-      },
-      {
-        "episode_id": 20405,
-        "display_name": "Lucifer S05E05 - Detektiv Amenadiel CZ Dabing",
-        "video_id": 26227574
-      },
-      {
-        "episode_id": 20407,
-        "display_name": "Lucifer S05E07 - Naše magie CZ Dabing",
-        "video_id": 26227614
-      },
-      {
-        "episode_id": 20409,
-        "display_name": "Lucifer S05E09 - Rodinná večeře CZ Dabing",
-        "video_id": 26227646
-      },
-      {
-        "episode_id": 20417,
-        "display_name": "Lucifer S06E01 - Tady je pořád všechno stejný CZ Dabing",
-        "video_id": 26227697
-      },
-      {
-        "episode_id": 20421,
-        "display_name": "Lucifer S06E05 - Kdo zabil Lucifera Morningstara? CZ Dabing",
-        "video_id": 26227746
-      },
-      {
-        "episode_id": 20423,
-        "display_name": "Lucifer S06E07 - Démonka se vdává CZ Dabing",
-        "video_id": 26227784
-      },
-      {
-        "episode_id": 20425,
-        "display_name": "Lucifer S06E09 - Loučení s Luciferem CZ Dabing",
-        "video_id": 26227821
-      },
-      {
-        "episode_id": 4051,
-        "display_name": "Ozark S01E01 - Cukrouš CZ Dabing",
-        "video_id": 26227845
-      },
-      {
-        "episode_id": 4053,
-        "display_name": "Ozark S01E03 - Pozvolný spánek CZ Dabing",
-        "video_id": 26227851
-      },
-      {
-        "episode_id": 4055,
-        "display_name": "Ozark S01E05 - Nadvláda CZ Dabing",
-        "video_id": 26227880
-      },
-      {
-        "episode_id": 4057,
-        "display_name": "Ozark S01E07 - Ptačí budka CZ Dabing",
-        "video_id": 26227908
-      },
-      {
-        "episode_id": 4059,
-        "display_name": "Ozark S01E09 - Černou kávu prosím CZ Dabing",
-        "video_id": 26227950
-      },
-      {
-        "episode_id": 4061,
-        "display_name": "Ozark S02E01 - Reparace CZ Dabing",
-        "video_id": 26227991
-      },
-      {
-        "episode_id": 4063,
-        "display_name": "Ozark S02E03 - Kletba rodu Langmorů CZ Dabing",
-        "video_id": 26228034
-      },
-      {
-        "episode_id": 21216,
-        "display_name": "Ve jménu vlasti S03E11 - Velké zvíře v Teheránu CZ Dabing",
-        "video_id": 26228090
-      },
-      {
-        "episode_id": 21218,
-        "display_name": "Ve jménu vlasti S04E01 - Královna dronů CZ Dabing",
-        "video_id": 26228114
-      },
-      {
-        "episode_id": 21220,
-        "display_name": "Ve jménu vlasti S04E03 - Šalvar kamíz CZ Dabing",
-        "video_id": 26228159
-      },
-      {
-        "episode_id": 21222,
-        "display_name": "Ve jménu vlasti S04E05 - Jak na věc CZ Dabing",
-        "video_id": 26228202
-      },
-      {
-        "episode_id": 21224,
-        "display_name": "Ve jménu vlasti S04E07 - Návrat CZ Dabing",
-        "video_id": 26228233
-      },
-      {
-        "episode_id": 21226,
-        "display_name": "Ve jménu vlasti S04E09 - Chystá se ještě něco dalšího CZ Dabing",
-        "video_id": 26228351
-      },
-      {
-        "episode_id": 21228,
-        "display_name": "Ve jménu vlasti S04E11 - Krieg nicht Lieb CZ Dabing",
-        "video_id": 26228389
-      },
-      {
-        "episode_id": 3630,
-        "display_name": "Ve jménu vlasti S05E02 - Tradiční pohostinnost CZ Dabing",
-        "video_id": 26228419
-      },
-      {
-        "episode_id": 3632,
-        "display_name": "Ve jménu vlasti S05E04 - Proč je tato noc jiná CZ Dabing",
-        "video_id": 26228448
-      },
-      {
-        "episode_id": 3634,
-        "display_name": "Ve jménu vlasti S05E06 - Parabióza CZ Dabing",
-        "video_id": 26228482
-      },
-      {
-        "episode_id": 3636,
-        "display_name": "Ve jménu vlasti S05E08 - Vše o Allison CZ Dabing",
-        "video_id": 26228504
-      },
-      {
-        "episode_id": 3638,
-        "display_name": "Ve jménu vlasti S05E10 - Nová realita CZ Dabing",
-        "video_id": 26228535
-      },
-      {
-        "episode_id": 3640,
-        "display_name": "Ve jménu vlasti S05E12 - Falešný záblesk CZ Dabing",
-        "video_id": 26228559
-      },
-      {
-        "episode_id": 12302,
-        "display_name": "Ve jménu vlasti S06E01 - Štvanec CZ Dabing",
-        "video_id": 26228587
-      },
-      {
-        "episode_id": 12320,
-        "display_name": "Ve jménu vlasti S06E04 - Záblesk světla CZ Dabing",
-        "video_id": 26228605
-      },
-      {
-        "episode_id": 12308,
-        "display_name": "Ve jménu vlasti S06E05 - Casus Belli CZ Dabing",
-        "video_id": 26228621
-      },
-      {
-        "episode_id": 12318,
-        "display_name": "Ve jménu vlasti S06E06 - Návrat CZ Dabing",
-        "video_id": 26228661
-      },
-      {
-        "episode_id": 12316,
-        "display_name": "Ve jménu vlasti S06E07 - Bezprostřední ohrožení CZ Dabing",
-        "video_id": 26228685
-      },
-      {
-        "episode_id": 12304,
-        "display_name": "Ve jménu vlasti S06E10 - Dům s vlajkou CZ Dabing",
-        "video_id": 26228733
-      },
-      {
-        "episode_id": 12306,
-        "display_name": "Ve jménu vlasti S06E11 - R jako Romeo CZ Dabing",
-        "video_id": 26228749
       },
       {
         "episode_id": 4065,
@@ -149176,6 +148681,11 @@
         "episode_id": 38935,
         "display_name": "Pokémon S15E19 - Cilan ve víru zápasu! CZ Dabing",
         "video_id": 27200769
+      },
+      {
+        "episode_id": 39287,
+        "display_name": "Pokémon S15E22 - Klub-exploze začíná! CZ Dabing",
+        "video_id": 27201169
       }
     ],
     "prepared_not_upload_ready": [
