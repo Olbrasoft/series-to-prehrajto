@@ -1,37 +1,77 @@
 {
   "counts": {
     "backlog_episodes": 174508,
-    "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 18870,
-    "prepared_source_episodes": 43768,
+    "manifest_upload_ready_episodes": 1001,
+    "uploaded_episodes": 18871,
+    "prepared_source_episodes": 43778,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 40,
+    "language_audited_sources": 71,
     "language_whisper_attempted_sources": 40,
-    "language_pending_whisper_sources": 2604,
-    "whisper_review_sources": 26667,
-    "whisper_review_pending_sources": 24908,
-    "subtitle_followup_sources": 5262,
-    "subtitle_followup_pending_sources": 5262
+    "language_pending_whisper_sources": 2624,
+    "whisper_review_sources": 26676,
+    "whisper_review_pending_sources": 24917,
+    "subtitle_followup_sources": 5264,
+    "subtitle_followup_pending_sources": 5264
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-07-06T19:46:50Z",
-      "databaseId": 28818662421,
+      "createdAt": "2026-07-06T19:57:40Z",
+      "databaseId": 28819292717,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-07-06T19:53:51Z",
+      "databaseId": 28819067206,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "backfill-subtitles"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-06T19:51:51Z",
+      "databaseId": 28818947430,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-06T19:48:25Z",
+      "databaseId": 28818752410,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "backfill-subtitles"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-06T19:48:02Z",
+      "databaseId": 28818730038,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-06T19:46:50Z",
+      "databaseId": 28818662421,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-06T19:43:28Z",
       "databaseId": 28818464653,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "backfill-subtitles"
     },
     {
@@ -43,11 +83,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-06T19:39:10Z",
       "databaseId": 28818193620,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
@@ -99,11 +139,11 @@
       "workflowName": "prepare-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-06T19:32:37Z",
       "databaseId": 28817763172,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -137,46 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-06T19:24:51Z",
-      "databaseId": 28817433233,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-06T19:24:43Z",
-      "databaseId": 28817425388,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-06T19:24:39Z",
-      "databaseId": 28817421781,
-      "headBranch": "main",
-      "status": "pending",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-06T19:23:50Z",
-      "databaseId": 28817372139,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-06T19:20:27Z",
-      "databaseId": 28817179081,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "backfill-subtitles"
     }
   ],
   "gaps": {
@@ -72181,6 +72181,11 @@
         "video_id": 27203388
       },
       {
+        "episode_id": 39366,
+        "display_name": "Pokémon S18E34 - Festivalová výměna, festivalové sbohem! CZ Titulky",
+        "video_id": 27203668
+      },
+      {
         "episode_id": 38943,
         "display_name": "Pokémon S15E28 - Zápas o oživenou zkamenělinu! (Část druhá) CZ Dabing",
         "video_id": 27201444
@@ -76473,66 +76478,6 @@
         "video_id": 26306204
       },
       {
-        "episode_id": 45635,
-        "display_name": "Zpátky do školy S01E02 - Španělština CZ Dabing",
-        "video_id": 26306455
-      },
-      {
-        "episode_id": 45637,
-        "display_name": "Zpátky do školy S01E06 - Fotbal, feminismus a ty CZ Dabing",
-        "video_id": 26306479
-      },
-      {
-        "episode_id": 45639,
-        "display_name": "Zpátky do školy S01E08 - Vedení domácnosti CZ Dabing",
-        "video_id": 26306489
-      },
-      {
-        "episode_id": 45641,
-        "display_name": "Zpátky do školy S01E09 - Debata CZ Dabing",
-        "video_id": 26306522
-      },
-      {
-        "episode_id": 45643,
-        "display_name": "Zpátky do školy S01E13 - Investigativní žurnalistika CZ Dabing",
-        "video_id": 26306574
-      },
-      {
-        "episode_id": 45645,
-        "display_name": "Zpátky do školy S01E14 - Výrazový tanec CZ Dabing",
-        "video_id": 26306628
-      },
-      {
-        "episode_id": 45647,
-        "display_name": "Zpátky do školy S01E16 - Komunikační studia CZ Dabing",
-        "video_id": 26306666
-      },
-      {
-        "episode_id": 45649,
-        "display_name": "Zpátky do školy S01E18 - Základy genealogie CZ Dabing",
-        "video_id": 26306738
-      },
-      {
-        "episode_id": 45651,
-        "display_name": "Zpátky do školy S01E20 - Umění iluze CZ Dabing",
-        "video_id": 26306797
-      },
-      {
-        "episode_id": 45653,
-        "display_name": "Zpátky do školy S01E22 - Řečnické umění CZ Dabing",
-        "video_id": 26306854
-      },
-      {
-        "episode_id": 45655,
-        "display_name": "Zpátky do školy S01E25 - Pascalův trojúhelník znovuobjevený CZ Dabing",
-        "video_id": 26306944
-      },
-      {
-        "episode_id": 45657,
-        "display_name": "Zpátky do školy S02E01 - Antropologie CZ Dabing",
-        "video_id": 26307343
-      },
-      {
         "episode_id": 37922,
         "display_name": "Černá listina S02E09 - Luther Braxton (č. 21) CZ Dabing",
         "video_id": 26307466
@@ -76633,181 +76578,6 @@
         "video_id": 26311424
       },
       {
-        "episode_id": 45659,
-        "display_name": "Zpátky do školy S02E03 - Psychologie odchodu CZ Dabing",
-        "video_id": 26307399
-      },
-      {
-        "episode_id": 45661,
-        "display_name": "Zpátky do školy S02E05 - Mesiášské mýty a starověké národy CZ Dabing",
-        "video_id": 26307486
-      },
-      {
-        "episode_id": 45663,
-        "display_name": "Zpátky do školy S02E07 - Aerodynamika pohlaví CZ Dabing",
-        "video_id": 26307704
-      },
-      {
-        "episode_id": 45665,
-        "display_name": "Zpátky do školy S02E09 - Konspirační teorie a návrhy interiérů CZ Dabing",
-        "video_id": 26307772
-      },
-      {
-        "episode_id": 45667,
-        "display_name": "Zpátky do školy S02E11 - Abedovy nezvladatelné Vánoce CZ Dabing",
-        "video_id": 26307837
-      },
-      {
-        "episode_id": 45669,
-        "display_name": "Zpátky do školy S02E14 - Dračí doupě pro pokročilé CZ Dabing",
-        "video_id": 26307986
-      },
-      {
-        "episode_id": 45671,
-        "display_name": "Zpátky do školy S02E15 - Raný romantismus 21. století CZ Dabing",
-        "video_id": 26308057
-      },
-      {
-        "episode_id": 45673,
-        "display_name": "Zpátky do školy S02E17 - Úvod do politologie CZ Dabing",
-        "video_id": 26308118
-      },
-      {
-        "episode_id": 45675,
-        "display_name": "Zpátky do školy S02E19 - Kritické filmové studie CZ Dabing",
-        "video_id": 26308182
-      },
-      {
-        "episode_id": 45677,
-        "display_name": "Zpátky do školy S02E20 - Sommeliérský kurs CZ Dabing",
-        "video_id": 26308253
-      },
-      {
-        "episode_id": 45679,
-        "display_name": "Zpátky do školy S02E24 - Pro pár kuliček navíc CZ Dabing",
-        "video_id": 26308290
-      },
-      {
-        "episode_id": 45683,
-        "display_name": "Zpátky do školy S03E03 - Srovnávací ekologie CZ Dabing",
-        "video_id": 26308349
-      },
-      {
-        "episode_id": 45685,
-        "display_name": "Zpátky do školy S03E05 - Horor v sedmi děsivých krocích CZ Dabing",
-        "video_id": 26308377
-      },
-      {
-        "episode_id": 45687,
-        "display_name": "Zpátky do školy S03E07 - Studia moderního stěhování CZ Dabing",
-        "video_id": 26308445
-      },
-      {
-        "episode_id": 45689,
-        "display_name": "Zpátky do školy S03E09 - Stolní fotbal a noční bdění CZ Dabing",
-        "video_id": 26308618
-      },
-      {
-        "episode_id": 45691,
-        "display_name": "Zpátky do školy S03E11 - Městské manželství a sendvičové umění CZ Dabing",
-        "video_id": 26308700
-      },
-      {
-        "episode_id": 45693,
-        "display_name": "Zpátky do školy S03E13 - Digitální průzkum bytového designu CZ Dabing",
-        "video_id": 26308729
-      },
-      {
-        "episode_id": 45695,
-        "display_name": "Zpátky do školy S03E15 - Původ upírské mytologie CZ Dabing",
-        "video_id": 26308743
-      },
-      {
-        "episode_id": 45697,
-        "display_name": "Zpátky do školy S03E16 - Analýza virtuálních systémů CZ Dabing",
-        "video_id": 26308810
-      },
-      {
-        "episode_id": 45699,
-        "display_name": "Zpátky do školy S03E19 - Studium nedostupné CZ Dabing",
-        "video_id": 26308889
-      },
-      {
-        "episode_id": 45701,
-        "display_name": "Zpátky do školy S03E22 - Úvod do konečnosti CZ Dabing",
-        "video_id": 26308975
-      },
-      {
-        "episode_id": 45703,
-        "display_name": "Zpátky do školy S04E01 - Děkanské hry CZ Dabing",
-        "video_id": 26309133
-      },
-      {
-        "episode_id": 45705,
-        "display_name": "Zpátky do školy S04E03 - Festival inspektora Spacetimea CZ Dabing",
-        "video_id": 26310553
-      },
-      {
-        "episode_id": 45707,
-        "display_name": "Zpátky do školy S04E05 - Kooperační úniky v rodinných vztazích CZ Dabing",
-        "video_id": 26310575
-      },
-      {
-        "episode_id": 45709,
-        "display_name": "Zpátky do školy S04E07 - Tělesná výchovýchova CZ Dabing",
-        "video_id": 26310596
-      },
-      {
-        "episode_id": 45711,
-        "display_name": "Zpátky do školy S04E10 - Úvod do vázání uzlů CZ Dabing",
-        "video_id": 26310662
-      },
-      {
-        "episode_id": 45713,
-        "display_name": "Zpátky do školy S04E11 - Základy lidské anatomie CZ Dabing",
-        "video_id": 26310873
-      },
-      {
-        "episode_id": 45715,
-        "display_name": "Zpátky do školy S04E13 - Nejtemnější časová osa CZ Dabing",
-        "video_id": 26310938
-      },
-      {
-        "episode_id": 45719,
-        "display_name": "Zpátky do školy S05E02 - Úvod do učitelství CZ Dabing",
-        "video_id": 26310979
-      },
-      {
-        "episode_id": 45717,
-        "display_name": "Zpátky do školy S05E03 - Základy mezihýžďové numismatiky CZ Dabing",
-        "video_id": 26311048
-      },
-      {
-        "episode_id": 45721,
-        "display_name": "Zpátky do školy S05E06 - Analýza vytváření sítí CZ Dabing",
-        "video_id": 26311146
-      },
-      {
-        "episode_id": 45723,
-        "display_name": "Zpátky do školy S05E08 - Úvod do vývoje aplikací CZ Dabing",
-        "video_id": 26311162
-      },
-      {
-        "episode_id": 45725,
-        "display_name": "Zpátky do školy S05E10 - Dračí doupě pro zvlášť pokročilé CZ Dabing",
-        "video_id": 26311179
-      },
-      {
-        "episode_id": 45727,
-        "display_name": "Zpátky do školy S05E12 - Zachraňte Greendale CZ Dabing",
-        "video_id": 26311208
-      },
-      {
-        "episode_id": 45729,
-        "display_name": "Zpátky do školy S06E01 - Žebříky CZ Dabing",
-        "video_id": 26311332
-      },
-      {
         "episode_id": 37942,
         "display_name": "Černá listina S04E05 - Firma Lindquist (č. 105) CZ Dabing",
         "video_id": 26311748
@@ -76906,36 +76676,6 @@
         "episode_id": 37984,
         "display_name": "Černá listina S05E21 - Lawrence Dane Devlin (č. 26) CZ Dabing",
         "video_id": 26316643
-      },
-      {
-        "episode_id": 45741,
-        "display_name": "Zpátky do školy S06E04 - Lekce herectví a otevřená homosexualita CZ Dabing",
-        "video_id": 26311461
-      },
-      {
-        "episode_id": 45735,
-        "display_name": "Zpátky do školy S06E05 - Zákony robotiky a vězeňské etiky CZ Dabing",
-        "video_id": 26311755
-      },
-      {
-        "episode_id": 45737,
-        "display_name": "Zpátky do školy S06E08 - Úvod do recyklované kinematografie CZ Dabing",
-        "video_id": 26311815
-      },
-      {
-        "episode_id": 45733,
-        "display_name": "Zpátky do školy S06E09 - Základy šejdířství CZ Dabing",
-        "video_id": 26312018
-      },
-      {
-        "episode_id": 45731,
-        "display_name": "Zpátky do školy S06E10 - Základy přežití v divočině CZ Dabing",
-        "video_id": 26312176
-      },
-      {
-        "episode_id": 45739,
-        "display_name": "Zpátky do školy S06E11 - Moderní špionáž CZ Dabing",
-        "video_id": 26312322
       },
       {
         "episode_id": 4291,
@@ -86243,21 +85983,6 @@
         "video_id": 26460169
       },
       {
-        "episode_id": 13348,
-        "display_name": "Živí mrtví S02E08 - Nebraska CZ Dabing",
-        "video_id": 26474131
-      },
-      {
-        "episode_id": 13350,
-        "display_name": "Živí mrtví S02E10 - Víc než dál CZ Dabing",
-        "video_id": 26474913
-      },
-      {
-        "episode_id": 13349,
-        "display_name": "Živí mrtví S02E09 - Přestřelka CZ Dabing",
-        "video_id": 26474142
-      },
-      {
         "episode_id": 17518,
         "display_name": "Euforie S02E02 - Mimo Dosah CZ Dabing",
         "video_id": 26477613
@@ -86408,106 +86133,6 @@
         "video_id": 26480972
       },
       {
-        "episode_id": 49824,
-        "display_name": "Dexter S01E07 - Okruh přátel CZ Dabing",
-        "video_id": 26481306
-      },
-      {
-        "episode_id": 49820,
-        "display_name": "Dexter S01E10 - Vidět rudě CZ Dabing",
-        "video_id": 26481456
-      },
-      {
-        "episode_id": 34858,
-        "display_name": "Dexter S02E09 - Odpor je marný CZ Dabing",
-        "video_id": 26481604
-      },
-      {
-        "episode_id": 202991,
-        "display_name": "Banda S05E08 - Kosti a krev CZ Dabing",
-        "video_id": 26481286
-      },
-      {
-        "episode_id": 49817,
-        "display_name": "Dexter S01E02 - Krokodýlí slzy CZ Dabing",
-        "video_id": 26481575
-      },
-      {
-        "episode_id": 34861,
-        "display_name": "Dexter S02E12 - Britská invaze CZ Dabing",
-        "video_id": 26481731
-      },
-      {
-        "episode_id": 34873,
-        "display_name": "Dexter S03E12 - Chcete si vzít Dextera Morgana? CZ Dabing",
-        "video_id": 26482120
-      },
-      {
-        "episode_id": 34900,
-        "display_name": "Dexter S06E03 - Polda a bandita CZ Dabing",
-        "video_id": 26486692
-      },
-      {
-        "episode_id": 34922,
-        "display_name": "Dexter S08E01 - Nádhernej den CZ Dabing",
-        "video_id": 26486739
-      },
-      {
-        "episode_id": 34924,
-        "display_name": "Dexter S08E03 - Co žere Dextera Morgana? CZ Dabing",
-        "video_id": 26486833
-      },
-      {
-        "episode_id": 34926,
-        "display_name": "Dexter S08E05 - Vařila myšička kašičku CZ Dabing",
-        "video_id": 26486985
-      },
-      {
-        "episode_id": 17104,
-        "display_name": "Temný případ S04E03 - Noční krajina: Část 3 CZ Dabing",
-        "video_id": 26487182
-      },
-      {
-        "episode_id": 34889,
-        "display_name": "Dexter S05E04 - Kráska a zvíře CZ Dabing",
-        "video_id": 26486745
-      },
-      {
-        "episode_id": 34913,
-        "display_name": "Dexter S07E04 - Uteč CZ Dabing",
-        "video_id": 26486969
-      },
-      {
-        "episode_id": 34923,
-        "display_name": "Dexter S08E02 - Není nebe bez mráčku... CZ Dabing",
-        "video_id": 26487033
-      },
-      {
-        "episode_id": 34929,
-        "display_name": "Dexter S08E08 - Už tam budem? CZ Dabing",
-        "video_id": 26487055
-      },
-      {
-        "episode_id": 34931,
-        "display_name": "Dexter S08E10 - Sbohem, Miami CZ Dabing",
-        "video_id": 26487295
-      },
-      {
-        "episode_id": 34933,
-        "display_name": "Dexter S08E12 - Pamatuješ si ty zrůdy? CZ Dabing",
-        "video_id": 26487523
-      },
-      {
-        "episode_id": 13416,
-        "display_name": "Živí mrtví S06E11 - Rozvázat uzly CZ Dabing",
-        "video_id": 26491821
-      },
-      {
-        "episode_id": 13359,
-        "display_name": "Živí mrtví S03E06 - Štvanice CZ Dabing",
-        "video_id": 26491655
-      },
-      {
         "episode_id": 9975,
         "display_name": "Andor S01E12 - Ulice Rix CZ Dabing",
         "video_id": 26499255
@@ -86558,11 +86183,6 @@
         "video_id": 26500144
       },
       {
-        "episode_id": 34852,
-        "display_name": "Dexter S02E03 - Nepříjemná lež CZ Dabing",
-        "video_id": 26500549
-      },
-      {
         "episode_id": 42995,
         "display_name": "Útěk z vězení S04E02 - Vloupání CZ Dabing",
         "video_id": 26500902
@@ -86573,94 +86193,9 @@
         "video_id": 26501291
       },
       {
-        "episode_id": 3916,
-        "display_name": "Mandalorian S01E02 - Kapitola 2: Dítě CZ Dabing",
-        "video_id": 26502294
-      },
-      {
-        "episode_id": 3918,
-        "display_name": "Mandalorian S01E04 - Kapitola 4: Útočiště CZ Dabing",
-        "video_id": 26502476
-      },
-      {
-        "episode_id": 3920,
-        "display_name": "Mandalorian S01E06 - Kapitola 6: Vězeň CZ Dabing",
-        "video_id": 26502575
-      },
-      {
-        "episode_id": 3922,
-        "display_name": "Mandalorian S01E08 - Kapitola 8: Vykoupení CZ Dabing",
-        "video_id": 26502813
-      },
-      {
-        "episode_id": 3928,
-        "display_name": "Mandalorian S02E07 - Kapitola 15: Přesvědčení CZ Dabing",
-        "video_id": 26503182
-      },
-      {
-        "episode_id": 3932,
-        "display_name": "Mandalorian S03E02 - Kapitola 18: Doly na Mandaloru CZ Dabing",
-        "video_id": 26503244
-      },
-      {
-        "episode_id": 3832,
-        "display_name": "Lovci duchů S01E09 - Znovu doma CZ Dabing",
-        "video_id": 26503464
-      },
-      {
-        "episode_id": 3915,
-        "display_name": "Mandalorian S01E01 - Kapitola 1: Mandalorian CZ Dabing",
-        "video_id": 26502228
-      },
-      {
-        "episode_id": 3917,
-        "display_name": "Mandalorian S01E03 - Kapitola 3: Hřích CZ Dabing",
-        "video_id": 26502416
-      },
-      {
-        "episode_id": 3919,
-        "display_name": "Mandalorian S01E05 - Kapitola 5: Pistolník CZ Dabing",
-        "video_id": 26502936
-      },
-      {
-        "episode_id": 3921,
-        "display_name": "Mandalorian S01E07 - Kapitola 7: Zúčtování CZ Dabing",
-        "video_id": 26503137
-      },
-      {
-        "episode_id": 3923,
-        "display_name": "Mandalorian S02E01 - Kapitola 9: Šerif CZ Dabing",
-        "video_id": 26503332
-      },
-      {
-        "episode_id": 3955,
-        "display_name": "Mandalorian S02E06 - Kapitola 14: Tragédie CZ Dabing",
-        "video_id": 26503500
-      },
-      {
-        "episode_id": 3935,
-        "display_name": "Mandalorian S03E03 - Kapitola 19: Obrácení CZ Dabing",
-        "video_id": 26503998
-      },
-      {
-        "episode_id": 3937,
-        "display_name": "Mandalorian S03E04 - Kapitola 20: Nalezenec CZ Dabing",
-        "video_id": 26504234
-      },
-      {
         "episode_id": 64657,
         "display_name": "Dr. House S05E10 - Ať jedí koláče CZ Dabing",
         "video_id": 26504429
-      },
-      {
-        "episode_id": 5093,
-        "display_name": "Daredevil S03E01 - Zmrtvýchvstání CZ Dabing",
-        "video_id": 26505234
-      },
-      {
-        "episode_id": 2025,
-        "display_name": "Simpsonovi S01E01 - Vánoce u Simpsonových CZ Dabing",
-        "video_id": 26505646
       },
       {
         "episode_id": 52278,
@@ -87006,36 +86541,6 @@
         "episode_id": 52343,
         "display_name": "Chirurgové S06E15 - Poslední přednáška CZ Dabing",
         "video_id": 26525298
-      },
-      {
-        "episode_id": 5095,
-        "display_name": "Daredevil S03E03 - Za dobrotu CZ Dabing",
-        "video_id": 26525989
-      },
-      {
-        "episode_id": 5094,
-        "display_name": "Daredevil S03E02 - Prosím CZ Dabing",
-        "video_id": 26526178
-      },
-      {
-        "episode_id": 5096,
-        "display_name": "Daredevil S03E04 - Zaskočení CZ Dabing",
-        "video_id": 26526369
-      },
-      {
-        "episode_id": 5100,
-        "display_name": "Daredevil S03E08 - Nahoře a dole CZ Dabing",
-        "video_id": 26526520
-      },
-      {
-        "episode_id": 42906,
-        "display_name": "Flash S01E20 - Past CZ Dabing",
-        "video_id": 26526603
-      },
-      {
-        "episode_id": 42742,
-        "display_name": "Flash S02E03 - Rodina lotrů CZ Dabing",
-        "video_id": 26526784
       },
       {
         "episode_id": 52270,
@@ -144708,6 +144213,11 @@
         "video_id": 27203388
       },
       {
+        "episode_id": 39366,
+        "display_name": "Pokémon S18E34 - Festivalová výměna, festivalové sbohem! CZ Titulky",
+        "video_id": 27203668
+      },
+      {
         "episode_id": 38943,
         "display_name": "Pokémon S15E28 - Zápas o oživenou zkamenělinu! (Část druhá) CZ Dabing",
         "video_id": 27201444
@@ -145967,16 +145477,18 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 39,
+    "disabled": 31,
+    "ok": 38,
+    "sample_failed": 1,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
     "whisper_non_cz_needs_subtitles": 1240,
     "whisper_confirmed_cz": 519,
     "whisper_failed": 1,
-    "needs_whisper": 24907
+    "needs_whisper": 24916
   },
   "subtitle_followup_statuses": {
-    "needs_subtitle_setup_after_prehrajto_processing": 5262
+    "needs_subtitle_setup_after_prehrajto_processing": 5264
   }
 }
