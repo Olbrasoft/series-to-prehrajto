@@ -2,7 +2,7 @@
   "counts": {
     "backlog_episodes": 174508,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 18864,
+    "uploaded_episodes": 18867,
     "prepared_source_episodes": 43768,
     "description_series": 60,
     "description_episodes": 753,
@@ -20,6 +20,46 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-07-06T19:34:45Z",
+      "databaseId": 28817858829,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-06T19:34:32Z",
+      "databaseId": 28817838859,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-06T19:33:14Z",
+      "databaseId": 28817788108,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-06T19:32:37Z",
+      "databaseId": 28817763172,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-06T19:29:41Z",
+      "databaseId": 28817656519,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "backfill-subtitles"
+    },
+    {
+      "conclusion": "",
       "createdAt": "2026-07-06T19:25:09Z",
       "databaseId": 28817451147,
       "headBranch": "main",
@@ -27,11 +67,11 @@
       "workflowName": "prepare-manifest"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-06T19:24:56Z",
       "databaseId": 28817437787,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "update-descriptions"
     },
     {
@@ -51,11 +91,11 @@
       "workflowName": "audit-language"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-06T19:24:43Z",
       "databaseId": 28817425388,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -75,11 +115,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-06T19:20:27Z",
       "databaseId": 28817179081,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "backfill-subtitles"
     },
     {
@@ -137,46 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "backfill-subtitles"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-06T18:52:12Z",
-      "databaseId": 28815508336,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-06T18:50:39Z",
-      "databaseId": 28815417073,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "backfill-subtitles"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-06T18:49:18Z",
-      "databaseId": 28815338894,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-06T18:48:49Z",
-      "databaseId": 28815311748,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-06T18:48:12Z",
-      "databaseId": 28815274513,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
     }
   ],
   "gaps": {
@@ -72171,6 +72171,11 @@
         "video_id": 27203108
       },
       {
+        "episode_id": 39358,
+        "display_name": "Pokémon S18E28 - Nepříliš vzletný start! CZ Titulky",
+        "video_id": 27203367
+      },
+      {
         "episode_id": 38943,
         "display_name": "Pokémon S15E28 - Zápas o oživenou zkamenělinu! (Část druhá) CZ Dabing",
         "video_id": 27201444
@@ -72249,6 +72254,16 @@
         "episode_id": 39477,
         "display_name": "Pokémon S16E08 - Ztraceni v Lize oblasti Unova! CZ Dabing",
         "video_id": 27202995
+      },
+      {
+        "episode_id": 39451,
+        "display_name": "Pokémon S16E09 - Vítězství náleží silné strategii! CZ Dabing",
+        "video_id": 27203240
+      },
+      {
+        "episode_id": 39447,
+        "display_name": "Pokémon S16E10 - Cameronova tajná zbraň! CZ Dabing",
+        "video_id": 27203266
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -74866,506 +74881,6 @@
         "episode_id": 2115,
         "display_name": "American Horror Story S10E09 - Modrý měsíc CZ Dabing",
         "video_id": 26233139
-      },
-      {
-        "episode_id": 14653,
-        "display_name": "TY S01E06 - Bláznivá láska CZ Dabing",
-        "video_id": 26269884
-      },
-      {
-        "episode_id": 14655,
-        "display_name": "TY S01E08 - Jsem tvůj, kotě CZ Dabing",
-        "video_id": 26269952
-      },
-      {
-        "episode_id": 14657,
-        "display_name": "TY S01E10 - Modrovousův zámek CZ Dabing",
-        "video_id": 26270038
-      },
-      {
-        "episode_id": 14659,
-        "display_name": "TY S02E02 - Jen na okraj CZ Dabing",
-        "video_id": 26270127
-      },
-      {
-        "episode_id": 14661,
-        "display_name": "TY S02E04 - Hodný, zlý a Hendy CZ Dabing",
-        "video_id": 26270186
-      },
-      {
-        "episode_id": 14663,
-        "display_name": "TY S02E06 - Sbohem buď, králíčku můj CZ Dabing",
-        "video_id": 26270255
-      },
-      {
-        "episode_id": 14665,
-        "display_name": "TY S02E08 - Strach a hnus v Beverly Hills CZ Dabing",
-        "video_id": 26270306
-      },
-      {
-        "episode_id": 14667,
-        "display_name": "TY S02E10 - Láska nebeská CZ Dabing",
-        "video_id": 26270349
-      },
-      {
-        "episode_id": 14669,
-        "display_name": "TY S03E02 - Vzal jsem si vražedkyni se sekyrou CZ Dabing",
-        "video_id": 26270398
-      },
-      {
-        "episode_id": 14671,
-        "display_name": "TY S03E04 - Madre Linda pátrá CZ Dabing",
-        "video_id": 26270424
-      },
-      {
-        "episode_id": 14673,
-        "display_name": "TY S03E06 - Práce a rodina CZ Dabing",
-        "video_id": 26270489
-      },
-      {
-        "episode_id": 14675,
-        "display_name": "TY S03E08 - Swingování CZ Dabing",
-        "video_id": 26270536
-      },
-      {
-        "episode_id": 14677,
-        "display_name": "TY S03E10 - Co je to láska CZ Dabing",
-        "video_id": 26270585
-      },
-      {
-        "episode_id": 14679,
-        "display_name": "TY S04E02 - Portrét umělce CZ Dabing",
-        "video_id": 26270650
-      },
-      {
-        "episode_id": 14681,
-        "display_name": "TY S04E04 - Hampsy CZ Dabing",
-        "video_id": 26270717
-      },
-      {
-        "episode_id": 7406,
-        "display_name": "Proč? 13x proto S04E07 - Přijímací pohovor CZ Dabing",
-        "video_id": 26270836
-      },
-      {
-        "episode_id": 7408,
-        "display_name": "Proč? 13x proto S04E09 - Ples CZ Dabing",
-        "video_id": 26270919
-      },
-      {
-        "episode_id": 3128,
-        "display_name": "Orange Is the New Black S01E04 - Imaginární nepřátelé CZ Dabing",
-        "video_id": 26271039
-      },
-      {
-        "episode_id": 3126,
-        "display_name": "Orange Is the New Black S01E05 - Slepice CZ Dabing",
-        "video_id": 26271141
-      },
-      {
-        "episode_id": 3130,
-        "display_name": "Orange Is the New Black S01E06 - Vězeňská politika CZ Dabing",
-        "video_id": 26271240
-      },
-      {
-        "episode_id": 3132,
-        "display_name": "Orange Is the New Black S01E08 - Moskevská pašeračka CZ Dabing",
-        "video_id": 26271336
-      },
-      {
-        "episode_id": 3134,
-        "display_name": "Orange Is the New Black S01E09 - Den p*čuvzdání CZ Dabing",
-        "video_id": 26271440
-      },
-      {
-        "episode_id": 3138,
-        "display_name": "Orange Is the New Black S02E01 - Žíznivý ptáček CZ Dabing",
-        "video_id": 26271553
-      },
-      {
-        "episode_id": 3140,
-        "display_name": "Orange Is the New Black S02E02 - Vypadá modře, chutná červeně CZ Dabing",
-        "video_id": 26271650
-      },
-      {
-        "episode_id": 3136,
-        "display_name": "Orange Is the New Black S02E03 - Objetí mohou klamat CZ Dabing",
-        "video_id": 26271744
-      },
-      {
-        "episode_id": 3144,
-        "display_name": "Orange Is the New Black S02E07 - Comic Sans CZ Dabing",
-        "video_id": 26271846
-      },
-      {
-        "episode_id": 3142,
-        "display_name": "Orange Is the New Black S02E08 - Květináče CZ Dabing",
-        "video_id": 26271932
-      },
-      {
-        "episode_id": 3146,
-        "display_name": "Orange Is the New Black S02E09 - Propustka CZ Dabing",
-        "video_id": 26272064
-      },
-      {
-        "episode_id": 3148,
-        "display_name": "Orange Is the New Black S02E12 - Změna CZ Dabing",
-        "video_id": 26272182
-      },
-      {
-        "episode_id": 3150,
-        "display_name": "Orange Is the New Black S02E13 - Zásady slušného chování CZ Dabing",
-        "video_id": 26272330
-      },
-      {
-        "episode_id": 3152,
-        "display_name": "Orange Is the New Black S03E02 - Štěnice postelní CZ Dabing",
-        "video_id": 26272569
-      },
-      {
-        "episode_id": 3154,
-        "display_name": "Orange Is the New Black S03E04 - Prst, který zadržuje vodu v hrázi CZ Dabing",
-        "video_id": 26272717
-      },
-      {
-        "episode_id": 3156,
-        "display_name": "Orange Is the New Black S03E06 - Ching Chong Chang CZ Dabing",
-        "video_id": 26272834
-      },
-      {
-        "episode_id": 3158,
-        "display_name": "Orange Is the New Black S03E08 - Strach a jiné zápachy CZ Dabing",
-        "video_id": 26272959
-      },
-      {
-        "episode_id": 3160,
-        "display_name": "Orange Is the New Black S03E10 - Chlupy a kozičky CZ Dabing",
-        "video_id": 26273053
-      },
-      {
-        "episode_id": 14683,
-        "display_name": "TY S04E06 - Nejlepší přátelé CZ Dabing",
-        "video_id": 26270799
-      },
-      {
-        "episode_id": 14685,
-        "display_name": "TY S04E08 - Odkud přicházíš a kam jdeš? CZ Dabing",
-        "video_id": 26270889
-      },
-      {
-        "episode_id": 14687,
-        "display_name": "TY S04E10 - Smrt Jonathana Moora CZ Dabing",
-        "video_id": 26270967
-      },
-      {
-        "episode_id": 14689,
-        "display_name": "TY S05E02 - Krev za krev CZ Dabing",
-        "video_id": 26271022
-      },
-      {
-        "episode_id": 14691,
-        "display_name": "TY S05E04 - My Fair Maddie CZ Dabing",
-        "video_id": 26271112
-      },
-      {
-        "episode_id": 14693,
-        "display_name": "TY S05E06 - Temná tvář lásky CZ Dabing",
-        "video_id": 26271162
-      },
-      {
-        "episode_id": 14695,
-        "display_name": "TY S05E08 - Folie à deux CZ Dabing",
-        "video_id": 26271202
-      },
-      {
-        "episode_id": 14697,
-        "display_name": "TY S05E10 - Finále CZ Dabing",
-        "video_id": 26271273
-      },
-      {
-        "episode_id": 82255,
-        "display_name": "Boj o moc S01E02 - Prů*er v továrně na sr*čky CZ Dabing",
-        "video_id": 26271329
-      },
-      {
-        "episode_id": 82257,
-        "display_name": "Boj o moc S01E06 - Na čí jsi straně? CZ Dabing",
-        "video_id": 26271366
-      },
-      {
-        "episode_id": 82259,
-        "display_name": "Boj o moc S01E08 - Praha CZ Dabing",
-        "video_id": 26271414
-      },
-      {
-        "episode_id": 82263,
-        "display_name": "Boj o moc S02E03 - Lov CZ Dabing",
-        "video_id": 26271485
-      },
-      {
-        "episode_id": 82269,
-        "display_name": "Boj o moc S02E10 - Sbohem a neplačte CZ Dabing",
-        "video_id": 26271582
-      },
-      {
-        "episode_id": 82235,
-        "display_name": "Boj o moc S03E03 - Rozklad CZ Dabing",
-        "video_id": 26271696
-      },
-      {
-        "episode_id": 82237,
-        "display_name": "Boj o moc S03E06 - Co je třeba CZ Dabing",
-        "video_id": 26271794
-      },
-      {
-        "episode_id": 82239,
-        "display_name": "Boj o moc S03E08 - Toskánsko CZ Dabing",
-        "video_id": 26271916
-      },
-      {
-        "episode_id": 82253,
-        "display_name": "Boj o moc S03E09 - Držte si klobouky CZ Dabing",
-        "video_id": 26272090
-      },
-      {
-        "episode_id": 82241,
-        "display_name": "Boj o moc S04E01 - Pochlebovači CZ Dabing",
-        "video_id": 26272223
-      },
-      {
-        "episode_id": 82243,
-        "display_name": "Boj o moc S04E04 - Líbánkové státy CZ Dabing",
-        "video_id": 26272285
-      },
-      {
-        "episode_id": 82249,
-        "display_name": "Boj o moc S04E05 - Seznam smrti CZ Dabing",
-        "video_id": 26272356
-      },
-      {
-        "episode_id": 82247,
-        "display_name": "Boj o moc S04E08 - Amerika rozhodne CZ Dabing",
-        "video_id": 26272432
-      },
-      {
-        "episode_id": 82245,
-        "display_name": "Boj o moc S04E09 - Církev a stát CZ Dabing",
-        "video_id": 26272534
-      },
-      {
-        "episode_id": 59909,
-        "display_name": "One Piece S01E01 - 1. epizoda CZ Dabing",
-        "video_id": 26272633
-      },
-      {
-        "episode_id": 59911,
-        "display_name": "One Piece S01E04 - 4. epizoda CZ Dabing",
-        "video_id": 26272765
-      },
-      {
-        "episode_id": 59913,
-        "display_name": "One Piece S01E06 - 6. epizoda CZ Dabing",
-        "video_id": 26272871
-      },
-      {
-        "episode_id": 59915,
-        "display_name": "One Piece S01E08 - 8. epizoda CZ Dabing",
-        "video_id": 26272925
-      },
-      {
-        "episode_id": 35805,
-        "display_name": "One Piece S02E02 CZ Dabing",
-        "video_id": 26272993
-      },
-      {
-        "episode_id": 35807,
-        "display_name": "One Piece S02E04 CZ Dabing",
-        "video_id": 26273055
-      },
-      {
-        "episode_id": 3162,
-        "display_name": "Orange Is the New Black S03E12 - Nenuť mě si pro tebe dojít CZ Dabing",
-        "video_id": 26273149
-      },
-      {
-        "episode_id": 3164,
-        "display_name": "Orange Is the New Black S04E01 - Pevné tělo CZ Dabing",
-        "video_id": 26273221
-      },
-      {
-        "episode_id": 3166,
-        "display_name": "Orange Is the New Black S04E03 - Mluv nebo mlč CZ Dabing",
-        "video_id": 26273274
-      },
-      {
-        "episode_id": 3168,
-        "display_name": "Orange Is the New Black S04E05 - Vždy budeme mít Baltimore CZ Dabing",
-        "video_id": 26273336
-      },
-      {
-        "episode_id": 3170,
-        "display_name": "Orange Is the New Black S04E07 - V mojí hlavě to znělo líp CZ Dabing",
-        "video_id": 26273411
-      },
-      {
-        "episode_id": 3172,
-        "display_name": "Orange Is the New Black S04E09 - Dbám o čistotu CZ Dabing",
-        "video_id": 26273492
-      },
-      {
-        "episode_id": 3174,
-        "display_name": "Orange Is the New Black S04E11 - S lidmi to umí CZ Dabing",
-        "video_id": 26273590
-      },
-      {
-        "episode_id": 3176,
-        "display_name": "Orange Is the New Black S04E13 - Toast už nikdy nebude chlebem CZ Dabing",
-        "video_id": 26273710
-      },
-      {
-        "episode_id": 20428,
-        "display_name": "Orange Is the New Black S05E02 - A pak je tu Frieda... CZ Dabing",
-        "video_id": 26273789
-      },
-      {
-        "episode_id": 20430,
-        "display_name": "Orange Is the New Black S05E04 - Litchfield má talent CZ Dabing",
-        "video_id": 26273853
-      },
-      {
-        "episode_id": 20432,
-        "display_name": "Orange Is the New Black S05E06 - Ohnivě ostré Cheetos CZ Dabing",
-        "video_id": 26273919
-      },
-      {
-        "episode_id": 20438,
-        "display_name": "Orange Is the New Black S05E12 - Tetování CZ Dabing",
-        "video_id": 26273995
-      },
-      {
-        "episode_id": 20440,
-        "display_name": "Orange Is the New Black S06E01 - Kdo to ví líp než já CZ Dabing",
-        "video_id": 26274041
-      },
-      {
-        "episode_id": 20442,
-        "display_name": "Orange Is the New Black S06E03 - Každá za sebe CZ Dabing",
-        "video_id": 26274088
-      },
-      {
-        "episode_id": 20444,
-        "display_name": "Orange Is the New Black S06E05 - Trable, trable CZ Dabing",
-        "video_id": 26274163
-      },
-      {
-        "episode_id": 20446,
-        "display_name": "Orange Is the New Black S06E07 - Změna povětří CZ Dabing",
-        "video_id": 26274232
-      },
-      {
-        "episode_id": 20448,
-        "display_name": "Orange Is the New Black S06E09 - Přerušit řetěz CZ Dabing",
-        "video_id": 26274311
-      },
-      {
-        "episode_id": 20450,
-        "display_name": "Orange Is the New Black S06E11 - Temný zvrat CZ Dabing",
-        "video_id": 26274428
-      },
-      {
-        "episode_id": 20452,
-        "display_name": "Orange Is the New Black S06E13 - Svoboda CZ Dabing",
-        "video_id": 26274544
-      },
-      {
-        "episode_id": 20454,
-        "display_name": "Orange Is the New Black S07E02 - Samé dobroty CZ Dabing",
-        "video_id": 26274678
-      },
-      {
-        "episode_id": 35809,
-        "display_name": "One Piece S02E06 CZ Dabing",
-        "video_id": 26273108
-      },
-      {
-        "episode_id": 35811,
-        "display_name": "One Piece S02E08 CZ Dabing",
-        "video_id": 26273177
-      },
-      {
-        "episode_id": 25527,
-        "display_name": "Proč? 13x proto S01E01 - První kazeta, první strana CZ Dabing",
-        "video_id": 26273226
-      },
-      {
-        "episode_id": 25529,
-        "display_name": "Proč? 13x proto S01E03 - Druhá kazeta, první strana CZ Dabing",
-        "video_id": 26273261
-      },
-      {
-        "episode_id": 25531,
-        "display_name": "Proč? 13x proto S01E05 - Třetí kazeta, první strana CZ Dabing",
-        "video_id": 26273320
-      },
-      {
-        "episode_id": 25533,
-        "display_name": "Proč? 13x proto S01E07 - Čtvrtá kazeta, první strana CZ Dabing",
-        "video_id": 26273365
-      },
-      {
-        "episode_id": 25535,
-        "display_name": "Proč? 13x proto S01E09 - Pátá kazeta, první strana CZ Dabing",
-        "video_id": 26273413
-      },
-      {
-        "episode_id": 25537,
-        "display_name": "Proč? 13x proto S01E11 - Šestá kazeta, první strana CZ Dabing",
-        "video_id": 26273465
-      },
-      {
-        "episode_id": 25539,
-        "display_name": "Proč? 13x proto S01E13 - Sedmá kazeta, první strana CZ Dabing",
-        "video_id": 26273506
-      },
-      {
-        "episode_id": 25541,
-        "display_name": "Proč? 13x proto S02E02 - Dvě líbající se holky CZ Dabing",
-        "video_id": 26273555
-      },
-      {
-        "episode_id": 25543,
-        "display_name": "Proč? 13x proto S02E04 - Druhý polaroid CZ Dabing",
-        "video_id": 26273606
-      },
-      {
-        "episode_id": 25545,
-        "display_name": "Proč? 13x proto S02E06 - Úsměv na konci doku CZ Dabing",
-        "video_id": 26273661
-      },
-      {
-        "episode_id": 25547,
-        "display_name": "Proč? 13x proto S02E08 - Malá holka CZ Dabing",
-        "video_id": 26273694
-      },
-      {
-        "episode_id": 25549,
-        "display_name": "Proč? 13x proto S02E10 - Úsměv, děvky CZ Dabing",
-        "video_id": 26273752
-      },
-      {
-        "episode_id": 25551,
-        "display_name": "Proč? 13x proto S02E12 - Krabice polaroidů CZ Dabing",
-        "video_id": 26273797
-      },
-      {
-        "episode_id": 10549,
-        "display_name": "Proč? 13x proto S03E02 - Lež je neodmyslitelnou součástí života CZ Dabing",
-        "video_id": 26273844
-      },
-      {
-        "episode_id": 25553,
-        "display_name": "Proč? 13x proto S03E03 - Dobrého člověka od špatného nerozeznáš CZ Dabing",
-        "video_id": 26273911
       },
       {
         "episode_id": 10547,
@@ -145918,6 +145433,11 @@
         "video_id": 27203108
       },
       {
+        "episode_id": 39358,
+        "display_name": "Pokémon S18E28 - Nepříliš vzletný start! CZ Titulky",
+        "video_id": 27203367
+      },
+      {
         "episode_id": 38943,
         "display_name": "Pokémon S15E28 - Zápas o oživenou zkamenělinu! (Část druhá) CZ Dabing",
         "video_id": 27201444
@@ -145996,6 +145516,16 @@
         "episode_id": 39477,
         "display_name": "Pokémon S16E08 - Ztraceni v Lize oblasti Unova! CZ Dabing",
         "video_id": 27202995
+      },
+      {
+        "episode_id": 39451,
+        "display_name": "Pokémon S16E09 - Vítězství náleží silné strategii! CZ Dabing",
+        "video_id": 27203240
+      },
+      {
+        "episode_id": 39447,
+        "display_name": "Pokémon S16E10 - Cameronova tajná zbraň! CZ Dabing",
+        "video_id": 27203266
       }
     ],
     "prepared_not_upload_ready": [
