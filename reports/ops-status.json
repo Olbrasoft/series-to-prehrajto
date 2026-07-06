@@ -2,44 +2,116 @@
   "counts": {
     "backlog_episodes": 174784,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 18626,
+    "uploaded_episodes": 18635,
     "prepared_source_episodes": 43628,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 595,
-    "language_whisper_attempted_sources": 123,
-    "language_pending_whisper_sources": 2624,
+    "language_audited_sources": 40,
+    "language_whisper_attempted_sources": 40,
+    "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 26589,
-    "whisper_review_pending_sources": 25129,
+    "whisper_review_pending_sources": 25089,
     "subtitle_followup_sources": 5217,
     "subtitle_followup_pending_sources": 5217
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-07-06T11:49:31Z",
-      "databaseId": 28789346343,
+      "createdAt": "2026-07-06T12:04:35Z",
+      "databaseId": 28790168257,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
-      "createdAt": "2026-07-06T11:47:06Z",
-      "databaseId": 28789221504,
+      "createdAt": "2026-07-06T12:04:29Z",
+      "databaseId": 28790163254,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-06T12:04:24Z",
+      "databaseId": 28790157647,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-06T12:04:23Z",
+      "databaseId": 28790156979,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "backfill-subtitles"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-07-06T11:56:44Z",
+      "databaseId": 28789738204,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-sources"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-06T11:55:23Z",
+      "databaseId": 28789667767,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "backfill-subtitles"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-06T11:50:39Z",
+      "databaseId": 28789408991,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-06T11:50:36Z",
+      "databaseId": 28789405871,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-06T11:50:33Z",
+      "databaseId": 28789403101,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-06T11:49:31Z",
+      "databaseId": 28789346343,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-06T11:47:06Z",
+      "databaseId": 28789221504,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "backfill-subtitles"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-06T11:43:48Z",
       "databaseId": 28789042335,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
@@ -102,78 +174,6 @@
       "conclusion": "success",
       "createdAt": "2026-07-06T11:14:55Z",
       "databaseId": 28787511870,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "backfill-subtitles"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-06T11:14:41Z",
-      "databaseId": 28787499093,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-06T11:14:39Z",
-      "databaseId": 28787496579,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-06T11:14:37Z",
-      "databaseId": 28787494825,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-06T11:13:28Z",
-      "databaseId": 28787431598,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-07-06T11:13:23Z",
-      "databaseId": 28787427663,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-06T11:10:51Z",
-      "databaseId": 28787288148,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "backfill-subtitles"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-07-06T11:07:05Z",
-      "databaseId": 28787075847,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-06T11:06:40Z",
-      "databaseId": 28787050699,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-06T10:58:56Z",
-      "databaseId": 28786628988,
       "headBranch": "main",
       "status": "completed",
       "workflowName": "backfill-subtitles"
@@ -71059,6 +71059,51 @@
         "episode_id": 34197,
         "display_name": "Pokémon S01E66 - Vánice CZ Dabing",
         "video_id": 27193957
+      },
+      {
+        "episode_id": 34211,
+        "display_name": "Pokémon S01E75 - Zlý až na kost CZ Dabing",
+        "video_id": 27194014
+      },
+      {
+        "episode_id": 34203,
+        "display_name": "Pokémon S01E76 - Plamenné zahajení turnaje CZ Dabing",
+        "video_id": 27194031
+      },
+      {
+        "episode_id": 34213,
+        "display_name": "Pokémon S02E01 - Panika v Oblázkovém městě CZ Dabing",
+        "video_id": 27194057
+      },
+      {
+        "episode_id": 34217,
+        "display_name": "Pokémon S02E02 - Hrůza ve vzduchu CZ Dabing",
+        "video_id": 27194095
+      },
+      {
+        "episode_id": 34215,
+        "display_name": "Pokémon S02E03 - Problémy s pokéballem CZ Dabing",
+        "video_id": 27194122
+      },
+      {
+        "episode_id": 34219,
+        "display_name": "Pokémon S02E07 - Skleněný Onix CZ Dabing",
+        "video_id": 27194140
+      },
+      {
+        "episode_id": 34221,
+        "display_name": "Pokémon S02E09 - Nebezpečné krunýře CZ Dabing",
+        "video_id": 27194158
+      },
+      {
+        "episode_id": 34223,
+        "display_name": "Pokémon S02E11 - Sbohem Psyducku CZ Dabing",
+        "video_id": 27194170
+      },
+      {
+        "episode_id": 39175,
+        "display_name": "Pokémon S10E01 - Dívčí dobrodružství začíná CZ Dabing",
+        "video_id": 27194245
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -150446,6 +150491,51 @@
         "episode_id": 34197,
         "display_name": "Pokémon S01E66 - Vánice CZ Dabing",
         "video_id": 27193957
+      },
+      {
+        "episode_id": 34211,
+        "display_name": "Pokémon S01E75 - Zlý až na kost CZ Dabing",
+        "video_id": 27194014
+      },
+      {
+        "episode_id": 34203,
+        "display_name": "Pokémon S01E76 - Plamenné zahajení turnaje CZ Dabing",
+        "video_id": 27194031
+      },
+      {
+        "episode_id": 34213,
+        "display_name": "Pokémon S02E01 - Panika v Oblázkovém městě CZ Dabing",
+        "video_id": 27194057
+      },
+      {
+        "episode_id": 34217,
+        "display_name": "Pokémon S02E02 - Hrůza ve vzduchu CZ Dabing",
+        "video_id": 27194095
+      },
+      {
+        "episode_id": 34215,
+        "display_name": "Pokémon S02E03 - Problémy s pokéballem CZ Dabing",
+        "video_id": 27194122
+      },
+      {
+        "episode_id": 34219,
+        "display_name": "Pokémon S02E07 - Skleněný Onix CZ Dabing",
+        "video_id": 27194140
+      },
+      {
+        "episode_id": 34221,
+        "display_name": "Pokémon S02E09 - Nebezpečné krunýře CZ Dabing",
+        "video_id": 27194158
+      },
+      {
+        "episode_id": 34223,
+        "display_name": "Pokémon S02E11 - Sbohem Psyducku CZ Dabing",
+        "video_id": 27194170
+      },
+      {
+        "episode_id": 39175,
+        "display_name": "Pokémon S10E01 - Dívčí dobrodružství začíná CZ Dabing",
+        "video_id": 27194245
       }
     ],
     "prepared_not_upload_ready": [
@@ -150752,326 +150842,6 @@
     ],
     "whisper_review_pending": [
       {
-        "episode_id": 183497,
-        "source_id": -64651507827776117,
-        "series_title": "Blue",
-        "episode_code": "S01E40",
-        "source_title": "Big.Blue.S01E40.Captain.Lemo.1080p.ROKU.WEB-DL.DD5.1.H.264-NTb",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183498,
-        "source_id": -283427478517711,
-        "series_title": "Blue",
-        "episode_code": "S01E41",
-        "source_title": "Big.Blue.S01E41.My.Dinner.With.Krill.1080p.ROKU.WEB-DL.DD5.1.H.264-NTb",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183499,
-        "source_id": -42876141846025959,
-        "series_title": "Blue",
-        "episode_code": "S01E42",
-        "source_title": "Big.Blue.S01E42.What's.Your.Vector.Collector.1080p.ROKU.WEB-DL.DD5.1.H.264-NTb",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183500,
-        "source_id": -47940899213925091,
-        "series_title": "Blue",
-        "episode_code": "S01E43",
-        "source_title": "Big.Blue.S01E43.A.Night.at.the.TheatRRR.1080p.ROKU.WEB-DL.DD5.1.H.264-NTb",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183501,
-        "source_id": -19191677500780966,
-        "series_title": "Blue",
-        "episode_code": "S01E44",
-        "source_title": "Big.Blue.S01E44.Hero.Boy.1080p.ROKU.WEB-DL.DD5.1.H.264-NTb",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183502,
-        "source_id": -9241124262070869,
-        "series_title": "Blue",
-        "episode_code": "S01E45",
-        "source_title": "Big.Blue.S01E45.Lemo.Vs.Phil.1080p.ROKU.WEB-DL.DD5.1.H.264-NTb",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183503,
-        "source_id": -57183970315456900,
-        "series_title": "Blue",
-        "episode_code": "S01E46",
-        "source_title": "Big.Blue.S01E46.Busted.1080p.ROKU.WEB-DL.DD5.1.H.264-NTb",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183504,
-        "source_id": -68461963706917345,
-        "series_title": "Blue",
-        "episode_code": "S01E47",
-        "source_title": "Big.Blue.S01E47.The.Incredible.Lemo.and.his.Dancing.Sea.Flea.Sloan.1080p.ROKU.WEB-DL.DD5.1.H.264-NTb",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183505,
-        "source_id": -41267691425302687,
-        "series_title": "Blue",
-        "episode_code": "S01E48",
-        "source_title": "Big.Blue.S01E48.Baby.Bro.No.More.1080p.ROKU.WEB-DL.DD5.1.H.264-NTb",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183506,
-        "source_id": -41717517290831524,
-        "series_title": "Blue",
-        "episode_code": "S01E49",
-        "source_title": "Big.Blue.S01E49.Now.You.Sea.Ghosts.Now.You.Don't.1080p.ROKU.WEB-DL.DD5.1.H.264-NTb",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183507,
-        "source_id": -63058241259676588,
-        "series_title": "Blue",
-        "episode_code": "S01E50",
-        "source_title": "Bluey.S01E50.1080p.WEB.h264-SALT",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183507,
-        "source_id": -43794747783381650,
-        "series_title": "Blue",
-        "episode_code": "S01E50",
-        "source_title": "Big.Blue.S01E50.Captain.Bossy.Fins.1080p.ROKU.WEB-DL.DD5.1.H.264-NTb",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183508,
-        "source_id": -27674109514922416,
-        "series_title": "Blue",
-        "episode_code": "S01E51",
-        "source_title": "Bluey.S01E51.1080p.WEB.h264-SALT",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183508,
-        "source_id": -4076035225246808,
-        "series_title": "Blue",
-        "episode_code": "S01E51",
-        "source_title": "Big.Blue.S01E51.Ready.Steady.Lettie.1080p.ROKU.WEB-DL.DD5.1.H.264-NTb",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183509,
-        "source_id": -7072595242766958,
-        "series_title": "Blue",
-        "episode_code": "S01E52",
-        "source_title": "Bluey.S01E52.1080p.WEB.h264-SALT",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183509,
-        "source_id": -19786914624581813,
-        "series_title": "Blue",
-        "episode_code": "S01E52",
-        "source_title": "Big.Blue.S01E52.Return.of.the.Blegh.1080p.ROKU.WEB-DL.DD5.1.H.264-NTb",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183510,
-        "source_id": -71259047429458263,
-        "series_title": "Blue",
-        "episode_code": "S02E01",
-        "source_title": "Shades of Blue - s02e01",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183510,
-        "source_id": -12263541450977642,
-        "series_title": "Blue",
-        "episode_code": "S02E01",
-        "source_title": "Blue S02E01 1080p",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183511,
-        "source_id": -60443072483134571,
-        "series_title": "Blue",
-        "episode_code": "S02E02",
-        "source_title": "Shades of Blue - s02e02",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183511,
-        "source_id": -18183030214586700,
-        "series_title": "Blue",
-        "episode_code": "S02E02",
-        "source_title": "Shades of Blue - S02E02 - Eye Of The Hurricane",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183511,
-        "source_id": -44913196694775601,
-        "series_title": "Blue",
-        "episode_code": "S02E02",
-        "source_title": "Shades of Blue S02E02 SKtit V OBRAZE",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183511,
-        "source_id": -59678715941524531,
-        "series_title": "Blue",
-        "episode_code": "S02E02",
-        "source_title": "Blue S02E02 1080p",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183512,
-        "source_id": -15942083796150870,
-        "series_title": "Blue",
-        "episode_code": "S02E03",
-        "source_title": "Shades of Blue - s02e03",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183512,
-        "source_id": -6356567409006200,
-        "series_title": "Blue",
-        "episode_code": "S02E03",
-        "source_title": "NYPD.Blue.S02E03.Cop.Suey.DVDRip.XviD-PARAMOUNT",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183512,
-        "source_id": -32559106546683111,
-        "series_title": "Blue",
-        "episode_code": "S02E03",
-        "source_title": "Shades of Blue S02E03 SKtit V OBRAZE",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183512,
-        "source_id": -54042859999913533,
-        "series_title": "Blue",
-        "episode_code": "S02E03",
-        "source_title": "Blue S02E03 1080p",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183513,
-        "source_id": -38411522203603734,
-        "series_title": "Blue",
-        "episode_code": "S02E04",
-        "source_title": "Shades of Blue - s02e04",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183513,
-        "source_id": -49299247027805612,
-        "series_title": "Blue",
-        "episode_code": "S02E04",
-        "source_title": "Shades of Blue - S02E04 - Daddy's Girl",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183513,
-        "source_id": -10202890655913674,
-        "series_title": "Blue",
-        "episode_code": "S02E04",
-        "source_title": "Blue S02E04 1080p",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183514,
-        "source_id": -1654787936832905,
-        "series_title": "Blue",
-        "episode_code": "S02E05",
-        "source_title": "Shades of Blue - s02e05",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183514,
-        "source_id": -62524483711509549,
-        "series_title": "Blue",
-        "episode_code": "S02E05",
-        "source_title": "Shades of Blue - S02E05 - Sweet Caroline",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183514,
-        "source_id": -63631954572396383,
-        "series_title": "Blue",
-        "episode_code": "S02E05",
-        "source_title": "Shades of Blue S02E05 SKtit V OBRAZE",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183514,
-        "source_id": -3565757067882553,
-        "series_title": "Blue",
-        "episode_code": "S02E05",
-        "source_title": "Blue S02E05 1080p",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183515,
-        "source_id": -20604271925992831,
-        "series_title": "Blue",
-        "episode_code": "S02E06",
-        "source_title": "Shades of Blue - s02e06",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183515,
-        "source_id": -54441369555410696,
-        "series_title": "Blue",
-        "episode_code": "S02E06",
-        "source_title": "Shades of Blue - S02E06 - Fracture",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183515,
-        "source_id": -52123900110116198,
-        "series_title": "Blue",
-        "episode_code": "S02E06",
-        "source_title": "Shades of Blue S02E06 SKtit V OBRAZE",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183515,
-        "source_id": -29482436593457786,
-        "series_title": "Blue",
-        "episode_code": "S02E06",
-        "source_title": "Blue S02E06 1080p",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183516,
-        "source_id": -4137463363207691,
-        "series_title": "Blue",
-        "episode_code": "S02E07",
-        "source_title": "Shades of Blue - s02e07",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183516,
-        "source_id": -6794533271248402,
-        "series_title": "Blue",
-        "episode_code": "S02E07",
-        "source_title": "Shades of Blue - S02E07 - A House Divided",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183516,
-        "source_id": -24182201244638146,
-        "series_title": "Blue",
-        "episode_code": "S02E07",
-        "source_title": "NYPD.Blue.S02E07.Double.Abandando.DVDRip.XviD-PARAMOUNT",
-        "status": "needs_whisper"
-      },
-      {
         "episode_id": 183516,
         "source_id": -46608211167224226,
         "series_title": "Blue",
@@ -151149,6 +150919,326 @@
         "series_title": "Blue",
         "episode_code": "S02E09",
         "source_title": "NYPD.Blue.S02E09.Don.We.Know.Our.Gay.Appeal.DVDRip.XviD-PARAMOUNT",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 183518,
+        "source_id": -56524186131399693,
+        "series_title": "Blue",
+        "episode_code": "S02E09",
+        "source_title": "Shades of Blue S02E09 SKtit V OBRAZE",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 183518,
+        "source_id": -17555546027268533,
+        "series_title": "Blue",
+        "episode_code": "S02E09",
+        "source_title": "Blue S02E09 1080p",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 183519,
+        "source_id": -11552058961853867,
+        "series_title": "Blue",
+        "episode_code": "S02E10",
+        "source_title": "Shades of Blue - s02e10",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 183519,
+        "source_id": -38811727875013515,
+        "series_title": "Blue",
+        "episode_code": "S02E10",
+        "source_title": "Shades of Blue - S02E10 - Whoever Fights Monsters",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 183519,
+        "source_id": -57679261819957413,
+        "series_title": "Blue",
+        "episode_code": "S02E10",
+        "source_title": "NYPD.Blue.S02E10.In.The.Butt.Bob.DVDRip.XviD-PARAMOUNT",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 183519,
+        "source_id": -47933746439225569,
+        "series_title": "Blue",
+        "episode_code": "S02E10",
+        "source_title": "Shades of Blue S02E10 SKtit V OBRAZE",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 183519,
+        "source_id": -1911067418947787,
+        "series_title": "Blue",
+        "episode_code": "S02E10",
+        "source_title": "Blue S02E10 1080p",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 183520,
+        "source_id": -39102686091892524,
+        "series_title": "Blue",
+        "episode_code": "S02E11",
+        "source_title": "Shades of Blue - s02e11",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 183520,
+        "source_id": -55648929083271350,
+        "series_title": "Blue",
+        "episode_code": "S02E11",
+        "source_title": "Shades of Blue - S02E11 - The Quality Of Mercy",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 183520,
+        "source_id": -10302532388211818,
+        "series_title": "Blue",
+        "episode_code": "S02E11",
+        "source_title": "Bluey.S02E11.1080p.WEB.h264-SALT",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 183520,
+        "source_id": -59308563358041340,
+        "series_title": "Blue",
+        "episode_code": "S02E11",
+        "source_title": "NYPD.Blue.S02E11.Vishy-Vashy.Vinnie.DVDRip.XviD-PARAMOUNT",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 183520,
+        "source_id": -42041845568115986,
+        "series_title": "Blue",
+        "episode_code": "S02E11",
+        "source_title": "Blue S02E11 1080p",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 183521,
+        "source_id": -35672414189240115,
+        "series_title": "Blue",
+        "episode_code": "S02E12",
+        "source_title": "Shades of Blue - s02e12",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 183521,
+        "source_id": -50644805104354733,
+        "series_title": "Blue",
+        "episode_code": "S02E12",
+        "source_title": "Shades of Blue - S02E12 - Behind the Mask",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 183521,
+        "source_id": -739899020179220,
+        "series_title": "Blue",
+        "episode_code": "S02E12",
+        "source_title": "NYPD.Blue.S02E12.Large-Mouth.Bass.DVDRip.XviD-PARAMOUNT",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 183521,
+        "source_id": -42611474818037722,
+        "series_title": "Blue",
+        "episode_code": "S02E12",
+        "source_title": "Shades of Blue S02E12 SKtit V OBRAZE",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 183521,
+        "source_id": -5525599466271672,
+        "series_title": "Blue",
+        "episode_code": "S02E12",
+        "source_title": "Blue S02E12 1080p",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 183522,
+        "source_id": -30672516263243926,
+        "series_title": "Blue",
+        "episode_code": "S02E13",
+        "source_title": "Shades of Blue - s02e13",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 183522,
+        "source_id": -57689478452616726,
+        "series_title": "Blue",
+        "episode_code": "S02E13",
+        "source_title": "Shades of Blue - S02E13 - Broken Dolls",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 183522,
+        "source_id": -68535055321570567,
+        "series_title": "Blue",
+        "episode_code": "S02E13",
+        "source_title": "NYPD.Blue.S02E13.Travels.With.Andy.DVDRip.XviD-PARAMOUNT",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 183522,
+        "source_id": -49444536253902917,
+        "series_title": "Blue",
+        "episode_code": "S02E13",
+        "source_title": "Shades of Blue S02E13 SKtit V OBRAZE",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 183523,
+        "source_id": -15454532118859059,
+        "series_title": "Blue",
+        "episode_code": "S02E14",
+        "source_title": "Bluey.S02E14.1080p.WEB.h264-SALT",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 183523,
+        "source_id": -31928847536390560,
+        "series_title": "Blue",
+        "episode_code": "S02E14",
+        "source_title": "NYPD.Blue.S02E14",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 183523,
+        "source_id": -67597398852134895,
+        "series_title": "Blue",
+        "episode_code": "S02E14",
+        "source_title": "Blue S02E14 1080p",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 183524,
+        "source_id": -19400111648980771,
+        "series_title": "Blue",
+        "episode_code": "S02E15",
+        "source_title": "NYPD.Blue.S02E15.Bombs.Away.DVDRip.XviD-PARAMOUNT",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 183524,
+        "source_id": -15867105317586649,
+        "series_title": "Blue",
+        "episode_code": "S02E15",
+        "source_title": "Blue S02E15 1080p",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 183525,
+        "source_id": -9163816225493322,
+        "series_title": "Blue",
+        "episode_code": "S02E16",
+        "source_title": "NYPD.Blue.S02E16.Unamerican.Grafitti.DVDRip.XviD-PARAMOUNT",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 183525,
+        "source_id": -65380874374183575,
+        "series_title": "Blue",
+        "episode_code": "S02E16",
+        "source_title": "Blue S02E16 1080p",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 183526,
+        "source_id": -41765946277068861,
+        "series_title": "Blue",
+        "episode_code": "S02E17",
+        "source_title": "NYPD.Blue.S02E17.Dirty.Socks.DVDRip.XviD-PARAMOUNT",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 183526,
+        "source_id": -3724143672493676,
+        "series_title": "Blue",
+        "episode_code": "S02E17",
+        "source_title": "Blue S02E17 1080p",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 183527,
+        "source_id": -37530714570917405,
+        "series_title": "Blue",
+        "episode_code": "S02E18",
+        "source_title": "NYPD.Blue.S02E18.Innuendo.DVDRip.XviD-PARAMOUNT",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 183527,
+        "source_id": -49326931986348534,
+        "series_title": "Blue",
+        "episode_code": "S02E18",
+        "source_title": "Blue S02E18 1080p",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 183528,
+        "source_id": -8906204974550854,
+        "series_title": "Blue",
+        "episode_code": "S02E19",
+        "source_title": "NYPD.Blue.S02E19.Boxer.Rebellion.DVDRip.XviD-PARAMOUNT",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 183528,
+        "source_id": -28860123292862373,
+        "series_title": "Blue",
+        "episode_code": "S02E19",
+        "source_title": "Blue S02E19 1080p",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 183529,
+        "source_id": -10425975800729892,
+        "series_title": "Blue",
+        "episode_code": "S02E20",
+        "source_title": "Bluey.S02E20.1080p.WEB.h264-SALT",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 183529,
+        "source_id": -66597489417401236,
+        "series_title": "Blue",
+        "episode_code": "S02E20",
+        "source_title": "NYPD.Blue.S02E20.The.Bookie.And.Kooky.Cookie.DVDRip.XviD-PARAMOUNT",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 183529,
+        "source_id": -45505279486817318,
+        "series_title": "Blue",
+        "episode_code": "S02E20",
+        "source_title": "Blue S02E20 1080p",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 183530,
+        "source_id": -56589805929837946,
+        "series_title": "Blue",
+        "episode_code": "S02E21",
+        "source_title": "NYPD.Blue.S02E21.The.Bank.Dick.DVDRip.XviD-PARAMOUNT",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 183530,
+        "source_id": -8115388809253690,
+        "series_title": "Blue",
+        "episode_code": "S02E21",
+        "source_title": "Blue S02E21 1080p",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 183531,
+        "source_id": -59782883358466013,
+        "series_title": "Blue",
+        "episode_code": "S02E22",
+        "source_title": "NYPD.Blue.S02E22.A.D.A.Sipowicz.DVDRip.XviD-PARAMOUNT",
         "status": "needs_whisper"
       }
     ],
@@ -151607,14 +151697,13 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 472,
-    "ok": 122,
+    "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
-    "whisper_non_cz_needs_subtitles": 1058,
-    "whisper_confirmed_cz": 402,
-    "needs_whisper": 25129
+    "whisper_non_cz_needs_subtitles": 1089,
+    "whisper_confirmed_cz": 411,
+    "needs_whisper": 25089
   },
   "subtitle_followup_statuses": {
     "needs_subtitle_setup_after_prehrajto_processing": 5217
