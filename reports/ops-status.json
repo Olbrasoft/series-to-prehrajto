@@ -2,44 +2,156 @@
   "counts": {
     "backlog_episodes": 174784,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 18595,
-    "prepared_source_episodes": 43588,
+    "uploaded_episodes": 18626,
+    "prepared_source_episodes": 43628,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 179,
-    "language_whisper_attempted_sources": 40,
-    "language_pending_whisper_sources": 2604,
-    "whisper_review_sources": 26587,
-    "whisper_review_pending_sources": 25107,
-    "subtitle_followup_sources": 5164,
-    "subtitle_followup_pending_sources": 5164
+    "language_audited_sources": 595,
+    "language_whisper_attempted_sources": 123,
+    "language_pending_whisper_sources": 2624,
+    "whisper_review_sources": 26589,
+    "whisper_review_pending_sources": 25129,
+    "subtitle_followup_sources": 5217,
+    "subtitle_followup_pending_sources": 5217
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-07-06T11:13:28Z",
-      "databaseId": 28787431598,
+      "createdAt": "2026-07-06T11:49:31Z",
+      "databaseId": 28789346343,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
-      "createdAt": "2026-07-06T11:13:23Z",
-      "databaseId": 28787427663,
+      "createdAt": "2026-07-06T11:47:06Z",
+      "databaseId": 28789221504,
       "headBranch": "main",
-      "status": "pending",
-      "workflowName": "prepare-manifest"
+      "status": "in_progress",
+      "workflowName": "backfill-subtitles"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-07-06T11:43:48Z",
+      "databaseId": 28789042335,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-06T11:39:52Z",
+      "databaseId": 28788834091,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "backfill-subtitles"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-06T11:33:07Z",
+      "databaseId": 28788477246,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "backfill-subtitles"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-06T11:29:29Z",
+      "databaseId": 28788282576,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-06T11:25:21Z",
+      "databaseId": 28788072247,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "backfill-subtitles"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-06T11:22:22Z",
+      "databaseId": 28787904665,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "backfill-subtitles"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-06T11:18:25Z",
+      "databaseId": 28787697411,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "backfill-subtitles"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-06T11:15:10Z",
+      "databaseId": 28787525205,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-06T11:14:55Z",
+      "databaseId": 28787511870,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "backfill-subtitles"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-06T11:14:41Z",
+      "databaseId": 28787499093,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-06T11:14:39Z",
+      "databaseId": 28787496579,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-06T11:14:37Z",
+      "databaseId": 28787494825,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-06T11:13:28Z",
+      "databaseId": 28787431598,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-07-06T11:13:23Z",
+      "databaseId": 28787427663,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-06T11:10:51Z",
       "databaseId": 28787288148,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "backfill-subtitles"
     },
     {
@@ -65,118 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "backfill-subtitles"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-06T10:56:35Z",
-      "databaseId": 28786507702,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-06T10:56:32Z",
-      "databaseId": 28786504964,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-06T10:56:29Z",
-      "databaseId": 28786503140,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-06T10:56:27Z",
-      "databaseId": 28786500687,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-06T10:55:24Z",
-      "databaseId": 28786446942,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-06T10:52:53Z",
-      "databaseId": 28786311052,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "backfill-subtitles"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-06T10:48:59Z",
-      "databaseId": 28786103458,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "backfill-subtitles"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-06T10:41:37Z",
-      "databaseId": 28785712079,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "refresh-backlog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-06T10:36:57Z",
-      "databaseId": 28785463383,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "backfill-subtitles"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-06T10:36:32Z",
-      "databaseId": 28785439682,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-06T10:35:03Z",
-      "databaseId": 28785361187,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-06T10:32:55Z",
-      "databaseId": 28785242611,
-      "headBranch": "main",
-      "status": "pending",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-06T10:26:46Z",
-      "databaseId": 28784914186,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "backfill-subtitles"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-06T10:24:02Z",
-      "databaseId": 28784767606,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
     }
   ],
   "gaps": {
@@ -70904,6 +70904,161 @@
         "episode_id": 15437,
         "display_name": "Borgiové S02E09 - Svět zázraků CZ Titulky",
         "video_id": 27193348
+      },
+      {
+        "episode_id": 39206,
+        "display_name": "Pokémon S10E33 - Jenom se převléknu a už jdu CZ Dabing",
+        "video_id": 27193395
+      },
+      {
+        "episode_id": 39208,
+        "display_name": "Pokémon S10E35 - Setkání elity CZ Dabing",
+        "video_id": 27193405
+      },
+      {
+        "episode_id": 39210,
+        "display_name": "Pokémon S10E37 - Travní zvěřinec CZ Dabing",
+        "video_id": 27193421
+      },
+      {
+        "episode_id": 39212,
+        "display_name": "Pokémon S10E39 - Pokémonní večírek CZ Dabing",
+        "video_id": 27193430
+      },
+      {
+        "episode_id": 39214,
+        "display_name": "Pokémon S10E41 - Bolavé setkání CZ Dabing",
+        "video_id": 27193451
+      },
+      {
+        "episode_id": 39216,
+        "display_name": "Pokémon S10E43 - Hrdinové v Říši Divů CZ Titulky",
+        "video_id": 27193464
+      },
+      {
+        "episode_id": 39218,
+        "display_name": "Pokémon S10E46 - Závod bludištěm CZ Dabing",
+        "video_id": 27193479
+      },
+      {
+        "episode_id": 39222,
+        "display_name": "Pokémon S10E50 - Párový turnaj CZ Dabing",
+        "video_id": 27193492
+      },
+      {
+        "episode_id": 39228,
+        "display_name": "Pokémon S11E05 - Bibarel kouše nejlíp CZ Dabing",
+        "video_id": 27193527
+      },
+      {
+        "episode_id": 39230,
+        "display_name": "Pokémon S11E07 - Luxrayův zrak CZ Dabing",
+        "video_id": 27193547
+      },
+      {
+        "episode_id": 39232,
+        "display_name": "Pokémon S11E09 - Týmový šok CZ Dabing",
+        "video_id": 27193559
+      },
+      {
+        "episode_id": 39234,
+        "display_name": "Pokémon S11E11 - Příběh horkého pramene CZ Dabing",
+        "video_id": 27193598
+      },
+      {
+        "episode_id": 39236,
+        "display_name": "Pokémon S11E13 - Písečné pláně CZ Dabing",
+        "video_id": 27193682
+      },
+      {
+        "episode_id": 39238,
+        "display_name": "Pokémon S11E15 - Překročení bitevní linie CZ Titulky",
+        "video_id": 27193694
+      },
+      {
+        "episode_id": 39244,
+        "display_name": "Pokémon S11E21 - Když se cesty rozejdou CZ Dabing",
+        "video_id": 27193711
+      },
+      {
+        "episode_id": 39246,
+        "display_name": "Pokémon S11E23 - Přihlaste se do soutěže CZ Dabing",
+        "video_id": 27193724
+      },
+      {
+        "episode_id": 39248,
+        "display_name": "Pokémon S11E25 - Vítání hrdinů CZ Dabing",
+        "video_id": 27193735
+      },
+      {
+        "episode_id": 39250,
+        "display_name": "Pokémon S11E27 - Dívčí strategie CZ Dabing",
+        "video_id": 27193753
+      },
+      {
+        "episode_id": 39252,
+        "display_name": "Pokémon S11E29 - Chimcharův Skrytý Potenciál CZ Dabing",
+        "video_id": 27193792
+      },
+      {
+        "episode_id": 39254,
+        "display_name": "Pokémon S11E31 - Zápas s Crasherem Wakem CZ Dabing",
+        "video_id": 27193907
+      },
+      {
+        "episode_id": 15439,
+        "display_name": "Borgiové S03E01 - Tvář smrti CZ Titulky",
+        "video_id": 27193404
+      },
+      {
+        "episode_id": 15441,
+        "display_name": "Borgiové S03E03 - Sourozenci CZ Titulky",
+        "video_id": 27193427
+      },
+      {
+        "episode_id": 15443,
+        "display_name": "Borgiové S03E05 - Vlk a beránek CZ Dabing",
+        "video_id": 27193456
+      },
+      {
+        "episode_id": 15445,
+        "display_name": "Borgiové S03E07 - Lucreziin gambit CZ Dabing",
+        "video_id": 27193550
+      },
+      {
+        "episode_id": 15447,
+        "display_name": "Borgiové S03E09 - Výbušný plán CZ Dabing",
+        "video_id": 27193713
+      },
+      {
+        "episode_id": 34141,
+        "display_name": "Pokémon S01E10 - Bulbasaur a utajená vesnice CZ Dabing",
+        "video_id": 27193750
+      },
+      {
+        "episode_id": 34143,
+        "display_name": "Pokémon S01E12 - Pozor na Squirtla CZ Dabing",
+        "video_id": 27193768
+      },
+      {
+        "episode_id": 34149,
+        "display_name": "Pokémon S01E17 - Ostrov obřích pokémonů CZ Dabing",
+        "video_id": 27193810
+      },
+      {
+        "episode_id": 34169,
+        "display_name": "Pokémon S01E38 - Electric Soldier Porygon CZ Titulky",
+        "video_id": 27193902
+      },
+      {
+        "episode_id": 34187,
+        "display_name": "Pokémon S01E56 - Obtížná zkouška CZ Dabing",
+        "video_id": 27193931
+      },
+      {
+        "episode_id": 34197,
+        "display_name": "Pokémon S01E66 - Vánice CZ Dabing",
+        "video_id": 27193957
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -150136,6 +150291,161 @@
         "episode_id": 15437,
         "display_name": "Borgiové S02E09 - Svět zázraků CZ Titulky",
         "video_id": 27193348
+      },
+      {
+        "episode_id": 39206,
+        "display_name": "Pokémon S10E33 - Jenom se převléknu a už jdu CZ Dabing",
+        "video_id": 27193395
+      },
+      {
+        "episode_id": 39208,
+        "display_name": "Pokémon S10E35 - Setkání elity CZ Dabing",
+        "video_id": 27193405
+      },
+      {
+        "episode_id": 39210,
+        "display_name": "Pokémon S10E37 - Travní zvěřinec CZ Dabing",
+        "video_id": 27193421
+      },
+      {
+        "episode_id": 39212,
+        "display_name": "Pokémon S10E39 - Pokémonní večírek CZ Dabing",
+        "video_id": 27193430
+      },
+      {
+        "episode_id": 39214,
+        "display_name": "Pokémon S10E41 - Bolavé setkání CZ Dabing",
+        "video_id": 27193451
+      },
+      {
+        "episode_id": 39216,
+        "display_name": "Pokémon S10E43 - Hrdinové v Říši Divů CZ Titulky",
+        "video_id": 27193464
+      },
+      {
+        "episode_id": 39218,
+        "display_name": "Pokémon S10E46 - Závod bludištěm CZ Dabing",
+        "video_id": 27193479
+      },
+      {
+        "episode_id": 39222,
+        "display_name": "Pokémon S10E50 - Párový turnaj CZ Dabing",
+        "video_id": 27193492
+      },
+      {
+        "episode_id": 39228,
+        "display_name": "Pokémon S11E05 - Bibarel kouše nejlíp CZ Dabing",
+        "video_id": 27193527
+      },
+      {
+        "episode_id": 39230,
+        "display_name": "Pokémon S11E07 - Luxrayův zrak CZ Dabing",
+        "video_id": 27193547
+      },
+      {
+        "episode_id": 39232,
+        "display_name": "Pokémon S11E09 - Týmový šok CZ Dabing",
+        "video_id": 27193559
+      },
+      {
+        "episode_id": 39234,
+        "display_name": "Pokémon S11E11 - Příběh horkého pramene CZ Dabing",
+        "video_id": 27193598
+      },
+      {
+        "episode_id": 39236,
+        "display_name": "Pokémon S11E13 - Písečné pláně CZ Dabing",
+        "video_id": 27193682
+      },
+      {
+        "episode_id": 39238,
+        "display_name": "Pokémon S11E15 - Překročení bitevní linie CZ Titulky",
+        "video_id": 27193694
+      },
+      {
+        "episode_id": 39244,
+        "display_name": "Pokémon S11E21 - Když se cesty rozejdou CZ Dabing",
+        "video_id": 27193711
+      },
+      {
+        "episode_id": 39246,
+        "display_name": "Pokémon S11E23 - Přihlaste se do soutěže CZ Dabing",
+        "video_id": 27193724
+      },
+      {
+        "episode_id": 39248,
+        "display_name": "Pokémon S11E25 - Vítání hrdinů CZ Dabing",
+        "video_id": 27193735
+      },
+      {
+        "episode_id": 39250,
+        "display_name": "Pokémon S11E27 - Dívčí strategie CZ Dabing",
+        "video_id": 27193753
+      },
+      {
+        "episode_id": 39252,
+        "display_name": "Pokémon S11E29 - Chimcharův Skrytý Potenciál CZ Dabing",
+        "video_id": 27193792
+      },
+      {
+        "episode_id": 39254,
+        "display_name": "Pokémon S11E31 - Zápas s Crasherem Wakem CZ Dabing",
+        "video_id": 27193907
+      },
+      {
+        "episode_id": 15439,
+        "display_name": "Borgiové S03E01 - Tvář smrti CZ Titulky",
+        "video_id": 27193404
+      },
+      {
+        "episode_id": 15441,
+        "display_name": "Borgiové S03E03 - Sourozenci CZ Titulky",
+        "video_id": 27193427
+      },
+      {
+        "episode_id": 15443,
+        "display_name": "Borgiové S03E05 - Vlk a beránek CZ Dabing",
+        "video_id": 27193456
+      },
+      {
+        "episode_id": 15445,
+        "display_name": "Borgiové S03E07 - Lucreziin gambit CZ Dabing",
+        "video_id": 27193550
+      },
+      {
+        "episode_id": 15447,
+        "display_name": "Borgiové S03E09 - Výbušný plán CZ Dabing",
+        "video_id": 27193713
+      },
+      {
+        "episode_id": 34141,
+        "display_name": "Pokémon S01E10 - Bulbasaur a utajená vesnice CZ Dabing",
+        "video_id": 27193750
+      },
+      {
+        "episode_id": 34143,
+        "display_name": "Pokémon S01E12 - Pozor na Squirtla CZ Dabing",
+        "video_id": 27193768
+      },
+      {
+        "episode_id": 34149,
+        "display_name": "Pokémon S01E17 - Ostrov obřích pokémonů CZ Dabing",
+        "video_id": 27193810
+      },
+      {
+        "episode_id": 34169,
+        "display_name": "Pokémon S01E38 - Electric Soldier Porygon CZ Titulky",
+        "video_id": 27193902
+      },
+      {
+        "episode_id": 34187,
+        "display_name": "Pokémon S01E56 - Obtížná zkouška CZ Dabing",
+        "video_id": 27193931
+      },
+      {
+        "episode_id": 34197,
+        "display_name": "Pokémon S01E66 - Vánice CZ Dabing",
+        "video_id": 27193957
       }
     ],
     "prepared_not_upload_ready": [
@@ -150442,6 +150752,166 @@
     ],
     "whisper_review_pending": [
       {
+        "episode_id": 183497,
+        "source_id": -64651507827776117,
+        "series_title": "Blue",
+        "episode_code": "S01E40",
+        "source_title": "Big.Blue.S01E40.Captain.Lemo.1080p.ROKU.WEB-DL.DD5.1.H.264-NTb",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 183498,
+        "source_id": -283427478517711,
+        "series_title": "Blue",
+        "episode_code": "S01E41",
+        "source_title": "Big.Blue.S01E41.My.Dinner.With.Krill.1080p.ROKU.WEB-DL.DD5.1.H.264-NTb",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 183499,
+        "source_id": -42876141846025959,
+        "series_title": "Blue",
+        "episode_code": "S01E42",
+        "source_title": "Big.Blue.S01E42.What's.Your.Vector.Collector.1080p.ROKU.WEB-DL.DD5.1.H.264-NTb",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 183500,
+        "source_id": -47940899213925091,
+        "series_title": "Blue",
+        "episode_code": "S01E43",
+        "source_title": "Big.Blue.S01E43.A.Night.at.the.TheatRRR.1080p.ROKU.WEB-DL.DD5.1.H.264-NTb",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 183501,
+        "source_id": -19191677500780966,
+        "series_title": "Blue",
+        "episode_code": "S01E44",
+        "source_title": "Big.Blue.S01E44.Hero.Boy.1080p.ROKU.WEB-DL.DD5.1.H.264-NTb",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 183502,
+        "source_id": -9241124262070869,
+        "series_title": "Blue",
+        "episode_code": "S01E45",
+        "source_title": "Big.Blue.S01E45.Lemo.Vs.Phil.1080p.ROKU.WEB-DL.DD5.1.H.264-NTb",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 183503,
+        "source_id": -57183970315456900,
+        "series_title": "Blue",
+        "episode_code": "S01E46",
+        "source_title": "Big.Blue.S01E46.Busted.1080p.ROKU.WEB-DL.DD5.1.H.264-NTb",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 183504,
+        "source_id": -68461963706917345,
+        "series_title": "Blue",
+        "episode_code": "S01E47",
+        "source_title": "Big.Blue.S01E47.The.Incredible.Lemo.and.his.Dancing.Sea.Flea.Sloan.1080p.ROKU.WEB-DL.DD5.1.H.264-NTb",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 183505,
+        "source_id": -41267691425302687,
+        "series_title": "Blue",
+        "episode_code": "S01E48",
+        "source_title": "Big.Blue.S01E48.Baby.Bro.No.More.1080p.ROKU.WEB-DL.DD5.1.H.264-NTb",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 183506,
+        "source_id": -41717517290831524,
+        "series_title": "Blue",
+        "episode_code": "S01E49",
+        "source_title": "Big.Blue.S01E49.Now.You.Sea.Ghosts.Now.You.Don't.1080p.ROKU.WEB-DL.DD5.1.H.264-NTb",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 183507,
+        "source_id": -63058241259676588,
+        "series_title": "Blue",
+        "episode_code": "S01E50",
+        "source_title": "Bluey.S01E50.1080p.WEB.h264-SALT",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 183507,
+        "source_id": -43794747783381650,
+        "series_title": "Blue",
+        "episode_code": "S01E50",
+        "source_title": "Big.Blue.S01E50.Captain.Bossy.Fins.1080p.ROKU.WEB-DL.DD5.1.H.264-NTb",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 183508,
+        "source_id": -27674109514922416,
+        "series_title": "Blue",
+        "episode_code": "S01E51",
+        "source_title": "Bluey.S01E51.1080p.WEB.h264-SALT",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 183508,
+        "source_id": -4076035225246808,
+        "series_title": "Blue",
+        "episode_code": "S01E51",
+        "source_title": "Big.Blue.S01E51.Ready.Steady.Lettie.1080p.ROKU.WEB-DL.DD5.1.H.264-NTb",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 183509,
+        "source_id": -7072595242766958,
+        "series_title": "Blue",
+        "episode_code": "S01E52",
+        "source_title": "Bluey.S01E52.1080p.WEB.h264-SALT",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 183509,
+        "source_id": -19786914624581813,
+        "series_title": "Blue",
+        "episode_code": "S01E52",
+        "source_title": "Big.Blue.S01E52.Return.of.the.Blegh.1080p.ROKU.WEB-DL.DD5.1.H.264-NTb",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 183510,
+        "source_id": -71259047429458263,
+        "series_title": "Blue",
+        "episode_code": "S02E01",
+        "source_title": "Shades of Blue - s02e01",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 183510,
+        "source_id": -12263541450977642,
+        "series_title": "Blue",
+        "episode_code": "S02E01",
+        "source_title": "Blue S02E01 1080p",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 183511,
+        "source_id": -60443072483134571,
+        "series_title": "Blue",
+        "episode_code": "S02E02",
+        "source_title": "Shades of Blue - s02e02",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 183511,
+        "source_id": -18183030214586700,
+        "series_title": "Blue",
+        "episode_code": "S02E02",
+        "source_title": "Shades of Blue - S02E02 - Eye Of The Hurricane",
+        "status": "needs_whisper"
+      },
+      {
         "episode_id": 183511,
         "source_id": -44913196694775601,
         "series_title": "Blue",
@@ -150679,166 +151149,6 @@
         "series_title": "Blue",
         "episode_code": "S02E09",
         "source_title": "NYPD.Blue.S02E09.Don.We.Know.Our.Gay.Appeal.DVDRip.XviD-PARAMOUNT",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183518,
-        "source_id": -56524186131399693,
-        "series_title": "Blue",
-        "episode_code": "S02E09",
-        "source_title": "Shades of Blue S02E09 SKtit V OBRAZE",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183518,
-        "source_id": -17555546027268533,
-        "series_title": "Blue",
-        "episode_code": "S02E09",
-        "source_title": "Blue S02E09 1080p",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183519,
-        "source_id": -11552058961853867,
-        "series_title": "Blue",
-        "episode_code": "S02E10",
-        "source_title": "Shades of Blue - s02e10",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183519,
-        "source_id": -38811727875013515,
-        "series_title": "Blue",
-        "episode_code": "S02E10",
-        "source_title": "Shades of Blue - S02E10 - Whoever Fights Monsters",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183519,
-        "source_id": -57679261819957413,
-        "series_title": "Blue",
-        "episode_code": "S02E10",
-        "source_title": "NYPD.Blue.S02E10.In.The.Butt.Bob.DVDRip.XviD-PARAMOUNT",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183519,
-        "source_id": -47933746439225569,
-        "series_title": "Blue",
-        "episode_code": "S02E10",
-        "source_title": "Shades of Blue S02E10 SKtit V OBRAZE",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183519,
-        "source_id": -1911067418947787,
-        "series_title": "Blue",
-        "episode_code": "S02E10",
-        "source_title": "Blue S02E10 1080p",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183520,
-        "source_id": -39102686091892524,
-        "series_title": "Blue",
-        "episode_code": "S02E11",
-        "source_title": "Shades of Blue - s02e11",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183520,
-        "source_id": -55648929083271350,
-        "series_title": "Blue",
-        "episode_code": "S02E11",
-        "source_title": "Shades of Blue - S02E11 - The Quality Of Mercy",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183520,
-        "source_id": -10302532388211818,
-        "series_title": "Blue",
-        "episode_code": "S02E11",
-        "source_title": "Bluey.S02E11.1080p.WEB.h264-SALT",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183520,
-        "source_id": -59308563358041340,
-        "series_title": "Blue",
-        "episode_code": "S02E11",
-        "source_title": "NYPD.Blue.S02E11.Vishy-Vashy.Vinnie.DVDRip.XviD-PARAMOUNT",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183520,
-        "source_id": -42041845568115986,
-        "series_title": "Blue",
-        "episode_code": "S02E11",
-        "source_title": "Blue S02E11 1080p",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183521,
-        "source_id": -35672414189240115,
-        "series_title": "Blue",
-        "episode_code": "S02E12",
-        "source_title": "Shades of Blue - s02e12",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183521,
-        "source_id": -50644805104354733,
-        "series_title": "Blue",
-        "episode_code": "S02E12",
-        "source_title": "Shades of Blue - S02E12 - Behind the Mask",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183521,
-        "source_id": -739899020179220,
-        "series_title": "Blue",
-        "episode_code": "S02E12",
-        "source_title": "NYPD.Blue.S02E12.Large-Mouth.Bass.DVDRip.XviD-PARAMOUNT",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183521,
-        "source_id": -42611474818037722,
-        "series_title": "Blue",
-        "episode_code": "S02E12",
-        "source_title": "Shades of Blue S02E12 SKtit V OBRAZE",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183521,
-        "source_id": -5525599466271672,
-        "series_title": "Blue",
-        "episode_code": "S02E12",
-        "source_title": "Blue S02E12 1080p",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183522,
-        "source_id": -30672516263243926,
-        "series_title": "Blue",
-        "episode_code": "S02E13",
-        "source_title": "Shades of Blue - s02e13",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183522,
-        "source_id": -57689478452616726,
-        "series_title": "Blue",
-        "episode_code": "S02E13",
-        "source_title": "Shades of Blue - S02E13 - Broken Dolls",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183522,
-        "source_id": -68535055321570567,
-        "series_title": "Blue",
-        "episode_code": "S02E13",
-        "source_title": "NYPD.Blue.S02E13.Travels.With.Andy.DVDRip.XviD-PARAMOUNT",
         "status": "needs_whisper"
       }
     ],
@@ -151297,16 +151607,16 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 139,
-    "ok": 39,
+    "disabled": 472,
+    "ok": 122,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
-    "whisper_non_cz_needs_subtitles": 1076,
-    "whisper_confirmed_cz": 404,
-    "needs_whisper": 25107
+    "whisper_non_cz_needs_subtitles": 1058,
+    "whisper_confirmed_cz": 402,
+    "needs_whisper": 25129
   },
   "subtitle_followup_statuses": {
-    "needs_subtitle_setup_after_prehrajto_processing": 5164
+    "needs_subtitle_setup_after_prehrajto_processing": 5217
   }
 }
