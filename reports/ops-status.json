@@ -2,7 +2,7 @@
   "counts": {
     "backlog_episodes": 174508,
     "manifest_upload_ready_episodes": 1001,
-    "uploaded_episodes": 18908,
+    "uploaded_episodes": 18913,
     "prepared_source_episodes": 43778,
     "description_series": 60,
     "description_episodes": 753,
@@ -20,18 +20,74 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-07-06T21:28:36Z",
-      "databaseId": 28824502135,
+      "createdAt": "2026-07-06T21:31:29Z",
+      "databaseId": 28824656571,
       "headBranch": "main",
-      "status": "pending",
-      "workflowName": "prepare-manifest"
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-07-06T21:31:29Z",
+      "databaseId": 28824656568,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-06T21:29:43Z",
+      "databaseId": 28824559519,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-06T21:29:43Z",
+      "databaseId": 28824559362,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-06T21:29:41Z",
+      "databaseId": 28824557494,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-06T21:29:39Z",
+      "databaseId": 28824555474,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-06T21:29:36Z",
+      "databaseId": 28824553412,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-06T21:28:36Z",
+      "databaseId": 28824502135,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-06T21:28:35Z",
       "databaseId": 28824501355,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -107,11 +163,11 @@
       "workflowName": "backfill-subtitles"
     },
     {
-      "conclusion": "",
+      "conclusion": "failure",
       "createdAt": "2026-07-06T20:57:54Z",
       "databaseId": 28822783428,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -121,62 +177,6 @@
       "headBranch": "main",
       "status": "pending",
       "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-06T20:55:50Z",
-      "databaseId": 28822666963,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "backfill-subtitles"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-06T20:54:28Z",
-      "databaseId": 28822589027,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-06T20:54:24Z",
-      "databaseId": 28822585121,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-06T20:53:27Z",
-      "databaseId": 28822529342,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-06T20:51:42Z",
-      "databaseId": 28822427098,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-06T20:45:49Z",
-      "databaseId": 28822097209,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "backfill-subtitles"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-06T20:40:53Z",
-      "databaseId": 28821809188,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "backfill-subtitles"
     }
   ],
   "gaps": {
@@ -72391,6 +72391,11 @@
         "video_id": 27206258
       },
       {
+        "episode_id": 51818,
+        "display_name": "Nikita S01E08 - Fénix CZ Dabing",
+        "video_id": 27206311
+      },
+      {
         "episode_id": 39483,
         "display_name": "Pokémon S16E19 - Plameny ohnivého setkání! CZ Dabing",
         "video_id": 27204327
@@ -72469,6 +72474,26 @@
         "episode_id": 39307,
         "display_name": "Pokémon S17E18 - Probuzení spícího obra! CZ Titulky",
         "video_id": 27206272
+      },
+      {
+        "episode_id": 39309,
+        "display_name": "Pokémon S17E20 - Zámecký zápas o tituly! CZ Titulky",
+        "video_id": 27206285
+      },
+      {
+        "episode_id": 39311,
+        "display_name": "Pokémon S17E24 - Vzhůru po vysoké stěně! CZ Titulky",
+        "video_id": 27206294
+      },
+      {
+        "episode_id": 39313,
+        "display_name": "Pokémon S17E25 - Nejsladší zápas! CZ Titulky",
+        "video_id": 27206314
+      },
+      {
+        "episode_id": 39315,
+        "display_name": "Pokémon S17E26 - Hledání vílí květiny! CZ Titulky",
+        "video_id": 27206332
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -144578,6 +144603,11 @@
         "video_id": 27206258
       },
       {
+        "episode_id": 51818,
+        "display_name": "Nikita S01E08 - Fénix CZ Dabing",
+        "video_id": 27206311
+      },
+      {
         "episode_id": 39483,
         "display_name": "Pokémon S16E19 - Plameny ohnivého setkání! CZ Dabing",
         "video_id": 27204327
@@ -144656,6 +144686,26 @@
         "episode_id": 39307,
         "display_name": "Pokémon S17E18 - Probuzení spícího obra! CZ Titulky",
         "video_id": 27206272
+      },
+      {
+        "episode_id": 39309,
+        "display_name": "Pokémon S17E20 - Zámecký zápas o tituly! CZ Titulky",
+        "video_id": 27206285
+      },
+      {
+        "episode_id": 39311,
+        "display_name": "Pokémon S17E24 - Vzhůru po vysoké stěně! CZ Titulky",
+        "video_id": 27206294
+      },
+      {
+        "episode_id": 39313,
+        "display_name": "Pokémon S17E25 - Nejsladší zápas! CZ Titulky",
+        "video_id": 27206314
+      },
+      {
+        "episode_id": 39315,
+        "display_name": "Pokémon S17E26 - Hledání vílí květiny! CZ Titulky",
+        "video_id": 27206332
       }
     ],
     "prepared_not_upload_ready": [
