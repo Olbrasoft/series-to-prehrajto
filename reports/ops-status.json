@@ -2,44 +2,60 @@
   "counts": {
     "backlog_episodes": 175111,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 18268,
-    "prepared_source_episodes": 42698,
+    "uploaded_episodes": 18270,
+    "prepared_source_episodes": 42758,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 83,
+    "language_audited_sources": 432,
     "language_whisper_attempted_sources": 40,
     "language_pending_whisper_sources": 2604,
-    "whisper_review_sources": 25126,
-    "whisper_review_pending_sources": 23706,
+    "whisper_review_sources": 25382,
+    "whisper_review_pending_sources": 23962,
     "subtitle_followup_sources": 5033,
     "subtitle_followup_pending_sources": 5033
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-07-06T04:57:07Z",
-      "databaseId": 28768798540,
+      "createdAt": "2026-07-06T05:03:18Z",
+      "databaseId": 28769008255,
       "headBranch": "main",
       "status": "in_progress",
-      "workflowName": "ops-status"
+      "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
-      "createdAt": "2026-07-06T04:56:59Z",
-      "databaseId": 28768793876,
+      "createdAt": "2026-07-06T05:02:18Z",
+      "databaseId": 28768974812,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "backfill-subtitles"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
+      "createdAt": "2026-07-06T04:57:07Z",
+      "databaseId": 28768798540,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-06T04:56:59Z",
+      "databaseId": 28768793876,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "backfill-subtitles"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-06T04:56:43Z",
       "databaseId": 28768784907,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "update-descriptions"
     },
     {
@@ -63,7 +79,7 @@
       "createdAt": "2026-07-06T04:46:36Z",
       "databaseId": 28768451219,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "prepare-manifest"
     },
     {
@@ -131,11 +147,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-06T04:29:34Z",
       "databaseId": 28767874865,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -161,22 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-06T04:24:24Z",
-      "databaseId": 28767687748,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-06T04:24:22Z",
-      "databaseId": 28767686410,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
     }
   ],
   "gaps": {
@@ -69169,6 +69169,16 @@
         "episode_id": 2812,
         "display_name": "Power S04E02 - 2. epizoda CZ Titulky",
         "video_id": 27185800
+      },
+      {
+        "episode_id": 2814,
+        "display_name": "Power S04E04 - 4. epizoda CZ Titulky",
+        "video_id": 27185816
+      },
+      {
+        "episode_id": 2816,
+        "display_name": "Power S04E06 - 6. epizoda CZ Titulky",
+        "video_id": 27185838
       },
       {
         "episode_id": 46573,
@@ -146768,6 +146778,16 @@
         "video_id": 27185800
       },
       {
+        "episode_id": 2814,
+        "display_name": "Power S04E04 - 4. epizoda CZ Titulky",
+        "video_id": 27185816
+      },
+      {
+        "episode_id": 2816,
+        "display_name": "Power S04E06 - 6. epizoda CZ Titulky",
+        "video_id": 27185838
+      },
+      {
         "episode_id": 46573,
         "display_name": "Heuréka – město divů S03E08 - Věc Heuropulos CZ Dabing",
         "video_id": 27185454
@@ -148027,14 +148047,14 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 43,
+    "disabled": 392,
     "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
     "whisper_non_cz_needs_subtitles": 1028,
     "whisper_confirmed_cz": 392,
-    "needs_whisper": 23706
+    "needs_whisper": 23962
   },
   "subtitle_followup_statuses": {
     "needs_subtitle_setup_after_prehrajto_processing": 5033
