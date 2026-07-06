@@ -2,36 +2,84 @@
   "counts": {
     "backlog_episodes": 174921,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 18475,
-    "prepared_source_episodes": 43258,
+    "uploaded_episodes": 18506,
+    "prepared_source_episodes": 43338,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 506,
-    "language_whisper_attempted_sources": 80,
-    "language_pending_whisper_sources": 2604,
-    "whisper_review_sources": 26356,
-    "whisper_review_pending_sources": 24876,
+    "language_audited_sources": 580,
+    "language_whisper_attempted_sources": 20,
+    "language_pending_whisper_sources": 2624,
+    "whisper_review_sources": 26398,
+    "whisper_review_pending_sources": 24938,
     "subtitle_followup_sources": 5149,
     "subtitle_followup_pending_sources": 5149
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-07-06T08:34:04Z",
-      "databaseId": 28778572488,
+      "createdAt": "2026-07-06T09:12:15Z",
+      "databaseId": 28780691730,
       "headBranch": "main",
       "status": "in_progress",
-      "workflowName": "ops-status"
+      "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-07-06T09:03:30Z",
+      "databaseId": 28780184994,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "backfill-subtitles"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-06T08:55:11Z",
+      "databaseId": 28779727468,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "backfill-subtitles"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-06T08:46:45Z",
+      "databaseId": 28779261062,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "backfill-subtitles"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-06T08:39:45Z",
+      "databaseId": 28778877921,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "backfill-subtitles"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-06T08:38:29Z",
+      "databaseId": 28778812463,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-06T08:34:04Z",
+      "databaseId": 28778572488,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "cancelled",
       "createdAt": "2026-07-06T08:32:54Z",
       "databaseId": 28778508243,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -43,11 +91,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-06T08:32:21Z",
       "databaseId": 28778479914,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "backfill-subtitles"
     },
     {
@@ -55,15 +103,15 @@
       "createdAt": "2026-07-06T08:31:19Z",
       "databaseId": 28778421990,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "prepare-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-06T08:29:02Z",
       "databaseId": 28778297875,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -83,19 +131,19 @@
       "workflowName": "process-whisper-review"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-06T08:26:31Z",
       "databaseId": 28778158659,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-06T08:26:27Z",
       "databaseId": 28778155528,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -129,54 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "backfill-subtitles"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-06T07:50:58Z",
-      "databaseId": 28776261708,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-06T07:50:47Z",
-      "databaseId": 28776252410,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-06T07:50:06Z",
-      "databaseId": 28776216504,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-06T07:49:12Z",
-      "databaseId": 28776170885,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "backfill-subtitles"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-06T07:48:58Z",
-      "databaseId": 28776158288,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-06T07:48:52Z",
-      "databaseId": 28776153978,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "refresh-backlog"
     }
   ],
   "gaps": {
@@ -70304,6 +70304,161 @@
         "episode_id": 92993,
         "display_name": "Alias S02E05 - Ukazatel CZ Dabing",
         "video_id": 27189963
+      },
+      {
+        "episode_id": 49362,
+        "display_name": "Dokonalý podraz  S04E10 - 10. epizoda CZ Titulky",
+        "video_id": 27190010
+      },
+      {
+        "episode_id": 49322,
+        "display_name": "Dokonalý podraz  S05E01 - 1. epizoda CZ Dabing",
+        "video_id": 27190048
+      },
+      {
+        "episode_id": 49360,
+        "display_name": "Dokonalý podraz  S05E07 - 7. epizoda CZ Dabing",
+        "video_id": 27190073
+      },
+      {
+        "episode_id": 90732,
+        "display_name": "Knick: Doktoři bez hranic S01E04 - A co důstojnost? CZ Titulky",
+        "video_id": 27190113
+      },
+      {
+        "episode_id": 90730,
+        "display_name": "Knick: Doktoři bez hranic S01E05 - Drží se v nich teplo CZ Dabing",
+        "video_id": 27190137
+      },
+      {
+        "episode_id": 90728,
+        "display_name": "Knick: Doktoři bez hranic S01E08 - Pracuješ do noci docela často CZ Dabing",
+        "video_id": 27190157
+      },
+      {
+        "episode_id": 90726,
+        "display_name": "Knick: Doktoři bez hranic S01E09 - Zlatý lotos CZ Titulky",
+        "video_id": 27190180
+      },
+      {
+        "episode_id": 90716,
+        "display_name": "Knick: Doktoři bez hranic S01E10 - Crutchfield CZ Dabing",
+        "video_id": 27190206
+      },
+      {
+        "episode_id": 90720,
+        "display_name": "Knick: Doktoři bez hranic S02E05 - Hyperflexe CZ Titulky",
+        "video_id": 27190232
+      },
+      {
+        "episode_id": 90724,
+        "display_name": "Knick: Doktoři bez hranic S02E06 - Pravidla jsou daná CZ Titulky",
+        "video_id": 27190261
+      },
+      {
+        "episode_id": 90722,
+        "display_name": "Knick: Doktoři bez hranic S02E07 - Williams a Walker CZ Titulky",
+        "video_id": 27190294
+      },
+      {
+        "episode_id": 154262,
+        "display_name": "Soudní porota S01E05 - Neúčinná pomoc CZ Titulky",
+        "video_id": 27190363
+      },
+      {
+        "episode_id": 97536,
+        "display_name": "Bořiči mýtů S01E03 - 3. epizoda CZ Dabing",
+        "video_id": 27190398
+      },
+      {
+        "episode_id": 97538,
+        "display_name": "Bořiči mýtů S01E06 - 6. epizoda CZ Dabing",
+        "video_id": 27190427
+      },
+      {
+        "episode_id": 97510,
+        "display_name": "Bořiči mýtů S02E05 - 5. epizoda CZ Dabing",
+        "video_id": 27190456
+      },
+      {
+        "episode_id": 97528,
+        "display_name": "Bořiči mýtů S03E10 - 10. epizoda CZ Dabing",
+        "video_id": 27190493
+      },
+      {
+        "episode_id": 97544,
+        "display_name": "Bořiči mýtů S04E01 - 1. epizoda CZ Dabing",
+        "video_id": 27190517
+      },
+      {
+        "episode_id": 97546,
+        "display_name": "Bořiči mýtů S04E03 - 3. epizoda CZ Dabing",
+        "video_id": 27190545
+      },
+      {
+        "episode_id": 97556,
+        "display_name": "Bořiči mýtů S05E02 - 2. epizoda CZ Dabing",
+        "video_id": 27190571
+      },
+      {
+        "episode_id": 97488,
+        "display_name": "Bořiči mýtů S07E06 - 6. epizoda CZ Dabing",
+        "video_id": 27190591
+      },
+      {
+        "episode_id": 92997,
+        "display_name": "Alias S02E10 - Únos CZ Dabing",
+        "video_id": 27190012
+      },
+      {
+        "episode_id": 93009,
+        "display_name": "Alias S02E14 - Dvojitý agent CZ Titulky",
+        "video_id": 27190054
+      },
+      {
+        "episode_id": 93001,
+        "display_name": "Alias S02E15 - Nezávislý agent CZ Dabing",
+        "video_id": 27190081
+      },
+      {
+        "episode_id": 93003,
+        "display_name": "Alias S02E17 - Temný obrat CZ Titulky",
+        "video_id": 27190122
+      },
+      {
+        "episode_id": 93005,
+        "display_name": "Alias S02E19 - Koncovka CZ Titulky",
+        "video_id": 27190185
+      },
+      {
+        "episode_id": 93007,
+        "display_name": "Alias S02E21 - Druhý dvojitý agent CZ Dabing",
+        "video_id": 27190246
+      },
+      {
+        "episode_id": 93689,
+        "display_name": "Alias S03E02 - Dědictví CZ Titulky",
+        "video_id": 27190325
+      },
+      {
+        "episode_id": 93691,
+        "display_name": "Alias S03E05 - Následky CZ Titulky",
+        "video_id": 27190470
+      },
+      {
+        "episode_id": 93693,
+        "display_name": "Alias S03E08 - Bod zlomu CZ Dabing",
+        "video_id": 27190572
+      },
+      {
+        "episode_id": 93695,
+        "display_name": "Alias S03E10 - Střípky paměti CZ Titulky",
+        "video_id": 27190604
+      },
+      {
+        "episode_id": 93697,
+        "display_name": "Alias S03E12 - Průsečíky CZ Titulky",
+        "video_id": 27190658
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -148936,6 +149091,161 @@
         "episode_id": 92993,
         "display_name": "Alias S02E05 - Ukazatel CZ Dabing",
         "video_id": 27189963
+      },
+      {
+        "episode_id": 49362,
+        "display_name": "Dokonalý podraz  S04E10 - 10. epizoda CZ Titulky",
+        "video_id": 27190010
+      },
+      {
+        "episode_id": 49322,
+        "display_name": "Dokonalý podraz  S05E01 - 1. epizoda CZ Dabing",
+        "video_id": 27190048
+      },
+      {
+        "episode_id": 49360,
+        "display_name": "Dokonalý podraz  S05E07 - 7. epizoda CZ Dabing",
+        "video_id": 27190073
+      },
+      {
+        "episode_id": 90732,
+        "display_name": "Knick: Doktoři bez hranic S01E04 - A co důstojnost? CZ Titulky",
+        "video_id": 27190113
+      },
+      {
+        "episode_id": 90730,
+        "display_name": "Knick: Doktoři bez hranic S01E05 - Drží se v nich teplo CZ Dabing",
+        "video_id": 27190137
+      },
+      {
+        "episode_id": 90728,
+        "display_name": "Knick: Doktoři bez hranic S01E08 - Pracuješ do noci docela často CZ Dabing",
+        "video_id": 27190157
+      },
+      {
+        "episode_id": 90726,
+        "display_name": "Knick: Doktoři bez hranic S01E09 - Zlatý lotos CZ Titulky",
+        "video_id": 27190180
+      },
+      {
+        "episode_id": 90716,
+        "display_name": "Knick: Doktoři bez hranic S01E10 - Crutchfield CZ Dabing",
+        "video_id": 27190206
+      },
+      {
+        "episode_id": 90720,
+        "display_name": "Knick: Doktoři bez hranic S02E05 - Hyperflexe CZ Titulky",
+        "video_id": 27190232
+      },
+      {
+        "episode_id": 90724,
+        "display_name": "Knick: Doktoři bez hranic S02E06 - Pravidla jsou daná CZ Titulky",
+        "video_id": 27190261
+      },
+      {
+        "episode_id": 90722,
+        "display_name": "Knick: Doktoři bez hranic S02E07 - Williams a Walker CZ Titulky",
+        "video_id": 27190294
+      },
+      {
+        "episode_id": 154262,
+        "display_name": "Soudní porota S01E05 - Neúčinná pomoc CZ Titulky",
+        "video_id": 27190363
+      },
+      {
+        "episode_id": 97536,
+        "display_name": "Bořiči mýtů S01E03 - 3. epizoda CZ Dabing",
+        "video_id": 27190398
+      },
+      {
+        "episode_id": 97538,
+        "display_name": "Bořiči mýtů S01E06 - 6. epizoda CZ Dabing",
+        "video_id": 27190427
+      },
+      {
+        "episode_id": 97510,
+        "display_name": "Bořiči mýtů S02E05 - 5. epizoda CZ Dabing",
+        "video_id": 27190456
+      },
+      {
+        "episode_id": 97528,
+        "display_name": "Bořiči mýtů S03E10 - 10. epizoda CZ Dabing",
+        "video_id": 27190493
+      },
+      {
+        "episode_id": 97544,
+        "display_name": "Bořiči mýtů S04E01 - 1. epizoda CZ Dabing",
+        "video_id": 27190517
+      },
+      {
+        "episode_id": 97546,
+        "display_name": "Bořiči mýtů S04E03 - 3. epizoda CZ Dabing",
+        "video_id": 27190545
+      },
+      {
+        "episode_id": 97556,
+        "display_name": "Bořiči mýtů S05E02 - 2. epizoda CZ Dabing",
+        "video_id": 27190571
+      },
+      {
+        "episode_id": 97488,
+        "display_name": "Bořiči mýtů S07E06 - 6. epizoda CZ Dabing",
+        "video_id": 27190591
+      },
+      {
+        "episode_id": 92997,
+        "display_name": "Alias S02E10 - Únos CZ Dabing",
+        "video_id": 27190012
+      },
+      {
+        "episode_id": 93009,
+        "display_name": "Alias S02E14 - Dvojitý agent CZ Titulky",
+        "video_id": 27190054
+      },
+      {
+        "episode_id": 93001,
+        "display_name": "Alias S02E15 - Nezávislý agent CZ Dabing",
+        "video_id": 27190081
+      },
+      {
+        "episode_id": 93003,
+        "display_name": "Alias S02E17 - Temný obrat CZ Titulky",
+        "video_id": 27190122
+      },
+      {
+        "episode_id": 93005,
+        "display_name": "Alias S02E19 - Koncovka CZ Titulky",
+        "video_id": 27190185
+      },
+      {
+        "episode_id": 93007,
+        "display_name": "Alias S02E21 - Druhý dvojitý agent CZ Dabing",
+        "video_id": 27190246
+      },
+      {
+        "episode_id": 93689,
+        "display_name": "Alias S03E02 - Dědictví CZ Titulky",
+        "video_id": 27190325
+      },
+      {
+        "episode_id": 93691,
+        "display_name": "Alias S03E05 - Následky CZ Titulky",
+        "video_id": 27190470
+      },
+      {
+        "episode_id": 93693,
+        "display_name": "Alias S03E08 - Bod zlomu CZ Dabing",
+        "video_id": 27190572
+      },
+      {
+        "episode_id": 93695,
+        "display_name": "Alias S03E10 - Střípky paměti CZ Titulky",
+        "video_id": 27190604
+      },
+      {
+        "episode_id": 93697,
+        "display_name": "Alias S03E12 - Průsečíky CZ Titulky",
+        "video_id": 27190658
       }
     ],
     "prepared_not_upload_ready": [
@@ -149242,6 +149552,166 @@
     ],
     "whisper_review_pending": [
       {
+        "episode_id": 183497,
+        "source_id": -64651507827776117,
+        "series_title": "Blue",
+        "episode_code": "S01E40",
+        "source_title": "Big.Blue.S01E40.Captain.Lemo.1080p.ROKU.WEB-DL.DD5.1.H.264-NTb",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 183498,
+        "source_id": -283427478517711,
+        "series_title": "Blue",
+        "episode_code": "S01E41",
+        "source_title": "Big.Blue.S01E41.My.Dinner.With.Krill.1080p.ROKU.WEB-DL.DD5.1.H.264-NTb",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 183499,
+        "source_id": -42876141846025959,
+        "series_title": "Blue",
+        "episode_code": "S01E42",
+        "source_title": "Big.Blue.S01E42.What's.Your.Vector.Collector.1080p.ROKU.WEB-DL.DD5.1.H.264-NTb",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 183500,
+        "source_id": -47940899213925091,
+        "series_title": "Blue",
+        "episode_code": "S01E43",
+        "source_title": "Big.Blue.S01E43.A.Night.at.the.TheatRRR.1080p.ROKU.WEB-DL.DD5.1.H.264-NTb",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 183501,
+        "source_id": -19191677500780966,
+        "series_title": "Blue",
+        "episode_code": "S01E44",
+        "source_title": "Big.Blue.S01E44.Hero.Boy.1080p.ROKU.WEB-DL.DD5.1.H.264-NTb",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 183502,
+        "source_id": -9241124262070869,
+        "series_title": "Blue",
+        "episode_code": "S01E45",
+        "source_title": "Big.Blue.S01E45.Lemo.Vs.Phil.1080p.ROKU.WEB-DL.DD5.1.H.264-NTb",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 183503,
+        "source_id": -57183970315456900,
+        "series_title": "Blue",
+        "episode_code": "S01E46",
+        "source_title": "Big.Blue.S01E46.Busted.1080p.ROKU.WEB-DL.DD5.1.H.264-NTb",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 183504,
+        "source_id": -68461963706917345,
+        "series_title": "Blue",
+        "episode_code": "S01E47",
+        "source_title": "Big.Blue.S01E47.The.Incredible.Lemo.and.his.Dancing.Sea.Flea.Sloan.1080p.ROKU.WEB-DL.DD5.1.H.264-NTb",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 183505,
+        "source_id": -41267691425302687,
+        "series_title": "Blue",
+        "episode_code": "S01E48",
+        "source_title": "Big.Blue.S01E48.Baby.Bro.No.More.1080p.ROKU.WEB-DL.DD5.1.H.264-NTb",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 183506,
+        "source_id": -41717517290831524,
+        "series_title": "Blue",
+        "episode_code": "S01E49",
+        "source_title": "Big.Blue.S01E49.Now.You.Sea.Ghosts.Now.You.Don't.1080p.ROKU.WEB-DL.DD5.1.H.264-NTb",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 183507,
+        "source_id": -63058241259676588,
+        "series_title": "Blue",
+        "episode_code": "S01E50",
+        "source_title": "Bluey.S01E50.1080p.WEB.h264-SALT",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 183507,
+        "source_id": -43794747783381650,
+        "series_title": "Blue",
+        "episode_code": "S01E50",
+        "source_title": "Big.Blue.S01E50.Captain.Bossy.Fins.1080p.ROKU.WEB-DL.DD5.1.H.264-NTb",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 183508,
+        "source_id": -27674109514922416,
+        "series_title": "Blue",
+        "episode_code": "S01E51",
+        "source_title": "Bluey.S01E51.1080p.WEB.h264-SALT",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 183508,
+        "source_id": -4076035225246808,
+        "series_title": "Blue",
+        "episode_code": "S01E51",
+        "source_title": "Big.Blue.S01E51.Ready.Steady.Lettie.1080p.ROKU.WEB-DL.DD5.1.H.264-NTb",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 183509,
+        "source_id": -7072595242766958,
+        "series_title": "Blue",
+        "episode_code": "S01E52",
+        "source_title": "Bluey.S01E52.1080p.WEB.h264-SALT",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 183509,
+        "source_id": -19786914624581813,
+        "series_title": "Blue",
+        "episode_code": "S01E52",
+        "source_title": "Big.Blue.S01E52.Return.of.the.Blegh.1080p.ROKU.WEB-DL.DD5.1.H.264-NTb",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 183510,
+        "source_id": -71259047429458263,
+        "series_title": "Blue",
+        "episode_code": "S02E01",
+        "source_title": "Shades of Blue - s02e01",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 183510,
+        "source_id": -12263541450977642,
+        "series_title": "Blue",
+        "episode_code": "S02E01",
+        "source_title": "Blue S02E01 1080p",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 183511,
+        "source_id": -60443072483134571,
+        "series_title": "Blue",
+        "episode_code": "S02E02",
+        "source_title": "Shades of Blue - s02e02",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 183511,
+        "source_id": -18183030214586700,
+        "series_title": "Blue",
+        "episode_code": "S02E02",
+        "source_title": "Shades of Blue - S02E02 - Eye Of The Hurricane",
+        "status": "needs_whisper"
+      },
+      {
         "episode_id": 183511,
         "source_id": -44913196694775601,
         "series_title": "Blue",
@@ -149479,166 +149949,6 @@
         "series_title": "Blue",
         "episode_code": "S02E09",
         "source_title": "NYPD.Blue.S02E09.Don.We.Know.Our.Gay.Appeal.DVDRip.XviD-PARAMOUNT",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183518,
-        "source_id": -56524186131399693,
-        "series_title": "Blue",
-        "episode_code": "S02E09",
-        "source_title": "Shades of Blue S02E09 SKtit V OBRAZE",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183518,
-        "source_id": -17555546027268533,
-        "series_title": "Blue",
-        "episode_code": "S02E09",
-        "source_title": "Blue S02E09 1080p",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183519,
-        "source_id": -11552058961853867,
-        "series_title": "Blue",
-        "episode_code": "S02E10",
-        "source_title": "Shades of Blue - s02e10",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183519,
-        "source_id": -38811727875013515,
-        "series_title": "Blue",
-        "episode_code": "S02E10",
-        "source_title": "Shades of Blue - S02E10 - Whoever Fights Monsters",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183519,
-        "source_id": -57679261819957413,
-        "series_title": "Blue",
-        "episode_code": "S02E10",
-        "source_title": "NYPD.Blue.S02E10.In.The.Butt.Bob.DVDRip.XviD-PARAMOUNT",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183519,
-        "source_id": -47933746439225569,
-        "series_title": "Blue",
-        "episode_code": "S02E10",
-        "source_title": "Shades of Blue S02E10 SKtit V OBRAZE",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183519,
-        "source_id": -1911067418947787,
-        "series_title": "Blue",
-        "episode_code": "S02E10",
-        "source_title": "Blue S02E10 1080p",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183520,
-        "source_id": -39102686091892524,
-        "series_title": "Blue",
-        "episode_code": "S02E11",
-        "source_title": "Shades of Blue - s02e11",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183520,
-        "source_id": -55648929083271350,
-        "series_title": "Blue",
-        "episode_code": "S02E11",
-        "source_title": "Shades of Blue - S02E11 - The Quality Of Mercy",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183520,
-        "source_id": -10302532388211818,
-        "series_title": "Blue",
-        "episode_code": "S02E11",
-        "source_title": "Bluey.S02E11.1080p.WEB.h264-SALT",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183520,
-        "source_id": -59308563358041340,
-        "series_title": "Blue",
-        "episode_code": "S02E11",
-        "source_title": "NYPD.Blue.S02E11.Vishy-Vashy.Vinnie.DVDRip.XviD-PARAMOUNT",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183520,
-        "source_id": -42041845568115986,
-        "series_title": "Blue",
-        "episode_code": "S02E11",
-        "source_title": "Blue S02E11 1080p",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183521,
-        "source_id": -35672414189240115,
-        "series_title": "Blue",
-        "episode_code": "S02E12",
-        "source_title": "Shades of Blue - s02e12",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183521,
-        "source_id": -50644805104354733,
-        "series_title": "Blue",
-        "episode_code": "S02E12",
-        "source_title": "Shades of Blue - S02E12 - Behind the Mask",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183521,
-        "source_id": -739899020179220,
-        "series_title": "Blue",
-        "episode_code": "S02E12",
-        "source_title": "NYPD.Blue.S02E12.Large-Mouth.Bass.DVDRip.XviD-PARAMOUNT",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183521,
-        "source_id": -42611474818037722,
-        "series_title": "Blue",
-        "episode_code": "S02E12",
-        "source_title": "Shades of Blue S02E12 SKtit V OBRAZE",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183521,
-        "source_id": -5525599466271672,
-        "series_title": "Blue",
-        "episode_code": "S02E12",
-        "source_title": "Blue S02E12 1080p",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183522,
-        "source_id": -30672516263243926,
-        "series_title": "Blue",
-        "episode_code": "S02E13",
-        "source_title": "Shades of Blue - s02e13",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183522,
-        "source_id": -57689478452616726,
-        "series_title": "Blue",
-        "episode_code": "S02E13",
-        "source_title": "Shades of Blue - S02E13 - Broken Dolls",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183522,
-        "source_id": -68535055321570567,
-        "series_title": "Blue",
-        "episode_code": "S02E13",
-        "source_title": "NYPD.Blue.S02E13.Travels.With.Andy.DVDRip.XviD-PARAMOUNT",
         "status": "needs_whisper"
       }
     ],
@@ -150097,14 +150407,14 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 426,
-    "ok": 79,
+    "disabled": 560,
+    "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
-    "whisper_non_cz_needs_subtitles": 1076,
-    "whisper_confirmed_cz": 404,
-    "needs_whisper": 24876
+    "whisper_non_cz_needs_subtitles": 1058,
+    "whisper_confirmed_cz": 402,
+    "needs_whisper": 24938
   },
   "subtitle_followup_statuses": {
     "needs_subtitle_setup_after_prehrajto_processing": 5149
