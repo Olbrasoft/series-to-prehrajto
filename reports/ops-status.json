@@ -2,22 +2,62 @@
   "counts": {
     "backlog_episodes": 173351,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 20188,
+    "uploaded_episodes": 20200,
     "prepared_source_episodes": 43808,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 40,
-    "language_whisper_attempted_sources": 40,
-    "language_pending_whisper_sources": 2604,
+    "language_audited_sources": 20,
+    "language_whisper_attempted_sources": 20,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 26684,
     "whisper_review_pending_sources": 24826,
     "subtitle_followup_sources": 5272,
     "subtitle_followup_pending_sources": 5272
   },
   "workflow_runs": [
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-07T23:34:04Z",
+      "databaseId": 28906122476,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-07T23:33:37Z",
+      "databaseId": 28906103675,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-07T23:32:19Z",
+      "databaseId": 28906042393,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-07T23:32:05Z",
+      "databaseId": 28906031539,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-07T23:26:05Z",
+      "databaseId": 28905773770,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
     {
       "conclusion": "success",
       "createdAt": "2026-07-07T23:24:59Z",
@@ -27,19 +67,19 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "failure",
       "createdAt": "2026-07-07T23:24:56Z",
       "databaseId": 28905721552,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-07T23:23:55Z",
       "databaseId": 28905676178,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -51,11 +91,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-07-07T23:23:49Z",
       "databaseId": 28905672016,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -87,15 +127,15 @@
       "createdAt": "2026-07-07T23:20:34Z",
       "databaseId": 28905525933,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "prepare-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-07T23:19:03Z",
       "databaseId": 28905459858,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -137,46 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-07T23:10:31Z",
-      "databaseId": 28905076960,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-07T23:05:55Z",
-      "databaseId": 28904873230,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-07T22:57:14Z",
-      "databaseId": 28904464707,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "backfill-subtitles"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-07T22:55:53Z",
-      "databaseId": 28904403839,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-sources"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-07T22:54:19Z",
-      "databaseId": 28904329118,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
     }
   ],
   "gaps": {
@@ -78869,6 +78869,66 @@
         "episode_id": 84975,
         "display_name": "Black Clover S01E23 - 23. epizoda CZ Titulky",
         "video_id": 27242867
+      },
+      {
+        "episode_id": 67268,
+        "display_name": "Griselda S01E06 - Adios, Miami CZ Dabing",
+        "video_id": 27243106
+      },
+      {
+        "episode_id": 16930,
+        "display_name": "Mesiáš S01E02 - Povstání CZ Dabing",
+        "video_id": 27243161
+      },
+      {
+        "episode_id": 16932,
+        "display_name": "Mesiáš S01E05 - Aby hledíce hleděli a neuviděli CZ Dabing",
+        "video_id": 27243208
+      },
+      {
+        "episode_id": 16934,
+        "display_name": "Mesiáš S01E08 - Vyšší moc CZ Dabing",
+        "video_id": 27243255
+      },
+      {
+        "episode_id": 16936,
+        "display_name": "Mesiáš S01E10 - Odměna hříchu CZ Dabing",
+        "video_id": 27243288
+      },
+      {
+        "episode_id": 83415,
+        "display_name": "Právo a pořádek S01E07 - 7. epizoda CZ Dabing",
+        "video_id": 27243107
+      },
+      {
+        "episode_id": 84999,
+        "display_name": "Black Clover S01E27 - 27. epizoda CZ Titulky",
+        "video_id": 27243145
+      },
+      {
+        "episode_id": 85011,
+        "display_name": "Black Clover S01E28 - 28. epizoda CZ Titulky",
+        "video_id": 27243181
+      },
+      {
+        "episode_id": 84995,
+        "display_name": "Black Clover S01E29 - 29. epizoda CZ Titulky",
+        "video_id": 27243203
+      },
+      {
+        "episode_id": 84969,
+        "display_name": "Black Clover S01E31 - 31. epizoda CZ Titulky",
+        "video_id": 27243239
+      },
+      {
+        "episode_id": 84979,
+        "display_name": "Black Clover S01E32 - 32. epizoda CZ Titulky",
+        "video_id": 27243272
+      },
+      {
+        "episode_id": 85003,
+        "display_name": "Black Clover S01E36 - 36. epizoda CZ Titulky",
+        "video_id": 27243305
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -157456,6 +157516,66 @@
         "episode_id": 84975,
         "display_name": "Black Clover S01E23 - 23. epizoda CZ Titulky",
         "video_id": 27242867
+      },
+      {
+        "episode_id": 67268,
+        "display_name": "Griselda S01E06 - Adios, Miami CZ Dabing",
+        "video_id": 27243106
+      },
+      {
+        "episode_id": 16930,
+        "display_name": "Mesiáš S01E02 - Povstání CZ Dabing",
+        "video_id": 27243161
+      },
+      {
+        "episode_id": 16932,
+        "display_name": "Mesiáš S01E05 - Aby hledíce hleděli a neuviděli CZ Dabing",
+        "video_id": 27243208
+      },
+      {
+        "episode_id": 16934,
+        "display_name": "Mesiáš S01E08 - Vyšší moc CZ Dabing",
+        "video_id": 27243255
+      },
+      {
+        "episode_id": 16936,
+        "display_name": "Mesiáš S01E10 - Odměna hříchu CZ Dabing",
+        "video_id": 27243288
+      },
+      {
+        "episode_id": 83415,
+        "display_name": "Právo a pořádek S01E07 - 7. epizoda CZ Dabing",
+        "video_id": 27243107
+      },
+      {
+        "episode_id": 84999,
+        "display_name": "Black Clover S01E27 - 27. epizoda CZ Titulky",
+        "video_id": 27243145
+      },
+      {
+        "episode_id": 85011,
+        "display_name": "Black Clover S01E28 - 28. epizoda CZ Titulky",
+        "video_id": 27243181
+      },
+      {
+        "episode_id": 84995,
+        "display_name": "Black Clover S01E29 - 29. epizoda CZ Titulky",
+        "video_id": 27243203
+      },
+      {
+        "episode_id": 84969,
+        "display_name": "Black Clover S01E31 - 31. epizoda CZ Titulky",
+        "video_id": 27243239
+      },
+      {
+        "episode_id": 84979,
+        "display_name": "Black Clover S01E32 - 32. epizoda CZ Titulky",
+        "video_id": 27243272
+      },
+      {
+        "episode_id": 85003,
+        "display_name": "Black Clover S01E36 - 36. epizoda CZ Titulky",
+        "video_id": 27243305
       }
     ],
     "prepared_not_upload_ready": [
@@ -158617,7 +158737,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 39,
+    "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
