@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 174218,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 19282,
+    "uploaded_episodes": 19303,
     "prepared_source_episodes": 43798,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 20,
-    "language_whisper_attempted_sources": 20,
-    "language_pending_whisper_sources": 2624,
+    "language_audited_sources": 40,
+    "language_whisper_attempted_sources": 40,
+    "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 26684,
     "whisper_review_pending_sources": 24826,
     "subtitle_followup_sources": 5272,
@@ -20,18 +20,90 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-07-07T04:08:32Z",
-      "databaseId": 28840820165,
+      "createdAt": "2026-07-07T04:24:02Z",
+      "databaseId": 28841402063,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-07-07T04:23:58Z",
+      "databaseId": 28841399727,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-07-07T04:22:45Z",
+      "databaseId": 28841352238,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-07T04:21:16Z",
+      "databaseId": 28841296366,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-07T04:17:04Z",
+      "databaseId": 28841141934,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "backfill-subtitles"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-07T04:09:51Z",
+      "databaseId": 28840871497,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "backfill-subtitles"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-07T04:09:39Z",
+      "databaseId": 28840863777,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "failure",
+      "createdAt": "2026-07-07T04:09:36Z",
+      "databaseId": 28840862162,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-07T04:09:34Z",
+      "databaseId": 28840860904,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-07T04:08:32Z",
+      "databaseId": 28840820165,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-07T04:08:05Z",
       "databaseId": 28840802148,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "backfill-subtitles"
     },
     {
@@ -105,78 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "backfill-subtitles"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-07T03:43:42Z",
-      "databaseId": 28839922003,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-07T03:37:47Z",
-      "databaseId": 28839713488,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "backfill-subtitles"
-    },
-    {
-      "conclusion": "failure",
-      "createdAt": "2026-07-07T03:32:59Z",
-      "databaseId": 28839543900,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-07T03:32:29Z",
-      "databaseId": 28839526688,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-07T03:32:25Z",
-      "databaseId": 28839524376,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-07T03:31:19Z",
-      "databaseId": 28839485050,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-07T03:28:38Z",
-      "databaseId": 28839388103,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-07T03:27:35Z",
-      "databaseId": 28839351686,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-07T03:21:23Z",
-      "databaseId": 28839126542,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
     }
   ],
   "gaps": {
@@ -74326,6 +74326,61 @@
         "video_id": 27214436
       },
       {
+        "episode_id": 75092,
+        "display_name": "Spravedlnost v krvi  S13E10 - 10. epizoda CZ Dabing",
+        "video_id": 27214462
+      },
+      {
+        "episode_id": 75084,
+        "display_name": "Spravedlnost v krvi  S13E12 - 12. epizoda CZ Dabing",
+        "video_id": 27214481
+      },
+      {
+        "episode_id": 67602,
+        "display_name": "Spravedlnost v krvi  S13E18 - 18. epizoda CZ Titulky",
+        "video_id": 27214501
+      },
+      {
+        "episode_id": 75090,
+        "display_name": "Spravedlnost v krvi  S13E19 - 19. epizoda CZ Dabing",
+        "video_id": 27214533
+      },
+      {
+        "episode_id": 127598,
+        "display_name": "Láska a Smrt S01E02 - Střety CZ Titulky",
+        "video_id": 27214564
+      },
+      {
+        "episode_id": 40500,
+        "display_name": "Kauzy z Bostonu S02E09 - 9. epizoda CZ Dabing",
+        "video_id": 27214612
+      },
+      {
+        "episode_id": 40522,
+        "display_name": "Kauzy z Bostonu S03E04 - 4. epizoda CZ Dabing",
+        "video_id": 27214743
+      },
+      {
+        "episode_id": 40444,
+        "display_name": "Kauzy z Bostonu S04E06 - 6. epizoda CZ Dabing",
+        "video_id": 27214774
+      },
+      {
+        "episode_id": 40512,
+        "display_name": "Kauzy z Bostonu S04E09 - 9. epizoda CZ Dabing",
+        "video_id": 27214789
+      },
+      {
+        "episode_id": 40520,
+        "display_name": "Kauzy z Bostonu S04E10 - 10. epizoda CZ Dabing",
+        "video_id": 27214798
+      },
+      {
+        "episode_id": 40484,
+        "display_name": "Kauzy z Bostonu S04E12 - 12. epizoda CZ Dabing",
+        "video_id": 27214812
+      },
+      {
         "episode_id": 67447,
         "display_name": "Spravedlnost v krvi  S01E09 - 9. epizoda CZ Dabing",
         "video_id": 27214355
@@ -74339,6 +74394,56 @@
         "episode_id": 67451,
         "display_name": "Spravedlnost v krvi  S01E14 - 14. epizoda CZ Dabing",
         "video_id": 27214431
+      },
+      {
+        "episode_id": 67453,
+        "display_name": "Spravedlnost v krvi  S01E16 - 16. epizoda CZ Dabing",
+        "video_id": 27214471
+      },
+      {
+        "episode_id": 67577,
+        "display_name": "Spravedlnost v krvi  S01E18 - 18. epizoda CZ Dabing",
+        "video_id": 27214499
+      },
+      {
+        "episode_id": 67455,
+        "display_name": "Spravedlnost v krvi  S01E20 - 20. epizoda CZ Dabing",
+        "video_id": 27214531
+      },
+      {
+        "episode_id": 67457,
+        "display_name": "Spravedlnost v krvi  S01E22 - 22. epizoda CZ Dabing",
+        "video_id": 27214565
+      },
+      {
+        "episode_id": 67459,
+        "display_name": "Spravedlnost v krvi  S02E02 - 2. epizoda CZ Dabing",
+        "video_id": 27214592
+      },
+      {
+        "episode_id": 67461,
+        "display_name": "Spravedlnost v krvi  S02E07 - 7. epizoda CZ Dabing",
+        "video_id": 27214652
+      },
+      {
+        "episode_id": 67469,
+        "display_name": "Spravedlnost v krvi  S02E16 - 16. epizoda CZ Dabing",
+        "video_id": 27214725
+      },
+      {
+        "episode_id": 67527,
+        "display_name": "Spravedlnost v krvi  S07E12 - 12. epizoda CZ Dabing",
+        "video_id": 27214757
+      },
+      {
+        "episode_id": 67529,
+        "display_name": "Spravedlnost v krvi  S07E14 - 14. epizoda CZ Dabing",
+        "video_id": 27214772
+      },
+      {
+        "episode_id": 67531,
+        "display_name": "Spravedlnost v krvi  S07E16 - 16. epizoda CZ Titulky",
+        "video_id": 27214793
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -148383,6 +148488,61 @@
         "video_id": 27214436
       },
       {
+        "episode_id": 75092,
+        "display_name": "Spravedlnost v krvi  S13E10 - 10. epizoda CZ Dabing",
+        "video_id": 27214462
+      },
+      {
+        "episode_id": 75084,
+        "display_name": "Spravedlnost v krvi  S13E12 - 12. epizoda CZ Dabing",
+        "video_id": 27214481
+      },
+      {
+        "episode_id": 67602,
+        "display_name": "Spravedlnost v krvi  S13E18 - 18. epizoda CZ Titulky",
+        "video_id": 27214501
+      },
+      {
+        "episode_id": 75090,
+        "display_name": "Spravedlnost v krvi  S13E19 - 19. epizoda CZ Dabing",
+        "video_id": 27214533
+      },
+      {
+        "episode_id": 127598,
+        "display_name": "Láska a Smrt S01E02 - Střety CZ Titulky",
+        "video_id": 27214564
+      },
+      {
+        "episode_id": 40500,
+        "display_name": "Kauzy z Bostonu S02E09 - 9. epizoda CZ Dabing",
+        "video_id": 27214612
+      },
+      {
+        "episode_id": 40522,
+        "display_name": "Kauzy z Bostonu S03E04 - 4. epizoda CZ Dabing",
+        "video_id": 27214743
+      },
+      {
+        "episode_id": 40444,
+        "display_name": "Kauzy z Bostonu S04E06 - 6. epizoda CZ Dabing",
+        "video_id": 27214774
+      },
+      {
+        "episode_id": 40512,
+        "display_name": "Kauzy z Bostonu S04E09 - 9. epizoda CZ Dabing",
+        "video_id": 27214789
+      },
+      {
+        "episode_id": 40520,
+        "display_name": "Kauzy z Bostonu S04E10 - 10. epizoda CZ Dabing",
+        "video_id": 27214798
+      },
+      {
+        "episode_id": 40484,
+        "display_name": "Kauzy z Bostonu S04E12 - 12. epizoda CZ Dabing",
+        "video_id": 27214812
+      },
+      {
         "episode_id": 67447,
         "display_name": "Spravedlnost v krvi  S01E09 - 9. epizoda CZ Dabing",
         "video_id": 27214355
@@ -148396,6 +148556,56 @@
         "episode_id": 67451,
         "display_name": "Spravedlnost v krvi  S01E14 - 14. epizoda CZ Dabing",
         "video_id": 27214431
+      },
+      {
+        "episode_id": 67453,
+        "display_name": "Spravedlnost v krvi  S01E16 - 16. epizoda CZ Dabing",
+        "video_id": 27214471
+      },
+      {
+        "episode_id": 67577,
+        "display_name": "Spravedlnost v krvi  S01E18 - 18. epizoda CZ Dabing",
+        "video_id": 27214499
+      },
+      {
+        "episode_id": 67455,
+        "display_name": "Spravedlnost v krvi  S01E20 - 20. epizoda CZ Dabing",
+        "video_id": 27214531
+      },
+      {
+        "episode_id": 67457,
+        "display_name": "Spravedlnost v krvi  S01E22 - 22. epizoda CZ Dabing",
+        "video_id": 27214565
+      },
+      {
+        "episode_id": 67459,
+        "display_name": "Spravedlnost v krvi  S02E02 - 2. epizoda CZ Dabing",
+        "video_id": 27214592
+      },
+      {
+        "episode_id": 67461,
+        "display_name": "Spravedlnost v krvi  S02E07 - 7. epizoda CZ Dabing",
+        "video_id": 27214652
+      },
+      {
+        "episode_id": 67469,
+        "display_name": "Spravedlnost v krvi  S02E16 - 16. epizoda CZ Dabing",
+        "video_id": 27214725
+      },
+      {
+        "episode_id": 67527,
+        "display_name": "Spravedlnost v krvi  S07E12 - 12. epizoda CZ Dabing",
+        "video_id": 27214757
+      },
+      {
+        "episode_id": 67529,
+        "display_name": "Spravedlnost v krvi  S07E14 - 14. epizoda CZ Dabing",
+        "video_id": 27214772
+      },
+      {
+        "episode_id": 67531,
+        "display_name": "Spravedlnost v krvi  S07E16 - 16. epizoda CZ Titulky",
+        "video_id": 27214793
       }
     ],
     "prepared_not_upload_ready": [
@@ -149557,7 +149767,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 19,
+    "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
