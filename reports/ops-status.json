@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 174050,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 19360,
+    "uploaded_episodes": 19390,
     "prepared_source_episodes": 43798,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 40,
-    "language_whisper_attempted_sources": 40,
-    "language_pending_whisper_sources": 2604,
+    "language_audited_sources": 20,
+    "language_whisper_attempted_sources": 20,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 26684,
     "whisper_review_pending_sources": 24826,
     "subtitle_followup_sources": 5272,
@@ -20,10 +20,58 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-07-07T05:36:27Z",
+      "databaseId": 28844147237,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-07T05:36:18Z",
+      "databaseId": 28844141713,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-07T05:20:39Z",
+      "databaseId": 28843521144,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "backfill-subtitles"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-07T05:16:55Z",
+      "databaseId": 28843375784,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-07T05:16:02Z",
+      "databaseId": 28843342734,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-07T05:12:48Z",
+      "databaseId": 28843219211,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-07T05:11:44Z",
       "databaseId": 28843178265,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -35,19 +83,19 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "failure",
       "createdAt": "2026-07-07T05:09:35Z",
       "databaseId": 28843095069,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-07T05:09:33Z",
       "databaseId": 28843093677,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -63,7 +111,7 @@
       "createdAt": "2026-07-07T05:08:27Z",
       "databaseId": 28843051820,
       "headBranch": "main",
-      "status": "queued",
+      "status": "in_progress",
       "workflowName": "prepare-manifest"
     },
     {
@@ -75,11 +123,11 @@
       "workflowName": "sync"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-07T05:02:26Z",
       "databaseId": 28842819275,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "backfill-subtitles"
     },
     {
@@ -111,7 +159,7 @@
       "createdAt": "2026-07-07T04:46:32Z",
       "databaseId": 28842232863,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "prepare-descriptions"
     },
     {
@@ -129,54 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "backfill-subtitles"
-    },
-    {
-      "conclusion": "failure",
-      "createdAt": "2026-07-07T04:36:53Z",
-      "databaseId": 28841877642,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-07T04:34:55Z",
-      "databaseId": 28841807415,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "backfill-subtitles"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-07T04:32:16Z",
-      "databaseId": 28841708841,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "backfill-subtitles"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-07T04:27:30Z",
-      "databaseId": 28841530778,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "backfill-subtitles"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-07T04:26:44Z",
-      "databaseId": 28841502364,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "refresh-backlog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-07T04:25:11Z",
-      "databaseId": 28841445616,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
     }
   ],
   "gaps": {
@@ -74716,6 +74716,71 @@
         "video_id": 27215755
       },
       {
+        "episode_id": 18076,
+        "display_name": "Bojovník S02E01 - Zvykej si, nebo si pořiď osobního strážce CZ Titulky",
+        "video_id": 27215785
+      },
+      {
+        "episode_id": 18074,
+        "display_name": "Bojovník S02E04 - Bez krve to není ono CZ Titulky",
+        "video_id": 27215815
+      },
+      {
+        "episode_id": 18070,
+        "display_name": "Bojovník S02E08 - Proti všem nepřátelům CZ Titulky",
+        "video_id": 27215841
+      },
+      {
+        "episode_id": 16848,
+        "display_name": "Bojovník S03E01 - Není čas na hrdost CZ Titulky",
+        "video_id": 27215866
+      },
+      {
+        "episode_id": 16852,
+        "display_name": "Bojovník S03E06 - S měkkým srdcem daleko nedojdeš CZ Titulky",
+        "video_id": 27215888
+      },
+      {
+        "episode_id": 57676,
+        "display_name": "Gangs of London S01E03 - 3. epizoda CZ Titulky",
+        "video_id": 27215917
+      },
+      {
+        "episode_id": 57678,
+        "display_name": "Gangs of London S01E05 - 5. epizoda CZ Dabing",
+        "video_id": 27215964
+      },
+      {
+        "episode_id": 57680,
+        "display_name": "Gangs of London S01E07 - 7. epizoda CZ Titulky",
+        "video_id": 27216002
+      },
+      {
+        "episode_id": 36144,
+        "display_name": "Gangs of London S02E01 - 1. epizoda CZ Titulky",
+        "video_id": 27216033
+      },
+      {
+        "episode_id": 36146,
+        "display_name": "Gangs of London S02E03 - 3. epizoda CZ Titulky",
+        "video_id": 27216072
+      },
+      {
+        "episode_id": 36150,
+        "display_name": "Gangs of London S02E07 - 7. epizoda CZ Titulky",
+        "video_id": 27216114
+      },
+      {
+        "episode_id": 35930,
+        "display_name": "Gangs of London S02E08 - 8. epizoda CZ Titulky",
+        "video_id": 27216139
+      },
+      {
+        "episode_id": 57686,
+        "display_name": "Gangs of London S03E02 - 2. epizoda CZ Dabing",
+        "video_id": 27216194
+      },
+      {
         "episode_id": 40523,
         "display_name": "Kauzy z Bostonu S03E10 - 10. epizoda CZ Dabing",
         "video_id": 27215731
@@ -74729,6 +74794,91 @@
         "episode_id": 40465,
         "display_name": "Kauzy z Bostonu S03E14 - 14. epizoda CZ Dabing",
         "video_id": 27215763
+      },
+      {
+        "episode_id": 40477,
+        "display_name": "Kauzy z Bostonu S03E15 - 15. epizoda CZ Dabing",
+        "video_id": 27215774
+      },
+      {
+        "episode_id": 40463,
+        "display_name": "Kauzy z Bostonu S03E16 - 16. epizoda CZ Dabing",
+        "video_id": 27215790
+      },
+      {
+        "episode_id": 40449,
+        "display_name": "Kauzy z Bostonu S03E21 - 21. epizoda CZ Dabing",
+        "video_id": 27215803
+      },
+      {
+        "episode_id": 40511,
+        "display_name": "Kauzy z Bostonu S03E23 - 23. epizoda CZ Dabing",
+        "video_id": 27215816
+      },
+      {
+        "episode_id": 40497,
+        "display_name": "Kauzy z Bostonu S03E24 - 24. epizoda CZ Dabing",
+        "video_id": 27215838
+      },
+      {
+        "episode_id": 40435,
+        "display_name": "Kauzy z Bostonu S04E01 - 1. epizoda CZ Dabing",
+        "video_id": 27215851
+      },
+      {
+        "episode_id": 40439,
+        "display_name": "Kauzy z Bostonu S04E03 - 3. epizoda CZ Dabing",
+        "video_id": 27215869
+      },
+      {
+        "episode_id": 40441,
+        "display_name": "Kauzy z Bostonu S04E07 - 7. epizoda CZ Dabing",
+        "video_id": 27215886
+      },
+      {
+        "episode_id": 40525,
+        "display_name": "Kauzy z Bostonu S04E08 - 8. epizoda CZ Dabing",
+        "video_id": 27215903
+      },
+      {
+        "episode_id": 40493,
+        "display_name": "Kauzy z Bostonu S04E14 - 14. epizoda CZ Dabing",
+        "video_id": 27215924
+      },
+      {
+        "episode_id": 55919,
+        "display_name": "Já a robot S01E01 - Hranice lidskosti CZ Dabing",
+        "video_id": 27215948
+      },
+      {
+        "episode_id": 55921,
+        "display_name": "Já a robot S01E03 - Podle protokolu CZ Dabing",
+        "video_id": 27215966
+      },
+      {
+        "episode_id": 55923,
+        "display_name": "Já a robot S01E05 - Pokrevní bratři CZ Dabing",
+        "video_id": 27215985
+      },
+      {
+        "episode_id": 55925,
+        "display_name": "Já a robot S01E07 - Svět podle Simona CZ Dabing",
+        "video_id": 27216004
+      },
+      {
+        "episode_id": 55927,
+        "display_name": "Já a robot S01E09 - Stvořitel CZ Dabing",
+        "video_id": 27216025
+      },
+      {
+        "episode_id": 55929,
+        "display_name": "Já a robot S01E11 - Narušení CZ Dabing",
+        "video_id": 27216050
+      },
+      {
+        "episode_id": 55931,
+        "display_name": "Já a robot S01E12 - Pozorovatel CZ Dabing",
+        "video_id": 27216073
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -149163,6 +149313,71 @@
         "video_id": 27215755
       },
       {
+        "episode_id": 18076,
+        "display_name": "Bojovník S02E01 - Zvykej si, nebo si pořiď osobního strážce CZ Titulky",
+        "video_id": 27215785
+      },
+      {
+        "episode_id": 18074,
+        "display_name": "Bojovník S02E04 - Bez krve to není ono CZ Titulky",
+        "video_id": 27215815
+      },
+      {
+        "episode_id": 18070,
+        "display_name": "Bojovník S02E08 - Proti všem nepřátelům CZ Titulky",
+        "video_id": 27215841
+      },
+      {
+        "episode_id": 16848,
+        "display_name": "Bojovník S03E01 - Není čas na hrdost CZ Titulky",
+        "video_id": 27215866
+      },
+      {
+        "episode_id": 16852,
+        "display_name": "Bojovník S03E06 - S měkkým srdcem daleko nedojdeš CZ Titulky",
+        "video_id": 27215888
+      },
+      {
+        "episode_id": 57676,
+        "display_name": "Gangs of London S01E03 - 3. epizoda CZ Titulky",
+        "video_id": 27215917
+      },
+      {
+        "episode_id": 57678,
+        "display_name": "Gangs of London S01E05 - 5. epizoda CZ Dabing",
+        "video_id": 27215964
+      },
+      {
+        "episode_id": 57680,
+        "display_name": "Gangs of London S01E07 - 7. epizoda CZ Titulky",
+        "video_id": 27216002
+      },
+      {
+        "episode_id": 36144,
+        "display_name": "Gangs of London S02E01 - 1. epizoda CZ Titulky",
+        "video_id": 27216033
+      },
+      {
+        "episode_id": 36146,
+        "display_name": "Gangs of London S02E03 - 3. epizoda CZ Titulky",
+        "video_id": 27216072
+      },
+      {
+        "episode_id": 36150,
+        "display_name": "Gangs of London S02E07 - 7. epizoda CZ Titulky",
+        "video_id": 27216114
+      },
+      {
+        "episode_id": 35930,
+        "display_name": "Gangs of London S02E08 - 8. epizoda CZ Titulky",
+        "video_id": 27216139
+      },
+      {
+        "episode_id": 57686,
+        "display_name": "Gangs of London S03E02 - 2. epizoda CZ Dabing",
+        "video_id": 27216194
+      },
+      {
         "episode_id": 40523,
         "display_name": "Kauzy z Bostonu S03E10 - 10. epizoda CZ Dabing",
         "video_id": 27215731
@@ -149176,6 +149391,91 @@
         "episode_id": 40465,
         "display_name": "Kauzy z Bostonu S03E14 - 14. epizoda CZ Dabing",
         "video_id": 27215763
+      },
+      {
+        "episode_id": 40477,
+        "display_name": "Kauzy z Bostonu S03E15 - 15. epizoda CZ Dabing",
+        "video_id": 27215774
+      },
+      {
+        "episode_id": 40463,
+        "display_name": "Kauzy z Bostonu S03E16 - 16. epizoda CZ Dabing",
+        "video_id": 27215790
+      },
+      {
+        "episode_id": 40449,
+        "display_name": "Kauzy z Bostonu S03E21 - 21. epizoda CZ Dabing",
+        "video_id": 27215803
+      },
+      {
+        "episode_id": 40511,
+        "display_name": "Kauzy z Bostonu S03E23 - 23. epizoda CZ Dabing",
+        "video_id": 27215816
+      },
+      {
+        "episode_id": 40497,
+        "display_name": "Kauzy z Bostonu S03E24 - 24. epizoda CZ Dabing",
+        "video_id": 27215838
+      },
+      {
+        "episode_id": 40435,
+        "display_name": "Kauzy z Bostonu S04E01 - 1. epizoda CZ Dabing",
+        "video_id": 27215851
+      },
+      {
+        "episode_id": 40439,
+        "display_name": "Kauzy z Bostonu S04E03 - 3. epizoda CZ Dabing",
+        "video_id": 27215869
+      },
+      {
+        "episode_id": 40441,
+        "display_name": "Kauzy z Bostonu S04E07 - 7. epizoda CZ Dabing",
+        "video_id": 27215886
+      },
+      {
+        "episode_id": 40525,
+        "display_name": "Kauzy z Bostonu S04E08 - 8. epizoda CZ Dabing",
+        "video_id": 27215903
+      },
+      {
+        "episode_id": 40493,
+        "display_name": "Kauzy z Bostonu S04E14 - 14. epizoda CZ Dabing",
+        "video_id": 27215924
+      },
+      {
+        "episode_id": 55919,
+        "display_name": "Já a robot S01E01 - Hranice lidskosti CZ Dabing",
+        "video_id": 27215948
+      },
+      {
+        "episode_id": 55921,
+        "display_name": "Já a robot S01E03 - Podle protokolu CZ Dabing",
+        "video_id": 27215966
+      },
+      {
+        "episode_id": 55923,
+        "display_name": "Já a robot S01E05 - Pokrevní bratři CZ Dabing",
+        "video_id": 27215985
+      },
+      {
+        "episode_id": 55925,
+        "display_name": "Já a robot S01E07 - Svět podle Simona CZ Dabing",
+        "video_id": 27216004
+      },
+      {
+        "episode_id": 55927,
+        "display_name": "Já a robot S01E09 - Stvořitel CZ Dabing",
+        "video_id": 27216025
+      },
+      {
+        "episode_id": 55929,
+        "display_name": "Já a robot S01E11 - Narušení CZ Dabing",
+        "video_id": 27216050
+      },
+      {
+        "episode_id": 55931,
+        "display_name": "Já a robot S01E12 - Pozorovatel CZ Dabing",
+        "video_id": 27216073
       }
     ],
     "prepared_not_upload_ready": [
@@ -150337,7 +150637,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 39,
+    "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
