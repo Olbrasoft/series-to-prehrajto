@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 173351,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 20123,
+    "uploaded_episodes": 20143,
     "prepared_source_episodes": 43808,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 40,
-    "language_whisper_attempted_sources": 40,
-    "language_pending_whisper_sources": 2604,
+    "language_audited_sources": 20,
+    "language_whisper_attempted_sources": 20,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 26684,
     "whisper_review_pending_sources": 24826,
     "subtitle_followup_sources": 5272,
@@ -20,10 +20,58 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-07-07T22:43:10Z",
+      "databaseId": 28903802919,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-07T22:43:07Z",
+      "databaseId": 28903800027,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-07T22:42:45Z",
+      "databaseId": 28903781523,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-07T22:36:56Z",
+      "databaseId": 28903503877,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-07T22:36:43Z",
+      "databaseId": 28903492843,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-07T22:35:36Z",
+      "databaseId": 28903441236,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "backfill-subtitles"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-07T22:30:11Z",
       "databaseId": 28903166637,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-status"
     },
     {
@@ -31,7 +79,7 @@
       "createdAt": "2026-07-07T22:29:29Z",
       "databaseId": 28903131963,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "prepare-manifest"
     },
     {
@@ -47,23 +95,23 @@
       "createdAt": "2026-07-07T22:28:53Z",
       "databaseId": 28903101314,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "prepare-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-07T22:25:53Z",
       "databaseId": 28902952532,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-07T22:23:37Z",
       "databaseId": 28902836730,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "backfill-subtitles"
     },
     {
@@ -129,54 +177,6 @@
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-07T22:04:22Z",
-      "databaseId": 28901861515,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "backfill-subtitles"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-07T22:00:57Z",
-      "databaseId": 28901677326,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-sources"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-07T21:58:16Z",
-      "databaseId": 28901536251,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-07T21:57:59Z",
-      "databaseId": 28901521397,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-07T21:57:59Z",
-      "databaseId": 28901521329,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-07-07T21:57:26Z",
-      "databaseId": 28901493386,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-descriptions"
     }
   ],
   "gaps": {
@@ -78511,6 +78511,51 @@
         "video_id": 27241648
       },
       {
+        "episode_id": 88618,
+        "display_name": "Gomora S05E03 - 3. epizoda CZ Titulky",
+        "video_id": 27241675
+      },
+      {
+        "episode_id": 88620,
+        "display_name": "Gomora S05E05 - 5. epizoda CZ Dabing",
+        "video_id": 27241719
+      },
+      {
+        "episode_id": 88624,
+        "display_name": "Gomora S05E09 - 9. epizoda CZ Dabing",
+        "video_id": 27241776
+      },
+      {
+        "episode_id": 84998,
+        "display_name": "Black Clover S01E02 - 2. epizoda CZ Titulky",
+        "video_id": 27241808
+      },
+      {
+        "episode_id": 85024,
+        "display_name": "Black Clover S01E05 - 5. epizoda CZ Titulky",
+        "video_id": 27241832
+      },
+      {
+        "episode_id": 85014,
+        "display_name": "Black Clover S01E06 - 6. epizoda CZ Titulky",
+        "video_id": 27241871
+      },
+      {
+        "episode_id": 84960,
+        "display_name": "Black Clover S01E09 - 9. epizoda CZ Titulky",
+        "video_id": 27241900
+      },
+      {
+        "episode_id": 84992,
+        "display_name": "Black Clover S01E12 - 12. epizoda CZ Titulky",
+        "video_id": 27241930
+      },
+      {
+        "episode_id": 84980,
+        "display_name": "Black Clover S01E14 - 14. epizoda CZ Titulky",
+        "video_id": 27241952
+      },
+      {
         "episode_id": 21629,
         "display_name": "Superman a Lois S03E04 - Příliš blízko domova CZ Dabing",
         "video_id": 27241425
@@ -78544,6 +78589,61 @@
         "episode_id": 12429,
         "display_name": "Superman a Lois S04E07 - Normální chlap CZ Dabing",
         "video_id": 27241644
+      },
+      {
+        "episode_id": 12427,
+        "display_name": "Superman a Lois S04E09 - Znovu žít a zemřít CZ Dabing",
+        "video_id": 27241660
+      },
+      {
+        "episode_id": 52993,
+        "display_name": "Ghosts S01E03 - 3. epizoda CZ Titulky",
+        "video_id": 27241680
+      },
+      {
+        "episode_id": 52949,
+        "display_name": "Ghosts S02E07 - 7. epizoda CZ Titulky",
+        "video_id": 27241698
+      },
+      {
+        "episode_id": 52969,
+        "display_name": "Ghosts S04E05 - 5. epizoda CZ Titulky",
+        "video_id": 27241770
+      },
+      {
+        "episode_id": 52971,
+        "display_name": "Ghosts S04E07 - 7. epizoda CZ Titulky",
+        "video_id": 27241807
+      },
+      {
+        "episode_id": 45847,
+        "display_name": "Gomora S01E02 - Důvěřuješ mi? CZ Dabing",
+        "video_id": 27241849
+      },
+      {
+        "episode_id": 45845,
+        "display_name": "Gomora S01E04 - Africká krev CZ Dabing",
+        "video_id": 27241879
+      },
+      {
+        "episode_id": 45851,
+        "display_name": "Gomora S01E06 - Španělská ruleta CZ Dabing",
+        "video_id": 27241906
+      },
+      {
+        "episode_id": 45849,
+        "display_name": "Gomora S01E07 - Imma proti všem CZ Dabing",
+        "video_id": 27241925
+      },
+      {
+        "episode_id": 45853,
+        "display_name": "Gomora S01E10 - Je čas si vyřídit účty CZ Dabing",
+        "video_id": 27241946
+      },
+      {
+        "episode_id": 45855,
+        "display_name": "Gomora S01E12 - Nesmrtelní CZ Dabing",
+        "video_id": 27241971
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -156773,6 +156873,51 @@
         "video_id": 27241648
       },
       {
+        "episode_id": 88618,
+        "display_name": "Gomora S05E03 - 3. epizoda CZ Titulky",
+        "video_id": 27241675
+      },
+      {
+        "episode_id": 88620,
+        "display_name": "Gomora S05E05 - 5. epizoda CZ Dabing",
+        "video_id": 27241719
+      },
+      {
+        "episode_id": 88624,
+        "display_name": "Gomora S05E09 - 9. epizoda CZ Dabing",
+        "video_id": 27241776
+      },
+      {
+        "episode_id": 84998,
+        "display_name": "Black Clover S01E02 - 2. epizoda CZ Titulky",
+        "video_id": 27241808
+      },
+      {
+        "episode_id": 85024,
+        "display_name": "Black Clover S01E05 - 5. epizoda CZ Titulky",
+        "video_id": 27241832
+      },
+      {
+        "episode_id": 85014,
+        "display_name": "Black Clover S01E06 - 6. epizoda CZ Titulky",
+        "video_id": 27241871
+      },
+      {
+        "episode_id": 84960,
+        "display_name": "Black Clover S01E09 - 9. epizoda CZ Titulky",
+        "video_id": 27241900
+      },
+      {
+        "episode_id": 84992,
+        "display_name": "Black Clover S01E12 - 12. epizoda CZ Titulky",
+        "video_id": 27241930
+      },
+      {
+        "episode_id": 84980,
+        "display_name": "Black Clover S01E14 - 14. epizoda CZ Titulky",
+        "video_id": 27241952
+      },
+      {
         "episode_id": 21629,
         "display_name": "Superman a Lois S03E04 - Příliš blízko domova CZ Dabing",
         "video_id": 27241425
@@ -156806,6 +156951,61 @@
         "episode_id": 12429,
         "display_name": "Superman a Lois S04E07 - Normální chlap CZ Dabing",
         "video_id": 27241644
+      },
+      {
+        "episode_id": 12427,
+        "display_name": "Superman a Lois S04E09 - Znovu žít a zemřít CZ Dabing",
+        "video_id": 27241660
+      },
+      {
+        "episode_id": 52993,
+        "display_name": "Ghosts S01E03 - 3. epizoda CZ Titulky",
+        "video_id": 27241680
+      },
+      {
+        "episode_id": 52949,
+        "display_name": "Ghosts S02E07 - 7. epizoda CZ Titulky",
+        "video_id": 27241698
+      },
+      {
+        "episode_id": 52969,
+        "display_name": "Ghosts S04E05 - 5. epizoda CZ Titulky",
+        "video_id": 27241770
+      },
+      {
+        "episode_id": 52971,
+        "display_name": "Ghosts S04E07 - 7. epizoda CZ Titulky",
+        "video_id": 27241807
+      },
+      {
+        "episode_id": 45847,
+        "display_name": "Gomora S01E02 - Důvěřuješ mi? CZ Dabing",
+        "video_id": 27241849
+      },
+      {
+        "episode_id": 45845,
+        "display_name": "Gomora S01E04 - Africká krev CZ Dabing",
+        "video_id": 27241879
+      },
+      {
+        "episode_id": 45851,
+        "display_name": "Gomora S01E06 - Španělská ruleta CZ Dabing",
+        "video_id": 27241906
+      },
+      {
+        "episode_id": 45849,
+        "display_name": "Gomora S01E07 - Imma proti všem CZ Dabing",
+        "video_id": 27241925
+      },
+      {
+        "episode_id": 45853,
+        "display_name": "Gomora S01E10 - Je čas si vyřídit účty CZ Dabing",
+        "video_id": 27241946
+      },
+      {
+        "episode_id": 45855,
+        "display_name": "Gomora S01E12 - Nesmrtelní CZ Dabing",
+        "video_id": 27241971
       }
     ],
     "prepared_not_upload_ready": [
@@ -157967,7 +158167,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 39,
+    "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
