@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 173442,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 19951,
+    "uploaded_episodes": 19961,
     "prepared_source_episodes": 43808,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 20,
-    "language_whisper_attempted_sources": 20,
-    "language_pending_whisper_sources": 2624,
+    "language_audited_sources": 40,
+    "language_whisper_attempted_sources": 40,
+    "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 26684,
     "whisper_review_pending_sources": 24826,
     "subtitle_followup_sources": 5272,
@@ -20,10 +20,74 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-07-07T17:01:15Z",
+      "databaseId": 28884114981,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-07T16:59:34Z",
+      "databaseId": 28884003322,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-07T16:57:50Z",
+      "databaseId": 28883895098,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-07T16:52:40Z",
+      "databaseId": 28883574089,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "backfill-subtitles"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-07T16:52:40Z",
+      "databaseId": 28883573958,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-07T16:49:14Z",
+      "databaseId": 28883360547,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "failure",
+      "createdAt": "2026-07-07T16:49:10Z",
+      "databaseId": 28883357364,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-07T16:49:08Z",
+      "databaseId": 28883355106,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-07T16:48:02Z",
       "databaseId": 28883289376,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -113,70 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-07T16:14:00Z",
-      "databaseId": 28881192594,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "failure",
-      "createdAt": "2026-07-07T16:13:56Z",
-      "databaseId": 28881188882,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-07T16:12:42Z",
-      "databaseId": 28881109001,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-07T16:12:41Z",
-      "databaseId": 28881108834,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "failure",
-      "createdAt": "2026-07-07T16:12:35Z",
-      "databaseId": 28881101773,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-07T16:12:26Z",
-      "databaseId": 28881091545,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-07T16:12:21Z",
-      "databaseId": 28881086434,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-07T16:11:08Z",
-      "databaseId": 28881010360,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
     }
   ],
   "gaps": {
@@ -77684,6 +77684,56 @@
         "episode_id": 16951,
         "display_name": "Mladý papež S01E04 - 4. epizoda CZ Dabing",
         "video_id": 27233460
+      },
+      {
+        "episode_id": 83516,
+        "display_name": "Právo a pořádek S03E10 - 10. epizoda CZ Dabing",
+        "video_id": 27233688
+      },
+      {
+        "episode_id": 83442,
+        "display_name": "Právo a pořádek S03E11 - 11. epizoda CZ Dabing",
+        "video_id": 27233724
+      },
+      {
+        "episode_id": 83512,
+        "display_name": "Právo a pořádek S03E12 - 12. epizoda CZ Dabing",
+        "video_id": 27233747
+      },
+      {
+        "episode_id": 83518,
+        "display_name": "Právo a pořádek S03E14 - 14. epizoda CZ Dabing",
+        "video_id": 27233769
+      },
+      {
+        "episode_id": 83446,
+        "display_name": "Právo a pořádek S03E15 - 15. epizoda CZ Dabing",
+        "video_id": 27233813
+      },
+      {
+        "episode_id": 83450,
+        "display_name": "Právo a pořádek S03E17 - 17. epizoda CZ Dabing",
+        "video_id": 27233898
+      },
+      {
+        "episode_id": 83452,
+        "display_name": "Právo a pořádek S03E19 - 19. epizoda CZ Dabing",
+        "video_id": 27233920
+      },
+      {
+        "episode_id": 16953,
+        "display_name": "Mladý papež S01E06 - 6. epizoda CZ Dabing",
+        "video_id": 27233740
+      },
+      {
+        "episode_id": 16955,
+        "display_name": "Mladý papež S01E08 - 8. epizoda CZ Dabing",
+        "video_id": 27233788
+      },
+      {
+        "episode_id": 16957,
+        "display_name": "Mladý papež S01E10 - 10. epizoda CZ Dabing",
+        "video_id": 27233915
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -155086,6 +155136,56 @@
         "episode_id": 16951,
         "display_name": "Mladý papež S01E04 - 4. epizoda CZ Dabing",
         "video_id": 27233460
+      },
+      {
+        "episode_id": 83516,
+        "display_name": "Právo a pořádek S03E10 - 10. epizoda CZ Dabing",
+        "video_id": 27233688
+      },
+      {
+        "episode_id": 83442,
+        "display_name": "Právo a pořádek S03E11 - 11. epizoda CZ Dabing",
+        "video_id": 27233724
+      },
+      {
+        "episode_id": 83512,
+        "display_name": "Právo a pořádek S03E12 - 12. epizoda CZ Dabing",
+        "video_id": 27233747
+      },
+      {
+        "episode_id": 83518,
+        "display_name": "Právo a pořádek S03E14 - 14. epizoda CZ Dabing",
+        "video_id": 27233769
+      },
+      {
+        "episode_id": 83446,
+        "display_name": "Právo a pořádek S03E15 - 15. epizoda CZ Dabing",
+        "video_id": 27233813
+      },
+      {
+        "episode_id": 83450,
+        "display_name": "Právo a pořádek S03E17 - 17. epizoda CZ Dabing",
+        "video_id": 27233898
+      },
+      {
+        "episode_id": 83452,
+        "display_name": "Právo a pořádek S03E19 - 19. epizoda CZ Dabing",
+        "video_id": 27233920
+      },
+      {
+        "episode_id": 16953,
+        "display_name": "Mladý papež S01E06 - 6. epizoda CZ Dabing",
+        "video_id": 27233740
+      },
+      {
+        "episode_id": 16955,
+        "display_name": "Mladý papež S01E08 - 8. epizoda CZ Dabing",
+        "video_id": 27233788
+      },
+      {
+        "episode_id": 16957,
+        "display_name": "Mladý papež S01E10 - 10. epizoda CZ Dabing",
+        "video_id": 27233915
       }
     ],
     "prepared_not_upload_ready": [
@@ -156247,7 +156347,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 19,
+    "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
