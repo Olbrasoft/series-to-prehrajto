@@ -94,8 +94,8 @@ jobs:
 
       - name: Run sync batch
         env:
-          PREHRAJTO_EMAIL: ${{ secrets.PREHRAJTO_EMAIL }}
-          PREHRAJTO_PASSWORD: ${{ secrets.PREHRAJTO_PASSWORD }}
+          PREHRAJTO_EMAIL: ${{ secrets.UPLOAD_PREHRAJTO_EMAIL || secrets.PREHRAJTO_EMAIL }}
+          PREHRAJTO_PASSWORD: ${{ secrets.UPLOAD_PREHRAJTO_PASSWORD || secrets.PREHRAJTO_PASSWORD }}
           CZ_PROXY_URL: ${{ secrets.CZ_PROXY_URL }}
           CZ_PROXY_KEY: ${{ secrets.CZ_PROXY_KEY }}
           WHISPER_LANGUAGE_CHECK: ${{ vars.WHISPER_LANGUAGE_CHECK || '0' }}
