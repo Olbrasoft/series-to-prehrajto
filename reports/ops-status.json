@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 173765,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 19684,
+    "uploaded_episodes": 19700,
     "prepared_source_episodes": 43808,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 20,
-    "language_whisper_attempted_sources": 20,
-    "language_pending_whisper_sources": 2624,
+    "language_audited_sources": 40,
+    "language_whisper_attempted_sources": 40,
+    "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 26684,
     "whisper_review_pending_sources": 24826,
     "subtitle_followup_sources": 5272,
@@ -20,18 +20,82 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-07-07T12:14:20Z",
-      "databaseId": 28865288215,
+      "createdAt": "2026-07-07T12:27:57Z",
+      "databaseId": 28866088763,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-07-07T12:27:14Z",
+      "databaseId": 28866047957,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-sources"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-07T12:26:28Z",
+      "databaseId": 28866000423,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "backfill-subtitles"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-07T12:25:20Z",
+      "databaseId": 28865932679,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-07T12:17:02Z",
+      "databaseId": 28865445096,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "backfill-subtitles"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-07T12:15:29Z",
+      "databaseId": 28865357149,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "failure",
+      "createdAt": "2026-07-07T12:15:27Z",
+      "databaseId": 28865354186,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-07T12:15:24Z",
+      "databaseId": 28865351963,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-07T12:14:20Z",
+      "databaseId": 28865288215,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "cancelled",
       "createdAt": "2026-07-07T12:14:14Z",
       "databaseId": 28865283101,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -51,11 +115,11 @@
       "workflowName": "sync"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-07T12:08:37Z",
       "databaseId": 28864955908,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "backfill-subtitles"
     },
     {
@@ -87,7 +151,7 @@
       "createdAt": "2026-07-07T11:59:58Z",
       "databaseId": 28864445550,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "prepare-descriptions"
     },
     {
@@ -113,70 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "backfill-subtitles"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-07T11:45:12Z",
-      "databaseId": 28863639455,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "failure",
-      "createdAt": "2026-07-07T11:45:08Z",
-      "databaseId": 28863636304,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-07T11:45:06Z",
-      "databaseId": 28863633483,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-07T11:44:37Z",
-      "databaseId": 28863608759,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "backfill-subtitles"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-07T11:43:59Z",
-      "databaseId": 28863572144,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-07T11:40:31Z",
-      "databaseId": 28863376669,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "backfill-subtitles"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-07T11:34:26Z",
-      "databaseId": 28863044110,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-07T11:34:24Z",
-      "databaseId": 28863042382,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-descriptions"
     }
   ],
   "gaps": {
@@ -76349,6 +76349,86 @@
         "episode_id": 43501,
         "display_name": "Policie Chicago S07E05 - Bratrská láska CZ Dabing",
         "video_id": 27227002
+      },
+      {
+        "episode_id": 43534,
+        "display_name": "Policie Chicago S13E13 - 13. epizoda CZ Titulky",
+        "video_id": 27227082
+      },
+      {
+        "episode_id": 43532,
+        "display_name": "Policie Chicago S13E14 - 14. epizoda CZ Titulky",
+        "video_id": 27227121
+      },
+      {
+        "episode_id": 181778,
+        "display_name": "Policie Chicago S13E16 - 16. epizoda CZ Titulky",
+        "video_id": 27227159
+      },
+      {
+        "episode_id": 181782,
+        "display_name": "Policie Chicago S13E21 - 21. epizoda CZ Titulky",
+        "video_id": 27227190
+      },
+      {
+        "episode_id": 13618,
+        "display_name": "Xena S01E02 - Válečné vozy CZ Dabing",
+        "video_id": 27227218
+      },
+      {
+        "episode_id": 13620,
+        "display_name": "Xena S01E04 - Kolébka naděje CZ Dabing",
+        "video_id": 27227247
+      },
+      {
+        "episode_id": 13622,
+        "display_name": "Xena S01E06 - Váhání CZ Dabing",
+        "video_id": 27227274
+      },
+      {
+        "episode_id": 13624,
+        "display_name": "Xena S01E08 - Prométeus CZ Dabing",
+        "video_id": 27227303
+      },
+      {
+        "episode_id": 13628,
+        "display_name": "Xena S01E12 - Střež se Řeků, když přinášejí dary CZ Dabing",
+        "video_id": 27227340
+      },
+      {
+        "episode_id": 13630,
+        "display_name": "Xena S01E14 - Přehršle dinárů CZ Dabing",
+        "video_id": 27227373
+      },
+      {
+        "episode_id": 43437,
+        "display_name": "Policie Chicago S07E06 - Falešná pozitivita CZ Dabing",
+        "video_id": 27227091
+      },
+      {
+        "episode_id": 43439,
+        "display_name": "Policie Chicago S07E08 - Nelituji CZ Dabing",
+        "video_id": 27227176
+      },
+      {
+        "episode_id": 43429,
+        "display_name": "Policie Chicago S07E11 - Roh 43. a Normal CZ Dabing",
+        "video_id": 27227211
+      },
+      {
+        "episode_id": 43431,
+        "display_name": "Policie Chicago S07E13 - Pořád tu budu CZ Titulky",
+        "video_id": 27227264
+      },
+      {
+        "episode_id": 43433,
+        "display_name": "Policie Chicago S07E15 - Tíha pravdy CZ Titulky",
+        "video_id": 27227291
+      },
+      {
+        "episode_id": 43441,
+        "display_name": "Policie Chicago S07E20 - Mlčení noci CZ Dabing",
+        "video_id": 27227341
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -152416,6 +152496,86 @@
         "episode_id": 43501,
         "display_name": "Policie Chicago S07E05 - Bratrská láska CZ Dabing",
         "video_id": 27227002
+      },
+      {
+        "episode_id": 43534,
+        "display_name": "Policie Chicago S13E13 - 13. epizoda CZ Titulky",
+        "video_id": 27227082
+      },
+      {
+        "episode_id": 43532,
+        "display_name": "Policie Chicago S13E14 - 14. epizoda CZ Titulky",
+        "video_id": 27227121
+      },
+      {
+        "episode_id": 181778,
+        "display_name": "Policie Chicago S13E16 - 16. epizoda CZ Titulky",
+        "video_id": 27227159
+      },
+      {
+        "episode_id": 181782,
+        "display_name": "Policie Chicago S13E21 - 21. epizoda CZ Titulky",
+        "video_id": 27227190
+      },
+      {
+        "episode_id": 13618,
+        "display_name": "Xena S01E02 - Válečné vozy CZ Dabing",
+        "video_id": 27227218
+      },
+      {
+        "episode_id": 13620,
+        "display_name": "Xena S01E04 - Kolébka naděje CZ Dabing",
+        "video_id": 27227247
+      },
+      {
+        "episode_id": 13622,
+        "display_name": "Xena S01E06 - Váhání CZ Dabing",
+        "video_id": 27227274
+      },
+      {
+        "episode_id": 13624,
+        "display_name": "Xena S01E08 - Prométeus CZ Dabing",
+        "video_id": 27227303
+      },
+      {
+        "episode_id": 13628,
+        "display_name": "Xena S01E12 - Střež se Řeků, když přinášejí dary CZ Dabing",
+        "video_id": 27227340
+      },
+      {
+        "episode_id": 13630,
+        "display_name": "Xena S01E14 - Přehršle dinárů CZ Dabing",
+        "video_id": 27227373
+      },
+      {
+        "episode_id": 43437,
+        "display_name": "Policie Chicago S07E06 - Falešná pozitivita CZ Dabing",
+        "video_id": 27227091
+      },
+      {
+        "episode_id": 43439,
+        "display_name": "Policie Chicago S07E08 - Nelituji CZ Dabing",
+        "video_id": 27227176
+      },
+      {
+        "episode_id": 43429,
+        "display_name": "Policie Chicago S07E11 - Roh 43. a Normal CZ Dabing",
+        "video_id": 27227211
+      },
+      {
+        "episode_id": 43431,
+        "display_name": "Policie Chicago S07E13 - Pořád tu budu CZ Titulky",
+        "video_id": 27227264
+      },
+      {
+        "episode_id": 43433,
+        "display_name": "Policie Chicago S07E15 - Tíha pravdy CZ Titulky",
+        "video_id": 27227291
+      },
+      {
+        "episode_id": 43441,
+        "display_name": "Policie Chicago S07E20 - Mlčení noci CZ Dabing",
+        "video_id": 27227341
       }
     ],
     "prepared_not_upload_ready": [
@@ -153577,7 +153737,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 19,
+    "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
