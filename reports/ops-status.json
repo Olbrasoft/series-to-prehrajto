@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 173351,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 20207,
+    "uploaded_episodes": 20209,
     "prepared_source_episodes": 43808,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 20,
-    "language_whisper_attempted_sources": 20,
-    "language_pending_whisper_sources": 2624,
+    "language_audited_sources": 40,
+    "language_whisper_attempted_sources": 40,
+    "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 26684,
     "whisper_review_pending_sources": 24826,
     "subtitle_followup_sources": 5272,
@@ -20,10 +20,34 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-07-07T23:44:09Z",
+      "databaseId": 28906559413,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "backfill-subtitles"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-07T23:43:38Z",
+      "databaseId": 28906535925,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-07T23:42:48Z",
+      "databaseId": 28906499877,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-07T23:41:41Z",
       "databaseId": 28906450209,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -35,11 +59,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-07T23:34:37Z",
       "databaseId": 28906147241,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -59,11 +83,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "failure",
       "createdAt": "2026-07-07T23:32:19Z",
       "databaseId": 28906042393,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
@@ -153,30 +177,6 @@
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-07T23:19:03Z",
-      "databaseId": 28905459858,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-07T23:13:22Z",
-      "databaseId": 28905203902,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-07T23:12:15Z",
-      "databaseId": 28905151925,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
     }
   ],
   "gaps": {
@@ -78921,6 +78921,16 @@
         "video_id": 27243506
       },
       {
+        "episode_id": 119510,
+        "display_name": "Sněží! S01E08 - Porodní bolesti CZ Dabing",
+        "video_id": 27243533
+      },
+      {
+        "episode_id": 119512,
+        "display_name": "Sněží! S01E10 - The Rubicon CZ Dabing",
+        "video_id": 27243555
+      },
+      {
         "episode_id": 83415,
         "display_name": "Právo a pořádek S01E07 - 7. epizoda CZ Dabing",
         "video_id": 27243107
@@ -157603,6 +157613,16 @@
         "video_id": 27243506
       },
       {
+        "episode_id": 119510,
+        "display_name": "Sněží! S01E08 - Porodní bolesti CZ Dabing",
+        "video_id": 27243533
+      },
+      {
+        "episode_id": 119512,
+        "display_name": "Sněží! S01E10 - The Rubicon CZ Dabing",
+        "video_id": 27243555
+      },
+      {
         "episode_id": 83415,
         "display_name": "Právo a pořádek S01E07 - 7. epizoda CZ Dabing",
         "video_id": 27243107
@@ -158807,7 +158827,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 19,
+    "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
