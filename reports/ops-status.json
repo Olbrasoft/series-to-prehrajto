@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 173627,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 19844,
+    "uploaded_episodes": 19881,
     "prepared_source_episodes": 43808,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 20,
-    "language_whisper_attempted_sources": 20,
-    "language_pending_whisper_sources": 2624,
+    "language_audited_sources": 40,
+    "language_whisper_attempted_sources": 40,
+    "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 26684,
     "whisper_review_pending_sources": 24826,
     "subtitle_followup_sources": 5272,
@@ -20,10 +20,82 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-07-07T15:03:08Z",
+      "databaseId": 28876452223,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-07T15:03:02Z",
+      "databaseId": 28876444653,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-07-07T15:01:32Z",
+      "databaseId": 28876337887,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-07T15:00:02Z",
+      "databaseId": 28876224799,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-07T14:54:06Z",
+      "databaseId": 28875807817,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "backfill-subtitles"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-07T14:44:59Z",
+      "databaseId": 28875173855,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "backfill-subtitles"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-07T14:37:45Z",
+      "databaseId": 28874678687,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "failure",
+      "createdAt": "2026-07-07T14:37:40Z",
+      "databaseId": 28874674016,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-07T14:37:36Z",
+      "databaseId": 28874668913,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-07T14:36:32Z",
       "databaseId": 28874597115,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -31,7 +103,7 @@
       "createdAt": "2026-07-07T14:36:24Z",
       "databaseId": 28874587920,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "prepare-manifest"
     },
     {
@@ -51,11 +123,11 @@
       "workflowName": "prepare-sources"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-07T14:20:10Z",
       "databaseId": 28873452275,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "backfill-subtitles"
     },
     {
@@ -79,7 +151,7 @@
       "createdAt": "2026-07-07T14:16:59Z",
       "databaseId": 28873232150,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "prepare-descriptions"
     },
     {
@@ -99,84 +171,12 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-07T14:12:04Z",
       "databaseId": 28872894972,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "failure",
-      "createdAt": "2026-07-07T14:12:01Z",
-      "databaseId": 28872890990,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-07T14:11:56Z",
-      "databaseId": 28872885213,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-07T14:10:50Z",
-      "databaseId": 28872809655,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-07T14:07:20Z",
-      "databaseId": 28872568796,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-07T14:06:56Z",
-      "databaseId": 28872541545,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "backfill-subtitles"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-07T14:00:34Z",
-      "databaseId": 28872083060,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-07T13:59:18Z",
-      "databaseId": 28871990246,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-07T13:59:11Z",
-      "databaseId": 28871982112,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-07T13:58:00Z",
-      "databaseId": 28871904477,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
     }
   ],
   "gaps": {
@@ -77149,6 +77149,191 @@
         "episode_id": 13699,
         "display_name": "Xena S04E12 - Které střevíc padne CZ Dabing",
         "video_id": 27230281
+      },
+      {
+        "episode_id": 54806,
+        "display_name": "Aféra S03E03 - 3. epizoda CZ Dabing",
+        "video_id": 27230600
+      },
+      {
+        "episode_id": 54824,
+        "display_name": "Aféra S03E04 - 4. epizoda CZ Dabing",
+        "video_id": 27230645
+      },
+      {
+        "episode_id": 54810,
+        "display_name": "Aféra S03E07 - 7. epizoda CZ Dabing",
+        "video_id": 27230676
+      },
+      {
+        "episode_id": 54826,
+        "display_name": "Aféra S03E09 - 9. epizoda CZ Dabing",
+        "video_id": 27230719
+      },
+      {
+        "episode_id": 54838,
+        "display_name": "Aféra S03E10 - 10. epizoda CZ Dabing",
+        "video_id": 27230755
+      },
+      {
+        "episode_id": 54812,
+        "display_name": "Aféra S04E02 - 2. epizoda CZ Dabing",
+        "video_id": 27230798
+      },
+      {
+        "episode_id": 54846,
+        "display_name": "Aféra S04E04 - 4. epizoda CZ Dabing",
+        "video_id": 27230840
+      },
+      {
+        "episode_id": 54808,
+        "display_name": "Aféra S04E06 - 6. epizoda CZ Dabing",
+        "video_id": 27230869
+      },
+      {
+        "episode_id": 54814,
+        "display_name": "Aféra S04E08 - 8. epizoda CZ Titulky",
+        "video_id": 27230890
+      },
+      {
+        "episode_id": 54850,
+        "display_name": "Aféra S05E01 - 1. epizoda CZ Titulky",
+        "video_id": 27230911
+      },
+      {
+        "episode_id": 54832,
+        "display_name": "Aféra S05E09 - 9. epizoda CZ Dabing",
+        "video_id": 27230942
+      },
+      {
+        "episode_id": 54848,
+        "display_name": "Aféra S05E10 - 10. epizoda CZ Titulky",
+        "video_id": 27230992
+      },
+      {
+        "episode_id": 54854,
+        "display_name": "Aféra S05E11 - 11. epizoda CZ Titulky",
+        "video_id": 27231018
+      },
+      {
+        "episode_id": 95408,
+        "display_name": "Mr Inbetween S02E05 - 5. epizoda CZ Titulky",
+        "video_id": 27231045
+      },
+      {
+        "episode_id": 95410,
+        "display_name": "Mr Inbetween S02E08 - 8. epizoda CZ Titulky",
+        "video_id": 27231070
+      },
+      {
+        "episode_id": 95412,
+        "display_name": "Mr Inbetween S02E10 - 10. epizoda CZ Titulky",
+        "video_id": 27231097
+      },
+      {
+        "episode_id": 95422,
+        "display_name": "Mr Inbetween S03E09 - 9. epizoda CZ Titulky",
+        "video_id": 27231130
+      },
+      {
+        "episode_id": 13701,
+        "display_name": "Xena S04E14 - Devi CZ Dabing",
+        "video_id": 27230594
+      },
+      {
+        "episode_id": 13703,
+        "display_name": "Xena S04E16 - Cesta CZ Dabing",
+        "video_id": 27230631
+      },
+      {
+        "episode_id": 13705,
+        "display_name": "Xena S04E18 - Napravená CZ Dabing",
+        "video_id": 27230654
+      },
+      {
+        "episode_id": 13707,
+        "display_name": "Xena S04E20 - Koncová hra CZ Dabing",
+        "video_id": 27230675
+      },
+      {
+        "episode_id": 13709,
+        "display_name": "Xena S04E22 - Déja vu zas a znova CZ Dabing",
+        "video_id": 27230723
+      },
+      {
+        "episode_id": 13711,
+        "display_name": "Xena S05E02 - Šakram CZ Dabing",
+        "video_id": 27230758
+      },
+      {
+        "episode_id": 13713,
+        "display_name": "Xena S05E04 - Zvířecí přitažlivost CZ Dabing",
+        "video_id": 27230786
+      },
+      {
+        "episode_id": 13715,
+        "display_name": "Xena S05E06 - Čistota CZ Dabing",
+        "video_id": 27230807
+      },
+      {
+        "episode_id": 13717,
+        "display_name": "Xena S05E08 - Drobné potíže CZ Dabing",
+        "video_id": 27230846
+      },
+      {
+        "episode_id": 13719,
+        "display_name": "Xena S05E10 - Lyra, lyra, srdce svírá CZ Dabing",
+        "video_id": 27230867
+      },
+      {
+        "episode_id": 13721,
+        "display_name": "Xena S05E12 - Bohabojné dítě CZ Dabing",
+        "video_id": 27230886
+      },
+      {
+        "episode_id": 13723,
+        "display_name": "Xena S05E14 - Amfipolis v obležení CZ Dabing",
+        "video_id": 27230901
+      },
+      {
+        "episode_id": 13725,
+        "display_name": "Xena S05E16 - Životní síla CZ Dabing",
+        "video_id": 27230912
+      },
+      {
+        "episode_id": 13727,
+        "display_name": "Xena S05E18 - Antonius a Kleopatra CZ Dabing",
+        "video_id": 27230927
+      },
+      {
+        "episode_id": 13729,
+        "display_name": "Xena S05E20 - Livie CZ Dabing",
+        "video_id": 27230937
+      },
+      {
+        "episode_id": 13731,
+        "display_name": "Xena S05E22 - Mateřství CZ Dabing",
+        "video_id": 27230950
+      },
+      {
+        "episode_id": 13733,
+        "display_name": "Xena S06E02 - Prokletí Amfipolis CZ Dabing",
+        "video_id": 27230977
+      },
+      {
+        "episode_id": 13735,
+        "display_name": "Xena S06E04 - Kdo je Gurkhan? CZ Dabing",
+        "video_id": 27230998
+      },
+      {
+        "episode_id": 13737,
+        "display_name": "Xena S06E06 - Pekelná propast CZ Dabing",
+        "video_id": 27231016
+      },
+      {
+        "episode_id": 13739,
+        "display_name": "Xena S06E08 - Prsten CZ Dabing",
+        "video_id": 27231034
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -154016,6 +154201,191 @@
         "episode_id": 13699,
         "display_name": "Xena S04E12 - Které střevíc padne CZ Dabing",
         "video_id": 27230281
+      },
+      {
+        "episode_id": 54806,
+        "display_name": "Aféra S03E03 - 3. epizoda CZ Dabing",
+        "video_id": 27230600
+      },
+      {
+        "episode_id": 54824,
+        "display_name": "Aféra S03E04 - 4. epizoda CZ Dabing",
+        "video_id": 27230645
+      },
+      {
+        "episode_id": 54810,
+        "display_name": "Aféra S03E07 - 7. epizoda CZ Dabing",
+        "video_id": 27230676
+      },
+      {
+        "episode_id": 54826,
+        "display_name": "Aféra S03E09 - 9. epizoda CZ Dabing",
+        "video_id": 27230719
+      },
+      {
+        "episode_id": 54838,
+        "display_name": "Aféra S03E10 - 10. epizoda CZ Dabing",
+        "video_id": 27230755
+      },
+      {
+        "episode_id": 54812,
+        "display_name": "Aféra S04E02 - 2. epizoda CZ Dabing",
+        "video_id": 27230798
+      },
+      {
+        "episode_id": 54846,
+        "display_name": "Aféra S04E04 - 4. epizoda CZ Dabing",
+        "video_id": 27230840
+      },
+      {
+        "episode_id": 54808,
+        "display_name": "Aféra S04E06 - 6. epizoda CZ Dabing",
+        "video_id": 27230869
+      },
+      {
+        "episode_id": 54814,
+        "display_name": "Aféra S04E08 - 8. epizoda CZ Titulky",
+        "video_id": 27230890
+      },
+      {
+        "episode_id": 54850,
+        "display_name": "Aféra S05E01 - 1. epizoda CZ Titulky",
+        "video_id": 27230911
+      },
+      {
+        "episode_id": 54832,
+        "display_name": "Aféra S05E09 - 9. epizoda CZ Dabing",
+        "video_id": 27230942
+      },
+      {
+        "episode_id": 54848,
+        "display_name": "Aféra S05E10 - 10. epizoda CZ Titulky",
+        "video_id": 27230992
+      },
+      {
+        "episode_id": 54854,
+        "display_name": "Aféra S05E11 - 11. epizoda CZ Titulky",
+        "video_id": 27231018
+      },
+      {
+        "episode_id": 95408,
+        "display_name": "Mr Inbetween S02E05 - 5. epizoda CZ Titulky",
+        "video_id": 27231045
+      },
+      {
+        "episode_id": 95410,
+        "display_name": "Mr Inbetween S02E08 - 8. epizoda CZ Titulky",
+        "video_id": 27231070
+      },
+      {
+        "episode_id": 95412,
+        "display_name": "Mr Inbetween S02E10 - 10. epizoda CZ Titulky",
+        "video_id": 27231097
+      },
+      {
+        "episode_id": 95422,
+        "display_name": "Mr Inbetween S03E09 - 9. epizoda CZ Titulky",
+        "video_id": 27231130
+      },
+      {
+        "episode_id": 13701,
+        "display_name": "Xena S04E14 - Devi CZ Dabing",
+        "video_id": 27230594
+      },
+      {
+        "episode_id": 13703,
+        "display_name": "Xena S04E16 - Cesta CZ Dabing",
+        "video_id": 27230631
+      },
+      {
+        "episode_id": 13705,
+        "display_name": "Xena S04E18 - Napravená CZ Dabing",
+        "video_id": 27230654
+      },
+      {
+        "episode_id": 13707,
+        "display_name": "Xena S04E20 - Koncová hra CZ Dabing",
+        "video_id": 27230675
+      },
+      {
+        "episode_id": 13709,
+        "display_name": "Xena S04E22 - Déja vu zas a znova CZ Dabing",
+        "video_id": 27230723
+      },
+      {
+        "episode_id": 13711,
+        "display_name": "Xena S05E02 - Šakram CZ Dabing",
+        "video_id": 27230758
+      },
+      {
+        "episode_id": 13713,
+        "display_name": "Xena S05E04 - Zvířecí přitažlivost CZ Dabing",
+        "video_id": 27230786
+      },
+      {
+        "episode_id": 13715,
+        "display_name": "Xena S05E06 - Čistota CZ Dabing",
+        "video_id": 27230807
+      },
+      {
+        "episode_id": 13717,
+        "display_name": "Xena S05E08 - Drobné potíže CZ Dabing",
+        "video_id": 27230846
+      },
+      {
+        "episode_id": 13719,
+        "display_name": "Xena S05E10 - Lyra, lyra, srdce svírá CZ Dabing",
+        "video_id": 27230867
+      },
+      {
+        "episode_id": 13721,
+        "display_name": "Xena S05E12 - Bohabojné dítě CZ Dabing",
+        "video_id": 27230886
+      },
+      {
+        "episode_id": 13723,
+        "display_name": "Xena S05E14 - Amfipolis v obležení CZ Dabing",
+        "video_id": 27230901
+      },
+      {
+        "episode_id": 13725,
+        "display_name": "Xena S05E16 - Životní síla CZ Dabing",
+        "video_id": 27230912
+      },
+      {
+        "episode_id": 13727,
+        "display_name": "Xena S05E18 - Antonius a Kleopatra CZ Dabing",
+        "video_id": 27230927
+      },
+      {
+        "episode_id": 13729,
+        "display_name": "Xena S05E20 - Livie CZ Dabing",
+        "video_id": 27230937
+      },
+      {
+        "episode_id": 13731,
+        "display_name": "Xena S05E22 - Mateřství CZ Dabing",
+        "video_id": 27230950
+      },
+      {
+        "episode_id": 13733,
+        "display_name": "Xena S06E02 - Prokletí Amfipolis CZ Dabing",
+        "video_id": 27230977
+      },
+      {
+        "episode_id": 13735,
+        "display_name": "Xena S06E04 - Kdo je Gurkhan? CZ Dabing",
+        "video_id": 27230998
+      },
+      {
+        "episode_id": 13737,
+        "display_name": "Xena S06E06 - Pekelná propast CZ Dabing",
+        "video_id": 27231016
+      },
+      {
+        "episode_id": 13739,
+        "display_name": "Xena S06E08 - Prsten CZ Dabing",
+        "video_id": 27231034
       }
     ],
     "prepared_not_upload_ready": [
@@ -155177,7 +155547,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 19,
+    "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
