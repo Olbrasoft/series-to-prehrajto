@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 174444,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 19115,
+    "uploaded_episodes": 19127,
     "prepared_source_episodes": 43798,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 20,
-    "language_whisper_attempted_sources": 20,
-    "language_pending_whisper_sources": 2624,
+    "language_audited_sources": 40,
+    "language_whisper_attempted_sources": 40,
+    "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 26684,
     "whisper_review_pending_sources": 24826,
     "subtitle_followup_sources": 5272,
@@ -20,10 +20,58 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-07-07T00:45:02Z",
+      "databaseId": 28833393680,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-07T00:40:37Z",
+      "databaseId": 28833228931,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-07T00:34:28Z",
+      "databaseId": 28833001837,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-07T00:34:04Z",
+      "databaseId": 28832985558,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-07T00:34:00Z",
+      "databaseId": 28832983445,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-07T00:33:43Z",
+      "databaseId": 28832973326,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "backfill-subtitles"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-07T00:32:59Z",
       "databaseId": 28832945131,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -51,11 +99,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "failure",
       "createdAt": "2026-07-07T00:27:59Z",
       "databaseId": 28832754406,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
@@ -75,11 +123,11 @@
       "workflowName": "audit-language"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-07T00:14:13Z",
       "databaseId": 28832225898,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "backfill-subtitles"
     },
     {
@@ -129,54 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-07T00:02:50Z",
-      "databaseId": 28831762439,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-07T00:02:47Z",
-      "databaseId": 28831760619,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-07-07T00:02:35Z",
-      "databaseId": 28831751852,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-07T00:01:47Z",
-      "databaseId": 28831720131,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-07T00:01:44Z",
-      "databaseId": 28831718398,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-06T23:59:36Z",
-      "databaseId": 28831624953,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
     }
   ],
   "gaps": {
@@ -73504,6 +73504,66 @@
         "episode_id": 75951,
         "display_name": "Nemocnice New Amsterdam S05E11 - 11. epizoda CZ Dabing",
         "video_id": 27210019
+      },
+      {
+        "episode_id": 115550,
+        "display_name": "Chůva k pohledání S02E22 - 22. epizoda CZ Dabing",
+        "video_id": 27210072
+      },
+      {
+        "episode_id": 109044,
+        "display_name": "Chůva k pohledání S03E06 - 6. epizoda CZ Dabing",
+        "video_id": 27210095
+      },
+      {
+        "episode_id": 109046,
+        "display_name": "Chůva k pohledání S03E08 - 8. epizoda CZ Dabing",
+        "video_id": 27210104
+      },
+      {
+        "episode_id": 39314,
+        "display_name": "Pokémon S17E23 - Návrat do mrazivé zimy! CZ Titulky",
+        "video_id": 27210120
+      },
+      {
+        "episode_id": 109048,
+        "display_name": "Chůva k pohledání S03E10 - 10. epizoda CZ Dabing",
+        "video_id": 27210143
+      },
+      {
+        "episode_id": 109056,
+        "display_name": "Chůva k pohledání S03E18 - 18. epizoda CZ Dabing",
+        "video_id": 27210159
+      },
+      {
+        "episode_id": 109060,
+        "display_name": "Chůva k pohledání S03E22 - 22. epizoda CZ Dabing",
+        "video_id": 27210181
+      },
+      {
+        "episode_id": 109062,
+        "display_name": "Chůva k pohledání S03E24 - 24. epizoda CZ Dabing",
+        "video_id": 27210194
+      },
+      {
+        "episode_id": 109064,
+        "display_name": "Chůva k pohledání S03E26 - 26. epizoda CZ Dabing",
+        "video_id": 27210212
+      },
+      {
+        "episode_id": 113380,
+        "display_name": "Chůva k pohledání S05E22 - 22. epizoda CZ Dabing",
+        "video_id": 27210231
+      },
+      {
+        "episode_id": 75953,
+        "display_name": "Nemocnice New Amsterdam S05E13 - 13. epizoda CZ Dabing",
+        "video_id": 27210073
+      },
+      {
+        "episode_id": 90715,
+        "display_name": "Hvězdná brána - Hluboký vesmír S01E01 - Vzduch, část první CZ Dabing",
+        "video_id": 27210146
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -146726,6 +146786,66 @@
         "episode_id": 75951,
         "display_name": "Nemocnice New Amsterdam S05E11 - 11. epizoda CZ Dabing",
         "video_id": 27210019
+      },
+      {
+        "episode_id": 115550,
+        "display_name": "Chůva k pohledání S02E22 - 22. epizoda CZ Dabing",
+        "video_id": 27210072
+      },
+      {
+        "episode_id": 109044,
+        "display_name": "Chůva k pohledání S03E06 - 6. epizoda CZ Dabing",
+        "video_id": 27210095
+      },
+      {
+        "episode_id": 109046,
+        "display_name": "Chůva k pohledání S03E08 - 8. epizoda CZ Dabing",
+        "video_id": 27210104
+      },
+      {
+        "episode_id": 39314,
+        "display_name": "Pokémon S17E23 - Návrat do mrazivé zimy! CZ Titulky",
+        "video_id": 27210120
+      },
+      {
+        "episode_id": 109048,
+        "display_name": "Chůva k pohledání S03E10 - 10. epizoda CZ Dabing",
+        "video_id": 27210143
+      },
+      {
+        "episode_id": 109056,
+        "display_name": "Chůva k pohledání S03E18 - 18. epizoda CZ Dabing",
+        "video_id": 27210159
+      },
+      {
+        "episode_id": 109060,
+        "display_name": "Chůva k pohledání S03E22 - 22. epizoda CZ Dabing",
+        "video_id": 27210181
+      },
+      {
+        "episode_id": 109062,
+        "display_name": "Chůva k pohledání S03E24 - 24. epizoda CZ Dabing",
+        "video_id": 27210194
+      },
+      {
+        "episode_id": 109064,
+        "display_name": "Chůva k pohledání S03E26 - 26. epizoda CZ Dabing",
+        "video_id": 27210212
+      },
+      {
+        "episode_id": 113380,
+        "display_name": "Chůva k pohledání S05E22 - 22. epizoda CZ Dabing",
+        "video_id": 27210231
+      },
+      {
+        "episode_id": 75953,
+        "display_name": "Nemocnice New Amsterdam S05E13 - 13. epizoda CZ Dabing",
+        "video_id": 27210073
+      },
+      {
+        "episode_id": 90715,
+        "display_name": "Hvězdná brána - Hluboký vesmír S01E01 - Vzduch, část první CZ Dabing",
+        "video_id": 27210146
       }
     ],
     "prepared_not_upload_ready": [
@@ -147887,7 +148007,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 19,
+    "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
