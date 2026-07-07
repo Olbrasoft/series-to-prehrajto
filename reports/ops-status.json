@@ -1,17 +1,17 @@
 {
   "counts": {
-    "backlog_episodes": 173627,
+    "backlog_episodes": 173442,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 19895,
+    "uploaded_episodes": 19917,
     "prepared_source_episodes": 43808,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 40,
-    "language_whisper_attempted_sources": 40,
-    "language_pending_whisper_sources": 2604,
+    "language_audited_sources": 20,
+    "language_whisper_attempted_sources": 20,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 26684,
     "whisper_review_pending_sources": 24826,
     "subtitle_followup_sources": 5272,
@@ -20,10 +20,58 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-07-07T15:58:39Z",
+      "databaseId": 28880205248,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-07T15:57:34Z",
+      "databaseId": 28880136621,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "refresh-backlog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-07T15:53:58Z",
+      "databaseId": 28879899110,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-07T15:48:45Z",
+      "databaseId": 28879553155,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "backfill-subtitles"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-07T15:36:41Z",
+      "databaseId": 28878759143,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "backfill-subtitles"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-07T15:34:06Z",
+      "databaseId": 28878584702,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-sources"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-07T15:29:53Z",
       "databaseId": 28878289624,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-status"
     },
     {
@@ -39,23 +87,23 @@
       "createdAt": "2026-07-07T15:29:08Z",
       "databaseId": 28878237217,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "prepare-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-07T15:28:19Z",
       "databaseId": 28878179373,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-07T15:24:40Z",
       "databaseId": 28877928708,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "backfill-subtitles"
     },
     {
@@ -99,11 +147,11 @@
       "workflowName": "process-whisper-review"
     },
     {
-      "conclusion": "",
+      "conclusion": "failure",
       "createdAt": "2026-07-07T15:13:30Z",
       "databaseId": 28877161893,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -129,54 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "failure",
-      "createdAt": "2026-07-07T15:04:36Z",
-      "databaseId": 28876553489,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-07T15:04:33Z",
-      "databaseId": 28876550542,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-07T15:03:08Z",
-      "databaseId": 28876452223,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-07-07T15:03:02Z",
-      "databaseId": 28876444653,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-07-07T15:01:32Z",
-      "databaseId": 28876337887,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-07T15:00:02Z",
-      "databaseId": 28876224799,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "sync"
     }
   ],
   "gaps": {
@@ -77371,6 +77371,61 @@
         "video_id": 27231590
       },
       {
+        "episode_id": 100386,
+        "display_name": "Kriminálka New York S09E08 - Pozdní přiznání CZ Dabing",
+        "video_id": 27231648
+      },
+      {
+        "episode_id": 100388,
+        "display_name": "Kriminálka New York S09E09 - Prolitá krev CZ Dabing",
+        "video_id": 27231693
+      },
+      {
+        "episode_id": 100370,
+        "display_name": "Kriminálka New York S09E13 - Mrakodrap 9-13 CZ Dabing",
+        "video_id": 27231793
+      },
+      {
+        "episode_id": 71700,
+        "display_name": "Kriminálka New York S09E14 - Bílé zlato CZ Dabing",
+        "video_id": 27231849
+      },
+      {
+        "episode_id": 71680,
+        "display_name": "Kriminálka New York S09E15 - Seth a Apep CZ Dabing",
+        "video_id": 27231909
+      },
+      {
+        "episode_id": 83398,
+        "display_name": "Právo a pořádek S01E01 - 1. epizoda CZ Dabing",
+        "video_id": 27231951
+      },
+      {
+        "episode_id": 83402,
+        "display_name": "Právo a pořádek S01E02 - 2. epizoda CZ Dabing",
+        "video_id": 27231992
+      },
+      {
+        "episode_id": 83404,
+        "display_name": "Právo a pořádek S01E10 - 10. epizoda CZ Dabing",
+        "video_id": 27232044
+      },
+      {
+        "episode_id": 83400,
+        "display_name": "Právo a pořádek S01E11 - 11. epizoda CZ Dabing",
+        "video_id": 27232139
+      },
+      {
+        "episode_id": 83414,
+        "display_name": "Právo a pořádek S01E12 - 12. epizoda CZ Dabing",
+        "video_id": 27232194
+      },
+      {
+        "episode_id": 83412,
+        "display_name": "Právo a pořádek S01E14 - 14. epizoda CZ Dabing",
+        "video_id": 27232243
+      },
+      {
         "episode_id": 13741,
         "display_name": "Xena S06E10 - Starý Áres farmu měl CZ Dabing",
         "video_id": 27231345
@@ -77404,6 +77459,61 @@
         "episode_id": 54821,
         "display_name": "Aféra S01E04 - 4. epizoda CZ Dabing",
         "video_id": 27231577
+      },
+      {
+        "episode_id": 54841,
+        "display_name": "Aféra S01E09 - 9. epizoda CZ Dabing",
+        "video_id": 27231612
+      },
+      {
+        "episode_id": 54845,
+        "display_name": "Aféra S02E04 - 4. epizoda CZ Dabing",
+        "video_id": 27231643
+      },
+      {
+        "episode_id": 54831,
+        "display_name": "Aféra S02E11 - 11. epizoda CZ Dabing",
+        "video_id": 27231675
+      },
+      {
+        "episode_id": 54807,
+        "display_name": "Aféra S03E05 - 5. epizoda CZ Dabing",
+        "video_id": 27231785
+      },
+      {
+        "episode_id": 54811,
+        "display_name": "Aféra S03E06 - 6. epizoda CZ Dabing",
+        "video_id": 27231827
+      },
+      {
+        "episode_id": 54813,
+        "display_name": "Aféra S04E03 - 3. epizoda CZ Dabing",
+        "video_id": 27231883
+      },
+      {
+        "episode_id": 54809,
+        "display_name": "Aféra S04E05 - 5. epizoda CZ Titulky",
+        "video_id": 27232036
+      },
+      {
+        "episode_id": 54829,
+        "display_name": "Aféra S04E07 - 7. epizoda CZ Dabing",
+        "video_id": 27232069
+      },
+      {
+        "episode_id": 54827,
+        "display_name": "Aféra S04E09 - 9. epizoda CZ Dabing",
+        "video_id": 27232092
+      },
+      {
+        "episode_id": 54805,
+        "display_name": "Aféra S04E10 - 10. epizoda CZ Titulky",
+        "video_id": 27232213
+      },
+      {
+        "episode_id": 88039,
+        "display_name": "Aféra S05E03 - 3. epizoda CZ Titulky",
+        "video_id": 27232247
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -154493,6 +154603,61 @@
         "video_id": 27231590
       },
       {
+        "episode_id": 100386,
+        "display_name": "Kriminálka New York S09E08 - Pozdní přiznání CZ Dabing",
+        "video_id": 27231648
+      },
+      {
+        "episode_id": 100388,
+        "display_name": "Kriminálka New York S09E09 - Prolitá krev CZ Dabing",
+        "video_id": 27231693
+      },
+      {
+        "episode_id": 100370,
+        "display_name": "Kriminálka New York S09E13 - Mrakodrap 9-13 CZ Dabing",
+        "video_id": 27231793
+      },
+      {
+        "episode_id": 71700,
+        "display_name": "Kriminálka New York S09E14 - Bílé zlato CZ Dabing",
+        "video_id": 27231849
+      },
+      {
+        "episode_id": 71680,
+        "display_name": "Kriminálka New York S09E15 - Seth a Apep CZ Dabing",
+        "video_id": 27231909
+      },
+      {
+        "episode_id": 83398,
+        "display_name": "Právo a pořádek S01E01 - 1. epizoda CZ Dabing",
+        "video_id": 27231951
+      },
+      {
+        "episode_id": 83402,
+        "display_name": "Právo a pořádek S01E02 - 2. epizoda CZ Dabing",
+        "video_id": 27231992
+      },
+      {
+        "episode_id": 83404,
+        "display_name": "Právo a pořádek S01E10 - 10. epizoda CZ Dabing",
+        "video_id": 27232044
+      },
+      {
+        "episode_id": 83400,
+        "display_name": "Právo a pořádek S01E11 - 11. epizoda CZ Dabing",
+        "video_id": 27232139
+      },
+      {
+        "episode_id": 83414,
+        "display_name": "Právo a pořádek S01E12 - 12. epizoda CZ Dabing",
+        "video_id": 27232194
+      },
+      {
+        "episode_id": 83412,
+        "display_name": "Právo a pořádek S01E14 - 14. epizoda CZ Dabing",
+        "video_id": 27232243
+      },
+      {
         "episode_id": 13741,
         "display_name": "Xena S06E10 - Starý Áres farmu měl CZ Dabing",
         "video_id": 27231345
@@ -154526,6 +154691,61 @@
         "episode_id": 54821,
         "display_name": "Aféra S01E04 - 4. epizoda CZ Dabing",
         "video_id": 27231577
+      },
+      {
+        "episode_id": 54841,
+        "display_name": "Aféra S01E09 - 9. epizoda CZ Dabing",
+        "video_id": 27231612
+      },
+      {
+        "episode_id": 54845,
+        "display_name": "Aféra S02E04 - 4. epizoda CZ Dabing",
+        "video_id": 27231643
+      },
+      {
+        "episode_id": 54831,
+        "display_name": "Aféra S02E11 - 11. epizoda CZ Dabing",
+        "video_id": 27231675
+      },
+      {
+        "episode_id": 54807,
+        "display_name": "Aféra S03E05 - 5. epizoda CZ Dabing",
+        "video_id": 27231785
+      },
+      {
+        "episode_id": 54811,
+        "display_name": "Aféra S03E06 - 6. epizoda CZ Dabing",
+        "video_id": 27231827
+      },
+      {
+        "episode_id": 54813,
+        "display_name": "Aféra S04E03 - 3. epizoda CZ Dabing",
+        "video_id": 27231883
+      },
+      {
+        "episode_id": 54809,
+        "display_name": "Aféra S04E05 - 5. epizoda CZ Titulky",
+        "video_id": 27232036
+      },
+      {
+        "episode_id": 54829,
+        "display_name": "Aféra S04E07 - 7. epizoda CZ Dabing",
+        "video_id": 27232069
+      },
+      {
+        "episode_id": 54827,
+        "display_name": "Aféra S04E09 - 9. epizoda CZ Dabing",
+        "video_id": 27232092
+      },
+      {
+        "episode_id": 54805,
+        "display_name": "Aféra S04E10 - 10. epizoda CZ Titulky",
+        "video_id": 27232213
+      },
+      {
+        "episode_id": 88039,
+        "display_name": "Aféra S05E03 - 3. epizoda CZ Titulky",
+        "video_id": 27232247
       }
     ],
     "prepared_not_upload_ready": [
@@ -155687,7 +155907,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 39,
+    "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
