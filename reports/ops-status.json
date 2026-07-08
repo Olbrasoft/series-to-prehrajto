@@ -1,17 +1,17 @@
 {
   "counts": {
     "backlog_episodes": 172558,
-    "manifest_upload_ready_episodes": 463,
-    "uploaded_episodes": 20823,
+    "manifest_upload_ready_episodes": 429,
+    "uploaded_episodes": 20828,
     "prepared_source_episodes": 43808,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 40,
-    "language_whisper_attempted_sources": 40,
-    "language_pending_whisper_sources": 2604,
+    "language_audited_sources": 20,
+    "language_whisper_attempted_sources": 20,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 26684,
     "whisper_review_pending_sources": 24826,
     "subtitle_followup_sources": 5272,
@@ -20,10 +20,50 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-07-08T13:23:02Z",
+      "databaseId": 28946005000,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-08T13:20:42Z",
+      "databaseId": 28945856930,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-08T13:18:37Z",
+      "databaseId": 28945722631,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "backfill-subtitles"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-07-08T13:18:30Z",
+      "databaseId": 28945715156,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-08T13:15:51Z",
+      "databaseId": 28945548292,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-08T13:14:46Z",
       "databaseId": 28945475763,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -35,11 +75,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "failure",
       "createdAt": "2026-07-08T13:11:51Z",
       "databaseId": 28945287511,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
@@ -67,19 +107,19 @@
       "workflowName": "prepare-sources"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-08T13:07:59Z",
       "databaseId": 28945046769,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "backfill-subtitles"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-08T13:06:37Z",
       "databaseId": 28944961479,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -103,7 +143,7 @@
       "createdAt": "2026-07-08T13:01:19Z",
       "databaseId": 28944618896,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "prepare-descriptions"
     },
     {
@@ -137,46 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "backfill-subtitles"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-08T12:53:27Z",
-      "databaseId": 28944114090,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-08T12:52:22Z",
-      "databaseId": 28944043356,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-08T12:49:51Z",
-      "databaseId": 28943883045,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "failure",
-      "createdAt": "2026-07-08T12:48:17Z",
-      "databaseId": 28943784475,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-08T12:47:26Z",
-      "databaseId": 28943731897,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
     }
   ],
   "gaps": {
@@ -82041,9 +82041,34 @@
         "video_id": 27259135
       },
       {
+        "episode_id": 55442,
+        "display_name": "MacGyver S01E01 - Pilot CZ Dabing",
+        "video_id": 27259181
+      },
+      {
+        "episode_id": 55410,
+        "display_name": "MacGyver S01E11 - Noční můry CZ Dabing",
+        "video_id": 27259249
+      },
+      {
         "episode_id": 111457,
         "display_name": "Odstřelovač S03E07 - Nejvyšší soud CZ Dabing",
         "video_id": 27259129
+      },
+      {
+        "episode_id": 111455,
+        "display_name": "Odstřelovač S03E08 - Cestou odvahy CZ Dabing",
+        "video_id": 27259158
+      },
+      {
+        "episode_id": 111453,
+        "display_name": "Odstřelovač S03E12 - Anděl strážný CZ Dabing",
+        "video_id": 27259200
+      },
+      {
+        "episode_id": 111449,
+        "display_name": "Odstřelovač S03E13 - Konečná CZ Dabing",
+        "video_id": 27259245
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -163803,9 +163828,34 @@
         "video_id": 27259135
       },
       {
+        "episode_id": 55442,
+        "display_name": "MacGyver S01E01 - Pilot CZ Dabing",
+        "video_id": 27259181
+      },
+      {
+        "episode_id": 55410,
+        "display_name": "MacGyver S01E11 - Noční můry CZ Dabing",
+        "video_id": 27259249
+      },
+      {
         "episode_id": 111457,
         "display_name": "Odstřelovač S03E07 - Nejvyšší soud CZ Dabing",
         "video_id": 27259129
+      },
+      {
+        "episode_id": 111455,
+        "display_name": "Odstřelovač S03E08 - Cestou odvahy CZ Dabing",
+        "video_id": 27259158
+      },
+      {
+        "episode_id": 111453,
+        "display_name": "Odstřelovač S03E12 - Anděl strážný CZ Dabing",
+        "video_id": 27259200
+      },
+      {
+        "episode_id": 111449,
+        "display_name": "Odstřelovač S03E13 - Konečná CZ Dabing",
+        "video_id": 27259245
       }
     ],
     "prepared_not_upload_ready": [
@@ -164967,7 +165017,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 39,
+    "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
