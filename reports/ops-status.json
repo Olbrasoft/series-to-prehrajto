@@ -1,17 +1,17 @@
 {
   "counts": {
     "backlog_episodes": 172892,
-    "manifest_upload_ready_episodes": 825,
-    "uploaded_episodes": 20546,
+    "manifest_upload_ready_episodes": 801,
+    "uploaded_episodes": 20578,
     "prepared_source_episodes": 43808,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 40,
-    "language_whisper_attempted_sources": 40,
-    "language_pending_whisper_sources": 2604,
+    "language_audited_sources": 20,
+    "language_whisper_attempted_sources": 20,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 26684,
     "whisper_review_pending_sources": 24826,
     "subtitle_followup_sources": 5272,
@@ -20,18 +20,74 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-07-08T08:34:05Z",
-      "databaseId": 28929073308,
+      "createdAt": "2026-07-08T09:03:50Z",
+      "databaseId": 28930821372,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-08T09:03:45Z",
+      "databaseId": 28930816867,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-07-08T08:59:54Z",
+      "databaseId": 28930573609,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-08T08:54:14Z",
+      "databaseId": 28930240640,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "backfill-subtitles"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
+      "createdAt": "2026-07-08T08:49:43Z",
+      "databaseId": 28929970587,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-08T08:43:54Z",
+      "databaseId": 28929634905,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "backfill-subtitles"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-08T08:34:47Z",
+      "databaseId": 28929112556,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-08T08:34:05Z",
+      "databaseId": 28929073308,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "backfill-subtitles"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-08T08:33:41Z",
       "databaseId": 28929051138,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -43,19 +99,19 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "failure",
       "createdAt": "2026-07-08T08:28:13Z",
       "databaseId": 28928729406,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-08T08:28:11Z",
       "databaseId": 28928727417,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -71,7 +127,7 @@
       "createdAt": "2026-07-08T08:27:41Z",
       "databaseId": 28928699717,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "prepare-manifest"
     },
     {
@@ -119,64 +175,8 @@
       "createdAt": "2026-07-08T08:16:42Z",
       "databaseId": 28928077284,
       "headBranch": "main",
-      "status": "pending",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-08T08:12:44Z",
-      "databaseId": 28927846323,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-08T08:12:42Z",
-      "databaseId": 28927844202,
-      "headBranch": "main",
       "status": "in_progress",
       "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "failure",
-      "createdAt": "2026-07-08T08:12:39Z",
-      "databaseId": 28927841905,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-08T08:12:37Z",
-      "databaseId": 28927839965,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-08T08:11:18Z",
-      "databaseId": 28927763485,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-08T08:11:14Z",
-      "databaseId": 28927759257,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-08T08:06:10Z",
-      "databaseId": 28927468515,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "sync"
     }
   ],
   "gaps": {
@@ -80651,6 +80651,91 @@
         "video_id": 27254195
       },
       {
+        "episode_id": 63544,
+        "display_name": "Za hranicí S01E08 - Západ CZ Dabing",
+        "video_id": 27254212
+      },
+      {
+        "episode_id": 63546,
+        "display_name": "Za hranicí S02E01 - Jedna noc ve Wabangu CZ Dabing",
+        "video_id": 27254232
+      },
+      {
+        "episode_id": 63548,
+        "display_name": "Za hranicí S02E03 - Všichni někdy trpí CZ Dabing",
+        "video_id": 27254249
+      },
+      {
+        "episode_id": 63550,
+        "display_name": "Za hranicí S02E05 - Celý svět je jeviště CZ Dabing",
+        "video_id": 27254256
+      },
+      {
+        "episode_id": 7986,
+        "display_name": "ted S01E04 - Metra, kola a automobily CZ Dabing",
+        "video_id": 27254287
+      },
+      {
+        "episode_id": 7990,
+        "display_name": "ted S01E06 - Hlasitá noc CZ Dabing",
+        "video_id": 27254317
+      },
+      {
+        "episode_id": 7988,
+        "display_name": "ted S01E07 - Musí to mít CZ Dabing",
+        "video_id": 27254362
+      },
+      {
+        "episode_id": 10796,
+        "display_name": "ted S01E09 CZ Dabing",
+        "video_id": 27254388
+      },
+      {
+        "episode_id": 10794,
+        "display_name": "ted S02E02 - Paní Robicheková CZ Dabing",
+        "video_id": 27254402
+      },
+      {
+        "episode_id": 10792,
+        "display_name": "ted S02E04 - Maminčina bombastická romantická komedie CZ Dabing",
+        "video_id": 27254418
+      },
+      {
+        "episode_id": 10790,
+        "display_name": "ted S02E06 - Roe V. Weed CZ Dabing",
+        "video_id": 27254440
+      },
+      {
+        "episode_id": 10786,
+        "display_name": "ted S02E11 CZ Dabing",
+        "video_id": 27254457
+      },
+      {
+        "episode_id": 6430,
+        "display_name": "FUBAR S01E02 - Vlaková krádež CZ Dabing",
+        "video_id": 27254468
+      },
+      {
+        "episode_id": 6432,
+        "display_name": "FUBAR S01E03 - Sváděcí akce CZ Dabing",
+        "video_id": 27254477
+      },
+      {
+        "episode_id": 6434,
+        "display_name": "FUBAR S01E04 - Velký Dán CZ Dabing",
+        "video_id": 27254495
+      },
+      {
+        "episode_id": 6436,
+        "display_name": "FUBAR S01E08 - Konec a uzavřeno CZ Dabing",
+        "video_id": 27254512
+      },
+      {
+        "episode_id": 6440,
+        "display_name": "FUBAR S02E02 - Greto? CZ Dabing",
+        "video_id": 27254529
+      },
+      {
         "episode_id": 49511,
         "display_name": "Defiance S01E10 - The Bride Wore Black CZ Titulky",
         "video_id": 27254146
@@ -80659,6 +80744,81 @@
         "episode_id": 49517,
         "display_name": "Defiance S01E12 - Everything is Broken CZ Titulky",
         "video_id": 27254172
+      },
+      {
+        "episode_id": 49519,
+        "display_name": "Defiance S02E02 - In My Secret Life CZ Titulky",
+        "video_id": 27254207
+      },
+      {
+        "episode_id": 49521,
+        "display_name": "Defiance S02E04 - Beasts of Burden CZ Titulky",
+        "video_id": 27254233
+      },
+      {
+        "episode_id": 49523,
+        "display_name": "Defiance S02E06 - This Woman's Work CZ Titulky",
+        "video_id": 27254255
+      },
+      {
+        "episode_id": 49525,
+        "display_name": "Defiance S02E08 - Slouching Towards Bethlehem CZ Titulky",
+        "video_id": 27254301
+      },
+      {
+        "episode_id": 49527,
+        "display_name": "Defiance S02E10 - Bottom of the World CZ Titulky",
+        "video_id": 27254325
+      },
+      {
+        "episode_id": 49529,
+        "display_name": "Defiance S03E01 - The World We Seize CZ Titulky",
+        "video_id": 27254353
+      },
+      {
+        "episode_id": 32857,
+        "display_name": "Hotel Continental S01E01 - Bratři ve zbrani CZ Dabing",
+        "video_id": 27254383
+      },
+      {
+        "episode_id": 17879,
+        "display_name": "Hotel Continental S01E03 - Divadlo bolesti CZ Titulky",
+        "video_id": 27254406
+      },
+      {
+        "episode_id": 63537,
+        "display_name": "Za hranicí S01E01 - Prázdnota CZ Dabing",
+        "video_id": 27254422
+      },
+      {
+        "episode_id": 63539,
+        "display_name": "Za hranicí S01E03 - Čas CZ Dabing",
+        "video_id": 27254443
+      },
+      {
+        "episode_id": 63541,
+        "display_name": "Za hranicí S01E05 - Půda CZ Dabing",
+        "video_id": 27254461
+      },
+      {
+        "episode_id": 63543,
+        "display_name": "Za hranicí S01E07 - Neznámo CZ Dabing",
+        "video_id": 27254474
+      },
+      {
+        "episode_id": 63547,
+        "display_name": "Za hranicí S02E02 - Stopy do neznáma CZ Dabing",
+        "video_id": 27254508
+      },
+      {
+        "episode_id": 63549,
+        "display_name": "Za hranicí S02E04 - Óda pro radost CZ Dabing",
+        "video_id": 27254524
+      },
+      {
+        "episode_id": 63545,
+        "display_name": "Za hranicí S02E06 - Do-Si-Do CZ Dabing",
+        "video_id": 27254558
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -161028,6 +161188,91 @@
         "video_id": 27254195
       },
       {
+        "episode_id": 63544,
+        "display_name": "Za hranicí S01E08 - Západ CZ Dabing",
+        "video_id": 27254212
+      },
+      {
+        "episode_id": 63546,
+        "display_name": "Za hranicí S02E01 - Jedna noc ve Wabangu CZ Dabing",
+        "video_id": 27254232
+      },
+      {
+        "episode_id": 63548,
+        "display_name": "Za hranicí S02E03 - Všichni někdy trpí CZ Dabing",
+        "video_id": 27254249
+      },
+      {
+        "episode_id": 63550,
+        "display_name": "Za hranicí S02E05 - Celý svět je jeviště CZ Dabing",
+        "video_id": 27254256
+      },
+      {
+        "episode_id": 7986,
+        "display_name": "ted S01E04 - Metra, kola a automobily CZ Dabing",
+        "video_id": 27254287
+      },
+      {
+        "episode_id": 7990,
+        "display_name": "ted S01E06 - Hlasitá noc CZ Dabing",
+        "video_id": 27254317
+      },
+      {
+        "episode_id": 7988,
+        "display_name": "ted S01E07 - Musí to mít CZ Dabing",
+        "video_id": 27254362
+      },
+      {
+        "episode_id": 10796,
+        "display_name": "ted S01E09 CZ Dabing",
+        "video_id": 27254388
+      },
+      {
+        "episode_id": 10794,
+        "display_name": "ted S02E02 - Paní Robicheková CZ Dabing",
+        "video_id": 27254402
+      },
+      {
+        "episode_id": 10792,
+        "display_name": "ted S02E04 - Maminčina bombastická romantická komedie CZ Dabing",
+        "video_id": 27254418
+      },
+      {
+        "episode_id": 10790,
+        "display_name": "ted S02E06 - Roe V. Weed CZ Dabing",
+        "video_id": 27254440
+      },
+      {
+        "episode_id": 10786,
+        "display_name": "ted S02E11 CZ Dabing",
+        "video_id": 27254457
+      },
+      {
+        "episode_id": 6430,
+        "display_name": "FUBAR S01E02 - Vlaková krádež CZ Dabing",
+        "video_id": 27254468
+      },
+      {
+        "episode_id": 6432,
+        "display_name": "FUBAR S01E03 - Sváděcí akce CZ Dabing",
+        "video_id": 27254477
+      },
+      {
+        "episode_id": 6434,
+        "display_name": "FUBAR S01E04 - Velký Dán CZ Dabing",
+        "video_id": 27254495
+      },
+      {
+        "episode_id": 6436,
+        "display_name": "FUBAR S01E08 - Konec a uzavřeno CZ Dabing",
+        "video_id": 27254512
+      },
+      {
+        "episode_id": 6440,
+        "display_name": "FUBAR S02E02 - Greto? CZ Dabing",
+        "video_id": 27254529
+      },
+      {
         "episode_id": 49511,
         "display_name": "Defiance S01E10 - The Bride Wore Black CZ Titulky",
         "video_id": 27254146
@@ -161036,6 +161281,81 @@
         "episode_id": 49517,
         "display_name": "Defiance S01E12 - Everything is Broken CZ Titulky",
         "video_id": 27254172
+      },
+      {
+        "episode_id": 49519,
+        "display_name": "Defiance S02E02 - In My Secret Life CZ Titulky",
+        "video_id": 27254207
+      },
+      {
+        "episode_id": 49521,
+        "display_name": "Defiance S02E04 - Beasts of Burden CZ Titulky",
+        "video_id": 27254233
+      },
+      {
+        "episode_id": 49523,
+        "display_name": "Defiance S02E06 - This Woman's Work CZ Titulky",
+        "video_id": 27254255
+      },
+      {
+        "episode_id": 49525,
+        "display_name": "Defiance S02E08 - Slouching Towards Bethlehem CZ Titulky",
+        "video_id": 27254301
+      },
+      {
+        "episode_id": 49527,
+        "display_name": "Defiance S02E10 - Bottom of the World CZ Titulky",
+        "video_id": 27254325
+      },
+      {
+        "episode_id": 49529,
+        "display_name": "Defiance S03E01 - The World We Seize CZ Titulky",
+        "video_id": 27254353
+      },
+      {
+        "episode_id": 32857,
+        "display_name": "Hotel Continental S01E01 - Bratři ve zbrani CZ Dabing",
+        "video_id": 27254383
+      },
+      {
+        "episode_id": 17879,
+        "display_name": "Hotel Continental S01E03 - Divadlo bolesti CZ Titulky",
+        "video_id": 27254406
+      },
+      {
+        "episode_id": 63537,
+        "display_name": "Za hranicí S01E01 - Prázdnota CZ Dabing",
+        "video_id": 27254422
+      },
+      {
+        "episode_id": 63539,
+        "display_name": "Za hranicí S01E03 - Čas CZ Dabing",
+        "video_id": 27254443
+      },
+      {
+        "episode_id": 63541,
+        "display_name": "Za hranicí S01E05 - Půda CZ Dabing",
+        "video_id": 27254461
+      },
+      {
+        "episode_id": 63543,
+        "display_name": "Za hranicí S01E07 - Neznámo CZ Dabing",
+        "video_id": 27254474
+      },
+      {
+        "episode_id": 63547,
+        "display_name": "Za hranicí S02E02 - Stopy do neznáma CZ Dabing",
+        "video_id": 27254508
+      },
+      {
+        "episode_id": 63549,
+        "display_name": "Za hranicí S02E04 - Óda pro radost CZ Dabing",
+        "video_id": 27254524
+      },
+      {
+        "episode_id": 63545,
+        "display_name": "Za hranicí S02E06 - Do-Si-Do CZ Dabing",
+        "video_id": 27254558
       }
     ],
     "prepared_not_upload_ready": [
@@ -162197,7 +162517,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 39,
+    "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
