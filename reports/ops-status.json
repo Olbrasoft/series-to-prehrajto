@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 172734,
     "manifest_upload_ready_episodes": 648,
-    "uploaded_episodes": 20730,
+    "uploaded_episodes": 20741,
     "prepared_source_episodes": 43808,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 40,
-    "language_whisper_attempted_sources": 40,
-    "language_pending_whisper_sources": 2604,
+    "language_audited_sources": 20,
+    "language_whisper_attempted_sources": 20,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 26684,
     "whisper_review_pending_sources": 24826,
     "subtitle_followup_sources": 5272,
@@ -20,26 +20,66 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-07-08T11:36:44Z",
-      "databaseId": 28939581401,
+      "createdAt": "2026-07-08T11:43:23Z",
+      "databaseId": 28939950879,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
-      "createdAt": "2026-07-08T11:36:40Z",
-      "databaseId": 28939577675,
+      "createdAt": "2026-07-08T11:43:16Z",
+      "databaseId": 28939945011,
       "headBranch": "main",
       "status": "pending",
       "workflowName": "prepare-manifest"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-07-08T11:38:43Z",
+      "databaseId": 28939690300,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "backfill-subtitles"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-08T11:37:52Z",
+      "databaseId": 28939644027,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-08T11:37:49Z",
+      "databaseId": 28939641241,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-08T11:36:44Z",
+      "databaseId": 28939581401,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-07-08T11:36:40Z",
+      "databaseId": 28939577675,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-08T11:33:33Z",
       "databaseId": 28939400165,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -47,7 +87,7 @@
       "createdAt": "2026-07-08T11:30:57Z",
       "databaseId": 28939249391,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "sync"
     },
     {
@@ -59,11 +99,11 @@
       "workflowName": "prepare-manifest"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-08T11:24:49Z",
       "databaseId": 28938905250,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "backfill-subtitles"
     },
     {
@@ -137,46 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "failure",
-      "createdAt": "2026-07-08T11:09:42Z",
-      "databaseId": 28938069519,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-08T11:09:39Z",
-      "databaseId": 28938067807,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-08T11:08:31Z",
-      "databaseId": 28938005013,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-08T11:00:58Z",
-      "databaseId": 28937582880,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "backfill-subtitles"
-    },
-    {
-      "conclusion": "failure",
-      "createdAt": "2026-07-08T10:53:41Z",
-      "databaseId": 28937175612,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
     }
   ],
   "gaps": {
@@ -81511,6 +81511,31 @@
         "video_id": 27257207
       },
       {
+        "episode_id": 67284,
+        "display_name": "Ranč S01E12 - Dobře se nám tu žije CZ Titulky",
+        "video_id": 27257239
+      },
+      {
+        "episode_id": 67288,
+        "display_name": "Ranč S01E19 - Odchod je už nějakou chvíli na pořádku dne CZ Titulky",
+        "video_id": 27257261
+      },
+      {
+        "episode_id": 67294,
+        "display_name": "Ranč S02E01 - Příštích 30 let CZ Titulky",
+        "video_id": 27257274
+      },
+      {
+        "episode_id": 67298,
+        "display_name": "Ranč S02E05 - Nejlepší přátelé CZ Titulky",
+        "video_id": 27257286
+      },
+      {
+        "episode_id": 67300,
+        "display_name": "Ranč S02E08 - Já se neptám a sama nic neřekla CZ Dabing",
+        "video_id": 27257294
+      },
+      {
         "episode_id": 82857,
         "display_name": "Hanna S01E04 - Otec CZ Dabing",
         "video_id": 27256876
@@ -81579,6 +81604,36 @@
         "episode_id": 140823,
         "display_name": "Daisy Jones & the Six S01E08 - Stopa 8: Asi jsme to zvládli CZ Dabing",
         "video_id": 27257208
+      },
+      {
+        "episode_id": 140825,
+        "display_name": "Daisy Jones & the Six S01E10 - Stopa 10: Rokenrolová sebevražda CZ Titulky",
+        "video_id": 27257223
+      },
+      {
+        "episode_id": 54863,
+        "display_name": "HAPPY! S02E01 - Válka o Velikonocích CZ Titulky",
+        "video_id": 27257249
+      },
+      {
+        "episode_id": 54865,
+        "display_name": "HAPPY! S02E03 - Některé dívky se musí hodně kát CZ Titulky",
+        "video_id": 27257270
+      },
+      {
+        "episode_id": 54871,
+        "display_name": "HAPPY! S02E09 - Pět kuřecích stripsů a bouchačka CZ Titulky",
+        "video_id": 27257284
+      },
+      {
+        "episode_id": 54539,
+        "display_name": "Joey S01E19 - Joey a nóbl sestra CZ Dabing",
+        "video_id": 27257298
+      },
+      {
+        "episode_id": 54549,
+        "display_name": "Joey S02E05 - Joey a dům hříchu CZ Dabing",
+        "video_id": 27257309
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -162808,6 +162863,31 @@
         "video_id": 27257207
       },
       {
+        "episode_id": 67284,
+        "display_name": "Ranč S01E12 - Dobře se nám tu žije CZ Titulky",
+        "video_id": 27257239
+      },
+      {
+        "episode_id": 67288,
+        "display_name": "Ranč S01E19 - Odchod je už nějakou chvíli na pořádku dne CZ Titulky",
+        "video_id": 27257261
+      },
+      {
+        "episode_id": 67294,
+        "display_name": "Ranč S02E01 - Příštích 30 let CZ Titulky",
+        "video_id": 27257274
+      },
+      {
+        "episode_id": 67298,
+        "display_name": "Ranč S02E05 - Nejlepší přátelé CZ Titulky",
+        "video_id": 27257286
+      },
+      {
+        "episode_id": 67300,
+        "display_name": "Ranč S02E08 - Já se neptám a sama nic neřekla CZ Dabing",
+        "video_id": 27257294
+      },
+      {
         "episode_id": 82857,
         "display_name": "Hanna S01E04 - Otec CZ Dabing",
         "video_id": 27256876
@@ -162876,6 +162956,36 @@
         "episode_id": 140823,
         "display_name": "Daisy Jones & the Six S01E08 - Stopa 8: Asi jsme to zvládli CZ Dabing",
         "video_id": 27257208
+      },
+      {
+        "episode_id": 140825,
+        "display_name": "Daisy Jones & the Six S01E10 - Stopa 10: Rokenrolová sebevražda CZ Titulky",
+        "video_id": 27257223
+      },
+      {
+        "episode_id": 54863,
+        "display_name": "HAPPY! S02E01 - Válka o Velikonocích CZ Titulky",
+        "video_id": 27257249
+      },
+      {
+        "episode_id": 54865,
+        "display_name": "HAPPY! S02E03 - Některé dívky se musí hodně kát CZ Titulky",
+        "video_id": 27257270
+      },
+      {
+        "episode_id": 54871,
+        "display_name": "HAPPY! S02E09 - Pět kuřecích stripsů a bouchačka CZ Titulky",
+        "video_id": 27257284
+      },
+      {
+        "episode_id": 54539,
+        "display_name": "Joey S01E19 - Joey a nóbl sestra CZ Dabing",
+        "video_id": 27257298
+      },
+      {
+        "episode_id": 54549,
+        "display_name": "Joey S02E05 - Joey a dům hříchu CZ Dabing",
+        "video_id": 27257309
       }
     ],
     "prepared_not_upload_ready": [
@@ -164037,7 +164147,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 39,
+    "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
