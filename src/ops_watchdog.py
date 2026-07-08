@@ -209,7 +209,7 @@ def main() -> int:
     )
 
     has_preparation_work = unprepared_queue_episodes > 0
-    prepare_episode_target = min(args.emergency_episodes, 200)
+    prepare_episode_target = min(args.emergency_episodes, 500)
     prepare_series_target = min(args.target_series, 80)
 
     if has_preparation_work:
