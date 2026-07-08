@@ -2,7 +2,7 @@
   "counts": {
     "backlog_episodes": 173094,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 20395,
+    "uploaded_episodes": 20397,
     "prepared_source_episodes": 43808,
     "description_series": 60,
     "description_episodes": 753,
@@ -20,18 +20,82 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-07-08T03:35:41Z",
-      "databaseId": 28915577769,
+      "createdAt": "2026-07-08T03:41:05Z",
+      "databaseId": 28915767668,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "backfill-subtitles"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-08T03:40:58Z",
+      "databaseId": 28915763472,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-07-08T03:40:54Z",
+      "databaseId": 28915760587,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-08T03:40:48Z",
+      "databaseId": 28915757203,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-08T03:40:18Z",
+      "databaseId": 28915736938,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-08T03:36:50Z",
+      "databaseId": 28915617490,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-08T03:36:47Z",
+      "databaseId": 28915615798,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-08T03:36:44Z",
+      "databaseId": 28915614498,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-08T03:35:41Z",
+      "databaseId": 28915577769,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-08T03:25:58Z",
       "databaseId": 28915224118,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "backfill-subtitles"
     },
     {
@@ -113,70 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "failure",
-      "createdAt": "2026-07-08T03:04:26Z",
-      "databaseId": 28914422462,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-08T02:59:56Z",
-      "databaseId": 28914242789,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-08T02:53:16Z",
-      "databaseId": 28914006753,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "backfill-subtitles"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-08T02:48:43Z",
-      "databaseId": 28913838029,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-08T02:45:18Z",
-      "databaseId": 28913715799,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "failure",
-      "createdAt": "2026-07-08T02:45:15Z",
-      "databaseId": 28913713604,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-08T02:45:12Z",
-      "databaseId": 28913712097,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-08T02:44:09Z",
-      "databaseId": 28913672426,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
     }
   ],
   "gaps": {
@@ -79904,6 +79904,16 @@
         "episode_id": 183513,
         "display_name": "Blue S02E04 - Squash CZ Titulky",
         "video_id": 27248040
+      },
+      {
+        "episode_id": 183567,
+        "display_name": "Blue S03E06 - Jsem včerejší CZ Dabing",
+        "video_id": 27248101
+      },
+      {
+        "episode_id": 183569,
+        "display_name": "Blue S03E08 - Jednoróža CZ Titulky",
+        "video_id": 27248117
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -159526,6 +159536,16 @@
         "episode_id": 183513,
         "display_name": "Blue S02E04 - Squash CZ Titulky",
         "video_id": 27248040
+      },
+      {
+        "episode_id": 183567,
+        "display_name": "Blue S03E06 - Jsem včerejší CZ Dabing",
+        "video_id": 27248101
+      },
+      {
+        "episode_id": 183569,
+        "display_name": "Blue S03E08 - Jednoróža CZ Titulky",
+        "video_id": 27248117
       }
     ],
     "prepared_not_upload_ready": [
