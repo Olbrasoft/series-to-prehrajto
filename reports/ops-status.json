@@ -1,17 +1,17 @@
 {
   "counts": {
-    "backlog_episodes": 173351,
+    "backlog_episodes": 173094,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 20263,
+    "uploaded_episodes": 20268,
     "prepared_source_episodes": 43808,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 40,
-    "language_whisper_attempted_sources": 40,
-    "language_pending_whisper_sources": 2604,
+    "language_audited_sources": 20,
+    "language_whisper_attempted_sources": 20,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 26684,
     "whisper_review_pending_sources": 24826,
     "subtitle_followup_sources": 5272,
@@ -20,26 +20,146 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-07-08T00:51:02Z",
-      "databaseId": 28909318861,
+      "createdAt": "2026-07-08T01:10:11Z",
+      "databaseId": 28910095609,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-08T01:10:11Z",
+      "databaseId": 28910095567,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
-      "createdAt": "2026-07-08T00:50:59Z",
-      "databaseId": 28909316966,
+      "createdAt": "2026-07-08T01:10:07Z",
+      "databaseId": 28910092599,
       "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "refresh-backlog"
+      "status": "pending",
+      "workflowName": "prepare-manifest"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-07-08T01:09:45Z",
+      "databaseId": 28910077550,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "backfill-subtitles"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-08T01:06:21Z",
+      "databaseId": 28909946588,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-sources"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-08T01:03:36Z",
+      "databaseId": 28909829992,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-08T00:59:21Z",
+      "databaseId": 28909650638,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-08T00:57:52Z",
+      "databaseId": 28909593800,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "backfill-subtitles"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-07-08T00:56:00Z",
+      "databaseId": 28909523097,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-08T00:53:19Z",
+      "databaseId": 28909414426,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-08T00:52:52Z",
+      "databaseId": 28909394083,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-08T00:52:15Z",
+      "databaseId": 28909370114,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "failure",
+      "createdAt": "2026-07-08T00:52:12Z",
+      "databaseId": 28909368066,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-08T00:52:10Z",
+      "databaseId": 28909366477,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-08T00:52:08Z",
+      "databaseId": 28909364536,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-08T00:51:02Z",
+      "databaseId": 28909318861,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-08T00:50:59Z",
+      "databaseId": 28909316966,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "refresh-backlog"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-08T00:47:30Z",
       "databaseId": 28909177601,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "backfill-subtitles"
     },
     {
@@ -57,126 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-status"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-08T00:35:05Z",
-      "databaseId": 28908686119,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-08T00:33:57Z",
-      "databaseId": 28908641275,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-08T00:33:53Z",
-      "databaseId": 28908638600,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-08T00:32:14Z",
-      "databaseId": 28908571079,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-08T00:32:11Z",
-      "databaseId": 28908568988,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-08T00:31:10Z",
-      "databaseId": 28908529371,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-08T00:28:26Z",
-      "databaseId": 28908416170,
-      "headBranch": "main",
-      "status": "pending",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-08T00:27:42Z",
-      "databaseId": 28908387508,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "backfill-subtitles"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-08T00:26:06Z",
-      "databaseId": 28908324301,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "failure",
-      "createdAt": "2026-07-08T00:26:02Z",
-      "databaseId": 28908322137,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-08T00:24:57Z",
-      "databaseId": 28908278411,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "failure",
-      "createdAt": "2026-07-08T00:24:53Z",
-      "databaseId": 28908276370,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-08T00:21:39Z",
-      "databaseId": 28908145845,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-08T00:14:16Z",
-      "databaseId": 28907847923,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "backfill-subtitles"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-07-08T00:12:35Z",
-      "databaseId": 28907776071,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
     }
   ],
   "gaps": {
@@ -79146,6 +79146,31 @@
         "video_id": 27245004
       },
       {
+        "episode_id": 76880,
+        "display_name": "Dawsonův svět S02E09 - Volby CZ Dabing",
+        "video_id": 27245058
+      },
+      {
+        "episode_id": 76968,
+        "display_name": "Dawsonův svět S02E11 - To je sex, napsala CZ Titulky",
+        "video_id": 27245182
+      },
+      {
+        "episode_id": 76852,
+        "display_name": "Dawsonův svět S02E13 - Jeho hlavní představitelka CZ Dabing",
+        "video_id": 27245264
+      },
+      {
+        "episode_id": 76952,
+        "display_name": "Dawsonův svět S02E18 - Dokonalá svatba CZ Dabing",
+        "video_id": 27245341
+      },
+      {
+        "episode_id": 76922,
+        "display_name": "Dawsonův svět S02E22 - Rodičovská rozvážnost CZ Dabing",
+        "video_id": 27245399
+      },
+      {
         "episode_id": 101019,
         "display_name": "Tajemství kruhu S01E12 - 12. epizoda CZ Titulky",
         "video_id": 27244084
@@ -158108,6 +158133,31 @@
         "video_id": 27245004
       },
       {
+        "episode_id": 76880,
+        "display_name": "Dawsonův svět S02E09 - Volby CZ Dabing",
+        "video_id": 27245058
+      },
+      {
+        "episode_id": 76968,
+        "display_name": "Dawsonův svět S02E11 - To je sex, napsala CZ Titulky",
+        "video_id": 27245182
+      },
+      {
+        "episode_id": 76852,
+        "display_name": "Dawsonův svět S02E13 - Jeho hlavní představitelka CZ Dabing",
+        "video_id": 27245264
+      },
+      {
+        "episode_id": 76952,
+        "display_name": "Dawsonův svět S02E18 - Dokonalá svatba CZ Dabing",
+        "video_id": 27245341
+      },
+      {
+        "episode_id": 76922,
+        "display_name": "Dawsonův svět S02E22 - Rodičovská rozvážnost CZ Dabing",
+        "video_id": 27245399
+      },
+      {
         "episode_id": 101019,
         "display_name": "Tajemství kruhu S01E12 - 12. epizoda CZ Titulky",
         "video_id": 27244084
@@ -159367,7 +159417,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 39,
+    "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
