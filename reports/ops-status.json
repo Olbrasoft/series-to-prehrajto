@@ -1,17 +1,17 @@
 {
   "counts": {
     "backlog_episodes": 172434,
-    "manifest_upload_ready_episodes": 131,
-    "uploaded_episodes": 20951,
+    "manifest_upload_ready_episodes": 112,
+    "uploaded_episodes": 20960,
     "prepared_source_episodes": 43808,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 40,
-    "language_whisper_attempted_sources": 40,
-    "language_pending_whisper_sources": 2604,
+    "language_audited_sources": 20,
+    "language_whisper_attempted_sources": 20,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 26684,
     "whisper_review_pending_sources": 24826,
     "subtitle_followup_sources": 5272,
@@ -20,18 +20,58 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-07-08T17:44:44Z",
-      "databaseId": 28963543036,
+      "createdAt": "2026-07-08T17:59:26Z",
+      "databaseId": 28964448502,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-07-08T17:52:27Z",
+      "databaseId": 28964024028,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "backfill-subtitles"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-08T17:49:08Z",
+      "databaseId": 28963817671,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-08T17:48:21Z",
+      "databaseId": 28963770884,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-08T17:45:59Z",
+      "databaseId": 28963624048,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-08T17:44:44Z",
+      "databaseId": 28963543036,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-08T17:44:23Z",
       "databaseId": 28963521435,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "backfill-subtitles"
     },
     {
@@ -59,11 +99,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "failure",
       "createdAt": "2026-07-08T17:36:58Z",
       "databaseId": 28963063928,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
@@ -83,11 +123,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-08T17:35:11Z",
       "databaseId": 28962952786,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -137,46 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-08T17:25:10Z",
-      "databaseId": 28962321074,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-08T17:24:04Z",
-      "databaseId": 28962252819,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-08T17:24:01Z",
-      "databaseId": 28962249186,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-08T17:23:58Z",
-      "databaseId": 28962245860,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-08T17:17:03Z",
-      "databaseId": 28961813875,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "backfill-subtitles"
     }
   ],
   "gaps": {
@@ -82656,6 +82656,26 @@
         "video_id": 27264896
       },
       {
+        "episode_id": 202930,
+        "display_name": "Doktoři S01E01 - První den (Pilot) CZ Dabing",
+        "video_id": 27265101
+      },
+      {
+        "episode_id": 179988,
+        "display_name": "Doktoři S01E03 - Spolubojovník CZ Dabing",
+        "video_id": 27265177
+      },
+      {
+        "episode_id": 105316,
+        "display_name": "Doktoři S02E02 - Princ a chuďas CZ Dabing",
+        "video_id": 27265363
+      },
+      {
+        "episode_id": 105318,
+        "display_name": "Doktoři S02E03 - Tři slova CZ Dabing",
+        "video_id": 27265391
+      },
+      {
         "episode_id": 106245,
         "display_name": "R jako rodina S05E01 - 1. epizoda CZ Titulky",
         "video_id": 27264489
@@ -82684,6 +82704,31 @@
         "episode_id": 102713,
         "display_name": "Goldbergovi S08E16 - Souboj dvojic CZ Dabing",
         "video_id": 27264930
+      },
+      {
+        "episode_id": 16959,
+        "display_name": "Přeplněný pokoj S01E02 - Útočiště CZ Titulky",
+        "video_id": 27265135
+      },
+      {
+        "episode_id": 16961,
+        "display_name": "Přeplněný pokoj S01E04 - Londýn CZ Titulky",
+        "video_id": 27265192
+      },
+      {
+        "episode_id": 16963,
+        "display_name": "Přeplněný pokoj S01E06 - Rya CZ Titulky",
+        "video_id": 27265294
+      },
+      {
+        "episode_id": 16965,
+        "display_name": "Přeplněný pokoj S01E08 - Shledání CZ Titulky",
+        "video_id": 27265347
+      },
+      {
+        "episode_id": 16967,
+        "display_name": "Přeplněný pokoj S01E10 - Rozsudek CZ Titulky",
+        "video_id": 27265378
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -165058,6 +165103,26 @@
         "video_id": 27264896
       },
       {
+        "episode_id": 202930,
+        "display_name": "Doktoři S01E01 - První den (Pilot) CZ Dabing",
+        "video_id": 27265101
+      },
+      {
+        "episode_id": 179988,
+        "display_name": "Doktoři S01E03 - Spolubojovník CZ Dabing",
+        "video_id": 27265177
+      },
+      {
+        "episode_id": 105316,
+        "display_name": "Doktoři S02E02 - Princ a chuďas CZ Dabing",
+        "video_id": 27265363
+      },
+      {
+        "episode_id": 105318,
+        "display_name": "Doktoři S02E03 - Tři slova CZ Dabing",
+        "video_id": 27265391
+      },
+      {
         "episode_id": 106245,
         "display_name": "R jako rodina S05E01 - 1. epizoda CZ Titulky",
         "video_id": 27264489
@@ -165086,6 +165151,31 @@
         "episode_id": 102713,
         "display_name": "Goldbergovi S08E16 - Souboj dvojic CZ Dabing",
         "video_id": 27264930
+      },
+      {
+        "episode_id": 16959,
+        "display_name": "Přeplněný pokoj S01E02 - Útočiště CZ Titulky",
+        "video_id": 27265135
+      },
+      {
+        "episode_id": 16961,
+        "display_name": "Přeplněný pokoj S01E04 - Londýn CZ Titulky",
+        "video_id": 27265192
+      },
+      {
+        "episode_id": 16963,
+        "display_name": "Přeplněný pokoj S01E06 - Rya CZ Titulky",
+        "video_id": 27265294
+      },
+      {
+        "episode_id": 16965,
+        "display_name": "Přeplněný pokoj S01E08 - Shledání CZ Titulky",
+        "video_id": 27265347
+      },
+      {
+        "episode_id": 16967,
+        "display_name": "Přeplněný pokoj S01E10 - Rozsudek CZ Titulky",
+        "video_id": 27265378
       }
     ],
     "prepared_not_upload_ready": [
@@ -166247,7 +166337,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 39,
+    "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
