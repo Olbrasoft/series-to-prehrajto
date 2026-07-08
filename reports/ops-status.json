@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 172386,
     "manifest_upload_ready_episodes": 42,
-    "uploaded_episodes": 20972,
+    "uploaded_episodes": 20974,
     "prepared_source_episodes": 43808,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 20,
-    "language_whisper_attempted_sources": 20,
-    "language_pending_whisper_sources": 2624,
+    "language_audited_sources": 40,
+    "language_whisper_attempted_sources": 40,
+    "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 26684,
     "whisper_review_pending_sources": 24826,
     "subtitle_followup_sources": 5272,
@@ -20,10 +20,66 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-07-08T18:57:10Z",
+      "databaseId": 28967986888,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-08T18:56:45Z",
+      "databaseId": 28967960417,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-08T18:56:30Z",
+      "databaseId": 28967944560,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-08T18:56:29Z",
+      "databaseId": 28967944425,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-08T18:49:48Z",
+      "databaseId": 28967528843,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "backfill-subtitles"
+    },
+    {
+      "conclusion": "failure",
+      "createdAt": "2026-07-08T18:43:58Z",
+      "databaseId": 28967167976,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-08T18:43:51Z",
+      "databaseId": 28967160423,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-08T18:42:39Z",
       "databaseId": 28967085355,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -35,11 +91,11 @@
       "workflowName": "sync"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-08T18:40:04Z",
       "databaseId": 28966922794,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "backfill-subtitles"
     },
     {
@@ -59,11 +115,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-08T18:38:54Z",
       "databaseId": 28966852064,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -115,68 +171,12 @@
       "workflowName": "backfill-subtitles"
     },
     {
-      "conclusion": "",
+      "conclusion": "failure",
       "createdAt": "2026-07-08T18:31:12Z",
       "databaseId": 28966369859,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-08T18:29:59Z",
-      "databaseId": 28966288857,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-08T18:29:54Z",
-      "databaseId": 28966284203,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-08T18:29:43Z",
-      "databaseId": 28966272952,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-08T18:27:33Z",
-      "databaseId": 28966145459,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-07-08T18:21:41Z",
-      "databaseId": 28965788695,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-08T18:20:45Z",
-      "databaseId": 28965731811,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "backfill-subtitles"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-08T18:08:16Z",
-      "databaseId": 28964992278,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "backfill-subtitles"
     }
   ],
   "gaps": {
@@ -82726,6 +82726,16 @@
         "video_id": 27266214
       },
       {
+        "episode_id": 104496,
+        "display_name": "Drsný šerif S06E03 - Děkuju, Victorie CZ Dabing",
+        "video_id": 27266446
+      },
+      {
+        "episode_id": 104516,
+        "display_name": "Drsný šerif S06E07 - Zmrtvýchvstání CZ Dabing",
+        "video_id": 27266527
+      },
+      {
         "episode_id": 106245,
         "display_name": "R jako rodina S05E01 - 1. epizoda CZ Titulky",
         "video_id": 27264489
@@ -165233,6 +165243,16 @@
         "video_id": 27266214
       },
       {
+        "episode_id": 104496,
+        "display_name": "Drsný šerif S06E03 - Děkuju, Victorie CZ Dabing",
+        "video_id": 27266446
+      },
+      {
+        "episode_id": 104516,
+        "display_name": "Drsný šerif S06E07 - Zmrtvýchvstání CZ Dabing",
+        "video_id": 27266527
+      },
+      {
         "episode_id": 106245,
         "display_name": "R jako rodina S05E01 - 1. epizoda CZ Titulky",
         "video_id": 27264489
@@ -166457,7 +166477,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 19,
+    "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
