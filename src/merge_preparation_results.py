@@ -111,6 +111,54 @@ def audit_key(row: dict) -> tuple | None:
     return (int(row["source_id"]),)
 
 
+def episode_key(row: dict) -> tuple[int, int, int] | None:
+    if row.get("series_id") is None or row.get("season") is None or row.get("episode") is None:
+        return None
+    return (int(row["series_id"]), int(row["season"]), int(row["episode"]))
+
+
+def load_uploaded_episodes(repo: Path) -> tuple[set[int], set[tuple[int, int, int]]]:
+    uploaded_ids: set[int] = set()
+    uploaded_keys: set[tuple[int, int, int]] = set()
+    state_dir = repo / "state"
+    paths = [state_dir / "uploaded.json"]
+    paths.extend(sorted(state_dir.glob("uploaded-shard-*.json")))
+    for path in paths:
+        if not path.exists() or path.stat().st_size == 0:
+            continue
+        try:
+            state = json.loads(path.read_text(encoding="utf-8"))
+        except json.JSONDecodeError:
+            continue
+        for upload in state.get("uploads", []):
+            if upload.get("episode_id") is not None:
+                uploaded_ids.add(int(upload["episode_id"]))
+            key = episode_key(upload)
+            if key:
+                uploaded_keys.add(key)
+    return uploaded_ids, uploaded_keys
+
+
+def prune_uploaded_prepared(repo: Path) -> int:
+    path = repo / "plans" / "prepared-episodes.jsonl"
+    rows = load_jsonl(path)
+    if not rows:
+        return 0
+    uploaded_ids, uploaded_keys = load_uploaded_episodes(repo)
+    kept = [
+        row
+        for row in rows
+        if row.get("episode_id") is None
+        or int(row["episode_id"]) not in uploaded_ids
+        and episode_key(row) not in uploaded_keys
+    ]
+    removed = len(rows) - len(kept)
+    if removed:
+        kept.sort(key=episode_sort_key)
+        write_jsonl(path, kept)
+    return removed
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--incoming-dir", required=True)
@@ -153,6 +201,7 @@ def main() -> int:
             winner_fn=newer_timestamp_wins("audited_at"),
         ),
     }
+    changes["prepared_pruned_uploaded"] = prune_uploaded_prepared(repo)
     print(json.dumps(changes, ensure_ascii=False, sort_keys=True))
     return 0
 
