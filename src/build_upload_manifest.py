@@ -13,6 +13,10 @@ from description_quality import is_valid_generated_description
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 MIN_UPLOAD_FILE_SIZE = 300 * 1024 * 1024
+# Search/provider metadata can overstate the final stream size. Keep a planning
+# margin so upload workers do not waste batches on sources that HEAD later
+# rejects as undersized.
+MIN_PLANNED_FILE_SIZE = 350 * 1024 * 1024
 
 
 def load_jsonl(path: Path) -> list[dict]:
@@ -256,7 +260,7 @@ def upload_candidate_ids(plan: dict, burned: set[int]) -> list[int]:
         if sid in burned:
             return False
         fsize = source.get("filesize_bytes")
-        if fsize is not None and fsize < MIN_UPLOAD_FILE_SIZE:
+        if fsize is not None and fsize < MIN_PLANNED_FILE_SIZE:
             return False
         return True
 
@@ -284,7 +288,7 @@ def upload_candidate_ids(plan: dict, burned: set[int]) -> list[int]:
         if not source or not passes(source):
             continue
         fsize = source.get("filesize_bytes")
-        if fsize is None or fsize < MIN_UPLOAD_FILE_SIZE:
+        if fsize is None or fsize < MIN_PLANNED_FILE_SIZE:
             continue
         if not source.get("source_url"):
             continue
@@ -391,7 +395,7 @@ def build_manifest(
             stats["selected_source_burned"] += 1
             continue
         fsize = selected.get("filesize_bytes")
-        if fsize is not None and fsize < MIN_UPLOAD_FILE_SIZE:
+        if fsize is not None and fsize < MIN_PLANNED_FILE_SIZE:
             stats["selected_source_undersize"] += 1
             continue
         resolvable = bool(((selected.get("signals") or {}).get("provider_probe") or {}).get("streams"))

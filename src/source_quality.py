@@ -5,7 +5,7 @@ from __future__ import annotations
 import re
 from typing import Any
 
-MIN_PREFERRED_FILESIZE_BYTES = 300 * 1024 * 1024
+MIN_PREFERRED_FILESIZE_BYTES = 350 * 1024 * 1024
 
 
 def resolution_score(value: str | None) -> int:

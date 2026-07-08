@@ -14,7 +14,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from audit_language_sources import audit_one, append_jsonl, write_latest_index  # noqa: E402
 from prepare_episode_sources import (  # noqa: E402
-    MIN_UPLOAD_FILE_SIZE,
+    MIN_PLANNED_FILE_SIZE,
     load_jsonl,
     source_quality_tier,
     update_subtitle_followup_queue,
@@ -161,13 +161,13 @@ def main() -> int:
         updated_queue.append(updated)
         if (
             status == "whisper_confirmed_cz"
-            and int(audit.get("filesize_bytes") or 0) >= MIN_UPLOAD_FILE_SIZE
+            and int(audit.get("filesize_bytes") or 0) >= MIN_PLANNED_FILE_SIZE
         ):
             promoted.append(prepared_row_from_audit(audit, upload_kind="audio"))
             promoted_keys.add(queue_key(audit))
         elif (
             status == "whisper_non_cz_needs_subtitles"
-            and int(audit.get("filesize_bytes") or 0) >= MIN_UPLOAD_FILE_SIZE
+            and int(audit.get("filesize_bytes") or 0) >= MIN_PLANNED_FILE_SIZE
         ):
             promoted.append(prepared_row_from_audit(audit, upload_kind="subtitles"))
             promoted_keys.add(queue_key(audit))

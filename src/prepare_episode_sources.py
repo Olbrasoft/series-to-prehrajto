@@ -28,6 +28,9 @@ from source_quality import source_quality_score, source_quality_tier  # noqa: E4
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 MIN_UPLOAD_FILE_SIZE = 300 * 1024 * 1024
+# Metadata collected during search can be optimistic. Use a planning margin;
+# sync_batch still verifies the real stream against MIN_UPLOAD_FILE_SIZE.
+MIN_PLANNED_FILE_SIZE = 350 * 1024 * 1024
 FAILED_RETRY_AFTER = dt.timedelta(hours=24)
 MAX_RESOLVABLE_CANDIDATE_PROBES = 1
 
@@ -59,7 +62,7 @@ def source_has_cz_subtitle_hint(source: dict) -> bool:
 
 def source_has_upload_quality_hint(source: dict) -> bool:
     filesize = source.get("filesize_bytes")
-    if filesize is not None and int(filesize) >= MIN_UPLOAD_FILE_SIZE:
+    if filesize is not None and int(filesize) >= MIN_PLANNED_FILE_SIZE:
         return True
     return source_quality_score(source)[1] >= 1080
 
