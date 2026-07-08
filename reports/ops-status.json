@@ -1,8 +1,8 @@
 {
   "counts": {
     "backlog_episodes": 172386,
-    "manifest_upload_ready_episodes": 39,
-    "uploaded_episodes": 20980,
+    "manifest_upload_ready_episodes": 32,
+    "uploaded_episodes": 20981,
     "prepared_source_episodes": 43808,
     "description_series": 60,
     "description_episodes": 753,
@@ -20,18 +20,82 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-07-08T19:29:11Z",
-      "databaseId": 28969902266,
+      "createdAt": "2026-07-08T19:35:33Z",
+      "databaseId": 28970289002,
       "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "ops-watchdog"
+      "status": "pending",
+      "workflowName": "prepare-descriptions"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-07-08T19:34:58Z",
+      "databaseId": 28970253375,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-08T19:34:23Z",
+      "databaseId": 28970219267,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-08T19:34:23Z",
+      "databaseId": 28970219178,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-08T19:33:52Z",
+      "databaseId": 28970187967,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "backfill-subtitles"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-08T19:32:59Z",
+      "databaseId": 28970135108,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-08T19:30:38Z",
+      "databaseId": 28969990930,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-08T19:30:34Z",
+      "databaseId": 28969986937,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-08T19:29:11Z",
+      "databaseId": 28969902266,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-08T19:24:38Z",
       "databaseId": 28969636472,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "backfill-subtitles"
     },
     {
@@ -39,7 +103,7 @@
       "createdAt": "2026-07-08T19:20:54Z",
       "databaseId": 28969415807,
       "headBranch": "main",
-      "status": "queued",
+      "status": "in_progress",
       "workflowName": "prepare-manifest"
     },
     {
@@ -59,11 +123,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "failure",
       "createdAt": "2026-07-08T19:19:19Z",
       "databaseId": 28969322309,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
@@ -113,70 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "failure",
-      "createdAt": "2026-07-08T19:02:07Z",
-      "databaseId": 28968293072,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-08T19:00:56Z",
-      "databaseId": 28968219268,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-07-08T19:00:51Z",
-      "databaseId": 28968213441,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-08T18:59:07Z",
-      "databaseId": 28968103900,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "backfill-subtitles"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-08T18:59:01Z",
-      "databaseId": 28968098075,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-sources"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-08T18:58:28Z",
-      "databaseId": 28968066001,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-08T18:57:10Z",
-      "databaseId": 28967986888,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-08T18:56:45Z",
-      "databaseId": 28967960417,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
     }
   ],
   "gaps": {
@@ -82829,6 +82829,11 @@
         "episode_id": 105607,
         "display_name": "Doteky osudu S02E04 - Dokonalá bouře CZ Dabing",
         "video_id": 27267301
+      },
+      {
+        "episode_id": 105605,
+        "display_name": "Doteky osudu S02E11 - Obvinění CZ Dabing",
+        "video_id": 27267601
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -165376,6 +165381,11 @@
         "episode_id": 105607,
         "display_name": "Doteky osudu S02E04 - Dokonalá bouře CZ Dabing",
         "video_id": 27267301
+      },
+      {
+        "episode_id": 105605,
+        "display_name": "Doteky osudu S02E11 - Obvinění CZ Dabing",
+        "video_id": 27267601
       }
     ],
     "prepared_not_upload_ready": [
