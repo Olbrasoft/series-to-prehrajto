@@ -1,17 +1,17 @@
 {
   "counts": {
     "backlog_episodes": 172892,
-    "manifest_upload_ready_episodes": 801,
-    "uploaded_episodes": 20581,
+    "manifest_upload_ready_episodes": 770,
+    "uploaded_episodes": 20589,
     "prepared_source_episodes": 43808,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 20,
-    "language_whisper_attempted_sources": 20,
-    "language_pending_whisper_sources": 2624,
+    "language_audited_sources": 40,
+    "language_whisper_attempted_sources": 40,
+    "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 26684,
     "whisper_review_pending_sources": 24826,
     "subtitle_followup_sources": 5272,
@@ -20,10 +20,50 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-07-08T09:19:20Z",
+      "databaseId": 28931750663,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-08T09:18:52Z",
+      "databaseId": 28931722509,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-08T09:18:07Z",
+      "databaseId": 28931678550,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-08T09:18:06Z",
+      "databaseId": 28931677816,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "backfill-subtitles"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-08T09:11:18Z",
+      "databaseId": 28931274135,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-08T09:10:13Z",
       "databaseId": 28931207954,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -35,11 +75,11 @@
       "workflowName": "prepare-manifest"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-08T09:07:04Z",
       "databaseId": 28931018845,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "backfill-subtitles"
     },
     {
@@ -47,7 +87,7 @@
       "createdAt": "2026-07-08T09:06:28Z",
       "databaseId": 28930981931,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "process-whisper-review"
     },
     {
@@ -67,19 +107,19 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "failure",
       "createdAt": "2026-07-08T09:04:56Z",
       "databaseId": 28930887549,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-08T09:04:54Z",
       "databaseId": 28930885510,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -137,46 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-08T08:34:05Z",
-      "databaseId": 28929073308,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "backfill-subtitles"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-08T08:33:41Z",
-      "databaseId": 28929051138,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-08T08:28:16Z",
-      "databaseId": 28928731854,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "failure",
-      "createdAt": "2026-07-08T08:28:13Z",
-      "databaseId": 28928729406,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-08T08:28:11Z",
-      "databaseId": 28928727417,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
     }
   ],
   "gaps": {
@@ -80834,6 +80834,46 @@
         "episode_id": 7985,
         "display_name": "ted S01E02 - Moji dva tátové CZ Dabing",
         "video_id": 27254611
+      },
+      {
+        "episode_id": 6438,
+        "display_name": "FUBAR S02E03 - Tango a řež CZ Dabing",
+        "video_id": 27254630
+      },
+      {
+        "episode_id": 6442,
+        "display_name": "FUBAR S02E07 - Poprask na přehradě CZ Dabing",
+        "video_id": 27254648
+      },
+      {
+        "episode_id": 6444,
+        "display_name": "FUBAR S02E08 - Nic nekončí, jedeme dál CZ Dabing",
+        "video_id": 27254671
+      },
+      {
+        "episode_id": 36190,
+        "display_name": "Stařík v utajení S01E02 - Muž, který věděl příliš mnoho o mostech CZ Dabing",
+        "video_id": 27254698
+      },
+      {
+        "episode_id": 36094,
+        "display_name": "Stařík v utajení S01E04 - Podivný případ se psem v hodině kreslení CZ Dabing",
+        "video_id": 27254731
+      },
+      {
+        "episode_id": 7989,
+        "display_name": "ted S01E03 - Vystřelovací dysfunkce CZ Dabing",
+        "video_id": 27254641
+      },
+      {
+        "episode_id": 7987,
+        "display_name": "ted S01E05 - Hledám Susan. Zn.: Zoufale CZ Dabing",
+        "video_id": 27254677
+      },
+      {
+        "episode_id": 10797,
+        "display_name": "ted S01E08 CZ Dabing",
+        "video_id": 27254725
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -161386,6 +161426,46 @@
         "episode_id": 7985,
         "display_name": "ted S01E02 - Moji dva tátové CZ Dabing",
         "video_id": 27254611
+      },
+      {
+        "episode_id": 6438,
+        "display_name": "FUBAR S02E03 - Tango a řež CZ Dabing",
+        "video_id": 27254630
+      },
+      {
+        "episode_id": 6442,
+        "display_name": "FUBAR S02E07 - Poprask na přehradě CZ Dabing",
+        "video_id": 27254648
+      },
+      {
+        "episode_id": 6444,
+        "display_name": "FUBAR S02E08 - Nic nekončí, jedeme dál CZ Dabing",
+        "video_id": 27254671
+      },
+      {
+        "episode_id": 36190,
+        "display_name": "Stařík v utajení S01E02 - Muž, který věděl příliš mnoho o mostech CZ Dabing",
+        "video_id": 27254698
+      },
+      {
+        "episode_id": 36094,
+        "display_name": "Stařík v utajení S01E04 - Podivný případ se psem v hodině kreslení CZ Dabing",
+        "video_id": 27254731
+      },
+      {
+        "episode_id": 7989,
+        "display_name": "ted S01E03 - Vystřelovací dysfunkce CZ Dabing",
+        "video_id": 27254641
+      },
+      {
+        "episode_id": 7987,
+        "display_name": "ted S01E05 - Hledám Susan. Zn.: Zoufale CZ Dabing",
+        "video_id": 27254677
+      },
+      {
+        "episode_id": 10797,
+        "display_name": "ted S01E08 CZ Dabing",
+        "video_id": 27254725
       }
     ],
     "prepared_not_upload_ready": [
@@ -162547,7 +162627,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 19,
+    "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
