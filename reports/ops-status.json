@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 172434,
     "manifest_upload_ready_episodes": 131,
-    "uploaded_episodes": 20947,
+    "uploaded_episodes": 20951,
     "prepared_source_episodes": 43808,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 20,
-    "language_whisper_attempted_sources": 20,
-    "language_pending_whisper_sources": 2624,
+    "language_audited_sources": 40,
+    "language_whisper_attempted_sources": 40,
+    "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 26684,
     "whisper_review_pending_sources": 24826,
     "subtitle_followup_sources": 5272,
@@ -20,18 +20,66 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-07-08T17:36:14Z",
-      "databaseId": 28963018513,
+      "createdAt": "2026-07-08T17:44:44Z",
+      "databaseId": 28963543036,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-08T17:44:23Z",
+      "databaseId": 28963521435,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "backfill-subtitles"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-07-08T17:38:52Z",
+      "databaseId": 28963177197,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-08T17:37:07Z",
+      "databaseId": 28963072250,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-08T17:37:02Z",
+      "databaseId": 28963067015,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-08T17:36:58Z",
+      "databaseId": 28963063928,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-08T17:36:14Z",
+      "databaseId": 28963018513,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "backfill-subtitles"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-08T17:35:52Z",
       "databaseId": 28962996062,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -39,7 +87,7 @@
       "createdAt": "2026-07-08T17:35:11Z",
       "databaseId": 28962952786,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "audit-language"
     },
     {
@@ -91,11 +139,11 @@
       "workflowName": "process-whisper-review"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-08T17:25:10Z",
       "databaseId": 28962321074,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -129,54 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "backfill-subtitles"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-08T17:09:20Z",
-      "databaseId": 28961311640,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-08T17:05:07Z",
-      "databaseId": 28961090985,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-sources"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-08T17:03:15Z",
-      "databaseId": 28960970504,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "backfill-subtitles"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-08T17:00:35Z",
-      "databaseId": 28960797584,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-08T17:00:03Z",
-      "databaseId": 28960759133,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-08T16:59:21Z",
-      "databaseId": 28960715435,
-      "headBranch": "main",
-      "status": "pending",
-      "workflowName": "prepare-descriptions"
     }
   ],
   "gaps": {
@@ -82646,6 +82646,16 @@
         "video_id": 27262767
       },
       {
+        "episode_id": 130368,
+        "display_name": "Máma S01E04 - Den blbec CZ Titulky",
+        "video_id": 27264823
+      },
+      {
+        "episode_id": 76594,
+        "display_name": "Máma S01E12 - Vařené hovězí a pouta CZ Titulky",
+        "video_id": 27264896
+      },
+      {
         "episode_id": 106245,
         "display_name": "R jako rodina S05E01 - 1. epizoda CZ Titulky",
         "video_id": 27264489
@@ -82664,6 +82674,16 @@
         "episode_id": 106251,
         "display_name": "R jako rodina S05E07 - 7. epizoda CZ Titulky",
         "video_id": 27264656
+      },
+      {
+        "episode_id": 58787,
+        "display_name": "Goldbergovi S04E23 - Cesta k dospělosti CZ Dabing",
+        "video_id": 27264780
+      },
+      {
+        "episode_id": 102713,
+        "display_name": "Goldbergovi S08E16 - Souboj dvojic CZ Dabing",
+        "video_id": 27264930
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -165028,6 +165048,16 @@
         "video_id": 27262767
       },
       {
+        "episode_id": 130368,
+        "display_name": "Máma S01E04 - Den blbec CZ Titulky",
+        "video_id": 27264823
+      },
+      {
+        "episode_id": 76594,
+        "display_name": "Máma S01E12 - Vařené hovězí a pouta CZ Titulky",
+        "video_id": 27264896
+      },
+      {
         "episode_id": 106245,
         "display_name": "R jako rodina S05E01 - 1. epizoda CZ Titulky",
         "video_id": 27264489
@@ -165046,6 +165076,16 @@
         "episode_id": 106251,
         "display_name": "R jako rodina S05E07 - 7. epizoda CZ Titulky",
         "video_id": 27264656
+      },
+      {
+        "episode_id": 58787,
+        "display_name": "Goldbergovi S04E23 - Cesta k dospělosti CZ Dabing",
+        "video_id": 27264780
+      },
+      {
+        "episode_id": 102713,
+        "display_name": "Goldbergovi S08E16 - Souboj dvojic CZ Dabing",
+        "video_id": 27264930
       }
     ],
     "prepared_not_upload_ready": [
@@ -166207,7 +166247,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 19,
+    "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
