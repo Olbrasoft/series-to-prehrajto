@@ -1,8 +1,8 @@
 {
   "counts": {
     "backlog_episodes": 172892,
-    "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 20490,
+    "manifest_upload_ready_episodes": 918,
+    "uploaded_episodes": 20501,
     "prepared_source_episodes": 43808,
     "description_series": 60,
     "description_episodes": 753,
@@ -20,18 +20,74 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-07-08T07:37:13Z",
-      "databaseId": 28925876842,
+      "createdAt": "2026-07-08T07:48:28Z",
+      "databaseId": 28926476939,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-07-08T07:48:24Z",
+      "databaseId": 28926472823,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-08T07:45:59Z",
+      "databaseId": 28926343955,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-08T07:41:28Z",
+      "databaseId": 28926100079,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "backfill-subtitles"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-08T07:38:21Z",
+      "databaseId": 28925935493,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "failure",
+      "createdAt": "2026-07-08T07:38:18Z",
+      "databaseId": 28925933298,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-08T07:38:16Z",
+      "databaseId": 28925931619,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-08T07:37:13Z",
+      "databaseId": 28925876842,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-08T07:32:05Z",
       "databaseId": 28925610076,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "backfill-subtitles"
     },
     {
@@ -87,7 +143,7 @@
       "createdAt": "2026-07-08T07:13:18Z",
       "databaseId": 28924623419,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "sync"
     },
     {
@@ -121,62 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-08T07:10:40Z",
-      "databaseId": 28924486919,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "failure",
-      "createdAt": "2026-07-08T07:10:36Z",
-      "databaseId": 28924483189,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-08T07:10:15Z",
-      "databaseId": 28924464195,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "backfill-subtitles"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-07-08T07:05:01Z",
-      "databaseId": 28924193772,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "failure",
-      "createdAt": "2026-07-08T07:04:58Z",
-      "databaseId": 28924191071,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-08T07:01:04Z",
-      "databaseId": 28923986432,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "refresh-backlog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-08T06:59:33Z",
-      "databaseId": 28923902907,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "backfill-subtitles"
     }
   ],
   "gaps": {
@@ -80326,6 +80326,26 @@
         "video_id": 27252852
       },
       {
+        "episode_id": 54722,
+        "display_name": "Mrtví jako já S02E09 - Utiš se, mé srdce CZ Dabing",
+        "video_id": 27252969
+      },
+      {
+        "episode_id": 54724,
+        "display_name": "Mrtví jako já S02E12 - Nezapomeň na mě CZ Dabing",
+        "video_id": 27253068
+      },
+      {
+        "episode_id": 54726,
+        "display_name": "Mrtví jako já S02E13 - Poslední výzva CZ Dabing",
+        "video_id": 27253117
+      },
+      {
+        "episode_id": 54728,
+        "display_name": "Mrtví jako já S02E15 - Halloween CZ Dabing",
+        "video_id": 27253169
+      },
+      {
         "episode_id": 7173,
         "display_name": "Vlajka smrti S01E04 - Díl 4 CZ Titulky",
         "video_id": 27252459
@@ -80379,6 +80399,41 @@
         "episode_id": 26443,
         "display_name": "Jak prodávat drogy přes internet (rychle) S03E02 - Přestupek, jen klopýtnutí CZ Titulky",
         "video_id": 27252926
+      },
+      {
+        "episode_id": 26445,
+        "display_name": "Jak prodávat drogy přes internet (rychle) S03E04 - Než otočíš klíčem, chci ti ještě něco říct CZ Titulky",
+        "video_id": 27252954
+      },
+      {
+        "episode_id": 26447,
+        "display_name": "Jak prodávat drogy přes internet (rychle) S03E06 - Každý dostane druhou šanci CZ Titulky",
+        "video_id": 27252986
+      },
+      {
+        "episode_id": 15669,
+        "display_name": "Kominského metoda S01E03 - Kapitola 3: Prostata se zvětšuje CZ Dabing",
+        "video_id": 27253025
+      },
+      {
+        "episode_id": 15671,
+        "display_name": "Kominského metoda S01E05 - Kapitola 5: Zjevuje se agent CZ Dabing",
+        "video_id": 27253056
+      },
+      {
+        "episode_id": 15673,
+        "display_name": "Kominského metoda S01E07 - Kapitola 7: Je utvořen závazek CZ Dabing",
+        "video_id": 27253091
+      },
+      {
+        "episode_id": 15679,
+        "display_name": "Kominského metoda S02E05 - Kapitola 13: Shenckmanovy vytáčky CZ Dabing",
+        "video_id": 27253129
+      },
+      {
+        "episode_id": 15685,
+        "display_name": "Kominského metoda S03E03 - Kapitola 19: A je to čím dál absurdnější CZ Dabing",
+        "video_id": 27253163
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -160423,6 +160478,26 @@
         "video_id": 27252852
       },
       {
+        "episode_id": 54722,
+        "display_name": "Mrtví jako já S02E09 - Utiš se, mé srdce CZ Dabing",
+        "video_id": 27252969
+      },
+      {
+        "episode_id": 54724,
+        "display_name": "Mrtví jako já S02E12 - Nezapomeň na mě CZ Dabing",
+        "video_id": 27253068
+      },
+      {
+        "episode_id": 54726,
+        "display_name": "Mrtví jako já S02E13 - Poslední výzva CZ Dabing",
+        "video_id": 27253117
+      },
+      {
+        "episode_id": 54728,
+        "display_name": "Mrtví jako já S02E15 - Halloween CZ Dabing",
+        "video_id": 27253169
+      },
+      {
         "episode_id": 7173,
         "display_name": "Vlajka smrti S01E04 - Díl 4 CZ Titulky",
         "video_id": 27252459
@@ -160476,6 +160551,41 @@
         "episode_id": 26443,
         "display_name": "Jak prodávat drogy přes internet (rychle) S03E02 - Přestupek, jen klopýtnutí CZ Titulky",
         "video_id": 27252926
+      },
+      {
+        "episode_id": 26445,
+        "display_name": "Jak prodávat drogy přes internet (rychle) S03E04 - Než otočíš klíčem, chci ti ještě něco říct CZ Titulky",
+        "video_id": 27252954
+      },
+      {
+        "episode_id": 26447,
+        "display_name": "Jak prodávat drogy přes internet (rychle) S03E06 - Každý dostane druhou šanci CZ Titulky",
+        "video_id": 27252986
+      },
+      {
+        "episode_id": 15669,
+        "display_name": "Kominského metoda S01E03 - Kapitola 3: Prostata se zvětšuje CZ Dabing",
+        "video_id": 27253025
+      },
+      {
+        "episode_id": 15671,
+        "display_name": "Kominského metoda S01E05 - Kapitola 5: Zjevuje se agent CZ Dabing",
+        "video_id": 27253056
+      },
+      {
+        "episode_id": 15673,
+        "display_name": "Kominského metoda S01E07 - Kapitola 7: Je utvořen závazek CZ Dabing",
+        "video_id": 27253091
+      },
+      {
+        "episode_id": 15679,
+        "display_name": "Kominského metoda S02E05 - Kapitola 13: Shenckmanovy vytáčky CZ Dabing",
+        "video_id": 27253129
+      },
+      {
+        "episode_id": 15685,
+        "display_name": "Kominského metoda S03E03 - Kapitola 19: A je to čím dál absurdnější CZ Dabing",
+        "video_id": 27253163
       }
     ],
     "prepared_not_upload_ready": [
