@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 173094,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 20298,
+    "uploaded_episodes": 20322,
     "prepared_source_episodes": 43808,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 40,
-    "language_whisper_attempted_sources": 40,
-    "language_pending_whisper_sources": 2604,
+    "language_audited_sources": 20,
+    "language_whisper_attempted_sources": 20,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 26684,
     "whisper_review_pending_sources": 24826,
     "subtitle_followup_sources": 5272,
@@ -20,26 +20,90 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-07-08T01:45:09Z",
-      "databaseId": 28911444626,
+      "createdAt": "2026-07-08T02:12:28Z",
+      "databaseId": 28912482133,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
-      "createdAt": "2026-07-08T01:45:05Z",
-      "databaseId": 28911441364,
+      "createdAt": "2026-07-08T02:09:53Z",
+      "databaseId": 28912387043,
       "headBranch": "main",
-      "status": "pending",
-      "workflowName": "prepare-manifest"
+      "status": "in_progress",
+      "workflowName": "backfill-subtitles"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-07-08T02:06:35Z",
+      "databaseId": 28912266813,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-08T01:58:44Z",
+      "databaseId": 28911951094,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "backfill-subtitles"
+    },
+    {
+      "conclusion": "failure",
+      "createdAt": "2026-07-08T01:52:46Z",
+      "databaseId": 28911730533,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-08T01:47:01Z",
+      "databaseId": 28911516080,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "backfill-subtitles"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-08T01:46:18Z",
+      "databaseId": 28911489402,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "failure",
+      "createdAt": "2026-07-08T01:46:15Z",
+      "databaseId": 28911487789,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-08T01:45:09Z",
+      "databaseId": 28911444626,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-07-08T01:45:05Z",
+      "databaseId": 28911441364,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-08T01:41:31Z",
       "databaseId": 28911302952,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -51,19 +115,19 @@
       "workflowName": "sync"
     },
     {
-      "conclusion": "",
+      "conclusion": "failure",
       "createdAt": "2026-07-08T01:38:12Z",
       "databaseId": 28911173389,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-08T01:37:21Z",
       "databaseId": 28911140980,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "backfill-subtitles"
     },
     {
@@ -113,70 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "failure",
-      "createdAt": "2026-07-08T01:20:36Z",
-      "databaseId": 28910494274,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-08T01:20:34Z",
-      "databaseId": 28910492849,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-08T01:19:26Z",
-      "databaseId": 28910449475,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "failure",
-      "createdAt": "2026-07-08T01:15:42Z",
-      "databaseId": 28910312425,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-08T01:12:23Z",
-      "databaseId": 28910181633,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-08T01:11:17Z",
-      "databaseId": 28910139125,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-08T01:11:13Z",
-      "databaseId": 28910136664,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-08T01:10:11Z",
-      "databaseId": 28910095609,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
     }
   ],
   "gaps": {
@@ -79419,6 +79419,126 @@
         "episode_id": 7533,
         "display_name": "Echo S01E04 - Taloa CZ Dabing",
         "video_id": 27245856
+      },
+      {
+        "episode_id": 171002,
+        "display_name": "Modrá planeta - Historie oceánů S01E05 - Moře mírného pásma CZ Dabing",
+        "video_id": 27245912
+      },
+      {
+        "episode_id": 89842,
+        "display_name": "Scream S02E12 - When a Stranger Calls CZ Titulky",
+        "video_id": 27245989
+      },
+      {
+        "episode_id": 8634,
+        "display_name": "Kaleidoskop S01E01 - Černá CZ Dabing",
+        "video_id": 27246028
+      },
+      {
+        "episode_id": 27898,
+        "display_name": "Kaleidoskop S01E02 - Žlutá CZ Dabing",
+        "video_id": 27246072
+      },
+      {
+        "episode_id": 27900,
+        "display_name": "Kaleidoskop S01E04 - Modrá CZ Dabing",
+        "video_id": 27246107
+      },
+      {
+        "episode_id": 27902,
+        "display_name": "Kaleidoskop S01E06 - Fialová CZ Dabing",
+        "video_id": 27246139
+      },
+      {
+        "episode_id": 8636,
+        "display_name": "Kaleidoskop S01E09 - Bílá CZ Dabing",
+        "video_id": 27246159
+      },
+      {
+        "episode_id": 112614,
+        "display_name": "A jak to bylo dál... S01E01 - A pak zničehonic CZ Dabing",
+        "video_id": 27246171
+      },
+      {
+        "episode_id": 112618,
+        "display_name": "A jak to bylo dál... S01E05 - 5. epizoda CZ Titulky",
+        "video_id": 27246200
+      },
+      {
+        "episode_id": 112620,
+        "display_name": "A jak to bylo dál... S01E07 - 7. epizoda CZ Dabing",
+        "video_id": 27246229
+      },
+      {
+        "episode_id": 112622,
+        "display_name": "A jak to bylo dál... S01E09 - Žádné závazky CZ Dabing",
+        "video_id": 27246255
+      },
+      {
+        "episode_id": 112626,
+        "display_name": "A jak to bylo dál... S02E04 - Živá CZ Dabing",
+        "video_id": 27246268
+      },
+      {
+        "episode_id": 112628,
+        "display_name": "A jak to bylo dál... S02E06 - Sněhová bouře CZ Dabing",
+        "video_id": 27246293
+      },
+      {
+        "episode_id": 112630,
+        "display_name": "A jak to bylo dál... S02E08 - Před sto lety CZ Dabing",
+        "video_id": 27246310
+      },
+      {
+        "episode_id": 107215,
+        "display_name": "Carnivale S01E01 - Milfay CZ Titulky",
+        "video_id": 27245902
+      },
+      {
+        "episode_id": 7607,
+        "display_name": "The Walking Dead: The Ones Who Live S01E01 - Years CZ Titulky",
+        "video_id": 27245921
+      },
+      {
+        "episode_id": 7609,
+        "display_name": "The Walking Dead: The Ones Who Live S01E03 - Bye CZ Titulky",
+        "video_id": 27245950
+      },
+      {
+        "episode_id": 83511,
+        "display_name": "Právo a pořádek S04E16 - 16. epizoda CZ Dabing",
+        "video_id": 27245977
+      },
+      {
+        "episode_id": 17157,
+        "display_name": "Černý králík S01E02 - Černí králíci CZ Dabing",
+        "video_id": 27246059
+      },
+      {
+        "episode_id": 76901,
+        "display_name": "Dawsonův svět S01E01 - Pilot CZ Dabing",
+        "video_id": 27246135
+      },
+      {
+        "episode_id": 76945,
+        "display_name": "Dawsonův svět S01E03 - Polibek CZ Dabing",
+        "video_id": 27246164
+      },
+      {
+        "episode_id": 83463,
+        "display_name": "Právo a pořádek S04E17 - 17. epizoda CZ Dabing",
+        "video_id": 27246189
+      },
+      {
+        "episode_id": 76913,
+        "display_name": "Dawsonův svět S01E04 - Odhalení CZ Dabing",
+        "video_id": 27246230
+      },
+      {
+        "episode_id": 76965,
+        "display_name": "Dawsonův svět S01E10 - Dvojité rande CZ Dabing",
+        "video_id": 27246283
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -158556,6 +158676,126 @@
         "episode_id": 7533,
         "display_name": "Echo S01E04 - Taloa CZ Dabing",
         "video_id": 27245856
+      },
+      {
+        "episode_id": 171002,
+        "display_name": "Modrá planeta - Historie oceánů S01E05 - Moře mírného pásma CZ Dabing",
+        "video_id": 27245912
+      },
+      {
+        "episode_id": 89842,
+        "display_name": "Scream S02E12 - When a Stranger Calls CZ Titulky",
+        "video_id": 27245989
+      },
+      {
+        "episode_id": 8634,
+        "display_name": "Kaleidoskop S01E01 - Černá CZ Dabing",
+        "video_id": 27246028
+      },
+      {
+        "episode_id": 27898,
+        "display_name": "Kaleidoskop S01E02 - Žlutá CZ Dabing",
+        "video_id": 27246072
+      },
+      {
+        "episode_id": 27900,
+        "display_name": "Kaleidoskop S01E04 - Modrá CZ Dabing",
+        "video_id": 27246107
+      },
+      {
+        "episode_id": 27902,
+        "display_name": "Kaleidoskop S01E06 - Fialová CZ Dabing",
+        "video_id": 27246139
+      },
+      {
+        "episode_id": 8636,
+        "display_name": "Kaleidoskop S01E09 - Bílá CZ Dabing",
+        "video_id": 27246159
+      },
+      {
+        "episode_id": 112614,
+        "display_name": "A jak to bylo dál... S01E01 - A pak zničehonic CZ Dabing",
+        "video_id": 27246171
+      },
+      {
+        "episode_id": 112618,
+        "display_name": "A jak to bylo dál... S01E05 - 5. epizoda CZ Titulky",
+        "video_id": 27246200
+      },
+      {
+        "episode_id": 112620,
+        "display_name": "A jak to bylo dál... S01E07 - 7. epizoda CZ Dabing",
+        "video_id": 27246229
+      },
+      {
+        "episode_id": 112622,
+        "display_name": "A jak to bylo dál... S01E09 - Žádné závazky CZ Dabing",
+        "video_id": 27246255
+      },
+      {
+        "episode_id": 112626,
+        "display_name": "A jak to bylo dál... S02E04 - Živá CZ Dabing",
+        "video_id": 27246268
+      },
+      {
+        "episode_id": 112628,
+        "display_name": "A jak to bylo dál... S02E06 - Sněhová bouře CZ Dabing",
+        "video_id": 27246293
+      },
+      {
+        "episode_id": 112630,
+        "display_name": "A jak to bylo dál... S02E08 - Před sto lety CZ Dabing",
+        "video_id": 27246310
+      },
+      {
+        "episode_id": 107215,
+        "display_name": "Carnivale S01E01 - Milfay CZ Titulky",
+        "video_id": 27245902
+      },
+      {
+        "episode_id": 7607,
+        "display_name": "The Walking Dead: The Ones Who Live S01E01 - Years CZ Titulky",
+        "video_id": 27245921
+      },
+      {
+        "episode_id": 7609,
+        "display_name": "The Walking Dead: The Ones Who Live S01E03 - Bye CZ Titulky",
+        "video_id": 27245950
+      },
+      {
+        "episode_id": 83511,
+        "display_name": "Právo a pořádek S04E16 - 16. epizoda CZ Dabing",
+        "video_id": 27245977
+      },
+      {
+        "episode_id": 17157,
+        "display_name": "Černý králík S01E02 - Černí králíci CZ Dabing",
+        "video_id": 27246059
+      },
+      {
+        "episode_id": 76901,
+        "display_name": "Dawsonův svět S01E01 - Pilot CZ Dabing",
+        "video_id": 27246135
+      },
+      {
+        "episode_id": 76945,
+        "display_name": "Dawsonův svět S01E03 - Polibek CZ Dabing",
+        "video_id": 27246164
+      },
+      {
+        "episode_id": 83463,
+        "display_name": "Právo a pořádek S04E17 - 17. epizoda CZ Dabing",
+        "video_id": 27246189
+      },
+      {
+        "episode_id": 76913,
+        "display_name": "Dawsonův svět S01E04 - Odhalení CZ Dabing",
+        "video_id": 27246230
+      },
+      {
+        "episode_id": 76965,
+        "display_name": "Dawsonův svět S01E10 - Dvojité rande CZ Dabing",
+        "video_id": 27246283
       }
     ],
     "prepared_not_upload_ready": [
@@ -159717,7 +159957,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 39,
+    "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
