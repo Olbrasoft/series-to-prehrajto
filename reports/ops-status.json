@@ -1,17 +1,17 @@
 {
   "counts": {
     "backlog_episodes": 172892,
-    "manifest_upload_ready_episodes": 918,
-    "uploaded_episodes": 20501,
+    "manifest_upload_ready_episodes": 885,
+    "uploaded_episodes": 20524,
     "prepared_source_episodes": 43808,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 40,
-    "language_whisper_attempted_sources": 40,
-    "language_pending_whisper_sources": 2604,
+    "language_audited_sources": 20,
+    "language_whisper_attempted_sources": 20,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 26684,
     "whisper_review_pending_sources": 24826,
     "subtitle_followup_sources": 5272,
@@ -20,10 +20,82 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-07-08T08:11:18Z",
+      "databaseId": 28927763485,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-08T08:11:14Z",
+      "databaseId": 28927759257,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-08T08:06:10Z",
+      "databaseId": 28927468515,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-08T08:02:58Z",
+      "databaseId": 28927290076,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "backfill-subtitles"
+    },
+    {
+      "conclusion": "failure",
+      "createdAt": "2026-07-08T07:58:31Z",
+      "databaseId": 28927034339,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-07-08T07:57:05Z",
+      "databaseId": 28926953802,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-08T07:52:31Z",
+      "databaseId": 28926700968,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "backfill-subtitles"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-08T07:49:30Z",
+      "databaseId": 28926533175,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "failure",
+      "createdAt": "2026-07-08T07:49:27Z",
+      "databaseId": 28926530825,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-08T07:48:28Z",
       "databaseId": 28926476939,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -31,23 +103,23 @@
       "createdAt": "2026-07-08T07:48:24Z",
       "databaseId": 28926472823,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "prepare-manifest"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-08T07:45:59Z",
       "databaseId": 28926343955,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-08T07:41:28Z",
       "databaseId": 28926100079,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "backfill-subtitles"
     },
     {
@@ -99,84 +171,12 @@
       "workflowName": "prepare-sources"
     },
     {
-      "conclusion": "",
+      "conclusion": "failure",
       "createdAt": "2026-07-08T07:20:16Z",
       "databaseId": 28924984117,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-08T07:20:09Z",
-      "databaseId": 28924977873,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "backfill-subtitles"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-08T07:20:00Z",
-      "databaseId": 28924969717,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-08T07:19:02Z",
-      "databaseId": 28924920503,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-08T07:18:36Z",
-      "databaseId": 28924897649,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-08T07:13:18Z",
-      "databaseId": 28924623419,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-08T07:13:05Z",
-      "databaseId": 28924612185,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-08T07:11:52Z",
-      "databaseId": 28924548500,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-08T07:11:48Z",
-      "databaseId": 28924544467,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-08T07:10:46Z",
-      "databaseId": 28924492099,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
     }
   ],
   "gaps": {
@@ -80434,6 +80434,121 @@
         "episode_id": 15685,
         "display_name": "Kominského metoda S03E03 - Kapitola 19: A je to čím dál absurdnější CZ Dabing",
         "video_id": 27253163
+      },
+      {
+        "episode_id": 8720,
+        "display_name": "Sedm smrtelných hříchů S01E02 - Meč svatého rytíře CZ Titulky",
+        "video_id": 27253261
+      },
+      {
+        "episode_id": 8722,
+        "display_name": "Sedm smrtelných hříchů S01E04 - Sen jedné holčičky CZ Titulky",
+        "video_id": 27253296
+      },
+      {
+        "episode_id": 8724,
+        "display_name": "Sedm smrtelných hříchů S01E06 - Báseň počátků CZ Titulky",
+        "video_id": 27253347
+      },
+      {
+        "episode_id": 8726,
+        "display_name": "Sedm smrtelných hříchů S01E08 - Děsivý pronásledovatel CZ Titulky",
+        "video_id": 27253385
+      },
+      {
+        "episode_id": 8728,
+        "display_name": "Sedm smrtelných hříchů S01E10 - Bojový festival Vaizel CZ Titulky",
+        "video_id": 27253408
+      },
+      {
+        "episode_id": 8730,
+        "display_name": "Sedm smrtelných hříchů S01E12 - Hrůzostrašný kanovník CZ Titulky",
+        "video_id": 27253437
+      },
+      {
+        "episode_id": 57468,
+        "display_name": "Sedm smrtelných hříchů S03E02 - Vzpomínky na svatou válku CZ Titulky",
+        "video_id": 27253459
+      },
+      {
+        "episode_id": 49506,
+        "display_name": "Defiance S01E02 - Down in the Ground Where the Dead Men Go CZ Titulky",
+        "video_id": 27253495
+      },
+      {
+        "episode_id": 49512,
+        "display_name": "Defiance S01E03 - The Devil in the Dark CZ Titulky",
+        "video_id": 27253553
+      },
+      {
+        "episode_id": 49508,
+        "display_name": "Defiance S01E05 - The Serpent's Egg CZ Titulky",
+        "video_id": 27253599
+      },
+      {
+        "episode_id": 49514,
+        "display_name": "Defiance S01E07 - Goodbye Blue Sky CZ Titulky",
+        "video_id": 27253641
+      },
+      {
+        "episode_id": 49510,
+        "display_name": "Defiance S01E09 - If I Ever Leave This World Alive CZ Titulky",
+        "video_id": 27253673
+      },
+      {
+        "episode_id": 49516,
+        "display_name": "Defiance S01E11 - Past is Prologue CZ Titulky",
+        "video_id": 27253714
+      },
+      {
+        "episode_id": 49518,
+        "display_name": "Defiance S02E01 - The Opposite of Hallelujah CZ Titulky",
+        "video_id": 27253754
+      },
+      {
+        "episode_id": 17325,
+        "display_name": "Její vina S01E02 - 2. epizoda CZ Dabing",
+        "video_id": 27253264
+      },
+      {
+        "episode_id": 17327,
+        "display_name": "Její vina S01E04 - 4. epizoda CZ Dabing",
+        "video_id": 27253303
+      },
+      {
+        "episode_id": 17329,
+        "display_name": "Její vina S01E06 - 6. epizoda CZ Dabing",
+        "video_id": 27253320
+      },
+      {
+        "episode_id": 17331,
+        "display_name": "Její vina S01E08 - 8. epizoda CZ Dabing",
+        "video_id": 27253339
+      },
+      {
+        "episode_id": 75251,
+        "display_name": "Sabrina - mladá čarodějnice S03E08 - 8. epizoda CZ Dabing",
+        "video_id": 27253378
+      },
+      {
+        "episode_id": 54735,
+        "display_name": "Mrtví jako já S01E08 - Kuchař CZ Dabing",
+        "video_id": 27253481
+      },
+      {
+        "episode_id": 54737,
+        "display_name": "Mrtví jako já S01E09 - Nedělní rána CZ Dabing",
+        "video_id": 27253549
+      },
+      {
+        "episode_id": 54741,
+        "display_name": "Mrtví jako já S01E14 - Odpočívej v pokoji CZ Dabing",
+        "video_id": 27253618
+      },
+      {
+        "episode_id": 54715,
+        "display_name": "Mrtví jako já S02E02 - Účetní rovnováha CZ Dabing",
+        "video_id": 27253708
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -160586,6 +160701,121 @@
         "episode_id": 15685,
         "display_name": "Kominského metoda S03E03 - Kapitola 19: A je to čím dál absurdnější CZ Dabing",
         "video_id": 27253163
+      },
+      {
+        "episode_id": 8720,
+        "display_name": "Sedm smrtelných hříchů S01E02 - Meč svatého rytíře CZ Titulky",
+        "video_id": 27253261
+      },
+      {
+        "episode_id": 8722,
+        "display_name": "Sedm smrtelných hříchů S01E04 - Sen jedné holčičky CZ Titulky",
+        "video_id": 27253296
+      },
+      {
+        "episode_id": 8724,
+        "display_name": "Sedm smrtelných hříchů S01E06 - Báseň počátků CZ Titulky",
+        "video_id": 27253347
+      },
+      {
+        "episode_id": 8726,
+        "display_name": "Sedm smrtelných hříchů S01E08 - Děsivý pronásledovatel CZ Titulky",
+        "video_id": 27253385
+      },
+      {
+        "episode_id": 8728,
+        "display_name": "Sedm smrtelných hříchů S01E10 - Bojový festival Vaizel CZ Titulky",
+        "video_id": 27253408
+      },
+      {
+        "episode_id": 8730,
+        "display_name": "Sedm smrtelných hříchů S01E12 - Hrůzostrašný kanovník CZ Titulky",
+        "video_id": 27253437
+      },
+      {
+        "episode_id": 57468,
+        "display_name": "Sedm smrtelných hříchů S03E02 - Vzpomínky na svatou válku CZ Titulky",
+        "video_id": 27253459
+      },
+      {
+        "episode_id": 49506,
+        "display_name": "Defiance S01E02 - Down in the Ground Where the Dead Men Go CZ Titulky",
+        "video_id": 27253495
+      },
+      {
+        "episode_id": 49512,
+        "display_name": "Defiance S01E03 - The Devil in the Dark CZ Titulky",
+        "video_id": 27253553
+      },
+      {
+        "episode_id": 49508,
+        "display_name": "Defiance S01E05 - The Serpent's Egg CZ Titulky",
+        "video_id": 27253599
+      },
+      {
+        "episode_id": 49514,
+        "display_name": "Defiance S01E07 - Goodbye Blue Sky CZ Titulky",
+        "video_id": 27253641
+      },
+      {
+        "episode_id": 49510,
+        "display_name": "Defiance S01E09 - If I Ever Leave This World Alive CZ Titulky",
+        "video_id": 27253673
+      },
+      {
+        "episode_id": 49516,
+        "display_name": "Defiance S01E11 - Past is Prologue CZ Titulky",
+        "video_id": 27253714
+      },
+      {
+        "episode_id": 49518,
+        "display_name": "Defiance S02E01 - The Opposite of Hallelujah CZ Titulky",
+        "video_id": 27253754
+      },
+      {
+        "episode_id": 17325,
+        "display_name": "Její vina S01E02 - 2. epizoda CZ Dabing",
+        "video_id": 27253264
+      },
+      {
+        "episode_id": 17327,
+        "display_name": "Její vina S01E04 - 4. epizoda CZ Dabing",
+        "video_id": 27253303
+      },
+      {
+        "episode_id": 17329,
+        "display_name": "Její vina S01E06 - 6. epizoda CZ Dabing",
+        "video_id": 27253320
+      },
+      {
+        "episode_id": 17331,
+        "display_name": "Její vina S01E08 - 8. epizoda CZ Dabing",
+        "video_id": 27253339
+      },
+      {
+        "episode_id": 75251,
+        "display_name": "Sabrina - mladá čarodějnice S03E08 - 8. epizoda CZ Dabing",
+        "video_id": 27253378
+      },
+      {
+        "episode_id": 54735,
+        "display_name": "Mrtví jako já S01E08 - Kuchař CZ Dabing",
+        "video_id": 27253481
+      },
+      {
+        "episode_id": 54737,
+        "display_name": "Mrtví jako já S01E09 - Nedělní rána CZ Dabing",
+        "video_id": 27253549
+      },
+      {
+        "episode_id": 54741,
+        "display_name": "Mrtví jako já S01E14 - Odpočívej v pokoji CZ Dabing",
+        "video_id": 27253618
+      },
+      {
+        "episode_id": 54715,
+        "display_name": "Mrtví jako já S02E02 - Účetní rovnováha CZ Dabing",
+        "video_id": 27253708
       }
     ],
     "prepared_not_upload_ready": [
@@ -161747,7 +161977,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 39,
+    "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
