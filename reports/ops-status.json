@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 172558,
     "manifest_upload_ready_episodes": 429,
-    "uploaded_episodes": 20828,
+    "uploaded_episodes": 20839,
     "prepared_source_episodes": 43808,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 20,
-    "language_whisper_attempted_sources": 20,
-    "language_pending_whisper_sources": 2624,
+    "language_audited_sources": 40,
+    "language_whisper_attempted_sources": 40,
+    "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 26684,
     "whisper_review_pending_sources": 24826,
     "subtitle_followup_sources": 5272,
@@ -20,10 +20,50 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-07-08T13:40:16Z",
+      "databaseId": 28947145206,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-08T13:28:26Z",
+      "databaseId": 28946349910,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-08T13:24:16Z",
+      "databaseId": 28946083654,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "failure",
+      "createdAt": "2026-07-08T13:24:12Z",
+      "databaseId": 28946079391,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-08T13:24:09Z",
+      "databaseId": 28946075874,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-08T13:23:02Z",
       "databaseId": 28946005000,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -137,46 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-08T13:01:19Z",
-      "databaseId": 28944618896,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-08T12:59:46Z",
-      "databaseId": 28944511830,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-08T12:59:42Z",
-      "databaseId": 28944507357,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-08T12:58:41Z",
-      "databaseId": 28944444018,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-08T12:55:24Z",
-      "databaseId": 28944240082,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "backfill-subtitles"
     }
   ],
   "gaps": {
@@ -82051,6 +82051,31 @@
         "video_id": 27259249
       },
       {
+        "episode_id": 55356,
+        "display_name": "MacGyver S01E12 - V pasti CZ Dabing",
+        "video_id": 27259322
+      },
+      {
+        "episode_id": 55368,
+        "display_name": "MacGyver S01E13 - Konec žáru CZ Dabing",
+        "video_id": 27259371
+      },
+      {
+        "episode_id": 55380,
+        "display_name": "MacGyver S01E14 - Odpočítávání CZ Dabing",
+        "video_id": 27259433
+      },
+      {
+        "episode_id": 55352,
+        "display_name": "MacGyver S01E18 - Ošklivé káčátko CZ Titulky",
+        "video_id": 27259514
+      },
+      {
+        "episode_id": 55364,
+        "display_name": "MacGyver S01E20 - Útěk CZ Titulky",
+        "video_id": 27259573
+      },
+      {
         "episode_id": 111457,
         "display_name": "Odstřelovač S03E07 - Nejvyšší soud CZ Dabing",
         "video_id": 27259129
@@ -82069,6 +82094,36 @@
         "episode_id": 111449,
         "display_name": "Odstřelovač S03E13 - Konečná CZ Dabing",
         "video_id": 27259245
+      },
+      {
+        "episode_id": 55427,
+        "display_name": "MacGyver S01E02 - Zlatý trojúhelník CZ Dabing",
+        "video_id": 27259314
+      },
+      {
+        "episode_id": 55441,
+        "display_name": "MacGyver S01E03 - Zloděj z Budapeště CZ Dabing",
+        "video_id": 27259358
+      },
+      {
+        "episode_id": 55429,
+        "display_name": "MacGyver S01E05 - Kořist CZ Titulky",
+        "video_id": 27259414
+      },
+      {
+        "episode_id": 55457,
+        "display_name": "MacGyver S01E09 - Marnotratník CZ Dabing",
+        "video_id": 27259489
+      },
+      {
+        "episode_id": 55443,
+        "display_name": "MacGyver S01E15 - Nepřítel uvnitř CZ Dabing",
+        "video_id": 27259551
+      },
+      {
+        "episode_id": 55369,
+        "display_name": "MacGyver S01E16 - Pokaždé, když se usměje CZ Dabing",
+        "video_id": 27259616
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -163838,6 +163893,31 @@
         "video_id": 27259249
       },
       {
+        "episode_id": 55356,
+        "display_name": "MacGyver S01E12 - V pasti CZ Dabing",
+        "video_id": 27259322
+      },
+      {
+        "episode_id": 55368,
+        "display_name": "MacGyver S01E13 - Konec žáru CZ Dabing",
+        "video_id": 27259371
+      },
+      {
+        "episode_id": 55380,
+        "display_name": "MacGyver S01E14 - Odpočítávání CZ Dabing",
+        "video_id": 27259433
+      },
+      {
+        "episode_id": 55352,
+        "display_name": "MacGyver S01E18 - Ošklivé káčátko CZ Titulky",
+        "video_id": 27259514
+      },
+      {
+        "episode_id": 55364,
+        "display_name": "MacGyver S01E20 - Útěk CZ Titulky",
+        "video_id": 27259573
+      },
+      {
         "episode_id": 111457,
         "display_name": "Odstřelovač S03E07 - Nejvyšší soud CZ Dabing",
         "video_id": 27259129
@@ -163856,6 +163936,36 @@
         "episode_id": 111449,
         "display_name": "Odstřelovač S03E13 - Konečná CZ Dabing",
         "video_id": 27259245
+      },
+      {
+        "episode_id": 55427,
+        "display_name": "MacGyver S01E02 - Zlatý trojúhelník CZ Dabing",
+        "video_id": 27259314
+      },
+      {
+        "episode_id": 55441,
+        "display_name": "MacGyver S01E03 - Zloděj z Budapeště CZ Dabing",
+        "video_id": 27259358
+      },
+      {
+        "episode_id": 55429,
+        "display_name": "MacGyver S01E05 - Kořist CZ Titulky",
+        "video_id": 27259414
+      },
+      {
+        "episode_id": 55457,
+        "display_name": "MacGyver S01E09 - Marnotratník CZ Dabing",
+        "video_id": 27259489
+      },
+      {
+        "episode_id": 55443,
+        "display_name": "MacGyver S01E15 - Nepřítel uvnitř CZ Dabing",
+        "video_id": 27259551
+      },
+      {
+        "episode_id": 55369,
+        "display_name": "MacGyver S01E16 - Pokaždé, když se usměje CZ Dabing",
+        "video_id": 27259616
       }
     ],
     "prepared_not_upload_ready": [
@@ -165017,7 +165127,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 19,
+    "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
