@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 173351,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 20244,
+    "uploaded_episodes": 20250,
     "prepared_source_episodes": 43808,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 40,
-    "language_whisper_attempted_sources": 40,
-    "language_pending_whisper_sources": 2604,
+    "language_audited_sources": 20,
+    "language_whisper_attempted_sources": 20,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 26684,
     "whisper_review_pending_sources": 24826,
     "subtitle_followup_sources": 5272,
@@ -20,10 +20,50 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-07-08T00:31:10Z",
+      "databaseId": 28908529371,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-08T00:28:26Z",
+      "databaseId": 28908416170,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-08T00:27:42Z",
+      "databaseId": 28908387508,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "backfill-subtitles"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-08T00:26:06Z",
+      "databaseId": 28908324301,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-08T00:26:02Z",
+      "databaseId": 28908322137,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-08T00:24:57Z",
       "databaseId": 28908278411,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -31,23 +71,23 @@
       "createdAt": "2026-07-08T00:24:53Z",
       "databaseId": 28908276370,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "prepare-manifest"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-08T00:21:39Z",
       "databaseId": 28908145845,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-08T00:14:16Z",
       "databaseId": 28907847923,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "backfill-subtitles"
     },
     {
@@ -137,46 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-07T23:58:24Z",
-      "databaseId": 28907157884,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-07T23:55:37Z",
-      "databaseId": 28907042883,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-sources"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-07T23:48:37Z",
-      "databaseId": 28906746651,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-07T23:48:06Z",
-      "databaseId": 28906724973,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-07T23:48:06Z",
-      "databaseId": 28906724945,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-manifest"
     }
   ],
   "gaps": {
@@ -79106,6 +79106,16 @@
         "video_id": 27244381
       },
       {
+        "episode_id": 76950,
+        "display_name": "Dawsonův svět S01E02 - Tanec CZ Dabing",
+        "video_id": 27244448
+      },
+      {
+        "episode_id": 120174,
+        "display_name": "Final Space S03E05 - 5. epizoda CZ Titulky",
+        "video_id": 27244563
+      },
+      {
         "episode_id": 101019,
         "display_name": "Tajemství kruhu S01E12 - 12. epizoda CZ Titulky",
         "video_id": 27244084
@@ -79149,6 +79159,26 @@
         "episode_id": 16931,
         "display_name": "Mesiáš S01E04 - Proces CZ Dabing",
         "video_id": 27244489
+      },
+      {
+        "episode_id": 16933,
+        "display_name": "Mesiáš S01E06 - Ne všichni zemřeme CZ Dabing",
+        "video_id": 27244514
+      },
+      {
+        "episode_id": 83427,
+        "display_name": "Právo a pořádek S02E19 - 19. epizoda CZ Dabing",
+        "video_id": 27244557
+      },
+      {
+        "episode_id": 16935,
+        "display_name": "Mesiáš S01E07 - Stalo se tak, jak bylo řečeno CZ Dabing",
+        "video_id": 27244590
+      },
+      {
+        "episode_id": 16937,
+        "display_name": "Mesiáš S01E09 - Bůh je veliký CZ Dabing",
+        "video_id": 27244632
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -157973,6 +158003,16 @@
         "video_id": 27244381
       },
       {
+        "episode_id": 76950,
+        "display_name": "Dawsonův svět S01E02 - Tanec CZ Dabing",
+        "video_id": 27244448
+      },
+      {
+        "episode_id": 120174,
+        "display_name": "Final Space S03E05 - 5. epizoda CZ Titulky",
+        "video_id": 27244563
+      },
+      {
         "episode_id": 101019,
         "display_name": "Tajemství kruhu S01E12 - 12. epizoda CZ Titulky",
         "video_id": 27244084
@@ -158016,6 +158056,26 @@
         "episode_id": 16931,
         "display_name": "Mesiáš S01E04 - Proces CZ Dabing",
         "video_id": 27244489
+      },
+      {
+        "episode_id": 16933,
+        "display_name": "Mesiáš S01E06 - Ne všichni zemřeme CZ Dabing",
+        "video_id": 27244514
+      },
+      {
+        "episode_id": 83427,
+        "display_name": "Právo a pořádek S02E19 - 19. epizoda CZ Dabing",
+        "video_id": 27244557
+      },
+      {
+        "episode_id": 16935,
+        "display_name": "Mesiáš S01E07 - Stalo se tak, jak bylo řečeno CZ Dabing",
+        "video_id": 27244590
+      },
+      {
+        "episode_id": 16937,
+        "display_name": "Mesiáš S01E09 - Bůh je veliký CZ Dabing",
+        "video_id": 27244632
       }
     ],
     "prepared_not_upload_ready": [
@@ -159177,7 +159237,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 39,
+    "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
