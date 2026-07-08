@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 172945,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 20418,
+    "uploaded_episodes": 20422,
     "prepared_source_episodes": 43808,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 20,
-    "language_whisper_attempted_sources": 20,
-    "language_pending_whisper_sources": 2624,
+    "language_audited_sources": 40,
+    "language_whisper_attempted_sources": 40,
+    "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 26684,
     "whisper_review_pending_sources": 24826,
     "subtitle_followup_sources": 5272,
@@ -20,26 +20,114 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-07-08T04:46:33Z",
-      "databaseId": 28918205287,
+      "createdAt": "2026-07-08T05:12:43Z",
+      "databaseId": 28919201390,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-08T05:12:03Z",
+      "databaseId": 28919174669,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
-      "createdAt": "2026-07-08T04:46:11Z",
-      "databaseId": 28918192855,
+      "createdAt": "2026-07-08T05:12:00Z",
+      "databaseId": 28919172246,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-08T05:05:32Z",
+      "databaseId": 28918916908,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "prepare-manifest"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-07-08T05:04:27Z",
+      "databaseId": 28918872943,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "backfill-subtitles"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-08T05:03:48Z",
+      "databaseId": 28918846006,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-08T04:54:18Z",
+      "databaseId": 28918486439,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "backfill-subtitles"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-08T04:47:41Z",
+      "databaseId": 28918245359,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-08T04:47:39Z",
+      "databaseId": 28918244292,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "failure",
+      "createdAt": "2026-07-08T04:47:37Z",
+      "databaseId": 28918243205,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-08T04:47:35Z",
+      "databaseId": 28918241902,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-08T04:46:33Z",
+      "databaseId": 28918205287,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "failure",
+      "createdAt": "2026-07-08T04:46:11Z",
+      "databaseId": 28918192855,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-08T04:44:09Z",
       "databaseId": 28918117715,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "backfill-subtitles"
     },
     {
@@ -89,94 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-08T04:08:11Z",
-      "databaseId": 28916766713,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "refresh-backlog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-08T04:00:50Z",
-      "databaseId": 28916484114,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "backfill-subtitles"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-08T03:59:07Z",
-      "databaseId": 28916417797,
-      "headBranch": "main",
-      "status": "pending",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-08T03:56:30Z",
-      "databaseId": 28916328267,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-08T03:55:22Z",
-      "databaseId": 28916288555,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "failure",
-      "createdAt": "2026-07-08T03:55:18Z",
-      "databaseId": 28916286188,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-08T03:53:30Z",
-      "databaseId": 28916220498,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "failure",
-      "createdAt": "2026-07-08T03:53:28Z",
-      "databaseId": 28916219107,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-08T03:53:26Z",
-      "databaseId": 28916218153,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-08T03:52:20Z",
-      "databaseId": 28916176195,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-07-08T03:51:16Z",
-      "databaseId": 28916138082,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
     }
   ],
   "gaps": {
@@ -79966,6 +79966,26 @@
         "video_id": 27249489
       },
       {
+        "episode_id": 69074,
+        "display_name": "Columbo S04E02 - Obrácený negativ CZ Titulky",
+        "video_id": 27249744
+      },
+      {
+        "episode_id": 69072,
+        "display_name": "Columbo S04E03 - Za úsvitu CZ Titulky",
+        "video_id": 27249904
+      },
+      {
+        "episode_id": 69082,
+        "display_name": "Columbo S04E04 - Rozbouřené vody CZ Dabing",
+        "video_id": 27249979
+      },
+      {
+        "episode_id": 69080,
+        "display_name": "Columbo S05E02 - Případ diplomatické imunity CZ Titulky",
+        "video_id": 27250067
+      },
+      {
         "episode_id": 46225,
         "display_name": "Dark Matter S01E07 - Episode Seven CZ Titulky",
         "video_id": 27248196
@@ -159703,6 +159723,26 @@
         "video_id": 27249489
       },
       {
+        "episode_id": 69074,
+        "display_name": "Columbo S04E02 - Obrácený negativ CZ Titulky",
+        "video_id": 27249744
+      },
+      {
+        "episode_id": 69072,
+        "display_name": "Columbo S04E03 - Za úsvitu CZ Titulky",
+        "video_id": 27249904
+      },
+      {
+        "episode_id": 69082,
+        "display_name": "Columbo S04E04 - Rozbouřené vody CZ Dabing",
+        "video_id": 27249979
+      },
+      {
+        "episode_id": 69080,
+        "display_name": "Columbo S05E02 - Případ diplomatické imunity CZ Titulky",
+        "video_id": 27250067
+      },
+      {
         "episode_id": 46225,
         "display_name": "Dark Matter S01E07 - Episode Seven CZ Titulky",
         "video_id": 27248196
@@ -160917,7 +160957,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 19,
+    "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
