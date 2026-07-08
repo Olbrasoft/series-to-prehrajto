@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 173351,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 20255,
+    "uploaded_episodes": 20263,
     "prepared_source_episodes": 43808,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 20,
-    "language_whisper_attempted_sources": 20,
-    "language_pending_whisper_sources": 2624,
+    "language_audited_sources": 40,
+    "language_whisper_attempted_sources": 40,
+    "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 26684,
     "whisper_review_pending_sources": 24826,
     "subtitle_followup_sources": 5272,
@@ -20,10 +20,42 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-07-08T00:51:02Z",
+      "databaseId": 28909318861,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-08T00:50:59Z",
+      "databaseId": 28909316966,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "refresh-backlog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-08T00:47:30Z",
+      "databaseId": 28909177601,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "backfill-subtitles"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-08T00:38:20Z",
+      "databaseId": 28908813310,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "backfill-subtitles"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-08T00:37:37Z",
       "databaseId": 28908786090,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-status"
     },
     {
@@ -59,11 +91,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-08T00:32:11Z",
       "databaseId": 28908568988,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -83,11 +115,11 @@
       "workflowName": "prepare-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-08T00:27:42Z",
       "databaseId": 28908387508,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "backfill-subtitles"
     },
     {
@@ -115,11 +147,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "failure",
       "createdAt": "2026-07-08T00:24:53Z",
       "databaseId": 28908276370,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -145,38 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-08T00:05:05Z",
-      "databaseId": 28907450536,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-08T00:03:57Z",
-      "databaseId": 28907400448,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-08T00:02:57Z",
-      "databaseId": 28907357515,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-08T00:02:52Z",
-      "databaseId": 28907354397,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
     }
   ],
   "gaps": {
@@ -79126,6 +79126,26 @@
         "video_id": 27244704
       },
       {
+        "episode_id": 76972,
+        "display_name": "Dawsonův svět S02E01 - Polibek CZ Dabing",
+        "video_id": 27244781
+      },
+      {
+        "episode_id": 76912,
+        "display_name": "Dawsonův svět S02E05 - Úplněk CZ Dabing",
+        "video_id": 27244842
+      },
+      {
+        "episode_id": 76876,
+        "display_name": "Dawsonův svět S02E06 - Ples CZ Dabing",
+        "video_id": 27244912
+      },
+      {
+        "episode_id": 120182,
+        "display_name": "Final Space S03E13 - 13. epizoda CZ Titulky",
+        "video_id": 27245004
+      },
+      {
         "episode_id": 101019,
         "display_name": "Tajemství kruhu S01E12 - 12. epizoda CZ Titulky",
         "video_id": 27244084
@@ -79204,6 +79224,26 @@
         "episode_id": 83431,
         "display_name": "Právo a pořádek S02E21 - 21. epizoda CZ Dabing",
         "video_id": 27244778
+      },
+      {
+        "episode_id": 113745,
+        "display_name": "Resident Evil: Lék S01E05 - Domácí videa CZ Dabing",
+        "video_id": 27244803
+      },
+      {
+        "episode_id": 113747,
+        "display_name": "Resident Evil: Lék S01E07 - Parazit CZ Dabing",
+        "video_id": 27244822
+      },
+      {
+        "episode_id": 119503,
+        "display_name": "Sněží! S01E01 - Pilot CZ Dabing",
+        "video_id": 27244856
+      },
+      {
+        "episode_id": 119507,
+        "display_name": "Sněží! S01E05 - Den nezávislosti CZ Titulky",
+        "video_id": 27244871
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -158048,6 +158088,26 @@
         "video_id": 27244704
       },
       {
+        "episode_id": 76972,
+        "display_name": "Dawsonův svět S02E01 - Polibek CZ Dabing",
+        "video_id": 27244781
+      },
+      {
+        "episode_id": 76912,
+        "display_name": "Dawsonův svět S02E05 - Úplněk CZ Dabing",
+        "video_id": 27244842
+      },
+      {
+        "episode_id": 76876,
+        "display_name": "Dawsonův svět S02E06 - Ples CZ Dabing",
+        "video_id": 27244912
+      },
+      {
+        "episode_id": 120182,
+        "display_name": "Final Space S03E13 - 13. epizoda CZ Titulky",
+        "video_id": 27245004
+      },
+      {
         "episode_id": 101019,
         "display_name": "Tajemství kruhu S01E12 - 12. epizoda CZ Titulky",
         "video_id": 27244084
@@ -158126,6 +158186,26 @@
         "episode_id": 83431,
         "display_name": "Právo a pořádek S02E21 - 21. epizoda CZ Dabing",
         "video_id": 27244778
+      },
+      {
+        "episode_id": 113745,
+        "display_name": "Resident Evil: Lék S01E05 - Domácí videa CZ Dabing",
+        "video_id": 27244803
+      },
+      {
+        "episode_id": 113747,
+        "display_name": "Resident Evil: Lék S01E07 - Parazit CZ Dabing",
+        "video_id": 27244822
+      },
+      {
+        "episode_id": 119503,
+        "display_name": "Sněží! S01E01 - Pilot CZ Dabing",
+        "video_id": 27244856
+      },
+      {
+        "episode_id": 119507,
+        "display_name": "Sněží! S01E05 - Den nezávislosti CZ Titulky",
+        "video_id": 27244871
       }
     ],
     "prepared_not_upload_ready": [
@@ -159287,7 +159367,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 19,
+    "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
