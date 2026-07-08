@@ -1,17 +1,17 @@
 {
   "counts": {
     "backlog_episodes": 172734,
-    "manifest_upload_ready_episodes": 691,
-    "uploaded_episodes": 20675,
+    "manifest_upload_ready_episodes": 656,
+    "uploaded_episodes": 20698,
     "prepared_source_episodes": 43808,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 20,
-    "language_whisper_attempted_sources": 20,
-    "language_pending_whisper_sources": 2624,
+    "language_audited_sources": 40,
+    "language_whisper_attempted_sources": 40,
+    "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 26684,
     "whisper_review_pending_sources": 24826,
     "subtitle_followup_sources": 5272,
@@ -20,10 +20,50 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-07-08T11:08:31Z",
+      "databaseId": 28938005013,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-08T11:00:58Z",
+      "databaseId": 28937582880,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "backfill-subtitles"
+    },
+    {
+      "conclusion": "failure",
+      "createdAt": "2026-07-08T10:53:41Z",
+      "databaseId": 28937175612,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-08T10:48:23Z",
+      "databaseId": 28936880796,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-08T10:48:18Z",
+      "databaseId": 28936876210,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-08T10:47:12Z",
       "databaseId": 28936816976,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -35,19 +75,19 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "failure",
       "createdAt": "2026-07-08T10:46:52Z",
       "databaseId": 28936798570,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-08T10:46:50Z",
       "databaseId": 28936796831,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -63,7 +103,7 @@
       "createdAt": "2026-07-08T10:45:43Z",
       "databaseId": 28936733705,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "prepare-manifest"
     },
     {
@@ -115,19 +155,19 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "failure",
       "createdAt": "2026-07-08T10:29:49Z",
       "databaseId": 28935844026,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-08T10:24:51Z",
       "databaseId": 28935571164,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "backfill-subtitles"
     },
     {
@@ -137,46 +177,6 @@
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "prepare-sources"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-08T10:21:39Z",
-      "databaseId": 28935393449,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "failure",
-      "createdAt": "2026-07-08T10:21:37Z",
-      "databaseId": 28935390842,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-08T10:21:35Z",
-      "databaseId": 28935389132,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-08T10:20:31Z",
-      "databaseId": 28935330036,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-08T10:17:22Z",
-      "databaseId": 28935159921,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
     }
   ],
   "gaps": {
@@ -81281,6 +81281,61 @@
         "video_id": 27256418
       },
       {
+        "episode_id": 82866,
+        "display_name": "Hanna S02E05 - Zármutek CZ Titulky",
+        "video_id": 27256444
+      },
+      {
+        "episode_id": 82868,
+        "display_name": "Hanna S02E07 - Tacitus CZ Titulky",
+        "video_id": 27256464
+      },
+      {
+        "episode_id": 82870,
+        "display_name": "Hanna S03E01 - Odboj CZ Titulky",
+        "video_id": 27256488
+      },
+      {
+        "episode_id": 82872,
+        "display_name": "Hanna S03E03 - Nadiya CZ Titulky",
+        "video_id": 27256507
+      },
+      {
+        "episode_id": 82874,
+        "display_name": "Hanna S03E05 - Oční linky CZ Titulky",
+        "video_id": 27256525
+      },
+      {
+        "episode_id": 140816,
+        "display_name": "Daisy Jones & the Six S01E01 - Stopa 1: Pojď si pro to CZ Titulky",
+        "video_id": 27256543
+      },
+      {
+        "episode_id": 140818,
+        "display_name": "Daisy Jones & the Six S01E03 - Stopa 3: Dnes večer mi někdo zachránil CZ Dabing",
+        "video_id": 27256555
+      },
+      {
+        "episode_id": 140820,
+        "display_name": "Daisy Jones & the Six S01E05 - Stopa 5: Oheň CZ Titulky",
+        "video_id": 27256568
+      },
+      {
+        "episode_id": 140822,
+        "display_name": "Daisy Jones & the Six S01E07 - Stopa 7: Je pryč CZ Dabing",
+        "video_id": 27256580
+      },
+      {
+        "episode_id": 140824,
+        "display_name": "Daisy Jones & the Six S01E09 - Stopa 9: Jako by to bylo poprvé CZ Titulky",
+        "video_id": 27256588
+      },
+      {
+        "episode_id": 54864,
+        "display_name": "HAPPY! S02E02 - Tallahassee CZ Titulky",
+        "video_id": 27256598
+      },
+      {
         "episode_id": 141989,
         "display_name": "Dotkni se mých ran S01E01 - Chlapec, který se živil nočními můrami CZ Titulky",
         "video_id": 27256219
@@ -81304,6 +81359,66 @@
         "episode_id": 141997,
         "display_name": "Dotkni se mých ran S01E09 - Král s oslíma ušima CZ Dabing",
         "video_id": 27256388
+      },
+      {
+        "episode_id": 141999,
+        "display_name": "Dotkni se mých ran S01E11 - Ošklivé káčátko CZ Dabing",
+        "video_id": 27256427
+      },
+      {
+        "episode_id": 142001,
+        "display_name": "Dotkni se mých ran S01E13 - Otec dvou sester CZ Dabing",
+        "video_id": 27256453
+      },
+      {
+        "episode_id": 142003,
+        "display_name": "Dotkni se mých ran S01E15 - Příběh dvou bratrů CZ Titulky",
+        "video_id": 27256485
+      },
+      {
+        "episode_id": 73941,
+        "display_name": "Dragon Ball Super S01E02 - 2. epizoda CZ Titulky",
+        "video_id": 27256504
+      },
+      {
+        "episode_id": 73969,
+        "display_name": "Dragon Ball Super S01E07 - 7. epizoda CZ Titulky",
+        "video_id": 27256514
+      },
+      {
+        "episode_id": 73957,
+        "display_name": "Dragon Ball Super S01E08 - 8. epizoda CZ Titulky",
+        "video_id": 27256527
+      },
+      {
+        "episode_id": 73973,
+        "display_name": "Dragon Ball Super S01E09 - 9. epizoda CZ Titulky",
+        "video_id": 27256542
+      },
+      {
+        "episode_id": 73945,
+        "display_name": "Dragon Ball Super S01E10 - 10. epizoda CZ Titulky",
+        "video_id": 27256558
+      },
+      {
+        "episode_id": 73951,
+        "display_name": "Dragon Ball Super S01E14 - 14. epizoda CZ Titulky",
+        "video_id": 27256572
+      },
+      {
+        "episode_id": 50823,
+        "display_name": "Lidé S01E03 - Episode #1.3 CZ Dabing",
+        "video_id": 27256585
+      },
+      {
+        "episode_id": 50825,
+        "display_name": "Lidé S01E05 - Episode #1.5 CZ Dabing",
+        "video_id": 27256599
+      },
+      {
+        "episode_id": 50827,
+        "display_name": "Lidé S01E07 - Episode #1.7 CZ Titulky",
+        "video_id": 27256634
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -162303,6 +162418,61 @@
         "video_id": 27256418
       },
       {
+        "episode_id": 82866,
+        "display_name": "Hanna S02E05 - Zármutek CZ Titulky",
+        "video_id": 27256444
+      },
+      {
+        "episode_id": 82868,
+        "display_name": "Hanna S02E07 - Tacitus CZ Titulky",
+        "video_id": 27256464
+      },
+      {
+        "episode_id": 82870,
+        "display_name": "Hanna S03E01 - Odboj CZ Titulky",
+        "video_id": 27256488
+      },
+      {
+        "episode_id": 82872,
+        "display_name": "Hanna S03E03 - Nadiya CZ Titulky",
+        "video_id": 27256507
+      },
+      {
+        "episode_id": 82874,
+        "display_name": "Hanna S03E05 - Oční linky CZ Titulky",
+        "video_id": 27256525
+      },
+      {
+        "episode_id": 140816,
+        "display_name": "Daisy Jones & the Six S01E01 - Stopa 1: Pojď si pro to CZ Titulky",
+        "video_id": 27256543
+      },
+      {
+        "episode_id": 140818,
+        "display_name": "Daisy Jones & the Six S01E03 - Stopa 3: Dnes večer mi někdo zachránil CZ Dabing",
+        "video_id": 27256555
+      },
+      {
+        "episode_id": 140820,
+        "display_name": "Daisy Jones & the Six S01E05 - Stopa 5: Oheň CZ Titulky",
+        "video_id": 27256568
+      },
+      {
+        "episode_id": 140822,
+        "display_name": "Daisy Jones & the Six S01E07 - Stopa 7: Je pryč CZ Dabing",
+        "video_id": 27256580
+      },
+      {
+        "episode_id": 140824,
+        "display_name": "Daisy Jones & the Six S01E09 - Stopa 9: Jako by to bylo poprvé CZ Titulky",
+        "video_id": 27256588
+      },
+      {
+        "episode_id": 54864,
+        "display_name": "HAPPY! S02E02 - Tallahassee CZ Titulky",
+        "video_id": 27256598
+      },
+      {
         "episode_id": 141989,
         "display_name": "Dotkni se mých ran S01E01 - Chlapec, který se živil nočními můrami CZ Titulky",
         "video_id": 27256219
@@ -162326,6 +162496,66 @@
         "episode_id": 141997,
         "display_name": "Dotkni se mých ran S01E09 - Král s oslíma ušima CZ Dabing",
         "video_id": 27256388
+      },
+      {
+        "episode_id": 141999,
+        "display_name": "Dotkni se mých ran S01E11 - Ošklivé káčátko CZ Dabing",
+        "video_id": 27256427
+      },
+      {
+        "episode_id": 142001,
+        "display_name": "Dotkni se mých ran S01E13 - Otec dvou sester CZ Dabing",
+        "video_id": 27256453
+      },
+      {
+        "episode_id": 142003,
+        "display_name": "Dotkni se mých ran S01E15 - Příběh dvou bratrů CZ Titulky",
+        "video_id": 27256485
+      },
+      {
+        "episode_id": 73941,
+        "display_name": "Dragon Ball Super S01E02 - 2. epizoda CZ Titulky",
+        "video_id": 27256504
+      },
+      {
+        "episode_id": 73969,
+        "display_name": "Dragon Ball Super S01E07 - 7. epizoda CZ Titulky",
+        "video_id": 27256514
+      },
+      {
+        "episode_id": 73957,
+        "display_name": "Dragon Ball Super S01E08 - 8. epizoda CZ Titulky",
+        "video_id": 27256527
+      },
+      {
+        "episode_id": 73973,
+        "display_name": "Dragon Ball Super S01E09 - 9. epizoda CZ Titulky",
+        "video_id": 27256542
+      },
+      {
+        "episode_id": 73945,
+        "display_name": "Dragon Ball Super S01E10 - 10. epizoda CZ Titulky",
+        "video_id": 27256558
+      },
+      {
+        "episode_id": 73951,
+        "display_name": "Dragon Ball Super S01E14 - 14. epizoda CZ Titulky",
+        "video_id": 27256572
+      },
+      {
+        "episode_id": 50823,
+        "display_name": "Lidé S01E03 - Episode #1.3 CZ Dabing",
+        "video_id": 27256585
+      },
+      {
+        "episode_id": 50825,
+        "display_name": "Lidé S01E05 - Episode #1.5 CZ Dabing",
+        "video_id": 27256599
+      },
+      {
+        "episode_id": 50827,
+        "display_name": "Lidé S01E07 - Episode #1.7 CZ Titulky",
+        "video_id": 27256634
       }
     ],
     "prepared_not_upload_ready": [
@@ -163487,7 +163717,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 19,
+    "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
