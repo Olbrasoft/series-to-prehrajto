@@ -1,9 +1,9 @@
 {
   "counts": {
     "backlog_episodes": 171787,
-    "manifest_upload_ready_episodes": 773,
-    "uploaded_episodes": 21595,
-    "prepared_source_episodes": 24248,
+    "manifest_upload_ready_episodes": 759,
+    "uploaded_episodes": 21625,
+    "prepared_source_episodes": 24234,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
@@ -11,35 +11,99 @@
     "language_queue_sources": 2644,
     "language_audited_sources": 40,
     "language_whisper_attempted_sources": 40,
-    "language_pending_whisper_sources": 2604,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 29487,
-    "whisper_review_pending_sources": 27489,
+    "whisper_review_pending_sources": 27469,
     "subtitle_followup_sources": 5585,
     "subtitle_followup_pending_sources": 5585
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-07-09T08:09:04Z",
-      "databaseId": 29003789147,
+      "createdAt": "2026-07-09T08:39:02Z",
+      "databaseId": 29005451638,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "backfill-subtitles"
     },
     {
       "conclusion": "",
-      "createdAt": "2026-07-09T08:07:50Z",
-      "databaseId": 29003720614,
+      "createdAt": "2026-07-09T08:36:07Z",
+      "databaseId": 29005290425,
       "headBranch": "main",
       "status": "in_progress",
-      "workflowName": "audit-language"
+      "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-07-09T08:36:02Z",
+      "databaseId": 29005286184,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-09T08:20:32Z",
+      "databaseId": 29004416260,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-07-09T08:18:26Z",
+      "databaseId": 29004304798,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-09T08:18:14Z",
+      "databaseId": 29004293454,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "backfill-subtitles"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-09T08:10:20Z",
+      "databaseId": 29003859053,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-09T08:10:17Z",
+      "databaseId": 29003856252,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-09T08:09:04Z",
+      "databaseId": 29003789147,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "backfill-subtitles"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-09T08:07:50Z",
+      "databaseId": 29003720614,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-09T08:06:14Z",
       "databaseId": 29003628071,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -87,7 +151,7 @@
       "createdAt": "2026-07-09T07:44:35Z",
       "databaseId": 29002477028,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "prepare-descriptions"
     },
     {
@@ -99,81 +163,17 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-09T07:44:11Z",
       "databaseId": 29002456358,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-descriptions"
     },
     {
       "conclusion": "success",
       "createdAt": "2026-07-09T07:44:08Z",
       "databaseId": 29002453558,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-09T07:43:09Z",
-      "databaseId": 29002401221,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "backfill-subtitles"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-09T07:40:26Z",
-      "databaseId": 29002258936,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "failure",
-      "createdAt": "2026-07-09T07:40:21Z",
-      "databaseId": 29002254781,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-09T07:34:25Z",
-      "databaseId": 29001951833,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "backfill-subtitles"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-09T07:25:07Z",
-      "databaseId": 29001470710,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-09T07:24:38Z",
-      "databaseId": 29001444721,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-09T07:24:35Z",
-      "databaseId": 29001441913,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-09T07:24:33Z",
-      "databaseId": 29001439761,
       "headBranch": "main",
       "status": "completed",
       "workflowName": "audit-language"
@@ -85886,6 +85886,91 @@
         "video_id": 27286230
       },
       {
+        "episode_id": 31460,
+        "display_name": "X-Men: Nová generace S02E08 - zMařený sen CZ Titulky",
+        "video_id": 27286267
+      },
+      {
+        "episode_id": 31462,
+        "display_name": "X-Men: Nová generace S02E10 - Nepřítel Mého nepřítele CZ Titulky",
+        "video_id": 27286292
+      },
+      {
+        "episode_id": 31464,
+        "display_name": "X-Men: Nová generace S02E12 - DoMov CZ Dabing",
+        "video_id": 27286334
+      },
+      {
+        "episode_id": 31466,
+        "display_name": "X-Men: Nová generace S02E14 - KalaMita CZ Dabing",
+        "video_id": 27286371
+      },
+      {
+        "episode_id": 31468,
+        "display_name": "X-Men: Nová generace S02E16 - ZnaMení CZ Dabing",
+        "video_id": 27286412
+      },
+      {
+        "episode_id": 4676,
+        "display_name": "Odkaz S01E13 - 13. epizoda CZ Dabing",
+        "video_id": 27286443
+      },
+      {
+        "episode_id": 4678,
+        "display_name": "Odkaz S01E15 - 15. epizoda CZ Dabing",
+        "video_id": 27286470
+      },
+      {
+        "episode_id": 4648,
+        "display_name": "Odkaz S02E01 - 1. epizoda CZ Dabing",
+        "video_id": 27286508
+      },
+      {
+        "episode_id": 4650,
+        "display_name": "Odkaz S02E04 - 4. epizoda CZ Dabing",
+        "video_id": 27286541
+      },
+      {
+        "episode_id": 4652,
+        "display_name": "Odkaz S02E05 - 5. epizoda CZ Dabing",
+        "video_id": 27286566
+      },
+      {
+        "episode_id": 4654,
+        "display_name": "Odkaz S02E08 - 8. epizoda CZ Dabing",
+        "video_id": 27286600
+      },
+      {
+        "episode_id": 4656,
+        "display_name": "Odkaz S02E09 - 9. epizoda CZ Dabing",
+        "video_id": 27286623
+      },
+      {
+        "episode_id": 4658,
+        "display_name": "Odkaz S02E10 - 10. epizoda CZ Dabing",
+        "video_id": 27286648
+      },
+      {
+        "episode_id": 4660,
+        "display_name": "Odkaz S02E12 - 12. epizoda CZ Dabing",
+        "video_id": 27286688
+      },
+      {
+        "episode_id": 4662,
+        "display_name": "Odkaz S02E14 - 14. epizoda CZ Dabing",
+        "video_id": 27286720
+      },
+      {
+        "episode_id": 4680,
+        "display_name": "Odkaz S02E16 - 16. epizoda CZ Dabing",
+        "video_id": 27286759
+      },
+      {
+        "episode_id": 9940,
+        "display_name": "Odkaz S03E01 - Nejsme hodni CZ Dabing",
+        "video_id": 27286784
+      },
+      {
         "episode_id": 31453,
         "display_name": "X-Men: Nová generace S02E01 - eMergence CZ Dabing",
         "video_id": 27286043
@@ -85904,6 +85989,71 @@
         "episode_id": 31459,
         "display_name": "X-Men: Nová generace S02E07 - Bez Milosti CZ Dabing",
         "video_id": 27286248
+      },
+      {
+        "episode_id": 31461,
+        "display_name": "X-Men: Nová generace S02E09 - PřeloM CZ Dabing",
+        "video_id": 27286293
+      },
+      {
+        "episode_id": 31465,
+        "display_name": "X-Men: Nová generace S02E13 - MáMení CZ Dabing",
+        "video_id": 27286341
+      },
+      {
+        "episode_id": 31467,
+        "display_name": "X-Men: Nová generace S02E15 - Monstra CZ Dabing",
+        "video_id": 27286386
+      },
+      {
+        "episode_id": 4671,
+        "display_name": "Odkaz S01E08 - 8. epizoda CZ Dabing",
+        "video_id": 27286456
+      },
+      {
+        "episode_id": 4673,
+        "display_name": "Odkaz S01E10 - 10. epizoda CZ Dabing",
+        "video_id": 27286522
+      },
+      {
+        "episode_id": 4675,
+        "display_name": "Odkaz S01E12 - 12. epizoda CZ Dabing",
+        "video_id": 27286562
+      },
+      {
+        "episode_id": 4677,
+        "display_name": "Odkaz S01E14 - 14. epizoda CZ Dabing",
+        "video_id": 27286611
+      },
+      {
+        "episode_id": 4679,
+        "display_name": "Odkaz S01E16 - 16. epizoda CZ Dabing",
+        "video_id": 27286662
+      },
+      {
+        "episode_id": 4649,
+        "display_name": "Odkaz S02E02 - 2. epizoda CZ Dabing",
+        "video_id": 27286732
+      },
+      {
+        "episode_id": 4651,
+        "display_name": "Odkaz S02E03 - 3. epizoda CZ Dabing",
+        "video_id": 27286800
+      },
+      {
+        "episode_id": 4653,
+        "display_name": "Odkaz S02E06 - 6. epizoda CZ Dabing",
+        "video_id": 27286877
+      },
+      {
+        "episode_id": 4655,
+        "display_name": "Odkaz S02E07 - 7. epizoda CZ Dabing",
+        "video_id": 27286930
+      },
+      {
+        "episode_id": 4659,
+        "display_name": "Odkaz S02E11 - 11. epizoda CZ Dabing",
+        "video_id": 27286965
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -171508,6 +171658,91 @@
         "video_id": 27286230
       },
       {
+        "episode_id": 31460,
+        "display_name": "X-Men: Nová generace S02E08 - zMařený sen CZ Titulky",
+        "video_id": 27286267
+      },
+      {
+        "episode_id": 31462,
+        "display_name": "X-Men: Nová generace S02E10 - Nepřítel Mého nepřítele CZ Titulky",
+        "video_id": 27286292
+      },
+      {
+        "episode_id": 31464,
+        "display_name": "X-Men: Nová generace S02E12 - DoMov CZ Dabing",
+        "video_id": 27286334
+      },
+      {
+        "episode_id": 31466,
+        "display_name": "X-Men: Nová generace S02E14 - KalaMita CZ Dabing",
+        "video_id": 27286371
+      },
+      {
+        "episode_id": 31468,
+        "display_name": "X-Men: Nová generace S02E16 - ZnaMení CZ Dabing",
+        "video_id": 27286412
+      },
+      {
+        "episode_id": 4676,
+        "display_name": "Odkaz S01E13 - 13. epizoda CZ Dabing",
+        "video_id": 27286443
+      },
+      {
+        "episode_id": 4678,
+        "display_name": "Odkaz S01E15 - 15. epizoda CZ Dabing",
+        "video_id": 27286470
+      },
+      {
+        "episode_id": 4648,
+        "display_name": "Odkaz S02E01 - 1. epizoda CZ Dabing",
+        "video_id": 27286508
+      },
+      {
+        "episode_id": 4650,
+        "display_name": "Odkaz S02E04 - 4. epizoda CZ Dabing",
+        "video_id": 27286541
+      },
+      {
+        "episode_id": 4652,
+        "display_name": "Odkaz S02E05 - 5. epizoda CZ Dabing",
+        "video_id": 27286566
+      },
+      {
+        "episode_id": 4654,
+        "display_name": "Odkaz S02E08 - 8. epizoda CZ Dabing",
+        "video_id": 27286600
+      },
+      {
+        "episode_id": 4656,
+        "display_name": "Odkaz S02E09 - 9. epizoda CZ Dabing",
+        "video_id": 27286623
+      },
+      {
+        "episode_id": 4658,
+        "display_name": "Odkaz S02E10 - 10. epizoda CZ Dabing",
+        "video_id": 27286648
+      },
+      {
+        "episode_id": 4660,
+        "display_name": "Odkaz S02E12 - 12. epizoda CZ Dabing",
+        "video_id": 27286688
+      },
+      {
+        "episode_id": 4662,
+        "display_name": "Odkaz S02E14 - 14. epizoda CZ Dabing",
+        "video_id": 27286720
+      },
+      {
+        "episode_id": 4680,
+        "display_name": "Odkaz S02E16 - 16. epizoda CZ Dabing",
+        "video_id": 27286759
+      },
+      {
+        "episode_id": 9940,
+        "display_name": "Odkaz S03E01 - Nejsme hodni CZ Dabing",
+        "video_id": 27286784
+      },
+      {
         "episode_id": 31453,
         "display_name": "X-Men: Nová generace S02E01 - eMergence CZ Dabing",
         "video_id": 27286043
@@ -171526,6 +171761,71 @@
         "episode_id": 31459,
         "display_name": "X-Men: Nová generace S02E07 - Bez Milosti CZ Dabing",
         "video_id": 27286248
+      },
+      {
+        "episode_id": 31461,
+        "display_name": "X-Men: Nová generace S02E09 - PřeloM CZ Dabing",
+        "video_id": 27286293
+      },
+      {
+        "episode_id": 31465,
+        "display_name": "X-Men: Nová generace S02E13 - MáMení CZ Dabing",
+        "video_id": 27286341
+      },
+      {
+        "episode_id": 31467,
+        "display_name": "X-Men: Nová generace S02E15 - Monstra CZ Dabing",
+        "video_id": 27286386
+      },
+      {
+        "episode_id": 4671,
+        "display_name": "Odkaz S01E08 - 8. epizoda CZ Dabing",
+        "video_id": 27286456
+      },
+      {
+        "episode_id": 4673,
+        "display_name": "Odkaz S01E10 - 10. epizoda CZ Dabing",
+        "video_id": 27286522
+      },
+      {
+        "episode_id": 4675,
+        "display_name": "Odkaz S01E12 - 12. epizoda CZ Dabing",
+        "video_id": 27286562
+      },
+      {
+        "episode_id": 4677,
+        "display_name": "Odkaz S01E14 - 14. epizoda CZ Dabing",
+        "video_id": 27286611
+      },
+      {
+        "episode_id": 4679,
+        "display_name": "Odkaz S01E16 - 16. epizoda CZ Dabing",
+        "video_id": 27286662
+      },
+      {
+        "episode_id": 4649,
+        "display_name": "Odkaz S02E02 - 2. epizoda CZ Dabing",
+        "video_id": 27286732
+      },
+      {
+        "episode_id": 4651,
+        "display_name": "Odkaz S02E03 - 3. epizoda CZ Dabing",
+        "video_id": 27286800
+      },
+      {
+        "episode_id": 4653,
+        "display_name": "Odkaz S02E06 - 6. epizoda CZ Dabing",
+        "video_id": 27286877
+      },
+      {
+        "episode_id": 4655,
+        "display_name": "Odkaz S02E07 - 7. epizoda CZ Dabing",
+        "video_id": 27286930
+      },
+      {
+        "episode_id": 4659,
+        "display_name": "Odkaz S02E11 - 11. epizoda CZ Dabing",
+        "video_id": 27286965
       }
     ],
     "prepared_not_upload_ready": [
@@ -171832,166 +172132,6 @@
     ],
     "whisper_review_pending": [
       {
-        "episode_id": 2217,
-        "source_id": -2803821219481806,
-        "series_title": "ALF",
-        "episode_code": "S02E03",
-        "source_title": "Alf S02E03. Alf není přelud",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2217,
-        "source_id": -33865800645704411,
-        "series_title": "ALF",
-        "episode_code": "S02E03",
-        "source_title": "Alf S02E03 SKdab",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2218,
-        "source_id": -71036551395575216,
-        "series_title": "ALF",
-        "episode_code": "S02E04",
-        "source_title": "ALF 02x04. Nechoď do kláštera",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2218,
-        "source_id": -32165179279874815,
-        "series_title": "ALF",
-        "episode_code": "S02E04",
-        "source_title": "ALF.S02E04 Blues pre svadobné zvony sk.mkv",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2218,
-        "source_id": -27382299329004843,
-        "series_title": "ALF",
-        "episode_code": "S02E04",
-        "source_title": "Alf S02E04. Nechoď do kláštera",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2219,
-        "source_id": -22963904210878056,
-        "series_title": "ALF",
-        "episode_code": "S02E05",
-        "source_title": "Alf S02E05. Boj o diváka",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2219,
-        "source_id": -15828323762634423,
-        "series_title": "ALF",
-        "episode_code": "S02E05",
-        "source_title": "ALF 02x05. Boj o diváka",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2219,
-        "source_id": -43079212829671,
-        "series_title": "ALF",
-        "episode_code": "S02E05",
-        "source_title": "ALF.S02E05 Hlavný vysielací čas sk.mkv",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2220,
-        "source_id": -62395031307976589,
-        "series_title": "ALF",
-        "episode_code": "S02E06",
-        "source_title": "Alf S02E06. Vydařený večer",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2220,
-        "source_id": -9337620737127699,
-        "series_title": "ALF",
-        "episode_code": "S02E06",
-        "source_title": "ALF.S02E06 Čarovný večer sk.mkv",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2220,
-        "source_id": -3792581768969783,
-        "series_title": "ALF",
-        "episode_code": "S02E06",
-        "source_title": "Alf S02E06 (1987) SKdabing",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2221,
-        "source_id": -56443319443163979,
-        "series_title": "ALF",
-        "episode_code": "S02E07",
-        "source_title": "ALF 02x07. Soutěž krásy",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2221,
-        "source_id": -40598549413248203,
-        "series_title": "ALF",
-        "episode_code": "S02E07",
-        "source_title": "ALF.S02E07 Súťaž krásy sk.mkv",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2221,
-        "source_id": -1378688943507587,
-        "series_title": "ALF",
-        "episode_code": "S02E07",
-        "source_title": "Alf S02E07. Soutěž krásy",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2222,
-        "source_id": -66528102706282406,
-        "series_title": "ALF",
-        "episode_code": "S02E08",
-        "source_title": "Alf S02E08 (1987) SKdabing",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2222,
-        "source_id": -58244077605384788,
-        "series_title": "ALF",
-        "episode_code": "S02E08",
-        "source_title": "Alf S02E08. Kosmická škytavka",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2222,
-        "source_id": -38449550078075135,
-        "series_title": "ALF",
-        "episode_code": "S02E08",
-        "source_title": "ALF.S02E08 Niečo sa so mnou deje sk.mkv",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2222,
-        "source_id": -20061607805950509,
-        "series_title": "ALF",
-        "episode_code": "S02E08",
-        "source_title": "ALF 02x08. Kosmická škytavka",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2223,
-        "source_id": -58436161681823073,
-        "series_title": "ALF",
-        "episode_code": "S02E09",
-        "source_title": "Alf S02E09 (1987) SKdabing",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2223,
-        "source_id": -43820234066160443,
-        "series_title": "ALF",
-        "episode_code": "S02E09",
-        "source_title": "ALF.S02E09 Nočný vlak sk.mkv",
-        "status": "needs_whisper"
-      },
-      {
         "episode_id": 2223,
         "source_id": -16722904466543447,
         "series_title": "ALF",
@@ -172229,6 +172369,166 @@
         "series_title": "ALF",
         "episode_code": "S02E18",
         "source_title": "ALF 02x18. Občané a zloději 2.část",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2233,
+        "source_id": -68314019067652556,
+        "series_title": "ALF",
+        "episode_code": "S02E19",
+        "source_title": "ALF 02x19. Na vlastní pěst",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2233,
+        "source_id": -59292473577051668,
+        "series_title": "ALF",
+        "episode_code": "S02E19",
+        "source_title": "Alf S02E19. Na vlastní pěst",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2233,
+        "source_id": -35235960952410227,
+        "series_title": "ALF",
+        "episode_code": "S02E19",
+        "source_title": "Alf S02E19 (1988) SKdabing",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2236,
+        "source_id": -69259160427720196,
+        "series_title": "ALF",
+        "episode_code": "S02E20",
+        "source_title": "Alf S02E20 (1988) SKdabing",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2236,
+        "source_id": -49849063583687519,
+        "series_title": "ALF",
+        "episode_code": "S02E20",
+        "source_title": "ALF.S02E20 Si obyčajný pako sk.mkv",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2236,
+        "source_id": -28676424935579940,
+        "series_title": "ALF",
+        "episode_code": "S02E20",
+        "source_title": "ALF 02x20. Pes v domě",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2236,
+        "source_id": -20234857433694424,
+        "series_title": "ALF",
+        "episode_code": "S02E20",
+        "source_title": "Alf S02E20. Pes v domě",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2234,
+        "source_id": -51287350948912605,
+        "series_title": "ALF",
+        "episode_code": "S02E21",
+        "source_title": "ALF 02x21. Rváč",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2234,
+        "source_id": -48149952593795934,
+        "series_title": "ALF",
+        "episode_code": "S02E21",
+        "source_title": "Alf S02E21. Rváč",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2234,
+        "source_id": -28267228915567628,
+        "series_title": "ALF",
+        "episode_code": "S02E21",
+        "source_title": "Alf S02E21 (1988) SKdabing",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2234,
+        "source_id": -58053417423354233,
+        "series_title": "ALF",
+        "episode_code": "S02E21",
+        "source_title": "Alf 2x21 Som tvoja bábka.mkv",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2235,
+        "source_id": -66587261633841746,
+        "series_title": "ALF",
+        "episode_code": "S02E22",
+        "source_title": "Alf S02E22 (1988) SKdabing",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2235,
+        "source_id": -54165746058325909,
+        "series_title": "ALF",
+        "episode_code": "S02E22",
+        "source_title": "Alf S02E22. Stěhování",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2235,
+        "source_id": -38900103769280630,
+        "series_title": "ALF",
+        "episode_code": "S02E22",
+        "source_title": "ALF 02x22. Stěhování",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2235,
+        "source_id": -27510311048692278,
+        "series_title": "ALF",
+        "episode_code": "S02E22",
+        "source_title": "Alf S02E22 SKdab",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2237,
+        "source_id": -28609494552991859,
+        "series_title": "ALF",
+        "episode_code": "S02E23",
+        "source_title": "Alf S02E23 (1988) SKdabing",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2237,
+        "source_id": -19821727731539250,
+        "series_title": "ALF",
+        "episode_code": "S02E23",
+        "source_title": "ALF 02x23. Alfovo druhé já",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2237,
+        "source_id": -7748152571175416,
+        "series_title": "ALF",
+        "episode_code": "S02E23",
+        "source_title": "Alf S02E23. Alfovo druhé já",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2238,
+        "source_id": -71255977498536494,
+        "series_title": "ALF",
+        "episode_code": "S02E24",
+        "source_title": "ALF 02x24. Tequila",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2238,
+        "source_id": -52894265826026278,
+        "series_title": "ALF",
+        "episode_code": "S02E24",
+        "source_title": "Alf S02E24 (1988) SKdabing",
         "status": "needs_whisper"
       }
     ],
@@ -172691,9 +172991,9 @@
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
-    "whisper_non_cz_needs_subtitles": 1286,
-    "whisper_confirmed_cz": 712,
-    "needs_whisper": 27487,
+    "whisper_non_cz_needs_subtitles": 1293,
+    "whisper_confirmed_cz": 725,
+    "needs_whisper": 27467,
     "whisper_failed": 2
   },
   "subtitle_followup_statuses": {
