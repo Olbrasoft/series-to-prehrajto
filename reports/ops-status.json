@@ -2,36 +2,92 @@
   "counts": {
     "backlog_episodes": 171185,
     "manifest_upload_ready_episodes": 1007,
-    "uploaded_episodes": 22267,
-    "prepared_source_episodes": 26460,
+    "uploaded_episodes": 22268,
+    "prepared_source_episodes": 26574,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 40,
+    "language_audited_sources": 554,
     "language_whisper_attempted_sources": 40,
     "language_pending_whisper_sources": 2604,
-    "whisper_review_sources": 32257,
-    "whisper_review_pending_sources": 30179,
+    "whisper_review_sources": 32366,
+    "whisper_review_pending_sources": 30288,
     "subtitle_followup_sources": 5960,
     "subtitle_followup_pending_sources": 5960
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-07-09T23:21:28Z",
-      "databaseId": 29057145645,
+      "createdAt": "2026-07-09T23:23:32Z",
+      "databaseId": 29057235830,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-09T23:23:30Z",
+      "databaseId": 29057234615,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-07-09T23:23:26Z",
+      "databaseId": 29057231640,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-09T23:22:26Z",
+      "databaseId": 29057187255,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-09T23:22:23Z",
+      "databaseId": 29057185330,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-09T23:22:23Z",
+      "databaseId": 29057185275,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "backfill-subtitles"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-09T23:22:21Z",
+      "databaseId": 29057183773,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-09T23:21:28Z",
+      "databaseId": 29057145645,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "cancelled",
       "createdAt": "2026-07-09T23:21:23Z",
       "databaseId": 29057141654,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -59,11 +115,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-09T23:06:04Z",
       "databaseId": 29056443742,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "backfill-subtitles"
     },
     {
@@ -121,62 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-09T22:53:25Z",
-      "databaseId": 29055825318,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-09T22:51:58Z",
-      "databaseId": 29055754587,
-      "headBranch": "main",
-      "status": "pending",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-07-09T22:49:56Z",
-      "databaseId": 29055655890,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-09T22:49:46Z",
-      "databaseId": 29055648921,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-09T22:49:42Z",
-      "databaseId": 29055646005,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-09T22:48:50Z",
-      "databaseId": 29055606365,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-07-09T22:48:46Z",
-      "databaseId": 29055602842,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
     }
   ],
   "gaps": {
@@ -89264,6 +89264,11 @@
         "episode_id": 28177,
         "display_name": "Beverly Hills 90210 S06E21 - 21. epizoda CZ Dabing",
         "video_id": 27314624
+      },
+      {
+        "episode_id": 28179,
+        "display_name": "Beverly Hills 90210 S06E23 - 23. epizoda CZ Dabing",
+        "video_id": 27314660
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -178246,6 +178251,11 @@
         "episode_id": 28177,
         "display_name": "Beverly Hills 90210 S06E21 - 21. epizoda CZ Dabing",
         "video_id": 27314624
+      },
+      {
+        "episode_id": 28179,
+        "display_name": "Beverly Hills 90210 S06E23 - 23. epizoda CZ Dabing",
+        "video_id": 27314660
       }
     ],
     "prepared_not_upload_ready": [
@@ -179407,13 +179417,14 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
+    "disabled": 514,
     "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
     "whisper_non_cz_needs_subtitles": 1332,
     "whisper_confirmed_cz": 746,
-    "needs_whisper": 30177,
+    "needs_whisper": 30286,
     "whisper_failed": 2
   },
   "subtitle_followup_statuses": {
