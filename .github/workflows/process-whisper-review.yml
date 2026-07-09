@@ -83,7 +83,7 @@ jobs:
           cp manifests/upload-ready.jsonl.gz "$TMP_DIR/manifests/upload-ready.jsonl.gz" 2>/dev/null || true
           cp reports/upload-manifest.json "$TMP_DIR/reports/upload-manifest.json" 2>/dev/null || true
 
-          for attempt in 1 2 3 4 5; do
+          for attempt in $(seq 1 20); do
             git fetch origin main
             git reset --hard origin/main
             mkdir -p plans audits manifests reports
@@ -114,7 +114,11 @@ jobs:
               exit 0
             fi
             echo "push race on attempt ${attempt}, retrying"
-            sleep $((attempt * 3))
+            SLEEP_SECONDS=$((attempt * 10))
+            if [ "$SLEEP_SECONDS" -gt 120 ]; then
+              SLEEP_SECONDS=120
+            fi
+            sleep "$SLEEP_SECONDS"
           done
 
           echo "failed to push Whisper review results"
