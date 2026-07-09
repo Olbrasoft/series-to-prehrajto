@@ -1,29 +1,69 @@
 {
   "counts": {
     "backlog_episodes": 171246,
-    "manifest_upload_ready_episodes": 1018,
+    "manifest_upload_ready_episodes": 1012,
     "uploaded_episodes": 22152,
-    "prepared_source_episodes": 26130,
+    "prepared_source_episodes": 26191,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 20,
-    "language_whisper_attempted_sources": 20,
+    "language_audited_sources": 236,
+    "language_whisper_attempted_sources": 40,
     "language_pending_whisper_sources": 2624,
-    "whisper_review_sources": 31962,
-    "whisper_review_pending_sources": 29904,
-    "subtitle_followup_sources": 5933,
-    "subtitle_followup_pending_sources": 5933
+    "whisper_review_sources": 32045,
+    "whisper_review_pending_sources": 29967,
+    "subtitle_followup_sources": 5938,
+    "subtitle_followup_pending_sources": 5938
   },
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-07-09T21:02:46Z",
+      "databaseId": 29050027738,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-09T21:02:08Z",
+      "databaseId": 29049993124,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-09T21:01:48Z",
+      "databaseId": 29049972086,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-09T20:59:59Z",
+      "databaseId": 29049853106,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "backfill-subtitles"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-09T20:54:58Z",
+      "databaseId": 29049561405,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-09T20:54:01Z",
       "databaseId": 29049505202,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -31,7 +71,7 @@
       "createdAt": "2026-07-09T20:53:57Z",
       "databaseId": 29049501281,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "prepare-manifest"
     },
     {
@@ -55,7 +95,7 @@
       "createdAt": "2026-07-09T20:50:20Z",
       "databaseId": 29049287128,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "process-whisper-review"
     },
     {
@@ -91,11 +131,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-09T20:41:55Z",
       "databaseId": 29048805230,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
@@ -137,46 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-07-09T20:28:36Z",
-      "databaseId": 29048029329,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-09T20:28:13Z",
-      "databaseId": 29048005872,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-09T20:28:10Z",
-      "databaseId": 29048002080,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-09T20:17:28Z",
-      "databaseId": 29047371459,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "backfill-subtitles"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-09T20:12:47Z",
-      "databaseId": 29047094488,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-sources"
     }
   ],
   "gaps": {
@@ -177402,166 +177402,6 @@
     ],
     "whisper_review_pending": [
       {
-        "episode_id": 2221,
-        "source_id": -40598549413248203,
-        "series_title": "ALF",
-        "episode_code": "S02E07",
-        "source_title": "ALF.S02E07 Súťaž krásy sk.mkv",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2221,
-        "source_id": -1378688943507587,
-        "series_title": "ALF",
-        "episode_code": "S02E07",
-        "source_title": "Alf S02E07. Soutěž krásy",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2222,
-        "source_id": -66528102706282406,
-        "series_title": "ALF",
-        "episode_code": "S02E08",
-        "source_title": "Alf S02E08 (1987) SKdabing",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2222,
-        "source_id": -58244077605384788,
-        "series_title": "ALF",
-        "episode_code": "S02E08",
-        "source_title": "Alf S02E08. Kosmická škytavka",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2222,
-        "source_id": -38449550078075135,
-        "series_title": "ALF",
-        "episode_code": "S02E08",
-        "source_title": "ALF.S02E08 Niečo sa so mnou deje sk.mkv",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2222,
-        "source_id": -20061607805950509,
-        "series_title": "ALF",
-        "episode_code": "S02E08",
-        "source_title": "ALF 02x08. Kosmická škytavka",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2223,
-        "source_id": -58436161681823073,
-        "series_title": "ALF",
-        "episode_code": "S02E09",
-        "source_title": "Alf S02E09 (1987) SKdabing",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2223,
-        "source_id": -43820234066160443,
-        "series_title": "ALF",
-        "episode_code": "S02E09",
-        "source_title": "ALF.S02E09 Nočný vlak sk.mkv",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2223,
-        "source_id": -16722904466543447,
-        "series_title": "ALF",
-        "episode_code": "S02E09",
-        "source_title": "ALF 02x09. Noční vlak",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2224,
-        "source_id": -69997090270106146,
-        "series_title": "ALF",
-        "episode_code": "S02E10",
-        "source_title": "ALF 02x10. Špetka romantiky",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2224,
-        "source_id": -23715269807195417,
-        "series_title": "ALF",
-        "episode_code": "S02E10",
-        "source_title": "Alf S02E10 (1987) SKdabing",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2224,
-        "source_id": -21952038636929867,
-        "series_title": "ALF",
-        "episode_code": "S02E10",
-        "source_title": "ALF.S02E10 Nie je to romantické sk.mkv",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2224,
-        "source_id": -6849634048089981,
-        "series_title": "ALF",
-        "episode_code": "S02E10",
-        "source_title": "Alf S02E10. Špetka romantiky",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2225,
-        "source_id": -64930908119899386,
-        "series_title": "ALF",
-        "episode_code": "S02E11",
-        "source_title": "Alf S02E11. Kandidáti",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2225,
-        "source_id": -58493863147754326,
-        "series_title": "ALF",
-        "episode_code": "S02E11",
-        "source_title": "ALF.S02E11 Voľby prezidenta sk.mkv",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2225,
-        "source_id": -6530238272387877,
-        "series_title": "ALF",
-        "episode_code": "S02E11",
-        "source_title": "ALF 02x11. Kandidáti",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2225,
-        "source_id": -71859828755407688,
-        "series_title": "ALF",
-        "episode_code": "S02E11",
-        "source_title": "Alf 2x11 Voľby prezidenta.mkv",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2226,
-        "source_id": -33386940199993691,
-        "series_title": "ALF",
-        "episode_code": "S02E12",
-        "source_title": "ALF 02x12-13. Alfovy výjimečné Vánoce část 1 i 2",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2226,
-        "source_id": -7634415751222692,
-        "series_title": "ALF",
-        "episode_code": "S02E12",
-        "source_title": "Alf S02E12-13. Alfovy výjimečné Vánoce část 1 i 2",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2227,
-        "source_id": -62952277417125821,
-        "series_title": "ALF",
-        "episode_code": "S02E13",
-        "source_title": "Alf S02E13 SKdab",
-        "status": "needs_whisper"
-      },
-      {
         "episode_id": 2227,
         "source_id": -54341523020859324,
         "series_title": "ALF",
@@ -177799,6 +177639,166 @@
         "series_title": "ALF",
         "episode_code": "S02E22",
         "source_title": "Alf S02E22 (1988) SKdabing",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2235,
+        "source_id": -54165746058325909,
+        "series_title": "ALF",
+        "episode_code": "S02E22",
+        "source_title": "Alf S02E22. Stěhování",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2235,
+        "source_id": -38900103769280630,
+        "series_title": "ALF",
+        "episode_code": "S02E22",
+        "source_title": "ALF 02x22. Stěhování",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2235,
+        "source_id": -27510311048692278,
+        "series_title": "ALF",
+        "episode_code": "S02E22",
+        "source_title": "Alf S02E22 SKdab",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2237,
+        "source_id": -28609494552991859,
+        "series_title": "ALF",
+        "episode_code": "S02E23",
+        "source_title": "Alf S02E23 (1988) SKdabing",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2237,
+        "source_id": -19821727731539250,
+        "series_title": "ALF",
+        "episode_code": "S02E23",
+        "source_title": "ALF 02x23. Alfovo druhé já",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2237,
+        "source_id": -7748152571175416,
+        "series_title": "ALF",
+        "episode_code": "S02E23",
+        "source_title": "Alf S02E23. Alfovo druhé já",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2238,
+        "source_id": -71255977498536494,
+        "series_title": "ALF",
+        "episode_code": "S02E24",
+        "source_title": "ALF 02x24. Tequila",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2238,
+        "source_id": -52894265826026278,
+        "series_title": "ALF",
+        "episode_code": "S02E24",
+        "source_title": "Alf S02E24 (1988) SKdabing",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2238,
+        "source_id": -9626043782521225,
+        "series_title": "ALF",
+        "episode_code": "S02E24",
+        "source_title": "Alf S02E24. Tequila",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2238,
+        "source_id": -2077510419823070,
+        "series_title": "ALF",
+        "episode_code": "S02E24",
+        "source_title": "Alf S02E24 SKdab",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2239,
+        "source_id": -67914705720152070,
+        "series_title": "ALF",
+        "episode_code": "S02E25",
+        "source_title": "ALF 02x25. Přátelé",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2239,
+        "source_id": -45884898103196760,
+        "series_title": "ALF",
+        "episode_code": "S02E25",
+        "source_title": "Alf S02E25. Přátelé",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2239,
+        "source_id": -24681474139563800,
+        "series_title": "ALF",
+        "episode_code": "S02E25",
+        "source_title": "Alf S02E25 (1988) SKdabing",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2239,
+        "source_id": -18821178814648408,
+        "series_title": "ALF",
+        "episode_code": "S02E25",
+        "source_title": "ALF S02E25 Sme Rodina",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2240,
+        "source_id": -41169401118245559,
+        "series_title": "ALF",
+        "episode_code": "S02E26",
+        "source_title": "Alf S02E26 (1988) SKdabing",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2240,
+        "source_id": -26409589783322149,
+        "series_title": "ALF",
+        "episode_code": "S02E26",
+        "source_title": "ALF 02x26. Na mizině",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2240,
+        "source_id": -16679313801254078,
+        "series_title": "ALF",
+        "episode_code": "S02E26",
+        "source_title": "Alf S02E26. Na mizině",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2240,
+        "source_id": -16970507433197081,
+        "series_title": "ALF",
+        "episode_code": "S02E26",
+        "source_title": "ALF S02E26 Kam Na Univerzitu",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2241,
+        "source_id": -65370223201896634,
+        "series_title": "ALF",
+        "episode_code": "S03E01",
+        "source_title": "Alf S03E01 (1988) SKdab",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2241,
+        "source_id": -56023651011811276,
+        "series_title": "ALF",
+        "episode_code": "S03E01",
+        "source_title": "Alf S03E01. Pro lásku všechno",
         "status": "needs_whisper"
       }
     ],
@@ -178257,16 +178257,17 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 19,
+    "ok": 39,
+    "disabled": 196,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
-    "whisper_non_cz_needs_subtitles": 1327,
-    "whisper_confirmed_cz": 731,
-    "needs_whisper": 29902,
+    "whisper_non_cz_needs_subtitles": 1332,
+    "whisper_confirmed_cz": 746,
+    "needs_whisper": 29965,
     "whisper_failed": 2
   },
   "subtitle_followup_statuses": {
-    "needs_subtitle_setup_after_prehrajto_processing": 5933
+    "needs_subtitle_setup_after_prehrajto_processing": 5938
   }
 }
