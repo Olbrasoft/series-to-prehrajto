@@ -2,28 +2,52 @@
   "counts": {
     "backlog_episodes": 171185,
     "manifest_upload_ready_episodes": 1007,
-    "uploaded_episodes": 22188,
-    "prepared_source_episodes": 26174,
+    "uploaded_episodes": 22189,
+    "prepared_source_episodes": 26273,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 60,
-    "language_whisper_attempted_sources": 60,
+    "language_audited_sources": 199,
+    "language_whisper_attempted_sources": 115,
     "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 32045,
     "whisper_review_pending_sources": 29887,
-    "subtitle_followup_sources": 5938,
-    "subtitle_followup_pending_sources": 5938
+    "subtitle_followup_sources": 5945,
+    "subtitle_followup_pending_sources": 5945
   },
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-07-09T22:09:38Z",
+      "databaseId": 29053693822,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-09T22:08:31Z",
+      "databaseId": 29053638764,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-09T22:08:27Z",
+      "databaseId": 29053635935,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-09T22:07:26Z",
       "databaseId": 29053584508,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -47,7 +71,7 @@
       "createdAt": "2026-07-09T22:03:33Z",
       "databaseId": 29053379800,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "audit-language"
     },
     {
@@ -99,11 +123,11 @@
       "workflowName": "process-whisper-review"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-09T21:59:27Z",
       "databaseId": 29053162110,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -153,30 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-09T21:44:00Z",
-      "databaseId": 29052342731,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-09T21:43:45Z",
-      "databaseId": 29052328580,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-09T21:42:55Z",
-      "databaseId": 29052284024,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
     }
   ],
   "gaps": {
@@ -88869,6 +88869,11 @@
         "episode_id": 28099,
         "display_name": "Beverly Hills 90210 S04E05 - 5. epizoda CZ Dabing",
         "video_id": 27312877
+      },
+      {
+        "episode_id": 28090,
+        "display_name": "Beverly Hills 90210 S03E25 - 25. epizoda CZ Dabing",
+        "video_id": 27313143
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -177456,6 +177461,11 @@
         "episode_id": 28099,
         "display_name": "Beverly Hills 90210 S04E05 - 5. epizoda CZ Dabing",
         "video_id": 27312877
+      },
+      {
+        "episode_id": 28090,
+        "display_name": "Beverly Hills 90210 S03E25 - 25. epizoda CZ Dabing",
+        "video_id": 27313143
       }
     ],
     "prepared_not_upload_ready": [
@@ -178617,16 +178627,17 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 59,
+    "ok": 114,
+    "disabled": 84,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
-    "whisper_non_cz_needs_subtitles": 1348,
-    "whisper_confirmed_cz": 810,
+    "whisper_non_cz_needs_subtitles": 1347,
+    "whisper_confirmed_cz": 811,
     "needs_whisper": 29885,
     "whisper_failed": 2
   },
   "subtitle_followup_statuses": {
-    "needs_subtitle_setup_after_prehrajto_processing": 5938
+    "needs_subtitle_setup_after_prehrajto_processing": 5945
   }
 }
