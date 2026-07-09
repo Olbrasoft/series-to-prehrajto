@@ -1,45 +1,93 @@
 {
   "counts": {
     "backlog_episodes": 171476,
-    "manifest_upload_ready_episodes": 865,
-    "uploaded_episodes": 21948,
-    "prepared_source_episodes": 25176,
+    "manifest_upload_ready_episodes": 852,
+    "uploaded_episodes": 21976,
+    "prepared_source_episodes": 25162,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 20,
-    "language_whisper_attempted_sources": 20,
-    "language_pending_whisper_sources": 2624,
+    "language_audited_sources": 40,
+    "language_whisper_attempted_sources": 40,
+    "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 30240,
-    "whisper_review_pending_sources": 28222,
+    "whisper_review_pending_sources": 28202,
     "subtitle_followup_sources": 5713,
     "subtitle_followup_pending_sources": 5713
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-07-09T14:38:57Z",
-      "databaseId": 29026233695,
+      "createdAt": "2026-07-09T14:55:22Z",
+      "databaseId": 29027361528,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
-      "createdAt": "2026-07-09T14:38:50Z",
-      "databaseId": 29026226578,
+      "createdAt": "2026-07-09T14:55:15Z",
+      "databaseId": 29027354641,
       "headBranch": "main",
       "status": "pending",
       "workflowName": "prepare-manifest"
     },
     {
+      "conclusion": "cancelled",
+      "createdAt": "2026-07-09T14:50:49Z",
+      "databaseId": 29027049602,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
       "conclusion": "",
+      "createdAt": "2026-07-09T14:45:56Z",
+      "databaseId": 29026715967,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "backfill-subtitles"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-09T14:40:03Z",
+      "databaseId": 29026307767,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-09T14:39:58Z",
+      "databaseId": 29026302229,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-09T14:38:57Z",
+      "databaseId": 29026233695,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-07-09T14:38:50Z",
+      "databaseId": 29026226578,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-09T14:37:21Z",
       "databaseId": 29026126978,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "backfill-subtitles"
     },
     {
@@ -51,11 +99,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-09T14:34:17Z",
       "databaseId": 29025914396,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
@@ -126,54 +174,6 @@
       "conclusion": "success",
       "createdAt": "2026-07-09T14:20:12Z",
       "databaseId": 29024944679,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-09T14:19:16Z",
-      "databaseId": 29024882244,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-09T14:10:09Z",
-      "databaseId": 29024260537,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "backfill-subtitles"
-    },
-    {
-      "conclusion": "failure",
-      "createdAt": "2026-07-09T14:04:14Z",
-      "databaseId": 29023860235,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-09T13:56:01Z",
-      "databaseId": 29023296051,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-09T13:55:58Z",
-      "databaseId": 29023293054,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-09T13:55:56Z",
-      "databaseId": 29023290433,
       "headBranch": "main",
       "status": "completed",
       "workflowName": "audit-language"
@@ -87669,6 +87669,146 @@
         "episode_id": 42281,
         "display_name": "S.W.A.T. S08E11 - Jantar CZ Dabing",
         "video_id": 27299934
+      },
+      {
+        "episode_id": 7576,
+        "display_name": "Červený trpaslík S01E03 - Rovnováha sil CZ Dabing",
+        "video_id": 27300324
+      },
+      {
+        "episode_id": 7578,
+        "display_name": "Červený trpaslík S01E05 - Sebevědomí a Mindrák CZ Dabing",
+        "video_id": 27300479
+      },
+      {
+        "episode_id": 42284,
+        "display_name": "S.W.A.T. S08E14 - Santa Clara CZ Dabing",
+        "video_id": 27300635
+      },
+      {
+        "episode_id": 64394,
+        "display_name": "Citadela S02E01 - Smažená Aljaška CZ Dabing",
+        "video_id": 27300844
+      },
+      {
+        "episode_id": 64396,
+        "display_name": "Citadela S02E03 - Kalhoty CZ Dabing",
+        "video_id": 27300983
+      },
+      {
+        "episode_id": 64398,
+        "display_name": "Citadela S02E05 - Rodinné památky CZ Dabing",
+        "video_id": 27301087
+      },
+      {
+        "episode_id": 64400,
+        "display_name": "Citadela S02E07 - Na zdraví! CZ Dabing",
+        "video_id": 27301251
+      },
+      {
+        "episode_id": 89542,
+        "display_name": "Interview with the Vampire S01E01 - 1. epizoda CZ Titulky",
+        "video_id": 27301369
+      },
+      {
+        "episode_id": 106846,
+        "display_name": "Pán času S01E01 - 1. epizoda CZ Dabing",
+        "video_id": 27301504
+      },
+      {
+        "episode_id": 106848,
+        "display_name": "Pán času S01E03 - 3. epizoda CZ Dabing",
+        "video_id": 27301614
+      },
+      {
+        "episode_id": 106850,
+        "display_name": "Pán času S01E05 - 5. epizoda CZ Dabing",
+        "video_id": 27301752
+      },
+      {
+        "episode_id": 106852,
+        "display_name": "Pán času S01E07 - 7. epizoda CZ Dabing",
+        "video_id": 27301924
+      },
+      {
+        "episode_id": 106854,
+        "display_name": "Pán času S02E01 - 1. epizoda CZ Dabing",
+        "video_id": 27302032
+      },
+      {
+        "episode_id": 7575,
+        "display_name": "Červený trpaslík S01E02 - Ozvěny budoucnosti CZ Dabing",
+        "video_id": 27300316
+      },
+      {
+        "episode_id": 7579,
+        "display_name": "Červený trpaslík S01E06 - Já na druhou CZ Dabing",
+        "video_id": 27300487
+      },
+      {
+        "episode_id": 25723,
+        "display_name": "Červený trpaslík S02E01 - Kryton CZ Dabing",
+        "video_id": 27300619
+      },
+      {
+        "episode_id": 25725,
+        "display_name": "Červený trpaslík S02E03 - Díky za tu vzpomínku CZ Dabing",
+        "video_id": 27300772
+      },
+      {
+        "episode_id": 25727,
+        "display_name": "Červený trpaslík S02E05 - Queeg CZ Dabing",
+        "video_id": 27300922
+      },
+      {
+        "episode_id": 25729,
+        "display_name": "Červený trpaslík S03E01 - Pozpátku CZ Titulky",
+        "video_id": 27301020
+      },
+      {
+        "episode_id": 25731,
+        "display_name": "Červený trpaslík S03E03 - Polymorf CZ Dabing",
+        "video_id": 27301118
+      },
+      {
+        "episode_id": 25733,
+        "display_name": "Červený trpaslík S03E05 - Fotostroj času CZ Dabing",
+        "video_id": 27301300
+      },
+      {
+        "episode_id": 42283,
+        "display_name": "S.W.A.T. S08E13 - Vysoká pozice CZ Dabing",
+        "video_id": 27301470
+      },
+      {
+        "episode_id": 64395,
+        "display_name": "Citadela S02E02 - Studená sprcha CZ Dabing",
+        "video_id": 27301656
+      },
+      {
+        "episode_id": 64397,
+        "display_name": "Citadela S02E04 - Nerozum CZ Dabing",
+        "video_id": 27301754
+      },
+      {
+        "episode_id": 64399,
+        "display_name": "Citadela S02E06 - Vysočina CZ Dabing",
+        "video_id": 27301851
+      },
+      {
+        "episode_id": 106847,
+        "display_name": "Pán času S01E02 - 2. epizoda CZ Dabing",
+        "video_id": 27301974
+      },
+      {
+        "episode_id": 106849,
+        "display_name": "Pán času S01E04 - 4. epizoda CZ Dabing",
+        "video_id": 27302071
+      },
+      {
+        "episode_id": 106851,
+        "display_name": "Pán času S01E06 - 6. epizoda CZ Dabing",
+        "video_id": 27302168
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -175056,6 +175196,146 @@
         "episode_id": 42281,
         "display_name": "S.W.A.T. S08E11 - Jantar CZ Dabing",
         "video_id": 27299934
+      },
+      {
+        "episode_id": 7576,
+        "display_name": "Červený trpaslík S01E03 - Rovnováha sil CZ Dabing",
+        "video_id": 27300324
+      },
+      {
+        "episode_id": 7578,
+        "display_name": "Červený trpaslík S01E05 - Sebevědomí a Mindrák CZ Dabing",
+        "video_id": 27300479
+      },
+      {
+        "episode_id": 42284,
+        "display_name": "S.W.A.T. S08E14 - Santa Clara CZ Dabing",
+        "video_id": 27300635
+      },
+      {
+        "episode_id": 64394,
+        "display_name": "Citadela S02E01 - Smažená Aljaška CZ Dabing",
+        "video_id": 27300844
+      },
+      {
+        "episode_id": 64396,
+        "display_name": "Citadela S02E03 - Kalhoty CZ Dabing",
+        "video_id": 27300983
+      },
+      {
+        "episode_id": 64398,
+        "display_name": "Citadela S02E05 - Rodinné památky CZ Dabing",
+        "video_id": 27301087
+      },
+      {
+        "episode_id": 64400,
+        "display_name": "Citadela S02E07 - Na zdraví! CZ Dabing",
+        "video_id": 27301251
+      },
+      {
+        "episode_id": 89542,
+        "display_name": "Interview with the Vampire S01E01 - 1. epizoda CZ Titulky",
+        "video_id": 27301369
+      },
+      {
+        "episode_id": 106846,
+        "display_name": "Pán času S01E01 - 1. epizoda CZ Dabing",
+        "video_id": 27301504
+      },
+      {
+        "episode_id": 106848,
+        "display_name": "Pán času S01E03 - 3. epizoda CZ Dabing",
+        "video_id": 27301614
+      },
+      {
+        "episode_id": 106850,
+        "display_name": "Pán času S01E05 - 5. epizoda CZ Dabing",
+        "video_id": 27301752
+      },
+      {
+        "episode_id": 106852,
+        "display_name": "Pán času S01E07 - 7. epizoda CZ Dabing",
+        "video_id": 27301924
+      },
+      {
+        "episode_id": 106854,
+        "display_name": "Pán času S02E01 - 1. epizoda CZ Dabing",
+        "video_id": 27302032
+      },
+      {
+        "episode_id": 7575,
+        "display_name": "Červený trpaslík S01E02 - Ozvěny budoucnosti CZ Dabing",
+        "video_id": 27300316
+      },
+      {
+        "episode_id": 7579,
+        "display_name": "Červený trpaslík S01E06 - Já na druhou CZ Dabing",
+        "video_id": 27300487
+      },
+      {
+        "episode_id": 25723,
+        "display_name": "Červený trpaslík S02E01 - Kryton CZ Dabing",
+        "video_id": 27300619
+      },
+      {
+        "episode_id": 25725,
+        "display_name": "Červený trpaslík S02E03 - Díky za tu vzpomínku CZ Dabing",
+        "video_id": 27300772
+      },
+      {
+        "episode_id": 25727,
+        "display_name": "Červený trpaslík S02E05 - Queeg CZ Dabing",
+        "video_id": 27300922
+      },
+      {
+        "episode_id": 25729,
+        "display_name": "Červený trpaslík S03E01 - Pozpátku CZ Titulky",
+        "video_id": 27301020
+      },
+      {
+        "episode_id": 25731,
+        "display_name": "Červený trpaslík S03E03 - Polymorf CZ Dabing",
+        "video_id": 27301118
+      },
+      {
+        "episode_id": 25733,
+        "display_name": "Červený trpaslík S03E05 - Fotostroj času CZ Dabing",
+        "video_id": 27301300
+      },
+      {
+        "episode_id": 42283,
+        "display_name": "S.W.A.T. S08E13 - Vysoká pozice CZ Dabing",
+        "video_id": 27301470
+      },
+      {
+        "episode_id": 64395,
+        "display_name": "Citadela S02E02 - Studená sprcha CZ Dabing",
+        "video_id": 27301656
+      },
+      {
+        "episode_id": 64397,
+        "display_name": "Citadela S02E04 - Nerozum CZ Dabing",
+        "video_id": 27301754
+      },
+      {
+        "episode_id": 64399,
+        "display_name": "Citadela S02E06 - Vysočina CZ Dabing",
+        "video_id": 27301851
+      },
+      {
+        "episode_id": 106847,
+        "display_name": "Pán času S01E02 - 2. epizoda CZ Dabing",
+        "video_id": 27301974
+      },
+      {
+        "episode_id": 106849,
+        "display_name": "Pán času S01E04 - 4. epizoda CZ Dabing",
+        "video_id": 27302071
+      },
+      {
+        "episode_id": 106851,
+        "display_name": "Pán času S01E06 - 6. epizoda CZ Dabing",
+        "video_id": 27302168
       }
     ],
     "prepared_not_upload_ready": [
@@ -175362,166 +175642,6 @@
     ],
     "whisper_review_pending": [
       {
-        "episode_id": 60262,
-        "source_id": -30413402137923878,
-        "series_title": "Alcatraz",
-        "episode_code": "S01E02",
-        "source_title": "Alcatraz - S1E2 Ernest Cobb EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 60262,
-        "source_id": -54071420313703459,
-        "series_title": "Alcatraz",
-        "episode_code": "S01E02",
-        "source_title": "Alcatraz - S01E02 - Ernest Cobb",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 60262,
-        "source_id": -65434639129048311,
-        "series_title": "Alcatraz",
-        "episode_code": "S01E02",
-        "source_title": "Alcatraz - S01E02 - Ernest Cobb",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 60260,
-        "source_id": -24225246444340243,
-        "series_title": "Alcatraz",
-        "episode_code": "S01E04",
-        "source_title": "Alcatraz - S1E4 Cal Sweeney EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 60260,
-        "source_id": -7880840145358162,
-        "series_title": "Alcatraz",
-        "episode_code": "S01E04",
-        "source_title": "Alcatraz - S01E04 - Cal Sweeney",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 60263,
-        "source_id": -31830461623804624,
-        "series_title": "Alcatraz",
-        "episode_code": "S01E06",
-        "source_title": "Alcatraz - S1E6 Paxton Petty EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 60263,
-        "source_id": -45788582513488769,
-        "series_title": "Alcatraz",
-        "episode_code": "S01E06",
-        "source_title": "Alcatraz - S01E06 - Paxton Petty",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 60263,
-        "source_id": -8558223546983942,
-        "series_title": "Alcatraz",
-        "episode_code": "S01E06",
-        "source_title": "Alcatraz - S01E06 - Paxton Petty",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 60264,
-        "source_id": -36074467986520731,
-        "series_title": "Alcatraz",
-        "episode_code": "S01E08",
-        "source_title": "Alcatraz - S01E08 - Clarence Montgomery",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 60264,
-        "source_id": -40324891993356610,
-        "series_title": "Alcatraz",
-        "episode_code": "S01E08",
-        "source_title": "Alcatraz - S1E8 Clarence Montgomery EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2219,
-        "source_id": -22963904210878056,
-        "series_title": "ALF",
-        "episode_code": "S02E05",
-        "source_title": "Alf S02E05. Boj o diváka",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2219,
-        "source_id": -15828323762634423,
-        "series_title": "ALF",
-        "episode_code": "S02E05",
-        "source_title": "ALF 02x05. Boj o diváka",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2219,
-        "source_id": -43079212829671,
-        "series_title": "ALF",
-        "episode_code": "S02E05",
-        "source_title": "ALF.S02E05 Hlavný vysielací čas sk.mkv",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2220,
-        "source_id": -62395031307976589,
-        "series_title": "ALF",
-        "episode_code": "S02E06",
-        "source_title": "Alf S02E06. Vydařený večer",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2220,
-        "source_id": -9337620737127699,
-        "series_title": "ALF",
-        "episode_code": "S02E06",
-        "source_title": "ALF.S02E06 Čarovný večer sk.mkv",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2220,
-        "source_id": -3792581768969783,
-        "series_title": "ALF",
-        "episode_code": "S02E06",
-        "source_title": "Alf S02E06 (1987) SKdabing",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2221,
-        "source_id": -56443319443163979,
-        "series_title": "ALF",
-        "episode_code": "S02E07",
-        "source_title": "ALF 02x07. Soutěž krásy",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2221,
-        "source_id": -40598549413248203,
-        "series_title": "ALF",
-        "episode_code": "S02E07",
-        "source_title": "ALF.S02E07 Súťaž krásy sk.mkv",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2221,
-        "source_id": -1378688943507587,
-        "series_title": "ALF",
-        "episode_code": "S02E07",
-        "source_title": "Alf S02E07. Soutěž krásy",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2222,
-        "source_id": -66528102706282406,
-        "series_title": "ALF",
-        "episode_code": "S02E08",
-        "source_title": "Alf S02E08 (1987) SKdabing",
-        "status": "needs_whisper"
-      },
-      {
         "episode_id": 2222,
         "source_id": -58244077605384788,
         "series_title": "ALF",
@@ -175759,6 +175879,166 @@
         "series_title": "ALF",
         "episode_code": "S02E17",
         "source_title": "Alf S02E17 (1988) SKdabing",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2231,
+        "source_id": -37383085373356293,
+        "series_title": "ALF",
+        "episode_code": "S02E17",
+        "source_title": "ALF 02x17. Občané a zloději 1.část",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2232,
+        "source_id": -70071489382938744,
+        "series_title": "ALF",
+        "episode_code": "S02E18",
+        "source_title": "ALF.S02E18 Ten čo ma stráži 2.mkv",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2232,
+        "source_id": -44497050143151581,
+        "series_title": "ALF",
+        "episode_code": "S02E18",
+        "source_title": "Alf S02E18 (1988) SKdabing",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2232,
+        "source_id": -34577028388209975,
+        "series_title": "ALF",
+        "episode_code": "S02E18",
+        "source_title": "Alf S02E18. Občané a zloději 2.část",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2232,
+        "source_id": -31025742482509933,
+        "series_title": "ALF",
+        "episode_code": "S02E18",
+        "source_title": "ALF 02x18. Občané a zloději 2.část",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2233,
+        "source_id": -68314019067652556,
+        "series_title": "ALF",
+        "episode_code": "S02E19",
+        "source_title": "ALF 02x19. Na vlastní pěst",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2233,
+        "source_id": -59292473577051668,
+        "series_title": "ALF",
+        "episode_code": "S02E19",
+        "source_title": "Alf S02E19. Na vlastní pěst",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2233,
+        "source_id": -35235960952410227,
+        "series_title": "ALF",
+        "episode_code": "S02E19",
+        "source_title": "Alf S02E19 (1988) SKdabing",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2236,
+        "source_id": -69259160427720196,
+        "series_title": "ALF",
+        "episode_code": "S02E20",
+        "source_title": "Alf S02E20 (1988) SKdabing",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2236,
+        "source_id": -49849063583687519,
+        "series_title": "ALF",
+        "episode_code": "S02E20",
+        "source_title": "ALF.S02E20 Si obyčajný pako sk.mkv",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2236,
+        "source_id": -28676424935579940,
+        "series_title": "ALF",
+        "episode_code": "S02E20",
+        "source_title": "ALF 02x20. Pes v domě",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2236,
+        "source_id": -20234857433694424,
+        "series_title": "ALF",
+        "episode_code": "S02E20",
+        "source_title": "Alf S02E20. Pes v domě",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2234,
+        "source_id": -51287350948912605,
+        "series_title": "ALF",
+        "episode_code": "S02E21",
+        "source_title": "ALF 02x21. Rváč",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2234,
+        "source_id": -48149952593795934,
+        "series_title": "ALF",
+        "episode_code": "S02E21",
+        "source_title": "Alf S02E21. Rváč",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2234,
+        "source_id": -28267228915567628,
+        "series_title": "ALF",
+        "episode_code": "S02E21",
+        "source_title": "Alf S02E21 (1988) SKdabing",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2234,
+        "source_id": -58053417423354233,
+        "series_title": "ALF",
+        "episode_code": "S02E21",
+        "source_title": "Alf 2x21 Som tvoja bábka.mkv",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2235,
+        "source_id": -66587261633841746,
+        "series_title": "ALF",
+        "episode_code": "S02E22",
+        "source_title": "Alf S02E22 (1988) SKdabing",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2235,
+        "source_id": -54165746058325909,
+        "series_title": "ALF",
+        "episode_code": "S02E22",
+        "source_title": "Alf S02E22. Stěhování",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2235,
+        "source_id": -38900103769280630,
+        "series_title": "ALF",
+        "episode_code": "S02E22",
+        "source_title": "ALF 02x22. Stěhování",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2235,
+        "source_id": -27510311048692278,
+        "series_title": "ALF",
+        "episode_code": "S02E22",
+        "source_title": "Alf S02E22 SKdab",
         "status": "needs_whisper"
       }
     ],
@@ -176217,13 +176497,13 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 19,
+    "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
-    "whisper_non_cz_needs_subtitles": 1297,
-    "whisper_confirmed_cz": 721,
-    "needs_whisper": 28220,
+    "whisper_non_cz_needs_subtitles": 1307,
+    "whisper_confirmed_cz": 731,
+    "needs_whisper": 28200,
     "whisper_failed": 2
   },
   "subtitle_followup_statuses": {
