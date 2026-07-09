@@ -1,37 +1,93 @@
 {
   "counts": {
     "backlog_episodes": 171476,
-    "manifest_upload_ready_episodes": 874,
-    "uploaded_episodes": 21892,
-    "prepared_source_episodes": 24950,
+    "manifest_upload_ready_episodes": 860,
+    "uploaded_episodes": 21908,
+    "prepared_source_episodes": 24936,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 80,
-    "language_whisper_attempted_sources": 80,
-    "language_pending_whisper_sources": 2604,
+    "language_audited_sources": 40,
+    "language_whisper_attempted_sources": 40,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 30184,
-    "whisper_review_pending_sources": 28146,
+    "whisper_review_pending_sources": 28126,
     "subtitle_followup_sources": 5702,
     "subtitle_followup_pending_sources": 5702
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-07-09T13:34:26Z",
-      "databaseId": 29021860828,
+      "createdAt": "2026-07-09T13:55:02Z",
+      "databaseId": 29023229005,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-07-09T13:54:56Z",
+      "databaseId": 29023221182,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-07-09T13:47:17Z",
+      "databaseId": 29022712188,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-09T13:43:26Z",
+      "databaseId": 29022450725,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "backfill-subtitles"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-09T13:35:33Z",
+      "databaseId": 29021935094,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-09T13:35:30Z",
+      "databaseId": 29021931357,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-09T13:35:28Z",
+      "databaseId": 29021929391,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-sources"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-09T13:34:26Z",
+      "databaseId": 29021860828,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-09T13:34:20Z",
       "databaseId": 29021853425,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "backfill-subtitles"
     },
     {
@@ -59,11 +115,11 @@
       "workflowName": "prepare-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-09T13:29:47Z",
       "databaseId": 29021548702,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -75,11 +131,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-09T13:29:22Z",
       "databaseId": 29021522020,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -95,7 +151,7 @@
       "createdAt": "2026-07-09T13:28:03Z",
       "databaseId": 29021437540,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "sync"
     },
     {
@@ -118,62 +174,6 @@
       "conclusion": "success",
       "createdAt": "2026-07-09T13:19:01Z",
       "databaseId": 29020902681,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-09T13:16:13Z",
-      "databaseId": 29020748931,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "refresh-backlog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-09T13:12:48Z",
-      "databaseId": 29020559767,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-09T13:12:46Z",
-      "databaseId": 29020557320,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-09T13:12:04Z",
-      "databaseId": 29020520388,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "backfill-subtitles"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-09T13:11:30Z",
-      "databaseId": 29020490610,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-09T13:10:17Z",
-      "databaseId": 29020425929,
-      "headBranch": "main",
-      "status": "pending",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-09T13:06:53Z",
-      "databaseId": 29020250283,
       "headBranch": "main",
       "status": "completed",
       "workflowName": "process-whisper-review"
@@ -87326,6 +87326,51 @@
         "video_id": 27294053
       },
       {
+        "episode_id": 42190,
+        "display_name": "S.W.A.T. S05E10 - 10. epizoda CZ Dabing",
+        "video_id": 27294332
+      },
+      {
+        "episode_id": 42194,
+        "display_name": "S.W.A.T. S05E12 - 12. epizoda CZ Dabing",
+        "video_id": 27294605
+      },
+      {
+        "episode_id": 42192,
+        "display_name": "S.W.A.T. S05E14 - 14. epizoda CZ Dabing",
+        "video_id": 27294806
+      },
+      {
+        "episode_id": 42258,
+        "display_name": "S.W.A.T. S05E15 - 15. epizoda CZ Dabing",
+        "video_id": 27294984
+      },
+      {
+        "episode_id": 65922,
+        "display_name": "S.W.A.T. S05E22 - 22. epizoda CZ Dabing",
+        "video_id": 27295200
+      },
+      {
+        "episode_id": 42270,
+        "display_name": "S.W.A.T. S06E01 - 1. epizoda CZ Dabing",
+        "video_id": 27295492
+      },
+      {
+        "episode_id": 42248,
+        "display_name": "S.W.A.T. S06E03 - 3. epizoda CZ Dabing",
+        "video_id": 27295741
+      },
+      {
+        "episode_id": 42250,
+        "display_name": "S.W.A.T. S06E05 - 5. epizoda CZ Dabing",
+        "video_id": 27295918
+      },
+      {
+        "episode_id": 42268,
+        "display_name": "S.W.A.T. S06E06 - 6. epizoda CZ Dabing",
+        "video_id": 27296048
+      },
+      {
         "episode_id": 42235,
         "display_name": "S.W.A.T. S04E06 - 6. epizoda CZ Dabing",
         "video_id": 27292781
@@ -87389,6 +87434,41 @@
         "episode_id": 42191,
         "display_name": "S.W.A.T. S05E13 - 13. epizoda CZ Dabing",
         "video_id": 27293955
+      },
+      {
+        "episode_id": 42259,
+        "display_name": "S.W.A.T. S05E16 - 16. epizoda CZ Dabing",
+        "video_id": 27294286
+      },
+      {
+        "episode_id": 42243,
+        "display_name": "S.W.A.T. S05E17 - 17. epizoda CZ Dabing",
+        "video_id": 27294461
+      },
+      {
+        "episode_id": 42245,
+        "display_name": "S.W.A.T. S05E19 - 19. epizoda CZ Dabing",
+        "video_id": 27294597
+      },
+      {
+        "episode_id": 65921,
+        "display_name": "S.W.A.T. S05E21 - 21. epizoda CZ Dabing",
+        "video_id": 27294751
+      },
+      {
+        "episode_id": 42247,
+        "display_name": "S.W.A.T. S06E02 - 2. epizoda CZ Dabing",
+        "video_id": 27294906
+      },
+      {
+        "episode_id": 42249,
+        "display_name": "S.W.A.T. S06E04 - 4. epizoda CZ Dabing",
+        "video_id": 27295056
+      },
+      {
+        "episode_id": 42251,
+        "display_name": "S.W.A.T. S06E07 - 7. epizoda CZ Dabing",
+        "video_id": 27295262
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -174433,6 +174513,51 @@
         "video_id": 27294053
       },
       {
+        "episode_id": 42190,
+        "display_name": "S.W.A.T. S05E10 - 10. epizoda CZ Dabing",
+        "video_id": 27294332
+      },
+      {
+        "episode_id": 42194,
+        "display_name": "S.W.A.T. S05E12 - 12. epizoda CZ Dabing",
+        "video_id": 27294605
+      },
+      {
+        "episode_id": 42192,
+        "display_name": "S.W.A.T. S05E14 - 14. epizoda CZ Dabing",
+        "video_id": 27294806
+      },
+      {
+        "episode_id": 42258,
+        "display_name": "S.W.A.T. S05E15 - 15. epizoda CZ Dabing",
+        "video_id": 27294984
+      },
+      {
+        "episode_id": 65922,
+        "display_name": "S.W.A.T. S05E22 - 22. epizoda CZ Dabing",
+        "video_id": 27295200
+      },
+      {
+        "episode_id": 42270,
+        "display_name": "S.W.A.T. S06E01 - 1. epizoda CZ Dabing",
+        "video_id": 27295492
+      },
+      {
+        "episode_id": 42248,
+        "display_name": "S.W.A.T. S06E03 - 3. epizoda CZ Dabing",
+        "video_id": 27295741
+      },
+      {
+        "episode_id": 42250,
+        "display_name": "S.W.A.T. S06E05 - 5. epizoda CZ Dabing",
+        "video_id": 27295918
+      },
+      {
+        "episode_id": 42268,
+        "display_name": "S.W.A.T. S06E06 - 6. epizoda CZ Dabing",
+        "video_id": 27296048
+      },
+      {
         "episode_id": 42235,
         "display_name": "S.W.A.T. S04E06 - 6. epizoda CZ Dabing",
         "video_id": 27292781
@@ -174496,6 +174621,41 @@
         "episode_id": 42191,
         "display_name": "S.W.A.T. S05E13 - 13. epizoda CZ Dabing",
         "video_id": 27293955
+      },
+      {
+        "episode_id": 42259,
+        "display_name": "S.W.A.T. S05E16 - 16. epizoda CZ Dabing",
+        "video_id": 27294286
+      },
+      {
+        "episode_id": 42243,
+        "display_name": "S.W.A.T. S05E17 - 17. epizoda CZ Dabing",
+        "video_id": 27294461
+      },
+      {
+        "episode_id": 42245,
+        "display_name": "S.W.A.T. S05E19 - 19. epizoda CZ Dabing",
+        "video_id": 27294597
+      },
+      {
+        "episode_id": 65921,
+        "display_name": "S.W.A.T. S05E21 - 21. epizoda CZ Dabing",
+        "video_id": 27294751
+      },
+      {
+        "episode_id": 42247,
+        "display_name": "S.W.A.T. S06E02 - 2. epizoda CZ Dabing",
+        "video_id": 27294906
+      },
+      {
+        "episode_id": 42249,
+        "display_name": "S.W.A.T. S06E04 - 4. epizoda CZ Dabing",
+        "video_id": 27295056
+      },
+      {
+        "episode_id": 42251,
+        "display_name": "S.W.A.T. S06E07 - 7. epizoda CZ Dabing",
+        "video_id": 27295262
       }
     ],
     "prepared_not_upload_ready": [
@@ -174802,166 +174962,6 @@
     ],
     "whisper_review_pending": [
       {
-        "episode_id": 2222,
-        "source_id": -58244077605384788,
-        "series_title": "ALF",
-        "episode_code": "S02E08",
-        "source_title": "Alf S02E08. Kosmická škytavka",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2222,
-        "source_id": -38449550078075135,
-        "series_title": "ALF",
-        "episode_code": "S02E08",
-        "source_title": "ALF.S02E08 Niečo sa so mnou deje sk.mkv",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2222,
-        "source_id": -20061607805950509,
-        "series_title": "ALF",
-        "episode_code": "S02E08",
-        "source_title": "ALF 02x08. Kosmická škytavka",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2223,
-        "source_id": -58436161681823073,
-        "series_title": "ALF",
-        "episode_code": "S02E09",
-        "source_title": "Alf S02E09 (1987) SKdabing",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2223,
-        "source_id": -43820234066160443,
-        "series_title": "ALF",
-        "episode_code": "S02E09",
-        "source_title": "ALF.S02E09 Nočný vlak sk.mkv",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2223,
-        "source_id": -16722904466543447,
-        "series_title": "ALF",
-        "episode_code": "S02E09",
-        "source_title": "ALF 02x09. Noční vlak",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2224,
-        "source_id": -69997090270106146,
-        "series_title": "ALF",
-        "episode_code": "S02E10",
-        "source_title": "ALF 02x10. Špetka romantiky",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2224,
-        "source_id": -23715269807195417,
-        "series_title": "ALF",
-        "episode_code": "S02E10",
-        "source_title": "Alf S02E10 (1987) SKdabing",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2224,
-        "source_id": -21952038636929867,
-        "series_title": "ALF",
-        "episode_code": "S02E10",
-        "source_title": "ALF.S02E10 Nie je to romantické sk.mkv",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2224,
-        "source_id": -6849634048089981,
-        "series_title": "ALF",
-        "episode_code": "S02E10",
-        "source_title": "Alf S02E10. Špetka romantiky",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2225,
-        "source_id": -64930908119899386,
-        "series_title": "ALF",
-        "episode_code": "S02E11",
-        "source_title": "Alf S02E11. Kandidáti",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2225,
-        "source_id": -58493863147754326,
-        "series_title": "ALF",
-        "episode_code": "S02E11",
-        "source_title": "ALF.S02E11 Voľby prezidenta sk.mkv",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2225,
-        "source_id": -6530238272387877,
-        "series_title": "ALF",
-        "episode_code": "S02E11",
-        "source_title": "ALF 02x11. Kandidáti",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2225,
-        "source_id": -71859828755407688,
-        "series_title": "ALF",
-        "episode_code": "S02E11",
-        "source_title": "Alf 2x11 Voľby prezidenta.mkv",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2226,
-        "source_id": -33386940199993691,
-        "series_title": "ALF",
-        "episode_code": "S02E12",
-        "source_title": "ALF 02x12-13. Alfovy výjimečné Vánoce část 1 i 2",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2226,
-        "source_id": -7634415751222692,
-        "series_title": "ALF",
-        "episode_code": "S02E12",
-        "source_title": "Alf S02E12-13. Alfovy výjimečné Vánoce část 1 i 2",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2227,
-        "source_id": -62952277417125821,
-        "series_title": "ALF",
-        "episode_code": "S02E13",
-        "source_title": "Alf S02E13 SKdab",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2227,
-        "source_id": -54341523020859324,
-        "series_title": "ALF",
-        "episode_code": "S02E13",
-        "source_title": "Alf 2x13 Potrebujem svedka.mkv",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2228,
-        "source_id": -68786022409441919,
-        "series_title": "ALF",
-        "episode_code": "S02E14",
-        "source_title": "Alf S02E14. Nový soused",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2228,
-        "source_id": -47122659003284873,
-        "series_title": "ALF",
-        "episode_code": "S02E14",
-        "source_title": "ALF.S02E14 Chlapec od susedov sk.mkv",
-        "status": "needs_whisper"
-      },
-      {
         "episode_id": 2228,
         "source_id": -21292496830909750,
         "series_title": "ALF",
@@ -175199,6 +175199,166 @@
         "series_title": "ALF",
         "episode_code": "S02E22",
         "source_title": "Alf S02E22 SKdab",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2237,
+        "source_id": -28609494552991859,
+        "series_title": "ALF",
+        "episode_code": "S02E23",
+        "source_title": "Alf S02E23 (1988) SKdabing",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2237,
+        "source_id": -19821727731539250,
+        "series_title": "ALF",
+        "episode_code": "S02E23",
+        "source_title": "ALF 02x23. Alfovo druhé já",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2237,
+        "source_id": -7748152571175416,
+        "series_title": "ALF",
+        "episode_code": "S02E23",
+        "source_title": "Alf S02E23. Alfovo druhé já",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2238,
+        "source_id": -71255977498536494,
+        "series_title": "ALF",
+        "episode_code": "S02E24",
+        "source_title": "ALF 02x24. Tequila",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2238,
+        "source_id": -52894265826026278,
+        "series_title": "ALF",
+        "episode_code": "S02E24",
+        "source_title": "Alf S02E24 (1988) SKdabing",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2238,
+        "source_id": -9626043782521225,
+        "series_title": "ALF",
+        "episode_code": "S02E24",
+        "source_title": "Alf S02E24. Tequila",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2238,
+        "source_id": -2077510419823070,
+        "series_title": "ALF",
+        "episode_code": "S02E24",
+        "source_title": "Alf S02E24 SKdab",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2239,
+        "source_id": -67914705720152070,
+        "series_title": "ALF",
+        "episode_code": "S02E25",
+        "source_title": "ALF 02x25. Přátelé",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2239,
+        "source_id": -45884898103196760,
+        "series_title": "ALF",
+        "episode_code": "S02E25",
+        "source_title": "Alf S02E25. Přátelé",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2239,
+        "source_id": -24681474139563800,
+        "series_title": "ALF",
+        "episode_code": "S02E25",
+        "source_title": "Alf S02E25 (1988) SKdabing",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2239,
+        "source_id": -18821178814648408,
+        "series_title": "ALF",
+        "episode_code": "S02E25",
+        "source_title": "ALF S02E25 Sme Rodina",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2240,
+        "source_id": -41169401118245559,
+        "series_title": "ALF",
+        "episode_code": "S02E26",
+        "source_title": "Alf S02E26 (1988) SKdabing",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2240,
+        "source_id": -26409589783322149,
+        "series_title": "ALF",
+        "episode_code": "S02E26",
+        "source_title": "ALF 02x26. Na mizině",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2240,
+        "source_id": -16679313801254078,
+        "series_title": "ALF",
+        "episode_code": "S02E26",
+        "source_title": "Alf S02E26. Na mizině",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2240,
+        "source_id": -16970507433197081,
+        "series_title": "ALF",
+        "episode_code": "S02E26",
+        "source_title": "ALF S02E26 Kam Na Univerzitu",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2241,
+        "source_id": -65370223201896634,
+        "series_title": "ALF",
+        "episode_code": "S03E01",
+        "source_title": "Alf S03E01 (1988) SKdab",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2241,
+        "source_id": -56023651011811276,
+        "series_title": "ALF",
+        "episode_code": "S03E01",
+        "source_title": "Alf S03E01. Pro lásku všechno",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2241,
+        "source_id": -21858460836069928,
+        "series_title": "ALF",
+        "episode_code": "S03E01",
+        "source_title": "ALF 03x01. Pro lásku všechno",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2241,
+        "source_id": -60795147909647223,
+        "series_title": "ALF",
+        "episode_code": "S03E01",
+        "source_title": "Alf S03E01 SKdab",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2242,
+        "source_id": -56467512550960622,
+        "series_title": "ALF",
+        "episode_code": "S03E02",
+        "source_title": "Alf S03E02 (1988) SKdab",
         "status": "needs_whisper"
       }
     ],
@@ -175657,13 +175817,13 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 79,
+    "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
-    "whisper_non_cz_needs_subtitles": 1307,
-    "whisper_confirmed_cz": 731,
-    "needs_whisper": 28144,
+    "whisper_non_cz_needs_subtitles": 1310,
+    "whisper_confirmed_cz": 748,
+    "needs_whisper": 28124,
     "whisper_failed": 2
   },
   "subtitle_followup_statuses": {
