@@ -1,37 +1,93 @@
 {
   "counts": {
     "backlog_episodes": 171787,
-    "manifest_upload_ready_episodes": 726,
-    "uploaded_episodes": 21649,
-    "prepared_source_episodes": 24303,
+    "manifest_upload_ready_episodes": 752,
+    "uploaded_episodes": 21663,
+    "prepared_source_episodes": 24350,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 112,
-    "language_whisper_attempted_sources": 74,
+    "language_audited_sources": 233,
+    "language_whisper_attempted_sources": 89,
     "language_pending_whisper_sources": 2604,
-    "whisper_review_sources": 29487,
-    "whisper_review_pending_sources": 27489,
+    "whisper_review_sources": 29526,
+    "whisper_review_pending_sources": 27508,
     "subtitle_followup_sources": 5590,
     "subtitle_followup_pending_sources": 5590
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-07-09T09:01:38Z",
-      "databaseId": 29006746243,
+      "createdAt": "2026-07-09T09:10:40Z",
+      "databaseId": 29007268803,
       "headBranch": "main",
       "status": "in_progress",
-      "workflowName": "ops-watchdog"
+      "workflowName": "backfill-subtitles"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-07-09T09:09:45Z",
+      "databaseId": 29007215276,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-09T09:08:10Z",
+      "databaseId": 29007124877,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-09T09:05:36Z",
+      "databaseId": 29006977368,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-09T09:02:42Z",
+      "databaseId": 29006808178,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-09T09:02:39Z",
+      "databaseId": 29006805334,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-09T09:02:37Z",
+      "databaseId": 29006803045,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-09T09:01:38Z",
+      "databaseId": 29006746243,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-09T08:47:31Z",
       "databaseId": 29005937615,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "backfill-subtitles"
     },
     {
@@ -55,7 +111,7 @@
       "createdAt": "2026-07-09T08:44:06Z",
       "databaseId": 29005741800,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "prepare-manifest"
     },
     {
@@ -120,62 +176,6 @@
       "databaseId": 29004304798,
       "headBranch": "main",
       "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-09T08:18:14Z",
-      "databaseId": 29004293454,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "backfill-subtitles"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-09T08:10:20Z",
-      "databaseId": 29003859053,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-09T08:10:17Z",
-      "databaseId": 29003856252,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-09T08:09:04Z",
-      "databaseId": 29003789147,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "backfill-subtitles"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-09T08:07:50Z",
-      "databaseId": 29003720614,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-09T08:06:14Z",
-      "databaseId": 29003628071,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-09T07:51:18Z",
-      "databaseId": 29002830410,
-      "headBranch": "main",
-      "status": "in_progress",
       "workflowName": "prepare-manifest"
     }
   ],
@@ -86111,6 +86111,41 @@
         "video_id": 27287466
       },
       {
+        "episode_id": 91938,
+        "display_name": "Rizzoli & Isles: Vraždy na pitevně S02E03 - Svátek námořníků CZ Dabing",
+        "video_id": 27287490
+      },
+      {
+        "episode_id": 108610,
+        "display_name": "Rizzoli & Isles: Vraždy na pitevně S02E07 - Dědictví krve CZ Dabing",
+        "video_id": 27287502
+      },
+      {
+        "episode_id": 91940,
+        "display_name": "Rizzoli & Isles: Vraždy na pitevně S02E08 - Můj nejhorší nepřítel CZ Dabing",
+        "video_id": 27287530
+      },
+      {
+        "episode_id": 108612,
+        "display_name": "Rizzoli & Isles: Vraždy na pitevně S02E10 - Nezapomeň na mě CZ Dabing",
+        "video_id": 27287548
+      },
+      {
+        "episode_id": 108614,
+        "display_name": "Rizzoli & Isles: Vraždy na pitevně S02E13 - Ne moc sladkých sedmnáct CZ Dabing",
+        "video_id": 27287573
+      },
+      {
+        "episode_id": 91942,
+        "display_name": "Rizzoli & Isles: Vraždy na pitevně S02E15 - Vražedný požár CZ Dabing",
+        "video_id": 27287594
+      },
+      {
+        "episode_id": 108616,
+        "display_name": "Rizzoli & Isles: Vraždy na pitevně S03E01 - Co tě nezabije CZ Dabing",
+        "video_id": 27287626
+      },
+      {
         "episode_id": 9941,
         "display_name": "Odkaz S03E10 - Dobrý konec vše napraví CZ Dabing",
         "video_id": 27287115
@@ -86174,6 +86209,41 @@
         "episode_id": 108611,
         "display_name": "Rizzoli & Isles: Vraždy na pitevně S02E09 - Sbohem, táto CZ Dabing",
         "video_id": 27287491
+      },
+      {
+        "episode_id": 108613,
+        "display_name": "Rizzoli & Isles: Vraždy na pitevně S02E11 - Sežeňte mi svědka CZ Dabing",
+        "video_id": 27287497
+      },
+      {
+        "episode_id": 91941,
+        "display_name": "Rizzoli & Isles: Vraždy na pitevně S02E12 - Potíže s bratrem CZ Dabing",
+        "video_id": 27287524
+      },
+      {
+        "episode_id": 108615,
+        "display_name": "Rizzoli & Isles: Vraždy na pitevně S02E14 - Nepřestávej tančit CZ Dabing",
+        "video_id": 27287536
+      },
+      {
+        "episode_id": 91943,
+        "display_name": "Rizzoli & Isles: Vraždy na pitevně S03E02 - Tajné hříchy CZ Dabing",
+        "video_id": 27287561
+      },
+      {
+        "episode_id": 108617,
+        "display_name": "Rizzoli & Isles: Vraždy na pitevně S03E04 - Dům panenek CZ Dabing",
+        "video_id": 27287576
+      },
+      {
+        "episode_id": 91975,
+        "display_name": "Rizzoli & Isles: Vraždy na pitevně S03E05 - Hozená rukavice CZ Dabing",
+        "video_id": 27287596
+      },
+      {
+        "episode_id": 108619,
+        "display_name": "Rizzoli & Isles: Vraždy na pitevně S03E07 - Láska bez hranic CZ Dabing",
+        "video_id": 27287617
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -172003,6 +172073,41 @@
         "video_id": 27287466
       },
       {
+        "episode_id": 91938,
+        "display_name": "Rizzoli & Isles: Vraždy na pitevně S02E03 - Svátek námořníků CZ Dabing",
+        "video_id": 27287490
+      },
+      {
+        "episode_id": 108610,
+        "display_name": "Rizzoli & Isles: Vraždy na pitevně S02E07 - Dědictví krve CZ Dabing",
+        "video_id": 27287502
+      },
+      {
+        "episode_id": 91940,
+        "display_name": "Rizzoli & Isles: Vraždy na pitevně S02E08 - Můj nejhorší nepřítel CZ Dabing",
+        "video_id": 27287530
+      },
+      {
+        "episode_id": 108612,
+        "display_name": "Rizzoli & Isles: Vraždy na pitevně S02E10 - Nezapomeň na mě CZ Dabing",
+        "video_id": 27287548
+      },
+      {
+        "episode_id": 108614,
+        "display_name": "Rizzoli & Isles: Vraždy na pitevně S02E13 - Ne moc sladkých sedmnáct CZ Dabing",
+        "video_id": 27287573
+      },
+      {
+        "episode_id": 91942,
+        "display_name": "Rizzoli & Isles: Vraždy na pitevně S02E15 - Vražedný požár CZ Dabing",
+        "video_id": 27287594
+      },
+      {
+        "episode_id": 108616,
+        "display_name": "Rizzoli & Isles: Vraždy na pitevně S03E01 - Co tě nezabije CZ Dabing",
+        "video_id": 27287626
+      },
+      {
         "episode_id": 9941,
         "display_name": "Odkaz S03E10 - Dobrý konec vše napraví CZ Dabing",
         "video_id": 27287115
@@ -172066,6 +172171,41 @@
         "episode_id": 108611,
         "display_name": "Rizzoli & Isles: Vraždy na pitevně S02E09 - Sbohem, táto CZ Dabing",
         "video_id": 27287491
+      },
+      {
+        "episode_id": 108613,
+        "display_name": "Rizzoli & Isles: Vraždy na pitevně S02E11 - Sežeňte mi svědka CZ Dabing",
+        "video_id": 27287497
+      },
+      {
+        "episode_id": 91941,
+        "display_name": "Rizzoli & Isles: Vraždy na pitevně S02E12 - Potíže s bratrem CZ Dabing",
+        "video_id": 27287524
+      },
+      {
+        "episode_id": 108615,
+        "display_name": "Rizzoli & Isles: Vraždy na pitevně S02E14 - Nepřestávej tančit CZ Dabing",
+        "video_id": 27287536
+      },
+      {
+        "episode_id": 91943,
+        "display_name": "Rizzoli & Isles: Vraždy na pitevně S03E02 - Tajné hříchy CZ Dabing",
+        "video_id": 27287561
+      },
+      {
+        "episode_id": 108617,
+        "display_name": "Rizzoli & Isles: Vraždy na pitevně S03E04 - Dům panenek CZ Dabing",
+        "video_id": 27287576
+      },
+      {
+        "episode_id": 91975,
+        "display_name": "Rizzoli & Isles: Vraždy na pitevně S03E05 - Hozená rukavice CZ Dabing",
+        "video_id": 27287596
+      },
+      {
+        "episode_id": 108619,
+        "display_name": "Rizzoli & Isles: Vraždy na pitevně S03E07 - Láska bez hranic CZ Dabing",
+        "video_id": 27287617
       }
     ],
     "prepared_not_upload_ready": [
@@ -172372,163 +172512,123 @@
     ],
     "whisper_review_pending": [
       {
-        "episode_id": 2217,
-        "source_id": -2803821219481806,
-        "series_title": "ALF",
-        "episode_code": "S02E03",
-        "source_title": "Alf S02E03. Alf není přelud",
+        "episode_id": 60259,
+        "source_id": -12645337385507031,
+        "series_title": "Alcatraz",
+        "episode_code": "S01E01",
+        "source_title": "Alcatraz - S01E01 - Pilot",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 2217,
-        "source_id": -33865800645704411,
-        "series_title": "ALF",
-        "episode_code": "S02E03",
-        "source_title": "Alf S02E03 SKdab",
+        "episode_id": 60259,
+        "source_id": -12705666690841359,
+        "series_title": "Alcatraz",
+        "episode_code": "S01E01",
+        "source_title": "Alcatraz - S1E1 Pilot EN",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 2218,
-        "source_id": -71036551395575216,
-        "series_title": "ALF",
-        "episode_code": "S02E04",
-        "source_title": "ALF 02x04. Nechoď do kláštera",
+        "episode_id": 60259,
+        "source_id": -3180651631990818,
+        "series_title": "Alcatraz",
+        "episode_code": "S01E01",
+        "source_title": "Alcatraz - S01E01 - Pilot",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 2218,
-        "source_id": -32165179279874815,
-        "series_title": "ALF",
-        "episode_code": "S02E04",
-        "source_title": "ALF.S02E04 Blues pre svadobné zvony sk.mkv",
+        "episode_id": 60259,
+        "source_id": -32766483325052157,
+        "series_title": "Alcatraz",
+        "episode_code": "S01E01",
+        "source_title": "Alcatraz-01x01-Jack-Sylvane-(Pilot)",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 2218,
-        "source_id": -27382299329004843,
-        "series_title": "ALF",
-        "episode_code": "S02E04",
-        "source_title": "Alf S02E04. Nechoď do kláštera",
+        "episode_id": 60265,
+        "source_id": -53412530761156526,
+        "series_title": "Alcatraz",
+        "episode_code": "S01E03",
+        "source_title": "Alcatraz - S1E3 Kit Nelson EN",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 2219,
-        "source_id": -22963904210878056,
-        "series_title": "ALF",
-        "episode_code": "S02E05",
-        "source_title": "Alf S02E05. Boj o diváka",
+        "episode_id": 60265,
+        "source_id": -55411171951697035,
+        "series_title": "Alcatraz",
+        "episode_code": "S01E03",
+        "source_title": "Alcatraz S1E3 Kit Nelson",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 2219,
-        "source_id": -15828323762634423,
-        "series_title": "ALF",
-        "episode_code": "S02E05",
-        "source_title": "ALF 02x05. Boj o diváka",
+        "episode_id": 60265,
+        "source_id": -13375769985439534,
+        "series_title": "Alcatraz",
+        "episode_code": "S01E03",
+        "source_title": "Alcatraz - S01E03 - Kit Nelson",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 2219,
-        "source_id": -43079212829671,
-        "series_title": "ALF",
-        "episode_code": "S02E05",
-        "source_title": "ALF.S02E05 Hlavný vysielací čas sk.mkv",
+        "episode_id": 60265,
+        "source_id": -19387872190143810,
+        "series_title": "Alcatraz",
+        "episode_code": "S01E03",
+        "source_title": "Alcatraz - S01E03 - Kit Nelson",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 2220,
-        "source_id": -62395031307976589,
-        "series_title": "ALF",
-        "episode_code": "S02E06",
-        "source_title": "Alf S02E06. Vydařený večer",
+        "episode_id": 60253,
+        "source_id": -68655725034118889,
+        "series_title": "Alcatraz",
+        "episode_code": "S01E05",
+        "source_title": "Alcatraz - S1E5 Guy Hastings EN",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 2220,
-        "source_id": -9337620737127699,
-        "series_title": "ALF",
-        "episode_code": "S02E06",
-        "source_title": "ALF.S02E06 Čarovný večer sk.mkv",
+        "episode_id": 60253,
+        "source_id": -21738351530703570,
+        "series_title": "Alcatraz",
+        "episode_code": "S01E05",
+        "source_title": "Alcatraz S1E5 Guy Hastings",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 2220,
-        "source_id": -3792581768969783,
-        "series_title": "ALF",
-        "episode_code": "S02E06",
-        "source_title": "Alf S02E06 (1987) SKdabing",
+        "episode_id": 60253,
+        "source_id": -18867420786670247,
+        "series_title": "Alcatraz",
+        "episode_code": "S01E05",
+        "source_title": "Alcatraz - S01E05 - Guy Hastings",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 2221,
-        "source_id": -56443319443163979,
-        "series_title": "ALF",
-        "episode_code": "S02E07",
-        "source_title": "ALF 02x07. Soutěž krásy",
+        "episode_id": 60253,
+        "source_id": -39404342115659721,
+        "series_title": "Alcatraz",
+        "episode_code": "S01E05",
+        "source_title": "Alcatraz - S01E05 - Guy Hastings",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 2221,
-        "source_id": -40598549413248203,
-        "series_title": "ALF",
-        "episode_code": "S02E07",
-        "source_title": "ALF.S02E07 Súťaž krásy sk.mkv",
+        "episode_id": 60257,
+        "source_id": -41759281704668202,
+        "series_title": "Alcatraz",
+        "episode_code": "S01E09",
+        "source_title": "Alcatraz - S1E9 The Ames Bros",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 2221,
-        "source_id": -1378688943507587,
-        "series_title": "ALF",
-        "episode_code": "S02E07",
-        "source_title": "Alf S02E07. Soutěž krásy",
+        "episode_id": 60257,
+        "source_id": -54949921020330831,
+        "series_title": "Alcatraz",
+        "episode_code": "S01E09",
+        "source_title": "Alcatraz - S1E9 The Ames Bros",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 2222,
-        "source_id": -66528102706282406,
-        "series_title": "ALF",
-        "episode_code": "S02E08",
-        "source_title": "Alf S02E08 (1987) SKdabing",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2222,
-        "source_id": -58244077605384788,
-        "series_title": "ALF",
-        "episode_code": "S02E08",
-        "source_title": "Alf S02E08. Kosmická škytavka",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2222,
-        "source_id": -38449550078075135,
-        "series_title": "ALF",
-        "episode_code": "S02E08",
-        "source_title": "ALF.S02E08 Niečo sa so mnou deje sk.mkv",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2222,
-        "source_id": -20061607805950509,
-        "series_title": "ALF",
-        "episode_code": "S02E08",
-        "source_title": "ALF 02x08. Kosmická škytavka",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2223,
-        "source_id": -58436161681823073,
-        "series_title": "ALF",
-        "episode_code": "S02E09",
-        "source_title": "Alf S02E09 (1987) SKdabing",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2223,
-        "source_id": -43820234066160443,
-        "series_title": "ALF",
-        "episode_code": "S02E09",
-        "source_title": "ALF.S02E09 Nočný vlak sk.mkv",
+        "episode_id": 60257,
+        "source_id": -18094218690453104,
+        "series_title": "Alcatraz",
+        "episode_code": "S01E09",
+        "source_title": "Alcatraz - S01E09 - The Ames Bros.",
         "status": "needs_whisper"
       },
       {
@@ -172769,6 +172869,46 @@
         "series_title": "ALF",
         "episode_code": "S02E18",
         "source_title": "ALF 02x18. Občané a zloději 2.část",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2233,
+        "source_id": -68314019067652556,
+        "series_title": "ALF",
+        "episode_code": "S02E19",
+        "source_title": "ALF 02x19. Na vlastní pěst",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2233,
+        "source_id": -59292473577051668,
+        "series_title": "ALF",
+        "episode_code": "S02E19",
+        "source_title": "Alf S02E19. Na vlastní pěst",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2233,
+        "source_id": -35235960952410227,
+        "series_title": "ALF",
+        "episode_code": "S02E19",
+        "source_title": "Alf S02E19 (1988) SKdabing",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2236,
+        "source_id": -69259160427720196,
+        "series_title": "ALF",
+        "episode_code": "S02E20",
+        "source_title": "Alf S02E20 (1988) SKdabing",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2236,
+        "source_id": -49849063583687519,
+        "series_title": "ALF",
+        "episode_code": "S02E20",
+        "source_title": "ALF.S02E20 Si obyčajný pako sk.mkv",
         "status": "needs_whisper"
       }
     ],
@@ -173227,14 +173367,14 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 73,
-    "disabled": 38,
+    "ok": 88,
+    "disabled": 144,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
-    "whisper_non_cz_needs_subtitles": 1286,
-    "whisper_confirmed_cz": 712,
-    "needs_whisper": 27487,
+    "whisper_non_cz_needs_subtitles": 1293,
+    "whisper_confirmed_cz": 725,
+    "needs_whisper": 27506,
     "whisper_failed": 2
   },
   "subtitle_followup_statuses": {
