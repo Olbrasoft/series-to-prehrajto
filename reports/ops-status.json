@@ -2,36 +2,92 @@
   "counts": {
     "backlog_episodes": 171185,
     "manifest_upload_ready_episodes": 1007,
-    "uploaded_episodes": 22228,
-    "prepared_source_episodes": 26375,
+    "uploaded_episodes": 22235,
+    "prepared_source_episodes": 26371,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 40,
-    "language_whisper_attempted_sources": 40,
+    "language_audited_sources": 60,
+    "language_whisper_attempted_sources": 60,
     "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 32161,
-    "whisper_review_pending_sources": 29963,
-    "subtitle_followup_sources": 5945,
-    "subtitle_followup_pending_sources": 5945
+    "whisper_review_pending_sources": 29944,
+    "subtitle_followup_sources": 5950,
+    "subtitle_followup_pending_sources": 5950
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-07-09T22:48:50Z",
-      "databaseId": 29055606365,
+      "createdAt": "2026-07-09T22:55:17Z",
+      "databaseId": 29055916597,
       "headBranch": "main",
       "status": "in_progress",
-      "workflowName": "ops-watchdog"
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-09T22:54:43Z",
+      "databaseId": 29055889787,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-07-09T22:53:25Z",
+      "databaseId": 29055825318,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-09T22:51:58Z",
+      "databaseId": 29055754587,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-09T22:49:56Z",
+      "databaseId": 29055655890,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-09T22:49:46Z",
+      "databaseId": 29055648921,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-09T22:49:42Z",
+      "databaseId": 29055646005,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-09T22:48:50Z",
+      "databaseId": 29055606365,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "cancelled",
       "createdAt": "2026-07-09T22:48:46Z",
       "databaseId": 29055602842,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -43,11 +99,11 @@
       "workflowName": "backfill-subtitles"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-09T22:43:28Z",
       "databaseId": 29055352309,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
@@ -121,62 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "backfill-subtitles"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-09T22:19:32Z",
-      "databaseId": 29054184659,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-07-09T22:17:22Z",
-      "databaseId": 29054080682,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-09T22:17:19Z",
-      "databaseId": 29054077834,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "backfill-subtitles"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-09T22:15:27Z",
-      "databaseId": 29053986018,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-09T22:15:24Z",
-      "databaseId": 29053983224,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-09T22:14:32Z",
-      "databaseId": 29053939513,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-09T22:10:30Z",
-      "databaseId": 29053737725,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
     }
   ],
   "gaps": {
@@ -89069,6 +89069,41 @@
         "episode_id": 28139,
         "display_name": "Beverly Hills 90210 S05E14 - 14. epizoda CZ Dabing",
         "video_id": 27313837
+      },
+      {
+        "episode_id": 28136,
+        "display_name": "Beverly Hills 90210 S05E11 - 11. epizoda CZ Dabing",
+        "video_id": 27313917
+      },
+      {
+        "episode_id": 28138,
+        "display_name": "Beverly Hills 90210 S05E13 - 13. epizoda CZ Dabing",
+        "video_id": 27313951
+      },
+      {
+        "episode_id": 28140,
+        "display_name": "Beverly Hills 90210 S05E15 - 15. epizoda CZ Dabing",
+        "video_id": 27313971
+      },
+      {
+        "episode_id": 28142,
+        "display_name": "Beverly Hills 90210 S05E17 - 17. epizoda CZ Dabing",
+        "video_id": 27314000
+      },
+      {
+        "episode_id": 28141,
+        "display_name": "Beverly Hills 90210 S05E16 - 16. epizoda CZ Dabing",
+        "video_id": 27313913
+      },
+      {
+        "episode_id": 28143,
+        "display_name": "Beverly Hills 90210 S05E18 - 18. epizoda CZ Dabing",
+        "video_id": 27313943
+      },
+      {
+        "episode_id": 28145,
+        "display_name": "Beverly Hills 90210 S05E20 - 20. epizoda CZ Dabing",
+        "video_id": 27313970
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -177856,6 +177891,41 @@
         "episode_id": 28139,
         "display_name": "Beverly Hills 90210 S05E14 - 14. epizoda CZ Dabing",
         "video_id": 27313837
+      },
+      {
+        "episode_id": 28136,
+        "display_name": "Beverly Hills 90210 S05E11 - 11. epizoda CZ Dabing",
+        "video_id": 27313917
+      },
+      {
+        "episode_id": 28138,
+        "display_name": "Beverly Hills 90210 S05E13 - 13. epizoda CZ Dabing",
+        "video_id": 27313951
+      },
+      {
+        "episode_id": 28140,
+        "display_name": "Beverly Hills 90210 S05E15 - 15. epizoda CZ Dabing",
+        "video_id": 27313971
+      },
+      {
+        "episode_id": 28142,
+        "display_name": "Beverly Hills 90210 S05E17 - 17. epizoda CZ Dabing",
+        "video_id": 27314000
+      },
+      {
+        "episode_id": 28141,
+        "display_name": "Beverly Hills 90210 S05E16 - 16. epizoda CZ Dabing",
+        "video_id": 27313913
+      },
+      {
+        "episode_id": 28143,
+        "display_name": "Beverly Hills 90210 S05E18 - 18. epizoda CZ Dabing",
+        "video_id": 27313943
+      },
+      {
+        "episode_id": 28145,
+        "display_name": "Beverly Hills 90210 S05E20 - 20. epizoda CZ Dabing",
+        "video_id": 27313970
       }
     ],
     "prepared_not_upload_ready": [
@@ -178162,164 +178232,12 @@
     ],
     "whisper_review_pending": [
       {
-        "episode_id": 2258,
-        "source_id": -34640676391079217,
-        "series_title": "ALF",
-        "episode_code": "S03E18",
-        "source_title": "Alf S03E18 SKdab",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2259,
-        "source_id": -47267501895979062,
-        "series_title": "ALF",
-        "episode_code": "S03E19",
-        "source_title": "ALF 03x19. Smolný den",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2259,
-        "source_id": -2936797171363672,
-        "series_title": "ALF",
-        "episode_code": "S03E19",
-        "source_title": "Alf S03E19. Smolný den",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2259,
-        "source_id": -51167516543212552,
-        "series_title": "ALF",
-        "episode_code": "S03E19",
-        "source_title": "Alf S03E19 SKdab",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2259,
-        "source_id": -25858450945309371,
-        "series_title": "ALF",
-        "episode_code": "S03E19",
-        "source_title": "ALF S03E19 Povera - Superstition",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2260,
-        "source_id": -18807201882323973,
-        "series_title": "ALF",
-        "episode_code": "S03E20",
-        "source_title": "Alf S03E20. Sokové",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2260,
-        "source_id": -4170310230228798,
-        "series_title": "ALF",
-        "episode_code": "S03E20",
-        "source_title": "ALF 03x20. Sokové",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2260,
-        "source_id": -62234833710630466,
-        "series_title": "ALF",
-        "episode_code": "S03E20",
-        "source_title": "ALF S03E20 Medzi Dvoma Milencami - Torn Between Two Lovers",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2261,
-        "source_id": -69803408938215574,
-        "series_title": "ALF",
-        "episode_code": "S03E21",
-        "source_title": "Alf S03E21. Přátelství až za hrob",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2261,
-        "source_id": -6670566858722039,
-        "series_title": "ALF",
-        "episode_code": "S03E21",
-        "source_title": "ALF 03x21. Přátelství až za hrob",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2261,
-        "source_id": -50496320407656084,
-        "series_title": "ALF",
-        "episode_code": "S03E21",
-        "source_title": "Alf S03E21 SKdab",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2261,
-        "source_id": -24644136749969086,
-        "series_title": "ALF",
-        "episode_code": "S03E21",
-        "source_title": "ALF S03E21 Pohreb Priatela - Funeral for a Friend",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2262,
-        "source_id": -56628375266671154,
-        "series_title": "ALF",
-        "episode_code": "S03E22",
-        "source_title": "ALF 03x22. Strach",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2262,
-        "source_id": -8443956526118094,
-        "series_title": "ALF",
-        "episode_code": "S03E22",
-        "source_title": "Alf S03E22. Strach",
-        "status": "needs_whisper"
-      },
-      {
         "episode_id": 2262,
         "source_id": -36417912212501737,
         "series_title": "ALF",
         "episode_code": "S03E22",
         "source_title": "Alf S03E22 SKdab",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2262,
-        "source_id": -23034669674501391,
-        "series_title": "ALF",
-        "episode_code": "S03E22",
-        "source_title": "ALF S03E22 Neboj Sa Tmy - Don’t Be Afraid of the Dark",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2263,
-        "source_id": -69461720233124652,
-        "series_title": "ALF",
-        "episode_code": "S03E23",
-        "source_title": "ALF 03x23. Jakeovo tajemství",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2263,
-        "source_id": -38640746811842909,
-        "series_title": "ALF",
-        "episode_code": "S03E23",
-        "source_title": "Alf S03E23. Jakeovo tajemství",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2263,
-        "source_id": -36716210567954218,
-        "series_title": "ALF",
-        "episode_code": "S03E23",
-        "source_title": "Alf S03E23 SKdab",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2263,
-        "source_id": -62055428857083885,
-        "series_title": "ALF",
-        "episode_code": "S03E23",
-        "source_title": "ALF S03E23 Videl Si Svoju Matku Stat V Tieni - Have You Seen Your Mother, Baby, Standing in the Shadow",
-        "status": "needs_whisper"
+        "status": "whisper_failed"
       },
       {
         "episode_id": 2264,
@@ -178559,6 +178477,158 @@
         "series_title": "ALF",
         "episode_code": "S04E07",
         "source_title": "ALF.S04E07",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2273,
+        "source_id": -14969370333513330,
+        "series_title": "ALF",
+        "episode_code": "S04E07",
+        "source_title": "ALF 04x07. Bratrská láska",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2273,
+        "source_id": -11148277797490021,
+        "series_title": "ALF",
+        "episode_code": "S04E07",
+        "source_title": "Alf S04E07. Bratrská láska",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2273,
+        "source_id": -32373747621301936,
+        "series_title": "ALF",
+        "episode_code": "S04E07",
+        "source_title": "ALF S04E07 Nie je nemožný, je to williho brat",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2275,
+        "source_id": -58288097712423889,
+        "series_title": "ALF",
+        "episode_code": "S04E08",
+        "source_title": "ALF 04x08. Blízké setkání prvního druhu",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2275,
+        "source_id": -32667898302282560,
+        "series_title": "ALF",
+        "episode_code": "S04E08",
+        "source_title": "ALF.S04E08",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2275,
+        "source_id": -31544226628935448,
+        "series_title": "ALF",
+        "episode_code": "S04E08",
+        "source_title": "Alf S04E08. Blízké setkání prvního druhu",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2274,
+        "source_id": -18794059139904885,
+        "series_title": "ALF",
+        "episode_code": "S04E09",
+        "source_title": "ALF 04x09. Žít a nechat zemřít",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2274,
+        "source_id": -2151195136185304,
+        "series_title": "ALF",
+        "episode_code": "S04E09",
+        "source_title": "Alf S04E09. Žít a nechat zemřít",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2274,
+        "source_id": -30684185753237588,
+        "series_title": "ALF",
+        "episode_code": "S04E09",
+        "source_title": "ALF S04E09 Ži a nechaj umriet",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2276,
+        "source_id": -27849670803220416,
+        "series_title": "ALF",
+        "episode_code": "S04E10",
+        "source_title": "Alf S04E10. Hádka",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2276,
+        "source_id": -19156262993470535,
+        "series_title": "ALF",
+        "episode_code": "S04E10",
+        "source_title": "ALF.S04E10",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2276,
+        "source_id": -1738131407638115,
+        "series_title": "ALF",
+        "episode_code": "S04E10",
+        "source_title": "ALF 04x10. Hádka",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2277,
+        "source_id": -46827960324766262,
+        "series_title": "ALF",
+        "episode_code": "S04E11",
+        "source_title": "ALF.S04E11",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2277,
+        "source_id": -36916053229727062,
+        "series_title": "ALF",
+        "episode_code": "S04E11",
+        "source_title": "Alf S04E11. Alf zlobí",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2277,
+        "source_id": -9481432142227476,
+        "series_title": "ALF",
+        "episode_code": "S04E11",
+        "source_title": "ALF 04x11. Alf zlobí",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2278,
+        "source_id": -50073672981154418,
+        "series_title": "ALF",
+        "episode_code": "S04E12",
+        "source_title": "Alf S04E12. Bacily útočí",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2278,
+        "source_id": -13786009833166816,
+        "series_title": "ALF",
+        "episode_code": "S04E12",
+        "source_title": "ALF 04x12. Bacily útočí",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2278,
+        "source_id": -7719599774884044,
+        "series_title": "ALF",
+        "episode_code": "S04E12",
+        "source_title": "ALF.S04E12",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2279,
+        "source_id": -52862543500727986,
+        "series_title": "ALF",
+        "episode_code": "S04E13",
+        "source_title": "ALF.S04E13",
         "status": "needs_whisper"
       }
     ],
@@ -179017,16 +179087,17 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 39,
+    "ok": 58,
+    "sample_failed": 1,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
-    "whisper_non_cz_needs_subtitles": 1360,
-    "whisper_confirmed_cz": 838,
-    "needs_whisper": 29961,
-    "whisper_failed": 2
+    "whisper_non_cz_needs_subtitles": 1365,
+    "whisper_confirmed_cz": 852,
+    "whisper_failed": 3,
+    "needs_whisper": 29941
   },
   "subtitle_followup_statuses": {
-    "needs_subtitle_setup_after_prehrajto_processing": 5945
+    "needs_subtitle_setup_after_prehrajto_processing": 5950
   }
 }
