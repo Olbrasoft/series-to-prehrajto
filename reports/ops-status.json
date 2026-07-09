@@ -1,37 +1,93 @@
 {
   "counts": {
     "backlog_episodes": 172200,
-    "manifest_upload_ready_episodes": 329,
-    "uploaded_episodes": 21184,
-    "prepared_source_episodes": 23095,
+    "manifest_upload_ready_episodes": 364,
+    "uploaded_episodes": 21207,
+    "prepared_source_episodes": 23236,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 20,
-    "language_whisper_attempted_sources": 20,
-    "language_pending_whisper_sources": 2624,
-    "whisper_review_sources": 28128,
-    "whisper_review_pending_sources": 26130,
-    "subtitle_followup_sources": 5385,
-    "subtitle_followup_pending_sources": 5385
+    "language_audited_sources": 271,
+    "language_whisper_attempted_sources": 88,
+    "language_pending_whisper_sources": 2604,
+    "whisper_review_sources": 28227,
+    "whisper_review_pending_sources": 26269,
+    "subtitle_followup_sources": 5400,
+    "subtitle_followup_pending_sources": 5400
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-07-09T01:18:06Z",
-      "databaseId": 28987221692,
+      "createdAt": "2026-07-09T01:35:25Z",
+      "databaseId": 28987854844,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-07-09T01:34:40Z",
+      "databaseId": 28987824961,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-09T01:23:32Z",
+      "databaseId": 28987423967,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-09T01:20:43Z",
+      "databaseId": 28987318435,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "backfill-subtitles"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-09T01:18:59Z",
+      "databaseId": 28987254527,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-09T01:18:57Z",
+      "databaseId": 28987253160,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-09T01:18:55Z",
+      "databaseId": 28987252066,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-09T01:18:06Z",
+      "databaseId": 28987221692,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "cancelled",
       "createdAt": "2026-07-09T01:18:01Z",
       "databaseId": 28987218740,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -59,11 +115,11 @@
       "workflowName": "prepare-manifest"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-09T01:01:00Z",
       "databaseId": 28986564559,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "backfill-subtitles"
     },
     {
@@ -79,7 +135,7 @@
       "createdAt": "2026-07-09T00:58:28Z",
       "databaseId": 28986462780,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "sync"
     },
     {
@@ -121,62 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-09T00:49:44Z",
-      "databaseId": 28986128318,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-07-09T00:49:39Z",
-      "databaseId": 28986125059,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-09T00:49:35Z",
-      "databaseId": 28986122434,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-09T00:49:29Z",
-      "databaseId": 28986118304,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "failure",
-      "createdAt": "2026-07-09T00:49:26Z",
-      "databaseId": 28986115564,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-09T00:49:23Z",
-      "databaseId": 28986113722,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-09T00:48:22Z",
-      "databaseId": 28986077286,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
     }
   ],
   "gaps": {
@@ -83756,6 +83756,21 @@
         "video_id": 27276612
       },
       {
+        "episode_id": 104498,
+        "display_name": "Drsný šerif S06E09 - Orlí závod CZ Dabing",
+        "video_id": 27276640
+      },
+      {
+        "episode_id": 58656,
+        "display_name": "Černá zmije S01E03 - Arcibiskup CZ Dabing",
+        "video_id": 27276675
+      },
+      {
+        "episode_id": 58654,
+        "display_name": "Černá zmije S01E04 - Vous královny španělské CZ Titulky",
+        "video_id": 27276715
+      },
+      {
         "episode_id": 58659,
         "display_name": "Černá zmije S02E04 - Peníze CZ Dabing",
         "video_id": 27275889
@@ -83849,6 +83864,106 @@
         "episode_id": 105333,
         "display_name": "Doktoři S02E20 - Když ne dnes, tak kdy? CZ Dabing",
         "video_id": 27276617
+      },
+      {
+        "episode_id": 105319,
+        "display_name": "Doktoři S02E05 - Mikrob CZ Dabing",
+        "video_id": 27276644
+      },
+      {
+        "episode_id": 58662,
+        "display_name": "Černá zmije S02E01 - Zvony CZ Dabing",
+        "video_id": 27276773
+      },
+      {
+        "episode_id": 58658,
+        "display_name": "Černá zmije S02E02 - Hlava CZ Dabing",
+        "video_id": 27276800
+      },
+      {
+        "episode_id": 78712,
+        "display_name": "Černá zmije S02E03 - Brambora CZ Dabing",
+        "video_id": 27276826
+      },
+      {
+        "episode_id": 58670,
+        "display_name": "Černá zmije S03E05 - Žně a ženich CZ Dabing",
+        "video_id": 27276855
+      },
+      {
+        "episode_id": 74644,
+        "display_name": "Disclaimer S01E07 - VII CZ Titulky",
+        "video_id": 27276879
+      },
+      {
+        "episode_id": 202516,
+        "display_name": "Pam a Tommy S01E02 - Miluju tě, Tommy CZ Dabing",
+        "video_id": 27276890
+      },
+      {
+        "episode_id": 202520,
+        "display_name": "Pam a Tommy S01E03 - Jane Fondová CZ Dabing",
+        "video_id": 27276908
+      },
+      {
+        "episode_id": 126670,
+        "display_name": "Čtyři roční období S01E06 - Ultimate frisbee CZ Dabing",
+        "video_id": 27276924
+      },
+      {
+        "episode_id": 102688,
+        "display_name": "Farscape S02E06 - Představ si… CZ Dabing",
+        "video_id": 27276955
+      },
+      {
+        "episode_id": 102690,
+        "display_name": "Farscape S02E08 - Sni svůj tajný sen CZ Dabing",
+        "video_id": 27276978
+      },
+      {
+        "episode_id": 105335,
+        "display_name": "Doktoři S02E22 - Dárce CZ Dabing",
+        "video_id": 27276767
+      },
+      {
+        "episode_id": 58653,
+        "display_name": "Černá zmije S01E01 - Věštba CZ Dabing",
+        "video_id": 27276799
+      },
+      {
+        "episode_id": 58655,
+        "display_name": "Černá zmije S01E05 - Čáryčichač a lovec čarodějnic CZ Dabing",
+        "video_id": 27276836
+      },
+      {
+        "episode_id": 58657,
+        "display_name": "Černá zmije S01E06 - Černá pečeť CZ Dabing",
+        "video_id": 27276860
+      },
+      {
+        "episode_id": 58669,
+        "display_name": "Černá zmije S03E03 - Arest a aristokracie CZ Dabing",
+        "video_id": 27276887
+      },
+      {
+        "episode_id": 74645,
+        "display_name": "Disclaimer S01E06 - VI CZ Titulky",
+        "video_id": 27276898
+      },
+      {
+        "episode_id": 126671,
+        "display_name": "Čtyři roční období S01E07 - Lyžovačka CZ Dabing",
+        "video_id": 27276923
+      },
+      {
+        "episode_id": 105603,
+        "display_name": "Doteky osudu S02E06 - Zlom CZ Dabing",
+        "video_id": 27276956
+      },
+      {
+        "episode_id": 126665,
+        "display_name": "Čtyři roční období S01E08 - Pohřeb CZ Dabing",
+        "video_id": 27276976
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -167323,6 +167438,21 @@
         "video_id": 27276612
       },
       {
+        "episode_id": 104498,
+        "display_name": "Drsný šerif S06E09 - Orlí závod CZ Dabing",
+        "video_id": 27276640
+      },
+      {
+        "episode_id": 58656,
+        "display_name": "Černá zmije S01E03 - Arcibiskup CZ Dabing",
+        "video_id": 27276675
+      },
+      {
+        "episode_id": 58654,
+        "display_name": "Černá zmije S01E04 - Vous královny španělské CZ Titulky",
+        "video_id": 27276715
+      },
+      {
         "episode_id": 58659,
         "display_name": "Černá zmije S02E04 - Peníze CZ Dabing",
         "video_id": 27275889
@@ -167416,6 +167546,106 @@
         "episode_id": 105333,
         "display_name": "Doktoři S02E20 - Když ne dnes, tak kdy? CZ Dabing",
         "video_id": 27276617
+      },
+      {
+        "episode_id": 105319,
+        "display_name": "Doktoři S02E05 - Mikrob CZ Dabing",
+        "video_id": 27276644
+      },
+      {
+        "episode_id": 58662,
+        "display_name": "Černá zmije S02E01 - Zvony CZ Dabing",
+        "video_id": 27276773
+      },
+      {
+        "episode_id": 58658,
+        "display_name": "Černá zmije S02E02 - Hlava CZ Dabing",
+        "video_id": 27276800
+      },
+      {
+        "episode_id": 78712,
+        "display_name": "Černá zmije S02E03 - Brambora CZ Dabing",
+        "video_id": 27276826
+      },
+      {
+        "episode_id": 58670,
+        "display_name": "Černá zmije S03E05 - Žně a ženich CZ Dabing",
+        "video_id": 27276855
+      },
+      {
+        "episode_id": 74644,
+        "display_name": "Disclaimer S01E07 - VII CZ Titulky",
+        "video_id": 27276879
+      },
+      {
+        "episode_id": 202516,
+        "display_name": "Pam a Tommy S01E02 - Miluju tě, Tommy CZ Dabing",
+        "video_id": 27276890
+      },
+      {
+        "episode_id": 202520,
+        "display_name": "Pam a Tommy S01E03 - Jane Fondová CZ Dabing",
+        "video_id": 27276908
+      },
+      {
+        "episode_id": 126670,
+        "display_name": "Čtyři roční období S01E06 - Ultimate frisbee CZ Dabing",
+        "video_id": 27276924
+      },
+      {
+        "episode_id": 102688,
+        "display_name": "Farscape S02E06 - Představ si… CZ Dabing",
+        "video_id": 27276955
+      },
+      {
+        "episode_id": 102690,
+        "display_name": "Farscape S02E08 - Sni svůj tajný sen CZ Dabing",
+        "video_id": 27276978
+      },
+      {
+        "episode_id": 105335,
+        "display_name": "Doktoři S02E22 - Dárce CZ Dabing",
+        "video_id": 27276767
+      },
+      {
+        "episode_id": 58653,
+        "display_name": "Černá zmije S01E01 - Věštba CZ Dabing",
+        "video_id": 27276799
+      },
+      {
+        "episode_id": 58655,
+        "display_name": "Černá zmije S01E05 - Čáryčichač a lovec čarodějnic CZ Dabing",
+        "video_id": 27276836
+      },
+      {
+        "episode_id": 58657,
+        "display_name": "Černá zmije S01E06 - Černá pečeť CZ Dabing",
+        "video_id": 27276860
+      },
+      {
+        "episode_id": 58669,
+        "display_name": "Černá zmije S03E03 - Arest a aristokracie CZ Dabing",
+        "video_id": 27276887
+      },
+      {
+        "episode_id": 74645,
+        "display_name": "Disclaimer S01E06 - VI CZ Titulky",
+        "video_id": 27276898
+      },
+      {
+        "episode_id": 126671,
+        "display_name": "Čtyři roční období S01E07 - Lyžovačka CZ Dabing",
+        "video_id": 27276923
+      },
+      {
+        "episode_id": 105603,
+        "display_name": "Doteky osudu S02E06 - Zlom CZ Dabing",
+        "video_id": 27276956
+      },
+      {
+        "episode_id": 126665,
+        "display_name": "Čtyři roční období S01E08 - Pohřeb CZ Dabing",
+        "video_id": 27276976
       }
     ],
     "prepared_not_upload_ready": [
@@ -167722,166 +167952,6 @@
     ],
     "whisper_review_pending": [
       {
-        "episode_id": 2199,
-        "source_id": -15097432855481500,
-        "series_title": "ALF",
-        "episode_code": "S01E11",
-        "source_title": "ALF.S01E11 Znovu na ceste sk.mkv",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2200,
-        "source_id": -70464204141687960,
-        "series_title": "ALF",
-        "episode_code": "S01E12",
-        "source_title": "ALF 01x12. První Vánoce",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2200,
-        "source_id": -66103005313471104,
-        "series_title": "ALF",
-        "episode_code": "S01E12",
-        "source_title": "Alf S01E12. První Vánoce",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2200,
-        "source_id": -59653043532237076,
-        "series_title": "ALF",
-        "episode_code": "S01E12",
-        "source_title": "Alf S01E12 (1986) SKdab",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2200,
-        "source_id": -13060687045883273,
-        "series_title": "ALF",
-        "episode_code": "S01E12",
-        "source_title": "ALF.S01E12 Vianočný stromček sk.mkv",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2201,
-        "source_id": -61363493086763504,
-        "series_title": "ALF",
-        "episode_code": "S01E13",
-        "source_title": "ALF.S01E13 Rodinná idyla sk.mkv",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2201,
-        "source_id": -51021238013339564,
-        "series_title": "ALF",
-        "episode_code": "S01E13",
-        "source_title": "ALF 01x13. Katalyzátor",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2201,
-        "source_id": -28045910432438168,
-        "series_title": "ALF",
-        "episode_code": "S01E13",
-        "source_title": "Alf S01E13 SKdab",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2202,
-        "source_id": -55949365787756284,
-        "series_title": "ALF",
-        "episode_code": "S01E14",
-        "source_title": "ALF 01x14. Příběh ze života",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2202,
-        "source_id": -50003694830687484,
-        "series_title": "ALF",
-        "episode_code": "S01E14",
-        "source_title": "Alf S01E14 SKdab",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2202,
-        "source_id": -4632567243082438,
-        "series_title": "ALF",
-        "episode_code": "S01E14",
-        "source_title": "Alf S01E14. Příběh ze života",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2202,
-        "source_id": -53156138517720591,
-        "series_title": "ALF",
-        "episode_code": "S01E14",
-        "source_title": "Alf S01E14 (1987)",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2203,
-        "source_id": -58472390527296807,
-        "series_title": "ALF",
-        "episode_code": "S01E15",
-        "source_title": "ALF.S01E15 Zmenila som názor SK.mkv",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2203,
-        "source_id": -57662915129954491,
-        "series_title": "ALF",
-        "episode_code": "S01E15",
-        "source_title": "Alf S01E15 SKdab",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2203,
-        "source_id": -23138301896808622,
-        "series_title": "ALF",
-        "episode_code": "S01E15",
-        "source_title": "Alf S01E15. Léčitel duší",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2203,
-        "source_id": -9003049379459943,
-        "series_title": "ALF",
-        "episode_code": "S01E15",
-        "source_title": "ALF 01x15. Léčitel duší",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2204,
-        "source_id": -20286723113116302,
-        "series_title": "ALF",
-        "episode_code": "S01E16",
-        "source_title": "ALF 01x16-17. Výpadek paměti 1 i 2. část",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2204,
-        "source_id": -3744445592023673,
-        "series_title": "ALF",
-        "episode_code": "S01E16",
-        "source_title": "Alf S01E16-17. Výpadek paměti 1 i 2. část",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2204,
-        "source_id": -37322661188114370,
-        "series_title": "ALF",
-        "episode_code": "S01E16",
-        "source_title": "ALF.S01E16 17 (1)",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2205,
-        "source_id": -57798673828520763,
-        "series_title": "ALF",
-        "episode_code": "S01E17",
-        "source_title": "Alf 1x17 Pohraničná balada.mkv",
-        "status": "needs_whisper"
-      },
-      {
         "episode_id": 2206,
         "source_id": -63075592784992741,
         "series_title": "ALF",
@@ -168119,6 +168189,166 @@
         "series_title": "ALF",
         "episode_code": "S01E26",
         "source_title": "ALF.S01E26 Zaleť si so mnou sk.mkv",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2214,
+        "source_id": -14147360729649103,
+        "series_title": "ALF",
+        "episode_code": "S01E26",
+        "source_title": "Alf S01E26 (1987) SKdabing",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2214,
+        "source_id": -8316702968933274,
+        "series_title": "ALF",
+        "episode_code": "S01E26",
+        "source_title": "ALF 01x26. Létání je hračka",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2215,
+        "source_id": -32460778324853925,
+        "series_title": "ALF",
+        "episode_code": "S02E01",
+        "source_title": "ALF.S02E01 Prepracujem sa späť k tebe sk.mkv",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2215,
+        "source_id": -31284148844916598,
+        "series_title": "ALF",
+        "episode_code": "S02E01",
+        "source_title": "ALF 02x01. Majordomus",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2215,
+        "source_id": -22444133457640053,
+        "series_title": "ALF",
+        "episode_code": "S02E01",
+        "source_title": "Alf S02E01. Majordomus",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2216,
+        "source_id": -4201307461032682,
+        "series_title": "ALF",
+        "episode_code": "S02E02",
+        "source_title": "Alf S02E02. Trosečníci na ostrově",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2216,
+        "source_id": -528487813672534,
+        "series_title": "ALF",
+        "episode_code": "S02E02",
+        "source_title": "ALF 02x02. Trosečníci na ostrově",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2216,
+        "source_id": -58769497173851416,
+        "series_title": "ALF",
+        "episode_code": "S02E02",
+        "source_title": "ALF S02E02 Balada O Giligenovom Ostrove",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2217,
+        "source_id": -51055044833838149,
+        "series_title": "ALF",
+        "episode_code": "S02E03",
+        "source_title": "ALF 02x03. Alf není přelud",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2217,
+        "source_id": -12553194144731105,
+        "series_title": "ALF",
+        "episode_code": "S02E03",
+        "source_title": "ALF.S02E03 Teraz sa na mňa pozri sk.mkv",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2217,
+        "source_id": -2803821219481806,
+        "series_title": "ALF",
+        "episode_code": "S02E03",
+        "source_title": "Alf S02E03. Alf není přelud",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2217,
+        "source_id": -33865800645704411,
+        "series_title": "ALF",
+        "episode_code": "S02E03",
+        "source_title": "Alf S02E03 SKdab",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2218,
+        "source_id": -71036551395575216,
+        "series_title": "ALF",
+        "episode_code": "S02E04",
+        "source_title": "ALF 02x04. Nechoď do kláštera",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2218,
+        "source_id": -32165179279874815,
+        "series_title": "ALF",
+        "episode_code": "S02E04",
+        "source_title": "ALF.S02E04 Blues pre svadobné zvony sk.mkv",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2218,
+        "source_id": -27382299329004843,
+        "series_title": "ALF",
+        "episode_code": "S02E04",
+        "source_title": "Alf S02E04. Nechoď do kláštera",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2219,
+        "source_id": -22963904210878056,
+        "series_title": "ALF",
+        "episode_code": "S02E05",
+        "source_title": "Alf S02E05. Boj o diváka",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2219,
+        "source_id": -15828323762634423,
+        "series_title": "ALF",
+        "episode_code": "S02E05",
+        "source_title": "ALF 02x05. Boj o diváka",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2219,
+        "source_id": -43079212829671,
+        "series_title": "ALF",
+        "episode_code": "S02E05",
+        "source_title": "ALF.S02E05 Hlavný vysielací čas sk.mkv",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2220,
+        "source_id": -62395031307976589,
+        "series_title": "ALF",
+        "episode_code": "S02E06",
+        "source_title": "Alf S02E06. Vydařený večer",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2220,
+        "source_id": -9337620737127699,
+        "series_title": "ALF",
+        "episode_code": "S02E06",
+        "source_title": "ALF.S02E06 Čarovný večer sk.mkv",
         "status": "needs_whisper"
       }
     ],
@@ -168577,16 +168807,17 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 19,
+    "disabled": 183,
+    "ok": 87,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
     "whisper_non_cz_needs_subtitles": 1279,
-    "whisper_confirmed_cz": 719,
-    "needs_whisper": 26128,
+    "whisper_confirmed_cz": 679,
+    "needs_whisper": 26267,
     "whisper_failed": 2
   },
   "subtitle_followup_statuses": {
-    "needs_subtitle_setup_after_prehrajto_processing": 5385
+    "needs_subtitle_setup_after_prehrajto_processing": 5400
   }
 }
