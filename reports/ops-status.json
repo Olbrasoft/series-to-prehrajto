@@ -2,14 +2,14 @@
   "counts": {
     "backlog_episodes": 169992,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 23462,
+    "uploaded_episodes": 23472,
     "prepared_source_episodes": 30163,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 314,
+    "language_audited_sources": 40,
     "language_whisper_attempted_sources": 40,
     "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 36044,
@@ -20,10 +20,74 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-07-10T23:21:49Z",
+      "databaseId": 29130148554,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-10T23:21:37Z",
+      "databaseId": 29130141655,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "backfill-subtitles"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-10T23:20:44Z",
+      "databaseId": 29130107923,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-10T23:19:58Z",
+      "databaseId": 29130075250,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-10T23:18:06Z",
+      "databaseId": 29130000745,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-10T23:14:45Z",
+      "databaseId": 29129859798,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-10T23:14:43Z",
+      "databaseId": 29129858111,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-10T23:14:41Z",
+      "databaseId": 29129856668,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-10T23:13:49Z",
       "databaseId": 29129820074,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -43,11 +107,11 @@
       "workflowName": "prepare-manifest"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-10T23:03:25Z",
       "databaseId": 29129385345,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "backfill-subtitles"
     },
     {
@@ -113,70 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-07-10T22:55:41Z",
-      "databaseId": 29129051568,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-10T22:55:38Z",
-      "databaseId": 29129049368,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-07-10T22:55:33Z",
-      "databaseId": 29129046600,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-10T22:55:14Z",
-      "databaseId": 29129030167,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "backfill-subtitles"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-10T22:48:54Z",
-      "databaseId": 29128751928,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-10T22:48:27Z",
-      "databaseId": 29128731852,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-10T22:47:40Z",
-      "databaseId": 29128697572,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-10T22:46:33Z",
-      "databaseId": 29128648688,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
     }
   ],
   "gaps": {
@@ -95211,6 +95211,16 @@
         "video_id": 27355490
       },
       {
+        "episode_id": 54030,
+        "display_name": "Protiúder S03E06 - 6. epizoda CZ Dabing",
+        "video_id": 27355601
+      },
+      {
+        "episode_id": 54048,
+        "display_name": "Protiúder S03E07 - 7. epizoda CZ Dabing",
+        "video_id": 27355630
+      },
+      {
         "episode_id": 16701,
         "display_name": "Pilíře Země S01E03 - Vykoupení CZ Dabing",
         "video_id": 27355220
@@ -95239,6 +95249,46 @@
         "episode_id": 171103,
         "display_name": "Rozhovory s vrahem: Výpověď Teda Bundyho S01E01 - Hezký ďábel CZ Titulky",
         "video_id": 27355402
+      },
+      {
+        "episode_id": 171105,
+        "display_name": "Rozhovory s vrahem: Výpověď Teda Bundyho S01E03 - Nejsem na řadě CZ Titulky",
+        "video_id": 27355510
+      },
+      {
+        "episode_id": 104189,
+        "display_name": "Znovu 20 S02E03 - Jako šéfová CZ Dabing",
+        "video_id": 27355539
+      },
+      {
+        "episode_id": 98499,
+        "display_name": "Znovu 20 S02E05 - Lízátko CZ Dabing",
+        "video_id": 27355548
+      },
+      {
+        "episode_id": 98501,
+        "display_name": "Znovu 20 S03E05 - P jako palačinka CZ Dabing",
+        "video_id": 27355570
+      },
+      {
+        "episode_id": 98503,
+        "display_name": "Znovu 20 S03E08 - Tak co, doktore? CZ Dabing",
+        "video_id": 27355578
+      },
+      {
+        "episode_id": 98505,
+        "display_name": "Znovu 20 S03E10 - Holubi, papoušci a čápi CZ Dabing",
+        "video_id": 27355600
+      },
+      {
+        "episode_id": 98507,
+        "display_name": "Znovu 20 S03E12 - Vzpamatujte se CZ Dabing",
+        "video_id": 27355613
+      },
+      {
+        "episode_id": 98509,
+        "display_name": "Znovu 20 S04E03 - Ukován v ohni CZ Dabing",
+        "video_id": 27355627
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -190168,6 +190218,16 @@
         "video_id": 27355490
       },
       {
+        "episode_id": 54030,
+        "display_name": "Protiúder S03E06 - 6. epizoda CZ Dabing",
+        "video_id": 27355601
+      },
+      {
+        "episode_id": 54048,
+        "display_name": "Protiúder S03E07 - 7. epizoda CZ Dabing",
+        "video_id": 27355630
+      },
+      {
         "episode_id": 16701,
         "display_name": "Pilíře Země S01E03 - Vykoupení CZ Dabing",
         "video_id": 27355220
@@ -190196,6 +190256,46 @@
         "episode_id": 171103,
         "display_name": "Rozhovory s vrahem: Výpověď Teda Bundyho S01E01 - Hezký ďábel CZ Titulky",
         "video_id": 27355402
+      },
+      {
+        "episode_id": 171105,
+        "display_name": "Rozhovory s vrahem: Výpověď Teda Bundyho S01E03 - Nejsem na řadě CZ Titulky",
+        "video_id": 27355510
+      },
+      {
+        "episode_id": 104189,
+        "display_name": "Znovu 20 S02E03 - Jako šéfová CZ Dabing",
+        "video_id": 27355539
+      },
+      {
+        "episode_id": 98499,
+        "display_name": "Znovu 20 S02E05 - Lízátko CZ Dabing",
+        "video_id": 27355548
+      },
+      {
+        "episode_id": 98501,
+        "display_name": "Znovu 20 S03E05 - P jako palačinka CZ Dabing",
+        "video_id": 27355570
+      },
+      {
+        "episode_id": 98503,
+        "display_name": "Znovu 20 S03E08 - Tak co, doktore? CZ Dabing",
+        "video_id": 27355578
+      },
+      {
+        "episode_id": 98505,
+        "display_name": "Znovu 20 S03E10 - Holubi, papoušci a čápi CZ Dabing",
+        "video_id": 27355600
+      },
+      {
+        "episode_id": 98507,
+        "display_name": "Znovu 20 S03E12 - Vzpamatujte se CZ Dabing",
+        "video_id": 27355613
+      },
+      {
+        "episode_id": 98509,
+        "display_name": "Znovu 20 S04E03 - Ukován v ohni CZ Dabing",
+        "video_id": 27355627
       }
     ],
     "prepared_not_upload_ready": [
@@ -191357,7 +191457,6 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 274,
     "ok": 39,
     "resolve_failed": 1
   },
