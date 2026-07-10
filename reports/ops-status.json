@@ -2,44 +2,148 @@
   "counts": {
     "backlog_episodes": 170778,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 22665,
-    "prepared_source_episodes": 27415,
+    "uploaded_episodes": 22687,
+    "prepared_source_episodes": 27431,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 418,
+    "language_audited_sources": 40,
     "language_whisper_attempted_sources": 40,
     "language_pending_whisper_sources": 2604,
-    "whisper_review_sources": 33315,
-    "whisper_review_pending_sources": 31197,
-    "subtitle_followup_sources": 6175,
-    "subtitle_followup_pending_sources": 6175
+    "whisper_review_sources": 33353,
+    "whisper_review_pending_sources": 31235,
+    "subtitle_followup_sources": 6185,
+    "subtitle_followup_pending_sources": 6185
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-07-10T05:41:08Z",
-      "databaseId": 29071937000,
+      "createdAt": "2026-07-10T06:20:44Z",
+      "databaseId": 29073580934,
       "headBranch": "main",
       "status": "in_progress",
-      "workflowName": "ops-watchdog"
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-10T06:20:10Z",
+      "databaseId": 29073555619,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
     },
     {
       "conclusion": "",
-      "createdAt": "2026-07-10T05:38:03Z",
-      "databaseId": 29071818211,
+      "createdAt": "2026-07-10T06:19:12Z",
+      "databaseId": 29073513043,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-10T06:11:41Z",
+      "databaseId": 29073197451,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "backfill-subtitles"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-10T06:08:14Z",
+      "databaseId": 29073052940,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-10T05:56:29Z",
+      "databaseId": 29072553207,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-sources"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-10T05:55:11Z",
+      "databaseId": 29072500835,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "backfill-subtitles"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-10T05:46:13Z",
+      "databaseId": 29072140155,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "prepare-manifest"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-07-10T05:45:27Z",
+      "databaseId": 29072110078,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-10T05:45:20Z",
+      "databaseId": 29072105163,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "backfill-subtitles"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-10T05:42:10Z",
+      "databaseId": 29071977195,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-10T05:42:07Z",
+      "databaseId": 29071975030,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-10T05:42:04Z",
+      "databaseId": 29071972702,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-10T05:41:08Z",
+      "databaseId": 29071937000,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-10T05:38:03Z",
+      "databaseId": 29071818211,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-10T05:36:02Z",
       "databaseId": 29071741178,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
@@ -73,110 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-10T05:27:56Z",
-      "databaseId": 29071417884,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-10T05:27:47Z",
-      "databaseId": 29071411728,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "backfill-subtitles"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-10T05:27:08Z",
-      "databaseId": 29071386084,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-10T05:16:51Z",
-      "databaseId": 29070985905,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-10T05:09:07Z",
-      "databaseId": 29070680782,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-10T05:09:05Z",
-      "databaseId": 29070678913,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-10T05:09:03Z",
-      "databaseId": 29070677345,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-10T05:08:14Z",
-      "databaseId": 29070645658,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-07-10T05:08:09Z",
-      "databaseId": 29070642488,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-10T05:08:05Z",
-      "databaseId": 29070639251,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-10T04:57:06Z",
-      "databaseId": 29070215982,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "backfill-subtitles"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-10T04:47:40Z",
-      "databaseId": 29069860541,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-10T04:47:15Z",
-      "databaseId": 29069843987,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
     }
   ],
   "gaps": {
@@ -91254,6 +91254,116 @@
         "episode_id": 30783,
         "display_name": "Tým SEAL S06E10 - Fair Winds And Following Seas CZ Dabing",
         "video_id": 27323400
+      },
+      {
+        "episode_id": 30785,
+        "display_name": "Tým SEAL S07E02 - Chaos in the Calm: Part 2 CZ Dabing",
+        "video_id": 27323459
+      },
+      {
+        "episode_id": 30787,
+        "display_name": "Tým SEAL S07E04 - Heroes and Criminals CZ Dabing",
+        "video_id": 27323558
+      },
+      {
+        "episode_id": 30791,
+        "display_name": "Tým SEAL S07E08 - Appetite for Destruction CZ Dabing",
+        "video_id": 27323645
+      },
+      {
+        "episode_id": 30793,
+        "display_name": "Tým SEAL S07E10 - The Last Word CZ Dabing",
+        "video_id": 27323774
+      },
+      {
+        "episode_id": 64807,
+        "display_name": "Quantum Leap S01E03 - 3. epizoda CZ Titulky",
+        "video_id": 27323815
+      },
+      {
+        "episode_id": 64809,
+        "display_name": "Quantum Leap S01E05 - 5. epizoda CZ Titulky",
+        "video_id": 27323864
+      },
+      {
+        "episode_id": 64811,
+        "display_name": "Quantum Leap S01E07 - 7. epizoda CZ Titulky",
+        "video_id": 27323901
+      },
+      {
+        "episode_id": 64875,
+        "display_name": "Quantum Leap S05E11 - 11. epizoda CZ Titulky",
+        "video_id": 27323971
+      },
+      {
+        "episode_id": 64899,
+        "display_name": "Quantum Leap S05E12 - 12. epizoda CZ Titulky",
+        "video_id": 27324080
+      },
+      {
+        "episode_id": 64877,
+        "display_name": "Quantum Leap S05E14 - 14. epizoda CZ Titulky",
+        "video_id": 27324173
+      },
+      {
+        "episode_id": 64879,
+        "display_name": "Quantum Leap S05E16 - 16. epizoda CZ Titulky",
+        "video_id": 27324256
+      },
+      {
+        "episode_id": 64881,
+        "display_name": "Quantum Leap S05E18 - 18. epizoda CZ Titulky",
+        "video_id": 27324341
+      },
+      {
+        "episode_id": 64883,
+        "display_name": "Quantum Leap S05E20 - 20. epizoda CZ Titulky",
+        "video_id": 27324413
+      },
+      {
+        "episode_id": 64885,
+        "display_name": "Quantum Leap S05E22 - 22. epizoda CZ Titulky",
+        "video_id": 27324506
+      },
+      {
+        "episode_id": 76401,
+        "display_name": "Spiderman S01E02 - Pavoukobijci CZ Titulky",
+        "video_id": 27324587
+      },
+      {
+        "episode_id": 76393,
+        "display_name": "Spiderman S01E03 - Pavoukobijci se vracejí CZ Dabing",
+        "video_id": 27324627
+      },
+      {
+        "episode_id": 76405,
+        "display_name": "Spiderman S01E05 - Mysteriova pomsta CZ Titulky",
+        "video_id": 27324664
+      },
+      {
+        "episode_id": 76395,
+        "display_name": "Spiderman S01E08 - Spiderman v kůži vetřelce - 1. část CZ Dabing",
+        "video_id": 27324734
+      },
+      {
+        "episode_id": 76399,
+        "display_name": "Spiderman S01E10 - Spiderman v kůži vetřelce - 3. část CZ Dabing",
+        "video_id": 27324778
+      },
+      {
+        "episode_id": 76397,
+        "display_name": "Spiderman S01E11 - Hobgoblin - 1. část CZ Titulky",
+        "video_id": 27324838
+      },
+      {
+        "episode_id": 76403,
+        "display_name": "Spiderman S01E12 - Hobgoblin - 2. část CZ Dabing",
+        "video_id": 27324895
+      },
+      {
+        "episode_id": 76341,
+        "display_name": "Spiderman S02E02 - Sklad Monstrózní šestky CZ Titulky",
+        "video_id": 27324948
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -182226,6 +182336,116 @@
         "episode_id": 30783,
         "display_name": "Tým SEAL S06E10 - Fair Winds And Following Seas CZ Dabing",
         "video_id": 27323400
+      },
+      {
+        "episode_id": 30785,
+        "display_name": "Tým SEAL S07E02 - Chaos in the Calm: Part 2 CZ Dabing",
+        "video_id": 27323459
+      },
+      {
+        "episode_id": 30787,
+        "display_name": "Tým SEAL S07E04 - Heroes and Criminals CZ Dabing",
+        "video_id": 27323558
+      },
+      {
+        "episode_id": 30791,
+        "display_name": "Tým SEAL S07E08 - Appetite for Destruction CZ Dabing",
+        "video_id": 27323645
+      },
+      {
+        "episode_id": 30793,
+        "display_name": "Tým SEAL S07E10 - The Last Word CZ Dabing",
+        "video_id": 27323774
+      },
+      {
+        "episode_id": 64807,
+        "display_name": "Quantum Leap S01E03 - 3. epizoda CZ Titulky",
+        "video_id": 27323815
+      },
+      {
+        "episode_id": 64809,
+        "display_name": "Quantum Leap S01E05 - 5. epizoda CZ Titulky",
+        "video_id": 27323864
+      },
+      {
+        "episode_id": 64811,
+        "display_name": "Quantum Leap S01E07 - 7. epizoda CZ Titulky",
+        "video_id": 27323901
+      },
+      {
+        "episode_id": 64875,
+        "display_name": "Quantum Leap S05E11 - 11. epizoda CZ Titulky",
+        "video_id": 27323971
+      },
+      {
+        "episode_id": 64899,
+        "display_name": "Quantum Leap S05E12 - 12. epizoda CZ Titulky",
+        "video_id": 27324080
+      },
+      {
+        "episode_id": 64877,
+        "display_name": "Quantum Leap S05E14 - 14. epizoda CZ Titulky",
+        "video_id": 27324173
+      },
+      {
+        "episode_id": 64879,
+        "display_name": "Quantum Leap S05E16 - 16. epizoda CZ Titulky",
+        "video_id": 27324256
+      },
+      {
+        "episode_id": 64881,
+        "display_name": "Quantum Leap S05E18 - 18. epizoda CZ Titulky",
+        "video_id": 27324341
+      },
+      {
+        "episode_id": 64883,
+        "display_name": "Quantum Leap S05E20 - 20. epizoda CZ Titulky",
+        "video_id": 27324413
+      },
+      {
+        "episode_id": 64885,
+        "display_name": "Quantum Leap S05E22 - 22. epizoda CZ Titulky",
+        "video_id": 27324506
+      },
+      {
+        "episode_id": 76401,
+        "display_name": "Spiderman S01E02 - Pavoukobijci CZ Titulky",
+        "video_id": 27324587
+      },
+      {
+        "episode_id": 76393,
+        "display_name": "Spiderman S01E03 - Pavoukobijci se vracejí CZ Dabing",
+        "video_id": 27324627
+      },
+      {
+        "episode_id": 76405,
+        "display_name": "Spiderman S01E05 - Mysteriova pomsta CZ Titulky",
+        "video_id": 27324664
+      },
+      {
+        "episode_id": 76395,
+        "display_name": "Spiderman S01E08 - Spiderman v kůži vetřelce - 1. část CZ Dabing",
+        "video_id": 27324734
+      },
+      {
+        "episode_id": 76399,
+        "display_name": "Spiderman S01E10 - Spiderman v kůži vetřelce - 3. část CZ Dabing",
+        "video_id": 27324778
+      },
+      {
+        "episode_id": 76397,
+        "display_name": "Spiderman S01E11 - Hobgoblin - 1. část CZ Titulky",
+        "video_id": 27324838
+      },
+      {
+        "episode_id": 76403,
+        "display_name": "Spiderman S01E12 - Hobgoblin - 2. část CZ Dabing",
+        "video_id": 27324895
+      },
+      {
+        "episode_id": 76341,
+        "display_name": "Spiderman S02E02 - Sklad Monstrózní šestky CZ Titulky",
+        "video_id": 27324948
       }
     ],
     "prepared_not_upload_ready": [
@@ -183387,17 +183607,16 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 378,
     "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
     "whisper_non_cz_needs_subtitles": 1338,
     "whisper_confirmed_cz": 780,
-    "needs_whisper": 31195,
+    "needs_whisper": 31233,
     "whisper_failed": 2
   },
   "subtitle_followup_statuses": {
-    "needs_subtitle_setup_after_prehrajto_processing": 6175
+    "needs_subtitle_setup_after_prehrajto_processing": 6185
   }
 }
