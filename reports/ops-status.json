@@ -2,28 +2,76 @@
   "counts": {
     "backlog_episodes": 169992,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 23380,
-    "prepared_source_episodes": 30011,
+    "uploaded_episodes": 23397,
+    "prepared_source_episodes": 30008,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 459,
-    "language_whisper_attempted_sources": 59,
+    "language_audited_sources": 20,
+    "language_whisper_attempted_sources": 20,
     "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 35932,
-    "whisper_review_pending_sources": 33675,
+    "whisper_review_pending_sources": 33695,
     "subtitle_followup_sources": 6576,
     "subtitle_followup_pending_sources": 6576
   },
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-07-10T22:11:53Z",
+      "databaseId": 29127018816,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-10T22:08:22Z",
+      "databaseId": 29126848181,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "backfill-subtitles"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-10T22:04:31Z",
+      "databaseId": 29126659677,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-10T21:55:55Z",
+      "databaseId": 29126223839,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "backfill-subtitles"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-10T21:55:53Z",
+      "databaseId": 29126222931,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-sources"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-10T21:54:58Z",
+      "databaseId": 29126176857,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-10T21:54:04Z",
       "databaseId": 29126132063,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -35,11 +83,11 @@
       "workflowName": "ops-status"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-10T21:48:53Z",
       "databaseId": 29125866684,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
@@ -71,23 +119,23 @@
       "createdAt": "2026-07-10T21:47:50Z",
       "databaseId": 29125814465,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "prepare-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-10T21:46:41Z",
       "databaseId": 29125755715,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-10T21:44:36Z",
       "databaseId": 29125650297,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "backfill-subtitles"
     },
     {
@@ -99,11 +147,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-10T21:44:14Z",
       "databaseId": 29125632507,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -129,54 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-10T21:38:16Z",
-      "databaseId": 29125318569,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-10T21:37:19Z",
-      "databaseId": 29125270279,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-10T21:37:16Z",
-      "databaseId": 29125268057,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-07-10T21:37:13Z",
-      "databaseId": 29125265148,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-10T21:35:26Z",
-      "databaseId": 29125171586,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-10T21:32:57Z",
-      "databaseId": 29125040411,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "backfill-subtitles"
     }
   ],
   "gaps": {
@@ -94801,6 +94801,41 @@
         "video_id": 27353905
       },
       {
+        "episode_id": 73284,
+        "display_name": "Zavolejte porodní sestřičky S12E01 - 1. epizoda CZ Dabing",
+        "video_id": 27353965
+      },
+      {
+        "episode_id": 73276,
+        "display_name": "Zavolejte porodní sestřičky S12E03 - 3. epizoda CZ Dabing",
+        "video_id": 27354022
+      },
+      {
+        "episode_id": 73278,
+        "display_name": "Zavolejte porodní sestřičky S12E05 - 5. epizoda CZ Dabing",
+        "video_id": 27354079
+      },
+      {
+        "episode_id": 73280,
+        "display_name": "Zavolejte porodní sestřičky S12E07 - 7. epizoda CZ Dabing",
+        "video_id": 27354128
+      },
+      {
+        "episode_id": 170876,
+        "display_name": "Zavolejte porodní sestřičky S13E02 - 2. epizoda CZ Dabing",
+        "video_id": 27354185
+      },
+      {
+        "episode_id": 170878,
+        "display_name": "Zavolejte porodní sestřičky S13E04 - 4. epizoda CZ Dabing",
+        "video_id": 27354221
+      },
+      {
+        "episode_id": 170880,
+        "display_name": "Zavolejte porodní sestřičky S13E06 - 6. epizoda CZ Dabing",
+        "video_id": 27354260
+      },
+      {
         "episode_id": 12951,
         "display_name": "Cross S01E05 - Co se stane u Ramseyho... CZ Dabing",
         "video_id": 27353515
@@ -94829,6 +94864,56 @@
         "episode_id": 7997,
         "display_name": "Cross S02E07 - Protřídit CZ Dabing",
         "video_id": 27353885
+      },
+      {
+        "episode_id": 54053,
+        "display_name": "Protiúder S01E03 - Zimbabwe, část 1 CZ Dabing",
+        "video_id": 27353926
+      },
+      {
+        "episode_id": 54001,
+        "display_name": "Protiúder S01E05 - Afganistán, část 1 CZ Dabing",
+        "video_id": 27354036
+      },
+      {
+        "episode_id": 54027,
+        "display_name": "Protiúder S02E01 - 1. epizoda CZ Dabing",
+        "video_id": 27354076
+      },
+      {
+        "episode_id": 54047,
+        "display_name": "Protiúder S02E02 - 2. epizoda CZ Dabing",
+        "video_id": 27354115
+      },
+      {
+        "episode_id": 54031,
+        "display_name": "Protiúder S02E04 - 4. epizoda CZ Dabing",
+        "video_id": 27354137
+      },
+      {
+        "episode_id": 54013,
+        "display_name": "Protiúder S02E05 - 5. epizoda CZ Dabing",
+        "video_id": 27354160
+      },
+      {
+        "episode_id": 53997,
+        "display_name": "Protiúder S02E06 - 6. epizoda CZ Dabing",
+        "video_id": 27354203
+      },
+      {
+        "episode_id": 54015,
+        "display_name": "Protiúder S03E01 - 1. epizoda CZ Dabing",
+        "video_id": 27354222
+      },
+      {
+        "episode_id": 54045,
+        "display_name": "Protiúder S03E02 - 2. epizoda CZ Dabing",
+        "video_id": 27354240
+      },
+      {
+        "episode_id": 54009,
+        "display_name": "Protiúder S03E03 - 3. epizoda CZ Dabing",
+        "video_id": 27354261
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -189348,6 +189433,41 @@
         "video_id": 27353905
       },
       {
+        "episode_id": 73284,
+        "display_name": "Zavolejte porodní sestřičky S12E01 - 1. epizoda CZ Dabing",
+        "video_id": 27353965
+      },
+      {
+        "episode_id": 73276,
+        "display_name": "Zavolejte porodní sestřičky S12E03 - 3. epizoda CZ Dabing",
+        "video_id": 27354022
+      },
+      {
+        "episode_id": 73278,
+        "display_name": "Zavolejte porodní sestřičky S12E05 - 5. epizoda CZ Dabing",
+        "video_id": 27354079
+      },
+      {
+        "episode_id": 73280,
+        "display_name": "Zavolejte porodní sestřičky S12E07 - 7. epizoda CZ Dabing",
+        "video_id": 27354128
+      },
+      {
+        "episode_id": 170876,
+        "display_name": "Zavolejte porodní sestřičky S13E02 - 2. epizoda CZ Dabing",
+        "video_id": 27354185
+      },
+      {
+        "episode_id": 170878,
+        "display_name": "Zavolejte porodní sestřičky S13E04 - 4. epizoda CZ Dabing",
+        "video_id": 27354221
+      },
+      {
+        "episode_id": 170880,
+        "display_name": "Zavolejte porodní sestřičky S13E06 - 6. epizoda CZ Dabing",
+        "video_id": 27354260
+      },
+      {
         "episode_id": 12951,
         "display_name": "Cross S01E05 - Co se stane u Ramseyho... CZ Dabing",
         "video_id": 27353515
@@ -189376,6 +189496,56 @@
         "episode_id": 7997,
         "display_name": "Cross S02E07 - Protřídit CZ Dabing",
         "video_id": 27353885
+      },
+      {
+        "episode_id": 54053,
+        "display_name": "Protiúder S01E03 - Zimbabwe, část 1 CZ Dabing",
+        "video_id": 27353926
+      },
+      {
+        "episode_id": 54001,
+        "display_name": "Protiúder S01E05 - Afganistán, část 1 CZ Dabing",
+        "video_id": 27354036
+      },
+      {
+        "episode_id": 54027,
+        "display_name": "Protiúder S02E01 - 1. epizoda CZ Dabing",
+        "video_id": 27354076
+      },
+      {
+        "episode_id": 54047,
+        "display_name": "Protiúder S02E02 - 2. epizoda CZ Dabing",
+        "video_id": 27354115
+      },
+      {
+        "episode_id": 54031,
+        "display_name": "Protiúder S02E04 - 4. epizoda CZ Dabing",
+        "video_id": 27354137
+      },
+      {
+        "episode_id": 54013,
+        "display_name": "Protiúder S02E05 - 5. epizoda CZ Dabing",
+        "video_id": 27354160
+      },
+      {
+        "episode_id": 53997,
+        "display_name": "Protiúder S02E06 - 6. epizoda CZ Dabing",
+        "video_id": 27354203
+      },
+      {
+        "episode_id": 54015,
+        "display_name": "Protiúder S03E01 - 1. epizoda CZ Dabing",
+        "video_id": 27354222
+      },
+      {
+        "episode_id": 54045,
+        "display_name": "Protiúder S03E02 - 2. epizoda CZ Dabing",
+        "video_id": 27354240
+      },
+      {
+        "episode_id": 54009,
+        "display_name": "Protiúder S03E03 - 3. epizoda CZ Dabing",
+        "video_id": 27354261
       }
     ],
     "prepared_not_upload_ready": [
@@ -189690,6 +189860,166 @@
         "status": "whisper_failed"
       },
       {
+        "episode_id": 2271,
+        "source_id": -20693681486629485,
+        "series_title": "ALF",
+        "episode_code": "S04E04",
+        "source_title": "Alf S04E04. V balíku",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2271,
+        "source_id": -16430923165407790,
+        "series_title": "ALF",
+        "episode_code": "S04E04",
+        "source_title": "ALF S04E04 Sme v balíku",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2270,
+        "source_id": -53459586688754378,
+        "series_title": "ALF",
+        "episode_code": "S04E05",
+        "source_title": "Alf S04E05. Životní poslání",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2270,
+        "source_id": -20302614019712673,
+        "series_title": "ALF",
+        "episode_code": "S04E05",
+        "source_title": "ALF 04x05. Životní poslání",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2270,
+        "source_id": -17680935735003086,
+        "series_title": "ALF",
+        "episode_code": "S04E05",
+        "source_title": "ALF.S04E05",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2272,
+        "source_id": -39027397263274767,
+        "series_title": "ALF",
+        "episode_code": "S04E06",
+        "source_title": "ALF.S04E06",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2272,
+        "source_id": -26147008133681715,
+        "series_title": "ALF",
+        "episode_code": "S04E06",
+        "source_title": "ALF 04x06. Alfova závislost",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2272,
+        "source_id": -6934912095351368,
+        "series_title": "ALF",
+        "episode_code": "S04E06",
+        "source_title": "Alf S04E06. Alfova závislost",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2272,
+        "source_id": -39379930940598368,
+        "series_title": "ALF",
+        "episode_code": "S04E06",
+        "source_title": "ALF S04E06 Závislý",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2273,
+        "source_id": -21850825235824513,
+        "series_title": "ALF",
+        "episode_code": "S04E07",
+        "source_title": "ALF.S04E07",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2273,
+        "source_id": -14969370333513330,
+        "series_title": "ALF",
+        "episode_code": "S04E07",
+        "source_title": "ALF 04x07. Bratrská láska",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2273,
+        "source_id": -11148277797490021,
+        "series_title": "ALF",
+        "episode_code": "S04E07",
+        "source_title": "Alf S04E07. Bratrská láska",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2273,
+        "source_id": -32373747621301936,
+        "series_title": "ALF",
+        "episode_code": "S04E07",
+        "source_title": "ALF S04E07 Nie je nemožný, je to williho brat",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2275,
+        "source_id": -58288097712423889,
+        "series_title": "ALF",
+        "episode_code": "S04E08",
+        "source_title": "ALF 04x08. Blízké setkání prvního druhu",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2275,
+        "source_id": -32667898302282560,
+        "series_title": "ALF",
+        "episode_code": "S04E08",
+        "source_title": "ALF.S04E08",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2275,
+        "source_id": -31544226628935448,
+        "series_title": "ALF",
+        "episode_code": "S04E08",
+        "source_title": "Alf S04E08. Blízké setkání prvního druhu",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2274,
+        "source_id": -18794059139904885,
+        "series_title": "ALF",
+        "episode_code": "S04E09",
+        "source_title": "ALF 04x09. Žít a nechat zemřít",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2274,
+        "source_id": -2151195136185304,
+        "series_title": "ALF",
+        "episode_code": "S04E09",
+        "source_title": "Alf S04E09. Žít a nechat zemřít",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2274,
+        "source_id": -30684185753237588,
+        "series_title": "ALF",
+        "episode_code": "S04E09",
+        "source_title": "ALF S04E09 Ži a nechaj umriet",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2276,
+        "source_id": -27849670803220416,
+        "series_title": "ALF",
+        "episode_code": "S04E10",
+        "source_title": "Alf S04E10. Hádka",
+        "status": "needs_whisper"
+      },
+      {
         "episode_id": 2276,
         "source_id": -19156262993470535,
         "series_title": "ALF",
@@ -189919,166 +190249,6 @@
         "series_title": "ALF",
         "episode_code": "S04E19",
         "source_title": "Alf S04E19. Alfův idol",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2285,
-        "source_id": -22571718121288791,
-        "series_title": "ALF",
-        "episode_code": "S04E19",
-        "source_title": "ALF 04x19. Alfův idol",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2285,
-        "source_id": -1694774801304190,
-        "series_title": "ALF",
-        "episode_code": "S04E19",
-        "source_title": "ALF.S04E19",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2286,
-        "source_id": -67684114101835022,
-        "series_title": "ALF",
-        "episode_code": "S04E20",
-        "source_title": "ALF.S04E20",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2286,
-        "source_id": -27054273068625715,
-        "series_title": "ALF",
-        "episode_code": "S04E20",
-        "source_title": "Alf S04E20. Zlatá horečka",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2286,
-        "source_id": -3590758489351330,
-        "series_title": "ALF",
-        "episode_code": "S04E20",
-        "source_title": "ALF 04x20. Zlatá horečka",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2287,
-        "source_id": -23507944203663980,
-        "series_title": "ALF",
-        "episode_code": "S04E21",
-        "source_title": "ALF 04x21. Ekolog amatér",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2287,
-        "source_id": -15829782006771686,
-        "series_title": "ALF",
-        "episode_code": "S04E21",
-        "source_title": "ALF.S04E21",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2287,
-        "source_id": -5872930536603120,
-        "series_title": "ALF",
-        "episode_code": "S04E21",
-        "source_title": "Alf S04E21. Ekolog amatér",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2288,
-        "source_id": -67712168265184706,
-        "series_title": "ALF",
-        "episode_code": "S04E22",
-        "source_title": "Alf S04E22. Pudy vítězí",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2288,
-        "source_id": -24935486321669703,
-        "series_title": "ALF",
-        "episode_code": "S04E22",
-        "source_title": "ALF.S04E22",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2288,
-        "source_id": -23741757455366568,
-        "series_title": "ALF",
-        "episode_code": "S04E22",
-        "source_title": "ALF 04x22. Pudy vítězí",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2288,
-        "source_id": -34534207925178187,
-        "series_title": "ALF",
-        "episode_code": "S04E22",
-        "source_title": "ALF S04E22 Hladný ako vlk",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2289,
-        "source_id": -51534092981428412,
-        "series_title": "ALF",
-        "episode_code": "S04E23",
-        "source_title": "ALF 04x23. Zralé rozhodnutí",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2289,
-        "source_id": -21725691574328252,
-        "series_title": "ALF",
-        "episode_code": "S04E23",
-        "source_title": "Alf S04E23. Zralé rozhodnutí",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2289,
-        "source_id": -2870558391926088,
-        "series_title": "ALF",
-        "episode_code": "S04E23",
-        "source_title": "ALF.S04E23",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2290,
-        "source_id": -50487040137902960,
-        "series_title": "ALF",
-        "episode_code": "S04E24",
-        "source_title": "Alf S04E24. Loučení",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2290,
-        "source_id": -42188796575410020,
-        "series_title": "ALF",
-        "episode_code": "S04E24",
-        "source_title": "ALF 04x24. Loučení",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2290,
-        "source_id": -9361408901662094,
-        "series_title": "ALF",
-        "episode_code": "S04E24",
-        "source_title": "ALF.S04E24",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 123877,
-        "source_id": -47358858320914985,
-        "series_title": "Alias Grace",
-        "episode_code": "S01E01",
-        "source_title": "Alias Grace - S01E01 - Part 1",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 123877,
-        "source_id": -26638723137774298,
-        "series_title": "Alias Grace",
-        "episode_code": "S01E01",
-        "source_title": "Alias Grace - S1E1 Part 1 EN",
         "status": "needs_whisper"
       }
     ],
@@ -190537,15 +190707,14 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 400,
-    "ok": 58,
+    "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
-    "whisper_non_cz_needs_subtitles": 1374,
-    "whisper_confirmed_cz": 883,
+    "whisper_non_cz_needs_subtitles": 1370,
+    "whisper_confirmed_cz": 867,
     "whisper_failed": 3,
-    "needs_whisper": 33672
+    "needs_whisper": 33692
   },
   "subtitle_followup_statuses": {
     "needs_subtitle_setup_after_prehrajto_processing": 6576
