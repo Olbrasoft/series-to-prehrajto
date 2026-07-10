@@ -2,44 +2,116 @@
   "counts": {
     "backlog_episodes": 170420,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 22968,
-    "prepared_source_episodes": 28141,
+    "uploaded_episodes": 22981,
+    "prepared_source_episodes": 28360,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 20,
-    "language_whisper_attempted_sources": 20,
-    "language_pending_whisper_sources": 2624,
-    "whisper_review_sources": 34077,
-    "whisper_review_pending_sources": 31899,
+    "language_audited_sources": 590,
+    "language_whisper_attempted_sources": 60,
+    "language_pending_whisper_sources": 2604,
+    "whisper_review_sources": 34198,
+    "whisper_review_pending_sources": 32020,
     "subtitle_followup_sources": 6312,
     "subtitle_followup_pending_sources": 6312
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-07-10T11:04:26Z",
-      "databaseId": 29088293576,
+      "createdAt": "2026-07-10T11:30:44Z",
+      "databaseId": 29089656487,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
-      "createdAt": "2026-07-10T11:04:20Z",
-      "databaseId": 29088288805,
+      "createdAt": "2026-07-10T11:29:13Z",
+      "databaseId": 29089574339,
       "headBranch": "main",
-      "status": "pending",
-      "workflowName": "prepare-manifest"
+      "status": "in_progress",
+      "workflowName": "backfill-subtitles"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-10T11:19:56Z",
+      "databaseId": 29089093524,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "backfill-subtitles"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-10T11:16:12Z",
+      "databaseId": 29088906728,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-10T11:09:59Z",
+      "databaseId": 29088581640,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "backfill-subtitles"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-07-10T11:06:02Z",
+      "databaseId": 29088380489,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-10T11:05:27Z",
+      "databaseId": 29088349110,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-10T11:05:24Z",
+      "databaseId": 29088346298,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-10T11:05:22Z",
+      "databaseId": 29088344374,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-10T11:04:26Z",
+      "databaseId": 29088293576,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-07-10T11:04:20Z",
+      "databaseId": 29088288805,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-10T11:01:02Z",
       "databaseId": 29088118909,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "backfill-subtitles"
     },
     {
@@ -105,78 +177,6 @@
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-10T10:29:31Z",
-      "databaseId": 29086487992,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-10T10:29:27Z",
-      "databaseId": 29086484971,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-10T10:29:25Z",
-      "databaseId": 29086483035,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-10T10:28:31Z",
-      "databaseId": 29086437539,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-10T10:26:32Z",
-      "databaseId": 29086335842,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "backfill-subtitles"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-10T10:18:35Z",
-      "databaseId": 29085922882,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "backfill-subtitles"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-10T10:11:41Z",
-      "databaseId": 29085553517,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "refresh-backlog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-10T10:10:27Z",
-      "databaseId": 29085484234,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "backfill-subtitles"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-10T10:04:24Z",
-      "databaseId": 29085143955,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-manifest"
     }
   ],
   "gaps": {
@@ -92769,6 +92769,71 @@
         "episode_id": 87761,
         "display_name": "Detektiv Endeavour Morse S07E01 - Orákulum CZ Dabing",
         "video_id": 27335903
+      },
+      {
+        "episode_id": 87762,
+        "display_name": "Detektiv Endeavour Morse S07E02 - Bratři CZ Dabing",
+        "video_id": 27336011
+      },
+      {
+        "episode_id": 87760,
+        "display_name": "Detektiv Endeavour Morse S07E03 - Liška v kurníku CZ Dabing",
+        "video_id": 27336096
+      },
+      {
+        "episode_id": 107614,
+        "display_name": "Detektiv Endeavour Morse S08E01 - Útočník CZ Dabing",
+        "video_id": 27336219
+      },
+      {
+        "episode_id": 87768,
+        "display_name": "Detektiv Endeavour Morse S09E01 - Předehra CZ Dabing",
+        "video_id": 27336330
+      },
+      {
+        "episode_id": 87770,
+        "display_name": "Detektiv Endeavour Morse S09E03 - Všichni odejdou CZ Dabing",
+        "video_id": 27336478
+      },
+      {
+        "episode_id": 87763,
+        "display_name": "Detektiv Endeavour Morse S08E02 - Hodiny CZ Dabing",
+        "video_id": 27336064
+      },
+      {
+        "episode_id": 87767,
+        "display_name": "Detektiv Endeavour Morse S08E03 - Konečná CZ Dabing",
+        "video_id": 27336135
+      },
+      {
+        "episode_id": 87769,
+        "display_name": "Detektiv Endeavour Morse S09E02 - Uniforma CZ Dabing",
+        "video_id": 27336214
+      },
+      {
+        "episode_id": 158949,
+        "display_name": "Ochránce S01E01 - 1. epizoda CZ Dabing",
+        "video_id": 27336332
+      },
+      {
+        "episode_id": 158951,
+        "display_name": "Ochránce S01E06 - 6. epizoda CZ Dabing",
+        "video_id": 27336402
+      },
+      {
+        "episode_id": 158953,
+        "display_name": "Ochránce S01E08 - 8. epizoda CZ Dabing",
+        "video_id": 27336473
+      },
+      {
+        "episode_id": 158955,
+        "display_name": "Ochránce S01E10 - 10. epizoda CZ Dabing",
+        "video_id": 27336658
+      },
+      {
+        "episode_id": 158961,
+        "display_name": "Ochránce S02E06 - 6. epizoda CZ Dabing",
+        "video_id": 27336716
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -185256,6 +185321,71 @@
         "episode_id": 87761,
         "display_name": "Detektiv Endeavour Morse S07E01 - Orákulum CZ Dabing",
         "video_id": 27335903
+      },
+      {
+        "episode_id": 87762,
+        "display_name": "Detektiv Endeavour Morse S07E02 - Bratři CZ Dabing",
+        "video_id": 27336011
+      },
+      {
+        "episode_id": 87760,
+        "display_name": "Detektiv Endeavour Morse S07E03 - Liška v kurníku CZ Dabing",
+        "video_id": 27336096
+      },
+      {
+        "episode_id": 107614,
+        "display_name": "Detektiv Endeavour Morse S08E01 - Útočník CZ Dabing",
+        "video_id": 27336219
+      },
+      {
+        "episode_id": 87768,
+        "display_name": "Detektiv Endeavour Morse S09E01 - Předehra CZ Dabing",
+        "video_id": 27336330
+      },
+      {
+        "episode_id": 87770,
+        "display_name": "Detektiv Endeavour Morse S09E03 - Všichni odejdou CZ Dabing",
+        "video_id": 27336478
+      },
+      {
+        "episode_id": 87763,
+        "display_name": "Detektiv Endeavour Morse S08E02 - Hodiny CZ Dabing",
+        "video_id": 27336064
+      },
+      {
+        "episode_id": 87767,
+        "display_name": "Detektiv Endeavour Morse S08E03 - Konečná CZ Dabing",
+        "video_id": 27336135
+      },
+      {
+        "episode_id": 87769,
+        "display_name": "Detektiv Endeavour Morse S09E02 - Uniforma CZ Dabing",
+        "video_id": 27336214
+      },
+      {
+        "episode_id": 158949,
+        "display_name": "Ochránce S01E01 - 1. epizoda CZ Dabing",
+        "video_id": 27336332
+      },
+      {
+        "episode_id": 158951,
+        "display_name": "Ochránce S01E06 - 6. epizoda CZ Dabing",
+        "video_id": 27336402
+      },
+      {
+        "episode_id": 158953,
+        "display_name": "Ochránce S01E08 - 8. epizoda CZ Dabing",
+        "video_id": 27336473
+      },
+      {
+        "episode_id": 158955,
+        "display_name": "Ochránce S01E10 - 10. epizoda CZ Dabing",
+        "video_id": 27336658
+      },
+      {
+        "episode_id": 158961,
+        "display_name": "Ochránce S02E06 - 6. epizoda CZ Dabing",
+        "video_id": 27336716
       }
     ],
     "prepared_not_upload_ready": [
@@ -186417,13 +186547,14 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 19,
+    "disabled": 530,
+    "ok": 59,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
-    "whisper_non_cz_needs_subtitles": 1354,
-    "whisper_confirmed_cz": 824,
-    "needs_whisper": 31897,
+    "whisper_non_cz_needs_subtitles": 1355,
+    "whisper_confirmed_cz": 823,
+    "needs_whisper": 32018,
     "whisper_failed": 2
   },
   "subtitle_followup_statuses": {
