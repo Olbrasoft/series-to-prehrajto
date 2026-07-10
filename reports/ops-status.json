@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 170039,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 23361,
+    "uploaded_episodes": 23363,
     "prepared_source_episodes": 29790,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 60,
-    "language_whisper_attempted_sources": 60,
-    "language_pending_whisper_sources": 2604,
+    "language_audited_sources": 20,
+    "language_whisper_attempted_sources": 20,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 35682,
     "whisper_review_pending_sources": 33385,
     "subtitle_followup_sources": 6490,
@@ -20,10 +20,34 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-07-10T21:19:22Z",
+      "databaseId": 29124336854,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-10T21:16:32Z",
+      "databaseId": 29124191375,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-10T21:16:29Z",
+      "databaseId": 29124188531,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-10T21:15:34Z",
       "databaseId": 29124138476,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -83,11 +107,11 @@
       "workflowName": "prepare-sources"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-10T20:55:00Z",
       "databaseId": 29123027241,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -150,30 +174,6 @@
       "conclusion": "success",
       "createdAt": "2026-07-10T20:43:12Z",
       "databaseId": 29122364366,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-10T20:43:12Z",
-      "databaseId": 29122364010,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-10T20:42:15Z",
-      "databaseId": 29122309488,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-10T20:42:13Z",
-      "databaseId": 29122307249,
       "headBranch": "main",
       "status": "completed",
       "workflowName": "process-whisper-review"
@@ -94636,6 +94636,16 @@
         "video_id": 27352961
       },
       {
+        "episode_id": 73238,
+        "display_name": "Zavolejte porodní sestřičky S07E01 - 1. epizoda CZ Dabing",
+        "video_id": 27353031
+      },
+      {
+        "episode_id": 73240,
+        "display_name": "Zavolejte porodní sestřičky S07E03 - 3. epizoda CZ Dabing",
+        "video_id": 27353106
+      },
+      {
         "episode_id": 73281,
         "display_name": "Zavolejte porodní sestřičky S12E08 - 8. epizoda CZ Dabing",
         "video_id": 27350190
@@ -189088,6 +189098,16 @@
         "video_id": 27352961
       },
       {
+        "episode_id": 73238,
+        "display_name": "Zavolejte porodní sestřičky S07E01 - 1. epizoda CZ Dabing",
+        "video_id": 27353031
+      },
+      {
+        "episode_id": 73240,
+        "display_name": "Zavolejte porodní sestřičky S07E03 - 3. epizoda CZ Dabing",
+        "video_id": 27353106
+      },
+      {
         "episode_id": 73281,
         "display_name": "Zavolejte porodní sestřičky S12E08 - 8. epizoda CZ Dabing",
         "video_id": 27350190
@@ -190347,7 +190367,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 59,
+    "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
