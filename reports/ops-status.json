@@ -2,15 +2,15 @@
   "counts": {
     "backlog_episodes": 170305,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 23173,
-    "prepared_source_episodes": 29005,
+    "uploaded_episodes": 23183,
+    "prepared_source_episodes": 29016,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 349,
-    "language_whisper_attempted_sources": 60,
+    "language_audited_sources": 369,
+    "language_whisper_attempted_sources": 80,
     "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 35172,
     "whisper_review_pending_sources": 32974,
@@ -20,18 +20,66 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-07-10T15:14:04Z",
-      "databaseId": 29102885755,
+      "createdAt": "2026-07-10T15:22:33Z",
+      "databaseId": 29103425349,
       "headBranch": "main",
       "status": "in_progress",
-      "workflowName": "ops-watchdog"
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-10T15:21:59Z",
+      "databaseId": 29103389657,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-07-10T15:21:04Z",
+      "databaseId": 29103332378,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-10T15:16:25Z",
+      "databaseId": 29103034507,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "backfill-subtitles"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-10T15:15:11Z",
+      "databaseId": 29102956239,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-10T15:15:05Z",
+      "databaseId": 29102949868,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-10T15:14:04Z",
+      "databaseId": 29102885755,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "failure",
       "createdAt": "2026-07-10T15:13:52Z",
       "databaseId": 29102872834,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -43,11 +91,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-10T15:08:29Z",
       "databaseId": 29102528326,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
@@ -75,11 +123,11 @@
       "workflowName": "prepare-manifest"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-10T15:04:08Z",
       "databaseId": 29102246904,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "backfill-subtitles"
     },
     {
@@ -129,54 +177,6 @@
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "sync"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-07-10T14:45:12Z",
-      "databaseId": 29101018632,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-10T14:42:45Z",
-      "databaseId": 29100859998,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "backfill-subtitles"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-10T14:27:52Z",
-      "databaseId": 29099908490,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-10T14:26:46Z",
-      "databaseId": 29099838445,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-10T14:25:18Z",
-      "databaseId": 29099747031,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-sources"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-10T14:23:34Z",
-      "databaseId": 29099635328,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
     }
   ],
   "gaps": {
@@ -93776,6 +93776,21 @@
         "video_id": 27343407
       },
       {
+        "episode_id": 39890,
+        "display_name": "Babylon 5 S05E01 - 1. epizoda CZ Dabing",
+        "video_id": 27343511
+      },
+      {
+        "episode_id": 39892,
+        "display_name": "Babylon 5 S05E03 - 3. epizoda CZ Dabing",
+        "video_id": 27343579
+      },
+      {
+        "episode_id": 39894,
+        "display_name": "Babylon 5 S05E04 - 4. epizoda CZ Dabing",
+        "video_id": 27343660
+      },
+      {
         "episode_id": 63343,
         "display_name": "Řád S01E06 - Návrat domů (2) CZ Dabing",
         "video_id": 27343388
@@ -93794,6 +93809,41 @@
         "episode_id": 15629,
         "display_name": "Nenasytná S01E08 - Důležité rozhodnutí CZ Titulky",
         "video_id": 27343484
+      },
+      {
+        "episode_id": 15633,
+        "display_name": "Nenasytná S01E10 - Banánová láska CZ Dabing",
+        "video_id": 27343540
+      },
+      {
+        "episode_id": 15639,
+        "display_name": "Nenasytná S02E07 - Po brazilsku CZ Dabing",
+        "video_id": 27343570
+      },
+      {
+        "episode_id": 142963,
+        "display_name": "Znuděný k smrti S01E01 - 1. epizoda CZ Dabing",
+        "video_id": 27343650
+      },
+      {
+        "episode_id": 142967,
+        "display_name": "Znuděný k smrti S01E02 - 2. epizoda CZ Dabing",
+        "video_id": 27343676
+      },
+      {
+        "episode_id": 142969,
+        "display_name": "Znuděný k smrti S01E07 - 7. epizoda CZ Dabing",
+        "video_id": 27343697
+      },
+      {
+        "episode_id": 142973,
+        "display_name": "Znuděný k smrti S02E03 - 3. epizoda CZ Dabing",
+        "video_id": 27343716
+      },
+      {
+        "episode_id": 142979,
+        "display_name": "Znuděný k smrti S03E01 - 1. epizoda CZ Dabing",
+        "video_id": 27343737
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -187288,6 +187338,21 @@
         "video_id": 27343407
       },
       {
+        "episode_id": 39890,
+        "display_name": "Babylon 5 S05E01 - 1. epizoda CZ Dabing",
+        "video_id": 27343511
+      },
+      {
+        "episode_id": 39892,
+        "display_name": "Babylon 5 S05E03 - 3. epizoda CZ Dabing",
+        "video_id": 27343579
+      },
+      {
+        "episode_id": 39894,
+        "display_name": "Babylon 5 S05E04 - 4. epizoda CZ Dabing",
+        "video_id": 27343660
+      },
+      {
         "episode_id": 63343,
         "display_name": "Řád S01E06 - Návrat domů (2) CZ Dabing",
         "video_id": 27343388
@@ -187306,6 +187371,41 @@
         "episode_id": 15629,
         "display_name": "Nenasytná S01E08 - Důležité rozhodnutí CZ Titulky",
         "video_id": 27343484
+      },
+      {
+        "episode_id": 15633,
+        "display_name": "Nenasytná S01E10 - Banánová láska CZ Dabing",
+        "video_id": 27343540
+      },
+      {
+        "episode_id": 15639,
+        "display_name": "Nenasytná S02E07 - Po brazilsku CZ Dabing",
+        "video_id": 27343570
+      },
+      {
+        "episode_id": 142963,
+        "display_name": "Znuděný k smrti S01E01 - 1. epizoda CZ Dabing",
+        "video_id": 27343650
+      },
+      {
+        "episode_id": 142967,
+        "display_name": "Znuděný k smrti S01E02 - 2. epizoda CZ Dabing",
+        "video_id": 27343676
+      },
+      {
+        "episode_id": 142969,
+        "display_name": "Znuděný k smrti S01E07 - 7. epizoda CZ Dabing",
+        "video_id": 27343697
+      },
+      {
+        "episode_id": 142973,
+        "display_name": "Znuděný k smrti S02E03 - 3. epizoda CZ Dabing",
+        "video_id": 27343716
+      },
+      {
+        "episode_id": 142979,
+        "display_name": "Znuděný k smrti S03E01 - 1. epizoda CZ Dabing",
+        "video_id": 27343737
       }
     ],
     "prepared_not_upload_ready": [
@@ -188468,7 +188568,8 @@
   "language_verdicts": {},
   "language_whisper_statuses": {
     "disabled": 289,
-    "ok": 59,
+    "ok": 78,
+    "sample_failed": 1,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
