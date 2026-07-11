@@ -2,22 +2,94 @@
   "counts": {
     "backlog_episodes": 169802,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 23568,
-    "prepared_source_episodes": 30299,
+    "uploaded_episodes": 23608,
+    "prepared_source_episodes": 30277,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 40,
-    "language_whisper_attempted_sources": 40,
+    "language_audited_sources": 60,
+    "language_whisper_attempted_sources": 60,
     "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 36167,
-    "whisper_review_pending_sources": 33830,
+    "whisper_review_pending_sources": 33812,
     "subtitle_followup_sources": 6669,
     "subtitle_followup_pending_sources": 6669
   },
   "workflow_runs": [
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-11T01:26:58Z",
+      "databaseId": 29134637729,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-11T01:26:52Z",
+      "databaseId": 29134634973,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-11T01:26:47Z",
+      "databaseId": 29134632735,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-11T01:24:26Z",
+      "databaseId": 29134564666,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "backfill-subtitles"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-11T01:12:46Z",
+      "databaseId": 29134213914,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "backfill-subtitles"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-11T01:04:57Z",
+      "databaseId": 29133958255,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-sources"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-11T01:02:09Z",
+      "databaseId": 29133863242,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "backfill-subtitles"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-11T01:02:02Z",
+      "databaseId": 29133859521,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-11T00:59:17Z",
+      "databaseId": 29133762543,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
     {
       "conclusion": "",
       "createdAt": "2026-07-11T00:58:19Z",
@@ -43,11 +115,11 @@
       "workflowName": "audit-language"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-11T00:57:22Z",
       "databaseId": 29133699563,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -59,19 +131,19 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-07-11T00:57:16Z",
       "databaseId": 29133696223,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-11T00:54:00Z",
       "databaseId": 29133587480,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "sync"
     },
     {
@@ -91,11 +163,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-11T00:50:49Z",
       "databaseId": 29133476595,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
@@ -105,78 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-11T00:48:52Z",
-      "databaseId": 29133406412,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "refresh-backlog"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-11T00:45:10Z",
-      "databaseId": 29133276044,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "backfill-subtitles"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-11T00:44:52Z",
-      "databaseId": 29133265226,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-11T00:44:49Z",
-      "databaseId": 29133263526,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-11T00:44:47Z",
-      "databaseId": 29133261760,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-11T00:43:50Z",
-      "databaseId": 29133227181,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-07-11T00:37:20Z",
-      "databaseId": 29132998850,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-11T00:35:44Z",
-      "databaseId": 29132943288,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-11T00:35:33Z",
-      "databaseId": 29132936489,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "backfill-subtitles"
     }
   ],
   "gaps": {
@@ -95769,6 +95769,206 @@
         "episode_id": 43015,
         "display_name": "Odložené případy S02E02 - Děvčata z továrny CZ Dabing",
         "video_id": 27357392
+      },
+      {
+        "episode_id": 104198,
+        "display_name": "Znovu 20 S05E10 - Bokovky CZ Dabing",
+        "video_id": 27357473
+      },
+      {
+        "episode_id": 104200,
+        "display_name": "Znovu 20 S06E01 - Den D CZ Dabing",
+        "video_id": 27357510
+      },
+      {
+        "episode_id": 104202,
+        "display_name": "Znovu 20 S06E03 - Podezřelý prodej CZ Dabing",
+        "video_id": 27357561
+      },
+      {
+        "episode_id": 104204,
+        "display_name": "Znovu 20 S06E05 - Drsná konkurence CZ Dabing",
+        "video_id": 27357601
+      },
+      {
+        "episode_id": 104206,
+        "display_name": "Znovu 20 S06E07 - Přátelé s výhodami CZ Dabing",
+        "video_id": 27357632
+      },
+      {
+        "episode_id": 104188,
+        "display_name": "Znovu 20 S06E08 - Odhalení CZ Dabing",
+        "video_id": 27357669
+      },
+      {
+        "episode_id": 104208,
+        "display_name": "Znovu 20 S06E10 - Peníze až na prvním místě CZ Dabing",
+        "video_id": 27357707
+      },
+      {
+        "episode_id": 98520,
+        "display_name": "Znovu 20 S06E12 - Navždy CZ Dabing",
+        "video_id": 27357750
+      },
+      {
+        "episode_id": 98522,
+        "display_name": "Znovu 20 S07E02 - Konec světa CZ Dabing",
+        "video_id": 27357797
+      },
+      {
+        "episode_id": 98524,
+        "display_name": "Znovu 20 S07E04 - Riskantní obchod CZ Dabing",
+        "video_id": 27357840
+      },
+      {
+        "episode_id": 104182,
+        "display_name": "Znovu 20 S07E06 - Slovo na P CZ Dabing",
+        "video_id": 27357879
+      },
+      {
+        "episode_id": 98526,
+        "display_name": "Znovu 20 S07E08 - Baronka CZ Dabing",
+        "video_id": 27357933
+      },
+      {
+        "episode_id": 98528,
+        "display_name": "Znovu 20 S07E10 - Kolaudační párty CZ Dabing",
+        "video_id": 27357976
+      },
+      {
+        "episode_id": 98530,
+        "display_name": "Znovu 20 S07E12 - Starší CZ Dabing",
+        "video_id": 27358024
+      },
+      {
+        "episode_id": 81548,
+        "display_name": "Boruto: Naruto Next Generations S01E03 - 3. epizoda CZ Titulky",
+        "video_id": 27358059
+      },
+      {
+        "episode_id": 81566,
+        "display_name": "Boruto: Naruto Next Generations S01E07 - 7. epizoda CZ Titulky",
+        "video_id": 27358085
+      },
+      {
+        "episode_id": 81606,
+        "display_name": "Boruto: Naruto Next Generations S01E08 - 8. epizoda CZ Titulky",
+        "video_id": 27358108
+      },
+      {
+        "episode_id": 81558,
+        "display_name": "Boruto: Naruto Next Generations S01E10 - 10. epizoda CZ Titulky",
+        "video_id": 27358126
+      },
+      {
+        "episode_id": 81550,
+        "display_name": "Boruto: Naruto Next Generations S01E13 - 13. epizoda CZ Titulky",
+        "video_id": 27358148
+      },
+      {
+        "episode_id": 73202,
+        "display_name": "Zavolejte porodní sestřičky S02E04 - 4. epizoda CZ Dabing",
+        "video_id": 27358184
+      },
+      {
+        "episode_id": 43109,
+        "display_name": "Odložené případy S02E06 - Přespání CZ Dabing",
+        "video_id": 27357485
+      },
+      {
+        "episode_id": 43019,
+        "display_name": "Odložené případy S02E08 - Rudá záře CZ Dabing",
+        "video_id": 27357512
+      },
+      {
+        "episode_id": 43103,
+        "display_name": "Odložené případy S02E12 - Ahoj, Adrian CZ Titulky",
+        "video_id": 27357535
+      },
+      {
+        "episode_id": 43031,
+        "display_name": "Odložené případy S02E22 - Nejlepší přátelé CZ Titulky",
+        "video_id": 27357560
+      },
+      {
+        "episode_id": 43033,
+        "display_name": "Odložené případy S02E23 - Les CZ Titulky",
+        "video_id": 27357581
+      },
+      {
+        "episode_id": 43095,
+        "display_name": "Odložené případy S03E01 - Rodina CZ Dabing",
+        "video_id": 27357607
+      },
+      {
+        "episode_id": 43091,
+        "display_name": "Odložené případy S03E06 - Zachraňte Patricka Bubleyho CZ Dabing",
+        "video_id": 27357635
+      },
+      {
+        "episode_id": 43037,
+        "display_name": "Odložené případy S03E07 - Rozjezd CZ Dabing",
+        "video_id": 27357656
+      },
+      {
+        "episode_id": 43039,
+        "display_name": "Odložené případy S03E08 - Čest CZ Dabing",
+        "video_id": 27357682
+      },
+      {
+        "episode_id": 43041,
+        "display_name": "Odložené případy S03E10 - Frankovy lahůdky CZ Titulky",
+        "video_id": 27357709
+      },
+      {
+        "episode_id": 43043,
+        "display_name": "Odložené případy S03E12 - Po škole CZ Dabing",
+        "video_id": 27357743
+      },
+      {
+        "episode_id": 43101,
+        "display_name": "Odložené případy S03E20 - Definitivní trest: Konečné odvolání CZ Titulky",
+        "video_id": 27357782
+      },
+      {
+        "episode_id": 73277,
+        "display_name": "Zavolejte porodní sestřičky S12E04 - 4. epizoda CZ Dabing",
+        "video_id": 27357815
+      },
+      {
+        "episode_id": 43111,
+        "display_name": "Odložené případy S04E01 - Běsnění CZ Dabing",
+        "video_id": 27357849
+      },
+      {
+        "episode_id": 43051,
+        "display_name": "Odložené případy S04E03 - Barabové CZ Dabing",
+        "video_id": 27357875
+      },
+      {
+        "episode_id": 43053,
+        "display_name": "Odložené případy S04E05 - Zachraňte Sammyho CZ Dabing",
+        "video_id": 27357902
+      },
+      {
+        "episode_id": 43059,
+        "display_name": "Odložené případy S04E12 - Zatnout pěsti! CZ Dabing",
+        "video_id": 27357941
+      },
+      {
+        "episode_id": 43065,
+        "display_name": "Odložené případy S04E20 - Postav se a zakřič CZ Dabing",
+        "video_id": 27357969
+      },
+      {
+        "episode_id": 43067,
+        "display_name": "Odložené případy S04E22 - Lodní náklad CZ Dabing",
+        "video_id": 27357998
+      },
+      {
+        "episode_id": 43069,
+        "display_name": "Odložené případy S04E23 - Smrt z milosti CZ Dabing",
+        "video_id": 27358032
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -191256,6 +191456,206 @@
         "episode_id": 43015,
         "display_name": "Odložené případy S02E02 - Děvčata z továrny CZ Dabing",
         "video_id": 27357392
+      },
+      {
+        "episode_id": 104198,
+        "display_name": "Znovu 20 S05E10 - Bokovky CZ Dabing",
+        "video_id": 27357473
+      },
+      {
+        "episode_id": 104200,
+        "display_name": "Znovu 20 S06E01 - Den D CZ Dabing",
+        "video_id": 27357510
+      },
+      {
+        "episode_id": 104202,
+        "display_name": "Znovu 20 S06E03 - Podezřelý prodej CZ Dabing",
+        "video_id": 27357561
+      },
+      {
+        "episode_id": 104204,
+        "display_name": "Znovu 20 S06E05 - Drsná konkurence CZ Dabing",
+        "video_id": 27357601
+      },
+      {
+        "episode_id": 104206,
+        "display_name": "Znovu 20 S06E07 - Přátelé s výhodami CZ Dabing",
+        "video_id": 27357632
+      },
+      {
+        "episode_id": 104188,
+        "display_name": "Znovu 20 S06E08 - Odhalení CZ Dabing",
+        "video_id": 27357669
+      },
+      {
+        "episode_id": 104208,
+        "display_name": "Znovu 20 S06E10 - Peníze až na prvním místě CZ Dabing",
+        "video_id": 27357707
+      },
+      {
+        "episode_id": 98520,
+        "display_name": "Znovu 20 S06E12 - Navždy CZ Dabing",
+        "video_id": 27357750
+      },
+      {
+        "episode_id": 98522,
+        "display_name": "Znovu 20 S07E02 - Konec světa CZ Dabing",
+        "video_id": 27357797
+      },
+      {
+        "episode_id": 98524,
+        "display_name": "Znovu 20 S07E04 - Riskantní obchod CZ Dabing",
+        "video_id": 27357840
+      },
+      {
+        "episode_id": 104182,
+        "display_name": "Znovu 20 S07E06 - Slovo na P CZ Dabing",
+        "video_id": 27357879
+      },
+      {
+        "episode_id": 98526,
+        "display_name": "Znovu 20 S07E08 - Baronka CZ Dabing",
+        "video_id": 27357933
+      },
+      {
+        "episode_id": 98528,
+        "display_name": "Znovu 20 S07E10 - Kolaudační párty CZ Dabing",
+        "video_id": 27357976
+      },
+      {
+        "episode_id": 98530,
+        "display_name": "Znovu 20 S07E12 - Starší CZ Dabing",
+        "video_id": 27358024
+      },
+      {
+        "episode_id": 81548,
+        "display_name": "Boruto: Naruto Next Generations S01E03 - 3. epizoda CZ Titulky",
+        "video_id": 27358059
+      },
+      {
+        "episode_id": 81566,
+        "display_name": "Boruto: Naruto Next Generations S01E07 - 7. epizoda CZ Titulky",
+        "video_id": 27358085
+      },
+      {
+        "episode_id": 81606,
+        "display_name": "Boruto: Naruto Next Generations S01E08 - 8. epizoda CZ Titulky",
+        "video_id": 27358108
+      },
+      {
+        "episode_id": 81558,
+        "display_name": "Boruto: Naruto Next Generations S01E10 - 10. epizoda CZ Titulky",
+        "video_id": 27358126
+      },
+      {
+        "episode_id": 81550,
+        "display_name": "Boruto: Naruto Next Generations S01E13 - 13. epizoda CZ Titulky",
+        "video_id": 27358148
+      },
+      {
+        "episode_id": 73202,
+        "display_name": "Zavolejte porodní sestřičky S02E04 - 4. epizoda CZ Dabing",
+        "video_id": 27358184
+      },
+      {
+        "episode_id": 43109,
+        "display_name": "Odložené případy S02E06 - Přespání CZ Dabing",
+        "video_id": 27357485
+      },
+      {
+        "episode_id": 43019,
+        "display_name": "Odložené případy S02E08 - Rudá záře CZ Dabing",
+        "video_id": 27357512
+      },
+      {
+        "episode_id": 43103,
+        "display_name": "Odložené případy S02E12 - Ahoj, Adrian CZ Titulky",
+        "video_id": 27357535
+      },
+      {
+        "episode_id": 43031,
+        "display_name": "Odložené případy S02E22 - Nejlepší přátelé CZ Titulky",
+        "video_id": 27357560
+      },
+      {
+        "episode_id": 43033,
+        "display_name": "Odložené případy S02E23 - Les CZ Titulky",
+        "video_id": 27357581
+      },
+      {
+        "episode_id": 43095,
+        "display_name": "Odložené případy S03E01 - Rodina CZ Dabing",
+        "video_id": 27357607
+      },
+      {
+        "episode_id": 43091,
+        "display_name": "Odložené případy S03E06 - Zachraňte Patricka Bubleyho CZ Dabing",
+        "video_id": 27357635
+      },
+      {
+        "episode_id": 43037,
+        "display_name": "Odložené případy S03E07 - Rozjezd CZ Dabing",
+        "video_id": 27357656
+      },
+      {
+        "episode_id": 43039,
+        "display_name": "Odložené případy S03E08 - Čest CZ Dabing",
+        "video_id": 27357682
+      },
+      {
+        "episode_id": 43041,
+        "display_name": "Odložené případy S03E10 - Frankovy lahůdky CZ Titulky",
+        "video_id": 27357709
+      },
+      {
+        "episode_id": 43043,
+        "display_name": "Odložené případy S03E12 - Po škole CZ Dabing",
+        "video_id": 27357743
+      },
+      {
+        "episode_id": 43101,
+        "display_name": "Odložené případy S03E20 - Definitivní trest: Konečné odvolání CZ Titulky",
+        "video_id": 27357782
+      },
+      {
+        "episode_id": 73277,
+        "display_name": "Zavolejte porodní sestřičky S12E04 - 4. epizoda CZ Dabing",
+        "video_id": 27357815
+      },
+      {
+        "episode_id": 43111,
+        "display_name": "Odložené případy S04E01 - Běsnění CZ Dabing",
+        "video_id": 27357849
+      },
+      {
+        "episode_id": 43051,
+        "display_name": "Odložené případy S04E03 - Barabové CZ Dabing",
+        "video_id": 27357875
+      },
+      {
+        "episode_id": 43053,
+        "display_name": "Odložené případy S04E05 - Zachraňte Sammyho CZ Dabing",
+        "video_id": 27357902
+      },
+      {
+        "episode_id": 43059,
+        "display_name": "Odložené případy S04E12 - Zatnout pěsti! CZ Dabing",
+        "video_id": 27357941
+      },
+      {
+        "episode_id": 43065,
+        "display_name": "Odložené případy S04E20 - Postav se a zakřič CZ Dabing",
+        "video_id": 27357969
+      },
+      {
+        "episode_id": 43067,
+        "display_name": "Odložené případy S04E22 - Lodní náklad CZ Dabing",
+        "video_id": 27357998
+      },
+      {
+        "episode_id": 43069,
+        "display_name": "Odložené případy S04E23 - Smrt z milosti CZ Dabing",
+        "video_id": 27358032
       }
     ],
     "prepared_not_upload_ready": [
@@ -191570,76 +191970,12 @@
         "status": "whisper_failed"
       },
       {
-        "episode_id": 48525,
-        "source_id": -60008207205664883,
-        "series_title": "Ally McBealová",
-        "episode_code": "S01E04",
-        "source_title": "Ally McBealová - 01x04.Romanek (by_UgarE)",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 48525,
-        "source_id": -21115011276449963,
-        "series_title": "Ally McBealová",
-        "episode_code": "S01E04",
-        "source_title": "Ally McBealová - 01x04.Romanek",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 48526,
-        "source_id": -68904984027903992,
-        "series_title": "Ally McBealová",
-        "episode_code": "S01E05",
-        "source_title": "Ally Mcbealová - S01E05",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 48526,
-        "source_id": -53285305858815631,
-        "series_title": "Ally McBealová",
-        "episode_code": "S01E05",
-        "source_title": "Ally McBealová - 01x05.Vyplakane.slzy (by_UgarE)",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 48526,
-        "source_id": -40255498219720493,
-        "series_title": "Ally McBealová",
-        "episode_code": "S01E05",
-        "source_title": "Ally McBealová - 01x05.Vyplakane.slzy",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 48527,
-        "source_id": -71483453726425067,
-        "series_title": "Ally McBealová",
-        "episode_code": "S01E06",
-        "source_title": "Ally Mcbealová - S01E06",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 48521,
-        "source_id": -55609624004380909,
-        "series_title": "Ally McBealová",
-        "episode_code": "S01E07",
-        "source_title": "Ally McBealová - 01x07.Zmena.pristupu (by_UgarE)",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 48521,
-        "source_id": -37204577121577650,
-        "series_title": "Ally McBealová",
-        "episode_code": "S01E07",
-        "source_title": "Ally McBealová - 01x07.Zmena.pristupu",
-        "status": "needs_whisper"
-      },
-      {
         "episode_id": 48528,
         "source_id": -44389897169469839,
         "series_title": "Ally McBealová",
         "episode_code": "S01E08",
         "source_title": "Ally McBealová - 01x08.Jsou.urcite.hranice (by_UgarE)",
-        "status": "needs_whisper"
+        "status": "whisper_failed"
       },
       {
         "episode_id": 48528,
@@ -191647,87 +191983,7 @@
         "series_title": "Ally McBealová",
         "episode_code": "S01E08",
         "source_title": "Ally McBealová - 01x08.Jsou.urcite.hranice",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 48531,
-        "source_id": -44234973330520024,
-        "series_title": "Ally McBealová",
-        "episode_code": "S01E11",
-        "source_title": "Ally McBealová - 01x11.Stribrne.zvonky (by_UgarE)",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 48531,
-        "source_id": -13223874833861124,
-        "series_title": "Ally McBealová",
-        "episode_code": "S01E11",
-        "source_title": "Ally McBealová - 01x11.Stribrne.zvonky",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 48540,
-        "source_id": -63148410649634249,
-        "series_title": "Ally McBealová",
-        "episode_code": "S02E01",
-        "source_title": "Ally McBealová - 02x01.opravdovy.svet",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 48540,
-        "source_id": -29963393721044039,
-        "series_title": "Ally McBealová",
-        "episode_code": "S02E01",
-        "source_title": "Ally McBealová - 02x01.opravdovy.svet (by_UgarE)",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 48541,
-        "source_id": -41954703904570904,
-        "series_title": "Ally McBealová",
-        "episode_code": "S02E02",
-        "source_title": "Ally McBealová - 02x02.kone.se.take.jedi (by_UgarE)",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 48541,
-        "source_id": -25398437200469132,
-        "series_title": "Ally McBealová",
-        "episode_code": "S02E02",
-        "source_title": "Ally McBealová - 02x02.kone.se.take.jedi",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 48542,
-        "source_id": -64044457252994330,
-        "series_title": "Ally McBealová",
-        "episode_code": "S02E03",
-        "source_title": "Ally McBealová - 02x03.pozvani.na.veceri",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 48542,
-        "source_id": -7846973744707823,
-        "series_title": "Ally McBealová",
-        "episode_code": "S02E03",
-        "source_title": "Ally McBealová - 02x03.pozvani.na.veceri (by_UgarE)",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 48544,
-        "source_id": -48819720433146354,
-        "series_title": "Ally McBealová",
-        "episode_code": "S02E05",
-        "source_title": "Ally McBealová - 02x05.pribeh.lasky (by_UgarE)",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 48544,
-        "source_id": -24026138577743921,
-        "series_title": "Ally McBealová",
-        "episode_code": "S02E05",
-        "source_title": "Ally McBealová - 02x05.pribeh.lasky",
-        "status": "needs_whisper"
+        "status": "whisper_failed"
       },
       {
         "episode_id": 48545,
@@ -191959,6 +192215,150 @@
         "series_title": "Americký vandal",
         "episode_code": "S01E03",
         "source_title": "Americký vandal - S1E3 Nailed EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 114587,
+        "source_id": -67750401671809174,
+        "series_title": "Americký vandal",
+        "episode_code": "S01E08",
+        "source_title": "Americký vandal - S1E8 Clean Up EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 17762,
+        "source_id": -9259354857310565,
+        "series_title": "Anatomie skandálu",
+        "episode_code": "S01E02",
+        "source_title": "Anatomie skandálu - S1E2 Epizoda 2 EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 17764,
+        "source_id": -71130074510650004,
+        "series_title": "Anatomie skandálu",
+        "episode_code": "S01E04",
+        "source_title": "Anatomie skandálu - S1E4 Epizoda 4 EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 162753,
+        "source_id": -10310388922768500,
+        "series_title": "Andělé v Americe",
+        "episode_code": "S01E01",
+        "source_title": "Andělé v Americe - S1E1 Millennium Approaches: Chapter One - Bad News EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 162750,
+        "source_id": -45523514096538563,
+        "series_title": "Andělé v Americe",
+        "episode_code": "S01E02",
+        "source_title": "Andělé v Americe - S1E2 Millennium Approaches: Chapter Two - In Vitro EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 162751,
+        "source_id": -53807649610525279,
+        "series_title": "Andělé v Americe",
+        "episode_code": "S01E03",
+        "source_title": "Andělé v Americe - S1E3 Millennium Approaches: Chapter Three - The Messenger EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 162752,
+        "source_id": -63369965311750846,
+        "series_title": "Andělé v Americe",
+        "episode_code": "S01E05",
+        "source_title": "Andělé v Americe - S1E5 EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 171025,
+        "source_id": -34697302891499691,
+        "series_title": "Andělé v Americe",
+        "episode_code": "S01E06",
+        "source_title": "Andělé v Americe - S1E6 Perestroika: Chapter Six - Heaven, I'm In Heaven EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39885,
+        "source_id": -21457400927111548,
+        "series_title": "Babylon 5",
+        "episode_code": "S01E01",
+        "source_title": "Babylon 5 S01E01 ⭐GG⭐",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39885,
+        "source_id": -2673949616794839,
+        "series_title": "Babylon 5",
+        "episode_code": "S01E01",
+        "source_title": "Babylon 5 S01E01 DoDo",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39885,
+        "source_id": -32873902874719700,
+        "series_title": "Babylon 5",
+        "episode_code": "S01E01",
+        "source_title": "Babylon 5 S01E01By DRAGOUN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39885,
+        "source_id": -3177514977772568,
+        "series_title": "Babylon 5",
+        "episode_code": "S01E01",
+        "source_title": "Babylon 5 S01E01⭐GT⭐",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39885,
+        "source_id": -47658075937080633,
+        "series_title": "Babylon 5",
+        "episode_code": "S01E01",
+        "source_title": "Babylon 5 S01E01 1080p SK",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39885,
+        "source_id": -15865889863977473,
+        "series_title": "Babylon 5",
+        "episode_code": "S01E01",
+        "source_title": "Babylon 5 S01E01 Polnočný útok",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39913,
+        "source_id": -19512431934754920,
+        "series_title": "Babylon 5",
+        "episode_code": "S01E02",
+        "source_title": "Babylon 5 S01E02 DoDo",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39913,
+        "source_id": -13486920989987079,
+        "series_title": "Babylon 5",
+        "episode_code": "S01E02",
+        "source_title": "Babylon 5 S01E02 ⭐GG⭐",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39913,
+        "source_id": -17769919278199618,
+        "series_title": "Babylon 5",
+        "episode_code": "S01E02",
+        "source_title": "Babylon 5 S01E02 1080p SK",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39887,
+        "source_id": -54874491088042422,
+        "series_title": "Babylon 5",
+        "episode_code": "S01E03",
+        "source_title": "Babylon 5 S01E03 ⭐GG⭐",
         "status": "needs_whisper"
       }
     ],
@@ -192417,14 +192817,15 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 39,
+    "ok": 57,
+    "sample_failed": 2,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
     "whisper_non_cz_needs_subtitles": 1404,
-    "whisper_confirmed_cz": 933,
-    "whisper_failed": 3,
-    "needs_whisper": 33827
+    "whisper_confirmed_cz": 951,
+    "whisper_failed": 5,
+    "needs_whisper": 33807
   },
   "subtitle_followup_statuses": {
     "needs_subtitle_setup_after_prehrajto_processing": 6669
