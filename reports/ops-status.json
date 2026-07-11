@@ -2,28 +2,76 @@
   "counts": {
     "backlog_episodes": 169802,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 23724,
-    "prepared_source_episodes": 30615,
+    "uploaded_episodes": 23758,
+    "prepared_source_episodes": 30593,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 20,
-    "language_whisper_attempted_sources": 20,
+    "language_audited_sources": 60,
+    "language_whisper_attempted_sources": 60,
     "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 36301,
-    "whisper_review_pending_sources": 34044,
+    "whisper_review_pending_sources": 34004,
     "subtitle_followup_sources": 6719,
     "subtitle_followup_pending_sources": 6719
   },
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-07-11T03:38:12Z",
+      "databaseId": 29138321449,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-11T03:38:09Z",
+      "databaseId": 29138319947,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "backfill-subtitles"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-11T03:28:23Z",
+      "databaseId": 29138050335,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "backfill-subtitles"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-11T03:20:09Z",
+      "databaseId": 29137832071,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-11T03:12:47Z",
+      "databaseId": 29137633658,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-07-11T03:10:32Z",
+      "databaseId": 29137570857,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-11T03:06:07Z",
       "databaseId": 29137449877,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-status"
     },
     {
@@ -35,11 +83,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-11T03:01:50Z",
       "databaseId": 29137324503,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "backfill-subtitles"
     },
     {
@@ -51,11 +99,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-11T03:00:56Z",
       "databaseId": 29137297658,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
@@ -87,7 +135,7 @@
       "createdAt": "2026-07-11T02:40:41Z",
       "databaseId": 29136740440,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "sync"
     },
     {
@@ -129,54 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-11T02:36:26Z",
-      "databaseId": 29136624122,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-11T02:35:53Z",
-      "databaseId": 29136606964,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "backfill-subtitles"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-11T02:35:33Z",
-      "databaseId": 29136598133,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-11T02:35:31Z",
-      "databaseId": 29136597455,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-11T02:35:27Z",
-      "databaseId": 29136595710,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-11T02:35:22Z",
-      "databaseId": 29136593201,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "sync"
     }
   ],
   "gaps": {
@@ -96549,6 +96549,176 @@
         "episode_id": 5867,
         "display_name": "Dva světy S01E05 - Shaking the Tree CZ Dabing",
         "video_id": 27360467
+      },
+      {
+        "episode_id": 5869,
+        "display_name": "Dva světy S01E07 - The Sincerest Form of Flattery CZ Dabing",
+        "video_id": 27360506
+      },
+      {
+        "episode_id": 5877,
+        "display_name": "Dva světy S02E05 - Shadow Puppets CZ Dabing",
+        "video_id": 27360539
+      },
+      {
+        "episode_id": 5879,
+        "display_name": "Dva světy S02E07 - No Strings Attached CZ Dabing",
+        "video_id": 27360563
+      },
+      {
+        "episode_id": 185631,
+        "display_name": "V jako Victoria S01E02 - Scéna s ptákem CZ Dabing",
+        "video_id": 27360589
+      },
+      {
+        "episode_id": 98604,
+        "display_name": "Holky z vejšky S02E03 - 3. epizoda CZ Dabing",
+        "video_id": 27360620
+      },
+      {
+        "episode_id": 98606,
+        "display_name": "Holky z vejšky S02E05 - 5. epizoda CZ Dabing",
+        "video_id": 27360655
+      },
+      {
+        "episode_id": 98608,
+        "display_name": "Holky z vejšky S02E07 - 7. epizoda CZ Dabing",
+        "video_id": 27360668
+      },
+      {
+        "episode_id": 98590,
+        "display_name": "Holky z vejšky S03E01 - 1. epizoda CZ Dabing",
+        "video_id": 27360685
+      },
+      {
+        "episode_id": 98592,
+        "display_name": "Holky z vejšky S03E03 - 3. epizoda CZ Dabing",
+        "video_id": 27360705
+      },
+      {
+        "episode_id": 98594,
+        "display_name": "Holky z vejšky S03E05 - 5. epizoda CZ Dabing",
+        "video_id": 27360725
+      },
+      {
+        "episode_id": 98598,
+        "display_name": "Holky z vejšky S03E07 - 7. epizoda CZ Dabing",
+        "video_id": 27360750
+      },
+      {
+        "episode_id": 98596,
+        "display_name": "Holky z vejšky S03E08 - 8. epizoda CZ Dabing",
+        "video_id": 27360779
+      },
+      {
+        "episode_id": 138070,
+        "display_name": "Pokoj č. 10 S01E01 - 1. epizoda CZ Dabing",
+        "video_id": 27360842
+      },
+      {
+        "episode_id": 138072,
+        "display_name": "Pokoj č. 10 S01E03 - 3. epizoda CZ Dabing",
+        "video_id": 27360948
+      },
+      {
+        "episode_id": 54874,
+        "display_name": "Viktorie S01E02 - Dvorní dámy CZ Dabing",
+        "video_id": 27361040
+      },
+      {
+        "episode_id": 54876,
+        "display_name": "Viktorie S01E04 - Princ na klíček CZ Dabing",
+        "video_id": 27361084
+      },
+      {
+        "episode_id": 185647,
+        "display_name": "V jako Victoria S01E03 - Souboj na jevišti CZ Dabing",
+        "video_id": 27360622
+      },
+      {
+        "episode_id": 185633,
+        "display_name": "V jako Victoria S01E05 - Jade versus Back CZ Dabing",
+        "video_id": 27360660
+      },
+      {
+        "episode_id": 185635,
+        "display_name": "V jako Victoria S01E07 - Školní blog CZ Dabing",
+        "video_id": 27360681
+      },
+      {
+        "episode_id": 185663,
+        "display_name": "V jako Victoria S01E08 - Na pláži CZ Dabing",
+        "video_id": 27360701
+      },
+      {
+        "episode_id": 185649,
+        "display_name": "V jako Victoria S01E10 - Beckův velký konkurz CZ Dabing",
+        "video_id": 27360719
+      },
+      {
+        "episode_id": 185637,
+        "display_name": "V jako Victoria S01E11 - Velký ping-pongový podfuk CZ Dabing",
+        "video_id": 27360767
+      },
+      {
+        "episode_id": 185639,
+        "display_name": "V jako Victoria S01E13 - Vyděs to monstrum CZ Dabing",
+        "video_id": 27360812
+      },
+      {
+        "episode_id": 185641,
+        "display_name": "V jako Victoria S01E15 - Narozeninové vystoupení CZ Dabing",
+        "video_id": 27360855
+      },
+      {
+        "episode_id": 185609,
+        "display_name": "V jako Victoria S02E02 - Co by Beck pro Tori neudělal CZ Dabing",
+        "video_id": 27360882
+      },
+      {
+        "episode_id": 185611,
+        "display_name": "V jako Victoria S02E04 - Hra CZ Dabing",
+        "video_id": 27360917
+      },
+      {
+        "episode_id": 185613,
+        "display_name": "V jako Victoria S02E06 - Ve vězení 1+2 CZ Dabing",
+        "video_id": 27360950
+      },
+      {
+        "episode_id": 185615,
+        "display_name": "V jako Victoria S02E08 - Kdo to Trině udělal? CZ Dabing",
+        "video_id": 27360965
+      },
+      {
+        "episode_id": 185617,
+        "display_name": "V jako Victoria S02E10 - Píseň pro Jade CZ Dabing",
+        "video_id": 27360984
+      },
+      {
+        "episode_id": 185621,
+        "display_name": "V jako Victoria S03E02 - Klub gorila CZ Dabing",
+        "video_id": 27360995
+      },
+      {
+        "episode_id": 185623,
+        "display_name": "V jako Victoria S03E04 - Andrého protivná holka CZ Dabing",
+        "video_id": 27361012
+      },
+      {
+        "episode_id": 185645,
+        "display_name": "V jako Victoria S03E06 - Tori a Jade hrají manžele CZ Dabing",
+        "video_id": 27361044
+      },
+      {
+        "episode_id": 185625,
+        "display_name": "V jako Victoria S03E07 - Platinová Tori CZ Dabing",
+        "video_id": 27361068
+      },
+      {
+        "episode_id": 185651,
+        "display_name": "V jako Victoria S03E08 - Jak Tori přivést k šílenství CZ Dabing",
+        "video_id": 27361097
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -192816,6 +192986,176 @@
         "episode_id": 5867,
         "display_name": "Dva světy S01E05 - Shaking the Tree CZ Dabing",
         "video_id": 27360467
+      },
+      {
+        "episode_id": 5869,
+        "display_name": "Dva světy S01E07 - The Sincerest Form of Flattery CZ Dabing",
+        "video_id": 27360506
+      },
+      {
+        "episode_id": 5877,
+        "display_name": "Dva světy S02E05 - Shadow Puppets CZ Dabing",
+        "video_id": 27360539
+      },
+      {
+        "episode_id": 5879,
+        "display_name": "Dva světy S02E07 - No Strings Attached CZ Dabing",
+        "video_id": 27360563
+      },
+      {
+        "episode_id": 185631,
+        "display_name": "V jako Victoria S01E02 - Scéna s ptákem CZ Dabing",
+        "video_id": 27360589
+      },
+      {
+        "episode_id": 98604,
+        "display_name": "Holky z vejšky S02E03 - 3. epizoda CZ Dabing",
+        "video_id": 27360620
+      },
+      {
+        "episode_id": 98606,
+        "display_name": "Holky z vejšky S02E05 - 5. epizoda CZ Dabing",
+        "video_id": 27360655
+      },
+      {
+        "episode_id": 98608,
+        "display_name": "Holky z vejšky S02E07 - 7. epizoda CZ Dabing",
+        "video_id": 27360668
+      },
+      {
+        "episode_id": 98590,
+        "display_name": "Holky z vejšky S03E01 - 1. epizoda CZ Dabing",
+        "video_id": 27360685
+      },
+      {
+        "episode_id": 98592,
+        "display_name": "Holky z vejšky S03E03 - 3. epizoda CZ Dabing",
+        "video_id": 27360705
+      },
+      {
+        "episode_id": 98594,
+        "display_name": "Holky z vejšky S03E05 - 5. epizoda CZ Dabing",
+        "video_id": 27360725
+      },
+      {
+        "episode_id": 98598,
+        "display_name": "Holky z vejšky S03E07 - 7. epizoda CZ Dabing",
+        "video_id": 27360750
+      },
+      {
+        "episode_id": 98596,
+        "display_name": "Holky z vejšky S03E08 - 8. epizoda CZ Dabing",
+        "video_id": 27360779
+      },
+      {
+        "episode_id": 138070,
+        "display_name": "Pokoj č. 10 S01E01 - 1. epizoda CZ Dabing",
+        "video_id": 27360842
+      },
+      {
+        "episode_id": 138072,
+        "display_name": "Pokoj č. 10 S01E03 - 3. epizoda CZ Dabing",
+        "video_id": 27360948
+      },
+      {
+        "episode_id": 54874,
+        "display_name": "Viktorie S01E02 - Dvorní dámy CZ Dabing",
+        "video_id": 27361040
+      },
+      {
+        "episode_id": 54876,
+        "display_name": "Viktorie S01E04 - Princ na klíček CZ Dabing",
+        "video_id": 27361084
+      },
+      {
+        "episode_id": 185647,
+        "display_name": "V jako Victoria S01E03 - Souboj na jevišti CZ Dabing",
+        "video_id": 27360622
+      },
+      {
+        "episode_id": 185633,
+        "display_name": "V jako Victoria S01E05 - Jade versus Back CZ Dabing",
+        "video_id": 27360660
+      },
+      {
+        "episode_id": 185635,
+        "display_name": "V jako Victoria S01E07 - Školní blog CZ Dabing",
+        "video_id": 27360681
+      },
+      {
+        "episode_id": 185663,
+        "display_name": "V jako Victoria S01E08 - Na pláži CZ Dabing",
+        "video_id": 27360701
+      },
+      {
+        "episode_id": 185649,
+        "display_name": "V jako Victoria S01E10 - Beckův velký konkurz CZ Dabing",
+        "video_id": 27360719
+      },
+      {
+        "episode_id": 185637,
+        "display_name": "V jako Victoria S01E11 - Velký ping-pongový podfuk CZ Dabing",
+        "video_id": 27360767
+      },
+      {
+        "episode_id": 185639,
+        "display_name": "V jako Victoria S01E13 - Vyděs to monstrum CZ Dabing",
+        "video_id": 27360812
+      },
+      {
+        "episode_id": 185641,
+        "display_name": "V jako Victoria S01E15 - Narozeninové vystoupení CZ Dabing",
+        "video_id": 27360855
+      },
+      {
+        "episode_id": 185609,
+        "display_name": "V jako Victoria S02E02 - Co by Beck pro Tori neudělal CZ Dabing",
+        "video_id": 27360882
+      },
+      {
+        "episode_id": 185611,
+        "display_name": "V jako Victoria S02E04 - Hra CZ Dabing",
+        "video_id": 27360917
+      },
+      {
+        "episode_id": 185613,
+        "display_name": "V jako Victoria S02E06 - Ve vězení 1+2 CZ Dabing",
+        "video_id": 27360950
+      },
+      {
+        "episode_id": 185615,
+        "display_name": "V jako Victoria S02E08 - Kdo to Trině udělal? CZ Dabing",
+        "video_id": 27360965
+      },
+      {
+        "episode_id": 185617,
+        "display_name": "V jako Victoria S02E10 - Píseň pro Jade CZ Dabing",
+        "video_id": 27360984
+      },
+      {
+        "episode_id": 185621,
+        "display_name": "V jako Victoria S03E02 - Klub gorila CZ Dabing",
+        "video_id": 27360995
+      },
+      {
+        "episode_id": 185623,
+        "display_name": "V jako Victoria S03E04 - Andrého protivná holka CZ Dabing",
+        "video_id": 27361012
+      },
+      {
+        "episode_id": 185645,
+        "display_name": "V jako Victoria S03E06 - Tori a Jade hrají manžele CZ Dabing",
+        "video_id": 27361044
+      },
+      {
+        "episode_id": 185625,
+        "display_name": "V jako Victoria S03E07 - Platinová Tori CZ Dabing",
+        "video_id": 27361068
+      },
+      {
+        "episode_id": 185651,
+        "display_name": "V jako Victoria S03E08 - Jak Tori přivést k šílenství CZ Dabing",
+        "video_id": 27361097
       }
     ],
     "prepared_not_upload_ready": [
@@ -193130,326 +193470,6 @@
         "status": "whisper_failed"
       },
       {
-        "episode_id": 2276,
-        "source_id": -19156262993470535,
-        "series_title": "ALF",
-        "episode_code": "S04E10",
-        "source_title": "ALF.S04E10",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2276,
-        "source_id": -1738131407638115,
-        "series_title": "ALF",
-        "episode_code": "S04E10",
-        "source_title": "ALF 04x10. Hádka",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2277,
-        "source_id": -46827960324766262,
-        "series_title": "ALF",
-        "episode_code": "S04E11",
-        "source_title": "ALF.S04E11",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2277,
-        "source_id": -36916053229727062,
-        "series_title": "ALF",
-        "episode_code": "S04E11",
-        "source_title": "Alf S04E11. Alf zlobí",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2277,
-        "source_id": -9481432142227476,
-        "series_title": "ALF",
-        "episode_code": "S04E11",
-        "source_title": "ALF 04x11. Alf zlobí",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2278,
-        "source_id": -50073672981154418,
-        "series_title": "ALF",
-        "episode_code": "S04E12",
-        "source_title": "Alf S04E12. Bacily útočí",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2278,
-        "source_id": -13786009833166816,
-        "series_title": "ALF",
-        "episode_code": "S04E12",
-        "source_title": "ALF 04x12. Bacily útočí",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2278,
-        "source_id": -7719599774884044,
-        "series_title": "ALF",
-        "episode_code": "S04E12",
-        "source_title": "ALF.S04E12",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2279,
-        "source_id": -52862543500727986,
-        "series_title": "ALF",
-        "episode_code": "S04E13",
-        "source_title": "ALF.S04E13",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2279,
-        "source_id": -51610618913099590,
-        "series_title": "ALF",
-        "episode_code": "S04E13",
-        "source_title": "Alf S04E13. Večírek",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2279,
-        "source_id": -3515495416671291,
-        "series_title": "ALF",
-        "episode_code": "S04E13",
-        "source_title": "ALF 04x13. Večírek",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2279,
-        "source_id": -14613910983911214,
-        "series_title": "ALF",
-        "episode_code": "S04E13",
-        "source_title": "ALF S04E13 To je moj večierok",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2280,
-        "source_id": -51602767840716221,
-        "series_title": "ALF",
-        "episode_code": "S04E14",
-        "source_title": "Alf S04E14. Legrace je vážná věc",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2280,
-        "source_id": -46559560777945932,
-        "series_title": "ALF",
-        "episode_code": "S04E14",
-        "source_title": "ALF 04x14. Legrace je vážná věc",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2280,
-        "source_id": -17704456084269317,
-        "series_title": "ALF",
-        "episode_code": "S04E14",
-        "source_title": "ALF.S04E14",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2281,
-        "source_id": -64067895368384762,
-        "series_title": "ALF",
-        "episode_code": "S04E15",
-        "source_title": "ALF 04x15. Láska u ledu",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2281,
-        "source_id": -59842743766335925,
-        "series_title": "ALF",
-        "episode_code": "S04E15",
-        "source_title": "ALF.S04E15",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2281,
-        "source_id": -38448196920250259,
-        "series_title": "ALF",
-        "episode_code": "S04E15",
-        "source_title": "Alf S04E15. Láska u ledu",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2282,
-        "source_id": -38510028533155857,
-        "series_title": "ALF",
-        "episode_code": "S04E16",
-        "source_title": "ALF.S04E16",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2282,
-        "source_id": -32736724392342748,
-        "series_title": "ALF",
-        "episode_code": "S04E16",
-        "source_title": "Alf S04E16. Umělecká kariéra",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2282,
-        "source_id": -17615144466266938,
-        "series_title": "ALF",
-        "episode_code": "S04E16",
-        "source_title": "ALF 04x16. Umělecká kariéra",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2282,
-        "source_id": -67240681608095036,
-        "series_title": "ALF",
-        "episode_code": "S04E16",
-        "source_title": "ALF S04E16 S farbou von",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2283,
-        "source_id": -67191399014106679,
-        "series_title": "ALF",
-        "episode_code": "S04E17",
-        "source_title": "Alf S04E17. Duchovní pastýř",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2283,
-        "source_id": -53675555368007712,
-        "series_title": "ALF",
-        "episode_code": "S04E17",
-        "source_title": "ALF.S04E17",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2283,
-        "source_id": -2912119981389111,
-        "series_title": "ALF",
-        "episode_code": "S04E17",
-        "source_title": "ALF 04x17. Duchovní pastýř",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2284,
-        "source_id": -65932365035511883,
-        "series_title": "ALF",
-        "episode_code": "S04E18",
-        "source_title": "ALF.S04E18",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2284,
-        "source_id": -62250850276764426,
-        "series_title": "ALF",
-        "episode_code": "S04E18",
-        "source_title": "ALF 04x18. Budoucnost s otazníkem",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2284,
-        "source_id": -11090251252108998,
-        "series_title": "ALF",
-        "episode_code": "S04E18",
-        "source_title": "Alf S04E18. Budoucnost s otazníkem",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2285,
-        "source_id": -65404665330138986,
-        "series_title": "ALF",
-        "episode_code": "S04E19",
-        "source_title": "Alf S04E19. Alfův idol",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2285,
-        "source_id": -22571718121288791,
-        "series_title": "ALF",
-        "episode_code": "S04E19",
-        "source_title": "ALF 04x19. Alfův idol",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2285,
-        "source_id": -1694774801304190,
-        "series_title": "ALF",
-        "episode_code": "S04E19",
-        "source_title": "ALF.S04E19",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2286,
-        "source_id": -67684114101835022,
-        "series_title": "ALF",
-        "episode_code": "S04E20",
-        "source_title": "ALF.S04E20",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2286,
-        "source_id": -27054273068625715,
-        "series_title": "ALF",
-        "episode_code": "S04E20",
-        "source_title": "Alf S04E20. Zlatá horečka",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2286,
-        "source_id": -3590758489351330,
-        "series_title": "ALF",
-        "episode_code": "S04E20",
-        "source_title": "ALF 04x20. Zlatá horečka",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2287,
-        "source_id": -23507944203663980,
-        "series_title": "ALF",
-        "episode_code": "S04E21",
-        "source_title": "ALF 04x21. Ekolog amatér",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2287,
-        "source_id": -15829782006771686,
-        "series_title": "ALF",
-        "episode_code": "S04E21",
-        "source_title": "ALF.S04E21",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2287,
-        "source_id": -5872930536603120,
-        "series_title": "ALF",
-        "episode_code": "S04E21",
-        "source_title": "Alf S04E21. Ekolog amatér",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2288,
-        "source_id": -67712168265184706,
-        "series_title": "ALF",
-        "episode_code": "S04E22",
-        "source_title": "Alf S04E22. Pudy vítězí",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2288,
-        "source_id": -24935486321669703,
-        "series_title": "ALF",
-        "episode_code": "S04E22",
-        "source_title": "ALF.S04E22",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2288,
-        "source_id": -23741757455366568,
-        "series_title": "ALF",
-        "episode_code": "S04E22",
-        "source_title": "ALF 04x22. Pudy vítězí",
-        "status": "needs_whisper"
-      },
-      {
         "episode_id": 2288,
         "source_id": -34534207925178187,
         "series_title": "ALF",
@@ -193519,6 +193539,326 @@
         "series_title": "Alias Grace",
         "episode_code": "S01E01",
         "source_title": "Alias Grace - S1E1 Part 1 EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 123877,
+        "source_id": -39542728156293205,
+        "series_title": "Alias Grace",
+        "episode_code": "S01E01",
+        "source_title": "Alias Grace S01E01.720p.WEB-DL x264",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 123873,
+        "source_id": -60936305459149242,
+        "series_title": "Alias Grace",
+        "episode_code": "S01E02",
+        "source_title": "Alias Grace - S01E02 - Part 2",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 123873,
+        "source_id": -13684646743752742,
+        "series_title": "Alias Grace",
+        "episode_code": "S01E02",
+        "source_title": "Alias Grace - S1E2 Part 2 EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 123873,
+        "source_id": -60943960479148705,
+        "series_title": "Alias Grace",
+        "episode_code": "S01E02",
+        "source_title": "Alias Grace 1x2",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 123873,
+        "source_id": -64949245111362529,
+        "series_title": "Alias Grace",
+        "episode_code": "S01E02",
+        "source_title": "Alias Grace S01E02.720p.WEB-DL x264",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 123874,
+        "source_id": -42799558803547127,
+        "series_title": "Alias Grace",
+        "episode_code": "S01E03",
+        "source_title": "Alias Grace - S01E03 - Part 3",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 123874,
+        "source_id": -35816068084619284,
+        "series_title": "Alias Grace",
+        "episode_code": "S01E03",
+        "source_title": "Alias Grace - S1E3 Part 3 EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 123874,
+        "source_id": -37025634329529050,
+        "series_title": "Alias Grace",
+        "episode_code": "S01E03",
+        "source_title": "Alias Grace S01E03.720p.WEB-DL x264",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 123874,
+        "source_id": -5798346154317905,
+        "series_title": "Alias Grace",
+        "episode_code": "S01E03",
+        "source_title": "Alias Grace 1x3",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 123874,
+        "source_id": -22942047707471467,
+        "series_title": "Alias Grace",
+        "episode_code": "S01E03",
+        "source_title": "Alias Grace - S1E3 Part 3 EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 123875,
+        "source_id": -34219314713320053,
+        "series_title": "Alias Grace",
+        "episode_code": "S01E04",
+        "source_title": "Alias Grace - S1E4 Part 4 EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 123875,
+        "source_id": -20675467292213080,
+        "series_title": "Alias Grace",
+        "episode_code": "S01E04",
+        "source_title": "Alias Grace S1E4 Part 4",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 123875,
+        "source_id": -9968882842147337,
+        "series_title": "Alias Grace",
+        "episode_code": "S01E04",
+        "source_title": "Alias Grace - S01E04 - Part 4",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 123875,
+        "source_id": -13008840822817304,
+        "series_title": "Alias Grace",
+        "episode_code": "S01E04",
+        "source_title": "Alias Grace S01E04.720p.WEB-DL x264",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 123875,
+        "source_id": -57762854856934670,
+        "series_title": "Alias Grace",
+        "episode_code": "S01E04",
+        "source_title": "Alias Grace 1x4",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 123875,
+        "source_id": -20519370144560512,
+        "series_title": "Alias Grace",
+        "episode_code": "S01E04",
+        "source_title": "Alias Grace - S1E4 Part 4 EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 123876,
+        "source_id": -32727359596712691,
+        "series_title": "Alias Grace",
+        "episode_code": "S01E05",
+        "source_title": "Alias Grace - S01E05 - Part 5",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 123876,
+        "source_id": -6841409555441805,
+        "series_title": "Alias Grace",
+        "episode_code": "S01E05",
+        "source_title": "Alias Grace - S1E5 Part 5 EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 123876,
+        "source_id": -24792350695206132,
+        "series_title": "Alias Grace",
+        "episode_code": "S01E05",
+        "source_title": "Alias Grace 1x5",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 123876,
+        "source_id": -25925785287527406,
+        "series_title": "Alias Grace",
+        "episode_code": "S01E05",
+        "source_title": "Alias Grace S01E05.720p.WEB-DL x264",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 123876,
+        "source_id": -35890710973566972,
+        "series_title": "Alias Grace",
+        "episode_code": "S01E05",
+        "source_title": "Alias Grace - S1E5 EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 123878,
+        "source_id": -56333438281849949,
+        "series_title": "Alias Grace",
+        "episode_code": "S01E06",
+        "source_title": "Alias Grace - S1E6 Part 6 EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 123878,
+        "source_id": -48278612633372772,
+        "series_title": "Alias Grace",
+        "episode_code": "S01E06",
+        "source_title": "Alias Grace - S01E06 - Part 6",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 123878,
+        "source_id": -53799156190913700,
+        "series_title": "Alias Grace",
+        "episode_code": "S01E06",
+        "source_title": "Alias Grace 1x6",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 123878,
+        "source_id": -16152353062761059,
+        "series_title": "Alias Grace",
+        "episode_code": "S01E06",
+        "source_title": "Alias Grace S01E06.720p.WEB-DL x264",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 48522,
+        "source_id": -68573277545459288,
+        "series_title": "Ally McBealová",
+        "episode_code": "S01E01",
+        "source_title": "Ally McBealová - 01x01.Pilot (by_UgarE)",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 48522,
+        "source_id": -41613227641654473,
+        "series_title": "Ally McBealová",
+        "episode_code": "S01E01",
+        "source_title": "Ally McBealová - 01x01.Pilot",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 48523,
+        "source_id": -28245014833018202,
+        "series_title": "Ally McBealová",
+        "episode_code": "S01E02",
+        "source_title": "Ally McBealová - 01x02.Nebezpecne.situace",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 48523,
+        "source_id": -104594346979426,
+        "series_title": "Ally McBealová",
+        "episode_code": "S01E02",
+        "source_title": "Ally McBealová - 01x02.Nebezpecne.situace (by_UgarE)",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 48524,
+        "source_id": -545192905164441,
+        "series_title": "Ally McBealová",
+        "episode_code": "S01E03",
+        "source_title": "Ally Mcbealová - S01E03",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 48525,
+        "source_id": -10794625807490310,
+        "series_title": "Ally McBealová",
+        "episode_code": "S01E04",
+        "source_title": "Ally Mcbealová - S01E04",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 48525,
+        "source_id": -60008207205664883,
+        "series_title": "Ally McBealová",
+        "episode_code": "S01E04",
+        "source_title": "Ally McBealová - 01x04.Romanek (by_UgarE)",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 48525,
+        "source_id": -21115011276449963,
+        "series_title": "Ally McBealová",
+        "episode_code": "S01E04",
+        "source_title": "Ally McBealová - 01x04.Romanek",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 48526,
+        "source_id": -68904984027903992,
+        "series_title": "Ally McBealová",
+        "episode_code": "S01E05",
+        "source_title": "Ally Mcbealová - S01E05",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 48526,
+        "source_id": -53285305858815631,
+        "series_title": "Ally McBealová",
+        "episode_code": "S01E05",
+        "source_title": "Ally McBealová - 01x05.Vyplakane.slzy (by_UgarE)",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 48526,
+        "source_id": -40255498219720493,
+        "series_title": "Ally McBealová",
+        "episode_code": "S01E05",
+        "source_title": "Ally McBealová - 01x05.Vyplakane.slzy",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 48527,
+        "source_id": -71483453726425067,
+        "series_title": "Ally McBealová",
+        "episode_code": "S01E06",
+        "source_title": "Ally Mcbealová - S01E06",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 48521,
+        "source_id": -55609624004380909,
+        "series_title": "Ally McBealová",
+        "episode_code": "S01E07",
+        "source_title": "Ally McBealová - 01x07.Zmena.pristupu (by_UgarE)",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 48521,
+        "source_id": -37204577121577650,
+        "series_title": "Ally McBealová",
+        "episode_code": "S01E07",
+        "source_title": "Ally McBealová - 01x07.Zmena.pristupu",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 48528,
+        "source_id": -44389897169469839,
+        "series_title": "Ally McBealová",
+        "episode_code": "S01E08",
+        "source_title": "Ally McBealová - 01x08.Jsou.urcite.hranice (by_UgarE)",
         "status": "needs_whisper"
       }
     ],
@@ -193977,14 +194317,14 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 19,
+    "ok": 59,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
-    "whisper_non_cz_needs_subtitles": 1374,
-    "whisper_confirmed_cz": 883,
+    "whisper_non_cz_needs_subtitles": 1376,
+    "whisper_confirmed_cz": 921,
     "whisper_failed": 3,
-    "needs_whisper": 34041
+    "needs_whisper": 34001
   },
   "subtitle_followup_statuses": {
     "needs_subtitle_setup_after_prehrajto_processing": 6719
