@@ -2,36 +2,76 @@
   "counts": {
     "backlog_episodes": 169206,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 24186,
-    "prepared_source_episodes": 32736,
+    "uploaded_episodes": 24188,
+    "prepared_source_episodes": 32850,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 20,
+    "language_audited_sources": 500,
     "language_whisper_attempted_sources": 20,
     "language_pending_whisper_sources": 2624,
-    "whisper_review_sources": 39456,
-    "whisper_review_pending_sources": 37159,
-    "subtitle_followup_sources": 7208,
-    "subtitle_followup_pending_sources": 7208
+    "whisper_review_sources": 39735,
+    "whisper_review_pending_sources": 37438,
+    "subtitle_followup_sources": 7256,
+    "subtitle_followup_pending_sources": 7256
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-07-11T16:10:57Z",
-      "databaseId": 29159309982,
+      "createdAt": "2026-07-11T16:15:56Z",
+      "databaseId": 29159464774,
       "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "update-descriptions"
+      "status": "pending",
+      "workflowName": "audit-language"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-07-11T16:15:55Z",
+      "databaseId": 29159464337,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-07-11T16:15:49Z",
+      "databaseId": 29159461516,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-11T16:15:48Z",
+      "databaseId": 29159460936,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-11T16:15:44Z",
+      "databaseId": 29159459083,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-11T16:10:57Z",
+      "databaseId": 29159309982,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-11T16:10:55Z",
       "databaseId": 29159309227,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -55,7 +95,7 @@
       "createdAt": "2026-07-11T16:10:52Z",
       "databaseId": 29159307698,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "sync"
     },
     {
@@ -75,11 +115,11 @@
       "workflowName": "backfill-subtitles"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-07-11T16:00:21Z",
       "databaseId": 29158969305,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -134,46 +174,6 @@
       "conclusion": "success",
       "createdAt": "2026-07-11T15:45:48Z",
       "databaseId": 29158513680,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-11T15:45:46Z",
-      "databaseId": 29158512375,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-11T15:45:03Z",
-      "databaseId": 29158486629,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "backfill-subtitles"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-11T15:41:51Z",
-      "databaseId": 29158390441,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-11T15:41:48Z",
-      "databaseId": 29158388874,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-11T15:40:54Z",
-      "databaseId": 29158361935,
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-watchdog"
@@ -98859,6 +98859,16 @@
         "episode_id": 80567,
         "display_name": "Herkules S03E19 - Konec začátku CZ Dabing",
         "video_id": 27375886
+      },
+      {
+        "episode_id": 96647,
+        "display_name": "Herkules S03E21 - Kámen a těžká situace CZ Dabing",
+        "video_id": 27375980
+      },
+      {
+        "episode_id": 80569,
+        "display_name": "Herkules S03E22 - Atlantis CZ Dabing",
+        "video_id": 27376090
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -197436,6 +197446,16 @@
         "episode_id": 80567,
         "display_name": "Herkules S03E19 - Konec začátku CZ Dabing",
         "video_id": 27375886
+      },
+      {
+        "episode_id": 96647,
+        "display_name": "Herkules S03E21 - Kámen a těžká situace CZ Dabing",
+        "video_id": 27375980
+      },
+      {
+        "episode_id": 80569,
+        "display_name": "Herkules S03E22 - Atlantis CZ Dabing",
+        "video_id": 27376090
       }
     ],
     "prepared_not_upload_ready": [
@@ -198597,16 +198617,17 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
+    "disabled": 480,
     "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
     "whisper_non_cz_needs_subtitles": 1414,
     "whisper_confirmed_cz": 883,
-    "needs_whisper": 37156,
+    "needs_whisper": 37435,
     "whisper_failed": 3
   },
   "subtitle_followup_statuses": {
-    "needs_subtitle_setup_after_prehrajto_processing": 7208
+    "needs_subtitle_setup_after_prehrajto_processing": 7256
   }
 }
