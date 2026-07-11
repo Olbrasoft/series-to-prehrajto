@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 169802,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 23722,
+    "uploaded_episodes": 23724,
     "prepared_source_episodes": 30615,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 209,
-    "language_whisper_attempted_sources": 40,
-    "language_pending_whisper_sources": 2604,
+    "language_audited_sources": 20,
+    "language_whisper_attempted_sources": 20,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 36301,
     "whisper_review_pending_sources": 34044,
     "subtitle_followup_sources": 6719,
@@ -20,26 +20,66 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-07-11T03:06:07Z",
+      "databaseId": 29137449877,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-11T03:04:32Z",
+      "databaseId": 29137403387,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-11T03:01:50Z",
+      "databaseId": 29137324503,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "backfill-subtitles"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-11T03:00:59Z",
+      "databaseId": 29137299315,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-11T03:00:56Z",
+      "databaseId": 29137297658,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-11T03:00:01Z",
       "databaseId": 29137266270,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-11T02:59:41Z",
       "databaseId": 29137258100,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-11T02:48:32Z",
       "databaseId": 29136953952,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "backfill-subtitles"
     },
     {
@@ -137,46 +177,6 @@
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "sync"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-07-11T02:31:55Z",
-      "databaseId": 29136498617,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-11T02:26:59Z",
-      "databaseId": 29136357580,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "backfill-subtitles"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-11T02:25:30Z",
-      "databaseId": 29136317567,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-sources"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-11T02:24:35Z",
-      "databaseId": 29136292409,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-11T02:24:32Z",
-      "databaseId": 29136290996,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
     }
   ],
   "gaps": {
@@ -96539,6 +96539,16 @@
         "episode_id": 49251,
         "display_name": "Dívka odjinud S03E13 - 13. epizoda CZ Dabing",
         "video_id": 27360376
+      },
+      {
+        "episode_id": 5863,
+        "display_name": "Dva světy S01E01 - Křížení CZ Dabing",
+        "video_id": 27360415
+      },
+      {
+        "episode_id": 5867,
+        "display_name": "Dva světy S01E05 - Shaking the Tree CZ Dabing",
+        "video_id": 27360467
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -192796,6 +192806,16 @@
         "episode_id": 49251,
         "display_name": "Dívka odjinud S03E13 - 13. epizoda CZ Dabing",
         "video_id": 27360376
+      },
+      {
+        "episode_id": 5863,
+        "display_name": "Dva světy S01E01 - Křížení CZ Dabing",
+        "video_id": 27360415
+      },
+      {
+        "episode_id": 5867,
+        "display_name": "Dva světy S01E05 - Shaking the Tree CZ Dabing",
+        "video_id": 27360467
       }
     ],
     "prepared_not_upload_ready": [
@@ -193957,8 +193977,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 169,
-    "ok": 39,
+    "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
