@@ -2,28 +2,92 @@
   "counts": {
     "backlog_episodes": 169470,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 24041,
-    "prepared_source_episodes": 32020,
+    "uploaded_episodes": 24055,
+    "prepared_source_episodes": 32002,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 40,
-    "language_whisper_attempted_sources": 40,
+    "language_audited_sources": 60,
+    "language_whisper_attempted_sources": 60,
     "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 38357,
-    "whisper_review_pending_sources": 36060,
+    "whisper_review_pending_sources": 36040,
     "subtitle_followup_sources": 7041,
     "subtitle_followup_pending_sources": 7041
   },
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-07-11T12:21:46Z",
+      "databaseId": 29152497148,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-11T12:20:22Z",
+      "databaseId": 29152458304,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-11T12:18:07Z",
+      "databaseId": 29152396972,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-11T12:15:17Z",
+      "databaseId": 29152320543,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-11T12:15:13Z",
+      "databaseId": 29152318213,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "backfill-subtitles"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-11T12:10:17Z",
+      "databaseId": 29152180232,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-11T12:10:15Z",
+      "databaseId": 29152179093,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-11T12:10:13Z",
+      "databaseId": 29152178006,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-11T12:09:14Z",
       "databaseId": 29152153631,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -113,70 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-07-11T11:55:47Z",
-      "databaseId": 29151786345,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-11T11:54:27Z",
-      "databaseId": 29151749520,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-sources"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-11T11:47:52Z",
-      "databaseId": 29151567663,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-11T11:47:43Z",
-      "databaseId": 29151563435,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-11T11:46:37Z",
-      "databaseId": 29151533547,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-11T11:46:02Z",
-      "databaseId": 29151515845,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-11T11:40:45Z",
-      "databaseId": 29151366105,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-11T11:40:41Z",
-      "databaseId": 29151364295,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
     }
   ],
   "gaps": {
@@ -98096,6 +98096,26 @@
         "video_id": 27371011
       },
       {
+        "episode_id": 150664,
+        "display_name": "Scény z manželského života S01E03 - Slzavé údolí CZ Dabing",
+        "video_id": 27371065
+      },
+      {
+        "episode_id": 150666,
+        "display_name": "Scény z manželského života S01E05 - Uprostřed noci, v temném domě kdesi na světě CZ Dabing",
+        "video_id": 27371115
+      },
+      {
+        "episode_id": 16748,
+        "display_name": "Bílá královna S01E01 - Láska ke králi CZ Dabing",
+        "video_id": 27371159
+      },
+      {
+        "episode_id": 16750,
+        "display_name": "Bílá královna S01E03 - Bouře CZ Dabing",
+        "video_id": 27371265
+      },
+      {
         "episode_id": 99869,
         "display_name": "Policajti z L. A. S04E10 - 10. epizoda CZ Dabing",
         "video_id": 27370845
@@ -98134,6 +98154,56 @@
         "episode_id": 60279,
         "display_name": "Teherán S01E03 - Jasminino děvče CZ Titulky",
         "video_id": 27371048
+      },
+      {
+        "episode_id": 43911,
+        "display_name": "Nemocnice Chicago Med S05E01 - Nic nebude jako dřív CZ Dabing",
+        "video_id": 27371073
+      },
+      {
+        "episode_id": 60277,
+        "display_name": "Teherán S01E04 - Shakira a Sick-boy CZ Titulky",
+        "video_id": 27371105
+      },
+      {
+        "episode_id": 60281,
+        "display_name": "Teherán S01E06 - Inženýr CZ Titulky",
+        "video_id": 27371114
+      },
+      {
+        "episode_id": 60285,
+        "display_name": "Teherán S02E01 - 13 000 CZ Dabing",
+        "video_id": 27371127
+      },
+      {
+        "episode_id": 43913,
+        "display_name": "Nemocnice Chicago Med S05E03 - V údolí stínů CZ Dabing",
+        "video_id": 27371144
+      },
+      {
+        "episode_id": 60291,
+        "display_name": "Teherán S02E02 - Změna plánu CZ Dabing",
+        "video_id": 27371189
+      },
+      {
+        "episode_id": 60287,
+        "display_name": "Teherán S02E05 - Dvojitá chyba CZ Dabing",
+        "video_id": 27371210
+      },
+      {
+        "episode_id": 60283,
+        "display_name": "Teherán S02E06 - Farázova volba CZ Dabing",
+        "video_id": 27371227
+      },
+      {
+        "episode_id": 43915,
+        "display_name": "Nemocnice Chicago Med S05E05 - Jsem tvůj přítel CZ Dabing",
+        "video_id": 27371256
+      },
+      {
+        "episode_id": 60289,
+        "display_name": "Teherán S02E07 - Betty CZ Dabing",
+        "video_id": 27371279
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -195948,6 +196018,26 @@
         "video_id": 27371011
       },
       {
+        "episode_id": 150664,
+        "display_name": "Scény z manželského života S01E03 - Slzavé údolí CZ Dabing",
+        "video_id": 27371065
+      },
+      {
+        "episode_id": 150666,
+        "display_name": "Scény z manželského života S01E05 - Uprostřed noci, v temném domě kdesi na světě CZ Dabing",
+        "video_id": 27371115
+      },
+      {
+        "episode_id": 16748,
+        "display_name": "Bílá královna S01E01 - Láska ke králi CZ Dabing",
+        "video_id": 27371159
+      },
+      {
+        "episode_id": 16750,
+        "display_name": "Bílá královna S01E03 - Bouře CZ Dabing",
+        "video_id": 27371265
+      },
+      {
         "episode_id": 99869,
         "display_name": "Policajti z L. A. S04E10 - 10. epizoda CZ Dabing",
         "video_id": 27370845
@@ -195986,6 +196076,56 @@
         "episode_id": 60279,
         "display_name": "Teherán S01E03 - Jasminino děvče CZ Titulky",
         "video_id": 27371048
+      },
+      {
+        "episode_id": 43911,
+        "display_name": "Nemocnice Chicago Med S05E01 - Nic nebude jako dřív CZ Dabing",
+        "video_id": 27371073
+      },
+      {
+        "episode_id": 60277,
+        "display_name": "Teherán S01E04 - Shakira a Sick-boy CZ Titulky",
+        "video_id": 27371105
+      },
+      {
+        "episode_id": 60281,
+        "display_name": "Teherán S01E06 - Inženýr CZ Titulky",
+        "video_id": 27371114
+      },
+      {
+        "episode_id": 60285,
+        "display_name": "Teherán S02E01 - 13 000 CZ Dabing",
+        "video_id": 27371127
+      },
+      {
+        "episode_id": 43913,
+        "display_name": "Nemocnice Chicago Med S05E03 - V údolí stínů CZ Dabing",
+        "video_id": 27371144
+      },
+      {
+        "episode_id": 60291,
+        "display_name": "Teherán S02E02 - Změna plánu CZ Dabing",
+        "video_id": 27371189
+      },
+      {
+        "episode_id": 60287,
+        "display_name": "Teherán S02E05 - Dvojitá chyba CZ Dabing",
+        "video_id": 27371210
+      },
+      {
+        "episode_id": 60283,
+        "display_name": "Teherán S02E06 - Farázova volba CZ Dabing",
+        "video_id": 27371227
+      },
+      {
+        "episode_id": 43915,
+        "display_name": "Nemocnice Chicago Med S05E05 - Jsem tvůj přítel CZ Dabing",
+        "video_id": 27371256
+      },
+      {
+        "episode_id": 60289,
+        "display_name": "Teherán S02E07 - Betty CZ Dabing",
+        "video_id": 27371279
       }
     ],
     "prepared_not_upload_ready": [
@@ -196292,166 +196432,6 @@
     ],
     "whisper_review_pending": [
       {
-        "episode_id": 125071,
-        "source_id": -50445180308637655,
-        "series_title": "Alchymie duše",
-        "episode_code": "S01E17",
-        "source_title": "Alchymie duše - S1E17 KO",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 125072,
-        "source_id": -55718898232604926,
-        "series_title": "Alchymie duše",
-        "episode_code": "S01E18",
-        "source_title": "Alchymie duše - S1E18 Episode 18 EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 125072,
-        "source_id": -67977288216823190,
-        "series_title": "Alchymie duše",
-        "episode_code": "S01E18",
-        "source_title": "Alchymie duše 1x18",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 125072,
-        "source_id": -43964524904366842,
-        "series_title": "Alchymie duše",
-        "episode_code": "S01E18",
-        "source_title": "Alchymie duše - S1E18 KO",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 125073,
-        "source_id": -38690007480776502,
-        "series_title": "Alchymie duše",
-        "episode_code": "S01E19",
-        "source_title": "Alchymie duše - S1E19 Episode 19 EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 125073,
-        "source_id": -46826955289452597,
-        "series_title": "Alchymie duše",
-        "episode_code": "S01E19",
-        "source_title": "Alchymie duše 1x19",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 125073,
-        "source_id": -23956827886795411,
-        "series_title": "Alchymie duše",
-        "episode_code": "S01E19",
-        "source_title": "Alchymie duše - S1E19 KO",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 125074,
-        "source_id": -10081547918731526,
-        "series_title": "Alchymie duše",
-        "episode_code": "S01E20",
-        "source_title": "Alchymie duše 1x20",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 125074,
-        "source_id": -37729656345381431,
-        "series_title": "Alchymie duše",
-        "episode_code": "S01E20",
-        "source_title": "Alchymie duše - S1E20 Episode 20 EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 125074,
-        "source_id": -66269561048840566,
-        "series_title": "Alchymie duše",
-        "episode_code": "S01E20",
-        "source_title": "Alchymie duše - S1E20 KO",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 125080,
-        "source_id": -71640575531181450,
-        "series_title": "Alchymie duše",
-        "episode_code": "S02E01",
-        "source_title": "Alchymie duše - S2E1 Episode 1 EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 125080,
-        "source_id": -62040566607905369,
-        "series_title": "Alchymie duše",
-        "episode_code": "S02E01",
-        "source_title": "Alchymie duše - S2E1 KO",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 125081,
-        "source_id": -53767171993000269,
-        "series_title": "Alchymie duše",
-        "episode_code": "S02E02",
-        "source_title": "Alchymie duše - S2E2 Episode 2 EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 125081,
-        "source_id": -68502965418142561,
-        "series_title": "Alchymie duše",
-        "episode_code": "S02E02",
-        "source_title": "Alchymie duše - S2E2 KO",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 125075,
-        "source_id": -39045947023714552,
-        "series_title": "Alchymie duše",
-        "episode_code": "S02E03",
-        "source_title": "Alchymie duše - S2E3 Episode 3 EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 125082,
-        "source_id": -54194855501393358,
-        "series_title": "Alchymie duše",
-        "episode_code": "S02E05",
-        "source_title": "Alchymie duše - S2E5 Episode 5 EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 125083,
-        "source_id": -20384749559922915,
-        "series_title": "Alchymie duše",
-        "episode_code": "S02E06",
-        "source_title": "Alchymie duše - S2E6 Episode 6 EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 125083,
-        "source_id": -36401632285881289,
-        "series_title": "Alchymie duše",
-        "episode_code": "S02E06",
-        "source_title": "Alchymie duše - S2E6 KO",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 125077,
-        "source_id": -29666558358177651,
-        "series_title": "Alchymie duše",
-        "episode_code": "S02E07",
-        "source_title": "Alchymie duše - S2E7 Episode 7 EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 125077,
-        "source_id": -19151604507240577,
-        "series_title": "Alchymie duše",
-        "episode_code": "S02E07",
-        "source_title": "Alchymie duše - S2E7 KO",
-        "status": "needs_whisper"
-      },
-      {
         "episode_id": 125079,
         "source_id": -39322301099808594,
         "series_title": "Alchymie duše",
@@ -196689,6 +196669,166 @@
         "series_title": "ALF",
         "episode_code": "S04E17",
         "source_title": "ALF 04x17. Duchovní pastýř",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2284,
+        "source_id": -65932365035511883,
+        "series_title": "ALF",
+        "episode_code": "S04E18",
+        "source_title": "ALF.S04E18",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2284,
+        "source_id": -62250850276764426,
+        "series_title": "ALF",
+        "episode_code": "S04E18",
+        "source_title": "ALF 04x18. Budoucnost s otazníkem",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2284,
+        "source_id": -11090251252108998,
+        "series_title": "ALF",
+        "episode_code": "S04E18",
+        "source_title": "Alf S04E18. Budoucnost s otazníkem",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2285,
+        "source_id": -65404665330138986,
+        "series_title": "ALF",
+        "episode_code": "S04E19",
+        "source_title": "Alf S04E19. Alfův idol",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2285,
+        "source_id": -22571718121288791,
+        "series_title": "ALF",
+        "episode_code": "S04E19",
+        "source_title": "ALF 04x19. Alfův idol",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2285,
+        "source_id": -1694774801304190,
+        "series_title": "ALF",
+        "episode_code": "S04E19",
+        "source_title": "ALF.S04E19",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2286,
+        "source_id": -67684114101835022,
+        "series_title": "ALF",
+        "episode_code": "S04E20",
+        "source_title": "ALF.S04E20",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2286,
+        "source_id": -27054273068625715,
+        "series_title": "ALF",
+        "episode_code": "S04E20",
+        "source_title": "Alf S04E20. Zlatá horečka",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2286,
+        "source_id": -3590758489351330,
+        "series_title": "ALF",
+        "episode_code": "S04E20",
+        "source_title": "ALF 04x20. Zlatá horečka",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2287,
+        "source_id": -23507944203663980,
+        "series_title": "ALF",
+        "episode_code": "S04E21",
+        "source_title": "ALF 04x21. Ekolog amatér",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2287,
+        "source_id": -15829782006771686,
+        "series_title": "ALF",
+        "episode_code": "S04E21",
+        "source_title": "ALF.S04E21",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2287,
+        "source_id": -5872930536603120,
+        "series_title": "ALF",
+        "episode_code": "S04E21",
+        "source_title": "Alf S04E21. Ekolog amatér",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2288,
+        "source_id": -67712168265184706,
+        "series_title": "ALF",
+        "episode_code": "S04E22",
+        "source_title": "Alf S04E22. Pudy vítězí",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2288,
+        "source_id": -24935486321669703,
+        "series_title": "ALF",
+        "episode_code": "S04E22",
+        "source_title": "ALF.S04E22",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2288,
+        "source_id": -23741757455366568,
+        "series_title": "ALF",
+        "episode_code": "S04E22",
+        "source_title": "ALF 04x22. Pudy vítězí",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2288,
+        "source_id": -34534207925178187,
+        "series_title": "ALF",
+        "episode_code": "S04E22",
+        "source_title": "ALF S04E22 Hladný ako vlk",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2289,
+        "source_id": -51534092981428412,
+        "series_title": "ALF",
+        "episode_code": "S04E23",
+        "source_title": "ALF 04x23. Zralé rozhodnutí",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2289,
+        "source_id": -21725691574328252,
+        "series_title": "ALF",
+        "episode_code": "S04E23",
+        "source_title": "Alf S04E23. Zralé rozhodnutí",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2289,
+        "source_id": -2870558391926088,
+        "series_title": "ALF",
+        "episode_code": "S04E23",
+        "source_title": "ALF.S04E23",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2290,
+        "source_id": -50487040137902960,
+        "series_title": "ALF",
+        "episode_code": "S04E24",
+        "source_title": "Alf S04E24. Loučení",
         "status": "needs_whisper"
       }
     ],
@@ -197147,13 +197287,13 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 39,
+    "ok": 59,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
-    "whisper_non_cz_needs_subtitles": 1414,
+    "whisper_non_cz_needs_subtitles": 1434,
     "whisper_confirmed_cz": 883,
-    "needs_whisper": 36057,
+    "needs_whisper": 36037,
     "whisper_failed": 3
   },
   "subtitle_followup_statuses": {
