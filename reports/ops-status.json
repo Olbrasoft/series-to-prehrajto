@@ -2,15 +2,15 @@
   "counts": {
     "backlog_episodes": 168413,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 25015,
+    "uploaded_episodes": 25017,
     "prepared_source_episodes": 35792,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 60,
-    "language_whisper_attempted_sources": 60,
+    "language_audited_sources": 40,
+    "language_whisper_attempted_sources": 40,
     "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 42557,
     "whisper_review_pending_sources": 40000,
@@ -18,6 +18,14 @@
     "subtitle_followup_pending_sources": 7881
   },
   "workflow_runs": [
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-12T11:36:56Z",
+      "databaseId": 29191141266,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
     {
       "conclusion": "",
       "createdAt": "2026-07-12T11:36:33Z",
@@ -31,7 +39,7 @@
       "createdAt": "2026-07-12T11:35:55Z",
       "databaseId": 29191113742,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
@@ -43,11 +51,11 @@
       "workflowName": "sync"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-12T11:35:48Z",
       "databaseId": 29191109569,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -169,14 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-12T11:01:11Z",
-      "databaseId": 29190109229,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
     }
   ],
   "gaps": {
@@ -102911,6 +102911,11 @@
         "video_id": 27405809
       },
       {
+        "episode_id": 30630,
+        "display_name": "Pobřežní hlídka S09E14 - Modrá hlubina CZ Dabing",
+        "video_id": 27405859
+      },
+      {
         "episode_id": 30663,
         "display_name": "Pobřežní hlídka S11E03 - 3. epizoda CZ Dabing",
         "video_id": 27405337
@@ -103004,6 +103009,11 @@
         "episode_id": 78327,
         "display_name": "C.B. Strike S01E02 - 2. epizoda CZ Titulky",
         "video_id": 27405885
+      },
+      {
+        "episode_id": 78321,
+        "display_name": "C.B. Strike S02E01 - 1. epizoda CZ Titulky",
+        "video_id": 27405910
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -205633,6 +205643,11 @@
         "video_id": 27405809
       },
       {
+        "episode_id": 30630,
+        "display_name": "Pobřežní hlídka S09E14 - Modrá hlubina CZ Dabing",
+        "video_id": 27405859
+      },
+      {
         "episode_id": 30663,
         "display_name": "Pobřežní hlídka S11E03 - 3. epizoda CZ Dabing",
         "video_id": 27405337
@@ -205726,6 +205741,11 @@
         "episode_id": 78327,
         "display_name": "C.B. Strike S01E02 - 2. epizoda CZ Titulky",
         "video_id": 27405885
+      },
+      {
+        "episode_id": 78321,
+        "display_name": "C.B. Strike S02E01 - 1. epizoda CZ Titulky",
+        "video_id": 27405910
       }
     ],
     "prepared_not_upload_ready": [
@@ -206887,7 +206907,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 59,
+    "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
