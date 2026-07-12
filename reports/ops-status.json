@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 168252,
     "manifest_upload_ready_episodes": 1001,
-    "uploaded_episodes": 25142,
+    "uploaded_episodes": 25146,
     "prepared_source_episodes": 37641,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 797,
+    "language_audited_sources": 40,
     "language_whisper_attempted_sources": 40,
-    "language_pending_whisper_sources": 2624,
+    "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 44468,
     "whisper_review_pending_sources": 41851,
     "subtitle_followup_sources": 8125,
@@ -20,10 +20,58 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-07-12T21:18:27Z",
+      "databaseId": 29209381069,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-12T21:17:50Z",
+      "databaseId": 29209361079,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-12T21:16:49Z",
+      "databaseId": 29209330441,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-12T21:16:39Z",
+      "databaseId": 29209325498,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-12T21:15:15Z",
+      "databaseId": 29209281003,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-12T21:12:40Z",
+      "databaseId": 29209199188,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-12T21:11:48Z",
       "databaseId": 29209173020,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -83,11 +131,11 @@
       "workflowName": "process-whisper-review"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-12T21:02:19Z",
       "databaseId": 29208870029,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -129,54 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-12T20:49:08Z",
-      "databaseId": 29208449435,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-07-12T20:49:05Z",
-      "databaseId": 29208447686,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-12T20:48:34Z",
-      "databaseId": 29208432094,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-12T20:47:10Z",
-      "databaseId": 29208389271,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-12T20:46:36Z",
-      "databaseId": 29208371118,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-12T20:45:46Z",
-      "databaseId": 29208346426,
-      "headBranch": "main",
-      "status": "pending",
-      "workflowName": "prepare-descriptions"
     }
   ],
   "gaps": {
@@ -103596,6 +103596,21 @@
         "video_id": 27416840
       },
       {
+        "episode_id": 98916,
+        "display_name": "Vraždy na Shetlandech S05E01 - Potrubí CZ Dabing",
+        "video_id": 27416878
+      },
+      {
+        "episode_id": 99990,
+        "display_name": "Vraždy na Shetlandech S05E02 - Stříbrný miláček CZ Dabing",
+        "video_id": 27416916
+      },
+      {
+        "episode_id": 99992,
+        "display_name": "Vraždy na Shetlandech S05E04 - Zápalná láhev CZ Dabing",
+        "video_id": 27416955
+      },
+      {
         "episode_id": 39945,
         "display_name": "Babylon 5 S02E17 - Nože CZ Dabing",
         "video_id": 27415621
@@ -103639,6 +103654,11 @@
         "episode_id": 157597,
         "display_name": "Lakers: Vzestup dynastie S01E01 - 1. epizoda CZ Titulky",
         "video_id": 27416649
+      },
+      {
+        "episode_id": 157603,
+        "display_name": "Lakers: Vzestup dynastie S02E03 - 3. epizoda CZ Titulky",
+        "video_id": 27416866
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -206953,6 +206973,21 @@
         "video_id": 27416840
       },
       {
+        "episode_id": 98916,
+        "display_name": "Vraždy na Shetlandech S05E01 - Potrubí CZ Dabing",
+        "video_id": 27416878
+      },
+      {
+        "episode_id": 99990,
+        "display_name": "Vraždy na Shetlandech S05E02 - Stříbrný miláček CZ Dabing",
+        "video_id": 27416916
+      },
+      {
+        "episode_id": 99992,
+        "display_name": "Vraždy na Shetlandech S05E04 - Zápalná láhev CZ Dabing",
+        "video_id": 27416955
+      },
+      {
         "episode_id": 39945,
         "display_name": "Babylon 5 S02E17 - Nože CZ Dabing",
         "video_id": 27415621
@@ -206996,6 +207031,11 @@
         "episode_id": 157597,
         "display_name": "Lakers: Vzestup dynastie S01E01 - 1. epizoda CZ Titulky",
         "video_id": 27416649
+      },
+      {
+        "episode_id": 157603,
+        "display_name": "Lakers: Vzestup dynastie S02E03 - 3. epizoda CZ Titulky",
+        "video_id": 27416866
       }
     ],
     "prepared_not_upload_ready": [
@@ -208157,7 +208197,6 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 757,
     "ok": 39,
     "resolve_failed": 1
   },
