@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 168215,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 25242,
+    "uploaded_episodes": 25243,
     "prepared_source_episodes": 38039,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 60,
-    "language_whisper_attempted_sources": 60,
-    "language_pending_whisper_sources": 2604,
+    "language_audited_sources": 20,
+    "language_whisper_attempted_sources": 20,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 44744,
     "whisper_review_pending_sources": 42067,
     "subtitle_followup_sources": 8222,
@@ -20,10 +20,42 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-07-12T23:49:53Z",
+      "databaseId": 29214103741,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-12T23:49:50Z",
+      "databaseId": 29214102114,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-12T23:49:42Z",
+      "databaseId": 29214097912,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-12T23:49:38Z",
+      "databaseId": 29214096335,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-12T23:47:56Z",
       "databaseId": 29214045714,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-status"
     },
     {
@@ -39,15 +71,15 @@
       "createdAt": "2026-07-12T23:46:42Z",
       "databaseId": 29214008671,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "prepare-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-12T23:45:41Z",
       "databaseId": 29213978573,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -107,11 +139,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-07-12T23:29:56Z",
       "databaseId": 29213501268,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -145,38 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-12T23:22:50Z",
-      "databaseId": 29213293407,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-12T23:22:06Z",
-      "databaseId": 29213271642,
-      "headBranch": "main",
-      "status": "pending",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-12T23:19:47Z",
-      "databaseId": 29213198253,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-12T23:18:50Z",
-      "databaseId": 29213171812,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
     }
   ],
   "gaps": {
@@ -104139,6 +104139,11 @@
         "episode_id": 63825,
         "display_name": "Magnum S04E03 - Míň než život CZ Dabing",
         "video_id": 27419104
+      },
+      {
+        "episode_id": 63741,
+        "display_name": "Magnum S04E05 - Dočasný závazek CZ Dabing",
+        "video_id": 27419140
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -207996,6 +208001,11 @@
         "episode_id": 63825,
         "display_name": "Magnum S04E03 - Míň než život CZ Dabing",
         "video_id": 27419104
+      },
+      {
+        "episode_id": 63741,
+        "display_name": "Magnum S04E05 - Dočasný závazek CZ Dabing",
+        "video_id": 27419140
       }
     ],
     "prepared_not_upload_ready": [
@@ -209157,7 +209167,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 59,
+    "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
