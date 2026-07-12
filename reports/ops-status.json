@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 169040,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 24507,
+    "uploaded_episodes": 24508,
     "prepared_source_episodes": 34124,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 145,
-    "language_whisper_attempted_sources": 40,
-    "language_pending_whisper_sources": 2604,
+    "language_audited_sources": 20,
+    "language_whisper_attempted_sources": 20,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 40625,
     "whisper_review_pending_sources": 38188,
     "subtitle_followup_sources": 7523,
@@ -20,10 +20,42 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-07-12T00:27:35Z",
+      "databaseId": 29173739502,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-12T00:27:30Z",
+      "databaseId": 29173737408,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-12T00:26:27Z",
+      "databaseId": 29173710541,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-12T00:26:25Z",
+      "databaseId": 29173709640,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-12T00:25:28Z",
       "databaseId": 29173686301,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -35,11 +67,11 @@
       "workflowName": "backfill-subtitles"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-12T00:20:50Z",
       "databaseId": 29173567819,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -95,7 +127,7 @@
       "createdAt": "2026-07-12T00:02:19Z",
       "databaseId": 29173071217,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "sync"
     },
     {
@@ -145,38 +177,6 @@
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "prepare-sources"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-11T23:53:55Z",
-      "databaseId": 29172840905,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-11T23:48:03Z",
-      "databaseId": 29172689719,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-11T23:47:39Z",
-      "databaseId": 29172680017,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-11T23:46:45Z",
-      "databaseId": 29172657377,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-descriptions"
     }
   ],
   "gaps": {
@@ -100464,6 +100464,11 @@
         "episode_id": 67693,
         "display_name": "To je vražda, napsala S01E11 - Kongres volá CZ Dabing",
         "video_id": 27392273
+      },
+      {
+        "episode_id": 67743,
+        "display_name": "To je vražda, napsala S01E12 - Comeback na Broadway CZ Dabing",
+        "video_id": 27392317
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -200646,6 +200651,11 @@
         "episode_id": 67693,
         "display_name": "To je vražda, napsala S01E11 - Kongres volá CZ Dabing",
         "video_id": 27392273
+      },
+      {
+        "episode_id": 67743,
+        "display_name": "To je vražda, napsala S01E12 - Comeback na Broadway CZ Dabing",
+        "video_id": 27392317
       }
     ],
     "prepared_not_upload_ready": [
@@ -201807,8 +201817,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 105,
-    "ok": 39,
+    "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
