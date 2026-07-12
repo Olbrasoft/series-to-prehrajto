@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 168215,
     "manifest_upload_ready_episodes": 1001,
-    "uploaded_episodes": 25164,
+    "uploaded_episodes": 25165,
     "prepared_source_episodes": 37745,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 40,
-    "language_whisper_attempted_sources": 40,
-    "language_pending_whisper_sources": 2604,
+    "language_audited_sources": 20,
+    "language_whisper_attempted_sources": 20,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 44468,
     "whisper_review_pending_sources": 41811,
     "subtitle_followup_sources": 8142,
@@ -20,10 +20,42 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-07-12T21:54:26Z",
+      "databaseId": 29210501791,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-sources"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-12T21:54:21Z",
+      "databaseId": 29210498907,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-12T21:51:36Z",
+      "databaseId": 29210415232,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-12T21:51:33Z",
+      "databaseId": 29210413799,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-12T21:50:37Z",
       "databaseId": 29210385426,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -59,11 +91,11 @@
       "workflowName": "prepare-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-12T21:44:51Z",
       "databaseId": 29210203472,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -142,38 +174,6 @@
       "conclusion": "cancelled",
       "createdAt": "2026-07-12T21:27:52Z",
       "databaseId": 29209674715,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-12T21:21:37Z",
-      "databaseId": 29209480412,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "refresh-backlog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-12T21:18:27Z",
-      "databaseId": 29209381069,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-12T21:17:50Z",
-      "databaseId": 29209361079,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-07-12T21:16:49Z",
-      "databaseId": 29209330441,
       "headBranch": "main",
       "status": "completed",
       "workflowName": "prepare-manifest"
@@ -103749,6 +103749,11 @@
         "episode_id": 80967,
         "display_name": "Huangovi v Americe S02E17 - Děláme to správně CZ Dabing",
         "video_id": 27417335
+      },
+      {
+        "episode_id": 80973,
+        "display_name": "Huangovi v Americe S02E23 - Manchuriánská večeře CZ Dabing",
+        "video_id": 27417381
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -207216,6 +207221,11 @@
         "episode_id": 80967,
         "display_name": "Huangovi v Americe S02E17 - Děláme to správně CZ Dabing",
         "video_id": 27417335
+      },
+      {
+        "episode_id": 80973,
+        "display_name": "Huangovi v Americe S02E23 - Manchuriánská večeře CZ Dabing",
+        "video_id": 27417381
       }
     ],
     "prepared_not_upload_ready": [
@@ -208377,7 +208387,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 39,
+    "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
