@@ -1,29 +1,101 @@
 {
   "counts": {
     "backlog_episodes": 168832,
-    "manifest_upload_ready_episodes": 1003,
-    "uploaded_episodes": 24588,
-    "prepared_source_episodes": 34282,
+    "manifest_upload_ready_episodes": 1000,
+    "uploaded_episodes": 24614,
+    "prepared_source_episodes": 34380,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 60,
-    "language_whisper_attempted_sources": 60,
-    "language_pending_whisper_sources": 2604,
-    "whisper_review_sources": 40704,
-    "whisper_review_pending_sources": 38127,
-    "subtitle_followup_sources": 7535,
-    "subtitle_followup_pending_sources": 7535
+    "language_audited_sources": 223,
+    "language_whisper_attempted_sources": 20,
+    "language_pending_whisper_sources": 2624,
+    "whisper_review_sources": 40788,
+    "whisper_review_pending_sources": 38271,
+    "subtitle_followup_sources": 7547,
+    "subtitle_followup_pending_sources": 7547
   },
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-07-12T02:27:18Z",
+      "databaseId": 29176786255,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-12T02:27:08Z",
+      "databaseId": 29176781954,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "backfill-subtitles"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-12T02:25:41Z",
+      "databaseId": 29176746665,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-sources"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-12T02:16:53Z",
+      "databaseId": 29176533078,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-12T02:15:46Z",
+      "databaseId": 29176506378,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-12T02:04:44Z",
+      "databaseId": 29176220103,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "backfill-subtitles"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-12T02:01:42Z",
+      "databaseId": 29176132513,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-12T02:01:39Z",
+      "databaseId": 29176131662,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-12T02:01:38Z",
+      "databaseId": 29176131076,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-12T02:00:41Z",
       "databaseId": 29176104596,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -59,11 +131,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-12T01:49:40Z",
       "databaseId": 29175829492,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "backfill-subtitles"
     },
     {
@@ -105,78 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-12T01:40:25Z",
-      "databaseId": 29175601228,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-12T01:36:15Z",
-      "databaseId": 29175499064,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-07-12T01:36:06Z",
-      "databaseId": 29175495299,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-12T01:35:54Z",
-      "databaseId": 29175490061,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "backfill-subtitles"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-12T01:35:02Z",
-      "databaseId": 29175467917,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-12T01:33:14Z",
-      "databaseId": 29175424004,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-12T01:32:16Z",
-      "databaseId": 29175400701,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-12T01:28:56Z",
-      "databaseId": 29175314345,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-12T01:28:53Z",
-      "databaseId": 29175313091,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
     }
   ],
   "gaps": {
@@ -100869,6 +100869,136 @@
         "episode_id": 67769,
         "display_name": "To je vražda, napsala S05E06 - Ničivá zeleň CZ Dabing",
         "video_id": 27394729
+      },
+      {
+        "episode_id": 128300,
+        "display_name": "První krev S01E03 - První bitva CZ Dabing",
+        "video_id": 27394790
+      },
+      {
+        "episode_id": 70654,
+        "display_name": "V utajení S01E11 - 11. epizoda CZ Dabing",
+        "video_id": 27394818
+      },
+      {
+        "episode_id": 70660,
+        "display_name": "V utajení S02E08 - 8. epizoda CZ Dabing",
+        "video_id": 27394836
+      },
+      {
+        "episode_id": 67746,
+        "display_name": "To je vražda, napsala S04E02 - Zloděj musí z kola ven CZ Dabing",
+        "video_id": 27394872
+      },
+      {
+        "episode_id": 67748,
+        "display_name": "To je vražda, napsala S04E04 - Smrt řeholnice CZ Dabing",
+        "video_id": 27394909
+      },
+      {
+        "episode_id": 67750,
+        "display_name": "To je vražda, napsala S04E06 - Rodinné zatížení CZ Dabing",
+        "video_id": 27394959
+      },
+      {
+        "episode_id": 70680,
+        "display_name": "V utajení S03E11 - 11. epizoda CZ Dabing",
+        "video_id": 27395009
+      },
+      {
+        "episode_id": 67752,
+        "display_name": "To je vražda, napsala S04E08 - Ukradený příběh CZ Dabing",
+        "video_id": 27395047
+      },
+      {
+        "episode_id": 67754,
+        "display_name": "To je vražda, napsala S04E10 - Indián CZ Dabing",
+        "video_id": 27395077
+      },
+      {
+        "episode_id": 67888,
+        "display_name": "To je vražda, napsala S04E11 - Přátelské shledání CZ Dabing",
+        "video_id": 27395106
+      },
+      {
+        "episode_id": 67756,
+        "display_name": "To je vražda, napsala S04E13 - Posel smrti CZ Dabing",
+        "video_id": 27395133
+      },
+      {
+        "episode_id": 67758,
+        "display_name": "To je vražda, napsala S04E15 - V kruhu rodinném CZ Dabing",
+        "video_id": 27395158
+      },
+      {
+        "episode_id": 70684,
+        "display_name": "V utajení S04E01 - 1. epizoda CZ Titulky",
+        "video_id": 27395181
+      },
+      {
+        "episode_id": 67760,
+        "display_name": "To je vražda, napsala S04E17 - Smrtonosná vinice CZ Dabing",
+        "video_id": 27395202
+      },
+      {
+        "episode_id": 67762,
+        "display_name": "To je vražda, napsala S04E20 - Rodeo v Saskatchewanu CZ Dabing",
+        "video_id": 27395234
+      },
+      {
+        "episode_id": 128299,
+        "display_name": "První krev S01E02 CZ Dabing",
+        "video_id": 27394798
+      },
+      {
+        "episode_id": 128301,
+        "display_name": "První krev S01E04 - První rande CZ Dabing",
+        "video_id": 27394830
+      },
+      {
+        "episode_id": 67771,
+        "display_name": "To je vražda, napsala S05E08 - Proroctví: vražda CZ Dabing",
+        "video_id": 27394884
+      },
+      {
+        "episode_id": 67773,
+        "display_name": "To je vražda, napsala S05E10 - Předu, předu tenkou nit CZ Dabing",
+        "video_id": 27394948
+      },
+      {
+        "episode_id": 67775,
+        "display_name": "To je vražda, napsala S05E12 - Zavedená praxe CZ Dabing",
+        "video_id": 27394991
+      },
+      {
+        "episode_id": 67777,
+        "display_name": "To je vražda, napsala S05E14 - Pozdrav z Ruska CZ Dabing",
+        "video_id": 27395035
+      },
+      {
+        "episode_id": 56529,
+        "display_name": "Babylon Berlín S01E01 - 1. epizoda CZ Titulky",
+        "video_id": 27395079
+      },
+      {
+        "episode_id": 67779,
+        "display_name": "To je vražda, napsala S05E16 - Motel CZ Dabing",
+        "video_id": 27395123
+      },
+      {
+        "episode_id": 67781,
+        "display_name": "To je vražda, napsala S05E18 - Dědictví Trevora Hudsona CZ Dabing",
+        "video_id": 27395155
+      },
+      {
+        "episode_id": 67783,
+        "display_name": "To je vražda, napsala S05E20 - Riskantní hra CZ Dabing",
+        "video_id": 27395193
+      },
+      {
+        "episode_id": 67785,
+        "display_name": "To je vražda, napsala S05E22 - Pověz mi zrcadlo - 2. část CZ Dabing",
+        "video_id": 27395231
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -201456,6 +201586,136 @@
         "episode_id": 67769,
         "display_name": "To je vražda, napsala S05E06 - Ničivá zeleň CZ Dabing",
         "video_id": 27394729
+      },
+      {
+        "episode_id": 128300,
+        "display_name": "První krev S01E03 - První bitva CZ Dabing",
+        "video_id": 27394790
+      },
+      {
+        "episode_id": 70654,
+        "display_name": "V utajení S01E11 - 11. epizoda CZ Dabing",
+        "video_id": 27394818
+      },
+      {
+        "episode_id": 70660,
+        "display_name": "V utajení S02E08 - 8. epizoda CZ Dabing",
+        "video_id": 27394836
+      },
+      {
+        "episode_id": 67746,
+        "display_name": "To je vražda, napsala S04E02 - Zloděj musí z kola ven CZ Dabing",
+        "video_id": 27394872
+      },
+      {
+        "episode_id": 67748,
+        "display_name": "To je vražda, napsala S04E04 - Smrt řeholnice CZ Dabing",
+        "video_id": 27394909
+      },
+      {
+        "episode_id": 67750,
+        "display_name": "To je vražda, napsala S04E06 - Rodinné zatížení CZ Dabing",
+        "video_id": 27394959
+      },
+      {
+        "episode_id": 70680,
+        "display_name": "V utajení S03E11 - 11. epizoda CZ Dabing",
+        "video_id": 27395009
+      },
+      {
+        "episode_id": 67752,
+        "display_name": "To je vražda, napsala S04E08 - Ukradený příběh CZ Dabing",
+        "video_id": 27395047
+      },
+      {
+        "episode_id": 67754,
+        "display_name": "To je vražda, napsala S04E10 - Indián CZ Dabing",
+        "video_id": 27395077
+      },
+      {
+        "episode_id": 67888,
+        "display_name": "To je vražda, napsala S04E11 - Přátelské shledání CZ Dabing",
+        "video_id": 27395106
+      },
+      {
+        "episode_id": 67756,
+        "display_name": "To je vražda, napsala S04E13 - Posel smrti CZ Dabing",
+        "video_id": 27395133
+      },
+      {
+        "episode_id": 67758,
+        "display_name": "To je vražda, napsala S04E15 - V kruhu rodinném CZ Dabing",
+        "video_id": 27395158
+      },
+      {
+        "episode_id": 70684,
+        "display_name": "V utajení S04E01 - 1. epizoda CZ Titulky",
+        "video_id": 27395181
+      },
+      {
+        "episode_id": 67760,
+        "display_name": "To je vražda, napsala S04E17 - Smrtonosná vinice CZ Dabing",
+        "video_id": 27395202
+      },
+      {
+        "episode_id": 67762,
+        "display_name": "To je vražda, napsala S04E20 - Rodeo v Saskatchewanu CZ Dabing",
+        "video_id": 27395234
+      },
+      {
+        "episode_id": 128299,
+        "display_name": "První krev S01E02 CZ Dabing",
+        "video_id": 27394798
+      },
+      {
+        "episode_id": 128301,
+        "display_name": "První krev S01E04 - První rande CZ Dabing",
+        "video_id": 27394830
+      },
+      {
+        "episode_id": 67771,
+        "display_name": "To je vražda, napsala S05E08 - Proroctví: vražda CZ Dabing",
+        "video_id": 27394884
+      },
+      {
+        "episode_id": 67773,
+        "display_name": "To je vražda, napsala S05E10 - Předu, předu tenkou nit CZ Dabing",
+        "video_id": 27394948
+      },
+      {
+        "episode_id": 67775,
+        "display_name": "To je vražda, napsala S05E12 - Zavedená praxe CZ Dabing",
+        "video_id": 27394991
+      },
+      {
+        "episode_id": 67777,
+        "display_name": "To je vražda, napsala S05E14 - Pozdrav z Ruska CZ Dabing",
+        "video_id": 27395035
+      },
+      {
+        "episode_id": 56529,
+        "display_name": "Babylon Berlín S01E01 - 1. epizoda CZ Titulky",
+        "video_id": 27395079
+      },
+      {
+        "episode_id": 67779,
+        "display_name": "To je vražda, napsala S05E16 - Motel CZ Dabing",
+        "video_id": 27395123
+      },
+      {
+        "episode_id": 67781,
+        "display_name": "To je vražda, napsala S05E18 - Dědictví Trevora Hudsona CZ Dabing",
+        "video_id": 27395155
+      },
+      {
+        "episode_id": 67783,
+        "display_name": "To je vražda, napsala S05E20 - Riskantní hra CZ Dabing",
+        "video_id": 27395193
+      },
+      {
+        "episode_id": 67785,
+        "display_name": "To je vražda, napsala S05E22 - Pověz mi zrcadlo - 2. část CZ Dabing",
+        "video_id": 27395231
       }
     ],
     "prepared_not_upload_ready": [
@@ -201770,395 +202030,395 @@
         "status": "whisper_failed"
       },
       {
-        "episode_id": 39945,
-        "source_id": -36033418806542177,
+        "episode_id": 39914,
+        "source_id": -45461186031643313,
         "series_title": "Babylon 5",
-        "episode_code": "S02E17",
-        "source_title": "Babylon 5 S02E17 Nože.mkv",
+        "episode_code": "S01E06",
+        "source_title": "Babylon 5 S01E06 DoDo",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 39945,
-        "source_id": -23676155198176276,
+        "episode_id": 39914,
+        "source_id": -61009495000724433,
         "series_title": "Babylon 5",
-        "episode_code": "S02E17",
-        "source_title": "Babylon 5 S02E17 Nože",
+        "episode_code": "S01E06",
+        "source_title": "Babylon 5 S01E06 1080p SK",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 39944,
-        "source_id": -39228163124960285,
+        "episode_id": 39888,
+        "source_id": -1239977965149092,
         "series_title": "Babylon 5",
-        "episode_code": "S02E18",
-        "source_title": "Babylon 5 S2 E18 - Confessions and Lamentations [=Sauron=, Josetto]",
+        "episode_code": "S01E07",
+        "source_title": "Babylon 5 S01E07 DoDo",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 39944,
-        "source_id": -66292195868953907,
+        "episode_id": 39888,
+        "source_id": -4300137824441522,
         "series_title": "Babylon 5",
-        "episode_code": "S02E18",
-        "source_title": "Babylon 5 S02E18 1080p SK",
+        "episode_code": "S01E07",
+        "source_title": "Babylon 5 S01E07 ⭐GG⭐",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 39944,
-        "source_id": -65598217991736537,
+        "episode_id": 39888,
+        "source_id": -11752845022568432,
         "series_title": "Babylon 5",
-        "episode_code": "S02E18",
-        "source_title": "Babylon 5 S02E18 SkDab",
+        "episode_code": "S01E07",
+        "source_title": "Babylon 5 S01E07By DRAGOUN",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 39944,
-        "source_id": -64614832327963470,
+        "episode_id": 39888,
+        "source_id": -52037592090760533,
         "series_title": "Babylon 5",
-        "episode_code": "S02E18",
-        "source_title": "Babylon 5 S02E18 Spoveď a nárek.mkv",
+        "episode_code": "S01E07",
+        "source_title": "Babylon 5 S01E07⭐GT⭐",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 39944,
-        "source_id": -6081925009425223,
+        "episode_id": 39888,
+        "source_id": -68688010643348456,
         "series_title": "Babylon 5",
-        "episode_code": "S02E18",
-        "source_title": "Babylon 5 S02E18 Spoveď a nárek",
+        "episode_code": "S01E07",
+        "source_title": "Babylon 5 S01E07 1080p SK",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 39947,
-        "source_id": -30386798575047919,
+        "episode_id": 39888,
+        "source_id": -61077062412396170,
         "series_title": "Babylon 5",
-        "episode_code": "S02E19",
-        "source_title": "Babylon 5 S2 E19 - Divided Loyalties [=Sauron=, Josetto]",
+        "episode_code": "S01E07",
+        "source_title": "Babylon 5 S01E07 Vojna o vojnu",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 39947,
-        "source_id": -68303801983097384,
+        "episode_id": 39930,
+        "source_id": -36104900053105544,
         "series_title": "Babylon 5",
-        "episode_code": "S02E19",
-        "source_title": "Babylon 5 S02E19 1080p SK",
+        "episode_code": "S01E08",
+        "source_title": "Babylon 5 S01E08 DoDo",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 39947,
-        "source_id": -11471244045564327,
+        "episode_id": 39930,
+        "source_id": -17597075180799441,
         "series_title": "Babylon 5",
-        "episode_code": "S02E19",
-        "source_title": "Babylon 5 S02E19 SkDab",
+        "episode_code": "S01E08",
+        "source_title": "Babylon 5 S01E08 1080p SK",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 39947,
-        "source_id": -47784853613552082,
+        "episode_id": 39941,
+        "source_id": -38604670590371035,
         "series_title": "Babylon 5",
-        "episode_code": "S02E19",
-        "source_title": "Babylon 5 S02E19 Rozdvojená vernosť.mkv",
+        "episode_code": "S01E10",
+        "source_title": "Babylon 5 S01E10 ⭐Boyd",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 39947,
-        "source_id": -38552714446543796,
+        "episode_id": 39941,
+        "source_id": -59382186698667182,
         "series_title": "Babylon 5",
-        "episode_code": "S02E19",
-        "source_title": "Babylon 5 S02E19 Rozdvojená vernosť",
+        "episode_code": "S01E10",
+        "source_title": "Babylon 5 S01E10 ⭐GG⭐",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 39947,
-        "source_id": -26746143826449742,
+        "episode_id": 39941,
+        "source_id": -66724523934972073,
         "series_title": "Babylon 5",
-        "episode_code": "S02E19",
-        "source_title": "Babylon 5 S02E19 DoDo",
+        "episode_code": "S01E10",
+        "source_title": "Babylon 5 S01E10 DoDo",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 39947,
-        "source_id": -50596343969386117,
+        "episode_id": 39941,
+        "source_id": -40894667303955758,
         "series_title": "Babylon 5",
-        "episode_code": "S02E19",
-        "source_title": "Babylon 5 S02E19 ⭐GG⭐",
+        "episode_code": "S01E10",
+        "source_title": "Babylon 5 S01E10By DRAGOUN",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 39949,
-        "source_id": -48720775869374709,
+        "episode_id": 39941,
+        "source_id": -15320487706390563,
         "series_title": "Babylon 5",
-        "episode_code": "S02E20",
-        "source_title": "Babylon 5 S2 E20 - The Long, Twilight Struggle [=Sauron=, Josetto]",
+        "episode_code": "S01E10",
+        "source_title": "Babylon 5 S01E10⭐GT⭐",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 39949,
-        "source_id": -31197211169591441,
+        "episode_id": 39941,
+        "source_id": -13683239224745642,
         "series_title": "Babylon 5",
-        "episode_code": "S02E20",
-        "source_title": "Babylon 5 S02E20 1080p SK",
+        "episode_code": "S01E10",
+        "source_title": "Babylon 5 S01E10 1080p SK",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 39949,
-        "source_id": -67841628874955827,
+        "episode_id": 39942,
+        "source_id": -10762901423323917,
         "series_title": "Babylon 5",
-        "episode_code": "S02E20",
-        "source_title": "Babylon 5 S02E20 SkDab",
+        "episode_code": "S01E11",
+        "source_title": "Babylon 5 S01E11 Krvná pomsta",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 39949,
-        "source_id": -40053019473954428,
+        "episode_id": 39942,
+        "source_id": -6874962932656422,
         "series_title": "Babylon 5",
-        "episode_code": "S02E20",
-        "source_title": "Babylon 5 S02E20 Dlhý boj za súmraku",
+        "episode_code": "S01E11",
+        "source_title": "Babylon 5 S01E11 Krvná pomsta.mkv",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 39949,
-        "source_id": -8465751398370132,
+        "episode_id": 39942,
+        "source_id": -30593981948559462,
         "series_title": "Babylon 5",
-        "episode_code": "S02E20",
-        "source_title": "Babylon 5 S02E20 Dlhý boj za súmraku.mkv",
+        "episode_code": "S01E11",
+        "source_title": "Babylon 5 S01E11 ⭐GG⭐",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 39950,
-        "source_id": -11205498476454727,
+        "episode_id": 39942,
+        "source_id": -2078726590231708,
         "series_title": "Babylon 5",
-        "episode_code": "S02E21",
-        "source_title": "Babylon 5 S2 E21 - Comes the Inquisitor [=Sauron=, Josetto]",
+        "episode_code": "S01E11",
+        "source_title": "Babylon 5 S01E11 1080p SK",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 39950,
-        "source_id": -39429646408318179,
+        "episode_id": 39932,
+        "source_id": -63325230240779764,
         "series_title": "Babylon 5",
-        "episode_code": "S02E21",
-        "source_title": "Babylon 5 S02E21 SkDab",
+        "episode_code": "S01E15",
+        "source_title": "Babylon 5 S01E15 ⭐Boyd",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 39950,
-        "source_id": -54374519548732764,
+        "episode_id": 39932,
+        "source_id": -20414326837419092,
         "series_title": "Babylon 5",
-        "episode_code": "S02E21",
-        "source_title": "Babylon 5 S02E21 1080p SK",
+        "episode_code": "S01E15",
+        "source_title": "Babylon 5 S01E15 DoDo",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 39950,
-        "source_id": -24914769347146739,
+        "episode_id": 39932,
+        "source_id": -13816792979479308,
         "series_title": "Babylon 5",
-        "episode_code": "S02E21",
-        "source_title": "Babylon 5 S02E21 Prichádza inkvizítor",
+        "episode_code": "S01E15",
+        "source_title": "Babylon 5 S01E15 ⭐GG⭐",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 39950,
-        "source_id": -44108479696672957,
+        "episode_id": 39932,
+        "source_id": -51523411842438783,
         "series_title": "Babylon 5",
-        "episode_code": "S02E21",
-        "source_title": "Babylon 5 S02E21 ⭐GG⭐",
+        "episode_code": "S01E15",
+        "source_title": "Babylon 5 S01E15 1080p SK",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 39950,
-        "source_id": -5446409410150130,
+        "episode_id": 39943,
+        "source_id": -71809200765180532,
         "series_title": "Babylon 5",
-        "episode_code": "S02E21",
-        "source_title": "Babylon 5 S02E21 DoDo",
+        "episode_code": "S01E17",
+        "source_title": "Babylon 5 S01E17 ⭐GG⭐",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 39950,
-        "source_id": -57779287548478337,
+        "episode_id": 39943,
+        "source_id": -34840810711475522,
         "series_title": "Babylon 5",
-        "episode_code": "S02E21",
-        "source_title": "Babylon 5 S02E21By DRAGOUN",
+        "episode_code": "S01E17",
+        "source_title": "Babylon 5 S01E17 DoDo",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 39951,
-        "source_id": -37323864653583147,
+        "episode_id": 39943,
+        "source_id": -24623552651324891,
         "series_title": "Babylon 5",
-        "episode_code": "S02E22",
-        "source_title": "Babylon 5 S2 E22 - The Fall of Night [=Sauron=, Josetto]",
+        "episode_code": "S01E17",
+        "source_title": "Babylon 5 S01E17By DRAGOUN",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 39951,
-        "source_id": -40461136314887340,
+        "episode_id": 39943,
+        "source_id": -28426473054444141,
         "series_title": "Babylon 5",
-        "episode_code": "S02E22",
-        "source_title": "Babylon 5 S02E22 SkDab",
+        "episode_code": "S01E17",
+        "source_title": "Babylon 5 S01E17⭐GT⭐",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 39951,
-        "source_id": -29999787105988829,
+        "episode_id": 39943,
+        "source_id": -21085843869418749,
         "series_title": "Babylon 5",
-        "episode_code": "S02E22",
-        "source_title": "Babylon 5 S02E22 1080p SK",
+        "episode_code": "S01E17",
+        "source_title": "Babylon 5 S1 E17 - Legacies [=Sauron=, Josetto]",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 39951,
-        "source_id": -58087371520620185,
+        "episode_id": 39943,
+        "source_id": -40672409963540230,
         "series_title": "Babylon 5",
-        "episode_code": "S02E22",
-        "source_title": "Babylon 5 S02E22 Príchod noci",
+        "episode_code": "S01E17",
+        "source_title": "Babylon 5 S01E17 1080p SK",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 39951,
-        "source_id": -8272987799944927,
+        "episode_id": 39920,
+        "source_id": -61772983268254493,
         "series_title": "Babylon 5",
-        "episode_code": "S02E22",
-        "source_title": "Babylon 5 S02E22 Príchod noci.mkv",
+        "episode_code": "S01E21",
+        "source_title": "Babylon 5 S01E21 DoDo",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 39951,
-        "source_id": -41067145179336422,
+        "episode_id": 39920,
+        "source_id": -6070014172490199,
         "series_title": "Babylon 5",
-        "episode_code": "S02E22",
-        "source_title": "Babylon 5 S02E22 ⭐Boyd",
+        "episode_code": "S01E21",
+        "source_title": "Babylon 5 S01E21 ⭐GG⭐",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 39952,
-        "source_id": -27684283797399938,
+        "episode_id": 39920,
+        "source_id": -36433868226886191,
         "series_title": "Babylon 5",
-        "episode_code": "S03E01",
-        "source_title": "Babylon 5 S03E01 1080p SK",
+        "episode_code": "S01E21",
+        "source_title": "Babylon 5 S01E21 1080p SK",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 39952,
-        "source_id": -30333324948487409,
+        "episode_id": 39948,
+        "source_id": -17864279251499417,
         "series_title": "Babylon 5",
-        "episode_code": "S03E01",
-        "source_title": "Babylon 5 S03E01-22 1995 SK dab - Matters of Honor",
+        "episode_code": "S01E22",
+        "source_title": "Babylon 5 S01E22 ⭐Boyd",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 39952,
-        "source_id": -13541716584428779,
+        "episode_id": 39948,
+        "source_id": -68578483893272633,
         "series_title": "Babylon 5",
-        "episode_code": "S03E01",
-        "source_title": "Babylon 5 S03E01 SkDab",
+        "episode_code": "S01E22",
+        "source_title": "Babylon 5 S01E22 DoDo",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 39952,
-        "source_id": -34894397666677658,
+        "episode_id": 39948,
+        "source_id": -46014988053540489,
         "series_title": "Babylon 5",
-        "episode_code": "S03E01",
-        "source_title": "Babylon 5 - S3E1 Epizoda 1 SK",
+        "episode_code": "S01E22",
+        "source_title": "Babylon 5 S01E22By DRAGOUN",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 39952,
-        "source_id": -56481686027547394,
+        "episode_id": 39948,
+        "source_id": -61583694378004914,
         "series_title": "Babylon 5",
-        "episode_code": "S03E01",
-        "source_title": "Babylon 5 S03E01 Otázka cti",
+        "episode_code": "S01E22",
+        "source_title": "Babylon 5 S01E22 1080p SK",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 39952,
-        "source_id": -49749476450032106,
+        "episode_id": 39935,
+        "source_id": -39550954676522407,
         "series_title": "Babylon 5",
-        "episode_code": "S03E01",
-        "source_title": "Babylon 5 S03E01 ⭐GG⭐",
+        "episode_code": "S02E01",
+        "source_title": "Babylon 5 S02E01 SkDab",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 39952,
-        "source_id": -52071120928075905,
+        "episode_id": 39934,
+        "source_id": -18611506448824631,
         "series_title": "Babylon 5",
-        "episode_code": "S03E01",
-        "source_title": "Babylon 5 S03E01 DoDo",
+        "episode_code": "S02E02",
+        "source_title": "Babylon 5 S02E02 DoDo",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 39952,
-        "source_id": -47866169261071761,
+        "episode_id": 39934,
+        "source_id": -47083738648681268,
         "series_title": "Babylon 5",
-        "episode_code": "S03E01",
-        "source_title": "Babylon 5 S03E01By DRAGOUN",
+        "episode_code": "S02E02",
+        "source_title": "Babylon 5 S02E02 1080p SK",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 39953,
-        "source_id": -9456062727358531,
+        "episode_id": 39924,
+        "source_id": -71898951070644421,
         "series_title": "Babylon 5",
-        "episode_code": "S03E02",
-        "source_title": "Babylon 5 S03E02 1080p SK",
+        "episode_code": "S02E03",
+        "source_title": "Babylon 5 S02E03 1080p SK",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 39953,
-        "source_id": -52812589039875639,
+        "episode_id": 39924,
+        "source_id": -43490012411349147,
         "series_title": "Babylon 5",
-        "episode_code": "S03E02",
-        "source_title": "Babylon 5 S03E02 SkDab",
+        "episode_code": "S02E03",
+        "source_title": "Babylon 5 S02E03 SkDab",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 39953,
-        "source_id": -69093550376903315,
+        "episode_id": 39922,
+        "source_id": -44110140850747361,
         "series_title": "Babylon 5",
-        "episode_code": "S03E02",
-        "source_title": "Babylon 5 - S3E2 Epizoda 2 SK",
+        "episode_code": "S02E05",
+        "source_title": "Babylon 5 S02E05 1080p SK",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 39953,
-        "source_id": -41041293538015300,
+        "episode_id": 39922,
+        "source_id": -9869764992055079,
         "series_title": "Babylon 5",
-        "episode_code": "S03E02",
-        "source_title": "Babylon 5 S03E02 DoDo",
+        "episode_code": "S02E05",
+        "source_title": "Babylon 5 S02E05 SkDab",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 39953,
-        "source_id": -5690837569729526,
+        "episode_id": 39923,
+        "source_id": -5937410167049375,
         "series_title": "Babylon 5",
-        "episode_code": "S03E02",
-        "source_title": "Babylon 5 S03E02 ⭐GG⭐",
+        "episode_code": "S02E06",
+        "source_title": "Babylon 5 S02E06 1080p SK",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 39953,
-        "source_id": -42539629260366384,
+        "episode_id": 39923,
+        "source_id": -33459825283995673,
         "series_title": "Babylon 5",
-        "episode_code": "S03E02",
-        "source_title": "Babylon 5 S03E02By DRAGOUN",
+        "episode_code": "S02E06",
+        "source_title": "Babylon 5 S02E06 SkDab",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 39953,
-        "source_id": -32859009797225938,
+        "episode_id": 39946,
+        "source_id": -35471734939872420,
         "series_title": "Babylon 5",
-        "episode_code": "S03E02",
-        "source_title": "Babylon 5 S03E02⭐GT⭐",
+        "episode_code": "S02E07",
+        "source_title": "Babylon 5 S02E07 1080p SK",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 39953,
-        "source_id": -25114527368310996,
+        "episode_id": 39946,
+        "source_id": -57908370428248124,
         "series_title": "Babylon 5",
-        "episode_code": "S03E02",
-        "source_title": "Babylon 5 S03E02 Ortiele",
+        "episode_code": "S02E07",
+        "source_title": "Babylon 5 S02E07 SkDab",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 39954,
-        "source_id": -49788686061550075,
+        "episode_id": 39946,
+        "source_id": -4491727273430798,
         "series_title": "Babylon 5",
-        "episode_code": "S03E03",
-        "source_title": "Babylon 5 S03E03 SkDab",
+        "episode_code": "S02E07",
+        "source_title": "Babylon 5 S02E07 Spriaznené duše",
         "status": "needs_whisper"
       }
     ],
@@ -202617,16 +202877,17 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 59,
+    "disabled": 203,
+    "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
-    "whisper_non_cz_needs_subtitles": 1568,
-    "whisper_confirmed_cz": 1009,
+    "whisper_non_cz_needs_subtitles": 1540,
+    "whisper_confirmed_cz": 977,
     "whisper_failed": 3,
-    "needs_whisper": 38124
+    "needs_whisper": 38268
   },
   "subtitle_followup_statuses": {
-    "needs_subtitle_setup_after_prehrajto_processing": 7535
+    "needs_subtitle_setup_after_prehrajto_processing": 7547
   }
 }
