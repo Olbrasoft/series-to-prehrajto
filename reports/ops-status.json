@@ -2,28 +2,68 @@
   "counts": {
     "backlog_episodes": 168215,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 25241,
-    "prepared_source_episodes": 38045,
+    "uploaded_episodes": 25242,
+    "prepared_source_episodes": 38039,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 240,
-    "language_whisper_attempted_sources": 105,
+    "language_audited_sources": 60,
+    "language_whisper_attempted_sources": 60,
     "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 44744,
-    "whisper_review_pending_sources": 42087,
+    "whisper_review_pending_sources": 42067,
     "subtitle_followup_sources": 8222,
     "subtitle_followup_pending_sources": 8222
   },
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-07-12T23:47:56Z",
+      "databaseId": 29214045714,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-12T23:47:20Z",
+      "databaseId": 29214028543,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-12T23:46:42Z",
+      "databaseId": 29214008671,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-12T23:45:41Z",
+      "databaseId": 29213978573,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-12T23:44:49Z",
+      "databaseId": 29213951514,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-12T23:43:47Z",
       "databaseId": 29213920017,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -35,11 +75,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-12T23:37:16Z",
       "databaseId": 29213728829,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -51,11 +91,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-12T23:32:19Z",
       "databaseId": 29213579838,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
@@ -137,46 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-12T23:17:23Z",
-      "databaseId": 29213129479,
-      "headBranch": "main",
-      "status": "pending",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-12T23:15:51Z",
-      "databaseId": 29213085147,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-12T23:02:02Z",
-      "databaseId": 29212646576,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-12T22:59:48Z",
-      "databaseId": 29212573484,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-07-12T22:58:38Z",
-      "databaseId": 29212540857,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
     }
   ],
   "gaps": {
@@ -104134,6 +104134,11 @@
         "episode_id": 63687,
         "display_name": "Magnum S03E23 - Víra a Begorrah CZ Dabing",
         "video_id": 27419081
+      },
+      {
+        "episode_id": 63825,
+        "display_name": "Magnum S04E03 - Míň než život CZ Dabing",
+        "video_id": 27419104
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -207986,6 +207991,11 @@
         "episode_id": 63687,
         "display_name": "Magnum S03E23 - Víra a Begorrah CZ Dabing",
         "video_id": 27419081
+      },
+      {
+        "episode_id": 63825,
+        "display_name": "Magnum S04E03 - Míň než život CZ Dabing",
+        "video_id": 27419104
       }
     ],
     "prepared_not_upload_ready": [
@@ -208300,166 +208310,6 @@
         "status": "whisper_failed"
       },
       {
-        "episode_id": 39954,
-        "source_id": -67254829920763728,
-        "series_title": "Babylon 5",
-        "episode_code": "S03E03",
-        "source_title": "Babylon 5 - S3E3 Epizoda 3 SK",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39954,
-        "source_id": -40849971479967080,
-        "series_title": "Babylon 5",
-        "episode_code": "S03E03",
-        "source_title": "Babylon 5 S03E03 Deň rozbrojov",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39954,
-        "source_id": -37404889844699787,
-        "series_title": "Babylon 5",
-        "episode_code": "S03E03",
-        "source_title": "Babylon 5 S03E03 Deň rozbrojov.mkv",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39954,
-        "source_id": -60902293861211788,
-        "series_title": "Babylon 5",
-        "episode_code": "S03E03",
-        "source_title": "Babylon 5 S03E03 ⭐Boyd",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39954,
-        "source_id": -25023739079491230,
-        "series_title": "Babylon 5",
-        "episode_code": "S03E03",
-        "source_title": "Babylon 5 S03E03 DoDo",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39954,
-        "source_id": -32200293389628572,
-        "series_title": "Babylon 5",
-        "episode_code": "S03E03",
-        "source_title": "Babylon 5 S03E03 ⭐GG⭐",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39955,
-        "source_id": -59261561022020483,
-        "series_title": "Babylon 5",
-        "episode_code": "S03E04",
-        "source_title": "Babylon 5 S03E04 1080p SK",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39955,
-        "source_id": -14891040788934366,
-        "series_title": "Babylon 5",
-        "episode_code": "S03E04",
-        "source_title": "Babylon 5 S03E04 SkDab",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39955,
-        "source_id": -67903274741073393,
-        "series_title": "Babylon 5",
-        "episode_code": "S03E04",
-        "source_title": "Babylon 5 - S3E4 Epizoda 4 SK",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39955,
-        "source_id": -63917239307761258,
-        "series_title": "Babylon 5",
-        "episode_code": "S03E04",
-        "source_title": "Babylon 5 S03E04 Noc v Getsemanskej záhrade.mkv",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39955,
-        "source_id": -50118621066455614,
-        "series_title": "Babylon 5",
-        "episode_code": "S03E04",
-        "source_title": "Babylon 5 S03E04 Noc v Getsemanskej záhrade",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39955,
-        "source_id": -10612727292825036,
-        "series_title": "Babylon 5",
-        "episode_code": "S03E04",
-        "source_title": "Babylon 5 S03E04 ⭐Boyd",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39955,
-        "source_id": -59890161232026085,
-        "series_title": "Babylon 5",
-        "episode_code": "S03E04",
-        "source_title": "Babylon 5 S03E04 ⭐GG⭐",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39955,
-        "source_id": -27598130650163159,
-        "series_title": "Babylon 5",
-        "episode_code": "S03E04",
-        "source_title": "Babylon 5 S03E04By DRAGOUN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39956,
-        "source_id": -14460361976269253,
-        "series_title": "Babylon 5",
-        "episode_code": "S03E05",
-        "source_title": "Babylon 5 S03E05 1080p SK",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39956,
-        "source_id": -17790742685623363,
-        "series_title": "Babylon 5",
-        "episode_code": "S03E05",
-        "source_title": "Babylon 5 S03E05 SkDab",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39956,
-        "source_id": -1911907195209507,
-        "series_title": "Babylon 5",
-        "episode_code": "S03E05",
-        "source_title": "Babylon 5 - S3E5 Epizoda 5 SK",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39956,
-        "source_id": -60204269600795720,
-        "series_title": "Babylon 5",
-        "episode_code": "S03E05",
-        "source_title": "Babylon 5 S03E05 ⭐GG⭐",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39956,
-        "source_id": -46649346408554348,
-        "series_title": "Babylon 5",
-        "episode_code": "S03E05",
-        "source_title": "Babylon 5 S03E05 DoDo",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39956,
-        "source_id": -4492011282593553,
-        "series_title": "Babylon 5",
-        "episode_code": "S03E05",
-        "source_title": "Babylon 5 S03E05By DRAGOUN",
-        "status": "needs_whisper"
-      },
-      {
         "episode_id": 39956,
         "source_id": -33382368439285362,
         "series_title": "Babylon 5",
@@ -208689,6 +208539,166 @@
         "series_title": "Babylon 5",
         "episode_code": "S03E09",
         "source_title": "Babylon 5 S03E09-22 1995 SK dab - Point of No Return",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39985,
+        "source_id": -67255447518899549,
+        "series_title": "Babylon 5",
+        "episode_code": "S03E09",
+        "source_title": "Babylon 5 - S3E9 Epizoda 9 SK",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39985,
+        "source_id": -42183298767976916,
+        "series_title": "Babylon 5",
+        "episode_code": "S03E09",
+        "source_title": "Babylon 5 S03E09 ⭐GG⭐",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39985,
+        "source_id": -22679404988800247,
+        "series_title": "Babylon 5",
+        "episode_code": "S03E09",
+        "source_title": "Babylon 5 S03E09 DoDo",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39985,
+        "source_id": -34294850157497791,
+        "series_title": "Babylon 5",
+        "episode_code": "S03E09",
+        "source_title": "Babylon 5 S03E09By DRAGOUN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39985,
+        "source_id": -26380080854419534,
+        "series_title": "Babylon 5",
+        "episode_code": "S03E09",
+        "source_title": "Babylon 5 S03E09⭐GT⭐",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39960,
+        "source_id": -29705689599236769,
+        "series_title": "Babylon 5",
+        "episode_code": "S03E10",
+        "source_title": "Babylon 5 S03E10 ⭐GG⭐",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39960,
+        "source_id": -8712766053726951,
+        "series_title": "Babylon 5",
+        "episode_code": "S03E10",
+        "source_title": "Babylon 5 S03E10 ⭐Boyd",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39960,
+        "source_id": -53760654051268576,
+        "series_title": "Babylon 5",
+        "episode_code": "S03E10",
+        "source_title": "Babylon 5 S03E10 DoDo",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39960,
+        "source_id": -66475208556842529,
+        "series_title": "Babylon 5",
+        "episode_code": "S03E10",
+        "source_title": "Babylon 5 S03E10By DRAGOUN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39960,
+        "source_id": -39323878863348861,
+        "series_title": "Babylon 5",
+        "episode_code": "S03E10",
+        "source_title": "Babylon 5 S03E10⭐GT⭐",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39960,
+        "source_id": -31566397632214497,
+        "series_title": "Babylon 5",
+        "episode_code": "S03E10",
+        "source_title": "Babylon 5 S3 E10 - Severed Dreams [=Sauron=, Josetto]",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39960,
+        "source_id": -52631127927631619,
+        "series_title": "Babylon 5",
+        "episode_code": "S03E10",
+        "source_title": "Babylon 5 S03E10 1080p SK",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39960,
+        "source_id": -56529468647022363,
+        "series_title": "Babylon 5",
+        "episode_code": "S03E10",
+        "source_title": "Babylon 5 S03E10 SkDab",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39961,
+        "source_id": -15981785573730655,
+        "series_title": "Babylon 5",
+        "episode_code": "S03E11",
+        "source_title": "Babylon 5 S3 E11 - Ceremonies of Light and Dark [=Sauron=, Josetto]",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39961,
+        "source_id": -29706829040167629,
+        "series_title": "Babylon 5",
+        "episode_code": "S03E11",
+        "source_title": "Babylon 5 S03E11 1080p SK",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39961,
+        "source_id": -55450059660027516,
+        "series_title": "Babylon 5",
+        "episode_code": "S03E11",
+        "source_title": "Babylon 5 S03E11-22 1995 SK dab - Ceremonies of Light and Dark",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39961,
+        "source_id": -3905162957664056,
+        "series_title": "Babylon 5",
+        "episode_code": "S03E11",
+        "source_title": "Babylon 5 S03E11 SkDab",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39961,
+        "source_id": -62583236622877901,
+        "series_title": "Babylon 5",
+        "episode_code": "S03E11",
+        "source_title": "Babylon 5 - S3E11 Epizoda 11 SK",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39961,
+        "source_id": -39665977837208415,
+        "series_title": "Babylon 5",
+        "episode_code": "S03E11",
+        "source_title": "Babylon 5 S03E11 Obrady svetla a tmy",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39961,
+        "source_id": -8025051318101019,
+        "series_title": "Babylon 5",
+        "episode_code": "S03E11",
+        "source_title": "Babylon 5 S03E11 Obrady svetla a tmy.mkv",
         "status": "needs_whisper"
       }
     ],
@@ -209147,15 +209157,14 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 104,
-    "disabled": 135,
+    "ok": 59,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
-    "whisper_non_cz_needs_subtitles": 1611,
-    "whisper_confirmed_cz": 1046,
+    "whisper_non_cz_needs_subtitles": 1617,
+    "whisper_confirmed_cz": 1060,
     "whisper_failed": 3,
-    "needs_whisper": 42084
+    "needs_whisper": 42064
   },
   "subtitle_followup_statuses": {
     "needs_subtitle_setup_after_prehrajto_processing": 8222
