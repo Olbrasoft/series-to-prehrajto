@@ -2,7 +2,7 @@
   "counts": {
     "backlog_episodes": 168673,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 24788,
+    "uploaded_episodes": 24789,
     "prepared_source_episodes": 35063,
     "description_series": 60,
     "description_episodes": 753,
@@ -19,27 +19,67 @@
   },
   "workflow_runs": [
     {
-      "conclusion": "",
-      "createdAt": "2026-07-12T06:17:05Z",
-      "databaseId": 29182423732,
+      "conclusion": "success",
+      "createdAt": "2026-07-12T06:18:11Z",
+      "databaseId": 29182450218,
       "headBranch": "main",
-      "status": "pending",
-      "workflowName": "ops-watchdog"
+      "status": "completed",
+      "workflowName": "update-descriptions"
     },
     {
       "conclusion": "",
-      "createdAt": "2026-07-12T06:17:03Z",
-      "databaseId": 29182423094,
+      "createdAt": "2026-07-12T06:18:09Z",
+      "databaseId": 29182449337,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-12T06:18:07Z",
+      "databaseId": 29182448471,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-12T06:18:05Z",
+      "databaseId": 29182447627,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-12T06:17:54Z",
+      "databaseId": 29182443318,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-12T06:17:05Z",
+      "databaseId": 29182423732,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
+      "createdAt": "2026-07-12T06:17:03Z",
+      "databaseId": 29182423094,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "cancelled",
       "createdAt": "2026-07-12T06:16:59Z",
       "databaseId": 29182421421,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -137,46 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-12T05:37:44Z",
-      "databaseId": 29181446430,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-12T05:37:42Z",
-      "databaseId": 29181445743,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-12T05:37:35Z",
-      "databaseId": 29181443195,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "backfill-subtitles"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-12T05:36:42Z",
-      "databaseId": 29181422503,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-12T05:36:37Z",
-      "databaseId": 29181420809,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-manifest"
     }
   ],
   "gaps": {
@@ -101869,6 +101869,11 @@
         "episode_id": 100767,
         "display_name": "Patty Hewes - nebezpečná advokátka S01E01 - Pilot CZ Dabing",
         "video_id": 27399563
+      },
+      {
+        "episode_id": 100769,
+        "display_name": "Patty Hewes - nebezpečná advokátka S01E03 - Můj ohromující strach ze smrti CZ Dabing",
+        "video_id": 27399609
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -203456,6 +203461,11 @@
         "episode_id": 100767,
         "display_name": "Patty Hewes - nebezpečná advokátka S01E01 - Pilot CZ Dabing",
         "video_id": 27399563
+      },
+      {
+        "episode_id": 100769,
+        "display_name": "Patty Hewes - nebezpečná advokátka S01E03 - Můj ohromující strach ze smrti CZ Dabing",
+        "video_id": 27399609
       }
     ],
     "prepared_not_upload_ready": [
