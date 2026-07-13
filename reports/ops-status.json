@@ -2,36 +2,76 @@
   "counts": {
     "backlog_episodes": 167296,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 26088,
-    "prepared_source_episodes": 40114,
+    "uploaded_episodes": 26094,
+    "prepared_source_episodes": 40198,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 20,
-    "language_whisper_attempted_sources": 20,
+    "language_audited_sources": 186,
+    "language_whisper_attempted_sources": 81,
     "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 47520,
-    "whisper_review_pending_sources": 44843,
-    "subtitle_followup_sources": 8623,
-    "subtitle_followup_pending_sources": 8623
+    "whisper_review_pending_sources": 44903,
+    "subtitle_followup_sources": 8644,
+    "subtitle_followup_pending_sources": 8644
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-07-13T13:32:25Z",
-      "databaseId": 29254152598,
+      "createdAt": "2026-07-13T13:42:39Z",
+      "databaseId": 29254839370,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-13T13:42:28Z",
+      "databaseId": 29254826129,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
+      "conclusion": "success",
+      "createdAt": "2026-07-13T13:33:29Z",
+      "databaseId": 29254223661,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-13T13:33:26Z",
+      "databaseId": 29254220327,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "process-whisper-review"
+    },
+    {
       "conclusion": "",
+      "createdAt": "2026-07-13T13:33:24Z",
+      "databaseId": 29254217651,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-13T13:32:25Z",
+      "databaseId": 29254152598,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "cancelled",
       "createdAt": "2026-07-13T13:29:26Z",
       "databaseId": 29253958364,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -137,46 +177,6 @@
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-13T12:38:54Z",
-      "databaseId": 29250651455,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-13T12:38:51Z",
-      "databaseId": 29250648784,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-13T12:38:49Z",
-      "databaseId": 29250646547,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-13T12:38:22Z",
-      "databaseId": 29250618867,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-13T12:37:47Z",
-      "databaseId": 29250582507,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
     }
   ],
   "gaps": {
@@ -108369,6 +108369,36 @@
         "episode_id": 109813,
         "display_name": "Sladké magnólie S03E07 - Někdo, koho toužím vidět CZ Titulky",
         "video_id": 27440688
+      },
+      {
+        "episode_id": 141270,
+        "display_name": "Undercover S01E01 - 1. epizoda CZ Dabing",
+        "video_id": 27441014
+      },
+      {
+        "episode_id": 141272,
+        "display_name": "Undercover S01E03 - 3. epizoda CZ Dabing",
+        "video_id": 27441048
+      },
+      {
+        "episode_id": 141274,
+        "display_name": "Undercover S01E06 - 6. epizoda CZ Dabing",
+        "video_id": 27441108
+      },
+      {
+        "episode_id": 109815,
+        "display_name": "Sladké magnólie S03E09 - Tichá pošta CZ Titulky",
+        "video_id": 27440961
+      },
+      {
+        "episode_id": 135583,
+        "display_name": "Sladké magnólie S04E01 - Na druhé straně závoje CZ Titulky",
+        "video_id": 27441031
+      },
+      {
+        "episode_id": 109821,
+        "display_name": "Sladké magnólie S04E02 - Nepraktické sny CZ Titulky",
+        "video_id": 27441110
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -216456,6 +216486,36 @@
         "episode_id": 109813,
         "display_name": "Sladké magnólie S03E07 - Někdo, koho toužím vidět CZ Titulky",
         "video_id": 27440688
+      },
+      {
+        "episode_id": 141270,
+        "display_name": "Undercover S01E01 - 1. epizoda CZ Dabing",
+        "video_id": 27441014
+      },
+      {
+        "episode_id": 141272,
+        "display_name": "Undercover S01E03 - 3. epizoda CZ Dabing",
+        "video_id": 27441048
+      },
+      {
+        "episode_id": 141274,
+        "display_name": "Undercover S01E06 - 6. epizoda CZ Dabing",
+        "video_id": 27441108
+      },
+      {
+        "episode_id": 109815,
+        "display_name": "Sladké magnólie S03E09 - Tichá pošta CZ Titulky",
+        "video_id": 27440961
+      },
+      {
+        "episode_id": 135583,
+        "display_name": "Sladké magnólie S04E01 - Na druhé straně závoje CZ Titulky",
+        "video_id": 27441031
+      },
+      {
+        "episode_id": 109821,
+        "display_name": "Sladké magnólie S04E02 - Nepraktické sny CZ Titulky",
+        "video_id": 27441110
       }
     ],
     "prepared_not_upload_ready": [
@@ -216762,6 +216822,222 @@
     ],
     "whisper_review_pending": [
       {
+        "episode_id": 129394,
+        "source_id": -6385269051839475,
+        "series_title": "A.P. Bio",
+        "episode_code": "S04E01",
+        "source_title": "A.P.Bio.S04E01.1080p.WEB.H264-GGEZ",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 129394,
+        "source_id": -29485284317375415,
+        "series_title": "A.P. Bio",
+        "episode_code": "S04E01",
+        "source_title": "A.P.Bio.S04E01.720p.WEB.H264-GGEZ",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 129395,
+        "source_id": -43219714271080877,
+        "series_title": "A.P. Bio",
+        "episode_code": "S04E02",
+        "source_title": "A.P.Bio.S04E02.1080p.WEB.H264-GGEZ",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 129395,
+        "source_id": -69843560830094081,
+        "series_title": "A.P. Bio",
+        "episode_code": "S04E02",
+        "source_title": "A.P.Bio.S04E02.720p.WEB.H264-GGEZ",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 129396,
+        "source_id": -7164101361564782,
+        "series_title": "A.P. Bio",
+        "episode_code": "S04E03",
+        "source_title": "A.P.Bio.S04E03.1080p.WEB.H264-GGEZ",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 129396,
+        "source_id": -8734904273242898,
+        "series_title": "A.P. Bio",
+        "episode_code": "S04E03",
+        "source_title": "A.P.Bio.S04E03.720p.WEB.H264-GGEZ",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 129397,
+        "source_id": -30596610227482378,
+        "series_title": "A.P. Bio",
+        "episode_code": "S04E04",
+        "source_title": "A.P.Bio.S04E04.1080p.WEB.H264-GGEZ",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 129397,
+        "source_id": -63197303023922642,
+        "series_title": "A.P. Bio",
+        "episode_code": "S04E04",
+        "source_title": "A.P.Bio.S04E04.720p.WEB.H264-GGEZ",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 129398,
+        "source_id": -14236065285966233,
+        "series_title": "A.P. Bio",
+        "episode_code": "S04E05",
+        "source_title": "A.P.Bio.S04E05.1080p.WEB.H264-GGEZ",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 129398,
+        "source_id": -43515192839720894,
+        "series_title": "A.P. Bio",
+        "episode_code": "S04E05",
+        "source_title": "A.P.Bio.S04E05.720p.WEB.H264-GGEZ",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 129399,
+        "source_id": -49195861485649203,
+        "series_title": "A.P. Bio",
+        "episode_code": "S04E06",
+        "source_title": "A.P.Bio.S04E06.1080p.WEB.H264-GGEZ",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 129399,
+        "source_id": -27751771970559713,
+        "series_title": "A.P. Bio",
+        "episode_code": "S04E06",
+        "source_title": "A.P.Bio.S04E06.720p.WEB.H264-GGEZ",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 129400,
+        "source_id": -24659316121818838,
+        "series_title": "A.P. Bio",
+        "episode_code": "S04E07",
+        "source_title": "A.P.Bio.S04E07.1080p.WEB.H264-GGEZ",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 129400,
+        "source_id": -10578753700107946,
+        "series_title": "A.P. Bio",
+        "episode_code": "S04E07",
+        "source_title": "A.P.Bio.S04E07.720p.WEB.H264-GGEZ",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 129401,
+        "source_id": -59592964495163945,
+        "series_title": "A.P. Bio",
+        "episode_code": "S04E08",
+        "source_title": "A.P.Bio.S04E08.1080p.WEB.H264-GGEZ",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 129401,
+        "source_id": -68622345152504764,
+        "series_title": "A.P. Bio",
+        "episode_code": "S04E08",
+        "source_title": "A.P.Bio.S04E08.720p.WEB.H264-GGEZ",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 179793,
+        "source_id": -67047996497989155,
+        "series_title": "Aaron Hernandez: V mysli vraha",
+        "episode_code": "S01E01",
+        "source_title": "Aaron Hernandez: V mysli vraha - S1E1 Episode 1 EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 179794,
+        "source_id": -61623974112691836,
+        "series_title": "Aaron Hernandez: V mysli vraha",
+        "episode_code": "S01E02",
+        "source_title": "Aaron Hernandez: V mysli vraha - S1E2 Episode 2 EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 179795,
+        "source_id": -54551032439350728,
+        "series_title": "Aaron Hernandez: V mysli vraha",
+        "episode_code": "S01E03",
+        "source_title": "Aaron Hernandez: V mysli vraha - S1E3 Episode 3 EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 174825,
+        "source_id": -46694144573076603,
+        "series_title": "Afrika",
+        "episode_code": "S01E02",
+        "source_title": "Život ve vedrech Afrika S01E02 Leopard, Sand and Heat",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 174825,
+        "source_id": -8011613750738633,
+        "series_title": "Afrika",
+        "episode_code": "S01E02",
+        "source_title": "Život ve vedrech Afrika S01E02 Leopard, Sand and Heat byDejv",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 174826,
+        "source_id": -59374803847929384,
+        "series_title": "Afrika",
+        "episode_code": "S01E03",
+        "source_title": "Život ve vedrech Afrika S01E03 The burning plains of the Cheetah",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 174826,
+        "source_id": -59321209123462845,
+        "series_title": "Afrika",
+        "episode_code": "S01E03",
+        "source_title": "Život ve vedrech Afrika S01E03 The burning plains of the Cheetah byDejv",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 174827,
+        "source_id": -34560994569021756,
+        "series_title": "Afrika",
+        "episode_code": "S01E04",
+        "source_title": "Život ve vedrech Afrika S01E04 Wild Dogs, Tough Territory",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 174827,
+        "source_id": -28712489770313428,
+        "series_title": "Afrika",
+        "episode_code": "S01E04",
+        "source_title": "Život ve vedrech Afrika S01E04 Wild Dogs, Tough Territory byDejv",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 174828,
+        "source_id": -58782855947802613,
+        "series_title": "Afrika",
+        "episode_code": "S01E05",
+        "source_title": "Život ve vedrech Afrika S01E05 Caracal, The Bush on Fire",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 174828,
+        "source_id": -37098148136715664,
+        "series_title": "Afrika",
+        "episode_code": "S01E05",
+        "source_title": "Život ve vedrech Afrika S01E05 Caracal, The Bush on Fire byDejv",
+        "status": "needs_whisper"
+      },
+      {
         "episode_id": 2262,
         "source_id": -36417912212501737,
         "series_title": "ALF",
@@ -216770,395 +217046,179 @@
         "status": "whisper_failed"
       },
       {
-        "episode_id": 39950,
-        "source_id": -24914769347146739,
-        "series_title": "Babylon 5",
-        "episode_code": "S02E21",
-        "source_title": "Babylon 5 S02E21 Prichádza inkvizítor",
+        "episode_id": 103476,
+        "source_id": -48315247615959381,
+        "series_title": "All in the Family",
+        "episode_code": "S01E04",
+        "source_title": "All In The Family - s01e04 - Archie Gives Blood",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 39950,
-        "source_id": -44108479696672957,
-        "series_title": "Babylon 5",
-        "episode_code": "S02E21",
-        "source_title": "Babylon 5 S02E21 ⭐GG⭐",
+        "episode_id": 103478,
+        "source_id": -67218299374782984,
+        "series_title": "All in the Family",
+        "episode_code": "S01E06",
+        "source_title": "All In The Family - s01e06 - Gloria Has a Belly Full",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 39950,
-        "source_id": -5446409410150130,
-        "series_title": "Babylon 5",
-        "episode_code": "S02E21",
-        "source_title": "Babylon 5 S02E21 DoDo",
+        "episode_id": 103479,
+        "source_id": -41808095070662796,
+        "series_title": "All in the Family",
+        "episode_code": "S01E07",
+        "source_title": "All In The Family - s01e07 - Mike's Hippie Friends Come to Visit",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 39950,
-        "source_id": -57779287548478337,
-        "series_title": "Babylon 5",
-        "episode_code": "S02E21",
-        "source_title": "Babylon 5 S02E21By DRAGOUN",
+        "episode_id": 103480,
+        "source_id": -53732560477172038,
+        "series_title": "All in the Family",
+        "episode_code": "S01E08",
+        "source_title": "All In The Family - s01e08 - Lionel Moves Into the Neighborhood",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 39951,
-        "source_id": -37323864653583147,
-        "series_title": "Babylon 5",
-        "episode_code": "S02E22",
-        "source_title": "Babylon 5 S2 E22 - The Fall of Night [=Sauron=, Josetto]",
+        "episode_id": 103484,
+        "source_id": -41793413032695163,
+        "series_title": "All in the Family",
+        "episode_code": "S01E12",
+        "source_title": "All In The Family - s01e12 - Success Story",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 39951,
-        "source_id": -40461136314887340,
-        "series_title": "Babylon 5",
-        "episode_code": "S02E22",
-        "source_title": "Babylon 5 S02E22 SkDab",
+        "episode_id": 103524,
+        "source_id": -5807928692356613,
+        "series_title": "All in the Family",
+        "episode_code": "S03E18",
+        "source_title": "All In the Family - s03e18 - Class Reunion",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 39951,
-        "source_id": -29999787105988829,
-        "series_title": "Babylon 5",
-        "episode_code": "S02E22",
-        "source_title": "Babylon 5 S02E22 1080p SK",
+        "episode_id": 103525,
+        "source_id": -54139581357152993,
+        "series_title": "All in the Family",
+        "episode_code": "S03E19",
+        "source_title": "All In the Family - s03e19 - Hot Watch",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 39951,
-        "source_id": -58087371520620185,
-        "series_title": "Babylon 5",
-        "episode_code": "S02E22",
-        "source_title": "Babylon 5 S02E22 Príchod noci",
+        "episode_id": 103527,
+        "source_id": -31234922511463305,
+        "series_title": "All in the Family",
+        "episode_code": "S03E21",
+        "source_title": "All In the Family - s03e21 - Everybody Tells the Truth",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 39951,
-        "source_id": -8272987799944927,
-        "series_title": "Babylon 5",
-        "episode_code": "S02E22",
-        "source_title": "Babylon 5 S02E22 Príchod noci.mkv",
+        "episode_id": 103528,
+        "source_id": -7345595617223493,
+        "series_title": "All in the Family",
+        "episode_code": "S03E22",
+        "source_title": "All In the Family - s03e22 - Archie Learns His Lesson",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 39951,
-        "source_id": -41067145179336422,
-        "series_title": "Babylon 5",
-        "episode_code": "S02E22",
-        "source_title": "Babylon 5 S02E22 ⭐Boyd",
+        "episode_id": 103529,
+        "source_id": -51487595559962896,
+        "series_title": "All in the Family",
+        "episode_code": "S03E23",
+        "source_title": "All In the Family - s03e23 - Gloria the Victim",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 39952,
-        "source_id": -27684283797399938,
-        "series_title": "Babylon 5",
-        "episode_code": "S03E01",
-        "source_title": "Babylon 5 S03E01 1080p SK",
+        "episode_id": 103530,
+        "source_id": -50740825138455128,
+        "series_title": "All in the Family",
+        "episode_code": "S03E24",
+        "source_title": "All In the Family - s03e24 - The Battle of the Month",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 39952,
-        "source_id": -30333324948487409,
-        "series_title": "Babylon 5",
-        "episode_code": "S03E01",
-        "source_title": "Babylon 5 S03E01-22 1995 SK dab - Matters of Honor",
+        "episode_id": 103532,
+        "source_id": -27831668555072898,
+        "series_title": "All in the Family",
+        "episode_code": "S04E03",
+        "source_title": "All In the Family - s04e03 - Edith Finds an Old Man",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 39952,
-        "source_id": -13541716584428779,
-        "series_title": "Babylon 5",
-        "episode_code": "S03E01",
-        "source_title": "Babylon 5 S03E01 SkDab",
+        "episode_id": 103533,
+        "source_id": -28298108291201114,
+        "series_title": "All in the Family",
+        "episode_code": "S04E04",
+        "source_title": "All In the Family - s04e04 - Archie and the Kiss",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 39952,
-        "source_id": -34894397666677658,
-        "series_title": "Babylon 5",
-        "episode_code": "S03E01",
-        "source_title": "Babylon 5 - S3E1 Epizoda 1 SK",
+        "episode_id": 103534,
+        "source_id": -53456697958205647,
+        "series_title": "All in the Family",
+        "episode_code": "S04E05",
+        "source_title": "All In the Family - s04e05 - Archie the Gambler",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 39952,
-        "source_id": -56481686027547394,
-        "series_title": "Babylon 5",
-        "episode_code": "S03E01",
-        "source_title": "Babylon 5 S03E01 Otázka cti",
+        "episode_id": 103535,
+        "source_id": -1710207743510714,
+        "series_title": "All in the Family",
+        "episode_code": "S04E06",
+        "source_title": "All In the Family - s04e06 - Henry's Farewell",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 39952,
-        "source_id": -49749476450032106,
-        "series_title": "Babylon 5",
-        "episode_code": "S03E01",
-        "source_title": "Babylon 5 S03E01 ⭐GG⭐",
+        "episode_id": 103536,
+        "source_id": -25402997831045919,
+        "series_title": "All in the Family",
+        "episode_code": "S04E08",
+        "source_title": "All In the Family - s04e08 - The Games Bunkers Play",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 39952,
-        "source_id": -52071120928075905,
-        "series_title": "Babylon 5",
-        "episode_code": "S03E01",
-        "source_title": "Babylon 5 S03E01 DoDo",
+        "episode_id": 103537,
+        "source_id": -13140795370531764,
+        "series_title": "All in the Family",
+        "episode_code": "S04E09",
+        "source_title": "All In the Family - s04e09 - Edith's Conversion",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 39952,
-        "source_id": -47866169261071761,
-        "series_title": "Babylon 5",
-        "episode_code": "S03E01",
-        "source_title": "Babylon 5 S03E01By DRAGOUN",
+        "episode_id": 103538,
+        "source_id": -52680955954425027,
+        "series_title": "All in the Family",
+        "episode_code": "S04E10",
+        "source_title": "All In the Family - s04e10 - Archie in the Cellar",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 39953,
-        "source_id": -9456062727358531,
-        "series_title": "Babylon 5",
-        "episode_code": "S03E02",
-        "source_title": "Babylon 5 S03E02 1080p SK",
+        "episode_id": 103539,
+        "source_id": -55191447078472305,
+        "series_title": "All in the Family",
+        "episode_code": "S04E11",
+        "source_title": "All In the Family - s04e11 - Black is the Color of My True Love's Wig",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 39953,
-        "source_id": -52812589039875639,
-        "series_title": "Babylon 5",
-        "episode_code": "S03E02",
-        "source_title": "Babylon 5 S03E02 SkDab",
+        "episode_id": 103540,
+        "source_id": -19069230773836004,
+        "series_title": "All in the Family",
+        "episode_code": "S04E12",
+        "source_title": "All In the Family - s04e12 - Second Honeymoon",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 39953,
-        "source_id": -69093550376903315,
-        "series_title": "Babylon 5",
-        "episode_code": "S03E02",
-        "source_title": "Babylon 5 - S3E2 Epizoda 2 SK",
+        "episode_id": 103541,
+        "source_id": -27496420027663685,
+        "series_title": "All in the Family",
+        "episode_code": "S04E13",
+        "source_title": "All In the Family - s04e13 - The Taxi Caper",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 39953,
-        "source_id": -41041293538015300,
-        "series_title": "Babylon 5",
-        "episode_code": "S03E02",
-        "source_title": "Babylon 5 S03E02 DoDo",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39953,
-        "source_id": -5690837569729526,
-        "series_title": "Babylon 5",
-        "episode_code": "S03E02",
-        "source_title": "Babylon 5 S03E02 ⭐GG⭐",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39953,
-        "source_id": -42539629260366384,
-        "series_title": "Babylon 5",
-        "episode_code": "S03E02",
-        "source_title": "Babylon 5 S03E02By DRAGOUN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39953,
-        "source_id": -32859009797225938,
-        "series_title": "Babylon 5",
-        "episode_code": "S03E02",
-        "source_title": "Babylon 5 S03E02⭐GT⭐",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39953,
-        "source_id": -25114527368310996,
-        "series_title": "Babylon 5",
-        "episode_code": "S03E02",
-        "source_title": "Babylon 5 S03E02 Ortiele",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39954,
-        "source_id": -49788686061550075,
-        "series_title": "Babylon 5",
-        "episode_code": "S03E03",
-        "source_title": "Babylon 5 S03E03 SkDab",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39954,
-        "source_id": -18046806684687344,
-        "series_title": "Babylon 5",
-        "episode_code": "S03E03",
-        "source_title": "Babylon 5 S03E03-22 1995 SK dab - A Day in the Strife",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39954,
-        "source_id": -67254829920763728,
-        "series_title": "Babylon 5",
-        "episode_code": "S03E03",
-        "source_title": "Babylon 5 - S3E3 Epizoda 3 SK",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39954,
-        "source_id": -40849971479967080,
-        "series_title": "Babylon 5",
-        "episode_code": "S03E03",
-        "source_title": "Babylon 5 S03E03 Deň rozbrojov",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39954,
-        "source_id": -37404889844699787,
-        "series_title": "Babylon 5",
-        "episode_code": "S03E03",
-        "source_title": "Babylon 5 S03E03 Deň rozbrojov.mkv",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39954,
-        "source_id": -60902293861211788,
-        "series_title": "Babylon 5",
-        "episode_code": "S03E03",
-        "source_title": "Babylon 5 S03E03 ⭐Boyd",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39954,
-        "source_id": -25023739079491230,
-        "series_title": "Babylon 5",
-        "episode_code": "S03E03",
-        "source_title": "Babylon 5 S03E03 DoDo",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39954,
-        "source_id": -32200293389628572,
-        "series_title": "Babylon 5",
-        "episode_code": "S03E03",
-        "source_title": "Babylon 5 S03E03 ⭐GG⭐",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39955,
-        "source_id": -59261561022020483,
-        "series_title": "Babylon 5",
-        "episode_code": "S03E04",
-        "source_title": "Babylon 5 S03E04 1080p SK",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39955,
-        "source_id": -14891040788934366,
-        "series_title": "Babylon 5",
-        "episode_code": "S03E04",
-        "source_title": "Babylon 5 S03E04 SkDab",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39955,
-        "source_id": -67903274741073393,
-        "series_title": "Babylon 5",
-        "episode_code": "S03E04",
-        "source_title": "Babylon 5 - S3E4 Epizoda 4 SK",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39955,
-        "source_id": -63917239307761258,
-        "series_title": "Babylon 5",
-        "episode_code": "S03E04",
-        "source_title": "Babylon 5 S03E04 Noc v Getsemanskej záhrade.mkv",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39955,
-        "source_id": -50118621066455614,
-        "series_title": "Babylon 5",
-        "episode_code": "S03E04",
-        "source_title": "Babylon 5 S03E04 Noc v Getsemanskej záhrade",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39955,
-        "source_id": -10612727292825036,
-        "series_title": "Babylon 5",
-        "episode_code": "S03E04",
-        "source_title": "Babylon 5 S03E04 ⭐Boyd",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39955,
-        "source_id": -59890161232026085,
-        "series_title": "Babylon 5",
-        "episode_code": "S03E04",
-        "source_title": "Babylon 5 S03E04 ⭐GG⭐",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39955,
-        "source_id": -27598130650163159,
-        "series_title": "Babylon 5",
-        "episode_code": "S03E04",
-        "source_title": "Babylon 5 S03E04By DRAGOUN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39956,
-        "source_id": -14460361976269253,
-        "series_title": "Babylon 5",
-        "episode_code": "S03E05",
-        "source_title": "Babylon 5 S03E05 1080p SK",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39956,
-        "source_id": -17790742685623363,
-        "series_title": "Babylon 5",
-        "episode_code": "S03E05",
-        "source_title": "Babylon 5 S03E05 SkDab",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39956,
-        "source_id": -1911907195209507,
-        "series_title": "Babylon 5",
-        "episode_code": "S03E05",
-        "source_title": "Babylon 5 - S3E5 Epizoda 5 SK",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39956,
-        "source_id": -60204269600795720,
-        "series_title": "Babylon 5",
-        "episode_code": "S03E05",
-        "source_title": "Babylon 5 S03E05 ⭐GG⭐",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39956,
-        "source_id": -46649346408554348,
-        "series_title": "Babylon 5",
-        "episode_code": "S03E05",
-        "source_title": "Babylon 5 S03E05 DoDo",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39956,
-        "source_id": -4492011282593553,
-        "series_title": "Babylon 5",
-        "episode_code": "S03E05",
-        "source_title": "Babylon 5 S03E05By DRAGOUN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39956,
-        "source_id": -33382368439285362,
-        "series_title": "Babylon 5",
-        "episode_code": "S03E05",
-        "source_title": "Babylon 5 S03E05⭐GT⭐",
+        "episode_id": 103542,
+        "source_id": -4519306561036320,
+        "series_title": "All in the Family",
+        "episode_code": "S04E14",
+        "source_title": "All In the Family - s04e14 - Archie is Cursed",
         "status": "needs_whisper"
       }
     ],
@@ -217617,16 +217677,17 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 19,
+    "ok": 80,
+    "disabled": 105,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
-    "whisper_non_cz_needs_subtitles": 1643,
-    "whisper_confirmed_cz": 1034,
-    "whisper_failed": 3,
-    "needs_whisper": 44840
+    "whisper_non_cz_needs_subtitles": 1591,
+    "whisper_confirmed_cz": 1026,
+    "needs_whisper": 44900,
+    "whisper_failed": 3
   },
   "subtitle_followup_statuses": {
-    "needs_subtitle_setup_after_prehrajto_processing": 8623
+    "needs_subtitle_setup_after_prehrajto_processing": 8644
   }
 }
