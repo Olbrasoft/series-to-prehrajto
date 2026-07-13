@@ -2,28 +2,84 @@
   "counts": {
     "backlog_episodes": 167154,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 26225,
-    "prepared_source_episodes": 40688,
+    "uploaded_episodes": 26238,
+    "prepared_source_episodes": 40677,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 663,
-    "language_whisper_attempted_sources": 47,
+    "language_audited_sources": 40,
+    "language_whisper_attempted_sources": 40,
     "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 48010,
-    "whisper_review_pending_sources": 45373,
-    "subtitle_followup_sources": 8754,
-    "subtitle_followup_pending_sources": 8754
+    "whisper_review_pending_sources": 45353,
+    "subtitle_followup_sources": 8758,
+    "subtitle_followup_pending_sources": 8758
   },
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-07-13T16:24:32Z",
+      "databaseId": 29266285844,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-13T16:24:00Z",
+      "databaseId": 29266247430,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-13T16:21:52Z",
+      "databaseId": 29266099059,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-13T16:21:11Z",
+      "databaseId": 29266053059,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-13T16:19:46Z",
+      "databaseId": 29265956089,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-13T16:19:12Z",
+      "databaseId": 29265917436,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-13T16:14:31Z",
+      "databaseId": 29265601844,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-13T16:13:24Z",
       "databaseId": 29265523506,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -35,19 +91,19 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-13T16:12:19Z",
       "databaseId": 29265449037,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-13T16:12:17Z",
       "databaseId": 29265446430,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -121,62 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-07-13T15:46:15Z",
-      "databaseId": 29263629053,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-13T15:34:10Z",
-      "databaseId": 29262776650,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-sources"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-13T15:29:06Z",
-      "databaseId": 29262414818,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-13T15:28:52Z",
-      "databaseId": 29262398045,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-13T15:28:06Z",
-      "databaseId": 29262346598,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-13T15:27:10Z",
-      "databaseId": 29262281625,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-13T15:20:10Z",
-      "databaseId": 29261790120,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "sync"
     }
   ],
   "gaps": {
@@ -109021,6 +109021,41 @@
         "video_id": 27446169
       },
       {
+        "episode_id": 109414,
+        "display_name": "black-ish S05E19 - 19. epizoda CZ Titulky",
+        "video_id": 27446222
+      },
+      {
+        "episode_id": 109416,
+        "display_name": "black-ish S05E23 - 23. epizoda CZ Titulky",
+        "video_id": 27446272
+      },
+      {
+        "episode_id": 109418,
+        "display_name": "black-ish S06E18 - 18. epizoda CZ Titulky",
+        "video_id": 27446329
+      },
+      {
+        "episode_id": 56844,
+        "display_name": "Knihovníci S01E02 - A meč v kameni CZ Dabing",
+        "video_id": 27446382
+      },
+      {
+        "episode_id": 56856,
+        "display_name": "Knihovníci S01E04 - A Santova půlnoční pouť CZ Dabing",
+        "video_id": 27446461
+      },
+      {
+        "episode_id": 56846,
+        "display_name": "Knihovníci S01E06 - A legenda zkázy CZ Dabing",
+        "video_id": 27446538
+      },
+      {
+        "episode_id": 56848,
+        "display_name": "Knihovníci S01E08 - A srdce temnoty CZ Dabing",
+        "video_id": 27446589
+      },
+      {
         "episode_id": 35423,
         "display_name": "V plamenech S02E02 - Erupce CZ Titulky",
         "video_id": 27445775
@@ -109054,6 +109089,36 @@
         "episode_id": 109377,
         "display_name": "black-ish S02E13 - 13. epizoda CZ Titulky",
         "video_id": 27446098
+      },
+      {
+        "episode_id": 109397,
+        "display_name": "black-ish S02E14 - 14. epizoda CZ Titulky",
+        "video_id": 27446211
+      },
+      {
+        "episode_id": 109379,
+        "display_name": "black-ish S02E16 - 16. epizoda CZ Titulky",
+        "video_id": 27446316
+      },
+      {
+        "episode_id": 109383,
+        "display_name": "black-ish S02E22 - 22. epizoda CZ Titulky",
+        "video_id": 27446391
+      },
+      {
+        "episode_id": 109405,
+        "display_name": "black-ish S04E04 - 4. epizoda CZ Titulky",
+        "video_id": 27446453
+      },
+      {
+        "episode_id": 109407,
+        "display_name": "black-ish S04E13 - 13. epizoda CZ Titulky",
+        "video_id": 27446522
+      },
+      {
+        "episode_id": 109349,
+        "display_name": "black-ish S04E20 - 20. epizoda CZ Titulky",
+        "video_id": 27446562
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -217793,6 +217858,41 @@
         "video_id": 27446169
       },
       {
+        "episode_id": 109414,
+        "display_name": "black-ish S05E19 - 19. epizoda CZ Titulky",
+        "video_id": 27446222
+      },
+      {
+        "episode_id": 109416,
+        "display_name": "black-ish S05E23 - 23. epizoda CZ Titulky",
+        "video_id": 27446272
+      },
+      {
+        "episode_id": 109418,
+        "display_name": "black-ish S06E18 - 18. epizoda CZ Titulky",
+        "video_id": 27446329
+      },
+      {
+        "episode_id": 56844,
+        "display_name": "Knihovníci S01E02 - A meč v kameni CZ Dabing",
+        "video_id": 27446382
+      },
+      {
+        "episode_id": 56856,
+        "display_name": "Knihovníci S01E04 - A Santova půlnoční pouť CZ Dabing",
+        "video_id": 27446461
+      },
+      {
+        "episode_id": 56846,
+        "display_name": "Knihovníci S01E06 - A legenda zkázy CZ Dabing",
+        "video_id": 27446538
+      },
+      {
+        "episode_id": 56848,
+        "display_name": "Knihovníci S01E08 - A srdce temnoty CZ Dabing",
+        "video_id": 27446589
+      },
+      {
         "episode_id": 35423,
         "display_name": "V plamenech S02E02 - Erupce CZ Titulky",
         "video_id": 27445775
@@ -217826,6 +217926,36 @@
         "episode_id": 109377,
         "display_name": "black-ish S02E13 - 13. epizoda CZ Titulky",
         "video_id": 27446098
+      },
+      {
+        "episode_id": 109397,
+        "display_name": "black-ish S02E14 - 14. epizoda CZ Titulky",
+        "video_id": 27446211
+      },
+      {
+        "episode_id": 109379,
+        "display_name": "black-ish S02E16 - 16. epizoda CZ Titulky",
+        "video_id": 27446316
+      },
+      {
+        "episode_id": 109383,
+        "display_name": "black-ish S02E22 - 22. epizoda CZ Titulky",
+        "video_id": 27446391
+      },
+      {
+        "episode_id": 109405,
+        "display_name": "black-ish S04E04 - 4. epizoda CZ Titulky",
+        "video_id": 27446453
+      },
+      {
+        "episode_id": 109407,
+        "display_name": "black-ish S04E13 - 13. epizoda CZ Titulky",
+        "video_id": 27446522
+      },
+      {
+        "episode_id": 109349,
+        "display_name": "black-ish S04E20 - 20. epizoda CZ Titulky",
+        "video_id": 27446562
       }
     ],
     "prepared_not_upload_ready": [
@@ -218132,166 +218262,6 @@
     ],
     "whisper_review_pending": [
       {
-        "episode_id": 174825,
-        "source_id": -8011613750738633,
-        "series_title": "Afrika",
-        "episode_code": "S01E02",
-        "source_title": "Život ve vedrech Afrika S01E02 Leopard, Sand and Heat byDejv",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 174826,
-        "source_id": -59374803847929384,
-        "series_title": "Afrika",
-        "episode_code": "S01E03",
-        "source_title": "Život ve vedrech Afrika S01E03 The burning plains of the Cheetah",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 174826,
-        "source_id": -59321209123462845,
-        "series_title": "Afrika",
-        "episode_code": "S01E03",
-        "source_title": "Život ve vedrech Afrika S01E03 The burning plains of the Cheetah byDejv",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 174827,
-        "source_id": -34560994569021756,
-        "series_title": "Afrika",
-        "episode_code": "S01E04",
-        "source_title": "Život ve vedrech Afrika S01E04 Wild Dogs, Tough Territory",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 174827,
-        "source_id": -28712489770313428,
-        "series_title": "Afrika",
-        "episode_code": "S01E04",
-        "source_title": "Život ve vedrech Afrika S01E04 Wild Dogs, Tough Territory byDejv",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 174828,
-        "source_id": -58782855947802613,
-        "series_title": "Afrika",
-        "episode_code": "S01E05",
-        "source_title": "Život ve vedrech Afrika S01E05 Caracal, The Bush on Fire",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 174828,
-        "source_id": -37098148136715664,
-        "series_title": "Afrika",
-        "episode_code": "S01E05",
-        "source_title": "Život ve vedrech Afrika S01E05 Caracal, The Bush on Fire byDejv",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 36239,
-        "source_id": -2494489511894757,
-        "series_title": "Alex Rider",
-        "episode_code": "S01E01",
-        "source_title": "Alex Rider S01E01 SkTit",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 36239,
-        "source_id": -6235650724956649,
-        "series_title": "Alex Rider",
-        "episode_code": "S01E01",
-        "source_title": "Alex Rider S01E01 SkTit.avi",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 36239,
-        "source_id": -3541206745568247,
-        "series_title": "Alex Rider",
-        "episode_code": "S01E01",
-        "source_title": "Alex Rider S01E01 SkTit",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 36239,
-        "source_id": -36689000598623794,
-        "series_title": "Alex Rider",
-        "episode_code": "S01E01",
-        "source_title": "Alex Rider - S1E1 Episode One EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 36240,
-        "source_id": -66204984914545061,
-        "series_title": "Alex Rider",
-        "episode_code": "S01E02",
-        "source_title": "Alex Rider S01E02 SkTit",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 36240,
-        "source_id": -11109223088852248,
-        "series_title": "Alex Rider",
-        "episode_code": "S01E02",
-        "source_title": "Alex.Rider.S01E02.1080p.WEBRip.x265-RARBG",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 36240,
-        "source_id": -29413173061140636,
-        "series_title": "Alex Rider",
-        "episode_code": "S01E02",
-        "source_title": "Alex Rider S01E02 SkTit.avi",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 36241,
-        "source_id": -43259808599194381,
-        "series_title": "Alex Rider",
-        "episode_code": "S01E03",
-        "source_title": "Alex Rider S01E03 (2020) SKtit V OBRAZE",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 36241,
-        "source_id": -32218685338396371,
-        "series_title": "Alex Rider",
-        "episode_code": "S01E03",
-        "source_title": "Alex Rider S01E03 SkTit",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 36241,
-        "source_id": -36950425412568479,
-        "series_title": "Alex Rider",
-        "episode_code": "S01E03",
-        "source_title": "Alex Rider S01E03 SkTit.avi",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 36241,
-        "source_id": -36856492891787479,
-        "series_title": "Alex Rider",
-        "episode_code": "S01E03",
-        "source_title": "Alex Rider S01E03 SkTit",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 36241,
-        "source_id": -51797130285733386,
-        "series_title": "Alex Rider",
-        "episode_code": "S01E03",
-        "source_title": "Alex Rider - S1E3 Episode Three EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 36242,
-        "source_id": -20897408570265086,
-        "series_title": "Alex Rider",
-        "episode_code": "S01E04",
-        "source_title": "Alex Rider S01E04 SkTit",
-        "status": "needs_whisper"
-      },
-      {
         "episode_id": 36242,
         "source_id": -15560798794100195,
         "series_title": "Alex Rider",
@@ -218529,6 +218499,166 @@
         "series_title": "Alex Rider",
         "episode_code": "S02E06",
         "source_title": "Alex.Rider.S02E06.WEBRip.x264-ION10",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 56671,
+        "source_id": -12461874440336749,
+        "series_title": "Alex Rider",
+        "episode_code": "S02E07",
+        "source_title": "Alex.Rider.S02E07.Assassin.720p.AMZN.WEB-DL.DDP5.1.H.264-MZABI",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 56671,
+        "source_id": -20199353058696450,
+        "series_title": "Alex Rider",
+        "episode_code": "S02E07",
+        "source_title": "Alex.Rider.S02E07.1080p.WEBRip.x265-RARBG",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 56672,
+        "source_id": -54105612487980055,
+        "series_title": "Alex Rider",
+        "episode_code": "S02E08",
+        "source_title": "Alex.Rider.S02E08.Strike.720p.AMZN.WEB-DL.DDP5.1.H.264-MZABI",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 56672,
+        "source_id": -16675898825817601,
+        "series_title": "Alex Rider",
+        "episode_code": "S02E08",
+        "source_title": "Alex.Rider.S02E08.1080p.WEBRip.x265-RARBG",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 56672,
+        "source_id": -39354712777004973,
+        "series_title": "Alex Rider",
+        "episode_code": "S02E08",
+        "source_title": "Alex Rider - S2E8 Strike EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 56681,
+        "source_id": -10834058374472462,
+        "series_title": "Alex Rider",
+        "episode_code": "S03E01",
+        "source_title": "Alex Rider - S3E1 Widow EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 56682,
+        "source_id": -22341342028993744,
+        "series_title": "Alex Rider",
+        "episode_code": "S03E02",
+        "source_title": "Alex Rider - S3E2 Lab EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 56675,
+        "source_id": -35619040106619616,
+        "series_title": "Alex Rider",
+        "episode_code": "S03E03",
+        "source_title": "Alex Rider S03E03 Enemy 1080p AMZN WEB-DL DDP5 1 H 264-FLUX",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 56676,
+        "source_id": -27734421491411935,
+        "series_title": "Alex Rider",
+        "episode_code": "S03E04",
+        "source_title": "Alex Rider S03E04 Recruit 1080p AMZN WEB-DL DDP5 1 H 264-FLUX",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 56677,
+        "source_id": -60726041324003679,
+        "series_title": "Alex Rider",
+        "episode_code": "S03E05",
+        "source_title": "Alex Rider S03E05 Revenge 1080p AMZN WEB-DL DDP5 1 H 264-FLUX",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 56678,
+        "source_id": -17291843174355287,
+        "series_title": "Alex Rider",
+        "episode_code": "S03E06",
+        "source_title": "Alex Rider S03E06 Target 1080p AMZN WEB-DL DDP5 1 H 264-FLUX",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 2262,
+        "source_id": -36417912212501737,
+        "series_title": "ALF",
+        "episode_code": "S03E22",
+        "source_title": "Alf S03E22 SKdab",
+        "status": "whisper_failed"
+      },
+      {
+        "episode_id": 103476,
+        "source_id": -48315247615959381,
+        "series_title": "All in the Family",
+        "episode_code": "S01E04",
+        "source_title": "All In The Family - s01e04 - Archie Gives Blood",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 103478,
+        "source_id": -67218299374782984,
+        "series_title": "All in the Family",
+        "episode_code": "S01E06",
+        "source_title": "All In The Family - s01e06 - Gloria Has a Belly Full",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 103479,
+        "source_id": -41808095070662796,
+        "series_title": "All in the Family",
+        "episode_code": "S01E07",
+        "source_title": "All In The Family - s01e07 - Mike's Hippie Friends Come to Visit",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 103480,
+        "source_id": -53732560477172038,
+        "series_title": "All in the Family",
+        "episode_code": "S01E08",
+        "source_title": "All In The Family - s01e08 - Lionel Moves Into the Neighborhood",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 103484,
+        "source_id": -41793413032695163,
+        "series_title": "All in the Family",
+        "episode_code": "S01E12",
+        "source_title": "All In The Family - s01e12 - Success Story",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 103524,
+        "source_id": -5807928692356613,
+        "series_title": "All in the Family",
+        "episode_code": "S03E18",
+        "source_title": "All In the Family - s03e18 - Class Reunion",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 103525,
+        "source_id": -54139581357152993,
+        "series_title": "All in the Family",
+        "episode_code": "S03E19",
+        "source_title": "All In the Family - s03e19 - Hot Watch",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 103527,
+        "source_id": -31234922511463305,
+        "series_title": "All in the Family",
+        "episode_code": "S03E21",
+        "source_title": "All In the Family - s03e21 - Everybody Tells the Truth",
         "status": "needs_whisper"
       }
     ],
@@ -218987,17 +219117,16 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 616,
-    "ok": 46,
+    "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
-    "whisper_non_cz_needs_subtitles": 1610,
-    "whisper_confirmed_cz": 1027,
-    "needs_whisper": 45370,
+    "whisper_non_cz_needs_subtitles": 1623,
+    "whisper_confirmed_cz": 1034,
+    "needs_whisper": 45350,
     "whisper_failed": 3
   },
   "subtitle_followup_statuses": {
-    "needs_subtitle_setup_after_prehrajto_processing": 8754
+    "needs_subtitle_setup_after_prehrajto_processing": 8758
   }
 }
