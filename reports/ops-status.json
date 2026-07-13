@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 167296,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 26080,
+    "uploaded_episodes": 26088,
     "prepared_source_episodes": 40114,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 60,
-    "language_whisper_attempted_sources": 60,
-    "language_pending_whisper_sources": 2604,
+    "language_audited_sources": 20,
+    "language_whisper_attempted_sources": 20,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 47520,
     "whisper_review_pending_sources": 44843,
     "subtitle_followup_sources": 8623,
@@ -20,18 +20,50 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-07-13T13:18:05Z",
-      "databaseId": 29253246466,
+      "createdAt": "2026-07-13T13:32:25Z",
+      "databaseId": 29254152598,
       "headBranch": "main",
       "status": "in_progress",
-      "workflowName": "ops-status"
+      "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-07-13T13:29:26Z",
+      "databaseId": 29253958364,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-13T13:24:41Z",
+      "databaseId": 29253662325,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-sources"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-13T13:19:56Z",
+      "databaseId": 29253362837,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-13T13:18:05Z",
+      "databaseId": 29253246466,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-13T13:17:44Z",
       "databaseId": 29253222919,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "update-descriptions"
     },
     {
@@ -39,15 +71,15 @@
       "createdAt": "2026-07-13T13:16:51Z",
       "databaseId": 29253162317,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "prepare-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-13T13:15:39Z",
       "databaseId": 29253081836,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -145,38 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-07-13T12:37:40Z",
-      "databaseId": 29250574826,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-13T12:25:07Z",
-      "databaseId": 29249775741,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-13T12:22:56Z",
-      "databaseId": 29249639695,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-13T12:21:59Z",
-      "databaseId": 29249580362,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
     }
   ],
   "gaps": {
@@ -108246,6 +108246,31 @@
         "video_id": 27440475
       },
       {
+        "episode_id": 135584,
+        "display_name": "Sladké magnólie S04E03 - Dokonalá elegance CZ Titulky",
+        "video_id": 27440553
+      },
+      {
+        "episode_id": 109818,
+        "display_name": "Sladké magnólie S04E04 - Jsi tak úžasný CZ Titulky",
+        "video_id": 27440610
+      },
+      {
+        "episode_id": 109822,
+        "display_name": "Sladké magnólie S04E05 - Jako maják v temnotě CZ Titulky",
+        "video_id": 27440680
+      },
+      {
+        "episode_id": 109824,
+        "display_name": "Sladké magnólie S04E08 - Stěny a dveře CZ Titulky",
+        "video_id": 27440732
+      },
+      {
+        "episode_id": 109820,
+        "display_name": "Sladké magnólie S04E09 - Parket je tvůj! CZ Titulky",
+        "video_id": 27440793
+      },
+      {
         "episode_id": 145633,
         "display_name": "Můžu tě zničit S01E07 - 7. epizoda CZ Dabing",
         "video_id": 27439848
@@ -108329,6 +108354,21 @@
         "episode_id": 109817,
         "display_name": "Sladké magnólie S03E01 - Tajemství CZ Titulky",
         "video_id": 27440487
+      },
+      {
+        "episode_id": 109809,
+        "display_name": "Sladké magnólie S03E03 - Hledání CZ Titulky",
+        "video_id": 27440535
+      },
+      {
+        "episode_id": 109811,
+        "display_name": "Sladké magnólie S03E05 - Na tomhle základě CZ Titulky",
+        "video_id": 27440617
+      },
+      {
+        "episode_id": 109813,
+        "display_name": "Sladké magnólie S03E07 - Někdo, koho toužím vidět CZ Titulky",
+        "video_id": 27440688
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -216293,6 +216333,31 @@
         "video_id": 27440475
       },
       {
+        "episode_id": 135584,
+        "display_name": "Sladké magnólie S04E03 - Dokonalá elegance CZ Titulky",
+        "video_id": 27440553
+      },
+      {
+        "episode_id": 109818,
+        "display_name": "Sladké magnólie S04E04 - Jsi tak úžasný CZ Titulky",
+        "video_id": 27440610
+      },
+      {
+        "episode_id": 109822,
+        "display_name": "Sladké magnólie S04E05 - Jako maják v temnotě CZ Titulky",
+        "video_id": 27440680
+      },
+      {
+        "episode_id": 109824,
+        "display_name": "Sladké magnólie S04E08 - Stěny a dveře CZ Titulky",
+        "video_id": 27440732
+      },
+      {
+        "episode_id": 109820,
+        "display_name": "Sladké magnólie S04E09 - Parket je tvůj! CZ Titulky",
+        "video_id": 27440793
+      },
+      {
         "episode_id": 145633,
         "display_name": "Můžu tě zničit S01E07 - 7. epizoda CZ Dabing",
         "video_id": 27439848
@@ -216376,6 +216441,21 @@
         "episode_id": 109817,
         "display_name": "Sladké magnólie S03E01 - Tajemství CZ Titulky",
         "video_id": 27440487
+      },
+      {
+        "episode_id": 109809,
+        "display_name": "Sladké magnólie S03E03 - Hledání CZ Titulky",
+        "video_id": 27440535
+      },
+      {
+        "episode_id": 109811,
+        "display_name": "Sladké magnólie S03E05 - Na tomhle základě CZ Titulky",
+        "video_id": 27440617
+      },
+      {
+        "episode_id": 109813,
+        "display_name": "Sladké magnólie S03E07 - Někdo, koho toužím vidět CZ Titulky",
+        "video_id": 27440688
       }
     ],
     "prepared_not_upload_ready": [
@@ -217537,7 +217617,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 59,
+    "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
