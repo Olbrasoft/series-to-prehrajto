@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 167296,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 26120,
+    "uploaded_episodes": 26128,
     "prepared_source_episodes": 40322,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 60,
-    "language_whisper_attempted_sources": 60,
-    "language_pending_whisper_sources": 2604,
+    "language_audited_sources": 20,
+    "language_whisper_attempted_sources": 20,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 47655,
     "whisper_review_pending_sources": 44998,
     "subtitle_followup_sources": 8674,
@@ -20,10 +20,42 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-07-13T14:28:10Z",
+      "databaseId": 29258073241,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-13T14:28:02Z",
+      "databaseId": 29258063242,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-13T14:25:57Z",
+      "databaseId": 29257918026,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-sources"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-07-13T14:20:21Z",
+      "databaseId": 29257515186,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-13T14:18:25Z",
       "databaseId": 29257379803,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-status"
     },
     {
@@ -39,15 +71,15 @@
       "createdAt": "2026-07-13T14:17:03Z",
       "databaseId": 29257285398,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "prepare-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-13T14:15:55Z",
       "databaseId": 29257204475,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -55,7 +87,7 @@
       "createdAt": "2026-07-13T14:13:07Z",
       "databaseId": 29257004328,
       "headBranch": "main",
-      "status": "pending",
+      "status": "queued",
       "workflowName": "sync"
     },
     {
@@ -145,38 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-13T13:33:26Z",
-      "databaseId": 29254220327,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-13T13:33:24Z",
-      "databaseId": 29254217651,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-13T13:32:25Z",
-      "databaseId": 29254152598,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-07-13T13:29:26Z",
-      "databaseId": 29253958364,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
     }
   ],
   "gaps": {
@@ -108446,6 +108446,31 @@
         "video_id": 27442201
       },
       {
+        "episode_id": 15120,
+        "display_name": "Sektor S02E04 - Jsou tu jisté ženy… CZ Dabing",
+        "video_id": 27442297
+      },
+      {
+        "episode_id": 15122,
+        "display_name": "Sektor S02E06 - Shortuj, dokud to nezabolí CZ Dabing",
+        "video_id": 27442345
+      },
+      {
+        "episode_id": 15124,
+        "display_name": "Sektor S02E08 - Jeruzalém CZ Dabing",
+        "video_id": 27442382
+      },
+      {
+        "episode_id": 15126,
+        "display_name": "Sektor S03E02 - Mlžení CZ Dabing",
+        "video_id": 27442419
+      },
+      {
+        "episode_id": 15128,
+        "display_name": "Sektor S03E04 - Smetánka CZ Dabing",
+        "video_id": 27442444
+      },
+      {
         "episode_id": 109815,
         "display_name": "Sladké magnólie S03E09 - Tichá pošta CZ Titulky",
         "video_id": 27440961
@@ -108529,6 +108554,21 @@
         "episode_id": 15111,
         "display_name": "Sektor S01E03 - Notting Hill CZ Dabing",
         "video_id": 27442228
+      },
+      {
+        "episode_id": 15121,
+        "display_name": "Sektor S02E05 - Kuchyňská sezóna CZ Dabing",
+        "video_id": 27442290
+      },
+      {
+        "episode_id": 15123,
+        "display_name": "Sektor S02E07 - Vlk samotář a mládě CZ Dabing",
+        "video_id": 27442329
+      },
+      {
+        "episode_id": 15125,
+        "display_name": "Sektor S03E01 - Il Mattino ha l’Oro in Boca CZ Dabing",
+        "video_id": 27442365
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -216693,6 +216733,31 @@
         "video_id": 27442201
       },
       {
+        "episode_id": 15120,
+        "display_name": "Sektor S02E04 - Jsou tu jisté ženy… CZ Dabing",
+        "video_id": 27442297
+      },
+      {
+        "episode_id": 15122,
+        "display_name": "Sektor S02E06 - Shortuj, dokud to nezabolí CZ Dabing",
+        "video_id": 27442345
+      },
+      {
+        "episode_id": 15124,
+        "display_name": "Sektor S02E08 - Jeruzalém CZ Dabing",
+        "video_id": 27442382
+      },
+      {
+        "episode_id": 15126,
+        "display_name": "Sektor S03E02 - Mlžení CZ Dabing",
+        "video_id": 27442419
+      },
+      {
+        "episode_id": 15128,
+        "display_name": "Sektor S03E04 - Smetánka CZ Dabing",
+        "video_id": 27442444
+      },
+      {
         "episode_id": 109815,
         "display_name": "Sladké magnólie S03E09 - Tichá pošta CZ Titulky",
         "video_id": 27440961
@@ -216776,6 +216841,21 @@
         "episode_id": 15111,
         "display_name": "Sektor S01E03 - Notting Hill CZ Dabing",
         "video_id": 27442228
+      },
+      {
+        "episode_id": 15121,
+        "display_name": "Sektor S02E05 - Kuchyňská sezóna CZ Dabing",
+        "video_id": 27442290
+      },
+      {
+        "episode_id": 15123,
+        "display_name": "Sektor S02E07 - Vlk samotář a mládě CZ Dabing",
+        "video_id": 27442329
+      },
+      {
+        "episode_id": 15125,
+        "display_name": "Sektor S03E01 - Il Mattino ha l’Oro in Boca CZ Dabing",
+        "video_id": 27442365
       }
     ],
     "prepared_not_upload_ready": [
@@ -217937,7 +218017,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 59,
+    "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
