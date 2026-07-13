@@ -2,36 +2,76 @@
   "counts": {
     "backlog_episodes": 167845,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 25568,
-    "prepared_source_episodes": 38806,
+    "uploaded_episodes": 25596,
+    "prepared_source_episodes": 38892,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 345,
-    "language_whisper_attempted_sources": 40,
-    "language_pending_whisper_sources": 2604,
-    "whisper_review_sources": 45604,
-    "whisper_review_pending_sources": 42987,
-    "subtitle_followup_sources": 8393,
-    "subtitle_followup_pending_sources": 8393
+    "language_audited_sources": 405,
+    "language_whisper_attempted_sources": 74,
+    "language_pending_whisper_sources": 2624,
+    "whisper_review_sources": 45739,
+    "whisper_review_pending_sources": 43102,
+    "subtitle_followup_sources": 8440,
+    "subtitle_followup_pending_sources": 8440
   },
   "workflow_runs": [
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-13T05:31:24Z",
+      "databaseId": 29226516094,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-13T05:27:14Z",
+      "databaseId": 29226351360,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-13T05:26:52Z",
+      "databaseId": 29226337530,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-13T05:23:16Z",
+      "databaseId": 29226192348,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-13T05:09:57Z",
+      "databaseId": 29225628707,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
     {
       "conclusion": "",
       "createdAt": "2026-07-13T05:09:37Z",
       "databaseId": 29225614902,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "prepare-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-13T05:09:03Z",
       "databaseId": 29225588875,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -39,7 +79,7 @@
       "createdAt": "2026-07-13T05:08:58Z",
       "databaseId": 29225585213,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "prepare-manifest"
     },
     {
@@ -59,19 +99,19 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-13T05:07:50Z",
       "databaseId": 29225539393,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-13T05:07:04Z",
       "databaseId": 29225507682,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -107,11 +147,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-13T04:36:15Z",
       "databaseId": 29224361004,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-descriptions"
     },
     {
@@ -137,46 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-07-13T04:35:12Z",
-      "databaseId": 29224321690,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-07-13T04:32:08Z",
-      "databaseId": 29224198281,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-07-13T04:31:11Z",
-      "databaseId": 29224158562,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-13T04:19:19Z",
-      "databaseId": 29223648806,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "refresh-backlog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-13T04:09:11Z",
-      "databaseId": 29223235794,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
     }
   ],
   "gaps": {
@@ -105769,6 +105769,146 @@
         "episode_id": 12739,
         "display_name": "Čmuchalové S02E05 - 5. epizoda CZ Dabing",
         "video_id": 27426932
+      },
+      {
+        "episode_id": 82536,
+        "display_name": "Will Trent S01E05 - Hlídka CZ Titulky",
+        "video_id": 27427188
+      },
+      {
+        "episode_id": 82538,
+        "display_name": "Will Trent S01E07 - K nenalezení CZ Titulky",
+        "video_id": 27427228
+      },
+      {
+        "episode_id": 82540,
+        "display_name": "Will Trent S01E09 - Štvanice CZ Titulky",
+        "video_id": 27427282
+      },
+      {
+        "episode_id": 82542,
+        "display_name": "Will Trent S01E11 - Bill Black CZ Titulky",
+        "video_id": 27427323
+      },
+      {
+        "episode_id": 82544,
+        "display_name": "Will Trent S01E13 - Špatná povaha a srdce z kamene CZ Titulky",
+        "video_id": 27427376
+      },
+      {
+        "episode_id": 82356,
+        "display_name": "Zákon a pořádek: Zločinné úmysly S10E02 - 2. epizoda CZ Dabing",
+        "video_id": 27427430
+      },
+      {
+        "episode_id": 82358,
+        "display_name": "Zákon a pořádek: Zločinné úmysly S10E04 - 4. epizoda CZ Dabing",
+        "video_id": 27427489
+      },
+      {
+        "episode_id": 82360,
+        "display_name": "Zákon a pořádek: Zločinné úmysly S10E06 - 6. epizoda CZ Dabing",
+        "video_id": 27427536
+      },
+      {
+        "episode_id": 82362,
+        "display_name": "Zákon a pořádek: Zločinné úmysly S10E08 - 8. epizoda CZ Dabing",
+        "video_id": 27427572
+      },
+      {
+        "episode_id": 110534,
+        "display_name": "Vojna a mír S01E01 - 1. epizoda CZ Dabing",
+        "video_id": 27427617
+      },
+      {
+        "episode_id": 110536,
+        "display_name": "Vojna a mír S01E03 - 3. epizoda CZ Dabing",
+        "video_id": 27427657
+      },
+      {
+        "episode_id": 110538,
+        "display_name": "Vojna a mír S01E05 - 5. epizoda CZ Dabing",
+        "video_id": 27427683
+      },
+      {
+        "episode_id": 179706,
+        "display_name": "Olive Kitteridgeová S01E03 - Jiná cesta CZ Dabing",
+        "video_id": 27427706
+      },
+      {
+        "episode_id": 179708,
+        "display_name": "Olive Kitteridgeová S01E04 - Bezpečnostní CZ Dabing",
+        "video_id": 27427733
+      },
+      {
+        "episode_id": 78246,
+        "display_name": "The Carrie Diaries S01E01 - 1. epizoda CZ Titulky",
+        "video_id": 27427750
+      },
+      {
+        "episode_id": 78248,
+        "display_name": "The Carrie Diaries S01E03 - 3. epizoda CZ Titulky",
+        "video_id": 27427767
+      },
+      {
+        "episode_id": 12735,
+        "display_name": "Čmuchalové S02E07 - 7. epizoda CZ Dabing",
+        "video_id": 27427201
+      },
+      {
+        "episode_id": 35853,
+        "display_name": "Bratři Sunovi S01E02 - Něco za něco CZ Dabing",
+        "video_id": 27427271
+      },
+      {
+        "episode_id": 35855,
+        "display_name": "Bratři Sunovi S01E04 - Čtverec CZ Dabing",
+        "video_id": 27427312
+      },
+      {
+        "episode_id": 35857,
+        "display_name": "Bratři Sunovi S01E06 - Kluk z vesnice CZ Dabing",
+        "video_id": 27427403
+      },
+      {
+        "episode_id": 35859,
+        "display_name": "Bratři Sunovi S01E08 - Chránit rodinu CZ Dabing",
+        "video_id": 27427503
+      },
+      {
+        "episode_id": 70827,
+        "display_name": "Nejsem do tebe blázen  S03E09 - 9. epizoda CZ Titulky",
+        "video_id": 27427557
+      },
+      {
+        "episode_id": 68667,
+        "display_name": "American Horror Stories S01E04 - Někdo zlobil CZ Titulky",
+        "video_id": 27427599
+      },
+      {
+        "episode_id": 68665,
+        "display_name": "American Horror Stories S03E04 - Orgán CZ Titulky",
+        "video_id": 27427639
+      },
+      {
+        "episode_id": 68657,
+        "display_name": "American Horror Stories S03E07 - 7. epizoda CZ Titulky",
+        "video_id": 27427668
+      },
+      {
+        "episode_id": 35755,
+        "display_name": "Pochybná dohoda S01E01 - Americké hlavní město plujících ostatků CZ Titulky",
+        "video_id": 27427703
+      },
+      {
+        "episode_id": 35761,
+        "display_name": "Pochybná dohoda S01E07 - Milovník koček CZ Titulky",
+        "video_id": 27427735
+      },
+      {
+        "episode_id": 35763,
+        "display_name": "Pochybná dohoda S01E09 - Tohle rozkošné štěňátko opravdu zabít nechcete CZ Titulky",
+        "video_id": 27427754
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -211256,6 +211396,146 @@
         "episode_id": 12739,
         "display_name": "Čmuchalové S02E05 - 5. epizoda CZ Dabing",
         "video_id": 27426932
+      },
+      {
+        "episode_id": 82536,
+        "display_name": "Will Trent S01E05 - Hlídka CZ Titulky",
+        "video_id": 27427188
+      },
+      {
+        "episode_id": 82538,
+        "display_name": "Will Trent S01E07 - K nenalezení CZ Titulky",
+        "video_id": 27427228
+      },
+      {
+        "episode_id": 82540,
+        "display_name": "Will Trent S01E09 - Štvanice CZ Titulky",
+        "video_id": 27427282
+      },
+      {
+        "episode_id": 82542,
+        "display_name": "Will Trent S01E11 - Bill Black CZ Titulky",
+        "video_id": 27427323
+      },
+      {
+        "episode_id": 82544,
+        "display_name": "Will Trent S01E13 - Špatná povaha a srdce z kamene CZ Titulky",
+        "video_id": 27427376
+      },
+      {
+        "episode_id": 82356,
+        "display_name": "Zákon a pořádek: Zločinné úmysly S10E02 - 2. epizoda CZ Dabing",
+        "video_id": 27427430
+      },
+      {
+        "episode_id": 82358,
+        "display_name": "Zákon a pořádek: Zločinné úmysly S10E04 - 4. epizoda CZ Dabing",
+        "video_id": 27427489
+      },
+      {
+        "episode_id": 82360,
+        "display_name": "Zákon a pořádek: Zločinné úmysly S10E06 - 6. epizoda CZ Dabing",
+        "video_id": 27427536
+      },
+      {
+        "episode_id": 82362,
+        "display_name": "Zákon a pořádek: Zločinné úmysly S10E08 - 8. epizoda CZ Dabing",
+        "video_id": 27427572
+      },
+      {
+        "episode_id": 110534,
+        "display_name": "Vojna a mír S01E01 - 1. epizoda CZ Dabing",
+        "video_id": 27427617
+      },
+      {
+        "episode_id": 110536,
+        "display_name": "Vojna a mír S01E03 - 3. epizoda CZ Dabing",
+        "video_id": 27427657
+      },
+      {
+        "episode_id": 110538,
+        "display_name": "Vojna a mír S01E05 - 5. epizoda CZ Dabing",
+        "video_id": 27427683
+      },
+      {
+        "episode_id": 179706,
+        "display_name": "Olive Kitteridgeová S01E03 - Jiná cesta CZ Dabing",
+        "video_id": 27427706
+      },
+      {
+        "episode_id": 179708,
+        "display_name": "Olive Kitteridgeová S01E04 - Bezpečnostní CZ Dabing",
+        "video_id": 27427733
+      },
+      {
+        "episode_id": 78246,
+        "display_name": "The Carrie Diaries S01E01 - 1. epizoda CZ Titulky",
+        "video_id": 27427750
+      },
+      {
+        "episode_id": 78248,
+        "display_name": "The Carrie Diaries S01E03 - 3. epizoda CZ Titulky",
+        "video_id": 27427767
+      },
+      {
+        "episode_id": 12735,
+        "display_name": "Čmuchalové S02E07 - 7. epizoda CZ Dabing",
+        "video_id": 27427201
+      },
+      {
+        "episode_id": 35853,
+        "display_name": "Bratři Sunovi S01E02 - Něco za něco CZ Dabing",
+        "video_id": 27427271
+      },
+      {
+        "episode_id": 35855,
+        "display_name": "Bratři Sunovi S01E04 - Čtverec CZ Dabing",
+        "video_id": 27427312
+      },
+      {
+        "episode_id": 35857,
+        "display_name": "Bratři Sunovi S01E06 - Kluk z vesnice CZ Dabing",
+        "video_id": 27427403
+      },
+      {
+        "episode_id": 35859,
+        "display_name": "Bratři Sunovi S01E08 - Chránit rodinu CZ Dabing",
+        "video_id": 27427503
+      },
+      {
+        "episode_id": 70827,
+        "display_name": "Nejsem do tebe blázen  S03E09 - 9. epizoda CZ Titulky",
+        "video_id": 27427557
+      },
+      {
+        "episode_id": 68667,
+        "display_name": "American Horror Stories S01E04 - Někdo zlobil CZ Titulky",
+        "video_id": 27427599
+      },
+      {
+        "episode_id": 68665,
+        "display_name": "American Horror Stories S03E04 - Orgán CZ Titulky",
+        "video_id": 27427639
+      },
+      {
+        "episode_id": 68657,
+        "display_name": "American Horror Stories S03E07 - 7. epizoda CZ Titulky",
+        "video_id": 27427668
+      },
+      {
+        "episode_id": 35755,
+        "display_name": "Pochybná dohoda S01E01 - Americké hlavní město plujících ostatků CZ Titulky",
+        "video_id": 27427703
+      },
+      {
+        "episode_id": 35761,
+        "display_name": "Pochybná dohoda S01E07 - Milovník koček CZ Titulky",
+        "video_id": 27427735
+      },
+      {
+        "episode_id": 35763,
+        "display_name": "Pochybná dohoda S01E09 - Tohle rozkošné štěňátko opravdu zabít nechcete CZ Titulky",
+        "video_id": 27427754
       }
     ],
     "prepared_not_upload_ready": [
@@ -211562,166 +211842,6 @@
     ],
     "whisper_review_pending": [
       {
-        "episode_id": 129394,
-        "source_id": -6385269051839475,
-        "series_title": "A.P. Bio",
-        "episode_code": "S04E01",
-        "source_title": "A.P.Bio.S04E01.1080p.WEB.H264-GGEZ",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 129394,
-        "source_id": -29485284317375415,
-        "series_title": "A.P. Bio",
-        "episode_code": "S04E01",
-        "source_title": "A.P.Bio.S04E01.720p.WEB.H264-GGEZ",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 129395,
-        "source_id": -43219714271080877,
-        "series_title": "A.P. Bio",
-        "episode_code": "S04E02",
-        "source_title": "A.P.Bio.S04E02.1080p.WEB.H264-GGEZ",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 129395,
-        "source_id": -69843560830094081,
-        "series_title": "A.P. Bio",
-        "episode_code": "S04E02",
-        "source_title": "A.P.Bio.S04E02.720p.WEB.H264-GGEZ",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 129396,
-        "source_id": -7164101361564782,
-        "series_title": "A.P. Bio",
-        "episode_code": "S04E03",
-        "source_title": "A.P.Bio.S04E03.1080p.WEB.H264-GGEZ",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 129396,
-        "source_id": -8734904273242898,
-        "series_title": "A.P. Bio",
-        "episode_code": "S04E03",
-        "source_title": "A.P.Bio.S04E03.720p.WEB.H264-GGEZ",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 129397,
-        "source_id": -30596610227482378,
-        "series_title": "A.P. Bio",
-        "episode_code": "S04E04",
-        "source_title": "A.P.Bio.S04E04.1080p.WEB.H264-GGEZ",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 129397,
-        "source_id": -63197303023922642,
-        "series_title": "A.P. Bio",
-        "episode_code": "S04E04",
-        "source_title": "A.P.Bio.S04E04.720p.WEB.H264-GGEZ",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 129398,
-        "source_id": -14236065285966233,
-        "series_title": "A.P. Bio",
-        "episode_code": "S04E05",
-        "source_title": "A.P.Bio.S04E05.1080p.WEB.H264-GGEZ",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 129398,
-        "source_id": -43515192839720894,
-        "series_title": "A.P. Bio",
-        "episode_code": "S04E05",
-        "source_title": "A.P.Bio.S04E05.720p.WEB.H264-GGEZ",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 129399,
-        "source_id": -49195861485649203,
-        "series_title": "A.P. Bio",
-        "episode_code": "S04E06",
-        "source_title": "A.P.Bio.S04E06.1080p.WEB.H264-GGEZ",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 129399,
-        "source_id": -27751771970559713,
-        "series_title": "A.P. Bio",
-        "episode_code": "S04E06",
-        "source_title": "A.P.Bio.S04E06.720p.WEB.H264-GGEZ",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 129400,
-        "source_id": -24659316121818838,
-        "series_title": "A.P. Bio",
-        "episode_code": "S04E07",
-        "source_title": "A.P.Bio.S04E07.1080p.WEB.H264-GGEZ",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 129400,
-        "source_id": -10578753700107946,
-        "series_title": "A.P. Bio",
-        "episode_code": "S04E07",
-        "source_title": "A.P.Bio.S04E07.720p.WEB.H264-GGEZ",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 129401,
-        "source_id": -59592964495163945,
-        "series_title": "A.P. Bio",
-        "episode_code": "S04E08",
-        "source_title": "A.P.Bio.S04E08.1080p.WEB.H264-GGEZ",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 129401,
-        "source_id": -68622345152504764,
-        "series_title": "A.P. Bio",
-        "episode_code": "S04E08",
-        "source_title": "A.P.Bio.S04E08.720p.WEB.H264-GGEZ",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 174825,
-        "source_id": -46694144573076603,
-        "series_title": "Afrika",
-        "episode_code": "S01E02",
-        "source_title": "Život ve vedrech Afrika S01E02 Leopard, Sand and Heat",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 174825,
-        "source_id": -8011613750738633,
-        "series_title": "Afrika",
-        "episode_code": "S01E02",
-        "source_title": "Život ve vedrech Afrika S01E02 Leopard, Sand and Heat byDejv",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 174826,
-        "source_id": -59374803847929384,
-        "series_title": "Afrika",
-        "episode_code": "S01E03",
-        "source_title": "Život ve vedrech Afrika S01E03 The burning plains of the Cheetah",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 174826,
-        "source_id": -59321209123462845,
-        "series_title": "Afrika",
-        "episode_code": "S01E03",
-        "source_title": "Život ve vedrech Afrika S01E03 The burning plains of the Cheetah byDejv",
-        "status": "needs_whisper"
-      },
-      {
         "episode_id": 174827,
         "source_id": -34560994569021756,
         "series_title": "Afrika",
@@ -211959,6 +212079,166 @@
         "series_title": "Babylon 5",
         "episode_code": "S03E02",
         "source_title": "Babylon 5 - S3E2 Epizoda 2 SK",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39953,
+        "source_id": -41041293538015300,
+        "series_title": "Babylon 5",
+        "episode_code": "S03E02",
+        "source_title": "Babylon 5 S03E02 DoDo",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39953,
+        "source_id": -5690837569729526,
+        "series_title": "Babylon 5",
+        "episode_code": "S03E02",
+        "source_title": "Babylon 5 S03E02 ⭐GG⭐",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39953,
+        "source_id": -42539629260366384,
+        "series_title": "Babylon 5",
+        "episode_code": "S03E02",
+        "source_title": "Babylon 5 S03E02By DRAGOUN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39953,
+        "source_id": -32859009797225938,
+        "series_title": "Babylon 5",
+        "episode_code": "S03E02",
+        "source_title": "Babylon 5 S03E02⭐GT⭐",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39953,
+        "source_id": -25114527368310996,
+        "series_title": "Babylon 5",
+        "episode_code": "S03E02",
+        "source_title": "Babylon 5 S03E02 Ortiele",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39954,
+        "source_id": -49788686061550075,
+        "series_title": "Babylon 5",
+        "episode_code": "S03E03",
+        "source_title": "Babylon 5 S03E03 SkDab",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39954,
+        "source_id": -18046806684687344,
+        "series_title": "Babylon 5",
+        "episode_code": "S03E03",
+        "source_title": "Babylon 5 S03E03-22 1995 SK dab - A Day in the Strife",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39954,
+        "source_id": -67254829920763728,
+        "series_title": "Babylon 5",
+        "episode_code": "S03E03",
+        "source_title": "Babylon 5 - S3E3 Epizoda 3 SK",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39954,
+        "source_id": -40849971479967080,
+        "series_title": "Babylon 5",
+        "episode_code": "S03E03",
+        "source_title": "Babylon 5 S03E03 Deň rozbrojov",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39954,
+        "source_id": -37404889844699787,
+        "series_title": "Babylon 5",
+        "episode_code": "S03E03",
+        "source_title": "Babylon 5 S03E03 Deň rozbrojov.mkv",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39954,
+        "source_id": -60902293861211788,
+        "series_title": "Babylon 5",
+        "episode_code": "S03E03",
+        "source_title": "Babylon 5 S03E03 ⭐Boyd",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39954,
+        "source_id": -25023739079491230,
+        "series_title": "Babylon 5",
+        "episode_code": "S03E03",
+        "source_title": "Babylon 5 S03E03 DoDo",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39954,
+        "source_id": -32200293389628572,
+        "series_title": "Babylon 5",
+        "episode_code": "S03E03",
+        "source_title": "Babylon 5 S03E03 ⭐GG⭐",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39955,
+        "source_id": -59261561022020483,
+        "series_title": "Babylon 5",
+        "episode_code": "S03E04",
+        "source_title": "Babylon 5 S03E04 1080p SK",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39955,
+        "source_id": -14891040788934366,
+        "series_title": "Babylon 5",
+        "episode_code": "S03E04",
+        "source_title": "Babylon 5 S03E04 SkDab",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39955,
+        "source_id": -67903274741073393,
+        "series_title": "Babylon 5",
+        "episode_code": "S03E04",
+        "source_title": "Babylon 5 - S3E4 Epizoda 4 SK",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39955,
+        "source_id": -63917239307761258,
+        "series_title": "Babylon 5",
+        "episode_code": "S03E04",
+        "source_title": "Babylon 5 S03E04 Noc v Getsemanskej záhrade.mkv",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39955,
+        "source_id": -50118621066455614,
+        "series_title": "Babylon 5",
+        "episode_code": "S03E04",
+        "source_title": "Babylon 5 S03E04 Noc v Getsemanskej záhrade",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39955,
+        "source_id": -10612727292825036,
+        "series_title": "Babylon 5",
+        "episode_code": "S03E04",
+        "source_title": "Babylon 5 S03E04 ⭐Boyd",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39955,
+        "source_id": -59890161232026085,
+        "series_title": "Babylon 5",
+        "episode_code": "S03E04",
+        "source_title": "Babylon 5 S03E04 ⭐GG⭐",
         "status": "needs_whisper"
       }
     ],
@@ -212417,17 +212697,17 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 305,
-    "ok": 39,
+    "disabled": 331,
+    "ok": 73,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
-    "whisper_non_cz_needs_subtitles": 1591,
-    "whisper_confirmed_cz": 1026,
-    "needs_whisper": 42984,
+    "whisper_non_cz_needs_subtitles": 1607,
+    "whisper_confirmed_cz": 1030,
+    "needs_whisper": 43099,
     "whisper_failed": 3
   },
   "subtitle_followup_statuses": {
-    "needs_subtitle_setup_after_prehrajto_processing": 8393
+    "needs_subtitle_setup_after_prehrajto_processing": 8440
   }
 }
