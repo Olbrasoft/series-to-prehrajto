@@ -2,36 +2,108 @@
   "counts": {
     "backlog_episodes": 168059,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 25305,
-    "prepared_source_episodes": 38219,
+    "uploaded_episodes": 25328,
+    "prepared_source_episodes": 38200,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 190,
-    "language_whisper_attempted_sources": 85,
-    "language_pending_whisper_sources": 2604,
+    "language_audited_sources": 40,
+    "language_whisper_attempted_sources": 40,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 45016,
-    "whisper_review_pending_sources": 42359,
+    "whisper_review_pending_sources": 42319,
     "subtitle_followup_sources": 8247,
     "subtitle_followup_pending_sources": 8247
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-07-13T00:55:54Z",
-      "databaseId": 29216341285,
+      "createdAt": "2026-07-13T01:21:49Z",
+      "databaseId": 29217256364,
       "headBranch": "main",
       "status": "pending",
-      "workflowName": "process-whisper-review"
+      "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-07-13T01:21:48Z",
+      "databaseId": 29217255882,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-13T01:21:44Z",
+      "databaseId": 29217253601,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-07-13T01:11:36Z",
+      "databaseId": 29216910077,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-13T01:07:46Z",
+      "databaseId": 29216760209,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-sources"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-13T01:05:11Z",
+      "databaseId": 29216666773,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-13T01:00:28Z",
+      "databaseId": 29216494907,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-13T00:58:27Z",
+      "databaseId": 29216427545,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-13T00:56:39Z",
+      "databaseId": 29216366271,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-13T00:55:54Z",
+      "databaseId": 29216341285,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-13T00:55:44Z",
       "databaseId": 29216335147,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -43,19 +115,19 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-13T00:53:45Z",
       "databaseId": 29216263160,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-13T00:53:43Z",
       "databaseId": 29216262182,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -91,11 +163,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-07-13T00:41:53Z",
       "databaseId": 29215867125,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -105,78 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-13T00:41:46Z",
-      "databaseId": 29215863304,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-13T00:41:44Z",
-      "databaseId": 29215862195,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-13T00:40:43Z",
-      "databaseId": 29215828000,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-07-13T00:40:39Z",
-      "databaseId": 29215826088,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-13T00:38:48Z",
-      "databaseId": 29215763920,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-07-13T00:34:29Z",
-      "databaseId": 29215613953,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-13T00:34:29Z",
-      "databaseId": 29215613876,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-13T00:33:11Z",
-      "databaseId": 29215568519,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-13T00:33:08Z",
-      "databaseId": 29215567224,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
     }
   ],
   "gaps": {
@@ -104421,6 +104421,56 @@
         "video_id": 27420394
       },
       {
+        "episode_id": 21230,
+        "display_name": "Dračí princ S05E03 - Noční můry a překvapivá odhalení CZ Dabing",
+        "video_id": 27420414
+      },
+      {
+        "episode_id": 21232,
+        "display_name": "Dračí princ S05E05 - Arcimágyně Akiyu CZ Dabing",
+        "video_id": 27420432
+      },
+      {
+        "episode_id": 157604,
+        "display_name": "Lakers: Vzestup dynastie S02E04 - 4. epizoda CZ Titulky",
+        "video_id": 27420533
+      },
+      {
+        "episode_id": 21234,
+        "display_name": "Dračí princ S05E07 - Na moři CZ Dabing",
+        "video_id": 27420661
+      },
+      {
+        "episode_id": 157606,
+        "display_name": "Lakers: Vzestup dynastie S02E06 - 6. epizoda CZ Titulky",
+        "video_id": 27420744
+      },
+      {
+        "episode_id": 21236,
+        "display_name": "Dračí princ S05E09 - Dětská krev CZ Dabing",
+        "video_id": 27420824
+      },
+      {
+        "episode_id": 21238,
+        "display_name": "Dračí princ S06E02 - Láska, válka a houby CZ Dabing",
+        "video_id": 27420840
+      },
+      {
+        "episode_id": 21240,
+        "display_name": "Dračí princ S06E04 - Hvězdodrap CZ Dabing",
+        "video_id": 27420855
+      },
+      {
+        "episode_id": 21242,
+        "display_name": "Dračí princ S06E06 - Okamžik pravdy CZ Dabing",
+        "video_id": 27420873
+      },
+      {
+        "episode_id": 21244,
+        "display_name": "Dračí princ S06E08 - Pád nás nemine CZ Dabing",
+        "video_id": 27420888
+      },
+      {
         "episode_id": 63801,
         "display_name": "Magnum S07E16 - Sólový let CZ Dabing",
         "video_id": 27420156
@@ -104454,6 +104504,71 @@
         "episode_id": 63811,
         "display_name": "Magnum S08E04 - Fanoušek tygrů CZ Dabing",
         "video_id": 27420389
+      },
+      {
+        "episode_id": 63813,
+        "display_name": "Magnum S08E06 - Láska, která lže CZ Dabing",
+        "video_id": 27420413
+      },
+      {
+        "episode_id": 63815,
+        "display_name": "Magnum S08E08 - Neukončená záležitost CZ Dabing",
+        "video_id": 27420436
+      },
+      {
+        "episode_id": 63817,
+        "display_name": "Magnum S08E10 - Legenda ztracených archů CZ Dabing",
+        "video_id": 27420461
+      },
+      {
+        "episode_id": 63835,
+        "display_name": "Magnum S08E11 - Proměny CZ Dabing",
+        "video_id": 27420496
+      },
+      {
+        "episode_id": 63819,
+        "display_name": "Magnum S08E13 - Rozhodnutí (2) CZ Dabing",
+        "video_id": 27420516
+      },
+      {
+        "episode_id": 162753,
+        "display_name": "Andělé v Americe S01E01 - Milénium se blíží: Špatná zpráva CZ Titulky",
+        "video_id": 27420553
+      },
+      {
+        "episode_id": 162751,
+        "display_name": "Andělé v Americe S01E03 - Milénium se blíží: Posel CZ Titulky",
+        "video_id": 27420599
+      },
+      {
+        "episode_id": 171025,
+        "display_name": "Andělé v Americe S01E06 - Perestrojka: Jsem v nebi CZ Titulky",
+        "video_id": 27420648
+      },
+      {
+        "episode_id": 3641,
+        "display_name": "Dračí princ S01E01 - Ozvěny hromu CZ Dabing",
+        "video_id": 27420665
+      },
+      {
+        "episode_id": 3645,
+        "display_name": "Dračí princ S01E05 - Prázdný trůn CZ Titulky",
+        "video_id": 27420682
+      },
+      {
+        "episode_id": 3647,
+        "display_name": "Dračí princ S01E07 - Dýka a vlk CZ Titulky",
+        "video_id": 27420708
+      },
+      {
+        "episode_id": 3649,
+        "display_name": "Dračí princ S01E09 - Bouře zázraků CZ Dabing",
+        "video_id": 27420729
+      },
+      {
+        "episode_id": 3661,
+        "display_name": "Dračí princ S03E03 - Duch CZ Titulky",
+        "video_id": 27420766
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -208593,6 +208708,56 @@
         "video_id": 27420394
       },
       {
+        "episode_id": 21230,
+        "display_name": "Dračí princ S05E03 - Noční můry a překvapivá odhalení CZ Dabing",
+        "video_id": 27420414
+      },
+      {
+        "episode_id": 21232,
+        "display_name": "Dračí princ S05E05 - Arcimágyně Akiyu CZ Dabing",
+        "video_id": 27420432
+      },
+      {
+        "episode_id": 157604,
+        "display_name": "Lakers: Vzestup dynastie S02E04 - 4. epizoda CZ Titulky",
+        "video_id": 27420533
+      },
+      {
+        "episode_id": 21234,
+        "display_name": "Dračí princ S05E07 - Na moři CZ Dabing",
+        "video_id": 27420661
+      },
+      {
+        "episode_id": 157606,
+        "display_name": "Lakers: Vzestup dynastie S02E06 - 6. epizoda CZ Titulky",
+        "video_id": 27420744
+      },
+      {
+        "episode_id": 21236,
+        "display_name": "Dračí princ S05E09 - Dětská krev CZ Dabing",
+        "video_id": 27420824
+      },
+      {
+        "episode_id": 21238,
+        "display_name": "Dračí princ S06E02 - Láska, válka a houby CZ Dabing",
+        "video_id": 27420840
+      },
+      {
+        "episode_id": 21240,
+        "display_name": "Dračí princ S06E04 - Hvězdodrap CZ Dabing",
+        "video_id": 27420855
+      },
+      {
+        "episode_id": 21242,
+        "display_name": "Dračí princ S06E06 - Okamžik pravdy CZ Dabing",
+        "video_id": 27420873
+      },
+      {
+        "episode_id": 21244,
+        "display_name": "Dračí princ S06E08 - Pád nás nemine CZ Dabing",
+        "video_id": 27420888
+      },
+      {
         "episode_id": 63801,
         "display_name": "Magnum S07E16 - Sólový let CZ Dabing",
         "video_id": 27420156
@@ -208626,6 +208791,71 @@
         "episode_id": 63811,
         "display_name": "Magnum S08E04 - Fanoušek tygrů CZ Dabing",
         "video_id": 27420389
+      },
+      {
+        "episode_id": 63813,
+        "display_name": "Magnum S08E06 - Láska, která lže CZ Dabing",
+        "video_id": 27420413
+      },
+      {
+        "episode_id": 63815,
+        "display_name": "Magnum S08E08 - Neukončená záležitost CZ Dabing",
+        "video_id": 27420436
+      },
+      {
+        "episode_id": 63817,
+        "display_name": "Magnum S08E10 - Legenda ztracených archů CZ Dabing",
+        "video_id": 27420461
+      },
+      {
+        "episode_id": 63835,
+        "display_name": "Magnum S08E11 - Proměny CZ Dabing",
+        "video_id": 27420496
+      },
+      {
+        "episode_id": 63819,
+        "display_name": "Magnum S08E13 - Rozhodnutí (2) CZ Dabing",
+        "video_id": 27420516
+      },
+      {
+        "episode_id": 162753,
+        "display_name": "Andělé v Americe S01E01 - Milénium se blíží: Špatná zpráva CZ Titulky",
+        "video_id": 27420553
+      },
+      {
+        "episode_id": 162751,
+        "display_name": "Andělé v Americe S01E03 - Milénium se blíží: Posel CZ Titulky",
+        "video_id": 27420599
+      },
+      {
+        "episode_id": 171025,
+        "display_name": "Andělé v Americe S01E06 - Perestrojka: Jsem v nebi CZ Titulky",
+        "video_id": 27420648
+      },
+      {
+        "episode_id": 3641,
+        "display_name": "Dračí princ S01E01 - Ozvěny hromu CZ Dabing",
+        "video_id": 27420665
+      },
+      {
+        "episode_id": 3645,
+        "display_name": "Dračí princ S01E05 - Prázdný trůn CZ Titulky",
+        "video_id": 27420682
+      },
+      {
+        "episode_id": 3647,
+        "display_name": "Dračí princ S01E07 - Dýka a vlk CZ Titulky",
+        "video_id": 27420708
+      },
+      {
+        "episode_id": 3649,
+        "display_name": "Dračí princ S01E09 - Bouře zázraků CZ Dabing",
+        "video_id": 27420729
+      },
+      {
+        "episode_id": 3661,
+        "display_name": "Dračí princ S03E03 - Duch CZ Titulky",
+        "video_id": 27420766
       }
     ],
     "prepared_not_upload_ready": [
@@ -208940,326 +209170,6 @@
         "status": "whisper_failed"
       },
       {
-        "episode_id": 39954,
-        "source_id": -67254829920763728,
-        "series_title": "Babylon 5",
-        "episode_code": "S03E03",
-        "source_title": "Babylon 5 - S3E3 Epizoda 3 SK",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39954,
-        "source_id": -40849971479967080,
-        "series_title": "Babylon 5",
-        "episode_code": "S03E03",
-        "source_title": "Babylon 5 S03E03 Deň rozbrojov",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39954,
-        "source_id": -37404889844699787,
-        "series_title": "Babylon 5",
-        "episode_code": "S03E03",
-        "source_title": "Babylon 5 S03E03 Deň rozbrojov.mkv",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39954,
-        "source_id": -60902293861211788,
-        "series_title": "Babylon 5",
-        "episode_code": "S03E03",
-        "source_title": "Babylon 5 S03E03 ⭐Boyd",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39954,
-        "source_id": -25023739079491230,
-        "series_title": "Babylon 5",
-        "episode_code": "S03E03",
-        "source_title": "Babylon 5 S03E03 DoDo",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39954,
-        "source_id": -32200293389628572,
-        "series_title": "Babylon 5",
-        "episode_code": "S03E03",
-        "source_title": "Babylon 5 S03E03 ⭐GG⭐",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39955,
-        "source_id": -59261561022020483,
-        "series_title": "Babylon 5",
-        "episode_code": "S03E04",
-        "source_title": "Babylon 5 S03E04 1080p SK",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39955,
-        "source_id": -14891040788934366,
-        "series_title": "Babylon 5",
-        "episode_code": "S03E04",
-        "source_title": "Babylon 5 S03E04 SkDab",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39955,
-        "source_id": -67903274741073393,
-        "series_title": "Babylon 5",
-        "episode_code": "S03E04",
-        "source_title": "Babylon 5 - S3E4 Epizoda 4 SK",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39955,
-        "source_id": -63917239307761258,
-        "series_title": "Babylon 5",
-        "episode_code": "S03E04",
-        "source_title": "Babylon 5 S03E04 Noc v Getsemanskej záhrade.mkv",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39955,
-        "source_id": -50118621066455614,
-        "series_title": "Babylon 5",
-        "episode_code": "S03E04",
-        "source_title": "Babylon 5 S03E04 Noc v Getsemanskej záhrade",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39955,
-        "source_id": -10612727292825036,
-        "series_title": "Babylon 5",
-        "episode_code": "S03E04",
-        "source_title": "Babylon 5 S03E04 ⭐Boyd",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39955,
-        "source_id": -59890161232026085,
-        "series_title": "Babylon 5",
-        "episode_code": "S03E04",
-        "source_title": "Babylon 5 S03E04 ⭐GG⭐",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39955,
-        "source_id": -27598130650163159,
-        "series_title": "Babylon 5",
-        "episode_code": "S03E04",
-        "source_title": "Babylon 5 S03E04By DRAGOUN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39956,
-        "source_id": -14460361976269253,
-        "series_title": "Babylon 5",
-        "episode_code": "S03E05",
-        "source_title": "Babylon 5 S03E05 1080p SK",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39956,
-        "source_id": -17790742685623363,
-        "series_title": "Babylon 5",
-        "episode_code": "S03E05",
-        "source_title": "Babylon 5 S03E05 SkDab",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39956,
-        "source_id": -1911907195209507,
-        "series_title": "Babylon 5",
-        "episode_code": "S03E05",
-        "source_title": "Babylon 5 - S3E5 Epizoda 5 SK",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39956,
-        "source_id": -60204269600795720,
-        "series_title": "Babylon 5",
-        "episode_code": "S03E05",
-        "source_title": "Babylon 5 S03E05 ⭐GG⭐",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39956,
-        "source_id": -46649346408554348,
-        "series_title": "Babylon 5",
-        "episode_code": "S03E05",
-        "source_title": "Babylon 5 S03E05 DoDo",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39956,
-        "source_id": -4492011282593553,
-        "series_title": "Babylon 5",
-        "episode_code": "S03E05",
-        "source_title": "Babylon 5 S03E05By DRAGOUN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39956,
-        "source_id": -33382368439285362,
-        "series_title": "Babylon 5",
-        "episode_code": "S03E05",
-        "source_title": "Babylon 5 S03E05⭐GT⭐",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39956,
-        "source_id": -8850327827861020,
-        "series_title": "Babylon 5",
-        "episode_code": "S03E05",
-        "source_title": "Babylon 5 S03E05 Autoritatívne hlasy",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39957,
-        "source_id": -47869259743882490,
-        "series_title": "Babylon 5",
-        "episode_code": "S03E06",
-        "source_title": "Babylon 5 S03E06 1080p SK",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39957,
-        "source_id": -65062596108309991,
-        "series_title": "Babylon 5",
-        "episode_code": "S03E06",
-        "source_title": "Babylon 5 S03E06 SkDab",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39957,
-        "source_id": -11221631727340596,
-        "series_title": "Babylon 5",
-        "episode_code": "S03E06",
-        "source_title": "Babylon 5 - S3E6 Epizoda 6 SK",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39957,
-        "source_id": -7891595874585471,
-        "series_title": "Babylon 5",
-        "episode_code": "S03E06",
-        "source_title": "Babylon 5 S03E06 ⭐Boyd",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39957,
-        "source_id": -40887049012519674,
-        "series_title": "Babylon 5",
-        "episode_code": "S03E06",
-        "source_title": "Babylon 5 S03E06 DoDo",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39957,
-        "source_id": -31316451034735533,
-        "series_title": "Babylon 5",
-        "episode_code": "S03E06",
-        "source_title": "Babylon 5 S03E06 ⭐GG⭐",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39957,
-        "source_id": -18630791167746026,
-        "series_title": "Babylon 5",
-        "episode_code": "S03E06",
-        "source_title": "Babylon 5 S03E06By DRAGOUN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39957,
-        "source_id": -24096026204418945,
-        "series_title": "Babylon 5",
-        "episode_code": "S03E06",
-        "source_title": "Babylon 5 S03E06⭐GT⭐",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39958,
-        "source_id": -58778040277012295,
-        "series_title": "Babylon 5",
-        "episode_code": "S03E07",
-        "source_title": "Babylon 5 S03E07-22 1995 SK dab - Exogenesis",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39958,
-        "source_id": -12033195757127816,
-        "series_title": "Babylon 5",
-        "episode_code": "S03E07",
-        "source_title": "Babylon 5 S03E07 SkDab",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39958,
-        "source_id": -33591933322269530,
-        "series_title": "Babylon 5",
-        "episode_code": "S03E07",
-        "source_title": "Babylon 5 - S3E7 Epizoda 7 SK",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39958,
-        "source_id": -32488753396844088,
-        "series_title": "Babylon 5",
-        "episode_code": "S03E07",
-        "source_title": "Babylon 5 S03E07 1080p SK",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39958,
-        "source_id": -45661358052513180,
-        "series_title": "Babylon 5",
-        "episode_code": "S03E07",
-        "source_title": "Babylon 5 S03E07 Exogenéza",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39958,
-        "source_id": -38013058354311754,
-        "series_title": "Babylon 5",
-        "episode_code": "S03E07",
-        "source_title": "Babylon 5 S03E07 ⭐Boyd",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39958,
-        "source_id": -3344498019565062,
-        "series_title": "Babylon 5",
-        "episode_code": "S03E07",
-        "source_title": "Babylon 5 S03E07 DoDo",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39958,
-        "source_id": -3492203737323295,
-        "series_title": "Babylon 5",
-        "episode_code": "S03E07",
-        "source_title": "Babylon 5 S03E07By DRAGOUN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39959,
-        "source_id": -33633301444570712,
-        "series_title": "Babylon 5",
-        "episode_code": "S03E08",
-        "source_title": "Babylon 5 S03E08 1080p SK",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39959,
-        "source_id": -64209383032305393,
-        "series_title": "Babylon 5",
-        "episode_code": "S03E08",
-        "source_title": "Babylon 5 S03E08 SkDab",
-        "status": "needs_whisper"
-      },
-      {
         "episode_id": 39959,
         "source_id": -1637008238393122,
         "series_title": "Babylon 5",
@@ -209329,6 +209239,326 @@
         "series_title": "Babylon 5",
         "episode_code": "S03E09",
         "source_title": "Babylon 5 S03E09-22 1995 SK dab - Point of No Return",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39985,
+        "source_id": -67255447518899549,
+        "series_title": "Babylon 5",
+        "episode_code": "S03E09",
+        "source_title": "Babylon 5 - S3E9 Epizoda 9 SK",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39985,
+        "source_id": -42183298767976916,
+        "series_title": "Babylon 5",
+        "episode_code": "S03E09",
+        "source_title": "Babylon 5 S03E09 ⭐GG⭐",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39985,
+        "source_id": -22679404988800247,
+        "series_title": "Babylon 5",
+        "episode_code": "S03E09",
+        "source_title": "Babylon 5 S03E09 DoDo",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39985,
+        "source_id": -34294850157497791,
+        "series_title": "Babylon 5",
+        "episode_code": "S03E09",
+        "source_title": "Babylon 5 S03E09By DRAGOUN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39985,
+        "source_id": -26380080854419534,
+        "series_title": "Babylon 5",
+        "episode_code": "S03E09",
+        "source_title": "Babylon 5 S03E09⭐GT⭐",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39960,
+        "source_id": -29705689599236769,
+        "series_title": "Babylon 5",
+        "episode_code": "S03E10",
+        "source_title": "Babylon 5 S03E10 ⭐GG⭐",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39960,
+        "source_id": -8712766053726951,
+        "series_title": "Babylon 5",
+        "episode_code": "S03E10",
+        "source_title": "Babylon 5 S03E10 ⭐Boyd",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39960,
+        "source_id": -53760654051268576,
+        "series_title": "Babylon 5",
+        "episode_code": "S03E10",
+        "source_title": "Babylon 5 S03E10 DoDo",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39960,
+        "source_id": -66475208556842529,
+        "series_title": "Babylon 5",
+        "episode_code": "S03E10",
+        "source_title": "Babylon 5 S03E10By DRAGOUN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39960,
+        "source_id": -39323878863348861,
+        "series_title": "Babylon 5",
+        "episode_code": "S03E10",
+        "source_title": "Babylon 5 S03E10⭐GT⭐",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39960,
+        "source_id": -31566397632214497,
+        "series_title": "Babylon 5",
+        "episode_code": "S03E10",
+        "source_title": "Babylon 5 S3 E10 - Severed Dreams [=Sauron=, Josetto]",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39960,
+        "source_id": -52631127927631619,
+        "series_title": "Babylon 5",
+        "episode_code": "S03E10",
+        "source_title": "Babylon 5 S03E10 1080p SK",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39960,
+        "source_id": -56529468647022363,
+        "series_title": "Babylon 5",
+        "episode_code": "S03E10",
+        "source_title": "Babylon 5 S03E10 SkDab",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39961,
+        "source_id": -15981785573730655,
+        "series_title": "Babylon 5",
+        "episode_code": "S03E11",
+        "source_title": "Babylon 5 S3 E11 - Ceremonies of Light and Dark [=Sauron=, Josetto]",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39961,
+        "source_id": -29706829040167629,
+        "series_title": "Babylon 5",
+        "episode_code": "S03E11",
+        "source_title": "Babylon 5 S03E11 1080p SK",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39961,
+        "source_id": -55450059660027516,
+        "series_title": "Babylon 5",
+        "episode_code": "S03E11",
+        "source_title": "Babylon 5 S03E11-22 1995 SK dab - Ceremonies of Light and Dark",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39961,
+        "source_id": -3905162957664056,
+        "series_title": "Babylon 5",
+        "episode_code": "S03E11",
+        "source_title": "Babylon 5 S03E11 SkDab",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39961,
+        "source_id": -62583236622877901,
+        "series_title": "Babylon 5",
+        "episode_code": "S03E11",
+        "source_title": "Babylon 5 - S3E11 Epizoda 11 SK",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39961,
+        "source_id": -39665977837208415,
+        "series_title": "Babylon 5",
+        "episode_code": "S03E11",
+        "source_title": "Babylon 5 S03E11 Obrady svetla a tmy",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39961,
+        "source_id": -8025051318101019,
+        "series_title": "Babylon 5",
+        "episode_code": "S03E11",
+        "source_title": "Babylon 5 S03E11 Obrady svetla a tmy.mkv",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39961,
+        "source_id": -25491613047876559,
+        "series_title": "Babylon 5",
+        "episode_code": "S03E11",
+        "source_title": "Babylon 5 S03E11 DoDo",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39962,
+        "source_id": -36798823407229979,
+        "series_title": "Babylon 5",
+        "episode_code": "S03E12",
+        "source_title": "Babylon 5 S3 E12 - Sic Transit Vir [=Sauron=, Josetto]",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39962,
+        "source_id": -71459695184980140,
+        "series_title": "Babylon 5",
+        "episode_code": "S03E12",
+        "source_title": "Babylon 5 S03E12 1080p SK",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39962,
+        "source_id": -22014728813388187,
+        "series_title": "Babylon 5",
+        "episode_code": "S03E12",
+        "source_title": "Babylon 5 S03E12 SkDab",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39962,
+        "source_id": -59521796240752791,
+        "series_title": "Babylon 5",
+        "episode_code": "S03E12",
+        "source_title": "Babylon 5 - S3E12 Epizoda 12 SK",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39962,
+        "source_id": -65047572208460547,
+        "series_title": "Babylon 5",
+        "episode_code": "S03E12",
+        "source_title": "Babylon 5 S03E12 Falošný úradník",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39962,
+        "source_id": -10104043488506225,
+        "series_title": "Babylon 5",
+        "episode_code": "S03E12",
+        "source_title": "Babylon 5 S03E12 Falošný úradník.mkv",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39962,
+        "source_id": -30230225836678940,
+        "series_title": "Babylon 5",
+        "episode_code": "S03E12",
+        "source_title": "Babylon 5 S03E12 ⭐GG⭐",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39962,
+        "source_id": -17027218409646132,
+        "series_title": "Babylon 5",
+        "episode_code": "S03E12",
+        "source_title": "Babylon 5 S03E12 DoDo",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39964,
+        "source_id": -45275487437848305,
+        "series_title": "Babylon 5",
+        "episode_code": "S03E13",
+        "source_title": "Babylon 5 S3 E13 - A Late Delivery from Avalon [=Sauron=, Josetto]",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39964,
+        "source_id": -36162000297369495,
+        "series_title": "Babylon 5",
+        "episode_code": "S03E13",
+        "source_title": "Babylon 5 S03E13 1080p SK",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39964,
+        "source_id": -19464681771273251,
+        "series_title": "Babylon 5",
+        "episode_code": "S03E13",
+        "source_title": "Babylon 5 S03E13 SkDab",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39964,
+        "source_id": -55680215804515577,
+        "series_title": "Babylon 5",
+        "episode_code": "S03E13",
+        "source_title": "Babylon 5 - S3E13 Epizoda 13 SK",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39964,
+        "source_id": -9784484019816736,
+        "series_title": "Babylon 5",
+        "episode_code": "S03E13",
+        "source_title": "Babylon 5 S03E13 Oneskorená zásielka z Avalonu.mkv",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39964,
+        "source_id": -8568614106955685,
+        "series_title": "Babylon 5",
+        "episode_code": "S03E13",
+        "source_title": "Babylon 5 S03E13 Oneskorená zásielka z Avalonu",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39964,
+        "source_id": -56607352145412080,
+        "series_title": "Babylon 5",
+        "episode_code": "S03E13",
+        "source_title": "Babylon 5 S03E13 ⭐Boyd",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39964,
+        "source_id": -46019767906769898,
+        "series_title": "Babylon 5",
+        "episode_code": "S03E13",
+        "source_title": "Babylon 5 S03E13 ⭐GG⭐",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39963,
+        "source_id": -39207127657668388,
+        "series_title": "Babylon 5",
+        "episode_code": "S03E14",
+        "source_title": "Babylon 5 S3 E14 - Ship of Tears [=Sauron=, Josetto]",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39963,
+        "source_id": -31089301805047120,
+        "series_title": "Babylon 5",
+        "episode_code": "S03E14",
+        "source_title": "Babylon 5 S03E14 1080p SK",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39963,
+        "source_id": -146760888777874,
+        "series_title": "Babylon 5",
+        "episode_code": "S03E14",
+        "source_title": "Babylon 5 S03E14 SkDab",
         "status": "needs_whisper"
       }
     ],
@@ -209787,15 +210017,14 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 105,
-    "ok": 84,
+    "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
-    "whisper_non_cz_needs_subtitles": 1611,
-    "whisper_confirmed_cz": 1046,
+    "whisper_non_cz_needs_subtitles": 1619,
+    "whisper_confirmed_cz": 1078,
     "whisper_failed": 3,
-    "needs_whisper": 42356
+    "needs_whisper": 42316
   },
   "subtitle_followup_statuses": {
     "needs_subtitle_setup_after_prehrajto_processing": 8247
