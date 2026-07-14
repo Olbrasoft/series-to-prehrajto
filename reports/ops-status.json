@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 165979,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 27522,
+    "uploaded_episodes": 27523,
     "prepared_source_episodes": 45839,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 246,
-    "language_whisper_attempted_sources": 32,
-    "language_pending_whisper_sources": 2624,
+    "language_audited_sources": 40,
+    "language_whisper_attempted_sources": 40,
+    "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 52867,
     "whisper_review_pending_sources": 49870,
     "subtitle_followup_sources": 9928,
@@ -20,10 +20,50 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-07-14T23:30:37Z",
+      "databaseId": 29376344449,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-14T23:30:37Z",
+      "databaseId": 29376344272,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-14T23:30:33Z",
+      "databaseId": 29376341114,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-14T23:30:30Z",
+      "databaseId": 29376339240,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-14T23:30:11Z",
+      "databaseId": 29376322633,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-14T23:29:08Z",
       "databaseId": 29376272101,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -31,15 +71,15 @@
       "createdAt": "2026-07-14T23:29:05Z",
       "databaseId": 29376269883,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "sync"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-07-14T23:27:48Z",
       "databaseId": 29376208697,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -75,11 +115,11 @@
       "workflowName": "process-whisper-review"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-14T23:23:09Z",
       "databaseId": 29375970689,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -134,46 +174,6 @@
       "conclusion": "success",
       "createdAt": "2026-07-14T23:05:58Z",
       "databaseId": 29375093055,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-14T23:05:54Z",
-      "databaseId": 29375089366,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-14T23:03:12Z",
-      "databaseId": 29374946512,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-14T23:03:08Z",
-      "databaseId": 29374942594,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-07-14T23:02:48Z",
-      "databaseId": 29374924625,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-14T23:02:04Z",
-      "databaseId": 29374885488,
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-watchdog"
@@ -115441,6 +115441,11 @@
         "video_id": 27493226
       },
       {
+        "episode_id": 45902,
+        "display_name": "Svatyně S01E10 - Válečníci CZ Dabing",
+        "video_id": 27493247
+      },
+      {
         "episode_id": 51575,
         "display_name": "Ripper Street S04E06 - 6. epizoda CZ Titulky",
         "video_id": 27492787
@@ -230698,6 +230703,11 @@
         "video_id": 27493226
       },
       {
+        "episode_id": 45902,
+        "display_name": "Svatyně S01E10 - Válečníci CZ Dabing",
+        "video_id": 27493247
+      },
+      {
         "episode_id": 51575,
         "display_name": "Ripper Street S04E06 - 6. epizoda CZ Titulky",
         "video_id": 27492787
@@ -231957,8 +231967,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 214,
-    "ok": 31,
+    "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
