@@ -1,29 +1,69 @@
 {
   "counts": {
-    "backlog_episodes": 166201,
-    "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 27271,
-    "prepared_source_episodes": 44402,
+    "backlog_episodes": 166090,
+    "manifest_upload_ready_episodes": 1001,
+    "uploaded_episodes": 27281,
+    "prepared_source_episodes": 44379,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 60,
-    "language_whisper_attempted_sources": 60,
-    "language_pending_whisper_sources": 2604,
+    "language_audited_sources": 20,
+    "language_whisper_attempted_sources": 20,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 51244,
-    "whisper_review_pending_sources": 48227,
+    "whisper_review_pending_sources": 48207,
     "subtitle_followup_sources": 9473,
     "subtitle_followup_pending_sources": 9473
   },
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-07-14T15:52:09Z",
+      "databaseId": 29347218655,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-14T15:52:05Z",
+      "databaseId": 29347214606,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-14T15:44:23Z",
+      "databaseId": 29346655664,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-14T15:41:40Z",
+      "databaseId": 29346452644,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-14T15:35:37Z",
+      "databaseId": 29346012973,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "refresh-backlog"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-14T15:32:12Z",
       "databaseId": 29345757335,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-status"
     },
     {
@@ -43,11 +83,11 @@
       "workflowName": "prepare-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-14T15:28:32Z",
       "databaseId": 29345485036,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -75,19 +115,19 @@
       "workflowName": "prepare-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-14T15:26:35Z",
       "databaseId": 29345344401,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-14T15:26:33Z",
       "databaseId": 29345341727,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -107,19 +147,19 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-07-14T15:25:27Z",
       "databaseId": 29345263082,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-07-14T15:13:27Z",
       "databaseId": 29344385795,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "sync"
     },
     {
@@ -137,46 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-14T14:55:50Z",
-      "databaseId": 29343049286,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-14T14:54:47Z",
-      "databaseId": 29342968814,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-14T14:54:40Z",
-      "databaseId": 29342961128,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-14T14:53:33Z",
-      "databaseId": 29342877848,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-14T14:53:28Z",
-      "databaseId": 29342872077,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
     }
   ],
   "gaps": {
@@ -114216,6 +114216,26 @@
         "video_id": 27484679
       },
       {
+        "episode_id": 94172,
+        "display_name": "The Get Down S01E04 - 4. epizoda CZ Titulky",
+        "video_id": 27484707
+      },
+      {
+        "episode_id": 94174,
+        "display_name": "The Get Down S01E06 - 6. epizoda CZ Titulky",
+        "video_id": 27484738
+      },
+      {
+        "episode_id": 111314,
+        "display_name": "Velká láska S01E01 - Pilot CZ Dabing",
+        "video_id": 27484796
+      },
+      {
+        "episode_id": 111304,
+        "display_name": "Velká láska S01E03 - Zásah do soukromí CZ Dabing",
+        "video_id": 27484934
+      },
+      {
         "episode_id": 50953,
         "display_name": "Killjoys - Vesmírní lovci S03E05 - Útok na Rack CZ Dabing",
         "video_id": 27484154
@@ -114284,6 +114304,36 @@
         "episode_id": 169943,
         "display_name": "Harry a Meghan S01E01 - 1. epizoda CZ Dabing",
         "video_id": 27484629
+      },
+      {
+        "episode_id": 169945,
+        "display_name": "Harry a Meghan S01E02 - 2. epizoda CZ Dabing",
+        "video_id": 27484714
+      },
+      {
+        "episode_id": 63511,
+        "display_name": "Chalífát S01E01 - 1. epizoda CZ Dabing",
+        "video_id": 27484757
+      },
+      {
+        "episode_id": 63513,
+        "display_name": "Chalífát S01E02 - 2. epizoda CZ Dabing",
+        "video_id": 27484817
+      },
+      {
+        "episode_id": 63509,
+        "display_name": "Chalífát S01E05 - 5. epizoda CZ Dabing",
+        "video_id": 27484892
+      },
+      {
+        "episode_id": 63515,
+        "display_name": "Chalífát S01E07 - 7. epizoda CZ Dabing",
+        "video_id": 27484980
+      },
+      {
+        "episode_id": 56819,
+        "display_name": "Salvation S02E04 - Nedělitelný CZ Dabing",
+        "video_id": 27485047
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -228218,6 +228268,26 @@
         "video_id": 27484679
       },
       {
+        "episode_id": 94172,
+        "display_name": "The Get Down S01E04 - 4. epizoda CZ Titulky",
+        "video_id": 27484707
+      },
+      {
+        "episode_id": 94174,
+        "display_name": "The Get Down S01E06 - 6. epizoda CZ Titulky",
+        "video_id": 27484738
+      },
+      {
+        "episode_id": 111314,
+        "display_name": "Velká láska S01E01 - Pilot CZ Dabing",
+        "video_id": 27484796
+      },
+      {
+        "episode_id": 111304,
+        "display_name": "Velká láska S01E03 - Zásah do soukromí CZ Dabing",
+        "video_id": 27484934
+      },
+      {
         "episode_id": 50953,
         "display_name": "Killjoys - Vesmírní lovci S03E05 - Útok na Rack CZ Dabing",
         "video_id": 27484154
@@ -228286,6 +228356,36 @@
         "episode_id": 169943,
         "display_name": "Harry a Meghan S01E01 - 1. epizoda CZ Dabing",
         "video_id": 27484629
+      },
+      {
+        "episode_id": 169945,
+        "display_name": "Harry a Meghan S01E02 - 2. epizoda CZ Dabing",
+        "video_id": 27484714
+      },
+      {
+        "episode_id": 63511,
+        "display_name": "Chalífát S01E01 - 1. epizoda CZ Dabing",
+        "video_id": 27484757
+      },
+      {
+        "episode_id": 63513,
+        "display_name": "Chalífát S01E02 - 2. epizoda CZ Dabing",
+        "video_id": 27484817
+      },
+      {
+        "episode_id": 63509,
+        "display_name": "Chalífát S01E05 - 5. epizoda CZ Dabing",
+        "video_id": 27484892
+      },
+      {
+        "episode_id": 63515,
+        "display_name": "Chalífát S01E07 - 7. epizoda CZ Dabing",
+        "video_id": 27484980
+      },
+      {
+        "episode_id": 56819,
+        "display_name": "Salvation S02E04 - Nedělitelný CZ Dabing",
+        "video_id": 27485047
       }
     ],
     "prepared_not_upload_ready": [
@@ -228600,166 +228700,6 @@
         "status": "whisper_failed"
       },
       {
-        "episode_id": 39989,
-        "source_id": -14695883872431456,
-        "series_title": "Babylon 5",
-        "episode_code": "S04E01",
-        "source_title": "Babylon 5 S04E01 ⭐Boyd",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39989,
-        "source_id": -40435565893254619,
-        "series_title": "Babylon 5",
-        "episode_code": "S04E01",
-        "source_title": "Babylon 5 S04E01 DoDo",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39989,
-        "source_id": -50098926631628302,
-        "series_title": "Babylon 5",
-        "episode_code": "S04E01",
-        "source_title": "Babylon 5 S04E01 ⭐GG⭐",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39989,
-        "source_id": -15595535999854620,
-        "series_title": "Babylon 5",
-        "episode_code": "S04E01",
-        "source_title": "Babylon 5 S04E01By DRAGOUN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39989,
-        "source_id": -63603569182119051,
-        "series_title": "Babylon 5",
-        "episode_code": "S04E01",
-        "source_title": "Babylon 5 S04E01 1080p SK",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39971,
-        "source_id": -56629478540744596,
-        "series_title": "Babylon 5",
-        "episode_code": "S04E02",
-        "source_title": "Babylon 5 S04E02-22 1996 SK dab - Whatever Happened to Mr. Garibaldi",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39971,
-        "source_id": -42322897230744721,
-        "series_title": "Babylon 5",
-        "episode_code": "S04E02",
-        "source_title": "Babylon 5 S04E02 SkDab",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39971,
-        "source_id": -39748089315160564,
-        "series_title": "Babylon 5",
-        "episode_code": "S04E02",
-        "source_title": "Babylon 5 - S4E2 Epizoda 2 SK",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39971,
-        "source_id": -14646030579642963,
-        "series_title": "Babylon 5",
-        "episode_code": "S04E02",
-        "source_title": "Babylon 5 S04E02 1080p SK",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39971,
-        "source_id": -18619868492990236,
-        "series_title": "Babylon 5",
-        "episode_code": "S04E02",
-        "source_title": "Babylon 5 S04E02 DoDo",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39971,
-        "source_id": -58677541145201650,
-        "series_title": "Babylon 5",
-        "episode_code": "S04E02",
-        "source_title": "Babylon 5 S04E02 ⭐GG⭐",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39971,
-        "source_id": -15179948557508476,
-        "series_title": "Babylon 5",
-        "episode_code": "S04E02",
-        "source_title": "Babylon 5 S04E02By DRAGOUN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39971,
-        "source_id": -8378400974663733,
-        "series_title": "Babylon 5",
-        "episode_code": "S04E02",
-        "source_title": "Babylon 5 S04E02⭐GT⭐",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39972,
-        "source_id": -67684976677847554,
-        "series_title": "Babylon 5",
-        "episode_code": "S04E03",
-        "source_title": "Babylon 5 S04E03 1080p SK",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39972,
-        "source_id": -24230038894664586,
-        "series_title": "Babylon 5",
-        "episode_code": "S04E03",
-        "source_title": "Babylon 5 S04E03 SkDab",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39972,
-        "source_id": -13434761138758081,
-        "series_title": "Babylon 5",
-        "episode_code": "S04E03",
-        "source_title": "Babylon 5 - S4E3 Epizoda 3 SK",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39972,
-        "source_id": -33404880202003270,
-        "series_title": "Babylon 5",
-        "episode_code": "S04E03",
-        "source_title": "Babylon 5 S04E03 ⭐Boyd",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39972,
-        "source_id": -29938146607090319,
-        "series_title": "Babylon 5",
-        "episode_code": "S04E03",
-        "source_title": "Babylon 5 S04E03 ⭐GG⭐",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39972,
-        "source_id": -1555074510203305,
-        "series_title": "Babylon 5",
-        "episode_code": "S04E03",
-        "source_title": "Babylon 5 S04E03 DoDo",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39972,
-        "source_id": -45011283982546415,
-        "series_title": "Babylon 5",
-        "episode_code": "S04E03",
-        "source_title": "Babylon 5 S04E03By DRAGOUN",
-        "status": "needs_whisper"
-      },
-      {
         "episode_id": 39972,
         "source_id": -3013023252844210,
         "series_title": "Babylon 5",
@@ -228989,6 +228929,166 @@
         "series_title": "Babylon 5",
         "episode_code": "S04E07",
         "source_title": "Babylon 5 S04E07⭐GT⭐",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39974,
+        "source_id": -1109563472308254,
+        "series_title": "Babylon 5",
+        "episode_code": "S04E07",
+        "source_title": "Babylon 5 S04E07 Predtucha",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39939,
+        "source_id": -61389523065047066,
+        "series_title": "Babylon 5",
+        "episode_code": "S04E08",
+        "source_title": "Babylon 5 S04E08 1080p SK",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39939,
+        "source_id": -11068309220676231,
+        "series_title": "Babylon 5",
+        "episode_code": "S04E08",
+        "source_title": "Babylon 5 S04E08 SkDab",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39939,
+        "source_id": -71978664312890099,
+        "series_title": "Babylon 5",
+        "episode_code": "S04E08",
+        "source_title": "Babylon 5 - S4E8 Epizoda 8 SK",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39939,
+        "source_id": -54481458418667215,
+        "series_title": "Babylon 5",
+        "episode_code": "S04E08",
+        "source_title": "Babylon 5 S04E08 ⭐GG⭐",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39939,
+        "source_id": -66344997371919606,
+        "series_title": "Babylon 5",
+        "episode_code": "S04E08",
+        "source_title": "Babylon 5 S04E08 DoDo",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39939,
+        "source_id": -59820593972682816,
+        "series_title": "Babylon 5",
+        "episode_code": "S04E08",
+        "source_title": "Babylon 5 S04E08By DRAGOUN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39939,
+        "source_id": -70196262257781806,
+        "series_title": "Babylon 5",
+        "episode_code": "S04E08",
+        "source_title": "Babylon 5 S04E08⭐GT⭐",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39939,
+        "source_id": -59516347064623885,
+        "series_title": "Babylon 5",
+        "episode_code": "S04E08",
+        "source_title": "Babylon 5 S04E08 Ilúzia pravdy.mkv",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39975,
+        "source_id": -17063433965725290,
+        "series_title": "Babylon 5",
+        "episode_code": "S04E09",
+        "source_title": "Babylon 5 S04E09 ⭐Boyd",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39975,
+        "source_id": -32926152537402446,
+        "series_title": "Babylon 5",
+        "episode_code": "S04E09",
+        "source_title": "Babylon 5 S04E09 ⭐GG⭐",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39975,
+        "source_id": -44950981117780020,
+        "series_title": "Babylon 5",
+        "episode_code": "S04E09",
+        "source_title": "Babylon 5 S04E09 DoDo",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39975,
+        "source_id": -39436835221731113,
+        "series_title": "Babylon 5",
+        "episode_code": "S04E09",
+        "source_title": "Babylon 5 S04E09By DRAGOUN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39975,
+        "source_id": -28380299952297775,
+        "series_title": "Babylon 5",
+        "episode_code": "S04E09",
+        "source_title": "Babylon 5 S04E09⭐GT⭐",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39975,
+        "source_id": -18684774488220248,
+        "series_title": "Babylon 5",
+        "episode_code": "S04E09",
+        "source_title": "Babylon 5 S04E09 1080p SK",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39975,
+        "source_id": -69422669534370926,
+        "series_title": "Babylon 5",
+        "episode_code": "S04E09",
+        "source_title": "Babylon 5 S04E09 SkDab",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39991,
+        "source_id": -43689668540926842,
+        "series_title": "Babylon 5",
+        "episode_code": "S04E10",
+        "source_title": "Babylon 5 S04E10 ⭐Boyd",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39991,
+        "source_id": -12681088608615218,
+        "series_title": "Babylon 5",
+        "episode_code": "S04E10",
+        "source_title": "Babylon 5 S04E10 DoDo",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39991,
+        "source_id": -49901544435917866,
+        "series_title": "Babylon 5",
+        "episode_code": "S04E10",
+        "source_title": "Babylon 5 S04E10 ⭐GG⭐",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 39991,
+        "source_id": -67678441538754895,
+        "series_title": "Babylon 5",
+        "episode_code": "S04E10",
+        "source_title": "Babylon 5 S04E10By DRAGOUN",
         "status": "needs_whisper"
       }
     ],
@@ -229447,14 +229547,14 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 59,
+    "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
-    "whisper_non_cz_needs_subtitles": 1881,
-    "whisper_confirmed_cz": 1136,
+    "whisper_non_cz_needs_subtitles": 1893,
+    "whisper_confirmed_cz": 1144,
     "whisper_failed": 3,
-    "needs_whisper": 48224
+    "needs_whisper": 48204
   },
   "subtitle_followup_statuses": {
     "needs_subtitle_setup_after_prehrajto_processing": 9473
