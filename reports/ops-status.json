@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 166523,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 26869,
+    "uploaded_episodes": 26877,
     "prepared_source_episodes": 43084,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 848,
-    "language_whisper_attempted_sources": 63,
-    "language_pending_whisper_sources": 2624,
+    "language_audited_sources": 40,
+    "language_whisper_attempted_sources": 40,
+    "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 50419,
     "whisper_review_pending_sources": 47682,
     "subtitle_followup_sources": 9236,
@@ -20,10 +20,58 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-07-14T07:36:39Z",
+      "databaseId": 29315135964,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-14T07:35:34Z",
+      "databaseId": 29315076886,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-14T07:35:34Z",
+      "databaseId": 29315076749,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-14T07:30:13Z",
+      "databaseId": 29314769445,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-14T07:30:11Z",
+      "databaseId": 29314766878,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-14T07:30:09Z",
+      "databaseId": 29314764854,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-14T07:29:07Z",
       "databaseId": 29314706953,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -83,11 +131,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-07-14T07:04:31Z",
       "databaseId": 29313352835,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -129,54 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-14T06:57:36Z",
-      "databaseId": 29312969580,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-07-14T06:54:39Z",
-      "databaseId": 29312810490,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-14T06:54:31Z",
-      "databaseId": 29312803447,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "refresh-backlog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-07-14T06:53:33Z",
-      "databaseId": 29312750904,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-14T06:48:03Z",
-      "databaseId": 29312459870,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-14T06:46:21Z",
-      "databaseId": 29312372864,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
     }
   ],
   "gaps": {
@@ -112216,6 +112216,36 @@
         "video_id": 27471715
       },
       {
+        "episode_id": 125178,
+        "display_name": "Soví dům S01E13 - První den CZ Dabing",
+        "video_id": 27471745
+      },
+      {
+        "episode_id": 125182,
+        "display_name": "Soví dům S01E15 - Porozumět Willow CZ Dabing",
+        "video_id": 27471767
+      },
+      {
+        "episode_id": 125176,
+        "display_name": "Soví dům S01E16 - Strach ze Slizu CZ Dabing",
+        "video_id": 27471792
+      },
+      {
+        "episode_id": 125190,
+        "display_name": "Soví dům S01E17 - Hrát jako čarodějky CZ Dabing",
+        "video_id": 27471813
+      },
+      {
+        "episode_id": 140108,
+        "display_name": "Soví dům S03E01 - 1. epizoda CZ Dabing",
+        "video_id": 27471840
+      },
+      {
+        "episode_id": 140110,
+        "display_name": "Soví dům S03E03 - 3. epizoda CZ Dabing",
+        "video_id": 27471887
+      },
+      {
         "episode_id": 82181,
         "display_name": "Troufalky S04E10 - Báječná chvíle CZ Dabing",
         "video_id": 27470998
@@ -112274,6 +112304,16 @@
         "episode_id": 83763,
         "display_name": "Vinyl S01E07 - Král a já CZ Dabing",
         "video_id": 27471640
+      },
+      {
+        "episode_id": 83767,
+        "display_name": "Vinyl S01E08 - E, A, H CZ Dabing",
+        "video_id": 27471768
+      },
+      {
+        "episode_id": 83769,
+        "display_name": "Vinyl S01E09 - Královna rocknrollu CZ Dabing",
+        "video_id": 27471860
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -224208,6 +224248,36 @@
         "video_id": 27471715
       },
       {
+        "episode_id": 125178,
+        "display_name": "Soví dům S01E13 - První den CZ Dabing",
+        "video_id": 27471745
+      },
+      {
+        "episode_id": 125182,
+        "display_name": "Soví dům S01E15 - Porozumět Willow CZ Dabing",
+        "video_id": 27471767
+      },
+      {
+        "episode_id": 125176,
+        "display_name": "Soví dům S01E16 - Strach ze Slizu CZ Dabing",
+        "video_id": 27471792
+      },
+      {
+        "episode_id": 125190,
+        "display_name": "Soví dům S01E17 - Hrát jako čarodějky CZ Dabing",
+        "video_id": 27471813
+      },
+      {
+        "episode_id": 140108,
+        "display_name": "Soví dům S03E01 - 1. epizoda CZ Dabing",
+        "video_id": 27471840
+      },
+      {
+        "episode_id": 140110,
+        "display_name": "Soví dům S03E03 - 3. epizoda CZ Dabing",
+        "video_id": 27471887
+      },
+      {
         "episode_id": 82181,
         "display_name": "Troufalky S04E10 - Báječná chvíle CZ Dabing",
         "video_id": 27470998
@@ -224266,6 +224336,16 @@
         "episode_id": 83763,
         "display_name": "Vinyl S01E07 - Král a já CZ Dabing",
         "video_id": 27471640
+      },
+      {
+        "episode_id": 83767,
+        "display_name": "Vinyl S01E08 - E, A, H CZ Dabing",
+        "video_id": 27471768
+      },
+      {
+        "episode_id": 83769,
+        "display_name": "Vinyl S01E09 - Královna rocknrollu CZ Dabing",
+        "video_id": 27471860
       }
     ],
     "prepared_not_upload_ready": [
@@ -225427,8 +225507,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 785,
-    "ok": 62,
+    "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
