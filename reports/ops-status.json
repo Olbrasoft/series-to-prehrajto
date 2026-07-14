@@ -2,22 +2,46 @@
   "counts": {
     "backlog_episodes": 165979,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 27484,
+    "uploaded_episodes": 27488,
     "prepared_source_episodes": 45628,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 323,
-    "language_whisper_attempted_sources": 82,
-    "language_pending_whisper_sources": 2624,
+    "language_audited_sources": 40,
+    "language_whisper_attempted_sources": 40,
+    "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 52662,
     "whisper_review_pending_sources": 49605,
     "subtitle_followup_sources": 9856,
     "subtitle_followup_pending_sources": 9856
   },
   "workflow_runs": [
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-14T23:02:48Z",
+      "databaseId": 29374924625,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-14T23:02:04Z",
+      "databaseId": 29374885488,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-14T23:01:16Z",
+      "databaseId": 29374845317,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
     {
       "conclusion": "",
       "createdAt": "2026-07-14T23:00:23Z",
@@ -43,11 +67,11 @@
       "workflowName": "process-whisper-review"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-14T22:58:58Z",
       "databaseId": 29374724816,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -83,11 +107,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-14T22:54:21Z",
       "databaseId": 29374485332,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -153,30 +177,6 @@
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-14T22:33:44Z",
-      "databaseId": 29373396401,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-07-14T22:31:30Z",
-      "databaseId": 29373272354,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-14T22:31:16Z",
-      "databaseId": 29373259051,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
     }
   ],
   "gaps": {
@@ -115346,9 +115346,29 @@
         "video_id": 27492757
       },
       {
+        "episode_id": 50588,
+        "display_name": "Tyran S01E07 - 7. epizoda CZ Dabing",
+        "video_id": 27492788
+      },
+      {
+        "episode_id": 50590,
+        "display_name": "Tyran S01E09 - 9. epizoda CZ Dabing",
+        "video_id": 27492806
+      },
+      {
         "episode_id": 51575,
         "display_name": "Ripper Street S04E06 - 6. epizoda CZ Titulky",
         "video_id": 27492787
+      },
+      {
+        "episode_id": 51597,
+        "display_name": "Ripper Street S05E06 - 6. epizoda CZ Titulky",
+        "video_id": 27492798
+      },
+      {
+        "episode_id": 64093,
+        "display_name": "Dívka, která se třpytila S01E01 - Řezné rány CZ Dabing",
+        "video_id": 27492812
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -230413,9 +230433,29 @@
         "video_id": 27492757
       },
       {
+        "episode_id": 50588,
+        "display_name": "Tyran S01E07 - 7. epizoda CZ Dabing",
+        "video_id": 27492788
+      },
+      {
+        "episode_id": 50590,
+        "display_name": "Tyran S01E09 - 9. epizoda CZ Dabing",
+        "video_id": 27492806
+      },
+      {
         "episode_id": 51575,
         "display_name": "Ripper Street S04E06 - 6. epizoda CZ Titulky",
         "video_id": 27492787
+      },
+      {
+        "episode_id": 51597,
+        "display_name": "Ripper Street S05E06 - 6. epizoda CZ Titulky",
+        "video_id": 27492798
+      },
+      {
+        "episode_id": 64093,
+        "display_name": "Dívka, která se třpytila S01E01 - Řezné rány CZ Dabing",
+        "video_id": 27492812
       }
     ],
     "prepared_not_upload_ready": [
@@ -231577,8 +231617,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 81,
-    "disabled": 241,
+    "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
