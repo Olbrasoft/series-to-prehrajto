@@ -2,36 +2,68 @@
   "counts": {
     "backlog_episodes": 166885,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 26482,
-    "prepared_source_episodes": 42070,
+    "uploaded_episodes": 26483,
+    "prepared_source_episodes": 42129,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 346,
+    "language_audited_sources": 640,
     "language_whisper_attempted_sources": 40,
     "language_pending_whisper_sources": 2604,
-    "whisper_review_sources": 49045,
-    "whisper_review_pending_sources": 46308,
-    "subtitle_followup_sources": 9015,
-    "subtitle_followup_pending_sources": 9015
+    "whisper_review_sources": 49217,
+    "whisper_review_pending_sources": 46480,
+    "subtitle_followup_sources": 9025,
+    "subtitle_followup_pending_sources": 9025
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-07-14T00:54:18Z",
-      "databaseId": 29297179722,
+      "createdAt": "2026-07-14T00:57:13Z",
+      "databaseId": 29297308781,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-07-14T00:57:07Z",
+      "databaseId": 29297304394,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-14T00:56:41Z",
+      "databaseId": 29297286924,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-14T00:55:21Z",
+      "databaseId": 29297226807,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-14T00:54:18Z",
+      "databaseId": 29297179722,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "cancelled",
       "createdAt": "2026-07-14T00:54:14Z",
       "databaseId": 29297176411,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -63,7 +95,7 @@
       "createdAt": "2026-07-14T00:48:15Z",
       "databaseId": 29296906636,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "sync"
     },
     {
@@ -142,38 +174,6 @@
       "conclusion": "success",
       "createdAt": "2026-07-14T00:19:36Z",
       "databaseId": 29295611089,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-14T00:19:22Z",
-      "databaseId": 29295601219,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-14T00:18:35Z",
-      "databaseId": 29295565882,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-07-14T00:18:30Z",
-      "databaseId": 29295562727,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-14T00:04:13Z",
-      "databaseId": 29294884655,
       "headBranch": "main",
       "status": "completed",
       "workflowName": "update-descriptions"
@@ -110266,6 +110266,11 @@
         "video_id": 27458136
       },
       {
+        "episode_id": 53988,
+        "display_name": "Wentworth S09E08 - 8. epizoda CZ Titulky",
+        "video_id": 27458233
+      },
+      {
         "episode_id": 58997,
         "display_name": "Záměna  S05E07 - 7. epizoda CZ Titulky",
         "video_id": 27456950
@@ -220323,6 +220328,11 @@
         "video_id": 27458136
       },
       {
+        "episode_id": 53988,
+        "display_name": "Wentworth S09E08 - 8. epizoda CZ Titulky",
+        "video_id": 27458233
+      },
+      {
         "episode_id": 58997,
         "display_name": "Záměna  S05E07 - 7. epizoda CZ Titulky",
         "video_id": 27456950
@@ -221557,7 +221567,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 306,
+    "disabled": 600,
     "ok": 39,
     "resolve_failed": 1
   },
@@ -221565,9 +221575,9 @@
     "whisper_non_cz_needs_subtitles": 1700,
     "whisper_confirmed_cz": 1037,
     "whisper_failed": 3,
-    "needs_whisper": 46305
+    "needs_whisper": 46477
   },
   "subtitle_followup_statuses": {
-    "needs_subtitle_setup_after_prehrajto_processing": 9015
+    "needs_subtitle_setup_after_prehrajto_processing": 9025
   }
 }
