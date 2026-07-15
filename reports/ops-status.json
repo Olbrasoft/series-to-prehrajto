@@ -2,22 +2,38 @@
   "counts": {
     "backlog_episodes": 165472,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 27893,
-    "prepared_source_episodes": 46916,
+    "uploaded_episodes": 27894,
+    "prepared_source_episodes": 47030,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 60,
-    "language_whisper_attempted_sources": 60,
+    "language_audited_sources": 104,
+    "language_whisper_attempted_sources": 89,
     "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 54398,
-    "whisper_review_pending_sources": 51321,
-    "subtitle_followup_sources": 10196,
-    "subtitle_followup_pending_sources": 10196
+    "whisper_review_pending_sources": 51279,
+    "subtitle_followup_sources": 10214,
+    "subtitle_followup_pending_sources": 10214
   },
   "workflow_runs": [
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-15T07:04:26Z",
+      "databaseId": 29396149601,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-15T07:01:02Z",
+      "databaseId": 29395961643,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
     {
       "conclusion": "success",
       "createdAt": "2026-07-15T06:59:50Z",
@@ -35,11 +51,11 @@
       "workflowName": "audit-language"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-15T06:59:35Z",
       "databaseId": 29395877471,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -161,22 +177,6 @@
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-15T06:14:21Z",
-      "databaseId": 29393625556,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-15T06:08:56Z",
-      "databaseId": 29393367429,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
     }
   ],
   "gaps": {
@@ -117394,6 +117394,11 @@
         "episode_id": 49891,
         "display_name": "Beze stopy S01E13 - Opři se o mne CZ Dabing",
         "video_id": 27500074
+      },
+      {
+        "episode_id": 49839,
+        "display_name": "Beze stopy S01E20 - Už dost CZ Dabing",
+        "video_id": 27500127
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -234506,6 +234511,11 @@
         "episode_id": 49891,
         "display_name": "Beze stopy S01E13 - Opři se o mne CZ Dabing",
         "video_id": 27500074
+      },
+      {
+        "episode_id": 49839,
+        "display_name": "Beze stopy S01E20 - Už dost CZ Dabing",
+        "video_id": 27500127
       }
     ],
     "prepared_not_upload_ready": [
@@ -235667,16 +235677,17 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 59,
+    "ok": 88,
+    "disabled": 15,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
-    "whisper_non_cz_needs_subtitles": 1909,
-    "whisper_confirmed_cz": 1168,
-    "needs_whisper": 51318,
+    "whisper_non_cz_needs_subtitles": 1924,
+    "whisper_confirmed_cz": 1195,
+    "needs_whisper": 51276,
     "whisper_failed": 3
   },
   "subtitle_followup_statuses": {
-    "needs_subtitle_setup_after_prehrajto_processing": 10196
+    "needs_subtitle_setup_after_prehrajto_processing": 10214
   }
 }
