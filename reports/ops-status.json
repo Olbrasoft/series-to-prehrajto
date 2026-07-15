@@ -2,36 +2,116 @@
   "counts": {
     "backlog_episodes": 165744,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 27623,
-    "prepared_source_episodes": 45993,
+    "uploaded_episodes": 27643,
+    "prepared_source_episodes": 45978,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 60,
-    "language_whisper_attempted_sources": 60,
-    "language_pending_whisper_sources": 2604,
+    "language_audited_sources": 20,
+    "language_whisper_attempted_sources": 20,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 52932,
-    "whisper_review_pending_sources": 49915,
+    "whisper_review_pending_sources": 49895,
     "subtitle_followup_sources": 9967,
     "subtitle_followup_pending_sources": 9967
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-07-15T00:47:04Z",
-      "databaseId": 29379974350,
+      "createdAt": "2026-07-15T01:10:57Z",
+      "databaseId": 29380995720,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-07-15T01:10:53Z",
+      "databaseId": 29380992902,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-15T01:01:30Z",
+      "databaseId": 29380595071,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-sources"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-15T00:59:09Z",
+      "databaseId": 29380488858,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-07-15T00:59:07Z",
+      "databaseId": 29380487585,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-15T00:56:18Z",
+      "databaseId": 29380370600,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-15T00:55:37Z",
+      "databaseId": 29380342409,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-07-15T00:48:30Z",
+      "databaseId": 29380037175,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-15T00:48:12Z",
+      "databaseId": 29380023936,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-15T00:48:08Z",
+      "databaseId": 29380020877,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-15T00:47:04Z",
+      "databaseId": 29379974350,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-15T00:46:59Z",
       "databaseId": 29379970075,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
@@ -47,7 +127,7 @@
       "createdAt": "2026-07-15T00:41:12Z",
       "databaseId": 29379710472,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "sync"
     },
     {
@@ -97,86 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-15T00:31:50Z",
-      "databaseId": 29379293295,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-15T00:31:45Z",
-      "databaseId": 29379289872,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-15T00:31:32Z",
-      "databaseId": 29379279835,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-15T00:27:44Z",
-      "databaseId": 29379104229,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-07-15T00:27:40Z",
-      "databaseId": 29379101405,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-15T00:23:33Z",
-      "databaseId": 29378909572,
-      "headBranch": "main",
-      "status": "pending",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-15T00:17:51Z",
-      "databaseId": 29378643039,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-15T00:10:29Z",
-      "databaseId": 29378295694,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-15T00:10:26Z",
-      "databaseId": 29378293627,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-15T00:10:24Z",
-      "databaseId": 29378292108,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
     }
   ],
   "gaps": {
@@ -116016,6 +116016,36 @@
         "video_id": 27494565
       },
       {
+        "episode_id": 30102,
+        "display_name": "The Rising of the Shield Hero S04E04 - 4. epizoda CZ Dabing",
+        "video_id": 27494593
+      },
+      {
+        "episode_id": 30106,
+        "display_name": "The Rising of the Shield Hero S04E08 - 8. epizoda CZ Dabing",
+        "video_id": 27494612
+      },
+      {
+        "episode_id": 164350,
+        "display_name": "Kdo je Erin Carterová? S01E02 - 2. epizoda CZ Dabing",
+        "video_id": 27494640
+      },
+      {
+        "episode_id": 164352,
+        "display_name": "Kdo je Erin Carterová? S01E05 - 5. epizoda CZ Dabing",
+        "video_id": 27494666
+      },
+      {
+        "episode_id": 164354,
+        "display_name": "Kdo je Erin Carterová? S01E07 - 7. epizoda CZ Dabing",
+        "video_id": 27494695
+      },
+      {
+        "episode_id": 108064,
+        "display_name": "Doktorka Fosterová S01E02 - 2. epizoda CZ Dabing",
+        "video_id": 27494721
+      },
+      {
         "episode_id": 45947,
         "display_name": "Svatyně S04E06 - Návrat domů CZ Dabing",
         "video_id": 27494409
@@ -116044,6 +116074,76 @@
         "episode_id": 88987,
         "display_name": "Paradise PD S03E08 - Vzdušné město CZ Dabing",
         "video_id": 27494547
+      },
+      {
+        "episode_id": 7587,
+        "display_name": "Králičí nora S01E03 - Algoritmy kontroly CZ Dabing",
+        "video_id": 27494572
+      },
+      {
+        "episode_id": 7589,
+        "display_name": "Králičí nora S01E05 - Tom CZ Dabing",
+        "video_id": 27494614
+      },
+      {
+        "episode_id": 173243,
+        "display_name": "Osudová láska Jany Eyrové S01E01 - 1. epizoda CZ Dabing",
+        "video_id": 27494649
+      },
+      {
+        "episode_id": 173245,
+        "display_name": "Osudová láska Jany Eyrové S01E03 - 3. epizoda CZ Dabing",
+        "video_id": 27494681
+      },
+      {
+        "episode_id": 121337,
+        "display_name": "Velká láska S04E05 - Otcovy hříchy CZ Dabing",
+        "video_id": 27494720
+      },
+      {
+        "episode_id": 144391,
+        "display_name": "Má lady Jana S01E02 - Divoch CZ Dabing",
+        "video_id": 27494755
+      },
+      {
+        "episode_id": 144387,
+        "display_name": "Má lady Jana S01E03 - S takovou jako ty CZ Dabing",
+        "video_id": 27494769
+      },
+      {
+        "episode_id": 144389,
+        "display_name": "Má lady Jana S01E06 - Cítím svobodu CZ Dabing",
+        "video_id": 27494784
+      },
+      {
+        "episode_id": 144393,
+        "display_name": "Má lady Jana S01E08 - Bůh ochraňuj královnu CZ Dabing",
+        "video_id": 27494804
+      },
+      {
+        "episode_id": 87859,
+        "display_name": "Nutné k přežití S01E03 - 3. epizoda CZ Dabing",
+        "video_id": 27494831
+      },
+      {
+        "episode_id": 156749,
+        "display_name": "Nutné k přežití S01E13 - 13. epizoda CZ Dabing",
+        "video_id": 27494850
+      },
+      {
+        "episode_id": 172371,
+        "display_name": "Nutné k přežití S02E09 - 9. epizoda CZ Dabing",
+        "video_id": 27494870
+      },
+      {
+        "episode_id": 172373,
+        "display_name": "Nutné k přežití S02E13 - 13. epizoda CZ Dabing",
+        "video_id": 27494885
+      },
+      {
+        "episode_id": 87831,
+        "display_name": "Nutné k přežití S03E01 - 1. epizoda CZ Dabing",
+        "video_id": 27494895
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -231778,6 +231878,36 @@
         "video_id": 27494565
       },
       {
+        "episode_id": 30102,
+        "display_name": "The Rising of the Shield Hero S04E04 - 4. epizoda CZ Dabing",
+        "video_id": 27494593
+      },
+      {
+        "episode_id": 30106,
+        "display_name": "The Rising of the Shield Hero S04E08 - 8. epizoda CZ Dabing",
+        "video_id": 27494612
+      },
+      {
+        "episode_id": 164350,
+        "display_name": "Kdo je Erin Carterová? S01E02 - 2. epizoda CZ Dabing",
+        "video_id": 27494640
+      },
+      {
+        "episode_id": 164352,
+        "display_name": "Kdo je Erin Carterová? S01E05 - 5. epizoda CZ Dabing",
+        "video_id": 27494666
+      },
+      {
+        "episode_id": 164354,
+        "display_name": "Kdo je Erin Carterová? S01E07 - 7. epizoda CZ Dabing",
+        "video_id": 27494695
+      },
+      {
+        "episode_id": 108064,
+        "display_name": "Doktorka Fosterová S01E02 - 2. epizoda CZ Dabing",
+        "video_id": 27494721
+      },
+      {
         "episode_id": 45947,
         "display_name": "Svatyně S04E06 - Návrat domů CZ Dabing",
         "video_id": 27494409
@@ -231806,6 +231936,76 @@
         "episode_id": 88987,
         "display_name": "Paradise PD S03E08 - Vzdušné město CZ Dabing",
         "video_id": 27494547
+      },
+      {
+        "episode_id": 7587,
+        "display_name": "Králičí nora S01E03 - Algoritmy kontroly CZ Dabing",
+        "video_id": 27494572
+      },
+      {
+        "episode_id": 7589,
+        "display_name": "Králičí nora S01E05 - Tom CZ Dabing",
+        "video_id": 27494614
+      },
+      {
+        "episode_id": 173243,
+        "display_name": "Osudová láska Jany Eyrové S01E01 - 1. epizoda CZ Dabing",
+        "video_id": 27494649
+      },
+      {
+        "episode_id": 173245,
+        "display_name": "Osudová láska Jany Eyrové S01E03 - 3. epizoda CZ Dabing",
+        "video_id": 27494681
+      },
+      {
+        "episode_id": 121337,
+        "display_name": "Velká láska S04E05 - Otcovy hříchy CZ Dabing",
+        "video_id": 27494720
+      },
+      {
+        "episode_id": 144391,
+        "display_name": "Má lady Jana S01E02 - Divoch CZ Dabing",
+        "video_id": 27494755
+      },
+      {
+        "episode_id": 144387,
+        "display_name": "Má lady Jana S01E03 - S takovou jako ty CZ Dabing",
+        "video_id": 27494769
+      },
+      {
+        "episode_id": 144389,
+        "display_name": "Má lady Jana S01E06 - Cítím svobodu CZ Dabing",
+        "video_id": 27494784
+      },
+      {
+        "episode_id": 144393,
+        "display_name": "Má lady Jana S01E08 - Bůh ochraňuj královnu CZ Dabing",
+        "video_id": 27494804
+      },
+      {
+        "episode_id": 87859,
+        "display_name": "Nutné k přežití S01E03 - 3. epizoda CZ Dabing",
+        "video_id": 27494831
+      },
+      {
+        "episode_id": 156749,
+        "display_name": "Nutné k přežití S01E13 - 13. epizoda CZ Dabing",
+        "video_id": 27494850
+      },
+      {
+        "episode_id": 172371,
+        "display_name": "Nutné k přežití S02E09 - 9. epizoda CZ Dabing",
+        "video_id": 27494870
+      },
+      {
+        "episode_id": 172373,
+        "display_name": "Nutné k přežití S02E13 - 13. epizoda CZ Dabing",
+        "video_id": 27494885
+      },
+      {
+        "episode_id": 87831,
+        "display_name": "Nutné k přežití S03E01 - 1. epizoda CZ Dabing",
+        "video_id": 27494895
       }
     ],
     "prepared_not_upload_ready": [
@@ -232120,166 +232320,6 @@
         "status": "whisper_failed"
       },
       {
-        "episode_id": 187974,
-        "source_id": -61038744154668439,
-        "series_title": "Americký Drak: Jake Long",
-        "episode_code": "S02E24",
-        "source_title": "Americký Drak Jake Long - 2x24 - Rok Jakea",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 36987,
-        "source_id": -40462790891612711,
-        "series_title": "Andromeda",
-        "episode_code": "S01E19",
-        "source_title": "Andromeda S1E19 Svatební oběť",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 36987,
-        "source_id": -8355750379129280,
-        "series_title": "Andromeda",
-        "episode_code": "S01E19",
-        "source_title": "Andromeda - S01E19 - Svatební oběť",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 36987,
-        "source_id": -48393655658730394,
-        "series_title": "Andromeda",
-        "episode_code": "S01E19",
-        "source_title": "Andromeda S01E19 dyk",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 37067,
-        "source_id": -19546726745589596,
-        "series_title": "Andromeda",
-        "episode_code": "S02E01",
-        "source_title": "Andromeda - S02E01 - The Widening Gyre",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 36991,
-        "source_id": -15513409981572257,
-        "series_title": "Andromeda",
-        "episode_code": "S02E02",
-        "source_title": "Andromeda - S02E02 - Exit Strategies",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 36991,
-        "source_id": -38041445042224258,
-        "series_title": "Andromeda",
-        "episode_code": "S02E02",
-        "source_title": "Andromeda S02E02",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 36992,
-        "source_id": -40881778323689688,
-        "series_title": "Andromeda",
-        "episode_code": "S02E03",
-        "source_title": "Andromeda - S02E03 - A Heart for Falsehood Framed",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 36992,
-        "source_id": -56074737820667499,
-        "series_title": "Andromeda",
-        "episode_code": "S02E03",
-        "source_title": "Andromeda S02E03",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 37071,
-        "source_id": -48517327749033298,
-        "series_title": "Andromeda",
-        "episode_code": "S02E19",
-        "source_title": "Andromeda 2x19.V brise netvora",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 37071,
-        "source_id": -38526820879800292,
-        "series_title": "Andromeda",
-        "episode_code": "S02E19",
-        "source_title": "Andromeda - S02E19 - Belly of the Beast",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 37071,
-        "source_id": -11162064394515690,
-        "series_title": "Andromeda",
-        "episode_code": "S02E19",
-        "source_title": "Andromeda S02E19 dyk",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 37007,
-        "source_id": -20288342515896320,
-        "series_title": "Andromeda",
-        "episode_code": "S02E21",
-        "source_title": "Andromeda 2x21.Dokonaly dojem",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 37007,
-        "source_id": -44769490763246381,
-        "series_title": "Andromeda",
-        "episode_code": "S02E21",
-        "source_title": "Andromeda - S02E21 - Immaculate Perception",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 37009,
-        "source_id": -11485948029588659,
-        "series_title": "Andromeda",
-        "episode_code": "S03E01",
-        "source_title": "Andromeda - S03E01 - If the Wheel Is Fixed",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 37063,
-        "source_id": -6436976164661915,
-        "series_title": "Andromeda",
-        "episode_code": "S03E08",
-        "source_title": "Andromeda - S03E08 - For Whom the Bell Tolls",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 37063,
-        "source_id": -29941371010039584,
-        "series_title": "Andromeda",
-        "episode_code": "S03E08",
-        "source_title": "Andromeda S03E08 dyk",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 37016,
-        "source_id": -66428688664273850,
-        "series_title": "Andromeda",
-        "episode_code": "S03E09",
-        "source_title": "Andromeda - S03E09 - And Your Heart Will Fly Away",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 37022,
-        "source_id": -21014221281130695,
-        "series_title": "Andromeda",
-        "episode_code": "S03E15",
-        "source_title": "Andromeda 3x15.Pribeh patera",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 37022,
-        "source_id": -28272537245417801,
-        "series_title": "Andromeda",
-        "episode_code": "S03E15",
-        "source_title": "Andromeda - S03E15 - What Happens to a Rev Deferred?",
-        "status": "needs_whisper"
-      },
-      {
         "episode_id": 37022,
         "source_id": -26799172557731415,
         "series_title": "Andromeda",
@@ -232509,6 +232549,166 @@
         "series_title": "Baby",
         "episode_code": "S01E01",
         "source_title": "Baby - S01E01 - Superpowers (WEBDL-2160p).mkv",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104627,
+        "source_id": -6927504703548514,
+        "series_title": "Baby",
+        "episode_code": "S01E01",
+        "source_title": "Baby.S01E01.1080p.WEB-DL.DD.5.1.H264-MeGaNFX",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104628,
+        "source_id": -68877948374494762,
+        "series_title": "Baby",
+        "episode_code": "S01E02",
+        "source_title": "Baby - S01E02 - Puppet (WEBDL-2160p).mkv",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104628,
+        "source_id": -60772476127650250,
+        "series_title": "Baby",
+        "episode_code": "S01E02",
+        "source_title": "Baby - S01E02 - Puppet (WEBDL-2160p)",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104628,
+        "source_id": -16722663081889646,
+        "series_title": "Baby",
+        "episode_code": "S01E02",
+        "source_title": "Baby.S01E02.1080p.WEB-DL.DD.5.1.H264-MeGaNFX",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104629,
+        "source_id": -34731595597197293,
+        "series_title": "Baby",
+        "episode_code": "S01E03",
+        "source_title": "Baby - S01E03 - #Friendzone (WEBDL-2160p).mkv",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104629,
+        "source_id": -1756744868476775,
+        "series_title": "Baby",
+        "episode_code": "S01E03",
+        "source_title": "Baby - S01E03 - #Friendzone (WEBDL-2160p)",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104629,
+        "source_id": -24426934704093825,
+        "series_title": "Baby",
+        "episode_code": "S01E03",
+        "source_title": "Man.vs.Baby.S01E03.Chapter.3.2160p.NF.WEB-DL.DDP5.1.Atmos.DV.HDR.H.265-BTBN (1)",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104629,
+        "source_id": -25331399621273539,
+        "series_title": "Baby",
+        "episode_code": "S01E03",
+        "source_title": "Baby.S01E03.1080p.WEB-DL.DD.5.1.H264-MeGaNFX",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104630,
+        "source_id": -67814890637634508,
+        "series_title": "Baby",
+        "episode_code": "S01E04",
+        "source_title": "Baby - S01E04 - Emma (WEBDL-2160p).mkv",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104630,
+        "source_id": -18097681290168337,
+        "series_title": "Baby",
+        "episode_code": "S01E04",
+        "source_title": "Baby - S01E04 - Emma (WEBDL-2160p)",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104630,
+        "source_id": -46321138807065066,
+        "series_title": "Baby",
+        "episode_code": "S01E04",
+        "source_title": "Man.vs.Baby.S01E04.Chapter.4.2160p.NF.WEB-DL.DDP5.1.Atmos.DV.HDR.H.265-BTBN (1)",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104630,
+        "source_id": -40070392230632276,
+        "series_title": "Baby",
+        "episode_code": "S01E04",
+        "source_title": "Baby.S01E04.1080p.WEB-DL.DD.5.1.H264-MeGaNFX",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104631,
+        "source_id": -23951084686115072,
+        "series_title": "Baby",
+        "episode_code": "S01E05",
+        "source_title": "Baby - S01E05 - The Last Shot (WEBDL-2160p)",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104631,
+        "source_id": -20331857560051222,
+        "series_title": "Baby",
+        "episode_code": "S01E05",
+        "source_title": "Baby - S01E05 - The Last Shot (WEBDL-2160p).mkv",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104631,
+        "source_id": -47863473055130962,
+        "series_title": "Baby",
+        "episode_code": "S01E05",
+        "source_title": "Baby_S01E05_Poslední pokus",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104631,
+        "source_id": -54765408242927103,
+        "series_title": "Baby",
+        "episode_code": "S01E05",
+        "source_title": "Baby.S01E05.1080p.WEB-DL.DD.5.1.H264-MeGaNFX",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104632,
+        "source_id": -69460878522728551,
+        "series_title": "Baby",
+        "episode_code": "S01E06",
+        "source_title": "Baby - S01E06 - #Love (WEBDL-2160p)",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104632,
+        "source_id": -4598552616172447,
+        "series_title": "Baby",
+        "episode_code": "S01E06",
+        "source_title": "Baby - S01E06 - #Love (WEBDL-2160p).mkv",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104632,
+        "source_id": -59447790495483591,
+        "series_title": "Baby",
+        "episode_code": "S01E06",
+        "source_title": "Baby_S01E06_#Love",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104632,
+        "source_id": -24008678162260768,
+        "series_title": "Baby",
+        "episode_code": "S01E06",
+        "source_title": "Baby.S01E06.1080p.WEB-DL.DD.5.1.H264-MeGaNFX",
         "status": "needs_whisper"
       }
     ],
@@ -232967,14 +233167,14 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 59,
+    "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
-    "whisper_non_cz_needs_subtitles": 1868,
-    "whisper_confirmed_cz": 1149,
+    "whisper_non_cz_needs_subtitles": 1869,
+    "whisper_confirmed_cz": 1168,
     "whisper_failed": 3,
-    "needs_whisper": 49912
+    "needs_whisper": 49892
   },
   "subtitle_followup_statuses": {
     "needs_subtitle_setup_after_prehrajto_processing": 9967
