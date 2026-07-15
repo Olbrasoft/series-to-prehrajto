@@ -2,22 +2,70 @@
   "counts": {
     "backlog_episodes": 165135,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 28298,
-    "prepared_source_episodes": 47985,
+    "uploaded_episodes": 28334,
+    "prepared_source_episodes": 48031,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 40,
-    "language_whisper_attempted_sources": 40,
+    "language_audited_sources": 260,
+    "language_whisper_attempted_sources": 60,
     "language_pending_whisper_sources": 2604,
-    "whisper_review_sources": 55492,
-    "whisper_review_pending_sources": 52448,
-    "subtitle_followup_sources": 10454,
-    "subtitle_followup_pending_sources": 10454
+    "whisper_review_sources": 55536,
+    "whisper_review_pending_sources": 52492,
+    "subtitle_followup_sources": 10477,
+    "subtitle_followup_pending_sources": 10477
   },
   "workflow_runs": [
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-15T14:30:00Z",
+      "databaseId": 29423813261,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-15T14:17:56Z",
+      "databaseId": 29422928415,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-15T14:14:49Z",
+      "databaseId": 29422697910,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-sources"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-15T13:54:09Z",
+      "databaseId": 29421182338,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-15T13:53:11Z",
+      "databaseId": 29421109325,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-15T13:53:07Z",
+      "databaseId": 29421103660,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
     {
       "conclusion": "success",
       "createdAt": "2026-07-15T13:52:04Z",
@@ -27,11 +75,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-15T13:52:04Z",
       "databaseId": 29421025631,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -43,11 +91,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-15T13:50:45Z",
       "databaseId": 29420930480,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
@@ -59,11 +107,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-07-15T13:50:04Z",
       "databaseId": 29420879400,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -99,11 +147,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-15T13:43:08Z",
       "databaseId": 29420380978,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
@@ -129,54 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-status"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-15T13:33:33Z",
-      "databaseId": 29419690094,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-15T13:32:50Z",
-      "databaseId": 29419637287,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-07-15T13:32:49Z",
-      "databaseId": 29419636929,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-15T13:30:26Z",
-      "databaseId": 29419458895,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-15T13:15:48Z",
-      "databaseId": 29418455601,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-15T13:14:44Z",
-      "databaseId": 29418380468,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
     }
   ],
   "gaps": {
@@ -119416,9 +119416,189 @@
         "video_id": 27505875
       },
       {
+        "episode_id": 10618,
+        "display_name": "Stargirl S01E01 - 1. epizoda CZ Dabing",
+        "video_id": 27505891
+      },
+      {
+        "episode_id": 10616,
+        "display_name": "Stargirl S01E03 - 3. epizoda CZ Dabing",
+        "video_id": 27505910
+      },
+      {
+        "episode_id": 10612,
+        "display_name": "Stargirl S01E08 - 8. epizoda CZ Dabing",
+        "video_id": 27505925
+      },
+      {
+        "episode_id": 10602,
+        "display_name": "Stargirl S01E12 - 12. epizoda CZ Titulky",
+        "video_id": 27505944
+      },
+      {
+        "episode_id": 7494,
+        "display_name": "Stargirl S02E01 - Kapitola první CZ Dabing",
+        "video_id": 27505959
+      },
+      {
+        "episode_id": 7496,
+        "display_name": "Stargirl S02E03 - Kapitola třetí CZ Dabing",
+        "video_id": 27505971
+      },
+      {
+        "episode_id": 25658,
+        "display_name": "Stargirl S02E11 - Kapitola jedenáctá CZ Dabing",
+        "video_id": 27505988
+      },
+      {
+        "episode_id": 10604,
+        "display_name": "Stargirl S03E03 - 3. epizoda CZ Dabing",
+        "video_id": 27506007
+      },
+      {
+        "episode_id": 63312,
+        "display_name": "Cruel Summer S01E05 - Jak to zamýšleli bohové karnevalů CZ Titulky",
+        "video_id": 27506060
+      },
+      {
+        "episode_id": 63314,
+        "display_name": "Cruel Summer S01E08 - Důkaz CZ Titulky",
+        "video_id": 27506137
+      },
+      {
+        "episode_id": 63316,
+        "display_name": "Cruel Summer S01E09 - Moje vlastní tajemství CZ Titulky",
+        "video_id": 27506168
+      },
+      {
+        "episode_id": 63318,
+        "display_name": "Cruel Summer S02E02 - Jízda nebo smrt CZ Titulky",
+        "video_id": 27506208
+      },
+      {
+        "episode_id": 63324,
+        "display_name": "Cruel Summer S02E03 - Krvavé klouby CZ Titulky",
+        "video_id": 27506232
+      },
+      {
+        "episode_id": 63320,
+        "display_name": "Cruel Summer S02E05 - Vše, co chci k Vánocům CZ Titulky",
+        "video_id": 27506256
+      },
+      {
+        "episode_id": 185902,
+        "display_name": "Jessie S01E22 - Ztroskotali jsme CZ Titulky",
+        "video_id": 27506274
+      },
+      {
+        "episode_id": 185918,
+        "display_name": "Jessie S02E12 - Velká hračková loupež CZ Dabing",
+        "video_id": 27506303
+      },
+      {
+        "episode_id": 185930,
+        "display_name": "Jessie S02E26 - Zvláštní jednotka Jessie 1+2.část CZ Dabing",
+        "video_id": 27506323
+      },
+      {
+        "episode_id": 185952,
+        "display_name": "Jessie S03E24 - Přichází nevěsta CZ Dabing",
+        "video_id": 27506342
+      },
+      {
+        "episode_id": 185954,
+        "display_name": "Jessie S03E26 - Dovolená na Havaji CZ Dabing",
+        "video_id": 27506357
+      },
+      {
         "episode_id": 168775,
         "display_name": "Já, Claudius S01E09 - Zdráv buď... ale kdo? CZ Dabing",
         "video_id": 27505879
+      },
+      {
+        "episode_id": 10611,
+        "display_name": "Stargirl S01E07 - 7. epizoda CZ Dabing",
+        "video_id": 27505908
+      },
+      {
+        "episode_id": 7495,
+        "display_name": "Stargirl S02E02 - Kapitola druhá CZ Dabing",
+        "video_id": 27505922
+      },
+      {
+        "episode_id": 7501,
+        "display_name": "Stargirl S02E08 - Kapitola osmá CZ Dabing",
+        "video_id": 27505936
+      },
+      {
+        "episode_id": 25657,
+        "display_name": "Stargirl S02E10 - Kapitola desátá CZ Dabing",
+        "video_id": 27505953
+      },
+      {
+        "episode_id": 25659,
+        "display_name": "Stargirl S02E12 - Kapitola dvanáctá CZ Dabing",
+        "video_id": 27505961
+      },
+      {
+        "episode_id": 10605,
+        "display_name": "Stargirl S03E02 - 2. epizoda CZ Dabing",
+        "video_id": 27505981
+      },
+      {
+        "episode_id": 63313,
+        "display_name": "Cruel Summer S01E06 - Oceán ve mně CZ Titulky",
+        "video_id": 27506004
+      },
+      {
+        "episode_id": 63315,
+        "display_name": "Cruel Summer S01E07 - Všechno nejlepší k narozeninám, Kate Wallis CZ Titulky",
+        "video_id": 27506038
+      },
+      {
+        "episode_id": 63317,
+        "display_name": "Cruel Summer S01E10 - Nepřátelský svědek CZ Titulky",
+        "video_id": 27506133
+      },
+      {
+        "episode_id": 63325,
+        "display_name": "Cruel Summer S02E06 - Ponoření do vody CZ Titulky",
+        "video_id": 27506206
+      },
+      {
+        "episode_id": 63321,
+        "display_name": "Cruel Summer S02E07 - Je to konec světa CZ Titulky",
+        "video_id": 27506247
+      },
+      {
+        "episode_id": 185901,
+        "display_name": "Jessie S01E23 - Děsivá Connie opět na scéně CZ Dabing",
+        "video_id": 27506282
+      },
+      {
+        "episode_id": 185937,
+        "display_name": "Jessie S03E07 - Hodně štěstí CZ Dabing",
+        "video_id": 27506312
+      },
+      {
+        "episode_id": 119899,
+        "display_name": "Pomsta s chutí třešní S01E01 - Existuju CZ Dabing",
+        "video_id": 27506359
+      },
+      {
+        "episode_id": 119901,
+        "display_name": "Pomsta s chutí třešní S01E03 - Římská svíce CZ Dabing",
+        "video_id": 27506423
+      },
+      {
+        "episode_id": 119903,
+        "display_name": "Pomsta s chutí třešní S01E06 - Mléčná lázeň CZ Dabing",
+        "video_id": 27506471
+      },
+      {
+        "episode_id": 64621,
+        "display_name": "Konstelace S01E02 - Žít a nechat zemřít CZ Dabing",
+        "video_id": 27506516
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -238553,9 +238733,189 @@
         "video_id": 27505875
       },
       {
+        "episode_id": 10618,
+        "display_name": "Stargirl S01E01 - 1. epizoda CZ Dabing",
+        "video_id": 27505891
+      },
+      {
+        "episode_id": 10616,
+        "display_name": "Stargirl S01E03 - 3. epizoda CZ Dabing",
+        "video_id": 27505910
+      },
+      {
+        "episode_id": 10612,
+        "display_name": "Stargirl S01E08 - 8. epizoda CZ Dabing",
+        "video_id": 27505925
+      },
+      {
+        "episode_id": 10602,
+        "display_name": "Stargirl S01E12 - 12. epizoda CZ Titulky",
+        "video_id": 27505944
+      },
+      {
+        "episode_id": 7494,
+        "display_name": "Stargirl S02E01 - Kapitola první CZ Dabing",
+        "video_id": 27505959
+      },
+      {
+        "episode_id": 7496,
+        "display_name": "Stargirl S02E03 - Kapitola třetí CZ Dabing",
+        "video_id": 27505971
+      },
+      {
+        "episode_id": 25658,
+        "display_name": "Stargirl S02E11 - Kapitola jedenáctá CZ Dabing",
+        "video_id": 27505988
+      },
+      {
+        "episode_id": 10604,
+        "display_name": "Stargirl S03E03 - 3. epizoda CZ Dabing",
+        "video_id": 27506007
+      },
+      {
+        "episode_id": 63312,
+        "display_name": "Cruel Summer S01E05 - Jak to zamýšleli bohové karnevalů CZ Titulky",
+        "video_id": 27506060
+      },
+      {
+        "episode_id": 63314,
+        "display_name": "Cruel Summer S01E08 - Důkaz CZ Titulky",
+        "video_id": 27506137
+      },
+      {
+        "episode_id": 63316,
+        "display_name": "Cruel Summer S01E09 - Moje vlastní tajemství CZ Titulky",
+        "video_id": 27506168
+      },
+      {
+        "episode_id": 63318,
+        "display_name": "Cruel Summer S02E02 - Jízda nebo smrt CZ Titulky",
+        "video_id": 27506208
+      },
+      {
+        "episode_id": 63324,
+        "display_name": "Cruel Summer S02E03 - Krvavé klouby CZ Titulky",
+        "video_id": 27506232
+      },
+      {
+        "episode_id": 63320,
+        "display_name": "Cruel Summer S02E05 - Vše, co chci k Vánocům CZ Titulky",
+        "video_id": 27506256
+      },
+      {
+        "episode_id": 185902,
+        "display_name": "Jessie S01E22 - Ztroskotali jsme CZ Titulky",
+        "video_id": 27506274
+      },
+      {
+        "episode_id": 185918,
+        "display_name": "Jessie S02E12 - Velká hračková loupež CZ Dabing",
+        "video_id": 27506303
+      },
+      {
+        "episode_id": 185930,
+        "display_name": "Jessie S02E26 - Zvláštní jednotka Jessie 1+2.část CZ Dabing",
+        "video_id": 27506323
+      },
+      {
+        "episode_id": 185952,
+        "display_name": "Jessie S03E24 - Přichází nevěsta CZ Dabing",
+        "video_id": 27506342
+      },
+      {
+        "episode_id": 185954,
+        "display_name": "Jessie S03E26 - Dovolená na Havaji CZ Dabing",
+        "video_id": 27506357
+      },
+      {
         "episode_id": 168775,
         "display_name": "Já, Claudius S01E09 - Zdráv buď... ale kdo? CZ Dabing",
         "video_id": 27505879
+      },
+      {
+        "episode_id": 10611,
+        "display_name": "Stargirl S01E07 - 7. epizoda CZ Dabing",
+        "video_id": 27505908
+      },
+      {
+        "episode_id": 7495,
+        "display_name": "Stargirl S02E02 - Kapitola druhá CZ Dabing",
+        "video_id": 27505922
+      },
+      {
+        "episode_id": 7501,
+        "display_name": "Stargirl S02E08 - Kapitola osmá CZ Dabing",
+        "video_id": 27505936
+      },
+      {
+        "episode_id": 25657,
+        "display_name": "Stargirl S02E10 - Kapitola desátá CZ Dabing",
+        "video_id": 27505953
+      },
+      {
+        "episode_id": 25659,
+        "display_name": "Stargirl S02E12 - Kapitola dvanáctá CZ Dabing",
+        "video_id": 27505961
+      },
+      {
+        "episode_id": 10605,
+        "display_name": "Stargirl S03E02 - 2. epizoda CZ Dabing",
+        "video_id": 27505981
+      },
+      {
+        "episode_id": 63313,
+        "display_name": "Cruel Summer S01E06 - Oceán ve mně CZ Titulky",
+        "video_id": 27506004
+      },
+      {
+        "episode_id": 63315,
+        "display_name": "Cruel Summer S01E07 - Všechno nejlepší k narozeninám, Kate Wallis CZ Titulky",
+        "video_id": 27506038
+      },
+      {
+        "episode_id": 63317,
+        "display_name": "Cruel Summer S01E10 - Nepřátelský svědek CZ Titulky",
+        "video_id": 27506133
+      },
+      {
+        "episode_id": 63325,
+        "display_name": "Cruel Summer S02E06 - Ponoření do vody CZ Titulky",
+        "video_id": 27506206
+      },
+      {
+        "episode_id": 63321,
+        "display_name": "Cruel Summer S02E07 - Je to konec světa CZ Titulky",
+        "video_id": 27506247
+      },
+      {
+        "episode_id": 185901,
+        "display_name": "Jessie S01E23 - Děsivá Connie opět na scéně CZ Dabing",
+        "video_id": 27506282
+      },
+      {
+        "episode_id": 185937,
+        "display_name": "Jessie S03E07 - Hodně štěstí CZ Dabing",
+        "video_id": 27506312
+      },
+      {
+        "episode_id": 119899,
+        "display_name": "Pomsta s chutí třešní S01E01 - Existuju CZ Dabing",
+        "video_id": 27506359
+      },
+      {
+        "episode_id": 119901,
+        "display_name": "Pomsta s chutí třešní S01E03 - Římská svíce CZ Dabing",
+        "video_id": 27506423
+      },
+      {
+        "episode_id": 119903,
+        "display_name": "Pomsta s chutí třešní S01E06 - Mléčná lázeň CZ Dabing",
+        "video_id": 27506471
+      },
+      {
+        "episode_id": 64621,
+        "display_name": "Konstelace S01E02 - Žít a nechat zemřít CZ Dabing",
+        "video_id": 27506516
       }
     ],
     "prepared_not_upload_ready": [
@@ -239717,16 +240077,17 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 39,
+    "disabled": 200,
+    "ok": 59,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
     "whisper_non_cz_needs_subtitles": 1871,
     "whisper_confirmed_cz": 1173,
-    "needs_whisper": 52445,
+    "needs_whisper": 52489,
     "whisper_failed": 3
   },
   "subtitle_followup_statuses": {
-    "needs_subtitle_setup_after_prehrajto_processing": 10454
+    "needs_subtitle_setup_after_prehrajto_processing": 10477
   }
 }
