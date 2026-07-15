@@ -2,44 +2,92 @@
   "counts": {
     "backlog_episodes": 165332,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 28056,
-    "prepared_source_episodes": 47469,
+    "uploaded_episodes": 28079,
+    "prepared_source_episodes": 47464,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 80,
-    "language_whisper_attempted_sources": 80,
-    "language_pending_whisper_sources": 2604,
+    "language_audited_sources": 40,
+    "language_whisper_attempted_sources": 40,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 54905,
-    "whisper_review_pending_sources": 51828,
+    "whisper_review_pending_sources": 51808,
     "subtitle_followup_sources": 10287,
     "subtitle_followup_pending_sources": 10287
   },
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-07-15T10:35:53Z",
+      "databaseId": 29408682701,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-15T10:34:54Z",
+      "databaseId": 29408625358,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-15T10:28:33Z",
+      "databaseId": 29408246485,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-07-15T10:24:30Z",
+      "databaseId": 29408014232,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-15T10:16:05Z",
+      "databaseId": 29407525088,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-sources"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-15T10:12:42Z",
+      "databaseId": 29407319111,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
       "createdAt": "2026-07-15T10:12:02Z",
       "databaseId": 29407279517,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "prepare-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-15T10:11:34Z",
       "databaseId": 29407252132,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-07-15T10:11:29Z",
       "databaseId": 29407247104,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -51,19 +99,19 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-15T10:11:21Z",
       "databaseId": 29407238901,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-15T10:11:12Z",
       "databaseId": 29407228809,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -129,54 +177,6 @@
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-15T09:43:15Z",
-      "databaseId": 29405543242,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "refresh-backlog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-15T09:39:20Z",
-      "databaseId": 29405296629,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-15T09:38:09Z",
-      "databaseId": 29405226482,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-07-15T09:33:24Z",
-      "databaseId": 29404932686,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-15T09:29:09Z",
-      "databaseId": 29404665769,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-15T09:29:05Z",
-      "databaseId": 29404661817,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
     }
   ],
   "gaps": {
@@ -118209,6 +118209,121 @@
         "episode_id": 62461,
         "display_name": "Undercover S01E08 - 8. epizoda CZ Titulky",
         "video_id": 27502739
+      },
+      {
+        "episode_id": 62456,
+        "display_name": "Undercover S01E03 - 3. epizoda CZ Dabing",
+        "video_id": 27502855
+      },
+      {
+        "episode_id": 62458,
+        "display_name": "Undercover S01E06 - 6. epizoda CZ Dabing",
+        "video_id": 27502880
+      },
+      {
+        "episode_id": 62464,
+        "display_name": "Undercover S01E07 - 7. epizoda CZ Titulky",
+        "video_id": 27502901
+      },
+      {
+        "episode_id": 62462,
+        "display_name": "Undercover S01E10 - 10. epizoda CZ Titulky",
+        "video_id": 27502932
+      },
+      {
+        "episode_id": 62466,
+        "display_name": "Undercover S02E02 - 2. epizoda CZ Dabing",
+        "video_id": 27502947
+      },
+      {
+        "episode_id": 62468,
+        "display_name": "Undercover S02E04 - 4. epizoda CZ Dabing",
+        "video_id": 27502972
+      },
+      {
+        "episode_id": 62470,
+        "display_name": "Undercover S02E06 - 6. epizoda CZ Dabing",
+        "video_id": 27503005
+      },
+      {
+        "episode_id": 62472,
+        "display_name": "Undercover S02E08 - 8. epizoda CZ Dabing",
+        "video_id": 27503041
+      },
+      {
+        "episode_id": 62474,
+        "display_name": "Undercover S02E10 - 10. epizoda CZ Dabing",
+        "video_id": 27503090
+      },
+      {
+        "episode_id": 62465,
+        "display_name": "Undercover S01E09 - 9. epizoda CZ Titulky",
+        "video_id": 27502852
+      },
+      {
+        "episode_id": 62463,
+        "display_name": "Undercover S02E01 - 1. epizoda CZ Dabing",
+        "video_id": 27502866
+      },
+      {
+        "episode_id": 62467,
+        "display_name": "Undercover S02E03 - 3. epizoda CZ Dabing",
+        "video_id": 27502883
+      },
+      {
+        "episode_id": 62469,
+        "display_name": "Undercover S02E05 - 5. epizoda CZ Dabing",
+        "video_id": 27502920
+      },
+      {
+        "episode_id": 62471,
+        "display_name": "Undercover S02E07 - 7. epizoda CZ Dabing",
+        "video_id": 27502961
+      },
+      {
+        "episode_id": 62473,
+        "display_name": "Undercover S02E09 - 9. epizoda CZ Dabing",
+        "video_id": 27502973
+      },
+      {
+        "episode_id": 62475,
+        "display_name": "Undercover S03E01 - 1. epizoda CZ Titulky",
+        "video_id": 27502992
+      },
+      {
+        "episode_id": 62477,
+        "display_name": "Undercover S03E03 - 3. epizoda CZ Titulky",
+        "video_id": 27503016
+      },
+      {
+        "episode_id": 62479,
+        "display_name": "Undercover S03E05 - 5. epizoda CZ Titulky",
+        "video_id": 27503036
+      },
+      {
+        "episode_id": 62481,
+        "display_name": "Undercover S03E07 - 7. epizoda CZ Titulky",
+        "video_id": 27503058
+      },
+      {
+        "episode_id": 62497,
+        "display_name": "Od soumraku do úsvitu S01E06 - Místo mrtvých cest CZ Dabing",
+        "video_id": 27503081
+      },
+      {
+        "episode_id": 62483,
+        "display_name": "Od soumraku do úsvitu S02E01 - Premiéra CZ Dabing",
+        "video_id": 27503094
+      },
+      {
+        "episode_id": 62485,
+        "display_name": "Od soumraku do úsvitu S02E03 - Útok 15metrové sexuální mašiny CZ Dabing",
+        "video_id": 27503104
+      },
+      {
+        "episode_id": 62487,
+        "display_name": "Od soumraku do úsvitu S02E06 - Bizarní příběhy CZ Dabing",
+        "video_id": 27503115
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -236136,6 +236251,121 @@
         "episode_id": 62461,
         "display_name": "Undercover S01E08 - 8. epizoda CZ Titulky",
         "video_id": 27502739
+      },
+      {
+        "episode_id": 62456,
+        "display_name": "Undercover S01E03 - 3. epizoda CZ Dabing",
+        "video_id": 27502855
+      },
+      {
+        "episode_id": 62458,
+        "display_name": "Undercover S01E06 - 6. epizoda CZ Dabing",
+        "video_id": 27502880
+      },
+      {
+        "episode_id": 62464,
+        "display_name": "Undercover S01E07 - 7. epizoda CZ Titulky",
+        "video_id": 27502901
+      },
+      {
+        "episode_id": 62462,
+        "display_name": "Undercover S01E10 - 10. epizoda CZ Titulky",
+        "video_id": 27502932
+      },
+      {
+        "episode_id": 62466,
+        "display_name": "Undercover S02E02 - 2. epizoda CZ Dabing",
+        "video_id": 27502947
+      },
+      {
+        "episode_id": 62468,
+        "display_name": "Undercover S02E04 - 4. epizoda CZ Dabing",
+        "video_id": 27502972
+      },
+      {
+        "episode_id": 62470,
+        "display_name": "Undercover S02E06 - 6. epizoda CZ Dabing",
+        "video_id": 27503005
+      },
+      {
+        "episode_id": 62472,
+        "display_name": "Undercover S02E08 - 8. epizoda CZ Dabing",
+        "video_id": 27503041
+      },
+      {
+        "episode_id": 62474,
+        "display_name": "Undercover S02E10 - 10. epizoda CZ Dabing",
+        "video_id": 27503090
+      },
+      {
+        "episode_id": 62465,
+        "display_name": "Undercover S01E09 - 9. epizoda CZ Titulky",
+        "video_id": 27502852
+      },
+      {
+        "episode_id": 62463,
+        "display_name": "Undercover S02E01 - 1. epizoda CZ Dabing",
+        "video_id": 27502866
+      },
+      {
+        "episode_id": 62467,
+        "display_name": "Undercover S02E03 - 3. epizoda CZ Dabing",
+        "video_id": 27502883
+      },
+      {
+        "episode_id": 62469,
+        "display_name": "Undercover S02E05 - 5. epizoda CZ Dabing",
+        "video_id": 27502920
+      },
+      {
+        "episode_id": 62471,
+        "display_name": "Undercover S02E07 - 7. epizoda CZ Dabing",
+        "video_id": 27502961
+      },
+      {
+        "episode_id": 62473,
+        "display_name": "Undercover S02E09 - 9. epizoda CZ Dabing",
+        "video_id": 27502973
+      },
+      {
+        "episode_id": 62475,
+        "display_name": "Undercover S03E01 - 1. epizoda CZ Titulky",
+        "video_id": 27502992
+      },
+      {
+        "episode_id": 62477,
+        "display_name": "Undercover S03E03 - 3. epizoda CZ Titulky",
+        "video_id": 27503016
+      },
+      {
+        "episode_id": 62479,
+        "display_name": "Undercover S03E05 - 5. epizoda CZ Titulky",
+        "video_id": 27503036
+      },
+      {
+        "episode_id": 62481,
+        "display_name": "Undercover S03E07 - 7. epizoda CZ Titulky",
+        "video_id": 27503058
+      },
+      {
+        "episode_id": 62497,
+        "display_name": "Od soumraku do úsvitu S01E06 - Místo mrtvých cest CZ Dabing",
+        "video_id": 27503081
+      },
+      {
+        "episode_id": 62483,
+        "display_name": "Od soumraku do úsvitu S02E01 - Premiéra CZ Dabing",
+        "video_id": 27503094
+      },
+      {
+        "episode_id": 62485,
+        "display_name": "Od soumraku do úsvitu S02E03 - Útok 15metrové sexuální mašiny CZ Dabing",
+        "video_id": 27503104
+      },
+      {
+        "episode_id": 62487,
+        "display_name": "Od soumraku do úsvitu S02E06 - Bizarní příběhy CZ Dabing",
+        "video_id": 27503115
       }
     ],
     "prepared_not_upload_ready": [
@@ -236442,166 +236672,6 @@
     ],
     "whisper_review_pending": [
       {
-        "episode_id": 104795,
-        "source_id": -68154072131647357,
-        "series_title": "Airwolf",
-        "episode_code": "S03E11",
-        "source_title": "Airwolf.S03E11.Where.Have.All.the.Children.Gone.DVDRip.XviD-DIMENSION",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 104795,
-        "source_id": -4863188421397795,
-        "series_title": "Airwolf",
-        "episode_code": "S03E11",
-        "source_title": "Airwolf S03E11 - ENG",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 104796,
-        "source_id": -60522396742274972,
-        "series_title": "Airwolf",
-        "episode_code": "S03E12",
-        "source_title": "Airwolf.S03E12.Half-Pint.DVDRip.XviD-DIMENSION",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 104796,
-        "source_id": -43380099581834349,
-        "series_title": "Airwolf",
-        "episode_code": "S03E12",
-        "source_title": "Airwolf S03E12 - ENG",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 104797,
-        "source_id": -64672726261471552,
-        "series_title": "Airwolf",
-        "episode_code": "S03E13",
-        "source_title": "Airwolf.S03E13.Wildfire.DVDRip.XviD-DIMENSION",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 104797,
-        "source_id": -39966471509219466,
-        "series_title": "Airwolf",
-        "episode_code": "S03E13",
-        "source_title": "Airwolf S03E13 - ENG",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 104798,
-        "source_id": -34212289899861956,
-        "series_title": "Airwolf",
-        "episode_code": "S03E14",
-        "source_title": "Airwolf.S03E14.Discovery.DVDRip.XviD-DIMENSION",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 104798,
-        "source_id": -10256269200933782,
-        "series_title": "Airwolf",
-        "episode_code": "S03E14",
-        "source_title": "Airwolf S03E14 - ENG",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 104799,
-        "source_id": -58747822176521541,
-        "series_title": "Airwolf",
-        "episode_code": "S03E15",
-        "source_title": "Airwolf S03E15 - ENG",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 104799,
-        "source_id": -41552910525681715,
-        "series_title": "Airwolf",
-        "episode_code": "S03E15",
-        "source_title": "Airwolf.S03E15.Day.of.Jeopardy.DVDRip.XviD-DIMENSION",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 104800,
-        "source_id": -40310908737126950,
-        "series_title": "Airwolf",
-        "episode_code": "S03E16",
-        "source_title": "Airwolf.S03E16.Little.Wolf.DVDRip.XviD-DIMENSION",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 104800,
-        "source_id": -28737938472413937,
-        "series_title": "Airwolf",
-        "episode_code": "S03E16",
-        "source_title": "Airwolf S03E16 - ENG",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 104801,
-        "source_id": -20623628024281685,
-        "series_title": "Airwolf",
-        "episode_code": "S03E17",
-        "source_title": "Airwolf S03E17 - ENG",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 104801,
-        "source_id": -19369237209351987,
-        "series_title": "Airwolf",
-        "episode_code": "S03E17",
-        "source_title": "Airwolf.S03E17.Desperate.Monday.DVDRip.XviD-DIMENSION",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 104802,
-        "source_id": -14908051455602208,
-        "series_title": "Airwolf",
-        "episode_code": "S03E18",
-        "source_title": "Airwolf S03E18 - ENG",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 104802,
-        "source_id": -3888310714307794,
-        "series_title": "Airwolf",
-        "episode_code": "S03E18",
-        "source_title": "Airwolf.S03E18.Hawkes.Run.DVDRip.XviD-DIMENSION",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 104803,
-        "source_id": -47213979229558498,
-        "series_title": "Airwolf",
-        "episode_code": "S03E19",
-        "source_title": "Airwolf.S03E19.Break-In.at.Santa.Paula.DVDRip.XviD-DIMENSION",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 104803,
-        "source_id": -26393212275212271,
-        "series_title": "Airwolf",
-        "episode_code": "S03E19",
-        "source_title": "Airwolf S03E19 - ENG",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 104804,
-        "source_id": -30900529458332274,
-        "series_title": "Airwolf",
-        "episode_code": "S03E20",
-        "source_title": "Airwolf S03E20 - ENG",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 104804,
-        "source_id": -6132195233816181,
-        "series_title": "Airwolf",
-        "episode_code": "S03E20",
-        "source_title": "Airwolf.S03E20.The.Girl.Who.Fell.from.the.Sky.DVDRip.XviD-DIMENSION",
-        "status": "needs_whisper"
-      },
-      {
         "episode_id": 104805,
         "source_id": -30538999456881607,
         "series_title": "Airwolf",
@@ -236839,6 +236909,166 @@
         "series_title": "Airwolf",
         "episode_code": "S04E13",
         "source_title": "Airwolf S04E13 - Ground Zero",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104776,
+        "source_id": -64721536574192043,
+        "series_title": "Airwolf",
+        "episode_code": "S04E14",
+        "source_title": "Airwolf S04E14 - Flowers of the Mountain - ENG",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104776,
+        "source_id": -5974045739949325,
+        "series_title": "Airwolf",
+        "episode_code": "S04E14",
+        "source_title": "Airwolf S04E14 - Flowers of the Mountain",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104778,
+        "source_id": -51701486144794785,
+        "series_title": "Airwolf",
+        "episode_code": "S04E15",
+        "source_title": "Airwolf S04E15 - The Key - ENG",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104778,
+        "source_id": -28491552693977268,
+        "series_title": "Airwolf",
+        "episode_code": "S04E15",
+        "source_title": "Airwolf S04E15 - The Key",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104777,
+        "source_id": -56156377360927841,
+        "series_title": "Airwolf",
+        "episode_code": "S04E16",
+        "source_title": "Airwolf S04E16 - On the Double - ENG",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104777,
+        "source_id": -32987909276182867,
+        "series_title": "Airwolf",
+        "episode_code": "S04E16",
+        "source_title": "Airwolf S04E16 - On the Double",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104779,
+        "source_id": -20945885106858126,
+        "series_title": "Airwolf",
+        "episode_code": "S04E17",
+        "source_title": "Airwolf S04E17 - Storm Warning - ENG",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104779,
+        "source_id": -11043780033717550,
+        "series_title": "Airwolf",
+        "episode_code": "S04E17",
+        "source_title": "Airwolf S04E17 - Storm Warning",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104780,
+        "source_id": -58910259522498280,
+        "series_title": "Airwolf",
+        "episode_code": "S04E18",
+        "source_title": "Airwolf S04E18 - The Golden One - ENG",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104780,
+        "source_id": -37341883214895185,
+        "series_title": "Airwolf",
+        "episode_code": "S04E18",
+        "source_title": "Airwolf S04E18 - The Golden One",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104781,
+        "source_id": -63888968402435838,
+        "series_title": "Airwolf",
+        "episode_code": "S04E19",
+        "source_title": "Airwolf S04E19 - The Puppet Master",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104781,
+        "source_id": -42157440648467749,
+        "series_title": "Airwolf",
+        "episode_code": "S04E19",
+        "source_title": "Airwolf S04E19 - The Puppet Master - ENG",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104782,
+        "source_id": -68534279398644609,
+        "series_title": "Airwolf",
+        "episode_code": "S04E20",
+        "source_title": "Airwolf S04E20 - Malduke",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104782,
+        "source_id": -22006487956251958,
+        "series_title": "Airwolf",
+        "episode_code": "S04E20",
+        "source_title": "Airwolf S04E20 - Malduke - ENG",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104783,
+        "source_id": -67196748265092573,
+        "series_title": "Airwolf",
+        "episode_code": "S04E21",
+        "source_title": "Airwolf S04E21 - Poppy Chain - ENG",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104783,
+        "source_id": -66323824089680607,
+        "series_title": "Airwolf",
+        "episode_code": "S04E21",
+        "source_title": "Airwolf S04E21 - Poppy Chain",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104784,
+        "source_id": -72028789766064627,
+        "series_title": "Airwolf",
+        "episode_code": "S04E22",
+        "source_title": "Airwolf S04E22 - Flying Home - ENG",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104784,
+        "source_id": -67287064538645567,
+        "series_title": "Airwolf",
+        "episode_code": "S04E22",
+        "source_title": "Airwolf S04E22 - Flying Home",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104785,
+        "source_id": -62644378177666986,
+        "series_title": "Airwolf",
+        "episode_code": "S04E23",
+        "source_title": "Airwolf S04E23 - Welcome to Paradise - ENG",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104785,
+        "source_id": -4433222764539433,
+        "series_title": "Airwolf",
+        "episode_code": "S04E23",
+        "source_title": "Airwolf S04E23 - Welcome to Paradise",
         "status": "needs_whisper"
       }
     ],
@@ -237297,13 +237527,13 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 79,
+    "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
-    "whisper_non_cz_needs_subtitles": 1909,
+    "whisper_non_cz_needs_subtitles": 1929,
     "whisper_confirmed_cz": 1168,
-    "needs_whisper": 51825,
+    "needs_whisper": 51805,
     "whisper_failed": 3
   },
   "subtitle_followup_statuses": {
