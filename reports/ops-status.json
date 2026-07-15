@@ -2,28 +2,76 @@
   "counts": {
     "backlog_episodes": 164829,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 28573,
-    "prepared_source_episodes": 49393,
+    "uploaded_episodes": 28590,
+    "prepared_source_episodes": 49388,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 40,
-    "language_whisper_attempted_sources": 40,
+    "language_audited_sources": 60,
+    "language_whisper_attempted_sources": 60,
     "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 56412,
-    "whisper_review_pending_sources": 53348,
-    "subtitle_followup_sources": 10795,
-    "subtitle_followup_pending_sources": 10795
+    "whisper_review_pending_sources": 53328,
+    "subtitle_followup_sources": 10798,
+    "subtitle_followup_pending_sources": 10798
   },
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-07-15T22:22:43Z",
+      "databaseId": 29455195867,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-15T22:22:15Z",
+      "databaseId": 29455168940,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-15T22:22:13Z",
+      "databaseId": 29455166703,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-15T22:21:23Z",
+      "databaseId": 29455120367,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-15T22:20:09Z",
+      "databaseId": 29455051507,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-15T22:18:34Z",
+      "databaseId": 29454964036,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-15T22:12:56Z",
       "databaseId": 29454646646,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "update-descriptions"
     },
     {
@@ -35,11 +83,11 @@
       "workflowName": "audit-language"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-15T22:11:53Z",
       "databaseId": 29454585747,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -51,11 +99,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-07-15T22:11:47Z",
       "databaseId": 29454580240,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -75,11 +123,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-15T22:08:47Z",
       "databaseId": 29454404229,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
@@ -126,54 +174,6 @@
       "conclusion": "success",
       "createdAt": "2026-07-15T21:57:00Z",
       "databaseId": 29453718424,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-15T21:55:54Z",
-      "databaseId": 29453659209,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-15T21:55:43Z",
-      "databaseId": 29453647605,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-sources"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-15T21:48:53Z",
-      "databaseId": 29453254861,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-15T21:48:12Z",
-      "databaseId": 29453216837,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-15T21:47:22Z",
-      "databaseId": 29453169391,
-      "headBranch": "main",
-      "status": "pending",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-15T21:46:20Z",
-      "databaseId": 29453111114,
       "headBranch": "main",
       "status": "completed",
       "workflowName": "audit-language"
@@ -120794,6 +120794,91 @@
         "episode_id": 17583,
         "display_name": "Do posledního samuraje S01E03 - Osud CZ Dabing",
         "video_id": 27515367
+      },
+      {
+        "episode_id": 69654,
+        "display_name": "H2O: Stačí přidat vodu S03E26 - Maturita CZ Dabing",
+        "video_id": 27515449
+      },
+      {
+        "episode_id": 126008,
+        "display_name": "Pod mostem S01E02 - Mafiánka ze Seven Oaks CZ Titulky",
+        "video_id": 27515471
+      },
+      {
+        "episode_id": 126010,
+        "display_name": "Pod mostem S01E04 - Nádherná Britská Kolumbie CZ Titulky",
+        "video_id": 27515502
+      },
+      {
+        "episode_id": 126012,
+        "display_name": "Pod mostem S01E06 - Potopí se tak jako tak CZ Titulky",
+        "video_id": 27515522
+      },
+      {
+        "episode_id": 126014,
+        "display_name": "Pod mostem S01E08 - Milosrdenství samo CZ Titulky",
+        "video_id": 27515538
+      },
+      {
+        "episode_id": 7330,
+        "display_name": "The Purge S01E02 - 2. epizoda CZ Titulky",
+        "video_id": 27515556
+      },
+      {
+        "episode_id": 7332,
+        "display_name": "The Purge S01E03 - 3. epizoda CZ Titulky",
+        "video_id": 27515572
+      },
+      {
+        "episode_id": 7334,
+        "display_name": "The Purge S01E04 - 4. epizoda CZ Titulky",
+        "video_id": 27515583
+      },
+      {
+        "episode_id": 7336,
+        "display_name": "The Purge S01E07 - 7. epizoda CZ Titulky",
+        "video_id": 27515590
+      },
+      {
+        "episode_id": 7338,
+        "display_name": "The Purge S01E10 - 10. epizoda CZ Titulky",
+        "video_id": 27515609
+      },
+      {
+        "episode_id": 17585,
+        "display_name": "Do posledního samuraje S01E05 - Duchové CZ Dabing",
+        "video_id": 27515463
+      },
+      {
+        "episode_id": 95705,
+        "display_name": "Ta lepší z nás S01E01 - Moje sestra CZ Dabing",
+        "video_id": 27515495
+      },
+      {
+        "episode_id": 95707,
+        "display_name": "Ta lepší z nás S01E03 - Přichází vdova CZ Dabing",
+        "video_id": 27515521
+      },
+      {
+        "episode_id": 95709,
+        "display_name": "Ta lepší z nás S01E06 - Klidná ruka CZ Dabing",
+        "video_id": 27515540
+      },
+      {
+        "episode_id": 95711,
+        "display_name": "Ta lepší z nás S01E08 - Ve svém světě CZ Dabing",
+        "video_id": 27515555
+      },
+      {
+        "episode_id": 154599,
+        "display_name": "Garth Marenghi's Darkplace S01E02 - 2. epizoda CZ Titulky",
+        "video_id": 27515577
+      },
+      {
+        "episode_id": 154601,
+        "display_name": "Garth Marenghi's Darkplace S01E04 - 4. epizoda CZ Titulky",
+        "video_id": 27515593
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -241306,6 +241391,91 @@
         "episode_id": 17583,
         "display_name": "Do posledního samuraje S01E03 - Osud CZ Dabing",
         "video_id": 27515367
+      },
+      {
+        "episode_id": 69654,
+        "display_name": "H2O: Stačí přidat vodu S03E26 - Maturita CZ Dabing",
+        "video_id": 27515449
+      },
+      {
+        "episode_id": 126008,
+        "display_name": "Pod mostem S01E02 - Mafiánka ze Seven Oaks CZ Titulky",
+        "video_id": 27515471
+      },
+      {
+        "episode_id": 126010,
+        "display_name": "Pod mostem S01E04 - Nádherná Britská Kolumbie CZ Titulky",
+        "video_id": 27515502
+      },
+      {
+        "episode_id": 126012,
+        "display_name": "Pod mostem S01E06 - Potopí se tak jako tak CZ Titulky",
+        "video_id": 27515522
+      },
+      {
+        "episode_id": 126014,
+        "display_name": "Pod mostem S01E08 - Milosrdenství samo CZ Titulky",
+        "video_id": 27515538
+      },
+      {
+        "episode_id": 7330,
+        "display_name": "The Purge S01E02 - 2. epizoda CZ Titulky",
+        "video_id": 27515556
+      },
+      {
+        "episode_id": 7332,
+        "display_name": "The Purge S01E03 - 3. epizoda CZ Titulky",
+        "video_id": 27515572
+      },
+      {
+        "episode_id": 7334,
+        "display_name": "The Purge S01E04 - 4. epizoda CZ Titulky",
+        "video_id": 27515583
+      },
+      {
+        "episode_id": 7336,
+        "display_name": "The Purge S01E07 - 7. epizoda CZ Titulky",
+        "video_id": 27515590
+      },
+      {
+        "episode_id": 7338,
+        "display_name": "The Purge S01E10 - 10. epizoda CZ Titulky",
+        "video_id": 27515609
+      },
+      {
+        "episode_id": 17585,
+        "display_name": "Do posledního samuraje S01E05 - Duchové CZ Dabing",
+        "video_id": 27515463
+      },
+      {
+        "episode_id": 95705,
+        "display_name": "Ta lepší z nás S01E01 - Moje sestra CZ Dabing",
+        "video_id": 27515495
+      },
+      {
+        "episode_id": 95707,
+        "display_name": "Ta lepší z nás S01E03 - Přichází vdova CZ Dabing",
+        "video_id": 27515521
+      },
+      {
+        "episode_id": 95709,
+        "display_name": "Ta lepší z nás S01E06 - Klidná ruka CZ Dabing",
+        "video_id": 27515540
+      },
+      {
+        "episode_id": 95711,
+        "display_name": "Ta lepší z nás S01E08 - Ve svém světě CZ Dabing",
+        "video_id": 27515555
+      },
+      {
+        "episode_id": 154599,
+        "display_name": "Garth Marenghi's Darkplace S01E02 - 2. epizoda CZ Titulky",
+        "video_id": 27515577
+      },
+      {
+        "episode_id": 154601,
+        "display_name": "Garth Marenghi's Darkplace S01E04 - 4. epizoda CZ Titulky",
+        "video_id": 27515593
       }
     ],
     "prepared_not_upload_ready": [
@@ -241612,166 +241782,6 @@
     ],
     "whisper_review_pending": [
       {
-        "episode_id": 160247,
-        "source_id": -70726366700557204,
-        "series_title": "Agatha Christie: Vraždy podle abecedy",
-        "episode_code": "S01E01",
-        "source_title": "Agatha Christie: Vraždy podle abecedy - S1E1 Episode 1 EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 160248,
-        "source_id": -35644882850614541,
-        "series_title": "Agatha Christie: Vraždy podle abecedy",
-        "episode_code": "S01E02",
-        "source_title": "Agatha Christie: Vraždy podle abecedy - S1E2 Episode 2 EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 160246,
-        "source_id": -62449156700852097,
-        "series_title": "Agatha Christie: Vraždy podle abecedy",
-        "episode_code": "S01E03",
-        "source_title": "Agatha Christie: Vraždy podle abecedy - S1E3 Episode 3 EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 160246,
-        "source_id": -16506802164579530,
-        "series_title": "Agatha Christie: Vraždy podle abecedy",
-        "episode_code": "S01E03",
-        "source_title": "Agatha Christie: Vraždy podle abecedy - S1E3 Episode 3 EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 156928,
-        "source_id": -67578113116254008,
-        "series_title": "Agatha Christie: Zkouška neviny",
-        "episode_code": "S01E01",
-        "source_title": "Agatha Christie: Zkouška neviny - S1E1 Episode 1 EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 156927,
-        "source_id": -60747512288909303,
-        "series_title": "Agatha Christie: Zkouška neviny",
-        "episode_code": "S01E02",
-        "source_title": "Agatha Christie: Zkouška neviny - S1E2 Episode 2 EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 156929,
-        "source_id": -40670664480781282,
-        "series_title": "Agatha Christie: Zkouška neviny",
-        "episode_code": "S01E03",
-        "source_title": "Agatha Christie: Zkouška neviny - S1E3 Episode 3 EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 104835,
-        "source_id": -49650439865174150,
-        "series_title": "Airwolf",
-        "episode_code": "S02E17",
-        "source_title": "Airwolf S02E17 - ENG",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 104836,
-        "source_id": -17063360205153016,
-        "series_title": "Airwolf",
-        "episode_code": "S02E18",
-        "source_title": "Airwolf S02E18 - ENG",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 104837,
-        "source_id": -41764083471061436,
-        "series_title": "Airwolf",
-        "episode_code": "S02E19",
-        "source_title": "Airwolf S02E19 - ENG",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 104786,
-        "source_id": -36952503178878524,
-        "series_title": "Airwolf",
-        "episode_code": "S03E01",
-        "source_title": "Airwolf S03E01 - ENG",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 104786,
-        "source_id": -8816853272660233,
-        "series_title": "Airwolf",
-        "episode_code": "S03E01",
-        "source_title": "Airwolf.S03E01.The.Horn.of.Plenty.DVDRip.XviD-DIMENSION",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 104787,
-        "source_id": -65701278084441228,
-        "series_title": "Airwolf",
-        "episode_code": "S03E02",
-        "source_title": "Airwolf S03E02 - ENG",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 104787,
-        "source_id": -10053593615139806,
-        "series_title": "Airwolf",
-        "episode_code": "S03E02",
-        "source_title": "Airwolf.S03E02.Airwolf.II.DVDRip.XviD-DIMENSION",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 104788,
-        "source_id": -19675396974807027,
-        "series_title": "Airwolf",
-        "episode_code": "S03E03",
-        "source_title": "Airwolf S03E03 - ENG",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 104788,
-        "source_id": -12177697421123796,
-        "series_title": "Airwolf",
-        "episode_code": "S03E03",
-        "source_title": "Airwolf.S03E03.And.a.Child.Shall.Lead.DVDRip.XviD-DIMENSION",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 104789,
-        "source_id": -60227244032768815,
-        "series_title": "Airwolf",
-        "episode_code": "S03E04",
-        "source_title": "Airwolf.S03E04.Fortune.Teller.DVDRip.XviD-DIMENSION",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 104789,
-        "source_id": -38311791220744401,
-        "series_title": "Airwolf",
-        "episode_code": "S03E04",
-        "source_title": "Airwolf S03E04 - ENG",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 104790,
-        "source_id": -46162437359641659,
-        "series_title": "Airwolf",
-        "episode_code": "S03E05",
-        "source_title": "Airwolf.S03E05.Crossover.DVDRip.XviD-DIMENSION",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 104790,
-        "source_id": -13178465719445529,
-        "series_title": "Airwolf",
-        "episode_code": "S03E05",
-        "source_title": "Airwolf S03E05 - ENG",
-        "status": "needs_whisper"
-      },
-      {
         "episode_id": 104791,
         "source_id": -45162098994656135,
         "series_title": "Airwolf",
@@ -242009,6 +242019,166 @@
         "series_title": "Airwolf",
         "episode_code": "S03E22",
         "source_title": "Airwolf S03E22 - ENG",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104806,
+        "source_id": -54638416330976566,
+        "series_title": "Airwolf",
+        "episode_code": "S03E22",
+        "source_title": "Airwolf.S03E22.Birds.of.Paradise.DVDRip.XviD-DIMENSION",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104764,
+        "source_id": -13761770586047469,
+        "series_title": "Airwolf",
+        "episode_code": "S04E01",
+        "source_title": "Airwolf S04E01 Blackjack",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104764,
+        "source_id": -60853268508555459,
+        "series_title": "Airwolf",
+        "episode_code": "S04E01",
+        "source_title": "Airwolf S04E01 - Blackjack",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104764,
+        "source_id": -9818554739888641,
+        "series_title": "Airwolf",
+        "episode_code": "S04E01",
+        "source_title": "Airwolf S04E01 - Blackjack - ENG",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104765,
+        "source_id": -43934269106813227,
+        "series_title": "Airwolf",
+        "episode_code": "S04E03",
+        "source_title": "Airwolf S04E03 - A Town For Hire - ENG",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104765,
+        "source_id": -31126641728453833,
+        "series_title": "Airwolf",
+        "episode_code": "S04E03",
+        "source_title": "Airwolf S04E03 - A Town For Hire",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104766,
+        "source_id": -28491899813772881,
+        "series_title": "Airwolf",
+        "episode_code": "S04E04",
+        "source_title": "Airwolf S04E04 - Salvage - ENG",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104766,
+        "source_id": -13350894658367227,
+        "series_title": "Airwolf",
+        "episode_code": "S04E04",
+        "source_title": "Airwolf S04E04 - Salvage",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104767,
+        "source_id": -41986167662983312,
+        "series_title": "Airwolf",
+        "episode_code": "S04E05",
+        "source_title": "Airwolf S04E05 - Windows - ENG",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104767,
+        "source_id": -20261754433599623,
+        "series_title": "Airwolf",
+        "episode_code": "S04E05",
+        "source_title": "Airwolf S04E05 - Windows",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104768,
+        "source_id": -22882741489222616,
+        "series_title": "Airwolf",
+        "episode_code": "S04E06",
+        "source_title": "Airwolf S04E06 - A Piece of Cake",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104768,
+        "source_id": -13969469633551684,
+        "series_title": "Airwolf",
+        "episode_code": "S04E06",
+        "source_title": "Airwolf S04E06 - A Piece of Cake - ENG",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104769,
+        "source_id": -50421329324037567,
+        "series_title": "Airwolf",
+        "episode_code": "S04E07",
+        "source_title": "Airwolf S04E07 Deathtrain",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104769,
+        "source_id": -67630100461037774,
+        "series_title": "Airwolf",
+        "episode_code": "S04E07",
+        "source_title": "Airwolf S04E07 - Code of Silence - ENG",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104769,
+        "source_id": -65405286598229068,
+        "series_title": "Airwolf",
+        "episode_code": "S04E07",
+        "source_title": "Airwolf S04E07 - Code of Silence",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104770,
+        "source_id": -61952422110549992,
+        "series_title": "Airwolf",
+        "episode_code": "S04E08",
+        "source_title": "Airwolf S04E08 - Stavograd Part 1",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104770,
+        "source_id": -16911681161261743,
+        "series_title": "Airwolf",
+        "episode_code": "S04E08",
+        "source_title": "Airwolf S04E08 - Stavograd Part 1 - ENG",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104771,
+        "source_id": -69008852569190411,
+        "series_title": "Airwolf",
+        "episode_code": "S04E09",
+        "source_title": "Airwolf S04E09 - Stavograd Part 2 - ENG",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104771,
+        "source_id": -32613286552680134,
+        "series_title": "Airwolf",
+        "episode_code": "S04E09",
+        "source_title": "Airwolf S04E09 - Stavograd Part 2",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104773,
+        "source_id": -32143724965674420,
+        "series_title": "Airwolf",
+        "episode_code": "S04E10",
+        "source_title": "Airwolf S04E10 - Mime Troupe",
         "status": "needs_whisper"
       }
     ],
@@ -242467,16 +242637,16 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 39,
+    "ok": 59,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
-    "whisper_non_cz_needs_subtitles": 1891,
+    "whisper_non_cz_needs_subtitles": 1911,
     "whisper_confirmed_cz": 1173,
-    "needs_whisper": 53345,
+    "needs_whisper": 53325,
     "whisper_failed": 3
   },
   "subtitle_followup_statuses": {
-    "needs_subtitle_setup_after_prehrajto_processing": 10795
+    "needs_subtitle_setup_after_prehrajto_processing": 10798
   }
 }
