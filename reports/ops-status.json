@@ -2,52 +2,84 @@
   "counts": {
     "backlog_episodes": 165744,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 27735,
-    "prepared_source_episodes": 46351,
+    "uploaded_episodes": 27746,
+    "prepared_source_episodes": 46344,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 625,
-    "language_whisper_attempted_sources": 71,
+    "language_audited_sources": 40,
+    "language_whisper_attempted_sources": 40,
     "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 53251,
-    "whisper_review_pending_sources": 50214,
+    "whisper_review_pending_sources": 50194,
     "subtitle_followup_sources": 10029,
     "subtitle_followup_pending_sources": 10029
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-07-15T02:54:27Z",
-      "databaseId": 29385221432,
+      "createdAt": "2026-07-15T03:05:41Z",
+      "databaseId": 29385687241,
       "headBranch": "main",
       "status": "in_progress",
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-15T03:04:10Z",
+      "databaseId": 29385618270,
+      "headBranch": "main",
+      "status": "completed",
       "workflowName": "update-descriptions"
     },
     {
       "conclusion": "",
-      "createdAt": "2026-07-15T02:54:23Z",
-      "databaseId": 29385219268,
+      "createdAt": "2026-07-15T03:02:14Z",
+      "databaseId": 29385535900,
       "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "process-whisper-review"
+      "status": "pending",
+      "workflowName": "prepare-descriptions"
     },
     {
       "conclusion": "",
-      "createdAt": "2026-07-15T02:54:21Z",
-      "databaseId": 29385217704,
+      "createdAt": "2026-07-15T02:59:15Z",
+      "databaseId": 29385408958,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "audit-language"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
+      "createdAt": "2026-07-15T02:54:27Z",
+      "databaseId": 29385221432,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-15T02:54:23Z",
+      "databaseId": 29385219268,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-15T02:54:21Z",
+      "databaseId": 29385217704,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-15T02:54:04Z",
       "databaseId": 29385205547,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -145,38 +177,6 @@
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-15T02:10:58Z",
-      "databaseId": 29383467211,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-15T02:09:56Z",
-      "databaseId": 29383422729,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-15T02:03:44Z",
-      "databaseId": 29383166282,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-15T02:03:41Z",
-      "databaseId": 29383164052,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
     }
   ],
   "gaps": {
@@ -116566,6 +116566,21 @@
         "video_id": 27496701
       },
       {
+        "episode_id": 174828,
+        "display_name": "Afrika S01E05 - Sahara CZ Dabing",
+        "video_id": 27496798
+      },
+      {
+        "episode_id": 156218,
+        "display_name": "Šahmaran S01E01 - Pozemská muka CZ Dabing",
+        "video_id": 27496866
+      },
+      {
+        "episode_id": 156220,
+        "display_name": "Šahmaran S01E03 - Křehká rovnováha CZ Dabing",
+        "video_id": 27496927
+      },
+      {
         "episode_id": 182505,
         "display_name": "Šmoulové S01E24 - Fialoví šmoulové CZ Titulky",
         "video_id": 27496523
@@ -116604,6 +116619,46 @@
         "episode_id": 156219,
         "display_name": "Šahmaran S01E02 - Co říká déšť CZ Dabing",
         "video_id": 27496723
+      },
+      {
+        "episode_id": 156221,
+        "display_name": "Šahmaran S01E04 - Nesnesitelná lehkost víry CZ Dabing",
+        "video_id": 27496741
+      },
+      {
+        "episode_id": 156223,
+        "display_name": "Šahmaran S01E06 - V životě není chvíli klid CZ Dabing",
+        "video_id": 27496762
+      },
+      {
+        "episode_id": 156225,
+        "display_name": "Šahmaran S01E08 - Had ve mně CZ Dabing",
+        "video_id": 27496776
+      },
+      {
+        "episode_id": 156231,
+        "display_name": "Šahmaran S02E06 - Cyklus CZ Dabing",
+        "video_id": 27496805
+      },
+      {
+        "episode_id": 96971,
+        "display_name": "Naprosto dokonalé S03E06 - 6. epizoda CZ Dabing",
+        "video_id": 27496825
+      },
+      {
+        "episode_id": 6209,
+        "display_name": "Soumrak templářů S01E04 - Kdo objevuje své vlastní já, objevuje Boha CZ Dabing",
+        "video_id": 27496843
+      },
+      {
+        "episode_id": 6215,
+        "display_name": "Soumrak templářů S01E10 - Vidíte modrou? CZ Titulky",
+        "video_id": 27496870
+      },
+      {
+        "episode_id": 6219,
+        "display_name": "Soumrak templářů S02E04 - Rovnost před Bohem CZ Titulky",
+        "video_id": 27496934
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -232888,6 +232943,21 @@
         "video_id": 27496701
       },
       {
+        "episode_id": 174828,
+        "display_name": "Afrika S01E05 - Sahara CZ Dabing",
+        "video_id": 27496798
+      },
+      {
+        "episode_id": 156218,
+        "display_name": "Šahmaran S01E01 - Pozemská muka CZ Dabing",
+        "video_id": 27496866
+      },
+      {
+        "episode_id": 156220,
+        "display_name": "Šahmaran S01E03 - Křehká rovnováha CZ Dabing",
+        "video_id": 27496927
+      },
+      {
         "episode_id": 182505,
         "display_name": "Šmoulové S01E24 - Fialoví šmoulové CZ Titulky",
         "video_id": 27496523
@@ -232926,6 +232996,46 @@
         "episode_id": 156219,
         "display_name": "Šahmaran S01E02 - Co říká déšť CZ Dabing",
         "video_id": 27496723
+      },
+      {
+        "episode_id": 156221,
+        "display_name": "Šahmaran S01E04 - Nesnesitelná lehkost víry CZ Dabing",
+        "video_id": 27496741
+      },
+      {
+        "episode_id": 156223,
+        "display_name": "Šahmaran S01E06 - V životě není chvíli klid CZ Dabing",
+        "video_id": 27496762
+      },
+      {
+        "episode_id": 156225,
+        "display_name": "Šahmaran S01E08 - Had ve mně CZ Dabing",
+        "video_id": 27496776
+      },
+      {
+        "episode_id": 156231,
+        "display_name": "Šahmaran S02E06 - Cyklus CZ Dabing",
+        "video_id": 27496805
+      },
+      {
+        "episode_id": 96971,
+        "display_name": "Naprosto dokonalé S03E06 - 6. epizoda CZ Dabing",
+        "video_id": 27496825
+      },
+      {
+        "episode_id": 6209,
+        "display_name": "Soumrak templářů S01E04 - Kdo objevuje své vlastní já, objevuje Boha CZ Dabing",
+        "video_id": 27496843
+      },
+      {
+        "episode_id": 6215,
+        "display_name": "Soumrak templářů S01E10 - Vidíte modrou? CZ Titulky",
+        "video_id": 27496870
+      },
+      {
+        "episode_id": 6219,
+        "display_name": "Soumrak templářů S02E04 - Rovnost před Bohem CZ Titulky",
+        "video_id": 27496934
       }
     ],
     "prepared_not_upload_ready": [
@@ -233240,166 +233350,6 @@
         "status": "whisper_failed"
       },
       {
-        "episode_id": 37022,
-        "source_id": -26799172557731415,
-        "series_title": "Andromeda",
-        "episode_code": "S03E15",
-        "source_title": "Andromeda S03E15 dyk",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 37027,
-        "source_id": -64807748101757137,
-        "series_title": "Andromeda",
-        "episode_code": "S04E01",
-        "source_title": "Andromeda S4E1 Epizoda 1",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 37027,
-        "source_id": -23873821494563846,
-        "series_title": "Andromeda",
-        "episode_code": "S04E01",
-        "source_title": "Andromeda - S04E01 - Epizoda 1",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 37041,
-        "source_id": -18591136618838621,
-        "series_title": "Andromeda",
-        "episode_code": "S04E15",
-        "source_title": "Andromeda 4x15.Strach spaleny na popel",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 37041,
-        "source_id": -29235649118307026,
-        "series_title": "Andromeda",
-        "episode_code": "S04E15",
-        "source_title": "Andromeda S04E15 dyk",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 37041,
-        "source_id": -37841988827504407,
-        "series_title": "Andromeda",
-        "episode_code": "S04E15",
-        "source_title": "Andromeda S04E15",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 37042,
-        "source_id": -67945592151805022,
-        "series_title": "Andromeda",
-        "episode_code": "S04E16",
-        "source_title": "Andromeda 4x16.Ztraceni v prostoru, ktery neexistuje",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 37050,
-        "source_id": -71901288980843532,
-        "series_title": "Andromeda",
-        "episode_code": "S05E02",
-        "source_title": "Andromeda S05E02 dyk",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 37051,
-        "source_id": -41624048689223470,
-        "series_title": "Andromeda",
-        "episode_code": "S05E03",
-        "source_title": "Andromeda S05E03 dyk",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 37052,
-        "source_id": -30242532412522609,
-        "series_title": "Andromeda",
-        "episode_code": "S05E04",
-        "source_title": "Andromeda S05E04 dyk",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 37052,
-        "source_id": -48718688364597291,
-        "series_title": "Andromeda",
-        "episode_code": "S05E04",
-        "source_title": "Andromeda S05E04",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 37053,
-        "source_id": -19775110542585427,
-        "series_title": "Andromeda",
-        "episode_code": "S05E05",
-        "source_title": "Andromeda S05E05 dyk",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 37053,
-        "source_id": -26604212925271315,
-        "series_title": "Andromeda",
-        "episode_code": "S05E05",
-        "source_title": "Andromeda S05E05",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 37054,
-        "source_id": -46110403238433250,
-        "series_title": "Andromeda",
-        "episode_code": "S05E06",
-        "source_title": "Andromeda S05E06 dyk",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 37054,
-        "source_id": -42504259626944902,
-        "series_title": "Andromeda",
-        "episode_code": "S05E06",
-        "source_title": "Andromeda S05E06",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 37077,
-        "source_id": -45240922573393169,
-        "series_title": "Andromeda",
-        "episode_code": "S05E15",
-        "source_title": "Andromeda 5x15.Osudna pritazlivost",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 37077,
-        "source_id": -53148840662416647,
-        "series_title": "Andromeda",
-        "episode_code": "S05E15",
-        "source_title": "Andromeda S05E15",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 106735,
-        "source_id": -64824243060197180,
-        "series_title": "Ao no Exorcist",
-        "episode_code": "S01E02",
-        "source_title": "Ao no Exorcist S01E02",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 106736,
-        "source_id": -57941424206706769,
-        "series_title": "Ao no Exorcist",
-        "episode_code": "S01E03",
-        "source_title": "Ao no Exorcist S01E03",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 106737,
-        "source_id": -70757743327249179,
-        "series_title": "Ao no Exorcist",
-        "episode_code": "S01E04",
-        "source_title": "Ao no Exorcist S01E04",
-        "status": "needs_whisper"
-      },
-      {
         "episode_id": 106739,
         "source_id": -19335960227767253,
         "series_title": "Ao no Exorcist",
@@ -233629,6 +233579,166 @@
         "series_title": "Baby",
         "episode_code": "S01E03",
         "source_title": "Baby - S01E03 - #Friendzone (WEBDL-2160p)",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104629,
+        "source_id": -24426934704093825,
+        "series_title": "Baby",
+        "episode_code": "S01E03",
+        "source_title": "Man.vs.Baby.S01E03.Chapter.3.2160p.NF.WEB-DL.DDP5.1.Atmos.DV.HDR.H.265-BTBN (1)",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104629,
+        "source_id": -25331399621273539,
+        "series_title": "Baby",
+        "episode_code": "S01E03",
+        "source_title": "Baby.S01E03.1080p.WEB-DL.DD.5.1.H264-MeGaNFX",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104630,
+        "source_id": -67814890637634508,
+        "series_title": "Baby",
+        "episode_code": "S01E04",
+        "source_title": "Baby - S01E04 - Emma (WEBDL-2160p).mkv",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104630,
+        "source_id": -18097681290168337,
+        "series_title": "Baby",
+        "episode_code": "S01E04",
+        "source_title": "Baby - S01E04 - Emma (WEBDL-2160p)",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104630,
+        "source_id": -46321138807065066,
+        "series_title": "Baby",
+        "episode_code": "S01E04",
+        "source_title": "Man.vs.Baby.S01E04.Chapter.4.2160p.NF.WEB-DL.DDP5.1.Atmos.DV.HDR.H.265-BTBN (1)",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104630,
+        "source_id": -40070392230632276,
+        "series_title": "Baby",
+        "episode_code": "S01E04",
+        "source_title": "Baby.S01E04.1080p.WEB-DL.DD.5.1.H264-MeGaNFX",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104631,
+        "source_id": -23951084686115072,
+        "series_title": "Baby",
+        "episode_code": "S01E05",
+        "source_title": "Baby - S01E05 - The Last Shot (WEBDL-2160p)",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104631,
+        "source_id": -20331857560051222,
+        "series_title": "Baby",
+        "episode_code": "S01E05",
+        "source_title": "Baby - S01E05 - The Last Shot (WEBDL-2160p).mkv",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104631,
+        "source_id": -47863473055130962,
+        "series_title": "Baby",
+        "episode_code": "S01E05",
+        "source_title": "Baby_S01E05_Poslední pokus",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104631,
+        "source_id": -54765408242927103,
+        "series_title": "Baby",
+        "episode_code": "S01E05",
+        "source_title": "Baby.S01E05.1080p.WEB-DL.DD.5.1.H264-MeGaNFX",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104632,
+        "source_id": -69460878522728551,
+        "series_title": "Baby",
+        "episode_code": "S01E06",
+        "source_title": "Baby - S01E06 - #Love (WEBDL-2160p)",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104632,
+        "source_id": -4598552616172447,
+        "series_title": "Baby",
+        "episode_code": "S01E06",
+        "source_title": "Baby - S01E06 - #Love (WEBDL-2160p).mkv",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104632,
+        "source_id": -59447790495483591,
+        "series_title": "Baby",
+        "episode_code": "S01E06",
+        "source_title": "Baby_S01E06_#Love",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104632,
+        "source_id": -24008678162260768,
+        "series_title": "Baby",
+        "episode_code": "S01E06",
+        "source_title": "Baby.S01E06.1080p.WEB-DL.DD.5.1.H264-MeGaNFX",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104633,
+        "source_id": -24973819693359857,
+        "series_title": "Baby",
+        "episode_code": "S02E01",
+        "source_title": "Baby - S02E01 - #justagame (WEBDL-2160p)",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104633,
+        "source_id": -46425877205466091,
+        "series_title": "Baby",
+        "episode_code": "S02E01",
+        "source_title": "Baby_S02E01_#jenomhra",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104633,
+        "source_id": -57335920200443179,
+        "series_title": "Baby",
+        "episode_code": "S02E01",
+        "source_title": "Baby.S02E01.1080p.WEB-DL.DD.5.1.H264-MeGaNFX",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104633,
+        "source_id": -24697616628023990,
+        "series_title": "Baby",
+        "episode_code": "S02E01",
+        "source_title": "Baby - S2E1 #justagame IT",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104633,
+        "source_id": -27475354928092004,
+        "series_title": "Baby",
+        "episode_code": "S02E01",
+        "source_title": "Baby - S2E1 I'm Not That Guy EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104634,
+        "source_id": -16878047869949192,
+        "series_title": "Baby",
+        "episode_code": "S02E02",
+        "source_title": "Baby - S02E02 - The Offer (WEBDL-2160p)",
         "status": "needs_whisper"
       }
     ],
@@ -234087,15 +234197,14 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 70,
-    "disabled": 554,
+    "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
-    "whisper_non_cz_needs_subtitles": 1869,
-    "whisper_confirmed_cz": 1168,
+    "whisper_non_cz_needs_subtitles": 1872,
+    "whisper_confirmed_cz": 1185,
     "whisper_failed": 3,
-    "needs_whisper": 50211
+    "needs_whisper": 50191
   },
   "subtitle_followup_statuses": {
     "needs_subtitle_setup_after_prehrajto_processing": 10029
