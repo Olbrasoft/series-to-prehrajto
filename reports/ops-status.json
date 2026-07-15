@@ -2,28 +2,76 @@
   "counts": {
     "backlog_episodes": 165135,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 28256,
-    "prepared_source_episodes": 47930,
+    "uploaded_episodes": 28278,
+    "prepared_source_episodes": 47985,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 60,
-    "language_whisper_attempted_sources": 60,
+    "language_audited_sources": 374,
+    "language_whisper_attempted_sources": 40,
     "language_pending_whisper_sources": 2604,
-    "whisper_review_sources": 55384,
-    "whisper_review_pending_sources": 52247,
-    "subtitle_followup_sources": 10444,
-    "subtitle_followup_pending_sources": 10444
+    "whisper_review_sources": 55492,
+    "whisper_review_pending_sources": 52448,
+    "subtitle_followup_sources": 10454,
+    "subtitle_followup_pending_sources": 10454
   },
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-07-15T13:33:35Z",
+      "databaseId": 29419693104,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-15T13:33:33Z",
+      "databaseId": 29419690094,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-15T13:32:50Z",
+      "databaseId": 29419637287,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-15T13:32:49Z",
+      "databaseId": 29419636929,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-15T13:30:26Z",
+      "databaseId": 29419458895,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-15T13:15:48Z",
+      "databaseId": 29418455601,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-15T13:14:44Z",
       "databaseId": 29418380468,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -31,7 +79,7 @@
       "createdAt": "2026-07-15T13:14:39Z",
       "databaseId": 29418375234,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "prepare-manifest"
     },
     {
@@ -51,19 +99,19 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-15T13:10:19Z",
       "databaseId": 29418086612,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-15T13:10:16Z",
       "databaseId": 29418083673,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -129,54 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-15T12:59:35Z",
-      "databaseId": 29417365740,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-sources"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-15T12:58:30Z",
-      "databaseId": 29417296992,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-07-15T12:58:25Z",
-      "databaseId": 29417290964,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-15T12:56:02Z",
-      "databaseId": 29417135100,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-07-15T12:50:36Z",
-      "databaseId": 29416779200,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-15T12:43:13Z",
-      "databaseId": 29416297431,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
     }
   ],
   "gaps": {
@@ -119209,6 +119209,116 @@
         "episode_id": 152267,
         "display_name": "Námořní vyšetřovací služba: New Orleans  S03E16 - Poslední šance CZ Dabing",
         "video_id": 27505235
+      },
+      {
+        "episode_id": 152266,
+        "display_name": "Námořní vyšetřovací služba: New Orleans  S03E15 - Konečná CZ Dabing",
+        "video_id": 27505379
+      },
+      {
+        "episode_id": 152268,
+        "display_name": "Námořní vyšetřovací služba: New Orleans  S03E17 - Rychlý, tichý, smrtící CZ Dabing",
+        "video_id": 27505415
+      },
+      {
+        "episode_id": 152270,
+        "display_name": "Námořní vyšetřovací služba: New Orleans  S03E20 - New Orleans - Přísně tajné CZ Dabing",
+        "video_id": 27505463
+      },
+      {
+        "episode_id": 152272,
+        "display_name": "Námořní vyšetřovací služba: New Orleans  S03E22 - K.O. CZ Dabing",
+        "video_id": 27505493
+      },
+      {
+        "episode_id": 169482,
+        "display_name": "Námořní vyšetřovací služba: New Orleans  S07E03 - Jeden z nás CZ Dabing",
+        "video_id": 27505517
+      },
+      {
+        "episode_id": 169484,
+        "display_name": "Námořní vyšetřovací služba: New Orleans  S07E07 - Léda a labuť, 1. část CZ Dabing",
+        "video_id": 27505535
+      },
+      {
+        "episode_id": 169486,
+        "display_name": "Námořní vyšetřovací služba: New Orleans  S07E12 - 12. epizoda CZ Dabing",
+        "video_id": 27505557
+      },
+      {
+        "episode_id": 169488,
+        "display_name": "Námořní vyšetřovací služba: New Orleans  S07E14 - 14. epizoda CZ Dabing",
+        "video_id": 27505576
+      },
+      {
+        "episode_id": 169490,
+        "display_name": "Námořní vyšetřovací služba: New Orleans  S07E16 - Všechno zlé je k něčemu dobré CZ Dabing",
+        "video_id": 27505598
+      },
+      {
+        "episode_id": 193254,
+        "display_name": "He-Man and the Masters of the Universe S01E01 - 1. epizoda CZ Dabing",
+        "video_id": 27505616
+      },
+      {
+        "episode_id": 193256,
+        "display_name": "He-Man and the Masters of the Universe S01E03 - 3. epizoda CZ Dabing",
+        "video_id": 27505624
+      },
+      {
+        "episode_id": 193258,
+        "display_name": "He-Man and the Masters of the Universe S01E05 - 5. epizoda CZ Dabing",
+        "video_id": 27505634
+      },
+      {
+        "episode_id": 193260,
+        "display_name": "He-Man and the Masters of the Universe S01E07 - 7. epizoda CZ Dabing",
+        "video_id": 27505650
+      },
+      {
+        "episode_id": 152269,
+        "display_name": "Námořní vyšetřovací služba: New Orleans  S03E19 - Oko za oko CZ Dabing",
+        "video_id": 27505385
+      },
+      {
+        "episode_id": 152271,
+        "display_name": "Námořní vyšetřovací služba: New Orleans  S03E21 - Loupež CZ Dabing",
+        "video_id": 27505443
+      },
+      {
+        "episode_id": 152273,
+        "display_name": "Námořní vyšetřovací služba: New Orleans  S03E23 - Do králičí nory CZ Dabing",
+        "video_id": 27505492
+      },
+      {
+        "episode_id": 169481,
+        "display_name": "Námořní vyšetřovací služba: New Orleans  S07E01 - Něco je ve vzduchu, 1. část CZ Dabing",
+        "video_id": 27505530
+      },
+      {
+        "episode_id": 169483,
+        "display_name": "Námořní vyšetřovací služba: New Orleans  S07E05 - Operace Drano, 1. část CZ Dabing",
+        "video_id": 27505564
+      },
+      {
+        "episode_id": 169485,
+        "display_name": "Námořní vyšetřovací služba: New Orleans  S07E11 - 11. epizoda CZ Dabing",
+        "video_id": 27505595
+      },
+      {
+        "episode_id": 169487,
+        "display_name": "Námořní vyšetřovací služba: New Orleans  S07E13 - 13. epizoda CZ Dabing",
+        "video_id": 27505617
+      },
+      {
+        "episode_id": 169489,
+        "display_name": "Námořní vyšetřovací služba: New Orleans  S07E15 - 15. epizoda CZ Dabing",
+        "video_id": 27505626
+      },
+      {
+        "episode_id": 193255,
+        "display_name": "He-Man and the Masters of the Universe S01E02 - 2. epizoda CZ Dabing",
+        "video_id": 27505638
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -238136,6 +238246,116 @@
         "episode_id": 152267,
         "display_name": "Námořní vyšetřovací služba: New Orleans  S03E16 - Poslední šance CZ Dabing",
         "video_id": 27505235
+      },
+      {
+        "episode_id": 152266,
+        "display_name": "Námořní vyšetřovací služba: New Orleans  S03E15 - Konečná CZ Dabing",
+        "video_id": 27505379
+      },
+      {
+        "episode_id": 152268,
+        "display_name": "Námořní vyšetřovací služba: New Orleans  S03E17 - Rychlý, tichý, smrtící CZ Dabing",
+        "video_id": 27505415
+      },
+      {
+        "episode_id": 152270,
+        "display_name": "Námořní vyšetřovací služba: New Orleans  S03E20 - New Orleans - Přísně tajné CZ Dabing",
+        "video_id": 27505463
+      },
+      {
+        "episode_id": 152272,
+        "display_name": "Námořní vyšetřovací služba: New Orleans  S03E22 - K.O. CZ Dabing",
+        "video_id": 27505493
+      },
+      {
+        "episode_id": 169482,
+        "display_name": "Námořní vyšetřovací služba: New Orleans  S07E03 - Jeden z nás CZ Dabing",
+        "video_id": 27505517
+      },
+      {
+        "episode_id": 169484,
+        "display_name": "Námořní vyšetřovací služba: New Orleans  S07E07 - Léda a labuť, 1. část CZ Dabing",
+        "video_id": 27505535
+      },
+      {
+        "episode_id": 169486,
+        "display_name": "Námořní vyšetřovací služba: New Orleans  S07E12 - 12. epizoda CZ Dabing",
+        "video_id": 27505557
+      },
+      {
+        "episode_id": 169488,
+        "display_name": "Námořní vyšetřovací služba: New Orleans  S07E14 - 14. epizoda CZ Dabing",
+        "video_id": 27505576
+      },
+      {
+        "episode_id": 169490,
+        "display_name": "Námořní vyšetřovací služba: New Orleans  S07E16 - Všechno zlé je k něčemu dobré CZ Dabing",
+        "video_id": 27505598
+      },
+      {
+        "episode_id": 193254,
+        "display_name": "He-Man and the Masters of the Universe S01E01 - 1. epizoda CZ Dabing",
+        "video_id": 27505616
+      },
+      {
+        "episode_id": 193256,
+        "display_name": "He-Man and the Masters of the Universe S01E03 - 3. epizoda CZ Dabing",
+        "video_id": 27505624
+      },
+      {
+        "episode_id": 193258,
+        "display_name": "He-Man and the Masters of the Universe S01E05 - 5. epizoda CZ Dabing",
+        "video_id": 27505634
+      },
+      {
+        "episode_id": 193260,
+        "display_name": "He-Man and the Masters of the Universe S01E07 - 7. epizoda CZ Dabing",
+        "video_id": 27505650
+      },
+      {
+        "episode_id": 152269,
+        "display_name": "Námořní vyšetřovací služba: New Orleans  S03E19 - Oko za oko CZ Dabing",
+        "video_id": 27505385
+      },
+      {
+        "episode_id": 152271,
+        "display_name": "Námořní vyšetřovací služba: New Orleans  S03E21 - Loupež CZ Dabing",
+        "video_id": 27505443
+      },
+      {
+        "episode_id": 152273,
+        "display_name": "Námořní vyšetřovací služba: New Orleans  S03E23 - Do králičí nory CZ Dabing",
+        "video_id": 27505492
+      },
+      {
+        "episode_id": 169481,
+        "display_name": "Námořní vyšetřovací služba: New Orleans  S07E01 - Něco je ve vzduchu, 1. část CZ Dabing",
+        "video_id": 27505530
+      },
+      {
+        "episode_id": 169483,
+        "display_name": "Námořní vyšetřovací služba: New Orleans  S07E05 - Operace Drano, 1. část CZ Dabing",
+        "video_id": 27505564
+      },
+      {
+        "episode_id": 169485,
+        "display_name": "Námořní vyšetřovací služba: New Orleans  S07E11 - 11. epizoda CZ Dabing",
+        "video_id": 27505595
+      },
+      {
+        "episode_id": 169487,
+        "display_name": "Námořní vyšetřovací služba: New Orleans  S07E13 - 13. epizoda CZ Dabing",
+        "video_id": 27505617
+      },
+      {
+        "episode_id": 169489,
+        "display_name": "Námořní vyšetřovací služba: New Orleans  S07E15 - 15. epizoda CZ Dabing",
+        "video_id": 27505626
+      },
+      {
+        "episode_id": 193255,
+        "display_name": "He-Man and the Masters of the Universe S01E02 - 2. epizoda CZ Dabing",
+        "video_id": 27505638
       }
     ],
     "prepared_not_upload_ready": [
@@ -238442,403 +238662,403 @@
     ],
     "whisper_review_pending": [
       {
-        "episode_id": 104781,
-        "source_id": -63888968402435838,
+        "episode_id": 104809,
+        "source_id": -19108013946603129,
         "series_title": "Airwolf",
-        "episode_code": "S04E19",
-        "source_title": "Airwolf S04E19 - The Puppet Master",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 104781,
-        "source_id": -42157440648467749,
-        "series_title": "Airwolf",
-        "episode_code": "S04E19",
-        "source_title": "Airwolf S04E19 - The Puppet Master - ENG",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 104782,
-        "source_id": -68534279398644609,
-        "series_title": "Airwolf",
-        "episode_code": "S04E20",
-        "source_title": "Airwolf S04E20 - Malduke",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 104782,
-        "source_id": -22006487956251958,
-        "series_title": "Airwolf",
-        "episode_code": "S04E20",
-        "source_title": "Airwolf S04E20 - Malduke - ENG",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 104783,
-        "source_id": -67196748265092573,
-        "series_title": "Airwolf",
-        "episode_code": "S04E21",
-        "source_title": "Airwolf S04E21 - Poppy Chain - ENG",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 104783,
-        "source_id": -66323824089680607,
-        "series_title": "Airwolf",
-        "episode_code": "S04E21",
-        "source_title": "Airwolf S04E21 - Poppy Chain",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 104784,
-        "source_id": -72028789766064627,
-        "series_title": "Airwolf",
-        "episode_code": "S04E22",
-        "source_title": "Airwolf S04E22 - Flying Home - ENG",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 104784,
-        "source_id": -67287064538645567,
-        "series_title": "Airwolf",
-        "episode_code": "S04E22",
-        "source_title": "Airwolf S04E22 - Flying Home",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 104785,
-        "source_id": -62644378177666986,
-        "series_title": "Airwolf",
-        "episode_code": "S04E23",
-        "source_title": "Airwolf S04E23 - Welcome to Paradise - ENG",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 104785,
-        "source_id": -4433222764539433,
-        "series_title": "Airwolf",
-        "episode_code": "S04E23",
-        "source_title": "Airwolf S04E23 - Welcome to Paradise",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 155318,
-        "source_id": -45414717202353679,
-        "series_title": "Alexandr Veliký: Zrození boha",
-        "episode_code": "S01E02",
-        "source_title": "Alexandr Veliký_ Zrození boha_S01E02_Smrt, nebo vítězství",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 155318,
-        "source_id": -30997958694944620,
-        "series_title": "Alexandr Veliký: Zrození boha",
-        "episode_code": "S01E02",
-        "source_title": "Alexandr Veliký_ Zrození boha_S01E02_Smrt, nebo vítězství byDejv",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 155318,
-        "source_id": -35981690338542793,
-        "series_title": "Alexandr Veliký: Zrození boha",
-        "episode_code": "S01E02",
-        "source_title": "Alexandr Veliký: Zrození boha - S1E2 EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 155319,
-        "source_id": -64444698364903513,
-        "series_title": "Alexandr Veliký: Zrození boha",
-        "episode_code": "S01E03",
-        "source_title": "Alexandr Veliký_ Zrození boha_S01E03_Tváří v tvář",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 155319,
-        "source_id": -28941835631631727,
-        "series_title": "Alexandr Veliký: Zrození boha",
-        "episode_code": "S01E03",
-        "source_title": "Alexandr Veliký_ Zrození boha_S01E03_Tváří v tvář byDejv",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 155319,
-        "source_id": -35314171978254132,
-        "series_title": "Alexandr Veliký: Zrození boha",
-        "episode_code": "S01E03",
-        "source_title": "Alexandr Veliký: Zrození boha - S1E3 EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 155321,
-        "source_id": -68059724015090707,
-        "series_title": "Alexandr Veliký: Zrození boha",
-        "episode_code": "S01E05",
-        "source_title": "Alexandr Veliký_ Zrození boha_S01E05_Vtělený bůh",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 155321,
-        "source_id": -43453809006628799,
-        "series_title": "Alexandr Veliký: Zrození boha",
-        "episode_code": "S01E05",
-        "source_title": "Alexandr Veliký_ Zrození boha_S01E05_Vtělený bůh byDejv",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 155321,
-        "source_id": -46100234311865889,
-        "series_title": "Alexandr Veliký: Zrození boha",
-        "episode_code": "S01E05",
-        "source_title": "Alexandr Veliký: Zrození boha - S1E5 EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 2262,
-        "source_id": -36417912212501737,
-        "series_title": "ALF",
-        "episode_code": "S03E22",
-        "source_title": "Alf S03E22 SKdab",
-        "status": "whisper_failed"
-      },
-      {
-        "episode_id": 98840,
-        "source_id": -26930781432187708,
-        "series_title": "Alfa samci",
-        "episode_code": "S01E04",
-        "source_title": "Alfa samci S01E04 Bylinky z Ibizy",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 98842,
-        "source_id": -1563083961073215,
-        "series_title": "Alfa samci",
-        "episode_code": "S01E06",
-        "source_title": "Alfa samci S01E06 Vidíš, co jsi udělala",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 98848,
-        "source_id": -22071250394454199,
-        "series_title": "Alfa samci",
-        "episode_code": "S02E02",
-        "source_title": "Alfa samci S02E02 Ty máš sny",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 98850,
-        "source_id": -29419540104990083,
-        "series_title": "Alfa samci",
-        "episode_code": "S02E04",
-        "source_title": "Alfa samci S02E04 Zeptej se, jestli můžeš dál",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 98852,
-        "source_id": -27932740479235410,
-        "series_title": "Alfa samci",
-        "episode_code": "S02E06",
-        "source_title": "Alfa samci S02E06 V pondělí",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 98854,
-        "source_id": -4154903206188495,
-        "series_title": "Alfa samci",
-        "episode_code": "S02E08",
-        "source_title": "Alfa samci S02E08 Jsem hetero",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 129616,
-        "source_id": -43280711655986658,
-        "series_title": "Alfa samci",
-        "episode_code": "S03E04",
-        "source_title": "Alfa samci_S03E04_Dva plus dva byDejv",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 98860,
-        "source_id": -60438479560685215,
-        "series_title": "Alfa samci",
-        "episode_code": "S03E06",
-        "source_title": "Alfa samci_S03E06_Beta samci",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 98869,
-        "source_id": -8844866730577769,
-        "series_title": "Alfa samci",
-        "episode_code": "S03E08",
-        "source_title": "Alfa samci_S03E08_Úmyslné chyby",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 98870,
-        "source_id": -67931787263761544,
-        "series_title": "Alfa samci",
-        "episode_code": "S03E10",
-        "source_title": "Alfa samci_S03E10_Lidi se pořád berou byDejv",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 98870,
-        "source_id": -62212751788183050,
-        "series_title": "Alfa samci",
-        "episode_code": "S03E10",
-        "source_title": "Alfa samci_S03E10_Lidi se pořád berou",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 98865,
-        "source_id": -47474301398614639,
-        "series_title": "Alfa samci",
-        "episode_code": "S04E02",
-        "source_title": "Alfa samci_S04E02_Reklama na Španělsko",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 98862,
-        "source_id": -33311468678949723,
-        "series_title": "Alfa samci",
-        "episode_code": "S04E04",
-        "source_title": "Alfa samci_S04E04_Teď jsem víc heterosexuál",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 98863,
-        "source_id": -26537166434725612,
-        "series_title": "Alfa samci",
-        "episode_code": "S04E06",
-        "source_title": "Alfa samci_S04E06_Kouzelný Karibik",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 98863,
-        "source_id": -48161802728595769,
-        "series_title": "Alfa samci",
-        "episode_code": "S04E06",
-        "source_title": "Alfa samci - S4E6 EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 98872,
-        "source_id": -9349884386047789,
-        "series_title": "Alfa samci",
-        "episode_code": "S05E02",
-        "source_title": "Alfa samci_S05E02_Jak lidstvo dospělo až sem",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 98872,
-        "source_id": -57019742427835662,
-        "series_title": "Alfa samci",
-        "episode_code": "S05E02",
-        "source_title": "Alfa samci - S5E2 Epizoda 2 ES",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 98874,
-        "source_id": -4635295902459707,
-        "series_title": "Alfa samci",
-        "episode_code": "S05E04",
-        "source_title": "Alfa samci_S05E04_Přehnaná náklonnost",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 98874,
-        "source_id": -59240767724923090,
-        "series_title": "Alfa samci",
-        "episode_code": "S05E04",
-        "source_title": "Alfa samci - S5E4 Epizoda 4 ES",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 98876,
-        "source_id": -71204930480748524,
-        "series_title": "Alfa samci",
-        "episode_code": "S05E06",
-        "source_title": "Alfa samci_S05E06_Láska je láska",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 98876,
-        "source_id": -26849898100399791,
-        "series_title": "Alfa samci",
-        "episode_code": "S05E06",
-        "source_title": "Alfa samci - S5E6 Epizoda 6 ES",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 153231,
-        "source_id": -14126903817858518,
-        "series_title": "Americká vražda: Gabby Petitová",
         "episode_code": "S01E01",
-        "source_title": "Americká vražda: Gabby Petitová - S1E1 EN",
+        "source_title": "Airwolf S01E01-02 - ENG",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 153233,
-        "source_id": -49554680010385778,
-        "series_title": "Americká vražda: Gabby Petitová",
+        "episode_id": 104812,
+        "source_id": -13649077700299978,
+        "series_title": "Airwolf",
         "episode_code": "S01E03",
-        "source_title": "Americká vražda: Gabby Petitová - S1E3 EN",
+        "source_title": "Airwolf S01E03 - ENG",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 37022,
-        "source_id": -26799172557731415,
-        "series_title": "Andromeda",
+        "episode_id": 104813,
+        "source_id": -58370306569616079,
+        "series_title": "Airwolf",
+        "episode_code": "S01E04",
+        "source_title": "Airwolf S01E04 - ENG",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104814,
+        "source_id": -47639321583401056,
+        "series_title": "Airwolf",
+        "episode_code": "S01E06",
+        "source_title": "Airwolf S01E06 - ENG",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104810,
+        "source_id": -42687155085239510,
+        "series_title": "Airwolf",
+        "episode_code": "S01E07",
+        "source_title": "Airwolf S01E07 - ENG",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104821,
+        "source_id": -7468908853318591,
+        "series_title": "Airwolf",
+        "episode_code": "S02E01",
+        "source_title": "Airwolf S02E01 - ENG",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104826,
+        "source_id": -15739228947090668,
+        "series_title": "Airwolf",
+        "episode_code": "S02E02",
+        "source_title": "Airwolf S02E02 - ENG",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104825,
+        "source_id": -6874508234782076,
+        "series_title": "Airwolf",
+        "episode_code": "S02E03",
+        "source_title": "Airwolf S02E03 - ENG",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104820,
+        "source_id": -30304140047454915,
+        "series_title": "Airwolf",
+        "episode_code": "S02E04",
+        "source_title": "Airwolf S02E04 - ENG",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104819,
+        "source_id": -69844550262734422,
+        "series_title": "Airwolf",
+        "episode_code": "S02E05",
+        "source_title": "Airwolf S02E05 - ENG",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104823,
+        "source_id": -3894197480307153,
+        "series_title": "Airwolf",
+        "episode_code": "S02E06",
+        "source_title": "Airwolf S02E06 - ENG",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104824,
+        "source_id": -47129814569991539,
+        "series_title": "Airwolf",
+        "episode_code": "S02E07",
+        "source_title": "Airwolf S02E07 - ENG",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104822,
+        "source_id": -30502325957645251,
+        "series_title": "Airwolf",
+        "episode_code": "S02E08",
+        "source_title": "Airwolf S02E08 - ENG",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104827,
+        "source_id": -61531833760234024,
+        "series_title": "Airwolf",
+        "episode_code": "S02E09",
+        "source_title": "Airwolf S02E09 - ENG",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104828,
+        "source_id": -5313671209413740,
+        "series_title": "Airwolf",
+        "episode_code": "S02E10",
+        "source_title": "Airwolf S02E10 - ENG",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104829,
+        "source_id": -45360672304714175,
+        "series_title": "Airwolf",
+        "episode_code": "S02E11",
+        "source_title": "Airwolf S02E11 - ENG",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104831,
+        "source_id": -18149591843930247,
+        "series_title": "Airwolf",
+        "episode_code": "S02E13",
+        "source_title": "Airwolf S02E13 - ENG",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104832,
+        "source_id": -51677407405402141,
+        "series_title": "Airwolf",
+        "episode_code": "S02E14",
+        "source_title": "Airwolf S02E14 - ENG",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104833,
+        "source_id": -24959985039488790,
+        "series_title": "Airwolf",
+        "episode_code": "S02E15",
+        "source_title": "Airwolf S02E15 - ENG",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104834,
+        "source_id": -52169719811652029,
+        "series_title": "Airwolf",
+        "episode_code": "S02E16",
+        "source_title": "Airwolf S02E16 - ENG",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104835,
+        "source_id": -49650439865174150,
+        "series_title": "Airwolf",
+        "episode_code": "S02E17",
+        "source_title": "Airwolf S02E17 - ENG",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104836,
+        "source_id": -17063360205153016,
+        "series_title": "Airwolf",
+        "episode_code": "S02E18",
+        "source_title": "Airwolf S02E18 - ENG",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104837,
+        "source_id": -41764083471061436,
+        "series_title": "Airwolf",
+        "episode_code": "S02E19",
+        "source_title": "Airwolf S02E19 - ENG",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104786,
+        "source_id": -36952503178878524,
+        "series_title": "Airwolf",
+        "episode_code": "S03E01",
+        "source_title": "Airwolf S03E01 - ENG",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104786,
+        "source_id": -8816853272660233,
+        "series_title": "Airwolf",
+        "episode_code": "S03E01",
+        "source_title": "Airwolf.S03E01.The.Horn.of.Plenty.DVDRip.XviD-DIMENSION",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104787,
+        "source_id": -65701278084441228,
+        "series_title": "Airwolf",
+        "episode_code": "S03E02",
+        "source_title": "Airwolf S03E02 - ENG",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104787,
+        "source_id": -10053593615139806,
+        "series_title": "Airwolf",
+        "episode_code": "S03E02",
+        "source_title": "Airwolf.S03E02.Airwolf.II.DVDRip.XviD-DIMENSION",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104788,
+        "source_id": -19675396974807027,
+        "series_title": "Airwolf",
+        "episode_code": "S03E03",
+        "source_title": "Airwolf S03E03 - ENG",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104788,
+        "source_id": -12177697421123796,
+        "series_title": "Airwolf",
+        "episode_code": "S03E03",
+        "source_title": "Airwolf.S03E03.And.a.Child.Shall.Lead.DVDRip.XviD-DIMENSION",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104789,
+        "source_id": -60227244032768815,
+        "series_title": "Airwolf",
+        "episode_code": "S03E04",
+        "source_title": "Airwolf.S03E04.Fortune.Teller.DVDRip.XviD-DIMENSION",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104789,
+        "source_id": -38311791220744401,
+        "series_title": "Airwolf",
+        "episode_code": "S03E04",
+        "source_title": "Airwolf S03E04 - ENG",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104790,
+        "source_id": -46162437359641659,
+        "series_title": "Airwolf",
+        "episode_code": "S03E05",
+        "source_title": "Airwolf.S03E05.Crossover.DVDRip.XviD-DIMENSION",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104790,
+        "source_id": -13178465719445529,
+        "series_title": "Airwolf",
+        "episode_code": "S03E05",
+        "source_title": "Airwolf S03E05 - ENG",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104791,
+        "source_id": -45162098994656135,
+        "series_title": "Airwolf",
+        "episode_code": "S03E06",
+        "source_title": "Airwolf S03E06 - ENG",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104791,
+        "source_id": -16398897043394772,
+        "series_title": "Airwolf",
+        "episode_code": "S03E06",
+        "source_title": "Airwolf.S03E06.Kingdom.Come.DVDRip.XviD-DIMENSION",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104792,
+        "source_id": -63529451413889119,
+        "series_title": "Airwolf",
+        "episode_code": "S03E07",
+        "source_title": "Airwolf S03E07 - ENG",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104792,
+        "source_id": -45156900032381544,
+        "series_title": "Airwolf",
+        "episode_code": "S03E07",
+        "source_title": "Airwolf.S03E07.Eagles.DVDRip.XviD-DIMENSION",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104794,
+        "source_id": -32026931720123242,
+        "series_title": "Airwolf",
+        "episode_code": "S03E09",
+        "source_title": "Airwolf.S03E09.Jennie.DVDRip.XviD-DIMENSION",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104794,
+        "source_id": -6127883213404568,
+        "series_title": "Airwolf",
+        "episode_code": "S03E09",
+        "source_title": "Airwolf S03E09 - ENG",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104818,
+        "source_id": -23757568508421992,
+        "series_title": "Airwolf",
+        "episode_code": "S03E10",
+        "source_title": "Airwolf S03E10 - ENG",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104795,
+        "source_id": -68154072131647357,
+        "series_title": "Airwolf",
+        "episode_code": "S03E11",
+        "source_title": "Airwolf.S03E11.Where.Have.All.the.Children.Gone.DVDRip.XviD-DIMENSION",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104795,
+        "source_id": -4863188421397795,
+        "series_title": "Airwolf",
+        "episode_code": "S03E11",
+        "source_title": "Airwolf S03E11 - ENG",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104796,
+        "source_id": -60522396742274972,
+        "series_title": "Airwolf",
+        "episode_code": "S03E12",
+        "source_title": "Airwolf.S03E12.Half-Pint.DVDRip.XviD-DIMENSION",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104796,
+        "source_id": -43380099581834349,
+        "series_title": "Airwolf",
+        "episode_code": "S03E12",
+        "source_title": "Airwolf S03E12 - ENG",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104797,
+        "source_id": -64672726261471552,
+        "series_title": "Airwolf",
+        "episode_code": "S03E13",
+        "source_title": "Airwolf.S03E13.Wildfire.DVDRip.XviD-DIMENSION",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104797,
+        "source_id": -39966471509219466,
+        "series_title": "Airwolf",
+        "episode_code": "S03E13",
+        "source_title": "Airwolf S03E13 - ENG",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104798,
+        "source_id": -34212289899861956,
+        "series_title": "Airwolf",
+        "episode_code": "S03E14",
+        "source_title": "Airwolf.S03E14.Discovery.DVDRip.XviD-DIMENSION",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104798,
+        "source_id": -10256269200933782,
+        "series_title": "Airwolf",
+        "episode_code": "S03E14",
+        "source_title": "Airwolf S03E14 - ENG",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104799,
+        "source_id": -58747822176521541,
+        "series_title": "Airwolf",
         "episode_code": "S03E15",
-        "source_title": "Andromeda S03E15 dyk",
+        "source_title": "Airwolf S03E15 - ENG",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 37027,
-        "source_id": -64807748101757137,
-        "series_title": "Andromeda",
-        "episode_code": "S04E01",
-        "source_title": "Andromeda S4E1 Epizoda 1",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 37027,
-        "source_id": -23873821494563846,
-        "series_title": "Andromeda",
-        "episode_code": "S04E01",
-        "source_title": "Andromeda - S04E01 - Epizoda 1",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 37041,
-        "source_id": -18591136618838621,
-        "series_title": "Andromeda",
-        "episode_code": "S04E15",
-        "source_title": "Andromeda 4x15.Strach spaleny na popel",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 37041,
-        "source_id": -29235649118307026,
-        "series_title": "Andromeda",
-        "episode_code": "S04E15",
-        "source_title": "Andromeda S04E15 dyk",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 37041,
-        "source_id": -37841988827504407,
-        "series_title": "Andromeda",
-        "episode_code": "S04E15",
-        "source_title": "Andromeda S04E15",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 37042,
-        "source_id": -67945592151805022,
-        "series_title": "Andromeda",
-        "episode_code": "S04E16",
-        "source_title": "Andromeda 4x16.Ztraceni v prostoru, ktery neexistuje",
+        "episode_id": 104799,
+        "source_id": -41552910525681715,
+        "series_title": "Airwolf",
+        "episode_code": "S03E15",
+        "source_title": "Airwolf.S03E15.Day.of.Jeopardy.DVDRip.XviD-DIMENSION",
         "status": "needs_whisper"
       }
     ],
@@ -239297,16 +239517,17 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 59,
+    "disabled": 334,
+    "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
-    "whisper_non_cz_needs_subtitles": 1969,
-    "whisper_confirmed_cz": 1168,
-    "needs_whisper": 52244,
+    "whisper_non_cz_needs_subtitles": 1871,
+    "whisper_confirmed_cz": 1173,
+    "needs_whisper": 52445,
     "whisper_failed": 3
   },
   "subtitle_followup_statuses": {
-    "needs_subtitle_setup_after_prehrajto_processing": 10444
+    "needs_subtitle_setup_after_prehrajto_processing": 10454
   }
 }
