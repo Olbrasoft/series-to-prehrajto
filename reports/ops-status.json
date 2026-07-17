@@ -2,22 +2,62 @@
   "counts": {
     "backlog_episodes": 163229,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 30271,
-    "prepared_source_episodes": 54946,
+    "uploaded_episodes": 30283,
+    "prepared_source_episodes": 55055,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 201,
-    "language_whisper_attempted_sources": 60,
+    "language_audited_sources": 94,
+    "language_whisper_attempted_sources": 40,
     "language_pending_whisper_sources": 2604,
-    "whisper_review_sources": 60958,
-    "whisper_review_pending_sources": 57734,
-    "subtitle_followup_sources": 12200,
-    "subtitle_followup_pending_sources": 12200
+    "whisper_review_sources": 61048,
+    "whisper_review_pending_sources": 57824,
+    "subtitle_followup_sources": 12231,
+    "subtitle_followup_pending_sources": 12231
   },
   "workflow_runs": [
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-17T11:58:26Z",
+      "databaseId": 29578628349,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-17T11:58:20Z",
+      "databaseId": 29578623020,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-17T11:55:43Z",
+      "databaseId": 29578480514,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-17T11:55:02Z",
+      "databaseId": 29578441705,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-17T11:43:43Z",
+      "databaseId": 29577809408,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
     {
       "conclusion": "success",
       "createdAt": "2026-07-17T11:42:36Z",
@@ -27,11 +67,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-17T11:42:31Z",
       "databaseId": 29577738852,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -39,7 +79,7 @@
       "createdAt": "2026-07-17T11:42:22Z",
       "databaseId": 29577729986,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "process-whisper-review"
     },
     {
@@ -47,7 +87,7 @@
       "createdAt": "2026-07-17T11:41:28Z",
       "databaseId": 29577679347,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "sync"
     },
     {
@@ -63,7 +103,7 @@
       "createdAt": "2026-07-17T11:41:21Z",
       "databaseId": 29577673281,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "prepare-manifest"
     },
     {
@@ -75,19 +115,19 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-17T11:39:47Z",
       "databaseId": 29577583835,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-17T11:39:44Z",
       "databaseId": 29577581520,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -137,46 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-17T11:21:05Z",
-      "databaseId": 29576547617,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-17T11:20:00Z",
-      "databaseId": 29576487335,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-17T11:19:59Z",
-      "databaseId": 29576486395,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-07-17T11:19:54Z",
-      "databaseId": 29576482407,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-17T11:07:32Z",
-      "databaseId": 29575797576,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-sources"
     }
   ],
   "gaps": {
@@ -129226,6 +129226,26 @@
         "video_id": 27581457
       },
       {
+        "episode_id": 135108,
+        "display_name": "A Million Little Things S03E16 - 16. epizoda CZ Titulky",
+        "video_id": 27581519
+      },
+      {
+        "episode_id": 135072,
+        "display_name": "A Million Little Things S04E09 - 9. epizoda CZ Titulky",
+        "video_id": 27581569
+      },
+      {
+        "episode_id": 135076,
+        "display_name": "A Million Little Things S05E08 - 8. epizoda CZ Titulky",
+        "video_id": 27581609
+      },
+      {
+        "episode_id": 152490,
+        "display_name": "High Fidelity S01E01 - Pět milostných pádů CZ Titulky",
+        "video_id": 27581655
+      },
+      {
         "episode_id": 66793,
         "display_name": "Brassic S03E04 - 4. epizoda CZ Titulky",
         "video_id": 27580814
@@ -129284,6 +129304,46 @@
         "episode_id": 173753,
         "display_name": "Hotel Del Luna S01E02 - Chytit tigra CZ Titulky",
         "video_id": 27581436
+      },
+      {
+        "episode_id": 173755,
+        "display_name": "Hotel Del Luna S01E04 - Pokoj 13 CZ Titulky",
+        "video_id": 27581522
+      },
+      {
+        "episode_id": 173757,
+        "display_name": "Hotel Del Luna S01E06 - Chan Seongova bývalá přítelkyně CZ Titulky",
+        "video_id": 27581596
+      },
+      {
+        "episode_id": 125295,
+        "display_name": "Židle S01E01 - Život letí příliš sk*rveně rychle, opravdu CZ Dabing",
+        "video_id": 27581659
+      },
+      {
+        "episode_id": 125297,
+        "display_name": "Židle S01E04 - Rodiště Bahlda Harmona (sporné) CZ Dabing",
+        "video_id": 27581712
+      },
+      {
+        "episode_id": 125299,
+        "display_name": "Židle S01E06 - Všechno nejlepší CZ Dabing",
+        "video_id": 27581753
+      },
+      {
+        "episode_id": 125301,
+        "display_name": "Židle S01E07 - Řekl jsem svému psovi: „Jak se ti líbí moje hipisácká košile?“ CZ Dabing",
+        "video_id": 27581821
+      },
+      {
+        "episode_id": 96409,
+        "display_name": "Souputníci S01E02 - Bulletproof CZ Dabing",
+        "video_id": 27581907
+      },
+      {
+        "episode_id": 96411,
+        "display_name": "Souputníci S01E03 - Uhoď mě CZ Dabing",
+        "video_id": 27582005
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -258228,6 +258288,26 @@
         "video_id": 27581457
       },
       {
+        "episode_id": 135108,
+        "display_name": "A Million Little Things S03E16 - 16. epizoda CZ Titulky",
+        "video_id": 27581519
+      },
+      {
+        "episode_id": 135072,
+        "display_name": "A Million Little Things S04E09 - 9. epizoda CZ Titulky",
+        "video_id": 27581569
+      },
+      {
+        "episode_id": 135076,
+        "display_name": "A Million Little Things S05E08 - 8. epizoda CZ Titulky",
+        "video_id": 27581609
+      },
+      {
+        "episode_id": 152490,
+        "display_name": "High Fidelity S01E01 - Pět milostných pádů CZ Titulky",
+        "video_id": 27581655
+      },
+      {
         "episode_id": 66793,
         "display_name": "Brassic S03E04 - 4. epizoda CZ Titulky",
         "video_id": 27580814
@@ -258286,6 +258366,46 @@
         "episode_id": 173753,
         "display_name": "Hotel Del Luna S01E02 - Chytit tigra CZ Titulky",
         "video_id": 27581436
+      },
+      {
+        "episode_id": 173755,
+        "display_name": "Hotel Del Luna S01E04 - Pokoj 13 CZ Titulky",
+        "video_id": 27581522
+      },
+      {
+        "episode_id": 173757,
+        "display_name": "Hotel Del Luna S01E06 - Chan Seongova bývalá přítelkyně CZ Titulky",
+        "video_id": 27581596
+      },
+      {
+        "episode_id": 125295,
+        "display_name": "Židle S01E01 - Život letí příliš sk*rveně rychle, opravdu CZ Dabing",
+        "video_id": 27581659
+      },
+      {
+        "episode_id": 125297,
+        "display_name": "Židle S01E04 - Rodiště Bahlda Harmona (sporné) CZ Dabing",
+        "video_id": 27581712
+      },
+      {
+        "episode_id": 125299,
+        "display_name": "Židle S01E06 - Všechno nejlepší CZ Dabing",
+        "video_id": 27581753
+      },
+      {
+        "episode_id": 125301,
+        "display_name": "Židle S01E07 - Řekl jsem svému psovi: „Jak se ti líbí moje hipisácká košile?“ CZ Dabing",
+        "video_id": 27581821
+      },
+      {
+        "episode_id": 96409,
+        "display_name": "Souputníci S01E02 - Bulletproof CZ Dabing",
+        "video_id": 27581907
+      },
+      {
+        "episode_id": 96411,
+        "display_name": "Souputníci S01E03 - Uhoď mě CZ Dabing",
+        "video_id": 27582005
       }
     ],
     "prepared_not_upload_ready": [
@@ -259447,17 +259567,17 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 141,
-    "ok": 59,
+    "disabled": 54,
+    "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
     "whisper_non_cz_needs_subtitles": 2018,
     "whisper_confirmed_cz": 1206,
-    "needs_whisper": 57731,
+    "needs_whisper": 57821,
     "whisper_failed": 3
   },
   "subtitle_followup_statuses": {
-    "needs_subtitle_setup_after_prehrajto_processing": 12200
+    "needs_subtitle_setup_after_prehrajto_processing": 12231
   }
 }
