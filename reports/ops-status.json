@@ -2,36 +2,76 @@
   "counts": {
     "backlog_episodes": 163050,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 30433,
-    "prepared_source_episodes": 55282,
+    "uploaded_episodes": 30434,
+    "prepared_source_episodes": 55395,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 313,
+    "language_audited_sources": 545,
     "language_whisper_attempted_sources": 40,
     "language_pending_whisper_sources": 2604,
-    "whisper_review_sources": 61645,
-    "whisper_review_pending_sources": 58381,
-    "subtitle_followup_sources": 12374,
-    "subtitle_followup_pending_sources": 12374
+    "whisper_review_sources": 61769,
+    "whisper_review_pending_sources": 58505,
+    "subtitle_followup_sources": 12399,
+    "subtitle_followup_pending_sources": 12399
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-07-17T14:22:28Z",
-      "databaseId": 29587723733,
+      "createdAt": "2026-07-17T14:26:33Z",
+      "databaseId": 29588001465,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
+      "conclusion": "success",
+      "createdAt": "2026-07-17T14:23:43Z",
+      "databaseId": 29587809204,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
       "conclusion": "",
+      "createdAt": "2026-07-17T14:23:42Z",
+      "databaseId": 29587808942,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-17T14:23:40Z",
+      "databaseId": 29587805766,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-17T14:23:37Z",
+      "databaseId": 29587802921,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-17T14:22:28Z",
+      "databaseId": 29587723733,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "cancelled",
       "createdAt": "2026-07-17T14:15:07Z",
       "databaseId": 29587212588,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -137,46 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-17T13:47:57Z",
-      "databaseId": 29585358383,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-17T13:40:32Z",
-      "databaseId": 29584875148,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-17T13:40:29Z",
-      "databaseId": 29584871181,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-17T13:39:16Z",
-      "databaseId": 29584791212,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-17T13:36:54Z",
-      "databaseId": 29584639647,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
     }
   ],
   "gaps": {
@@ -129996,6 +129996,11 @@
         "video_id": 27590594
       },
       {
+        "episode_id": 60808,
+        "display_name": "Kleo S01E01 - Big Eden CZ Dabing",
+        "video_id": 27590758
+      },
+      {
         "episode_id": 58183,
         "display_name": "Stalker S01E16 - 16. epizoda CZ Dabing",
         "video_id": 27589399
@@ -259808,6 +259813,11 @@
         "video_id": 27590594
       },
       {
+        "episode_id": 60808,
+        "display_name": "Kleo S01E01 - Big Eden CZ Dabing",
+        "video_id": 27590758
+      },
+      {
         "episode_id": 58183,
         "display_name": "Stalker S01E16 - 16. epizoda CZ Dabing",
         "video_id": 27589399
@@ -261067,17 +261077,17 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 273,
+    "disabled": 505,
     "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
     "whisper_non_cz_needs_subtitles": 2058,
     "whisper_confirmed_cz": 1206,
-    "needs_whisper": 58378,
+    "needs_whisper": 58502,
     "whisper_failed": 3
   },
   "subtitle_followup_statuses": {
-    "needs_subtitle_setup_after_prehrajto_processing": 12374
+    "needs_subtitle_setup_after_prehrajto_processing": 12399
   }
 }
