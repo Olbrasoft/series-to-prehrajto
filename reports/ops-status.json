@@ -1,16 +1,16 @@
 {
   "counts": {
-    "backlog_episodes": 163329,
+    "backlog_episodes": 163229,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 30139,
+    "uploaded_episodes": 30147,
     "prepared_source_episodes": 54811,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 184,
-    "language_whisper_attempted_sources": 86,
+    "language_audited_sources": 40,
+    "language_whisper_attempted_sources": 40,
     "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 60814,
     "whisper_review_pending_sources": 57550,
@@ -20,10 +20,42 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-07-17T09:49:53Z",
+      "databaseId": 29571358458,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-17T09:42:58Z",
+      "databaseId": 29570956920,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-17T09:42:56Z",
+      "databaseId": 29570954321,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-17T09:42:54Z",
+      "databaseId": 29570952304,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-17T09:41:44Z",
       "databaseId": 29570883686,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -145,38 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-17T09:07:29Z",
-      "databaseId": 29568841192,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-17T09:07:26Z",
-      "databaseId": 29568838496,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-17T09:06:49Z",
-      "databaseId": 29568802047,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-17T09:06:16Z",
-      "databaseId": 29568768057,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
     }
   ],
   "gaps": {
@@ -128586,6 +128586,31 @@
         "video_id": 27577381
       },
       {
+        "episode_id": 71246,
+        "display_name": "Everwood S02E17 - Příběh bez konce CZ Dabing",
+        "video_id": 27577412
+      },
+      {
+        "episode_id": 71164,
+        "display_name": "Everwood S02E20 - Buď anebo CZ Dabing",
+        "video_id": 27577462
+      },
+      {
+        "episode_id": 71206,
+        "display_name": "Everwood S02E21 - Budoucnost čeká CZ Dabing",
+        "video_id": 27577507
+      },
+      {
+        "episode_id": 71230,
+        "display_name": "Everwood S03E05 - Oběti CZ Dabing",
+        "video_id": 27577596
+      },
+      {
+        "episode_id": 71234,
+        "display_name": "Everwood S03E06 - Hop nebo trop CZ Dabing",
+        "video_id": 27577643
+      },
+      {
         "episode_id": 143015,
         "display_name": "BONDING S02E02 - Pod psa CZ Dabing",
         "video_id": 27576919
@@ -128624,6 +128649,21 @@
         "episode_id": 64671,
         "display_name": "Příležitostní detektivové z Baker Street S01E01 - Kapitola první: Nevlídná tvář Londýna CZ Titulky",
         "video_id": 27577361
+      },
+      {
+        "episode_id": 64673,
+        "display_name": "Příležitostní detektivové z Baker Street S01E03 - Kapitola třetí: Ipsissimus CZ Titulky",
+        "video_id": 27577440
+      },
+      {
+        "episode_id": 64675,
+        "display_name": "Příležitostní detektivové z Baker Street S01E05 - Kapitola pátá: Adepti nesvatých umění CZ Titulky",
+        "video_id": 27577528
+      },
+      {
+        "episode_id": 64677,
+        "display_name": "Příležitostní detektivové z Baker Street S01E07 - Kapitola sedmá: Extáze smrti CZ Titulky",
+        "video_id": 27577611
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -256928,6 +256968,31 @@
         "video_id": 27577381
       },
       {
+        "episode_id": 71246,
+        "display_name": "Everwood S02E17 - Příběh bez konce CZ Dabing",
+        "video_id": 27577412
+      },
+      {
+        "episode_id": 71164,
+        "display_name": "Everwood S02E20 - Buď anebo CZ Dabing",
+        "video_id": 27577462
+      },
+      {
+        "episode_id": 71206,
+        "display_name": "Everwood S02E21 - Budoucnost čeká CZ Dabing",
+        "video_id": 27577507
+      },
+      {
+        "episode_id": 71230,
+        "display_name": "Everwood S03E05 - Oběti CZ Dabing",
+        "video_id": 27577596
+      },
+      {
+        "episode_id": 71234,
+        "display_name": "Everwood S03E06 - Hop nebo trop CZ Dabing",
+        "video_id": 27577643
+      },
+      {
         "episode_id": 143015,
         "display_name": "BONDING S02E02 - Pod psa CZ Dabing",
         "video_id": 27576919
@@ -256966,6 +257031,21 @@
         "episode_id": 64671,
         "display_name": "Příležitostní detektivové z Baker Street S01E01 - Kapitola první: Nevlídná tvář Londýna CZ Titulky",
         "video_id": 27577361
+      },
+      {
+        "episode_id": 64673,
+        "display_name": "Příležitostní detektivové z Baker Street S01E03 - Kapitola třetí: Ipsissimus CZ Titulky",
+        "video_id": 27577440
+      },
+      {
+        "episode_id": 64675,
+        "display_name": "Příležitostní detektivové z Baker Street S01E05 - Kapitola pátá: Adepti nesvatých umění CZ Titulky",
+        "video_id": 27577528
+      },
+      {
+        "episode_id": 64677,
+        "display_name": "Příležitostní detektivové z Baker Street S01E07 - Kapitola sedmá: Extáze smrti CZ Titulky",
+        "video_id": 27577611
       }
     ],
     "prepared_not_upload_ready": [
@@ -258127,8 +258207,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 98,
-    "ok": 85,
+    "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
