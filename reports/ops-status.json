@@ -3,7 +3,7 @@
     "backlog_episodes": 162846,
     "manifest_upload_ready_episodes": 1000,
     "uploaded_episodes": 30562,
-    "prepared_source_episodes": 56484,
+    "prepared_source_episodes": 56482,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
@@ -11,27 +11,75 @@
     "language_queue_sources": 2644,
     "language_audited_sources": 40,
     "language_whisper_attempted_sources": 40,
-    "language_pending_whisper_sources": 2624,
+    "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 63012,
-    "whisper_review_pending_sources": 59526,
-    "subtitle_followup_sources": 12734,
-    "subtitle_followup_pending_sources": 12734
+    "whisper_review_pending_sources": 59506,
+    "subtitle_followup_sources": 12736,
+    "subtitle_followup_pending_sources": 12736
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-07-17T21:04:47Z",
-      "databaseId": 29613480953,
+      "createdAt": "2026-07-17T21:17:53Z",
+      "databaseId": 29614229616,
       "headBranch": "main",
       "status": "in_progress",
-      "workflowName": "ops-watchdog"
+      "workflowName": "ops-status"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-07-17T21:17:08Z",
+      "databaseId": 29614188465,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-17T21:17:08Z",
+      "databaseId": 29614188152,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-17T21:16:17Z",
+      "databaseId": 29614141195,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-17T21:14:57Z",
+      "databaseId": 29614062698,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-17T21:06:00Z",
+      "databaseId": 29613552341,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-17T21:04:47Z",
+      "databaseId": 29613480953,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "cancelled",
       "createdAt": "2026-07-17T21:04:42Z",
       "databaseId": 29613476005,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -51,19 +99,19 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-17T21:02:45Z",
       "databaseId": 29613360979,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-17T21:02:43Z",
       "databaseId": 29613359422,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -129,54 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-status"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-17T20:47:50Z",
-      "databaseId": 29612493474,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-17T20:47:20Z",
-      "databaseId": 29612464896,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-17T20:46:44Z",
-      "databaseId": 29612430051,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-17T20:45:29Z",
-      "databaseId": 29612355376,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-17T20:37:31Z",
-      "databaseId": 29611886689,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-17T20:36:15Z",
-      "databaseId": 29611810729,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
     }
   ],
   "gaps": {
@@ -261510,166 +261510,6 @@
         "status": "whisper_failed"
       },
       {
-        "episode_id": 69035,
-        "source_id": -44350082416912342,
-        "series_title": "Aquarius",
-        "episode_code": "S02E11",
-        "source_title": "Aquarius-S02E11-TitCz",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 69036,
-        "source_id": -69710458950080343,
-        "series_title": "Aquarius",
-        "episode_code": "S02E12",
-        "source_title": "Aquarius - S2E12 Mother Nature's Son EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 69036,
-        "source_id": -34866917049103638,
-        "series_title": "Aquarius",
-        "episode_code": "S02E12",
-        "source_title": "Aquarius - S02E12 - Mother Nature's Son",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 69036,
-        "source_id": -31138807435068624,
-        "series_title": "Aquarius",
-        "episode_code": "S02E12",
-        "source_title": "Aquarius 2x12",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 69036,
-        "source_id": -14256694379195808,
-        "series_title": "Aquarius",
-        "episode_code": "S02E12",
-        "source_title": "Aquarius - s02e12",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 69037,
-        "source_id": -68410503449726452,
-        "series_title": "Aquarius",
-        "episode_code": "S02E13",
-        "source_title": "Aquarius - S02E13 - I Will",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 69037,
-        "source_id": -38349400781342452,
-        "series_title": "Aquarius",
-        "episode_code": "S02E13",
-        "source_title": "Aquarius - S2E13 I Will EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 69037,
-        "source_id": -46833537615107054,
-        "series_title": "Aquarius",
-        "episode_code": "S02E13",
-        "source_title": "Aquarius - s02e13",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 69037,
-        "source_id": -29560966501358210,
-        "series_title": "Aquarius",
-        "episode_code": "S02E13",
-        "source_title": "Aquarius 2x13",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 69037,
-        "source_id": -1359551785215421,
-        "series_title": "Aquarius",
-        "episode_code": "S02E13",
-        "source_title": "Aquarius S02E13 I Will",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 149094,
-        "source_id": -39279611090106837,
-        "series_title": "Are You Being Served?",
-        "episode_code": "S01E03",
-        "source_title": "Are.You.Being.Served.s01e03.Our.Figures.Are.Slipping",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 149093,
-        "source_id": -53188226600008618,
-        "series_title": "Are You Being Served?",
-        "episode_code": "S05E05",
-        "source_title": "Are.You.Being.Served.S05E05",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 149095,
-        "source_id": -36397474867085454,
-        "series_title": "Are You Being Served?",
-        "episode_code": "S07E05",
-        "source_title": "Are.You.Being.Served.S07E05",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 186939,
-        "source_id": -42894009187211251,
-        "series_title": "Austin a Ally",
-        "episode_code": "S03E01",
-        "source_title": "Austin-a-Ally-S03E01---Cestování-&-Shledání",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 186939,
-        "source_id": -44270141978751205,
-        "series_title": "Austin a Ally",
-        "episode_code": "S03E01",
-        "source_title": "Austin-a-Ally-S03E01---Cestování-&-Shledání",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 186940,
-        "source_id": -9595418935134971,
-        "series_title": "Austin a Ally",
-        "episode_code": "S03E04",
-        "source_title": "Austin-a-Ally-S03E04---Plážové-kluby-&-BFFky",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 186976,
-        "source_id": -35014527161945099,
-        "series_title": "Austin a Ally",
-        "episode_code": "S04E08",
-        "source_title": "Austin-a-Ally-S04E08-_Kalamitní-Karaoke",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 186977,
-        "source_id": -15112564849360065,
-        "series_title": "Austin a Ally",
-        "episode_code": "S04E09",
-        "source_title": "Austin-a-Ally-S04E09-Manažerky-a-muffiny",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 186978,
-        "source_id": -9370588392151055,
-        "series_title": "Austin a Ally",
-        "episode_code": "S04E10",
-        "source_title": "Austin-a-Ally-S04E10-Zápasy-a-tanec",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 186978,
-        "source_id": -34359697144606400,
-        "series_title": "Austin a Ally",
-        "episode_code": "S04E10",
-        "source_title": "Austin-a-Ally---4x10---Zápasy-a-tance",
-        "status": "needs_whisper"
-      },
-      {
         "episode_id": 187008,
         "source_id": -6017170498249057,
         "series_title": "Austin a Ally",
@@ -261899,6 +261739,166 @@
         "series_title": "Baby",
         "episode_code": "S01E06",
         "source_title": "Baby.S01E06.1080p.WEB-DL.DD.5.1.H264-MeGaNFX",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104633,
+        "source_id": -24973819693359857,
+        "series_title": "Baby",
+        "episode_code": "S02E01",
+        "source_title": "Baby - S02E01 - #justagame (WEBDL-2160p)",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104633,
+        "source_id": -46425877205466091,
+        "series_title": "Baby",
+        "episode_code": "S02E01",
+        "source_title": "Baby_S02E01_#jenomhra",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104633,
+        "source_id": -57335920200443179,
+        "series_title": "Baby",
+        "episode_code": "S02E01",
+        "source_title": "Baby.S02E01.1080p.WEB-DL.DD.5.1.H264-MeGaNFX",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104633,
+        "source_id": -24697616628023990,
+        "series_title": "Baby",
+        "episode_code": "S02E01",
+        "source_title": "Baby - S2E1 #justagame IT",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104633,
+        "source_id": -27475354928092004,
+        "series_title": "Baby",
+        "episode_code": "S02E01",
+        "source_title": "Baby - S2E1 I'm Not That Guy EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104634,
+        "source_id": -16878047869949192,
+        "series_title": "Baby",
+        "episode_code": "S02E02",
+        "source_title": "Baby - S02E02 - The Offer (WEBDL-2160p)",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104634,
+        "source_id": -9468577459017506,
+        "series_title": "Baby",
+        "episode_code": "S02E02",
+        "source_title": "Baby_S02E02_Nabídka",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104634,
+        "source_id": -3682665512150635,
+        "series_title": "Baby",
+        "episode_code": "S02E02",
+        "source_title": "Baby.S02E02.1080p.WEB-DL.DD.5.1.H264-MeGaNFX",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104634,
+        "source_id": -29071411792342299,
+        "series_title": "Baby",
+        "episode_code": "S02E02",
+        "source_title": "Baby - S2E2 Rilancio IT",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104634,
+        "source_id": -22521930985061167,
+        "series_title": "Baby",
+        "episode_code": "S02E02",
+        "source_title": "Baby - S2E2 There's Something Fitchy Going On EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104635,
+        "source_id": -58664911592449174,
+        "series_title": "Baby",
+        "episode_code": "S02E03",
+        "source_title": "Baby - S02E03 - Ghosts (WEBDL-2160p)",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104635,
+        "source_id": -66163797833143929,
+        "series_title": "Baby",
+        "episode_code": "S02E03",
+        "source_title": "Baby.S02E03.1080p.WEB-DL.DD.5.1.H264-MeGaNFX",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104635,
+        "source_id": -43298736817943227,
+        "series_title": "Baby",
+        "episode_code": "S02E03",
+        "source_title": "Baby - S2E3 Fantasmi IT",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104635,
+        "source_id": -62675995495400864,
+        "series_title": "Baby",
+        "episode_code": "S02E03",
+        "source_title": "Baby - S2E3 Epizóda 3 EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104635,
+        "source_id": -37682055130211637,
+        "series_title": "Baby",
+        "episode_code": "S02E03",
+        "source_title": "Baby - S2E3 Epizóda 3 IT",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104636,
+        "source_id": -68053968342567897,
+        "series_title": "Baby",
+        "episode_code": "S02E04",
+        "source_title": "Baby - S02E04 - Truth or Dare (WEBDL-2160p)",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104636,
+        "source_id": -40103689673016534,
+        "series_title": "Baby",
+        "episode_code": "S02E04",
+        "source_title": "Baby_S02E04_Vadí nevadí",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104636,
+        "source_id": -63300536057555788,
+        "series_title": "Baby",
+        "episode_code": "S02E04",
+        "source_title": "Baby.S02E04.1080p.WEB-DL.DD.5.1.H264-MeGaNFX",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104636,
+        "source_id": -57692255713148798,
+        "series_title": "Baby",
+        "episode_code": "S02E04",
+        "source_title": "Baby - S2E4 Obbligo o verità IT",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104636,
+        "source_id": -31432228806519046,
+        "series_title": "Baby",
+        "episode_code": "S02E04",
+        "source_title": "Baby - S2E4 New Bonnie Vs",
         "status": "needs_whisper"
       }
     ],
@@ -262361,12 +262361,12 @@
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
-    "whisper_non_cz_needs_subtitles": 2233,
-    "whisper_confirmed_cz": 1253,
+    "whisper_non_cz_needs_subtitles": 2249,
+    "whisper_confirmed_cz": 1257,
     "whisper_failed": 3,
-    "needs_whisper": 59523
+    "needs_whisper": 59503
   },
   "subtitle_followup_statuses": {
-    "needs_subtitle_setup_after_prehrajto_processing": 12734
+    "needs_subtitle_setup_after_prehrajto_processing": 12736
   }
 }
