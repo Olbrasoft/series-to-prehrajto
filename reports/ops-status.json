@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 162846,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 30529,
+    "uploaded_episodes": 30534,
     "prepared_source_episodes": 56258,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 539,
+    "language_audited_sources": 40,
     "language_whisper_attempted_sources": 40,
-    "language_pending_whisper_sources": 2624,
+    "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 62784,
     "whisper_review_pending_sources": 59520,
     "subtitle_followup_sources": 12673,
@@ -20,10 +20,42 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-07-17T19:23:58Z",
+      "databaseId": 29607375953,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-17T19:22:24Z",
+      "databaseId": 29607279323,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-17T19:13:03Z",
+      "databaseId": 29606711686,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-17T19:13:00Z",
+      "databaseId": 29606709193,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-17T19:11:53Z",
       "databaseId": 29606641097,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -51,11 +83,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-17T18:59:35Z",
       "databaseId": 29605879106,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -143,40 +175,8 @@
       "createdAt": "2026-07-17T18:47:54Z",
       "databaseId": 29605155794,
       "headBranch": "main",
-      "status": "pending",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-17T18:46:42Z",
-      "databaseId": 29605082148,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-17T18:38:31Z",
-      "databaseId": 29604567966,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-17T18:37:21Z",
-      "databaseId": 29604495377,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-17T18:37:18Z",
-      "databaseId": 29604492158,
-      "headBranch": "main",
       "status": "in_progress",
-      "workflowName": "sync"
+      "workflowName": "prepare-descriptions"
     }
   ],
   "gaps": {
@@ -130561,6 +130561,26 @@
         "video_id": 27597145
       },
       {
+        "episode_id": 88292,
+        "display_name": "Pan Selfridge S03E07 - 7. epizoda CZ Dabing",
+        "video_id": 27597205
+      },
+      {
+        "episode_id": 88294,
+        "display_name": "Pan Selfridge S03E09 - 9. epizoda CZ Dabing",
+        "video_id": 27597266
+      },
+      {
+        "episode_id": 88298,
+        "display_name": "Pan Selfridge S04E01 - 1. epizoda CZ Dabing",
+        "video_id": 27597295
+      },
+      {
+        "episode_id": 88296,
+        "display_name": "Pan Selfridge S04E05 - 5. epizoda CZ Dabing",
+        "video_id": 27597337
+      },
+      {
         "episode_id": 17901,
         "display_name": "Vraždy ve Valhalle S01E02 - Návrat CZ Dabing",
         "video_id": 27596929
@@ -130574,6 +130594,11 @@
         "episode_id": 17905,
         "display_name": "Vraždy ve Valhalle S01E06 - Tajná místnost CZ Dabing",
         "video_id": 27597126
+      },
+      {
+        "episode_id": 17907,
+        "display_name": "Vraždy ve Valhalle S01E08 - Stvůra z temnot CZ Dabing",
+        "video_id": 27597206
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -260853,6 +260878,26 @@
         "video_id": 27597145
       },
       {
+        "episode_id": 88292,
+        "display_name": "Pan Selfridge S03E07 - 7. epizoda CZ Dabing",
+        "video_id": 27597205
+      },
+      {
+        "episode_id": 88294,
+        "display_name": "Pan Selfridge S03E09 - 9. epizoda CZ Dabing",
+        "video_id": 27597266
+      },
+      {
+        "episode_id": 88298,
+        "display_name": "Pan Selfridge S04E01 - 1. epizoda CZ Dabing",
+        "video_id": 27597295
+      },
+      {
+        "episode_id": 88296,
+        "display_name": "Pan Selfridge S04E05 - 5. epizoda CZ Dabing",
+        "video_id": 27597337
+      },
+      {
         "episode_id": 17901,
         "display_name": "Vraždy ve Valhalle S01E02 - Návrat CZ Dabing",
         "video_id": 27596929
@@ -260866,6 +260911,11 @@
         "episode_id": 17905,
         "display_name": "Vraždy ve Valhalle S01E06 - Tajná místnost CZ Dabing",
         "video_id": 27597126
+      },
+      {
+        "episode_id": 17907,
+        "display_name": "Vraždy ve Valhalle S01E08 - Stvůra z temnot CZ Dabing",
+        "video_id": 27597206
       }
     ],
     "prepared_not_upload_ready": [
@@ -262027,7 +262077,6 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 499,
     "ok": 39,
     "resolve_failed": 1
   },
