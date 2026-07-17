@@ -2,36 +2,76 @@
   "counts": {
     "backlog_episodes": 162846,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 30558,
-    "prepared_source_episodes": 56486,
+    "uploaded_episodes": 30562,
+    "prepared_source_episodes": 56484,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 243,
-    "language_whisper_attempted_sources": 88,
+    "language_audited_sources": 40,
+    "language_whisper_attempted_sources": 40,
     "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 63012,
-    "whisper_review_pending_sources": 59546,
+    "whisper_review_pending_sources": 59526,
     "subtitle_followup_sources": 12734,
     "subtitle_followup_pending_sources": 12734
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-07-17T20:48:04Z",
-      "databaseId": 29612506536,
+      "createdAt": "2026-07-17T21:01:37Z",
+      "databaseId": 29613292890,
       "headBranch": "main",
       "status": "in_progress",
-      "workflowName": "ops-status"
+      "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-07-17T20:54:58Z",
+      "databaseId": 29612904653,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-sources"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-17T20:52:37Z",
+      "databaseId": 29612771093,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-17T20:49:03Z",
+      "databaseId": 29612564163,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-17T20:49:00Z",
+      "databaseId": 29612561569,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-17T20:48:04Z",
+      "databaseId": 29612506536,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-17T20:47:50Z",
       "databaseId": 29612493474,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -51,11 +91,11 @@
       "workflowName": "prepare-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-17T20:45:29Z",
       "databaseId": 29612355376,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -137,46 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-17T20:17:54Z",
-      "databaseId": 29610683763,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-17T20:17:23Z",
-      "databaseId": 29610653939,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-17T20:15:57Z",
-      "databaseId": 29610567949,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-17T20:14:50Z",
-      "databaseId": 29610498413,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-17T20:14:49Z",
-      "databaseId": 29610497795,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
     }
   ],
   "gaps": {
@@ -130719,6 +130719,26 @@
         "episode_id": 88281,
         "display_name": "Pan Selfridge S02E05 - 5. epizoda CZ Dabing",
         "video_id": 27598909
+      },
+      {
+        "episode_id": 88287,
+        "display_name": "Pan Selfridge S03E02 - 2. epizoda CZ Dabing",
+        "video_id": 27599664
+      },
+      {
+        "episode_id": 88289,
+        "display_name": "Pan Selfridge S03E04 - 4. epizoda CZ Dabing",
+        "video_id": 27599765
+      },
+      {
+        "episode_id": 88291,
+        "display_name": "Pan Selfridge S03E06 - 6. epizoda CZ Dabing",
+        "video_id": 27599821
+      },
+      {
+        "episode_id": 88293,
+        "display_name": "Pan Selfridge S03E08 - 8. epizoda CZ Dabing",
+        "video_id": 27599859
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -261156,6 +261176,26 @@
         "episode_id": 88281,
         "display_name": "Pan Selfridge S02E05 - 5. epizoda CZ Dabing",
         "video_id": 27598909
+      },
+      {
+        "episode_id": 88287,
+        "display_name": "Pan Selfridge S03E02 - 2. epizoda CZ Dabing",
+        "video_id": 27599664
+      },
+      {
+        "episode_id": 88289,
+        "display_name": "Pan Selfridge S03E04 - 4. epizoda CZ Dabing",
+        "video_id": 27599765
+      },
+      {
+        "episode_id": 88291,
+        "display_name": "Pan Selfridge S03E06 - 6. epizoda CZ Dabing",
+        "video_id": 27599821
+      },
+      {
+        "episode_id": 88293,
+        "display_name": "Pan Selfridge S03E08 - 8. epizoda CZ Dabing",
+        "video_id": 27599859
       }
     ],
     "prepared_not_upload_ready": [
@@ -261470,166 +261510,6 @@
         "status": "whisper_failed"
       },
       {
-        "episode_id": 69032,
-        "source_id": -57985506707434613,
-        "series_title": "Aquarius",
-        "episode_code": "S02E07",
-        "source_title": "Aquarius - S2E7 Piggies EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 69032,
-        "source_id": -49985692644459830,
-        "series_title": "Aquarius",
-        "episode_code": "S02E07",
-        "source_title": "Aquarius - S02E07 - Piggies",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 69032,
-        "source_id": -5790008216349527,
-        "series_title": "Aquarius",
-        "episode_code": "S02E07",
-        "source_title": "Aquarius S02E07 Piggies",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 69032,
-        "source_id": -54816215050880135,
-        "series_title": "Aquarius",
-        "episode_code": "S02E07",
-        "source_title": "Aquarius S02E07 CTtit V OBRAZE",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 69038,
-        "source_id": -56096178408750687,
-        "series_title": "Aquarius",
-        "episode_code": "S02E08",
-        "source_title": "Aquarius - S02E08 - While My Guitar Gently Weeps",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 69038,
-        "source_id": -11990244063076585,
-        "series_title": "Aquarius",
-        "episode_code": "S02E08",
-        "source_title": "Aquarius - S2E8 While My Guitar Gently Weeps EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 69038,
-        "source_id": -71552498272739821,
-        "series_title": "Aquarius",
-        "episode_code": "S02E08",
-        "source_title": "Aquarius - s02e08",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 69038,
-        "source_id": -42775180846846137,
-        "series_title": "Aquarius",
-        "episode_code": "S02E08",
-        "source_title": "Aquarius 2x8",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 69038,
-        "source_id": -46653402621213904,
-        "series_title": "Aquarius",
-        "episode_code": "S02E08",
-        "source_title": "Aquarius S02E08 While My Guitar Gently Weeps",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 69033,
-        "source_id": -63844365172169366,
-        "series_title": "Aquarius",
-        "episode_code": "S02E09",
-        "source_title": "Aquarius S2E9 Sexy Sadie",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 69033,
-        "source_id": -57842853484108902,
-        "series_title": "Aquarius",
-        "episode_code": "S02E09",
-        "source_title": "Aquarius - S02E09 - Sexy Sadie",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 69033,
-        "source_id": -13468303583609466,
-        "series_title": "Aquarius",
-        "episode_code": "S02E09",
-        "source_title": "Aquarius - S2E9 Sexy Sadie EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 69033,
-        "source_id": -59683578473764247,
-        "series_title": "Aquarius",
-        "episode_code": "S02E09",
-        "source_title": "Aquarius S02E09 Sexy Sadie",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 69034,
-        "source_id": -20717163068125670,
-        "series_title": "Aquarius",
-        "episode_code": "S02E10",
-        "source_title": "Aquarius - S02E10 - Blackbird",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 69034,
-        "source_id": -10174972400632650,
-        "series_title": "Aquarius",
-        "episode_code": "S02E10",
-        "source_title": "Aquarius - S2E10 Blackbird EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 69034,
-        "source_id": -61268488653909474,
-        "series_title": "Aquarius",
-        "episode_code": "S02E10",
-        "source_title": "Aquarius - s02e10",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 69034,
-        "source_id": -6539661822697126,
-        "series_title": "Aquarius",
-        "episode_code": "S02E10",
-        "source_title": "Aquarius 2x10",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 69035,
-        "source_id": -39005054435029300,
-        "series_title": "Aquarius",
-        "episode_code": "S02E11",
-        "source_title": "Aquarius S02E11 Can You Take Me Back",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 69035,
-        "source_id": -59688445191946520,
-        "series_title": "Aquarius",
-        "episode_code": "S02E11",
-        "source_title": "Aquarius - s02e11",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 69035,
-        "source_id": -12976888657770496,
-        "series_title": "Aquarius",
-        "episode_code": "S02E11",
-        "source_title": "Aquarius 2x11",
-        "status": "needs_whisper"
-      },
-      {
         "episode_id": 69035,
         "source_id": -44350082416912342,
         "series_title": "Aquarius",
@@ -261859,6 +261739,166 @@
         "series_title": "Baby",
         "episode_code": "S01E01",
         "source_title": "Baby - S01E01 - Superpowers (WEBDL-2160p).mkv",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104627,
+        "source_id": -6927504703548514,
+        "series_title": "Baby",
+        "episode_code": "S01E01",
+        "source_title": "Baby.S01E01.1080p.WEB-DL.DD.5.1.H264-MeGaNFX",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104628,
+        "source_id": -68877948374494762,
+        "series_title": "Baby",
+        "episode_code": "S01E02",
+        "source_title": "Baby - S01E02 - Puppet (WEBDL-2160p).mkv",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104628,
+        "source_id": -60772476127650250,
+        "series_title": "Baby",
+        "episode_code": "S01E02",
+        "source_title": "Baby - S01E02 - Puppet (WEBDL-2160p)",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104628,
+        "source_id": -16722663081889646,
+        "series_title": "Baby",
+        "episode_code": "S01E02",
+        "source_title": "Baby.S01E02.1080p.WEB-DL.DD.5.1.H264-MeGaNFX",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104629,
+        "source_id": -34731595597197293,
+        "series_title": "Baby",
+        "episode_code": "S01E03",
+        "source_title": "Baby - S01E03 - #Friendzone (WEBDL-2160p).mkv",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104629,
+        "source_id": -1756744868476775,
+        "series_title": "Baby",
+        "episode_code": "S01E03",
+        "source_title": "Baby - S01E03 - #Friendzone (WEBDL-2160p)",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104629,
+        "source_id": -24426934704093825,
+        "series_title": "Baby",
+        "episode_code": "S01E03",
+        "source_title": "Man.vs.Baby.S01E03.Chapter.3.2160p.NF.WEB-DL.DDP5.1.Atmos.DV.HDR.H.265-BTBN (1)",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104629,
+        "source_id": -25331399621273539,
+        "series_title": "Baby",
+        "episode_code": "S01E03",
+        "source_title": "Baby.S01E03.1080p.WEB-DL.DD.5.1.H264-MeGaNFX",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104630,
+        "source_id": -67814890637634508,
+        "series_title": "Baby",
+        "episode_code": "S01E04",
+        "source_title": "Baby - S01E04 - Emma (WEBDL-2160p).mkv",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104630,
+        "source_id": -18097681290168337,
+        "series_title": "Baby",
+        "episode_code": "S01E04",
+        "source_title": "Baby - S01E04 - Emma (WEBDL-2160p)",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104630,
+        "source_id": -46321138807065066,
+        "series_title": "Baby",
+        "episode_code": "S01E04",
+        "source_title": "Man.vs.Baby.S01E04.Chapter.4.2160p.NF.WEB-DL.DDP5.1.Atmos.DV.HDR.H.265-BTBN (1)",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104630,
+        "source_id": -40070392230632276,
+        "series_title": "Baby",
+        "episode_code": "S01E04",
+        "source_title": "Baby.S01E04.1080p.WEB-DL.DD.5.1.H264-MeGaNFX",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104631,
+        "source_id": -23951084686115072,
+        "series_title": "Baby",
+        "episode_code": "S01E05",
+        "source_title": "Baby - S01E05 - The Last Shot (WEBDL-2160p)",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104631,
+        "source_id": -20331857560051222,
+        "series_title": "Baby",
+        "episode_code": "S01E05",
+        "source_title": "Baby - S01E05 - The Last Shot (WEBDL-2160p).mkv",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104631,
+        "source_id": -47863473055130962,
+        "series_title": "Baby",
+        "episode_code": "S01E05",
+        "source_title": "Baby_S01E05_Poslední pokus",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104631,
+        "source_id": -54765408242927103,
+        "series_title": "Baby",
+        "episode_code": "S01E05",
+        "source_title": "Baby.S01E05.1080p.WEB-DL.DD.5.1.H264-MeGaNFX",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104632,
+        "source_id": -69460878522728551,
+        "series_title": "Baby",
+        "episode_code": "S01E06",
+        "source_title": "Baby - S01E06 - #Love (WEBDL-2160p)",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104632,
+        "source_id": -4598552616172447,
+        "series_title": "Baby",
+        "episode_code": "S01E06",
+        "source_title": "Baby - S01E06 - #Love (WEBDL-2160p).mkv",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104632,
+        "source_id": -59447790495483591,
+        "series_title": "Baby",
+        "episode_code": "S01E06",
+        "source_title": "Baby_S01E06_#Love",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104632,
+        "source_id": -24008678162260768,
+        "series_title": "Baby",
+        "episode_code": "S01E06",
+        "source_title": "Baby.S01E06.1080p.WEB-DL.DD.5.1.H264-MeGaNFX",
         "status": "needs_whisper"
       }
     ],
@@ -262317,15 +262357,14 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 87,
-    "disabled": 155,
+    "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
-    "whisper_non_cz_needs_subtitles": 2213,
+    "whisper_non_cz_needs_subtitles": 2233,
     "whisper_confirmed_cz": 1253,
     "whisper_failed": 3,
-    "needs_whisper": 59543
+    "needs_whisper": 59523
   },
   "subtitle_followup_statuses": {
     "needs_subtitle_setup_after_prehrajto_processing": 12734
