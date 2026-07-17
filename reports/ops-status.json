@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 163565,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 29808,
-    "prepared_source_episodes": 53401,
+    "uploaded_episodes": 29815,
+    "prepared_source_episodes": 53397,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 64,
-    "language_whisper_attempted_sources": 28,
-    "language_pending_whisper_sources": 2624,
+    "language_audited_sources": 40,
+    "language_whisper_attempted_sources": 40,
+    "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 59475,
     "whisper_review_pending_sources": 56211,
     "subtitle_followup_sources": 11892,
@@ -20,18 +20,50 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-07-17T01:11:53Z",
-      "databaseId": 29546817636,
+      "createdAt": "2026-07-17T01:20:33Z",
+      "databaseId": 29547191207,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-07-17T01:20:29Z",
+      "databaseId": 29547188178,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-17T01:13:02Z",
+      "databaseId": 29546866950,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-17T01:12:58Z",
+      "databaseId": 29546864446,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-17T01:11:53Z",
+      "databaseId": 29546817636,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "cancelled",
       "createdAt": "2026-07-17T01:10:12Z",
       "databaseId": 29546744034,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -47,7 +79,7 @@
       "createdAt": "2026-07-17T01:04:16Z",
       "databaseId": 29546480904,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "prepare-descriptions"
     },
     {
@@ -67,11 +99,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-17T01:02:55Z",
       "databaseId": 29546418253,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
@@ -145,38 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-17T00:52:07Z",
-      "databaseId": 29545936931,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-17T00:52:03Z",
-      "databaseId": 29545933785,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-17T00:50:13Z",
-      "databaseId": 29545855233,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "refresh-backlog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-17T00:37:25Z",
-      "databaseId": 29545286082,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
     }
   ],
   "gaps": {
@@ -126956,6 +126956,26 @@
         "video_id": 27558924
       },
       {
+        "episode_id": 91450,
+        "display_name": "Magnum P.I S05E18 - Mimoškolní aktivity CZ Dabing",
+        "video_id": 27558975
+      },
+      {
+        "episode_id": 60016,
+        "display_name": "The Looming Tower S01E01 - 1. epizoda CZ Dabing",
+        "video_id": 27559103
+      },
+      {
+        "episode_id": 60018,
+        "display_name": "The Looming Tower S01E03 - 3. epizoda CZ Dabing",
+        "video_id": 27559188
+      },
+      {
+        "episode_id": 60020,
+        "display_name": "The Looming Tower S01E05 - 5. epizoda CZ Titulky",
+        "video_id": 27559252
+      },
+      {
         "episode_id": 91401,
         "display_name": "Magnum P.I S02E08 - Přišel v noci CZ Dabing",
         "video_id": 27558846
@@ -126969,6 +126989,21 @@
         "episode_id": 91437,
         "display_name": "Magnum P.I S02E12 - Zoufalá opatření CZ Dabing",
         "video_id": 27558973
+      },
+      {
+        "episode_id": 91377,
+        "display_name": "Magnum P.I S02E14 - Hra na kočku a na myš CZ Dabing",
+        "video_id": 27559037
+      },
+      {
+        "episode_id": 91407,
+        "display_name": "Magnum P.I S02E19 - Ať vyhraje ten nejlepší CZ Dabing",
+        "video_id": 27559142
+      },
+      {
+        "episode_id": 91439,
+        "display_name": "Magnum P.I S02E20 - Leopard na lovu CZ Dabing",
+        "video_id": 27559234
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -253643,6 +253678,26 @@
         "video_id": 27558924
       },
       {
+        "episode_id": 91450,
+        "display_name": "Magnum P.I S05E18 - Mimoškolní aktivity CZ Dabing",
+        "video_id": 27558975
+      },
+      {
+        "episode_id": 60016,
+        "display_name": "The Looming Tower S01E01 - 1. epizoda CZ Dabing",
+        "video_id": 27559103
+      },
+      {
+        "episode_id": 60018,
+        "display_name": "The Looming Tower S01E03 - 3. epizoda CZ Dabing",
+        "video_id": 27559188
+      },
+      {
+        "episode_id": 60020,
+        "display_name": "The Looming Tower S01E05 - 5. epizoda CZ Titulky",
+        "video_id": 27559252
+      },
+      {
         "episode_id": 91401,
         "display_name": "Magnum P.I S02E08 - Přišel v noci CZ Dabing",
         "video_id": 27558846
@@ -253656,6 +253711,21 @@
         "episode_id": 91437,
         "display_name": "Magnum P.I S02E12 - Zoufalá opatření CZ Dabing",
         "video_id": 27558973
+      },
+      {
+        "episode_id": 91377,
+        "display_name": "Magnum P.I S02E14 - Hra na kočku a na myš CZ Dabing",
+        "video_id": 27559037
+      },
+      {
+        "episode_id": 91407,
+        "display_name": "Magnum P.I S02E19 - Ať vyhraje ten nejlepší CZ Dabing",
+        "video_id": 27559142
+      },
+      {
+        "episode_id": 91439,
+        "display_name": "Magnum P.I S02E20 - Leopard na lovu CZ Dabing",
+        "video_id": 27559234
       }
     ],
     "prepared_not_upload_ready": [
@@ -254817,8 +254887,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 36,
-    "ok": 27,
+    "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
