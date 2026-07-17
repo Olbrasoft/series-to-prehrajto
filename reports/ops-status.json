@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 162804,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 30681,
+    "uploaded_episodes": 30683,
     "prepared_source_episodes": 56873,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 40,
-    "language_whisper_attempted_sources": 40,
-    "language_pending_whisper_sources": 2604,
+    "language_audited_sources": 20,
+    "language_whisper_attempted_sources": 20,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 63133,
     "whisper_review_pending_sources": 59507,
     "subtitle_followup_sources": 12784,
@@ -20,10 +20,26 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-07-17T23:51:27Z",
+      "databaseId": 29621740419,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-17T23:51:22Z",
+      "databaseId": 29621737747,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-17T23:48:03Z",
       "databaseId": 29621599176,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-status"
     },
     {
@@ -43,11 +59,11 @@
       "workflowName": "prepare-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-17T23:45:36Z",
       "databaseId": 29621502509,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -83,11 +99,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-07-17T23:38:29Z",
       "databaseId": 29621206285,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -111,7 +127,7 @@
       "createdAt": "2026-07-17T23:37:48Z",
       "databaseId": 29621177955,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "sync"
     },
     {
@@ -161,22 +177,6 @@
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-17T23:18:49Z",
-      "databaseId": 29620348564,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-17T23:18:14Z",
-      "databaseId": 29620325020,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
     }
   ],
   "gaps": {
@@ -131334,6 +131334,16 @@
         "episode_id": 59967,
         "display_name": "Otec Brown S04E10 - Hněv barona Samdi CZ Dabing",
         "video_id": 27603789
+      },
+      {
+        "episode_id": 59993,
+        "display_name": "Otec Brown S06E07 - Tanec smrti CZ Dabing",
+        "video_id": 27603843
+      },
+      {
+        "episode_id": 59995,
+        "display_name": "Otec Brown S06E09 - Květina golfového hřiště CZ Dabing",
+        "video_id": 27603870
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -262386,6 +262396,16 @@
         "episode_id": 59967,
         "display_name": "Otec Brown S04E10 - Hněv barona Samdi CZ Dabing",
         "video_id": 27603789
+      },
+      {
+        "episode_id": 59993,
+        "display_name": "Otec Brown S06E07 - Tanec smrti CZ Dabing",
+        "video_id": 27603843
+      },
+      {
+        "episode_id": 59995,
+        "display_name": "Otec Brown S06E09 - Květina golfového hřiště CZ Dabing",
+        "video_id": 27603870
       }
     ],
     "prepared_not_upload_ready": [
@@ -263547,7 +263567,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 39,
+    "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
