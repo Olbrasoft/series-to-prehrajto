@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 163329,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 30078,
+    "uploaded_episodes": 30080,
     "prepared_source_episodes": 54514,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 40,
-    "language_whisper_attempted_sources": 40,
-    "language_pending_whisper_sources": 2604,
+    "language_audited_sources": 20,
+    "language_whisper_attempted_sources": 20,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 60631,
     "whisper_review_pending_sources": 57367,
     "subtitle_followup_sources": 12132,
@@ -20,18 +20,42 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-07-17T08:14:55Z",
-      "databaseId": 29565768558,
+      "createdAt": "2026-07-17T08:18:27Z",
+      "databaseId": 29565969724,
       "headBranch": "main",
-      "status": "queued",
-      "workflowName": "prepare-descriptions"
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-17T08:15:20Z",
+      "databaseId": 29565793068,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-07-17T08:15:17Z",
+      "databaseId": 29565790355,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-17T08:14:55Z",
+      "databaseId": 29565768558,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-17T08:14:09Z",
       "databaseId": 29565725652,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -43,11 +67,11 @@
       "workflowName": "prepare-manifest"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-17T08:13:54Z",
       "databaseId": 29565711591,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -150,30 +174,6 @@
       "conclusion": "success",
       "createdAt": "2026-07-17T07:40:40Z",
       "databaseId": 29563841564,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-17T07:28:32Z",
-      "databaseId": 29563194016,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-17T07:27:20Z",
-      "databaseId": 29563130089,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-17T07:24:09Z",
-      "databaseId": 29562967455,
       "headBranch": "main",
       "status": "completed",
       "workflowName": "update-descriptions"
@@ -128319,6 +128319,16 @@
         "episode_id": 81861,
         "display_name": "Smash S02E08 - 8. epizoda CZ Titulky",
         "video_id": 27574289
+      },
+      {
+        "episode_id": 81863,
+        "display_name": "Smash S02E10 - 10. epizoda CZ Titulky",
+        "video_id": 27574365
+      },
+      {
+        "episode_id": 81865,
+        "display_name": "Smash S02E12 - 12. epizoda CZ Titulky",
+        "video_id": 27574439
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -256356,6 +256366,16 @@
         "episode_id": 81861,
         "display_name": "Smash S02E08 - 8. epizoda CZ Titulky",
         "video_id": 27574289
+      },
+      {
+        "episode_id": 81863,
+        "display_name": "Smash S02E10 - 10. epizoda CZ Titulky",
+        "video_id": 27574365
+      },
+      {
+        "episode_id": 81865,
+        "display_name": "Smash S02E12 - 12. epizoda CZ Titulky",
+        "video_id": 27574439
       }
     ],
     "prepared_not_upload_ready": [
@@ -257517,7 +257537,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 39,
+    "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
