@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 162126,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 31283,
+    "uploaded_episodes": 31298,
     "prepared_source_episodes": 58194,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 20,
-    "language_whisper_attempted_sources": 20,
-    "language_pending_whisper_sources": 2624,
+    "language_audited_sources": 40,
+    "language_whisper_attempted_sources": 40,
+    "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 64351,
     "whisper_review_pending_sources": 60947,
     "subtitle_followup_sources": 13074,
@@ -20,18 +20,58 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-07-18T10:20:01Z",
-      "databaseId": 29640668530,
+      "createdAt": "2026-07-18T10:30:18Z",
+      "databaseId": 29640946949,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-18T10:30:08Z",
+      "databaseId": 29640941092,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
+      "conclusion": "success",
+      "createdAt": "2026-07-18T10:21:19Z",
+      "databaseId": 29640706619,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
       "conclusion": "",
+      "createdAt": "2026-07-18T10:21:16Z",
+      "databaseId": 29640704083,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-18T10:21:13Z",
+      "databaseId": 29640702960,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-18T10:20:01Z",
+      "databaseId": 29640668530,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "cancelled",
       "createdAt": "2026-07-18T10:19:56Z",
       "databaseId": 29640666485,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -137,46 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-18T09:55:32Z",
-      "databaseId": 29639979452,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-07-18T09:50:01Z",
-      "databaseId": 29639821375,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-18T09:49:04Z",
-      "databaseId": 29639796449,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-18T09:49:00Z",
-      "databaseId": 29639794561,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-18T09:47:49Z",
-      "databaseId": 29639762126,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
     }
   ],
   "gaps": {
@@ -134344,6 +134344,81 @@
         "episode_id": 197047,
         "display_name": "Fotbalový talent S07E12 - 12. epizoda CZ Dabing",
         "video_id": 27617620
+      },
+      {
+        "episode_id": 156448,
+        "display_name": "Husí kůže S01E04 - Jdi jíst červy CZ Dabing",
+        "video_id": 27617779
+      },
+      {
+        "episode_id": 156450,
+        "display_name": "Husí kůže S01E06 - Noc živé figuríny (1) CZ Dabing",
+        "video_id": 27617795
+      },
+      {
+        "episode_id": 156452,
+        "display_name": "Husí kůže S01E08 - Mě nevyděsíš CZ Dabing",
+        "video_id": 27617815
+      },
+      {
+        "episode_id": 156454,
+        "display_name": "Husí kůže S01E10 - Vítejte v Horrorlandu CZ Titulky",
+        "video_id": 27617827
+      },
+      {
+        "episode_id": 53854,
+        "display_name": "Whitechapel S01E01 - 1. epizoda CZ Dabing",
+        "video_id": 27617842
+      },
+      {
+        "episode_id": 53856,
+        "display_name": "Whitechapel S01E03 - 3. epizoda CZ Dabing",
+        "video_id": 27617858
+      },
+      {
+        "episode_id": 53858,
+        "display_name": "Whitechapel S02E02 - 2. epizoda CZ Dabing",
+        "video_id": 27617875
+      },
+      {
+        "episode_id": 53860,
+        "display_name": "Whitechapel S03E01 - 1. epizoda CZ Dabing",
+        "video_id": 27617888
+      },
+      {
+        "episode_id": 53862,
+        "display_name": "Whitechapel S03E03 - 3. epizoda CZ Dabing",
+        "video_id": 27617894
+      },
+      {
+        "episode_id": 57115,
+        "display_name": "Pravěk útočí S01E01 - Skákající ještěrka CZ Dabing",
+        "video_id": 27617782
+      },
+      {
+        "episode_id": 57117,
+        "display_name": "Pravěk útočí S01E03 - Helen se ozývá CZ Dabing",
+        "video_id": 27617802
+      },
+      {
+        "episode_id": 57119,
+        "display_name": "Pravěk útočí S01E04 - Dodo CZ Dabing",
+        "video_id": 27617818
+      },
+      {
+        "episode_id": 57121,
+        "display_name": "Pravěk útočí S02E01 - Trable v nákupním centru CZ Dabing",
+        "video_id": 27617829
+      },
+      {
+        "episode_id": 57149,
+        "display_name": "Pravěk útočí S02E02 - Larvy, to snad ne! CZ Dabing",
+        "video_id": 27617845
+      },
+      {
+        "episode_id": 57125,
+        "display_name": "Pravěk útočí S02E06 - Mamut na dálnici CZ Dabing",
+        "video_id": 27617872
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -268406,6 +268481,81 @@
         "episode_id": 197047,
         "display_name": "Fotbalový talent S07E12 - 12. epizoda CZ Dabing",
         "video_id": 27617620
+      },
+      {
+        "episode_id": 156448,
+        "display_name": "Husí kůže S01E04 - Jdi jíst červy CZ Dabing",
+        "video_id": 27617779
+      },
+      {
+        "episode_id": 156450,
+        "display_name": "Husí kůže S01E06 - Noc živé figuríny (1) CZ Dabing",
+        "video_id": 27617795
+      },
+      {
+        "episode_id": 156452,
+        "display_name": "Husí kůže S01E08 - Mě nevyděsíš CZ Dabing",
+        "video_id": 27617815
+      },
+      {
+        "episode_id": 156454,
+        "display_name": "Husí kůže S01E10 - Vítejte v Horrorlandu CZ Titulky",
+        "video_id": 27617827
+      },
+      {
+        "episode_id": 53854,
+        "display_name": "Whitechapel S01E01 - 1. epizoda CZ Dabing",
+        "video_id": 27617842
+      },
+      {
+        "episode_id": 53856,
+        "display_name": "Whitechapel S01E03 - 3. epizoda CZ Dabing",
+        "video_id": 27617858
+      },
+      {
+        "episode_id": 53858,
+        "display_name": "Whitechapel S02E02 - 2. epizoda CZ Dabing",
+        "video_id": 27617875
+      },
+      {
+        "episode_id": 53860,
+        "display_name": "Whitechapel S03E01 - 1. epizoda CZ Dabing",
+        "video_id": 27617888
+      },
+      {
+        "episode_id": 53862,
+        "display_name": "Whitechapel S03E03 - 3. epizoda CZ Dabing",
+        "video_id": 27617894
+      },
+      {
+        "episode_id": 57115,
+        "display_name": "Pravěk útočí S01E01 - Skákající ještěrka CZ Dabing",
+        "video_id": 27617782
+      },
+      {
+        "episode_id": 57117,
+        "display_name": "Pravěk útočí S01E03 - Helen se ozývá CZ Dabing",
+        "video_id": 27617802
+      },
+      {
+        "episode_id": 57119,
+        "display_name": "Pravěk útočí S01E04 - Dodo CZ Dabing",
+        "video_id": 27617818
+      },
+      {
+        "episode_id": 57121,
+        "display_name": "Pravěk útočí S02E01 - Trable v nákupním centru CZ Dabing",
+        "video_id": 27617829
+      },
+      {
+        "episode_id": 57149,
+        "display_name": "Pravěk útočí S02E02 - Larvy, to snad ne! CZ Dabing",
+        "video_id": 27617845
+      },
+      {
+        "episode_id": 57125,
+        "display_name": "Pravěk útočí S02E06 - Mamut na dálnici CZ Dabing",
+        "video_id": 27617872
       }
     ],
     "prepared_not_upload_ready": [
@@ -269567,7 +269717,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 19,
+    "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
