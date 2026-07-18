@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 161847,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 31601,
+    "uploaded_episodes": 31602,
     "prepared_source_episodes": 58653,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 40,
-    "language_whisper_attempted_sources": 40,
-    "language_pending_whisper_sources": 2604,
+    "language_audited_sources": 20,
+    "language_whisper_attempted_sources": 20,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 64542,
     "whisper_review_pending_sources": 60918,
     "subtitle_followup_sources": 13271,
@@ -20,10 +20,50 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-07-18T17:39:32Z",
+      "databaseId": 29654337858,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-18T17:39:27Z",
+      "databaseId": 29654335799,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-18T17:33:57Z",
+      "databaseId": 29654159342,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-18T17:33:45Z",
+      "databaseId": 29654152739,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-18T17:33:41Z",
+      "databaseId": 29654150849,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-18T17:32:29Z",
       "databaseId": 29654111346,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -43,11 +83,11 @@
       "workflowName": "ops-status"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-07-18T17:21:26Z",
       "databaseId": 29653753362,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -63,7 +103,7 @@
       "createdAt": "2026-07-18T17:20:14Z",
       "databaseId": 29653713709,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "prepare-descriptions"
     },
     {
@@ -75,11 +115,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-18T17:18:55Z",
       "databaseId": 29653670484,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -137,46 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-18T17:02:40Z",
-      "databaseId": 29653148634,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-07-18T17:02:37Z",
-      "databaseId": 29653147077,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-18T16:55:26Z",
-      "databaseId": 29652914696,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-sources"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-18T16:55:10Z",
-      "databaseId": 29652906073,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-18T16:55:07Z",
-      "databaseId": 29652904539,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
     }
   ],
   "gaps": {
@@ -135836,6 +135836,11 @@
         "video_id": 27625604
       },
       {
+        "episode_id": 188532,
+        "display_name": "Na parket! S03E03 - 3. epizoda CZ Dabing",
+        "video_id": 27625715
+      },
+      {
         "episode_id": 36981,
         "display_name": "Andromeda S01E12 - Matematika slz CZ Dabing",
         "video_id": 27624056
@@ -271488,6 +271493,11 @@
         "video_id": 27625604
       },
       {
+        "episode_id": 188532,
+        "display_name": "Na parket! S03E03 - 3. epizoda CZ Dabing",
+        "video_id": 27625715
+      },
+      {
         "episode_id": 36981,
         "display_name": "Andromeda S01E12 - Matematika slz CZ Dabing",
         "video_id": 27624056
@@ -272747,7 +272757,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 39,
+    "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
