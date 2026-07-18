@@ -2,36 +2,84 @@
   "counts": {
     "backlog_episodes": 161970,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 31457,
-    "prepared_source_episodes": 58458,
+    "uploaded_episodes": 31465,
+    "prepared_source_episodes": 58452,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 330,
-    "language_whisper_attempted_sources": 112,
+    "language_audited_sources": 20,
+    "language_whisper_attempted_sources": 20,
     "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 64542,
-    "whisper_review_pending_sources": 61098,
+    "whisper_review_pending_sources": 61078,
     "subtitle_followup_sources": 13167,
     "subtitle_followup_pending_sources": 13167
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-07-18T14:01:32Z",
-      "databaseId": 29647243054,
+      "createdAt": "2026-07-18T14:14:30Z",
+      "databaseId": 29647659076,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-07-18T14:14:26Z",
+      "databaseId": 29647657239,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-07-18T14:08:52Z",
+      "databaseId": 29647476073,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-18T14:04:55Z",
+      "databaseId": 29647349867,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-sources"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-18T14:03:45Z",
+      "databaseId": 29647315218,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-18T14:02:48Z",
+      "databaseId": 29647284156,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-18T14:01:32Z",
+      "databaseId": 29647243054,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-18T14:01:31Z",
       "databaseId": 29647242140,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -43,11 +91,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-18T13:50:14Z",
       "databaseId": 29646884607,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -75,19 +123,19 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-07-18T13:45:16Z",
       "databaseId": 29646730279,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-18T13:45:05Z",
       "databaseId": 29646724502,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
@@ -129,54 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-status"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-18T13:30:58Z",
-      "databaseId": 29646290080,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-18T13:30:58Z",
-      "databaseId": 29646290007,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-18T13:29:55Z",
-      "databaseId": 29646250771,
-      "headBranch": "main",
-      "status": "pending",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-18T13:28:15Z",
-      "databaseId": 29646200832,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-18T13:28:02Z",
-      "databaseId": 29646194082,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-18T13:27:25Z",
-      "databaseId": 29646174829,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
     }
   ],
   "gaps": {
@@ -135176,6 +135176,36 @@
         "video_id": 27621387
       },
       {
+        "episode_id": 90002,
+        "display_name": "Slunečno, místy vraždy S03E07 - 7. epizoda CZ Dabing",
+        "video_id": 27621459
+      },
+      {
+        "episode_id": 90022,
+        "display_name": "Slunečno, místy vraždy S03E08 - 8. epizoda CZ Dabing",
+        "video_id": 27621518
+      },
+      {
+        "episode_id": 90024,
+        "display_name": "Slunečno, místy vraždy S03E10 - 10. epizoda CZ Dabing",
+        "video_id": 27621591
+      },
+      {
+        "episode_id": 90032,
+        "display_name": "Slunečno, místy vraždy S04E02 - 2. epizoda CZ Dabing",
+        "video_id": 27621642
+      },
+      {
+        "episode_id": 90028,
+        "display_name": "Slunečno, místy vraždy S04E03 - 3. epizoda CZ Dabing",
+        "video_id": 27621666
+      },
+      {
+        "episode_id": 90036,
+        "display_name": "Slunečno, místy vraždy S04E10 - 10. epizoda CZ Dabing",
+        "video_id": 27621685
+      },
+      {
         "episode_id": 108845,
         "display_name": "Splynout s davem S01E07 - Welcome to the Black Parade CZ Titulky",
         "video_id": 27621158
@@ -135214,6 +135244,16 @@
         "episode_id": 156661,
         "display_name": "Exit S03E05 - 5. epizoda CZ Titulky",
         "video_id": 27621377
+      },
+      {
+        "episode_id": 156663,
+        "display_name": "Exit S03E07 - 7. epizoda CZ Titulky",
+        "video_id": 27621439
+      },
+      {
+        "episode_id": 140097,
+        "display_name": "Děti planety Duna S01E01 - Mesiáš CZ Dabing",
+        "video_id": 27621551
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -270108,6 +270148,36 @@
         "video_id": 27621387
       },
       {
+        "episode_id": 90002,
+        "display_name": "Slunečno, místy vraždy S03E07 - 7. epizoda CZ Dabing",
+        "video_id": 27621459
+      },
+      {
+        "episode_id": 90022,
+        "display_name": "Slunečno, místy vraždy S03E08 - 8. epizoda CZ Dabing",
+        "video_id": 27621518
+      },
+      {
+        "episode_id": 90024,
+        "display_name": "Slunečno, místy vraždy S03E10 - 10. epizoda CZ Dabing",
+        "video_id": 27621591
+      },
+      {
+        "episode_id": 90032,
+        "display_name": "Slunečno, místy vraždy S04E02 - 2. epizoda CZ Dabing",
+        "video_id": 27621642
+      },
+      {
+        "episode_id": 90028,
+        "display_name": "Slunečno, místy vraždy S04E03 - 3. epizoda CZ Dabing",
+        "video_id": 27621666
+      },
+      {
+        "episode_id": 90036,
+        "display_name": "Slunečno, místy vraždy S04E10 - 10. epizoda CZ Dabing",
+        "video_id": 27621685
+      },
+      {
         "episode_id": 108845,
         "display_name": "Splynout s davem S01E07 - Welcome to the Black Parade CZ Titulky",
         "video_id": 27621158
@@ -270146,6 +270216,16 @@
         "episode_id": 156661,
         "display_name": "Exit S03E05 - 5. epizoda CZ Titulky",
         "video_id": 27621377
+      },
+      {
+        "episode_id": 156663,
+        "display_name": "Exit S03E07 - 7. epizoda CZ Titulky",
+        "video_id": 27621439
+      },
+      {
+        "episode_id": 140097,
+        "display_name": "Děti planety Duna S01E01 - Mesiáš CZ Dabing",
+        "video_id": 27621551
       }
     ],
     "prepared_not_upload_ready": [
@@ -270460,166 +270540,6 @@
         "status": "whisper_failed"
       },
       {
-        "episode_id": 69024,
-        "source_id": -13376924249898174,
-        "series_title": "Aquarius",
-        "episode_code": "S01E12",
-        "source_title": "Aquarius - S1E12 Epizoda 12 EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 69025,
-        "source_id": -62669439261740485,
-        "series_title": "Aquarius",
-        "episode_code": "S01E13",
-        "source_title": "Aquarius - S1E13 Old Ego Is a Too Much Thing EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 69025,
-        "source_id": -39637927240916030,
-        "series_title": "Aquarius",
-        "episode_code": "S01E13",
-        "source_title": "Aquarius.S01E13.mkv",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 69026,
-        "source_id": -31070275632857740,
-        "series_title": "Aquarius",
-        "episode_code": "S02E01",
-        "source_title": "Aquarius.S02E01.720p.HDTV.x264-KILLERS[ettv]",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 69026,
-        "source_id": -69593060822918455,
-        "series_title": "Aquarius",
-        "episode_code": "S02E01",
-        "source_title": "Aquarius - S02E01 - I'm So Tired",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 69026,
-        "source_id": -27740819787971890,
-        "series_title": "Aquarius",
-        "episode_code": "S02E01",
-        "source_title": "Aquarius - S2E1 I'm So Tired EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 69026,
-        "source_id": -24698065934253650,
-        "series_title": "Aquarius",
-        "episode_code": "S02E01",
-        "source_title": "Aquarius-S02E01-TitCz",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 69026,
-        "source_id": -70032947410608666,
-        "series_title": "Aquarius",
-        "episode_code": "S02E01",
-        "source_title": "Aquarius 2x1",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 69026,
-        "source_id": -69545280770978463,
-        "series_title": "Aquarius",
-        "episode_code": "S02E01",
-        "source_title": "Aquarius - s02e01-03",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 69026,
-        "source_id": -70301997168061021,
-        "series_title": "Aquarius",
-        "episode_code": "S02E01",
-        "source_title": "Aquarius S02E01 Helter Skelter",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 69027,
-        "source_id": -53197847716710411,
-        "series_title": "Aquarius",
-        "episode_code": "S02E02",
-        "source_title": "Aquarius - S2E2 Happiness Is a Warm Gun EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 69027,
-        "source_id": -47642125998962361,
-        "series_title": "Aquarius",
-        "episode_code": "S02E02",
-        "source_title": "Aquarius - S02E02 - Happiness Is a Warm Gun",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 69027,
-        "source_id": -60194058523946408,
-        "series_title": "Aquarius",
-        "episode_code": "S02E02",
-        "source_title": "Aquarius S02E02 Happiness Is a Warm Gun",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 69028,
-        "source_id": -69592081280011351,
-        "series_title": "Aquarius",
-        "episode_code": "S02E03",
-        "source_title": "Aquarius - S02E03 - Why Don't We Do It in the Road",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 69028,
-        "source_id": -28531561099476469,
-        "series_title": "Aquarius",
-        "episode_code": "S02E03",
-        "source_title": "Aquarius - S2E3 Why Don't We Do It in the Road EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 69028,
-        "source_id": -24681834100880258,
-        "series_title": "Aquarius",
-        "episode_code": "S02E03",
-        "source_title": "Aquarius S02E03 Why Don't We Do It in the Road",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 69029,
-        "source_id": -34341457359120565,
-        "series_title": "Aquarius",
-        "episode_code": "S02E04",
-        "source_title": "Aquarius - S2E4 Revolution 1 EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 69029,
-        "source_id": -11212327035888664,
-        "series_title": "Aquarius",
-        "episode_code": "S02E04",
-        "source_title": "Aquarius - S02E04 - Revolution 1",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 69029,
-        "source_id": -27447894385047053,
-        "series_title": "Aquarius",
-        "episode_code": "S02E04",
-        "source_title": "Aquarius S02E04 Revolution 1",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 69030,
-        "source_id": -3330842890073563,
-        "series_title": "Aquarius",
-        "episode_code": "S02E05",
-        "source_title": "Aquarius - S2E5 Everybody's Got Something to Hide Except Me and My Monkey EN",
-        "status": "needs_whisper"
-      },
-      {
         "episode_id": 69031,
         "source_id": -64663430376123283,
         "series_title": "Aquarius",
@@ -270849,6 +270769,166 @@
         "series_title": "Aquarius",
         "episode_code": "S02E12",
         "source_title": "Aquarius 2x12",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 69036,
+        "source_id": -14256694379195808,
+        "series_title": "Aquarius",
+        "episode_code": "S02E12",
+        "source_title": "Aquarius - s02e12",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 69037,
+        "source_id": -68410503449726452,
+        "series_title": "Aquarius",
+        "episode_code": "S02E13",
+        "source_title": "Aquarius - S02E13 - I Will",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 69037,
+        "source_id": -38349400781342452,
+        "series_title": "Aquarius",
+        "episode_code": "S02E13",
+        "source_title": "Aquarius - S2E13 I Will EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 69037,
+        "source_id": -46833537615107054,
+        "series_title": "Aquarius",
+        "episode_code": "S02E13",
+        "source_title": "Aquarius - s02e13",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 69037,
+        "source_id": -29560966501358210,
+        "series_title": "Aquarius",
+        "episode_code": "S02E13",
+        "source_title": "Aquarius 2x13",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 69037,
+        "source_id": -1359551785215421,
+        "series_title": "Aquarius",
+        "episode_code": "S02E13",
+        "source_title": "Aquarius S02E13 I Will",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 149094,
+        "source_id": -39279611090106837,
+        "series_title": "Are You Being Served?",
+        "episode_code": "S01E03",
+        "source_title": "Are.You.Being.Served.s01e03.Our.Figures.Are.Slipping",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 149093,
+        "source_id": -53188226600008618,
+        "series_title": "Are You Being Served?",
+        "episode_code": "S05E05",
+        "source_title": "Are.You.Being.Served.S05E05",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 149095,
+        "source_id": -36397474867085454,
+        "series_title": "Are You Being Served?",
+        "episode_code": "S07E05",
+        "source_title": "Are.You.Being.Served.S07E05",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 79221,
+        "source_id": -37223434291776308,
+        "series_title": "Army Wives",
+        "episode_code": "S01E01",
+        "source_title": "Army Wives S01E01",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 79226,
+        "source_id": -6881972057619854,
+        "series_title": "Army Wives",
+        "episode_code": "S01E07",
+        "source_title": "Army Wives S01E07",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 79230,
+        "source_id": -28188643909214168,
+        "series_title": "Army Wives",
+        "episode_code": "S01E12",
+        "source_title": "Army Wives S01E12",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 79250,
+        "source_id": -19688274042008377,
+        "series_title": "Army Wives",
+        "episode_code": "S02E03",
+        "source_title": "Army Wives S02E03",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 79251,
+        "source_id": -54474478649944766,
+        "series_title": "Army Wives",
+        "episode_code": "S02E04",
+        "source_title": "Army Wives S02E04",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 79252,
+        "source_id": -5648407693625496,
+        "series_title": "Army Wives",
+        "episode_code": "S02E05",
+        "source_title": "Army Wives S02E05",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 79253,
+        "source_id": -54186240593374804,
+        "series_title": "Army Wives",
+        "episode_code": "S02E06",
+        "source_title": "Army Wives S02E06",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 79254,
+        "source_id": -57127057874856779,
+        "series_title": "Army Wives",
+        "episode_code": "S02E07",
+        "source_title": "Army Wives S02E07",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 79258,
+        "source_id": -16145322239724082,
+        "series_title": "Army Wives",
+        "episode_code": "S02E11",
+        "source_title": "Army Wives S02E11",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 79261,
+        "source_id": -21766934338790302,
+        "series_title": "Army Wives",
+        "episode_code": "S02E14",
+        "source_title": "Army Wives S02E14",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 79268,
+        "source_id": -7998374202105708,
+        "series_title": "Army Wives",
+        "episode_code": "S03E02",
+        "source_title": "Army Wives S03E02",
         "status": "needs_whisper"
       }
     ],
@@ -271307,15 +271387,14 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 111,
-    "disabled": 218,
+    "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
-    "whisper_non_cz_needs_subtitles": 2191,
+    "whisper_non_cz_needs_subtitles": 2211,
     "whisper_confirmed_cz": 1253,
     "whisper_failed": 3,
-    "needs_whisper": 61095
+    "needs_whisper": 61075
   },
   "subtitle_followup_statuses": {
     "needs_subtitle_setup_after_prehrajto_processing": 13167
