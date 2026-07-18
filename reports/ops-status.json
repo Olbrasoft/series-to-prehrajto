@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 162471,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 30962,
+    "uploaded_episodes": 30969,
     "prepared_source_episodes": 57640,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 60,
-    "language_whisper_attempted_sources": 60,
-    "language_pending_whisper_sources": 2604,
+    "language_audited_sources": 20,
+    "language_whisper_attempted_sources": 20,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 64062,
     "whisper_review_pending_sources": 60678,
     "subtitle_followup_sources": 13010,
@@ -20,10 +20,74 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-07-18T05:25:07Z",
+      "databaseId": 29632220905,
+      "headBranch": "main",
+      "status": "queued",
+      "workflowName": "prepare-sources"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-18T05:24:17Z",
+      "databaseId": 29632197054,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-18T05:23:19Z",
+      "databaseId": 29632171814,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-18T05:22:12Z",
+      "databaseId": 29632142223,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-18T05:18:49Z",
+      "databaseId": 29632047018,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-18T05:16:18Z",
+      "databaseId": 29631977972,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-18T05:16:16Z",
+      "databaseId": 29631976811,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-18T05:15:57Z",
+      "databaseId": 29631966911,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-18T05:15:04Z",
       "databaseId": 29631939672,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -91,11 +155,11 @@
       "workflowName": "audit-language"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-07-18T04:48:55Z",
       "databaseId": 29631178031,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -110,70 +174,6 @@
       "conclusion": "",
       "createdAt": "2026-07-18T04:40:10Z",
       "databaseId": 29630935745,
-      "headBranch": "main",
-      "status": "pending",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-18T04:34:47Z",
-      "databaseId": 29630783599,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-18T04:34:44Z",
-      "databaseId": 29630782307,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-18T04:34:42Z",
-      "databaseId": 29630781342,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-18T04:33:25Z",
-      "databaseId": 29630746957,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-18T04:32:20Z",
-      "databaseId": 29630717361,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-18T04:32:16Z",
-      "databaseId": 29630715545,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-18T04:32:13Z",
-      "databaseId": 29630713654,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-18T04:32:06Z",
-      "databaseId": 29630710450,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "sync"
@@ -132641,6 +132641,11 @@
         "video_id": 27611596
       },
       {
+        "episode_id": 70614,
+        "display_name": "Město na kopci S02E08 - Pax Bostonia CZ Dabing",
+        "video_id": 27611630
+      },
+      {
         "episode_id": 126653,
         "display_name": "Ohnivá země S01E19 - 19. epizoda CZ Titulky",
         "video_id": 27610661
@@ -132739,6 +132744,36 @@
         "episode_id": 15491,
         "display_name": "Siréna S02E06 - 6. epizoda CZ Dabing",
         "video_id": 27611555
+      },
+      {
+        "episode_id": 70620,
+        "display_name": "Město na kopci S03E01 - Bohové a monstra CZ Dabing",
+        "video_id": 27611692
+      },
+      {
+        "episode_id": 70616,
+        "display_name": "Město na kopci S03E04 - Hnus, jak jsem říkal CZ Dabing",
+        "video_id": 27611729
+      },
+      {
+        "episode_id": 70618,
+        "display_name": "Město na kopci S03E05 - Vezmi mě domů CZ Dabing",
+        "video_id": 27611748
+      },
+      {
+        "episode_id": 15493,
+        "display_name": "Siréna S02E08 - 8. epizoda CZ Dabing",
+        "video_id": 27611693
+      },
+      {
+        "episode_id": 15495,
+        "display_name": "Siréna S02E09 - 9. epizoda CZ Dabing",
+        "video_id": 27611716
+      },
+      {
+        "episode_id": 15497,
+        "display_name": "Siréna S02E11 - 11. epizoda CZ Dabing",
+        "video_id": 27611744
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -265098,6 +265133,11 @@
         "video_id": 27611596
       },
       {
+        "episode_id": 70614,
+        "display_name": "Město na kopci S02E08 - Pax Bostonia CZ Dabing",
+        "video_id": 27611630
+      },
+      {
         "episode_id": 126653,
         "display_name": "Ohnivá země S01E19 - 19. epizoda CZ Titulky",
         "video_id": 27610661
@@ -265196,6 +265236,36 @@
         "episode_id": 15491,
         "display_name": "Siréna S02E06 - 6. epizoda CZ Dabing",
         "video_id": 27611555
+      },
+      {
+        "episode_id": 70620,
+        "display_name": "Město na kopci S03E01 - Bohové a monstra CZ Dabing",
+        "video_id": 27611692
+      },
+      {
+        "episode_id": 70616,
+        "display_name": "Město na kopci S03E04 - Hnus, jak jsem říkal CZ Dabing",
+        "video_id": 27611729
+      },
+      {
+        "episode_id": 70618,
+        "display_name": "Město na kopci S03E05 - Vezmi mě domů CZ Dabing",
+        "video_id": 27611748
+      },
+      {
+        "episode_id": 15493,
+        "display_name": "Siréna S02E08 - 8. epizoda CZ Dabing",
+        "video_id": 27611693
+      },
+      {
+        "episode_id": 15495,
+        "display_name": "Siréna S02E09 - 9. epizoda CZ Dabing",
+        "video_id": 27611716
+      },
+      {
+        "episode_id": 15497,
+        "display_name": "Siréna S02E11 - 11. epizoda CZ Dabing",
+        "video_id": 27611744
       }
     ],
     "prepared_not_upload_ready": [
@@ -266357,7 +266427,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 59,
+    "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
