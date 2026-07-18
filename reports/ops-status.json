@@ -2,36 +2,60 @@
   "counts": {
     "backlog_episodes": 161847,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 31563,
-    "prepared_source_episodes": 58691,
+    "uploaded_episodes": 31564,
+    "prepared_source_episodes": 58688,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 40,
-    "language_whisper_attempted_sources": 40,
+    "language_audited_sources": 60,
+    "language_whisper_attempted_sources": 60,
     "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 64542,
-    "whisper_review_pending_sources": 61018,
+    "whisper_review_pending_sources": 60998,
     "subtitle_followup_sources": 13271,
     "subtitle_followup_pending_sources": 13271
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-07-18T16:24:02Z",
-      "databaseId": 29651881864,
+      "createdAt": "2026-07-18T16:30:08Z",
+      "databaseId": 29652086120,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-07-18T16:29:19Z",
+      "databaseId": 29652058532,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-18T16:25:10Z",
+      "databaseId": 29651921915,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-18T16:24:02Z",
+      "databaseId": 29651881864,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "cancelled",
       "createdAt": "2026-07-18T16:23:56Z",
       "databaseId": 29651878293,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -59,11 +83,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-18T16:19:19Z",
       "databaseId": 29651724144,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
@@ -153,30 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-18T15:58:17Z",
-      "databaseId": 29651026928,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-18T15:57:06Z",
-      "databaseId": 29650990595,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-07-18T15:57:02Z",
-      "databaseId": 29650988370,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
     }
   ],
   "gaps": {
@@ -135744,6 +135744,11 @@
         "episode_id": 36977,
         "display_name": "Andromeda S01E06 - Temný anděl, zařící démon CZ Dabing",
         "video_id": 27623643
+      },
+      {
+        "episode_id": 188502,
+        "display_name": "Na parket! S01E16 - 16. epizoda CZ Dabing",
+        "video_id": 27623853
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -271206,6 +271211,11 @@
         "episode_id": 36977,
         "display_name": "Andromeda S01E06 - Temný anděl, zařící démon CZ Dabing",
         "video_id": 27623643
+      },
+      {
+        "episode_id": 188502,
+        "display_name": "Na parket! S01E16 - 16. epizoda CZ Dabing",
+        "video_id": 27623853
       }
     ],
     "prepared_not_upload_ready": [
@@ -271520,166 +271530,6 @@
         "status": "whisper_failed"
       },
       {
-        "episode_id": 79288,
-        "source_id": -48425250678319131,
-        "series_title": "Army Wives",
-        "episode_code": "S05E04",
-        "source_title": "Army Wives S05E04",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 79289,
-        "source_id": -68051422081282166,
-        "series_title": "Army Wives",
-        "episode_code": "S05E05",
-        "source_title": "Army Wives S05E05",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 79290,
-        "source_id": -70874883591363946,
-        "series_title": "Army Wives",
-        "episode_code": "S05E06",
-        "source_title": "Army Wives S05E06",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 79291,
-        "source_id": -22828065516697890,
-        "series_title": "Army Wives",
-        "episode_code": "S05E07",
-        "source_title": "Army Wives S05E07",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 79292,
-        "source_id": -9864530104846766,
-        "series_title": "Army Wives",
-        "episode_code": "S05E08",
-        "source_title": "Army Wives S05E08",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 79294,
-        "source_id": -17769379395393412,
-        "series_title": "Army Wives",
-        "episode_code": "S05E10",
-        "source_title": "Army Wives S05E10",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 79295,
-        "source_id": -26447265729911259,
-        "series_title": "Army Wives",
-        "episode_code": "S05E11",
-        "source_title": "Army Wives S05E11",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 79297,
-        "source_id": -65786470817424880,
-        "series_title": "Army Wives",
-        "episode_code": "S05E13",
-        "source_title": "Army Wives S05E13",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 79235,
-        "source_id": -31261098243380902,
-        "series_title": "Army Wives",
-        "episode_code": "S06E17",
-        "source_title": "Army.Wives.S06E17",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 79241,
-        "source_id": -18003530644154953,
-        "series_title": "Army Wives",
-        "episode_code": "S06E23",
-        "source_title": "Army.Wives.S06E23",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 186939,
-        "source_id": -42894009187211251,
-        "series_title": "Austin a Ally",
-        "episode_code": "S03E01",
-        "source_title": "Austin-a-Ally-S03E01---Cestování-&-Shledání",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 186939,
-        "source_id": -44270141978751205,
-        "series_title": "Austin a Ally",
-        "episode_code": "S03E01",
-        "source_title": "Austin-a-Ally-S03E01---Cestování-&-Shledání",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 186940,
-        "source_id": -9595418935134971,
-        "series_title": "Austin a Ally",
-        "episode_code": "S03E04",
-        "source_title": "Austin-a-Ally-S03E04---Plážové-kluby-&-BFFky",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 186976,
-        "source_id": -35014527161945099,
-        "series_title": "Austin a Ally",
-        "episode_code": "S04E08",
-        "source_title": "Austin-a-Ally-S04E08-_Kalamitní-Karaoke",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 186977,
-        "source_id": -15112564849360065,
-        "series_title": "Austin a Ally",
-        "episode_code": "S04E09",
-        "source_title": "Austin-a-Ally-S04E09-Manažerky-a-muffiny",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 186978,
-        "source_id": -9370588392151055,
-        "series_title": "Austin a Ally",
-        "episode_code": "S04E10",
-        "source_title": "Austin-a-Ally-S04E10-Zápasy-a-tanec",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 186978,
-        "source_id": -34359697144606400,
-        "series_title": "Austin a Ally",
-        "episode_code": "S04E10",
-        "source_title": "Austin-a-Ally---4x10---Zápasy-a-tance",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 187008,
-        "source_id": -6017170498249057,
-        "series_title": "Austin a Ally",
-        "episode_code": "S04E13",
-        "source_title": "Austin-a-Ally---4x13---bydlení-a-boynado-(9.10.2016)",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 186979,
-        "source_id": -20829816376993995,
-        "series_title": "Austin a Ally",
-        "episode_code": "S04E14",
-        "source_title": "Austin-a-Ally---4x14---zamilovaný-otec-,zoufalá-dcera",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 186984,
-        "source_id": -68861974466107390,
-        "series_title": "Austin a Ally",
-        "episode_code": "S04E15",
-        "source_title": "Austin-a-Ally---4x15---strašidla-a-strašidelné-příběhy",
-        "status": "needs_whisper"
-      },
-      {
         "episode_id": 186980,
         "source_id": -44089975747535814,
         "series_title": "Austin a Ally",
@@ -271909,6 +271759,166 @@
         "series_title": "Baby",
         "episode_code": "S02E01",
         "source_title": "Baby.S02E01.1080p.WEB-DL.DD.5.1.H264-MeGaNFX",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104633,
+        "source_id": -24697616628023990,
+        "series_title": "Baby",
+        "episode_code": "S02E01",
+        "source_title": "Baby - S2E1 #justagame IT",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104633,
+        "source_id": -27475354928092004,
+        "series_title": "Baby",
+        "episode_code": "S02E01",
+        "source_title": "Baby - S2E1 I'm Not That Guy EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104634,
+        "source_id": -16878047869949192,
+        "series_title": "Baby",
+        "episode_code": "S02E02",
+        "source_title": "Baby - S02E02 - The Offer (WEBDL-2160p)",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104634,
+        "source_id": -9468577459017506,
+        "series_title": "Baby",
+        "episode_code": "S02E02",
+        "source_title": "Baby_S02E02_Nabídka",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104634,
+        "source_id": -3682665512150635,
+        "series_title": "Baby",
+        "episode_code": "S02E02",
+        "source_title": "Baby.S02E02.1080p.WEB-DL.DD.5.1.H264-MeGaNFX",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104634,
+        "source_id": -29071411792342299,
+        "series_title": "Baby",
+        "episode_code": "S02E02",
+        "source_title": "Baby - S2E2 Rilancio IT",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104634,
+        "source_id": -22521930985061167,
+        "series_title": "Baby",
+        "episode_code": "S02E02",
+        "source_title": "Baby - S2E2 There's Something Fitchy Going On EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104635,
+        "source_id": -58664911592449174,
+        "series_title": "Baby",
+        "episode_code": "S02E03",
+        "source_title": "Baby - S02E03 - Ghosts (WEBDL-2160p)",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104635,
+        "source_id": -66163797833143929,
+        "series_title": "Baby",
+        "episode_code": "S02E03",
+        "source_title": "Baby.S02E03.1080p.WEB-DL.DD.5.1.H264-MeGaNFX",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104635,
+        "source_id": -43298736817943227,
+        "series_title": "Baby",
+        "episode_code": "S02E03",
+        "source_title": "Baby - S2E3 Fantasmi IT",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104635,
+        "source_id": -62675995495400864,
+        "series_title": "Baby",
+        "episode_code": "S02E03",
+        "source_title": "Baby - S2E3 Epizóda 3 EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104635,
+        "source_id": -37682055130211637,
+        "series_title": "Baby",
+        "episode_code": "S02E03",
+        "source_title": "Baby - S2E3 Epizóda 3 IT",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104636,
+        "source_id": -68053968342567897,
+        "series_title": "Baby",
+        "episode_code": "S02E04",
+        "source_title": "Baby - S02E04 - Truth or Dare (WEBDL-2160p)",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104636,
+        "source_id": -40103689673016534,
+        "series_title": "Baby",
+        "episode_code": "S02E04",
+        "source_title": "Baby_S02E04_Vadí nevadí",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104636,
+        "source_id": -63300536057555788,
+        "series_title": "Baby",
+        "episode_code": "S02E04",
+        "source_title": "Baby.S02E04.1080p.WEB-DL.DD.5.1.H264-MeGaNFX",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104636,
+        "source_id": -57692255713148798,
+        "series_title": "Baby",
+        "episode_code": "S02E04",
+        "source_title": "Baby - S2E4 Obbligo o verità IT",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104636,
+        "source_id": -31432228806519046,
+        "series_title": "Baby",
+        "episode_code": "S02E04",
+        "source_title": "Baby - S2E4 New Bonnie Vs",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104637,
+        "source_id": -19024765140858439,
+        "series_title": "Baby",
+        "episode_code": "S02E05",
+        "source_title": "Baby - S02E05 - Dead End (WEBDL-2160p)",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104637,
+        "source_id": -7427546687488427,
+        "series_title": "Baby",
+        "episode_code": "S02E05",
+        "source_title": "Baby.S02E05.1080p.WEB-DL.DD.5.1.H264-MeGaNFX",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104637,
+        "source_id": -5055745109974973,
+        "series_title": "Baby",
+        "episode_code": "S02E05",
+        "source_title": "Baby - S2E5 Vicolo cieco IT",
         "status": "needs_whisper"
       }
     ],
@@ -272367,14 +272377,14 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 39,
+    "ok": 59,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
-    "whisper_non_cz_needs_subtitles": 2271,
-    "whisper_confirmed_cz": 1253,
+    "whisper_non_cz_needs_subtitles": 2284,
+    "whisper_confirmed_cz": 1260,
     "whisper_failed": 3,
-    "needs_whisper": 61015
+    "needs_whisper": 60995
   },
   "subtitle_followup_statuses": {
     "needs_subtitle_setup_after_prehrajto_processing": 13271
