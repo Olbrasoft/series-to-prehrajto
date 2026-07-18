@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 162126,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 31317,
-    "prepared_source_episodes": 58268,
+    "uploaded_episodes": 31320,
+    "prepared_source_episodes": 58262,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 20,
-    "language_whisper_attempted_sources": 20,
-    "language_pending_whisper_sources": 2624,
+    "language_audited_sources": 40,
+    "language_whisper_attempted_sources": 40,
+    "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 64453,
     "whisper_review_pending_sources": 61069,
     "subtitle_followup_sources": 13079,
@@ -20,18 +20,58 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-07-18T10:56:20Z",
-      "databaseId": 29641692566,
+      "createdAt": "2026-07-18T11:01:43Z",
+      "databaseId": 29641852972,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-18T11:01:32Z",
+      "databaseId": 29641848204,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-18T11:01:11Z",
+      "databaseId": 29641838734,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-18T10:57:42Z",
+      "databaseId": 29641730396,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "prepare-sources"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
+      "createdAt": "2026-07-18T10:56:53Z",
+      "databaseId": 29641708547,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-07-18T10:56:20Z",
+      "databaseId": 29641692566,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-sources"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-18T10:55:06Z",
       "databaseId": 29641658443,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -67,19 +107,19 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-18T10:50:37Z",
       "databaseId": 29641530233,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-18T10:50:36Z",
       "databaseId": 29641529370,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -95,7 +135,7 @@
       "createdAt": "2026-07-18T10:49:22Z",
       "databaseId": 29641493329,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "prepare-manifest"
     },
     {
@@ -137,46 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-18T10:31:23Z",
-      "databaseId": 29640980312,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-18T10:31:20Z",
-      "databaseId": 29640978921,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-07-18T10:30:18Z",
-      "databaseId": 29640946949,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-18T10:30:08Z",
-      "databaseId": 29640941092,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-18T10:21:19Z",
-      "databaseId": 29640706619,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
     }
   ],
   "gaps": {
@@ -134514,6 +134514,21 @@
         "episode_id": 149193,
         "display_name": "Troy: Fall of a City S01E06 - 6. epizoda CZ Titulky",
         "video_id": 27618318
+      },
+      {
+        "episode_id": 194421,
+        "display_name": "Big Time Rush S01E07 - Big Time fotografování CZ Dabing",
+        "video_id": 27618345
+      },
+      {
+        "episode_id": 194419,
+        "display_name": "Big Time Rush S02E01 - Vítejte zpět, Big Time CZ Dabing",
+        "video_id": 27618379
+      },
+      {
+        "episode_id": 194423,
+        "display_name": "Big Time Rush S02E07 - Big Time žertíky CZ Titulky",
+        "video_id": 27618408
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -268746,6 +268761,21 @@
         "episode_id": 149193,
         "display_name": "Troy: Fall of a City S01E06 - 6. epizoda CZ Titulky",
         "video_id": 27618318
+      },
+      {
+        "episode_id": 194421,
+        "display_name": "Big Time Rush S01E07 - Big Time fotografování CZ Dabing",
+        "video_id": 27618345
+      },
+      {
+        "episode_id": 194419,
+        "display_name": "Big Time Rush S02E01 - Vítejte zpět, Big Time CZ Dabing",
+        "video_id": 27618379
+      },
+      {
+        "episode_id": 194423,
+        "display_name": "Big Time Rush S02E07 - Big Time žertíky CZ Titulky",
+        "video_id": 27618408
       }
     ],
     "prepared_not_upload_ready": [
@@ -269907,7 +269937,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 19,
+    "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
