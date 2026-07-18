@@ -2,15 +2,15 @@
   "counts": {
     "backlog_episodes": 161847,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 31574,
+    "uploaded_episodes": 31578,
     "prepared_source_episodes": 58679,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 40,
-    "language_whisper_attempted_sources": 40,
+    "language_audited_sources": 20,
+    "language_whisper_attempted_sources": 20,
     "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 64542,
     "whisper_review_pending_sources": 60978,
@@ -20,26 +20,50 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-07-18T16:48:25Z",
-      "databaseId": 29652689002,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "ops-status"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-18T16:48:24Z",
-      "databaseId": 29652688367,
+      "createdAt": "2026-07-18T16:53:56Z",
+      "databaseId": 29652866896,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-07-18T16:53:42Z",
+      "databaseId": 29652859574,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-18T16:49:35Z",
+      "databaseId": 29652725822,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-18T16:48:25Z",
+      "databaseId": 29652689002,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-18T16:48:24Z",
+      "databaseId": 29652688367,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "cancelled",
       "createdAt": "2026-07-18T16:48:20Z",
       "databaseId": 29652686141,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -59,11 +83,11 @@
       "workflowName": "prepare-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-18T16:46:07Z",
       "databaseId": 29652615685,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -153,30 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-18T16:19:22Z",
-      "databaseId": 29651725951,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-18T16:19:19Z",
-      "databaseId": 29651724144,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-18T16:18:08Z",
-      "databaseId": 29651687358,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
     }
   ],
   "gaps": {
@@ -135776,6 +135776,16 @@
         "video_id": 27624379
       },
       {
+        "episode_id": 188512,
+        "display_name": "Na parket! S02E07 - 7. epizoda CZ Dabing",
+        "video_id": 27624415
+      },
+      {
+        "episode_id": 188508,
+        "display_name": "Na parket! S02E08 - 8. epizoda CZ Dabing",
+        "video_id": 27624452
+      },
+      {
         "episode_id": 36981,
         "display_name": "Andromeda S01E12 - Matematika slz CZ Dabing",
         "video_id": 27624056
@@ -135799,6 +135809,16 @@
         "episode_id": 36995,
         "display_name": "Andromeda S02E06 - Příliš lidská CZ Dabing",
         "video_id": 27624367
+      },
+      {
+        "episode_id": 37069,
+        "display_name": "Andromeda S02E07 - Jediná naděje CZ Dabing",
+        "video_id": 27624404
+      },
+      {
+        "episode_id": 36997,
+        "display_name": "Andromeda S02E09 - Nebezpečné svádění CZ Dabing",
+        "video_id": 27624486
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -271293,6 +271313,16 @@
         "video_id": 27624379
       },
       {
+        "episode_id": 188512,
+        "display_name": "Na parket! S02E07 - 7. epizoda CZ Dabing",
+        "video_id": 27624415
+      },
+      {
+        "episode_id": 188508,
+        "display_name": "Na parket! S02E08 - 8. epizoda CZ Dabing",
+        "video_id": 27624452
+      },
+      {
         "episode_id": 36981,
         "display_name": "Andromeda S01E12 - Matematika slz CZ Dabing",
         "video_id": 27624056
@@ -271316,6 +271346,16 @@
         "episode_id": 36995,
         "display_name": "Andromeda S02E06 - Příliš lidská CZ Dabing",
         "video_id": 27624367
+      },
+      {
+        "episode_id": 37069,
+        "display_name": "Andromeda S02E07 - Jediná naděje CZ Dabing",
+        "video_id": 27624404
+      },
+      {
+        "episode_id": 36997,
+        "display_name": "Andromeda S02E09 - Nebezpečné svádění CZ Dabing",
+        "video_id": 27624486
       }
     ],
     "prepared_not_upload_ready": [
@@ -272477,7 +272517,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 39,
+    "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
