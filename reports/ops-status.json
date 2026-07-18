@@ -2,15 +2,15 @@
   "counts": {
     "backlog_episodes": 162471,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 30938,
+    "uploaded_episodes": 30947,
     "prepared_source_episodes": 57666,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 60,
-    "language_whisper_attempted_sources": 60,
+    "language_audited_sources": 40,
+    "language_whisper_attempted_sources": 40,
     "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 64062,
     "whisper_review_pending_sources": 60738,
@@ -20,6 +20,38 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-07-18T04:58:03Z",
+      "databaseId": 29631432550,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-18T04:49:43Z",
+      "databaseId": 29631199061,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-18T04:49:39Z",
+      "databaseId": 29631197558,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-18T04:49:37Z",
+      "databaseId": 29631196750,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "",
       "createdAt": "2026-07-18T04:48:55Z",
       "databaseId": 29631178031,
       "headBranch": "main",
@@ -27,11 +59,11 @@
       "workflowName": "prepare-manifest"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-18T04:48:35Z",
       "databaseId": 29631169054,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -145,38 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-18T04:24:20Z",
-      "databaseId": 29630498884,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-18T04:24:18Z",
-      "databaseId": 29630497969,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-18T04:23:11Z",
-      "databaseId": 29630468357,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-18T04:04:44Z",
-      "databaseId": 29629945210,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "refresh-backlog"
     }
   ],
   "gaps": {
@@ -132586,6 +132586,26 @@
         "video_id": 27610953
       },
       {
+        "episode_id": 147484,
+        "display_name": "Hledání Aljašky S01E06 - 6. epizoda CZ Dabing",
+        "video_id": 27610978
+      },
+      {
+        "episode_id": 147482,
+        "display_name": "Hledání Aljašky S01E07 - 7. epizoda CZ Dabing",
+        "video_id": 27611001
+      },
+      {
+        "episode_id": 70600,
+        "display_name": "Město na kopci S01E02 - Nečekané překvapení v Southie High CZ Dabing",
+        "video_id": 27611032
+      },
+      {
+        "episode_id": 70602,
+        "display_name": "Město na kopci S01E03 - Jen kdyby ten blázen bláznil takhle dál CZ Dabing",
+        "video_id": 27611088
+      },
+      {
         "episode_id": 126653,
         "display_name": "Ohnivá země S01E19 - 19. epizoda CZ Titulky",
         "video_id": 27610661
@@ -132619,6 +132639,31 @@
         "episode_id": 171923,
         "display_name": "The Empire S01E05 - 5. epizoda CZ Titulky",
         "video_id": 27610904
+      },
+      {
+        "episode_id": 171925,
+        "display_name": "The Empire S01E07 - 7. epizoda CZ Titulky",
+        "video_id": 27610958
+      },
+      {
+        "episode_id": 129697,
+        "display_name": "Řeka S01E01 - 1. epizoda CZ Titulky",
+        "video_id": 27610994
+      },
+      {
+        "episode_id": 129699,
+        "display_name": "Řeka S01E03 - 3. epizoda CZ Titulky",
+        "video_id": 27611020
+      },
+      {
+        "episode_id": 129701,
+        "display_name": "Řeka S01E04 - 4. epizoda CZ Titulky",
+        "video_id": 27611052
+      },
+      {
+        "episode_id": 108665,
+        "display_name": "Zápisky mladého doktora S01E01 - 1. epizoda CZ Dabing",
+        "video_id": 27611109
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -264923,6 +264968,26 @@
         "video_id": 27610953
       },
       {
+        "episode_id": 147484,
+        "display_name": "Hledání Aljašky S01E06 - 6. epizoda CZ Dabing",
+        "video_id": 27610978
+      },
+      {
+        "episode_id": 147482,
+        "display_name": "Hledání Aljašky S01E07 - 7. epizoda CZ Dabing",
+        "video_id": 27611001
+      },
+      {
+        "episode_id": 70600,
+        "display_name": "Město na kopci S01E02 - Nečekané překvapení v Southie High CZ Dabing",
+        "video_id": 27611032
+      },
+      {
+        "episode_id": 70602,
+        "display_name": "Město na kopci S01E03 - Jen kdyby ten blázen bláznil takhle dál CZ Dabing",
+        "video_id": 27611088
+      },
+      {
         "episode_id": 126653,
         "display_name": "Ohnivá země S01E19 - 19. epizoda CZ Titulky",
         "video_id": 27610661
@@ -264956,6 +265021,31 @@
         "episode_id": 171923,
         "display_name": "The Empire S01E05 - 5. epizoda CZ Titulky",
         "video_id": 27610904
+      },
+      {
+        "episode_id": 171925,
+        "display_name": "The Empire S01E07 - 7. epizoda CZ Titulky",
+        "video_id": 27610958
+      },
+      {
+        "episode_id": 129697,
+        "display_name": "Řeka S01E01 - 1. epizoda CZ Titulky",
+        "video_id": 27610994
+      },
+      {
+        "episode_id": 129699,
+        "display_name": "Řeka S01E03 - 3. epizoda CZ Titulky",
+        "video_id": 27611020
+      },
+      {
+        "episode_id": 129701,
+        "display_name": "Řeka S01E04 - 4. epizoda CZ Titulky",
+        "video_id": 27611052
+      },
+      {
+        "episode_id": 108665,
+        "display_name": "Zápisky mladého doktora S01E01 - 1. epizoda CZ Dabing",
+        "video_id": 27611109
       }
     ],
     "prepared_not_upload_ready": [
@@ -266117,7 +266207,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 59,
+    "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
