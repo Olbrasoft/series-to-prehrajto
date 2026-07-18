@@ -98,7 +98,7 @@ jobs:
           cp plans/whisper-review-queue.jsonl "$TMP_DIR/plans/whisper-review-queue.jsonl" 2>/dev/null || true
           cp audits/language-audit-latest.jsonl.gz "$TMP_DIR/audits/language-audit-latest.jsonl.gz" 2>/dev/null || true
 
-          for attempt in 1 2 3 4 5; do
+          for attempt in $(seq 1 20); do
             git fetch origin main
             git reset --hard origin/main
             mkdir -p plans audits manifests reports
@@ -120,12 +120,27 @@ jobs:
             fi
 
             git commit -m "chore: prepare series episode sources"
-            if git push origin HEAD:main; then
-              exit 0
-            fi
+            for push_attempt in $(seq 1 10); do
+              if git push origin HEAD:main; then
+                exit 0
+              fi
+
+              # Most races are upload/watchdog/description commits. Rebase
+              # quickly first; if that conflicts, rebuild from latest main.
+              git fetch origin main
+              if ! git rebase origin/main; then
+                git rebase --abort || true
+                break
+              fi
+              sleep 1
+            done
 
             echo "push race on attempt ${attempt}, retrying"
-            sleep $((attempt * 3))
+            SLEEP_SECONDS=$((attempt * 5))
+            if [ "$SLEEP_SECONDS" -gt 120 ]; then
+              SLEEP_SECONDS=120
+            fi
+            sleep "$SLEEP_SECONDS"
           done
 
           echo "failed to push preparation results after retries" >&2
