@@ -2,14 +2,14 @@
   "counts": {
     "backlog_episodes": 162126,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 31320,
-    "prepared_source_episodes": 58262,
+    "uploaded_episodes": 31323,
+    "prepared_source_episodes": 58280,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 40,
+    "language_audited_sources": 144,
     "language_whisper_attempted_sources": 40,
     "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 64453,
@@ -18,6 +18,30 @@
     "subtitle_followup_pending_sources": 13079
   },
   "workflow_runs": [
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-18T11:08:55Z",
+      "databaseId": 29642057640,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-18T11:08:51Z",
+      "databaseId": 29642055554,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-18T11:03:47Z",
+      "databaseId": 29641912906,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
     {
       "conclusion": "success",
       "createdAt": "2026-07-18T11:02:24Z",
@@ -43,11 +67,11 @@
       "workflowName": "audit-language"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-18T11:01:43Z",
       "databaseId": 29641852972,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -55,7 +79,7 @@
       "createdAt": "2026-07-18T11:01:32Z",
       "databaseId": 29641848204,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "prepare-manifest"
     },
     {
@@ -153,30 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-18T10:49:22Z",
-      "databaseId": 29641493329,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-18T10:42:02Z",
-      "databaseId": 29641277240,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-18T10:40:47Z",
-      "databaseId": 29641241685,
-      "headBranch": "main",
-      "status": "pending",
-      "workflowName": "sync"
     }
   ],
   "gaps": {
@@ -134529,6 +134529,21 @@
         "episode_id": 194423,
         "display_name": "Big Time Rush S02E07 - Big Time žertíky CZ Titulky",
         "video_id": 27618408
+      },
+      {
+        "episode_id": 194425,
+        "display_name": "Big Time Rush S02E11 - 11. epizoda CZ Titulky",
+        "video_id": 27618439
+      },
+      {
+        "episode_id": 194427,
+        "display_name": "Big Time Rush S02E17 - Souboj o titul krále CZ Titulky",
+        "video_id": 27618462
+      },
+      {
+        "episode_id": 194415,
+        "display_name": "Big Time Rush S03E01 - Konflikty v zákulisí CZ Dabing",
+        "video_id": 27618484
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -268776,6 +268791,21 @@
         "episode_id": 194423,
         "display_name": "Big Time Rush S02E07 - Big Time žertíky CZ Titulky",
         "video_id": 27618408
+      },
+      {
+        "episode_id": 194425,
+        "display_name": "Big Time Rush S02E11 - 11. epizoda CZ Titulky",
+        "video_id": 27618439
+      },
+      {
+        "episode_id": 194427,
+        "display_name": "Big Time Rush S02E17 - Souboj o titul krále CZ Titulky",
+        "video_id": 27618462
+      },
+      {
+        "episode_id": 194415,
+        "display_name": "Big Time Rush S03E01 - Konflikty v zákulisí CZ Dabing",
+        "video_id": 27618484
       }
     ],
     "prepared_not_upload_ready": [
@@ -269937,6 +269967,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
+    "disabled": 104,
     "ok": 39,
     "resolve_failed": 1
   },
