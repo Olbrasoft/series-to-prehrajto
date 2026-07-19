@@ -2,28 +2,76 @@
   "counts": {
     "backlog_episodes": 161112,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 32261,
-    "prepared_source_episodes": 60278,
+    "uploaded_episodes": 32267,
+    "prepared_source_episodes": 60392,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 60,
-    "language_whisper_attempted_sources": 60,
-    "language_pending_whisper_sources": 2604,
-    "whisper_review_sources": 65089,
-    "whisper_review_pending_sources": 61145,
-    "subtitle_followup_sources": 13783,
-    "subtitle_followup_pending_sources": 13783
+    "language_audited_sources": 40,
+    "language_whisper_attempted_sources": 40,
+    "language_pending_whisper_sources": 2624,
+    "whisper_review_sources": 65160,
+    "whisper_review_pending_sources": 61196,
+    "subtitle_followup_sources": 13803,
+    "subtitle_followup_pending_sources": 13803
   },
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-07-19T10:16:23Z",
+      "databaseId": 29683054929,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-19T10:16:20Z",
+      "databaseId": 29683053643,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-19T10:11:27Z",
+      "databaseId": 29682906876,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-19T10:08:27Z",
+      "databaseId": 29682816674,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-sources"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-19T10:04:38Z",
+      "databaseId": 29682703802,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-19T10:04:36Z",
+      "databaseId": 29682702557,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-19T10:03:43Z",
       "databaseId": 29682676605,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-status"
     },
     {
@@ -35,11 +83,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-19T10:03:22Z",
       "databaseId": 29682665421,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -51,11 +99,11 @@
       "workflowName": "prepare-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-19T10:02:09Z",
       "databaseId": 29682628206,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -99,19 +147,19 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-07-19T09:39:57Z",
       "databaseId": 29681977213,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-07-19T09:39:53Z",
       "databaseId": 29681975304,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "sync"
     },
     {
@@ -129,54 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-19T09:27:04Z",
-      "databaseId": 29681596903,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-19T09:27:02Z",
-      "databaseId": 29681595655,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-19T09:27:00Z",
-      "databaseId": 29681594719,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-19T09:25:07Z",
-      "databaseId": 29681540499,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-19T09:17:04Z",
-      "databaseId": 29681301834,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-sources"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-19T09:12:51Z",
-      "databaseId": 29681176732,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
     }
   ],
   "gaps": {
@@ -139171,6 +139171,21 @@
         "video_id": 27655336
       },
       {
+        "episode_id": 59764,
+        "display_name": "Krajní meze S02E11 - Útulek CZ Dabing",
+        "video_id": 27655438
+      },
+      {
+        "episode_id": 59746,
+        "display_name": "Krajní meze S02E21 - Zmizení CZ Dabing",
+        "video_id": 27655515
+      },
+      {
+        "episode_id": 79044,
+        "display_name": "Poloviční chlap S01E02 - 2. epizoda CZ Dabing",
+        "video_id": 27655606
+      },
+      {
         "episode_id": 55519,
         "display_name": "Seal Team 6 S01E07 - 7. epizoda CZ Dabing",
         "video_id": 27654298
@@ -139234,6 +139249,21 @@
         "episode_id": 126211,
         "display_name": "Zone Blanche S02E03 - 3. epizoda CZ Titulky",
         "video_id": 27655371
+      },
+      {
+        "episode_id": 171297,
+        "display_name": "Spřízněné duše S01E02 - 2. epizoda CZ Titulky",
+        "video_id": 27655453
+      },
+      {
+        "episode_id": 67195,
+        "display_name": "Evropské kmeny S01E06 - 6. kapitola CZ Titulky",
+        "video_id": 27655583
+      },
+      {
+        "episode_id": 171299,
+        "display_name": "Spřízněné duše S01E04 - 4. epizoda CZ Titulky",
+        "video_id": 27655775
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -278123,6 +278153,21 @@
         "video_id": 27655336
       },
       {
+        "episode_id": 59764,
+        "display_name": "Krajní meze S02E11 - Útulek CZ Dabing",
+        "video_id": 27655438
+      },
+      {
+        "episode_id": 59746,
+        "display_name": "Krajní meze S02E21 - Zmizení CZ Dabing",
+        "video_id": 27655515
+      },
+      {
+        "episode_id": 79044,
+        "display_name": "Poloviční chlap S01E02 - 2. epizoda CZ Dabing",
+        "video_id": 27655606
+      },
+      {
         "episode_id": 55519,
         "display_name": "Seal Team 6 S01E07 - 7. epizoda CZ Dabing",
         "video_id": 27654298
@@ -278186,6 +278231,21 @@
         "episode_id": 126211,
         "display_name": "Zone Blanche S02E03 - 3. epizoda CZ Titulky",
         "video_id": 27655371
+      },
+      {
+        "episode_id": 171297,
+        "display_name": "Spřízněné duše S01E02 - 2. epizoda CZ Titulky",
+        "video_id": 27655453
+      },
+      {
+        "episode_id": 67195,
+        "display_name": "Evropské kmeny S01E06 - 6. kapitola CZ Titulky",
+        "video_id": 27655583
+      },
+      {
+        "episode_id": 171299,
+        "display_name": "Spřízněné duše S01E04 - 4. epizoda CZ Titulky",
+        "video_id": 27655775
       }
     ],
     "prepared_not_upload_ready": [
@@ -278500,163 +278560,67 @@
         "status": "whisper_failed"
       },
       {
-        "episode_id": 39905,
-        "source_id": -71730897116296858,
-        "series_title": "Babylon 5",
-        "episode_code": "S05E16",
-        "source_title": "Babylon 5 S05E16 SkDab",
+        "episode_id": 141374,
+        "source_id": -38007779577860156,
+        "series_title": "Almost Paradise",
+        "episode_code": "S01E03",
+        "source_title": "Almost Paradise S01E03 - ENG",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 39905,
-        "source_id": -24789606392383845,
-        "series_title": "Babylon 5",
-        "episode_code": "S05E16",
-        "source_title": "Babylon 5 S05E16 DoDo",
+        "episode_id": 141374,
+        "source_id": -65881536640773649,
+        "series_title": "Almost Paradise",
+        "episode_code": "S01E03",
+        "source_title": "Almost.Paradise.S01E03.720p.AMZN.WEBRip.x264-GalaxyTV",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 39905,
-        "source_id": -36727804771668325,
-        "series_title": "Babylon 5",
-        "episode_code": "S05E16",
-        "source_title": "Babylon 5 S05E16By DRAGOUN",
+        "episode_id": 141378,
+        "source_id": -221239564690791,
+        "series_title": "Almost Paradise",
+        "episode_code": "S01E07",
+        "source_title": "Almost.Paradise.S01E07.720p.AMZN.WEBRip.x264-GalaxyTV",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 39905,
-        "source_id": -47805884832112334,
-        "series_title": "Babylon 5",
-        "episode_code": "S05E16",
-        "source_title": "Babylon 5 S05E16 ⭐GG⭐",
+        "episode_id": 141378,
+        "source_id": -14036777468781666,
+        "series_title": "Almost Paradise",
+        "episode_code": "S01E07",
+        "source_title": "Almost Paradise S01E07 - ENG",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 39905,
-        "source_id": -57838715375641663,
-        "series_title": "Babylon 5",
-        "episode_code": "S05E16",
-        "source_title": "Babylon 5 S05E16⭐GT⭐",
+        "episode_id": 141383,
+        "source_id": -38756353556954795,
+        "series_title": "Almost Paradise",
+        "episode_code": "S02E01",
+        "source_title": "Almost.Paradise.S02E01.1080p.WEB.h264-EDITH",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 39905,
-        "source_id": -5761758732481401,
-        "series_title": "Babylon 5",
-        "episode_code": "S05E16",
-        "source_title": "Babylon 5 S05E16 1080p SK",
+        "episode_id": 141383,
+        "source_id": -62132776877326800,
+        "series_title": "Almost Paradise",
+        "episode_code": "S02E01",
+        "source_title": "Almost Paradise - S2E1 The Magellan Cross EN",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 39906,
-        "source_id": -19419764759887817,
-        "series_title": "Babylon 5",
-        "episode_code": "S05E17",
-        "source_title": "Babylon 5 S05E17 SkDab",
+        "episode_id": 141387,
+        "source_id": -13793252623116300,
+        "series_title": "Almost Paradise",
+        "episode_code": "S02E05",
+        "source_title": "Almost.Paradise.S02E05.1080p.WEB.h264-EDITH",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 39906,
-        "source_id": -49438929193997074,
-        "series_title": "Babylon 5",
-        "episode_code": "S05E17",
-        "source_title": "Babylon 5 S05E17 Návrat tieňov",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39906,
-        "source_id": -10861932470473851,
-        "series_title": "Babylon 5",
-        "episode_code": "S05E17",
-        "source_title": "Babylon 5 S05E17 - Návrat tieňov.mkv",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39906,
-        "source_id": -24662112191412133,
-        "series_title": "Babylon 5",
-        "episode_code": "S05E17",
-        "source_title": "Babylon 5 S05E17 DoDo",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39906,
-        "source_id": -56571286317891172,
-        "series_title": "Babylon 5",
-        "episode_code": "S05E17",
-        "source_title": "Babylon 5 S05E17 ⭐GG⭐",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39906,
-        "source_id": -41296477432114119,
-        "series_title": "Babylon 5",
-        "episode_code": "S05E17",
-        "source_title": "Babylon 5 S05E17 1080p SK",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39907,
-        "source_id": -54572635485118866,
-        "series_title": "Babylon 5",
-        "episode_code": "S05E18",
-        "source_title": "Babylon 5 S05E18 SkDab",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39907,
-        "source_id": -66144432883995935,
-        "series_title": "Babylon 5",
-        "episode_code": "S05E18",
-        "source_title": "Babylon 5 S05E18 Pád Centauri Prime",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39907,
-        "source_id": -11735736066401680,
-        "series_title": "Babylon 5",
-        "episode_code": "S05E18",
-        "source_title": "Babylon 5 S05E18 - Pád Centauri Prime.mkv",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39907,
-        "source_id": -43747563099091635,
-        "series_title": "Babylon 5",
-        "episode_code": "S05E18",
-        "source_title": "Babylon 5 S05E18 Pád Centauri Prima",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39907,
-        "source_id": -5072477415665037,
-        "series_title": "Babylon 5",
-        "episode_code": "S05E18",
-        "source_title": "Babylon 5 S05E18 DoDo",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39907,
-        "source_id": -36021921442326671,
-        "series_title": "Babylon 5",
-        "episode_code": "S05E18",
-        "source_title": "Babylon 5 S05E18 1080p SK",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39908,
-        "source_id": -24332522706991646,
-        "series_title": "Babylon 5",
-        "episode_code": "S05E19",
-        "source_title": "Babylon 5 S05E19 SkDab",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 39908,
-        "source_id": -46314316327833820,
-        "series_title": "Babylon 5",
-        "episode_code": "S05E19",
-        "source_title": "Babylon 5 S05E19 - Ohnivé koleso",
+        "episode_id": 141391,
+        "source_id": -57839717580596613,
+        "series_title": "Almost Paradise",
+        "episode_code": "S02E09",
+        "source_title": "Almost.Paradise.S02E09.1080p.WEB.h264-EDITH",
         "status": "needs_whisper"
       },
       {
@@ -278889,6 +278853,102 @@
         "series_title": "Babylon Berlín",
         "episode_code": "S02E05",
         "source_title": "Babylon Berlín - S2E5 Episode 5 DE",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 160343,
+        "source_id": -46279469186390780,
+        "series_title": "Bad Blood",
+        "episode_code": "S01E01",
+        "source_title": "Bad Blood - S1E1 Scar Tissue EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 160343,
+        "source_id": -46236522811310474,
+        "series_title": "Bad Blood",
+        "episode_code": "S01E01",
+        "source_title": "Bad Blood - S1E1 Scar Tissue EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 160344,
+        "source_id": -62310543389684138,
+        "series_title": "Bad Blood",
+        "episode_code": "S01E02",
+        "source_title": "Bad Blood - S1E2 Pacifier EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 160344,
+        "source_id": -30999643518467017,
+        "series_title": "Bad Blood",
+        "episode_code": "S01E02",
+        "source_title": "Bad Blood - S1E2 Pacifier EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 160345,
+        "source_id": -29224375747036502,
+        "series_title": "Bad Blood",
+        "episode_code": "S01E03",
+        "source_title": "Bad Blood - S1E3 Feast or Famine EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 160345,
+        "source_id": -39304222421493875,
+        "series_title": "Bad Blood",
+        "episode_code": "S01E03",
+        "source_title": "Bad Blood - S1E3 Feast Or Famine EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 160346,
+        "source_id": -46901221139574834,
+        "series_title": "Bad Blood",
+        "episode_code": "S01E04",
+        "source_title": "Bad Blood - S1E4 Home Is Where the Gun Is EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 160346,
+        "source_id": -28808290152632843,
+        "series_title": "Bad Blood",
+        "episode_code": "S01E04",
+        "source_title": "Bad Blood - S1E4 Home Is Where The Gun Is EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 160347,
+        "source_id": -34803424595301020,
+        "series_title": "Bad Blood",
+        "episode_code": "S01E05",
+        "source_title": "Bad Blood - S1E5 When You Got Nothin'..",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 160347,
+        "source_id": -28466179901699022,
+        "series_title": "Bad Blood",
+        "episode_code": "S01E05",
+        "source_title": "Bad Blood - S1E5 When You Got Nothin EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 160348,
+        "source_id": -7185857615212411,
+        "series_title": "Bad Blood",
+        "episode_code": "S01E06",
+        "source_title": "Bad Blood - S1E6 You Can Never Hold Back Spring EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 160348,
+        "source_id": -51550357648486942,
+        "series_title": "Bad Blood",
+        "episode_code": "S01E06",
+        "source_title": "Bad Blood - S1E6 You Can Never Hold Back Spring EN",
         "status": "needs_whisper"
       }
     ],
@@ -279347,16 +279407,16 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 59,
+    "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
-    "whisper_non_cz_needs_subtitles": 2533,
-    "whisper_confirmed_cz": 1411,
+    "whisper_non_cz_needs_subtitles": 2547,
+    "whisper_confirmed_cz": 1417,
     "whisper_failed": 3,
-    "needs_whisper": 61142
+    "needs_whisper": 61193
   },
   "subtitle_followup_statuses": {
-    "needs_subtitle_setup_after_prehrajto_processing": 13783
+    "needs_subtitle_setup_after_prehrajto_processing": 13803
   }
 }
