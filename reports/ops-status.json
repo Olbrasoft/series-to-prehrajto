@@ -2,36 +2,60 @@
   "counts": {
     "backlog_episodes": 161112,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 32296,
-    "prepared_source_episodes": 60437,
+    "uploaded_episodes": 32298,
+    "prepared_source_episodes": 60422,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 20,
-    "language_whisper_attempted_sources": 20,
-    "language_pending_whisper_sources": 2624,
+    "language_audited_sources": 40,
+    "language_whisper_attempted_sources": 40,
+    "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 65160,
-    "whisper_review_pending_sources": 61136,
-    "subtitle_followup_sources": 13843,
-    "subtitle_followup_pending_sources": 13843
+    "whisper_review_pending_sources": 61116,
+    "subtitle_followup_sources": 13847,
+    "subtitle_followup_pending_sources": 13847
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-07-19T11:18:25Z",
-      "databaseId": 29684889411,
+      "createdAt": "2026-07-19T11:23:41Z",
+      "databaseId": 29685044861,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-07-19T11:23:37Z",
+      "databaseId": 29685042947,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-19T11:19:34Z",
+      "databaseId": 29684920922,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-19T11:18:25Z",
+      "databaseId": 29684889411,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "cancelled",
       "createdAt": "2026-07-19T11:18:22Z",
       "databaseId": 29684887930,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -43,19 +67,19 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-19T11:10:00Z",
       "databaseId": 29684640172,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-19T11:09:57Z",
       "databaseId": 29684639047,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -95,7 +119,7 @@
       "createdAt": "2026-07-19T10:57:06Z",
       "databaseId": 29684255797,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "prepare-descriptions"
     },
     {
@@ -153,30 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-19T10:37:45Z",
-      "databaseId": 29683672012,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-19T10:37:42Z",
-      "databaseId": 29683670797,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-19T10:36:31Z",
-      "databaseId": 29683637590,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
     }
   ],
   "gaps": {
@@ -139409,6 +139409,16 @@
         "episode_id": 59643,
         "display_name": "Nightflyers S01E02 - Pochodně a vidle CZ Titulky",
         "video_id": 27657105
+      },
+      {
+        "episode_id": 59645,
+        "display_name": "Nightflyers S01E04 - Bílý králik CZ Titulky",
+        "video_id": 27657133
+      },
+      {
+        "episode_id": 59647,
+        "display_name": "Nightflyers S01E06 - Posvátný dar CZ Titulky",
+        "video_id": 27657164
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -278536,6 +278546,16 @@
         "episode_id": 59643,
         "display_name": "Nightflyers S01E02 - Pochodně a vidle CZ Titulky",
         "video_id": 27657105
+      },
+      {
+        "episode_id": 59645,
+        "display_name": "Nightflyers S01E04 - Bílý králik CZ Titulky",
+        "video_id": 27657133
+      },
+      {
+        "episode_id": 59647,
+        "display_name": "Nightflyers S01E06 - Posvátný dar CZ Titulky",
+        "video_id": 27657164
       }
     ],
     "prepared_not_upload_ready": [
@@ -278850,166 +278870,6 @@
         "status": "whisper_failed"
       },
       {
-        "episode_id": 102226,
-        "source_id": -57873918322287073,
-        "series_title": "Badmintonový sen",
-        "episode_code": "S01E03",
-        "source_title": "Badmintonový sen - S1E3 Episode 3 KO",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 102226,
-        "source_id": -57772216877838490,
-        "series_title": "Badmintonový sen",
-        "episode_code": "S01E03",
-        "source_title": "Badmintonový sen - S1E3 Episode 3 KO",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 102227,
-        "source_id": -65147922475378383,
-        "series_title": "Badmintonový sen",
-        "episode_code": "S01E04",
-        "source_title": "Badmintonový sen - S1E4 Episode 4 KO",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 102227,
-        "source_id": -24861601370141478,
-        "series_title": "Badmintonový sen",
-        "episode_code": "S01E04",
-        "source_title": "Badmintonový sen - S1E4 Episode 4 KO",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 102237,
-        "source_id": -14016667189407684,
-        "series_title": "Badmintonový sen",
-        "episode_code": "S01E05",
-        "source_title": "Badmintonový sen - S1E5 Episode 5 KO",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 102237,
-        "source_id": -53295386106540510,
-        "series_title": "Badmintonový sen",
-        "episode_code": "S01E05",
-        "source_title": "Badmintonový sen - S1E5 Episode 5 KO",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 102238,
-        "source_id": -39794169267942636,
-        "series_title": "Badmintonový sen",
-        "episode_code": "S01E06",
-        "source_title": "Badmintonový sen - S1E6 Episode 6 KO",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 102238,
-        "source_id": -37734014360110234,
-        "series_title": "Badmintonový sen",
-        "episode_code": "S01E06",
-        "source_title": "Badmintonový sen - S1E6 KO",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 102228,
-        "source_id": -30786621455777244,
-        "series_title": "Badmintonový sen",
-        "episode_code": "S01E07",
-        "source_title": "Badmintonový sen - S1E7 Episode 7 KO",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 102228,
-        "source_id": -56675320638290861,
-        "series_title": "Badmintonový sen",
-        "episode_code": "S01E07",
-        "source_title": "Badmintonový sen - S1E7 Episode 7 KO",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 102229,
-        "source_id": -20753425562424396,
-        "series_title": "Badmintonový sen",
-        "episode_code": "S01E08",
-        "source_title": "Badmintonový sen - S1E8 Episode 8 KO",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 102229,
-        "source_id": -17396988300952654,
-        "series_title": "Badmintonový sen",
-        "episode_code": "S01E08",
-        "source_title": "Badmintonový sen - S1E8 Episode 8 KO",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 102230,
-        "source_id": -27528050732212410,
-        "series_title": "Badmintonový sen",
-        "episode_code": "S01E09",
-        "source_title": "Badmintonový sen - S1E9 Episode 9 KO",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 102230,
-        "source_id": -42585629465466993,
-        "series_title": "Badmintonový sen",
-        "episode_code": "S01E09",
-        "source_title": "Badmintonový sen - S1E9 Episode 9 KO",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 102231,
-        "source_id": -14246594724776756,
-        "series_title": "Badmintonový sen",
-        "episode_code": "S01E10",
-        "source_title": "Badmintonový sen - S1E10 Episode 10 KO",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 102231,
-        "source_id": -13769968446552803,
-        "series_title": "Badmintonový sen",
-        "episode_code": "S01E10",
-        "source_title": "Badmintonový sen - S1E10 Episode 10 KO",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 102239,
-        "source_id": -57548377296485222,
-        "series_title": "Badmintonový sen",
-        "episode_code": "S01E11",
-        "source_title": "Badmintonový sen - S1E11 Episode 11 KO",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 102239,
-        "source_id": -40958766349033748,
-        "series_title": "Badmintonový sen",
-        "episode_code": "S01E11",
-        "source_title": "Badmintonový sen - S1E11 Episode 11 KO",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 102240,
-        "source_id": -11493163021855699,
-        "series_title": "Badmintonový sen",
-        "episode_code": "S01E12",
-        "source_title": "Badmintonový sen - S1E12 Episode 12 KO",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 102240,
-        "source_id": -10789636862783313,
-        "series_title": "Badmintonový sen",
-        "episode_code": "S01E12",
-        "source_title": "Badmintonový sen - S1E12 Episode 12 KO",
-        "status": "needs_whisper"
-      },
-      {
         "episode_id": 102232,
         "source_id": -63834595400213642,
         "series_title": "Badmintonový sen",
@@ -279239,6 +279099,166 @@
         "series_title": "Banda: Ďábelské historky",
         "episode_code": "S01E06",
         "source_title": "Banda Ďábelské historky S01E06 Núbie vs Núbie",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 150740,
+        "source_id": -41725631083525171,
+        "series_title": "Banda: Ďábelské historky",
+        "episode_code": "S01E07",
+        "source_title": "Banda Ďábelské historky S01E07_John a Sun Hee",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 150740,
+        "source_id": -11378889808586467,
+        "series_title": "Banda: Ďábelské historky",
+        "episode_code": "S01E07",
+        "source_title": "Banda_ Ďábelské historky_S01E07_John a Sun Hee",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 150741,
+        "source_id": -51242574855056482,
+        "series_title": "Banda: Ďábelské historky",
+        "episode_code": "S01E08",
+        "source_title": "Banda Ďábelské historky S01E08 Jedna plus jedna jsou dvě",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 150741,
+        "source_id": -47174361994549894,
+        "series_title": "Banda: Ďábelské historky",
+        "episode_code": "S01E08",
+        "source_title": "Banda_ Ďábelské historky_S01E08_Jedna plus jedna jsou dvě",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 108135,
+        "source_id": -14093632581446390,
+        "series_title": "Baptiste",
+        "episode_code": "S01E01",
+        "source_title": "Baptiste - S1E1 Shell EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 108130,
+        "source_id": -35122988836395721,
+        "series_title": "Baptiste",
+        "episode_code": "S01E02",
+        "source_title": "Baptiste.S01E02.720p.HDTV.x264-MTB",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 108130,
+        "source_id": -37456695273301174,
+        "series_title": "Baptiste",
+        "episode_code": "S01E02",
+        "source_title": "Baptiste - S1E2 Measure of a Man EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 108131,
+        "source_id": -3102969924336329,
+        "series_title": "Baptiste",
+        "episode_code": "S01E03",
+        "source_title": "Baptiste - S1E3 For Blood EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 108131,
+        "source_id": -9666626343424355,
+        "series_title": "Baptiste",
+        "episode_code": "S01E03",
+        "source_title": "Baptiste.S01E03.720p.HDTV.x264-MTB",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 108132,
+        "source_id": -14013132876383116,
+        "series_title": "Baptiste",
+        "episode_code": "S01E04",
+        "source_title": "Baptiste.S01E04.720p.HDTV.x264-FoV",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 108132,
+        "source_id": -12399319759432596,
+        "series_title": "Baptiste",
+        "episode_code": "S01E04",
+        "source_title": "Baptiste - S1E4 Vertrouwen EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 108132,
+        "source_id": -45697780886679090,
+        "series_title": "Baptiste",
+        "episode_code": "S01E04",
+        "source_title": "Baptiste - S1E4 Vertrouwen EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 108133,
+        "source_id": -7366648840307154,
+        "series_title": "Baptiste",
+        "episode_code": "S01E05",
+        "source_title": "Baptiste.S01E05.720p.HDTV.x264-FoV",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 108133,
+        "source_id": -27333604761393322,
+        "series_title": "Baptiste",
+        "episode_code": "S01E05",
+        "source_title": "Baptiste - S1E5 Lucy EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 108134,
+        "source_id": -12384988560355786,
+        "series_title": "Baptiste",
+        "episode_code": "S01E06",
+        "source_title": "Baptiste - S1E6 Into the Sand EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 108134,
+        "source_id": -2532196838799832,
+        "series_title": "Baptiste",
+        "episode_code": "S01E06",
+        "source_title": "Baptiste - S1E6 Into The Sand EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 108136,
+        "source_id": -35190876729579796,
+        "series_title": "Baptiste",
+        "episode_code": "S02E01",
+        "source_title": "baptiste.s02e01.1080p.web.h264-whosnext",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 108136,
+        "source_id": -61629407260024428,
+        "series_title": "Baptiste",
+        "episode_code": "S02E01",
+        "source_title": "Baptiste.S02E01.Episode.1.1080p.iP.WEB-DL.AAC2.0.H.264-NTb",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 108136,
+        "source_id": -64403287224929157,
+        "series_title": "Baptiste",
+        "episode_code": "S02E01",
+        "source_title": "Baptiste.S02E01.720p.iP.WEB-DL.AAC2.0.H.264-BTN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 108136,
+        "source_id": -21590650637838345,
+        "series_title": "Baptiste",
+        "episode_code": "S02E01",
+        "source_title": "baptiste.s02e01.720p.web.h264-whosnext",
         "status": "needs_whisper"
       }
     ],
@@ -279697,16 +279717,16 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 19,
+    "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
-    "whisper_non_cz_needs_subtitles": 2589,
+    "whisper_non_cz_needs_subtitles": 2609,
     "whisper_confirmed_cz": 1435,
     "whisper_failed": 3,
-    "needs_whisper": 61133
+    "needs_whisper": 61113
   },
   "subtitle_followup_statuses": {
-    "needs_subtitle_setup_after_prehrajto_processing": 13843
+    "needs_subtitle_setup_after_prehrajto_processing": 13847
   }
 }
