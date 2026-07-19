@@ -2,15 +2,15 @@
   "counts": {
     "backlog_episodes": 161039,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 32343,
+    "uploaded_episodes": 32345,
     "prepared_source_episodes": 60528,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 60,
-    "language_whisper_attempted_sources": 60,
+    "language_audited_sources": 40,
+    "language_whisper_attempted_sources": 40,
     "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 65160,
     "whisper_review_pending_sources": 60976,
@@ -20,10 +20,34 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-07-19T13:38:11Z",
+      "databaseId": 29689259820,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-19T13:35:25Z",
+      "databaseId": 29689172666,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-19T13:35:20Z",
+      "databaseId": 29689170004,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-19T13:34:11Z",
       "databaseId": 29689132636,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -63,7 +87,7 @@
       "createdAt": "2026-07-19T13:28:26Z",
       "databaseId": 29688937149,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "audit-language"
     },
     {
@@ -83,11 +107,11 @@
       "workflowName": "process-whisper-review"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-19T13:24:37Z",
       "databaseId": 29688816989,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -153,30 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-07-19T13:02:34Z",
-      "databaseId": 29688124780,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-19T12:56:37Z",
-      "databaseId": 29687928426,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-sources"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-19T12:52:32Z",
-      "databaseId": 29687803389,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
     }
   ],
   "gaps": {
@@ -139556,6 +139556,11 @@
         "video_id": 27660352
       },
       {
+        "episode_id": 197984,
+        "display_name": "Melrose Place S05E18 - 18. epizoda CZ Dabing",
+        "video_id": 27660550
+      },
+      {
         "episode_id": 102235,
         "display_name": "Badmintonový sen S01E01 - 1. epizoda CZ Titulky",
         "video_id": 27657887
@@ -139644,6 +139649,11 @@
         "episode_id": 59163,
         "display_name": "Mladý Wallander S01E01 - 1. epizoda CZ Titulky",
         "video_id": 27660415
+      },
+      {
+        "episode_id": 59165,
+        "display_name": "Mladý Wallander S01E03 - 3. epizoda CZ Titulky",
+        "video_id": 27660524
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -278918,6 +278928,11 @@
         "video_id": 27660352
       },
       {
+        "episode_id": 197984,
+        "display_name": "Melrose Place S05E18 - 18. epizoda CZ Dabing",
+        "video_id": 27660550
+      },
+      {
         "episode_id": 102235,
         "display_name": "Badmintonový sen S01E01 - 1. epizoda CZ Titulky",
         "video_id": 27657887
@@ -279006,6 +279021,11 @@
         "episode_id": 59163,
         "display_name": "Mladý Wallander S01E01 - 1. epizoda CZ Titulky",
         "video_id": 27660415
+      },
+      {
+        "episode_id": 59165,
+        "display_name": "Mladý Wallander S01E03 - 3. epizoda CZ Titulky",
+        "video_id": 27660524
       }
     ],
     "prepared_not_upload_ready": [
@@ -280167,7 +280187,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 59,
+    "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
