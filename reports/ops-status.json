@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 160908,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 32523,
+    "uploaded_episodes": 32524,
     "prepared_source_episodes": 61137,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 40,
-    "language_whisper_attempted_sources": 40,
-    "language_pending_whisper_sources": 2604,
+    "language_audited_sources": 20,
+    "language_whisper_attempted_sources": 20,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 65215,
     "whisper_review_pending_sources": 60712,
     "subtitle_followup_sources": 14190,
@@ -20,10 +20,34 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-07-19T23:23:42Z",
+      "databaseId": 29707842816,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-19T23:21:53Z",
+      "databaseId": 29707794895,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-19T23:21:49Z",
+      "databaseId": 29707792862,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-19T23:20:32Z",
       "databaseId": 29707759141,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -67,11 +91,11 @@
       "workflowName": "prepare-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-19T23:17:06Z",
       "databaseId": 29707666651,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -153,30 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-19T22:54:31Z",
-      "databaseId": 29706991830,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-sources"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-07-19T22:51:44Z",
-      "databaseId": 29706909649,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-19T22:47:44Z",
-      "databaseId": 29706789490,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
     }
   ],
   "gaps": {
@@ -140501,6 +140501,11 @@
         "video_id": 27674366
       },
       {
+        "episode_id": 159082,
+        "display_name": "The Bay S01E04 - 4. epizoda CZ Titulky",
+        "video_id": 27674546
+      },
+      {
         "episode_id": 200145,
         "display_name": "Melrose Place S07E03 - 3. epizoda CZ Dabing",
         "video_id": 27673665
@@ -280763,6 +280768,11 @@
         "video_id": 27674366
       },
       {
+        "episode_id": 159082,
+        "display_name": "The Bay S01E04 - 4. epizoda CZ Titulky",
+        "video_id": 27674546
+      },
+      {
         "episode_id": 200145,
         "display_name": "Melrose Place S07E03 - 3. epizoda CZ Dabing",
         "video_id": 27673665
@@ -281967,7 +281977,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 39,
+    "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
