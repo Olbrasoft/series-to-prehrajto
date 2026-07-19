@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 160982,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 32402,
+    "uploaded_episodes": 32405,
     "prepared_source_episodes": 60847,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 87,
-    "language_whisper_attempted_sources": 60,
-    "language_pending_whisper_sources": 2604,
+    "language_audited_sources": 20,
+    "language_whisper_attempted_sources": 20,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 65185,
     "whisper_review_pending_sources": 60941,
     "subtitle_followup_sources": 14008,
@@ -20,10 +20,34 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-07-19T16:58:59Z",
+      "databaseId": 29695922977,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-19T16:55:20Z",
+      "databaseId": 29695810103,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-sources"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-19T16:53:16Z",
+      "databaseId": 29695742758,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-19T16:48:21Z",
       "databaseId": 29695581442,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-status"
     },
     {
@@ -43,11 +67,11 @@
       "workflowName": "prepare-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-19T16:45:51Z",
       "databaseId": 29695500005,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -153,30 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-status"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-19T16:20:46Z",
-      "databaseId": 29694672906,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-19T16:20:18Z",
-      "databaseId": 29694656808,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-19T16:19:30Z",
-      "databaseId": 29694629090,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
     }
   ],
   "gaps": {
@@ -139916,6 +139916,11 @@
         "video_id": 27664273
       },
       {
+        "episode_id": 86762,
+        "display_name": "Bez hranic S01E09 - 9. epizoda CZ Dabing",
+        "video_id": 27664591
+      },
+      {
         "episode_id": 175281,
         "display_name": "Dům tajemství: Smrt v Burari S01E03 - Nejen 11 CZ Titulky",
         "video_id": 27663895
@@ -139939,6 +139944,16 @@
         "episode_id": 104777,
         "display_name": "Airwolf S04E16 - 16. epizoda CZ Titulky",
         "video_id": 27664053
+      },
+      {
+        "episode_id": 104779,
+        "display_name": "Airwolf S04E17 - 17. epizoda CZ Titulky",
+        "video_id": 27664354
+      },
+      {
+        "episode_id": 104781,
+        "display_name": "Airwolf S04E19 - 19. epizoda CZ Titulky",
+        "video_id": 27664381
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -279573,6 +279588,11 @@
         "video_id": 27664273
       },
       {
+        "episode_id": 86762,
+        "display_name": "Bez hranic S01E09 - 9. epizoda CZ Dabing",
+        "video_id": 27664591
+      },
+      {
         "episode_id": 175281,
         "display_name": "Dům tajemství: Smrt v Burari S01E03 - Nejen 11 CZ Titulky",
         "video_id": 27663895
@@ -279596,6 +279616,16 @@
         "episode_id": 104777,
         "display_name": "Airwolf S04E16 - 16. epizoda CZ Titulky",
         "video_id": 27664053
+      },
+      {
+        "episode_id": 104779,
+        "display_name": "Airwolf S04E17 - 17. epizoda CZ Titulky",
+        "video_id": 27664354
+      },
+      {
+        "episode_id": 104781,
+        "display_name": "Airwolf S04E19 - 19. epizoda CZ Titulky",
+        "video_id": 27664381
       }
     ],
     "prepared_not_upload_ready": [
@@ -280757,8 +280787,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 59,
-    "disabled": 27,
+    "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
