@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 160982,
     "manifest_upload_ready_episodes": 1001,
-    "uploaded_episodes": 32387,
+    "uploaded_episodes": 32388,
     "prepared_source_episodes": 60842,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 40,
-    "language_whisper_attempted_sources": 40,
-    "language_pending_whisper_sources": 2604,
+    "language_audited_sources": 20,
+    "language_whisper_attempted_sources": 20,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 65178,
     "whisper_review_pending_sources": 60994,
     "subtitle_followup_sources": 14004,
@@ -20,10 +20,50 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-07-19T16:06:40Z",
+      "databaseId": 29694207218,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-19T16:06:38Z",
+      "databaseId": 29694205880,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-19T16:03:59Z",
+      "databaseId": 29694110038,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-19T15:59:06Z",
+      "databaseId": 29693934110,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-19T15:59:04Z",
+      "databaseId": 29693933059,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-19T15:57:56Z",
       "databaseId": 29693897300,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -75,11 +115,11 @@
       "workflowName": "prepare-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-19T15:45:58Z",
       "databaseId": 29693500469,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -115,11 +155,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-07-19T15:39:55Z",
       "databaseId": 29693297177,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "sync"
     },
     {
@@ -131,52 +171,12 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-07-19T15:39:25Z",
       "databaseId": 29693281003,
       "headBranch": "main",
-      "status": "pending",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-07-19T15:38:41Z",
-      "databaseId": 29693257206,
-      "headBranch": "main",
       "status": "completed",
       "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-19T15:33:21Z",
-      "databaseId": 29693079236,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-19T15:26:54Z",
-      "databaseId": 29692856466,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-19T15:26:52Z",
-      "databaseId": 29692855188,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-19T15:25:44Z",
-      "databaseId": 29692817070,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
     }
   ],
   "gaps": {
@@ -139766,6 +139766,11 @@
         "video_id": 27663143
       },
       {
+        "episode_id": 171936,
+        "display_name": "Rana Naidu S01E02 - Teen karod CZ Titulky",
+        "video_id": 27663345
+      },
+      {
         "episode_id": 93621,
         "display_name": "Bažináč S01E10 - Loose Ends CZ Titulky",
         "video_id": 27661275
@@ -279348,6 +279353,11 @@
         "video_id": 27663143
       },
       {
+        "episode_id": 171936,
+        "display_name": "Rana Naidu S01E02 - Teen karod CZ Titulky",
+        "video_id": 27663345
+      },
+      {
         "episode_id": 93621,
         "display_name": "Bažináč S01E10 - Loose Ends CZ Titulky",
         "video_id": 27661275
@@ -280607,7 +280617,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 39,
+    "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
