@@ -64,13 +64,20 @@ def head_size(url: str, *, timeout_sec: int = 30) -> int | None:
     return last
 
 
-def download_to(url: str, dest: str | Path, *, timeout_sec: int = 3600) -> int:
+def download_to(
+    url: str,
+    dest: str | Path,
+    *,
+    timeout_sec: int = 3600,
+    min_speed_bytes: int = 10_000,
+    speed_time_sec: int = 60,
+) -> int:
     """Download `url` to `dest`. Returns size in bytes. Raises DownloadError on failure.
 
     Uses a single curl call with HTTP Range (`bytes=0-`) — premiumcdn supports
-    Range and some endpoints require it. `--speed-limit 10000` aborts stalled
-    transfers (<10 KB/s for 60 s) so we don't burn the entire runner timeout
-    on a single dead host. On non-zero exit, the partial file is removed.
+    Range and some endpoints require it. The caller controls curl's low-speed
+    guard so long-running batch jobs can skip unusably slow sources sooner.
+    On non-zero exit, the partial file is removed.
     """
     if not shutil.which("curl"):
         raise DownloadError("curl not found in PATH")
@@ -83,7 +90,7 @@ def download_to(url: str, dest: str | Path, *, timeout_sec: int = 3600) -> int:
         "-H", "Referer: https://prehraj.to/",
         "-H", "Range: bytes=0-",
         "--max-time", str(timeout_sec),
-        "--speed-time", "60", "--speed-limit", "10000",
+        "--speed-time", str(speed_time_sec), "--speed-limit", str(min_speed_bytes),
         "-s", "-S",
         "-o", str(dest),
     ]
