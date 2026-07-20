@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 159907,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 33457,
+    "uploaded_episodes": 33459,
     "prepared_source_episodes": 63064,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 60,
-    "language_whisper_attempted_sources": 60,
-    "language_pending_whisper_sources": 2624,
+    "language_audited_sources": 40,
+    "language_whisper_attempted_sources": 40,
+    "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 66332,
     "whisper_review_pending_sources": 61236,
     "subtitle_followup_sources": 14898,
@@ -20,10 +20,42 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-07-20T19:14:33Z",
+      "databaseId": 29771167223,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-20T19:14:03Z",
+      "databaseId": 29771132493,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-20T19:14:02Z",
+      "databaseId": 29771131442,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-20T19:11:32Z",
+      "databaseId": 29770957284,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-sources"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-20T19:08:02Z",
       "databaseId": 29770720238,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-status"
     },
     {
@@ -99,11 +131,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-20T18:54:54Z",
       "databaseId": 29769792132,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -139,44 +171,12 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-07-20T18:43:03Z",
       "databaseId": 29768941108,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-20T18:43:01Z",
-      "databaseId": 29768937893,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-20T18:37:51Z",
-      "databaseId": 29768568177,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-20T18:37:51Z",
-      "databaseId": 29768568085,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-20T18:37:48Z",
-      "databaseId": 29768565284,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
     }
   ],
   "gaps": {
@@ -145211,9 +145211,19 @@
         "video_id": 27710724
       },
       {
+        "episode_id": 76034,
+        "display_name": "Já, společnice S03E05 - Control shift CZ Dabing",
+        "video_id": 27711206
+      },
+      {
         "episode_id": 71775,
         "display_name": "Frankensteinova kronika S02E05 - 5. epizoda CZ Titulky",
         "video_id": 27710761
+      },
+      {
+        "episode_id": 123515,
+        "display_name": "Power Book IV: Force S01E04 - 4. epizoda CZ Titulky",
+        "video_id": 27711197
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -290143,9 +290153,19 @@
         "video_id": 27710724
       },
       {
+        "episode_id": 76034,
+        "display_name": "Já, společnice S03E05 - Control shift CZ Dabing",
+        "video_id": 27711206
+      },
+      {
         "episode_id": 71775,
         "display_name": "Frankensteinova kronika S02E05 - 5. epizoda CZ Titulky",
         "video_id": 27710761
+      },
+      {
+        "episode_id": 123515,
+        "display_name": "Power Book IV: Force S01E04 - 4. epizoda CZ Titulky",
+        "video_id": 27711197
       }
     ],
     "prepared_not_upload_ready": [
@@ -291307,7 +291327,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 59,
+    "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
