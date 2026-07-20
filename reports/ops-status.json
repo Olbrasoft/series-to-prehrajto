@@ -2,28 +2,84 @@
   "counts": {
     "backlog_episodes": 159981,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 33418,
-    "prepared_source_episodes": 62815,
+    "uploaded_episodes": 33421,
+    "prepared_source_episodes": 62811,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 74,
-    "language_whisper_attempted_sources": 47,
+    "language_audited_sources": 40,
+    "language_whisper_attempted_sources": 40,
     "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 66229,
-    "whisper_review_pending_sources": 61233,
-    "subtitle_followup_sources": 14845,
-    "subtitle_followup_pending_sources": 14845
+    "whisper_review_pending_sources": 61213,
+    "subtitle_followup_sources": 14846,
+    "subtitle_followup_pending_sources": 14846
   },
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-07-20T17:01:16Z",
+      "databaseId": 29762041627,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-20T17:01:09Z",
+      "databaseId": 29762034066,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-20T17:00:38Z",
+      "databaseId": 29761997328,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-20T17:00:02Z",
+      "databaseId": 29761949692,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-20T16:59:30Z",
+      "databaseId": 29761914305,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-20T16:58:29Z",
+      "databaseId": 29761845526,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-20T16:48:53Z",
+      "databaseId": 29761189200,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-20T16:47:34Z",
       "databaseId": 29761099902,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -35,11 +91,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-20T16:45:23Z",
       "databaseId": 29760948960,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -51,11 +107,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-20T16:44:01Z",
       "databaseId": 29760847893,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
@@ -121,62 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-20T16:20:45Z",
-      "databaseId": 29759192931,
-      "headBranch": "main",
-      "status": "pending",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-20T16:14:53Z",
-      "databaseId": 29758765551,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-20T16:14:50Z",
-      "databaseId": 29758761927,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-20T16:14:48Z",
-      "databaseId": 29758759101,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-20T16:13:45Z",
-      "databaseId": 29758682734,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-20T16:09:03Z",
-      "databaseId": 29758338817,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-sources"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-20T16:04:53Z",
-      "databaseId": 29758025496,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
     }
   ],
   "gaps": {
@@ -145019,6 +145019,21 @@
         "episode_id": 143361,
         "display_name": "Maestro v d moll S02E02 - Džungle CZ Titulky",
         "video_id": 27708397
+      },
+      {
+        "episode_id": 143363,
+        "display_name": "Maestro v d moll S02E04 - Toxický CZ Titulky",
+        "video_id": 27708473
+      },
+      {
+        "episode_id": 143371,
+        "display_name": "Maestro v d moll S03E01 - 1. epizoda CZ Titulky",
+        "video_id": 27708571
+      },
+      {
+        "episode_id": 187011,
+        "display_name": "Gumídci S01E02 - Nekalý kameník CZ Dabing",
+        "video_id": 27708728
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -289756,6 +289771,21 @@
         "episode_id": 143361,
         "display_name": "Maestro v d moll S02E02 - Džungle CZ Titulky",
         "video_id": 27708397
+      },
+      {
+        "episode_id": 143363,
+        "display_name": "Maestro v d moll S02E04 - Toxický CZ Titulky",
+        "video_id": 27708473
+      },
+      {
+        "episode_id": 143371,
+        "display_name": "Maestro v d moll S03E01 - 1. epizoda CZ Titulky",
+        "video_id": 27708571
+      },
+      {
+        "episode_id": 187011,
+        "display_name": "Gumídci S01E02 - Nekalý kameník CZ Dabing",
+        "video_id": 27708728
       }
     ],
     "prepared_not_upload_ready": [
@@ -290078,46 +290108,6 @@
         "status": "whisper_failed"
       },
       {
-        "episode_id": 151798,
-        "source_id": -52811936078643349,
-        "series_title": "Bad and Crazy",
-        "episode_code": "S01E01",
-        "source_title": "Bad.and.Crazy.S01E01.1080p.WEB-DL.H264.AAC-AppleTor",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 151798,
-        "source_id": -19563365750296266,
-        "series_title": "Bad and Crazy",
-        "episode_code": "S01E01",
-        "source_title": "Bad.and.Crazy.S01E01.1080p.IQ.WEB-DL.AAC.H.264-iTs",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 151798,
-        "source_id": -1121691066165503,
-        "series_title": "Bad and Crazy",
-        "episode_code": "S01E01",
-        "source_title": "Bad.and.Crazy.S01E01.KOREAN.WEBRip.x264-ION10",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 151798,
-        "source_id": -48273750482633971,
-        "series_title": "Bad and Crazy",
-        "episode_code": "S01E01",
-        "source_title": "Bad.and.Crazy.S01E01.KOREAN.WEBRip.x264-ION10",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 151798,
-        "source_id": -68038749022703090,
-        "series_title": "Bad and Crazy",
-        "episode_code": "S01E01",
-        "source_title": "Bad and Crazy - S1E1 KO",
-        "status": "needs_whisper"
-      },
-      {
         "episode_id": 151799,
         "source_id": -57127986286334698,
         "series_title": "Bad and Crazy",
@@ -290150,43 +290140,11 @@
         "status": "needs_whisper"
       },
       {
-        "episode_id": 151803,
-        "source_id": -826304260498615,
-        "series_title": "Bad and Crazy",
-        "episode_code": "S01E03",
-        "source_title": "Bad and Crazy - S1E3 KO",
-        "status": "needs_whisper"
-      },
-      {
         "episode_id": 151804,
         "source_id": -69722664878052821,
         "series_title": "Bad and Crazy",
         "episode_code": "S01E05",
         "source_title": "Bad and Crazy - S1E5 KO",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 151800,
-        "source_id": -65856157327389285,
-        "series_title": "Bad and Crazy",
-        "episode_code": "S01E07",
-        "source_title": "Bad.and.Crazy.S01E07.1080p.WEB-DL.H264.AAC-AppleTor",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 151800,
-        "source_id": -32056057748658451,
-        "series_title": "Bad and Crazy",
-        "episode_code": "S01E07",
-        "source_title": "Bad.and.Crazy.S01E07.KOREAN.WEBRip.x264-ION10",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 151800,
-        "source_id": -56447726120760508,
-        "series_title": "Bad and Crazy",
-        "episode_code": "S01E07",
-        "source_title": "Bad and Crazy - S1E7 Episode 7 KO",
         "status": "needs_whisper"
       },
       {
@@ -290204,94 +290162,6 @@
         "episode_code": "S04E16",
         "source_title": "Beze stopy - 04x16 - Malé věci (The Little Things)",
         "status": "whisper_failed"
-      },
-      {
-        "episode_id": 49940,
-        "source_id": -11650679973244993,
-        "series_title": "Beze stopy",
-        "episode_code": "S07E08",
-        "source_title": "Beze stopy 07x08 Davne vzpominky DoDo",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 49940,
-        "source_id": -14497124508245712,
-        "series_title": "Beze stopy",
-        "episode_code": "S07E08",
-        "source_title": "Beze stopy 07x08 Davne vzpominky ⭐GG⭐",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 49940,
-        "source_id": -27848874083607887,
-        "series_title": "Beze stopy",
-        "episode_code": "S07E08",
-        "source_title": "Beze stopy 07x08 Davne vzpominkyBy DRAGOUN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 49940,
-        "source_id": -15594696410824084,
-        "series_title": "Beze stopy",
-        "episode_code": "S07E08",
-        "source_title": "Beze stopy 07x08 Davne vzpominky ⭐GT⭐",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 49940,
-        "source_id": -31314424963457395,
-        "series_title": "Beze stopy",
-        "episode_code": "S07E08",
-        "source_title": "Beze stopy 07x08 Davne vzpominky⭐Mustang⭐",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 49940,
-        "source_id": -20075999704877630,
-        "series_title": "Beze stopy",
-        "episode_code": "S07E08",
-        "source_title": "Beze-stopy-07x08-Davne-vzpominky-apu-",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 49938,
-        "source_id": -40102186441052750,
-        "series_title": "Beze stopy",
-        "episode_code": "S07E09",
-        "source_title": "Beze stopy 07x09 Jde do tuheho ⭐Boyd",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 49938,
-        "source_id": -16512127729492166,
-        "series_title": "Beze stopy",
-        "episode_code": "S07E09",
-        "source_title": "Beze stopy 07x09 Jde do tuheho DoDo",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 49938,
-        "source_id": -50719200827669703,
-        "series_title": "Beze stopy",
-        "episode_code": "S07E09",
-        "source_title": "Beze stopy 07x09 Jde do tuheho ⭐GG⭐",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 49938,
-        "source_id": -16902286067760694,
-        "series_title": "Beze stopy",
-        "episode_code": "S07E09",
-        "source_title": "Beze stopy 07x09 Jde do tuheho ⭐GT⭐",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 49938,
-        "source_id": -61382807312418456,
-        "series_title": "Beze stopy",
-        "episode_code": "S07E09",
-        "source_title": "Beze-stopy-07x09-Jde-do-tuheho-apu-",
-        "status": "needs_whisper"
       },
       {
         "episode_id": 49938,
@@ -290459,6 +290329,166 @@
         "series_title": "Beze stopy",
         "episode_code": "S07E13",
         "source_title": "Beze stopy 07x13 ZtracenaBy DRAGOUN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 49945,
+        "source_id": -52503324799634140,
+        "series_title": "Beze stopy",
+        "episode_code": "S07E13",
+        "source_title": "Beze stopy 07x13 Ztracena⭐Mustang⭐",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 49945,
+        "source_id": -38560730442475611,
+        "series_title": "Beze stopy",
+        "episode_code": "S07E13",
+        "source_title": "Beze-stopy-07x13-Ztracena-apu-",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 49945,
+        "source_id": -56117863905388927,
+        "series_title": "Beze stopy",
+        "episode_code": "S07E13",
+        "source_title": "Beze stopy 07x13 Ztracena⭐Koi⭐",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 49894,
+        "source_id": -54636228701428959,
+        "series_title": "Beze stopy",
+        "episode_code": "S07E14",
+        "source_title": "Beze stopy 07x14 Pratele a sousede ⭐Boyd",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 49894,
+        "source_id": -45064699442900601,
+        "series_title": "Beze stopy",
+        "episode_code": "S07E14",
+        "source_title": "Beze stopy 07x14 Pratele a sousede DoDo",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 49894,
+        "source_id": -36919304340200859,
+        "series_title": "Beze stopy",
+        "episode_code": "S07E14",
+        "source_title": "Beze stopy 07x14 Pratele a sousede ⭐GG⭐",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 49894,
+        "source_id": -51076365812536371,
+        "series_title": "Beze stopy",
+        "episode_code": "S07E14",
+        "source_title": "Beze stopy 07x14 Pratele a sousede ⭐GT⭐",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 49894,
+        "source_id": -3531104753903496,
+        "series_title": "Beze stopy",
+        "episode_code": "S07E14",
+        "source_title": "Beze stopy 07x14 Pratele a sousedeBy DRAGOUN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 49894,
+        "source_id": -27452617098817857,
+        "series_title": "Beze stopy",
+        "episode_code": "S07E14",
+        "source_title": "Beze-stopy-07x14-Pratele-a-sousede-apu-",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 49894,
+        "source_id": -21971513184056033,
+        "series_title": "Beze stopy",
+        "episode_code": "S07E14",
+        "source_title": "Beze stopy 07x14 Pratele a sousede⭐Mustang⭐",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 49903,
+        "source_id": -69611262922988053,
+        "series_title": "Beze stopy",
+        "episode_code": "S07E15",
+        "source_title": "Beze stopy 07x15 Chameleon DoDo",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 49903,
+        "source_id": -63585153389817583,
+        "series_title": "Beze stopy",
+        "episode_code": "S07E15",
+        "source_title": "Beze.stopy.07x15.Chameleon MUI",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 49903,
+        "source_id": -42634894592782986,
+        "series_title": "Beze stopy",
+        "episode_code": "S07E15",
+        "source_title": "Beze stopy 07x15 ChameleonBy DRAGOUN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 49903,
+        "source_id": -41205975748551178,
+        "series_title": "Beze stopy",
+        "episode_code": "S07E15",
+        "source_title": "Beze stopy 07x15 Chameleon ⭐Boyd",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 49903,
+        "source_id": -55440244046943609,
+        "series_title": "Beze stopy",
+        "episode_code": "S07E15",
+        "source_title": "Beze stopy 07x15 Chameleon ⭐GG⭐",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 49903,
+        "source_id": -7205849317816839,
+        "series_title": "Beze stopy",
+        "episode_code": "S07E15",
+        "source_title": "Beze stopy 07x15 Chameleon ⭐GT⭐",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 49903,
+        "source_id": -5588921000008846,
+        "series_title": "Beze stopy",
+        "episode_code": "S07E15",
+        "source_title": "Beze stopy 07x15 Chameleon⭐Mustang⭐",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 49895,
+        "source_id": -6635092287293810,
+        "series_title": "Beze stopy",
+        "episode_code": "S07E16",
+        "source_title": "Beze stopy 07x16 Kostlivec ve skrini ⭐Boyd",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 49895,
+        "source_id": -39256358315592217,
+        "series_title": "Beze stopy",
+        "episode_code": "S07E16",
+        "source_title": "Beze stopy 07x16 Kostlivec ve skrini ⭐GT⭐",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 49895,
+        "source_id": -22651529363918006,
+        "series_title": "Beze stopy",
+        "episode_code": "S07E16",
+        "source_title": "Beze stopy 07x16 Kostlivec ve skrini ⭐GG⭐",
         "status": "needs_whisper"
       }
     ],
@@ -290917,17 +290947,16 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 27,
-    "ok": 46,
+    "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
-    "whisper_non_cz_needs_subtitles": 3168,
-    "whisper_confirmed_cz": 1828,
+    "whisper_non_cz_needs_subtitles": 3182,
+    "whisper_confirmed_cz": 1834,
     "whisper_failed": 6,
-    "needs_whisper": 61227
+    "needs_whisper": 61207
   },
   "subtitle_followup_statuses": {
-    "needs_subtitle_setup_after_prehrajto_processing": 14845
+    "needs_subtitle_setup_after_prehrajto_processing": 14846
   }
 }
