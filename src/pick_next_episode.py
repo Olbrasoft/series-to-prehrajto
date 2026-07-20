@@ -58,7 +58,8 @@ def load_backlog(path: Path = BACKLOG) -> list[dict]:
 def _merge_states(paths: list[Path]) -> dict:
     merged = {"schema_version": 1, "uploads": [], "failed_attempts": []}
     upload_keys: set[tuple[int, int, int] | tuple[str, int]] = set()
-    failure_keys: set[tuple[int, int, str]] = set()
+    failures_by_key: dict[tuple[int, int, str], dict] = {}
+    failure_order: list[tuple[int, int, str]] = []
     last_updated = None
     for path in paths:
         if not path.exists() or path.stat().st_size == 0:
@@ -80,10 +81,11 @@ def _merge_states(paths: list[Path]) -> dict:
                 int(failure.get("source_id") or 0),
                 str(failure.get("reason") or ""),
             )
-            if key in failure_keys:
-                continue
-            failure_keys.add(key)
-            merged["failed_attempts"].append(failure)
+            if key not in failures_by_key:
+                failure_order.append(key)
+            if (failure.get("failed_at") or "") > (failures_by_key.get(key, {}).get("failed_at") or ""):
+                failures_by_key[key] = failure
+    merged["failed_attempts"] = [failures_by_key[key] for key in failure_order]
     if last_updated:
         merged["last_updated"] = last_updated
     return merged

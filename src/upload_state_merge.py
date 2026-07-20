@@ -68,7 +68,8 @@ def merge_state(current: dict, incoming: dict) -> dict:
         key = failure_key(source)
         if key not in failures_by_key:
             failure_order.append(key)
-        failures_by_key[key] = source
+        if (source.get("failed_at") or "") > (failures_by_key.get(key, {}).get("failed_at") or ""):
+            failures_by_key[key] = source
     merged["failed_attempts"] = [failures_by_key[key] for key in failure_order]
 
     last_updated = max(current.get("last_updated") or "", incoming.get("last_updated") or "")
