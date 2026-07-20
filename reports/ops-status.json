@@ -1,29 +1,93 @@
 {
   "counts": {
     "backlog_episodes": 160397,
-    "manifest_upload_ready_episodes": 1005,
-    "uploaded_episodes": 33057,
-    "prepared_source_episodes": 61956,
+    "manifest_upload_ready_episodes": 1000,
+    "uploaded_episodes": 33073,
+    "prepared_source_episodes": 61937,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 40,
-    "language_whisper_attempted_sources": 40,
-    "language_pending_whisper_sources": 2604,
+    "language_audited_sources": 220,
+    "language_whisper_attempted_sources": 65,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 65793,
-    "whisper_review_pending_sources": 61007,
-    "subtitle_followup_sources": 14644,
-    "subtitle_followup_pending_sources": 14644
+    "whisper_review_pending_sources": 61081,
+    "subtitle_followup_sources": 14661,
+    "subtitle_followup_pending_sources": 14661
   },
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-07-20T09:27:08Z",
+      "databaseId": 29731490829,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-20T09:20:45Z",
+      "databaseId": 29731082187,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-20T09:18:35Z",
+      "databaseId": 29730942509,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-20T09:13:27Z",
+      "databaseId": 29730612318,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-20T09:11:43Z",
+      "databaseId": 29730505045,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-20T09:11:41Z",
+      "databaseId": 29730502927,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-20T09:11:39Z",
+      "databaseId": 29730500772,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-20T09:11:36Z",
+      "databaseId": 29730498237,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-20T09:10:32Z",
       "databaseId": 29730430667,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -113,70 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-20T08:39:20Z",
-      "databaseId": 29728606126,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-20T08:38:11Z",
-      "databaseId": 29728546514,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-20T08:20:17Z",
-      "databaseId": 29727545907,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-20T08:20:13Z",
-      "databaseId": 29727542362,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-20T08:20:11Z",
-      "databaseId": 29727539916,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-20T08:19:02Z",
-      "databaseId": 29727475165,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-07-20T08:18:57Z",
-      "databaseId": 29727470464,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-07-20T08:12:30Z",
-      "databaseId": 29727090724,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
     }
   ],
   "gaps": {
@@ -143214,6 +143214,86 @@
         "episode_id": 154067,
         "display_name": "Půlnoc v hotelu Pera Palace S02E04 - 4. epizoda CZ Titulky",
         "video_id": 27694274
+      },
+      {
+        "episode_id": 32892,
+        "display_name": "FBI: Ti nejhledanější S02E07 - 7. epizoda CZ Dabing",
+        "video_id": 27695532
+      },
+      {
+        "episode_id": 32894,
+        "display_name": "FBI: Ti nejhledanější S02E09 - 9. epizoda CZ Dabing",
+        "video_id": 27695615
+      },
+      {
+        "episode_id": 32896,
+        "display_name": "FBI: Ti nejhledanější S02E11 - 11. epizoda CZ Dabing",
+        "video_id": 27695694
+      },
+      {
+        "episode_id": 32898,
+        "display_name": "FBI: Ti nejhledanější S02E13 - 13. epizoda CZ Dabing",
+        "video_id": 27695760
+      },
+      {
+        "episode_id": 32900,
+        "display_name": "FBI: Ti nejhledanější S02E15 - 15. epizoda CZ Dabing",
+        "video_id": 27695835
+      },
+      {
+        "episode_id": 154065,
+        "display_name": "Půlnoc v hotelu Pera Palace S02E07 - 7. epizoda CZ Titulky",
+        "video_id": 27695533
+      },
+      {
+        "episode_id": 143985,
+        "display_name": "Láska a anarchie S01E02 - Překvap mě CZ Titulky",
+        "video_id": 27695591
+      },
+      {
+        "episode_id": 143987,
+        "display_name": "Láska a anarchie S01E04 - Smlouva na dobu neurčitou CZ Titulky",
+        "video_id": 27695633
+      },
+      {
+        "episode_id": 143989,
+        "display_name": "Láska a anarchie S01E07 - Ayahuasca CZ Titulky",
+        "video_id": 27695677
+      },
+      {
+        "episode_id": 123093,
+        "display_name": "Vraždi všímavě S01E02 - Štěstí CZ Dabing",
+        "video_id": 27695705
+      },
+      {
+        "episode_id": 123087,
+        "display_name": "Vraždi všímavě S01E03 - Strach CZ Dabing",
+        "video_id": 27695736
+      },
+      {
+        "episode_id": 123089,
+        "display_name": "Vraždi všímavě S01E05 - Panika CZ Dabing",
+        "video_id": 27695766
+      },
+      {
+        "episode_id": 123091,
+        "display_name": "Vraždi všímavě S01E07 - Hněv CZ Dabing",
+        "video_id": 27695796
+      },
+      {
+        "episode_id": 6821,
+        "display_name": "Home Before Dark S01E06 - 140 km/h CZ Titulky",
+        "video_id": 27695830
+      },
+      {
+        "episode_id": 6825,
+        "display_name": "Home Before Dark S01E10 - Větší než my všichni CZ Titulky",
+        "video_id": 27695852
+      },
+      {
+        "episode_id": 7221,
+        "display_name": "October Faction S01E03 - Děs z hlubin času CZ Dabing",
+        "video_id": 27695891
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -286146,6 +286226,86 @@
         "episode_id": 154067,
         "display_name": "Půlnoc v hotelu Pera Palace S02E04 - 4. epizoda CZ Titulky",
         "video_id": 27694274
+      },
+      {
+        "episode_id": 32892,
+        "display_name": "FBI: Ti nejhledanější S02E07 - 7. epizoda CZ Dabing",
+        "video_id": 27695532
+      },
+      {
+        "episode_id": 32894,
+        "display_name": "FBI: Ti nejhledanější S02E09 - 9. epizoda CZ Dabing",
+        "video_id": 27695615
+      },
+      {
+        "episode_id": 32896,
+        "display_name": "FBI: Ti nejhledanější S02E11 - 11. epizoda CZ Dabing",
+        "video_id": 27695694
+      },
+      {
+        "episode_id": 32898,
+        "display_name": "FBI: Ti nejhledanější S02E13 - 13. epizoda CZ Dabing",
+        "video_id": 27695760
+      },
+      {
+        "episode_id": 32900,
+        "display_name": "FBI: Ti nejhledanější S02E15 - 15. epizoda CZ Dabing",
+        "video_id": 27695835
+      },
+      {
+        "episode_id": 154065,
+        "display_name": "Půlnoc v hotelu Pera Palace S02E07 - 7. epizoda CZ Titulky",
+        "video_id": 27695533
+      },
+      {
+        "episode_id": 143985,
+        "display_name": "Láska a anarchie S01E02 - Překvap mě CZ Titulky",
+        "video_id": 27695591
+      },
+      {
+        "episode_id": 143987,
+        "display_name": "Láska a anarchie S01E04 - Smlouva na dobu neurčitou CZ Titulky",
+        "video_id": 27695633
+      },
+      {
+        "episode_id": 143989,
+        "display_name": "Láska a anarchie S01E07 - Ayahuasca CZ Titulky",
+        "video_id": 27695677
+      },
+      {
+        "episode_id": 123093,
+        "display_name": "Vraždi všímavě S01E02 - Štěstí CZ Dabing",
+        "video_id": 27695705
+      },
+      {
+        "episode_id": 123087,
+        "display_name": "Vraždi všímavě S01E03 - Strach CZ Dabing",
+        "video_id": 27695736
+      },
+      {
+        "episode_id": 123089,
+        "display_name": "Vraždi všímavě S01E05 - Panika CZ Dabing",
+        "video_id": 27695766
+      },
+      {
+        "episode_id": 123091,
+        "display_name": "Vraždi všímavě S01E07 - Hněv CZ Dabing",
+        "video_id": 27695796
+      },
+      {
+        "episode_id": 6821,
+        "display_name": "Home Before Dark S01E06 - 140 km/h CZ Titulky",
+        "video_id": 27695830
+      },
+      {
+        "episode_id": 6825,
+        "display_name": "Home Before Dark S01E10 - Větší než my všichni CZ Titulky",
+        "video_id": 27695852
+      },
+      {
+        "episode_id": 7221,
+        "display_name": "October Faction S01E03 - Děs z hlubin času CZ Dabing",
+        "video_id": 27695891
       }
     ],
     "prepared_not_upload_ready": [
@@ -286476,379 +286636,379 @@
         "status": "whisper_failed"
       },
       {
-        "episode_id": 49972,
-        "source_id": -22668262002661283,
+        "episode_id": 49965,
+        "source_id": -69273330160392700,
         "series_title": "Beze stopy",
-        "episode_code": "S06E02",
-        "source_title": "Beze stopy 06x02 Uklid DoDo",
+        "episode_code": "S05E03",
+        "source_title": "Beze stopy 05x03 - Tísňové volání (911) (by_UgarE)",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 49972,
-        "source_id": -33490741369691418,
+        "episode_id": 49965,
+        "source_id": -64903562574384436,
         "series_title": "Beze stopy",
-        "episode_code": "S06E02",
-        "source_title": "Beze-stopy-06x02-Uklid-apu-",
+        "episode_code": "S05E03",
+        "source_title": "Beze stopy - 05x03 - Tísňové volání (911)",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 49972,
-        "source_id": -34578938093506549,
+        "episode_id": 49965,
+        "source_id": -27353264367068988,
         "series_title": "Beze stopy",
-        "episode_code": "S06E02",
-        "source_title": "Beze stopy 06x02 UklidBy DRAGOUN",
+        "episode_code": "S05E03",
+        "source_title": "Beze stopy 05x03 - Tísňové volání (911)",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 49973,
-        "source_id": -26009088470005386,
+        "episode_id": 49933,
+        "source_id": -36019871327177538,
         "series_title": "Beze stopy",
-        "episode_code": "S06E03",
-        "source_title": "Beze stopy 06x03 Res Ipsa ⭐Boyd",
+        "episode_code": "S05E04",
+        "source_title": "Beze stopy - 05x04 - Všichni za jednoho (All for One)",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 49973,
-        "source_id": -47469621996586650,
+        "episode_id": 49933,
+        "source_id": -21396514649003516,
         "series_title": "Beze stopy",
-        "episode_code": "S06E03",
-        "source_title": "Beze stopy 06x03 Res Ipsa ⭐GG⭐",
+        "episode_code": "S05E04",
+        "source_title": "Beze stopy 05x04 - Všichni za jednoho (All for One)",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 49973,
-        "source_id": -33098198792808193,
+        "episode_id": 49933,
+        "source_id": -18044488708712123,
         "series_title": "Beze stopy",
-        "episode_code": "S06E03",
-        "source_title": "Beze stopy 06x03 Res Ipsa ⭐GT⭐",
+        "episode_code": "S05E04",
+        "source_title": "Beze stopy 05x04 - Všichni za jednoho (All for One) (by_UgarE)",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 49973,
-        "source_id": -64606835036455566,
+        "episode_id": 49924,
+        "source_id": -62025603283905041,
         "series_title": "Beze stopy",
-        "episode_code": "S06E03",
-        "source_title": "Beze stopy 06x03 Res Ipsa DoDo",
+        "episode_code": "S05E05",
+        "source_title": "Beze stopy 05x05 - Nebezpečná hra (The Damage Done)",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 49973,
-        "source_id": -53114828104468097,
+        "episode_id": 49924,
+        "source_id": -42207856021873187,
         "series_title": "Beze stopy",
-        "episode_code": "S06E03",
-        "source_title": "Beze-stopy-06x03-Res-Ipsa-apu-",
+        "episode_code": "S05E05",
+        "source_title": "Beze stopy 05x05 - Nebezpečná hra (The Damage Done) (by_UgarE)",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 49973,
-        "source_id": -67573685090229008,
+        "episode_id": 49924,
+        "source_id": -2541509029159216,
         "series_title": "Beze stopy",
-        "episode_code": "S06E03",
-        "source_title": "Beze stopy 06x03 Res Ipsa⭐Mustang⭐",
+        "episode_code": "S05E05",
+        "source_title": "Beze stopy - 05x05 - Nebezpečná hra (The Damage Done)",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 49973,
-        "source_id": -32781037478007303,
+        "episode_id": 49922,
+        "source_id": -52941174549332925,
         "series_title": "Beze stopy",
-        "episode_code": "S06E03",
-        "source_title": "Beze stopy 06x03 Res IpsaBy DRAGOUN",
+        "episode_code": "S05E06",
+        "source_title": "Beze stopy 05x06 - Ticho před bouří (The Calm Before) (by_UgarE)",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 49909,
-        "source_id": -5854728161758070,
+        "episode_id": 49922,
+        "source_id": -35448989737330004,
         "series_title": "Beze stopy",
-        "episode_code": "S06E04",
-        "source_title": "Beze stopy 06x04 Pritez ⭐Boyd",
+        "episode_code": "S05E06",
+        "source_title": "Beze stopy - 05x06 - Ticho před bouří (The Calm Before)",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 49909,
-        "source_id": -41270469534784391,
+        "episode_id": 49922,
+        "source_id": -28058776488640919,
         "series_title": "Beze stopy",
-        "episode_code": "S06E04",
-        "source_title": "Beze stopy 06x04 Pritez ⭐GT⭐",
+        "episode_code": "S05E06",
+        "source_title": "Beze stopy 05x06 - Ticho před bouří (The Calm Before)",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 49909,
-        "source_id": -60825974163043651,
+        "episode_id": 49926,
+        "source_id": -54517882077044313,
         "series_title": "Beze stopy",
-        "episode_code": "S06E04",
-        "source_title": "Beze stopy 06x04 Pritez DoDo",
+        "episode_code": "S05E07",
+        "source_title": "Beze stopy - 05x07 - Všichni hříšní svatí (All the Sinners, Saints)",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 49909,
-        "source_id": -37760155352001952,
+        "episode_id": 49926,
+        "source_id": -54272101029640317,
         "series_title": "Beze stopy",
-        "episode_code": "S06E04",
-        "source_title": "Beze stopy 06x04 Pritez ⭐GG⭐",
+        "episode_code": "S05E07",
+        "source_title": "Beze stopy 05x07 - Všichni hříšní svatí (All the Sinners, Saints)",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 49909,
-        "source_id": -50220544858628235,
+        "episode_id": 49926,
+        "source_id": -27839923733491149,
         "series_title": "Beze stopy",
-        "episode_code": "S06E04",
-        "source_title": "Beze stopy 06x04 PritezBy DRAGOUN",
+        "episode_code": "S05E07",
+        "source_title": "Beze stopy 05x07 - Všichni hříšní svatí (All the Sinners, Saints) (by_UgarE)",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 49909,
-        "source_id": -6718222985196427,
+        "episode_id": 49939,
+        "source_id": -71890724346335472,
         "series_title": "Beze stopy",
-        "episode_code": "S06E04",
-        "source_title": "Beze-stopy-06x04-Pritez-apu-",
+        "episode_code": "S05E08",
+        "source_title": "Beze stopy 05x08 - Hop nebo trop (Win Today)",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 49909,
-        "source_id": -9501114366636329,
+        "episode_id": 49939,
+        "source_id": -65342428416376245,
         "series_title": "Beze stopy",
-        "episode_code": "S06E04",
-        "source_title": "Beze stopy 06x04 Pritez⭐Mustang⭐",
+        "episode_code": "S05E08",
+        "source_title": "Beze stopy 05x08 - Hop nebo trop (Win Today) (by_UgarE)",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 49935,
-        "source_id": -28285628846163700,
+        "episode_id": 49939,
+        "source_id": -27000643046141005,
         "series_title": "Beze stopy",
-        "episode_code": "S06E05",
-        "source_title": "Beze stopy 06x05 Na uteku ⭐Boyd",
+        "episode_code": "S05E08",
+        "source_title": "Beze stopy - 05x08 - Hop nebo trop (Win Today)",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 49935,
-        "source_id": -58019633782990163,
+        "episode_id": 49937,
+        "source_id": -69529081512838384,
         "series_title": "Beze stopy",
-        "episode_code": "S06E05",
-        "source_title": "Beze stopy 06x05 Na uteku ⭐GG⭐",
+        "episode_code": "S05E09",
+        "source_title": "Beze stopy 05x09 - Sociální systém (Watch Over Me) (by_UgarE)",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 49935,
-        "source_id": -49826046275721485,
+        "episode_id": 49937,
+        "source_id": -19469526567873609,
         "series_title": "Beze stopy",
-        "episode_code": "S06E05",
-        "source_title": "Beze stopy 06x05 Na uteku ⭐GT⭐",
+        "episode_code": "S05E09",
+        "source_title": "Beze stopy 05x09 - Sociální systém (Watch Over Me)",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 49935,
-        "source_id": -59388907017860319,
+        "episode_id": 49937,
+        "source_id": -5092148769713730,
         "series_title": "Beze stopy",
-        "episode_code": "S06E05",
-        "source_title": "Beze stopy 06x05 Na uteku DoDo",
+        "episode_code": "S05E09",
+        "source_title": "Beze stopy - 05x09 - Sociální systém (Watch Over Me)",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 49935,
-        "source_id": -57537857422307015,
+        "episode_id": 49896,
+        "source_id": -57014573697748406,
         "series_title": "Beze stopy",
-        "episode_code": "S06E05",
-        "source_title": "Beze-stopy-06x05-Na-uteku-apu-",
+        "episode_code": "S05E10",
+        "source_title": "Beze stopy - 05x10 - Anděl na poli (The Thing With Feathers)",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 49935,
-        "source_id": -51450685908206320,
+        "episode_id": 49896,
+        "source_id": -48106747626368425,
         "series_title": "Beze stopy",
-        "episode_code": "S06E05",
-        "source_title": "Beze stopy 06x05 Na utekuBy DRAGOUN",
+        "episode_code": "S05E10",
+        "source_title": "Beze stopy 05x10 - Anděl na poli (The Thing With Feathers)",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 49935,
-        "source_id": -66080681078963602,
+        "episode_id": 49896,
+        "source_id": -34186816844999013,
         "series_title": "Beze stopy",
-        "episode_code": "S06E05",
-        "source_title": "Beze stopy 06x05 Na uteku⭐Mustang⭐",
+        "episode_code": "S05E10",
+        "source_title": "Beze stopy 05x10 - Anděl na poli (The Thing With Feathers) (by_UgarE)",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 49953,
-        "source_id": -1497617665428966,
+        "episode_id": 49959,
+        "source_id": -67010518100456047,
         "series_title": "Beze stopy",
-        "episode_code": "S06E06",
-        "source_title": "Beze stopy 06x06 Kde a jak DoDo",
+        "episode_code": "S05E11",
+        "source_title": "Beze stopy - 05x11 - Zmizelý (Fade-Away)",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 49953,
-        "source_id": -61334979805037083,
+        "episode_id": 49959,
+        "source_id": -28669291032927032,
         "series_title": "Beze stopy",
-        "episode_code": "S06E06",
-        "source_title": "Beze stopy 06x06 Kde a jak ⭐Boyd",
+        "episode_code": "S05E11",
+        "source_title": "Beze stopy 05x11 - Zmizelý (Fade-Away)",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 49953,
-        "source_id": -58416053708325503,
+        "episode_id": 49959,
+        "source_id": -10664061391272024,
         "series_title": "Beze stopy",
-        "episode_code": "S06E06",
-        "source_title": "Beze stopy 06x06 Kde a jak ⭐GT⭐",
+        "episode_code": "S05E11",
+        "source_title": "Beze stopy 05x11 - Zmizelý (Fade-Away) (by_UgarE)",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 49953,
-        "source_id": -65435361860504470,
+        "episode_id": 49915,
+        "source_id": -49967413865376379,
         "series_title": "Beze stopy",
-        "episode_code": "S06E06",
-        "source_title": "Beze stopy 06x06 Kde a jak ⭐GG⭐",
+        "episode_code": "S05E12",
+        "source_title": "Beze stopy 05x12 - Pád letadla (Tail Spin)",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 49953,
-        "source_id": -3393684266598227,
+        "episode_id": 49915,
+        "source_id": -15615181433415233,
         "series_title": "Beze stopy",
-        "episode_code": "S06E06",
-        "source_title": "Beze-stopy-06x06-Kde-a-jak-apu-",
+        "episode_code": "S05E12",
+        "source_title": "Beze stopy - 05x12 - Pád letadla (Tail Spin)",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 49953,
-        "source_id": -59211692106195480,
+        "episode_id": 49915,
+        "source_id": -8802181833263525,
         "series_title": "Beze stopy",
-        "episode_code": "S06E06",
-        "source_title": "Beze stopy 06x06 Kde a jakBy DRAGOUN",
+        "episode_code": "S05E12",
+        "source_title": "Beze stopy 05x12 - Pád letadla (Tail Spin) (by_UgarE)",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 49953,
-        "source_id": -21977213017629545,
+        "episode_id": 49916,
+        "source_id": -67240572493021024,
         "series_title": "Beze stopy",
-        "episode_code": "S06E06",
-        "source_title": "Beze stopy 06x06 Kde a jak⭐Mustang⭐",
+        "episode_code": "S05E13",
+        "source_title": "Beze stopy 05x13 - Závody jedlíků (Eating Away) (by_UgarE)",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 49974,
-        "source_id": -22130123484890700,
+        "episode_id": 49916,
+        "source_id": -56146761150896506,
         "series_title": "Beze stopy",
-        "episode_code": "S06E07",
-        "source_title": "Beze stopy 06x07 Absalon DoDo",
+        "episode_code": "S05E13",
+        "source_title": "Beze stopy 05x13 - Závody jedlíků (Eating Away)",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 49974,
-        "source_id": -22994071307713268,
+        "episode_id": 49916,
+        "source_id": -30358557272797331,
         "series_title": "Beze stopy",
-        "episode_code": "S06E07",
-        "source_title": "Beze stopy 06x07 Absalon ⭐Boyd",
+        "episode_code": "S05E13",
+        "source_title": "Beze stopy - 05x13 - Závody jedlíků (Eating Away)",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 49974,
-        "source_id": -20865352159244268,
+        "episode_id": 49949,
+        "source_id": -35842056416963023,
         "series_title": "Beze stopy",
-        "episode_code": "S06E07",
-        "source_title": "Beze stopy 06x07 Absalon ⭐GT⭐",
+        "episode_code": "S05E14",
+        "source_title": "Beze stopy 05x14 - V rozpuku (Primed)",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 49974,
-        "source_id": -6142493978372196,
+        "episode_id": 49949,
+        "source_id": -1151696593717814,
         "series_title": "Beze stopy",
-        "episode_code": "S06E07",
-        "source_title": "Beze stopy 06x07 AbsalonBy DRAGOUN",
+        "episode_code": "S05E14",
+        "source_title": "Beze stopy 05x14 - V rozpuku (Primed) (by_UgarE)",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 49974,
-        "source_id": -45367360436478091,
+        "episode_id": 49949,
+        "source_id": -155903098228496,
         "series_title": "Beze stopy",
-        "episode_code": "S06E07",
-        "source_title": "Beze stopy 06x07 Absalon ⭐GG⭐",
+        "episode_code": "S05E14",
+        "source_title": "Beze stopy - 05x14 - V rozpuku (Primed)",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 49974,
-        "source_id": -65781997983787379,
+        "episode_id": 49955,
+        "source_id": -63849174877100662,
         "series_title": "Beze stopy",
-        "episode_code": "S06E07",
-        "source_title": "Beze stopy 06x07 Absalon⭐Mustang⭐",
+        "episode_code": "S05E15",
+        "source_title": "Beze stopy 05x15 - Kufr s penězi (Desert Springs)",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 49974,
-        "source_id": -56040772829106136,
+        "episode_id": 49955,
+        "source_id": -41195973570851840,
         "series_title": "Beze stopy",
-        "episode_code": "S06E07",
-        "source_title": "Beze-stopy-06x07-Absalon-apu-",
+        "episode_code": "S05E15",
+        "source_title": "Beze stopy - 05x15 - Kufr s penězi (Desert Springs)",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 49975,
-        "source_id": -61629041102570538,
+        "episode_id": 49955,
+        "source_id": -40142939034654827,
         "series_title": "Beze stopy",
-        "episode_code": "S06E08",
-        "source_title": "Beze stopy 06x08 Mimo ring ⭐Boyd",
+        "episode_code": "S05E15",
+        "source_title": "Beze stopy 05x15 - Kufr s penězi (Desert Springs) (by_UgarE)",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 49975,
-        "source_id": -23216098023868270,
+        "episode_id": 49970,
+        "source_id": -21021923033295629,
         "series_title": "Beze stopy",
-        "episode_code": "S06E08",
-        "source_title": "Beze stopy 06x08 Mimo ring DoDo",
+        "episode_code": "S05E16",
+        "source_title": "Beze stopy 05x16 - Bez tebe (Without You)",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 49975,
-        "source_id": -12680811888278498,
+        "episode_id": 49970,
+        "source_id": -13191814049002865,
         "series_title": "Beze stopy",
-        "episode_code": "S06E08",
-        "source_title": "Beze stopy 06x08 Mimo ring ⭐GG⭐",
+        "episode_code": "S05E16",
+        "source_title": "Beze stopy 05x16 - Bez tebe (Without You) (by_UgarE)",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 49975,
-        "source_id": -70479919742945242,
+        "episode_id": 49970,
+        "source_id": -9522454967878911,
         "series_title": "Beze stopy",
-        "episode_code": "S06E08",
-        "source_title": "Beze stopy 06x08 Mimo ringBy DRAGOUN",
+        "episode_code": "S05E16",
+        "source_title": "Beze stopy - 05x16 - Bez tebe (Without You)",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 49975,
-        "source_id": -33406365938904844,
+        "episode_id": 49957,
+        "source_id": -72005285882791883,
         "series_title": "Beze stopy",
-        "episode_code": "S06E08",
-        "source_title": "Beze stopy 06x08 Mimo ring⭐Mustang⭐",
+        "episode_code": "S05E17",
+        "source_title": "Beze stopy 05x17 - V hlubině moře (Deep Water)",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 49975,
-        "source_id": -47631849137957813,
+        "episode_id": 49957,
+        "source_id": -64898993485014937,
         "series_title": "Beze stopy",
-        "episode_code": "S06E08",
-        "source_title": "Beze stopy 06x08 Mimo ring ⭐GT⭐",
+        "episode_code": "S05E17",
+        "source_title": "Beze stopy 05x17 - V hlubině moře (Deep Water) (by_UgarE)",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 49975,
-        "source_id": -16126829065201798,
+        "episode_id": 49957,
+        "source_id": -8325468110161634,
         "series_title": "Beze stopy",
-        "episode_code": "S06E08",
-        "source_title": "Beze-stopy-06x08-Mimo-ring-apu-",
+        "episode_code": "S05E17",
+        "source_title": "Beze stopy - 05x17 - V hlubině moře (Deep Water)",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 49976,
-        "source_id": -1987125153403376,
+        "episode_id": 49927,
+        "source_id": -59100223013557300,
         "series_title": "Beze stopy",
-        "episode_code": "S06E09",
-        "source_title": "Beze.stopy.06x09.Jeden.chybny.krok MUI",
+        "episode_code": "S05E19",
+        "source_title": "Beze stopy - 05x19 - Odpočívej v pokoji (At Rest)",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 49976,
-        "source_id": -19811921953909124,
+        "episode_id": 49927,
+        "source_id": -56571888201071123,
         "series_title": "Beze stopy",
-        "episode_code": "S06E09",
-        "source_title": "Beze stopy 06x09 Jeden chybny krok DoDo",
+        "episode_code": "S05E19",
+        "source_title": "Beze stopy 05x19 - Odpočívej v pokoji (At Rest)",
         "status": "needs_whisper"
       }
     ],
@@ -287307,16 +287467,17 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 39,
+    "disabled": 155,
+    "ok": 64,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
-    "whisper_non_cz_needs_subtitles": 3085,
-    "whisper_confirmed_cz": 1701,
+    "whisper_non_cz_needs_subtitles": 3054,
+    "whisper_confirmed_cz": 1658,
     "whisper_failed": 5,
-    "needs_whisper": 61002
+    "needs_whisper": 61076
   },
   "subtitle_followup_statuses": {
-    "needs_subtitle_setup_after_prehrajto_processing": 14644
+    "needs_subtitle_setup_after_prehrajto_processing": 14661
   }
 }
