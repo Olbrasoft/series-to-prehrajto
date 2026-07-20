@@ -1,23 +1,55 @@
 {
   "counts": {
     "backlog_episodes": 159907,
-    "manifest_upload_ready_episodes": 1001,
-    "uploaded_episodes": 33459,
-    "prepared_source_episodes": 63062,
+    "manifest_upload_ready_episodes": 1000,
+    "uploaded_episodes": 33461,
+    "prepared_source_episodes": 63080,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 60,
+    "language_audited_sources": 76,
     "language_whisper_attempted_sources": 60,
     "language_pending_whisper_sources": 2604,
-    "whisper_review_sources": 66332,
-    "whisper_review_pending_sources": 61216,
+    "whisper_review_sources": 66348,
+    "whisper_review_pending_sources": 61232,
     "subtitle_followup_sources": 14898,
     "subtitle_followup_pending_sources": 14898
   },
   "workflow_runs": [
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-20T19:30:53Z",
+      "databaseId": 29772298639,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-20T19:30:28Z",
+      "databaseId": 29772268242,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-20T19:21:49Z",
+      "databaseId": 29771670749,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-20T19:21:45Z",
+      "databaseId": 29771666145,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "process-whisper-review"
+    },
     {
       "conclusion": "",
       "createdAt": "2026-07-20T19:21:10Z",
@@ -27,11 +59,11 @@
       "workflowName": "sync"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-20T19:20:20Z",
       "databaseId": 29771567123,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -145,38 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-20T18:59:55Z",
-      "databaseId": 29770144252,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-07-20T18:59:51Z",
-      "databaseId": 29770139745,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-20T18:54:57Z",
-      "databaseId": 29769796758,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-20T18:54:54Z",
-      "databaseId": 29769792132,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
     }
   ],
   "gaps": {
@@ -145224,6 +145224,16 @@
         "episode_id": 123515,
         "display_name": "Power Book IV: Force S01E04 - 4. epizoda CZ Titulky",
         "video_id": 27711197
+      },
+      {
+        "episode_id": 76038,
+        "display_name": "Já, společnice S03E10 - Integrace CZ Dabing",
+        "video_id": 27711370
+      },
+      {
+        "episode_id": 123517,
+        "display_name": "Power Book IV: Force S01E09 - 9. epizoda CZ Titulky",
+        "video_id": 27711384
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -290166,6 +290176,16 @@
         "episode_id": 123515,
         "display_name": "Power Book IV: Force S01E04 - 4. epizoda CZ Titulky",
         "video_id": 27711197
+      },
+      {
+        "episode_id": 76038,
+        "display_name": "Já, společnice S03E10 - Integrace CZ Dabing",
+        "video_id": 27711370
+      },
+      {
+        "episode_id": 123517,
+        "display_name": "Power Book IV: Force S01E09 - 9. epizoda CZ Titulky",
+        "video_id": 27711384
       }
     ],
     "prepared_not_upload_ready": [
@@ -291327,6 +291347,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
+    "disabled": 16,
     "ok": 59,
     "resolve_failed": 1
   },
@@ -291334,7 +291355,7 @@
     "whisper_non_cz_needs_subtitles": 3194,
     "whisper_confirmed_cz": 1922,
     "whisper_failed": 6,
-    "needs_whisper": 61210
+    "needs_whisper": 61226
   },
   "subtitle_followup_statuses": {
     "needs_subtitle_setup_after_prehrajto_processing": 14898
