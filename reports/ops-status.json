@@ -2,28 +2,52 @@
   "counts": {
     "backlog_episodes": 160243,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 33239,
-    "prepared_source_episodes": 62255,
+    "uploaded_episodes": 33242,
+    "prepared_source_episodes": 62361,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 20,
-    "language_whisper_attempted_sources": 20,
+    "language_audited_sources": 56,
+    "language_whisper_attempted_sources": 24,
     "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 66059,
-    "whisper_review_pending_sources": 61173,
-    "subtitle_followup_sources": 14767,
-    "subtitle_followup_pending_sources": 14767
+    "whisper_review_pending_sources": 61153,
+    "subtitle_followup_sources": 14774,
+    "subtitle_followup_pending_sources": 14774
   },
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-07-20T12:36:22Z",
+      "databaseId": 29742855053,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-20T12:34:04Z",
+      "databaseId": 29742701194,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-20T12:34:01Z",
+      "databaseId": 29742697753,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-20T12:32:48Z",
       "databaseId": 29742618392,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -153,30 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-07-20T11:52:17Z",
-      "databaseId": 29740066659,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-20T11:48:12Z",
-      "databaseId": 29739831267,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-20T11:48:09Z",
-      "databaseId": 29739828852,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
     }
   ],
   "gaps": {
@@ -144051,6 +144051,11 @@
         "video_id": 27702257
       },
       {
+        "episode_id": 16018,
+        "display_name": "Spartakus: Ashurův dům S01E06 - Prázdná těla CZ Dabing",
+        "video_id": 27702332
+      },
+      {
         "episode_id": 105021,
         "display_name": "Sousedství S01E15 - 15. epizoda CZ Dabing",
         "video_id": 27701918
@@ -144124,6 +144129,16 @@
         "episode_id": 127221,
         "display_name": "Sousedství S03E05 - 5. epizoda CZ Dabing",
         "video_id": 27702386
+      },
+      {
+        "episode_id": 127223,
+        "display_name": "Sousedství S03E07 - 7. epizoda CZ Dabing",
+        "video_id": 27702421
+      },
+      {
+        "episode_id": 127225,
+        "display_name": "Sousedství S03E13 - 13. epizoda CZ Dabing",
+        "video_id": 27702448
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -287893,6 +287908,11 @@
         "video_id": 27702257
       },
       {
+        "episode_id": 16018,
+        "display_name": "Spartakus: Ashurův dům S01E06 - Prázdná těla CZ Dabing",
+        "video_id": 27702332
+      },
+      {
         "episode_id": 105021,
         "display_name": "Sousedství S01E15 - 15. epizoda CZ Dabing",
         "video_id": 27701918
@@ -287966,6 +287986,16 @@
         "episode_id": 127221,
         "display_name": "Sousedství S03E05 - 5. epizoda CZ Dabing",
         "video_id": 27702386
+      },
+      {
+        "episode_id": 127223,
+        "display_name": "Sousedství S03E07 - 7. epizoda CZ Dabing",
+        "video_id": 27702421
+      },
+      {
+        "episode_id": 127225,
+        "display_name": "Sousedství S03E13 - 13. epizoda CZ Dabing",
+        "video_id": 27702448
       }
     ],
     "prepared_not_upload_ready": [
@@ -288280,166 +288310,6 @@
         "status": "whisper_failed"
       },
       {
-        "episode_id": 157724,
-        "source_id": -34312448214129252,
-        "series_title": "Arthdalská kronika",
-        "episode_code": "S02E02",
-        "source_title": "Arthdalská kronika - S2E2 The Battle Of The Twins EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 168487,
-        "source_id": -46388654413496556,
-        "series_title": "Arthdalská kronika",
-        "episode_code": "S02E03",
-        "source_title": "Arthdalská kronika - S2E3 Epizoda 3 EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 168487,
-        "source_id": -53193723845940991,
-        "series_title": "Arthdalská kronika",
-        "episode_code": "S02E03",
-        "source_title": "Arthdalská kronika - S2E3 The Lovers Of Wahan EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 168488,
-        "source_id": -4977419497939931,
-        "series_title": "Arthdalská kronika",
-        "episode_code": "S02E04",
-        "source_title": "Arthdalská kronika - S2E4 Epizoda 4 EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 168488,
-        "source_id": -46555809428281968,
-        "series_title": "Arthdalská kronika",
-        "episode_code": "S02E04",
-        "source_title": "Arthdalská kronika - S2E4 EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 168489,
-        "source_id": -61786950241517527,
-        "series_title": "Arthdalská kronika",
-        "episode_code": "S02E05",
-        "source_title": "Arthdalská kronika - S2E5 The Sword of Aramun EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 168489,
-        "source_id": -61214134454961560,
-        "series_title": "Arthdalská kronika",
-        "episode_code": "S02E05",
-        "source_title": "Arthdalská kronika - S2E5 The Sword Of Aramun EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 168490,
-        "source_id": -25026100244900369,
-        "series_title": "Arthdalská kronika",
-        "episode_code": "S02E06",
-        "source_title": "Arthdalská kronika - S2E6 Fake Inaishingi EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 168490,
-        "source_id": -49714006414190450,
-        "series_title": "Arthdalská kronika",
-        "episode_code": "S02E06",
-        "source_title": "Arthdalská kronika - S2E6 Fake Inaishingi EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 168491,
-        "source_id": -47362405556860821,
-        "series_title": "Arthdalská kronika",
-        "episode_code": "S02E07",
-        "source_title": "Arthdalská kronika - S2E7 Ikomahis EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 168491,
-        "source_id": -40301969427422376,
-        "series_title": "Arthdalská kronika",
-        "episode_code": "S02E07",
-        "source_title": "Arthdalská kronika - S2E7 Ikomahis EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 168492,
-        "source_id": -33268299557581791,
-        "series_title": "Arthdalská kronika",
-        "episode_code": "S02E08",
-        "source_title": "Arthdalská kronika - S2E8 The Strongest Creature in the World EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 168492,
-        "source_id": -43316704798279994,
-        "series_title": "Arthdalská kronika",
-        "episode_code": "S02E08",
-        "source_title": "Arthdalská kronika - S2E8 The Most Powerful Creature Under The Sky EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 168493,
-        "source_id": -53029593378600061,
-        "series_title": "Arthdalská kronika",
-        "episode_code": "S02E09",
-        "source_title": "Arthdalská kronika - S2E9 Remember My Face EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 168493,
-        "source_id": -31834974580504653,
-        "series_title": "Arthdalská kronika",
-        "episode_code": "S02E09",
-        "source_title": "Arthdalská kronika - S2E9 Remember My Face EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 168494,
-        "source_id": -60380062932589773,
-        "series_title": "Arthdalská kronika",
-        "episode_code": "S02E10",
-        "source_title": "Arthdalská kronika - S2E10 Whirlwind Fire EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 168494,
-        "source_id": -68450834401669894,
-        "series_title": "Arthdalská kronika",
-        "episode_code": "S02E10",
-        "source_title": "Arthdalská kronika - S2E10 Whirlwind Of Fire EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 168495,
-        "source_id": -6251336342942393,
-        "series_title": "Arthdalská kronika",
-        "episode_code": "S02E11",
-        "source_title": "Arthdalská kronika - S2E11 Heroines EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 168495,
-        "source_id": -44127118017593584,
-        "series_title": "Arthdalská kronika",
-        "episode_code": "S02E11",
-        "source_title": "Arthdalská kronika - S2E11 Heroines EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 168496,
-        "source_id": -15150142642452717,
-        "series_title": "Arthdalská kronika",
-        "episode_code": "S02E12",
-        "source_title": "Arthdalská kronika - S2E12 Arthdal Chronicles EN",
-        "status": "needs_whisper"
-      },
-      {
         "episode_id": 168496,
         "source_id": -68404768540557246,
         "series_title": "Arthdalská kronika",
@@ -288669,6 +288539,166 @@
         "series_title": "Beze stopy",
         "episode_code": "S06E17",
         "source_title": "Beze stopy 06x17 Na rozcesti ⭐GT⭐",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 49941,
+        "source_id": -68206635844956134,
+        "series_title": "Beze stopy",
+        "episode_code": "S06E17",
+        "source_title": "Beze stopy 06x17 Na rozcesti⭐Mustang⭐",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 49941,
+        "source_id": -51765885474252342,
+        "series_title": "Beze stopy",
+        "episode_code": "S06E17",
+        "source_title": "Beze-stopy-06x17-Na-rozcesti-apu-",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 49981,
+        "source_id": -3715032394221228,
+        "series_title": "Beze stopy",
+        "episode_code": "S06E18",
+        "source_title": "Beze stopy 06x18 Novy zacatek ⭐Boyd",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 49981,
+        "source_id": -62703337982400703,
+        "series_title": "Beze stopy",
+        "episode_code": "S06E18",
+        "source_title": "Beze.stopy.06x18.Novy.zacatek MUI",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 49981,
+        "source_id": -67539563216683799,
+        "series_title": "Beze stopy",
+        "episode_code": "S06E18",
+        "source_title": "Beze stopy 06x18 Novy zacatek ⭐GT⭐",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 49981,
+        "source_id": -1678221597385015,
+        "series_title": "Beze stopy",
+        "episode_code": "S06E18",
+        "source_title": "Beze stopy 06x18 Novy zacatek DoDo",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 49981,
+        "source_id": -67574265002626104,
+        "series_title": "Beze stopy",
+        "episode_code": "S06E18",
+        "source_title": "Beze stopy 06x18 Novy zacatek ⭐GG⭐",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 49981,
+        "source_id": -23674357261821666,
+        "series_title": "Beze stopy",
+        "episode_code": "S06E18",
+        "source_title": "Beze stopy 06x18 Novy zacatekBy DRAGOUN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 49981,
+        "source_id": -5612378517984776,
+        "series_title": "Beze stopy",
+        "episode_code": "S06E18",
+        "source_title": "Beze-stopy-06x18-Novy-zacatek-apu-",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 49981,
+        "source_id": -18392314579325622,
+        "series_title": "Beze stopy",
+        "episode_code": "S06E18",
+        "source_title": "Beze stopy 06x18 Novy zacatek⭐Mustang⭐",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 49914,
+        "source_id": -71285189690805601,
+        "series_title": "Beze stopy",
+        "episode_code": "S07E02",
+        "source_title": "Beze stopy 07x02 Vekovy rozdil ⭐Boyd",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 49914,
+        "source_id": -8646941298921223,
+        "series_title": "Beze stopy",
+        "episode_code": "S07E02",
+        "source_title": "Beze stopy 07x02 Vekovy rozdil ⭐GG⭐",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 49914,
+        "source_id": -29487229425357936,
+        "series_title": "Beze stopy",
+        "episode_code": "S07E02",
+        "source_title": "Beze stopy 07x02 Vekovy rozdil DoDo",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 49914,
+        "source_id": -53702899577163150,
+        "series_title": "Beze stopy",
+        "episode_code": "S07E02",
+        "source_title": "Beze stopy 07x02 Vekovy rozdilBy DRAGOUN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 49914,
+        "source_id": -71281281377549695,
+        "series_title": "Beze stopy",
+        "episode_code": "S07E02",
+        "source_title": "Beze stopy 07x02 Vekovy rozdil ⭐GT⭐",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 49914,
+        "source_id": -994642569521692,
+        "series_title": "Beze stopy",
+        "episode_code": "S07E02",
+        "source_title": "Beze stopy 07x02 Vekovy rozdil⭐Mustang⭐",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 49914,
+        "source_id": -16842249103505695,
+        "series_title": "Beze stopy",
+        "episode_code": "S07E02",
+        "source_title": "Beze-stopy-07x02-Vekovy-rozdil-apu-",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 49963,
+        "source_id": -69698172000899220,
+        "series_title": "Beze stopy",
+        "episode_code": "S07E03",
+        "source_title": "Beze stopy 07x03 Usmireni ⭐Boyd",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 49963,
+        "source_id": -68319032844683144,
+        "series_title": "Beze stopy",
+        "episode_code": "S07E03",
+        "source_title": "Beze stopy 07x03 Usmireni ⭐GG⭐",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 49963,
+        "source_id": -22170798307529695,
+        "series_title": "Beze stopy",
+        "episode_code": "S07E03",
+        "source_title": "Beze stopy 07x03 Usmireni DoDo",
         "status": "needs_whisper"
       }
     ],
@@ -289127,16 +289157,17 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 19,
+    "disabled": 32,
+    "ok": 23,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
-    "whisper_non_cz_needs_subtitles": 3129,
+    "whisper_non_cz_needs_subtitles": 3149,
     "whisper_confirmed_cz": 1757,
     "whisper_failed": 5,
-    "needs_whisper": 61168
+    "needs_whisper": 61148
   },
   "subtitle_followup_statuses": {
-    "needs_subtitle_setup_after_prehrajto_processing": 14767
+    "needs_subtitle_setup_after_prehrajto_processing": 14774
   }
 }
