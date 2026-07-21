@@ -2,28 +2,84 @@
   "counts": {
     "backlog_episodes": 159093,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 34319,
-    "prepared_source_episodes": 64148,
+    "uploaded_episodes": 34357,
+    "prepared_source_episodes": 64136,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 40,
-    "language_whisper_attempted_sources": 40,
-    "language_pending_whisper_sources": 2604,
+    "language_audited_sources": 20,
+    "language_whisper_attempted_sources": 20,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 66952,
-    "whisper_review_pending_sources": 61335,
+    "whisper_review_pending_sources": 61315,
     "subtitle_followup_sources": 15643,
     "subtitle_followup_pending_sources": 15643
   },
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-07-21T14:39:38Z",
+      "databaseId": 29840155933,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-21T14:26:58Z",
+      "databaseId": 29839151496,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-21T14:18:57Z",
+      "databaseId": 29838513632,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-sources"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-21T14:14:24Z",
+      "databaseId": 29838155341,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-21T14:13:06Z",
+      "databaseId": 29838054821,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-21T13:56:52Z",
+      "databaseId": 29836789450,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-21T13:56:48Z",
+      "databaseId": 29836784362,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "cancelled",
       "createdAt": "2026-07-21T13:56:10Z",
       "databaseId": 29836735709,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -35,11 +91,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-21T13:54:18Z",
       "databaseId": 29836586799,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -59,11 +115,11 @@
       "workflowName": "prepare-manifest"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-21T13:51:16Z",
       "databaseId": 29836351631,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
@@ -121,62 +177,6 @@
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-21T13:36:53Z",
-      "databaseId": 29835238373,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-21T13:23:42Z",
-      "databaseId": 29834227016,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-21T13:12:00Z",
-      "databaseId": 29833365366,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-21T13:11:57Z",
-      "databaseId": 29833361699,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-21T13:11:54Z",
-      "databaseId": 29833359102,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-21T13:10:52Z",
-      "databaseId": 29833283393,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-07-21T13:05:00Z",
-      "databaseId": 29832856316,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
     }
   ],
   "gaps": {
@@ -149524,6 +149524,196 @@
         "episode_id": 116989,
         "display_name": "Berlínská mise S03E08 - 8. epizoda CZ Titulky",
         "video_id": 27729271
+      },
+      {
+        "episode_id": 77418,
+        "display_name": "Pot a slzy  S01E05 - 5. epizoda CZ Titulky",
+        "video_id": 27729604
+      },
+      {
+        "episode_id": 77420,
+        "display_name": "Pot a slzy  S01E07 - 7. epizoda CZ Titulky",
+        "video_id": 27729630
+      },
+      {
+        "episode_id": 86718,
+        "display_name": "NCIS: Hawaiʻi S01E04 - 4. epizoda CZ Dabing",
+        "video_id": 27729656
+      },
+      {
+        "episode_id": 86704,
+        "display_name": "NCIS: Hawaiʻi S01E05 - 5. epizoda CZ Dabing",
+        "video_id": 27729676
+      },
+      {
+        "episode_id": 86706,
+        "display_name": "NCIS: Hawaiʻi S01E07 - 7. epizoda CZ Dabing",
+        "video_id": 27729700
+      },
+      {
+        "episode_id": 146300,
+        "display_name": "NCIS: Hawaiʻi S01E14 - 14. epizoda CZ Dabing",
+        "video_id": 27729718
+      },
+      {
+        "episode_id": 86714,
+        "display_name": "NCIS: Hawaiʻi S01E18 - 18. epizoda CZ Titulky",
+        "video_id": 27729740
+      },
+      {
+        "episode_id": 86730,
+        "display_name": "NCIS: Hawaiʻi S02E05 - 5. epizoda CZ Titulky",
+        "video_id": 27729760
+      },
+      {
+        "episode_id": 86742,
+        "display_name": "NCIS: Hawaiʻi S02E08 - 8. epizoda CZ Dabing",
+        "video_id": 27729788
+      },
+      {
+        "episode_id": 86720,
+        "display_name": "NCIS: Hawaiʻi S02E12 - 12. epizoda CZ Titulky",
+        "video_id": 27729808
+      },
+      {
+        "episode_id": 86722,
+        "display_name": "NCIS: Hawaiʻi S02E14 - 14. epizoda CZ Titulky",
+        "video_id": 27729831
+      },
+      {
+        "episode_id": 86724,
+        "display_name": "NCIS: Hawaiʻi S02E16 - 16. epizoda CZ Dabing",
+        "video_id": 27729847
+      },
+      {
+        "episode_id": 86734,
+        "display_name": "NCIS: Hawaiʻi S03E06 - 6. epizoda CZ Dabing",
+        "video_id": 27729865
+      },
+      {
+        "episode_id": 144412,
+        "display_name": "Láska od sousedů S01E01 - 1. epizoda CZ Titulky",
+        "video_id": 27729898
+      },
+      {
+        "episode_id": 144410,
+        "display_name": "Láska od sousedů S01E02 - 2. epizoda CZ Titulky",
+        "video_id": 27729952
+      },
+      {
+        "episode_id": 144416,
+        "display_name": "Láska od sousedů S01E08 - 8. epizoda CZ Titulky",
+        "video_id": 27730019
+      },
+      {
+        "episode_id": 144418,
+        "display_name": "Láska od sousedů S01E10 - 10. epizoda CZ Titulky",
+        "video_id": 27730075
+      },
+      {
+        "episode_id": 144420,
+        "display_name": "Láska od sousedů S01E12 - 12. epizoda CZ Titulky",
+        "video_id": 27730134
+      },
+      {
+        "episode_id": 116991,
+        "display_name": "Berlínská mise S03E10 - 10. epizoda CZ Titulky",
+        "video_id": 27729607
+      },
+      {
+        "episode_id": 7151,
+        "display_name": "Grotesquerie S01E02 - Katolíci a true crime CZ Titulky",
+        "video_id": 27729629
+      },
+      {
+        "episode_id": 7153,
+        "display_name": "Grotesquerie S01E04 - Souřadnice CZ Titulky",
+        "video_id": 27729658
+      },
+      {
+        "episode_id": 7155,
+        "display_name": "Grotesquerie S01E06 - Rudý opar CZ Titulky",
+        "video_id": 27729672
+      },
+      {
+        "episode_id": 7157,
+        "display_name": "Grotesquerie S01E08 - Ve snech CZ Titulky",
+        "video_id": 27729696
+      },
+      {
+        "episode_id": 7159,
+        "display_name": "Grotesquerie S01E10 - Myslím, že jsem mrtvá CZ Titulky",
+        "video_id": 27729719
+      },
+      {
+        "episode_id": 129827,
+        "display_name": "Čmuchalové S01E01 - 1. epizoda CZ Dabing",
+        "video_id": 27729761
+      },
+      {
+        "episode_id": 129823,
+        "display_name": "Čmuchalové S01E07 - 7. epizoda CZ Dabing",
+        "video_id": 27729791
+      },
+      {
+        "episode_id": 129817,
+        "display_name": "Čmuchalové S01E08 - 8. epizoda CZ Dabing",
+        "video_id": 27729826
+      },
+      {
+        "episode_id": 31369,
+        "display_name": "Ponorka S01E01 - Nové cesty CZ Dabing",
+        "video_id": 27729855
+      },
+      {
+        "episode_id": 16149,
+        "display_name": "Ponorka S02E05 - Smrtelná střela CZ Dabing",
+        "video_id": 27729884
+      },
+      {
+        "episode_id": 16151,
+        "display_name": "Ponorka S02E07 - Hlavy dohromady CZ Dabing",
+        "video_id": 27729913
+      },
+      {
+        "episode_id": 16153,
+        "display_name": "Ponorka S03E01 - Druhé šance CZ Dabing",
+        "video_id": 27729948
+      },
+      {
+        "episode_id": 16157,
+        "display_name": "Ponorka S03E03 - Roztočení kola CZ Dabing",
+        "video_id": 27729994
+      },
+      {
+        "episode_id": 16155,
+        "display_name": "Ponorka S03E05 - Do hlubin CZ Dabing",
+        "video_id": 27730018
+      },
+      {
+        "episode_id": 16159,
+        "display_name": "Ponorka S03E06 - Omezeni CZ Dabing",
+        "video_id": 27730047
+      },
+      {
+        "episode_id": 16161,
+        "display_name": "Ponorka S03E10 - Skutečný ponorkový muž CZ Dabing",
+        "video_id": 27730091
+      },
+      {
+        "episode_id": 138769,
+        "display_name": "Jablka ze stromu nepadají S01E07 - Joy CZ Dabing",
+        "video_id": 27730118
+      },
+      {
+        "episode_id": 31377,
+        "display_name": "Ponorka S04E01 - 1. epizoda CZ Titulky",
+        "video_id": 27730164
+      },
+      {
+        "episode_id": 132601,
+        "display_name": "Go-toubun no hanayome S01E01 - 1. epizoda CZ Titulky",
+        "video_id": 27730219
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -298766,6 +298956,196 @@
         "episode_id": 116989,
         "display_name": "Berlínská mise S03E08 - 8. epizoda CZ Titulky",
         "video_id": 27729271
+      },
+      {
+        "episode_id": 77418,
+        "display_name": "Pot a slzy  S01E05 - 5. epizoda CZ Titulky",
+        "video_id": 27729604
+      },
+      {
+        "episode_id": 77420,
+        "display_name": "Pot a slzy  S01E07 - 7. epizoda CZ Titulky",
+        "video_id": 27729630
+      },
+      {
+        "episode_id": 86718,
+        "display_name": "NCIS: Hawaiʻi S01E04 - 4. epizoda CZ Dabing",
+        "video_id": 27729656
+      },
+      {
+        "episode_id": 86704,
+        "display_name": "NCIS: Hawaiʻi S01E05 - 5. epizoda CZ Dabing",
+        "video_id": 27729676
+      },
+      {
+        "episode_id": 86706,
+        "display_name": "NCIS: Hawaiʻi S01E07 - 7. epizoda CZ Dabing",
+        "video_id": 27729700
+      },
+      {
+        "episode_id": 146300,
+        "display_name": "NCIS: Hawaiʻi S01E14 - 14. epizoda CZ Dabing",
+        "video_id": 27729718
+      },
+      {
+        "episode_id": 86714,
+        "display_name": "NCIS: Hawaiʻi S01E18 - 18. epizoda CZ Titulky",
+        "video_id": 27729740
+      },
+      {
+        "episode_id": 86730,
+        "display_name": "NCIS: Hawaiʻi S02E05 - 5. epizoda CZ Titulky",
+        "video_id": 27729760
+      },
+      {
+        "episode_id": 86742,
+        "display_name": "NCIS: Hawaiʻi S02E08 - 8. epizoda CZ Dabing",
+        "video_id": 27729788
+      },
+      {
+        "episode_id": 86720,
+        "display_name": "NCIS: Hawaiʻi S02E12 - 12. epizoda CZ Titulky",
+        "video_id": 27729808
+      },
+      {
+        "episode_id": 86722,
+        "display_name": "NCIS: Hawaiʻi S02E14 - 14. epizoda CZ Titulky",
+        "video_id": 27729831
+      },
+      {
+        "episode_id": 86724,
+        "display_name": "NCIS: Hawaiʻi S02E16 - 16. epizoda CZ Dabing",
+        "video_id": 27729847
+      },
+      {
+        "episode_id": 86734,
+        "display_name": "NCIS: Hawaiʻi S03E06 - 6. epizoda CZ Dabing",
+        "video_id": 27729865
+      },
+      {
+        "episode_id": 144412,
+        "display_name": "Láska od sousedů S01E01 - 1. epizoda CZ Titulky",
+        "video_id": 27729898
+      },
+      {
+        "episode_id": 144410,
+        "display_name": "Láska od sousedů S01E02 - 2. epizoda CZ Titulky",
+        "video_id": 27729952
+      },
+      {
+        "episode_id": 144416,
+        "display_name": "Láska od sousedů S01E08 - 8. epizoda CZ Titulky",
+        "video_id": 27730019
+      },
+      {
+        "episode_id": 144418,
+        "display_name": "Láska od sousedů S01E10 - 10. epizoda CZ Titulky",
+        "video_id": 27730075
+      },
+      {
+        "episode_id": 144420,
+        "display_name": "Láska od sousedů S01E12 - 12. epizoda CZ Titulky",
+        "video_id": 27730134
+      },
+      {
+        "episode_id": 116991,
+        "display_name": "Berlínská mise S03E10 - 10. epizoda CZ Titulky",
+        "video_id": 27729607
+      },
+      {
+        "episode_id": 7151,
+        "display_name": "Grotesquerie S01E02 - Katolíci a true crime CZ Titulky",
+        "video_id": 27729629
+      },
+      {
+        "episode_id": 7153,
+        "display_name": "Grotesquerie S01E04 - Souřadnice CZ Titulky",
+        "video_id": 27729658
+      },
+      {
+        "episode_id": 7155,
+        "display_name": "Grotesquerie S01E06 - Rudý opar CZ Titulky",
+        "video_id": 27729672
+      },
+      {
+        "episode_id": 7157,
+        "display_name": "Grotesquerie S01E08 - Ve snech CZ Titulky",
+        "video_id": 27729696
+      },
+      {
+        "episode_id": 7159,
+        "display_name": "Grotesquerie S01E10 - Myslím, že jsem mrtvá CZ Titulky",
+        "video_id": 27729719
+      },
+      {
+        "episode_id": 129827,
+        "display_name": "Čmuchalové S01E01 - 1. epizoda CZ Dabing",
+        "video_id": 27729761
+      },
+      {
+        "episode_id": 129823,
+        "display_name": "Čmuchalové S01E07 - 7. epizoda CZ Dabing",
+        "video_id": 27729791
+      },
+      {
+        "episode_id": 129817,
+        "display_name": "Čmuchalové S01E08 - 8. epizoda CZ Dabing",
+        "video_id": 27729826
+      },
+      {
+        "episode_id": 31369,
+        "display_name": "Ponorka S01E01 - Nové cesty CZ Dabing",
+        "video_id": 27729855
+      },
+      {
+        "episode_id": 16149,
+        "display_name": "Ponorka S02E05 - Smrtelná střela CZ Dabing",
+        "video_id": 27729884
+      },
+      {
+        "episode_id": 16151,
+        "display_name": "Ponorka S02E07 - Hlavy dohromady CZ Dabing",
+        "video_id": 27729913
+      },
+      {
+        "episode_id": 16153,
+        "display_name": "Ponorka S03E01 - Druhé šance CZ Dabing",
+        "video_id": 27729948
+      },
+      {
+        "episode_id": 16157,
+        "display_name": "Ponorka S03E03 - Roztočení kola CZ Dabing",
+        "video_id": 27729994
+      },
+      {
+        "episode_id": 16155,
+        "display_name": "Ponorka S03E05 - Do hlubin CZ Dabing",
+        "video_id": 27730018
+      },
+      {
+        "episode_id": 16159,
+        "display_name": "Ponorka S03E06 - Omezeni CZ Dabing",
+        "video_id": 27730047
+      },
+      {
+        "episode_id": 16161,
+        "display_name": "Ponorka S03E10 - Skutečný ponorkový muž CZ Dabing",
+        "video_id": 27730091
+      },
+      {
+        "episode_id": 138769,
+        "display_name": "Jablka ze stromu nepadají S01E07 - Joy CZ Dabing",
+        "video_id": 27730118
+      },
+      {
+        "episode_id": 31377,
+        "display_name": "Ponorka S04E01 - 1. epizoda CZ Titulky",
+        "video_id": 27730164
+      },
+      {
+        "episode_id": 132601,
+        "display_name": "Go-toubun no hanayome S01E01 - 1. epizoda CZ Titulky",
+        "video_id": 27730219
       }
     ],
     "prepared_not_upload_ready": [
@@ -299120,166 +299500,6 @@
         "status": "whisper_failed"
       },
       {
-        "episode_id": 97530,
-        "source_id": -41107509545995971,
-        "series_title": "Bořiči mýtů",
-        "episode_code": "S03E12",
-        "source_title": "Borici mytu 03x12 - Mobilní telefony v letadlech.avi",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 97530,
-        "source_id": -41040418312281866,
-        "series_title": "Bořiči mýtů",
-        "episode_code": "S03E12",
-        "source_title": "Bořiči Mýtů S03E12 - Mobilní telefony v letadlech",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 97530,
-        "source_id": -29428927181308777,
-        "series_title": "Bořiči mýtů",
-        "episode_code": "S03E12",
-        "source_title": "Bořiči mytu 3x12 - Mobilní telefony v letadlech",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 97531,
-        "source_id": -28334618599006999,
-        "series_title": "Bořiči mýtů",
-        "episode_code": "S03E14",
-        "source_title": "Bořiči mýtů S03E14 MythBusters S03E14",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 97531,
-        "source_id": -20432367342962974,
-        "series_title": "Bořiči mýtů",
-        "episode_code": "S03E14",
-        "source_title": "Borici mytu 03x14 -Jet-Pack.avi",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 97531,
-        "source_id": -24633920515783120,
-        "series_title": "Bořiči mýtů",
-        "episode_code": "S03E14",
-        "source_title": "Borici mytu 03x14 - Revidovane myty.avi",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 97531,
-        "source_id": -16345439470421421,
-        "series_title": "Bořiči mýtů",
-        "episode_code": "S03E14",
-        "source_title": "Bořiči Mýtů 03x14 - Revidovane myty",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 97531,
-        "source_id": -15619916328522778,
-        "series_title": "Bořiči mýtů",
-        "episode_code": "S03E14",
-        "source_title": "Bořiči mytu 3x14 - Revidovane myty",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 97531,
-        "source_id": -2748274754040929,
-        "series_title": "Bořiči mýtů",
-        "episode_code": "S03E14",
-        "source_title": "Bořiči Mýtů S03E14 - Revidovane myty",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 97532,
-        "source_id": -52006190302707988,
-        "series_title": "Bořiči mýtů",
-        "episode_code": "S03E15",
-        "source_title": "Borici mytu 03x15 - Ovladani mysli.avi",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 97532,
-        "source_id": -49681393385918376,
-        "series_title": "Bořiči mýtů",
-        "episode_code": "S03E15",
-        "source_title": "Bořiči mytu 3x15 - Ovladani mysli",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 97532,
-        "source_id": -10478480577252644,
-        "series_title": "Bořiči mýtů",
-        "episode_code": "S03E15",
-        "source_title": "Bořiči Mýtů S03E15 - Ovladani mysli",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 97532,
-        "source_id": -308985631985308,
-        "series_title": "Bořiči mýtů",
-        "episode_code": "S03E15",
-        "source_title": "Bořiči Mýtů 03x15 - Ovladani mysli",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 97532,
-        "source_id": -15369948609299934,
-        "series_title": "Bořiči mýtů",
-        "episode_code": "S03E15",
-        "source_title": "Borici mytu 03x15 -Killer-Brace-Position.avi",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 97533,
-        "source_id": -49014146679500248,
-        "series_title": "Bořiči mýtů",
-        "episode_code": "S03E16",
-        "source_title": "Borici mytu 03x16 -Bulletproof-Water.avi",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 97533,
-        "source_id": -54954817965450383,
-        "series_title": "Bořiči mýtů",
-        "episode_code": "S03E16",
-        "source_title": "Bořiči Mýtů S03E16 - Explodující kalhoty",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 97533,
-        "source_id": -9782303079383653,
-        "series_title": "Bořiči mýtů",
-        "episode_code": "S03E16",
-        "source_title": "Bořiči mytu 3x16 - Explodující kalhoty",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 97533,
-        "source_id": -7390168956978928,
-        "series_title": "Bořiči mýtů",
-        "episode_code": "S03E16",
-        "source_title": "Borici mytu 03x16 - Explodující kalhoty.avi",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 97533,
-        "source_id": -505419515492729,
-        "series_title": "Bořiči mýtů",
-        "episode_code": "S03E16",
-        "source_title": "Bořiči Mýtů 03x16 - Explodující kalhoty",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 97544,
-        "source_id": -31331008101453416,
-        "series_title": "Bořiči mýtů",
-        "episode_code": "S04E01",
-        "source_title": "Bořiči mýtů S04E01 MythBusters S04E01",
-        "status": "needs_whisper"
-      },
-      {
         "episode_id": 97544,
         "source_id": -55988305904067512,
         "series_title": "Bořiči mýtů",
@@ -299469,6 +299689,166 @@
         "series_title": "Bořiči mýtů",
         "episode_code": "S04E06",
         "source_title": "Bořiči mýtů S04E06 MythBusters S04E06",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 97549,
+        "source_id": -43789046533777324,
+        "series_title": "Bořiči mýtů",
+        "episode_code": "S04E06",
+        "source_title": "Bořiči Mýtů S04E06 - Zločiny motivované fikcí 2",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 97549,
+        "source_id": -40056285479943280,
+        "series_title": "Bořiči mýtů",
+        "episode_code": "S04E06",
+        "source_title": "Bořiči Mýtů 04x06 - Zločiny motivované fikcí 2",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 97549,
+        "source_id": -8816097957747030,
+        "series_title": "Bořiči mýtů",
+        "episode_code": "S04E06",
+        "source_title": "Borici mytu 04x06 - Zločiny motivované fikcí 2.avi",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 97549,
+        "source_id": -71460518626282661,
+        "series_title": "Bořiči mýtů",
+        "episode_code": "S04E06",
+        "source_title": "Borici mytu 04x06 (064) Helium-Raft,-Cell-Phone-on-Airplanes-.avi",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 97550,
+        "source_id": -58397546927126977,
+        "series_title": "Bořiči mýtů",
+        "episode_code": "S04E07",
+        "source_title": "Bořiči Mýtů S04E07 - Stroj na zemetreseni",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 97550,
+        "source_id": -33258873100114462,
+        "series_title": "Bořiči mýtů",
+        "episode_code": "S04E07",
+        "source_title": "Bořiči Mýtů 04x07 - Stroj na zemetreseni",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 97550,
+        "source_id": -31171121254657208,
+        "series_title": "Bořiči mýtů",
+        "episode_code": "S04E07",
+        "source_title": "Borici mytu 04x07 - Stroj na zemetreseni.avi",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 97550,
+        "source_id": -13442166713407474,
+        "series_title": "Bořiči mýtů",
+        "episode_code": "S04E07",
+        "source_title": "Bořiči mýtů S04E07 MythBusters S04E07",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 97550,
+        "source_id": -35646841492480028,
+        "series_title": "Bořiči mýtů",
+        "episode_code": "S04E07",
+        "source_title": "Borici mytu 04x07 (065) Bullets-Fired-Up-.avi",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 97475,
+        "source_id": -52081906636867677,
+        "series_title": "Bořiči mýtů",
+        "episode_code": "S04E08",
+        "source_title": "Bořiči mýtů S04E08 MythBusters S04E08",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 97475,
+        "source_id": -70217312703133484,
+        "series_title": "Bořiči mýtů",
+        "episode_code": "S04E08",
+        "source_title": "Bořiči Mýtů 04x08 - Deadly Straw",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 97475,
+        "source_id": -62105635136327764,
+        "series_title": "Bořiči mýtů",
+        "episode_code": "S04E08",
+        "source_title": "Bořiči Mýtů S04E08 - Deadly Straw",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 97475,
+        "source_id": -2261339275080250,
+        "series_title": "Bořiči mýtů",
+        "episode_code": "S04E08",
+        "source_title": "Borici mytu 04x08 - Deadly Straw.avi",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 97475,
+        "source_id": -30142146654798307,
+        "series_title": "Bořiči mýtů",
+        "episode_code": "S04E08",
+        "source_title": "Borici mytu 04x08 (066) Myths-Reopened.avi",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 97476,
+        "source_id": -48380692694888527,
+        "series_title": "Bořiči mýtů",
+        "episode_code": "S04E09",
+        "source_title": "Bořiči mýtů S04E09 MythBusters S04E09",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 97476,
+        "source_id": -49244091371769574,
+        "series_title": "Bořiči mýtů",
+        "episode_code": "S04E09",
+        "source_title": "Borici mytu 04x09 (067) Mind-Control-.avi",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 97476,
+        "source_id": -71524936102083283,
+        "series_title": "Bořiči mýtů",
+        "episode_code": "S04E09",
+        "source_title": "Borici mytu 04x09 - Smrtici pretrzene lano.avi",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 97476,
+        "source_id": -61448200283140302,
+        "series_title": "Bořiči mýtů",
+        "episode_code": "S04E09",
+        "source_title": "Bořiči Mýtů S04E09 - Smrtici pretrzene lano",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 97476,
+        "source_id": -48514890583844243,
+        "series_title": "Bořiči mýtů",
+        "episode_code": "S04E09",
+        "source_title": "Bořiči Mýtů 04x09 - Smrtici pretrzene lano",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 97551,
+        "source_id": -36858364134189019,
+        "series_title": "Bořiči mýtů",
+        "episode_code": "S04E10",
+        "source_title": "Bořiči Mýtů S04E10  -Vystřelující kislíková bomba",
         "status": "needs_whisper"
       }
     ],
@@ -299927,14 +300307,14 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 39,
+    "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
     "whisper_non_cz_needs_subtitles": 3570,
-    "whisper_confirmed_cz": 2047,
+    "whisper_confirmed_cz": 2067,
     "whisper_failed": 6,
-    "needs_whisper": 61329
+    "needs_whisper": 61309
   },
   "subtitle_followup_statuses": {
     "needs_subtitle_setup_after_prehrajto_processing": 15643
