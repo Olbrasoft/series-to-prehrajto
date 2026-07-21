@@ -1,37 +1,141 @@
 {
   "counts": {
-    "backlog_episodes": 159715,
-    "manifest_upload_ready_episodes": 1007,
-    "uploaded_episodes": 33797,
-    "prepared_source_episodes": 63649,
+    "backlog_episodes": 159531,
+    "manifest_upload_ready_episodes": 1000,
+    "uploaded_episodes": 33839,
+    "prepared_source_episodes": 63659,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 116,
-    "language_whisper_attempted_sources": 80,
-    "language_pending_whisper_sources": 2604,
-    "whisper_review_sources": 66591,
-    "whisper_review_pending_sources": 61315,
-    "subtitle_followup_sources": 15220,
-    "subtitle_followup_pending_sources": 15220
+    "language_audited_sources": 20,
+    "language_whisper_attempted_sources": 20,
+    "language_pending_whisper_sources": 2624,
+    "whisper_review_sources": 66614,
+    "whisper_review_pending_sources": 61318,
+    "subtitle_followup_sources": 15226,
+    "subtitle_followup_pending_sources": 15226
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-07-21T03:38:10Z",
-      "databaseId": 29799040676,
+      "createdAt": "2026-07-21T04:16:55Z",
+      "databaseId": 29800822517,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-07-21T04:16:50Z",
+      "databaseId": 29800818472,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-21T04:08:39Z",
+      "databaseId": 29800427280,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-21T04:08:21Z",
+      "databaseId": 29800413858,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "refresh-backlog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-21T04:00:06Z",
+      "databaseId": 29800018731,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-21T03:51:07Z",
+      "databaseId": 29799614935,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-21T03:46:40Z",
+      "databaseId": 29799420430,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-sources"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-07-21T03:43:43Z",
+      "databaseId": 29799286073,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-21T03:40:07Z",
+      "databaseId": 29799123859,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-21T03:39:27Z",
+      "databaseId": 29799094923,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-21T03:39:26Z",
+      "databaseId": 29799093675,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-21T03:39:24Z",
+      "databaseId": 29799092598,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-21T03:39:23Z",
+      "databaseId": 29799091353,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-21T03:38:10Z",
+      "databaseId": 29799040676,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "failure",
       "createdAt": "2026-07-21T03:38:04Z",
       "databaseId": 29799035906,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -73,110 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-21T03:06:17Z",
-      "databaseId": 29797620728,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-21T03:04:57Z",
-      "databaseId": 29797552996,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-21T02:59:48Z",
-      "databaseId": 29797303125,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-21T02:48:34Z",
-      "databaseId": 29796807944,
-      "headBranch": "main",
-      "status": "pending",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-21T02:46:47Z",
-      "databaseId": 29796731128,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-21T02:44:37Z",
-      "databaseId": 29796635167,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-21T02:43:26Z",
-      "databaseId": 29796582980,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-21T02:43:23Z",
-      "databaseId": 29796580505,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-21T02:43:21Z",
-      "databaseId": 29796578404,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-21T02:42:20Z",
-      "databaseId": 29796531989,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-21T02:42:18Z",
-      "databaseId": 29796531031,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-07-21T02:42:14Z",
-      "databaseId": 29796528145,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-21T02:42:08Z",
-      "databaseId": 29796522522,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "sync"
     }
   ],
   "gaps": {
@@ -146816,6 +146816,16 @@
         "video_id": 27719910
       },
       {
+        "episode_id": 124296,
+        "display_name": "Jedna chyba za druhou S01E05 - Jakub 4:17 CZ Dabing",
+        "video_id": 27719950
+      },
+      {
+        "episode_id": 124294,
+        "display_name": "Jedna chyba za druhou S01E07 - Moc jsem si to tady s tebou užila CZ Dabing",
+        "video_id": 27720021
+      },
+      {
         "episode_id": 152741,
         "display_name": "Klub Istanbul S02E04 - 4. díl CZ Titulky",
         "video_id": 27719144
@@ -146914,6 +146924,206 @@
         "episode_id": 92689,
         "display_name": "Třetí hlídka S01E11 - 11. Sám uprostřed davu CZ Dabing",
         "video_id": 27719586
+      },
+      {
+        "episode_id": 90676,
+        "display_name": "The Whispers S01E12 - 12. epizoda CZ Titulky",
+        "video_id": 27720078
+      },
+      {
+        "episode_id": 121532,
+        "display_name": "Plebs S01E01 - 1. epizoda CZ Titulky",
+        "video_id": 27720094
+      },
+      {
+        "episode_id": 121512,
+        "display_name": "Plebs S01E02 - 2. epizoda CZ Titulky",
+        "video_id": 27720118
+      },
+      {
+        "episode_id": 64010,
+        "display_name": "Bitten S02E04 - Dead Meat CZ Titulky",
+        "video_id": 27720140
+      },
+      {
+        "episode_id": 64012,
+        "display_name": "Bitten S02E06 - Nine Circles CZ Titulky",
+        "video_id": 27720156
+      },
+      {
+        "episode_id": 64014,
+        "display_name": "Bitten S02E08 - Dark Arts CZ Titulky",
+        "video_id": 27720175
+      },
+      {
+        "episode_id": 64016,
+        "display_name": "Bitten S02E10 - Fine Temporum CZ Titulky",
+        "video_id": 27720194
+      },
+      {
+        "episode_id": 64032,
+        "display_name": "Bitten S03E01 - Family, Of Sorts CZ Titulky",
+        "video_id": 27720211
+      },
+      {
+        "episode_id": 96606,
+        "display_name": "Holky z červeného gauče S01E02 - Jiný svět CZ Titulky",
+        "video_id": 27720230
+      },
+      {
+        "episode_id": 96608,
+        "display_name": "Holky z červeného gauče S01E04 - Sex a krev CZ Titulky",
+        "video_id": 27720254
+      },
+      {
+        "episode_id": 96610,
+        "display_name": "Holky z červeného gauče S01E06 - Lišky a zajíci CZ Titulky",
+        "video_id": 27720278
+      },
+      {
+        "episode_id": 96612,
+        "display_name": "Holky z červeného gauče S01E08 - Past CZ Titulky",
+        "video_id": 27720301
+      },
+      {
+        "episode_id": 96614,
+        "display_name": "Holky z červeného gauče S02E02 - Talent na mizerný život CZ Titulky",
+        "video_id": 27720323
+      },
+      {
+        "episode_id": 96616,
+        "display_name": "Holky z červeného gauče S02E04 - Tu noc jsme byly mrtvé CZ Titulky",
+        "video_id": 27720356
+      },
+      {
+        "episode_id": 96618,
+        "display_name": "Holky z červeného gauče S02E06 - Humr pro odsouzence na smrt CZ Titulky",
+        "video_id": 27720375
+      },
+      {
+        "episode_id": 96620,
+        "display_name": "Holky z červeného gauče S02E08 - Tihle lidi tě zničí CZ Titulky",
+        "video_id": 27720403
+      },
+      {
+        "episode_id": 96622,
+        "display_name": "Holky z červeného gauče S03E02 - 2. epizoda CZ Titulky",
+        "video_id": 27720444
+      },
+      {
+        "episode_id": 96624,
+        "display_name": "Holky z červeného gauče S03E04 - 4. epizoda CZ Titulky",
+        "video_id": 27720464
+      },
+      {
+        "episode_id": 96626,
+        "display_name": "Holky z červeného gauče S03E06 - 6. epizoda CZ Titulky",
+        "video_id": 27720497
+      },
+      {
+        "episode_id": 96628,
+        "display_name": "Holky z červeného gauče S03E08 - 8. epizoda CZ Titulky",
+        "video_id": 27720528
+      },
+      {
+        "episode_id": 90675,
+        "display_name": "The Whispers S01E11 - 11. epizoda CZ Titulky",
+        "video_id": 27720085
+      },
+      {
+        "episode_id": 90677,
+        "display_name": "The Whispers S01E13 - 13. epizoda CZ Titulky",
+        "video_id": 27720101
+      },
+      {
+        "episode_id": 64011,
+        "display_name": "Bitten S02E05 - Rabbit Hole CZ Titulky",
+        "video_id": 27720138
+      },
+      {
+        "episode_id": 64013,
+        "display_name": "Bitten S02E07 - Bad Dreams CZ Titulky",
+        "video_id": 27720153
+      },
+      {
+        "episode_id": 64015,
+        "display_name": "Bitten S02E09 - Scavenger's Daughter CZ Titulky",
+        "video_id": 27720184
+      },
+      {
+        "episode_id": 92619,
+        "display_name": "Třetí hlídka S01E13 - 13.  Bratrské pouto CZ Dabing",
+        "video_id": 27720200
+      },
+      {
+        "episode_id": 92691,
+        "display_name": "Třetí hlídka S01E15 - 15. Strážník ve hře CZ Dabing",
+        "video_id": 27720224
+      },
+      {
+        "episode_id": 92621,
+        "display_name": "Třetí hlídka S01E16 - 16.  Povaha nebo výchova CZ Dabing",
+        "video_id": 27720244
+      },
+      {
+        "episode_id": 92625,
+        "display_name": "Třetí hlídka S02E01 - 1. Podzemí CZ Dabing",
+        "video_id": 27720264
+      },
+      {
+        "episode_id": 92627,
+        "display_name": "Třetí hlídka S02E03 - 3. Čtyři dny CZ Dabing",
+        "video_id": 27720282
+      },
+      {
+        "episode_id": 92707,
+        "display_name": "Třetí hlídka S03E01 - 1. epizoda CZ Dabing",
+        "video_id": 27720302
+      },
+      {
+        "episode_id": 92649,
+        "display_name": "Třetí hlídka S04E04 - 4. epizoda CZ Dabing",
+        "video_id": 27720332
+      },
+      {
+        "episode_id": 92725,
+        "display_name": "Třetí hlídka S05E11 - 11. epizoda CZ Dabing",
+        "video_id": 27720371
+      },
+      {
+        "episode_id": 123485,
+        "display_name": "Lidské zdroje S01E01 - Porod CZ Dabing",
+        "video_id": 27720406
+      },
+      {
+        "episode_id": 123487,
+        "display_name": "Lidské zdroje S01E03 - Špatné matky CZ Dabing",
+        "video_id": 27720430
+      },
+      {
+        "episode_id": 123489,
+        "display_name": "Lidské zdroje S01E05 - Láska za časů poporodních CZ Dabing",
+        "video_id": 27720445
+      },
+      {
+        "episode_id": 123491,
+        "display_name": "Lidské zdroje S01E07 - Mezinárodní konference kreatur CZ Dabing",
+        "video_id": 27720465
+      },
+      {
+        "episode_id": 123493,
+        "display_name": "Lidské zdroje S01E09 - Brzo bude po všem CZ Dabing",
+        "video_id": 27720494
+      },
+      {
+        "episode_id": 123495,
+        "display_name": "Lidské zdroje S02E02 - Nepřehlédnutelné péro CZ Dabing",
+        "video_id": 27720522
+      },
+      {
+        "episode_id": 123497,
+        "display_name": "Lidské zdroje S02E03 - Total RePaul CZ Dabing",
+        "video_id": 27720567
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -293448,6 +293658,16 @@
         "video_id": 27719910
       },
       {
+        "episode_id": 124296,
+        "display_name": "Jedna chyba za druhou S01E05 - Jakub 4:17 CZ Dabing",
+        "video_id": 27719950
+      },
+      {
+        "episode_id": 124294,
+        "display_name": "Jedna chyba za druhou S01E07 - Moc jsem si to tady s tebou užila CZ Dabing",
+        "video_id": 27720021
+      },
+      {
         "episode_id": 152741,
         "display_name": "Klub Istanbul S02E04 - 4. díl CZ Titulky",
         "video_id": 27719144
@@ -293546,6 +293766,206 @@
         "episode_id": 92689,
         "display_name": "Třetí hlídka S01E11 - 11. Sám uprostřed davu CZ Dabing",
         "video_id": 27719586
+      },
+      {
+        "episode_id": 90676,
+        "display_name": "The Whispers S01E12 - 12. epizoda CZ Titulky",
+        "video_id": 27720078
+      },
+      {
+        "episode_id": 121532,
+        "display_name": "Plebs S01E01 - 1. epizoda CZ Titulky",
+        "video_id": 27720094
+      },
+      {
+        "episode_id": 121512,
+        "display_name": "Plebs S01E02 - 2. epizoda CZ Titulky",
+        "video_id": 27720118
+      },
+      {
+        "episode_id": 64010,
+        "display_name": "Bitten S02E04 - Dead Meat CZ Titulky",
+        "video_id": 27720140
+      },
+      {
+        "episode_id": 64012,
+        "display_name": "Bitten S02E06 - Nine Circles CZ Titulky",
+        "video_id": 27720156
+      },
+      {
+        "episode_id": 64014,
+        "display_name": "Bitten S02E08 - Dark Arts CZ Titulky",
+        "video_id": 27720175
+      },
+      {
+        "episode_id": 64016,
+        "display_name": "Bitten S02E10 - Fine Temporum CZ Titulky",
+        "video_id": 27720194
+      },
+      {
+        "episode_id": 64032,
+        "display_name": "Bitten S03E01 - Family, Of Sorts CZ Titulky",
+        "video_id": 27720211
+      },
+      {
+        "episode_id": 96606,
+        "display_name": "Holky z červeného gauče S01E02 - Jiný svět CZ Titulky",
+        "video_id": 27720230
+      },
+      {
+        "episode_id": 96608,
+        "display_name": "Holky z červeného gauče S01E04 - Sex a krev CZ Titulky",
+        "video_id": 27720254
+      },
+      {
+        "episode_id": 96610,
+        "display_name": "Holky z červeného gauče S01E06 - Lišky a zajíci CZ Titulky",
+        "video_id": 27720278
+      },
+      {
+        "episode_id": 96612,
+        "display_name": "Holky z červeného gauče S01E08 - Past CZ Titulky",
+        "video_id": 27720301
+      },
+      {
+        "episode_id": 96614,
+        "display_name": "Holky z červeného gauče S02E02 - Talent na mizerný život CZ Titulky",
+        "video_id": 27720323
+      },
+      {
+        "episode_id": 96616,
+        "display_name": "Holky z červeného gauče S02E04 - Tu noc jsme byly mrtvé CZ Titulky",
+        "video_id": 27720356
+      },
+      {
+        "episode_id": 96618,
+        "display_name": "Holky z červeného gauče S02E06 - Humr pro odsouzence na smrt CZ Titulky",
+        "video_id": 27720375
+      },
+      {
+        "episode_id": 96620,
+        "display_name": "Holky z červeného gauče S02E08 - Tihle lidi tě zničí CZ Titulky",
+        "video_id": 27720403
+      },
+      {
+        "episode_id": 96622,
+        "display_name": "Holky z červeného gauče S03E02 - 2. epizoda CZ Titulky",
+        "video_id": 27720444
+      },
+      {
+        "episode_id": 96624,
+        "display_name": "Holky z červeného gauče S03E04 - 4. epizoda CZ Titulky",
+        "video_id": 27720464
+      },
+      {
+        "episode_id": 96626,
+        "display_name": "Holky z červeného gauče S03E06 - 6. epizoda CZ Titulky",
+        "video_id": 27720497
+      },
+      {
+        "episode_id": 96628,
+        "display_name": "Holky z červeného gauče S03E08 - 8. epizoda CZ Titulky",
+        "video_id": 27720528
+      },
+      {
+        "episode_id": 90675,
+        "display_name": "The Whispers S01E11 - 11. epizoda CZ Titulky",
+        "video_id": 27720085
+      },
+      {
+        "episode_id": 90677,
+        "display_name": "The Whispers S01E13 - 13. epizoda CZ Titulky",
+        "video_id": 27720101
+      },
+      {
+        "episode_id": 64011,
+        "display_name": "Bitten S02E05 - Rabbit Hole CZ Titulky",
+        "video_id": 27720138
+      },
+      {
+        "episode_id": 64013,
+        "display_name": "Bitten S02E07 - Bad Dreams CZ Titulky",
+        "video_id": 27720153
+      },
+      {
+        "episode_id": 64015,
+        "display_name": "Bitten S02E09 - Scavenger's Daughter CZ Titulky",
+        "video_id": 27720184
+      },
+      {
+        "episode_id": 92619,
+        "display_name": "Třetí hlídka S01E13 - 13.  Bratrské pouto CZ Dabing",
+        "video_id": 27720200
+      },
+      {
+        "episode_id": 92691,
+        "display_name": "Třetí hlídka S01E15 - 15. Strážník ve hře CZ Dabing",
+        "video_id": 27720224
+      },
+      {
+        "episode_id": 92621,
+        "display_name": "Třetí hlídka S01E16 - 16.  Povaha nebo výchova CZ Dabing",
+        "video_id": 27720244
+      },
+      {
+        "episode_id": 92625,
+        "display_name": "Třetí hlídka S02E01 - 1. Podzemí CZ Dabing",
+        "video_id": 27720264
+      },
+      {
+        "episode_id": 92627,
+        "display_name": "Třetí hlídka S02E03 - 3. Čtyři dny CZ Dabing",
+        "video_id": 27720282
+      },
+      {
+        "episode_id": 92707,
+        "display_name": "Třetí hlídka S03E01 - 1. epizoda CZ Dabing",
+        "video_id": 27720302
+      },
+      {
+        "episode_id": 92649,
+        "display_name": "Třetí hlídka S04E04 - 4. epizoda CZ Dabing",
+        "video_id": 27720332
+      },
+      {
+        "episode_id": 92725,
+        "display_name": "Třetí hlídka S05E11 - 11. epizoda CZ Dabing",
+        "video_id": 27720371
+      },
+      {
+        "episode_id": 123485,
+        "display_name": "Lidské zdroje S01E01 - Porod CZ Dabing",
+        "video_id": 27720406
+      },
+      {
+        "episode_id": 123487,
+        "display_name": "Lidské zdroje S01E03 - Špatné matky CZ Dabing",
+        "video_id": 27720430
+      },
+      {
+        "episode_id": 123489,
+        "display_name": "Lidské zdroje S01E05 - Láska za časů poporodních CZ Dabing",
+        "video_id": 27720445
+      },
+      {
+        "episode_id": 123491,
+        "display_name": "Lidské zdroje S01E07 - Mezinárodní konference kreatur CZ Dabing",
+        "video_id": 27720465
+      },
+      {
+        "episode_id": 123493,
+        "display_name": "Lidské zdroje S01E09 - Brzo bude po všem CZ Dabing",
+        "video_id": 27720494
+      },
+      {
+        "episode_id": 123495,
+        "display_name": "Lidské zdroje S02E02 - Nepřehlédnutelné péro CZ Dabing",
+        "video_id": 27720522
+      },
+      {
+        "episode_id": 123497,
+        "display_name": "Lidské zdroje S02E03 - Total RePaul CZ Dabing",
+        "video_id": 27720567
       }
     ],
     "prepared_not_upload_ready": [
@@ -293868,30 +294288,6 @@
         "status": "whisper_failed"
       },
       {
-        "episode_id": 177232,
-        "source_id": -8752407992380632,
-        "series_title": "All Rise",
-        "episode_code": "S01E13",
-        "source_title": "All Rise S01E13 What the Bailiff Saw, telefilm",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 177232,
-        "source_id": -10176660542965728,
-        "series_title": "All Rise",
-        "episode_code": "S01E13",
-        "source_title": "All Rise - S1E13 EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 164730,
-        "source_id": -33477122442235976,
-        "series_title": "Backstreet Rookie",
-        "episode_code": "S01E16",
-        "source_title": "Backstreet Rookie S01E16",
-        "status": "needs_whisper"
-      },
-      {
         "episode_id": 28104,
         "source_id": -13428567874473772,
         "series_title": "Beverly Hills 90210",
@@ -293906,110 +294302,6 @@
         "episode_code": "S04E16",
         "source_title": "Beze stopy - 04x16 - Malé věci (The Little Things)",
         "status": "whisper_failed"
-      },
-      {
-        "episode_id": 64009,
-        "source_id": -71606449255986832,
-        "series_title": "Bitten",
-        "episode_code": "S02E03",
-        "source_title": "Bitten - S02E03 - Hell's Teeth",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 64009,
-        "source_id": -42507391808033611,
-        "series_title": "Bitten",
-        "episode_code": "S02E03",
-        "source_title": "Bitten - S2E3 Hell's Teeth EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 64010,
-        "source_id": -49217574970742602,
-        "series_title": "Bitten",
-        "episode_code": "S02E04",
-        "source_title": "Bitten - S02E04 - Dead Meat",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 64010,
-        "source_id": -4225980040409978,
-        "series_title": "Bitten",
-        "episode_code": "S02E04",
-        "source_title": "Bitten - S2E4 Dead Meat EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 64011,
-        "source_id": -57433790860851109,
-        "series_title": "Bitten",
-        "episode_code": "S02E05",
-        "source_title": "Bitten - S02E05 - Rabbit Hole",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 64011,
-        "source_id": -52313879944473257,
-        "series_title": "Bitten",
-        "episode_code": "S02E05",
-        "source_title": "Bitten S2E5 Rabbit Hole",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 64011,
-        "source_id": -21874406571690087,
-        "series_title": "Bitten",
-        "episode_code": "S02E05",
-        "source_title": "Bitten - S2E5 Rabbit Hole EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 64012,
-        "source_id": -35223581504077531,
-        "series_title": "Bitten",
-        "episode_code": "S02E06",
-        "source_title": "Bitten - S02E06 - Nine Circles",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 64012,
-        "source_id": -20235807785713485,
-        "series_title": "Bitten",
-        "episode_code": "S02E06",
-        "source_title": "Bitten - S2E6 Nine Circles EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 64013,
-        "source_id": -62955426976448705,
-        "series_title": "Bitten",
-        "episode_code": "S02E07",
-        "source_title": "Bitten - S02E07 - Bad Dreams",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 64013,
-        "source_id": -41878546368160833,
-        "series_title": "Bitten",
-        "episode_code": "S02E07",
-        "source_title": "Bitten - S2E7 Bad Dreams EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 64014,
-        "source_id": -62996382896104004,
-        "series_title": "Bitten",
-        "episode_code": "S02E08",
-        "source_title": "Bitten - S2E8 Dark Arts EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 64014,
-        "source_id": -52567782979488959,
-        "series_title": "Bitten",
-        "episode_code": "S02E08",
-        "source_title": "Bitten - S02E08 - Dark Arts",
-        "status": "needs_whisper"
       },
       {
         "episode_id": 64015,
@@ -294249,6 +294541,134 @@
         "series_title": "Black Lagoon",
         "episode_code": "S01E05",
         "source_title": "Black Lagoon - S01E05",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 131556,
+        "source_id": -40739220946831734,
+        "series_title": "Black Lagoon",
+        "episode_code": "S01E07",
+        "source_title": "Black Lagoon - S01E07",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 131558,
+        "source_id": -38671685426109294,
+        "series_title": "Black Lagoon",
+        "episode_code": "S01E10",
+        "source_title": "Black Lagoon - S01E10",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 59535,
+        "source_id": -64431486822010605,
+        "series_title": "Blockbuster",
+        "episode_code": "S01E05",
+        "source_title": "Blockbuster - S01E05",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 59536,
+        "source_id": -63299911494236073,
+        "series_title": "Blockbuster",
+        "episode_code": "S01E06",
+        "source_title": "Blockbuster - S01E06",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 59537,
+        "source_id": -64936443226983682,
+        "series_title": "Blockbuster",
+        "episode_code": "S01E07",
+        "source_title": "Blockbuster - S01E07",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 59538,
+        "source_id": -50205034230033664,
+        "series_title": "Blockbuster",
+        "episode_code": "S01E08",
+        "source_title": "Blockbuster - S01E08",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 59539,
+        "source_id": -61284345895054092,
+        "series_title": "Blockbuster",
+        "episode_code": "S01E09",
+        "source_title": "Blockbuster - S01E09",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 59540,
+        "source_id": -4881828916230722,
+        "series_title": "Blockbuster",
+        "episode_code": "S01E10",
+        "source_title": "Blockbuster - S01E10",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 59916,
+        "source_id": -42650511373798773,
+        "series_title": "Blood Drive",
+        "episode_code": "S01E01",
+        "source_title": "Blood Drive - S01E01 - The F-cking Cop",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 59916,
+        "source_id": -41520813261464463,
+        "series_title": "Blood Drive",
+        "episode_code": "S01E01",
+        "source_title": "Blood Drive - S1E1 The F-cking Cop EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 59916,
+        "source_id": -38179440787647514,
+        "series_title": "Blood Drive",
+        "episode_code": "S01E01",
+        "source_title": "Blood Drive 1x1",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 59916,
+        "source_id": -4571382175806282,
+        "series_title": "Blood Drive",
+        "episode_code": "S01E01",
+        "source_title": "Blood Drive - s01e01",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 59928,
+        "source_id": -71145653430898546,
+        "series_title": "Blood Drive",
+        "episode_code": "S01E02",
+        "source_title": "Blood Drive - S1E2 Welcome to Pixie Swallow EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 59928,
+        "source_id": -13595706412525620,
+        "series_title": "Blood Drive",
+        "episode_code": "S01E02",
+        "source_title": "Blood Drive - S01E02 - Welcome to Pixie Swallow",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 59928,
+        "source_id": -26852413131983714,
+        "series_title": "Blood Drive",
+        "episode_code": "S01E02",
+        "source_title": "Blood Drive 1x2",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 59928,
+        "source_id": -19874582714274081,
+        "series_title": "Blood Drive",
+        "episode_code": "S01E02",
+        "source_title": "Blood Drive - s01e02",
         "status": "needs_whisper"
       }
     ],
@@ -294707,17 +295127,16 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 79,
-    "disabled": 36,
+    "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
-    "whisper_non_cz_needs_subtitles": 3327,
+    "whisper_non_cz_needs_subtitles": 3347,
     "whisper_confirmed_cz": 1949,
     "whisper_failed": 6,
-    "needs_whisper": 61309
+    "needs_whisper": 61312
   },
   "subtitle_followup_statuses": {
-    "needs_subtitle_setup_after_prehrajto_processing": 15220
+    "needs_subtitle_setup_after_prehrajto_processing": 15226
   }
 }
