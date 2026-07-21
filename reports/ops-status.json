@@ -2,36 +2,68 @@
   "counts": {
     "backlog_episodes": 159206,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 34196,
-    "prepared_source_episodes": 64051,
+    "uploaded_episodes": 34199,
+    "prepared_source_episodes": 64046,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 20,
-    "language_whisper_attempted_sources": 20,
+    "language_audited_sources": 40,
+    "language_whisper_attempted_sources": 40,
     "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 66952,
-    "whisper_review_pending_sources": 61435,
+    "whisper_review_pending_sources": 61415,
     "subtitle_followup_sources": 15580,
     "subtitle_followup_pending_sources": 15580
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-07-21T10:53:41Z",
-      "databaseId": 29823982022,
+      "createdAt": "2026-07-21T11:01:30Z",
+      "databaseId": 29824483336,
       "headBranch": "main",
       "status": "in_progress",
-      "workflowName": "process-whisper-review"
+      "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-07-21T11:01:25Z",
+      "databaseId": 29824478209,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-21T10:54:28Z",
+      "databaseId": 29824033492,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-21T10:54:24Z",
+      "databaseId": 29824029183,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-21T10:53:41Z",
+      "databaseId": 29823982022,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-21T10:53:09Z",
       "databaseId": 29823947388,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -39,7 +71,7 @@
       "createdAt": "2026-07-21T10:53:06Z",
       "databaseId": 29823943977,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "sync"
     },
     {
@@ -145,38 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-21T10:25:01Z",
-      "databaseId": 29822134985,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-sources"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-21T10:18:19Z",
-      "databaseId": 29821707062,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-21T10:17:57Z",
-      "databaseId": 29821684920,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-21T10:17:11Z",
-      "databaseId": 29821637511,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-descriptions"
     }
   ],
   "gaps": {
@@ -148811,6 +148811,21 @@
         "video_id": 27726705
       },
       {
+        "episode_id": 34762,
+        "display_name": "Herkules S06E06 CZ Dabing",
+        "video_id": 27726727
+      },
+      {
+        "episode_id": 34764,
+        "display_name": "Herkules S06E08 CZ Dabing",
+        "video_id": 27726769
+      },
+      {
+        "episode_id": 8622,
+        "display_name": "Posedlost, láska a závist S01E01 - 1. epizoda CZ Dabing",
+        "video_id": 27726794
+      },
+      {
         "episode_id": 148263,
         "display_name": "Blue Lights S03E01 - 1. epizoda CZ Titulky",
         "video_id": 27726226
@@ -297438,6 +297453,21 @@
         "video_id": 27726705
       },
       {
+        "episode_id": 34762,
+        "display_name": "Herkules S06E06 CZ Dabing",
+        "video_id": 27726727
+      },
+      {
+        "episode_id": 34764,
+        "display_name": "Herkules S06E08 CZ Dabing",
+        "video_id": 27726769
+      },
+      {
+        "episode_id": 8622,
+        "display_name": "Posedlost, láska a závist S01E01 - 1. epizoda CZ Dabing",
+        "video_id": 27726794
+      },
+      {
         "episode_id": 148263,
         "display_name": "Blue Lights S03E01 - 1. epizoda CZ Titulky",
         "video_id": 27726226
@@ -297882,166 +297912,6 @@
         "status": "whisper_failed"
       },
       {
-        "episode_id": 74969,
-        "source_id": -46055355889388286,
-        "series_title": "Boj o ředitelnu",
-        "episode_code": "S01E04",
-        "source_title": "Boj o ředitelnu S01E04. Dali nám zabrat",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 74969,
-        "source_id": -15044763978387194,
-        "series_title": "Boj o ředitelnu",
-        "episode_code": "S01E04",
-        "source_title": "Boj o ředitelnu - S1E4 Run For The Money EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 74969,
-        "source_id": -13400219943814306,
-        "series_title": "Boj o ředitelnu",
-        "episode_code": "S01E04",
-        "source_title": "Boj o ředitelnu - S01E04 - Run For The Money",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 74970,
-        "source_id": -2663340514284725,
-        "series_title": "Boj o ředitelnu",
-        "episode_code": "S01E05",
-        "source_title": "Boj o ředitelnu S01E05. Kruhy",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 74970,
-        "source_id": -51440206716161909,
-        "series_title": "Boj o ředitelnu",
-        "episode_code": "S01E05",
-        "source_title": "Boj o ředitelnu - S1E5 Circles EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 74964,
-        "source_id": -30316790033714001,
-        "series_title": "Boj o ředitelnu",
-        "episode_code": "S01E06",
-        "source_title": "Boj o ředitelnu S01E06. Základy vzdělávání",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 74964,
-        "source_id": -24137073161416548,
-        "series_title": "Boj o ředitelnu",
-        "episode_code": "S01E06",
-        "source_title": "Boj o ředitelnu - S1E6 The Foundation Of Learning EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 74964,
-        "source_id": -22165185538194730,
-        "series_title": "Boj o ředitelnu",
-        "episode_code": "S01E06",
-        "source_title": "Boj o ředitelnu - S01E06 - The Foundation Of Learning",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 74971,
-        "source_id": -66709667796274349,
-        "series_title": "Boj o ředitelnu",
-        "episode_code": "S01E07",
-        "source_title": "Boj o ředitelnu S01E07. Kniha dobra",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 74971,
-        "source_id": -8689108389624191,
-        "series_title": "Boj o ředitelnu",
-        "episode_code": "S01E07",
-        "source_title": "Boj o ředitelnu - S1E7 The Good Book EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 74971,
-        "source_id": -56470465318551498,
-        "series_title": "Boj o ředitelnu",
-        "episode_code": "S01E07",
-        "source_title": "Boj o ředitelnu - S01E07 - The Good Book",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 74963,
-        "source_id": -21339396433473089,
-        "series_title": "Boj o ředitelnu",
-        "episode_code": "S01E08",
-        "source_title": "Boj o ředitelnu S01E08. Gin",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 74963,
-        "source_id": -56977569808261760,
-        "series_title": "Boj o ředitelnu",
-        "episode_code": "S01E08",
-        "source_title": "Boj o ředitelnu - S1E8 Gin EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 74972,
-        "source_id": -70820561193380096,
-        "series_title": "Boj o ředitelnu",
-        "episode_code": "S01E09",
-        "source_title": "Boj o ředitelnu S01E09. Konečná",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 74972,
-        "source_id": -67828431644578201,
-        "series_title": "Boj o ředitelnu",
-        "episode_code": "S01E09",
-        "source_title": "Boj o ředitelnu - S1E9 End Of The Line EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 74973,
-        "source_id": -45981911047291035,
-        "series_title": "Boj o ředitelnu",
-        "episode_code": "S02E01",
-        "source_title": "Boj o ředitelnu S02E01. Tygr v džungli",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 74973,
-        "source_id": -68788852147643850,
-        "series_title": "Boj o ředitelnu",
-        "episode_code": "S02E01",
-        "source_title": "Boj o ředitelnu - S2E1 Tiger Town EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 74973,
-        "source_id": -29390810158869012,
-        "series_title": "Boj o ředitelnu",
-        "episode_code": "S02E01",
-        "source_title": "Boj o ředitelnu - S02E01 - Tiger Town",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 74974,
-        "source_id": -13931166766205924,
-        "series_title": "Boj o ředitelnu",
-        "episode_code": "S02E02",
-        "source_title": "Boj o ředitelnu S02E02. Jatka",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 74974,
-        "source_id": -6232155565388791,
-        "series_title": "Boj o ředitelnu",
-        "episode_code": "S02E02",
-        "source_title": "Boj o ředitelnu - S2E2 Slaughter EN",
-        "status": "needs_whisper"
-      },
-      {
         "episode_id": 74974,
         "source_id": -17222916063020434,
         "series_title": "Boj o ředitelnu",
@@ -298239,6 +298109,166 @@
         "series_title": "Boj o těžkou vodu",
         "episode_code": "S01E02",
         "source_title": "Boj o těžkou vodu - S01E02 - Episode 2",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 67273,
+        "source_id": -38418198911913923,
+        "series_title": "Boj o těžkou vodu",
+        "episode_code": "S01E02",
+        "source_title": "Boj o těžkou vodu - S1E2 Episode 2 SK",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 67277,
+        "source_id": -42460333462223496,
+        "series_title": "Boj o těžkou vodu",
+        "episode_code": "S01E06",
+        "source_title": "Boj o těžkou vodu - S1E6 Episode 6 SK",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 196960,
+        "source_id": -37014829368248241,
+        "series_title": "Bojíte se tmy?",
+        "episode_code": "S02E01",
+        "source_title": "Bojíte se tmy__S02E01_Příběh o prokletém lese",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 196960,
+        "source_id": -6271654595083751,
+        "series_title": "Bojíte se tmy?",
+        "episode_code": "S02E01",
+        "source_title": "Bojíte se tmy? - S2E1 The Tale Of The Final Wish EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 196961,
+        "source_id": -61752056673188811,
+        "series_title": "Bojíte se tmy?",
+        "episode_code": "S02E02",
+        "source_title": "Bojíte se tmy__S02E02_Příběh o nočních děsech",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 196961,
+        "source_id": -22310515058179869,
+        "series_title": "Bojíte se tmy?",
+        "episode_code": "S02E02",
+        "source_title": "Bojíte se tmy? - S2E2 The Tale Of Locker 22 EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 196962,
+        "source_id": -65412221767686059,
+        "series_title": "Bojíte se tmy?",
+        "episode_code": "S02E03",
+        "source_title": "Bojíte se tmy? - S2E3 The Tale Of The Hatching EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 196963,
+        "source_id": -67744201434166900,
+        "series_title": "Bojíte se tmy?",
+        "episode_code": "S02E04",
+        "source_title": "Bojíte se tmy__S02E04_Příběh o Tanci smrti",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 196963,
+        "source_id": -71626621811172014,
+        "series_title": "Bojíte se tmy?",
+        "episode_code": "S02E04",
+        "source_title": "Bojíte se tmy? - S2E4 The Tale Of The Frozen Ghost EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 196964,
+        "source_id": -14735537948813655,
+        "series_title": "Bojíte se tmy?",
+        "episode_code": "S02E05",
+        "source_title": "Bojíte se tmy? - S2E5 The Tale Of The Thirteenth Floor EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 196965,
+        "source_id": -3200355715364705,
+        "series_title": "Bojíte se tmy?",
+        "episode_code": "S02E06",
+        "source_title": "Bojíte se tmy? - S2E6 The Tale Of The Midnight Madness EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 18069,
+        "source_id": -6836255527719051,
+        "series_title": "Bojovník",
+        "episode_code": "S02E09",
+        "source_title": "Bojovník - Warrior S02E09  .mkv",
+        "status": "whisper_failed"
+      },
+      {
+        "episode_id": 179443,
+        "source_id": -6407832698076688,
+        "series_title": "Bon Appétit, Vaše Výsosti",
+        "episode_code": "S01E02",
+        "source_title": "Bon Appétit, Vaše Výsosti - S1E2 Druhý chod: metoda sous-vide KO",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 179444,
+        "source_id": -12499265506176122,
+        "series_title": "Bon Appétit, Vaše Výsosti",
+        "episode_code": "S01E03",
+        "source_title": "Bon Appétit, Vaše Výsosti - S1E3 Třetí chod: Haute cuisine KO",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 179445,
+        "source_id": -40476420867828742,
+        "series_title": "Bon Appétit, Vaše Výsosti",
+        "episode_code": "S01E04",
+        "source_title": "Bon Appétit, Vaše Výsosti - S1E4 Čtvrtý chod: *** a špenátová polévka dondžang KO",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 179435,
+        "source_id": -36746299519859785,
+        "series_title": "Bon Appétit, Vaše Výsosti",
+        "episode_code": "S01E06",
+        "source_title": "Bon Appétit, Vaše Výsosti - S1E6 Šestý chod: makronka z černého sezamu KO",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 179436,
+        "source_id": -61931442846645275,
+        "series_title": "Bon Appétit, Vaše Výsosti",
+        "episode_code": "S01E08",
+        "source_title": "Bon Appétit, Vaše Výsosti - S1E8 Osmý chod: hovězí po burgundsku s rýžovým vínem KO",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 179437,
+        "source_id": -21257977951933565,
+        "series_title": "Bon Appétit, Vaše Výsosti",
+        "episode_code": "S01E11",
+        "source_title": "Bon Appétit, Vaše Výsosti - S1E11 Course N° 11 EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 179438,
+        "source_id": -27215639479078523,
+        "series_title": "Bon Appétit, Vaše Výsosti",
+        "episode_code": "S01E12",
+        "source_title": "Bon Appétit, Vaše Výsosti - S1E12 Course N° 12 KO",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 97525,
+        "source_id": -62351256127452664,
+        "series_title": "Bořiči mýtů",
+        "episode_code": "S03E04",
+        "source_title": "Bořiči Mýtů S03E04 - Mýty o vodce I",
         "status": "needs_whisper"
       }
     ],
@@ -298697,14 +298727,14 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 19,
+    "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
-    "whisper_non_cz_needs_subtitles": 3535,
-    "whisper_confirmed_cz": 1982,
+    "whisper_non_cz_needs_subtitles": 3545,
+    "whisper_confirmed_cz": 1992,
     "whisper_failed": 6,
-    "needs_whisper": 61429
+    "needs_whisper": 61409
   },
   "subtitle_followup_statuses": {
     "needs_subtitle_setup_after_prehrajto_processing": 15580
