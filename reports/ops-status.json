@@ -2,28 +2,84 @@
   "counts": {
     "backlog_episodes": 159206,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 34191,
-    "prepared_source_episodes": 64036,
+    "uploaded_episodes": 34196,
+    "prepared_source_episodes": 64051,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 60,
-    "language_whisper_attempted_sources": 60,
-    "language_pending_whisper_sources": 2604,
+    "language_audited_sources": 20,
+    "language_whisper_attempted_sources": 20,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 66952,
     "whisper_review_pending_sources": 61435,
-    "subtitle_followup_sources": 15576,
-    "subtitle_followup_pending_sources": 15576
+    "subtitle_followup_sources": 15580,
+    "subtitle_followup_pending_sources": 15580
   },
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-07-21T10:53:41Z",
+      "databaseId": 29823982022,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-21T10:53:09Z",
+      "databaseId": 29823947388,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-21T10:53:06Z",
+      "databaseId": 29823943977,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-21T10:51:38Z",
+      "databaseId": 29823848855,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-21T10:41:06Z",
+      "databaseId": 29823161456,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-21T10:40:41Z",
+      "databaseId": 29823135840,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-21T10:40:38Z",
+      "databaseId": 29823132568,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-21T10:39:22Z",
       "databaseId": 29823050245,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -35,11 +91,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-21T10:37:04Z",
       "databaseId": 29822906157,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -51,11 +107,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "failure",
       "createdAt": "2026-07-21T10:30:53Z",
       "databaseId": 29822509900,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -121,62 +177,6 @@
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-21T10:06:26Z",
-      "databaseId": 29820937863,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-21T10:06:22Z",
-      "databaseId": 29820932395,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-21T10:05:35Z",
-      "databaseId": 29820878525,
-      "headBranch": "main",
-      "status": "pending",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-21T10:05:08Z",
-      "databaseId": 29820845516,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-07-21T10:05:02Z",
-      "databaseId": 29820838219,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-21T10:04:45Z",
-      "databaseId": 29820818955,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-07-21T10:01:52Z",
-      "databaseId": 29820625899,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
     }
   ],
   "gaps": {
@@ -148786,6 +148786,31 @@
         "video_id": 27726561
       },
       {
+        "episode_id": 34742,
+        "display_name": "Herkules S05E08 CZ Dabing",
+        "video_id": 27726608
+      },
+      {
+        "episode_id": 34744,
+        "display_name": "Herkules S05E10 CZ Titulky",
+        "video_id": 27726637
+      },
+      {
+        "episode_id": 34746,
+        "display_name": "Herkules S05E12 CZ Dabing",
+        "video_id": 27726659
+      },
+      {
+        "episode_id": 34756,
+        "display_name": "Herkules S05E22 CZ Titulky",
+        "video_id": 27726680
+      },
+      {
+        "episode_id": 34758,
+        "display_name": "Herkules S06E02 CZ Dabing",
+        "video_id": 27726705
+      },
+      {
         "episode_id": 148263,
         "display_name": "Blue Lights S03E01 - 1. epizoda CZ Titulky",
         "video_id": 27726226
@@ -297388,6 +297413,31 @@
         "video_id": 27726561
       },
       {
+        "episode_id": 34742,
+        "display_name": "Herkules S05E08 CZ Dabing",
+        "video_id": 27726608
+      },
+      {
+        "episode_id": 34744,
+        "display_name": "Herkules S05E10 CZ Titulky",
+        "video_id": 27726637
+      },
+      {
+        "episode_id": 34746,
+        "display_name": "Herkules S05E12 CZ Dabing",
+        "video_id": 27726659
+      },
+      {
+        "episode_id": 34756,
+        "display_name": "Herkules S05E22 CZ Titulky",
+        "video_id": 27726680
+      },
+      {
+        "episode_id": 34758,
+        "display_name": "Herkules S06E02 CZ Dabing",
+        "video_id": 27726705
+      },
+      {
         "episode_id": 148263,
         "display_name": "Blue Lights S03E01 - 1. epizoda CZ Titulky",
         "video_id": 27726226
@@ -298647,7 +298697,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 59,
+    "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
@@ -298657,6 +298707,6 @@
     "needs_whisper": 61429
   },
   "subtitle_followup_statuses": {
-    "needs_subtitle_setup_after_prehrajto_processing": 15576
+    "needs_subtitle_setup_after_prehrajto_processing": 15580
   }
 }
