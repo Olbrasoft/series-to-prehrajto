@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 158883,
     "manifest_upload_ready_episodes": 1012,
-    "uploaded_episodes": 34512,
+    "uploaded_episodes": 34514,
     "prepared_source_episodes": 64395,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 40,
-    "language_whisper_attempted_sources": 40,
-    "language_pending_whisper_sources": 2604,
+    "language_audited_sources": 20,
+    "language_whisper_attempted_sources": 20,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 67084,
     "whisper_review_pending_sources": 61221,
     "subtitle_followup_sources": 15739,
@@ -20,10 +20,42 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-07-21T21:05:15Z",
+      "databaseId": 29868526289,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-21T21:04:51Z",
+      "databaseId": 29868495979,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-21T21:00:29Z",
+      "databaseId": 29868182753,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-21T21:00:26Z",
+      "databaseId": 29868179449,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-21T20:59:03Z",
       "databaseId": 29868079661,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -67,11 +99,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-21T20:50:02Z",
       "databaseId": 29867447070,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -99,11 +131,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-07-21T20:48:33Z",
       "databaseId": 29867345199,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -143,40 +175,8 @@
       "createdAt": "2026-07-21T20:40:25Z",
       "databaseId": 29866761963,
       "headBranch": "main",
-      "status": "pending",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-21T20:38:49Z",
-      "databaseId": 29866644685,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-21T20:29:11Z",
-      "databaseId": 29865952059,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-21T20:27:57Z",
-      "databaseId": 29865865089,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-21T20:26:34Z",
-      "databaseId": 29865765989,
-      "headBranch": "main",
       "status": "in_progress",
-      "workflowName": "prepare-descriptions"
+      "workflowName": "sync"
     }
   ],
   "gaps": {
@@ -150489,6 +150489,16 @@
         "episode_id": 59135,
         "display_name": "Helstrom S01E03 - Ten, co odešel CZ Titulky",
         "video_id": 27734487
+      },
+      {
+        "episode_id": 59141,
+        "display_name": "Helstrom S01E09 - Plavidlá CZ Titulky",
+        "video_id": 27734647
+      },
+      {
+        "episode_id": 51331,
+        "display_name": "Jak vycvičit draky: Závod na hřeben S01E02 - Dračí oko, 2 část CZ Dabing",
+        "video_id": 27734676
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -300696,6 +300706,16 @@
         "episode_id": 59135,
         "display_name": "Helstrom S01E03 - Ten, co odešel CZ Titulky",
         "video_id": 27734487
+      },
+      {
+        "episode_id": 59141,
+        "display_name": "Helstrom S01E09 - Plavidlá CZ Titulky",
+        "video_id": 27734647
+      },
+      {
+        "episode_id": 51331,
+        "display_name": "Jak vycvičit draky: Závod na hřeben S01E02 - Dračí oko, 2 část CZ Dabing",
+        "video_id": 27734676
       }
     ],
     "prepared_not_upload_ready": [
@@ -301857,7 +301877,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 39,
+    "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
