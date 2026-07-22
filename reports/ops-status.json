@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 158283,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 35113,
+    "uploaded_episodes": 35114,
     "prepared_source_episodes": 65247,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 52,
-    "language_whisper_attempted_sources": 52,
-    "language_pending_whisper_sources": 2604,
+    "language_audited_sources": 20,
+    "language_whisper_attempted_sources": 20,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 67471,
     "whisper_review_pending_sources": 61288,
     "subtitle_followup_sources": 16145,
@@ -20,18 +20,66 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-07-22T07:53:28Z",
-      "databaseId": 29901873225,
+      "createdAt": "2026-07-22T07:58:13Z",
+      "databaseId": 29902168001,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-22T07:58:01Z",
+      "databaseId": 29902154793,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-07-22T07:57:54Z",
+      "databaseId": 29902147977,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-22T07:54:50Z",
+      "databaseId": 29901956420,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-07-22T07:54:48Z",
+      "databaseId": 29901954016,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-22T07:54:46Z",
+      "databaseId": 29901952784,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-22T07:53:28Z",
+      "databaseId": 29901873225,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-22T07:46:35Z",
       "databaseId": 29901445137,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -95,7 +143,7 @@
       "createdAt": "2026-07-22T07:22:42Z",
       "databaseId": 29899977120,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "prepare-descriptions"
     },
     {
@@ -103,7 +151,7 @@
       "createdAt": "2026-07-22T07:16:39Z",
       "databaseId": 29899618079,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "sync"
     },
     {
@@ -129,54 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-22T07:03:10Z",
-      "databaseId": 29898801561,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "refresh-backlog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-07-22T06:56:44Z",
-      "databaseId": 29898419535,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-22T06:55:26Z",
-      "databaseId": 29898346411,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-22T06:55:23Z",
-      "databaseId": 29898343312,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-22T06:54:10Z",
-      "databaseId": 29898276210,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-22T06:48:24Z",
-      "databaseId": 29897952975,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
     }
   ],
   "gaps": {
@@ -153396,6 +153396,11 @@
         "video_id": 27745878
       },
       {
+        "episode_id": 157566,
+        "display_name": "Yeh Kaali Kaali Ankhein S01E01 - 1. epizoda CZ Titulky",
+        "video_id": 27745928
+      },
+      {
         "episode_id": 112409,
         "display_name": "Džine, něco si přej S01E13 - 13. díl CZ Dabing",
         "video_id": 27745158
@@ -306608,6 +306613,11 @@
         "video_id": 27745878
       },
       {
+        "episode_id": 157566,
+        "display_name": "Yeh Kaali Kaali Ankhein S01E01 - 1. epizoda CZ Titulky",
+        "video_id": 27745928
+      },
+      {
         "episode_id": 112409,
         "display_name": "Džine, něco si přej S01E13 - 13. díl CZ Dabing",
         "video_id": 27745158
@@ -307867,7 +307877,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 51,
+    "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
