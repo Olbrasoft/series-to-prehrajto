@@ -2,22 +2,46 @@
   "counts": {
     "backlog_episodes": 157816,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 35554,
+    "uploaded_episodes": 35557,
     "prepared_source_episodes": 66326,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 60,
-    "language_whisper_attempted_sources": 60,
-    "language_pending_whisper_sources": 2604,
+    "language_audited_sources": 20,
+    "language_whisper_attempted_sources": 20,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 67756,
     "whisper_review_pending_sources": 61103,
     "subtitle_followup_sources": 16592,
     "subtitle_followup_pending_sources": 16592
   },
   "workflow_runs": [
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-22T22:00:27Z",
+      "databaseId": 29961317719,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-22T21:57:40Z",
+      "databaseId": 29961143334,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-22T21:57:12Z",
+      "databaseId": 29961115011,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
     {
       "conclusion": "",
       "createdAt": "2026-07-22T21:56:47Z",
@@ -43,11 +67,11 @@
       "workflowName": "process-whisper-review"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-22T21:54:40Z",
       "databaseId": 29960963435,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -99,11 +123,11 @@
       "workflowName": "prepare-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-22T21:48:37Z",
       "databaseId": 29960595179,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -153,30 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-22T21:34:12Z",
-      "databaseId": 29959699932,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-22T21:30:58Z",
-      "databaseId": 29959492875,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-22T21:30:56Z",
-      "databaseId": 29959490066,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
     }
   ],
   "gaps": {
@@ -155699,6 +155699,21 @@
         "episode_id": 59693,
         "display_name": "Wisting S01E10 - 10. epizoda CZ Titulky",
         "video_id": 27762562
+      },
+      {
+        "episode_id": 125250,
+        "display_name": "Čas na dobrodružství: Fionna a Cake S01E08 - 8. epizoda CZ Titulky",
+        "video_id": 27762832
+      },
+      {
+        "episode_id": 59695,
+        "display_name": "Wisting S02E02 - 2. epizoda CZ Titulky",
+        "video_id": 27762744
+      },
+      {
+        "episode_id": 59697,
+        "display_name": "Wisting S02E04 - 4. epizoda CZ Titulky",
+        "video_id": 27762781
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -311116,6 +311131,21 @@
         "episode_id": 59693,
         "display_name": "Wisting S01E10 - 10. epizoda CZ Titulky",
         "video_id": 27762562
+      },
+      {
+        "episode_id": 125250,
+        "display_name": "Čas na dobrodružství: Fionna a Cake S01E08 - 8. epizoda CZ Titulky",
+        "video_id": 27762832
+      },
+      {
+        "episode_id": 59695,
+        "display_name": "Wisting S02E02 - 2. epizoda CZ Titulky",
+        "video_id": 27762744
+      },
+      {
+        "episode_id": 59697,
+        "display_name": "Wisting S02E04 - 4. epizoda CZ Titulky",
+        "video_id": 27762781
       }
     ],
     "prepared_not_upload_ready": [
@@ -312277,7 +312307,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 59,
+    "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
