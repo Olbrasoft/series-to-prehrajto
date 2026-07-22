@@ -2,36 +2,92 @@
   "counts": {
     "backlog_episodes": 157816,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 35547,
-    "prepared_source_episodes": 66334,
+    "uploaded_episodes": 35554,
+    "prepared_source_episodes": 66332,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 20,
-    "language_whisper_attempted_sources": 20,
-    "language_pending_whisper_sources": 2624,
+    "language_audited_sources": 40,
+    "language_whisper_attempted_sources": 40,
+    "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 67756,
-    "whisper_review_pending_sources": 61143,
+    "whisper_review_pending_sources": 61123,
     "subtitle_followup_sources": 16592,
     "subtitle_followup_pending_sources": 16592
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-07-22T21:37:40Z",
-      "databaseId": 29959920339,
+      "createdAt": "2026-07-22T21:51:35Z",
+      "databaseId": 29960774824,
       "headBranch": "main",
       "status": "in_progress",
-      "workflowName": "ops-watchdog"
+      "workflowName": "ops-status"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-07-22T21:50:07Z",
+      "databaseId": 29960685699,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-22T21:50:07Z",
+      "databaseId": 29960685317,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-22T21:49:09Z",
+      "databaseId": 29960625731,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-22T21:48:37Z",
+      "databaseId": 29960595179,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-22T21:38:50Z",
+      "databaseId": 29959994824,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-22T21:38:47Z",
+      "databaseId": 29959990987,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-22T21:37:40Z",
+      "databaseId": 29959920339,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "cancelled",
       "createdAt": "2026-07-22T21:37:36Z",
       "databaseId": 29959915951,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -39,7 +95,7 @@
       "createdAt": "2026-07-22T21:36:22Z",
       "databaseId": 29959841889,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "process-whisper-review"
     },
     {
@@ -67,11 +123,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-22T21:30:56Z",
       "databaseId": 29959490066,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
@@ -121,62 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-22T21:24:02Z",
-      "databaseId": 29959038504,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-22T21:22:40Z",
-      "databaseId": 29958949583,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-22T21:15:34Z",
-      "databaseId": 29958494665,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-22T21:15:31Z",
-      "databaseId": 29958491216,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-22T21:14:43Z",
-      "databaseId": 29958438229,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-22T21:14:00Z",
-      "databaseId": 29958391191,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-22T21:13:56Z",
-      "databaseId": 29958387835,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
     }
   ],
   "gaps": {
@@ -155664,6 +155664,41 @@
         "episode_id": 56687,
         "display_name": "Acapulco S01E09 - Nejkrásnější období v roce CZ Titulky",
         "video_id": 27762220
+      },
+      {
+        "episode_id": 134019,
+        "display_name": "Acapulco S04E01 - Vodopád CZ Titulky",
+        "video_id": 27762269
+      },
+      {
+        "episode_id": 134015,
+        "display_name": "Acapulco S04E06 - To mě naučila máma CZ Titulky",
+        "video_id": 27762375
+      },
+      {
+        "episode_id": 56707,
+        "display_name": "Acapulco S04E09 - Vítěz bere vše CZ Titulky",
+        "video_id": 27762398
+      },
+      {
+        "episode_id": 156455,
+        "display_name": "The Edge of Sleep S01E03 - 3. epizoda CZ Titulky",
+        "video_id": 27762438
+      },
+      {
+        "episode_id": 59687,
+        "display_name": "Wisting S01E02 - 2. epizoda CZ Titulky",
+        "video_id": 27762471
+      },
+      {
+        "episode_id": 59691,
+        "display_name": "Wisting S01E08 - 8. epizoda CZ Titulky",
+        "video_id": 27762530
+      },
+      {
+        "episode_id": 59693,
+        "display_name": "Wisting S01E10 - 10. epizoda CZ Titulky",
+        "video_id": 27762562
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -311046,6 +311081,41 @@
         "episode_id": 56687,
         "display_name": "Acapulco S01E09 - Nejkrásnější období v roce CZ Titulky",
         "video_id": 27762220
+      },
+      {
+        "episode_id": 134019,
+        "display_name": "Acapulco S04E01 - Vodopád CZ Titulky",
+        "video_id": 27762269
+      },
+      {
+        "episode_id": 134015,
+        "display_name": "Acapulco S04E06 - To mě naučila máma CZ Titulky",
+        "video_id": 27762375
+      },
+      {
+        "episode_id": 56707,
+        "display_name": "Acapulco S04E09 - Vítěz bere vše CZ Titulky",
+        "video_id": 27762398
+      },
+      {
+        "episode_id": 156455,
+        "display_name": "The Edge of Sleep S01E03 - 3. epizoda CZ Titulky",
+        "video_id": 27762438
+      },
+      {
+        "episode_id": 59687,
+        "display_name": "Wisting S01E02 - 2. epizoda CZ Titulky",
+        "video_id": 27762471
+      },
+      {
+        "episode_id": 59691,
+        "display_name": "Wisting S01E08 - 8. epizoda CZ Titulky",
+        "video_id": 27762530
+      },
+      {
+        "episode_id": 59693,
+        "display_name": "Wisting S01E10 - 10. epizoda CZ Titulky",
+        "video_id": 27762562
       }
     ],
     "prepared_not_upload_ready": [
@@ -311648,107 +311718,107 @@
         "status": "whisper_failed"
       },
       {
-        "episode_id": 107209,
-        "source_id": -12293088178052601,
-        "series_title": "Carnivale",
-        "episode_code": "S02E10",
-        "source_title": "Carnivale 2x10",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 107211,
-        "source_id": -34056521654751318,
-        "series_title": "Carnivale",
-        "episode_code": "S02E11",
-        "source_title": "Carnivale - S02E11 - Outside New Canaan",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 107211,
-        "source_id": -13853879152836798,
-        "series_title": "Carnivale",
-        "episode_code": "S02E11",
-        "source_title": "Carnivale 2x11",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 107207,
-        "source_id": -64077361768567300,
-        "series_title": "Carnivale",
-        "episode_code": "S02E12",
-        "source_title": "Carnivale - S02E12 - New Canaan, CA",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 107207,
-        "source_id": -18490602283824777,
-        "series_title": "Carnivale",
-        "episode_code": "S02E12",
-        "source_title": "Carnivale 2x12",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 125250,
-        "source_id": -70982074779801738,
-        "series_title": "Čas na dobrodružství: Fionna a Cake",
+        "episode_id": 137274,
+        "source_id": -16713051493472812,
+        "series_title": "Čas volá tvé jméno",
         "episode_code": "S01E08",
-        "source_title": "Čas na dobrodružství Fionna a Cake S01E08",
+        "source_title": "Čas volá tvé jméno - S1E8 Epizoda 8 KO",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 125257,
-        "source_id": -19245293162544785,
-        "series_title": "Čas na dobrodružství: Fionna a Cake",
+        "episode_id": 137275,
+        "source_id": -35015776489063503,
+        "series_title": "Čas volá tvé jméno",
+        "episode_code": "S01E09",
+        "source_title": "Čas volá tvé jméno - S1E9 Epizoda 9 KO",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 137275,
+        "source_id": -2827904501677220,
+        "series_title": "Čas volá tvé jméno",
+        "episode_code": "S01E09",
+        "source_title": "Čas volá tvé jméno - S1E9 Episode 9 KO",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 137276,
+        "source_id": -22235648400376431,
+        "series_title": "Čas volá tvé jméno",
         "episode_code": "S01E10",
-        "source_title": "Čas na dobrodružství Fionna a Cake S01E10",
+        "source_title": "Čas volá tvé jméno - S1E10 Epizoda 10 KO",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 137267,
-        "source_id": -67342046691633630,
+        "episode_id": 137276,
+        "source_id": -64431717384072272,
         "series_title": "Čas volá tvé jméno",
+        "episode_code": "S01E10",
+        "source_title": "Čas volá tvé jméno - S1E10 Episode 10 KO",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 137277,
+        "source_id": -30422950530887400,
+        "series_title": "Čas volá tvé jméno",
+        "episode_code": "S01E11",
+        "source_title": "Čas volá tvé jméno - S1E11 Epizoda 11 KO",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 137277,
+        "source_id": -67913365543352220,
+        "series_title": "Čas volá tvé jméno",
+        "episode_code": "S01E11",
+        "source_title": "Čas volá tvé jméno - S1E11 KO",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 137278,
+        "source_id": -44828527923469501,
+        "series_title": "Čas volá tvé jméno",
+        "episode_code": "S01E12",
+        "source_title": "Čas volá tvé jméno - S1E12 Epizoda 12 KO",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 137278,
+        "source_id": -21900055462807977,
+        "series_title": "Čas volá tvé jméno",
+        "episode_code": "S01E12",
+        "source_title": "Čas volá tvé jméno - S1E12 KO",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 5843,
+        "source_id": -22254662397348566,
+        "series_title": "Castle Rock",
         "episode_code": "S01E01",
-        "source_title": "Čas volá tvé jméno - S1E1 Epizoda 1 KO",
+        "source_title": "Castle Rock - S1E1 Severance EN",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 137267,
-        "source_id": -5133085373143413,
-        "series_title": "Čas volá tvé jméno",
-        "episode_code": "S01E01",
-        "source_title": "Čas volá tvé jméno - S1E1 KO",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 137268,
-        "source_id": -25725942113279036,
-        "series_title": "Čas volá tvé jméno",
+        "episode_id": 5844,
+        "source_id": -7482582959899226,
+        "series_title": "Castle Rock",
         "episode_code": "S01E02",
-        "source_title": "Čas volá tvé jméno - S1E2 Epizoda 2 KO",
+        "source_title": "Castle Rock - S1E2 Habeas Corpus EN",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 137268,
-        "source_id": -3019008174578311,
-        "series_title": "Čas volá tvé jméno",
-        "episode_code": "S01E02",
-        "source_title": "Čas volá tvé jméno - S1E2 Episode 2 KO",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 137269,
-        "source_id": -3352701256034272,
-        "series_title": "Čas volá tvé jméno",
+        "episode_id": 5846,
+        "source_id": -68087414541329366,
+        "series_title": "Castle Rock",
         "episode_code": "S01E03",
-        "source_title": "Čas volá tvé jméno - S1E3 Epizoda 3 KO",
+        "source_title": "Castle Rock - S1E3 Local Color EN",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 137269,
-        "source_id": -31872645900118766,
-        "series_title": "Čas volá tvé jméno",
+        "episode_id": 5846,
+        "source_id": -71646567596209541,
+        "series_title": "Castle Rock",
         "episode_code": "S01E03",
-        "source_title": "Čas volá tvé jméno - S1E3 KO",
+        "source_title": "Castle Rock - S1E3 Local Color EN",
         "status": "needs_whisper"
       }
     ],
@@ -312207,14 +312277,14 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 19,
+    "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
-    "whisper_non_cz_needs_subtitles": 4094,
+    "whisper_non_cz_needs_subtitles": 4114,
     "whisper_confirmed_cz": 2519,
     "whisper_failed": 37,
-    "needs_whisper": 61106
+    "needs_whisper": 61086
   },
   "subtitle_followup_statuses": {
     "needs_subtitle_setup_after_prehrajto_processing": 16592
