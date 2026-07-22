@@ -2,15 +2,15 @@
   "counts": {
     "backlog_episodes": 157939,
     "manifest_upload_ready_episodes": 1008,
-    "uploaded_episodes": 35482,
+    "uploaded_episodes": 35485,
     "prepared_source_episodes": 66062,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 60,
-    "language_whisper_attempted_sources": 60,
+    "language_audited_sources": 40,
+    "language_whisper_attempted_sources": 40,
     "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 67745,
     "whisper_review_pending_sources": 61266,
@@ -20,10 +20,18 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-07-22T17:40:38Z",
+      "databaseId": 29943355048,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-22T17:35:03Z",
       "databaseId": 29942958816,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-status"
     },
     {
@@ -47,7 +55,7 @@
       "createdAt": "2026-07-22T17:28:02Z",
       "databaseId": 29942446594,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "audit-language"
     },
     {
@@ -67,11 +75,11 @@
       "workflowName": "process-whisper-review"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-22T17:22:11Z",
       "databaseId": 29942036188,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -169,14 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-22T16:58:28Z",
-      "databaseId": 29940347139,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
     }
   ],
   "gaps": {
@@ -155331,6 +155331,11 @@
         "video_id": 27758420
       },
       {
+        "episode_id": 73448,
+        "display_name": "Bukanýrky S01E05 - Neúspěšná zrada CZ Titulky",
+        "video_id": 27758432
+      },
+      {
         "episode_id": 123631,
         "display_name": "Buck Rogers in the 25th Century S01E15 - Happy Birthday, Buck CZ Titulky",
         "video_id": 27758235
@@ -155339,6 +155344,16 @@
         "episode_id": 123641,
         "display_name": "Buck Rogers in the 25th Century S02E02 - Time of the Hawk: Part 2 CZ Titulky",
         "video_id": 27758398
+      },
+      {
+        "episode_id": 123647,
+        "display_name": "Buck Rogers in the 25th Century S02E08 - The Crystals CZ Titulky",
+        "video_id": 27758429
+      },
+      {
+        "episode_id": 73447,
+        "display_name": "Bukanýrky S02E05 - Láska se vším všudy CZ Titulky",
+        "video_id": 27758453
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -310388,6 +310403,11 @@
         "video_id": 27758420
       },
       {
+        "episode_id": 73448,
+        "display_name": "Bukanýrky S01E05 - Neúspěšná zrada CZ Titulky",
+        "video_id": 27758432
+      },
+      {
         "episode_id": 123631,
         "display_name": "Buck Rogers in the 25th Century S01E15 - Happy Birthday, Buck CZ Titulky",
         "video_id": 27758235
@@ -310396,6 +310416,16 @@
         "episode_id": 123641,
         "display_name": "Buck Rogers in the 25th Century S02E02 - Time of the Hawk: Part 2 CZ Titulky",
         "video_id": 27758398
+      },
+      {
+        "episode_id": 123647,
+        "display_name": "Buck Rogers in the 25th Century S02E08 - The Crystals CZ Titulky",
+        "video_id": 27758429
+      },
+      {
+        "episode_id": 73447,
+        "display_name": "Bukanýrky S02E05 - Láska se vším všudy CZ Titulky",
+        "video_id": 27758453
       }
     ],
     "prepared_not_upload_ready": [
@@ -311557,8 +311587,8 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 55,
-    "resolve_failed": 5
+    "ok": 39,
+    "resolve_failed": 1
   },
   "whisper_review_statuses": {
     "whisper_non_cz_needs_subtitles": 3978,
