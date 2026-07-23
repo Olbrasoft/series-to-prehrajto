@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 157040,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 36335,
+    "uploaded_episodes": 36336,
     "prepared_source_episodes": 67930,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 92,
-    "language_whisper_attempted_sources": 48,
-    "language_pending_whisper_sources": 2624,
+    "language_audited_sources": 40,
+    "language_whisper_attempted_sources": 40,
+    "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 68531,
     "whisper_review_pending_sources": 61532,
     "subtitle_followup_sources": 17265,
@@ -20,10 +20,58 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-07-23T19:31:40Z",
+      "databaseId": 30038329374,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-23T19:30:48Z",
+      "databaseId": 30038269076,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-23T19:30:48Z",
+      "databaseId": 30038269031,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-23T19:29:41Z",
+      "databaseId": 30038187745,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-23T19:28:11Z",
+      "databaseId": 30038087008,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-23T19:26:55Z",
+      "databaseId": 30038000818,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-23T19:25:30Z",
       "databaseId": 30037903682,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -91,11 +139,11 @@
       "workflowName": "process-whisper-review"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-23T19:11:12Z",
       "databaseId": 30036922949,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -129,54 +177,6 @@
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-23T18:52:22Z",
-      "databaseId": 30035586751,
-      "headBranch": "main",
-      "status": "pending",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-23T18:52:19Z",
-      "databaseId": 30035583227,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-23T18:51:01Z",
-      "databaseId": 30035490520,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-23T18:50:36Z",
-      "databaseId": 30035459813,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-23T18:43:15Z",
-      "databaseId": 30034929172,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-23T18:41:45Z",
-      "databaseId": 30034818734,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
     }
   ],
   "gaps": {
@@ -159604,6 +159604,11 @@
         "episode_id": 140029,
         "display_name": "Spojení osudem S01E06 - 6. epizoda CZ Titulky",
         "video_id": 27795275
+      },
+      {
+        "episode_id": 140033,
+        "display_name": "Spojení osudem S01E10 - 10. epizoda CZ Titulky",
+        "video_id": 27795456
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -318926,6 +318931,11 @@
         "episode_id": 140029,
         "display_name": "Spojení osudem S01E06 - 6. epizoda CZ Titulky",
         "video_id": 27795275
+      },
+      {
+        "episode_id": 140033,
+        "display_name": "Spojení osudem S01E10 - 10. epizoda CZ Titulky",
+        "video_id": 27795456
       }
     ],
     "prepared_not_upload_ready": [
@@ -320087,8 +320097,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 44,
-    "ok": 47,
+    "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
