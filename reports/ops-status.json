@@ -1,37 +1,77 @@
 {
   "counts": {
-    "backlog_episodes": 157040,
-    "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 36371,
-    "prepared_source_episodes": 67893,
+    "backlog_episodes": 156991,
+    "manifest_upload_ready_episodes": 1001,
+    "uploaded_episodes": 36378,
+    "prepared_source_episodes": 67890,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 60,
-    "language_whisper_attempted_sources": 60,
-    "language_pending_whisper_sources": 2604,
+    "language_audited_sources": 20,
+    "language_whisper_attempted_sources": 20,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 68531,
-    "whisper_review_pending_sources": 61372,
-    "subtitle_followup_sources": 17273,
-    "subtitle_followup_pending_sources": 17273
+    "whisper_review_pending_sources": 61352,
+    "subtitle_followup_sources": 17279,
+    "subtitle_followup_pending_sources": 17279
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-07-23T21:28:20Z",
-      "databaseId": 30046306796,
+      "createdAt": "2026-07-23T21:45:07Z",
+      "databaseId": 30047388298,
       "headBranch": "main",
       "status": "in_progress",
-      "workflowName": "refresh-backlog"
+      "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-07-23T21:35:36Z",
+      "databaseId": 30046789712,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-23T21:33:02Z",
+      "databaseId": 30046621769,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-23T21:29:29Z",
+      "databaseId": 30046380101,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-23T21:29:26Z",
+      "databaseId": 30046376686,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-23T21:28:20Z",
+      "databaseId": 30046306796,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "refresh-backlog"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-23T21:28:18Z",
       "databaseId": 30046303780,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -67,11 +107,11 @@
       "workflowName": "prepare-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-23T21:22:16Z",
       "databaseId": 30045891428,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -107,11 +147,11 @@
       "workflowName": "process-whisper-review"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-23T21:17:08Z",
       "databaseId": 30045559988,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -123,11 +163,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-07-23T21:15:52Z",
       "databaseId": 30045478015,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -137,46 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-23T20:57:03Z",
-      "databaseId": 30044222901,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-23T20:55:55Z",
-      "databaseId": 30044145558,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-sources"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-23T20:55:48Z",
-      "databaseId": 30044137016,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-07-23T20:55:44Z",
-      "databaseId": 30044132921,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-23T20:53:55Z",
-      "databaseId": 30044008189,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
     }
   ],
   "gaps": {
@@ -159751,6 +159751,31 @@
         "video_id": 27797688
       },
       {
+        "episode_id": 54786,
+        "display_name": "Chyťte ho! S01E02 - 2. epizoda CZ Dabing",
+        "video_id": 27797727
+      },
+      {
+        "episode_id": 54778,
+        "display_name": "Chyťte ho! S01E06 - 6. epizoda CZ Dabing",
+        "video_id": 27797868
+      },
+      {
+        "episode_id": 54776,
+        "display_name": "Chyťte ho! S01E08 - 8. epizoda CZ Dabing",
+        "video_id": 27797909
+      },
+      {
+        "episode_id": 54790,
+        "display_name": "Chyťte ho! S01E09 - 9. epizoda CZ Dabing",
+        "video_id": 27797953
+      },
+      {
+        "episode_id": 54802,
+        "display_name": "Chyťte ho! S01E10 - 10. epizoda CZ Dabing",
+        "video_id": 27797981
+      },
+      {
         "episode_id": 96357,
         "display_name": "Dynastie S01E08 - 8. epizoda CZ Dabing",
         "video_id": 27796841
@@ -159784,6 +159809,16 @@
         "episode_id": 148011,
         "display_name": "Star Trek S01E11 - Chtěl bych být menší CZ Dabing",
         "video_id": 27797567
+      },
+      {
+        "episode_id": 148021,
+        "display_name": "Star Trek S02E04 - Mor CZ Dabing",
+        "video_id": 27797842
+      },
+      {
+        "episode_id": 148023,
+        "display_name": "Star Trek S02E06 - V opačném čase CZ Dabing",
+        "video_id": 27797913
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -319253,6 +319288,31 @@
         "video_id": 27797688
       },
       {
+        "episode_id": 54786,
+        "display_name": "Chyťte ho! S01E02 - 2. epizoda CZ Dabing",
+        "video_id": 27797727
+      },
+      {
+        "episode_id": 54778,
+        "display_name": "Chyťte ho! S01E06 - 6. epizoda CZ Dabing",
+        "video_id": 27797868
+      },
+      {
+        "episode_id": 54776,
+        "display_name": "Chyťte ho! S01E08 - 8. epizoda CZ Dabing",
+        "video_id": 27797909
+      },
+      {
+        "episode_id": 54790,
+        "display_name": "Chyťte ho! S01E09 - 9. epizoda CZ Dabing",
+        "video_id": 27797953
+      },
+      {
+        "episode_id": 54802,
+        "display_name": "Chyťte ho! S01E10 - 10. epizoda CZ Dabing",
+        "video_id": 27797981
+      },
+      {
         "episode_id": 96357,
         "display_name": "Dynastie S01E08 - 8. epizoda CZ Dabing",
         "video_id": 27796841
@@ -319286,6 +319346,16 @@
         "episode_id": 148011,
         "display_name": "Star Trek S01E11 - Chtěl bych být menší CZ Dabing",
         "video_id": 27797567
+      },
+      {
+        "episode_id": 148021,
+        "display_name": "Star Trek S02E04 - Mor CZ Dabing",
+        "video_id": 27797842
+      },
+      {
+        "episode_id": 148023,
+        "display_name": "Star Trek S02E06 - V opačném čase CZ Dabing",
+        "video_id": 27797913
       }
     ],
     "prepared_not_upload_ready": [
@@ -319904,91 +319974,91 @@
         "status": "whisper_failed"
       },
       {
-        "episode_id": 121047,
-        "source_id": -43746536663920312,
-        "series_title": "Cesta svatojánských mušek",
-        "episode_code": "S02E10",
-        "source_title": "Cesta svatojánských mušek - S2E10 Episode 10 EN",
+        "episode_id": 114931,
+        "source_id": -2969293286235561,
+        "series_title": "Cestovatel",
+        "episode_code": "S01E06",
+        "source_title": "Cestovatel - 01x06",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 121048,
-        "source_id": -6745060638422845,
-        "series_title": "Cesta svatojánských mušek",
-        "episode_code": "S02E11",
-        "source_title": "Cesta svatojánských mušek - S2E11 Na prsou záleží EN",
+        "episode_id": 114929,
+        "source_id": -65339687545612326,
+        "series_title": "Cestovatel",
+        "episode_code": "S01E07",
+        "source_title": "Cestovatel S01E07 - Double Down",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 121048,
-        "source_id": -41212790891136583,
-        "series_title": "Cesta svatojánských mušek",
-        "episode_code": "S02E11",
-        "source_title": "Cesta svatojánských mušek - S2E11 Episode 11 EN",
+        "episode_id": 114929,
+        "source_id": -51744667899211829,
+        "series_title": "Cestovatel",
+        "episode_code": "S01E07",
+        "source_title": "Cestovatel - 01x07",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 121049,
-        "source_id": -33040117703569981,
-        "series_title": "Cesta svatojánských mušek",
-        "episode_code": "S02E12",
-        "source_title": "Cesta svatojánských mušek - S2E12 Za všechno může čas EN",
+        "episode_id": 114923,
+        "source_id": -23093069048715139,
+        "series_title": "Cestovatel",
+        "episode_code": "S01E08",
+        "source_title": "Cestovatel S01E08 - Winterland",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 121049,
-        "source_id": -7520178795067504,
-        "series_title": "Cesta svatojánských mušek",
-        "episode_code": "S02E12",
-        "source_title": "Cesta svatojánských mušek - S2E12 Episode 12 EN",
+        "episode_id": 114923,
+        "source_id": -25123886283106880,
+        "series_title": "Cestovatel",
+        "episode_code": "S01E08",
+        "source_title": "Cestovatel - 01x08",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 121050,
-        "source_id": -54275345077879540,
-        "series_title": "Cesta svatojánských mušek",
-        "episode_code": "S02E13",
-        "source_title": "Cesta svatojánských mušek - S2E13 Srdci neporučíš EN",
+        "episode_id": 114923,
+        "source_id": -16349404395052709,
+        "series_title": "Cestovatel",
+        "episode_code": "S01E08",
+        "source_title": "Cestovatel - 01x08 byDejv",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 121050,
-        "source_id": -45988368149296859,
-        "series_title": "Cesta svatojánských mušek",
-        "episode_code": "S02E13",
-        "source_title": "Cesta svatojánských mušek - S2E13 Episode 13 EN",
+        "episode_id": 114924,
+        "source_id": -35181506879414659,
+        "series_title": "Cestovatel",
+        "episode_code": "S01E09",
+        "source_title": "Cestovatel S01E09 - Emily",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 121051,
-        "source_id": -6230306870032575,
-        "series_title": "Cesta svatojánských mušek",
-        "episode_code": "S02E14",
-        "source_title": "Cesta svatojánských mušek - S2E14 Když nemůžeš, tak přidej EN",
+        "episode_id": 114924,
+        "source_id": -35788474564067466,
+        "series_title": "Cestovatel",
+        "episode_code": "S01E09",
+        "source_title": "Cestovatel - 01x09 byDejv",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 121051,
-        "source_id": -26794713653196425,
-        "series_title": "Cesta svatojánských mušek",
-        "episode_code": "S02E14",
-        "source_title": "Cesta svatojánských mušek - S2E14 Episode 14 EN",
+        "episode_id": 114924,
+        "source_id": -28724197511525372,
+        "series_title": "Cestovatel",
+        "episode_code": "S01E09",
+        "source_title": "Cestovatel - 01x09",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 121052,
-        "source_id": -51221184949518362,
-        "series_title": "Cesta svatojánských mušek",
-        "episode_code": "S02E15",
-        "source_title": "Cesta svatojánských mušek - S2E15 Měsíční rituál EN",
+        "episode_id": 114926,
+        "source_id": -34283918400476173,
+        "series_title": "Cestovatel",
+        "episode_code": "S01E10",
+        "source_title": "Cestovatel S01E10 - Blowback",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 121052,
-        "source_id": -18554838432622606,
-        "series_title": "Cesta svatojánských mušek",
-        "episode_code": "S02E15",
-        "source_title": "Cesta svatojánských mušek - S2E15 Episode 15 EN",
+        "episode_id": 114926,
+        "source_id": -44467715171236917,
+        "series_title": "Cestovatel",
+        "episode_code": "S01E10",
+        "source_title": "Cestovatel - 01x10 byDejv",
         "status": "needs_whisper"
       }
     ],
@@ -320447,16 +320517,16 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 59,
+    "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
-    "whisper_non_cz_needs_subtitles": 4459,
-    "whisper_confirmed_cz": 2700,
+    "whisper_non_cz_needs_subtitles": 4473,
+    "whisper_confirmed_cz": 2706,
     "whisper_failed": 39,
-    "needs_whisper": 61333
+    "needs_whisper": 61313
   },
   "subtitle_followup_statuses": {
-    "needs_subtitle_setup_after_prehrajto_processing": 17273
+    "needs_subtitle_setup_after_prehrajto_processing": 17279
   }
 }
