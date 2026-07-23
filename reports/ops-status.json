@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 157633,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 35754,
+    "uploaded_episodes": 35755,
     "prepared_source_episodes": 66730,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 60,
-    "language_whisper_attempted_sources": 60,
-    "language_pending_whisper_sources": 2604,
+    "language_audited_sources": 20,
+    "language_whisper_attempted_sources": 20,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 68009,
     "whisper_review_pending_sources": 61258,
     "subtitle_followup_sources": 16757,
@@ -19,19 +19,35 @@
   },
   "workflow_runs": [
     {
+      "conclusion": "success",
+      "createdAt": "2026-07-23T01:47:02Z",
+      "databaseId": 29972694478,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-23T01:46:59Z",
+      "databaseId": 29972692729,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "process-whisper-review"
+    },
+    {
       "conclusion": "",
       "createdAt": "2026-07-23T01:45:49Z",
       "databaseId": 29972643868,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-23T01:45:47Z",
       "databaseId": 29972643071,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -43,11 +59,11 @@
       "workflowName": "prepare-manifest"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-23T01:41:56Z",
       "databaseId": 29972474539,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -161,22 +177,6 @@
       "headBranch": "main",
       "status": "pending",
       "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-07-23T01:03:40Z",
-      "databaseId": 29970797353,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-23T00:59:33Z",
-      "databaseId": 29970600771,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
     }
   ],
   "gaps": {
@@ -156699,6 +156699,11 @@
         "episode_id": 35899,
         "display_name": "Red Rose S01E08 - Zahradník CZ Dabing",
         "video_id": 27769912
+      },
+      {
+        "episode_id": 104348,
+        "display_name": "Casual S04E04 - 4. epizoda CZ Titulky",
+        "video_id": 27770030
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -313116,6 +313121,11 @@
         "episode_id": 35899,
         "display_name": "Red Rose S01E08 - Zahradník CZ Dabing",
         "video_id": 27769912
+      },
+      {
+        "episode_id": 104348,
+        "display_name": "Casual S04E04 - 4. epizoda CZ Titulky",
+        "video_id": 27770030
       }
     ],
     "prepared_not_upload_ready": [
@@ -314277,7 +314287,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 59,
+    "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
