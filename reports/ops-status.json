@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 157156,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 36213,
+    "uploaded_episodes": 36214,
     "prepared_source_episodes": 67492,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 60,
-    "language_whisper_attempted_sources": 60,
-    "language_pending_whisper_sources": 2604,
+    "language_audited_sources": 20,
+    "language_whisper_attempted_sources": 20,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 68492,
     "whisper_review_pending_sources": 61596,
     "subtitle_followup_sources": 17117,
@@ -20,10 +20,42 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-07-23T13:15:02Z",
+      "databaseId": 30010387918,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-23T13:07:30Z",
+      "databaseId": 30009847843,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-sources"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-23T13:04:46Z",
+      "databaseId": 30009649993,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-23T13:03:16Z",
+      "databaseId": 30009543754,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-23T13:01:30Z",
       "databaseId": 30009417664,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-status"
     },
     {
@@ -145,38 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-23T12:20:09Z",
-      "databaseId": 30006572960,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-23T12:20:06Z",
-      "databaseId": 30006568934,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-23T12:15:53Z",
-      "databaseId": 30006296249,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-23T12:15:51Z",
-      "databaseId": 30006293215,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
     }
   ],
   "gaps": {
@@ -158994,6 +158994,11 @@
         "episode_id": 108151,
         "display_name": "Valeria S02E05 - Zhroucení CZ Dabing",
         "video_id": 27787705
+      },
+      {
+        "episode_id": 108153,
+        "display_name": "Valeria S02E07 - Záblesky CZ Dabing",
+        "video_id": 27787734
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -317706,6 +317711,11 @@
         "episode_id": 108151,
         "display_name": "Valeria S02E05 - Zhroucení CZ Dabing",
         "video_id": 27787705
+      },
+      {
+        "episode_id": 108153,
+        "display_name": "Valeria S02E07 - Záblesky CZ Dabing",
+        "video_id": 27787734
       }
     ],
     "prepared_not_upload_ready": [
@@ -318867,7 +318877,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 59,
+    "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
