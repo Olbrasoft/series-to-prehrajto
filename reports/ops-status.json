@@ -2,28 +2,84 @@
   "counts": {
     "backlog_episodes": 157429,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 36013,
-    "prepared_source_episodes": 67070,
+    "uploaded_episodes": 36026,
+    "prepared_source_episodes": 67130,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 188,
-    "language_whisper_attempted_sources": 79,
-    "language_pending_whisper_sources": 2604,
-    "whisper_review_sources": 68122,
-    "whisper_review_pending_sources": 61331,
-    "subtitle_followup_sources": 16909,
-    "subtitle_followup_pending_sources": 16909
+    "language_audited_sources": 289,
+    "language_whisper_attempted_sources": 20,
+    "language_pending_whisper_sources": 2624,
+    "whisper_review_sources": 68216,
+    "whisper_review_pending_sources": 61385,
+    "subtitle_followup_sources": 16932,
+    "subtitle_followup_pending_sources": 16932
   },
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-07-23T09:11:19Z",
+      "databaseId": 29994245636,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-23T09:10:08Z",
+      "databaseId": 29994162252,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-23T09:06:32Z",
+      "databaseId": 29993908229,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-23T09:02:21Z",
+      "databaseId": 29993610721,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-07-23T09:02:00Z",
+      "databaseId": 29993585664,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-23T08:50:18Z",
+      "databaseId": 29992655480,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-23T08:49:46Z",
+      "databaseId": 29992596244,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-23T08:48:24Z",
       "databaseId": 29992457362,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -35,19 +91,19 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-23T08:46:18Z",
       "databaseId": 29992265214,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-23T08:46:15Z",
       "databaseId": 29992261551,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -91,11 +147,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-07-23T08:25:37Z",
       "databaseId": 29991150392,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -121,62 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-status"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-23T08:17:37Z",
-      "databaseId": 29990760448,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-23T08:16:51Z",
-      "databaseId": 29990723639,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-23T07:59:54Z",
-      "databaseId": 29989873126,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-23T07:59:47Z",
-      "databaseId": 29989867201,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-23T07:59:41Z",
-      "databaseId": 29989861807,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-23T07:51:31Z",
-      "databaseId": 29989458707,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-23T07:51:29Z",
-      "databaseId": 29989456514,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
     }
   ],
   "gaps": {
@@ -157951,6 +157951,36 @@
         "video_id": 27782169
       },
       {
+        "episode_id": 81384,
+        "display_name": "Taxi Driver S01E14 - 14. epizoda CZ Titulky",
+        "video_id": 27782246
+      },
+      {
+        "episode_id": 81386,
+        "display_name": "Taxi Driver S01E16 - 16. epizoda CZ Titulky",
+        "video_id": 27782328
+      },
+      {
+        "episode_id": 81388,
+        "display_name": "Taxi Driver S02E02 - 2. epizoda CZ Titulky",
+        "video_id": 27782395
+      },
+      {
+        "episode_id": 81390,
+        "display_name": "Taxi Driver S02E06 - 6. epizoda CZ Titulky",
+        "video_id": 27782478
+      },
+      {
+        "episode_id": 81392,
+        "display_name": "Taxi Driver S02E09 - 9. epizoda CZ Titulky",
+        "video_id": 27782569
+      },
+      {
+        "episode_id": 81394,
+        "display_name": "Taxi Driver S02E11 - 11. epizoda CZ Titulky",
+        "video_id": 27782665
+      },
+      {
         "episode_id": 88061,
         "display_name": "Riviéra S02E04 - Renesance CZ Dabing",
         "video_id": 27781573
@@ -157994,6 +158024,41 @@
         "episode_id": 144603,
         "display_name": "Ničemové S01E02 - 2. epizoda CZ Titulky",
         "video_id": 27782151
+      },
+      {
+        "episode_id": 144609,
+        "display_name": "Ničemové S01E08 - 8. epizoda CZ Titulky",
+        "video_id": 27782199
+      },
+      {
+        "episode_id": 81371,
+        "display_name": "Taxi Driver S01E01 - 1. epizoda CZ Titulky",
+        "video_id": 27782254
+      },
+      {
+        "episode_id": 81373,
+        "display_name": "Taxi Driver S01E03 - 3. epizoda CZ Dabing",
+        "video_id": 27782353
+      },
+      {
+        "episode_id": 81375,
+        "display_name": "Taxi Driver S01E05 - 5. epizoda CZ Dabing",
+        "video_id": 27782416
+      },
+      {
+        "episode_id": 81377,
+        "display_name": "Taxi Driver S01E07 - 7. epizoda CZ Dabing",
+        "video_id": 27782450
+      },
+      {
+        "episode_id": 81379,
+        "display_name": "Taxi Driver S01E09 - 9. epizoda CZ Dabing",
+        "video_id": 27782517
+      },
+      {
+        "episode_id": 81381,
+        "display_name": "Taxi Driver S01E11 - 11. epizoda CZ Titulky",
+        "video_id": 27782577
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -315663,6 +315728,36 @@
         "video_id": 27782169
       },
       {
+        "episode_id": 81384,
+        "display_name": "Taxi Driver S01E14 - 14. epizoda CZ Titulky",
+        "video_id": 27782246
+      },
+      {
+        "episode_id": 81386,
+        "display_name": "Taxi Driver S01E16 - 16. epizoda CZ Titulky",
+        "video_id": 27782328
+      },
+      {
+        "episode_id": 81388,
+        "display_name": "Taxi Driver S02E02 - 2. epizoda CZ Titulky",
+        "video_id": 27782395
+      },
+      {
+        "episode_id": 81390,
+        "display_name": "Taxi Driver S02E06 - 6. epizoda CZ Titulky",
+        "video_id": 27782478
+      },
+      {
+        "episode_id": 81392,
+        "display_name": "Taxi Driver S02E09 - 9. epizoda CZ Titulky",
+        "video_id": 27782569
+      },
+      {
+        "episode_id": 81394,
+        "display_name": "Taxi Driver S02E11 - 11. epizoda CZ Titulky",
+        "video_id": 27782665
+      },
+      {
         "episode_id": 88061,
         "display_name": "Riviéra S02E04 - Renesance CZ Dabing",
         "video_id": 27781573
@@ -315706,6 +315801,41 @@
         "episode_id": 144603,
         "display_name": "Ničemové S01E02 - 2. epizoda CZ Titulky",
         "video_id": 27782151
+      },
+      {
+        "episode_id": 144609,
+        "display_name": "Ničemové S01E08 - 8. epizoda CZ Titulky",
+        "video_id": 27782199
+      },
+      {
+        "episode_id": 81371,
+        "display_name": "Taxi Driver S01E01 - 1. epizoda CZ Titulky",
+        "video_id": 27782254
+      },
+      {
+        "episode_id": 81373,
+        "display_name": "Taxi Driver S01E03 - 3. epizoda CZ Dabing",
+        "video_id": 27782353
+      },
+      {
+        "episode_id": 81375,
+        "display_name": "Taxi Driver S01E05 - 5. epizoda CZ Dabing",
+        "video_id": 27782416
+      },
+      {
+        "episode_id": 81377,
+        "display_name": "Taxi Driver S01E07 - 7. epizoda CZ Dabing",
+        "video_id": 27782450
+      },
+      {
+        "episode_id": 81379,
+        "display_name": "Taxi Driver S01E09 - 9. epizoda CZ Dabing",
+        "video_id": 27782517
+      },
+      {
+        "episode_id": 81381,
+        "display_name": "Taxi Driver S01E11 - 11. epizoda CZ Titulky",
+        "video_id": 27782577
       }
     ],
     "prepared_not_upload_ready": [
@@ -316044,6 +316174,30 @@
         "status": "whisper_failed"
       },
       {
+        "episode_id": 157047,
+        "source_id": -3606834788463981,
+        "series_title": "#blackAF",
+        "episode_code": "S01E06",
+        "source_title": "#blackAF - S1E6 hard to believe, but still because of slavery EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 157049,
+        "source_id": -31566933980306979,
+        "series_title": "#blackAF",
+        "episode_code": "S01E08",
+        "source_title": "#blackAF - S1E8 i know you may not get this, but the reason we deserve a vacation is..",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 157049,
+        "source_id": -19795742517959688,
+        "series_title": "#blackAF",
+        "episode_code": "S01E08",
+        "source_title": "#blackAF - S1E8 EN",
+        "status": "needs_whisper"
+      },
+      {
         "episode_id": 183563,
         "source_id": -12203798851234399,
         "series_title": "Blue",
@@ -316058,94 +316212,6 @@
         "episode_code": "S02E09",
         "source_title": "Bojovník - Warrior S02E09  .mkv",
         "status": "whisper_failed"
-      },
-      {
-        "episode_id": 107136,
-        "source_id": -13748263807861686,
-        "series_title": "Břemeno pravdy",
-        "episode_code": "S03E07",
-        "source_title": "Břemeno pravdy - S3E7 Name Your Ghosts EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 107137,
-        "source_id": -23146002730583267,
-        "series_title": "Břemeno pravdy",
-        "episode_code": "S03E08",
-        "source_title": "Břemeno pravdy - S3E8 Shelter from the Storm EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 107137,
-        "source_id": -10639905309320643,
-        "series_title": "Břemeno pravdy",
-        "episode_code": "S03E08",
-        "source_title": "Břemeno pravdy - S3E8 Epizóda 8 EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 107138,
-        "source_id": -65829376398536508,
-        "series_title": "Břemeno pravdy",
-        "episode_code": "S04E01",
-        "source_title": "Břemeno pravdy - S4E1 River City EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 107139,
-        "source_id": -4051593312648739,
-        "series_title": "Břemeno pravdy",
-        "episode_code": "S04E02",
-        "source_title": "Břemeno pravdy - S4E2 Breaking Points EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 107142,
-        "source_id": -14907738449653463,
-        "series_title": "Břemeno pravdy",
-        "episode_code": "S04E03",
-        "source_title": "Břemeno pravdy - S4E3 From Out the Gloomy Rack EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 107143,
-        "source_id": -6886170513673087,
-        "series_title": "Břemeno pravdy",
-        "episode_code": "S04E04",
-        "source_title": "Břemeno pravdy - S4E4 Scorched Earth EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 107144,
-        "source_id": -57608323618481879,
-        "series_title": "Břemeno pravdy",
-        "episode_code": "S04E05",
-        "source_title": "Břemeno pravdy - S4E5 Spirits in the Material World EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 107145,
-        "source_id": -32489820490097796,
-        "series_title": "Břemeno pravdy",
-        "episode_code": "S04E06",
-        "source_title": "Břemeno pravdy - S4E6 The Homecoming EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 107140,
-        "source_id": -4676133667006841,
-        "series_title": "Břemeno pravdy",
-        "episode_code": "S04E07",
-        "source_title": "Břemeno pravdy - S4E7 Where the Shadows Lie Waiting EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 107141,
-        "source_id": -65213348317763869,
-        "series_title": "Břemeno pravdy",
-        "episode_code": "S04E08",
-        "source_title": "Břemeno pravdy - S4E8 Standing by Peaceful Waters EN",
-        "status": "needs_whisper"
       },
       {
         "episode_id": 24693,
@@ -316410,6 +316476,70 @@
         "episode_code": "S02E01",
         "source_title": "Castle Rock - S2E1 Let The River Run EN",
         "status": "whisper_failed"
+      },
+      {
+        "episode_id": 104349,
+        "source_id": -28725095520623176,
+        "series_title": "Casual",
+        "episode_code": "S04E05",
+        "source_title": "Casual - S4E5 The Last Super Bowl EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104350,
+        "source_id": -48814366173494402,
+        "series_title": "Casual",
+        "episode_code": "S04E06",
+        "source_title": "Casual - S4E6 Faultless Bodies and Blameless Minds EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104351,
+        "source_id": -39541979908054615,
+        "series_title": "Casual",
+        "episode_code": "S04E07",
+        "source_title": "Casual - S4E7 All About You EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 104352,
+        "source_id": -34133164328352006,
+        "series_title": "Casual",
+        "episode_code": "S04E08",
+        "source_title": "Casual - S4E8 Finale EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 144997,
+        "source_id": -45387089390369585,
+        "series_title": "CAT: Práskači",
+        "episode_code": "S01E01",
+        "source_title": "CAT: Práskači - S1E1 Dohoda ID",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 144997,
+        "source_id": -28678908025485100,
+        "series_title": "CAT: Práskači",
+        "episode_code": "S01E01",
+        "source_title": "CAT: Práskači - S1E1 The Deal EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 144998,
+        "source_id": -13476949481670524,
+        "series_title": "CAT: Práskači",
+        "episode_code": "S01E02",
+        "source_title": "CAT: Práskači - S1E2 Invaze ID",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 144999,
+        "source_id": -58976331832817480,
+        "series_title": "CAT: Práskači",
+        "episode_code": "S01E03",
+        "source_title": "CAT: Práskači - S1E3 Podvodník ID",
+        "status": "needs_whisper"
       }
     ],
     "subtitle_followup_pending": [
@@ -316867,17 +316997,17 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 109,
-    "ok": 78,
+    "disabled": 269,
+    "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
-    "whisper_non_cz_needs_subtitles": 4249,
-    "whisper_confirmed_cz": 2542,
+    "whisper_non_cz_needs_subtitles": 4281,
+    "whisper_confirmed_cz": 2550,
     "whisper_failed": 39,
-    "needs_whisper": 61292
+    "needs_whisper": 61346
   },
   "subtitle_followup_statuses": {
-    "needs_subtitle_setup_after_prehrajto_processing": 16909
+    "needs_subtitle_setup_after_prehrajto_processing": 16932
   }
 }
