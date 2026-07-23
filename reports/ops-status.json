@@ -2,28 +2,76 @@
   "counts": {
     "backlog_episodes": 157633,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 35789,
-    "prepared_source_episodes": 66822,
+    "uploaded_episodes": 35794,
+    "prepared_source_episodes": 66819,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 253,
-    "language_whisper_attempted_sources": 70,
+    "language_audited_sources": 40,
+    "language_whisper_attempted_sources": 40,
     "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 68116,
-    "whisper_review_pending_sources": 61385,
+    "whisper_review_pending_sources": 61365,
     "subtitle_followup_sources": 16787,
     "subtitle_followup_pending_sources": 16787
   },
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-07-23T02:54:13Z",
+      "databaseId": 29975571586,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-23T02:54:07Z",
+      "databaseId": 29975567547,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-07-23T02:46:19Z",
+      "databaseId": 29975248832,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-23T02:37:30Z",
+      "databaseId": 29974882362,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-23T02:37:28Z",
+      "databaseId": 29974880562,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-23T02:37:26Z",
+      "databaseId": 29974879275,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-23T02:36:17Z",
       "databaseId": 29974832883,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -31,7 +79,7 @@
       "createdAt": "2026-07-23T02:32:58Z",
       "databaseId": 29974690543,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "prepare-manifest"
     },
     {
@@ -87,7 +135,7 @@
       "createdAt": "2026-07-23T02:21:17Z",
       "databaseId": 29974185255,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "sync"
     },
     {
@@ -95,15 +143,15 @@
       "createdAt": "2026-07-23T02:16:37Z",
       "databaseId": 29973983723,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "prepare-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "failure",
       "createdAt": "2026-07-23T01:54:49Z",
       "databaseId": 29973022459,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -126,54 +174,6 @@
       "conclusion": "success",
       "createdAt": "2026-07-23T01:48:24Z",
       "databaseId": 29972751537,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-23T01:47:02Z",
-      "databaseId": 29972694478,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-23T01:46:59Z",
-      "databaseId": 29972692729,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-23T01:45:49Z",
-      "databaseId": 29972643868,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-23T01:45:47Z",
-      "databaseId": 29972643071,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-07-23T01:45:44Z",
-      "databaseId": 29972640639,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-23T01:41:56Z",
-      "databaseId": 29972474539,
       "headBranch": "main",
       "status": "completed",
       "workflowName": "audit-language"
@@ -156874,6 +156874,31 @@
         "episode_id": 102137,
         "display_name": "Rosewood S02E03 - 3. epizoda CZ Titulky",
         "video_id": 27771365
+      },
+      {
+        "episode_id": 102141,
+        "display_name": "Rosewood S02E04 - 4. epizoda CZ Titulky",
+        "video_id": 27771467
+      },
+      {
+        "episode_id": 114533,
+        "display_name": "Caprica S01E17 - Tady jsou draci CZ Titulky",
+        "video_id": 27771600
+      },
+      {
+        "episode_id": 102143,
+        "display_name": "Rosewood S02E05 - 5. epizoda CZ Titulky",
+        "video_id": 27771764
+      },
+      {
+        "episode_id": 64989,
+        "display_name": "Camelot S01E03 - Guinevere CZ Titulky",
+        "video_id": 27771829
+      },
+      {
+        "episode_id": 102135,
+        "display_name": "Rosewood S02E06 - 6. epizoda CZ Titulky",
+        "video_id": 27771890
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -313466,6 +313491,31 @@
         "episode_id": 102137,
         "display_name": "Rosewood S02E03 - 3. epizoda CZ Titulky",
         "video_id": 27771365
+      },
+      {
+        "episode_id": 102141,
+        "display_name": "Rosewood S02E04 - 4. epizoda CZ Titulky",
+        "video_id": 27771467
+      },
+      {
+        "episode_id": 114533,
+        "display_name": "Caprica S01E17 - Tady jsou draci CZ Titulky",
+        "video_id": 27771600
+      },
+      {
+        "episode_id": 102143,
+        "display_name": "Rosewood S02E05 - 5. epizoda CZ Titulky",
+        "video_id": 27771764
+      },
+      {
+        "episode_id": 64989,
+        "display_name": "Camelot S01E03 - Guinevere CZ Titulky",
+        "video_id": 27771829
+      },
+      {
+        "episode_id": 102135,
+        "display_name": "Rosewood S02E06 - 6. epizoda CZ Titulky",
+        "video_id": 27771890
       }
     ],
     "prepared_not_upload_ready": [
@@ -313780,172 +313830,12 @@
         "status": "whisper_failed"
       },
       {
-        "episode_id": 152276,
-        "source_id": -50938376397694405,
-        "series_title": "Alien Nation",
-        "episode_code": "S01E05",
-        "source_title": "Alien.Nation.S01E05.Fifteen.With.Wanda.DVDRip.XviD-SAiNTS",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 152291,
-        "source_id": -29538175521434517,
-        "series_title": "Alien Nation",
-        "episode_code": "S01E07",
-        "source_title": "Alien.Nation.S01E07.The.First.Cigar",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 152284,
-        "source_id": -10184516384547207,
-        "series_title": "Alien Nation",
-        "episode_code": "S01E15",
-        "source_title": "Alien.Nation.S01E15.Generation.To.Generation.DVDRip.XviD-SAiNTS",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 152286,
-        "source_id": -37999239490117151,
-        "series_title": "Alien Nation",
-        "episode_code": "S01E18",
-        "source_title": "Alien.Nation.S01E18.Real.Men.DVDRip.XviD-SAiNTS",
-        "status": "needs_whisper"
-      },
-      {
         "episode_id": 175038,
         "source_id": -11151980550350308,
         "series_title": "All or Nothing: Tottenham Hotspur",
         "episode_code": "S01E04",
         "source_title": "All or Nothing: Tottenham Hotspur - S1E4 EN",
         "status": "whisper_failed"
-      },
-      {
-        "episode_id": 98200,
-        "source_id": -61161370262696296,
-        "series_title": "Aquí no hay quien viva",
-        "episode_code": "S03E16",
-        "source_title": "Aqui.no.hay.quien.viva.3x16.-.Erase.unos.estatutos.[DVDRip.by.Juaniyo.&.KNagisa][TusSeries-ComedyRip]",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 98201,
-        "source_id": -62434473082621519,
-        "series_title": "Aquí no hay quien viva",
-        "episode_code": "S03E19",
-        "source_title": "Aqui.no.hay.quien.viva.3x19.-.Erase.un.discopub.videoclub.[DVDRip.by.Juaniyo.&.KNagisa][TusSeries-Comedy",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 98202,
-        "source_id": -61668485917779873,
-        "series_title": "Aquí no hay quien viva",
-        "episode_code": "S03E20",
-        "source_title": "Aqui.no.hay.quien.viva.3x20.-.Erase.un.cobaya.[DVDRip.by.Juaniyo.&.KNagisa][TusSeries-ComedyRip]",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 98203,
-        "source_id": -24701766335285086,
-        "series_title": "Aquí no hay quien viva",
-        "episode_code": "S03E21",
-        "source_title": "Aqui.no.hay.quien.viva.3x21.-.Erase.un.premio.[DVDRip.by.Juaniyo.&.KNagisa][TusSeries-ComedyRip]",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 98204,
-        "source_id": -6527473721113149,
-        "series_title": "Aquí no hay quien viva",
-        "episode_code": "S03E22",
-        "source_title": "Aqui.no.hay.quien.viva.3x22.-.Erase.unas.puertas.blindadas.[DVDRip.by.Juaniyo.&.KNagisa][TusSeries-Comed",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 98205,
-        "source_id": -55145378250633914,
-        "series_title": "Aquí no hay quien viva",
-        "episode_code": "S03E23",
-        "source_title": "Aqui.no.hay.quien.viva.3x23.-.Erase.un.vicio.[DVDRip.by.Juaniyo.&.KNagisa][TusSeries-Comed",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 98206,
-        "source_id": -65708270834172777,
-        "series_title": "Aquí no hay quien viva",
-        "episode_code": "S03E24",
-        "source_title": "Aqui.no.hay.quien.viva.3x24.-.Erase.un.administrador.[DVDRip.by.Juaniyo.&.KNagisa][TusSeries-Comed",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 98207,
-        "source_id": -24398738795130884,
-        "series_title": "Aquí no hay quien viva",
-        "episode_code": "S03E25",
-        "source_title": "Aqui.no.hay.quien.viva.3x25.-.Erase.una.traicion.[DVDRip.by.Juaniyo.&.KNagisa][TusSeries-Comed",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 98207,
-        "source_id": -59884698802607158,
-        "series_title": "Aquí no hay quien viva",
-        "episode_code": "S03E25",
-        "source_title": "Aqui.no.hay.quien.viva.3x25b.-.Erase.una.visita.guiada.[DVDRip.by.Juaniyo.&.KNagisa][TusSeries-ComedyRip]",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 98208,
-        "source_id": -19079452939095059,
-        "series_title": "Aquí no hay quien viva",
-        "episode_code": "S03E26",
-        "source_title": "Aqui.no.hay.quien.viva.3x26.-.Erase.el.primer.presidente.gay.[DVDRip.by.Juaniyo.&.KNagisa][TusSeries-Comed",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 98209,
-        "source_id": -66852282752152428,
-        "series_title": "Aquí no hay quien viva",
-        "episode_code": "S03E27",
-        "source_title": "Aqui.no.hay.quien.viva.3x27.-.Erase.una.tragaperras.[DVDRip.by.Juaniyo.&.KNagisa][TusSeries-Comed",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 98210,
-        "source_id": -18416367609873098,
-        "series_title": "Aquí no hay quien viva",
-        "episode_code": "S03E28",
-        "source_title": "Aqui.no.hay.quien.viva.3x28.-.Erase.un.desgobierno.[DVDRip.by.Juaniyo.&.KNagisa][TusSeries-Comedy",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 98211,
-        "source_id": -52230518645626742,
-        "series_title": "Aquí no hay quien viva",
-        "episode_code": "S03E30",
-        "source_title": "Aqui.no.hay.quien.viva.3x30.-.Erase.otra.boda.[DVDRip.by.Juaniyo.&.KNagisa][TusSeries-ComedyRip]",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 98212,
-        "source_id": -57661301221804323,
-        "series_title": "Aquí no hay quien viva",
-        "episode_code": "S03E31",
-        "source_title": "Aqui.no.hay.quien.viva.3x31.-.Erase.una.luna.de.miel.[DVDRip.by.Juaniyo.&.KNagisa][TusSeries-Come",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 98213,
-        "source_id": -66445646721956438,
-        "series_title": "Aquí no hay quien viva",
-        "episode_code": "S03E32",
-        "source_title": "Aqui.no.hay.quien.viva.3x32.-.Erase.un.cirujano.plastico.[DVDRip.by.Osiris][TusSeries-ComedyRip]",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 98214,
-        "source_id": -43118738720889082,
-        "series_title": "Aquí no hay quien viva",
-        "episode_code": "S03E33",
-        "source_title": "Aqui.no.hay.quien.viva.3x33.-.Erase.unas.vacaciones.[DVDRip.by.Osiris][TusSeries-ComedyRip]",
-        "status": "needs_whisper"
       },
       {
         "episode_id": 98222,
@@ -314169,6 +314059,166 @@
         "series_title": "Břemeno pravdy",
         "episode_code": "S02E04",
         "source_title": "Břemeno pravdy - S2E4 Guilt by Association EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 107125,
+        "source_id": -21083086930381603,
+        "series_title": "Břemeno pravdy",
+        "episode_code": "S02E04",
+        "source_title": "Břemeno pravdy - S2E4 Guilt By Association EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 107126,
+        "source_id": -52695950894403079,
+        "series_title": "Břemeno pravdy",
+        "episode_code": "S02E05",
+        "source_title": "Břemeno pravdy - S2E5 Cold, Tired and Hungry EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 107127,
+        "source_id": -45473911446967059,
+        "series_title": "Břemeno pravdy",
+        "episode_code": "S02E06",
+        "source_title": "Břemeno pravdy - S2E6 Manic Street Preacher EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 107129,
+        "source_id": -4116079771805242,
+        "series_title": "Břemeno pravdy",
+        "episode_code": "S02E07",
+        "source_title": "Břemeno pravdy - S2E7 Never Face the Hangman EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 107129,
+        "source_id": -17943760846326687,
+        "series_title": "Břemeno pravdy",
+        "episode_code": "S02E07",
+        "source_title": "Břemeno pravdy - S2E7 Never Face The Hangman EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 107130,
+        "source_id": -45491043921736572,
+        "series_title": "Břemeno pravdy",
+        "episode_code": "S02E08",
+        "source_title": "Břemeno pravdy - S2E8 The Right Road EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 107128,
+        "source_id": -67799262601876570,
+        "series_title": "Břemeno pravdy",
+        "episode_code": "S03E01",
+        "source_title": "Břemeno pravdy - S3E1 Crawford Chang EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 107128,
+        "source_id": -54710796070238348,
+        "series_title": "Břemeno pravdy",
+        "episode_code": "S03E01",
+        "source_title": "Břemeno pravdy - S3E1 Crawford Chang EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 107131,
+        "source_id": -34833527782337590,
+        "series_title": "Břemeno pravdy",
+        "episode_code": "S03E02",
+        "source_title": "Břemeno pravdy - S3E2 Wherever You Go EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 107132,
+        "source_id": -70463412183729195,
+        "series_title": "Břemeno pravdy",
+        "episode_code": "S03E03",
+        "source_title": "Břemeno pravdy - S3E3 No Fathers and Sons EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 107133,
+        "source_id": -28098061775251494,
+        "series_title": "Břemeno pravdy",
+        "episode_code": "S03E04",
+        "source_title": "Břemeno pravdy - S3E4 Desperate Measures EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 107134,
+        "source_id": -7735672806245660,
+        "series_title": "Břemeno pravdy",
+        "episode_code": "S03E05",
+        "source_title": "Břemeno pravdy - S3E5 Crisis of Faith EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 107134,
+        "source_id": -15255678392024989,
+        "series_title": "Břemeno pravdy",
+        "episode_code": "S03E05",
+        "source_title": "Břemeno pravdy - S3E5 Crisis Of Faith EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 107135,
+        "source_id": -17952628604790239,
+        "series_title": "Břemeno pravdy",
+        "episode_code": "S03E06",
+        "source_title": "Břemeno pravdy - S3E6 It Takes a Village EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 107135,
+        "source_id": -645834596906102,
+        "series_title": "Břemeno pravdy",
+        "episode_code": "S03E06",
+        "source_title": "Břemeno pravdy - S3E6 It Takes A Village EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 107136,
+        "source_id": -17322494146424359,
+        "series_title": "Břemeno pravdy",
+        "episode_code": "S03E07",
+        "source_title": "Břemeno pravdy - S3E7 Name Your Ghosts EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 107136,
+        "source_id": -13748263807861686,
+        "series_title": "Břemeno pravdy",
+        "episode_code": "S03E07",
+        "source_title": "Břemeno pravdy - S3E7 Name Your Ghosts EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 107137,
+        "source_id": -23146002730583267,
+        "series_title": "Břemeno pravdy",
+        "episode_code": "S03E08",
+        "source_title": "Břemeno pravdy - S3E8 Shelter from the Storm EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 107137,
+        "source_id": -10639905309320643,
+        "series_title": "Břemeno pravdy",
+        "episode_code": "S03E08",
+        "source_title": "Břemeno pravdy - S3E8 Epizóda 8 EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 107138,
+        "source_id": -65829376398536508,
+        "series_title": "Břemeno pravdy",
+        "episode_code": "S04E01",
+        "source_title": "Břemeno pravdy - S4E1 River City EN",
         "status": "needs_whisper"
       }
     ],
@@ -314627,15 +314677,14 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 183,
-    "ok": 69,
+    "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
-    "whisper_non_cz_needs_subtitles": 4189,
+    "whisper_non_cz_needs_subtitles": 4209,
     "whisper_confirmed_cz": 2542,
     "whisper_failed": 39,
-    "needs_whisper": 61346
+    "needs_whisper": 61326
   },
   "subtitle_followup_statuses": {
     "needs_subtitle_setup_after_prehrajto_processing": 16787
