@@ -1,37 +1,93 @@
 {
   "counts": {
-    "backlog_episodes": 156826,
+    "backlog_episodes": 156639,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 36714,
-    "prepared_source_episodes": 68657,
+    "uploaded_episodes": 36751,
+    "prepared_source_episodes": 68763,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 162,
-    "language_whisper_attempted_sources": 79,
-    "language_pending_whisper_sources": 2604,
-    "whisper_review_sources": 68902,
-    "whisper_review_pending_sources": 61723,
-    "subtitle_followup_sources": 17576,
-    "subtitle_followup_pending_sources": 17576
+    "language_audited_sources": 155,
+    "language_whisper_attempted_sources": 20,
+    "language_pending_whisper_sources": 2624,
+    "whisper_review_sources": 69023,
+    "whisper_review_pending_sources": 61884,
+    "subtitle_followup_sources": 17587,
+    "subtitle_followup_pending_sources": 17587
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-07-24T03:58:01Z",
-      "databaseId": 30065551660,
+      "createdAt": "2026-07-24T04:37:16Z",
+      "databaseId": 30067267038,
       "headBranch": "main",
       "status": "in_progress",
-      "workflowName": "ops-watchdog"
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-24T04:36:27Z",
+      "databaseId": 30067232103,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-07-24T04:35:49Z",
+      "databaseId": 30067205551,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-24T04:08:04Z",
+      "databaseId": 30065991903,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "failure",
+      "createdAt": "2026-07-24T04:07:41Z",
+      "databaseId": 30065976104,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-24T04:07:35Z",
+      "databaseId": 30065971253,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "refresh-backlog"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-24T03:59:11Z",
+      "databaseId": 30065598952,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-24T03:58:01Z",
+      "databaseId": 30065551660,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "cancelled",
       "createdAt": "2026-07-24T03:57:57Z",
       "databaseId": 30065549140,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -43,19 +99,19 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-24T03:51:55Z",
       "databaseId": 30065297622,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-24T03:51:53Z",
       "databaseId": 30065295993,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -118,62 +174,6 @@
       "conclusion": "cancelled",
       "createdAt": "2026-07-24T03:33:57Z",
       "databaseId": 30064544280,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-24T03:20:05Z",
-      "databaseId": 30063959057,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-24T03:16:58Z",
-      "databaseId": 30063830810,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-24T03:16:55Z",
-      "databaseId": 30063828741,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-24T03:16:53Z",
-      "databaseId": 30063827193,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-07-24T03:16:12Z",
-      "databaseId": 30063798952,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-24T03:15:38Z",
-      "databaseId": 30063773967,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-07-24T03:15:32Z",
-      "databaseId": 30063770233,
       "headBranch": "main",
       "status": "completed",
       "workflowName": "prepare-manifest"
@@ -161499,6 +161499,191 @@
         "episode_id": 143997,
         "display_name": "Předstírejme, že je to v pořádku S01E07 - Knihovnické služby CZ Titulky",
         "video_id": 27804485
+      },
+      {
+        "episode_id": 17718,
+        "display_name": "Motýlek S01E06 - Annyeong CZ Dabing",
+        "video_id": 27804577
+      },
+      {
+        "episode_id": 130082,
+        "display_name": "BOCCHI THE ROCK! S01E02 - 2. epizoda CZ Titulky",
+        "video_id": 27804616
+      },
+      {
+        "episode_id": 130084,
+        "display_name": "BOCCHI THE ROCK! S01E04 - 4. epizoda CZ Titulky",
+        "video_id": 27804632
+      },
+      {
+        "episode_id": 154712,
+        "display_name": "This Way Up S01E06 - 6. epizoda CZ Titulky",
+        "video_id": 27804651
+      },
+      {
+        "episode_id": 117162,
+        "display_name": "Colin v černobílém S01E02 - Quarterback CZ Dabing",
+        "video_id": 27804668
+      },
+      {
+        "episode_id": 117166,
+        "display_name": "Colin v černobílém S01E06 - Drahý Coline CZ Dabing",
+        "video_id": 27804720
+      },
+      {
+        "episode_id": 131664,
+        "display_name": "Nash Bridges S01E01 - 1. epizoda CZ Dabing",
+        "video_id": 27804742
+      },
+      {
+        "episode_id": 131666,
+        "display_name": "Nash Bridges S01E03 - 3. epizoda CZ Dabing",
+        "video_id": 27804782
+      },
+      {
+        "episode_id": 131668,
+        "display_name": "Nash Bridges S01E06 - 6. epizoda CZ Dabing",
+        "video_id": 27804821
+      },
+      {
+        "episode_id": 131670,
+        "display_name": "Nash Bridges S02E02 - 2. epizoda CZ Dabing",
+        "video_id": 27804867
+      },
+      {
+        "episode_id": 131672,
+        "display_name": "Nash Bridges S02E21 - 21. epizoda CZ Dabing",
+        "video_id": 27804912
+      },
+      {
+        "episode_id": 131674,
+        "display_name": "Nash Bridges S03E01 - 1. epizoda CZ Dabing",
+        "video_id": 27804959
+      },
+      {
+        "episode_id": 131676,
+        "display_name": "Nash Bridges S03E03 - 3. epizoda CZ Dabing",
+        "video_id": 27804991
+      },
+      {
+        "episode_id": 131678,
+        "display_name": "Nash Bridges S03E05 - 5. epizoda CZ Dabing",
+        "video_id": 27805035
+      },
+      {
+        "episode_id": 131680,
+        "display_name": "Nash Bridges S03E07 - 7. epizoda CZ Dabing",
+        "video_id": 27805077
+      },
+      {
+        "episode_id": 131682,
+        "display_name": "Nash Bridges S03E09 - 9. epizoda CZ Dabing",
+        "video_id": 27805103
+      },
+      {
+        "episode_id": 131684,
+        "display_name": "Nash Bridges S03E11 - 11. epizoda CZ Dabing",
+        "video_id": 27805138
+      },
+      {
+        "episode_id": 148957,
+        "display_name": "Širé moře S03E02 - Masky CZ Titulky",
+        "video_id": 27804582
+      },
+      {
+        "episode_id": 148959,
+        "display_name": "Širé moře S03E04 - Chytat stíny CZ Titulky",
+        "video_id": 27804605
+      },
+      {
+        "episode_id": 148961,
+        "display_name": "Širé moře S03E06 - Věčné moře CZ Titulky",
+        "video_id": 27804631
+      },
+      {
+        "episode_id": 130539,
+        "display_name": "Láska je láska: Generace Q S02E02 - Opři se o mě… CZ Dabing",
+        "video_id": 27804655
+      },
+      {
+        "episode_id": 130541,
+        "display_name": "Láska je láska: Generace Q S02E07 - Světlo CZ Dabing",
+        "video_id": 27804683
+      },
+      {
+        "episode_id": 130549,
+        "display_name": "Láska je láska: Generace Q S02E09 - Poslední tanec CZ Dabing",
+        "video_id": 27804718
+      },
+      {
+        "episode_id": 130545,
+        "display_name": "Láska je láska: Generace Q S02E10 - Poslední výzva CZ Dabing",
+        "video_id": 27804738
+      },
+      {
+        "episode_id": 177791,
+        "display_name": "Přežít! S01E03 - Zločin a trest CZ Dabing",
+        "video_id": 27804764
+      },
+      {
+        "episode_id": 177793,
+        "display_name": "Přežít! S01E05 - Falešný prorok CZ Dabing",
+        "video_id": 27804790
+      },
+      {
+        "episode_id": 176013,
+        "display_name": "Přežít! S02E02 - Procitnutí CZ Dabing",
+        "video_id": 27804816
+      },
+      {
+        "episode_id": 176015,
+        "display_name": "Přežít! S02E04 - Dole v dole CZ Dabing",
+        "video_id": 27804850
+      },
+      {
+        "episode_id": 176017,
+        "display_name": "Přežít! S02E06 - Naděje nikdy neumírá CZ Dabing",
+        "video_id": 27804872
+      },
+      {
+        "episode_id": 17715,
+        "display_name": "Motýlek S01E01 - Pilot CZ Dabing",
+        "video_id": 27804891
+      },
+      {
+        "episode_id": 17713,
+        "display_name": "Motýlek S01E03 - Pusan CZ Dabing",
+        "video_id": 27804923
+      },
+      {
+        "episode_id": 17717,
+        "display_name": "Motýlek S01E05 - Soul CZ Dabing",
+        "video_id": 27804956
+      },
+      {
+        "episode_id": 130081,
+        "display_name": "BOCCHI THE ROCK! S01E01 - 1. epizoda CZ Titulky",
+        "video_id": 27804998
+      },
+      {
+        "episode_id": 130083,
+        "display_name": "BOCCHI THE ROCK! S01E03 - 3. epizoda CZ Titulky",
+        "video_id": 27805012
+      },
+      {
+        "episode_id": 130085,
+        "display_name": "BOCCHI THE ROCK! S01E05 - 5. epizoda CZ Titulky",
+        "video_id": 27805030
+      },
+      {
+        "episode_id": 117161,
+        "display_name": "Colin v černobílém S01E01 - Kukuřice CZ Dabing",
+        "video_id": 27805058
+      },
+      {
+        "episode_id": 117163,
+        "display_name": "Colin v černobílém S01E03 - Road trip CZ Dabing",
+        "video_id": 27805082
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -322716,6 +322901,191 @@
         "episode_id": 143997,
         "display_name": "Předstírejme, že je to v pořádku S01E07 - Knihovnické služby CZ Titulky",
         "video_id": 27804485
+      },
+      {
+        "episode_id": 17718,
+        "display_name": "Motýlek S01E06 - Annyeong CZ Dabing",
+        "video_id": 27804577
+      },
+      {
+        "episode_id": 130082,
+        "display_name": "BOCCHI THE ROCK! S01E02 - 2. epizoda CZ Titulky",
+        "video_id": 27804616
+      },
+      {
+        "episode_id": 130084,
+        "display_name": "BOCCHI THE ROCK! S01E04 - 4. epizoda CZ Titulky",
+        "video_id": 27804632
+      },
+      {
+        "episode_id": 154712,
+        "display_name": "This Way Up S01E06 - 6. epizoda CZ Titulky",
+        "video_id": 27804651
+      },
+      {
+        "episode_id": 117162,
+        "display_name": "Colin v černobílém S01E02 - Quarterback CZ Dabing",
+        "video_id": 27804668
+      },
+      {
+        "episode_id": 117166,
+        "display_name": "Colin v černobílém S01E06 - Drahý Coline CZ Dabing",
+        "video_id": 27804720
+      },
+      {
+        "episode_id": 131664,
+        "display_name": "Nash Bridges S01E01 - 1. epizoda CZ Dabing",
+        "video_id": 27804742
+      },
+      {
+        "episode_id": 131666,
+        "display_name": "Nash Bridges S01E03 - 3. epizoda CZ Dabing",
+        "video_id": 27804782
+      },
+      {
+        "episode_id": 131668,
+        "display_name": "Nash Bridges S01E06 - 6. epizoda CZ Dabing",
+        "video_id": 27804821
+      },
+      {
+        "episode_id": 131670,
+        "display_name": "Nash Bridges S02E02 - 2. epizoda CZ Dabing",
+        "video_id": 27804867
+      },
+      {
+        "episode_id": 131672,
+        "display_name": "Nash Bridges S02E21 - 21. epizoda CZ Dabing",
+        "video_id": 27804912
+      },
+      {
+        "episode_id": 131674,
+        "display_name": "Nash Bridges S03E01 - 1. epizoda CZ Dabing",
+        "video_id": 27804959
+      },
+      {
+        "episode_id": 131676,
+        "display_name": "Nash Bridges S03E03 - 3. epizoda CZ Dabing",
+        "video_id": 27804991
+      },
+      {
+        "episode_id": 131678,
+        "display_name": "Nash Bridges S03E05 - 5. epizoda CZ Dabing",
+        "video_id": 27805035
+      },
+      {
+        "episode_id": 131680,
+        "display_name": "Nash Bridges S03E07 - 7. epizoda CZ Dabing",
+        "video_id": 27805077
+      },
+      {
+        "episode_id": 131682,
+        "display_name": "Nash Bridges S03E09 - 9. epizoda CZ Dabing",
+        "video_id": 27805103
+      },
+      {
+        "episode_id": 131684,
+        "display_name": "Nash Bridges S03E11 - 11. epizoda CZ Dabing",
+        "video_id": 27805138
+      },
+      {
+        "episode_id": 148957,
+        "display_name": "Širé moře S03E02 - Masky CZ Titulky",
+        "video_id": 27804582
+      },
+      {
+        "episode_id": 148959,
+        "display_name": "Širé moře S03E04 - Chytat stíny CZ Titulky",
+        "video_id": 27804605
+      },
+      {
+        "episode_id": 148961,
+        "display_name": "Širé moře S03E06 - Věčné moře CZ Titulky",
+        "video_id": 27804631
+      },
+      {
+        "episode_id": 130539,
+        "display_name": "Láska je láska: Generace Q S02E02 - Opři se o mě… CZ Dabing",
+        "video_id": 27804655
+      },
+      {
+        "episode_id": 130541,
+        "display_name": "Láska je láska: Generace Q S02E07 - Světlo CZ Dabing",
+        "video_id": 27804683
+      },
+      {
+        "episode_id": 130549,
+        "display_name": "Láska je láska: Generace Q S02E09 - Poslední tanec CZ Dabing",
+        "video_id": 27804718
+      },
+      {
+        "episode_id": 130545,
+        "display_name": "Láska je láska: Generace Q S02E10 - Poslední výzva CZ Dabing",
+        "video_id": 27804738
+      },
+      {
+        "episode_id": 177791,
+        "display_name": "Přežít! S01E03 - Zločin a trest CZ Dabing",
+        "video_id": 27804764
+      },
+      {
+        "episode_id": 177793,
+        "display_name": "Přežít! S01E05 - Falešný prorok CZ Dabing",
+        "video_id": 27804790
+      },
+      {
+        "episode_id": 176013,
+        "display_name": "Přežít! S02E02 - Procitnutí CZ Dabing",
+        "video_id": 27804816
+      },
+      {
+        "episode_id": 176015,
+        "display_name": "Přežít! S02E04 - Dole v dole CZ Dabing",
+        "video_id": 27804850
+      },
+      {
+        "episode_id": 176017,
+        "display_name": "Přežít! S02E06 - Naděje nikdy neumírá CZ Dabing",
+        "video_id": 27804872
+      },
+      {
+        "episode_id": 17715,
+        "display_name": "Motýlek S01E01 - Pilot CZ Dabing",
+        "video_id": 27804891
+      },
+      {
+        "episode_id": 17713,
+        "display_name": "Motýlek S01E03 - Pusan CZ Dabing",
+        "video_id": 27804923
+      },
+      {
+        "episode_id": 17717,
+        "display_name": "Motýlek S01E05 - Soul CZ Dabing",
+        "video_id": 27804956
+      },
+      {
+        "episode_id": 130081,
+        "display_name": "BOCCHI THE ROCK! S01E01 - 1. epizoda CZ Titulky",
+        "video_id": 27804998
+      },
+      {
+        "episode_id": 130083,
+        "display_name": "BOCCHI THE ROCK! S01E03 - 3. epizoda CZ Titulky",
+        "video_id": 27805012
+      },
+      {
+        "episode_id": 130085,
+        "display_name": "BOCCHI THE ROCK! S01E05 - 5. epizoda CZ Titulky",
+        "video_id": 27805030
+      },
+      {
+        "episode_id": 117161,
+        "display_name": "Colin v černobílém S01E01 - Kukuřice CZ Dabing",
+        "video_id": 27805058
+      },
+      {
+        "episode_id": 117163,
+        "display_name": "Colin v černobílém S01E03 - Road trip CZ Dabing",
+        "video_id": 27805082
       }
     ],
     "prepared_not_upload_ready": [
@@ -323038,6 +323408,326 @@
         "status": "whisper_failed"
       },
       {
+        "episode_id": 102714,
+        "source_id": -21257002601066014,
+        "series_title": "Astrid a Raphaëlle",
+        "episode_code": "S01E01",
+        "source_title": "Astrid.a.Raphaelle.S01E01.1080p.WEB.H264-SK-dab",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 102714,
+        "source_id": -9664903882521888,
+        "series_title": "Astrid a Raphaëlle",
+        "episode_code": "S01E01",
+        "source_title": "Astrid a Raphaelle S01E01 - Hantise (2020) krimi skdab.mkv",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 102714,
+        "source_id": -7798983141705537,
+        "series_title": "Astrid a Raphaëlle",
+        "episode_code": "S01E01",
+        "source_title": "Astrid a Raphaelle S01E01 SKdab",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 102714,
+        "source_id": -11114019737606421,
+        "series_title": "Astrid a Raphaëlle",
+        "episode_code": "S01E01",
+        "source_title": "Astrid a Raphaëlle - S1E1 Hantise SK",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 102714,
+        "source_id": -32261374817456998,
+        "series_title": "Astrid a Raphaëlle",
+        "episode_code": "S01E01",
+        "source_title": "Astrid a Raphaelle, S01E01, 2019, SK",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 102716,
+        "source_id": -57956400971608799,
+        "series_title": "Astrid a Raphaëlle",
+        "episode_code": "S01E03",
+        "source_title": "Astrid a Raphaelle S01E03 - Chainon manquant (2020) krimi skdab.mkv",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 102716,
+        "source_id": -50499170244226304,
+        "series_title": "Astrid a Raphaëlle",
+        "episode_code": "S01E03",
+        "source_title": "Astrid.a.Raphaelle.S01E03.1080p.WEB.H264-SK-dab",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 102716,
+        "source_id": -71072508521934218,
+        "series_title": "Astrid a Raphaëlle",
+        "episode_code": "S01E03",
+        "source_title": "Astrid a Raphaelle S01E03 SKdab",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 102716,
+        "source_id": -72014794778356250,
+        "series_title": "Astrid a Raphaëlle",
+        "episode_code": "S01E03",
+        "source_title": "Astrid a Raphaelle, S01E03 S01E04, 2019, SK",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 102716,
+        "source_id": -54351677121764787,
+        "series_title": "Astrid a Raphaëlle",
+        "episode_code": "S01E03",
+        "source_title": "Astrid a Raphaëlle - S1E3 Chaînon manquant SK",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 102718,
+        "source_id": -62281336287225741,
+        "series_title": "Astrid a Raphaëlle",
+        "episode_code": "S01E05",
+        "source_title": "Astrid.a.Raphaelle.S01E05.1080p.WEB.H264-SK-dab",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 102718,
+        "source_id": -60768936140404499,
+        "series_title": "Astrid a Raphaëlle",
+        "episode_code": "S01E05",
+        "source_title": "Astrid a Raphaelle S01E05 - Fulcanelli (2020) krimi skdab.mkv",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 102718,
+        "source_id": -37246030636374413,
+        "series_title": "Astrid a Raphaëlle",
+        "episode_code": "S01E05",
+        "source_title": "Astrid a Raphaëlle S01E05 SKdab",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 102718,
+        "source_id": -29114011009296672,
+        "series_title": "Astrid a Raphaëlle",
+        "episode_code": "S01E05",
+        "source_title": "Astrid a Raphaëlle - S1E5 Epizoda 5 SK",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 102718,
+        "source_id": -44632125037587970,
+        "series_title": "Astrid a Raphaëlle",
+        "episode_code": "S01E05",
+        "source_title": "Astrid a Raphaelle, S01E05, 2019, SK",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 102720,
+        "source_id": -67654425690461557,
+        "series_title": "Astrid a Raphaëlle",
+        "episode_code": "S01E07",
+        "source_title": "Astrid.a.Raphaelle.S01E07.1080p.WEB.H264-SK-dab",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 102720,
+        "source_id": -17475469576034546,
+        "series_title": "Astrid a Raphaëlle",
+        "episode_code": "S01E07",
+        "source_title": "Astrid a Raphaelle S01E07 - La Mort et compagnie (2020) krimi skdab.mkv",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 102720,
+        "source_id": -42740724462397407,
+        "series_title": "Astrid a Raphaëlle",
+        "episode_code": "S01E07",
+        "source_title": "Astrid a Raphaëlle S01E07 SKdab",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 102720,
+        "source_id": -67662862899091260,
+        "series_title": "Astrid a Raphaëlle",
+        "episode_code": "S01E07",
+        "source_title": "Astrid a Raphaëlle - S1E7 Epizoda 7 SK",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 102720,
+        "source_id": -65619772528744218,
+        "series_title": "Astrid a Raphaëlle",
+        "episode_code": "S01E07",
+        "source_title": "Astrid a Raphaelle, S01E07, 2019, SK",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 102722,
+        "source_id": -51879093745416536,
+        "series_title": "Astrid a Raphaëlle",
+        "episode_code": "S02E01",
+        "source_title": "Astrid.a.Raphaelle.S02E01.1080p.WEB.H264-SK-dab",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 102722,
+        "source_id": -25834842842149440,
+        "series_title": "Astrid a Raphaëlle",
+        "episode_code": "S02E01",
+        "source_title": "Astrid a Raphaelle S02E01 - L´Étourneau (2021) krimi skdab.mkv",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 102722,
+        "source_id": -6225251224903063,
+        "series_title": "Astrid a Raphaëlle",
+        "episode_code": "S02E01",
+        "source_title": "Astrid a Raphaelle S02E01 SKdab",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 102722,
+        "source_id": -68477062019446811,
+        "series_title": "Astrid a Raphaëlle",
+        "episode_code": "S02E01",
+        "source_title": "Astrid a Raphaëlle - S2E1 L'Étourneau SK",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 102724,
+        "source_id": -41152363429380304,
+        "series_title": "Astrid a Raphaëlle",
+        "episode_code": "S02E03",
+        "source_title": "Astrid a Raphaelle S02E03 - Le Paradoxe de Fermi (2021) krimi skdab.mkv",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 102724,
+        "source_id": -37392094041447849,
+        "series_title": "Astrid a Raphaëlle",
+        "episode_code": "S02E03",
+        "source_title": "Astrid.a.Raphaelle.S02E03.1080p.WEB.H264-SK-dab",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 102724,
+        "source_id": -16863528921763778,
+        "series_title": "Astrid a Raphaëlle",
+        "episode_code": "S02E03",
+        "source_title": "Astrid a Raphaelle S02E03 SKdab",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 102724,
+        "source_id": -10286637769416910,
+        "series_title": "Astrid a Raphaëlle",
+        "episode_code": "S02E03",
+        "source_title": "Astrid a Raphaëlle - S2E3 Le Paradoxe de Fermi SK",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 102726,
+        "source_id": -65920505762068643,
+        "series_title": "Astrid a Raphaëlle",
+        "episode_code": "S02E05",
+        "source_title": "Astrid.a.Raphaelle.S02E05.1080p.WEB.H264-SK-dab",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 102726,
+        "source_id": -49024680329940727,
+        "series_title": "Astrid a Raphaëlle",
+        "episode_code": "S02E05",
+        "source_title": "Astrid a Raphaelle S02E05 - Circé (2021) krimi skdab.mkv",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 102726,
+        "source_id": -8545626693555267,
+        "series_title": "Astrid a Raphaëlle",
+        "episode_code": "S02E05",
+        "source_title": "Astrid a Raphaelle S02E05 SKdab",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 102726,
+        "source_id": -43924702731208358,
+        "series_title": "Astrid a Raphaëlle",
+        "episode_code": "S02E05",
+        "source_title": "Astrid a Raphaëlle - S2E5 Circé SK",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 102728,
+        "source_id": -44285326710654407,
+        "series_title": "Astrid a Raphaëlle",
+        "episode_code": "S02E07",
+        "source_title": "Astrid.a.Raphaelle.S02E07.1080p.WEB.H264-SK-dab",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 102728,
+        "source_id": -38292595881599584,
+        "series_title": "Astrid a Raphaëlle",
+        "episode_code": "S02E07",
+        "source_title": "Astrid a Raphaelle S02E07 - Le Livre (2021) krimi skdab.mkv",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 102728,
+        "source_id": -314191816377119,
+        "series_title": "Astrid a Raphaëlle",
+        "episode_code": "S02E07",
+        "source_title": "Astrid a Raphaelle S02E07 SKdab",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 102728,
+        "source_id": -57038262771113064,
+        "series_title": "Astrid a Raphaëlle",
+        "episode_code": "S02E07",
+        "source_title": "Astrid a Raphaëlle - S2E7 Le Livre SK",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 102106,
+        "source_id": -59776639729232960,
+        "series_title": "Astrid a Raphaëlle",
+        "episode_code": "S03E01",
+        "source_title": "Astrid.a.Raphaelle.S03E01.1080p.WEB.H264-SK-dab",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 102106,
+        "source_id": -55799688529416662,
+        "series_title": "Astrid a Raphaëlle",
+        "episode_code": "S03E01",
+        "source_title": "Astrid.a.Raphaelle.S03E01.1080p.WEB",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 102106,
+        "source_id": -45816445089126156,
+        "series_title": "Astrid a Raphaëlle",
+        "episode_code": "S03E01",
+        "source_title": "Astrid a Raphaelle S03E01 - Plan global (2022) krimi skdab.mkv",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 102106,
+        "source_id": -11793315359077040,
+        "series_title": "Astrid a Raphaëlle",
+        "episode_code": "S03E01",
+        "source_title": "Astrid a Raphaelle S03E01 byDejv",
+        "status": "needs_whisper"
+      },
+      {
         "episode_id": 102106,
         "source_id": -65529625945025921,
         "series_title": "Astrid a Raphaëlle",
@@ -323100,326 +323790,6 @@
         "episode_code": "S03E05",
         "source_title": "Astrid.a.Raphaelle.S03E05.1080p.WEB.H264-SK-dab",
         "status": "needs_whisper"
-      },
-      {
-        "episode_id": 102110,
-        "source_id": -7455318755376775,
-        "series_title": "Astrid a Raphaëlle",
-        "episode_code": "S03E05",
-        "source_title": "Astrid.a.Raphaelle.S03E05.1080p.WEB",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 102110,
-        "source_id": -1599805511797494,
-        "series_title": "Astrid a Raphaëlle",
-        "episode_code": "S03E05",
-        "source_title": "Astrid a Raphaelle S03E05 byDejv",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 102110,
-        "source_id": -24117474602042624,
-        "series_title": "Astrid a Raphaëlle",
-        "episode_code": "S03E05",
-        "source_title": "Astrid a Raphaëlle - S3E5 Témoin SK",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 102111,
-        "source_id": -60494631745495809,
-        "series_title": "Astrid a Raphaëlle",
-        "episode_code": "S03E07",
-        "source_title": "Astrid.a.Raphaelle.S03E07.1080p.WEB",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 102111,
-        "source_id": -32834990938443686,
-        "series_title": "Astrid a Raphaëlle",
-        "episode_code": "S03E07",
-        "source_title": "Astrid a Raphaelle S03E07 byDejv",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 102111,
-        "source_id": -12552827547170352,
-        "series_title": "Astrid a Raphaëlle",
-        "episode_code": "S03E07",
-        "source_title": "Astrid.a.Raphaelle.S03E07.1080p.WEB.H264-SK-dab",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 102111,
-        "source_id": -4591539312873178,
-        "series_title": "Astrid a Raphaëlle",
-        "episode_code": "S03E07",
-        "source_title": "Astrid a Raphaelle S03E07 - Les Fleurs du mal (2022) krimi skdab.mkv",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 102111,
-        "source_id": -65642689469484826,
-        "series_title": "Astrid a Raphaëlle",
-        "episode_code": "S03E07",
-        "source_title": "Astrid a Raphaëlle - S3E7 Les fleurs du mal SK",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 102730,
-        "source_id": -65553920912066367,
-        "series_title": "Astrid a Raphaëlle",
-        "episode_code": "S04E01",
-        "source_title": "Astrid a Raphaelle S04E01 SKdab",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 102730,
-        "source_id": -60257074847635910,
-        "series_title": "Astrid a Raphaëlle",
-        "episode_code": "S04E01",
-        "source_title": "Astrid.a.Raphaelle.S04E01.1080p.WEB.H264-SK-dab",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 102730,
-        "source_id": -41970559490212800,
-        "series_title": "Astrid a Raphaëlle",
-        "episode_code": "S04E01",
-        "source_title": "Astrid a Raphaelle S04E01 - L´CEil du dragon (2023) krimi skdab.mkv",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 102730,
-        "source_id": -10175907482596467,
-        "series_title": "Astrid a Raphaëlle",
-        "episode_code": "S04E01",
-        "source_title": "Astrid.a.Raphaelle.S04E01.1080p.WEB",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 102730,
-        "source_id": -10050395331703053,
-        "series_title": "Astrid a Raphaëlle",
-        "episode_code": "S04E01",
-        "source_title": "Astrid a Raphaelle - S04E01 (1080p)",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 102730,
-        "source_id": -27073428961982673,
-        "series_title": "Astrid a Raphaëlle",
-        "episode_code": "S04E01",
-        "source_title": "Astrid a Raphaëlle - S4E1 Dračie oko SK",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 102732,
-        "source_id": -56657816039957516,
-        "series_title": "Astrid a Raphaëlle",
-        "episode_code": "S04E03",
-        "source_title": "Astrid.a.Raphaelle.S04E03.1080p.WEB",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 102732,
-        "source_id": -50182361180697434,
-        "series_title": "Astrid a Raphaëlle",
-        "episode_code": "S04E03",
-        "source_title": "Astrid.a.Raphaelle.S04E03.1080p.WEB.H264-SK-dab",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 102732,
-        "source_id": -41906058860558581,
-        "series_title": "Astrid a Raphaëlle",
-        "episode_code": "S04E03",
-        "source_title": "Astrid a Raphaelle S04E03 SKdab",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 102732,
-        "source_id": -30090692876795429,
-        "series_title": "Astrid a Raphaëlle",
-        "episode_code": "S04E03",
-        "source_title": "Astrid a Raphaelle - S04E03 (1080p)",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 102732,
-        "source_id": -18971168902873631,
-        "series_title": "Astrid a Raphaëlle",
-        "episode_code": "S04E03",
-        "source_title": "Astrid a Raphaelle S04E03 - 10 000 Métres (2023) krimi skdab.mkv",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 102732,
-        "source_id": -30260384409541528,
-        "series_title": "Astrid a Raphaëlle",
-        "episode_code": "S04E03",
-        "source_title": "Astrid a Raphaëlle - S4E3 10000 metrov nad zemou SK",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 102734,
-        "source_id": -47987806794526316,
-        "series_title": "Astrid a Raphaëlle",
-        "episode_code": "S04E05",
-        "source_title": "Astrid.a.Raphaelle.S04E05.1080p.WEB",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 102734,
-        "source_id": -44847564378334648,
-        "series_title": "Astrid a Raphaëlle",
-        "episode_code": "S04E05",
-        "source_title": "Astrid a Raphaelle S04E05 - Le Sacrifice du fou (2023) krimi skdab.mkv",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 102734,
-        "source_id": -30550817113691626,
-        "series_title": "Astrid a Raphaëlle",
-        "episode_code": "S04E05",
-        "source_title": "Astrid a Raphaelle S04E05 SKdab",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 102734,
-        "source_id": -7393349059049937,
-        "series_title": "Astrid a Raphaëlle",
-        "episode_code": "S04E05",
-        "source_title": "Astrid.a.Raphaelle.S04E05.1080p.WEB.H264-SK-dab",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 102734,
-        "source_id": -4633627723451925,
-        "series_title": "Astrid a Raphaëlle",
-        "episode_code": "S04E05",
-        "source_title": "Astrid a Raphaelle - S04E05 (1080p)",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 102734,
-        "source_id": -67149337092364219,
-        "series_title": "Astrid a Raphaëlle",
-        "episode_code": "S04E05",
-        "source_title": "Astrid a Raphaëlle - S4E5 Le Sacrifice du fou SK",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 102736,
-        "source_id": -65103097056589693,
-        "series_title": "Astrid a Raphaëlle",
-        "episode_code": "S04E07",
-        "source_title": "Astrid.a.Raphaelle.S04E07.1080p.WEB",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 102736,
-        "source_id": -51056058275226709,
-        "series_title": "Astrid a Raphaëlle",
-        "episode_code": "S04E07",
-        "source_title": "Astrid a Raphaelle S04E07 SKdab",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 102736,
-        "source_id": -49205556898443876,
-        "series_title": "Astrid a Raphaëlle",
-        "episode_code": "S04E07",
-        "source_title": "Astrid.a.Raphaelle.S04E07.1080p.WEB.H264-SK-dab",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 102736,
-        "source_id": -37613505818942483,
-        "series_title": "Astrid a Raphaëlle",
-        "episode_code": "S04E07",
-        "source_title": "Astrid a Raphaelle S04E07 - L´Ankou (2023) krimi skdab.mkv",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 102736,
-        "source_id": -32135230402081391,
-        "series_title": "Astrid a Raphaëlle",
-        "episode_code": "S04E07",
-        "source_title": "Astrid a Raphaelle - S04E07 (1080p)",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 102736,
-        "source_id": -5495798291620230,
-        "series_title": "Astrid a Raphaëlle",
-        "episode_code": "S04E07",
-        "source_title": "Astrid a Raphaëlle - S4E7 L’Ankou SK",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 28104,
-        "source_id": -13428567874473772,
-        "series_title": "Beverly Hills 90210",
-        "episode_code": "S04E10",
-        "source_title": "Beverly Hills 90210 - S4E10 A stalo se..",
-        "status": "whisper_failed"
-      },
-      {
-        "episode_id": 49910,
-        "source_id": -49187278468511205,
-        "series_title": "Beze stopy",
-        "episode_code": "S04E16",
-        "source_title": "Beze stopy - 04x16 - Malé věci (The Little Things)",
-        "status": "whisper_failed"
-      },
-      {
-        "episode_id": 183563,
-        "source_id": -12203798851234399,
-        "series_title": "Blue",
-        "episode_code": "S03E02",
-        "source_title": "Blue S03E02 1080p SK",
-        "status": "whisper_failed"
-      },
-      {
-        "episode_id": 18069,
-        "source_id": -6836255527719051,
-        "series_title": "Bojovník",
-        "episode_code": "S02E09",
-        "source_title": "Bojovník - Warrior S02E09  .mkv",
-        "status": "whisper_failed"
-      },
-      {
-        "episode_id": 24693,
-        "source_id": -47697067608167193,
-        "series_title": "Brickleberry",
-        "episode_code": "S03E01",
-        "source_title": "Brickleberry - 03x01 - Obamascare (Obamascare).mkv",
-        "status": "whisper_failed"
-      },
-      {
-        "episode_id": 24694,
-        "source_id": -9917911476158659,
-        "series_title": "Brickleberry",
-        "episode_code": "S03E02",
-        "source_title": "Brickleberry - 03x02 - In Da Club (In Da Club).mkv",
-        "status": "whisper_failed"
-      },
-      {
-        "episode_id": 24695,
-        "source_id": -40900099642113719,
-        "series_title": "Brickleberry",
-        "episode_code": "S03E03",
-        "source_title": "Brickleberry - 03x03 - Miss Národní park (Miss National Park).mkv",
-        "status": "whisper_failed"
-      },
-      {
-        "episode_id": 24697,
-        "source_id": -15396484627022835,
-        "series_title": "Brickleberry",
-        "episode_code": "S03E05",
-        "source_title": "Brickleberry - 03x05 - První Gaycountry hudebník (Write 'Em Cowboy).mkv",
-        "status": "whisper_failed"
       }
     ],
     "subtitle_followup_pending": [
@@ -323877,17 +324247,17 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 78,
-    "disabled": 83,
+    "disabled": 135,
+    "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
-    "whisper_non_cz_needs_subtitles": 4450,
-    "whisper_confirmed_cz": 2729,
+    "whisper_non_cz_needs_subtitles": 4420,
+    "whisper_confirmed_cz": 2719,
     "whisper_failed": 39,
-    "needs_whisper": 61684
+    "needs_whisper": 61845
   },
   "subtitle_followup_statuses": {
-    "needs_subtitle_setup_after_prehrajto_processing": 17576
+    "needs_subtitle_setup_after_prehrajto_processing": 17587
   }
 }
