@@ -1,17 +1,17 @@
 {
   "counts": {
-    "backlog_episodes": 156507,
+    "backlog_episodes": 156359,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 37000,
+    "uploaded_episodes": 37011,
     "prepared_source_episodes": 69185,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 293,
-    "language_whisper_attempted_sources": 103,
-    "language_pending_whisper_sources": 2604,
+    "language_audited_sources": 20,
+    "language_whisper_attempted_sources": 20,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 69250,
     "whisper_review_pending_sources": 62011,
     "subtitle_followup_sources": 17734,
@@ -20,26 +20,82 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-07-24T09:49:07Z",
-      "databaseId": 30083945786,
+      "createdAt": "2026-07-24T10:01:02Z",
+      "databaseId": 30084678041,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
-      "createdAt": "2026-07-24T09:45:20Z",
-      "databaseId": 30083721113,
+      "createdAt": "2026-07-24T10:00:58Z",
+      "databaseId": 30084673886,
       "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "audit-language"
+      "status": "pending",
+      "workflowName": "prepare-manifest"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-07-24T09:59:20Z",
+      "databaseId": 30084567285,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-24T09:55:34Z",
+      "databaseId": 30084342888,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-24T09:52:43Z",
+      "databaseId": 30084164340,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "refresh-backlog"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-24T09:50:27Z",
+      "databaseId": 30084025737,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-24T09:50:24Z",
+      "databaseId": 30084022295,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-24T09:49:07Z",
+      "databaseId": 30083945786,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-24T09:45:20Z",
+      "databaseId": 30083721113,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "cancelled",
       "createdAt": "2026-07-24T09:37:02Z",
       "databaseId": 30083222412,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -121,62 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-24T09:16:43Z",
-      "databaseId": 30081978929,
-      "headBranch": "main",
-      "status": "pending",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-24T09:09:39Z",
-      "databaseId": 30081545203,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-24T09:09:37Z",
-      "databaseId": 30081542907,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-24T09:09:33Z",
-      "databaseId": 30081540024,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-24T09:08:01Z",
-      "databaseId": 30081444815,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "failure",
-      "createdAt": "2026-07-24T09:07:57Z",
-      "databaseId": 30081440345,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-24T09:04:47Z",
-      "databaseId": 30081243182,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
     }
   ],
   "gaps": {
@@ -162876,6 +162876,36 @@
         "video_id": 27810752
       },
       {
+        "episode_id": 137902,
+        "display_name": "Bedna S01E07 - 7. epizoda CZ Titulky",
+        "video_id": 27810769
+      },
+      {
+        "episode_id": 137904,
+        "display_name": "Bedna S02E02 - 2. epizoda CZ Dabing",
+        "video_id": 27810784
+      },
+      {
+        "episode_id": 137906,
+        "display_name": "Bedna S02E05 - 5. epizoda CZ Titulky",
+        "video_id": 27810800
+      },
+      {
+        "episode_id": 137908,
+        "display_name": "Bedna S02E07 - 7. epizoda CZ Dabing",
+        "video_id": 27810819
+      },
+      {
+        "episode_id": 137912,
+        "display_name": "Bedna S03E03 - 3. epizoda CZ Dabing",
+        "video_id": 27810840
+      },
+      {
+        "episode_id": 60210,
+        "display_name": "Hap & Leonard S01E01 - Savage Season CZ Titulky",
+        "video_id": 27810862
+      },
+      {
         "episode_id": 17845,
         "display_name": "Signál S01E02 - Paula CZ Dabing",
         "video_id": 27810384
@@ -162929,6 +162959,31 @@
         "episode_id": 70357,
         "display_name": "Rovnodennost S01E03 - Co to vidíš ve spánku? CZ Titulky",
         "video_id": 27810735
+      },
+      {
+        "episode_id": 70359,
+        "display_name": "Rovnodennost S01E05 - Slyším hlasy CZ Titulky",
+        "video_id": 27810766
+      },
+      {
+        "episode_id": 158333,
+        "display_name": "Tady Zodiac S01E02 - Jste vy ten Zodiac? CZ Dabing",
+        "video_id": 27810816
+      },
+      {
+        "episode_id": 181351,
+        "display_name": "Benidorm S01E02 - 2. epizoda CZ Titulky",
+        "video_id": 27810870
+      },
+      {
+        "episode_id": 173923,
+        "display_name": "Lookism S01E02 - 2. epizoda CZ Titulky",
+        "video_id": 27810914
+      },
+      {
+        "episode_id": 173927,
+        "display_name": "Lookism S01E06 - 6. epizoda CZ Titulky",
+        "video_id": 27810926
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -325523,6 +325578,36 @@
         "video_id": 27810752
       },
       {
+        "episode_id": 137902,
+        "display_name": "Bedna S01E07 - 7. epizoda CZ Titulky",
+        "video_id": 27810769
+      },
+      {
+        "episode_id": 137904,
+        "display_name": "Bedna S02E02 - 2. epizoda CZ Dabing",
+        "video_id": 27810784
+      },
+      {
+        "episode_id": 137906,
+        "display_name": "Bedna S02E05 - 5. epizoda CZ Titulky",
+        "video_id": 27810800
+      },
+      {
+        "episode_id": 137908,
+        "display_name": "Bedna S02E07 - 7. epizoda CZ Dabing",
+        "video_id": 27810819
+      },
+      {
+        "episode_id": 137912,
+        "display_name": "Bedna S03E03 - 3. epizoda CZ Dabing",
+        "video_id": 27810840
+      },
+      {
+        "episode_id": 60210,
+        "display_name": "Hap & Leonard S01E01 - Savage Season CZ Titulky",
+        "video_id": 27810862
+      },
+      {
         "episode_id": 17845,
         "display_name": "Signál S01E02 - Paula CZ Dabing",
         "video_id": 27810384
@@ -325576,6 +325661,31 @@
         "episode_id": 70357,
         "display_name": "Rovnodennost S01E03 - Co to vidíš ve spánku? CZ Titulky",
         "video_id": 27810735
+      },
+      {
+        "episode_id": 70359,
+        "display_name": "Rovnodennost S01E05 - Slyším hlasy CZ Titulky",
+        "video_id": 27810766
+      },
+      {
+        "episode_id": 158333,
+        "display_name": "Tady Zodiac S01E02 - Jste vy ten Zodiac? CZ Dabing",
+        "video_id": 27810816
+      },
+      {
+        "episode_id": 181351,
+        "display_name": "Benidorm S01E02 - 2. epizoda CZ Titulky",
+        "video_id": 27810870
+      },
+      {
+        "episode_id": 173923,
+        "display_name": "Lookism S01E02 - 2. epizoda CZ Titulky",
+        "video_id": 27810914
+      },
+      {
+        "episode_id": 173927,
+        "display_name": "Lookism S01E06 - 6. epizoda CZ Titulky",
+        "video_id": 27810926
       }
     ],
     "prepared_not_upload_ready": [
@@ -326737,8 +326847,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 190,
-    "ok": 102,
+    "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
