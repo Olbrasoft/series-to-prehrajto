@@ -2,22 +2,78 @@
   "counts": {
     "backlog_episodes": 156639,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 36855,
-    "prepared_source_episodes": 68870,
+    "uploaded_episodes": 36856,
+    "prepared_source_episodes": 68928,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 20,
-    "language_whisper_attempted_sources": 20,
+    "language_audited_sources": 154,
+    "language_whisper_attempted_sources": 51,
     "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 69120,
-    "whisper_review_pending_sources": 61821,
-    "subtitle_followup_sources": 17629,
-    "subtitle_followup_pending_sources": 17629
+    "whisper_review_pending_sources": 61901,
+    "subtitle_followup_sources": 17663,
+    "subtitle_followup_pending_sources": 17663
   },
   "workflow_runs": [
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-24T07:02:27Z",
+      "databaseId": 30074131890,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-24T07:02:24Z",
+      "databaseId": 30074128783,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-24T07:01:54Z",
+      "databaseId": 30074100710,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-24T07:01:47Z",
+      "databaseId": 30074094912,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "refresh-backlog"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-24T07:01:36Z",
+      "databaseId": 30074084390,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-24T07:01:31Z",
+      "databaseId": 30074079924,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-24T07:01:30Z",
+      "databaseId": 30074078544,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
     {
       "conclusion": "success",
       "createdAt": "2026-07-24T07:00:16Z",
@@ -43,11 +99,11 @@
       "workflowName": "audit-language"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-24T06:59:05Z",
       "databaseId": 30073938611,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -63,7 +119,7 @@
       "createdAt": "2026-07-24T06:59:01Z",
       "databaseId": 30073935165,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "prepare-manifest"
     },
     {
@@ -121,62 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-07-24T06:19:24Z",
-      "databaseId": 30071929032,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-24T06:11:53Z",
-      "databaseId": 30071561951,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-24T06:11:50Z",
-      "databaseId": 30071559141,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-24T06:11:47Z",
-      "databaseId": 30071557202,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-24T06:10:36Z",
-      "databaseId": 30071499305,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-07-24T06:10:31Z",
-      "databaseId": 30071495122,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-24T06:01:21Z",
-      "databaseId": 30071041133,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
     }
   ],
   "gaps": {
@@ -162204,6 +162204,11 @@
         "episode_id": 101057,
         "display_name": "Kings S01E06 - Judgment Day CZ Titulky",
         "video_id": 27807595
+      },
+      {
+        "episode_id": 77138,
+        "display_name": "FBI: International S03E01 - June CZ Dabing",
+        "video_id": 27807680
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -324126,6 +324131,11 @@
         "episode_id": 101057,
         "display_name": "Kings S01E06 - Judgment Day CZ Titulky",
         "video_id": 27807595
+      },
+      {
+        "episode_id": 77138,
+        "display_name": "FBI: International S03E01 - June CZ Dabing",
+        "video_id": 27807680
       }
     ],
     "prepared_not_upload_ready": [
@@ -324488,6 +324498,214 @@
         "status": "whisper_failed"
       },
       {
+        "episode_id": 92279,
+        "source_id": -67088139119599027,
+        "series_title": "Blood+",
+        "episode_code": "S01E01",
+        "source_title": "Blood - S1E1 Episode 1 EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 92279,
+        "source_id": -31226508523046688,
+        "series_title": "Blood+",
+        "episode_code": "S01E01",
+        "source_title": "Blood - S1E1 Podivná Láska EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 92285,
+        "source_id": -42864415103191902,
+        "series_title": "Blood+",
+        "episode_code": "S01E02",
+        "source_title": "Blood S01E02",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 92275,
+        "source_id": -67985058860185132,
+        "series_title": "Blood+",
+        "episode_code": "S01E03",
+        "source_title": "Blood S01E03",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 92275,
+        "source_id": -32832669106847728,
+        "series_title": "Blood+",
+        "episode_code": "S01E03",
+        "source_title": "Blood - S1E3 Episode 3 EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 92291,
+        "source_id": -66271115306968300,
+        "series_title": "Blood+",
+        "episode_code": "S01E04",
+        "source_title": "Blood S01E04",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 92291,
+        "source_id": -30672432733002917,
+        "series_title": "Blood+",
+        "episode_code": "S01E04",
+        "source_title": "Blood - S1E4 Episode 4 EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 92291,
+        "source_id": -30452242811652428,
+        "series_title": "Blood+",
+        "episode_code": "S01E04",
+        "source_title": "Blood - S1E4 4",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 92288,
+        "source_id": -45380384737623440,
+        "series_title": "Blood+",
+        "episode_code": "S01E05",
+        "source_title": "Blood S01E05",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 92288,
+        "source_id": -38827501640930153,
+        "series_title": "Blood+",
+        "episode_code": "S01E05",
+        "source_title": "Blood - S1E5 Episode 5 EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 92289,
+        "source_id": -54054024187944105,
+        "series_title": "Blood+",
+        "episode_code": "S01E06",
+        "source_title": "Blood S01E06",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 92289,
+        "source_id": -45366773820137063,
+        "series_title": "Blood+",
+        "episode_code": "S01E06",
+        "source_title": "Blood - S1E6 Episode 6 EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 92283,
+        "source_id": -56898328547145651,
+        "series_title": "Blood+",
+        "episode_code": "S01E07",
+        "source_title": "Blood S01E07",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 92313,
+        "source_id": -34441733231718158,
+        "series_title": "Blood+",
+        "episode_code": "S01E08",
+        "source_title": "Blood S01E08",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 92312,
+        "source_id": -49652909762228018,
+        "series_title": "Blood+",
+        "episode_code": "S01E09",
+        "source_title": "Blood S01E09",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 92309,
+        "source_id": -33764685068906022,
+        "series_title": "Blood+",
+        "episode_code": "S01E10",
+        "source_title": "Blood S01E10",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 92295,
+        "source_id": -2510788076898719,
+        "series_title": "Blood+",
+        "episode_code": "S01E11",
+        "source_title": "Blood S01E11",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 92284,
+        "source_id": -6248237475433939,
+        "series_title": "Blood+",
+        "episode_code": "S01E12",
+        "source_title": "Blood S01E12",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 92308,
+        "source_id": -30434898190573753,
+        "series_title": "Blood+",
+        "episode_code": "S01E13",
+        "source_title": "Blood S01E13",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 92282,
+        "source_id": -7442220659862280,
+        "series_title": "Blood+",
+        "episode_code": "S01E14",
+        "source_title": "Blood S01E14",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 92305,
+        "source_id": -42340975826697325,
+        "series_title": "Blood+",
+        "episode_code": "S01E15",
+        "source_title": "Blood S01E15",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 92317,
+        "source_id": -61556876525523695,
+        "series_title": "Blood+",
+        "episode_code": "S01E16",
+        "source_title": "Blood S01E16",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 92298,
+        "source_id": -43671770423987446,
+        "series_title": "Blood+",
+        "episode_code": "S01E17",
+        "source_title": "Blood S01E17",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 92294,
+        "source_id": -65963422077658163,
+        "series_title": "Blood+",
+        "episode_code": "S01E18",
+        "source_title": "Blood S01E18",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 92272,
+        "source_id": -24843784211170108,
+        "series_title": "Blood+",
+        "episode_code": "S01E19",
+        "source_title": "Blood S01E19",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 92315,
+        "source_id": -122930800027960,
+        "series_title": "Blood+",
+        "episode_code": "S01E20",
+        "source_title": "Blood S01E20",
+        "status": "needs_whisper"
+      },
+      {
         "episode_id": 183563,
         "source_id": -12203798851234399,
         "series_title": "Blue",
@@ -324622,214 +324840,6 @@
         "episode_code": "S03E13",
         "source_title": "Brickleberry+3x13+Globální+varování+1080p",
         "status": "whisper_failed"
-      },
-      {
-        "episode_id": 127639,
-        "source_id": -26840048287197829,
-        "series_title": "Bull",
-        "episode_code": "S01E06",
-        "source_title": "Bull - S1E6 Bedside Manner EN",
-        "status": "whisper_failed"
-      },
-      {
-        "episode_id": 127645,
-        "source_id": -17181798485106316,
-        "series_title": "Bull",
-        "episode_code": "S01E15",
-        "source_title": "Bull - S1E15 What's Your Number? EN",
-        "status": "whisper_failed"
-      },
-      {
-        "episode_id": 127648,
-        "source_id": -37002395875500144,
-        "series_title": "Bull",
-        "episode_code": "S01E19",
-        "source_title": "Bull - S1E19 Bring It On EN",
-        "status": "whisper_failed"
-      },
-      {
-        "episode_id": 127652,
-        "source_id": -20464379301112068,
-        "series_title": "Bull",
-        "episode_code": "S01E23",
-        "source_title": "Bull - S1E23 Benevolent Deception EN",
-        "status": "whisper_failed"
-      },
-      {
-        "episode_id": 127653,
-        "source_id": -307602609802154,
-        "series_title": "Bull",
-        "episode_code": "S02E01",
-        "source_title": "Bull - S2E1 School for Scandal EN",
-        "status": "whisper_failed"
-      },
-      {
-        "episode_id": 127655,
-        "source_id": -6739918876335886,
-        "series_title": "Bull",
-        "episode_code": "S02E03",
-        "source_title": "Bull - S2E3 A Business Of Favors EN",
-        "status": "whisper_failed"
-      },
-      {
-        "episode_id": 127655,
-        "source_id": -18113496950397378,
-        "series_title": "Bull",
-        "episode_code": "S02E03",
-        "source_title": "Bull - S2E3 A Business Of Favors EN",
-        "status": "whisper_failed"
-      },
-      {
-        "episode_id": 127658,
-        "source_id": -49821753972490395,
-        "series_title": "Bull",
-        "episode_code": "S02E06",
-        "source_title": "Bull - S2E6 The Exception to the Rule EN",
-        "status": "whisper_failed"
-      },
-      {
-        "episode_id": 127661,
-        "source_id": -10715392425794155,
-        "series_title": "Bull",
-        "episode_code": "S02E09",
-        "source_title": "Bull - S2E9 Thanksgiving EN",
-        "status": "whisper_failed"
-      },
-      {
-        "episode_id": 127661,
-        "source_id": -19059031650246879,
-        "series_title": "Bull",
-        "episode_code": "S02E09",
-        "source_title": "Bull - S2E9 Thanksgiving EN",
-        "status": "whisper_failed"
-      },
-      {
-        "episode_id": 127623,
-        "source_id": -52937150431784071,
-        "series_title": "Bull",
-        "episode_code": "S03E18",
-        "source_title": "Bull - S3E18 Don't Say A Word EN",
-        "status": "whisper_failed"
-      },
-      {
-        "episode_id": 127662,
-        "source_id": -16836162049670618,
-        "series_title": "Bull",
-        "episode_code": "S05E01",
-        "source_title": "Bull - S5E1 My Corona EN",
-        "status": "whisper_failed"
-      },
-      {
-        "episode_id": 127662,
-        "source_id": -39184682976841789,
-        "series_title": "Bull",
-        "episode_code": "S05E01",
-        "source_title": "Bull - S5E1 My Corona SK",
-        "status": "whisper_failed"
-      },
-      {
-        "episode_id": 127624,
-        "source_id": -33166513284687071,
-        "series_title": "Bull",
-        "episode_code": "S05E04",
-        "source_title": "Bull - S5E4 The Ex Factor EN",
-        "status": "whisper_failed"
-      },
-      {
-        "episode_id": 127629,
-        "source_id": -32418560082034659,
-        "series_title": "Bull",
-        "episode_code": "S06E01",
-        "source_title": "Bull - S6E1 Gone EN",
-        "status": "whisper_failed"
-      },
-      {
-        "episode_id": 127633,
-        "source_id": -56148696178700847,
-        "series_title": "Bull",
-        "episode_code": "S06E07",
-        "source_title": "Bull - S6E7 Confidence Man EN",
-        "status": "whisper_failed"
-      },
-      {
-        "episode_id": 5853,
-        "source_id": -69874682964933342,
-        "series_title": "Castle Rock",
-        "episode_code": "S02E01",
-        "source_title": "Castle Rock - S2E1 Let the River Run EN",
-        "status": "whisper_failed"
-      },
-      {
-        "episode_id": 5853,
-        "source_id": -11645537142753869,
-        "series_title": "Castle Rock",
-        "episode_code": "S02E01",
-        "source_title": "Castle Rock - S2E1 Let The River Run EN",
-        "status": "whisper_failed"
-      },
-      {
-        "episode_id": 121043,
-        "source_id": -50563438807254654,
-        "series_title": "Cesta svatojánských mušek",
-        "episode_code": "S02E06",
-        "source_title": "Cesta svatojánských mušek - S2E6 Znovuzrozeny 4",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 121043,
-        "source_id": -40230035600404105,
-        "series_title": "Cesta svatojánských mušek",
-        "episode_code": "S02E06",
-        "source_title": "Cesta svatojánských mušek - S2E6 Episode 6 EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 121044,
-        "source_id": -1318665651380887,
-        "series_title": "Cesta svatojánských mušek",
-        "episode_code": "S02E07",
-        "source_title": "Cesta svatojánských mušek - S2E7 Tak sbohem! Zlaté časy EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 121045,
-        "source_id": -49491244361286034,
-        "series_title": "Cesta svatojánských mušek",
-        "episode_code": "S02E08",
-        "source_title": "Cesta svatojánských mušek - S2E8 Omluva EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 121046,
-        "source_id": -60460917859875618,
-        "series_title": "Cesta svatojánských mušek",
-        "episode_code": "S02E09",
-        "source_title": "Cesta svatojánských mušek - S2E9 Drahá Tully EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 121046,
-        "source_id": -26683594280076803,
-        "series_title": "Cesta svatojánských mušek",
-        "episode_code": "S02E09",
-        "source_title": "Cesta svatojánských mušek - S2E9 Episode 9 EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 121047,
-        "source_id": -55908059433429048,
-        "series_title": "Cesta svatojánských mušek",
-        "episode_code": "S02E10",
-        "source_title": "Cesta svatojánských mušek - S2E10 Celý svět je jeviště EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 121047,
-        "source_id": -43746536663920312,
-        "series_title": "Cesta svatojánských mušek",
-        "episode_code": "S02E10",
-        "source_title": "Cesta svatojánských mušek - S2E10 Episode 10 EN",
-        "status": "needs_whisper"
       }
     ],
     "subtitle_followup_pending": [
@@ -325287,16 +325297,17 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 19,
+    "disabled": 103,
+    "ok": 50,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
-    "whisper_non_cz_needs_subtitles": 4532,
-    "whisper_confirmed_cz": 2767,
+    "whisper_non_cz_needs_subtitles": 4469,
+    "whisper_confirmed_cz": 2750,
     "whisper_failed": 39,
-    "needs_whisper": 61782
+    "needs_whisper": 61862
   },
   "subtitle_followup_statuses": {
-    "needs_subtitle_setup_after_prehrajto_processing": 17629
+    "needs_subtitle_setup_after_prehrajto_processing": 17663
   }
 }
