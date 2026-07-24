@@ -1,29 +1,61 @@
 {
   "counts": {
-    "backlog_episodes": 156359,
-    "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 37135,
-    "prepared_source_episodes": 69470,
+    "backlog_episodes": 156228,
+    "manifest_upload_ready_episodes": 1003,
+    "uploaded_episodes": 37138,
+    "prepared_source_episodes": 69585,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 20,
-    "language_whisper_attempted_sources": 20,
+    "language_audited_sources": 201,
+    "language_whisper_attempted_sources": 66,
     "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 69369,
-    "whisper_review_pending_sources": 61945,
-    "subtitle_followup_sources": 17798,
-    "subtitle_followup_pending_sources": 17798
+    "whisper_review_pending_sources": 61963,
+    "subtitle_followup_sources": 17874,
+    "subtitle_followup_pending_sources": 17874
   },
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-07-24T12:46:22Z",
+      "databaseId": 30094313696,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-24T12:44:17Z",
+      "databaseId": 30094181432,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-24T12:43:22Z",
+      "databaseId": 30094125503,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-24T12:42:00Z",
+      "databaseId": 30094043970,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-24T12:40:43Z",
       "databaseId": 30093965857,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -51,11 +83,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-24T12:36:55Z",
       "databaseId": 30093727675,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
@@ -145,38 +177,6 @@
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-24T12:01:27Z",
-      "databaseId": 30091588543,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-24T12:01:14Z",
-      "databaseId": 30091576078,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-24T12:00:46Z",
-      "databaseId": 30091546195,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-24T11:58:03Z",
-      "databaseId": 30091382400,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
     }
   ],
   "gaps": {
@@ -163604,6 +163604,21 @@
         "episode_id": 92759,
         "display_name": "Flash S01E04 - 4. epizoda CZ Dabing",
         "video_id": 27813754
+      },
+      {
+        "episode_id": 141976,
+        "display_name": "Mr. Iglesias S03E03 - Oblíbenci CZ Dabing",
+        "video_id": 27814089
+      },
+      {
+        "episode_id": 92741,
+        "display_name": "Flash S01E05 - 5. epizoda CZ Dabing",
+        "video_id": 27814088
+      },
+      {
+        "episode_id": 92745,
+        "display_name": "Flash S01E06 - 6. epizoda CZ Dabing",
+        "video_id": 27814127
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -326926,6 +326941,21 @@
         "episode_id": 92759,
         "display_name": "Flash S01E04 - 4. epizoda CZ Dabing",
         "video_id": 27813754
+      },
+      {
+        "episode_id": 141976,
+        "display_name": "Mr. Iglesias S03E03 - Oblíbenci CZ Dabing",
+        "video_id": 27814089
+      },
+      {
+        "episode_id": 92741,
+        "display_name": "Flash S01E05 - 5. epizoda CZ Dabing",
+        "video_id": 27814088
+      },
+      {
+        "episode_id": 92745,
+        "display_name": "Flash S01E06 - 6. epizoda CZ Dabing",
+        "video_id": 27814127
       }
     ],
     "prepared_not_upload_ready": [
@@ -327544,91 +327574,91 @@
         "status": "whisper_failed"
       },
       {
-        "episode_id": 63512,
-        "source_id": -16370946005239820,
+        "episode_id": 63511,
+        "source_id": -60495825367672774,
         "series_title": "Chalífát",
-        "episode_code": "S01E06",
-        "source_title": "Kalifat Chalífát S01E06",
+        "episode_code": "S01E01",
+        "source_title": "Chalífát_S01E01_1. díl",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 63512,
-        "source_id": -69576877177805776,
+        "episode_id": 63511,
+        "source_id": -2835868414918876,
         "series_title": "Chalífát",
-        "episode_code": "S01E06",
-        "source_title": "Chalífát S01E06 SKdab",
+        "episode_code": "S01E01",
+        "source_title": "Chalífát - S1E1 Epizoda 1 NO",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 63512,
-        "source_id": -18678290087800205,
+        "episode_id": 63511,
+        "source_id": -65556910727010309,
         "series_title": "Chalífát",
-        "episode_code": "S01E06",
-        "source_title": "Chalífát_S01E06_6. díl",
+        "episode_code": "S01E01",
+        "source_title": "Chalífát - S1E1 Epizoda 1 SK",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 63512,
-        "source_id": -7513201462031944,
+        "episode_id": 63513,
+        "source_id": -17477449752080505,
         "series_title": "Chalífát",
-        "episode_code": "S01E06",
-        "source_title": "Chalífát - S1E6 Epizoda 6 NO",
+        "episode_code": "S01E02",
+        "source_title": "Kalifat Chalífát S01E02",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 63515,
-        "source_id": -58018690665448996,
+        "episode_id": 63513,
+        "source_id": -31860821302708260,
         "series_title": "Chalífát",
-        "episode_code": "S01E07",
-        "source_title": "Kalifat Chalífát S01E07",
+        "episode_code": "S01E02",
+        "source_title": "Chalífát S01E02 SKdab",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 63515,
-        "source_id": -23021449847427920,
+        "episode_id": 63513,
+        "source_id": -67638019626304658,
         "series_title": "Chalífát",
-        "episode_code": "S01E07",
-        "source_title": "Chalífát - S1E7 Episode 7 SK",
+        "episode_code": "S01E02",
+        "source_title": "Chalífát_S01E02_2. díl",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 63515,
-        "source_id": -57319916310992010,
+        "episode_id": 63513,
+        "source_id": -62631847287100684,
         "series_title": "Chalífát",
-        "episode_code": "S01E07",
-        "source_title": "Chalífát S01E07 SKdab",
+        "episode_code": "S01E02",
+        "source_title": "Chalífát - S1E2 Epizoda 2 NO",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 63515,
-        "source_id": -19551730034978114,
+        "episode_id": 63513,
+        "source_id": -6783481029744038,
         "series_title": "Chalífát",
-        "episode_code": "S01E07",
-        "source_title": "Chalífát_S01E07_7. díl",
+        "episode_code": "S01E02",
+        "source_title": "Chalífát - S1E2 Epizoda 2 SK",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 63515,
-        "source_id": -50480621022864361,
+        "episode_id": 63510,
+        "source_id": -56877162278907119,
         "series_title": "Chalífát",
-        "episode_code": "S01E07",
-        "source_title": "Chalífát - S1E7 Epizoda 7 NO",
+        "episode_code": "S01E03",
+        "source_title": "Chalífát S01E03 SKdab",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 63516,
-        "source_id": -3056460045124276,
+        "episode_id": 63510,
+        "source_id": -14713593314690995,
         "series_title": "Chalífát",
-        "episode_code": "S01E08",
-        "source_title": "Kalifat Chalífát S01E08",
+        "episode_code": "S01E03",
+        "source_title": "Chalífát_S01E03_3. díl",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 63516,
-        "source_id": -7511718304084777,
+        "episode_id": 63510,
+        "source_id": -71108365388214269,
         "series_title": "Chalífát",
-        "episode_code": "S01E08",
-        "source_title": "Chalífát - S1E8 Episode 8 SK",
+        "episode_code": "S01E03",
+        "source_title": "Chalífát - S1E3 Epizoda 3 NO",
         "status": "needs_whisper"
       }
     ],
@@ -328087,16 +328117,17 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 19,
+    "disabled": 135,
+    "ok": 65,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
-    "whisper_non_cz_needs_subtitles": 4616,
-    "whisper_confirmed_cz": 2808,
+    "whisper_non_cz_needs_subtitles": 4602,
+    "whisper_confirmed_cz": 2804,
     "whisper_failed": 39,
-    "needs_whisper": 61906
+    "needs_whisper": 61924
   },
   "subtitle_followup_statuses": {
-    "needs_subtitle_setup_after_prehrajto_processing": 17798
+    "needs_subtitle_setup_after_prehrajto_processing": 17874
   }
 }
