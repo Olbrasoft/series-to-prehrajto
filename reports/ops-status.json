@@ -2,36 +2,76 @@
   "counts": {
     "backlog_episodes": 156093,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 37323,
-    "prepared_source_episodes": 69940,
+    "uploaded_episodes": 37329,
+    "prepared_source_episodes": 69934,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 100,
-    "language_whisper_attempted_sources": 68,
-    "language_pending_whisper_sources": 2604,
+    "language_audited_sources": 40,
+    "language_whisper_attempted_sources": 40,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 69428,
-    "whisper_review_pending_sources": 61864,
+    "whisper_review_pending_sources": 61844,
     "subtitle_followup_sources": 18054,
     "subtitle_followup_pending_sources": 18054
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-07-24T17:33:10Z",
-      "databaseId": 30113438299,
+      "createdAt": "2026-07-24T17:46:45Z",
+      "databaseId": 30114335738,
       "headBranch": "main",
       "status": "in_progress",
-      "workflowName": "ops-status"
+      "workflowName": "process-whisper-review"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-07-24T17:46:09Z",
+      "databaseId": 30114297634,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-24T17:46:06Z",
+      "databaseId": 30114294228,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-24T17:44:53Z",
+      "databaseId": 30114210660,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-07-24T17:44:09Z",
+      "databaseId": 30114161706,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-24T17:33:10Z",
+      "databaseId": 30113438299,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-24T17:32:36Z",
       "databaseId": 30113400141,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
@@ -51,11 +91,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-24T17:29:47Z",
       "databaseId": 30113209321,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -115,11 +155,11 @@
       "workflowName": "prepare-sources"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-07-24T17:04:01Z",
       "databaseId": 30111536266,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "sync"
     },
     {
@@ -135,48 +175,8 @@
       "createdAt": "2026-07-24T17:01:56Z",
       "databaseId": 30111392402,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-07-24T16:52:49Z",
-      "databaseId": 30110792282,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-24T16:49:23Z",
-      "databaseId": 30110564784,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-24T16:45:26Z",
-      "databaseId": 30110275083,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-24T16:44:12Z",
-      "databaseId": 30110214828,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-24T16:39:58Z",
-      "databaseId": 30109960996,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
     }
   ],
   "gaps": {
@@ -164471,6 +164471,21 @@
         "video_id": 27824142
       },
       {
+        "episode_id": 140736,
+        "display_name": "Na křídlech ctižádosti S03E01 - 1. epizoda CZ Titulky",
+        "video_id": 27824237
+      },
+      {
+        "episode_id": 140738,
+        "display_name": "Na křídlech ctižádosti S03E02 - 2. epizoda CZ Titulky",
+        "video_id": 27824258
+      },
+      {
+        "episode_id": 140742,
+        "display_name": "Na křídlech ctižádosti S03E07 - 7. epizoda CZ Titulky",
+        "video_id": 27824293
+      },
+      {
         "episode_id": 86673,
         "display_name": "Lovci pokladů S03E13 - Oheň v oblacích CZ Titulky",
         "video_id": 27823405
@@ -164544,6 +164559,21 @@
         "episode_id": 179931,
         "display_name": "Dark Tourist S01E04 - Kazachstán a Tirgisttán CZ Titulky",
         "video_id": 27824085
+      },
+      {
+        "episode_id": 136657,
+        "display_name": "Hřbitov S01E01 - Teplejší než slunce CZ Titulky",
+        "video_id": 27824199
+      },
+      {
+        "episode_id": 136659,
+        "display_name": "Hřbitov S01E03 - Žena u jezera CZ Titulky",
+        "video_id": 27824262
+      },
+      {
+        "episode_id": 166657,
+        "display_name": "Hřbitov S02E01 - Tichý ďábel, 1. část CZ Titulky",
+        "video_id": 27824328
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -328733,6 +328763,21 @@
         "video_id": 27824142
       },
       {
+        "episode_id": 140736,
+        "display_name": "Na křídlech ctižádosti S03E01 - 1. epizoda CZ Titulky",
+        "video_id": 27824237
+      },
+      {
+        "episode_id": 140738,
+        "display_name": "Na křídlech ctižádosti S03E02 - 2. epizoda CZ Titulky",
+        "video_id": 27824258
+      },
+      {
+        "episode_id": 140742,
+        "display_name": "Na křídlech ctižádosti S03E07 - 7. epizoda CZ Titulky",
+        "video_id": 27824293
+      },
+      {
         "episode_id": 86673,
         "display_name": "Lovci pokladů S03E13 - Oheň v oblacích CZ Titulky",
         "video_id": 27823405
@@ -328806,6 +328851,21 @@
         "episode_id": 179931,
         "display_name": "Dark Tourist S01E04 - Kazachstán a Tirgisttán CZ Titulky",
         "video_id": 27824085
+      },
+      {
+        "episode_id": 136657,
+        "display_name": "Hřbitov S01E01 - Teplejší než slunce CZ Titulky",
+        "video_id": 27824199
+      },
+      {
+        "episode_id": 136659,
+        "display_name": "Hřbitov S01E03 - Žena u jezera CZ Titulky",
+        "video_id": 27824262
+      },
+      {
+        "episode_id": 166657,
+        "display_name": "Hřbitov S02E01 - Tichý ďábel, 1. část CZ Titulky",
+        "video_id": 27824328
       }
     ],
     "prepared_not_upload_ready": [
@@ -329424,91 +329484,91 @@
         "status": "whisper_failed"
       },
       {
-        "episode_id": 60195,
-        "source_id": -7574519918902625,
+        "episode_id": 60200,
+        "source_id": -26216524437279689,
         "series_title": "Chance",
-        "episode_code": "S01E04",
-        "source_title": "No Second Chance - S1E4 Episode 4 SK",
+        "episode_code": "S02E02",
+        "source_title": "Chance - S02E02 - A Very Special Onion",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 60195,
-        "source_id": -48052678535035271,
+        "episode_id": 60204,
+        "source_id": -28199378510189283,
         "series_title": "Chance",
-        "episode_code": "S01E04",
-        "source_title": "Chance - S1E4 The Mad Doctor EN",
+        "episode_code": "S02E03",
+        "source_title": "Chance - S2E3 The Flitcraft Parable EN",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 60195,
-        "source_id": -17536799194440174,
+        "episode_id": 60204,
+        "source_id": -18436573623817349,
         "series_title": "Chance",
-        "episode_code": "S01E04",
-        "source_title": "Chance S1E4 The Mad Doctor",
+        "episode_code": "S02E03",
+        "source_title": "Chance - S02E03 - The Flitcraft Parable",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 60195,
-        "source_id": -11789464667978783,
+        "episode_id": 60201,
+        "source_id": -65930181806193101,
         "series_title": "Chance",
-        "episode_code": "S01E04",
-        "source_title": "Chance - S01E04 - The Mad Doctor",
+        "episode_code": "S02E04",
+        "source_title": "Chance - S2E4 The Coping Mechanism EN",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 60191,
-        "source_id": -14889338277451461,
+        "episode_id": 60201,
+        "source_id": -52428364850004860,
         "series_title": "Chance",
-        "episode_code": "S01E05",
-        "source_title": "No Second Chance - S1E5 Episode 5 SK",
+        "episode_code": "S02E04",
+        "source_title": "Chance - S02E04 - The Coping Mechanism",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 60191,
-        "source_id": -69731096111700429,
+        "episode_id": 60199,
+        "source_id": -65684346886617408,
         "series_title": "Chance",
-        "episode_code": "S01E05",
-        "source_title": "Chance - S1E5 A Still Point in the Turning World EN",
+        "episode_code": "S02E05",
+        "source_title": "Chance - S2E5 The Collected Works of William Shakespeare EN",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 60191,
-        "source_id": -24731648683807711,
+        "episode_id": 60199,
+        "source_id": -26109729202910047,
         "series_title": "Chance",
-        "episode_code": "S01E05",
-        "source_title": "Chance - S01E05 - A Still Point in the Turning World",
+        "episode_code": "S02E05",
+        "source_title": "Chance - S02E05 - The Collected Works of William Shakespeare",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 60192,
-        "source_id": -15112369888631954,
+        "episode_id": 60199,
+        "source_id": -25758138442248226,
         "series_title": "Chance",
-        "episode_code": "S01E06",
-        "source_title": "No Second Chance - S1E6 Episode 6 SK",
+        "episode_code": "S02E05",
+        "source_title": "Chance - S2E5 The Collected Works Of William Shakespeare EN",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 60192,
-        "source_id": -24748070554332835,
+        "episode_id": 60203,
+        "source_id": -62131346875112019,
         "series_title": "Chance",
-        "episode_code": "S01E06",
-        "source_title": "Chance S1E6 The Unflinching Spark",
+        "episode_code": "S02E06",
+        "source_title": "Chance - S2E6 Treasures in Jars of Clay EN",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 60192,
-        "source_id": -22201924206352990,
+        "episode_id": 60203,
+        "source_id": -51170984518040647,
         "series_title": "Chance",
-        "episode_code": "S01E06",
-        "source_title": "Chance - S1E6 The Unflinching Spark EN",
+        "episode_code": "S02E06",
+        "source_title": "Chance S2E6 Treasures in Jars of Clay",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 60192,
-        "source_id": -5235005096348789,
+        "episode_id": 60203,
+        "source_id": -33803903598107603,
         "series_title": "Chance",
-        "episode_code": "S01E06",
-        "source_title": "Chance - S01E06 - The Unflinching Spark",
+        "episode_code": "S02E06",
+        "source_title": "Chance - S02E06 - Treasures in Jars of Clay",
         "status": "needs_whisper"
       }
     ],
@@ -329967,15 +330027,14 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 32,
-    "ok": 67,
+    "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
-    "whisper_non_cz_needs_subtitles": 4658,
-    "whisper_confirmed_cz": 2906,
+    "whisper_non_cz_needs_subtitles": 4676,
+    "whisper_confirmed_cz": 2908,
     "whisper_failed": 39,
-    "needs_whisper": 61825
+    "needs_whisper": 61805
   },
   "subtitle_followup_statuses": {
     "needs_subtitle_setup_after_prehrajto_processing": 18054
