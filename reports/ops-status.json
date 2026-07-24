@@ -2,22 +2,62 @@
   "counts": {
     "backlog_episodes": 156228,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 37207,
-    "prepared_source_episodes": 69642,
+    "uploaded_episodes": 37210,
+    "prepared_source_episodes": 69693,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 80,
+    "language_audited_sources": 245,
     "language_whisper_attempted_sources": 80,
     "language_pending_whisper_sources": 2604,
-    "whisper_review_sources": 69369,
-    "whisper_review_pending_sources": 61865,
-    "subtitle_followup_sources": 17926,
-    "subtitle_followup_pending_sources": 17926
+    "whisper_review_sources": 69428,
+    "whisper_review_pending_sources": 61964,
+    "subtitle_followup_sources": 17938,
+    "subtitle_followup_pending_sources": 17938
   },
   "workflow_runs": [
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-24T14:17:53Z",
+      "databaseId": 30100418442,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-24T14:17:48Z",
+      "databaseId": 30100413147,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-24T14:15:36Z",
+      "databaseId": 30100258638,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-sources"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-24T14:12:42Z",
+      "databaseId": 30100051919,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-24T14:12:39Z",
+      "databaseId": 30100048652,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "process-whisper-review"
+    },
     {
       "conclusion": "",
       "createdAt": "2026-07-24T14:11:43Z",
@@ -27,11 +67,11 @@
       "workflowName": "sync"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-24T14:11:31Z",
       "databaseId": 30099968676,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -67,11 +107,11 @@
       "workflowName": "process-whisper-review"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-07-24T13:49:23Z",
       "databaseId": 30098435575,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -79,7 +119,7 @@
       "createdAt": "2026-07-24T13:38:28Z",
       "databaseId": 30097690749,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "prepare-descriptions"
     },
     {
@@ -137,46 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-24T13:27:03Z",
-      "databaseId": 30096917726,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-07-24T13:26:35Z",
-      "databaseId": 30096889318,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-24T13:21:31Z",
-      "databaseId": 30096558780,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-24T13:20:29Z",
-      "databaseId": 30096492244,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-24T13:20:25Z",
-      "databaseId": 30096488603,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "sync"
     }
   ],
   "gaps": {
@@ -163871,6 +163871,16 @@
         "video_id": 27815521
       },
       {
+        "episode_id": 166864,
+        "display_name": "Bratrství S01E03 - Matouš 13:57 CZ Dabing",
+        "video_id": 27815670
+      },
+      {
+        "episode_id": 166866,
+        "display_name": "Bratrství S01E05 - Matouš 12:25 CZ Dabing",
+        "video_id": 27815701
+      },
+      {
         "episode_id": 14443,
         "display_name": "Chameleon S01E01 - Muž bez minulosti CZ Dabing",
         "video_id": 27814937
@@ -163964,6 +163974,11 @@
         "episode_id": 87643,
         "display_name": "Agentka S01E06 - Jak že se to jmenuješ? CZ Dabing",
         "video_id": 27815604
+      },
+      {
+        "episode_id": 160389,
+        "display_name": "Little Things S03E08 - Migrace II CZ Titulky",
+        "video_id": 27815663
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -327553,6 +327568,16 @@
         "video_id": 27815521
       },
       {
+        "episode_id": 166864,
+        "display_name": "Bratrství S01E03 - Matouš 13:57 CZ Dabing",
+        "video_id": 27815670
+      },
+      {
+        "episode_id": 166866,
+        "display_name": "Bratrství S01E05 - Matouš 12:25 CZ Dabing",
+        "video_id": 27815701
+      },
+      {
         "episode_id": 14443,
         "display_name": "Chameleon S01E01 - Muž bez minulosti CZ Dabing",
         "video_id": 27814937
@@ -327646,6 +327671,11 @@
         "episode_id": 87643,
         "display_name": "Agentka S01E06 - Jak že se to jmenuješ? CZ Dabing",
         "video_id": 27815604
+      },
+      {
+        "episode_id": 160389,
+        "display_name": "Little Things S03E08 - Migrace II CZ Titulky",
+        "video_id": 27815663
       }
     ],
     "prepared_not_upload_ready": [
@@ -327992,6 +328022,134 @@
         "status": "whisper_failed"
       },
       {
+        "episode_id": 157742,
+        "source_id": -56493783604566327,
+        "series_title": "Bojovnice na druhou",
+        "episode_code": "S01E02",
+        "source_title": "Bojovnice na druhou_S01E02_2. díl",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 157742,
+        "source_id": -3834656079533763,
+        "series_title": "Bojovnice na druhou",
+        "episode_code": "S01E02",
+        "source_title": "Bojovnice na druhou - S1E2 Epizoda 2 FR",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 157742,
+        "source_id": -36988176741328864,
+        "series_title": "Bojovnice na druhou",
+        "episode_code": "S01E02",
+        "source_title": "Bojovnice na druhou - S1E2 EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 157742,
+        "source_id": -57297788658002589,
+        "series_title": "Bojovnice na druhou",
+        "episode_code": "S01E02",
+        "source_title": "Bojovnice na druhou - s01e02.mp4",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 157744,
+        "source_id": -55951567748643458,
+        "series_title": "Bojovnice na druhou",
+        "episode_code": "S01E04",
+        "source_title": "Bojovnice na druhou_S01E04_4. díl",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 157744,
+        "source_id": -55172827260589326,
+        "series_title": "Bojovnice na druhou",
+        "episode_code": "S01E04",
+        "source_title": "Bojovnice na druhou - S1E4 Epizoda 4 FR",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 157744,
+        "source_id": -10642782944711471,
+        "series_title": "Bojovnice na druhou",
+        "episode_code": "S01E04",
+        "source_title": "Bojovnice na druhou - S1E4 EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 157744,
+        "source_id": -5648836221496953,
+        "series_title": "Bojovnice na druhou",
+        "episode_code": "S01E04",
+        "source_title": "Bojovnice na druhou - s01e04.mp4",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 157746,
+        "source_id": -16700562857084515,
+        "series_title": "Bojovnice na druhou",
+        "episode_code": "S01E06",
+        "source_title": "Bojovnice na druhou_S01E06_6. díl",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 157746,
+        "source_id": -28219514950245339,
+        "series_title": "Bojovnice na druhou",
+        "episode_code": "S01E06",
+        "source_title": "Bojovnice na druhou - S1E6 Epizoda 6 FR",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 157746,
+        "source_id": -30126135075071696,
+        "series_title": "Bojovnice na druhou",
+        "episode_code": "S01E06",
+        "source_title": "Bojovnice na druhou - S1E6 EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 157746,
+        "source_id": -11382998618360075,
+        "series_title": "Bojovnice na druhou",
+        "episode_code": "S01E06",
+        "source_title": "Bojovnice na druhou - s01e06.mp4",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 157748,
+        "source_id": -4439828535718487,
+        "series_title": "Bojovnice na druhou",
+        "episode_code": "S01E08",
+        "source_title": "Bojovnice na druhou_S01E08_8. díl",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 157748,
+        "source_id": -50145866026882199,
+        "series_title": "Bojovnice na druhou",
+        "episode_code": "S01E08",
+        "source_title": "Bojovnice na druhou - S1E8 Epizoda 8 FR",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 157748,
+        "source_id": -11178134654246493,
+        "series_title": "Bojovnice na druhou",
+        "episode_code": "S01E08",
+        "source_title": "Bojovnice na druhou - s01e08.mp4",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 157748,
+        "source_id": -41621992222667044,
+        "series_title": "Bojovnice na druhou",
+        "episode_code": "S01E08",
+        "source_title": "Bojovnice na druhou - S1E8 EN",
+        "status": "needs_whisper"
+      },
+      {
         "episode_id": 18069,
         "source_id": -6836255527719051,
         "series_title": "Bojovník",
@@ -328222,134 +328380,6 @@
         "episode_code": "S05E01",
         "source_title": "Bull - S5E1 My Corona SK",
         "status": "whisper_failed"
-      },
-      {
-        "episode_id": 127624,
-        "source_id": -33166513284687071,
-        "series_title": "Bull",
-        "episode_code": "S05E04",
-        "source_title": "Bull - S5E4 The Ex Factor EN",
-        "status": "whisper_failed"
-      },
-      {
-        "episode_id": 127629,
-        "source_id": -32418560082034659,
-        "series_title": "Bull",
-        "episode_code": "S06E01",
-        "source_title": "Bull - S6E1 Gone EN",
-        "status": "whisper_failed"
-      },
-      {
-        "episode_id": 127633,
-        "source_id": -56148696178700847,
-        "series_title": "Bull",
-        "episode_code": "S06E07",
-        "source_title": "Bull - S6E7 Confidence Man EN",
-        "status": "whisper_failed"
-      },
-      {
-        "episode_id": 5853,
-        "source_id": -69874682964933342,
-        "series_title": "Castle Rock",
-        "episode_code": "S02E01",
-        "source_title": "Castle Rock - S2E1 Let the River Run EN",
-        "status": "whisper_failed"
-      },
-      {
-        "episode_id": 5853,
-        "source_id": -11645537142753869,
-        "series_title": "Castle Rock",
-        "episode_code": "S02E01",
-        "source_title": "Castle Rock - S2E1 Let The River Run EN",
-        "status": "whisper_failed"
-      },
-      {
-        "episode_id": 14499,
-        "source_id": -63772951599471139,
-        "series_title": "Chameleon",
-        "episode_code": "S03E14",
-        "source_title": "Chameleon S03E14",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 14500,
-        "source_id": -12918995302382788,
-        "series_title": "Chameleon",
-        "episode_code": "S03E15",
-        "source_title": "Chameleon S03E15",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 14501,
-        "source_id": -37328077255370189,
-        "series_title": "Chameleon",
-        "episode_code": "S03E16",
-        "source_title": "Chameleon S03E16",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 14502,
-        "source_id": -69752902914943161,
-        "series_title": "Chameleon",
-        "episode_code": "S03E17",
-        "source_title": "Chameleon S03E17",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 14502,
-        "source_id": -7892351857949007,
-        "series_title": "Chameleon",
-        "episode_code": "S03E17",
-        "source_title": "Chameleon - 3x17 - Pevne pouto",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 14503,
-        "source_id": -47974331556698490,
-        "series_title": "Chameleon",
-        "episode_code": "S03E18",
-        "source_title": "Chameleon S03E18",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 14504,
-        "source_id": -8701281164380593,
-        "series_title": "Chameleon",
-        "episode_code": "S03E19",
-        "source_title": "Chameleon S03E19",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 14505,
-        "source_id": -39277613781729577,
-        "series_title": "Chameleon",
-        "episode_code": "S03E20",
-        "source_title": "Chameleon S03E20",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 14508,
-        "source_id": -59175709203344380,
-        "series_title": "Chameleon",
-        "episode_code": "S03E21",
-        "source_title": "Chameleon S03E21 - E22",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 14506,
-        "source_id": -20184054439751433,
-        "series_title": "Chameleon",
-        "episode_code": "S04E01",
-        "source_title": "Chameleon S04E01",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 14507,
-        "source_id": -30260010354855028,
-        "series_title": "Chameleon",
-        "episode_code": "S04E02",
-        "source_title": "Chameleon S04E02",
-        "status": "needs_whisper"
       }
     ],
     "subtitle_followup_pending": [
@@ -328807,16 +328837,17 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
+    "disabled": 165,
     "ok": 79,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
-    "whisper_non_cz_needs_subtitles": 4634,
-    "whisper_confirmed_cz": 2870,
+    "whisper_non_cz_needs_subtitles": 4629,
+    "whisper_confirmed_cz": 2835,
     "whisper_failed": 39,
-    "needs_whisper": 61826
+    "needs_whisper": 61925
   },
   "subtitle_followup_statuses": {
-    "needs_subtitle_setup_after_prehrajto_processing": 17926
+    "needs_subtitle_setup_after_prehrajto_processing": 17938
   }
 }
