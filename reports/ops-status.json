@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 156228,
     "manifest_upload_ready_episodes": 1003,
-    "uploaded_episodes": 37138,
+    "uploaded_episodes": 37143,
     "prepared_source_episodes": 69585,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 201,
-    "language_whisper_attempted_sources": 66,
-    "language_pending_whisper_sources": 2624,
+    "language_audited_sources": 40,
+    "language_whisper_attempted_sources": 40,
+    "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 69369,
     "whisper_review_pending_sources": 61963,
     "subtitle_followup_sources": 17874,
@@ -20,10 +20,26 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-07-24T12:51:56Z",
+      "databaseId": 30094652502,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-24T12:47:39Z",
+      "databaseId": 30094389968,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-24T12:46:22Z",
       "databaseId": 30094313696,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -91,11 +107,11 @@
       "workflowName": "process-whisper-review"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-24T12:36:52Z",
       "databaseId": 30093724197,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -161,22 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-24T12:05:21Z",
-      "databaseId": 30091820999,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-sources"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-24T12:03:42Z",
-      "databaseId": 30091720075,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "sync"
     }
   ],
   "gaps": {
@@ -163611,6 +163611,21 @@
         "video_id": 27814089
       },
       {
+        "episode_id": 141978,
+        "display_name": "Mr. Iglesias S03E05 - Velký ples CZ Dabing",
+        "video_id": 27814147
+      },
+      {
+        "episode_id": 129596,
+        "display_name": "Strašidelný Hotel S01E02 - Nevyřízené účty CZ Dabing",
+        "video_id": 27814223
+      },
+      {
+        "episode_id": 180260,
+        "display_name": "Americká vražda: Laci Petersonová S01E02 - Nebyla jsem milenka CZ Dabing",
+        "video_id": 27814269
+      },
+      {
         "episode_id": 92741,
         "display_name": "Flash S01E05 - 5. epizoda CZ Dabing",
         "video_id": 27814088
@@ -163619,6 +163634,16 @@
         "episode_id": 92745,
         "display_name": "Flash S01E06 - 6. epizoda CZ Dabing",
         "video_id": 27814127
+      },
+      {
+        "episode_id": 92747,
+        "display_name": "Flash S01E14 - 14. epizoda CZ Titulky",
+        "video_id": 27814180
+      },
+      {
+        "episode_id": 92751,
+        "display_name": "Flash S01E17 - 17. epizoda CZ Dabing",
+        "video_id": 27814290
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -326948,6 +326973,21 @@
         "video_id": 27814089
       },
       {
+        "episode_id": 141978,
+        "display_name": "Mr. Iglesias S03E05 - Velký ples CZ Dabing",
+        "video_id": 27814147
+      },
+      {
+        "episode_id": 129596,
+        "display_name": "Strašidelný Hotel S01E02 - Nevyřízené účty CZ Dabing",
+        "video_id": 27814223
+      },
+      {
+        "episode_id": 180260,
+        "display_name": "Americká vražda: Laci Petersonová S01E02 - Nebyla jsem milenka CZ Dabing",
+        "video_id": 27814269
+      },
+      {
         "episode_id": 92741,
         "display_name": "Flash S01E05 - 5. epizoda CZ Dabing",
         "video_id": 27814088
@@ -326956,6 +326996,16 @@
         "episode_id": 92745,
         "display_name": "Flash S01E06 - 6. epizoda CZ Dabing",
         "video_id": 27814127
+      },
+      {
+        "episode_id": 92747,
+        "display_name": "Flash S01E14 - 14. epizoda CZ Titulky",
+        "video_id": 27814180
+      },
+      {
+        "episode_id": 92751,
+        "display_name": "Flash S01E17 - 17. epizoda CZ Dabing",
+        "video_id": 27814290
       }
     ],
     "prepared_not_upload_ready": [
@@ -328117,8 +328167,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 135,
-    "ok": 65,
+    "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
