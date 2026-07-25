@@ -2,36 +2,76 @@
   "counts": {
     "backlog_episodes": 155619,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 37759,
-    "prepared_source_episodes": 70409,
+    "uploaded_episodes": 37761,
+    "prepared_source_episodes": 70507,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 40,
-    "language_whisper_attempted_sources": 40,
+    "language_audited_sources": 162,
+    "language_whisper_attempted_sources": 79,
     "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 69542,
-    "whisper_review_pending_sources": 61358,
-    "subtitle_followup_sources": 18299,
-    "subtitle_followup_pending_sources": 18299
+    "whisper_review_pending_sources": 61438,
+    "subtitle_followup_sources": 18324,
+    "subtitle_followup_pending_sources": 18324
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-07-25T10:51:18Z",
-      "databaseId": 30155206291,
+      "createdAt": "2026-07-25T10:55:50Z",
+      "databaseId": 30155340429,
       "headBranch": "main",
       "status": "in_progress",
-      "workflowName": "update-descriptions"
+      "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-07-25T10:55:01Z",
+      "databaseId": 30155315973,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-25T10:54:38Z",
+      "databaseId": 30155303822,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-25T10:54:22Z",
+      "databaseId": 30155296466,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-25T10:52:32Z",
+      "databaseId": 30155242640,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-25T10:51:18Z",
+      "databaseId": 30155206291,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-25T10:50:08Z",
       "databaseId": 30155171200,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -51,11 +91,11 @@
       "workflowName": "sync"
     },
     {
-      "conclusion": "",
+      "conclusion": "failure",
       "createdAt": "2026-07-25T10:49:43Z",
       "databaseId": 30155157876,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "backfill-subtitles"
     },
     {
@@ -123,11 +163,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-07-25T10:39:20Z",
       "databaseId": 30154848266,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -137,46 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-25T10:32:19Z",
-      "databaseId": 30154637760,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-25T10:31:38Z",
-      "databaseId": 30154617335,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-25T10:18:14Z",
-      "databaseId": 30154234997,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-25T10:18:10Z",
-      "databaseId": 30154233559,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-25T10:17:02Z",
-      "databaseId": 30154203887,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
     }
   ],
   "gaps": {
@@ -166716,6 +166716,11 @@
         "video_id": 27839494
       },
       {
+        "episode_id": 126342,
+        "display_name": "Neviditelné město S01E03 - Jsou mezi námi CZ Titulky",
+        "video_id": 27839528
+      },
+      {
         "episode_id": 52777,
         "display_name": "Murder in the First S03E10 - 10. epizoda CZ Titulky",
         "video_id": 27839492
@@ -166724,6 +166729,11 @@
         "episode_id": 167533,
         "display_name": "Basket S01E09 - Výjezd na turnaj CZ Titulky",
         "video_id": 27839529
+      },
+      {
+        "episode_id": 141375,
+        "display_name": "Almost Paradise S01E02 - 2. epizoda CZ Titulky",
+        "video_id": 27839550
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -333158,6 +333168,11 @@
         "video_id": 27839494
       },
       {
+        "episode_id": 126342,
+        "display_name": "Neviditelné město S01E03 - Jsou mezi námi CZ Titulky",
+        "video_id": 27839528
+      },
+      {
         "episode_id": 52777,
         "display_name": "Murder in the First S03E10 - 10. epizoda CZ Titulky",
         "video_id": 27839492
@@ -333166,6 +333181,11 @@
         "episode_id": 167533,
         "display_name": "Basket S01E09 - Výjezd na turnaj CZ Titulky",
         "video_id": 27839529
+      },
+      {
+        "episode_id": 141375,
+        "display_name": "Almost Paradise S01E02 - 2. epizoda CZ Titulky",
+        "video_id": 27839550
       }
     ],
     "prepared_not_upload_ready": [
@@ -333784,91 +333804,91 @@
         "status": "whisper_failed"
       },
       {
-        "episode_id": 38287,
-        "source_id": -20295966566449410,
+        "episode_id": 38262,
+        "source_id": -70627866459910885,
         "series_title": "Chicago Fire",
-        "episode_code": "S10E03",
-        "source_title": "Chicago.Fire.S10E03.Counting.Your.Breaths.720p.AMZN.WEB-DL.DDP5.1.H.264-KiNGS",
+        "episode_code": "S08E14",
+        "source_title": "Chicago Fire S08E14",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 38287,
-        "source_id": -52474806041325797,
+        "episode_id": 38262,
+        "source_id": -28785094921068102,
         "series_title": "Chicago Fire",
-        "episode_code": "S10E03",
-        "source_title": "Chicago Fire - S10E3 Counting Your Breaths EN",
+        "episode_code": "S08E14",
+        "source_title": "Chicago Fire S08E14 SK",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 38287,
-        "source_id": -57059022716877942,
+        "episode_id": 38262,
+        "source_id": -22289439690904697,
         "series_title": "Chicago Fire",
-        "episode_code": "S10E03",
-        "source_title": "Chicago.Fire.S10E03.720p.AMZN.WEBRip.x264-GalaxyTV",
+        "episode_code": "S08E14",
+        "source_title": "Chicago Fire S08E14 SKdab",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 38288,
-        "source_id": -29672256773299288,
+        "episode_id": 38263,
+        "source_id": -52081378174582860,
         "series_title": "Chicago Fire",
-        "episode_code": "S10E04",
-        "source_title": "chicago.fire.s10e04.1080p.web.h264-dexterous",
+        "episode_code": "S08E15",
+        "source_title": "Chicago Fire S08E15",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 38288,
-        "source_id": -4317285659731071,
+        "episode_id": 38263,
+        "source_id": -23371157436564041,
         "series_title": "Chicago Fire",
-        "episode_code": "S10E04",
-        "source_title": "Chicago.Fire.S10E04.The.Right.Thing.1080p.AMZN.WEB-DL.DDP5.1.H.264-KiNGS",
+        "episode_code": "S08E15",
+        "source_title": "Chicago Fire S08E15 SK",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 38288,
-        "source_id": -38833694018645372,
+        "episode_id": 38263,
+        "source_id": -21400703992587288,
         "series_title": "Chicago Fire",
-        "episode_code": "S10E04",
-        "source_title": "Chicago.Fire.S10E04.The.Right.Thing.720p.AMZN.WEB-DL.DDP5.1.H.264-KiNGS",
+        "episode_code": "S08E15",
+        "source_title": "Chicago Fire - S8E15 Off the Grid EN",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 38288,
-        "source_id": -9160402782370423,
+        "episode_id": 38264,
+        "source_id": -37944049107779003,
         "series_title": "Chicago Fire",
-        "episode_code": "S10E04",
-        "source_title": "chicago.fire.s10e04.720p.web.h264-dexterous",
+        "episode_code": "S08E16",
+        "source_title": "Chicago Fire S08E16",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 38288,
-        "source_id": -62671492448481672,
+        "episode_id": 38264,
+        "source_id": -27764917094089875,
         "series_title": "Chicago Fire",
-        "episode_code": "S10E04",
-        "source_title": "Chicago Fire - S10E4 The Right Thing EN",
+        "episode_code": "S08E16",
+        "source_title": "Chicago Fire S08E16 SK",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 38288,
-        "source_id": -45769517091088780,
+        "episode_id": 38264,
+        "source_id": -26452729263480249,
         "series_title": "Chicago Fire",
-        "episode_code": "S10E04",
-        "source_title": "Chicago.Fire.S10E04.720p.AMZN.WEBRip.x264-GalaxyTV",
+        "episode_code": "S08E16",
+        "source_title": "Chicago Fire S08E16 - 1080p",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 38289,
-        "source_id": -61960318640327200,
+        "episode_id": 38265,
+        "source_id": -8539409935937991,
         "series_title": "Chicago Fire",
-        "episode_code": "S10E05",
-        "source_title": "Chicago.Fire.S10E05.Two.Hundred.1080p.AMZN.WEB-DL.DDP5.1.H.264-KiNGS",
+        "episode_code": "S08E17",
+        "source_title": "Chicago Fire S08E17",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 38289,
-        "source_id": -59073147967475649,
+        "episode_id": 38265,
+        "source_id": -25888866668848077,
         "series_title": "Chicago Fire",
-        "episode_code": "S10E05",
-        "source_title": "Chicago.Fire.S10E05.1080p.H264, EN sub",
+        "episode_code": "S08E17",
+        "source_title": "Chicago Fire S08E17 - 1080p",
         "status": "needs_whisper"
       }
     ],
@@ -334327,16 +334347,18 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 39,
+    "disabled": 83,
+    "ok": 77,
+    "sample_failed": 1,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
-    "whisper_non_cz_needs_subtitles": 5094,
-    "whisper_confirmed_cz": 3090,
+    "whisper_non_cz_needs_subtitles": 5031,
+    "whisper_confirmed_cz": 3073,
     "whisper_failed": 39,
-    "needs_whisper": 61319
+    "needs_whisper": 61399
   },
   "subtitle_followup_statuses": {
-    "needs_subtitle_setup_after_prehrajto_processing": 18299
+    "needs_subtitle_setup_after_prehrajto_processing": 18324
   }
 }
