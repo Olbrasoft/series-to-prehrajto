@@ -66,10 +66,10 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-      - name: Run subtitle backfill
+      - name: Run primary subtitle backfill
         env:
-          PREHRAJTO_EMAIL: ${{ secrets.PREHRAJTO_EMAIL }}
-          PREHRAJTO_PASSWORD: ${{ secrets.PREHRAJTO_PASSWORD }}
+          PREHRAJTO_EMAIL: ${{ secrets.UPLOAD_PREHRAJTO_EMAIL || secrets.PREHRAJTO_EMAIL }}
+          PREHRAJTO_PASSWORD: ${{ secrets.UPLOAD_PREHRAJTO_PASSWORD || secrets.PREHRAJTO_PASSWORD }}
           CZ_PROXY_URL: ${{ secrets.CZ_PROXY_URL }}
           CZ_PROXY_KEY: ${{ secrets.CZ_PROXY_KEY }}
         run: |
@@ -86,7 +86,33 @@ jobs:
           if [ "${{ inputs.retry_reported || 'false' }}" = "true" ]; then
             ARGS+=("--retry-reported")
           fi
-          python src/backfill_uploaded_subtitles.py "${ARGS[@]}"
+          python src/backfill_uploaded_subtitles.py "${ARGS[@]}" \
+            --state-file state/uploaded-shard-0.json \
+            --state-file state/uploaded-shard-1.json
+
+      - name: Run serialy subtitle backfill
+        env:
+          PREHRAJTO_EMAIL: ${{ secrets.SERIALY_PREHRAJTO_EMAIL }}
+          PREHRAJTO_PASSWORD: ${{ secrets.SERIALY_PREHRAJTO_PASSWORD }}
+          CZ_PROXY_URL: ${{ secrets.CZ_PROXY_URL }}
+          CZ_PROXY_KEY: ${{ secrets.CZ_PROXY_KEY }}
+        run: |
+          ARGS=(
+            "--limit" "${{ inputs.limit || '3' }}"
+            "--max-rows" "${{ inputs.max_rows || '80' }}"
+            "--search-min-interval" "10"
+            "--verify-timeout" "120"
+            "--allow-partial"
+          )
+          if [ "${{ inputs.dry_run || 'false' }}" = "true" ]; then
+            ARGS+=("--dry-run")
+          fi
+          if [ "${{ inputs.retry_reported || 'false' }}" = "true" ]; then
+            ARGS+=("--retry-reported")
+          fi
+          python src/backfill_uploaded_subtitles.py "${ARGS[@]}" \
+            --state-file state/uploaded-shard-2.json \
+            --state-file state/uploaded-shard-3.json
 
       - name: Commit subtitle report
         if: always()

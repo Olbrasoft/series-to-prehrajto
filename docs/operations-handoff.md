@@ -9,9 +9,10 @@ Last reviewed: 2026-07-01.
 
 ## Objective
 
-Continuously upload series episodes to the `serialy.prehrajto@seznam.cz`
-Prehraj.to account while preparing future episodes faster than uploads consume
-them.
+Continuously upload series episodes to the configured Přehraj.to upload
+accounts while preparing future episodes faster than uploads consume them. The
+active upload accounts are split by global sync shard: primary shards upload to
+the primary account and serialy shards upload to the serialy account.
 
 An upload candidate is useful when it:
 
@@ -82,9 +83,10 @@ stay in the durable reservoir.
 
 ### Upload state
 
-- `state/uploaded-shard-0.json` and `state/uploaded-shard-1.json`: persistent
-  upload/failure state.
-- `state/sync-shard-0.log` and `state/sync-shard-1.log`: detailed resolve,
+- `state/uploaded-shard-0.json` through `state/uploaded-shard-3.json`:
+  persistent upload/failure state. Shards 0 and 1 use the primary upload
+  account; shards 2 and 3 use the serialy upload account.
+- `state/sync-shard-0.log` through `state/sync-shard-3.log`: detailed resolve,
   download and upload logs.
 - State is committed after each successful upload. A workflow marked
   `in_progress` is insufficient evidence; recent per-episode commits or log
@@ -123,7 +125,9 @@ stay in the durable reservoir.
   `cancel-in-progress: false`.
 - Exactly one full sync run is active; GitHub may replace an older pending run
   with a newer pending trigger, but must not cancel the active run.
-- Two matrix shards upload in parallel.
+- Four matrix shards upload in parallel. The global shard modulo prevents the
+  two upload accounts from selecting the same episode before either account has
+  committed its completed upload.
 - Checkout is shallow. Full history is several gigabytes and previously caused
   multi-minute startup stalls.
 - Each shard normally uploads 20 episodes. A single download is bounded to 900
@@ -132,7 +136,7 @@ stay in the durable reservoir.
 - `ops-watchdog.yml` and the schedule are additional recovery paths.
 
 Healthy handoff evidence is a completed successful sync whose `queue-next` is
-successful, followed within seconds by a new run with both shards in
+successful, followed within seconds by a new run with all active shards in
 `Run sync batch`.
 
 ### `prepare-manifest.yml` - fast continuous preparation
@@ -244,7 +248,7 @@ gh run view RUN_ID --log | rg \
 
 Interpretation:
 
-- upload healthy: both shards are in `Run sync batch` and recent episode
+- upload healthy: all active shards are in `Run sync batch` and recent episode
   commits/log entries appear,
 - continuation healthy: one sync is active and another is pending, or the
   previous successful run has a successful `queue-next`,
@@ -266,7 +270,7 @@ Snapshot taken 2026-07-01 around 12:35 Europe/Prague:
 - durable preparation file: 24,598 episode rows, 16,883 currently marked
   `upload_ready` before applying uploaded/burned/stale exclusions,
 - persisted uploaded episode count in the current status snapshot: 12,699,
-- `sync`: active with both shards in `Run sync batch`; the previous run was
+- `sync`: active with all active shards in `Run sync batch`; the previous run was
   successful and `queue-next` started the current run within two seconds,
 - `prepare-manifest`: active with both source-preparation shards running,
 - `prepare-sources`: active in `Prepare episode sources`,
@@ -330,8 +334,9 @@ replacement starts.
   repository.
 - Credentials live in GitHub secrets and local access documents. Never commit
   or print them in logs or documentation.
-- Required upload secrets: `PREHRAJTO_EMAIL`, `PREHRAJTO_PASSWORD`,
-  `CZ_PROXY_URL`, `CZ_PROXY_KEY`.
+- Required upload secrets: `UPLOAD_PREHRAJTO_EMAIL`,
+  `UPLOAD_PREHRAJTO_PASSWORD`, `SERIALY_PREHRAJTO_EMAIL`,
+  `SERIALY_PREHRAJTO_PASSWORD`, `CZ_PROXY_URL`, `CZ_PROXY_KEY`.
 - Description generation uses `GEMINI_API_KEYS`, but the configured model must
   remain Gemma. Do not silently fall back to Gemini models.
 - Never force-push operational state. Preserve concurrent Action commits.

@@ -28,6 +28,7 @@ LOG_PATH = REPO_ROOT / "state" / (f"sync-shard-{SHARD_ID}.log" if NUM_SHARDS > 1
 TMP_DIR = Path("/tmp")
 DESCRIPTIONS = REPO_ROOT / "plans" / "descriptions.jsonl"
 PREPARED_SOURCES = REPO_ROOT / "plans" / "prepared-episodes.jsonl"
+UPLOAD_ACCOUNT = os.environ.get("PREHRAJTO_ACCOUNT", "primary")
 MIN_UPLOAD_FILE_SIZE = 300 * 1024 * 1024
 DOWNLOAD_TIMEOUT_SECONDS = int(os.environ.get("SYNC_DOWNLOAD_TIMEOUT_SECONDS", "360"))
 DOWNLOAD_MIN_SPEED_BYTES = int(os.environ.get("SYNC_DOWNLOAD_MIN_SPEED_BYTES", "250000"))
@@ -61,7 +62,7 @@ def push_state(reason: str) -> None:
         log_rel = str(LOG_PATH.relative_to(REPO_ROOT))
         state_snapshot = json.loads(STATE.read_text(encoding="utf-8")) if STATE.exists() and STATE.stat().st_size > 0 else {}
         log_bytes = LOG_PATH.read_bytes() if LOG_PATH.exists() else b""
-        tag = f"shard {SHARD_ID}/{NUM_SHARDS}" if NUM_SHARDS > 1 else "sync"
+        tag = f"{UPLOAD_ACCOUNT} shard {SHARD_ID}/{NUM_SHARDS}" if NUM_SHARDS > 1 else f"{UPLOAD_ACCOUNT} sync"
         for _ in range(5):
             subprocess.run(["git", "fetch", "origin", "main"], check=False)
             subprocess.run(["git", "reset", "--hard", "origin/main"], check=False)
@@ -311,6 +312,7 @@ def try_candidate(episode: dict, candidate: dict, session, state: dict, *, allow
             "episode": episode["episode"],
             "episode_code": episode.get("episode_code") or f"S{int(episode.get('season', 0)):02d}E{int(episode.get('episode', 0)):02d}",
             "display_name": episode["display_name"],
+            "upload_account": UPLOAD_ACCOUNT,
             "source_id": candidate["source_id"],
             "external_id": candidate.get("external_id"),
             "source_url": candidate.get("url"),
@@ -382,7 +384,7 @@ def main() -> int:
     description_plans = load_description_plans()
     source_plans = load_source_plans()
     log(
-        f"batch-start count={args.count} max_episode_attempts={max_episode_attempts} "
+        f"batch-start account={UPLOAD_ACCOUNT} count={args.count} max_episode_attempts={max_episode_attempts} "
         f"backlog={len(rows)} uploads={len(state.get('uploads', []))} failed={len(state.get('failed_attempts', []))}"
     )
     log(f"description-plans series={len(description_plans['series'])} episodes={len(description_plans['episode'])} require={args.require_description}")

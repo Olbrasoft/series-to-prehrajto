@@ -10,7 +10,7 @@ on:
       num_shards:
         description: "Total parallel shards"
         required: false
-        default: "2"
+        default: "4"
       allow_subtitles:
         description: "Allow CZ subtitle-only sources"
         required: false
@@ -30,7 +30,7 @@ on:
   schedule:
     - cron: "*/10 * * * *"
 
-# Keep one complete two-shard upload active and one successor queued. GitHub
+# Keep one complete multi-shard upload active and one successor queued. GitHub
 # replaces an older pending run when another trigger arrives, but never stops
 # the run that is currently uploading.
 concurrency:
@@ -47,11 +47,11 @@ jobs:
       actions: write
     strategy:
       fail-fast: false
-      matrix:
-        shard: ${{ fromJSON((inputs.num_shards || '2') == '2' && '[0,1]' || '[0]') }}
+      matrix: ${{ fromJSON((inputs.num_shards || '4') == '4' && '{"include":[{"shard":0,"upload_account":"primary"},{"shard":1,"upload_account":"primary"},{"shard":2,"upload_account":"serialy"},{"shard":3,"upload_account":"serialy"}]}' || (inputs.num_shards || '4') == '2' && '{"include":[{"shard":0,"upload_account":"primary"},{"shard":1,"upload_account":"primary"}]}' || '{"include":[{"shard":0,"upload_account":"primary"}]}') }}
     env:
-      SYNC_NUM_SHARDS: ${{ inputs.num_shards || '2' }}
+      SYNC_NUM_SHARDS: ${{ inputs.num_shards || '4' }}
       SYNC_SHARD_ID: ${{ matrix.shard }}
+      UPLOAD_ACCOUNT: ${{ matrix.upload_account }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -89,13 +89,15 @@ jobs:
           RUN_URL="${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
           {
             echo ""
-            echo "===== run $RUN_TS shard=${SYNC_SHARD_ID}/${SYNC_NUM_SHARDS} batch_size=${{ inputs.batch_size }} ($RUN_URL) ====="
+            echo "===== run $RUN_TS account=${UPLOAD_ACCOUNT} shard=${SYNC_SHARD_ID}/${SYNC_NUM_SHARDS} batch_size=${{ inputs.batch_size }} ($RUN_URL) ====="
           } >> "$LOG"
 
       - name: Run sync batch
         env:
-          PREHRAJTO_EMAIL: ${{ secrets.UPLOAD_PREHRAJTO_EMAIL || secrets.PREHRAJTO_EMAIL }}
-          PREHRAJTO_PASSWORD: ${{ secrets.UPLOAD_PREHRAJTO_PASSWORD || secrets.PREHRAJTO_PASSWORD }}
+          PRIMARY_PREHRAJTO_EMAIL: ${{ secrets.UPLOAD_PREHRAJTO_EMAIL || secrets.PREHRAJTO_EMAIL }}
+          PRIMARY_PREHRAJTO_PASSWORD: ${{ secrets.UPLOAD_PREHRAJTO_PASSWORD || secrets.PREHRAJTO_PASSWORD }}
+          SERIALY_PREHRAJTO_EMAIL: ${{ secrets.SERIALY_PREHRAJTO_EMAIL }}
+          SERIALY_PREHRAJTO_PASSWORD: ${{ secrets.SERIALY_PREHRAJTO_PASSWORD }}
           CZ_PROXY_URL: ${{ secrets.CZ_PROXY_URL }}
           CZ_PROXY_KEY: ${{ secrets.CZ_PROXY_KEY }}
           WHISPER_LANGUAGE_CHECK: ${{ vars.WHISPER_LANGUAGE_CHECK || '0' }}
@@ -106,6 +108,21 @@ jobs:
           SYNC_DOWNLOAD_SPEED_TIME_SECONDS: "90"
           SYNC_TRANSIENT_FAILURE_COOLDOWN_SECONDS: "21600"
         run: |
+          case "$UPLOAD_ACCOUNT" in
+            primary)
+              export PREHRAJTO_EMAIL="$PRIMARY_PREHRAJTO_EMAIL"
+              export PREHRAJTO_PASSWORD="$PRIMARY_PREHRAJTO_PASSWORD"
+              ;;
+            serialy)
+              export PREHRAJTO_EMAIL="$SERIALY_PREHRAJTO_EMAIL"
+              export PREHRAJTO_PASSWORD="$SERIALY_PREHRAJTO_PASSWORD"
+              ;;
+            *)
+              echo "unknown upload account: $UPLOAD_ACCOUNT" >&2
+              exit 2
+              ;;
+          esac
+          export PREHRAJTO_ACCOUNT="$UPLOAD_ACCOUNT"
           ARGS=("--count" "${{ inputs.batch_size || '20' }}")
           ARGS+=("--max-episode-attempts" "${{ inputs.max_episode_attempts || '60' }}")
           if [ "${{ inputs.allow_subtitles || 'true' }}" = "true" ]; then
@@ -195,7 +212,7 @@ jobs:
               echo "upload-ready episodes remain and no other sync is waiting; queueing next upload batch"
               gh workflow run sync.yml \
                 -f batch_size="${{ inputs.batch_size || '20' }}" \
-                -f num_shards="${{ inputs.num_shards || '2' }}" \
+                -f num_shards="${{ inputs.num_shards || '4' }}" \
                 -f allow_subtitles="${{ inputs.allow_subtitles || 'true' }}" \
                 -f download_timeout_seconds="${{ inputs.download_timeout_seconds || '360' }}" \
                 -f continue_uploads="true"

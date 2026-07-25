@@ -43,11 +43,19 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-      - name: Update uploaded descriptions
+      - name: Update primary uploaded descriptions
         env:
-          PREHRAJTO_EMAIL: ${{ secrets.PREHRAJTO_EMAIL }}
-          PREHRAJTO_PASSWORD: ${{ secrets.PREHRAJTO_PASSWORD }}
-        run: python src/update_uploaded_descriptions.py --limit "${{ inputs.limit || '50' }}"
+          PREHRAJTO_EMAIL: ${{ secrets.UPLOAD_PREHRAJTO_EMAIL || secrets.PREHRAJTO_EMAIL }}
+          PREHRAJTO_PASSWORD: ${{ secrets.UPLOAD_PREHRAJTO_PASSWORD || secrets.PREHRAJTO_PASSWORD }}
+        run: |
+          python src/update_uploaded_descriptions.py --limit "${{ inputs.limit || '50' }}" --state-glob "state/uploaded.json"
+          python src/update_uploaded_descriptions.py --limit "${{ inputs.limit || '50' }}" --state-glob "state/uploaded-shard-[01].json"
+
+      - name: Update serialy uploaded descriptions
+        env:
+          PREHRAJTO_EMAIL: ${{ secrets.SERIALY_PREHRAJTO_EMAIL }}
+          PREHRAJTO_PASSWORD: ${{ secrets.SERIALY_PREHRAJTO_PASSWORD }}
+        run: python src/update_uploaded_descriptions.py --limit "${{ inputs.limit || '50' }}" --state-glob "state/uploaded-shard-[23].json"
 
       - name: Commit update state
         if: always()
