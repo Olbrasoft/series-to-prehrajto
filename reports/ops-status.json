@@ -1,29 +1,77 @@
 {
   "counts": {
     "backlog_episodes": 155768,
-    "manifest_upload_ready_episodes": 1002,
-    "uploaded_episodes": 37601,
-    "prepared_source_episodes": 70317,
+    "manifest_upload_ready_episodes": 1000,
+    "uploaded_episodes": 37628,
+    "prepared_source_episodes": 70309,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 40,
-    "language_whisper_attempted_sources": 40,
-    "language_pending_whisper_sources": 2604,
+    "language_audited_sources": 20,
+    "language_whisper_attempted_sources": 20,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 69527,
-    "whisper_review_pending_sources": 61543,
-    "subtitle_followup_sources": 18223,
-    "subtitle_followup_pending_sources": 18223
+    "whisper_review_pending_sources": 61523,
+    "subtitle_followup_sources": 18226,
+    "subtitle_followup_pending_sources": 18226
   },
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-07-25T06:37:03Z",
+      "databaseId": 30147814239,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-25T06:36:24Z",
+      "databaseId": 30147794241,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-25T06:24:55Z",
+      "databaseId": 30147453280,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-sources"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-25T06:19:22Z",
+      "databaseId": 30147296826,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-25T06:15:56Z",
+      "databaseId": 30147202798,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-25T06:10:55Z",
+      "databaseId": 30147056071,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-25T06:09:45Z",
       "databaseId": 30147021849,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -51,19 +99,19 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-25T06:03:51Z",
       "databaseId": 30146852858,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-25T06:03:49Z",
       "databaseId": 30146852127,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -83,11 +131,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-07-25T06:02:35Z",
       "databaseId": 30146815960,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -129,54 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-25T05:50:10Z",
-      "databaseId": 30146447126,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-25T05:49:08Z",
-      "databaseId": 30146417823,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-07-25T05:44:51Z",
-      "databaseId": 30146297493,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-25T05:40:27Z",
-      "databaseId": 30146170248,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-25T05:40:25Z",
-      "databaseId": 30146169040,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-25T05:40:23Z",
-      "databaseId": 30146168214,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
     }
   ],
   "gaps": {
@@ -165921,6 +165921,56 @@
         "video_id": 27836533
       },
       {
+        "episode_id": 38106,
+        "display_name": "Chicago Fire S04E19 - Budu chodit CZ Titulky",
+        "video_id": 27836551
+      },
+      {
+        "episode_id": 38108,
+        "display_name": "Chicago Fire S04E21 - Poněkud bláznivý nápad CZ Dabing",
+        "video_id": 27836568
+      },
+      {
+        "episode_id": 38138,
+        "display_name": "Chicago Fire S04E23 - Superhrdina CZ Titulky",
+        "video_id": 27836586
+      },
+      {
+        "episode_id": 38192,
+        "display_name": "Chicago Fire S05E10 - Lidi, které známe CZ Dabing",
+        "video_id": 27836604
+      },
+      {
+        "episode_id": 173560,
+        "display_name": "Na Západ S01E01 - Wheel to the Stars CZ Dabing",
+        "video_id": 27836640
+      },
+      {
+        "episode_id": 173558,
+        "display_name": "Na Západ S01E03 - Dreams and Schemes CZ Titulky",
+        "video_id": 27836678
+      },
+      {
+        "episode_id": 52746,
+        "display_name": "Murder in the First S01E01 - 1. epizoda CZ Titulky",
+        "video_id": 27836702
+      },
+      {
+        "episode_id": 52748,
+        "display_name": "Murder in the First S01E03 - 3. epizoda CZ Titulky",
+        "video_id": 27836737
+      },
+      {
+        "episode_id": 52750,
+        "display_name": "Murder in the First S01E05 - 5. epizoda CZ Titulky",
+        "video_id": 27836782
+      },
+      {
+        "episode_id": 52752,
+        "display_name": "Murder in the First S01E07 - 7. epizoda CZ Titulky",
+        "video_id": 27836829
+      },
+      {
         "episode_id": 38101,
         "display_name": "Chicago Fire S04E14 - Všechny těžké části CZ Titulky",
         "video_id": 27836505
@@ -165934,6 +165984,91 @@
         "episode_id": 38105,
         "display_name": "Chicago Fire S04E18 - Na válečné stezce CZ Titulky",
         "video_id": 27836538
+      },
+      {
+        "episode_id": 125859,
+        "display_name": "Girls5eva S01E06 - Zanechte činnosti CZ Titulky",
+        "video_id": 27836553
+      },
+      {
+        "episode_id": 125861,
+        "display_name": "Girls5eva S01E08 - Vlastní cestou CZ Titulky",
+        "video_id": 27836570
+      },
+      {
+        "episode_id": 157713,
+        "display_name": "Madoff: Monstrum z Wall Street S01E02 - Tajnůstkář CZ Titulky",
+        "video_id": 27836583
+      },
+      {
+        "episode_id": 64065,
+        "display_name": "Ty, já a apokalypsa S01E05 - 23 dní do konce CZ Titulky",
+        "video_id": 27836592
+      },
+      {
+        "episode_id": 67273,
+        "display_name": "Boj o těžkou vodu S01E02 - 2. epizoda CZ Titulky",
+        "video_id": 27836608
+      },
+      {
+        "episode_id": 73493,
+        "display_name": "Na povrchu S02E03 - Konfrontace CZ Titulky",
+        "video_id": 27836624
+      },
+      {
+        "episode_id": 93939,
+        "display_name": "Směr jih S01E18 - 18. epizoda CZ Dabing",
+        "video_id": 27836637
+      },
+      {
+        "episode_id": 93947,
+        "display_name": "Směr jih S02E04 - 4. epizoda CZ Dabing",
+        "video_id": 27836651
+      },
+      {
+        "episode_id": 93933,
+        "display_name": "Směr jih S02E08 - 8. epizoda CZ Dabing",
+        "video_id": 27836667
+      },
+      {
+        "episode_id": 93953,
+        "display_name": "Směr jih S02E09 - 9. epizoda CZ Dabing",
+        "video_id": 27836690
+      },
+      {
+        "episode_id": 93935,
+        "display_name": "Směr jih S02E10 - 10. epizoda CZ Dabing",
+        "video_id": 27836699
+      },
+      {
+        "episode_id": 93959,
+        "display_name": "Směr jih S02E11 - 11. epizoda CZ Dabing",
+        "video_id": 27836717
+      },
+      {
+        "episode_id": 93969,
+        "display_name": "Směr jih S02E13 - 13. epizoda CZ Dabing",
+        "video_id": 27836732
+      },
+      {
+        "episode_id": 93949,
+        "display_name": "Směr jih S02E15 - 15. epizoda CZ Dabing",
+        "video_id": 27836755
+      },
+      {
+        "episode_id": 35381,
+        "display_name": "Alexa a Katie S01E01 - Vlasy na draka CZ Dabing",
+        "video_id": 27836780
+      },
+      {
+        "episode_id": 35387,
+        "display_name": "Alexa a Katie S01E08 - Víc hlav víc ví CZ Dabing",
+        "video_id": 27836799
+      },
+      {
+        "episode_id": 35389,
+        "display_name": "Alexa a Katie S01E10 - Díkuvzdání CZ Titulky",
+        "video_id": 27836819
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -331573,6 +331708,56 @@
         "video_id": 27836533
       },
       {
+        "episode_id": 38106,
+        "display_name": "Chicago Fire S04E19 - Budu chodit CZ Titulky",
+        "video_id": 27836551
+      },
+      {
+        "episode_id": 38108,
+        "display_name": "Chicago Fire S04E21 - Poněkud bláznivý nápad CZ Dabing",
+        "video_id": 27836568
+      },
+      {
+        "episode_id": 38138,
+        "display_name": "Chicago Fire S04E23 - Superhrdina CZ Titulky",
+        "video_id": 27836586
+      },
+      {
+        "episode_id": 38192,
+        "display_name": "Chicago Fire S05E10 - Lidi, které známe CZ Dabing",
+        "video_id": 27836604
+      },
+      {
+        "episode_id": 173560,
+        "display_name": "Na Západ S01E01 - Wheel to the Stars CZ Dabing",
+        "video_id": 27836640
+      },
+      {
+        "episode_id": 173558,
+        "display_name": "Na Západ S01E03 - Dreams and Schemes CZ Titulky",
+        "video_id": 27836678
+      },
+      {
+        "episode_id": 52746,
+        "display_name": "Murder in the First S01E01 - 1. epizoda CZ Titulky",
+        "video_id": 27836702
+      },
+      {
+        "episode_id": 52748,
+        "display_name": "Murder in the First S01E03 - 3. epizoda CZ Titulky",
+        "video_id": 27836737
+      },
+      {
+        "episode_id": 52750,
+        "display_name": "Murder in the First S01E05 - 5. epizoda CZ Titulky",
+        "video_id": 27836782
+      },
+      {
+        "episode_id": 52752,
+        "display_name": "Murder in the First S01E07 - 7. epizoda CZ Titulky",
+        "video_id": 27836829
+      },
+      {
         "episode_id": 38101,
         "display_name": "Chicago Fire S04E14 - Všechny těžké části CZ Titulky",
         "video_id": 27836505
@@ -331586,6 +331771,91 @@
         "episode_id": 38105,
         "display_name": "Chicago Fire S04E18 - Na válečné stezce CZ Titulky",
         "video_id": 27836538
+      },
+      {
+        "episode_id": 125859,
+        "display_name": "Girls5eva S01E06 - Zanechte činnosti CZ Titulky",
+        "video_id": 27836553
+      },
+      {
+        "episode_id": 125861,
+        "display_name": "Girls5eva S01E08 - Vlastní cestou CZ Titulky",
+        "video_id": 27836570
+      },
+      {
+        "episode_id": 157713,
+        "display_name": "Madoff: Monstrum z Wall Street S01E02 - Tajnůstkář CZ Titulky",
+        "video_id": 27836583
+      },
+      {
+        "episode_id": 64065,
+        "display_name": "Ty, já a apokalypsa S01E05 - 23 dní do konce CZ Titulky",
+        "video_id": 27836592
+      },
+      {
+        "episode_id": 67273,
+        "display_name": "Boj o těžkou vodu S01E02 - 2. epizoda CZ Titulky",
+        "video_id": 27836608
+      },
+      {
+        "episode_id": 73493,
+        "display_name": "Na povrchu S02E03 - Konfrontace CZ Titulky",
+        "video_id": 27836624
+      },
+      {
+        "episode_id": 93939,
+        "display_name": "Směr jih S01E18 - 18. epizoda CZ Dabing",
+        "video_id": 27836637
+      },
+      {
+        "episode_id": 93947,
+        "display_name": "Směr jih S02E04 - 4. epizoda CZ Dabing",
+        "video_id": 27836651
+      },
+      {
+        "episode_id": 93933,
+        "display_name": "Směr jih S02E08 - 8. epizoda CZ Dabing",
+        "video_id": 27836667
+      },
+      {
+        "episode_id": 93953,
+        "display_name": "Směr jih S02E09 - 9. epizoda CZ Dabing",
+        "video_id": 27836690
+      },
+      {
+        "episode_id": 93935,
+        "display_name": "Směr jih S02E10 - 10. epizoda CZ Dabing",
+        "video_id": 27836699
+      },
+      {
+        "episode_id": 93959,
+        "display_name": "Směr jih S02E11 - 11. epizoda CZ Dabing",
+        "video_id": 27836717
+      },
+      {
+        "episode_id": 93969,
+        "display_name": "Směr jih S02E13 - 13. epizoda CZ Dabing",
+        "video_id": 27836732
+      },
+      {
+        "episode_id": 93949,
+        "display_name": "Směr jih S02E15 - 15. epizoda CZ Dabing",
+        "video_id": 27836755
+      },
+      {
+        "episode_id": 35381,
+        "display_name": "Alexa a Katie S01E01 - Vlasy na draka CZ Dabing",
+        "video_id": 27836780
+      },
+      {
+        "episode_id": 35387,
+        "display_name": "Alexa a Katie S01E08 - Víc hlav víc ví CZ Dabing",
+        "video_id": 27836799
+      },
+      {
+        "episode_id": 35389,
+        "display_name": "Alexa a Katie S01E10 - Díkuvzdání CZ Titulky",
+        "video_id": 27836819
       }
     ],
     "prepared_not_upload_ready": [
@@ -332204,91 +332474,91 @@
         "status": "whisper_failed"
       },
       {
-        "episode_id": 38200,
-        "source_id": -37311389300070980,
+        "episode_id": 38205,
+        "source_id": -42519996493675025,
         "series_title": "Chicago Fire",
-        "episode_code": "S05E17",
-        "source_title": "Chicago Fire_S05E17_Děti a blázni",
+        "episode_code": "S05E22",
+        "source_title": "Chicago Fire_S05E22_Můj zázrak",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 38200,
-        "source_id": -60760639013012665,
+        "episode_id": 38205,
+        "source_id": -36193141778305609,
         "series_title": "Chicago Fire",
-        "episode_code": "S05E17",
-        "source_title": "Chicago Fire S05E17 SKdab",
+        "episode_code": "S05E22",
+        "source_title": "Chicago Fire - S05E22 - My Miracle",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 38200,
-        "source_id": -36191359484788002,
+        "episode_id": 38205,
+        "source_id": -33886862523701152,
         "series_title": "Chicago Fire",
-        "episode_code": "S05E17",
-        "source_title": "Chicago Fire - S05E17 - Babies and Fools",
+        "episode_code": "S05E22",
+        "source_title": "Chicago Fire - S5E22 My Miracle EN",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 38200,
-        "source_id": -33228335469543574,
+        "episode_id": 38205,
+        "source_id": -9111737859666993,
         "series_title": "Chicago Fire",
-        "episode_code": "S05E17",
-        "source_title": "Chicago Fire - S5E17 Babies and Fools EN",
+        "episode_code": "S05E22",
+        "source_title": "Chicago Fire - S5E22 SK",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 38201,
-        "source_id": -20575910180148367,
+        "episode_id": 38211,
+        "source_id": -29003494361623873,
         "series_title": "Chicago Fire",
-        "episode_code": "S05E18",
-        "source_title": "Chicago Fire_S05E18_Kleknout",
+        "episode_code": "S06E01",
+        "source_title": "Chicago Fire_S06E01_To nestačilo",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 38201,
-        "source_id": -55005293902664787,
+        "episode_id": 38211,
+        "source_id": -49258010884408120,
         "series_title": "Chicago Fire",
-        "episode_code": "S05E18",
-        "source_title": "Chicago Fire S05E18 SKdab",
+        "episode_code": "S06E01",
+        "source_title": "Chicago Fire S06E01 SKdab",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 38201,
-        "source_id": -68161429016308715,
+        "episode_id": 38211,
+        "source_id": -147452253278595,
         "series_title": "Chicago Fire",
-        "episode_code": "S05E18",
-        "source_title": "Chicago Fire - S5E18 Take A Knee EN",
+        "episode_code": "S06E01",
+        "source_title": "Chicago Fire s06e01 SK",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 38201,
-        "source_id": -43613402137538629,
+        "episode_id": 38206,
+        "source_id": -28149722387433325,
         "series_title": "Chicago Fire",
-        "episode_code": "S05E18",
-        "source_title": "Chicago Fire - S05E18 - Take A Knee",
+        "episode_code": "S06E02",
+        "source_title": "Chicago Fire_S06E02_Spuštění kontaktem",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 38202,
-        "source_id": -48609260268604427,
+        "episode_id": 38206,
+        "source_id": -58117025622677739,
         "series_title": "Chicago Fire",
-        "episode_code": "S05E19",
-        "source_title": "Chicago Fire_S05E19_Nést odkaz",
+        "episode_code": "S06E02",
+        "source_title": "Chicago Fire S06E02 SKdab",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 38202,
-        "source_id": -23472266500906943,
+        "episode_id": 38206,
+        "source_id": -4940154833821649,
         "series_title": "Chicago Fire",
-        "episode_code": "S05E19",
-        "source_title": "Chicago Fire S05E19 SKdab",
+        "episode_code": "S06E02",
+        "source_title": "Chicago Fire s06e02 SK",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 38202,
-        "source_id": -64029387931263019,
+        "episode_id": 38206,
+        "source_id": -19953568292229428,
         "series_title": "Chicago Fire",
-        "episode_code": "S05E19",
-        "source_title": "Chicago Fire - S05E19 - Carry Their Legacy",
+        "episode_code": "S06E02",
+        "source_title": "Chicago Fire - S6E2 Ignite on Contact EN",
         "status": "needs_whisper"
       }
     ],
@@ -332747,16 +333017,16 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 39,
+    "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
-    "whisper_non_cz_needs_subtitles": 4980,
-    "whisper_confirmed_cz": 3004,
+    "whisper_non_cz_needs_subtitles": 4991,
+    "whisper_confirmed_cz": 3013,
     "whisper_failed": 39,
-    "needs_whisper": 61504
+    "needs_whisper": 61484
   },
   "subtitle_followup_statuses": {
-    "needs_subtitle_setup_after_prehrajto_processing": 18223
+    "needs_subtitle_setup_after_prehrajto_processing": 18226
   }
 }
