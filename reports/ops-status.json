@@ -1,8 +1,8 @@
 {
   "counts": {
     "backlog_episodes": 155361,
-    "manifest_upload_ready_episodes": 1001,
-    "uploaded_episodes": 38028,
+    "manifest_upload_ready_episodes": 1000,
+    "uploaded_episodes": 38029,
     "prepared_source_episodes": 70877,
     "description_series": 60,
     "description_episodes": 753,
@@ -11,7 +11,7 @@
     "language_queue_sources": 2644,
     "language_audited_sources": 40,
     "language_whisper_attempted_sources": 40,
-    "language_pending_whisper_sources": 2624,
+    "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 69656,
     "whisper_review_pending_sources": 61012,
     "subtitle_followup_sources": 18567,
@@ -20,18 +20,74 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-07-25T20:17:43Z",
-      "databaseId": 30173289088,
+      "createdAt": "2026-07-25T20:23:56Z",
+      "databaseId": 30173494244,
       "headBranch": "main",
-      "status": "pending",
-      "workflowName": "audit-language"
+      "status": "in_progress",
+      "workflowName": "ops-status"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-07-25T20:23:36Z",
+      "databaseId": 30173482227,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-25T20:23:36Z",
+      "databaseId": 30173482176,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-25T20:20:33Z",
+      "databaseId": 30173380710,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-07-25T20:20:02Z",
+      "databaseId": 30173363132,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-25T20:18:21Z",
+      "databaseId": 30173309734,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-25T20:18:19Z",
+      "databaseId": 30173308362,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-25T20:17:43Z",
+      "databaseId": 30173289088,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-25T20:16:54Z",
       "databaseId": 30173263491,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -43,11 +99,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-25T20:10:10Z",
       "databaseId": 30173041705,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -118,62 +174,6 @@
       "conclusion": "success",
       "createdAt": "2026-07-25T19:56:59Z",
       "databaseId": 30172608195,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-25T19:55:36Z",
-      "databaseId": 30172564494,
-      "headBranch": "main",
-      "status": "pending",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-25T19:53:19Z",
-      "databaseId": 30172490695,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-25T19:39:14Z",
-      "databaseId": 30172031708,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-25T19:39:11Z",
-      "databaseId": 30172030422,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-25T19:38:09Z",
-      "databaseId": 30171997343,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-07-25T19:38:06Z",
-      "databaseId": 30171995568,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-25T19:32:00Z",
-      "databaseId": 30171788896,
       "headBranch": "main",
       "status": "completed",
       "workflowName": "update-descriptions"
@@ -167981,6 +167981,11 @@
         "video_id": 27843523
       },
       {
+        "episode_id": 99958,
+        "display_name": "Darkness Those Who Kill S01E03 - 3. epizoda CZ Titulky",
+        "video_id": 27843598
+      },
+      {
         "episode_id": 38359,
         "display_name": "Chicago Fire S13E21 - 21. epizoda CZ Titulky",
         "video_id": 27842039
@@ -335766,6 +335771,11 @@
         "episode_id": 145690,
         "display_name": "Beyond Evil S01E15 - 15. epizoda CZ Titulky",
         "video_id": 27843523
+      },
+      {
+        "episode_id": 99958,
+        "display_name": "Darkness Those Who Kill S01E03 - 3. epizoda CZ Titulky",
+        "video_id": 27843598
       },
       {
         "episode_id": 38359,
