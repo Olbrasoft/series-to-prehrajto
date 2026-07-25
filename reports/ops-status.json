@@ -1,29 +1,61 @@
 {
   "counts": {
     "backlog_episodes": 155559,
-    "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 37857,
-    "prepared_source_episodes": 70562,
+    "manifest_upload_ready_episodes": 1004,
+    "uploaded_episodes": 37858,
+    "prepared_source_episodes": 70665,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 40,
-    "language_whisper_attempted_sources": 40,
+    "language_audited_sources": 187,
+    "language_whisper_attempted_sources": 60,
     "language_pending_whisper_sources": 2624,
-    "whisper_review_sources": 69549,
-    "whisper_review_pending_sources": 61165,
-    "subtitle_followup_sources": 18384,
-    "subtitle_followup_pending_sources": 18384
+    "whisper_review_sources": 69604,
+    "whisper_review_pending_sources": 61200,
+    "subtitle_followup_sources": 18393,
+    "subtitle_followup_pending_sources": 18393
   },
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-07-25T14:50:55Z",
+      "databaseId": 30162441077,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-25T14:50:52Z",
+      "databaseId": 30162439074,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-25T14:50:01Z",
+      "databaseId": 30162409433,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-25T14:48:55Z",
+      "databaseId": 30162373156,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-25T14:47:46Z",
       "databaseId": 30162337043,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -35,19 +67,19 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-25T14:42:48Z",
       "databaseId": 30162172729,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-25T14:42:13Z",
       "databaseId": 30162154535,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
@@ -91,11 +123,11 @@
       "workflowName": "prepare-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-07-25T14:21:20Z",
       "databaseId": 30161473245,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -145,38 +177,6 @@
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "prepare-sources"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-25T14:07:20Z",
-      "databaseId": 30161027126,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-25T14:03:27Z",
-      "databaseId": 30160904701,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-25T14:03:23Z",
-      "databaseId": 30160902858,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-25T14:02:10Z",
-      "databaseId": 30160864591,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
     }
   ],
   "gaps": {
@@ -166999,6 +166999,11 @@
         "episode_id": 140508,
         "display_name": "Greenhouse Academy S02E01 - Únikový mechanismus CZ Titulky",
         "video_id": 27840820
+      },
+      {
+        "episode_id": 140512,
+        "display_name": "Greenhouse Academy S02E05 - Lekce surfingu CZ Titulky",
+        "video_id": 27840846
       },
       {
         "episode_id": 140501,
@@ -333933,6 +333938,11 @@
         "video_id": 27840820
       },
       {
+        "episode_id": 140512,
+        "display_name": "Greenhouse Academy S02E05 - Lekce surfingu CZ Titulky",
+        "video_id": 27840846
+      },
+      {
         "episode_id": 140501,
         "display_name": "Greenhouse Academy S01E06 - Kapitán CZ Titulky",
         "video_id": 27840331
@@ -334764,91 +334774,91 @@
         "status": "whisper_failed"
       },
       {
-        "episode_id": 38341,
-        "source_id": -9677112675583929,
+        "episode_id": 38347,
+        "source_id": -49957163494322782,
         "series_title": "Chicago Fire",
-        "episode_code": "S13E02",
-        "source_title": "Chicago Fire S13E02 Ride the Blade 720p AMZN WEB-DL DDP5 1 H 264-FLUX",
+        "episode_code": "S13E08",
+        "source_title": "Chicago Fire - S13E8 EN",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 38341,
-        "source_id": -6440440676184889,
+        "episode_id": 38349,
+        "source_id": -42719014471098054,
         "series_title": "Chicago Fire",
-        "episode_code": "S13E02",
-        "source_title": "Chicago.Fire.S13E02.Ride.the.Blade.720p.AMZN.WEB-DL.DDP5.1.H.264-KiNGS",
+        "episode_code": "S13E10",
+        "source_title": "Chicago.Fire.S13E10.Chaos.Theory.1080p.AMZN.WEB-DL.DDP5.1.H.264-FLUX",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 38341,
-        "source_id": -49449249494403727,
+        "episode_id": 38349,
+        "source_id": -66506003564440742,
         "series_title": "Chicago Fire",
-        "episode_code": "S13E02",
-        "source_title": "Chicago Fire - S13E2 EN",
+        "episode_code": "S13E10",
+        "source_title": "Chicago.Fire.S13E10.Chaos.Theory.720p.AMZN.WEB-DL.DDP5.1.H.264-FLUX",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 38342,
-        "source_id": -9630079662959146,
+        "episode_id": 38349,
+        "source_id": -1970746779406768,
         "series_title": "Chicago Fire",
-        "episode_code": "S13E03",
-        "source_title": "chicago.fire.s13e03.720p.web.h264-skyfire",
+        "episode_code": "S13E10",
+        "source_title": "Chicago Fire - S13E10 EN",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 38342,
-        "source_id": -67354491868855930,
+        "episode_id": 38351,
+        "source_id": -53832700192442362,
         "series_title": "Chicago Fire",
-        "episode_code": "S13E03",
-        "source_title": "Chicago Fire S13E03 All Kinds Of Crazy 720p AMZN WEB-DL DDP5 1 H 264-KiNGS",
+        "episode_code": "S13E12",
+        "source_title": "Chicago.Fire.S13E12.1080p.WEB.h264-ELEANOR",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 38342,
-        "source_id": -62788702432598401,
+        "episode_id": 38351,
+        "source_id": -2746734105942051,
         "series_title": "Chicago Fire",
-        "episode_code": "S13E03",
-        "source_title": "Chicago Fire S13E03 All Kinds of Crazy 720p AMZN WEB-DL DDP5 1 H 264-FLUX",
+        "episode_code": "S13E12",
+        "source_title": "Chicago.Fire.S13E12.Relief.Cut.1080p.AMZN.WEB-DL.DDP5.1.H.264-NTb",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 38342,
-        "source_id": -9257698803614794,
+        "episode_id": 38351,
+        "source_id": -6669632104406066,
         "series_title": "Chicago Fire",
-        "episode_code": "S13E03",
-        "source_title": "Chicago Fire - S13E3 EN",
+        "episode_code": "S13E12",
+        "source_title": "Chicago.Fire.S13E12.Relief.Cut.720p.AMZN.WEB-DL.DDP5.1.H.264-NTb",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 38343,
-        "source_id": -19596893792329913,
+        "episode_id": 38351,
+        "source_id": -17989969832694295,
         "series_title": "Chicago Fire",
-        "episode_code": "S13E04",
-        "source_title": "Chicago Fire S13E04 Through the Skin 1080p AMZN WEB-DL DDP5 1 H 264-KiNGS",
+        "episode_code": "S13E12",
+        "source_title": "Chicago Fire S13E12",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 38343,
-        "source_id": -69314285892096896,
+        "episode_id": 38351,
+        "source_id": -61130360526303493,
         "series_title": "Chicago Fire",
-        "episode_code": "S13E04",
-        "source_title": "Chicago.Fire.S13E04.Through.the.Skin.1080p.AMZN.WEB-DL.DDP5.1.H.264-KiNGS",
+        "episode_code": "S13E12",
+        "source_title": "Chicago Fire - S13E12 EN",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 38343,
-        "source_id": -11596817078115716,
+        "episode_id": 38353,
+        "source_id": -42941316731778993,
         "series_title": "Chicago Fire",
-        "episode_code": "S13E04",
-        "source_title": "Chicago Fire S13E04 Through the Skin REPACK 1080p AMZN WEB-DL DDP5 1 H 264-FLUX",
+        "episode_code": "S13E14",
+        "source_title": "Chicago.Fire.S13E14.Bar.Time.1080p.AMZN.WEB-DL.DDP5.1.H.264-NTb",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 38343,
-        "source_id": -11976459021168532,
+        "episode_id": 38353,
+        "source_id": -57111433398918213,
         "series_title": "Chicago Fire",
-        "episode_code": "S13E04",
-        "source_title": "Chicago Fire S13E04 Through the Skin 720p AMZN WEB-DL DDP5 1 H 264-KiNGS",
+        "episode_code": "S13E14",
+        "source_title": "chicago.fire.s13e14.1080p.web.h264-successfulcrab",
         "status": "needs_whisper"
       }
     ],
@@ -335307,16 +335317,17 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 39,
+    "disabled": 127,
+    "ok": 59,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
-    "whisper_non_cz_needs_subtitles": 5294,
+    "whisper_non_cz_needs_subtitles": 5314,
     "whisper_confirmed_cz": 3090,
     "whisper_failed": 39,
-    "needs_whisper": 61126
+    "needs_whisper": 61161
   },
   "subtitle_followup_statuses": {
-    "needs_subtitle_setup_after_prehrajto_processing": 18384
+    "needs_subtitle_setup_after_prehrajto_processing": 18393
   }
 }
