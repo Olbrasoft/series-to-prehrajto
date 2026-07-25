@@ -2,28 +2,76 @@
   "counts": {
     "backlog_episodes": 155619,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 37743,
-    "prepared_source_episodes": 70428,
+    "uploaded_episodes": 37744,
+    "prepared_source_episodes": 70424,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 40,
-    "language_whisper_attempted_sources": 40,
+    "language_audited_sources": 60,
+    "language_whisper_attempted_sources": 60,
     "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 69542,
-    "whisper_review_pending_sources": 61398,
-    "subtitle_followup_sources": 18295,
-    "subtitle_followup_pending_sources": 18295
+    "whisper_review_pending_sources": 61378,
+    "subtitle_followup_sources": 18297,
+    "subtitle_followup_pending_sources": 18297
   },
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-07-25T10:03:03Z",
+      "databaseId": 30153798348,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-25T10:02:34Z",
+      "databaseId": 30153783579,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-25T10:02:31Z",
+      "databaseId": 30153781987,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-25T10:01:48Z",
+      "databaseId": 30153758669,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-25T10:01:45Z",
+      "databaseId": 30153757077,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-25T10:01:43Z",
+      "databaseId": 30153755796,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-25T10:00:22Z",
       "databaseId": 30153713704,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -35,11 +83,11 @@
       "workflowName": "sync"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-07-25T09:57:32Z",
       "databaseId": 30153634915,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -129,54 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-07-25T09:18:08Z",
-      "databaseId": 30152577861,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-25T09:14:13Z",
-      "databaseId": 30152471849,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-sources"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-25T09:13:05Z",
-      "databaseId": 30152438088,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-25T09:11:42Z",
-      "databaseId": 30152399918,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-25T09:11:39Z",
-      "databaseId": 30152398732,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-25T09:11:05Z",
-      "databaseId": 30152383501,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
     }
   ],
   "gaps": {
@@ -166644,6 +166644,11 @@
         "episode_id": 52751,
         "display_name": "Murder in the First S01E06 - 6. epizoda CZ Titulky",
         "video_id": 27838871
+      },
+      {
+        "episode_id": 52753,
+        "display_name": "Murder in the First S01E08 - 8. epizoda CZ Titulky",
+        "video_id": 27838996
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -333006,6 +333011,11 @@
         "episode_id": 52751,
         "display_name": "Murder in the First S01E06 - 6. epizoda CZ Titulky",
         "video_id": 27838871
+      },
+      {
+        "episode_id": 52753,
+        "display_name": "Murder in the First S01E08 - 8. epizoda CZ Titulky",
+        "video_id": 27838996
       }
     ],
     "prepared_not_upload_ready": [
@@ -333624,91 +333634,91 @@
         "status": "whisper_failed"
       },
       {
-        "episode_id": 38276,
-        "source_id": -56725158121341374,
+        "episode_id": 38282,
+        "source_id": -11946892724711241,
         "series_title": "Chicago Fire",
-        "episode_code": "S09E08",
-        "source_title": "Chicago.Fire.S09E08.1080p.WEB.H264-STRONTiUM",
+        "episode_code": "S09E14",
+        "source_title": "Chicago.Fire.S09E14.What.Comes.Next.720p.AMZN.WEB-DL.DDP5.1.H.264-KiNGS",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 38276,
-        "source_id": -61686553045471726,
+        "episode_id": 38283,
+        "source_id": -16532124494013639,
         "series_title": "Chicago Fire",
-        "episode_code": "S09E08",
-        "source_title": "Chicago.Fire.S09E08.720p.WEB.H264-STRONTiUM",
+        "episode_code": "S09E15",
+        "source_title": "Chicago.Fire.S09E15.A.White-Knuckle.Panic.1080p.AMZN.WEB-DL.DDP5.1.H.264-KiNGS",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 38276,
-        "source_id": -28475910579475052,
+        "episode_id": 38283,
+        "source_id": -11539761703949479,
         "series_title": "Chicago Fire",
-        "episode_code": "S09E08",
-        "source_title": "Chicago Fire S09E08 - 1080p",
+        "episode_code": "S09E15",
+        "source_title": "Chicago.Fire.S09E15.1080p.WEB.H264-STRONTiUM",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 38277,
-        "source_id": -67718477767756568,
+        "episode_id": 38283,
+        "source_id": -9635751989842867,
         "series_title": "Chicago Fire",
-        "episode_code": "S09E09",
-        "source_title": "Chicago.Fire.S09E09.Double.Red.1080p.AMZN.WEB-DL.DDP5.1.H.264-KiNGS",
+        "episode_code": "S09E15",
+        "source_title": "Chicago.Fire.S09E15.A.White-Knuckle.Panic.720p.AMZN.WEB-DL.DDP5.1.H.264-KiNGS",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 38277,
-        "source_id": -49754068228698720,
+        "episode_id": 38284,
+        "source_id": -63972204039914802,
         "series_title": "Chicago Fire",
-        "episode_code": "S09E09",
-        "source_title": "Chicago.Fire.S09E09.1080p.WEB.H264-STRONTiUM",
+        "episode_code": "S09E16",
+        "source_title": "Chicago.Fire.S09E16.1080p.WEB.H264-STRONTiUM",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 38277,
-        "source_id": -13917645214549928,
+        "episode_id": 38284,
+        "source_id": -39924669800012247,
         "series_title": "Chicago Fire",
-        "episode_code": "S09E09",
-        "source_title": "Chicago Fire S09E09 - 1080p",
+        "episode_code": "S09E16",
+        "source_title": "Chicago Fire S09E16",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 38278,
-        "source_id": -38118435063869893,
+        "episode_id": 38285,
+        "source_id": -57892311495683023,
         "series_title": "Chicago Fire",
-        "episode_code": "S09E10",
-        "source_title": "Chicago.Fire.S09E10.1080p.WEB.H264-STRONTiUM",
+        "episode_code": "S10E01",
+        "source_title": "Chicago.Fire.S10E01.Mayday.1080p.AMZN.WEB-DL.DDP5.1.H.264-KiNGS",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 38278,
-        "source_id": -33715772558218994,
+        "episode_id": 38285,
+        "source_id": -38990470913793131,
         "series_title": "Chicago Fire",
-        "episode_code": "S09E10",
-        "source_title": "Chicago.Fire.S09E10.One.Crazy.Shift.1080p.AMZN.WEB-DL.DDP5.1.H.264-KiNGS",
+        "episode_code": "S10E01",
+        "source_title": "Chicago.Fire.S10E01.1080p.WEB.h264-GOSSIP",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 38278,
-        "source_id": -7818778609694809,
+        "episode_id": 38285,
+        "source_id": -69151284814826571,
         "series_title": "Chicago Fire",
-        "episode_code": "S09E10",
-        "source_title": "Chicago Fire S09E10 - 1080p",
+        "episode_code": "S10E01",
+        "source_title": "Chicago.Fire.S10E01.720p.WEB.h264-GOSSIP",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 38279,
-        "source_id": -64229119182411875,
+        "episode_id": 38285,
+        "source_id": -61138648094068429,
         "series_title": "Chicago Fire",
-        "episode_code": "S09E11",
-        "source_title": "Chicago.Fire.S09E11.A.Couple.Hundred.Degrees.1080p.AMZN.WEB-DL.DDP5.1.H.264-KiNGS",
+        "episode_code": "S10E01",
+        "source_title": "Chicago.Fire.S10E01.Mayday.1080p.AMZN.WEB-DL.DDP5.1.H.264-KiNGS",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 38279,
-        "source_id": -23532619252316975,
+        "episode_id": 38285,
+        "source_id": -35266059733696539,
         "series_title": "Chicago Fire",
-        "episode_code": "S09E11",
-        "source_title": "Chicago.Fire.S09E11.1080p.WEB.H264-STRONTiUM",
+        "episode_code": "S10E01",
+        "source_title": "Chicago.Fire.S10E01.720p.AMZN.WEBRip.x264-GalaxyTV",
         "status": "needs_whisper"
       }
     ],
@@ -334167,16 +334177,16 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 39,
+    "ok": 59,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
-    "whisper_non_cz_needs_subtitles": 5060,
-    "whisper_confirmed_cz": 3084,
+    "whisper_non_cz_needs_subtitles": 5075,
+    "whisper_confirmed_cz": 3089,
     "whisper_failed": 39,
-    "needs_whisper": 61359
+    "needs_whisper": 61339
   },
   "subtitle_followup_statuses": {
-    "needs_subtitle_setup_after_prehrajto_processing": 18295
+    "needs_subtitle_setup_after_prehrajto_processing": 18297
   }
 }
