@@ -1,29 +1,93 @@
 {
   "counts": {
-    "backlog_episodes": 155955,
+    "backlog_episodes": 155824,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 37535,
-    "prepared_source_episodes": 70277,
+    "uploaded_episodes": 37542,
+    "prepared_source_episodes": 70271,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 94,
-    "language_whisper_attempted_sources": 60,
+    "language_audited_sources": 40,
+    "language_whisper_attempted_sources": 40,
     "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 69527,
-    "whisper_review_pending_sources": 61703,
+    "whisper_review_pending_sources": 61683,
     "subtitle_followup_sources": 18166,
     "subtitle_followup_pending_sources": 18166
   },
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-07-25T00:56:41Z",
+      "databaseId": 30137442622,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-25T00:55:57Z",
+      "databaseId": 30137417503,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-25T00:55:52Z",
+      "databaseId": 30137414357,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-25T00:52:50Z",
+      "databaseId": 30137303261,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-25T00:51:10Z",
+      "databaseId": 30137240396,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "refresh-backlog"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-25T00:47:03Z",
+      "databaseId": 30137093763,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-25T00:47:00Z",
+      "databaseId": 30137092185,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-25T00:46:58Z",
+      "databaseId": 30137091008,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-25T00:45:46Z",
       "databaseId": 30137045203,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -113,70 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-25T00:29:51Z",
-      "databaseId": 30136412644,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-25T00:22:59Z",
-      "databaseId": 30136149950,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-25T00:16:19Z",
-      "databaseId": 30135894458,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-25T00:15:10Z",
-      "databaseId": 30135846860,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-25T00:14:27Z",
-      "databaseId": 30135815183,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-25T00:14:24Z",
-      "databaseId": 30135813462,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-25T00:14:22Z",
-      "databaseId": 30135812186,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-25T00:13:21Z",
-      "databaseId": 30135772919,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
     }
   ],
   "gaps": {
@@ -165604,6 +165604,41 @@
         "episode_id": 137271,
         "display_name": "Čas volá tvé jméno S01E05 - 5. epizoda CZ Titulky",
         "video_id": 27831175
+      },
+      {
+        "episode_id": 178816,
+        "display_name": "Chci mluvit se svým agentem! S04E01 - 1. epizoda CZ Titulky",
+        "video_id": 27831660
+      },
+      {
+        "episode_id": 93926,
+        "display_name": "Směr jih S01E14 - 14. epizoda CZ Dabing",
+        "video_id": 27831686
+      },
+      {
+        "episode_id": 93968,
+        "display_name": "Směr jih S01E15 - 15. epizoda CZ Dabing",
+        "video_id": 27831716
+      },
+      {
+        "episode_id": 80049,
+        "display_name": "Ďábel v přestrojení: John Wayne Gacy S01E01 - Deset dní CZ Titulky",
+        "video_id": 27831658
+      },
+      {
+        "episode_id": 140725,
+        "display_name": "Na křídlech ctižádosti S01E06 - 6. epizoda CZ Titulky",
+        "video_id": 27831688
+      },
+      {
+        "episode_id": 140727,
+        "display_name": "Na křídlech ctižádosti S01E08 - 8. epizoda CZ Titulky",
+        "video_id": 27831723
+      },
+      {
+        "episode_id": 135513,
+        "display_name": "The Truth About the Harry Quebert Affair S01E01 - 1. epizoda CZ Titulky",
+        "video_id": 27831737
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -330926,6 +330961,41 @@
         "episode_id": 137271,
         "display_name": "Čas volá tvé jméno S01E05 - 5. epizoda CZ Titulky",
         "video_id": 27831175
+      },
+      {
+        "episode_id": 178816,
+        "display_name": "Chci mluvit se svým agentem! S04E01 - 1. epizoda CZ Titulky",
+        "video_id": 27831660
+      },
+      {
+        "episode_id": 93926,
+        "display_name": "Směr jih S01E14 - 14. epizoda CZ Dabing",
+        "video_id": 27831686
+      },
+      {
+        "episode_id": 93968,
+        "display_name": "Směr jih S01E15 - 15. epizoda CZ Dabing",
+        "video_id": 27831716
+      },
+      {
+        "episode_id": 80049,
+        "display_name": "Ďábel v přestrojení: John Wayne Gacy S01E01 - Deset dní CZ Titulky",
+        "video_id": 27831658
+      },
+      {
+        "episode_id": 140725,
+        "display_name": "Na křídlech ctižádosti S01E06 - 6. epizoda CZ Titulky",
+        "video_id": 27831688
+      },
+      {
+        "episode_id": 140727,
+        "display_name": "Na křídlech ctižádosti S01E08 - 8. epizoda CZ Titulky",
+        "video_id": 27831723
+      },
+      {
+        "episode_id": 135513,
+        "display_name": "The Truth About the Harry Quebert Affair S01E01 - 1. epizoda CZ Titulky",
+        "video_id": 27831737
       }
     ],
     "prepared_not_upload_ready": [
@@ -331544,91 +331614,91 @@
         "status": "whisper_failed"
       },
       {
-        "episode_id": 201804,
-        "source_id": -57461647687898696,
-        "series_title": "Cheerleading",
-        "episode_code": "S02E05",
-        "source_title": "Cheerleading - S2E5 Jerry EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 143041,
-        "source_id": -40797428942682627,
-        "series_title": "Cheerleading",
-        "episode_code": "S02E06",
-        "source_title": "Cheerleading - S2E6 Gymnastika EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 143041,
-        "source_id": -34070600284722259,
-        "series_title": "Cheerleading",
-        "episode_code": "S02E06",
-        "source_title": "Cheerleading - S2E6 EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 143042,
-        "source_id": -19131805735204586,
-        "series_title": "Cheerleading",
-        "episode_code": "S02E07",
-        "source_title": "Cheerleading - S2E7 Každá desetina dobrá EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 143042,
-        "source_id": -40678892611461140,
-        "series_title": "Cheerleading",
-        "episode_code": "S02E07",
-        "source_title": "Cheerleading - S2E7 EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 143043,
-        "source_id": -71188747992267740,
-        "series_title": "Cheerleading",
-        "episode_code": "S02E08",
-        "source_title": "Cheerleading - S2E8 EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 143044,
-        "source_id": -41553152516762036,
-        "series_title": "Cheerleading",
-        "episode_code": "S02E09",
-        "source_title": "Cheerleading - S2E9 Daytona, část druhá: Když rozhodčí nesouhlasí EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 143044,
-        "source_id": -6324651565820908,
-        "series_title": "Cheerleading",
-        "episode_code": "S02E09",
-        "source_title": "Cheerleading - S2E9 EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 38158,
-        "source_id": -47799745842340982,
+        "episode_id": 38166,
+        "source_id": -22123869402803248,
         "series_title": "Chicago Fire",
-        "episode_code": "S02E21",
-        "source_title": "Chicago Fire - s02e21 SK",
+        "episode_code": "S03E05",
+        "source_title": "Chicago Fire S03E05 SKdab",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 38158,
-        "source_id": -8134669907650922,
+        "episode_id": 38164,
+        "source_id": -61916578735212148,
         "series_title": "Chicago Fire",
-        "episode_code": "S02E21",
-        "source_title": "Chicago Fire S02E21 SKdab",
+        "episode_code": "S03E07",
+        "source_title": "Chicago Fire_S03E07_Na nic nesahat",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 38159,
-        "source_id": -64839400969473763,
+        "episode_id": 38164,
+        "source_id": -36097909942723160,
         "series_title": "Chicago Fire",
-        "episode_code": "S02E22",
-        "source_title": "Chicago Fire_S02E22_Realita nepočká",
+        "episode_code": "S03E07",
+        "source_title": "Chicago Fire S03E07 SKdab",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 38165,
+        "source_id": -39902114808179309,
+        "series_title": "Chicago Fire",
+        "episode_code": "S03E08",
+        "source_title": "Chicago Fire_S03E08_Vrtulník",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 38165,
+        "source_id": -17264787826287835,
+        "series_title": "Chicago Fire",
+        "episode_code": "S03E08",
+        "source_title": "Chicago Fire S03E08 SKdab",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 38167,
+        "source_id": -68230621213152155,
+        "series_title": "Chicago Fire",
+        "episode_code": "S03E09",
+        "source_title": "Chicago Fire_S03E09_Zastavení dopravy",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 38167,
+        "source_id": -25659429995370402,
+        "series_title": "Chicago Fire",
+        "episode_code": "S03E09",
+        "source_title": "Chicago Fire S03E09 SKdab",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 38168,
+        "source_id": -35976771774230711,
+        "series_title": "Chicago Fire",
+        "episode_code": "S03E10",
+        "source_title": "Chicago Fire_S03E10_Santovo kousnutí",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 38168,
+        "source_id": -18155423816803907,
+        "series_title": "Chicago Fire",
+        "episode_code": "S03E10",
+        "source_title": "Chicago Fire S03E10 SKdab",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 38169,
+        "source_id": -57569987987426404,
+        "series_title": "Chicago Fire",
+        "episode_code": "S03E11",
+        "source_title": "Chicago Fire_S03E11_Nech ho zemřít",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 38170,
+        "source_id": -32307778925425795,
+        "series_title": "Chicago Fire",
+        "episode_code": "S03E12",
+        "source_title": "Chicago Fire_S03E12_Dopadnout dravce",
         "status": "needs_whisper"
       }
     ],
@@ -332087,15 +332157,14 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 34,
-    "ok": 59,
+    "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
-    "whisper_non_cz_needs_subtitles": 4915,
-    "whisper_confirmed_cz": 2909,
+    "whisper_non_cz_needs_subtitles": 4926,
+    "whisper_confirmed_cz": 2918,
     "whisper_failed": 39,
-    "needs_whisper": 61664
+    "needs_whisper": 61644
   },
   "subtitle_followup_statuses": {
     "needs_subtitle_setup_after_prehrajto_processing": 18166
