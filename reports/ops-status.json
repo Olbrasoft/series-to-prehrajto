@@ -1,29 +1,53 @@
 {
   "counts": {
     "backlog_episodes": 155310,
-    "manifest_upload_ready_episodes": 1009,
-    "uploaded_episodes": 38088,
-    "prepared_source_episodes": 70845,
+    "manifest_upload_ready_episodes": 1000,
+    "uploaded_episodes": 38090,
+    "prepared_source_episodes": 70955,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 40,
-    "language_whisper_attempted_sources": 40,
+    "language_audited_sources": 96,
+    "language_whisper_attempted_sources": 86,
     "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 69656,
-    "whisper_review_pending_sources": 60854,
-    "subtitle_followup_sources": 18631,
-    "subtitle_followup_pending_sources": 18631
+    "whisper_review_pending_sources": 60972,
+    "subtitle_followup_sources": 18682,
+    "subtitle_followup_pending_sources": 18682
   },
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-07-25T22:43:26Z",
+      "databaseId": 30178109089,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-25T22:41:06Z",
+      "databaseId": 30178036930,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-25T22:41:03Z",
+      "databaseId": 30178035467,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-25T22:39:51Z",
       "databaseId": 30177997212,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -153,30 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-07-25T22:02:36Z",
-      "databaseId": 30176804229,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-07-25T22:02:33Z",
-      "databaseId": 30176802609,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-25T21:58:21Z",
-      "databaseId": 30176658941,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
     }
   ],
   "gaps": {
@@ -168191,6 +168191,11 @@
         "video_id": 27844497
       },
       {
+        "episode_id": 111392,
+        "display_name": "Borgia S03E08 - 8. epizoda CZ Titulky",
+        "video_id": 27844519
+      },
+      {
         "episode_id": 109041,
         "display_name": "Chůva k pohledání S03E01 - 1. epizoda CZ Dabing",
         "video_id": 27844008
@@ -168369,6 +168374,11 @@
         "episode_id": 111371,
         "display_name": "Borgia S01E09 - Vpád do Říma CZ Dabing",
         "video_id": 27844512
+      },
+      {
+        "episode_id": 111363,
+        "display_name": "Borgia S01E12 - Zjevení hada CZ Dabing",
+        "video_id": 27844534
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -336278,6 +336288,11 @@
         "video_id": 27844497
       },
       {
+        "episode_id": 111392,
+        "display_name": "Borgia S03E08 - 8. epizoda CZ Titulky",
+        "video_id": 27844519
+      },
+      {
         "episode_id": 109041,
         "display_name": "Chůva k pohledání S03E01 - 1. epizoda CZ Dabing",
         "video_id": 27844008
@@ -336456,6 +336471,11 @@
         "episode_id": 111371,
         "display_name": "Borgia S01E09 - Vpád do Říma CZ Dabing",
         "video_id": 27844512
+      },
+      {
+        "episode_id": 111363,
+        "display_name": "Borgia S01E12 - Zjevení hada CZ Dabing",
+        "video_id": 27844534
       }
     ],
     "prepared_not_upload_ready": [
@@ -337074,91 +337094,91 @@
         "status": "whisper_failed"
       },
       {
+        "episode_id": 64945,
+        "source_id": -35489348491316586,
+        "series_title": "Cizinec",
+        "episode_code": "S01E01",
+        "source_title": "Cizinec - S1E1 Episode 1 EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 64945,
+        "source_id": -55427434004454447,
+        "series_title": "Cizinec",
+        "episode_code": "S01E01",
+        "source_title": "Dokonalý cizinec - S1E1 I EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 64946,
+        "source_id": -41945191583954368,
+        "series_title": "Cizinec",
+        "episode_code": "S01E02",
+        "source_title": "Cizinec - S1E2 Episode 2 EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 64946,
+        "source_id": -43773712459997546,
+        "series_title": "Cizinec",
+        "episode_code": "S01E02",
+        "source_title": "Dokonalý cizinec - S1E2 II EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 64939,
+        "source_id": -32850704574729344,
+        "series_title": "Cizinec",
+        "episode_code": "S01E03",
+        "source_title": "Dokonalý cizinec - S1E3 III EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 64939,
+        "source_id": -20751619843244776,
+        "series_title": "Cizinec",
+        "episode_code": "S01E03",
+        "source_title": "Cizinec - S1E3 Episode 3 EN",
+        "status": "needs_whisper"
+      },
+      {
         "episode_id": 64939,
         "source_id": -9222256834490886,
         "series_title": "Cizinec",
         "episode_code": "S01E03",
         "source_title": "Dokonalý cizinec - S1E3 EN",
-        "status": "whisper_failed"
-      },
-      {
-        "episode_id": 114715,
-        "source_id": -20801181528521991,
-        "series_title": "Clickbait",
-        "episode_code": "S01E01",
-        "source_title": "Clickbait.S01E01.1080p.NF.WEB-DL.DDP5.1.Atmos.H.265.HDR-NTb",
-        "status": "whisper_failed"
-      },
-      {
-        "episode_id": 64425,
-        "source_id": -50046099630785019,
-        "series_title": "Closer: Nové případy",
-        "episode_code": "S03E19",
-        "source_title": "Closer: Nové případy - S3E19 Special Master Part Two EN",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 64425,
-        "source_id": -66847093876079510,
-        "series_title": "Closer: Nové případy",
-        "episode_code": "S03E19",
-        "source_title": "Closer: Nové případy S3E19 Special Master Part Two",
+        "episode_id": 64940,
+        "source_id": -61413641449346387,
+        "series_title": "Cizinec",
+        "episode_code": "S01E04",
+        "source_title": "Dokonalý cizinec - S1E4 IV EN",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 64427,
-        "source_id": -12794634528212543,
-        "series_title": "Closer: Nové případy",
-        "episode_code": "S04E02",
-        "source_title": "Closer: Nové případy - S4E2 Sorry I Missed You EN",
+        "episode_id": 64940,
+        "source_id": -69132116844240570,
+        "series_title": "Cizinec",
+        "episode_code": "S01E04",
+        "source_title": "Cizinec - S1E4 Episode 4 EN",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 64438,
-        "source_id": -64410558254460542,
-        "series_title": "Closer: Nové případy",
-        "episode_code": "S04E21",
-        "source_title": "Closer: Nové případy - S4E21 Hindsight - Part 3 EN",
+        "episode_id": 64940,
+        "source_id": -37317323417666883,
+        "series_title": "Cizinec",
+        "episode_code": "S01E04",
+        "source_title": "Dokonalý cizinec - S1E4 EN",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 64467,
-        "source_id": -62091225219223691,
-        "series_title": "Closer: Nové případy",
-        "episode_code": "S04E23",
-        "source_title": "Closer: Nové případy - S4E23 Hindsight - Part 5 EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 64429,
-        "source_id": -69823963931770257,
-        "series_title": "Closer: Nové případy",
-        "episode_code": "S05E05",
-        "source_title": "Closer: Nové případy - S5E5 Cashed Out EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 64431,
-        "source_id": -11228883092759203,
-        "series_title": "Closer: Nové případy",
-        "episode_code": "S05E07",
-        "source_title": "Closer: Nové případy - S5E7 Moral Hazard EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 64433,
-        "source_id": -9881082081166281,
-        "series_title": "Closer: Nové případy",
-        "episode_code": "S05E09",
-        "source_title": "Closer: Nové případy - S5E9 Family Law EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 64435,
-        "source_id": -64455805423356683,
-        "series_title": "Closer: Nové případy",
-        "episode_code": "S05E11",
-        "source_title": "Closer: Nové případy - S5E11 White Lies Part 1 EN",
+        "episode_id": 64941,
+        "source_id": -31054282683777729,
+        "series_title": "Cizinec",
+        "episode_code": "S01E05",
+        "source_title": "Dokonalý cizinec - S1E5 V EN",
         "status": "needs_whisper"
       }
     ],
@@ -337617,16 +337637,17 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 39,
+    "ok": 85,
+    "disabled": 10,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
-    "whisper_non_cz_needs_subtitles": 5580,
-    "whisper_confirmed_cz": 3222,
-    "whisper_failed": 41,
-    "needs_whisper": 60813
+    "whisper_non_cz_needs_subtitles": 5519,
+    "whisper_confirmed_cz": 3165,
+    "whisper_failed": 39,
+    "needs_whisper": 60933
   },
   "subtitle_followup_statuses": {
-    "needs_subtitle_setup_after_prehrajto_processing": 18631
+    "needs_subtitle_setup_after_prehrajto_processing": 18682
   }
 }
