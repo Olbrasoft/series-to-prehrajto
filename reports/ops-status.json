@@ -1,45 +1,77 @@
 {
   "counts": {
     "backlog_episodes": 154190,
-    "manifest_upload_ready_episodes": 1434,
-    "uploaded_episodes": 39215,
-    "prepared_source_episodes": 54370,
+    "manifest_upload_ready_episodes": 1421,
+    "uploaded_episodes": 39225,
+    "prepared_source_episodes": 54360,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 20,
-    "language_whisper_attempted_sources": 20,
-    "language_pending_whisper_sources": 2624,
-    "whisper_review_sources": 56915,
-    "whisper_review_pending_sources": 49561,
+    "language_audited_sources": 40,
+    "language_whisper_attempted_sources": 40,
+    "language_pending_whisper_sources": 2604,
+    "whisper_review_sources": 56911,
+    "whisper_review_pending_sources": 49541,
     "subtitle_followup_sources": 19740,
     "subtitle_followup_pending_sources": 19740
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-07-26T20:06:09Z",
-      "databaseId": 30218266914,
+      "createdAt": "2026-07-26T20:26:18Z",
+      "databaseId": 30218969615,
       "headBranch": "main",
       "status": "in_progress",
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-26T20:24:41Z",
+      "databaseId": 30218909546,
+      "headBranch": "main",
+      "status": "completed",
       "workflowName": "update-descriptions"
     },
     {
       "conclusion": "",
-      "createdAt": "2026-07-26T20:06:06Z",
-      "databaseId": 30218264947,
+      "createdAt": "2026-07-26T20:21:14Z",
+      "databaseId": 30218787799,
       "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "process-whisper-review"
+      "status": "pending",
+      "workflowName": "prepare-descriptions"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-07-26T20:19:11Z",
+      "databaseId": 30218715132,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-26T20:06:09Z",
+      "databaseId": 30218266914,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-26T20:06:06Z",
+      "databaseId": 30218264947,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-26T20:06:03Z",
       "databaseId": 30218263268,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -51,11 +83,11 @@
       "workflowName": "prepare-manifest"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-26T20:04:56Z",
       "databaseId": 30218220593,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -99,11 +131,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-07-26T19:55:05Z",
       "databaseId": 30217860804,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-descriptions"
     },
     {
@@ -145,38 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "failure",
-      "createdAt": "2026-07-26T19:42:26Z",
-      "databaseId": 30217415818,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-26T19:39:52Z",
-      "databaseId": 30217322336,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-26T19:39:13Z",
-      "databaseId": 30217301472,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-26T19:39:09Z",
-      "databaseId": 30217299181,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
     }
   ],
   "gaps": {
@@ -173426,6 +173426,26 @@
         "video_id": 27888100
       },
       {
+        "episode_id": 144020,
+        "display_name": "Jasuke S01E01 - Ronin CZ Titulky",
+        "video_id": 27888124
+      },
+      {
+        "episode_id": 131912,
+        "display_name": "Můj kluk na vyžádání S01E03 - První láska CZ Dabing",
+        "video_id": 27888277
+      },
+      {
+        "episode_id": 178316,
+        "display_name": "Chiraiya S01E06 - 6. epizoda CZ Titulky",
+        "video_id": 27888321
+      },
+      {
+        "episode_id": 17292,
+        "display_name": "Francouzská revoluce S01E01 - První kapitola: Počátky CZ Titulky",
+        "video_id": 27888383
+      },
+      {
         "episode_id": 127445,
         "display_name": "Capitani S01E04 - Očím se neuleví, srdce nedojde klidu CZ Titulky",
         "video_id": 27875133
@@ -173486,6 +173506,21 @@
         "video_id": 27888093
       },
       {
+        "episode_id": 174885,
+        "display_name": "Informer S01E01 - 1. epizoda CZ Titulky",
+        "video_id": 27888129
+      },
+      {
+        "episode_id": 69009,
+        "display_name": "The Romanoffs S01E08 - 8. epizoda CZ Titulky",
+        "video_id": 27888279
+      },
+      {
+        "episode_id": 99301,
+        "display_name": "Dads S01E03 - 3. epizoda CZ Titulky",
+        "video_id": 27888457
+      },
+      {
         "episode_id": 198958,
         "display_name": "Malá mořská víla S01E13 - Dvakrát měř, jednou řež CZ Dabing",
         "video_id": 27875114
@@ -173539,6 +173574,11 @@
         "episode_id": 32986,
         "display_name": "Nepolepšovna: Podvody, sekty, únosy S01E03 - Za vším hledej peníze CZ Dabing",
         "video_id": 27886320
+      },
+      {
+        "episode_id": 173714,
+        "display_name": "Ona S01E02 - Návrh CZ Titulky",
+        "video_id": 27888438
       },
       {
         "episode_id": 131919,
@@ -173624,6 +173664,16 @@
         "episode_id": 17891,
         "display_name": "Nepolepšovna: Podvody, sekty, únosy S01E01 - Kde to sakra jsem? CZ Dabing",
         "video_id": 27887317
+      },
+      {
+        "episode_id": 178315,
+        "display_name": "Chiraiya S01E05 - 5. epizoda CZ Titulky",
+        "video_id": 27888122
+      },
+      {
+        "episode_id": 17295,
+        "display_name": "Francouzská revoluce S01E04 - Čtvrtá kapitola: Mučitelé CZ Titulky",
+        "video_id": 27888175
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -346768,6 +346818,26 @@
         "video_id": 27888100
       },
       {
+        "episode_id": 144020,
+        "display_name": "Jasuke S01E01 - Ronin CZ Titulky",
+        "video_id": 27888124
+      },
+      {
+        "episode_id": 131912,
+        "display_name": "Můj kluk na vyžádání S01E03 - První láska CZ Dabing",
+        "video_id": 27888277
+      },
+      {
+        "episode_id": 178316,
+        "display_name": "Chiraiya S01E06 - 6. epizoda CZ Titulky",
+        "video_id": 27888321
+      },
+      {
+        "episode_id": 17292,
+        "display_name": "Francouzská revoluce S01E01 - První kapitola: Počátky CZ Titulky",
+        "video_id": 27888383
+      },
+      {
         "episode_id": 127445,
         "display_name": "Capitani S01E04 - Očím se neuleví, srdce nedojde klidu CZ Titulky",
         "video_id": 27875133
@@ -346828,6 +346898,21 @@
         "video_id": 27888093
       },
       {
+        "episode_id": 174885,
+        "display_name": "Informer S01E01 - 1. epizoda CZ Titulky",
+        "video_id": 27888129
+      },
+      {
+        "episode_id": 69009,
+        "display_name": "The Romanoffs S01E08 - 8. epizoda CZ Titulky",
+        "video_id": 27888279
+      },
+      {
+        "episode_id": 99301,
+        "display_name": "Dads S01E03 - 3. epizoda CZ Titulky",
+        "video_id": 27888457
+      },
+      {
         "episode_id": 198958,
         "display_name": "Malá mořská víla S01E13 - Dvakrát měř, jednou řež CZ Dabing",
         "video_id": 27875114
@@ -346881,6 +346966,11 @@
         "episode_id": 32986,
         "display_name": "Nepolepšovna: Podvody, sekty, únosy S01E03 - Za vším hledej peníze CZ Dabing",
         "video_id": 27886320
+      },
+      {
+        "episode_id": 173714,
+        "display_name": "Ona S01E02 - Návrh CZ Titulky",
+        "video_id": 27888438
       },
       {
         "episode_id": 131919,
@@ -346966,6 +347056,16 @@
         "episode_id": 17891,
         "display_name": "Nepolepšovna: Podvody, sekty, únosy S01E01 - Kde to sakra jsem? CZ Dabing",
         "video_id": 27887317
+      },
+      {
+        "episode_id": 178315,
+        "display_name": "Chiraiya S01E05 - 5. epizoda CZ Titulky",
+        "video_id": 27888122
+      },
+      {
+        "episode_id": 17295,
+        "display_name": "Francouzská revoluce S01E04 - Čtvrtá kapitola: Mučitelé CZ Titulky",
+        "video_id": 27888175
       }
     ],
     "prepared_not_upload_ready": [
@@ -347288,166 +347388,6 @@
         "status": "whisper_failed"
       },
       {
-        "episode_id": 51898,
-        "source_id": -42528256492656677,
-        "series_title": "American Horror Story",
-        "episode_code": "S11E02",
-        "source_title": "American Horror Story - S11E2 Thank You for Your Service EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 51899,
-        "source_id": -2113042558262848,
-        "series_title": "American Horror Story",
-        "episode_code": "S11E03",
-        "source_title": "American Horror Story - S11E3 Smoke Signals EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 51900,
-        "source_id": -43617374739594219,
-        "series_title": "American Horror Story",
-        "episode_code": "S11E04",
-        "source_title": "American Horror Story - S11E4 Black Out EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 51901,
-        "source_id": -35861501032222055,
-        "series_title": "American Horror Story",
-        "episode_code": "S11E05",
-        "source_title": "American Horror Story - S11E5 Bad Fortune EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 51902,
-        "source_id": -16643632216077108,
-        "series_title": "American Horror Story",
-        "episode_code": "S11E06",
-        "source_title": "American Horror Story - S11E6 The Body EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 51896,
-        "source_id": -48909435782712939,
-        "series_title": "American Horror Story",
-        "episode_code": "S11E07",
-        "source_title": "American Horror Story - S11E7 The Sentinel EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 51903,
-        "source_id": -3505939457901717,
-        "series_title": "American Horror Story",
-        "episode_code": "S11E08",
-        "source_title": "American Horror Story - S11E8 Fire Island EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 51903,
-        "source_id": -53072934411186968,
-        "series_title": "American Horror Story",
-        "episode_code": "S11E08",
-        "source_title": "American Horror Story - S11E8 EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 51904,
-        "source_id": -29270013907207156,
-        "series_title": "American Horror Story",
-        "episode_code": "S11E09",
-        "source_title": "American Horror Story - S11E9 Requiem 1981 1987 (1) EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 51905,
-        "source_id": -50577755831500766,
-        "series_title": "American Horror Story",
-        "episode_code": "S11E10",
-        "source_title": "American Horror Story - S11E10 Requiem 1981 1987 (2) EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 19924,
-        "source_id": -47281954988115593,
-        "series_title": "American Horror Story",
-        "episode_code": "S12E01",
-        "source_title": "American Horror Story - S12E1 Multiply Thy Pain EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 19925,
-        "source_id": -39718785112950391,
-        "series_title": "American Horror Story",
-        "episode_code": "S12E02",
-        "source_title": "American Horror Story S12E02 Rockabye 1080p AMZN WEB-DL DDP5 1 H 264-NTb",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 19925,
-        "source_id": -47454548945053884,
-        "series_title": "American Horror Story",
-        "episode_code": "S12E02",
-        "source_title": "American Horror Story - S12E2 Rockabye EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 19925,
-        "source_id": -20736727769245948,
-        "series_title": "American Horror Story",
-        "episode_code": "S12E02",
-        "source_title": "American Horror Story - S12E2 EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 19926,
-        "source_id": -42965320460167568,
-        "series_title": "American Horror Story",
-        "episode_code": "S12E03",
-        "source_title": "American Horror Story S12E03 When the Bough Breaks 1080p AMZN WEB-DL DDP5 1 H 264-NTb",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 19926,
-        "source_id": -13402031333423062,
-        "series_title": "American Horror Story",
-        "episode_code": "S12E03",
-        "source_title": "American Horror Story - S12E3 When the Bough Breaks EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 19927,
-        "source_id": -1184788283412565,
-        "series_title": "American Horror Story",
-        "episode_code": "S12E04",
-        "source_title": "American Horror Story S12E04 Vanishing Twin 1080p AMZN WEB-DL DDP5 1 H 264-NTb",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 19927,
-        "source_id": -14962129427304751,
-        "series_title": "American Horror Story",
-        "episode_code": "S12E04",
-        "source_title": "American Horror Story S12E04 Vanishing Twin 720p AMZN WEB-DL DDP5 1 H 264-NTb",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 19927,
-        "source_id": -69119553283140176,
-        "series_title": "American Horror Story",
-        "episode_code": "S12E04",
-        "source_title": "American Horror Story - S12E4 Vanishing Twin EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 19928,
-        "source_id": -31825060208029935,
-        "series_title": "American Horror Story",
-        "episode_code": "S12E05",
-        "source_title": "American Horror Story S12E05 Preech 1080p AMZN WEB-DL DDP5 1 H 264-NTb",
-        "status": "needs_whisper"
-      },
-      {
         "episode_id": 19928,
         "source_id": -4251933492911904,
         "series_title": "American Horror Story",
@@ -347670,6 +347610,166 @@
         "episode_code": "S02E01",
         "source_title": "Andor-S02E01-_Ponny_",
         "status": "needs_whisper"
+      },
+      {
+        "episode_id": 84523,
+        "source_id": -67331208430434911,
+        "series_title": "Arrested Development",
+        "episode_code": "S04E07",
+        "source_title": "Arrested Development - S4E7 Colony Collapse EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 84524,
+        "source_id": -13792700747207744,
+        "series_title": "Arrested Development",
+        "episode_code": "S04E08",
+        "source_title": "Arrested Development - S4E8 Red Hairing EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 84527,
+        "source_id": -6347349941681691,
+        "series_title": "Arrested Development",
+        "episode_code": "S04E11",
+        "source_title": "Arrested Development - S4E11 EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 84530,
+        "source_id": -21446576542691621,
+        "series_title": "Arrested Development",
+        "episode_code": "S04E14",
+        "source_title": "Arrested Development - S4E14 Off The Hook EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 84564,
+        "source_id": -24502051459244765,
+        "series_title": "Arrested Development",
+        "episode_code": "S05E01",
+        "source_title": "Arrested Development S5E1 Family Leave",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 84564,
+        "source_id": -18652815514710135,
+        "series_title": "Arrested Development",
+        "episode_code": "S05E01",
+        "source_title": "Arrested Development - S5E1 Family Leave EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 84563,
+        "source_id": -41987631316678290,
+        "series_title": "Arrested Development",
+        "episode_code": "S05E03",
+        "source_title": "Arrested Development - S5E3 Everyone Gets Atrophy EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 84563,
+        "source_id": -27164943137386632,
+        "series_title": "Arrested Development",
+        "episode_code": "S05E03",
+        "source_title": "Arrested Development S5E3 Everyone Gets Atrophy",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 158547,
+        "source_id": -51814776078853223,
+        "series_title": "Best Medicine",
+        "episode_code": "S01E02",
+        "source_title": "Best.Medicine.S01E02.720p.HDTV.x264-SYNCOPY",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 158547,
+        "source_id": -22367582676807694,
+        "series_title": "Best Medicine",
+        "episode_code": "S01E02",
+        "source_title": "Best Medicine S01E02 720p WEB H264-JFF",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 158548,
+        "source_id": -32467353346915572,
+        "series_title": "Best Medicine",
+        "episode_code": "S01E03",
+        "source_title": "Best.Medicine.S01E03.720p.HDTV.x264-SYNCOPY",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 158549,
+        "source_id": -39553142469934707,
+        "series_title": "Best Medicine",
+        "episode_code": "S01E04",
+        "source_title": "Best.Medicine.S01E04.720p.x264-FENiX",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 158549,
+        "source_id": -32907901315799820,
+        "series_title": "Best Medicine",
+        "episode_code": "S01E04",
+        "source_title": "Best.Medicine.S01E04.1080p",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 158550,
+        "source_id": -37781328427878907,
+        "series_title": "Best Medicine",
+        "episode_code": "S01E05",
+        "source_title": "Best Medicine S01E05",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 158552,
+        "source_id": -26967299779949614,
+        "series_title": "Best Medicine",
+        "episode_code": "S01E07",
+        "source_title": "Best Medicine S01E07 There Might Be Blood",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 158552,
+        "source_id": -24285663028764295,
+        "series_title": "Best Medicine",
+        "episode_code": "S01E07",
+        "source_title": "Best.Medicine.S01E07.720p",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 158553,
+        "source_id": -51564790477586367,
+        "series_title": "Best Medicine",
+        "episode_code": "S01E08",
+        "source_title": "Best Medicine S01E08 1080p x265-ELiTE",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 158554,
+        "source_id": -10790653192344938,
+        "series_title": "Best Medicine",
+        "episode_code": "S01E13",
+        "source_title": "Best Medicine S01E13",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 28104,
+        "source_id": -13428567874473772,
+        "series_title": "Beverly Hills 90210",
+        "episode_code": "S04E10",
+        "source_title": "Beverly Hills 90210 - S4E10 A stalo se..",
+        "status": "whisper_failed"
+      },
+      {
+        "episode_id": 49910,
+        "source_id": -49187278468511205,
+        "series_title": "Beze stopy",
+        "episode_code": "S04E16",
+        "source_title": "Beze stopy - 04x16 - Malé věci (The Little Things)",
+        "status": "whisper_failed"
       }
     ],
     "subtitle_followup_pending": [
@@ -348127,14 +348227,14 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 19,
+    "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
-    "whisper_non_cz_needs_subtitles": 4586,
+    "whisper_non_cz_needs_subtitles": 4602,
     "whisper_confirmed_cz": 2768,
     "whisper_failed": 40,
-    "needs_whisper": 49521
+    "needs_whisper": 49501
   },
   "subtitle_followup_statuses": {
     "needs_subtitle_setup_after_prehrajto_processing": 19740
