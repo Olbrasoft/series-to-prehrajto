@@ -2,28 +2,76 @@
   "counts": {
     "backlog_episodes": 155146,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 38254,
-    "prepared_source_episodes": 71122,
+    "uploaded_episodes": 38281,
+    "prepared_source_episodes": 71109,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 50,
-    "language_whisper_attempted_sources": 40,
-    "language_pending_whisper_sources": 2604,
+    "language_audited_sources": 20,
+    "language_whisper_attempted_sources": 20,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 69787,
-    "whisper_review_pending_sources": 60965,
+    "whisper_review_pending_sources": 60925,
     "subtitle_followup_sources": 18889,
     "subtitle_followup_pending_sources": 18889
   },
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-07-26T02:38:48Z",
+      "databaseId": 30184888873,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-26T02:38:44Z",
+      "databaseId": 30184886742,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-26T02:25:44Z",
+      "databaseId": 30184537089,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-sources"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-07-26T02:20:47Z",
+      "databaseId": 30184408958,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-26T02:15:45Z",
+      "databaseId": 30184276842,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-26T01:53:25Z",
+      "databaseId": 30183630588,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-26T01:52:45Z",
       "databaseId": 30183612637,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
@@ -35,19 +83,19 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-26T01:51:54Z",
       "databaseId": 30183589628,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-26T01:50:37Z",
       "databaseId": 30183555075,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -55,7 +103,7 @@
       "createdAt": "2026-07-26T01:50:34Z",
       "databaseId": 30183554021,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "sync"
     },
     {
@@ -87,7 +135,7 @@
       "createdAt": "2026-07-26T01:41:22Z",
       "databaseId": 30183304733,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "prepare-manifest"
     },
     {
@@ -99,11 +147,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-26T01:41:08Z",
       "databaseId": 30183297992,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
@@ -129,54 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-status"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-26T01:34:47Z",
-      "databaseId": 30183118174,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-26T01:33:23Z",
-      "databaseId": 30183079568,
-      "headBranch": "main",
-      "status": "pending",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-26T01:29:32Z",
-      "databaseId": 30182968390,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-26T01:29:30Z",
-      "databaseId": 30182967644,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-26T01:29:28Z",
-      "databaseId": 30182966800,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-26T01:29:26Z",
-      "databaseId": 30182965894,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
     }
   ],
   "gaps": {
@@ -168996,6 +168996,46 @@
         "video_id": 27845780
       },
       {
+        "episode_id": 79936,
+        "display_name": "Z onoho světa S02E03 - To nie je dobré CZ Titulky",
+        "video_id": 27845820
+      },
+      {
+        "episode_id": 99976,
+        "display_name": "Darkness Those Who Kill S03E05 - 5. epizoda CZ Titulky",
+        "video_id": 27845865
+      },
+      {
+        "episode_id": 99980,
+        "display_name": "Darkness Those Who Kill S04E03 - 3. epizoda CZ Titulky",
+        "video_id": 27845891
+      },
+      {
+        "episode_id": 79940,
+        "display_name": "Z onoho světa S02E08 - Já řvu, ty řveš CZ Titulky",
+        "video_id": 27845906
+      },
+      {
+        "episode_id": 115120,
+        "display_name": "Bookmaker S01E02 - Když děláš limonádu CZ Dabing",
+        "video_id": 27845957
+      },
+      {
+        "episode_id": 89712,
+        "display_name": "Powerless S01E05 - 5. epizoda CZ Titulky",
+        "video_id": 27845986
+      },
+      {
+        "episode_id": 151984,
+        "display_name": "Bookmaker S02E05 - Díl 5 CZ Dabing",
+        "video_id": 27846004
+      },
+      {
+        "episode_id": 70196,
+        "display_name": "Měli jsme štěstí S01E02 - 2. epizoda CZ Dabing",
+        "video_id": 27846020
+      },
+      {
         "episode_id": 142105,
         "display_name": "Extraordinary You S01E08 - 8. epizoda CZ Titulky",
         "video_id": 27845381
@@ -169071,6 +169111,31 @@
         "video_id": 27845787
       },
       {
+        "episode_id": 114553,
+        "display_name": "Trophy Wife S01E04 - 4. epizoda CZ Titulky",
+        "video_id": 27845832
+      },
+      {
+        "episode_id": 114557,
+        "display_name": "Trophy Wife S01E08 - 8. epizoda CZ Titulky",
+        "video_id": 27845856
+      },
+      {
+        "episode_id": 140489,
+        "display_name": "Greenhouse Academy S04E02 - Ten rychlý CZ Titulky",
+        "video_id": 27845887
+      },
+      {
+        "episode_id": 114561,
+        "display_name": "Trophy Wife S01E12 - 12. epizoda CZ Titulky",
+        "video_id": 27845904
+      },
+      {
+        "episode_id": 114565,
+        "display_name": "Trophy Wife S01E16 - 16. epizoda CZ Titulky",
+        "video_id": 27845933
+      },
+      {
         "episode_id": 116830,
         "display_name": "Anthony Bourdain: Neznámé končiny S04E08 - 8. epizoda CZ Titulky",
         "video_id": 27845383
@@ -169129,6 +169194,46 @@
         "episode_id": 127166,
         "display_name": "Animal Control S04E10 - 10. epizoda CZ Titulky",
         "video_id": 27845823
+      },
+      {
+        "episode_id": 139662,
+        "display_name": "Upright S02E02 - 2. epizoda CZ Titulky",
+        "video_id": 27845846
+      },
+      {
+        "episode_id": 111390,
+        "display_name": "Borgia S03E06 - 6. epizoda CZ Titulky",
+        "video_id": 27845867
+      },
+      {
+        "episode_id": 139666,
+        "display_name": "Upright S02E06 - 6. epizoda CZ Titulky",
+        "video_id": 27845912
+      },
+      {
+        "episode_id": 111394,
+        "display_name": "Borgia S03E10 - 10. epizoda CZ Titulky",
+        "video_id": 27845948
+      },
+      {
+        "episode_id": 145678,
+        "display_name": "Beyond Evil S01E10 - 10. epizoda CZ Titulky",
+        "video_id": 27845993
+      },
+      {
+        "episode_id": 111398,
+        "display_name": "Borgia S03E14 - 14. epizoda CZ Titulky",
+        "video_id": 27846050
+      },
+      {
+        "episode_id": 99962,
+        "display_name": "Darkness Those Who Kill S01E07 - 7. epizoda CZ Titulky",
+        "video_id": 27846102
+      },
+      {
+        "episode_id": 142102,
+        "display_name": "Extraordinary You S01E03 - 3. epizoda CZ Titulky",
+        "video_id": 27846184
       },
       {
         "episode_id": 96635,
@@ -169199,6 +169304,36 @@
         "episode_id": 115499,
         "display_name": "The Enemy Within S01E10 - Chigorin CZ Titulky",
         "video_id": 27845808
+      },
+      {
+        "episode_id": 66611,
+        "display_name": "Absolventi roku 2009 S01E03 - 3. epizoda CZ Titulky",
+        "video_id": 27845839
+      },
+      {
+        "episode_id": 66607,
+        "display_name": "Absolventi roku 2009 S01E08 - 8. epizoda CZ Titulky",
+        "video_id": 27845880
+      },
+      {
+        "episode_id": 114551,
+        "display_name": "Trophy Wife S01E01 - 1. epizoda CZ Titulky",
+        "video_id": 27845916
+      },
+      {
+        "episode_id": 99979,
+        "display_name": "Darkness Those Who Kill S04E02 - 2. epizoda CZ Titulky",
+        "video_id": 27845951
+      },
+      {
+        "episode_id": 114559,
+        "display_name": "Trophy Wife S01E10 - 10. epizoda CZ Titulky",
+        "video_id": 27845971
+      },
+      {
+        "episode_id": 70195,
+        "display_name": "Měli jsme štěstí S01E01 - 1. epizoda CZ Dabing",
+        "video_id": 27845998
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -337913,6 +338048,46 @@
         "video_id": 27845780
       },
       {
+        "episode_id": 79936,
+        "display_name": "Z onoho světa S02E03 - To nie je dobré CZ Titulky",
+        "video_id": 27845820
+      },
+      {
+        "episode_id": 99976,
+        "display_name": "Darkness Those Who Kill S03E05 - 5. epizoda CZ Titulky",
+        "video_id": 27845865
+      },
+      {
+        "episode_id": 99980,
+        "display_name": "Darkness Those Who Kill S04E03 - 3. epizoda CZ Titulky",
+        "video_id": 27845891
+      },
+      {
+        "episode_id": 79940,
+        "display_name": "Z onoho světa S02E08 - Já řvu, ty řveš CZ Titulky",
+        "video_id": 27845906
+      },
+      {
+        "episode_id": 115120,
+        "display_name": "Bookmaker S01E02 - Když děláš limonádu CZ Dabing",
+        "video_id": 27845957
+      },
+      {
+        "episode_id": 89712,
+        "display_name": "Powerless S01E05 - 5. epizoda CZ Titulky",
+        "video_id": 27845986
+      },
+      {
+        "episode_id": 151984,
+        "display_name": "Bookmaker S02E05 - Díl 5 CZ Dabing",
+        "video_id": 27846004
+      },
+      {
+        "episode_id": 70196,
+        "display_name": "Měli jsme štěstí S01E02 - 2. epizoda CZ Dabing",
+        "video_id": 27846020
+      },
+      {
         "episode_id": 142105,
         "display_name": "Extraordinary You S01E08 - 8. epizoda CZ Titulky",
         "video_id": 27845381
@@ -337988,6 +338163,31 @@
         "video_id": 27845787
       },
       {
+        "episode_id": 114553,
+        "display_name": "Trophy Wife S01E04 - 4. epizoda CZ Titulky",
+        "video_id": 27845832
+      },
+      {
+        "episode_id": 114557,
+        "display_name": "Trophy Wife S01E08 - 8. epizoda CZ Titulky",
+        "video_id": 27845856
+      },
+      {
+        "episode_id": 140489,
+        "display_name": "Greenhouse Academy S04E02 - Ten rychlý CZ Titulky",
+        "video_id": 27845887
+      },
+      {
+        "episode_id": 114561,
+        "display_name": "Trophy Wife S01E12 - 12. epizoda CZ Titulky",
+        "video_id": 27845904
+      },
+      {
+        "episode_id": 114565,
+        "display_name": "Trophy Wife S01E16 - 16. epizoda CZ Titulky",
+        "video_id": 27845933
+      },
+      {
         "episode_id": 116830,
         "display_name": "Anthony Bourdain: Neznámé končiny S04E08 - 8. epizoda CZ Titulky",
         "video_id": 27845383
@@ -338046,6 +338246,46 @@
         "episode_id": 127166,
         "display_name": "Animal Control S04E10 - 10. epizoda CZ Titulky",
         "video_id": 27845823
+      },
+      {
+        "episode_id": 139662,
+        "display_name": "Upright S02E02 - 2. epizoda CZ Titulky",
+        "video_id": 27845846
+      },
+      {
+        "episode_id": 111390,
+        "display_name": "Borgia S03E06 - 6. epizoda CZ Titulky",
+        "video_id": 27845867
+      },
+      {
+        "episode_id": 139666,
+        "display_name": "Upright S02E06 - 6. epizoda CZ Titulky",
+        "video_id": 27845912
+      },
+      {
+        "episode_id": 111394,
+        "display_name": "Borgia S03E10 - 10. epizoda CZ Titulky",
+        "video_id": 27845948
+      },
+      {
+        "episode_id": 145678,
+        "display_name": "Beyond Evil S01E10 - 10. epizoda CZ Titulky",
+        "video_id": 27845993
+      },
+      {
+        "episode_id": 111398,
+        "display_name": "Borgia S03E14 - 14. epizoda CZ Titulky",
+        "video_id": 27846050
+      },
+      {
+        "episode_id": 99962,
+        "display_name": "Darkness Those Who Kill S01E07 - 7. epizoda CZ Titulky",
+        "video_id": 27846102
+      },
+      {
+        "episode_id": 142102,
+        "display_name": "Extraordinary You S01E03 - 3. epizoda CZ Titulky",
+        "video_id": 27846184
       },
       {
         "episode_id": 96635,
@@ -338116,6 +338356,36 @@
         "episode_id": 115499,
         "display_name": "The Enemy Within S01E10 - Chigorin CZ Titulky",
         "video_id": 27845808
+      },
+      {
+        "episode_id": 66611,
+        "display_name": "Absolventi roku 2009 S01E03 - 3. epizoda CZ Titulky",
+        "video_id": 27845839
+      },
+      {
+        "episode_id": 66607,
+        "display_name": "Absolventi roku 2009 S01E08 - 8. epizoda CZ Titulky",
+        "video_id": 27845880
+      },
+      {
+        "episode_id": 114551,
+        "display_name": "Trophy Wife S01E01 - 1. epizoda CZ Titulky",
+        "video_id": 27845916
+      },
+      {
+        "episode_id": 99979,
+        "display_name": "Darkness Those Who Kill S04E02 - 2. epizoda CZ Titulky",
+        "video_id": 27845951
+      },
+      {
+        "episode_id": 114559,
+        "display_name": "Trophy Wife S01E10 - 10. epizoda CZ Titulky",
+        "video_id": 27845971
+      },
+      {
+        "episode_id": 70195,
+        "display_name": "Měli jsme štěstí S01E01 - 1. epizoda CZ Dabing",
+        "video_id": 27845998
       }
     ],
     "prepared_not_upload_ready": [
@@ -338462,86 +338732,6 @@
         "status": "whisper_failed"
       },
       {
-        "episode_id": 85841,
-        "source_id": -11224985652489093,
-        "series_title": "Blunt Talk - Plané řeči",
-        "episode_code": "S01E06",
-        "source_title": "Blunt Talk - Plané řeči - S1E6 Goodnight, My Someone EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 85841,
-        "source_id": -26839962344883076,
-        "series_title": "Blunt Talk - Plané řeči",
-        "episode_code": "S01E06",
-        "source_title": "Blunt Talk - Plané řeči - S01E06 - Goodnight, My Someone",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 85843,
-        "source_id": -70538112967345553,
-        "series_title": "Blunt Talk - Plané řeči",
-        "episode_code": "S01E08",
-        "source_title": "Blunt Talk - Plané řeči - S1E8 Who Kisses So Early in the Morning? EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 85843,
-        "source_id": -42191813214976336,
-        "series_title": "Blunt Talk - Plané řeči",
-        "episode_code": "S01E08",
-        "source_title": "Blunt Talk - Plané řeči - S01E08 - Who Kisses So Early in the Morning?",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 85830,
-        "source_id": -56032388257127324,
-        "series_title": "Blunt Talk - Plané řeči",
-        "episode_code": "S02E02",
-        "source_title": "Blunt Talk - Plané řeči - S2E2 If It Comes in a Plastic Bag, Don't Eat It EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 85832,
-        "source_id": -4377127599939580,
-        "series_title": "Blunt Talk - Plané řeči",
-        "episode_code": "S02E04",
-        "source_title": "Blunt Talk - Plané řeči - S2E4 How Is It That Every Conversation We Have Comes Back to the Size of Your Penis EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 85832,
-        "source_id": -45092395060226269,
-        "series_title": "Blunt Talk - Plané řeči",
-        "episode_code": "S02E04",
-        "source_title": "Blunt Talk - Plané řeči - S02E04 - How Is It That Every Conversation We Have Comes Back to the Size of Your Penis",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 85834,
-        "source_id": -24359964838703563,
-        "series_title": "Blunt Talk - Plané řeči",
-        "episode_code": "S02E06",
-        "source_title": "Blunt Talk - Plané řeči - S2E6 Love Is Not Linear EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 85836,
-        "source_id": -29200409106073206,
-        "series_title": "Blunt Talk - Plané řeči",
-        "episode_code": "S02E08",
-        "source_title": "Blunt Talk - Plané řeči - S2E8 A Cell Doesn't Have to Be a Closet EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 85838,
-        "source_id": -46148588318828594,
-        "series_title": "Blunt Talk - Plané řeči",
-        "episode_code": "S02E10",
-        "source_title": "Blunt Talk - Plané řeči - S2E10 Is This All Because I Didn't Call You EN",
-        "status": "needs_whisper"
-      },
-      {
         "episode_id": 18069,
         "source_id": -6836255527719051,
         "series_title": "Bojovník",
@@ -338820,6 +339010,86 @@
         "episode_code": "S01E03",
         "source_title": "Dokonalý cizinec - S1E3 EN",
         "status": "whisper_failed"
+      },
+      {
+        "episode_id": 114715,
+        "source_id": -20801181528521991,
+        "series_title": "Clickbait",
+        "episode_code": "S01E01",
+        "source_title": "Clickbait.S01E01.1080p.NF.WEB-DL.DDP5.1.Atmos.H.265.HDR-NTb",
+        "status": "whisper_failed"
+      },
+      {
+        "episode_id": 75828,
+        "source_id": -44463525852351933,
+        "series_title": "Code Black",
+        "episode_code": "S01E10",
+        "source_title": "Code Black - S1E10 Cardiac Support EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 75829,
+        "source_id": -13477576204969882,
+        "series_title": "Code Black",
+        "episode_code": "S01E11",
+        "source_title": "Code Black - S01E11 - Black Tag",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 75829,
+        "source_id": -7362211871676540,
+        "series_title": "Code Black",
+        "episode_code": "S01E11",
+        "source_title": "Code Black - S1E11 Black Tag EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 75830,
+        "source_id": -62683354891949660,
+        "series_title": "Code Black",
+        "episode_code": "S01E12",
+        "source_title": "Code Black - S01E12 - The Fog of War",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 75830,
+        "source_id": -9176001815084150,
+        "series_title": "Code Black",
+        "episode_code": "S01E12",
+        "source_title": "Code Black - S1E12 The Fog of War EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 75831,
+        "source_id": -33821560943891797,
+        "series_title": "Code Black",
+        "episode_code": "S01E13",
+        "source_title": "Code Black - S01E13 - First Date",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 75831,
+        "source_id": -26463114575502336,
+        "series_title": "Code Black",
+        "episode_code": "S01E13",
+        "source_title": "Code Black S1E13 First Date",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 75831,
+        "source_id": -23386696137401442,
+        "series_title": "Code Black",
+        "episode_code": "S01E13",
+        "source_title": "Code Black - S1E13 First Date EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 75831,
+        "source_id": -16700795119527454,
+        "series_title": "Code Black",
+        "episode_code": "S01E13",
+        "source_title": "Code Black S1E13 First Date",
+        "status": "needs_whisper"
       }
     ],
     "subtitle_followup_pending": [
@@ -339277,15 +339547,14 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 10,
-    "ok": 39,
+    "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
-    "whisper_non_cz_needs_subtitles": 5595,
-    "whisper_confirmed_cz": 3227,
+    "whisper_non_cz_needs_subtitles": 5630,
+    "whisper_confirmed_cz": 3232,
     "whisper_failed": 41,
-    "needs_whisper": 60924
+    "needs_whisper": 60884
   },
   "subtitle_followup_statuses": {
     "needs_subtitle_setup_after_prehrajto_processing": 18889
