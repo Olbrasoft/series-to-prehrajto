@@ -2,44 +2,76 @@
   "counts": {
     "backlog_episodes": 154828,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 38598,
-    "prepared_source_episodes": 56291,
+    "uploaded_episodes": 38601,
+    "prepared_source_episodes": 56307,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 456,
-    "language_whisper_attempted_sources": 80,
-    "language_pending_whisper_sources": 2604,
+    "language_audited_sources": 166,
+    "language_whisper_attempted_sources": 40,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 56804,
     "whisper_review_pending_sources": 49012,
-    "subtitle_followup_sources": 19129,
-    "subtitle_followup_pending_sources": 19129
+    "subtitle_followup_sources": 19132,
+    "subtitle_followup_pending_sources": 19132
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-07-26T08:17:44Z",
-      "databaseId": 30194362286,
+      "createdAt": "2026-07-26T08:24:57Z",
+      "databaseId": 30194581383,
       "headBranch": "main",
       "status": "in_progress",
-      "workflowName": "ops-status"
+      "workflowName": "prepare-sources"
     },
     {
       "conclusion": "",
-      "createdAt": "2026-07-26T08:17:23Z",
-      "databaseId": 30194351117,
+      "createdAt": "2026-07-26T08:24:22Z",
+      "databaseId": 30194563052,
       "headBranch": "main",
       "status": "pending",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-26T08:24:22Z",
+      "databaseId": 30194562769,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-26T08:24:18Z",
+      "databaseId": 30194560750,
+      "headBranch": "main",
+      "status": "in_progress",
       "workflowName": "prepare-manifest"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
+      "createdAt": "2026-07-26T08:17:44Z",
+      "databaseId": 30194362286,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-07-26T08:17:23Z",
+      "databaseId": 30194351117,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-26T08:17:23Z",
       "databaseId": 30194351115,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "update-descriptions"
     },
     {
@@ -51,11 +83,11 @@
       "workflowName": "prepare-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-26T08:15:17Z",
       "databaseId": 30194287917,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -67,11 +99,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-26T08:10:54Z",
       "databaseId": 30194150981,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
@@ -103,7 +135,7 @@
       "createdAt": "2026-07-26T07:44:50Z",
       "databaseId": 30193347630,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "sync"
     },
     {
@@ -131,11 +163,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "failure",
       "createdAt": "2026-07-26T07:42:10Z",
       "databaseId": 30193271677,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -145,38 +177,6 @@
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "prepare-sources"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-26T07:23:26Z",
-      "databaseId": 30192716521,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-07-26T07:22:47Z",
-      "databaseId": 30192696026,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-26T07:22:47Z",
-      "databaseId": 30192695998,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-26T07:22:03Z",
-      "databaseId": 30192674417,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-descriptions"
     }
   ],
   "gaps": {
@@ -170821,6 +170821,21 @@
         "video_id": 27850630
       },
       {
+        "episode_id": 107154,
+        "display_name": "Dalgliesh S03E04 - Zahalte jí tvář (2) CZ Dabing",
+        "video_id": 27850694
+      },
+      {
+        "episode_id": 125870,
+        "display_name": "Muž v domácnosti S01E01 - 1. epizoda CZ Titulky",
+        "video_id": 27850730
+      },
+      {
+        "episode_id": 125874,
+        "display_name": "Muž v domácnosti S01E05 - 5. epizoda CZ Titulky",
+        "video_id": 27850745
+      },
+      {
         "episode_id": 69071,
         "display_name": "Columbo S03E03 - Kandidát zločinu CZ Dabing",
         "video_id": 27849444
@@ -341458,6 +341473,21 @@
         "video_id": 27850630
       },
       {
+        "episode_id": 107154,
+        "display_name": "Dalgliesh S03E04 - Zahalte jí tvář (2) CZ Dabing",
+        "video_id": 27850694
+      },
+      {
+        "episode_id": 125870,
+        "display_name": "Muž v domácnosti S01E01 - 1. epizoda CZ Titulky",
+        "video_id": 27850730
+      },
+      {
+        "episode_id": 125874,
+        "display_name": "Muž v domácnosti S01E05 - 5. epizoda CZ Titulky",
+        "video_id": 27850745
+      },
+      {
         "episode_id": 69071,
         "display_name": "Columbo S03E03 - Kandidát zločinu CZ Dabing",
         "video_id": 27849444
@@ -342717,9 +342747,9 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 376,
-    "ok": 79,
-    "resolve_failed": 1
+    "ok": 38,
+    "resolve_failed": 2,
+    "disabled": 126
   },
   "whisper_review_statuses": {
     "whisper_non_cz_needs_subtitles": 4994,
@@ -342728,6 +342758,6 @@
     "needs_whisper": 48970
   },
   "subtitle_followup_statuses": {
-    "needs_subtitle_setup_after_prehrajto_processing": 19129
+    "needs_subtitle_setup_after_prehrajto_processing": 19132
   }
 }
