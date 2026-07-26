@@ -1,37 +1,93 @@
 {
   "counts": {
     "backlog_episodes": 154640,
-    "manifest_upload_ready_episodes": 1001,
-    "uploaded_episodes": 38761,
-    "prepared_source_episodes": 56437,
+    "manifest_upload_ready_episodes": 1169,
+    "uploaded_episodes": 38800,
+    "prepared_source_episodes": 56200,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 40,
-    "language_whisper_attempted_sources": 40,
+    "language_audited_sources": 662,
+    "language_whisper_attempted_sources": 60,
     "language_pending_whisper_sources": 2604,
-    "whisper_review_sources": 56826,
-    "whisper_review_pending_sources": 49122,
-    "subtitle_followup_sources": 19176,
-    "subtitle_followup_pending_sources": 19176
+    "whisper_review_sources": 56860,
+    "whisper_review_pending_sources": 49289,
+    "subtitle_followup_sources": 19192,
+    "subtitle_followup_pending_sources": 19192
   },
   "workflow_runs": [
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-26T10:59:16Z",
+      "databaseId": 30199267500,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-26T10:58:50Z",
+      "databaseId": 30199255742,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-26T10:54:31Z",
+      "databaseId": 30199120629,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-26T10:48:36Z",
+      "databaseId": 30198936107,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-26T10:34:02Z",
+      "databaseId": 30198491391,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-26T10:33:59Z",
+      "databaseId": 30198489710,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-26T10:33:56Z",
+      "databaseId": 30198488642,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
     {
       "conclusion": "",
       "createdAt": "2026-07-26T10:33:22Z",
       "databaseId": 30198471895,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "prepare-manifest"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-26T10:32:54Z",
       "databaseId": 30198457835,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -121,62 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-26T10:09:59Z",
-      "databaseId": 30197773164,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-26T10:09:39Z",
-      "databaseId": 30197763108,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-26T09:52:23Z",
-      "databaseId": 30197239218,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-07-26T09:50:43Z",
-      "databaseId": 30197190925,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-26T09:48:00Z",
-      "databaseId": 30197110968,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-26T09:47:56Z",
-      "databaseId": 30197108938,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-26T09:46:41Z",
-      "databaseId": 30197073390,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
     }
   ],
   "gaps": {
@@ -171734,6 +171734,46 @@
         "episode_id": 59927,
         "display_name": "Blood Drive S01E13 - 13. epizoda CZ Titulky",
         "video_id": 27852925
+      },
+      {
+        "episode_id": 69076,
+        "display_name": "Columbo S05E03 - Krize identity CZ Titulky",
+        "video_id": 27853528
+      },
+      {
+        "episode_id": 130520,
+        "display_name": "Dobrý den, Verônico S02E05 - 5. epizoda CZ Titulky",
+        "video_id": 27853645
+      },
+      {
+        "episode_id": 86452,
+        "display_name": "Místo zvané domov S01E03 - 3. epizoda CZ Dabing",
+        "video_id": 27853713
+      },
+      {
+        "episode_id": 137422,
+        "display_name": "Carol a konec světa S01E10 - Vyšetřování CZ Dabing",
+        "video_id": 27853412
+      },
+      {
+        "episode_id": 134294,
+        "display_name": "Sever na druhou S01E01 - Srdce Arktidy CZ Dabing",
+        "video_id": 27853459
+      },
+      {
+        "episode_id": 180030,
+        "display_name": "Krvavá Sally S01E01 - Den svatého Valentýna CZ Dabing",
+        "video_id": 27853562
+      },
+      {
+        "episode_id": 159346,
+        "display_name": "Irma Vep S01E06 - The Thunder Master CZ Dabing",
+        "video_id": 27853642
+      },
+      {
+        "episode_id": 130511,
+        "display_name": "Dobrý den, Verônico S01E04 - Ciao, principessa CZ Titulky",
+        "video_id": 27853714
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -343186,6 +343226,196 @@
         "episode_id": 59927,
         "display_name": "Blood Drive S01E13 - 13. epizoda CZ Titulky",
         "video_id": 27852925
+      },
+      {
+        "episode_id": 12840,
+        "display_name": "Gangy z Birminghamu S04E01 - Oprátka CZ Dabing",
+        "video_id": 27853143
+      },
+      {
+        "episode_id": 12844,
+        "display_name": "Gangy z Birminghamu S05E01 - Černé úterý CZ Dabing",
+        "video_id": 27853198
+      },
+      {
+        "episode_id": 12836,
+        "display_name": "Gangy z Birminghamu S05E06 - Pan Jones CZ Dabing",
+        "video_id": 27853244
+      },
+      {
+        "episode_id": 18124,
+        "display_name": "Temný případ S02E03 - Snad zítra CZ Dabing",
+        "video_id": 27853288
+      },
+      {
+        "episode_id": 42016,
+        "display_name": "Kravaťáci S05E03 - Nedoplňovat CZ Dabing",
+        "video_id": 27853325
+      },
+      {
+        "episode_id": 42020,
+        "display_name": "Kravaťáci S05E07 - Trefa do černého CZ Dabing",
+        "video_id": 27853342
+      },
+      {
+        "episode_id": 42028,
+        "display_name": "Kravaťáci S05E14 - Sebeobrana CZ Titulky",
+        "video_id": 27853416
+      },
+      {
+        "episode_id": 69076,
+        "display_name": "Columbo S05E03 - Krize identity CZ Titulky",
+        "video_id": 27853528
+      },
+      {
+        "episode_id": 130520,
+        "display_name": "Dobrý den, Verônico S02E05 - 5. epizoda CZ Titulky",
+        "video_id": 27853645
+      },
+      {
+        "episode_id": 86452,
+        "display_name": "Místo zvané domov S01E03 - 3. epizoda CZ Dabing",
+        "video_id": 27853713
+      },
+      {
+        "episode_id": 10453,
+        "display_name": "Gangy z Birminghamu S03E03 - 3. epizoda CZ Dabing",
+        "video_id": 27853148
+      },
+      {
+        "episode_id": 10441,
+        "display_name": "Gangy z Birminghamu S03E06 - 6. epizoda CZ Dabing",
+        "video_id": 27853188
+      },
+      {
+        "episode_id": 12845,
+        "display_name": "Gangy z Birminghamu S04E06 - Společnost CZ Dabing",
+        "video_id": 27853331
+      },
+      {
+        "episode_id": 12841,
+        "display_name": "Gangy z Birminghamu S05E04 - Smyčka CZ Dabing",
+        "video_id": 27853403
+      },
+      {
+        "episode_id": 12837,
+        "display_name": "Gangy z Birminghamu S05E05 - Šok CZ Dabing",
+        "video_id": 27853512
+      },
+      {
+        "episode_id": 10442,
+        "display_name": "Gangy z Birminghamu S03E05 - 5. epizoda CZ Titulky",
+        "video_id": 27853154
+      },
+      {
+        "episode_id": 12838,
+        "display_name": "Gangy z Birminghamu S04E03 - Kos CZ Dabing",
+        "video_id": 27853187
+      },
+      {
+        "episode_id": 12846,
+        "display_name": "Gangy z Birminghamu S04E05 - Souboj CZ Dabing",
+        "video_id": 27853221
+      },
+      {
+        "episode_id": 10446,
+        "display_name": "Gangy z Birminghamu S06E06 - Zámek a klíč CZ Dabing",
+        "video_id": 27853255
+      },
+      {
+        "episode_id": 9822,
+        "display_name": "Mandalorian S03E06 - Kapitola 22: Žoldnéři CZ Dabing",
+        "video_id": 27853324
+      },
+      {
+        "episode_id": 42014,
+        "display_name": "Kravaťáci S05E01 - Popírání CZ Dabing",
+        "video_id": 27853334
+      },
+      {
+        "episode_id": 42018,
+        "display_name": "Kravaťáci S05E05 - Tváří v tvář CZ Dabing",
+        "video_id": 27853355
+      },
+      {
+        "episode_id": 42026,
+        "display_name": "Kravaťáci S05E12 - Žít pro boj... CZ Dabing",
+        "video_id": 27853394
+      },
+      {
+        "episode_id": 137422,
+        "display_name": "Carol a konec světa S01E10 - Vyšetřování CZ Dabing",
+        "video_id": 27853412
+      },
+      {
+        "episode_id": 134294,
+        "display_name": "Sever na druhou S01E01 - Srdce Arktidy CZ Dabing",
+        "video_id": 27853459
+      },
+      {
+        "episode_id": 180030,
+        "display_name": "Krvavá Sally S01E01 - Den svatého Valentýna CZ Dabing",
+        "video_id": 27853562
+      },
+      {
+        "episode_id": 159346,
+        "display_name": "Irma Vep S01E06 - The Thunder Master CZ Dabing",
+        "video_id": 27853642
+      },
+      {
+        "episode_id": 10443,
+        "display_name": "Gangy z Birminghamu S03E04 - 4. epizoda CZ Dabing",
+        "video_id": 27853146
+      },
+      {
+        "episode_id": 12839,
+        "display_name": "Gangy z Birminghamu S04E02 - Neznabozi CZ Dabing",
+        "video_id": 27853170
+      },
+      {
+        "episode_id": 10447,
+        "display_name": "Gangy z Birminghamu S06E04 - Safír CZ Dabing",
+        "video_id": 27853202
+      },
+      {
+        "episode_id": 10451,
+        "display_name": "Gangy z Birminghamu S06E05 - Cesta do pekel CZ Dabing",
+        "video_id": 27853252
+      },
+      {
+        "episode_id": 9823,
+        "display_name": "Mandalorian S03E05 - Kapitola 21: Pirát CZ Dabing",
+        "video_id": 27853384
+      },
+      {
+        "episode_id": 203203,
+        "display_name": "Rod Draka S03E02 - Královnino přístaviště CZ Dabing",
+        "video_id": 27853442
+      },
+      {
+        "episode_id": 42015,
+        "display_name": "Kravaťáci S05E02 - Náhrada CZ Dabing",
+        "video_id": 27853498
+      },
+      {
+        "episode_id": 42019,
+        "display_name": "Kravaťáci S05E06 - Privilegium CZ Dabing",
+        "video_id": 27853527
+      },
+      {
+        "episode_id": 42023,
+        "display_name": "Kravaťáci S05E10 - Víra CZ Dabing",
+        "video_id": 27853572
+      },
+      {
+        "episode_id": 42027,
+        "display_name": "Kravaťáci S05E13 - Božská zelená planeta CZ Dabing",
+        "video_id": 27853638
+      },
+      {
+        "episode_id": 130511,
+        "display_name": "Dobrý den, Verônico S01E04 - Ciao, principessa CZ Titulky",
+        "video_id": 27853714
       }
     ],
     "prepared_not_upload_ready": [
@@ -343836,59 +344066,59 @@
         "status": "whisper_failed"
       },
       {
-        "episode_id": 69081,
-        "source_id": -47658809283230642,
+        "episode_id": 69099,
+        "source_id": -58373418818864622,
         "series_title": "Columbo",
-        "episode_code": "S05E04",
-        "source_title": "COLUMBO S05E04 Smrt v aréně",
+        "episode_code": "S06E02",
+        "source_title": "Columbo S06E02 - Staromódní vražda (by Noxx).mkv",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 69081,
-        "source_id": -20904423213446800,
+        "episode_id": 69099,
+        "source_id": -17257254295606154,
         "series_title": "Columbo",
-        "episode_code": "S05E04",
-        "source_title": "Columbo S05E04 Smrt v aréně (by Nexsus)",
+        "episode_code": "S06E02",
+        "source_title": "Columbo S06E02 Staromódní vražda (by Nexsus)",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 69081,
-        "source_id": -12009701335937661,
+        "episode_id": 69099,
+        "source_id": -27780327518614783,
         "series_title": "Columbo",
-        "episode_code": "S05E04",
-        "source_title": "Columbo S05E04 - Smrt v aréně (by Noxx).mkv",
+        "episode_code": "S06E02",
+        "source_title": "Columbo 6x2",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 69081,
-        "source_id": -25206285911538459,
+        "episode_id": 69099,
+        "source_id": -63464595784987829,
         "series_title": "Columbo",
-        "episode_code": "S05E04",
-        "source_title": "Columbo S5E4 Smrt v aréně",
+        "episode_code": "S06E02",
+        "source_title": "Columbo S06e02 - Staromódní vražda",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 69081,
-        "source_id": -23061431168647012,
+        "episode_id": 69098,
+        "source_id": -37940125131068685,
         "series_title": "Columbo",
-        "episode_code": "S05E04",
-        "source_title": "Columbo - S05E04 - Smrt v aréně",
+        "episode_code": "S06E03",
+        "source_title": "Columbo S06E03 Případ vysokého IQ (by Nexsus)",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 69062,
-        "source_id": -71069368513725471,
+        "episode_id": 69098,
+        "source_id": -7902858359641146,
         "series_title": "Columbo",
-        "episode_code": "S05E05",
-        "source_title": "Columbo S05E05 Kouzelné alibi (by Nexsus)",
+        "episode_code": "S06E03",
+        "source_title": "Columbo S06E03 - Případ vysokého IQ (by Noxx)",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 69062,
-        "source_id": -48334155602782800,
+        "episode_id": 69098,
+        "source_id": -19129213649649228,
         "series_title": "Columbo",
-        "episode_code": "S05E05",
-        "source_title": "Columbo S05E05 - Kouzelné alibi (by Noxx).mkv",
+        "episode_code": "S06E03",
+        "source_title": "Columbo 6x3",
         "status": "needs_whisper"
       }
     ],
@@ -344347,16 +344577,17 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 39,
+    "disabled": 602,
+    "ok": 59,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
-    "whisper_non_cz_needs_subtitles": 4887,
-    "whisper_confirmed_cz": 2817,
+    "whisper_non_cz_needs_subtitles": 4739,
+    "whisper_confirmed_cz": 2832,
     "whisper_failed": 43,
-    "needs_whisper": 49079
+    "needs_whisper": 49246
   },
   "subtitle_followup_statuses": {
-    "needs_subtitle_setup_after_prehrajto_processing": 19176
+    "needs_subtitle_setup_after_prehrajto_processing": 19192
   }
 }
