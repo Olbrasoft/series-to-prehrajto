@@ -15,6 +15,9 @@ from gzip import BadGzipFile
 from pathlib import Path
 from typing import Callable, Iterable
 
+MAX_PREPARED_BYTES = 90 * 1024 * 1024
+MAX_WHISPER_REVIEW_BYTES = 45 * 1024 * 1024
+
 
 def load_jsonl(path: Path) -> list[dict]:
     if not path.exists() or path.stat().st_size == 0:
@@ -35,6 +38,10 @@ def write_jsonl(path: Path, rows: Iterable[dict]) -> None:
     with opener(path, "wt", encoding="utf-8") as fh:
         for row in rows:
             fh.write(json.dumps(row, ensure_ascii=False) + "\n")
+
+
+def row_json_size(row: dict) -> int:
+    return len(json.dumps(row, ensure_ascii=False).encode("utf-8")) + 1
 
 
 def episode_sort_key(row: dict) -> tuple:
@@ -159,6 +166,49 @@ def prune_uploaded_prepared(repo: Path) -> int:
     return removed
 
 
+def compact_to_size_limit(
+    path: Path,
+    *,
+    max_bytes: int,
+    priority_fn: Callable[[dict], tuple],
+    sort_fn: Callable[[dict], tuple] | None = None,
+) -> int:
+    rows = load_jsonl(path)
+    if not rows or path.stat().st_size <= max_bytes:
+        return 0
+
+    kept: list[dict] = []
+    total = 0
+    for row in sorted(rows, key=priority_fn, reverse=True):
+        size = row_json_size(row)
+        if kept and total + size > max_bytes:
+            continue
+        kept.append(row)
+        total += size
+
+    if sort_fn:
+        kept.sort(key=sort_fn)
+    write_jsonl(path, kept)
+    return len(rows) - len(kept)
+
+
+def prepared_retention_key(row: dict) -> tuple:
+    return (
+        bool(row.get("upload_ready") and row.get("selected_source")),
+        str(row.get("prepared_at") or ""),
+        int(row.get("episode_id") or 0),
+    )
+
+
+def whisper_retention_key(row: dict) -> tuple:
+    return (
+        str(row.get("created_at") or row.get("prepared_at") or ""),
+        int(row.get("filesize_bytes") or 0),
+        int(row.get("episode_id") or 0),
+        int(row.get("source_id") or 0),
+    )
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--incoming-dir", required=True)
@@ -202,6 +252,24 @@ def main() -> int:
         ),
     }
     changes["prepared_pruned_uploaded"] = prune_uploaded_prepared(repo)
+    changes["prepared_pruned_size"] = compact_to_size_limit(
+        repo / "plans" / "prepared-episodes.jsonl",
+        max_bytes=MAX_PREPARED_BYTES,
+        priority_fn=prepared_retention_key,
+        sort_fn=episode_sort_key,
+    )
+    changes["whisper_review_pruned_size"] = compact_to_size_limit(
+        repo / "plans" / "whisper-review-queue.jsonl",
+        max_bytes=MAX_WHISPER_REVIEW_BYTES,
+        priority_fn=whisper_retention_key,
+        sort_fn=lambda row: (
+            str(row.get("series_slug") or ""),
+            int(row.get("season") or 0),
+            int(row.get("episode") or 0),
+            -int(row.get("filesize_bytes") or 0),
+            int(row.get("source_id") or 0),
+        ),
+    )
     print(json.dumps(changes, ensure_ascii=False, sort_keys=True))
     return 0
 
