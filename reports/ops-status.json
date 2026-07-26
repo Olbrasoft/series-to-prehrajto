@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 154190,
     "manifest_upload_ready_episodes": 1544,
-    "uploaded_episodes": 39240,
+    "uploaded_episodes": 39241,
     "prepared_source_episodes": 53801,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 781,
-    "language_whisper_attempted_sources": 60,
-    "language_pending_whisper_sources": 2624,
+    "language_audited_sources": 40,
+    "language_whisper_attempted_sources": 40,
+    "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 56936,
     "whisper_review_pending_sources": 49733,
     "subtitle_followup_sources": 19866,
@@ -20,10 +20,18 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-07-26T21:21:45Z",
+      "databaseId": 30220914202,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-26T21:20:24Z",
       "databaseId": 30220866732,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-status"
     },
     {
@@ -55,7 +63,7 @@
       "createdAt": "2026-07-26T21:16:41Z",
       "databaseId": 30220739540,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "audit-language"
     },
     {
@@ -99,11 +107,11 @@
       "workflowName": "process-whisper-review"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-26T21:04:19Z",
       "databaseId": 30220307463,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -127,7 +135,7 @@
       "createdAt": "2026-07-26T21:00:41Z",
       "databaseId": 30220178072,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "prepare-manifest"
     },
     {
@@ -169,14 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-07-26T20:47:02Z",
-      "databaseId": 30219707314,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-descriptions"
     }
   ],
   "gaps": {
@@ -173749,6 +173749,11 @@
         "episode_id": 169931,
         "display_name": "Písně lásky S01E07 - Jak to chodí se sny CZ Titulky",
         "video_id": 27888688
+      },
+      {
+        "episode_id": 141282,
+        "display_name": "Club de Cuervos S01E05 - 5. epizoda CZ Titulky",
+        "video_id": 27889495
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -347216,6 +347221,11 @@
         "episode_id": 169931,
         "display_name": "Písně lásky S01E07 - Jak to chodí se sny CZ Titulky",
         "video_id": 27888688
+      },
+      {
+        "episode_id": 141282,
+        "display_name": "Club de Cuervos S01E05 - 5. epizoda CZ Titulky",
+        "video_id": 27889495
       }
     ],
     "prepared_not_upload_ready": [
@@ -348377,8 +348387,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 721,
-    "ok": 59,
+    "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
