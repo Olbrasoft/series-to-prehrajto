@@ -1,29 +1,45 @@
 {
   "counts": {
     "backlog_episodes": 154475,
-    "manifest_upload_ready_episodes": 1289,
-    "uploaded_episodes": 38919,
-    "prepared_source_episodes": 55896,
+    "manifest_upload_ready_episodes": 1311,
+    "uploaded_episodes": 38920,
+    "prepared_source_episodes": 55837,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 192,
+    "language_audited_sources": 350,
     "language_whisper_attempted_sources": 60,
     "language_pending_whisper_sources": 2604,
-    "whisper_review_sources": 56879,
-    "whisper_review_pending_sources": 49397,
-    "subtitle_followup_sources": 19281,
-    "subtitle_followup_pending_sources": 19281
+    "whisper_review_sources": 56882,
+    "whisper_review_pending_sources": 49416,
+    "subtitle_followup_sources": 19304,
+    "subtitle_followup_pending_sources": 19304
   },
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-07-26T13:34:03Z",
+      "databaseId": 30204301792,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-26T13:33:41Z",
+      "databaseId": 30204289741,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-26T13:31:58Z",
       "databaseId": 30204229312,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-status"
     },
     {
@@ -79,7 +95,7 @@
       "createdAt": "2026-07-26T13:05:46Z",
       "databaseId": 30203362202,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "sync"
     },
     {
@@ -87,7 +103,7 @@
       "createdAt": "2026-07-26T13:04:13Z",
       "databaseId": 30203311008,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "prepare-manifest"
     },
     {
@@ -161,22 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-26T12:49:13Z",
-      "databaseId": 30202813912,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-26T12:48:00Z",
-      "databaseId": 30202776233,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-descriptions"
     }
   ],
   "gaps": {
@@ -172134,6 +172134,11 @@
         "episode_id": 72105,
         "display_name": "Letecké katastrofy S15E10 - Osudové zpoždění CZ Dabing",
         "video_id": 27857001
+      },
+      {
+        "episode_id": 139141,
+        "display_name": "Rudá cesta S01E05 - Velký souboj zmijí CZ Dabing",
+        "video_id": 27857056
       },
       {
         "episode_id": 159902,
@@ -344183,6 +344188,11 @@
         "video_id": 27857001
       },
       {
+        "episode_id": 139141,
+        "display_name": "Rudá cesta S01E05 - Velký souboj zmijí CZ Dabing",
+        "video_id": 27857056
+      },
+      {
         "episode_id": 159902,
         "display_name": "Friendly Rivalry S01E13 - 13. epizoda CZ Titulky",
         "video_id": 27855198
@@ -344930,6 +344940,14 @@
         "status": "whisper_failed"
       },
       {
+        "episode_id": 37855,
+        "source_id": -46286758777074448,
+        "series_title": "Brooklyn 99",
+        "episode_code": "S08E01",
+        "source_title": "Brooklyn Nine-Nine (Brooklyn 99) S08E01 1080p EnTit",
+        "status": "needs_whisper"
+      },
+      {
         "episode_id": 37856,
         "source_id": -41663194584321245,
         "series_title": "Brooklyn 99",
@@ -345071,14 +345089,6 @@
         "series_title": "Castle Rock",
         "episode_code": "S02E01",
         "source_title": "Castle Rock - S2E1 Let the River Run EN",
-        "status": "whisper_failed"
-      },
-      {
-        "episode_id": 5853,
-        "source_id": -11645537142753869,
-        "series_title": "Castle Rock",
-        "episode_code": "S02E01",
-        "source_title": "Castle Rock - S2E1 Let The River Run EN",
         "status": "whisper_failed"
       }
     ],
@@ -345537,17 +345547,17 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 132,
+    "disabled": 290,
     "ok": 59,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
-    "whisper_non_cz_needs_subtitles": 4693,
+    "whisper_non_cz_needs_subtitles": 4677,
     "whisper_confirmed_cz": 2789,
-    "whisper_failed": 42,
-    "needs_whisper": 49355
+    "whisper_failed": 41,
+    "needs_whisper": 49375
   },
   "subtitle_followup_statuses": {
-    "needs_subtitle_setup_after_prehrajto_processing": 19281
+    "needs_subtitle_setup_after_prehrajto_processing": 19304
   }
 }
