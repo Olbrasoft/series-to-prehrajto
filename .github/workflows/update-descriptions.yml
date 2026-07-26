@@ -84,9 +84,18 @@ jobs:
             fi
 
             git commit -m "chore: update uploaded descriptions"
-            if git push origin HEAD:main; then
-              exit 0
-            fi
+            for push_attempt in 1 2 3 4 5 6 7 8 9 10; do
+              if git push origin HEAD:main; then
+                exit 0
+              fi
+
+              git fetch origin main
+              if ! git rebase origin/main; then
+                git rebase --abort
+                break
+              fi
+              sleep 1
+            done
             echo "push race on attempt ${attempt}, retrying"
             sleep $((attempt * 2))
           done
