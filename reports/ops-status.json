@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 154106,
     "manifest_upload_ready_episodes": 1379,
-    "uploaded_episodes": 39392,
+    "uploaded_episodes": 39393,
     "prepared_source_episodes": 53122,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 505,
+    "language_audited_sources": 40,
     "language_whisper_attempted_sources": 40,
-    "language_pending_whisper_sources": 2624,
+    "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 56945,
     "whisper_review_pending_sources": 49662,
     "subtitle_followup_sources": 19950,
@@ -20,10 +20,26 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-07-26T23:43:21Z",
+      "databaseId": 30225847839,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-26T23:43:06Z",
+      "databaseId": 30225838822,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-26T23:41:52Z",
       "databaseId": 30225796318,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -59,11 +75,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-26T23:33:14Z",
       "databaseId": 30225495556,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -161,22 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-26T23:09:54Z",
-      "databaseId": 30224656303,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-26T23:08:39Z",
-      "databaseId": 30224612855,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
     }
   ],
   "gaps": {
@@ -348701,6 +348701,11 @@
         "episode_id": 89495,
         "display_name": "Doktorka S02E13 - 13. epizoda CZ Dabing",
         "video_id": 27892323
+      },
+      {
+        "episode_id": 37459,
+        "display_name": "Simpsonovi S30E20 - Dívka, která neumí říci ne CZ Dabing",
+        "video_id": 27892392
       }
     ],
     "prepared_not_upload_ready": [
@@ -349862,7 +349867,6 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 465,
     "ok": 39,
     "resolve_failed": 1
   },
