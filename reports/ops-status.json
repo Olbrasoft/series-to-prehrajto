@@ -2,44 +2,100 @@
   "counts": {
     "backlog_episodes": 155146,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 38315,
-    "prepared_source_episodes": 71170,
+    "uploaded_episodes": 38352,
+    "prepared_source_episodes": 71163,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 170,
-    "language_whisper_attempted_sources": 112,
-    "language_pending_whisper_sources": 2604,
+    "language_audited_sources": 20,
+    "language_whisper_attempted_sources": 20,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 69787,
-    "whisper_review_pending_sources": 60915,
-    "subtitle_followup_sources": 18951,
-    "subtitle_followup_pending_sources": 18951
+    "whisper_review_pending_sources": 60845,
+    "subtitle_followup_sources": 18962,
+    "subtitle_followup_pending_sources": 18962
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-07-26T03:25:11Z",
-      "databaseId": 30186135603,
+      "createdAt": "2026-07-26T04:09:49Z",
+      "databaseId": 30187337409,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
-      "createdAt": "2026-07-26T03:20:30Z",
-      "databaseId": 30186010581,
+      "createdAt": "2026-07-26T04:04:34Z",
+      "databaseId": 30187197529,
       "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "process-whisper-review"
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-07-26T04:03:03Z",
+      "databaseId": 30187149570,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-07-26T03:50:05Z",
+      "databaseId": 30186793773,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-sources"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-26T03:43:01Z",
+      "databaseId": 30186609569,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-26T03:26:31Z",
+      "databaseId": 30186171058,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-26T03:26:28Z",
+      "databaseId": 30186169387,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-26T03:25:11Z",
+      "databaseId": 30186135603,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-26T03:20:30Z",
+      "databaseId": 30186010581,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "cancelled",
       "createdAt": "2026-07-26T03:11:56Z",
       "databaseId": 30185779999,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -99,11 +155,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-26T03:02:35Z",
       "databaseId": 30185516598,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-descriptions"
     },
     {
@@ -121,62 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-26T02:54:54Z",
-      "databaseId": 30185307283,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-26T02:53:43Z",
-      "databaseId": 30185277521,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-26T02:46:26Z",
-      "databaseId": 30185091177,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-26T02:39:51Z",
-      "databaseId": 30184915672,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-26T02:39:49Z",
-      "databaseId": 30184914695,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-26T02:39:47Z",
-      "databaseId": 30184913835,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-26T02:38:48Z",
-      "databaseId": 30184888873,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
     }
   ],
   "gaps": {
@@ -169386,6 +169386,46 @@
         "video_id": 27846833
       },
       {
+        "episode_id": 133240,
+        "display_name": "Na straně zákona S01E05 - 5. epizoda CZ Dabing",
+        "video_id": 27846872
+      },
+      {
+        "episode_id": 133244,
+        "display_name": "Na straně zákona S02E02 - 2. epizoda CZ Dabing",
+        "video_id": 27846904
+      },
+      {
+        "episode_id": 158724,
+        "display_name": "Doktoři na dně S01E03 - 3. epizoda CZ Titulky",
+        "video_id": 27846939
+      },
+      {
+        "episode_id": 55964,
+        "display_name": "Closer S02E03 - Uklouznutí CZ Titulky",
+        "video_id": 27846986
+      },
+      {
+        "episode_id": 158728,
+        "display_name": "Doktoři na dně S01E07 - 7. epizoda CZ Titulky",
+        "video_id": 27847014
+      },
+      {
+        "episode_id": 157628,
+        "display_name": "Entrevías S02E06 - Pro lásku všechno CZ Titulky",
+        "video_id": 27847061
+      },
+      {
+        "episode_id": 158732,
+        "display_name": "Doktoři na dně S01E11 - 11. epizoda CZ Titulky",
+        "video_id": 27847138
+      },
+      {
+        "episode_id": 158736,
+        "display_name": "Doktoři na dně S01E15 - 15. epizoda CZ Titulky",
+        "video_id": 27847192
+      },
+      {
         "episode_id": 75837,
         "display_name": "Code Black S02E01 - 1. epizoda CZ Titulky",
         "video_id": 27846294
@@ -169419,6 +169459,51 @@
         "episode_id": 79937,
         "display_name": "Z onoho světa S02E04 - Ťuk ťuk CZ Dabing",
         "video_id": 27846772
+      },
+      {
+        "episode_id": 79941,
+        "display_name": "Z onoho světa S02E07 - Vír CZ Titulky",
+        "video_id": 27846836
+      },
+      {
+        "episode_id": 115121,
+        "display_name": "Bookmaker S01E03 - Vždy věř svému svěrači CZ Dabing",
+        "video_id": 27846898
+      },
+      {
+        "episode_id": 176741,
+        "display_name": "Na straně zákona S03E05 - 5. epizoda CZ Dabing",
+        "video_id": 27846935
+      },
+      {
+        "episode_id": 181521,
+        "display_name": "Gulliverovy cesty S01E02 - 2. epizoda CZ Dabing",
+        "video_id": 27846965
+      },
+      {
+        "episode_id": 158725,
+        "display_name": "Doktoři na dně S01E04 - 4. epizoda CZ Titulky",
+        "video_id": 27846995
+      },
+      {
+        "episode_id": 109053,
+        "display_name": "Chůva k pohledání S03E15 - 15. epizoda CZ Dabing",
+        "video_id": 27847048
+      },
+      {
+        "episode_id": 158729,
+        "display_name": "Doktoři na dně S01E08 - 8. epizoda CZ Titulky",
+        "video_id": 27847075
+      },
+      {
+        "episode_id": 157625,
+        "display_name": "Entrevías S02E03 - Naslouchej svému srdci CZ Titulky",
+        "video_id": 27847137
+      },
+      {
+        "episode_id": 158733,
+        "display_name": "Doktoři na dně S01E12 - 12. epizoda CZ Titulky",
+        "video_id": 27847215
       },
       {
         "episode_id": 75838,
@@ -169471,6 +169556,56 @@
         "video_id": 27846817
       },
       {
+        "episode_id": 142110,
+        "display_name": "Extraordinary You S01E13 - 13. epizoda CZ Titulky",
+        "video_id": 27846855
+      },
+      {
+        "episode_id": 142114,
+        "display_name": "Extraordinary You S01E17 - 17. epizoda CZ Titulky",
+        "video_id": 27846890
+      },
+      {
+        "episode_id": 142118,
+        "display_name": "Extraordinary You S01E21 - 21. epizoda CZ Titulky",
+        "video_id": 27846918
+      },
+      {
+        "episode_id": 142126,
+        "display_name": "Extraordinary You S01E29 - 29. epizoda CZ Titulky",
+        "video_id": 27846949
+      },
+      {
+        "episode_id": 64738,
+        "display_name": "Klikař Hank S01E07 - 7. epizoda CZ Dabing",
+        "video_id": 27846980
+      },
+      {
+        "episode_id": 201006,
+        "display_name": "My Gym Partner's a Monkey S04E07 - 7. epizoda CZ Titulky",
+        "video_id": 27846998
+      },
+      {
+        "episode_id": 115498,
+        "display_name": "The Enemy Within S01E09 - Homecoming CZ Titulky",
+        "video_id": 27847019
+      },
+      {
+        "episode_id": 109054,
+        "display_name": "Chůva k pohledání S03E16 - 16. epizoda CZ Dabing",
+        "video_id": 27847050
+      },
+      {
+        "episode_id": 115502,
+        "display_name": "The Enemy Within S01E13 - Sierra Maestra CZ Titulky",
+        "video_id": 27847073
+      },
+      {
+        "episode_id": 66606,
+        "display_name": "Absolventi roku 2009 S01E07 - 7. epizoda CZ Titulky",
+        "video_id": 27847108
+      },
+      {
         "episode_id": 75835,
         "display_name": "Code Black S01E17 - 17. epizoda CZ Titulky",
         "video_id": 27846286
@@ -169504,6 +169639,56 @@
         "episode_id": 157623,
         "display_name": "Entrevías S02E01 - Od desíti k pěti CZ Titulky",
         "video_id": 27846791
+      },
+      {
+        "episode_id": 114563,
+        "display_name": "Trophy Wife S01E14 - 14. epizoda CZ Titulky",
+        "video_id": 27846881
+      },
+      {
+        "episode_id": 79935,
+        "display_name": "Z onoho světa S02E02 - Na zdraví, mrcho CZ Dabing",
+        "video_id": 27846919
+      },
+      {
+        "episode_id": 79939,
+        "display_name": "Z onoho světa S02E06 - Postelové sloupky CZ Titulky",
+        "video_id": 27846974
+      },
+      {
+        "episode_id": 109051,
+        "display_name": "Chůva k pohledání S03E13 - 13. epizoda CZ Dabing",
+        "video_id": 27847018
+      },
+      {
+        "episode_id": 79943,
+        "display_name": "Z onoho světa S02E10 - Tohle není tvůj domov CZ Dabing",
+        "video_id": 27847049
+      },
+      {
+        "episode_id": 115119,
+        "display_name": "Bookmaker S01E01 - Tyhle prachy smrdí CZ Dabing",
+        "video_id": 27847093
+      },
+      {
+        "episode_id": 151983,
+        "display_name": "Bookmaker S02E04 - Díl 4 CZ Dabing",
+        "video_id": 27847135
+      },
+      {
+        "episode_id": 32171,
+        "display_name": "Call of the Night S02E06 - Šestá noc: Na kvalitu se neptám CZ Titulky",
+        "video_id": 27847163
+      },
+      {
+        "episode_id": 133239,
+        "display_name": "Na straně zákona S01E04 - 4. epizoda CZ Dabing",
+        "video_id": 27847185
+      },
+      {
+        "episode_id": 174587,
+        "display_name": "Na straně zákona S02E03 - 3. epizoda CZ Dabing",
+        "video_id": 27847218
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -338608,6 +338793,46 @@
         "video_id": 27846833
       },
       {
+        "episode_id": 133240,
+        "display_name": "Na straně zákona S01E05 - 5. epizoda CZ Dabing",
+        "video_id": 27846872
+      },
+      {
+        "episode_id": 133244,
+        "display_name": "Na straně zákona S02E02 - 2. epizoda CZ Dabing",
+        "video_id": 27846904
+      },
+      {
+        "episode_id": 158724,
+        "display_name": "Doktoři na dně S01E03 - 3. epizoda CZ Titulky",
+        "video_id": 27846939
+      },
+      {
+        "episode_id": 55964,
+        "display_name": "Closer S02E03 - Uklouznutí CZ Titulky",
+        "video_id": 27846986
+      },
+      {
+        "episode_id": 158728,
+        "display_name": "Doktoři na dně S01E07 - 7. epizoda CZ Titulky",
+        "video_id": 27847014
+      },
+      {
+        "episode_id": 157628,
+        "display_name": "Entrevías S02E06 - Pro lásku všechno CZ Titulky",
+        "video_id": 27847061
+      },
+      {
+        "episode_id": 158732,
+        "display_name": "Doktoři na dně S01E11 - 11. epizoda CZ Titulky",
+        "video_id": 27847138
+      },
+      {
+        "episode_id": 158736,
+        "display_name": "Doktoři na dně S01E15 - 15. epizoda CZ Titulky",
+        "video_id": 27847192
+      },
+      {
         "episode_id": 75837,
         "display_name": "Code Black S02E01 - 1. epizoda CZ Titulky",
         "video_id": 27846294
@@ -338641,6 +338866,51 @@
         "episode_id": 79937,
         "display_name": "Z onoho světa S02E04 - Ťuk ťuk CZ Dabing",
         "video_id": 27846772
+      },
+      {
+        "episode_id": 79941,
+        "display_name": "Z onoho světa S02E07 - Vír CZ Titulky",
+        "video_id": 27846836
+      },
+      {
+        "episode_id": 115121,
+        "display_name": "Bookmaker S01E03 - Vždy věř svému svěrači CZ Dabing",
+        "video_id": 27846898
+      },
+      {
+        "episode_id": 176741,
+        "display_name": "Na straně zákona S03E05 - 5. epizoda CZ Dabing",
+        "video_id": 27846935
+      },
+      {
+        "episode_id": 181521,
+        "display_name": "Gulliverovy cesty S01E02 - 2. epizoda CZ Dabing",
+        "video_id": 27846965
+      },
+      {
+        "episode_id": 158725,
+        "display_name": "Doktoři na dně S01E04 - 4. epizoda CZ Titulky",
+        "video_id": 27846995
+      },
+      {
+        "episode_id": 109053,
+        "display_name": "Chůva k pohledání S03E15 - 15. epizoda CZ Dabing",
+        "video_id": 27847048
+      },
+      {
+        "episode_id": 158729,
+        "display_name": "Doktoři na dně S01E08 - 8. epizoda CZ Titulky",
+        "video_id": 27847075
+      },
+      {
+        "episode_id": 157625,
+        "display_name": "Entrevías S02E03 - Naslouchej svému srdci CZ Titulky",
+        "video_id": 27847137
+      },
+      {
+        "episode_id": 158733,
+        "display_name": "Doktoři na dně S01E12 - 12. epizoda CZ Titulky",
+        "video_id": 27847215
       },
       {
         "episode_id": 75838,
@@ -338693,6 +338963,56 @@
         "video_id": 27846817
       },
       {
+        "episode_id": 142110,
+        "display_name": "Extraordinary You S01E13 - 13. epizoda CZ Titulky",
+        "video_id": 27846855
+      },
+      {
+        "episode_id": 142114,
+        "display_name": "Extraordinary You S01E17 - 17. epizoda CZ Titulky",
+        "video_id": 27846890
+      },
+      {
+        "episode_id": 142118,
+        "display_name": "Extraordinary You S01E21 - 21. epizoda CZ Titulky",
+        "video_id": 27846918
+      },
+      {
+        "episode_id": 142126,
+        "display_name": "Extraordinary You S01E29 - 29. epizoda CZ Titulky",
+        "video_id": 27846949
+      },
+      {
+        "episode_id": 64738,
+        "display_name": "Klikař Hank S01E07 - 7. epizoda CZ Dabing",
+        "video_id": 27846980
+      },
+      {
+        "episode_id": 201006,
+        "display_name": "My Gym Partner's a Monkey S04E07 - 7. epizoda CZ Titulky",
+        "video_id": 27846998
+      },
+      {
+        "episode_id": 115498,
+        "display_name": "The Enemy Within S01E09 - Homecoming CZ Titulky",
+        "video_id": 27847019
+      },
+      {
+        "episode_id": 109054,
+        "display_name": "Chůva k pohledání S03E16 - 16. epizoda CZ Dabing",
+        "video_id": 27847050
+      },
+      {
+        "episode_id": 115502,
+        "display_name": "The Enemy Within S01E13 - Sierra Maestra CZ Titulky",
+        "video_id": 27847073
+      },
+      {
+        "episode_id": 66606,
+        "display_name": "Absolventi roku 2009 S01E07 - 7. epizoda CZ Titulky",
+        "video_id": 27847108
+      },
+      {
         "episode_id": 75835,
         "display_name": "Code Black S01E17 - 17. epizoda CZ Titulky",
         "video_id": 27846286
@@ -338726,6 +339046,56 @@
         "episode_id": 157623,
         "display_name": "Entrevías S02E01 - Od desíti k pěti CZ Titulky",
         "video_id": 27846791
+      },
+      {
+        "episode_id": 114563,
+        "display_name": "Trophy Wife S01E14 - 14. epizoda CZ Titulky",
+        "video_id": 27846881
+      },
+      {
+        "episode_id": 79935,
+        "display_name": "Z onoho světa S02E02 - Na zdraví, mrcho CZ Dabing",
+        "video_id": 27846919
+      },
+      {
+        "episode_id": 79939,
+        "display_name": "Z onoho světa S02E06 - Postelové sloupky CZ Titulky",
+        "video_id": 27846974
+      },
+      {
+        "episode_id": 109051,
+        "display_name": "Chůva k pohledání S03E13 - 13. epizoda CZ Dabing",
+        "video_id": 27847018
+      },
+      {
+        "episode_id": 79943,
+        "display_name": "Z onoho světa S02E10 - Tohle není tvůj domov CZ Dabing",
+        "video_id": 27847049
+      },
+      {
+        "episode_id": 115119,
+        "display_name": "Bookmaker S01E01 - Tyhle prachy smrdí CZ Dabing",
+        "video_id": 27847093
+      },
+      {
+        "episode_id": 151983,
+        "display_name": "Bookmaker S02E04 - Díl 4 CZ Dabing",
+        "video_id": 27847135
+      },
+      {
+        "episode_id": 32171,
+        "display_name": "Call of the Night S02E06 - Šestá noc: Na kvalitu se neptám CZ Titulky",
+        "video_id": 27847163
+      },
+      {
+        "episode_id": 133239,
+        "display_name": "Na straně zákona S01E04 - 4. epizoda CZ Dabing",
+        "video_id": 27847185
+      },
+      {
+        "episode_id": 174587,
+        "display_name": "Na straně zákona S02E03 - 3. epizoda CZ Dabing",
+        "video_id": 27847218
       }
     ],
     "prepared_not_upload_ready": [
@@ -339360,75 +339730,75 @@
         "status": "whisper_failed"
       },
       {
-        "episode_id": 75832,
-        "source_id": -71378017515503733,
-        "series_title": "Code Black",
-        "episode_code": "S01E14",
-        "source_title": "Code Black - S1E14 The Fifth Stage EN",
+        "episode_id": 69056,
+        "source_id": -45730352964376454,
+        "series_title": "Columbo",
+        "episode_code": "S01E01",
+        "source_title": "COLUMBO S01E01 - Vražda podle knihy",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 75832,
-        "source_id": -16219281361582078,
-        "series_title": "Code Black",
-        "episode_code": "S01E14",
-        "source_title": "Code Black - S01E14 - The Fifth Stage",
+        "episode_id": 69056,
+        "source_id": -7098555985151007,
+        "series_title": "Columbo",
+        "episode_code": "S01E01",
+        "source_title": "Columbo S01E01 - Vražda podle knihy (by Noxx).mkv",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 75833,
-        "source_id": -71295793999845235,
-        "series_title": "Code Black",
-        "episode_code": "S01E15",
-        "source_title": "Code Black - S01E15 - Diagnosis of Exclusion",
+        "episode_id": 69056,
+        "source_id": -4460055322341244,
+        "series_title": "Columbo",
+        "episode_code": "S01E01",
+        "source_title": "Columbo S01E01 - Vražda podle knihy (by Nexsus)",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 75833,
-        "source_id": -26663985709016228,
-        "series_title": "Code Black",
-        "episode_code": "S01E15",
-        "source_title": "Code Black - S1E15 Diagnosis of Exclusion EN",
+        "episode_id": 69056,
+        "source_id": -44099552248517967,
+        "series_title": "Columbo",
+        "episode_code": "S01E01",
+        "source_title": "Columbo - S01E01 - Vražda na předpis",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 75834,
-        "source_id": -66053084965611226,
-        "series_title": "Code Black",
-        "episode_code": "S01E16",
-        "source_title": "Code Black - S01E16 - Hail Mary",
+        "episode_id": 69056,
+        "source_id": -52261069446284910,
+        "series_title": "Columbo",
+        "episode_code": "S01E01",
+        "source_title": "COLUMBO S01E01 - Vražda podle knihy",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 75834,
-        "source_id": -15293640671659219,
-        "series_title": "Code Black",
-        "episode_code": "S01E16",
-        "source_title": "Code Black - S1E16 Hail Mary EN",
+        "episode_id": 69056,
+        "source_id": -19763212216604424,
+        "series_title": "Columbo",
+        "episode_code": "S01E01",
+        "source_title": "Columbo 1x1",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 75835,
-        "source_id": -37347765641402898,
-        "series_title": "Code Black",
-        "episode_code": "S01E17",
-        "source_title": "Code Black - S01E17 - Love Hurts",
+        "episode_id": 69084,
+        "source_id": -9387701161855066,
+        "series_title": "Columbo",
+        "episode_code": "S01E02",
+        "source_title": "COLUMBO S01E02 Smrt nabízí pomocnou ruku",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 75835,
-        "source_id": -31909809411851375,
-        "series_title": "Code Black",
-        "episode_code": "S01E17",
-        "source_title": "Code Black - S1E17 Love Hurts EN",
+        "episode_id": 69084,
+        "source_id": -43879923481252629,
+        "series_title": "Columbo",
+        "episode_code": "S01E02",
+        "source_title": "Columbo S01E02 Smrt nabízí pomocnou ruku (by Nexsus)",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 75836,
-        "source_id": -53959939637296835,
-        "series_title": "Code Black",
-        "episode_code": "S01E18",
-        "source_title": "Code Black - S1E18 Blood Sport EN",
+        "episode_id": 69084,
+        "source_id": -38190813023112074,
+        "series_title": "Columbo",
+        "episode_code": "S01E02",
+        "source_title": "Columbo S01E02 - Smrt nabízí pomocnou ruku (by Noxx).mkv",
         "status": "needs_whisper"
       }
     ],
@@ -339887,17 +340257,16 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 58,
-    "ok": 111,
+    "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
-    "whisper_non_cz_needs_subtitles": 5642,
-    "whisper_confirmed_cz": 3230,
+    "whisper_non_cz_needs_subtitles": 5710,
+    "whisper_confirmed_cz": 3232,
     "whisper_failed": 41,
-    "needs_whisper": 60874
+    "needs_whisper": 60804
   },
   "subtitle_followup_statuses": {
-    "needs_subtitle_setup_after_prehrajto_processing": 18951
+    "needs_subtitle_setup_after_prehrajto_processing": 18962
   }
 }
