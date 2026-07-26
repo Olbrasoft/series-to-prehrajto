@@ -2,15 +2,15 @@
   "counts": {
     "backlog_episodes": 154992,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 38359,
+    "uploaded_episodes": 38361,
     "prepared_source_episodes": 71124,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 60,
-    "language_whisper_attempted_sources": 60,
+    "language_audited_sources": 40,
+    "language_whisper_attempted_sources": 40,
     "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 69787,
     "whisper_review_pending_sources": 60825,
@@ -20,10 +20,34 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-07-26T04:32:41Z",
+      "databaseId": 30187953366,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-26T04:32:38Z",
+      "databaseId": 30187952062,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-26T04:22:42Z",
+      "databaseId": 30187683653,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "failure",
       "createdAt": "2026-07-26T04:21:22Z",
       "databaseId": 30187648266,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -147,36 +171,12 @@
       "workflowName": "prepare-manifest"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-07-26T03:11:12Z",
       "databaseId": 30185759693,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-26T03:09:38Z",
-      "databaseId": 30185714214,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-26T03:09:35Z",
-      "databaseId": 30185712912,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-26T03:09:33Z",
-      "databaseId": 30185711870,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
     }
   ],
   "gaps": {
@@ -169524,6 +169524,16 @@
         "episode_id": 160421,
         "display_name": "Divná dvojka S02E02 - 2. epizoda CZ Titulky",
         "video_id": 27847299
+      },
+      {
+        "episode_id": 160425,
+        "display_name": "Divná dvojka S02E06 - 6. epizoda CZ Titulky",
+        "video_id": 27847333
+      },
+      {
+        "episode_id": 114101,
+        "display_name": "Jak funguje vesmír S01E02 - Černé díry CZ Dabing",
+        "video_id": 27847369
       },
       {
         "episode_id": 75838,
@@ -338968,6 +338978,16 @@
         "video_id": 27847299
       },
       {
+        "episode_id": 160425,
+        "display_name": "Divná dvojka S02E06 - 6. epizoda CZ Titulky",
+        "video_id": 27847333
+      },
+      {
+        "episode_id": 114101,
+        "display_name": "Jak funguje vesmír S01E02 - Černé díry CZ Dabing",
+        "video_id": 27847369
+      },
+      {
         "episode_id": 75838,
         "display_name": "Code Black S02E08 - 8. epizoda CZ Titulky",
         "video_id": 27846293
@@ -340327,7 +340347,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 59,
+    "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
