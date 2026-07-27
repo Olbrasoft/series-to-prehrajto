@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 152367,
     "manifest_upload_ready_episodes": 1082,
-    "uploaded_episodes": 41138,
+    "uploaded_episodes": 41141,
     "prepared_source_episodes": 52111,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 226,
-    "language_whisper_attempted_sources": 124,
-    "language_pending_whisper_sources": 2604,
+    "language_audited_sources": 20,
+    "language_whisper_attempted_sources": 20,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 56946,
     "whisper_review_pending_sources": 49945,
     "subtitle_followup_sources": 20556,
@@ -20,18 +20,34 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-07-27T23:50:26Z",
-      "databaseId": 30315431540,
+      "createdAt": "2026-07-27T23:57:21Z",
+      "databaseId": 30315809251,
       "headBranch": "main",
       "status": "in_progress",
-      "workflowName": "ops-status"
+      "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-07-27T23:56:16Z",
+      "databaseId": 30315754268,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-sources"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-27T23:50:26Z",
+      "databaseId": 30315431540,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-27T23:49:59Z",
       "databaseId": 30315404219,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "update-descriptions"
     },
     {
@@ -51,11 +67,11 @@
       "workflowName": "prepare-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-27T23:48:37Z",
       "databaseId": 30315335067,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -75,11 +91,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-27T23:44:17Z",
       "databaseId": 30315101126,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -161,22 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-07-27T23:30:15Z",
-      "databaseId": 30314346969,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-27T23:24:40Z",
-      "databaseId": 30314046947,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
     }
   ],
   "gaps": {
@@ -181026,6 +181026,21 @@
         "video_id": 27939897
       },
       {
+        "episode_id": 21774,
+        "display_name": "Co kdyby...? S02E08 - Co kdyby... se Avengers dali dohromady v roce 1602? CZ Dabing",
+        "video_id": 27939946
+      },
+      {
+        "episode_id": 12506,
+        "display_name": "Co kdyby...? S03E01 - Co kdyby... Hulk bojoval s Robo-Avengers? CZ Dabing",
+        "video_id": 27939990
+      },
+      {
+        "episode_id": 40266,
+        "display_name": "Smallville S06E08 - Únos do jiné frekvence CZ Dabing",
+        "video_id": 27940075
+      },
+      {
         "episode_id": 15047,
         "display_name": "Koroner S02E05 - 5. epizoda CZ Titulky",
         "video_id": 27937787
@@ -361868,6 +361883,21 @@
         "video_id": 27939897
       },
       {
+        "episode_id": 21774,
+        "display_name": "Co kdyby...? S02E08 - Co kdyby... se Avengers dali dohromady v roce 1602? CZ Dabing",
+        "video_id": 27939946
+      },
+      {
+        "episode_id": 12506,
+        "display_name": "Co kdyby...? S03E01 - Co kdyby... Hulk bojoval s Robo-Avengers? CZ Dabing",
+        "video_id": 27939990
+      },
+      {
+        "episode_id": 40266,
+        "display_name": "Smallville S06E08 - Únos do jiné frekvence CZ Dabing",
+        "video_id": 27940075
+      },
+      {
         "episode_id": 15047,
         "display_name": "Koroner S02E05 - 5. epizoda CZ Titulky",
         "video_id": 27937787
@@ -363127,8 +363157,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 102,
-    "ok": 123,
+    "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
