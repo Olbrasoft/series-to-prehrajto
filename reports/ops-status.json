@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 152367,
     "manifest_upload_ready_episodes": 1096,
-    "uploaded_episodes": 41059,
+    "uploaded_episodes": 41063,
     "prepared_source_episodes": 52050,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 118,
-    "language_whisper_attempted_sources": 20,
-    "language_pending_whisper_sources": 2624,
+    "language_audited_sources": 40,
+    "language_whisper_attempted_sources": 40,
+    "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 56965,
     "whisper_review_pending_sources": 50044,
     "subtitle_followup_sources": 20521,
@@ -20,18 +20,66 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-07-27T22:42:58Z",
-      "databaseId": 30311701888,
+      "createdAt": "2026-07-27T22:48:56Z",
+      "databaseId": 30312042760,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-27T22:48:43Z",
+      "databaseId": 30312031194,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "update-descriptions"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-07-27T22:48:11Z",
+      "databaseId": 30312002778,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-27T22:48:07Z",
+      "databaseId": 30311998899,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-27T22:47:39Z",
+      "databaseId": 30311972923,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-27T22:46:44Z",
+      "databaseId": 30311921664,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-27T22:42:58Z",
+      "databaseId": 30311701888,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-27T22:42:33Z",
       "databaseId": 30311677646,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -39,7 +87,7 @@
       "createdAt": "2026-07-27T22:42:29Z",
       "databaseId": 30311674256,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "sync"
     },
     {
@@ -67,11 +115,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-27T22:39:19Z",
       "databaseId": 30311490109,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -129,54 +177,6 @@
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-27T22:20:53Z",
-      "databaseId": 30310389759,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-27T22:17:35Z",
-      "databaseId": 30310192947,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-27T22:16:23Z",
-      "databaseId": 30310119414,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-07-27T22:16:19Z",
-      "databaseId": 30310116106,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-27T22:13:59Z",
-      "databaseId": 30309966140,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-27T22:13:56Z",
-      "databaseId": 30309962994,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
     }
   ],
   "gaps": {
@@ -180646,6 +180646,11 @@
         "video_id": 27937461
       },
       {
+        "episode_id": 68982,
+        "display_name": "Riverdale S07E08 - 8. epizoda CZ Titulky",
+        "video_id": 27937548
+      },
+      {
         "episode_id": 72115,
         "display_name": "Letecké katastrofy S16E05 - Smrtelná oklika CZ Dabing",
         "video_id": 27935410
@@ -180729,6 +180734,21 @@
         "episode_id": 61983,
         "display_name": "Zákon a pořádek: Útvar pro zvláštní oběti S05E25 - Hlava CZ Dabing",
         "video_id": 27937560
+      },
+      {
+        "episode_id": 62043,
+        "display_name": "Zákon a pořádek: Útvar pro zvláštní oběti S08E20 - Vyvraždění CZ Dabing",
+        "video_id": 27937590
+      },
+      {
+        "episode_id": 62083,
+        "display_name": "Zákon a pořádek: Útvar pro zvláštní oběti S10E08 - Neznámá osoba CZ Dabing",
+        "video_id": 27937623
+      },
+      {
+        "episode_id": 98447,
+        "display_name": "Zákon a pořádek: Útvar pro zvláštní oběti S26E13 - 13. epizoda CZ Dabing",
+        "video_id": 27937668
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -361093,6 +361113,11 @@
         "video_id": 27937461
       },
       {
+        "episode_id": 68982,
+        "display_name": "Riverdale S07E08 - 8. epizoda CZ Titulky",
+        "video_id": 27937548
+      },
+      {
         "episode_id": 72115,
         "display_name": "Letecké katastrofy S16E05 - Smrtelná oklika CZ Dabing",
         "video_id": 27935410
@@ -361176,6 +361201,21 @@
         "episode_id": 61983,
         "display_name": "Zákon a pořádek: Útvar pro zvláštní oběti S05E25 - Hlava CZ Dabing",
         "video_id": 27937560
+      },
+      {
+        "episode_id": 62043,
+        "display_name": "Zákon a pořádek: Útvar pro zvláštní oběti S08E20 - Vyvraždění CZ Dabing",
+        "video_id": 27937590
+      },
+      {
+        "episode_id": 62083,
+        "display_name": "Zákon a pořádek: Útvar pro zvláštní oběti S10E08 - Neznámá osoba CZ Dabing",
+        "video_id": 27937623
+      },
+      {
+        "episode_id": 98447,
+        "display_name": "Zákon a pořádek: Útvar pro zvláštní oběti S26E13 - 13. epizoda CZ Dabing",
+        "video_id": 27937668
       }
     ],
     "prepared_not_upload_ready": [
@@ -362337,8 +362377,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 98,
-    "ok": 19,
+    "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
