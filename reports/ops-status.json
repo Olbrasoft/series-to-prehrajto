@@ -2,8 +2,8 @@
   "counts": {
     "backlog_episodes": 153252,
     "manifest_upload_ready_episodes": 1005,
-    "uploaded_episodes": 40182,
-    "prepared_source_episodes": 53152,
+    "uploaded_episodes": 40186,
+    "prepared_source_episodes": 53149,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
@@ -11,7 +11,7 @@
     "language_queue_sources": 2644,
     "language_audited_sources": 40,
     "language_whisper_attempted_sources": 40,
-    "language_pending_whisper_sources": 2624,
+    "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 56908,
     "whisper_review_pending_sources": 49574,
     "subtitle_followup_sources": 20228,
@@ -20,18 +20,58 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-07-27T08:19:16Z",
-      "databaseId": 30249444769,
+      "createdAt": "2026-07-27T08:30:06Z",
+      "databaseId": 30250138619,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-07-27T08:30:01Z",
+      "databaseId": 30250131658,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-27T08:20:29Z",
+      "databaseId": 30249525975,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "failure",
+      "createdAt": "2026-07-27T08:20:26Z",
+      "databaseId": 30249522828,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-27T08:20:24Z",
+      "databaseId": 30249520928,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-27T08:19:16Z",
+      "databaseId": 30249444769,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "cancelled",
       "createdAt": "2026-07-27T08:19:11Z",
       "databaseId": 30249439542,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -47,7 +87,7 @@
       "createdAt": "2026-07-27T08:05:18Z",
       "databaseId": 30248522196,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "sync"
     },
     {
@@ -137,46 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-27T07:28:01Z",
-      "databaseId": 30246251430,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-27T07:27:58Z",
-      "databaseId": 30246248766,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-27T07:27:55Z",
-      "databaseId": 30246245317,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-27T07:26:36Z",
-      "databaseId": 30246169565,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-07-27T07:26:31Z",
-      "databaseId": 30246164535,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
     }
   ],
   "gaps": {
@@ -352298,21 +352298,6 @@
         "video_id": 27901631
       },
       {
-        "episode_id": 42888,
-        "display_name": "Flash S08E17 - 17. epizoda CZ Titulky",
-        "video_id": 27902452
-      },
-      {
-        "episode_id": 42868,
-        "display_name": "Flash S08E18 - 18. epizoda CZ Titulky",
-        "video_id": 27902499
-      },
-      {
-        "episode_id": 73468,
-        "display_name": "Flash S09E07 - 7. epizoda CZ Titulky",
-        "video_id": 27902564
-      },
-      {
         "episode_id": 52328,
         "display_name": "Chirurgové S05E01 - Tam pod nebeskou bání – 1. část CZ Dabing",
         "video_id": 27902592
@@ -352448,39 +352433,24 @@
         "video_id": 27902685
       },
       {
-        "episode_id": 42870,
-        "display_name": "Flash S05E16 - 16. epizoda CZ Titulky",
-        "video_id": 27902436
+        "episode_id": 42798,
+        "display_name": "Flash S07E09 - 9. epizoda CZ Titulky",
+        "video_id": 27902974
       },
       {
-        "episode_id": 42858,
-        "display_name": "Flash S05E20 - 20. epizoda CZ Titulky",
-        "video_id": 27902472
+        "episode_id": 42802,
+        "display_name": "Flash S07E13 - 13. epizoda CZ Titulky",
+        "video_id": 27903070
       },
       {
-        "episode_id": 42786,
-        "display_name": "Flash S06E05 - 5. epizoda CZ Titulky",
-        "video_id": 27902596
+        "episode_id": 42806,
+        "display_name": "Flash S07E17 - 17. epizoda CZ Titulky",
+        "video_id": 27903096
       },
       {
-        "episode_id": 42790,
-        "display_name": "Flash S06E09 - 9. epizoda CZ Titulky",
-        "video_id": 27902675
-      },
-      {
-        "episode_id": 42822,
-        "display_name": "Flash S06E10 - 10. epizoda CZ Titulky",
-        "video_id": 27902722
-      },
-      {
-        "episode_id": 42866,
-        "display_name": "Flash S06E16 - 16. epizoda CZ Titulky",
-        "video_id": 27902812
-      },
-      {
-        "episode_id": 42794,
-        "display_name": "Flash S07E04 - 4. epizoda CZ Titulky",
-        "video_id": 27902921
+        "episode_id": 42842,
+        "display_name": "Flash S08E02 - 2. epizoda CZ Titulky",
+        "video_id": 27903130
       },
       {
         "episode_id": 52311,
