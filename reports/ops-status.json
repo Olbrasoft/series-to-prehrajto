@@ -1,17 +1,17 @@
 {
   "counts": {
     "backlog_episodes": 151951,
-    "manifest_upload_ready_episodes": 1017,
-    "uploaded_episodes": 41532,
+    "manifest_upload_ready_episodes": 1016,
+    "uploaded_episodes": 41560,
     "prepared_source_episodes": 52104,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 274,
-    "language_whisper_attempted_sources": 43,
-    "language_pending_whisper_sources": 2624,
+    "language_audited_sources": 40,
+    "language_whisper_attempted_sources": 40,
+    "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 56927,
     "whisper_review_pending_sources": 49997,
     "subtitle_followup_sources": 20621,
@@ -20,18 +20,50 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-07-28T09:01:50Z",
-      "databaseId": 30344836112,
+      "createdAt": "2026-07-28T09:19:17Z",
+      "databaseId": 30346089971,
       "headBranch": "main",
       "status": "in_progress",
-      "workflowName": "update-descriptions"
+      "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-07-28T09:13:47Z",
+      "databaseId": 30345702364,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-28T09:10:07Z",
+      "databaseId": 30345440565,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-28T09:09:01Z",
+      "databaseId": 30345363693,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-28T09:01:50Z",
+      "databaseId": 30344836112,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-28T09:01:05Z",
       "databaseId": 30344782547,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -59,11 +91,11 @@
       "workflowName": "process-whisper-review"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-28T08:54:29Z",
       "databaseId": 30344309209,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -145,38 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-28T08:18:56Z",
-      "databaseId": 30341888477,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-28T08:18:32Z",
-      "databaseId": 30341861548,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-28T08:18:04Z",
-      "databaseId": 30341829045,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-28T08:17:14Z",
-      "databaseId": 30341772106,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-descriptions"
     }
   ],
   "gaps": {
@@ -183051,6 +183051,36 @@
         "video_id": 27958375
       },
       {
+        "episode_id": 52652,
+        "display_name": "O.C. S03E08 - Plán hry CZ Dabing",
+        "video_id": 27958485
+      },
+      {
+        "episode_id": 52648,
+        "display_name": "O.C. S03E20 - Den poté CZ Dabing",
+        "video_id": 27958612
+      },
+      {
+        "episode_id": 52644,
+        "display_name": "O.C. S04E15 - Noční hnutí CZ Dabing",
+        "video_id": 27958837
+      },
+      {
+        "episode_id": 128108,
+        "display_name": "Pýcha a předsudek S01E02 - 2. epizoda CZ Dabing",
+        "video_id": 27958960
+      },
+      {
+        "episode_id": 128112,
+        "display_name": "Pýcha a předsudek S01E04 - 4. epizoda CZ Dabing",
+        "video_id": 27959008
+      },
+      {
+        "episode_id": 5064,
+        "display_name": "Legion S01E03 - Kapitola 3 CZ Dabing",
+        "video_id": 27959060
+      },
+      {
         "episode_id": 46549,
         "display_name": "Heuréka – město divů S01E04 - Spiklenci CZ Dabing",
         "video_id": 27958383
@@ -183059,6 +183089,46 @@
         "episode_id": 46553,
         "display_name": "Heuréka – město divů S01E06 - Doktor Nobel CZ Dabing",
         "video_id": 27958493
+      },
+      {
+        "episode_id": 46557,
+        "display_name": "Heuréka – město divů S01E12 - Jednou za život CZ Dabing",
+        "video_id": 27958602
+      },
+      {
+        "episode_id": 100561,
+        "display_name": "Atlanta S04E06 - Zabiják tančících rapperů CZ Titulky",
+        "video_id": 27958823
+      },
+      {
+        "episode_id": 100557,
+        "display_name": "Atlanta S04E10 - To všechno byl jenom sen CZ Titulky",
+        "video_id": 27958870
+      },
+      {
+        "episode_id": 94005,
+        "display_name": "Big Mouth S01E08 - K tomu mě nenuť CZ Titulky",
+        "video_id": 27958932
+      },
+      {
+        "episode_id": 94009,
+        "display_name": "Big Mouth S01E10 - Porno dimenze CZ Titulky",
+        "video_id": 27959020
+      },
+      {
+        "episode_id": 94017,
+        "display_name": "Big Mouth S02E08 - Temná strana prsu CZ Titulky",
+        "video_id": 27959072
+      },
+      {
+        "episode_id": 93993,
+        "display_name": "Big Mouth S03E03 - Mobilka CZ Titulky",
+        "video_id": 27959138
+      },
+      {
+        "episode_id": 93997,
+        "display_name": "Big Mouth S03E08 - Žebříčky CZ Titulky",
+        "video_id": 27959170
       },
       {
         "episode_id": 44498,
@@ -183076,6 +183146,31 @@
         "video_id": 27958479
       },
       {
+        "episode_id": 65942,
+        "display_name": "Atypický S04E01 - Magický pták č. 1 CZ Titulky",
+        "video_id": 27958533
+      },
+      {
+        "episode_id": 65946,
+        "display_name": "Atypický S04E06 - Jste zdravý? CZ Titulky",
+        "video_id": 27958609
+      },
+      {
+        "episode_id": 65950,
+        "display_name": "Atypický S04E10 - Dezert v Olive Garden CZ Titulky",
+        "video_id": 27958821
+      },
+      {
+        "episode_id": 76734,
+        "display_name": "Ztraceni ve vesmíru S01E05 - Vysílání CZ Dabing",
+        "video_id": 27958943
+      },
+      {
+        "episode_id": 76738,
+        "display_name": "Ztraceni ve vesmíru S01E06 - Chvála CZ Dabing",
+        "video_id": 27959024
+      },
+      {
         "episode_id": 60079,
         "display_name": "Boku no Hero Academia S02E12 - 12. epizoda CZ Titulky",
         "video_id": 27958368
@@ -183089,6 +183184,51 @@
         "episode_id": 80443,
         "display_name": "Bleach S01E15 - 15. epizoda CZ Dabing",
         "video_id": 27958454
+      },
+      {
+        "episode_id": 100523,
+        "display_name": "Atlanta S01E03 - Na mizině CZ Titulky",
+        "video_id": 27958515
+      },
+      {
+        "episode_id": 60071,
+        "display_name": "Boku no Hero Academia S02E24 - 24. epizoda CZ Titulky",
+        "video_id": 27958621
+      },
+      {
+        "episode_id": 60063,
+        "display_name": "Boku no Hero Academia S02E25 - 25. epizoda CZ Titulky",
+        "video_id": 27958800
+      },
+      {
+        "episode_id": 100551,
+        "display_name": "Atlanta S04E02 - Jako malé děti CZ Titulky",
+        "video_id": 27958856
+      },
+      {
+        "episode_id": 100559,
+        "display_name": "Atlanta S04E08 - Trdlo, co sedělo u dveří CZ Titulky",
+        "video_id": 27958893
+      },
+      {
+        "episode_id": 68451,
+        "display_name": "Boku no Hero Academia S05E03 - 3. epizoda CZ Dabing",
+        "video_id": 27958942
+      },
+      {
+        "episode_id": 94007,
+        "display_name": "Big Mouth S01E02 - Krvácí každý CZ Titulky",
+        "video_id": 27958998
+      },
+      {
+        "episode_id": 68455,
+        "display_name": "Boku no Hero Academia S05E07 - 7. epizoda CZ Dabing",
+        "video_id": 27959066
+      },
+      {
+        "episode_id": 94003,
+        "display_name": "Big Mouth S01E06 - Pokec v posteli CZ Titulky",
+        "video_id": 27959134
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -365858,6 +365998,36 @@
         "video_id": 27958375
       },
       {
+        "episode_id": 52652,
+        "display_name": "O.C. S03E08 - Plán hry CZ Dabing",
+        "video_id": 27958485
+      },
+      {
+        "episode_id": 52648,
+        "display_name": "O.C. S03E20 - Den poté CZ Dabing",
+        "video_id": 27958612
+      },
+      {
+        "episode_id": 52644,
+        "display_name": "O.C. S04E15 - Noční hnutí CZ Dabing",
+        "video_id": 27958837
+      },
+      {
+        "episode_id": 128108,
+        "display_name": "Pýcha a předsudek S01E02 - 2. epizoda CZ Dabing",
+        "video_id": 27958960
+      },
+      {
+        "episode_id": 128112,
+        "display_name": "Pýcha a předsudek S01E04 - 4. epizoda CZ Dabing",
+        "video_id": 27959008
+      },
+      {
+        "episode_id": 5064,
+        "display_name": "Legion S01E03 - Kapitola 3 CZ Dabing",
+        "video_id": 27959060
+      },
+      {
         "episode_id": 46549,
         "display_name": "Heuréka – město divů S01E04 - Spiklenci CZ Dabing",
         "video_id": 27958383
@@ -365866,6 +366036,46 @@
         "episode_id": 46553,
         "display_name": "Heuréka – město divů S01E06 - Doktor Nobel CZ Dabing",
         "video_id": 27958493
+      },
+      {
+        "episode_id": 46557,
+        "display_name": "Heuréka – město divů S01E12 - Jednou za život CZ Dabing",
+        "video_id": 27958602
+      },
+      {
+        "episode_id": 100561,
+        "display_name": "Atlanta S04E06 - Zabiják tančících rapperů CZ Titulky",
+        "video_id": 27958823
+      },
+      {
+        "episode_id": 100557,
+        "display_name": "Atlanta S04E10 - To všechno byl jenom sen CZ Titulky",
+        "video_id": 27958870
+      },
+      {
+        "episode_id": 94005,
+        "display_name": "Big Mouth S01E08 - K tomu mě nenuť CZ Titulky",
+        "video_id": 27958932
+      },
+      {
+        "episode_id": 94009,
+        "display_name": "Big Mouth S01E10 - Porno dimenze CZ Titulky",
+        "video_id": 27959020
+      },
+      {
+        "episode_id": 94017,
+        "display_name": "Big Mouth S02E08 - Temná strana prsu CZ Titulky",
+        "video_id": 27959072
+      },
+      {
+        "episode_id": 93993,
+        "display_name": "Big Mouth S03E03 - Mobilka CZ Titulky",
+        "video_id": 27959138
+      },
+      {
+        "episode_id": 93997,
+        "display_name": "Big Mouth S03E08 - Žebříčky CZ Titulky",
+        "video_id": 27959170
       },
       {
         "episode_id": 44498,
@@ -365883,6 +366093,31 @@
         "video_id": 27958479
       },
       {
+        "episode_id": 65942,
+        "display_name": "Atypický S04E01 - Magický pták č. 1 CZ Titulky",
+        "video_id": 27958533
+      },
+      {
+        "episode_id": 65946,
+        "display_name": "Atypický S04E06 - Jste zdravý? CZ Titulky",
+        "video_id": 27958609
+      },
+      {
+        "episode_id": 65950,
+        "display_name": "Atypický S04E10 - Dezert v Olive Garden CZ Titulky",
+        "video_id": 27958821
+      },
+      {
+        "episode_id": 76734,
+        "display_name": "Ztraceni ve vesmíru S01E05 - Vysílání CZ Dabing",
+        "video_id": 27958943
+      },
+      {
+        "episode_id": 76738,
+        "display_name": "Ztraceni ve vesmíru S01E06 - Chvála CZ Dabing",
+        "video_id": 27959024
+      },
+      {
         "episode_id": 60079,
         "display_name": "Boku no Hero Academia S02E12 - 12. epizoda CZ Titulky",
         "video_id": 27958368
@@ -365896,6 +366131,51 @@
         "episode_id": 80443,
         "display_name": "Bleach S01E15 - 15. epizoda CZ Dabing",
         "video_id": 27958454
+      },
+      {
+        "episode_id": 100523,
+        "display_name": "Atlanta S01E03 - Na mizině CZ Titulky",
+        "video_id": 27958515
+      },
+      {
+        "episode_id": 60071,
+        "display_name": "Boku no Hero Academia S02E24 - 24. epizoda CZ Titulky",
+        "video_id": 27958621
+      },
+      {
+        "episode_id": 60063,
+        "display_name": "Boku no Hero Academia S02E25 - 25. epizoda CZ Titulky",
+        "video_id": 27958800
+      },
+      {
+        "episode_id": 100551,
+        "display_name": "Atlanta S04E02 - Jako malé děti CZ Titulky",
+        "video_id": 27958856
+      },
+      {
+        "episode_id": 100559,
+        "display_name": "Atlanta S04E08 - Trdlo, co sedělo u dveří CZ Titulky",
+        "video_id": 27958893
+      },
+      {
+        "episode_id": 68451,
+        "display_name": "Boku no Hero Academia S05E03 - 3. epizoda CZ Dabing",
+        "video_id": 27958942
+      },
+      {
+        "episode_id": 94007,
+        "display_name": "Big Mouth S01E02 - Krvácí každý CZ Titulky",
+        "video_id": 27958998
+      },
+      {
+        "episode_id": 68455,
+        "display_name": "Boku no Hero Academia S05E07 - 7. epizoda CZ Dabing",
+        "video_id": 27959066
+      },
+      {
+        "episode_id": 94003,
+        "display_name": "Big Mouth S01E06 - Pokec v posteli CZ Titulky",
+        "video_id": 27959134
       }
     ],
     "prepared_not_upload_ready": [
@@ -367057,9 +367337,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 231,
-    "ok": 41,
-    "sample_failed": 1,
+    "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
