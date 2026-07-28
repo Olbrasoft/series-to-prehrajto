@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 151746,
     "manifest_upload_ready_episodes": 1001,
-    "uploaded_episodes": 41699,
+    "uploaded_episodes": 41752,
     "prepared_source_episodes": 52305,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 40,
-    "language_whisper_attempted_sources": 40,
-    "language_pending_whisper_sources": 2604,
+    "language_audited_sources": 20,
+    "language_whisper_attempted_sources": 20,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 56917,
     "whisper_review_pending_sources": 49947,
     "subtitle_followup_sources": 20629,
@@ -20,18 +20,42 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-07-28T11:16:58Z",
-      "databaseId": 30354159017,
+      "createdAt": "2026-07-28T11:47:26Z",
+      "databaseId": 30356202983,
       "headBranch": "main",
       "status": "in_progress",
-      "workflowName": "ops-status"
+      "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-07-28T11:32:38Z",
+      "databaseId": 30355208529,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-28T11:23:49Z",
+      "databaseId": 30354615143,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-sources"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-28T11:16:58Z",
+      "databaseId": 30354159017,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-28T11:16:31Z",
       "databaseId": 30354129014,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "update-descriptions"
     },
     {
@@ -43,11 +67,11 @@
       "workflowName": "prepare-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-28T11:14:58Z",
       "databaseId": 30354021562,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -83,11 +107,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-07-28T11:03:57Z",
       "databaseId": 30353270010,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -153,30 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-28T10:41:00Z",
-      "databaseId": 30351727143,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-28T10:40:58Z",
-      "databaseId": 30351724721,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-28T10:40:55Z",
-      "databaseId": 30351721309,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-manifest"
     }
   ],
   "gaps": {
@@ -183861,6 +183861,61 @@
         "video_id": 27962208
       },
       {
+        "episode_id": 7488,
+        "display_name": "Američtí bohové S03E09 - The Lake Effect CZ Titulky",
+        "video_id": 27962267
+      },
+      {
+        "episode_id": 48052,
+        "display_name": "Bosch S03E03 - Bůh se dívá CZ Dabing",
+        "video_id": 27962324
+      },
+      {
+        "episode_id": 48076,
+        "display_name": "Bosch S03E09 - Přesná muška CZ Dabing",
+        "video_id": 27962409
+      },
+      {
+        "episode_id": 48080,
+        "display_name": "Bosch S05E04 - Probuďte mrtvou CZ Dabing",
+        "video_id": 27962468
+      },
+      {
+        "episode_id": 48096,
+        "display_name": "Bosch S06E04 - Patří to k životu CZ Dabing",
+        "video_id": 27962636
+      },
+      {
+        "episode_id": 48100,
+        "display_name": "Bosch S07E04 - Trojaut CZ Dabing",
+        "video_id": 27962945
+      },
+      {
+        "episode_id": 14776,
+        "display_name": "Stoupenci zla S03E03 - 3. epizoda CZ Dabing",
+        "video_id": 27963393
+      },
+      {
+        "episode_id": 92016,
+        "display_name": "Tenkrát poprvé S02E05 - …, když jsem někomu zničila život CZ Dabing",
+        "video_id": 27963424
+      },
+      {
+        "episode_id": 92020,
+        "display_name": "Tenkrát poprvé S02E09 - …, když jsem sledovala vlastní mámu CZ Dabing",
+        "video_id": 27963515
+      },
+      {
+        "episode_id": 92040,
+        "display_name": "Tenkrát poprvé S04E09 - ..., když jsem šla na maturitní ples CZ Dabing",
+        "video_id": 27963565
+      },
+      {
+        "episode_id": 89252,
+        "display_name": "Castlevania S01E01 - Kouzelná láhev CZ Titulky",
+        "video_id": 27963993
+      },
+      {
         "episode_id": 79097,
         "display_name": "One Tree Hill S05E14 - 14. epizoda CZ Dabing",
         "video_id": 27962046
@@ -183874,6 +183929,71 @@
         "episode_id": 79129,
         "display_name": "One Tree Hill S07E08 - 8. epizoda CZ Dabing",
         "video_id": 27962219
+      },
+      {
+        "episode_id": 79109,
+        "display_name": "One Tree Hill S07E09 - 9. epizoda CZ Dabing",
+        "video_id": 27962246
+      },
+      {
+        "episode_id": 79181,
+        "display_name": "One Tree Hill S08E11 - 11. epizoda CZ Dabing",
+        "video_id": 27962296
+      },
+      {
+        "episode_id": 79209,
+        "display_name": "One Tree Hill S08E14 - 14. epizoda CZ Dabing",
+        "video_id": 27962333
+      },
+      {
+        "episode_id": 25989,
+        "display_name": "Srdcerváči S03E06 - Tělo CZ Dabing",
+        "video_id": 27962356
+      },
+      {
+        "episode_id": 40785,
+        "display_name": "Kriminálka Las Vegas S11E22 - V temném domě CZ Dabing",
+        "video_id": 27962398
+      },
+      {
+        "episode_id": 80453,
+        "display_name": "Bleach S01E12 - 12. epizoda CZ Dabing",
+        "video_id": 27962460
+      },
+      {
+        "episode_id": 11009,
+        "display_name": "Agresivní virus S01E02 - Bedna CZ Titulky",
+        "video_id": 27962487
+      },
+      {
+        "episode_id": 28845,
+        "display_name": "Agresivní virus S04E03 - Jedna rána CZ Titulky",
+        "video_id": 27962608
+      },
+      {
+        "episode_id": 28849,
+        "display_name": "Agresivní virus S04E07 - Ouroboros CZ Titulky",
+        "video_id": 27962630
+      },
+      {
+        "episode_id": 63273,
+        "display_name": "Médium S01E04 - Jackpot CZ Dabing",
+        "video_id": 27962710
+      },
+      {
+        "episode_id": 63277,
+        "display_name": "Médium S01E08 - Stvoření tisíců lesů CZ Dabing",
+        "video_id": 27963432
+      },
+      {
+        "episode_id": 25045,
+        "display_name": "For All Mankind S01E03 - Nixonovy ženy CZ Dabing",
+        "video_id": 27963489
+      },
+      {
+        "episode_id": 160333,
+        "display_name": "Pán tygrů S01E07 - Svržen z trůnu CZ Dabing",
+        "video_id": 27963547
       },
       {
         "episode_id": 100526,
@@ -183901,6 +184021,81 @@
         "video_id": 27962268
       },
       {
+        "episode_id": 100558,
+        "display_name": "Atlanta S04E09 - Andrew Wyeth. Alfredův svět. CZ Titulky",
+        "video_id": 27962293
+      },
+      {
+        "episode_id": 51526,
+        "display_name": "Falling Skies S01E02 - Zbrojnice CZ Titulky",
+        "video_id": 27962358
+      },
+      {
+        "episode_id": 93990,
+        "display_name": "Big Mouth S01E01 - Ejakulace CZ Titulky",
+        "video_id": 27962404
+      },
+      {
+        "episode_id": 94002,
+        "display_name": "Big Mouth S01E03 - Jsem gay? CZ Titulky",
+        "video_id": 27962438
+      },
+      {
+        "episode_id": 94006,
+        "display_name": "Big Mouth S01E05 - Holky jsou taky nadržené CZ Titulky",
+        "video_id": 27962466
+      },
+      {
+        "episode_id": 94010,
+        "display_name": "Big Mouth S02E01 - Jsem normální? CZ Titulky",
+        "video_id": 27962612
+      },
+      {
+        "episode_id": 94014,
+        "display_name": "Big Mouth S02E05 - Plánované rodičovství CZ Titulky",
+        "video_id": 27962632
+      },
+      {
+        "episode_id": 94018,
+        "display_name": "Big Mouth S02E09 - Líbej nebo sdílej CZ Titulky",
+        "video_id": 27962647
+      },
+      {
+        "episode_id": 93994,
+        "display_name": "Big Mouth S03E04 - Závislost CZ Titulky",
+        "video_id": 27962734
+      },
+      {
+        "episode_id": 93998,
+        "display_name": "Big Mouth S03E09 - Testy CZ Titulky",
+        "video_id": 27963299
+      },
+      {
+        "episode_id": 94022,
+        "display_name": "Big Mouth S04E02 - Monstrmenstruace CZ Dabing",
+        "video_id": 27963392
+      },
+      {
+        "episode_id": 94030,
+        "display_name": "Big Mouth S04E06 - Nick Starr CZ Dabing",
+        "video_id": 27963423
+      },
+      {
+        "episode_id": 94026,
+        "display_name": "Big Mouth S04E07 - Ručně a stručně CZ Dabing",
+        "video_id": 27963444
+      },
+      {
+        "episode_id": 94034,
+        "display_name": "Big Mouth S05E04 - Zelenooký netvor CZ Dabing",
+        "video_id": 27963474
+      },
+      {
+        "episode_id": 94038,
+        "display_name": "Big Mouth S05E08 - (S05E08) (epizoda) USA A Very Big Mouth Christmas Animovaný / Komedie CZ Dabing",
+        "video_id": 27963500
+      },
+      {
         "episode_id": 178323,
         "display_name": "JoJova prazvláštní dobrodružství S05E11 - Operace Krutý strážce (Směr dvůr!) (2) CZ Titulky",
         "video_id": 27962056
@@ -183924,6 +184119,76 @@
         "episode_id": 14771,
         "display_name": "Stoupenci zla S02E13 - 13. epizoda CZ Dabing",
         "video_id": 27962229
+      },
+      {
+        "episode_id": 14775,
+        "display_name": "Stoupenci zla S03E02 - 2. epizoda CZ Dabing",
+        "video_id": 27962257
+      },
+      {
+        "episode_id": 14783,
+        "display_name": "Stoupenci zla S03E10 - 10. epizoda CZ Dabing",
+        "video_id": 27962290
+      },
+      {
+        "episode_id": 92011,
+        "display_name": "Tenkrát poprvé S01E03 - …, když jsem se opila s hvězdami školy CZ Dabing",
+        "video_id": 27962328
+      },
+      {
+        "episode_id": 92003,
+        "display_name": "Tenkrát poprvé S01E04 - …, když jsem se cítila super indicky CZ Dabing",
+        "video_id": 27962369
+      },
+      {
+        "episode_id": 92015,
+        "display_name": "Tenkrát poprvé S02E04 - …, když jsem měla indickou (ne)přítelkyni CZ Dabing",
+        "video_id": 27962426
+      },
+      {
+        "episode_id": 92019,
+        "display_name": "Tenkrát poprvé S02E08 - …, když jsem byla Daisy Buchananová CZ Dabing",
+        "video_id": 27962472
+      },
+      {
+        "episode_id": 92023,
+        "display_name": "Tenkrát poprvé S03E02 - …, když jsem měla svého trolla CZ Dabing",
+        "video_id": 27962596
+      },
+      {
+        "episode_id": 92035,
+        "display_name": "Tenkrát poprvé S04E04 - ..., když jsem si zničila budoucnost CZ Dabing",
+        "video_id": 27962650
+      },
+      {
+        "episode_id": 92039,
+        "display_name": "Tenkrát poprvé S04E08 - ..., když jsem mámě domluvila rande CZ Dabing",
+        "video_id": 27963342
+      },
+      {
+        "episode_id": 89255,
+        "display_name": "Castlevania S01E04 - Monument CZ Titulky",
+        "video_id": 27963405
+      },
+      {
+        "episode_id": 89267,
+        "display_name": "Castlevania S03E10 - Vzdejte se veškeré naděje CZ Titulky",
+        "video_id": 27963433
+      },
+      {
+        "episode_id": 89275,
+        "display_name": "Castlevania S04E04 - Musíš něco obětovat CZ Titulky",
+        "video_id": 27963466
+      },
+      {
+        "episode_id": 89279,
+        "display_name": "Castlevania S04E08 - Magie smrti CZ Titulky",
+        "video_id": 27963494
+      },
+      {
+        "episode_id": 62515,
+        "display_name": "Dva z Queensu S01E03 - 3. epizoda CZ Dabing",
+        "video_id": 27963543
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -367503,6 +367768,61 @@
         "video_id": 27962208
       },
       {
+        "episode_id": 7488,
+        "display_name": "Američtí bohové S03E09 - The Lake Effect CZ Titulky",
+        "video_id": 27962267
+      },
+      {
+        "episode_id": 48052,
+        "display_name": "Bosch S03E03 - Bůh se dívá CZ Dabing",
+        "video_id": 27962324
+      },
+      {
+        "episode_id": 48076,
+        "display_name": "Bosch S03E09 - Přesná muška CZ Dabing",
+        "video_id": 27962409
+      },
+      {
+        "episode_id": 48080,
+        "display_name": "Bosch S05E04 - Probuďte mrtvou CZ Dabing",
+        "video_id": 27962468
+      },
+      {
+        "episode_id": 48096,
+        "display_name": "Bosch S06E04 - Patří to k životu CZ Dabing",
+        "video_id": 27962636
+      },
+      {
+        "episode_id": 48100,
+        "display_name": "Bosch S07E04 - Trojaut CZ Dabing",
+        "video_id": 27962945
+      },
+      {
+        "episode_id": 14776,
+        "display_name": "Stoupenci zla S03E03 - 3. epizoda CZ Dabing",
+        "video_id": 27963393
+      },
+      {
+        "episode_id": 92016,
+        "display_name": "Tenkrát poprvé S02E05 - …, když jsem někomu zničila život CZ Dabing",
+        "video_id": 27963424
+      },
+      {
+        "episode_id": 92020,
+        "display_name": "Tenkrát poprvé S02E09 - …, když jsem sledovala vlastní mámu CZ Dabing",
+        "video_id": 27963515
+      },
+      {
+        "episode_id": 92040,
+        "display_name": "Tenkrát poprvé S04E09 - ..., když jsem šla na maturitní ples CZ Dabing",
+        "video_id": 27963565
+      },
+      {
+        "episode_id": 89252,
+        "display_name": "Castlevania S01E01 - Kouzelná láhev CZ Titulky",
+        "video_id": 27963993
+      },
+      {
         "episode_id": 79097,
         "display_name": "One Tree Hill S05E14 - 14. epizoda CZ Dabing",
         "video_id": 27962046
@@ -367516,6 +367836,71 @@
         "episode_id": 79129,
         "display_name": "One Tree Hill S07E08 - 8. epizoda CZ Dabing",
         "video_id": 27962219
+      },
+      {
+        "episode_id": 79109,
+        "display_name": "One Tree Hill S07E09 - 9. epizoda CZ Dabing",
+        "video_id": 27962246
+      },
+      {
+        "episode_id": 79181,
+        "display_name": "One Tree Hill S08E11 - 11. epizoda CZ Dabing",
+        "video_id": 27962296
+      },
+      {
+        "episode_id": 79209,
+        "display_name": "One Tree Hill S08E14 - 14. epizoda CZ Dabing",
+        "video_id": 27962333
+      },
+      {
+        "episode_id": 25989,
+        "display_name": "Srdcerváči S03E06 - Tělo CZ Dabing",
+        "video_id": 27962356
+      },
+      {
+        "episode_id": 40785,
+        "display_name": "Kriminálka Las Vegas S11E22 - V temném domě CZ Dabing",
+        "video_id": 27962398
+      },
+      {
+        "episode_id": 80453,
+        "display_name": "Bleach S01E12 - 12. epizoda CZ Dabing",
+        "video_id": 27962460
+      },
+      {
+        "episode_id": 11009,
+        "display_name": "Agresivní virus S01E02 - Bedna CZ Titulky",
+        "video_id": 27962487
+      },
+      {
+        "episode_id": 28845,
+        "display_name": "Agresivní virus S04E03 - Jedna rána CZ Titulky",
+        "video_id": 27962608
+      },
+      {
+        "episode_id": 28849,
+        "display_name": "Agresivní virus S04E07 - Ouroboros CZ Titulky",
+        "video_id": 27962630
+      },
+      {
+        "episode_id": 63273,
+        "display_name": "Médium S01E04 - Jackpot CZ Dabing",
+        "video_id": 27962710
+      },
+      {
+        "episode_id": 63277,
+        "display_name": "Médium S01E08 - Stvoření tisíců lesů CZ Dabing",
+        "video_id": 27963432
+      },
+      {
+        "episode_id": 25045,
+        "display_name": "For All Mankind S01E03 - Nixonovy ženy CZ Dabing",
+        "video_id": 27963489
+      },
+      {
+        "episode_id": 160333,
+        "display_name": "Pán tygrů S01E07 - Svržen z trůnu CZ Dabing",
+        "video_id": 27963547
       },
       {
         "episode_id": 100526,
@@ -367543,6 +367928,81 @@
         "video_id": 27962268
       },
       {
+        "episode_id": 100558,
+        "display_name": "Atlanta S04E09 - Andrew Wyeth. Alfredův svět. CZ Titulky",
+        "video_id": 27962293
+      },
+      {
+        "episode_id": 51526,
+        "display_name": "Falling Skies S01E02 - Zbrojnice CZ Titulky",
+        "video_id": 27962358
+      },
+      {
+        "episode_id": 93990,
+        "display_name": "Big Mouth S01E01 - Ejakulace CZ Titulky",
+        "video_id": 27962404
+      },
+      {
+        "episode_id": 94002,
+        "display_name": "Big Mouth S01E03 - Jsem gay? CZ Titulky",
+        "video_id": 27962438
+      },
+      {
+        "episode_id": 94006,
+        "display_name": "Big Mouth S01E05 - Holky jsou taky nadržené CZ Titulky",
+        "video_id": 27962466
+      },
+      {
+        "episode_id": 94010,
+        "display_name": "Big Mouth S02E01 - Jsem normální? CZ Titulky",
+        "video_id": 27962612
+      },
+      {
+        "episode_id": 94014,
+        "display_name": "Big Mouth S02E05 - Plánované rodičovství CZ Titulky",
+        "video_id": 27962632
+      },
+      {
+        "episode_id": 94018,
+        "display_name": "Big Mouth S02E09 - Líbej nebo sdílej CZ Titulky",
+        "video_id": 27962647
+      },
+      {
+        "episode_id": 93994,
+        "display_name": "Big Mouth S03E04 - Závislost CZ Titulky",
+        "video_id": 27962734
+      },
+      {
+        "episode_id": 93998,
+        "display_name": "Big Mouth S03E09 - Testy CZ Titulky",
+        "video_id": 27963299
+      },
+      {
+        "episode_id": 94022,
+        "display_name": "Big Mouth S04E02 - Monstrmenstruace CZ Dabing",
+        "video_id": 27963392
+      },
+      {
+        "episode_id": 94030,
+        "display_name": "Big Mouth S04E06 - Nick Starr CZ Dabing",
+        "video_id": 27963423
+      },
+      {
+        "episode_id": 94026,
+        "display_name": "Big Mouth S04E07 - Ručně a stručně CZ Dabing",
+        "video_id": 27963444
+      },
+      {
+        "episode_id": 94034,
+        "display_name": "Big Mouth S05E04 - Zelenooký netvor CZ Dabing",
+        "video_id": 27963474
+      },
+      {
+        "episode_id": 94038,
+        "display_name": "Big Mouth S05E08 - (S05E08) (epizoda) USA A Very Big Mouth Christmas Animovaný / Komedie CZ Dabing",
+        "video_id": 27963500
+      },
+      {
         "episode_id": 178323,
         "display_name": "JoJova prazvláštní dobrodružství S05E11 - Operace Krutý strážce (Směr dvůr!) (2) CZ Titulky",
         "video_id": 27962056
@@ -367566,6 +368026,76 @@
         "episode_id": 14771,
         "display_name": "Stoupenci zla S02E13 - 13. epizoda CZ Dabing",
         "video_id": 27962229
+      },
+      {
+        "episode_id": 14775,
+        "display_name": "Stoupenci zla S03E02 - 2. epizoda CZ Dabing",
+        "video_id": 27962257
+      },
+      {
+        "episode_id": 14783,
+        "display_name": "Stoupenci zla S03E10 - 10. epizoda CZ Dabing",
+        "video_id": 27962290
+      },
+      {
+        "episode_id": 92011,
+        "display_name": "Tenkrát poprvé S01E03 - …, když jsem se opila s hvězdami školy CZ Dabing",
+        "video_id": 27962328
+      },
+      {
+        "episode_id": 92003,
+        "display_name": "Tenkrát poprvé S01E04 - …, když jsem se cítila super indicky CZ Dabing",
+        "video_id": 27962369
+      },
+      {
+        "episode_id": 92015,
+        "display_name": "Tenkrát poprvé S02E04 - …, když jsem měla indickou (ne)přítelkyni CZ Dabing",
+        "video_id": 27962426
+      },
+      {
+        "episode_id": 92019,
+        "display_name": "Tenkrát poprvé S02E08 - …, když jsem byla Daisy Buchananová CZ Dabing",
+        "video_id": 27962472
+      },
+      {
+        "episode_id": 92023,
+        "display_name": "Tenkrát poprvé S03E02 - …, když jsem měla svého trolla CZ Dabing",
+        "video_id": 27962596
+      },
+      {
+        "episode_id": 92035,
+        "display_name": "Tenkrát poprvé S04E04 - ..., když jsem si zničila budoucnost CZ Dabing",
+        "video_id": 27962650
+      },
+      {
+        "episode_id": 92039,
+        "display_name": "Tenkrát poprvé S04E08 - ..., když jsem mámě domluvila rande CZ Dabing",
+        "video_id": 27963342
+      },
+      {
+        "episode_id": 89255,
+        "display_name": "Castlevania S01E04 - Monument CZ Titulky",
+        "video_id": 27963405
+      },
+      {
+        "episode_id": 89267,
+        "display_name": "Castlevania S03E10 - Vzdejte se veškeré naděje CZ Titulky",
+        "video_id": 27963433
+      },
+      {
+        "episode_id": 89275,
+        "display_name": "Castlevania S04E04 - Musíš něco obětovat CZ Titulky",
+        "video_id": 27963466
+      },
+      {
+        "episode_id": 89279,
+        "display_name": "Castlevania S04E08 - Magie smrti CZ Titulky",
+        "video_id": 27963494
+      },
+      {
+        "episode_id": 62515,
+        "display_name": "Dva z Queensu S01E03 - 3. epizoda CZ Dabing",
+        "video_id": 27963543
       }
     ],
     "prepared_not_upload_ready": [
@@ -368727,7 +369257,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 39,
+    "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
