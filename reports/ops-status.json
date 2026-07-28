@@ -1,23 +1,63 @@
 {
   "counts": {
     "backlog_episodes": 151951,
-    "manifest_upload_ready_episodes": 1018,
-    "uploaded_episodes": 41489,
-    "prepared_source_episodes": 51909,
+    "manifest_upload_ready_episodes": 1011,
+    "uploaded_episodes": 41523,
+    "prepared_source_episodes": 51995,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 428,
-    "language_whisper_attempted_sources": 120,
+    "language_audited_sources": 20,
+    "language_whisper_attempted_sources": 20,
     "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 56937,
-    "whisper_review_pending_sources": 50038,
+    "whisper_review_pending_sources": 50047,
     "subtitle_followup_sources": 20616,
     "subtitle_followup_pending_sources": 20616
   },
   "workflow_runs": [
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-28T08:53:22Z",
+      "databaseId": 30344229405,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-28T08:53:20Z",
+      "databaseId": 30344227728,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-28T08:53:15Z",
+      "databaseId": 30344221537,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-07-28T08:45:24Z",
+      "databaseId": 30343678545,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-28T08:26:31Z",
+      "databaseId": 30342400492,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
     {
       "conclusion": "",
       "createdAt": "2026-07-28T08:25:53Z",
@@ -27,19 +67,19 @@
       "workflowName": "prepare-sources"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-28T08:25:01Z",
       "databaseId": 30342299764,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-07-28T08:22:09Z",
       "databaseId": 30342104747,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -51,11 +91,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-28T08:20:18Z",
       "databaseId": 30341979431,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
@@ -91,11 +131,11 @@
       "workflowName": "prepare-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-28T08:16:04Z",
       "databaseId": 30341692422,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -111,7 +151,7 @@
       "createdAt": "2026-07-28T08:02:13Z",
       "databaseId": 30340733090,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "sync"
     },
     {
@@ -131,52 +171,12 @@
       "workflowName": "process-whisper-review"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-28T07:51:29Z",
       "databaseId": 30340017354,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-28T07:50:17Z",
-      "databaseId": 30339938210,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-07-28T07:50:12Z",
-      "databaseId": 30339932165,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-28T07:44:05Z",
-      "databaseId": 30339541467,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-28T07:30:37Z",
-      "databaseId": 30338688198,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-28T07:27:24Z",
-      "databaseId": 30338479668,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-sources"
     }
   ],
   "gaps": {
@@ -182716,6 +182716,41 @@
         "video_id": 27957209
       },
       {
+        "episode_id": 35568,
+        "display_name": "Misfits: Zmetci S02E07 - 7. epizoda CZ Dabing",
+        "video_id": 27957308
+      },
+      {
+        "episode_id": 50576,
+        "display_name": "Misfits: Zmetci S03E01 - 1. epizoda CZ Dabing",
+        "video_id": 27957396
+      },
+      {
+        "episode_id": 4612,
+        "display_name": "Daredevil: Znovuzrození S01E05 - I s úroky CZ Dabing",
+        "video_id": 27957469
+      },
+      {
+        "episode_id": 51188,
+        "display_name": "The Orville S01E07 - Pravidlo většiny CZ Titulky",
+        "video_id": 27957544
+      },
+      {
+        "episode_id": 52604,
+        "display_name": "O.C. S02E06 - Jak Chánoce málem nebyly CZ Dabing",
+        "video_id": 27957633
+      },
+      {
+        "episode_id": 52624,
+        "display_name": "O.C. S02E09 - Ex-faktor CZ Dabing",
+        "video_id": 27957740
+      },
+      {
+        "episode_id": 52656,
+        "display_name": "O.C. S03E06 - Vlny CZ Dabing",
+        "video_id": 27957821
+      },
+      {
         "episode_id": 52649,
         "display_name": "O.C. S03E10 - Chánoční bar micva CZ Dabing",
         "video_id": 27956264
@@ -182764,6 +182799,56 @@
         "episode_id": 131265,
         "display_name": "American Crime Story S02E01 - 1. epizoda CZ Titulky",
         "video_id": 27957225
+      },
+      {
+        "episode_id": 50789,
+        "display_name": "Narcos: Mexiko S02E04 - Velký tunel CZ Dabing",
+        "video_id": 27957304
+      },
+      {
+        "episode_id": 13073,
+        "display_name": "Star Trek: Picard S01E02 - Mapy a legendy CZ Titulky",
+        "video_id": 27957371
+      },
+      {
+        "episode_id": 13065,
+        "display_name": "Star Trek: Picard S02E04 - Strážce CZ Titulky",
+        "video_id": 27957438
+      },
+      {
+        "episode_id": 27949,
+        "display_name": "Star Trek: Picard S03E08 - Kapitulace CZ Titulky",
+        "video_id": 27957502
+      },
+      {
+        "episode_id": 70289,
+        "display_name": "Star Trek S03E06 - Přízračná přestřelka CZ Dabing",
+        "video_id": 27957577
+      },
+      {
+        "episode_id": 70277,
+        "display_name": "Star Trek S03E09 - Síť Tholianů CZ Dabing",
+        "video_id": 27957662
+      },
+      {
+        "episode_id": 100525,
+        "display_name": "Atlanta S01E07 - B.A.N. CZ Titulky",
+        "video_id": 27957717
+      },
+      {
+        "episode_id": 100537,
+        "display_name": "Atlanta S03E04 - Velká odplata CZ Titulky",
+        "video_id": 27957815
+      },
+      {
+        "episode_id": 100553,
+        "display_name": "Atlanta S03E08 - New Jazz CZ Titulky",
+        "video_id": 27957857
+      },
+      {
+        "episode_id": 100549,
+        "display_name": "Atlanta S04E01 - Většina Atlanty CZ Titulky",
+        "video_id": 27958014
       },
       {
         "episode_id": 68454,
@@ -182821,6 +182906,46 @@
         "video_id": 27957197
       },
       {
+        "episode_id": 4954,
+        "display_name": "Sabrinina děsivá dobrodružství S01E03 - Kapitola třetí: Zkouška Sabriny Spellmanové CZ Titulky",
+        "video_id": 27957278
+      },
+      {
+        "episode_id": 4958,
+        "display_name": "Sabrinina děsivá dobrodružství S01E08 - Kapitola osmá: Pohřeb CZ Titulky",
+        "video_id": 27957394
+      },
+      {
+        "episode_id": 4962,
+        "display_name": "Sabrinina děsivá dobrodružství S02E03 - Kapitola dvacátá třetí: Těžká je koruna CZ Titulky",
+        "video_id": 27957494
+      },
+      {
+        "episode_id": 4966,
+        "display_name": "Sabrinina děsivá dobrodružství S02E05 - Kapitola dvacátá pátá: Ďábel v nitru CZ Dabing",
+        "video_id": 27957551
+      },
+      {
+        "episode_id": 6550,
+        "display_name": "Pod kupolí S03E05 - Aljaška CZ Dabing",
+        "video_id": 27957664
+      },
+      {
+        "episode_id": 44534,
+        "display_name": "Jmenuju se Earl S01E24 - První ze seznamu CZ Dabing",
+        "video_id": 27957869
+      },
+      {
+        "episode_id": 44474,
+        "display_name": "Jmenuju se Earl S02E02 - Kauce za Joy CZ Dabing",
+        "video_id": 27958177
+      },
+      {
+        "episode_id": 44490,
+        "display_name": "Jmenuju se Earl S02E20 - Do koulí CZ Dabing",
+        "video_id": 27958240
+      },
+      {
         "episode_id": 106123,
         "display_name": "Transplant S01E08 - 8. epizoda CZ Titulky",
         "video_id": 27956256
@@ -182874,6 +182999,51 @@
         "episode_id": 72139,
         "display_name": "Letecké katastrofy S18E10 - Zimní smrt CZ Dabing",
         "video_id": 27957184
+      },
+      {
+        "episode_id": 13067,
+        "display_name": "Star Trek: Picard S02E02 - Pokání CZ Titulky",
+        "video_id": 27957323
+      },
+      {
+        "episode_id": 27943,
+        "display_name": "Star Trek: Picard S03E02 - Odpojení CZ Titulky",
+        "video_id": 27957382
+      },
+      {
+        "episode_id": 84679,
+        "display_name": "Letecké katastrofy S25E04 - Pochybnosti CZ Dabing",
+        "video_id": 27957441
+      },
+      {
+        "episode_id": 27947,
+        "display_name": "Star Trek: Picard S03E06 - Odměna CZ Titulky",
+        "video_id": 27957508
+      },
+      {
+        "episode_id": 70275,
+        "display_name": "Star Trek S03E02 - Případ Enterprise CZ Dabing",
+        "video_id": 27957572
+      },
+      {
+        "episode_id": 70295,
+        "display_name": "Star Trek S03E04 - A děti půjdou v čele CZ Dabing",
+        "video_id": 27957656
+      },
+      {
+        "episode_id": 105391,
+        "display_name": "Letecké katastrofy S26E07 - Smrtící opatření CZ Dabing",
+        "video_id": 27957722
+      },
+      {
+        "episode_id": 60083,
+        "display_name": "Boku no Hero Academia S02E09 - 9. epizoda CZ Titulky",
+        "video_id": 27957862
+      },
+      {
+        "episode_id": 156207,
+        "display_name": "Rychlokurz romantiky S01E03 - Počet výsledků, kdy se averze změní v zalíbení CZ Titulky",
+        "video_id": 27958097
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -365308,6 +365478,41 @@
         "video_id": 27957209
       },
       {
+        "episode_id": 35568,
+        "display_name": "Misfits: Zmetci S02E07 - 7. epizoda CZ Dabing",
+        "video_id": 27957308
+      },
+      {
+        "episode_id": 50576,
+        "display_name": "Misfits: Zmetci S03E01 - 1. epizoda CZ Dabing",
+        "video_id": 27957396
+      },
+      {
+        "episode_id": 4612,
+        "display_name": "Daredevil: Znovuzrození S01E05 - I s úroky CZ Dabing",
+        "video_id": 27957469
+      },
+      {
+        "episode_id": 51188,
+        "display_name": "The Orville S01E07 - Pravidlo většiny CZ Titulky",
+        "video_id": 27957544
+      },
+      {
+        "episode_id": 52604,
+        "display_name": "O.C. S02E06 - Jak Chánoce málem nebyly CZ Dabing",
+        "video_id": 27957633
+      },
+      {
+        "episode_id": 52624,
+        "display_name": "O.C. S02E09 - Ex-faktor CZ Dabing",
+        "video_id": 27957740
+      },
+      {
+        "episode_id": 52656,
+        "display_name": "O.C. S03E06 - Vlny CZ Dabing",
+        "video_id": 27957821
+      },
+      {
         "episode_id": 52649,
         "display_name": "O.C. S03E10 - Chánoční bar micva CZ Dabing",
         "video_id": 27956264
@@ -365356,6 +365561,56 @@
         "episode_id": 131265,
         "display_name": "American Crime Story S02E01 - 1. epizoda CZ Titulky",
         "video_id": 27957225
+      },
+      {
+        "episode_id": 50789,
+        "display_name": "Narcos: Mexiko S02E04 - Velký tunel CZ Dabing",
+        "video_id": 27957304
+      },
+      {
+        "episode_id": 13073,
+        "display_name": "Star Trek: Picard S01E02 - Mapy a legendy CZ Titulky",
+        "video_id": 27957371
+      },
+      {
+        "episode_id": 13065,
+        "display_name": "Star Trek: Picard S02E04 - Strážce CZ Titulky",
+        "video_id": 27957438
+      },
+      {
+        "episode_id": 27949,
+        "display_name": "Star Trek: Picard S03E08 - Kapitulace CZ Titulky",
+        "video_id": 27957502
+      },
+      {
+        "episode_id": 70289,
+        "display_name": "Star Trek S03E06 - Přízračná přestřelka CZ Dabing",
+        "video_id": 27957577
+      },
+      {
+        "episode_id": 70277,
+        "display_name": "Star Trek S03E09 - Síť Tholianů CZ Dabing",
+        "video_id": 27957662
+      },
+      {
+        "episode_id": 100525,
+        "display_name": "Atlanta S01E07 - B.A.N. CZ Titulky",
+        "video_id": 27957717
+      },
+      {
+        "episode_id": 100537,
+        "display_name": "Atlanta S03E04 - Velká odplata CZ Titulky",
+        "video_id": 27957815
+      },
+      {
+        "episode_id": 100553,
+        "display_name": "Atlanta S03E08 - New Jazz CZ Titulky",
+        "video_id": 27957857
+      },
+      {
+        "episode_id": 100549,
+        "display_name": "Atlanta S04E01 - Většina Atlanty CZ Titulky",
+        "video_id": 27958014
       },
       {
         "episode_id": 68454,
@@ -365413,6 +365668,46 @@
         "video_id": 27957197
       },
       {
+        "episode_id": 4954,
+        "display_name": "Sabrinina děsivá dobrodružství S01E03 - Kapitola třetí: Zkouška Sabriny Spellmanové CZ Titulky",
+        "video_id": 27957278
+      },
+      {
+        "episode_id": 4958,
+        "display_name": "Sabrinina děsivá dobrodružství S01E08 - Kapitola osmá: Pohřeb CZ Titulky",
+        "video_id": 27957394
+      },
+      {
+        "episode_id": 4962,
+        "display_name": "Sabrinina děsivá dobrodružství S02E03 - Kapitola dvacátá třetí: Těžká je koruna CZ Titulky",
+        "video_id": 27957494
+      },
+      {
+        "episode_id": 4966,
+        "display_name": "Sabrinina děsivá dobrodružství S02E05 - Kapitola dvacátá pátá: Ďábel v nitru CZ Dabing",
+        "video_id": 27957551
+      },
+      {
+        "episode_id": 6550,
+        "display_name": "Pod kupolí S03E05 - Aljaška CZ Dabing",
+        "video_id": 27957664
+      },
+      {
+        "episode_id": 44534,
+        "display_name": "Jmenuju se Earl S01E24 - První ze seznamu CZ Dabing",
+        "video_id": 27957869
+      },
+      {
+        "episode_id": 44474,
+        "display_name": "Jmenuju se Earl S02E02 - Kauce za Joy CZ Dabing",
+        "video_id": 27958177
+      },
+      {
+        "episode_id": 44490,
+        "display_name": "Jmenuju se Earl S02E20 - Do koulí CZ Dabing",
+        "video_id": 27958240
+      },
+      {
         "episode_id": 106123,
         "display_name": "Transplant S01E08 - 8. epizoda CZ Titulky",
         "video_id": 27956256
@@ -365466,6 +365761,51 @@
         "episode_id": 72139,
         "display_name": "Letecké katastrofy S18E10 - Zimní smrt CZ Dabing",
         "video_id": 27957184
+      },
+      {
+        "episode_id": 13067,
+        "display_name": "Star Trek: Picard S02E02 - Pokání CZ Titulky",
+        "video_id": 27957323
+      },
+      {
+        "episode_id": 27943,
+        "display_name": "Star Trek: Picard S03E02 - Odpojení CZ Titulky",
+        "video_id": 27957382
+      },
+      {
+        "episode_id": 84679,
+        "display_name": "Letecké katastrofy S25E04 - Pochybnosti CZ Dabing",
+        "video_id": 27957441
+      },
+      {
+        "episode_id": 27947,
+        "display_name": "Star Trek: Picard S03E06 - Odměna CZ Titulky",
+        "video_id": 27957508
+      },
+      {
+        "episode_id": 70275,
+        "display_name": "Star Trek S03E02 - Případ Enterprise CZ Dabing",
+        "video_id": 27957572
+      },
+      {
+        "episode_id": 70295,
+        "display_name": "Star Trek S03E04 - A děti půjdou v čele CZ Dabing",
+        "video_id": 27957656
+      },
+      {
+        "episode_id": 105391,
+        "display_name": "Letecké katastrofy S26E07 - Smrtící opatření CZ Dabing",
+        "video_id": 27957722
+      },
+      {
+        "episode_id": 60083,
+        "display_name": "Boku no Hero Academia S02E09 - 9. epizoda CZ Titulky",
+        "video_id": 27957862
+      },
+      {
+        "episode_id": 156207,
+        "display_name": "Rychlokurz romantiky S01E03 - Počet výsledků, kdy se averze změní v zalíbení CZ Titulky",
+        "video_id": 27958097
       }
     ],
     "prepared_not_upload_ready": [
@@ -366627,14 +366967,13 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 308,
-    "ok": 119,
+    "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
-    "whisper_confirmed_cz": 2286,
-    "whisper_non_cz_needs_subtitles": 4613,
-    "needs_whisper": 50000,
+    "whisper_confirmed_cz": 2278,
+    "whisper_non_cz_needs_subtitles": 4612,
+    "needs_whisper": 50009,
     "whisper_failed": 38
   },
   "subtitle_followup_statuses": {
