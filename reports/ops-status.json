@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 151052,
     "manifest_upload_ready_episodes": 1107,
-    "uploaded_episodes": 42319,
+    "uploaded_episodes": 42322,
     "prepared_source_episodes": 53845,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 632,
-    "language_whisper_attempted_sources": 48,
-    "language_pending_whisper_sources": 2624,
+    "language_audited_sources": 40,
+    "language_whisper_attempted_sources": 40,
+    "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 56886,
     "whisper_review_pending_sources": 49791,
     "subtitle_followup_sources": 20756,
@@ -20,10 +20,26 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-07-28T22:11:32Z",
+      "databaseId": 30403636629,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-28T22:05:32Z",
+      "databaseId": 30403259706,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-28T22:04:19Z",
       "databaseId": 30403176072,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -51,11 +67,11 @@
       "workflowName": "process-whisper-review"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-28T22:02:55Z",
       "databaseId": 30403083521,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -161,22 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "failure",
-      "createdAt": "2026-07-28T21:36:34Z",
-      "databaseId": 30401362417,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-28T21:35:45Z",
-      "databaseId": 30401308872,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
     }
   ],
   "gaps": {
@@ -186729,6 +186729,21 @@
         "episode_id": 186072,
         "display_name": "Záchranáři L. A. S05E02 - Zoufalé časy CZ Dabing",
         "video_id": 27989879
+      },
+      {
+        "episode_id": 186124,
+        "display_name": "Záchranáři L. A. S05E15 - Hlavně ať něco nepropásnu CZ Dabing",
+        "video_id": 27989971
+      },
+      {
+        "episode_id": 135496,
+        "display_name": "Tým Škorpion S01E17 - Cesta na jih CZ Dabing",
+        "video_id": 27989989
+      },
+      {
+        "episode_id": 48748,
+        "display_name": "Sword Art Online S04E14 - 14. epizoda CZ Dabing",
+        "video_id": 27990026
       },
       {
         "episode_id": 96117,
@@ -373473,6 +373488,21 @@
         "video_id": 27989879
       },
       {
+        "episode_id": 186124,
+        "display_name": "Záchranáři L. A. S05E15 - Hlavně ať něco nepropásnu CZ Dabing",
+        "video_id": 27989971
+      },
+      {
+        "episode_id": 135496,
+        "display_name": "Tým Škorpion S01E17 - Cesta na jih CZ Dabing",
+        "video_id": 27989989
+      },
+      {
+        "episode_id": 48748,
+        "display_name": "Sword Art Online S04E14 - 14. epizoda CZ Dabing",
+        "video_id": 27990026
+      },
+      {
         "episode_id": 96117,
         "display_name": "Roadies S01E03 - 3. epizoda CZ Titulky",
         "video_id": 27988401
@@ -374927,8 +374957,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 47,
-    "disabled": 584,
+    "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
