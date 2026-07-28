@@ -1,17 +1,17 @@
 {
   "counts": {
     "backlog_episodes": 152162,
-    "manifest_upload_ready_episodes": 1068,
-    "uploaded_episodes": 41195,
-    "prepared_source_episodes": 52292,
+    "manifest_upload_ready_episodes": 1066,
+    "uploaded_episodes": 41202,
+    "prepared_source_episodes": 52287,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 60,
-    "language_whisper_attempted_sources": 60,
-    "language_pending_whisper_sources": 2604,
+    "language_audited_sources": 40,
+    "language_whisper_attempted_sources": 40,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 56940,
     "whisper_review_pending_sources": 49939,
     "subtitle_followup_sources": 20556,
@@ -20,18 +20,58 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-07-28T00:59:12Z",
-      "databaseId": 30318930870,
+      "createdAt": "2026-07-28T01:13:01Z",
+      "databaseId": 30319618297,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-07-28T01:12:57Z",
+      "databaseId": 30319614424,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-28T01:02:36Z",
+      "databaseId": 30319106774,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-sources"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-28T01:00:35Z",
+      "databaseId": 30319004020,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-28T01:00:25Z",
+      "databaseId": 30318994491,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-28T00:59:12Z",
+      "databaseId": 30318930870,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-28T00:58:04Z",
       "databaseId": 30318878671,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -59,19 +99,19 @@
       "workflowName": "sync"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-28T00:49:45Z",
       "databaseId": 30318469907,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-07-28T00:48:57Z",
       "databaseId": 30318429445,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -131,52 +171,12 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-07-28T00:27:55Z",
       "databaseId": 30317376574,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-07-28T00:21:33Z",
-      "databaseId": 30317065840,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-28T00:20:41Z",
-      "databaseId": 30317025299,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-07-28T00:10:55Z",
-      "databaseId": 30316534274,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-28T00:06:46Z",
-      "databaseId": 30316316136,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-28T00:05:35Z",
-      "databaseId": 30316250641,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
     }
   ],
   "gaps": {
@@ -181241,6 +181241,16 @@
         "video_id": 27942289
       },
       {
+        "episode_id": 68144,
+        "display_name": "Cyberpunk: Edgerunners S01E06 - Hustá holka CZ Dabing",
+        "video_id": 27942339
+      },
+      {
+        "episode_id": 68148,
+        "display_name": "Cyberpunk: Edgerunners S01E10 - Na Měsíci! CZ Dabing",
+        "video_id": 27942391
+      },
+      {
         "episode_id": 106505,
         "display_name": "Kobayashi-san Chi no Maid Dragon S02E04 - 4. epizoda CZ Titulky",
         "video_id": 27940534
@@ -181409,6 +181419,31 @@
         "episode_id": 106510,
         "display_name": "Kobayashi-san Chi no Maid Dragon S02E09 - 9. epizoda CZ Titulky",
         "video_id": 27942141
+      },
+      {
+        "episode_id": 4482,
+        "display_name": "Banshee S02E05 - Pravda o jednorožcích CZ Dabing",
+        "video_id": 27942288
+      },
+      {
+        "episode_id": 155354,
+        "display_name": "Zlomové okamžiky: Atomová bomba a studená válka S01E09 - Ještě nejsme mrtví CZ Dabing",
+        "video_id": 27942434
+      },
+      {
+        "episode_id": 4470,
+        "display_name": "Banshee S02E07 - Jak pohřbít chlapa CZ Dabing",
+        "video_id": 27942483
+      },
+      {
+        "episode_id": 9938,
+        "display_name": "Star Trek: Discovery S03E01 - Naděje nebyla zbytečná, 1. část CZ Dabing",
+        "video_id": 27942629
+      },
+      {
+        "episode_id": 86366,
+        "display_name": "Sonic X S01E12 - 12. epizoda CZ Dabing",
+        "video_id": 27942677
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -362368,6 +362403,16 @@
         "video_id": 27942289
       },
       {
+        "episode_id": 68144,
+        "display_name": "Cyberpunk: Edgerunners S01E06 - Hustá holka CZ Dabing",
+        "video_id": 27942339
+      },
+      {
+        "episode_id": 68148,
+        "display_name": "Cyberpunk: Edgerunners S01E10 - Na Měsíci! CZ Dabing",
+        "video_id": 27942391
+      },
+      {
         "episode_id": 106505,
         "display_name": "Kobayashi-san Chi no Maid Dragon S02E04 - 4. epizoda CZ Titulky",
         "video_id": 27940534
@@ -362536,6 +362581,31 @@
         "episode_id": 106510,
         "display_name": "Kobayashi-san Chi no Maid Dragon S02E09 - 9. epizoda CZ Titulky",
         "video_id": 27942141
+      },
+      {
+        "episode_id": 4482,
+        "display_name": "Banshee S02E05 - Pravda o jednorožcích CZ Dabing",
+        "video_id": 27942288
+      },
+      {
+        "episode_id": 155354,
+        "display_name": "Zlomové okamžiky: Atomová bomba a studená válka S01E09 - Ještě nejsme mrtví CZ Dabing",
+        "video_id": 27942434
+      },
+      {
+        "episode_id": 4470,
+        "display_name": "Banshee S02E07 - Jak pohřbít chlapa CZ Dabing",
+        "video_id": 27942483
+      },
+      {
+        "episode_id": 9938,
+        "display_name": "Star Trek: Discovery S03E01 - Naděje nebyla zbytečná, 1. část CZ Dabing",
+        "video_id": 27942629
+      },
+      {
+        "episode_id": 86366,
+        "display_name": "Sonic X S01E12 - 12. epizoda CZ Dabing",
+        "video_id": 27942677
       }
     ],
     "prepared_not_upload_ready": [
@@ -363697,7 +363767,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 59,
+    "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
