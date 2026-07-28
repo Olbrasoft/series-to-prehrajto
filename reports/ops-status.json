@@ -1,37 +1,77 @@
 {
   "counts": {
     "backlog_episodes": 151514,
-    "manifest_upload_ready_episodes": 1026,
-    "uploaded_episodes": 41954,
-    "prepared_source_episodes": 52541,
+    "manifest_upload_ready_episodes": 1086,
+    "uploaded_episodes": 41982,
+    "prepared_source_episodes": 52755,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 169,
-    "language_whisper_attempted_sources": 94,
-    "language_pending_whisper_sources": 2604,
-    "whisper_review_sources": 56916,
-    "whisper_review_pending_sources": 49926,
-    "subtitle_followup_sources": 20672,
-    "subtitle_followup_pending_sources": 20672
+    "language_audited_sources": 314,
+    "language_whisper_attempted_sources": 40,
+    "language_pending_whisper_sources": 2624,
+    "whisper_review_sources": 56920,
+    "whisper_review_pending_sources": 49950,
+    "subtitle_followup_sources": 20674,
+    "subtitle_followup_pending_sources": 20674
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-07-28T14:16:34Z",
-      "databaseId": 30367553276,
+      "createdAt": "2026-07-28T14:37:41Z",
+      "databaseId": 30369305457,
       "headBranch": "main",
       "status": "in_progress",
-      "workflowName": "ops-status"
+      "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-07-28T14:24:02Z",
+      "databaseId": 30368162204,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-sources"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-28T14:18:17Z",
+      "databaseId": 30367692776,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-28T14:17:48Z",
+      "databaseId": 30367651862,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-28T14:17:44Z",
+      "databaseId": 30367646851,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-28T14:16:34Z",
+      "databaseId": 30367553276,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-28T14:16:20Z",
       "databaseId": 30367533483,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -47,15 +87,15 @@
       "createdAt": "2026-07-28T14:15:04Z",
       "databaseId": 30367428684,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "prepare-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-28T14:13:50Z",
       "databaseId": 30367328091,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -103,7 +143,7 @@
       "createdAt": "2026-07-28T13:47:44Z",
       "databaseId": 30365178724,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "prepare-manifest"
     },
     {
@@ -137,46 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-28T13:30:59Z",
-      "databaseId": 30363840054,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-28T13:21:32Z",
-      "databaseId": 30363102173,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-28T13:09:57Z",
-      "databaseId": 30362216375,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-sources"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-28T13:09:39Z",
-      "databaseId": 30362193782,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-28T13:09:36Z",
-      "databaseId": 30362189980,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
     }
   ],
   "gaps": {
@@ -185081,6 +185081,31 @@
         "video_id": 27967797
       },
       {
+        "episode_id": 89560,
+        "display_name": "Friday Night Lights S01E12 - 12. epizoda CZ Titulky",
+        "video_id": 27967869
+      },
+      {
+        "episode_id": 53364,
+        "display_name": "Pohotovost S02E02 - Letní jízda CZ Dabing",
+        "video_id": 27967959
+      },
+      {
+        "episode_id": 53372,
+        "display_name": "Pohotovost S02E11 - Uprostřed zimy CZ Dabing",
+        "video_id": 27968080
+      },
+      {
+        "episode_id": 53432,
+        "display_name": "Pohotovost S05E08 - Spravedlivý boj CZ Dabing",
+        "video_id": 27968199
+      },
+      {
+        "episode_id": 53476,
+        "display_name": "Pohotovost S07E09 - Nejkrásnější ze všech darů CZ Dabing",
+        "video_id": 27968285
+      },
+      {
         "episode_id": 39277,
         "display_name": "Pokémon S12E14 - Vzdušné cíle CZ Titulky",
         "video_id": 27967558
@@ -185114,6 +185139,46 @@
         "episode_id": 37589,
         "display_name": "Hvězdná brána - Atlantida S02E05 - Odsouzenci CZ Dabing",
         "video_id": 27967823
+      },
+      {
+        "episode_id": 37597,
+        "display_name": "Hvězdná brána - Atlantida S02E18 - Michael CZ Dabing",
+        "video_id": 27967878
+      },
+      {
+        "episode_id": 12361,
+        "display_name": "Ledová archa S01E04 - I bez svého tvůrce CZ Dabing",
+        "video_id": 27967943
+      },
+      {
+        "episode_id": 12353,
+        "display_name": "Ledová archa S02E06 - Daleko od Sněhoborce CZ Dabing",
+        "video_id": 27967966
+      },
+      {
+        "episode_id": 57449,
+        "display_name": "Všemocný S01E18 - Bezgraničnyj CZ Dabing",
+        "video_id": 27968001
+      },
+      {
+        "episode_id": 57437,
+        "display_name": "Všemocný S01E19 - Nepořádek CZ Dabing",
+        "video_id": 27968024
+      },
+      {
+        "episode_id": 106685,
+        "display_name": "Šťastné údolí S01E02 - 2. epizoda CZ Dabing",
+        "video_id": 27968056
+      },
+      {
+        "episode_id": 106689,
+        "display_name": "Šťastné údolí S01E06 - 6. epizoda CZ Dabing",
+        "video_id": 27968135
+      },
+      {
+        "episode_id": 14973,
+        "display_name": "Starosta Kingstownu S02E08 - Santa Ježíš CZ Dabing",
+        "video_id": 27968209
       },
       {
         "episode_id": 38838,
@@ -185161,6 +185226,46 @@
         "video_id": 27967855
       },
       {
+        "episode_id": 46510,
+        "display_name": "Revoluce S02E08 - Pan Horn CZ Dabing",
+        "video_id": 27967918
+      },
+      {
+        "episode_id": 46514,
+        "display_name": "Revoluce S02E11 - Syn dvou otců CZ Dabing",
+        "video_id": 27967960
+      },
+      {
+        "episode_id": 46522,
+        "display_name": "Revoluce S02E18 - V Austinu CZ Dabing",
+        "video_id": 27968009
+      },
+      {
+        "episode_id": 172046,
+        "display_name": "Královna Kleopatra S01E04 - Poslední faraonka CZ Dabing",
+        "video_id": 27968067
+      },
+      {
+        "episode_id": 10722,
+        "display_name": "Most S03E06 - 6. epizoda CZ Dabing",
+        "video_id": 27968158
+      },
+      {
+        "episode_id": 10718,
+        "display_name": "Most S03E10 - 10. epizoda CZ Dabing",
+        "video_id": 27968195
+      },
+      {
+        "episode_id": 88146,
+        "display_name": "Nezdolná Kimmy Schmidt S01E01 - Kimmy je venku! CZ Titulky",
+        "video_id": 27968257
+      },
+      {
+        "episode_id": 100410,
+        "display_name": "Havaj 5-0 S06E06 - Monstra CZ Dabing",
+        "video_id": 27968314
+      },
+      {
         "episode_id": 39259,
         "display_name": "Pokémon S11E36 - Pokémonní tábor CZ Titulky",
         "video_id": 27967564
@@ -185199,6 +185304,41 @@
         "episode_id": 76183,
         "display_name": "Havaj 5-0 S10E16 - Dobrovolné přiznání CZ Dabing",
         "video_id": 27967854
+      },
+      {
+        "episode_id": 89559,
+        "display_name": "Friday Night Lights S01E11 - 11. epizoda CZ Titulky",
+        "video_id": 27967932
+      },
+      {
+        "episode_id": 53375,
+        "display_name": "Pohotovost S02E14 - Správná věc CZ Dabing",
+        "video_id": 27968010
+      },
+      {
+        "episode_id": 53379,
+        "display_name": "Pohotovost S02E19 - Oheň v břiše CZ Dabing",
+        "video_id": 27968065
+      },
+      {
+        "episode_id": 53403,
+        "display_name": "Pohotovost S03E21 - Něco si přej CZ Dabing",
+        "video_id": 27968105
+      },
+      {
+        "episode_id": 53407,
+        "display_name": "Pohotovost S04E03 - Přátelská palba CZ Dabing",
+        "video_id": 27968138
+      },
+      {
+        "episode_id": 53431,
+        "display_name": "Pohotovost S05E06 - Pevné spojení CZ Dabing",
+        "video_id": 27968186
+      },
+      {
+        "episode_id": 53435,
+        "display_name": "Pohotovost S05E11 - Nikdo nemá rád Amandu Leeyovou CZ Dabing",
+        "video_id": 27968273
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -369998,6 +370138,31 @@
         "video_id": 27967797
       },
       {
+        "episode_id": 89560,
+        "display_name": "Friday Night Lights S01E12 - 12. epizoda CZ Titulky",
+        "video_id": 27967869
+      },
+      {
+        "episode_id": 53364,
+        "display_name": "Pohotovost S02E02 - Letní jízda CZ Dabing",
+        "video_id": 27967959
+      },
+      {
+        "episode_id": 53372,
+        "display_name": "Pohotovost S02E11 - Uprostřed zimy CZ Dabing",
+        "video_id": 27968080
+      },
+      {
+        "episode_id": 53432,
+        "display_name": "Pohotovost S05E08 - Spravedlivý boj CZ Dabing",
+        "video_id": 27968199
+      },
+      {
+        "episode_id": 53476,
+        "display_name": "Pohotovost S07E09 - Nejkrásnější ze všech darů CZ Dabing",
+        "video_id": 27968285
+      },
+      {
         "episode_id": 39277,
         "display_name": "Pokémon S12E14 - Vzdušné cíle CZ Titulky",
         "video_id": 27967558
@@ -370031,6 +370196,46 @@
         "episode_id": 37589,
         "display_name": "Hvězdná brána - Atlantida S02E05 - Odsouzenci CZ Dabing",
         "video_id": 27967823
+      },
+      {
+        "episode_id": 37597,
+        "display_name": "Hvězdná brána - Atlantida S02E18 - Michael CZ Dabing",
+        "video_id": 27967878
+      },
+      {
+        "episode_id": 12361,
+        "display_name": "Ledová archa S01E04 - I bez svého tvůrce CZ Dabing",
+        "video_id": 27967943
+      },
+      {
+        "episode_id": 12353,
+        "display_name": "Ledová archa S02E06 - Daleko od Sněhoborce CZ Dabing",
+        "video_id": 27967966
+      },
+      {
+        "episode_id": 57449,
+        "display_name": "Všemocný S01E18 - Bezgraničnyj CZ Dabing",
+        "video_id": 27968001
+      },
+      {
+        "episode_id": 57437,
+        "display_name": "Všemocný S01E19 - Nepořádek CZ Dabing",
+        "video_id": 27968024
+      },
+      {
+        "episode_id": 106685,
+        "display_name": "Šťastné údolí S01E02 - 2. epizoda CZ Dabing",
+        "video_id": 27968056
+      },
+      {
+        "episode_id": 106689,
+        "display_name": "Šťastné údolí S01E06 - 6. epizoda CZ Dabing",
+        "video_id": 27968135
+      },
+      {
+        "episode_id": 14973,
+        "display_name": "Starosta Kingstownu S02E08 - Santa Ježíš CZ Dabing",
+        "video_id": 27968209
       },
       {
         "episode_id": 38838,
@@ -370078,6 +370283,46 @@
         "video_id": 27967855
       },
       {
+        "episode_id": 46510,
+        "display_name": "Revoluce S02E08 - Pan Horn CZ Dabing",
+        "video_id": 27967918
+      },
+      {
+        "episode_id": 46514,
+        "display_name": "Revoluce S02E11 - Syn dvou otců CZ Dabing",
+        "video_id": 27967960
+      },
+      {
+        "episode_id": 46522,
+        "display_name": "Revoluce S02E18 - V Austinu CZ Dabing",
+        "video_id": 27968009
+      },
+      {
+        "episode_id": 172046,
+        "display_name": "Královna Kleopatra S01E04 - Poslední faraonka CZ Dabing",
+        "video_id": 27968067
+      },
+      {
+        "episode_id": 10722,
+        "display_name": "Most S03E06 - 6. epizoda CZ Dabing",
+        "video_id": 27968158
+      },
+      {
+        "episode_id": 10718,
+        "display_name": "Most S03E10 - 10. epizoda CZ Dabing",
+        "video_id": 27968195
+      },
+      {
+        "episode_id": 88146,
+        "display_name": "Nezdolná Kimmy Schmidt S01E01 - Kimmy je venku! CZ Titulky",
+        "video_id": 27968257
+      },
+      {
+        "episode_id": 100410,
+        "display_name": "Havaj 5-0 S06E06 - Monstra CZ Dabing",
+        "video_id": 27968314
+      },
+      {
         "episode_id": 39259,
         "display_name": "Pokémon S11E36 - Pokémonní tábor CZ Titulky",
         "video_id": 27967564
@@ -370116,6 +370361,41 @@
         "episode_id": 76183,
         "display_name": "Havaj 5-0 S10E16 - Dobrovolné přiznání CZ Dabing",
         "video_id": 27967854
+      },
+      {
+        "episode_id": 89559,
+        "display_name": "Friday Night Lights S01E11 - 11. epizoda CZ Titulky",
+        "video_id": 27967932
+      },
+      {
+        "episode_id": 53375,
+        "display_name": "Pohotovost S02E14 - Správná věc CZ Dabing",
+        "video_id": 27968010
+      },
+      {
+        "episode_id": 53379,
+        "display_name": "Pohotovost S02E19 - Oheň v břiše CZ Dabing",
+        "video_id": 27968065
+      },
+      {
+        "episode_id": 53403,
+        "display_name": "Pohotovost S03E21 - Něco si přej CZ Dabing",
+        "video_id": 27968105
+      },
+      {
+        "episode_id": 53407,
+        "display_name": "Pohotovost S04E03 - Přátelská palba CZ Dabing",
+        "video_id": 27968138
+      },
+      {
+        "episode_id": 53431,
+        "display_name": "Pohotovost S05E06 - Pevné spojení CZ Dabing",
+        "video_id": 27968186
+      },
+      {
+        "episode_id": 53435,
+        "display_name": "Pohotovost S05E11 - Nikdo nemá rád Amandu Leeyovou CZ Dabing",
+        "video_id": 27968273
       }
     ],
     "prepared_not_upload_ready": [
@@ -371277,17 +371557,17 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 93,
-    "disabled": 75,
+    "disabled": 274,
+    "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
     "whisper_confirmed_cz": 2282,
-    "whisper_non_cz_needs_subtitles": 4708,
+    "whisper_non_cz_needs_subtitles": 4688,
     "whisper_failed": 38,
-    "needs_whisper": 49888
+    "needs_whisper": 49912
   },
   "subtitle_followup_statuses": {
-    "needs_subtitle_setup_after_prehrajto_processing": 20672
+    "needs_subtitle_setup_after_prehrajto_processing": 20674
   }
 }
