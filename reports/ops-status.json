@@ -1,37 +1,77 @@
 {
   "counts": {
     "backlog_episodes": 150810,
-    "manifest_upload_ready_episodes": 1013,
-    "uploaded_episodes": 42594,
-    "prepared_source_episodes": 54177,
+    "manifest_upload_ready_episodes": 1002,
+    "uploaded_episodes": 42642,
+    "prepared_source_episodes": 54243,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 185,
-    "language_whisper_attempted_sources": 87,
-    "language_pending_whisper_sources": 2604,
-    "whisper_review_sources": 56868,
-    "whisper_review_pending_sources": 49700,
+    "language_audited_sources": 60,
+    "language_whisper_attempted_sources": 60,
+    "language_pending_whisper_sources": 2624,
+    "whisper_review_sources": 56862,
+    "whisper_review_pending_sources": 49667,
     "subtitle_followup_sources": 20793,
     "subtitle_followup_pending_sources": 20793
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-07-29T01:36:04Z",
-      "databaseId": 30414528973,
+      "createdAt": "2026-07-29T02:11:32Z",
+      "databaseId": 30416164259,
       "headBranch": "main",
       "status": "in_progress",
-      "workflowName": "ops-status"
+      "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-07-29T02:11:27Z",
+      "databaseId": 30416159981,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-29T01:52:31Z",
+      "databaseId": 30415293957,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-29T01:40:23Z",
+      "databaseId": 30414735910,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-29T01:39:22Z",
+      "databaseId": 30414687222,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-29T01:36:04Z",
+      "databaseId": 30414528973,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-29T01:35:05Z",
       "databaseId": 30414481391,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "update-descriptions"
     },
     {
@@ -59,19 +99,19 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-29T01:32:26Z",
       "databaseId": 30414354303,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-29T01:32:25Z",
       "databaseId": 30414352757,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -87,7 +127,7 @@
       "createdAt": "2026-07-29T01:25:34Z",
       "databaseId": 30414031064,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "prepare-manifest"
     },
     {
@@ -137,46 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-29T01:04:53Z",
-      "databaseId": 30413045991,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-sources"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-29T01:00:15Z",
-      "databaseId": 30412807573,
-      "headBranch": "main",
-      "status": "pending",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-29T00:58:28Z",
-      "databaseId": 30412718603,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-29T00:54:57Z",
-      "databaseId": 30412551643,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-29T00:54:53Z",
-      "databaseId": 30412548353,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
     }
   ],
   "gaps": {
@@ -188286,6 +188286,61 @@
         "video_id": 27999002
       },
       {
+        "episode_id": 49300,
+        "display_name": "Dokonalý podraz  S02E02 - 2. epizoda CZ Dabing",
+        "video_id": 27999034
+      },
+      {
+        "episode_id": 49340,
+        "display_name": "Dokonalý podraz  S03E08 - 8. epizoda CZ Dabing",
+        "video_id": 27999049
+      },
+      {
+        "episode_id": 49348,
+        "display_name": "Dokonalý podraz  S03E16 - 16. epizoda CZ Dabing",
+        "video_id": 27999067
+      },
+      {
+        "episode_id": 49320,
+        "display_name": "Dokonalý podraz  S04E17 - 17. epizoda CZ Dabing",
+        "video_id": 27999082
+      },
+      {
+        "episode_id": 66012,
+        "display_name": "Dandadan S01E02 - 2. epizoda CZ Dabing",
+        "video_id": 27999102
+      },
+      {
+        "episode_id": 34152,
+        "display_name": "Pokémon S01E21 - Sbohem Butterfree CZ Dabing",
+        "video_id": 27999129
+      },
+      {
+        "episode_id": 39240,
+        "display_name": "Pokémon S11E17 - Přicházejí Galakťáci CZ Dabing",
+        "video_id": 27999156
+      },
+      {
+        "episode_id": 38852,
+        "display_name": "Pokémon S13E09 - Létající Sunyshoreská Věž CZ Titulky",
+        "video_id": 27999184
+      },
+      {
+        "episode_id": 38892,
+        "display_name": "Pokémon S14E20 - Tanec s Ducklettím triem! CZ Titulky",
+        "video_id": 27999209
+      },
+      {
+        "episode_id": 39316,
+        "display_name": "Pokémon S17E28 - Hrdinové - praví i falešní! CZ Titulky",
+        "video_id": 27999232
+      },
+      {
+        "episode_id": 39352,
+        "display_name": "Pokémon S18E22 - Tam, za tou duhou! CZ Titulky",
+        "video_id": 27999255
+      },
+      {
         "episode_id": 94013,
         "display_name": "Big Mouth S02E04 - Panic Steve CZ Titulky",
         "video_id": 27998716
@@ -188326,6 +188381,66 @@
         "video_id": 27998996
       },
       {
+        "episode_id": 127601,
+        "display_name": "Láska a Smrt S01E05 - Zatčení CZ Dabing",
+        "video_id": 27999018
+      },
+      {
+        "episode_id": 16849,
+        "display_name": "Bojovník S03E02 - Rána do hlavy CZ Dabing",
+        "video_id": 27999042
+      },
+      {
+        "episode_id": 136485,
+        "display_name": "Pozlacený věk S01E07 - Nezadržitelná změna CZ Dabing",
+        "video_id": 27999074
+      },
+      {
+        "episode_id": 140101,
+        "display_name": "Pozlacený věk S02E01 - Vždyť nemáš operu ráda CZ Dabing",
+        "video_id": 27999112
+      },
+      {
+        "episode_id": 67953,
+        "display_name": "Posel ztracených duší S01E22 - Ta první CZ Dabing",
+        "video_id": 27999169
+      },
+      {
+        "episode_id": 43321,
+        "display_name": "Policie Chicago S01E13 - Návrat CZ Dabing",
+        "video_id": 27999214
+      },
+      {
+        "episode_id": 43365,
+        "display_name": "Policie Chicago S04E15 - Zaujatost, náklonost, zášť nebo zlá vůle CZ Dabing",
+        "video_id": 27999273
+      },
+      {
+        "episode_id": 43457,
+        "display_name": "Policie Chicago S08E15 - 15. epizoda CZ Dabing",
+        "video_id": 27999320
+      },
+      {
+        "episode_id": 36049,
+        "display_name": "Mladá modrá krev S01E06 - 6. díl CZ Dabing",
+        "video_id": 27999380
+      },
+      {
+        "episode_id": 83445,
+        "display_name": "Právo a pořádek S03E22 - 22. epizoda CZ Dabing",
+        "video_id": 27999453
+      },
+      {
+        "episode_id": 83481,
+        "display_name": "Právo a pořádek S05E06 - 6. epizoda CZ Dabing",
+        "video_id": 27999498
+      },
+      {
+        "episode_id": 21637,
+        "display_name": "Superman a Lois S03E12 - Bezpráví CZ Dabing",
+        "video_id": 27999519
+      },
+      {
         "episode_id": 14958,
         "display_name": "Starosta Kingstownu S01E03 - Prostě vražda CZ Dabing",
         "video_id": 27998733
@@ -188354,6 +188469,76 @@
         "episode_id": 38238,
         "display_name": "Chicago Fire S07E11 - Vyber si CZ Dabing",
         "video_id": 27999007
+      },
+      {
+        "episode_id": 48754,
+        "display_name": "Sword Art Online S04E20 - 20. epizoda CZ Dabing",
+        "video_id": 27999041
+      },
+      {
+        "episode_id": 13030,
+        "display_name": "Vikingové: Valhalla S02E03 - Kousky bohů CZ Dabing",
+        "video_id": 27999109
+      },
+      {
+        "episode_id": 90358,
+        "display_name": "SPY×FAMILY S01E15 - 15. epizoda CZ Dabing",
+        "video_id": 27999164
+      },
+      {
+        "episode_id": 6462,
+        "display_name": "Doom Patrol S01E02 - Donkey Patrol CZ Titulky",
+        "video_id": 27999197
+      },
+      {
+        "episode_id": 93662,
+        "display_name": "Star Wars: Povstalci S03E04 - Hrdinové Hery CZ Dabing",
+        "video_id": 27999231
+      },
+      {
+        "episode_id": 109526,
+        "display_name": "Komparz S01E05 - Samuel L. Jackson CZ Dabing",
+        "video_id": 27999278
+      },
+      {
+        "episode_id": 33950,
+        "display_name": "Sousedská tajemství S02E03 - Takhle zestárnout jsme neměli CZ Dabing",
+        "video_id": 27999329
+      },
+      {
+        "episode_id": 203046,
+        "display_name": "Sousedská tajemství S02E09 - Motto srabů CZ Dabing",
+        "video_id": 27999381
+      },
+      {
+        "episode_id": 33926,
+        "display_name": "Teror S01E05 - 5. epizoda CZ Dabing",
+        "video_id": 27999427
+      },
+      {
+        "episode_id": 104174,
+        "display_name": "Star Wars: Povstalci S03E21 - Poslední hodina: Část 2 CZ Dabing",
+        "video_id": 27999507
+      },
+      {
+        "episode_id": 16214,
+        "display_name": "Monarch: Odkaz monster S02E07 - Teorie strun CZ Dabing",
+        "video_id": 27999542
+      },
+      {
+        "episode_id": 65582,
+        "display_name": "V bezpečí S01E04 - 4. epizoda CZ Titulky",
+        "video_id": 27999618
+      },
+      {
+        "episode_id": 65586,
+        "display_name": "V bezpečí S01E08 - 8. epizoda CZ Titulky",
+        "video_id": 27999636
+      },
+      {
+        "episode_id": 50518,
+        "display_name": "Plastická chirurgie s. r. o. S03E14 - Cherry Pecková CZ Dabing",
+        "video_id": 27999659
       },
       {
         "episode_id": 56731,
@@ -188399,6 +188584,61 @@
         "episode_id": 91551,
         "display_name": "Alias S01E14 - Odvážný čin CZ Dabing",
         "video_id": 27999004
+      },
+      {
+        "episode_id": 90723,
+        "display_name": "Knick: Doktoři bez hranic S02E10 - Víc nás nečeká CZ Dabing",
+        "video_id": 27999033
+      },
+      {
+        "episode_id": 49307,
+        "display_name": "Dokonalý podraz  S02E09 - 9. epizoda CZ Dabing",
+        "video_id": 27999059
+      },
+      {
+        "episode_id": 49347,
+        "display_name": "Dokonalý podraz  S03E15 - 15. epizoda CZ Dabing",
+        "video_id": 27999076
+      },
+      {
+        "episode_id": 49323,
+        "display_name": "Dokonalý podraz  S05E02 - 2. epizoda CZ Dabing",
+        "video_id": 27999108
+      },
+      {
+        "episode_id": 154259,
+        "display_name": "Soudní porota S01E02 - Úvodní řeč CZ Titulky",
+        "video_id": 27999132
+      },
+      {
+        "episode_id": 66011,
+        "display_name": "Dandadan S01E01 - 1. epizoda CZ Dabing",
+        "video_id": 27999150
+      },
+      {
+        "episode_id": 15427,
+        "display_name": "Borgiové S01E08 - Umění války CZ Dabing",
+        "video_id": 27999201
+      },
+      {
+        "episode_id": 34171,
+        "display_name": "Pokémon S01E40 - Eevee bratři CZ Dabing",
+        "video_id": 27999223
+      },
+      {
+        "episode_id": 34191,
+        "display_name": "Pokémon S01E60 - Problémy s Blastoisem CZ Dabing",
+        "video_id": 27999249
+      },
+      {
+        "episode_id": 39207,
+        "display_name": "Pokémon S10E34 - Nezahrávejte si s Buizelem CZ Dabing",
+        "video_id": 27999271
+      },
+      {
+        "episode_id": 39219,
+        "display_name": "Pokémon S10E47 - Cesta za Sandshrewem CZ Dabing",
+        "video_id": 27999284
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -376403,6 +376643,61 @@
         "video_id": 27999002
       },
       {
+        "episode_id": 49300,
+        "display_name": "Dokonalý podraz  S02E02 - 2. epizoda CZ Dabing",
+        "video_id": 27999034
+      },
+      {
+        "episode_id": 49340,
+        "display_name": "Dokonalý podraz  S03E08 - 8. epizoda CZ Dabing",
+        "video_id": 27999049
+      },
+      {
+        "episode_id": 49348,
+        "display_name": "Dokonalý podraz  S03E16 - 16. epizoda CZ Dabing",
+        "video_id": 27999067
+      },
+      {
+        "episode_id": 49320,
+        "display_name": "Dokonalý podraz  S04E17 - 17. epizoda CZ Dabing",
+        "video_id": 27999082
+      },
+      {
+        "episode_id": 66012,
+        "display_name": "Dandadan S01E02 - 2. epizoda CZ Dabing",
+        "video_id": 27999102
+      },
+      {
+        "episode_id": 34152,
+        "display_name": "Pokémon S01E21 - Sbohem Butterfree CZ Dabing",
+        "video_id": 27999129
+      },
+      {
+        "episode_id": 39240,
+        "display_name": "Pokémon S11E17 - Přicházejí Galakťáci CZ Dabing",
+        "video_id": 27999156
+      },
+      {
+        "episode_id": 38852,
+        "display_name": "Pokémon S13E09 - Létající Sunyshoreská Věž CZ Titulky",
+        "video_id": 27999184
+      },
+      {
+        "episode_id": 38892,
+        "display_name": "Pokémon S14E20 - Tanec s Ducklettím triem! CZ Titulky",
+        "video_id": 27999209
+      },
+      {
+        "episode_id": 39316,
+        "display_name": "Pokémon S17E28 - Hrdinové - praví i falešní! CZ Titulky",
+        "video_id": 27999232
+      },
+      {
+        "episode_id": 39352,
+        "display_name": "Pokémon S18E22 - Tam, za tou duhou! CZ Titulky",
+        "video_id": 27999255
+      },
+      {
         "episode_id": 94013,
         "display_name": "Big Mouth S02E04 - Panic Steve CZ Titulky",
         "video_id": 27998716
@@ -376443,6 +376738,66 @@
         "video_id": 27998996
       },
       {
+        "episode_id": 127601,
+        "display_name": "Láska a Smrt S01E05 - Zatčení CZ Dabing",
+        "video_id": 27999018
+      },
+      {
+        "episode_id": 16849,
+        "display_name": "Bojovník S03E02 - Rána do hlavy CZ Dabing",
+        "video_id": 27999042
+      },
+      {
+        "episode_id": 136485,
+        "display_name": "Pozlacený věk S01E07 - Nezadržitelná změna CZ Dabing",
+        "video_id": 27999074
+      },
+      {
+        "episode_id": 140101,
+        "display_name": "Pozlacený věk S02E01 - Vždyť nemáš operu ráda CZ Dabing",
+        "video_id": 27999112
+      },
+      {
+        "episode_id": 67953,
+        "display_name": "Posel ztracených duší S01E22 - Ta první CZ Dabing",
+        "video_id": 27999169
+      },
+      {
+        "episode_id": 43321,
+        "display_name": "Policie Chicago S01E13 - Návrat CZ Dabing",
+        "video_id": 27999214
+      },
+      {
+        "episode_id": 43365,
+        "display_name": "Policie Chicago S04E15 - Zaujatost, náklonost, zášť nebo zlá vůle CZ Dabing",
+        "video_id": 27999273
+      },
+      {
+        "episode_id": 43457,
+        "display_name": "Policie Chicago S08E15 - 15. epizoda CZ Dabing",
+        "video_id": 27999320
+      },
+      {
+        "episode_id": 36049,
+        "display_name": "Mladá modrá krev S01E06 - 6. díl CZ Dabing",
+        "video_id": 27999380
+      },
+      {
+        "episode_id": 83445,
+        "display_name": "Právo a pořádek S03E22 - 22. epizoda CZ Dabing",
+        "video_id": 27999453
+      },
+      {
+        "episode_id": 83481,
+        "display_name": "Právo a pořádek S05E06 - 6. epizoda CZ Dabing",
+        "video_id": 27999498
+      },
+      {
+        "episode_id": 21637,
+        "display_name": "Superman a Lois S03E12 - Bezpráví CZ Dabing",
+        "video_id": 27999519
+      },
+      {
         "episode_id": 14958,
         "display_name": "Starosta Kingstownu S01E03 - Prostě vražda CZ Dabing",
         "video_id": 27998733
@@ -376471,6 +376826,76 @@
         "episode_id": 38238,
         "display_name": "Chicago Fire S07E11 - Vyber si CZ Dabing",
         "video_id": 27999007
+      },
+      {
+        "episode_id": 48754,
+        "display_name": "Sword Art Online S04E20 - 20. epizoda CZ Dabing",
+        "video_id": 27999041
+      },
+      {
+        "episode_id": 13030,
+        "display_name": "Vikingové: Valhalla S02E03 - Kousky bohů CZ Dabing",
+        "video_id": 27999109
+      },
+      {
+        "episode_id": 90358,
+        "display_name": "SPY×FAMILY S01E15 - 15. epizoda CZ Dabing",
+        "video_id": 27999164
+      },
+      {
+        "episode_id": 6462,
+        "display_name": "Doom Patrol S01E02 - Donkey Patrol CZ Titulky",
+        "video_id": 27999197
+      },
+      {
+        "episode_id": 93662,
+        "display_name": "Star Wars: Povstalci S03E04 - Hrdinové Hery CZ Dabing",
+        "video_id": 27999231
+      },
+      {
+        "episode_id": 109526,
+        "display_name": "Komparz S01E05 - Samuel L. Jackson CZ Dabing",
+        "video_id": 27999278
+      },
+      {
+        "episode_id": 33950,
+        "display_name": "Sousedská tajemství S02E03 - Takhle zestárnout jsme neměli CZ Dabing",
+        "video_id": 27999329
+      },
+      {
+        "episode_id": 203046,
+        "display_name": "Sousedská tajemství S02E09 - Motto srabů CZ Dabing",
+        "video_id": 27999381
+      },
+      {
+        "episode_id": 33926,
+        "display_name": "Teror S01E05 - 5. epizoda CZ Dabing",
+        "video_id": 27999427
+      },
+      {
+        "episode_id": 104174,
+        "display_name": "Star Wars: Povstalci S03E21 - Poslední hodina: Část 2 CZ Dabing",
+        "video_id": 27999507
+      },
+      {
+        "episode_id": 16214,
+        "display_name": "Monarch: Odkaz monster S02E07 - Teorie strun CZ Dabing",
+        "video_id": 27999542
+      },
+      {
+        "episode_id": 65582,
+        "display_name": "V bezpečí S01E04 - 4. epizoda CZ Titulky",
+        "video_id": 27999618
+      },
+      {
+        "episode_id": 65586,
+        "display_name": "V bezpečí S01E08 - 8. epizoda CZ Titulky",
+        "video_id": 27999636
+      },
+      {
+        "episode_id": 50518,
+        "display_name": "Plastická chirurgie s. r. o. S03E14 - Cherry Pecková CZ Dabing",
+        "video_id": 27999659
       },
       {
         "episode_id": 56731,
@@ -376516,6 +376941,61 @@
         "episode_id": 91551,
         "display_name": "Alias S01E14 - Odvážný čin CZ Dabing",
         "video_id": 27999004
+      },
+      {
+        "episode_id": 90723,
+        "display_name": "Knick: Doktoři bez hranic S02E10 - Víc nás nečeká CZ Dabing",
+        "video_id": 27999033
+      },
+      {
+        "episode_id": 49307,
+        "display_name": "Dokonalý podraz  S02E09 - 9. epizoda CZ Dabing",
+        "video_id": 27999059
+      },
+      {
+        "episode_id": 49347,
+        "display_name": "Dokonalý podraz  S03E15 - 15. epizoda CZ Dabing",
+        "video_id": 27999076
+      },
+      {
+        "episode_id": 49323,
+        "display_name": "Dokonalý podraz  S05E02 - 2. epizoda CZ Dabing",
+        "video_id": 27999108
+      },
+      {
+        "episode_id": 154259,
+        "display_name": "Soudní porota S01E02 - Úvodní řeč CZ Titulky",
+        "video_id": 27999132
+      },
+      {
+        "episode_id": 66011,
+        "display_name": "Dandadan S01E01 - 1. epizoda CZ Dabing",
+        "video_id": 27999150
+      },
+      {
+        "episode_id": 15427,
+        "display_name": "Borgiové S01E08 - Umění války CZ Dabing",
+        "video_id": 27999201
+      },
+      {
+        "episode_id": 34171,
+        "display_name": "Pokémon S01E40 - Eevee bratři CZ Dabing",
+        "video_id": 27999223
+      },
+      {
+        "episode_id": 34191,
+        "display_name": "Pokémon S01E60 - Problémy s Blastoisem CZ Dabing",
+        "video_id": 27999249
+      },
+      {
+        "episode_id": 39207,
+        "display_name": "Pokémon S10E34 - Nezahrávejte si s Buizelem CZ Dabing",
+        "video_id": 27999271
+      },
+      {
+        "episode_id": 39219,
+        "display_name": "Pokémon S10E47 - Cesta za Sandshrewem CZ Dabing",
+        "video_id": 27999284
       }
     ],
     "prepared_not_upload_ready": [
@@ -376862,326 +377342,6 @@
         "status": "whisper_failed"
       },
       {
-        "episode_id": 93991,
-        "source_id": -61383876694051713,
-        "series_title": "Big Mouth",
-        "episode_code": "S03E01",
-        "source_title": "Big Mouth - S3E1 EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 93992,
-        "source_id": -63128497464083745,
-        "series_title": "Big Mouth",
-        "episode_code": "S03E02",
-        "source_title": "Big.Mouth.S03E02.Girls.Are.Angry.Too.1080p",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 93992,
-        "source_id": -30332711404444247,
-        "series_title": "Big Mouth",
-        "episode_code": "S03E02",
-        "source_title": "Big.Mouth.S03E02.Girls.Are.Angry.Too.1080p.NF.WEB-DL.DDP5.1.x264-NTb",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 93992,
-        "source_id": -7305939638515524,
-        "series_title": "Big Mouth",
-        "episode_code": "S03E02",
-        "source_title": "Big Mouth S03E02 - ENG",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 93992,
-        "source_id": -9547398490849926,
-        "series_title": "Big Mouth",
-        "episode_code": "S03E02",
-        "source_title": "Big Mouth_S03E02_Holky jsou rozzlobené taky",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 93992,
-        "source_id": -23074861456471732,
-        "series_title": "Big Mouth",
-        "episode_code": "S03E02",
-        "source_title": "Big Mouth - S3E2 Girls Are Angry Too EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 93993,
-        "source_id": -63254479756284091,
-        "series_title": "Big Mouth",
-        "episode_code": "S03E03",
-        "source_title": "Big.Mouth.S03E03.Cellsea.1080p",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 93993,
-        "source_id": -52163819190166401,
-        "series_title": "Big Mouth",
-        "episode_code": "S03E03",
-        "source_title": "Big Mouth S03E03 - ENG",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 93993,
-        "source_id": -5695566421936218,
-        "series_title": "Big Mouth",
-        "episode_code": "S03E03",
-        "source_title": "Big.Mouth.S03E03.Cellsea.1080p.NF.WEB-DL.DDP5.1.x264-NTb",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 93993,
-        "source_id": -43003460789460702,
-        "series_title": "Big Mouth",
-        "episode_code": "S03E03",
-        "source_title": "Big Mouth_S03E03_Mobilka",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 93993,
-        "source_id": -9509334110148357,
-        "series_title": "Big Mouth",
-        "episode_code": "S03E03",
-        "source_title": "Big Mouth - S3E3 Cellsea EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 93994,
-        "source_id": -33463907016975093,
-        "series_title": "Big Mouth",
-        "episode_code": "S03E04",
-        "source_title": "Big.Mouth.S03E04.Obsessed.1080p.NF.WEB-DL.DDP5.1.x264-NTb",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 93994,
-        "source_id": -26291582935121140,
-        "series_title": "Big Mouth",
-        "episode_code": "S03E04",
-        "source_title": "Big Mouth S03E04 - ENG",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 93994,
-        "source_id": -70575803472488990,
-        "series_title": "Big Mouth",
-        "episode_code": "S03E04",
-        "source_title": "Big Mouth_S03E04_Závislost",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 93994,
-        "source_id": -61807068785419588,
-        "series_title": "Big Mouth",
-        "episode_code": "S03E04",
-        "source_title": "Big Mouth - S3E4 Obsessed EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 94020,
-        "source_id": -55830292997995887,
-        "series_title": "Big Mouth",
-        "episode_code": "S03E06",
-        "source_title": "Big Mouth S03E06 - ENG",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 94020,
-        "source_id": -59808005237501162,
-        "series_title": "Big Mouth",
-        "episode_code": "S03E06",
-        "source_title": "Big Mouth_S03E06_Jak dosáhnout orgasmu",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 93996,
-        "source_id": -71402196165051319,
-        "series_title": "Big Mouth",
-        "episode_code": "S03E07",
-        "source_title": "Big.Mouth.S03E07.Duke.1080p",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 93996,
-        "source_id": -63846325366468426,
-        "series_title": "Big Mouth",
-        "episode_code": "S03E07",
-        "source_title": "Big.Mouth.S03E07.Duke.1080p.NF.WEB-DL.DDP5.1.x264-NTb",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 93996,
-        "source_id": -63447331795411459,
-        "series_title": "Big Mouth",
-        "episode_code": "S03E07",
-        "source_title": "Big Mouth S03E07 - ENG",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 93996,
-        "source_id": -57227772374581900,
-        "series_title": "Big Mouth",
-        "episode_code": "S03E07",
-        "source_title": "Big Mouth_S03E07_Duke",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 93996,
-        "source_id": -54417937842591556,
-        "series_title": "Big Mouth",
-        "episode_code": "S03E07",
-        "source_title": "Big Mouth - S3E7 Duke EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 93997,
-        "source_id": -42838265185741455,
-        "series_title": "Big Mouth",
-        "episode_code": "S03E08",
-        "source_title": "Big.Mouth.S03E08.Rankings.1080p.NF.WEB-DL.DDP5.1.x264-NTb",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 93997,
-        "source_id": -34984171732684990,
-        "series_title": "Big Mouth",
-        "episode_code": "S03E08",
-        "source_title": "Big.Mouth.S03E08.Rankings.1080p",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 93997,
-        "source_id": -16394057851080190,
-        "series_title": "Big Mouth",
-        "episode_code": "S03E08",
-        "source_title": "Big Mouth S03E08 - ENG",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 93997,
-        "source_id": -6161243024315741,
-        "series_title": "Big Mouth",
-        "episode_code": "S03E08",
-        "source_title": "Big Mouth_S03E08_Žebříčky",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 93997,
-        "source_id": -28019421918282226,
-        "series_title": "Big Mouth",
-        "episode_code": "S03E08",
-        "source_title": "Big Mouth - S3E8 Rankings EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 93998,
-        "source_id": -67780017340695336,
-        "series_title": "Big Mouth",
-        "episode_code": "S03E09",
-        "source_title": "Big.Mouth.S03E09.The.ASSes.1080p",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 93998,
-        "source_id": -48267055235639062,
-        "series_title": "Big Mouth",
-        "episode_code": "S03E09",
-        "source_title": "Big.Mouth.S03E09.The.ASSes.1080p.NF.WEB-DL.DDP5.1.x264-NTb",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 93998,
-        "source_id": -8702884210955950,
-        "series_title": "Big Mouth",
-        "episode_code": "S03E09",
-        "source_title": "Big Mouth S03E09 - ENG",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 93998,
-        "source_id": -9230501315651174,
-        "series_title": "Big Mouth",
-        "episode_code": "S03E09",
-        "source_title": "Big Mouth_S03E09_Testy",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 93998,
-        "source_id": -66519481998225485,
-        "series_title": "Big Mouth",
-        "episode_code": "S03E09",
-        "source_title": "Big Mouth - S3E9 The ASSes EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 93999,
-        "source_id": -28948820415304567,
-        "series_title": "Big Mouth",
-        "episode_code": "S03E10",
-        "source_title": "Big.Mouth.S03E10.Disclosure.the.Movie.The.Musical.1080p.NF.WEB-DL.DDP5.1.x264-NTb",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 93999,
-        "source_id": -8390690012474246,
-        "series_title": "Big Mouth",
-        "episode_code": "S03E10",
-        "source_title": "Big Mouth S03E10 - ENG",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 93999,
-        "source_id": -2458927812864391,
-        "series_title": "Big Mouth",
-        "episode_code": "S03E10",
-        "source_title": "Big.Mouth.S03E10.Disclosure.the.Movie.The.Musical.1080p",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 93999,
-        "source_id": -6549467570125023,
-        "series_title": "Big Mouth",
-        "episode_code": "S03E10",
-        "source_title": "Big Mouth_S03E10_Skandální odhalení_ muzikál_",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 93999,
-        "source_id": -42977928317336034,
-        "series_title": "Big Mouth",
-        "episode_code": "S03E10",
-        "source_title": "Big Mouth - S3E10 Disclosure the Movie: The Musical! EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 94000,
-        "source_id": -42495882470819365,
-        "series_title": "Big Mouth",
-        "episode_code": "S03E11",
-        "source_title": "Big.Mouth.S03E11.Super.Mouth.1080p",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 94000,
-        "source_id": -29010966527143791,
-        "series_title": "Big Mouth",
-        "episode_code": "S03E11",
-        "source_title": "Big.Mouth.S03E11.Super.Mouth.1080p.NF.WEB-DL.DDP5.1.x264-NTb",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 94000,
-        "source_id": -60457886685889090,
-        "series_title": "Big Mouth",
-        "episode_code": "S03E11",
-        "source_title": "Big Mouth_S03E11_Super tlamy",
-        "status": "needs_whisper"
-      },
-      {
         "episode_id": 94000,
         "source_id": -39627997177293448,
         "series_title": "Big Mouth",
@@ -377219,6 +377379,326 @@
         "series_title": "Big Mouth",
         "episode_code": "S04E02",
         "source_title": "Big Mouth - S4E2 Monstrmenstruace EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 94023,
+        "source_id": -18357344100950346,
+        "series_title": "Big Mouth",
+        "episode_code": "S04E03",
+        "source_title": "Big Mouth_S04E03_Čekání na bobek",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 94023,
+        "source_id": -12237788224565474,
+        "series_title": "Big Mouth",
+        "episode_code": "S04E03",
+        "source_title": "Big Mouth - S4E3 Čekání na bobek EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 94024,
+        "source_id": -13745440348675536,
+        "series_title": "Big Mouth",
+        "episode_code": "S04E04",
+        "source_title": "Big Mouth_S04E04_Holky z jídelny",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 94024,
+        "source_id": -33101620481130636,
+        "series_title": "Big Mouth",
+        "episode_code": "S04E04",
+        "source_title": "Big Mouth - S4E4 Holky z jídelny EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 94025,
+        "source_id": -1005445622814706,
+        "series_title": "Big Mouth",
+        "episode_code": "S04E05",
+        "source_title": "Big Mouth_S04E05_Speciální díl k 11. září",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 94025,
+        "source_id": -901025158874126,
+        "series_title": "Big Mouth",
+        "episode_code": "S04E05",
+        "source_title": "Big Mouth - S4E5 Speciální díl k 11",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 94030,
+        "source_id": -42569848698400772,
+        "series_title": "Big Mouth",
+        "episode_code": "S04E06",
+        "source_title": "Big Mouth_S04E06_Nick Starr",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 94030,
+        "source_id": -17704227461131958,
+        "series_title": "Big Mouth",
+        "episode_code": "S04E06",
+        "source_title": "Big Mouth - S4E6 Nick Starr EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 94026,
+        "source_id": -64471269856956663,
+        "series_title": "Big Mouth",
+        "episode_code": "S04E07",
+        "source_title": "Big Mouth_S04E07_Ručně a stručně",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 94026,
+        "source_id": -131150905423540,
+        "series_title": "Big Mouth",
+        "episode_code": "S04E07",
+        "source_title": "Big Mouth - S4E7 Ručně a stručně EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 94027,
+        "source_id": -39945195403754498,
+        "series_title": "Big Mouth",
+        "episode_code": "S04E08",
+        "source_title": "Big Mouth_S04E08_Pohřeb",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 94027,
+        "source_id": -24186670581053433,
+        "series_title": "Big Mouth",
+        "episode_code": "S04E08",
+        "source_title": "Big Mouth - S4E8 Pohřeb EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 94028,
+        "source_id": -61827359104153660,
+        "series_title": "Big Mouth",
+        "episode_code": "S04E09",
+        "source_title": "Big Mouth_S04E09_Hororový spolek",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 94028,
+        "source_id": -49637054966332251,
+        "series_title": "Big Mouth",
+        "episode_code": "S04E09",
+        "source_title": "Big Mouth - S4E9 Hororový spolek EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 94029,
+        "source_id": -63118563328207880,
+        "series_title": "Big Mouth",
+        "episode_code": "S04E10",
+        "source_title": "Big Mouth - S4E10 Duch, který se vrátil EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 94031,
+        "source_id": -37239365847910405,
+        "series_title": "Big Mouth",
+        "episode_code": "S05E01",
+        "source_title": "Big Mouth - S5E1 Listopad bez leštění EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 94031,
+        "source_id": -53480061822311427,
+        "series_title": "Big Mouth",
+        "episode_code": "S05E01",
+        "source_title": "Big Mouth_S05E01_Listopad bez leštění",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 94032,
+        "source_id": -26306159512586400,
+        "series_title": "Big Mouth",
+        "episode_code": "S05E02",
+        "source_title": "Big Mouth_S05E02_Had Oběžník povstal",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 94032,
+        "source_id": -42068398586434360,
+        "series_title": "Big Mouth",
+        "episode_code": "S05E02",
+        "source_title": "Big Mouth - S5E2 Had Oběžník povstal EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 94033,
+        "source_id": -18490618430813605,
+        "series_title": "Big Mouth",
+        "episode_code": "S05E03",
+        "source_title": "Big Mouth - S5E3 Lásenky EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 94034,
+        "source_id": -18312247366751826,
+        "series_title": "Big Mouth",
+        "episode_code": "S05E04",
+        "source_title": "Big Mouth_S05E04_Zelenooký netvor",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 94034,
+        "source_id": -53130991310191087,
+        "series_title": "Big Mouth",
+        "episode_code": "S05E04",
+        "source_title": "Big Mouth - S5E4 Zelenooký netvor EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 94035,
+        "source_id": -64190972762607042,
+        "series_title": "Big Mouth",
+        "episode_code": "S05E05",
+        "source_title": "Big Mouth_S05E05_Díkůvzdání",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 94035,
+        "source_id": -39391877057478602,
+        "series_title": "Big Mouth",
+        "episode_code": "S05E05",
+        "source_title": "Big Mouth - S5E5 Díkůvzdání EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 94036,
+        "source_id": -64858262822510989,
+        "series_title": "Big Mouth",
+        "episode_code": "S05E06",
+        "source_title": "Big Mouth - S5E6 Nejlepší kámošky jsou nejlepší milenky EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 94037,
+        "source_id": -1265512475162517,
+        "series_title": "Big Mouth",
+        "episode_code": "S05E07",
+        "source_title": "Big Mouth_S05E07_Já tě tak nenávidím_",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 94037,
+        "source_id": -28073701908066164,
+        "series_title": "Big Mouth",
+        "episode_code": "S05E07",
+        "source_title": "Big Mouth - S5E7 Já tě tak nenávidím! EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 94038,
+        "source_id": -18097397069577585,
+        "series_title": "Big Mouth",
+        "episode_code": "S05E08",
+        "source_title": "Big Mouth_S05E08_Pořádné Big Mouth Vánoce",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 94038,
+        "source_id": -38825164713336330,
+        "series_title": "Big Mouth",
+        "episode_code": "S05E08",
+        "source_title": "Big Mouth - S5E8 Pořádné Big Mouth Vánoce EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 94039,
+        "source_id": -4059310321713912,
+        "series_title": "Big Mouth",
+        "episode_code": "S05E09",
+        "source_title": "Big Mouth_S05E09_Lyžovačka",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 94039,
+        "source_id": -46606710915035762,
+        "series_title": "Big Mouth",
+        "episode_code": "S05E09",
+        "source_title": "Big Mouth - S5E9 Lyžovačka EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 94040,
+        "source_id": -9661308874890007,
+        "series_title": "Big Mouth",
+        "episode_code": "S05E10",
+        "source_title": "Big Mouth_S05E10_Silvestr obnovených slibů",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 94040,
+        "source_id": -67616321818861779,
+        "series_title": "Big Mouth",
+        "episode_code": "S05E10",
+        "source_title": "Big Mouth - S5E10 Silvestr obnovených slibů EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 94041,
+        "source_id": -59899733798064779,
+        "series_title": "Big Mouth",
+        "episode_code": "S06E01",
+        "source_title": "Big Mouth - S6E1 Šmajchlbarák EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 94042,
+        "source_id": -5572613996006693,
+        "series_title": "Big Mouth",
+        "episode_code": "S06E02",
+        "source_title": "Big Mouth - S6E2 Dvacet dva a ty EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 94043,
+        "source_id": -3587986277464761,
+        "series_title": "Big Mouth",
+        "episode_code": "S06E03",
+        "source_title": "Big Mouth - S6E3 Trápení s vagínou EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 94044,
+        "source_id": -22597168715816670,
+        "series_title": "Big Mouth",
+        "episode_code": "S06E04",
+        "source_title": "Big Mouth - S6E4 Test počestnosti EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 94045,
+        "source_id": -15216290753305791,
+        "series_title": "Big Mouth",
+        "episode_code": "S06E05",
+        "source_title": "Big Mouth - S6E5 Andrew si dneska mákne na kozu EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 94046,
+        "source_id": -66979763696457108,
+        "series_title": "Big Mouth",
+        "episode_code": "S06E06",
+        "source_title": "Big Mouth - S6E6 Jablečná brož EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 94047,
+        "source_id": -20932540961314520,
+        "series_title": "Big Mouth",
+        "episode_code": "S06E07",
+        "source_title": "Big Mouth - S6E7 Dadda Dia! EN",
         "status": "needs_whisper"
       }
     ],
@@ -377677,15 +378157,14 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 86,
-    "disabled": 98,
+    "ok": 59,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
-    "whisper_confirmed_cz": 2325,
-    "whisper_non_cz_needs_subtitles": 4843,
+    "whisper_confirmed_cz": 2320,
+    "whisper_non_cz_needs_subtitles": 4875,
     "whisper_failed": 38,
-    "needs_whisper": 49662
+    "needs_whisper": 49629
   },
   "subtitle_followup_statuses": {
     "needs_subtitle_setup_after_prehrajto_processing": 20793
