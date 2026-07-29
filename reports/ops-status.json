@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 149796,
     "manifest_upload_ready_episodes": 1061,
-    "uploaded_episodes": 43696,
+    "uploaded_episodes": 43697,
     "prepared_source_episodes": 56296,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 40,
-    "language_whisper_attempted_sources": 40,
-    "language_pending_whisper_sources": 2604,
+    "language_audited_sources": 20,
+    "language_whisper_attempted_sources": 20,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 56836,
     "whisper_review_pending_sources": 49540,
     "subtitle_followup_sources": 20977,
@@ -20,10 +20,26 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-07-29T18:05:14Z",
+      "databaseId": 30478310178,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-29T18:05:10Z",
+      "databaseId": 30478304050,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "",
       "createdAt": "2026-07-29T18:04:16Z",
       "databaseId": 30478233877,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
@@ -35,11 +51,11 @@
       "workflowName": "sync"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-29T18:03:51Z",
       "databaseId": 30478201274,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -158,22 +174,6 @@
       "conclusion": "success",
       "createdAt": "2026-07-29T17:29:01Z",
       "databaseId": 30475522491,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-29T17:27:03Z",
-      "databaseId": 30475371117,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-29T17:25:19Z",
-      "databaseId": 30475239289,
       "headBranch": "main",
       "status": "completed",
       "workflowName": "update-descriptions"
@@ -193909,6 +193909,11 @@
         "episode_id": 15623,
         "display_name": "Nenasytná S01E01 - Pilotní díl CZ Dabing",
         "video_id": 28026213
+      },
+      {
+        "episode_id": 126159,
+        "display_name": "Zvláštní poldové S01E07 - 7. epizoda CZ Dabing",
+        "video_id": 28026255
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -387536,6 +387541,11 @@
         "episode_id": 15623,
         "display_name": "Nenasytná S01E01 - Pilotní díl CZ Dabing",
         "video_id": 28026213
+      },
+      {
+        "episode_id": 126159,
+        "display_name": "Zvláštní poldové S01E07 - 7. epizoda CZ Dabing",
+        "video_id": 28026255
       }
     ],
     "prepared_not_upload_ready": [
@@ -388697,7 +388707,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 39,
+    "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
