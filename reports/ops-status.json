@@ -1,37 +1,85 @@
 {
   "counts": {
     "backlog_episodes": 148876,
-    "manifest_upload_ready_episodes": 1035,
-    "uploaded_episodes": 44557,
-    "prepared_source_episodes": 57952,
+    "manifest_upload_ready_episodes": 1025,
+    "uploaded_episodes": 44613,
+    "prepared_source_episodes": 58003,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 40,
-    "language_whisper_attempted_sources": 40,
-    "language_pending_whisper_sources": 2604,
-    "whisper_review_sources": 56908,
-    "whisper_review_pending_sources": 49905,
-    "subtitle_followup_sources": 21188,
-    "subtitle_followup_pending_sources": 21188
+    "language_audited_sources": 377,
+    "language_whisper_attempted_sources": 62,
+    "language_pending_whisper_sources": 2624,
+    "whisper_review_sources": 56910,
+    "whisper_review_pending_sources": 49922,
+    "subtitle_followup_sources": 21205,
+    "subtitle_followup_pending_sources": 21205
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-07-30T08:17:51Z",
-      "databaseId": 30526134333,
+      "createdAt": "2026-07-30T09:02:43Z",
+      "databaseId": 30529103395,
       "headBranch": "main",
       "status": "in_progress",
-      "workflowName": "ops-status"
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-30T08:56:31Z",
+      "databaseId": 30528672557,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-07-30T08:54:56Z",
+      "databaseId": 30528562170,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-30T08:44:49Z",
+      "databaseId": 30527898887,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-30T08:30:50Z",
+      "databaseId": 30526990285,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-30T08:25:15Z",
+      "databaseId": 30526617801,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-sources"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-30T08:17:51Z",
+      "databaseId": 30526134333,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-30T08:15:15Z",
       "databaseId": 30525962961,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -75,11 +123,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-07-30T08:10:45Z",
       "databaseId": 30525660804,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -91,11 +139,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-30T08:08:09Z",
       "databaseId": 30525487301,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
@@ -126,54 +174,6 @@
       "conclusion": "success",
       "createdAt": "2026-07-30T07:51:25Z",
       "databaseId": 30524355800,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-30T07:48:28Z",
-      "databaseId": 30524174813,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-30T07:42:16Z",
-      "databaseId": 30523810847,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-07-30T07:31:55Z",
-      "databaseId": 30523262972,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-07-30T07:26:54Z",
-      "databaseId": 30522986090,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-sources"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-30T07:20:48Z",
-      "databaseId": 30522650307,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-30T07:19:08Z",
-      "databaseId": 30522550362,
       "headBranch": "main",
       "status": "completed",
       "workflowName": "update-descriptions"
@@ -198161,6 +198161,81 @@
         "video_id": 28048236
       },
       {
+        "episode_id": 193188,
+        "display_name": "Kristy a její klub S01E06 - Claudia a protivná Janine CZ Titulky",
+        "video_id": 28048259
+      },
+      {
+        "episode_id": 193196,
+        "display_name": "Kristy a její klub S02E04 - Jessi a superdareba CZ Titulky",
+        "video_id": 28048267
+      },
+      {
+        "episode_id": 193200,
+        "display_name": "Kristy a její klub S02E08 - Kristy a mimina v průvodu CZ Titulky",
+        "video_id": 28048297
+      },
+      {
+        "episode_id": 139340,
+        "display_name": "Nájemná vražedkyně S01E04 - 4. epizoda CZ Dabing",
+        "video_id": 28048318
+      },
+      {
+        "episode_id": 8716,
+        "display_name": "Holocaust S01E03 - 3. epizoda CZ Dabing",
+        "video_id": 28048337
+      },
+      {
+        "episode_id": 88264,
+        "display_name": "Saddám: Vzestup a pád S01E04 - 4. epizoda CZ Dabing",
+        "video_id": 28048368
+      },
+      {
+        "episode_id": 119080,
+        "display_name": "Big Shot: Hvězdný trenér S01E04 - Přemlouvání mi jde CZ Titulky",
+        "video_id": 28048403
+      },
+      {
+        "episode_id": 109168,
+        "display_name": "SurrealEstate S03E07 - 7. epizoda CZ Titulky",
+        "video_id": 28048417
+      },
+      {
+        "episode_id": 154120,
+        "display_name": "Big Shot: Hvězdný trenér S02E02 - KLUCI! CZ Dabing",
+        "video_id": 28048440
+      },
+      {
+        "episode_id": 154124,
+        "display_name": "Big Shot: Hvězdný trenér S02E06 - To bude dobrý CZ Dabing",
+        "video_id": 28048470
+      },
+      {
+        "episode_id": 154128,
+        "display_name": "Big Shot: Hvězdný trenér S02E10 - Nová kapitola CZ Dabing",
+        "video_id": 28048514
+      },
+      {
+        "episode_id": 130712,
+        "display_name": "Tour de France: Bez příkras S01E04 - Útok a protiútok CZ Dabing",
+        "video_id": 28048549
+      },
+      {
+        "episode_id": 130716,
+        "display_name": "Tour de France: Bez příkras S01E08 - Cesta do Paříže CZ Dabing",
+        "video_id": 28048570
+      },
+      {
+        "episode_id": 130724,
+        "display_name": "Tour de France: Bez příkras S02E03 - Žádné slitování CZ Dabing",
+        "video_id": 28048610
+      },
+      {
+        "episode_id": 130720,
+        "display_name": "Tour de France: Bez příkras S02E05 - Nepřítel v týmu CZ Dabing",
+        "video_id": 28048646
+      },
+      {
         "episode_id": 171089,
         "display_name": "Půlnoční evangelium S01E03 - Lovci bez domova CZ Titulky",
         "video_id": 28048167
@@ -198181,6 +198256,76 @@
         "video_id": 28048233
       },
       {
+        "episode_id": 153093,
+        "display_name": "Dokonalá pohádka S01E04 - Datum trvanlivosti CZ Dabing",
+        "video_id": 28048260
+      },
+      {
+        "episode_id": 169589,
+        "display_name": " Případy doktora Bleika S01E01 - 1. epizoda CZ Dabing",
+        "video_id": 28048275
+      },
+      {
+        "episode_id": 169593,
+        "display_name": " Případy doktora Bleika S01E03 - 3. epizoda CZ Dabing",
+        "video_id": 28048289
+      },
+      {
+        "episode_id": 107121,
+        "display_name": "Břemeno pravdy S01E10 - 10. epizoda CZ Titulky",
+        "video_id": 28048302
+      },
+      {
+        "episode_id": 107137,
+        "display_name": "Břemeno pravdy S03E08 - 8. epizoda CZ Titulky",
+        "video_id": 28048322
+      },
+      {
+        "episode_id": 180977,
+        "display_name": "Na místě činu: Texaská vražedná pole S01E01 - Nikdo nic neviděl CZ Dabing",
+        "video_id": 28048344
+      },
+      {
+        "episode_id": 55085,
+        "display_name": "Na lodi S01E03 - Přízrak piráta CZ Dabing",
+        "video_id": 28048379
+      },
+      {
+        "episode_id": 55089,
+        "display_name": "Na lodi S01E08 - Velký úlovek CZ Dabing",
+        "video_id": 28048474
+      },
+      {
+        "episode_id": 55093,
+        "display_name": "Na lodi S01E12 - Muž z Liverpoolu CZ Dabing",
+        "video_id": 28048524
+      },
+      {
+        "episode_id": 55097,
+        "display_name": "Na lodi S02E05 - Kdopak by se vlka bál? CZ Dabing",
+        "video_id": 28048591
+      },
+      {
+        "episode_id": 55101,
+        "display_name": "Na lodi S02E08 - Siréna CZ Dabing",
+        "video_id": 28048660
+      },
+      {
+        "episode_id": 55105,
+        "display_name": "Na lodi S02E13 - Lži a kabaret CZ Dabing",
+        "video_id": 28048940
+      },
+      {
+        "episode_id": 144553,
+        "display_name": "Leanne S01E04 - Hladká jako delfín CZ Dabing",
+        "video_id": 28048993
+      },
+      {
+        "episode_id": 144557,
+        "display_name": "Leanne S01E08 - Svalová paměť CZ Dabing",
+        "video_id": 28049015
+      },
+      {
         "episode_id": 171094,
         "display_name": "Půlnoční evangelium S01E08 - Myš ze stříbra CZ Titulky",
         "video_id": 28048176
@@ -198194,6 +198339,61 @@
         "episode_id": 35758,
         "display_name": "Pochybná dohoda S01E04 - Nic s ní není, jen už ji nepotřebuju CZ Titulky",
         "video_id": 28048214
+      },
+      {
+        "episode_id": 125078,
+        "display_name": "Alchymie duše S02E08 - 8. epizoda CZ Titulky",
+        "video_id": 28048237
+      },
+      {
+        "episode_id": 120758,
+        "display_name": "Penthouse S01E08 - 8. epizoda CZ Titulky",
+        "video_id": 28048277
+      },
+      {
+        "episode_id": 120762,
+        "display_name": "Penthouse S01E12 - 12. epizoda CZ Titulky",
+        "video_id": 28048325
+      },
+      {
+        "episode_id": 120766,
+        "display_name": "Penthouse S01E16 - 16. epizoda CZ Titulky",
+        "video_id": 28048392
+      },
+      {
+        "episode_id": 120770,
+        "display_name": "Penthouse S01E21 - 21. epizoda CZ Titulky",
+        "video_id": 28048467
+      },
+      {
+        "episode_id": 120774,
+        "display_name": "Penthouse S02E04 - 4. epizoda CZ Titulky",
+        "video_id": 28048528
+      },
+      {
+        "episode_id": 120750,
+        "display_name": "Penthouse S02E06 - 6. epizoda CZ Titulky",
+        "video_id": 28048563
+      },
+      {
+        "episode_id": 120778,
+        "display_name": "Penthouse S02E10 - 10. epizoda CZ Titulky",
+        "video_id": 28048592
+      },
+      {
+        "episode_id": 120782,
+        "display_name": "Penthouse S03E01 - 1. epizoda CZ Titulky",
+        "video_id": 28048664
+      },
+      {
+        "episode_id": 120786,
+        "display_name": "Penthouse S03E08 - 8. epizoda CZ Titulky",
+        "video_id": 28048951
+      },
+      {
+        "episode_id": 133882,
+        "display_name": "Ministerstvo času S03E09 - 9. epizoda CZ Titulky",
+        "video_id": 28049026
       },
       {
         "episode_id": 70839,
@@ -198214,6 +198414,86 @@
         "episode_id": 155667,
         "display_name": "Muzeum nevinnosti S01E04 - 4. díl CZ Dabing",
         "video_id": 28048225
+      },
+      {
+        "episode_id": 155663,
+        "display_name": "Muzeum nevinnosti S01E08 - 8. díl CZ Dabing",
+        "video_id": 28048255
+      },
+      {
+        "episode_id": 141335,
+        "display_name": "Mystery Road S01E03 - 3. epizoda CZ Titulky",
+        "video_id": 28048278
+      },
+      {
+        "episode_id": 141339,
+        "display_name": "Mystery Road S02E02 - 2. epizoda CZ Titulky",
+        "video_id": 28048295
+      },
+      {
+        "episode_id": 141343,
+        "display_name": "Mystery Road S02E06 - 6. epizoda CZ Titulky",
+        "video_id": 28048316
+      },
+      {
+        "episode_id": 98167,
+        "display_name": "Aquí no hay quien viva S01E11 - 11. epizoda CZ Titulky",
+        "video_id": 28048339
+      },
+      {
+        "episode_id": 98171,
+        "display_name": "Aquí no hay quien viva S01E15 - 15. epizoda CZ Titulky",
+        "video_id": 28048353
+      },
+      {
+        "episode_id": 98183,
+        "display_name": "Aquí no hay quien viva S02E13 - 13. epizoda CZ Titulky",
+        "video_id": 28048375
+      },
+      {
+        "episode_id": 98195,
+        "display_name": "Aquí no hay quien viva S03E11 - 11. epizoda CZ Titulky",
+        "video_id": 28048395
+      },
+      {
+        "episode_id": 98199,
+        "display_name": "Aquí no hay quien viva S03E15 - 15. epizoda CZ Titulky",
+        "video_id": 28048416
+      },
+      {
+        "episode_id": 98203,
+        "display_name": "Aquí no hay quien viva S03E21 - 21. epizoda CZ Titulky",
+        "video_id": 28048439
+      },
+      {
+        "episode_id": 98207,
+        "display_name": "Aquí no hay quien viva S03E25 - 25. epizoda CZ Titulky",
+        "video_id": 28048464
+      },
+      {
+        "episode_id": 98211,
+        "display_name": "Aquí no hay quien viva S03E30 - 30. epizoda CZ Titulky",
+        "video_id": 28048495
+      },
+      {
+        "episode_id": 98223,
+        "display_name": "Aquí no hay quien viva S04E11 - 11. epizoda CZ Titulky",
+        "video_id": 28048515
+      },
+      {
+        "episode_id": 98235,
+        "display_name": "Aquí no hay quien viva S05E10 - 10. epizoda CZ Titulky",
+        "video_id": 28048541
+      },
+      {
+        "episode_id": 122279,
+        "display_name": "Rozehrávači S01E01 - Dlouhá cesta CZ Dabing",
+        "video_id": 28048580
+      },
+      {
+        "episode_id": 122283,
+        "display_name": "Rozehrávači S01E06 - Pod tlakem CZ Dabing",
+        "video_id": 28048634
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -396093,6 +396373,81 @@
         "video_id": 28048236
       },
       {
+        "episode_id": 193188,
+        "display_name": "Kristy a její klub S01E06 - Claudia a protivná Janine CZ Titulky",
+        "video_id": 28048259
+      },
+      {
+        "episode_id": 193196,
+        "display_name": "Kristy a její klub S02E04 - Jessi a superdareba CZ Titulky",
+        "video_id": 28048267
+      },
+      {
+        "episode_id": 193200,
+        "display_name": "Kristy a její klub S02E08 - Kristy a mimina v průvodu CZ Titulky",
+        "video_id": 28048297
+      },
+      {
+        "episode_id": 139340,
+        "display_name": "Nájemná vražedkyně S01E04 - 4. epizoda CZ Dabing",
+        "video_id": 28048318
+      },
+      {
+        "episode_id": 8716,
+        "display_name": "Holocaust S01E03 - 3. epizoda CZ Dabing",
+        "video_id": 28048337
+      },
+      {
+        "episode_id": 88264,
+        "display_name": "Saddám: Vzestup a pád S01E04 - 4. epizoda CZ Dabing",
+        "video_id": 28048368
+      },
+      {
+        "episode_id": 119080,
+        "display_name": "Big Shot: Hvězdný trenér S01E04 - Přemlouvání mi jde CZ Titulky",
+        "video_id": 28048403
+      },
+      {
+        "episode_id": 109168,
+        "display_name": "SurrealEstate S03E07 - 7. epizoda CZ Titulky",
+        "video_id": 28048417
+      },
+      {
+        "episode_id": 154120,
+        "display_name": "Big Shot: Hvězdný trenér S02E02 - KLUCI! CZ Dabing",
+        "video_id": 28048440
+      },
+      {
+        "episode_id": 154124,
+        "display_name": "Big Shot: Hvězdný trenér S02E06 - To bude dobrý CZ Dabing",
+        "video_id": 28048470
+      },
+      {
+        "episode_id": 154128,
+        "display_name": "Big Shot: Hvězdný trenér S02E10 - Nová kapitola CZ Dabing",
+        "video_id": 28048514
+      },
+      {
+        "episode_id": 130712,
+        "display_name": "Tour de France: Bez příkras S01E04 - Útok a protiútok CZ Dabing",
+        "video_id": 28048549
+      },
+      {
+        "episode_id": 130716,
+        "display_name": "Tour de France: Bez příkras S01E08 - Cesta do Paříže CZ Dabing",
+        "video_id": 28048570
+      },
+      {
+        "episode_id": 130724,
+        "display_name": "Tour de France: Bez příkras S02E03 - Žádné slitování CZ Dabing",
+        "video_id": 28048610
+      },
+      {
+        "episode_id": 130720,
+        "display_name": "Tour de France: Bez příkras S02E05 - Nepřítel v týmu CZ Dabing",
+        "video_id": 28048646
+      },
+      {
         "episode_id": 171089,
         "display_name": "Půlnoční evangelium S01E03 - Lovci bez domova CZ Titulky",
         "video_id": 28048167
@@ -396113,6 +396468,76 @@
         "video_id": 28048233
       },
       {
+        "episode_id": 153093,
+        "display_name": "Dokonalá pohádka S01E04 - Datum trvanlivosti CZ Dabing",
+        "video_id": 28048260
+      },
+      {
+        "episode_id": 169589,
+        "display_name": " Případy doktora Bleika S01E01 - 1. epizoda CZ Dabing",
+        "video_id": 28048275
+      },
+      {
+        "episode_id": 169593,
+        "display_name": " Případy doktora Bleika S01E03 - 3. epizoda CZ Dabing",
+        "video_id": 28048289
+      },
+      {
+        "episode_id": 107121,
+        "display_name": "Břemeno pravdy S01E10 - 10. epizoda CZ Titulky",
+        "video_id": 28048302
+      },
+      {
+        "episode_id": 107137,
+        "display_name": "Břemeno pravdy S03E08 - 8. epizoda CZ Titulky",
+        "video_id": 28048322
+      },
+      {
+        "episode_id": 180977,
+        "display_name": "Na místě činu: Texaská vražedná pole S01E01 - Nikdo nic neviděl CZ Dabing",
+        "video_id": 28048344
+      },
+      {
+        "episode_id": 55085,
+        "display_name": "Na lodi S01E03 - Přízrak piráta CZ Dabing",
+        "video_id": 28048379
+      },
+      {
+        "episode_id": 55089,
+        "display_name": "Na lodi S01E08 - Velký úlovek CZ Dabing",
+        "video_id": 28048474
+      },
+      {
+        "episode_id": 55093,
+        "display_name": "Na lodi S01E12 - Muž z Liverpoolu CZ Dabing",
+        "video_id": 28048524
+      },
+      {
+        "episode_id": 55097,
+        "display_name": "Na lodi S02E05 - Kdopak by se vlka bál? CZ Dabing",
+        "video_id": 28048591
+      },
+      {
+        "episode_id": 55101,
+        "display_name": "Na lodi S02E08 - Siréna CZ Dabing",
+        "video_id": 28048660
+      },
+      {
+        "episode_id": 55105,
+        "display_name": "Na lodi S02E13 - Lži a kabaret CZ Dabing",
+        "video_id": 28048940
+      },
+      {
+        "episode_id": 144553,
+        "display_name": "Leanne S01E04 - Hladká jako delfín CZ Dabing",
+        "video_id": 28048993
+      },
+      {
+        "episode_id": 144557,
+        "display_name": "Leanne S01E08 - Svalová paměť CZ Dabing",
+        "video_id": 28049015
+      },
+      {
         "episode_id": 171094,
         "display_name": "Půlnoční evangelium S01E08 - Myš ze stříbra CZ Titulky",
         "video_id": 28048176
@@ -396126,6 +396551,61 @@
         "episode_id": 35758,
         "display_name": "Pochybná dohoda S01E04 - Nic s ní není, jen už ji nepotřebuju CZ Titulky",
         "video_id": 28048214
+      },
+      {
+        "episode_id": 125078,
+        "display_name": "Alchymie duše S02E08 - 8. epizoda CZ Titulky",
+        "video_id": 28048237
+      },
+      {
+        "episode_id": 120758,
+        "display_name": "Penthouse S01E08 - 8. epizoda CZ Titulky",
+        "video_id": 28048277
+      },
+      {
+        "episode_id": 120762,
+        "display_name": "Penthouse S01E12 - 12. epizoda CZ Titulky",
+        "video_id": 28048325
+      },
+      {
+        "episode_id": 120766,
+        "display_name": "Penthouse S01E16 - 16. epizoda CZ Titulky",
+        "video_id": 28048392
+      },
+      {
+        "episode_id": 120770,
+        "display_name": "Penthouse S01E21 - 21. epizoda CZ Titulky",
+        "video_id": 28048467
+      },
+      {
+        "episode_id": 120774,
+        "display_name": "Penthouse S02E04 - 4. epizoda CZ Titulky",
+        "video_id": 28048528
+      },
+      {
+        "episode_id": 120750,
+        "display_name": "Penthouse S02E06 - 6. epizoda CZ Titulky",
+        "video_id": 28048563
+      },
+      {
+        "episode_id": 120778,
+        "display_name": "Penthouse S02E10 - 10. epizoda CZ Titulky",
+        "video_id": 28048592
+      },
+      {
+        "episode_id": 120782,
+        "display_name": "Penthouse S03E01 - 1. epizoda CZ Titulky",
+        "video_id": 28048664
+      },
+      {
+        "episode_id": 120786,
+        "display_name": "Penthouse S03E08 - 8. epizoda CZ Titulky",
+        "video_id": 28048951
+      },
+      {
+        "episode_id": 133882,
+        "display_name": "Ministerstvo času S03E09 - 9. epizoda CZ Titulky",
+        "video_id": 28049026
       },
       {
         "episode_id": 70839,
@@ -396146,6 +396626,86 @@
         "episode_id": 155667,
         "display_name": "Muzeum nevinnosti S01E04 - 4. díl CZ Dabing",
         "video_id": 28048225
+      },
+      {
+        "episode_id": 155663,
+        "display_name": "Muzeum nevinnosti S01E08 - 8. díl CZ Dabing",
+        "video_id": 28048255
+      },
+      {
+        "episode_id": 141335,
+        "display_name": "Mystery Road S01E03 - 3. epizoda CZ Titulky",
+        "video_id": 28048278
+      },
+      {
+        "episode_id": 141339,
+        "display_name": "Mystery Road S02E02 - 2. epizoda CZ Titulky",
+        "video_id": 28048295
+      },
+      {
+        "episode_id": 141343,
+        "display_name": "Mystery Road S02E06 - 6. epizoda CZ Titulky",
+        "video_id": 28048316
+      },
+      {
+        "episode_id": 98167,
+        "display_name": "Aquí no hay quien viva S01E11 - 11. epizoda CZ Titulky",
+        "video_id": 28048339
+      },
+      {
+        "episode_id": 98171,
+        "display_name": "Aquí no hay quien viva S01E15 - 15. epizoda CZ Titulky",
+        "video_id": 28048353
+      },
+      {
+        "episode_id": 98183,
+        "display_name": "Aquí no hay quien viva S02E13 - 13. epizoda CZ Titulky",
+        "video_id": 28048375
+      },
+      {
+        "episode_id": 98195,
+        "display_name": "Aquí no hay quien viva S03E11 - 11. epizoda CZ Titulky",
+        "video_id": 28048395
+      },
+      {
+        "episode_id": 98199,
+        "display_name": "Aquí no hay quien viva S03E15 - 15. epizoda CZ Titulky",
+        "video_id": 28048416
+      },
+      {
+        "episode_id": 98203,
+        "display_name": "Aquí no hay quien viva S03E21 - 21. epizoda CZ Titulky",
+        "video_id": 28048439
+      },
+      {
+        "episode_id": 98207,
+        "display_name": "Aquí no hay quien viva S03E25 - 25. epizoda CZ Titulky",
+        "video_id": 28048464
+      },
+      {
+        "episode_id": 98211,
+        "display_name": "Aquí no hay quien viva S03E30 - 30. epizoda CZ Titulky",
+        "video_id": 28048495
+      },
+      {
+        "episode_id": 98223,
+        "display_name": "Aquí no hay quien viva S04E11 - 11. epizoda CZ Titulky",
+        "video_id": 28048515
+      },
+      {
+        "episode_id": 98235,
+        "display_name": "Aquí no hay quien viva S05E10 - 10. epizoda CZ Titulky",
+        "video_id": 28048541
+      },
+      {
+        "episode_id": 122279,
+        "display_name": "Rozehrávači S01E01 - Dlouhá cesta CZ Dabing",
+        "video_id": 28048580
+      },
+      {
+        "episode_id": 122283,
+        "display_name": "Rozehrávači S01E06 - Pod tlakem CZ Dabing",
+        "video_id": 28048634
       }
     ],
     "prepared_not_upload_ready": [
@@ -397307,16 +397867,17 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 39,
+    "disabled": 315,
+    "ok": 61,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
-    "whisper_confirmed_cz": 2295,
-    "needs_whisper": 49867,
-    "whisper_non_cz_needs_subtitles": 4708,
+    "whisper_confirmed_cz": 2289,
+    "needs_whisper": 49884,
+    "whisper_non_cz_needs_subtitles": 4699,
     "whisper_failed": 38
   },
   "subtitle_followup_statuses": {
-    "needs_subtitle_setup_after_prehrajto_processing": 21188
+    "needs_subtitle_setup_after_prehrajto_processing": 21205
   }
 }
