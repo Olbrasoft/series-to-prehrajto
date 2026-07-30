@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 148451,
     "manifest_upload_ready_episodes": 1013,
-    "uploaded_episodes": 45019,
+    "uploaded_episodes": 45021,
     "prepared_source_episodes": 58503,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 60,
-    "language_whisper_attempted_sources": 60,
-    "language_pending_whisper_sources": 2604,
+    "language_audited_sources": 20,
+    "language_whisper_attempted_sources": 20,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 56918,
     "whisper_review_pending_sources": 49978,
     "subtitle_followup_sources": 21278,
@@ -20,10 +20,34 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-07-30T14:22:14Z",
+      "databaseId": 30551355875,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-30T14:18:52Z",
+      "databaseId": 30551082146,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-30T14:18:48Z",
+      "databaseId": 30551076548,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-30T14:17:25Z",
       "databaseId": 30550966330,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -43,11 +67,11 @@
       "workflowName": "prepare-manifest"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-30T14:13:41Z",
       "databaseId": 30550664250,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -103,7 +127,7 @@
       "createdAt": "2026-07-30T13:38:40Z",
       "databaseId": 30547860253,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "sync"
     },
     {
@@ -119,7 +143,7 @@
       "createdAt": "2026-07-30T13:33:35Z",
       "databaseId": 30547459933,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "prepare-descriptions"
     },
     {
@@ -139,11 +163,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "failure",
       "createdAt": "2026-07-30T13:26:15Z",
       "databaseId": 30546902800,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-descriptions"
     },
     {
@@ -153,30 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-30T13:24:51Z",
-      "databaseId": 30546796724,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-30T13:23:37Z",
-      "databaseId": 30546705175,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-30T13:23:37Z",
-      "databaseId": 30546705135,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
     }
   ],
   "gaps": {
@@ -200426,6 +200426,16 @@
         "video_id": 28053961
       },
       {
+        "episode_id": 130722,
+        "display_name": "Tour de France: Bez příkras S02E07 - Kamikadze CZ Dabing",
+        "video_id": 28054020
+      },
+      {
+        "episode_id": 175558,
+        "display_name": "Antidisturbios S01E04 - 4. epizoda CZ Titulky",
+        "video_id": 28054054
+      },
+      {
         "episode_id": 92279,
         "display_name": "Blood+ S01E01 - 1. epizoda CZ Titulky",
         "video_id": 28053360
@@ -400668,6 +400678,16 @@
         "video_id": 28053961
       },
       {
+        "episode_id": 130722,
+        "display_name": "Tour de France: Bez příkras S02E07 - Kamikadze CZ Dabing",
+        "video_id": 28054020
+      },
+      {
+        "episode_id": 175558,
+        "display_name": "Antidisturbios S01E04 - 4. epizoda CZ Titulky",
+        "video_id": 28054054
+      },
+      {
         "episode_id": 92279,
         "display_name": "Blood+ S01E01 - 1. epizoda CZ Titulky",
         "video_id": 28053360
@@ -401927,7 +401947,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 59,
+    "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
