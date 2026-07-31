@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 146383,
     "manifest_upload_ready_episodes": 468,
-    "uploaded_episodes": 47084,
+    "uploaded_episodes": 47085,
     "prepared_source_episodes": 61615,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 60,
-    "language_whisper_attempted_sources": 60,
-    "language_pending_whisper_sources": 2604,
+    "language_audited_sources": 20,
+    "language_whisper_attempted_sources": 20,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 56938,
     "whisper_review_pending_sources": 50107,
     "subtitle_followup_sources": 21529,
@@ -20,10 +20,34 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-07-31T18:12:46Z",
+      "databaseId": 30654257057,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-31T18:12:37Z",
+      "databaseId": 30654246481,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-31T18:11:49Z",
+      "databaseId": 30654193054,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-31T18:10:42Z",
       "databaseId": 30654120998,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -35,11 +59,11 @@
       "workflowName": "prepare-sources"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-31T18:05:26Z",
       "databaseId": 30653776403,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -99,11 +123,11 @@
       "workflowName": "audit-language"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-07-31T17:39:00Z",
       "databaseId": 30651989138,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "sync"
     },
     {
@@ -150,30 +174,6 @@
       "conclusion": "success",
       "createdAt": "2026-07-31T17:24:24Z",
       "databaseId": 30651036657,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-31T17:22:46Z",
-      "databaseId": 30650928360,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-31T17:15:22Z",
-      "databaseId": 30650445061,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-31T17:14:02Z",
-      "databaseId": 30650353923,
       "headBranch": "main",
       "status": "completed",
       "workflowName": "update-descriptions"
@@ -210849,6 +210849,11 @@
         "episode_id": 138243,
         "display_name": "Post mortem: Město, kde nikdo neumírá S01E04 - Pohřeb CZ Titulky",
         "video_id": 28085582
+      },
+      {
+        "episode_id": 118015,
+        "display_name": "Rejseholdet S01E06 - 6. epizoda CZ Titulky",
+        "video_id": 28085602
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -421416,6 +421421,11 @@
         "episode_id": 138243,
         "display_name": "Post mortem: Město, kde nikdo neumírá S01E04 - Pohřeb CZ Titulky",
         "video_id": 28085582
+      },
+      {
+        "episode_id": 118015,
+        "display_name": "Rejseholdet S01E06 - 6. epizoda CZ Titulky",
+        "video_id": 28085602
       }
     ],
     "prepared_not_upload_ready": [
@@ -422577,7 +422587,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 59,
+    "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
