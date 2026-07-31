@@ -2,15 +2,15 @@
   "counts": {
     "backlog_episodes": 146848,
     "manifest_upload_ready_episodes": 918,
-    "uploaded_episodes": 46696,
+    "uploaded_episodes": 46699,
     "prepared_source_episodes": 60917,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 142,
-    "language_whisper_attempted_sources": 60,
+    "language_audited_sources": 40,
+    "language_whisper_attempted_sources": 40,
     "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 56943,
     "whisper_review_pending_sources": 50132,
@@ -20,18 +20,42 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-07-31T12:34:55Z",
-      "databaseId": 30631142104,
+      "createdAt": "2026-07-31T12:40:47Z",
+      "databaseId": 30631495865,
       "headBranch": "main",
-      "status": "pending",
-      "workflowName": "audit-language"
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-07-31T12:40:43Z",
+      "databaseId": 30631491532,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-07-31T12:35:52Z",
+      "databaseId": 30631199325,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-07-31T12:34:55Z",
+      "databaseId": 30631142104,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-07-31T12:34:25Z",
       "databaseId": 30631112384,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -51,11 +75,11 @@
       "workflowName": "process-whisper-review"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-07-31T12:28:02Z",
       "databaseId": 30630714877,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -79,7 +103,7 @@
       "createdAt": "2026-07-31T12:13:25Z",
       "databaseId": 30629821400,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "sync"
     },
     {
@@ -150,30 +174,6 @@
       "conclusion": "success",
       "createdAt": "2026-07-31T11:47:31Z",
       "databaseId": 30628277215,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-31T11:46:15Z",
-      "databaseId": 30628201213,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-31T11:44:58Z",
-      "databaseId": 30628122201,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-07-31T11:36:45Z",
-      "databaseId": 30627637110,
       "headBranch": "main",
       "status": "completed",
       "workflowName": "update-descriptions"
@@ -208909,6 +208909,21 @@
         "episode_id": 17911,
         "display_name": "Ztracený svět S01E21 - 21. epizoda CZ Dabing",
         "video_id": 28079736
+      },
+      {
+        "episode_id": 26263,
+        "display_name": "Ztracený svět S02E02 - 2. epizoda CZ Titulky",
+        "video_id": 28079803
+      },
+      {
+        "episode_id": 74951,
+        "display_name": "Shardlake S01E04 - Episode 4 CZ Dabing",
+        "video_id": 28079843
+      },
+      {
+        "episode_id": 118703,
+        "display_name": "Kübra S01E05 - 5. epizoda CZ Titulky",
+        "video_id": 28079891
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -417536,6 +417551,21 @@
         "episode_id": 17911,
         "display_name": "Ztracený svět S01E21 - 21. epizoda CZ Dabing",
         "video_id": 28079736
+      },
+      {
+        "episode_id": 26263,
+        "display_name": "Ztracený svět S02E02 - 2. epizoda CZ Titulky",
+        "video_id": 28079803
+      },
+      {
+        "episode_id": 74951,
+        "display_name": "Shardlake S01E04 - Episode 4 CZ Dabing",
+        "video_id": 28079843
+      },
+      {
+        "episode_id": 118703,
+        "display_name": "Kübra S01E05 - 5. epizoda CZ Titulky",
+        "video_id": 28079891
       }
     ],
     "prepared_not_upload_ready": [
@@ -418697,8 +418727,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 82,
-    "ok": 59,
+    "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
