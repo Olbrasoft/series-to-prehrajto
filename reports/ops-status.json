@@ -1,29 +1,101 @@
 {
   "counts": {
     "backlog_episodes": 145898,
-    "manifest_upload_ready_episodes": 207,
-    "uploaded_episodes": 47598,
-    "prepared_source_episodes": 62454,
+    "manifest_upload_ready_episodes": 163,
+    "uploaded_episodes": 47631,
+    "prepared_source_episodes": 62441,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 40,
-    "language_whisper_attempted_sources": 40,
-    "language_pending_whisper_sources": 2604,
-    "whisper_review_sources": 56962,
-    "whisper_review_pending_sources": 50212,
+    "language_audited_sources": 28,
+    "language_whisper_attempted_sources": 20,
+    "language_pending_whisper_sources": 2624,
+    "whisper_review_sources": 56967,
+    "whisper_review_pending_sources": 50237,
     "subtitle_followup_sources": 21756,
     "subtitle_followup_pending_sources": 21756
   },
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-08-01T03:49:41Z",
+      "databaseId": 30682743298,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-01T03:47:52Z",
+      "databaseId": 30682687093,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-sources"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-01T03:42:53Z",
+      "databaseId": 30682528147,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-01T03:42:01Z",
+      "databaseId": 30682501789,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-01T03:20:27Z",
+      "databaseId": 30681800573,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-01T03:14:32Z",
+      "databaseId": 30681609194,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-01T03:14:29Z",
+      "databaseId": 30681608109,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-01T03:14:27Z",
+      "databaseId": 30681607003,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-01T03:14:25Z",
+      "databaseId": 30681605788,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-01T03:13:23Z",
       "databaseId": 30681571708,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -31,7 +103,7 @@
       "createdAt": "2026-08-01T03:13:18Z",
       "databaseId": 30681568780,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "prepare-manifest"
     },
     {
@@ -105,78 +177,6 @@
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-01T02:48:30Z",
-      "databaseId": 30680735406,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-01T02:47:49Z",
-      "databaseId": 30680714243,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-01T02:32:37Z",
-      "databaseId": 30680215927,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-01T02:25:46Z",
-      "databaseId": 30679986230,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-sources"
-    },
-    {
-      "conclusion": "failure",
-      "createdAt": "2026-08-01T02:17:03Z",
-      "databaseId": 30679691624,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-01T02:15:29Z",
-      "databaseId": 30679641623,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-01T02:11:47Z",
-      "databaseId": 30679514784,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-01T02:11:44Z",
-      "databaseId": 30679512898,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-01T02:11:42Z",
-      "databaseId": 30679511250,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
     }
   ],
   "gaps": {
@@ -213419,6 +213419,171 @@
         "episode_id": 157435,
         "display_name": "LuLaRich S01E02 - 2. epizoda CZ Dabing",
         "video_id": 28095759
+      },
+      {
+        "episode_id": 124364,
+        "display_name": "Charlieho andílci S01E07 - 7. epizoda CZ Titulky",
+        "video_id": 28096085
+      },
+      {
+        "episode_id": 202260,
+        "display_name": "Kouzelná Beruška a Černý kocour S06E05 - Odhalovač CZ Dabing",
+        "video_id": 28096103
+      },
+      {
+        "episode_id": 118308,
+        "display_name": "Wildfire S01E04 - 4. epizoda CZ Dabing",
+        "video_id": 28096151
+      },
+      {
+        "episode_id": 118352,
+        "display_name": "Wildfire S01E07 - 7. epizoda CZ Dabing",
+        "video_id": 28096254
+      },
+      {
+        "episode_id": 72832,
+        "display_name": "Heartbeat S05E11 - 11. epizoda CZ Titulky",
+        "video_id": 28096315
+      },
+      {
+        "episode_id": 138189,
+        "display_name": "Tichá dohoda S01E04 - 4. epizoda CZ Titulky",
+        "video_id": 28096087
+      },
+      {
+        "episode_id": 148669,
+        "display_name": "Wyatt Earp a válka kovbojů S01E04 - Kovbojové vrací úder CZ Dabing",
+        "video_id": 28096122
+      },
+      {
+        "episode_id": 152229,
+        "display_name": "Milenec z vesmíru S01E05 - Pátý záznam CZ Titulky",
+        "video_id": 28096161
+      },
+      {
+        "episode_id": 126317,
+        "display_name": "Wolfblood S01E01 - Osamělý vlk CZ Dabing",
+        "video_id": 28096208
+      },
+      {
+        "episode_id": 126321,
+        "display_name": "Wolfblood S01E05 - Occamova břitva CZ Dabing",
+        "video_id": 28096220
+      },
+      {
+        "episode_id": 126325,
+        "display_name": "Wolfblood S01E09 - Nevyčnívat z davu CZ Dabing",
+        "video_id": 28096231
+      },
+      {
+        "episode_id": 126329,
+        "display_name": "Wolfblood S01E13 - Prozrazeni CZ Dabing",
+        "video_id": 28096245
+      },
+      {
+        "episode_id": 126333,
+        "display_name": "Wolfblood S02E05 - Stará zášť CZ Dabing",
+        "video_id": 28096253
+      },
+      {
+        "episode_id": 126337,
+        "display_name": "Wolfblood S02E10 - Vlkodlačí doupě CZ Dabing",
+        "video_id": 28096267
+      },
+      {
+        "episode_id": 152242,
+        "display_name": "Milenec z vesmíru S01E18 - Osmnáctý záznam CZ Titulky",
+        "video_id": 28096093
+      },
+      {
+        "episode_id": 178698,
+        "display_name": "Central Park S02E01 - Blackout CZ Titulky",
+        "video_id": 28096144
+      },
+      {
+        "episode_id": 98978,
+        "display_name": "Terapeutka S01E04 - 4. epizoda CZ Titulky",
+        "video_id": 28096167
+      },
+      {
+        "episode_id": 126378,
+        "display_name": "Hlubina S01E01 - 1. epizoda CZ Titulky",
+        "video_id": 28096192
+      },
+      {
+        "episode_id": 78706,
+        "display_name": "Vedoucí katedry S01E01 - Dokonalá chyba CZ Dabing",
+        "video_id": 28096236
+      },
+      {
+        "episode_id": 126382,
+        "display_name": "Hlubina S01E06 - 6. epizoda CZ Titulky",
+        "video_id": 28096259
+      },
+      {
+        "episode_id": 126386,
+        "display_name": "Hlubina S01E10 - 10. epizoda CZ Titulky",
+        "video_id": 28096297
+      },
+      {
+        "episode_id": 202926,
+        "display_name": "24 hodin: Nezastavitelný S01E07 - 18:00 - 19:00 CZ Titulky",
+        "video_id": 28096322
+      },
+      {
+        "episode_id": 126715,
+        "display_name": "Odvážný a krásná S01E32 - 32. epizoda CZ Titulky",
+        "video_id": 28096088
+      },
+      {
+        "episode_id": 148667,
+        "display_name": "Wyatt Earp a válka kovbojů S01E06 - Poslední souboj CZ Dabing",
+        "video_id": 28096128
+      },
+      {
+        "episode_id": 126687,
+        "display_name": "Odvážný a krásná S01E03 - 3. epizoda CZ Dabing",
+        "video_id": 28096173
+      },
+      {
+        "episode_id": 94727,
+        "display_name": "Krapopolis S02E03 - 3. epizoda CZ Titulky",
+        "video_id": 28096250
+      },
+      {
+        "episode_id": 56115,
+        "display_name": "Král: Věčný panovník S01E09 - 9. epizoda CZ Titulky",
+        "video_id": 28096265
+      },
+      {
+        "episode_id": 94735,
+        "display_name": "Krapopolis S02E10 - 10. epizoda CZ Titulky",
+        "video_id": 28096277
+      },
+      {
+        "episode_id": 138187,
+        "display_name": "Tichá dohoda S01E02 - 2. epizoda CZ Titulky",
+        "video_id": 28096294
+      },
+      {
+        "episode_id": 138191,
+        "display_name": "Tichá dohoda S01E06 - 6. epizoda CZ Dabing",
+        "video_id": 28096311
+      },
+      {
+        "episode_id": 148671,
+        "display_name": "Wyatt Earp a válka kovbojů S01E02 - Přestřelka CZ Titulky",
+        "video_id": 28096328
+      },
+      {
+        "episode_id": 126319,
+        "display_name": "Wolfblood S01E03 - Rodinná pouta CZ Dabing",
+        "video_id": 28096350
+      },
+      {
+        "episode_id": 126323,
+        "display_name": "Wolfblood S01E07 - Měsíc v novu CZ Dabing",
+        "video_id": 28096362
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -426556,6 +426721,171 @@
         "episode_id": 157435,
         "display_name": "LuLaRich S01E02 - 2. epizoda CZ Dabing",
         "video_id": 28095759
+      },
+      {
+        "episode_id": 124364,
+        "display_name": "Charlieho andílci S01E07 - 7. epizoda CZ Titulky",
+        "video_id": 28096085
+      },
+      {
+        "episode_id": 202260,
+        "display_name": "Kouzelná Beruška a Černý kocour S06E05 - Odhalovač CZ Dabing",
+        "video_id": 28096103
+      },
+      {
+        "episode_id": 118308,
+        "display_name": "Wildfire S01E04 - 4. epizoda CZ Dabing",
+        "video_id": 28096151
+      },
+      {
+        "episode_id": 118352,
+        "display_name": "Wildfire S01E07 - 7. epizoda CZ Dabing",
+        "video_id": 28096254
+      },
+      {
+        "episode_id": 72832,
+        "display_name": "Heartbeat S05E11 - 11. epizoda CZ Titulky",
+        "video_id": 28096315
+      },
+      {
+        "episode_id": 138189,
+        "display_name": "Tichá dohoda S01E04 - 4. epizoda CZ Titulky",
+        "video_id": 28096087
+      },
+      {
+        "episode_id": 148669,
+        "display_name": "Wyatt Earp a válka kovbojů S01E04 - Kovbojové vrací úder CZ Dabing",
+        "video_id": 28096122
+      },
+      {
+        "episode_id": 152229,
+        "display_name": "Milenec z vesmíru S01E05 - Pátý záznam CZ Titulky",
+        "video_id": 28096161
+      },
+      {
+        "episode_id": 126317,
+        "display_name": "Wolfblood S01E01 - Osamělý vlk CZ Dabing",
+        "video_id": 28096208
+      },
+      {
+        "episode_id": 126321,
+        "display_name": "Wolfblood S01E05 - Occamova břitva CZ Dabing",
+        "video_id": 28096220
+      },
+      {
+        "episode_id": 126325,
+        "display_name": "Wolfblood S01E09 - Nevyčnívat z davu CZ Dabing",
+        "video_id": 28096231
+      },
+      {
+        "episode_id": 126329,
+        "display_name": "Wolfblood S01E13 - Prozrazeni CZ Dabing",
+        "video_id": 28096245
+      },
+      {
+        "episode_id": 126333,
+        "display_name": "Wolfblood S02E05 - Stará zášť CZ Dabing",
+        "video_id": 28096253
+      },
+      {
+        "episode_id": 126337,
+        "display_name": "Wolfblood S02E10 - Vlkodlačí doupě CZ Dabing",
+        "video_id": 28096267
+      },
+      {
+        "episode_id": 152242,
+        "display_name": "Milenec z vesmíru S01E18 - Osmnáctý záznam CZ Titulky",
+        "video_id": 28096093
+      },
+      {
+        "episode_id": 178698,
+        "display_name": "Central Park S02E01 - Blackout CZ Titulky",
+        "video_id": 28096144
+      },
+      {
+        "episode_id": 98978,
+        "display_name": "Terapeutka S01E04 - 4. epizoda CZ Titulky",
+        "video_id": 28096167
+      },
+      {
+        "episode_id": 126378,
+        "display_name": "Hlubina S01E01 - 1. epizoda CZ Titulky",
+        "video_id": 28096192
+      },
+      {
+        "episode_id": 78706,
+        "display_name": "Vedoucí katedry S01E01 - Dokonalá chyba CZ Dabing",
+        "video_id": 28096236
+      },
+      {
+        "episode_id": 126382,
+        "display_name": "Hlubina S01E06 - 6. epizoda CZ Titulky",
+        "video_id": 28096259
+      },
+      {
+        "episode_id": 126386,
+        "display_name": "Hlubina S01E10 - 10. epizoda CZ Titulky",
+        "video_id": 28096297
+      },
+      {
+        "episode_id": 202926,
+        "display_name": "24 hodin: Nezastavitelný S01E07 - 18:00 - 19:00 CZ Titulky",
+        "video_id": 28096322
+      },
+      {
+        "episode_id": 126715,
+        "display_name": "Odvážný a krásná S01E32 - 32. epizoda CZ Titulky",
+        "video_id": 28096088
+      },
+      {
+        "episode_id": 148667,
+        "display_name": "Wyatt Earp a válka kovbojů S01E06 - Poslední souboj CZ Dabing",
+        "video_id": 28096128
+      },
+      {
+        "episode_id": 126687,
+        "display_name": "Odvážný a krásná S01E03 - 3. epizoda CZ Dabing",
+        "video_id": 28096173
+      },
+      {
+        "episode_id": 94727,
+        "display_name": "Krapopolis S02E03 - 3. epizoda CZ Titulky",
+        "video_id": 28096250
+      },
+      {
+        "episode_id": 56115,
+        "display_name": "Král: Věčný panovník S01E09 - 9. epizoda CZ Titulky",
+        "video_id": 28096265
+      },
+      {
+        "episode_id": 94735,
+        "display_name": "Krapopolis S02E10 - 10. epizoda CZ Titulky",
+        "video_id": 28096277
+      },
+      {
+        "episode_id": 138187,
+        "display_name": "Tichá dohoda S01E02 - 2. epizoda CZ Titulky",
+        "video_id": 28096294
+      },
+      {
+        "episode_id": 138191,
+        "display_name": "Tichá dohoda S01E06 - 6. epizoda CZ Dabing",
+        "video_id": 28096311
+      },
+      {
+        "episode_id": 148671,
+        "display_name": "Wyatt Earp a válka kovbojů S01E02 - Přestřelka CZ Titulky",
+        "video_id": 28096328
+      },
+      {
+        "episode_id": 126319,
+        "display_name": "Wolfblood S01E03 - Rodinná pouta CZ Dabing",
+        "video_id": 28096350
+      },
+      {
+        "episode_id": 126323,
+        "display_name": "Wolfblood S01E07 - Měsíc v novu CZ Dabing",
+        "video_id": 28096362
       }
     ],
     "prepared_not_upload_ready": [
@@ -426862,6 +427192,166 @@
     ],
     "whisper_review_pending": [
       {
+        "episode_id": 7048,
+        "source_id": -41260784444223869,
+        "series_title": "13. okrsek",
+        "episode_code": "S01E05",
+        "source_title": "13. okrsek - APB S01E05 Nad očekávání 2017 byDejv",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 7054,
+        "source_id": -55683625306582057,
+        "series_title": "13. okrsek",
+        "episode_code": "S01E11",
+        "source_title": "13. okrsek - APB S01E11 Pandořina skříňka 2017 byDejv",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 131581,
+        "source_id": -64241815647438550,
+        "series_title": "18 Again",
+        "episode_code": "S01E01",
+        "source_title": "18.Again.S01E01.V2.1080p.NF.WEB-DL.DDP2.0.x264-Imagine",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 131583,
+        "source_id": -18424112277395675,
+        "series_title": "18 Again",
+        "episode_code": "S01E03",
+        "source_title": "18.Again.S01E03.V2.1080p.NF.WEB-DL.DDP2.0.x264-Imagine",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 131584,
+        "source_id": -28437957379011848,
+        "series_title": "18 Again",
+        "episode_code": "S01E04",
+        "source_title": "18.Again.S01E04.V2.1080p.NF.WEB-DL.DDP2.0.x264-Imagine",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 131585,
+        "source_id": -36343779909785518,
+        "series_title": "18 Again",
+        "episode_code": "S01E05",
+        "source_title": "18.Again.S01E05.V2.1080p.NF.WEB-DL.DDP2.0.x264-Imagine",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 131586,
+        "source_id": -36120139394765078,
+        "series_title": "18 Again",
+        "episode_code": "S01E06",
+        "source_title": "18.Again.S01E06.V2.1080p.NF.WEB-DL.DDP2.0.x264-Imagine",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 131587,
+        "source_id": -1548110963000424,
+        "series_title": "18 Again",
+        "episode_code": "S01E07",
+        "source_title": "18.Again.S01E07.V2.1080p.NF.WEB-DL.DDP2.0.x264-Imagine",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 131588,
+        "source_id": -12144559024770312,
+        "series_title": "18 Again",
+        "episode_code": "S01E08",
+        "source_title": "18.Again.S01E08.V2.1080p.NF.WEB-DL.DDP2.0.x264-Imagine",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 131589,
+        "source_id": -28269255978586483,
+        "series_title": "18 Again",
+        "episode_code": "S01E09",
+        "source_title": "18.Again.S01E09.V2.1080p.NF.WEB-DL.DDP2.0.x264-Imagine",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 131590,
+        "source_id": -27564256448363439,
+        "series_title": "18 Again",
+        "episode_code": "S01E10",
+        "source_title": "18.Again.S01E10.V2.1080p.NF.WEB-DL.DDP2.0.x264-Imagine",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 131591,
+        "source_id": -65290332300141834,
+        "series_title": "18 Again",
+        "episode_code": "S01E11",
+        "source_title": "18.Again.S01E11.V2.1080p.NF.WEB-DL.DDP2.0.x264-Imagine",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 131593,
+        "source_id": -32168132079900285,
+        "series_title": "18 Again",
+        "episode_code": "S01E13",
+        "source_title": "18.Again.S01E13.V2.1080p.NF.WEB-DL.DDP2.0.x264-Imagine",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 131595,
+        "source_id": -21796613340588297,
+        "series_title": "18 Again",
+        "episode_code": "S01E15",
+        "source_title": "18.Again.S01E15.V2.1080p.NF.WEB-DL.DDP2.0.x264-Imagine",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 131596,
+        "source_id": -4700062680720149,
+        "series_title": "18 Again",
+        "episode_code": "S01E16",
+        "source_title": "18.Again.S01E16.V2.1080p.NF.WEB-DL.DDP2.0.x264-Imagine",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 202926,
+        "source_id": -47971933662806045,
+        "series_title": "24 hodin: Nezastavitelný",
+        "episode_code": "S01E07",
+        "source_title": "24 Hodin: Nezastavitelný - S1E7 6:00 P.M. - 7:00 P.M",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 202925,
+        "source_id": -22846855142182463,
+        "series_title": "24 hodin: Nezastavitelný",
+        "episode_code": "S01E09",
+        "source_title": "24 Hodin: Nezastavitelný - S1E9 8:00 P.M. - 9:00 P.M",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 60087,
+        "source_id": -54681113484535039,
+        "series_title": "3 %",
+        "episode_code": "S01E01",
+        "source_title": "3 %_S01E01_Kapitola 01_ Kostky",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 60087,
+        "source_id": -63534000315146654,
+        "series_title": "3 %",
+        "episode_code": "S01E01",
+        "source_title": "3% - S1E1 Chapter 01: Cubes EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 60087,
+        "source_id": -35379021837802076,
+        "series_title": "3 %",
+        "episode_code": "S01E01",
+        "source_title": "3% - S01E01 - Chapter 01: Cubes",
+        "status": "needs_whisper"
+      },
+      {
         "episode_id": 60087,
         "source_id": -60620232997028834,
         "series_title": "3 %",
@@ -427100,166 +427590,6 @@
         "episode_code": "S02E03",
         "source_title": "3 %_S02E03_Kapitola 03_ Bez hnutí",
         "status": "needs_whisper"
-      },
-      {
-        "episode_id": 60097,
-        "source_id": -11563576844894771,
-        "series_title": "3 %",
-        "episode_code": "S02E03",
-        "source_title": "3% S2E3 Chapter 03: Static",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 60097,
-        "source_id": -8941870325206181,
-        "series_title": "3 %",
-        "episode_code": "S02E03",
-        "source_title": "3% - S2E3 Chapter 03: Static EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 60097,
-        "source_id": -35018259701261958,
-        "series_title": "3 %",
-        "episode_code": "S02E03",
-        "source_title": "3% S02E03",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 60097,
-        "source_id": -56065246566433766,
-        "series_title": "3 %",
-        "episode_code": "S02E03",
-        "source_title": "3% - S2E3 Chapter 03: Static EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 60098,
-        "source_id": -47904729432160592,
-        "series_title": "3 %",
-        "episode_code": "S02E04",
-        "source_title": "3 %_S02E04_Kapitola 04_ Ubrousek",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 60098,
-        "source_id": -46098321076064043,
-        "series_title": "3 %",
-        "episode_code": "S02E04",
-        "source_title": "3% - S2E4 Chapter 04: Napkin EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 60098,
-        "source_id": -50699610809846960,
-        "series_title": "3 %",
-        "episode_code": "S02E04",
-        "source_title": "3% S02E04",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 60099,
-        "source_id": -53135438058981152,
-        "series_title": "3 %",
-        "episode_code": "S02E05",
-        "source_title": "3 %_S02E05_Kapitola 05_ Lampa",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 60099,
-        "source_id": -41771691076844197,
-        "series_title": "3 %",
-        "episode_code": "S02E05",
-        "source_title": "3% - S2E5 Chapter 05: Lamp EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 60100,
-        "source_id": -68492302959782647,
-        "series_title": "3 %",
-        "episode_code": "S02E06",
-        "source_title": "3 %_S02E06_Kapitola 06_ Lahve",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 60100,
-        "source_id": -58544110075034243,
-        "series_title": "3 %",
-        "episode_code": "S02E06",
-        "source_title": "3% - S2E6 Chapter 06: Bottles EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 60100,
-        "source_id": -7881053016800629,
-        "series_title": "3 %",
-        "episode_code": "S02E06",
-        "source_title": "3% S02E06",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 60100,
-        "source_id": -17090935671746865,
-        "series_title": "3 %",
-        "episode_code": "S02E06",
-        "source_title": "3% - S2E6 Chapter 06: Bottles EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 60101,
-        "source_id": -14860441722566573,
-        "series_title": "3 %",
-        "episode_code": "S02E07",
-        "source_title": "3 %_S02E07_Kapitola 07_ Mlha",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 60101,
-        "source_id": -16155130364458127,
-        "series_title": "3 %",
-        "episode_code": "S02E07",
-        "source_title": "3% - S2E7 Chapter 07: Fog EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 60101,
-        "source_id": -47880569215678673,
-        "series_title": "3 %",
-        "episode_code": "S02E07",
-        "source_title": "3% - S2E7 Chapter 07: Fog EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 60103,
-        "source_id": -66161918147570446,
-        "series_title": "3 %",
-        "episode_code": "S02E08",
-        "source_title": "3 %_S02E08_Kapitola 08_ Žáby",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 60103,
-        "source_id": -68620252265955059,
-        "series_title": "3 %",
-        "episode_code": "S02E08",
-        "source_title": "3% - S2E8 Chapter 08: Frogs EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 60103,
-        "source_id": -69102562519419880,
-        "series_title": "3 %",
-        "episode_code": "S02E08",
-        "source_title": "3% S02E08",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 60103,
-        "source_id": -11197452425969835,
-        "series_title": "3 %",
-        "episode_code": "S02E08",
-        "source_title": "3% - S2E8 Chapter 08: Frogs PT",
-        "status": "needs_whisper"
       }
     ],
     "subtitle_followup_pending": [
@@ -427283,12 +427613,12 @@
       },
       {
         "episode_id": 131581,
-        "source_id": -64241815647438550,
+        "source_id": -22465317252864558,
         "series_title": "18 Again",
         "episode_code": "S01E01",
-        "source_title": "18.Again.S01E01.V2.1080p.NF.WEB-DL.DDP2.0.x264-Imagine",
+        "source_title": "18 Again s01e01 život jde dál cz titulky",
         "subtitle_status": "needs_subtitle_setup_after_prehrajto_processing",
-        "reason": "selected source needs Czech subtitles after Whisper detected non-Czech audio"
+        "reason": "selected source has Czech subtitles but no Czech audio source was found"
       },
       {
         "episode_id": 131582,
@@ -427301,57 +427631,57 @@
       },
       {
         "episode_id": 131583,
-        "source_id": -18424112277395675,
+        "source_id": -64074255895985573,
         "series_title": "18 Again",
         "episode_code": "S01E03",
-        "source_title": "18.Again.S01E03.V2.1080p.NF.WEB-DL.DDP2.0.x264-Imagine",
+        "source_title": "18 Again S01E03 CZtitulky",
         "subtitle_status": "needs_subtitle_setup_after_prehrajto_processing",
-        "reason": "selected source needs Czech subtitles after Whisper detected non-Czech audio"
+        "reason": "selected source has Czech subtitles but no Czech audio source was found"
       },
       {
         "episode_id": 131584,
-        "source_id": -28437957379011848,
+        "source_id": -69934750687861746,
         "series_title": "18 Again",
         "episode_code": "S01E04",
-        "source_title": "18.Again.S01E04.V2.1080p.NF.WEB-DL.DDP2.0.x264-Imagine",
+        "source_title": "18 Again S01E04 CZtitulky",
         "subtitle_status": "needs_subtitle_setup_after_prehrajto_processing",
-        "reason": "selected source needs Czech subtitles after Whisper detected non-Czech audio"
+        "reason": "selected source has Czech subtitles but no Czech audio source was found"
       },
       {
         "episode_id": 131585,
-        "source_id": -36343779909785518,
+        "source_id": -49747916852831232,
         "series_title": "18 Again",
         "episode_code": "S01E05",
-        "source_title": "18.Again.S01E05.V2.1080p.NF.WEB-DL.DDP2.0.x264-Imagine",
+        "source_title": "18 Again S01E05 CZtitulky",
         "subtitle_status": "needs_subtitle_setup_after_prehrajto_processing",
-        "reason": "selected source needs Czech subtitles after Whisper detected non-Czech audio"
+        "reason": "selected source has Czech subtitles but no Czech audio source was found"
       },
       {
         "episode_id": 131586,
-        "source_id": -36120139394765078,
+        "source_id": -52029093756939352,
         "series_title": "18 Again",
         "episode_code": "S01E06",
-        "source_title": "18.Again.S01E06.V2.1080p.NF.WEB-DL.DDP2.0.x264-Imagine",
+        "source_title": "18 Again s01e06 Upřímné srdce jejího fanouška číslo 1 cz titulky",
         "subtitle_status": "needs_subtitle_setup_after_prehrajto_processing",
-        "reason": "selected source needs Czech subtitles after Whisper detected non-Czech audio"
+        "reason": "selected source has Czech subtitles but no Czech audio source was found"
       },
       {
         "episode_id": 131587,
-        "source_id": -1548110963000424,
+        "source_id": -26233774768328897,
         "series_title": "18 Again",
         "episode_code": "S01E07",
-        "source_title": "18.Again.S01E07.V2.1080p.NF.WEB-DL.DDP2.0.x264-Imagine",
+        "source_title": "18 Again S01E07 CZtitulky",
         "subtitle_status": "needs_subtitle_setup_after_prehrajto_processing",
-        "reason": "selected source needs Czech subtitles after Whisper detected non-Czech audio"
+        "reason": "selected source has Czech subtitles but no Czech audio source was found"
       },
       {
         "episode_id": 131588,
-        "source_id": -12144559024770312,
+        "source_id": -45209332449885719,
         "series_title": "18 Again",
         "episode_code": "S01E08",
-        "source_title": "18.Again.S01E08.V2.1080p.NF.WEB-DL.DDP2.0.x264-Imagine",
+        "source_title": "18 Again s01e08 Příběh, který jsem nevěděl cz titulky",
         "subtitle_status": "needs_subtitle_setup_after_prehrajto_processing",
-        "reason": "selected source needs Czech subtitles after Whisper detected non-Czech audio"
+        "reason": "selected source has Czech subtitles but no Czech audio source was found"
       },
       {
         "episode_id": 131589,
@@ -427490,12 +427820,12 @@
       },
       {
         "episode_id": 60087,
-        "source_id": -35379021837802076,
+        "source_id": -1273362075397811,
         "series_title": "3 %",
         "episode_code": "S01E01",
-        "source_title": "3% - S01E01 - Chapter 01: Cubes",
+        "source_title": "3% S01E01 CZ TITULKY",
         "subtitle_status": "needs_subtitle_setup_after_prehrajto_processing",
-        "reason": "selected source needs Czech subtitles after Whisper detected non-Czech audio"
+        "reason": "selected source has Czech subtitles but no Czech audio source was found"
       },
       {
         "episode_id": 60088,
@@ -427717,13 +428047,14 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 39,
+    "disabled": 8,
+    "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
-    "whisper_non_cz_needs_subtitles": 4583,
+    "needs_whisper": 50201,
     "whisper_confirmed_cz": 2167,
-    "needs_whisper": 50176,
+    "whisper_non_cz_needs_subtitles": 4563,
     "whisper_failed": 36
   },
   "subtitle_followup_statuses": {
