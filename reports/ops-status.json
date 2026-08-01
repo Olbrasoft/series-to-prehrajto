@@ -1,16 +1,16 @@
 {
   "counts": {
     "backlog_episodes": 145113,
-    "manifest_upload_ready_episodes": 91,
-    "uploaded_episodes": 48236,
-    "prepared_source_episodes": 62499,
+    "manifest_upload_ready_episodes": 100,
+    "uploaded_episodes": 48237,
+    "prepared_source_episodes": 62449,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 301,
-    "language_whisper_attempted_sources": 36,
+    "language_audited_sources": 410,
+    "language_whisper_attempted_sources": 43,
     "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 56896,
     "whisper_review_pending_sources": 49926,
@@ -20,18 +20,34 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-08-01T20:38:14Z",
-      "databaseId": 30717414353,
+      "createdAt": "2026-08-01T20:44:54Z",
+      "databaseId": 30717645330,
       "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "update-descriptions"
+      "status": "pending",
+      "workflowName": "audit-language"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-08-01T20:44:43Z",
+      "databaseId": 30717638834,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-01T20:38:14Z",
+      "databaseId": 30717414353,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-01T20:37:01Z",
       "databaseId": 30717372411,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -47,7 +63,7 @@
       "createdAt": "2026-08-01T20:36:57Z",
       "databaseId": 30717369800,
       "headBranch": "main",
-      "status": "pending",
+      "status": "queued",
       "workflowName": "prepare-manifest"
     },
     {
@@ -87,7 +103,7 @@
       "createdAt": "2026-08-01T20:30:21Z",
       "databaseId": 30717128456,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "process-whisper-review"
     },
     {
@@ -161,22 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-01T20:25:13Z",
-      "databaseId": 30716933553,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-01T20:24:01Z",
-      "databaseId": 30716886418,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
     }
   ],
   "gaps": {
@@ -216609,6 +216609,11 @@
         "episode_id": 162539,
         "display_name": "Zítra je taky den S01E03 - Les času 1 CZ Titulky",
         "video_id": 28109244
+      },
+      {
+        "episode_id": 36999,
+        "display_name": "Andromeda S02E11 - Cena za svobodu CZ Dabing",
+        "video_id": 28110185
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -432936,6 +432941,11 @@
         "episode_id": 162539,
         "display_name": "Zítra je taky den S01E03 - Les času 1 CZ Titulky",
         "video_id": 28109244
+      },
+      {
+        "episode_id": 36999,
+        "display_name": "Andromeda S02E11 - Cena za svobodu CZ Dabing",
+        "video_id": 28110185
       }
     ],
     "prepared_not_upload_ready": [
@@ -434097,8 +434107,8 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 265,
-    "ok": 35,
+    "disabled": 367,
+    "ok": 42,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
