@@ -1,45 +1,69 @@
 {
   "counts": {
     "backlog_episodes": 145166,
-    "manifest_upload_ready_episodes": 19,
-    "uploaded_episodes": 48192,
-    "prepared_source_episodes": 62988,
+    "manifest_upload_ready_episodes": 17,
+    "uploaded_episodes": 48194,
+    "prepared_source_episodes": 62986,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 20,
-    "language_whisper_attempted_sources": 20,
+    "language_audited_sources": 40,
+    "language_whisper_attempted_sources": 40,
     "language_pending_whisper_sources": 2624,
-    "whisper_review_sources": 56916,
-    "whisper_review_pending_sources": 50026,
+    "whisper_review_sources": 56911,
+    "whisper_review_pending_sources": 50001,
     "subtitle_followup_sources": 22000,
     "subtitle_followup_pending_sources": 22000
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-08-01T16:57:59Z",
-      "databaseId": 30709291811,
+      "createdAt": "2026-08-01T17:06:10Z",
+      "databaseId": 30709593530,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
-      "createdAt": "2026-08-01T16:57:54Z",
-      "databaseId": 30709289472,
+      "createdAt": "2026-08-01T17:06:05Z",
+      "databaseId": 30709590205,
       "headBranch": "main",
       "status": "pending",
       "workflowName": "prepare-manifest"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
+      "createdAt": "2026-08-01T16:59:14Z",
+      "databaseId": 30709335076,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-01T16:57:59Z",
+      "databaseId": 30709291811,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-08-01T16:57:54Z",
+      "databaseId": 30709289472,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-01T16:56:24Z",
       "databaseId": 30709237089,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
@@ -91,11 +115,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-01T16:50:16Z",
       "databaseId": 30709017932,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "sync"
     },
     {
@@ -153,30 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-01T16:31:42Z",
-      "databaseId": 30708328376,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-01T16:31:40Z",
-      "databaseId": 30708327343,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-01T16:30:30Z",
-      "databaseId": 30708282761,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
     }
   ],
   "gaps": {
@@ -216389,6 +216389,16 @@
         "episode_id": 35699,
         "display_name": "Příšera ze starého Soulu S01E05 - Beznaděj CZ Dabing",
         "video_id": 28106679
+      },
+      {
+        "episode_id": 35700,
+        "display_name": "Příšera ze starého Soulu S01E06 - Chaos CZ Dabing",
+        "video_id": 28106856
+      },
+      {
+        "episode_id": 35703,
+        "display_name": "Příšera ze starého Soulu S01E09 - Zvěrstvo CZ Dabing",
+        "video_id": 28106854
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -432496,6 +432506,16 @@
         "episode_id": 35699,
         "display_name": "Příšera ze starého Soulu S01E05 - Beznaděj CZ Dabing",
         "video_id": 28106679
+      },
+      {
+        "episode_id": 35700,
+        "display_name": "Příšera ze starého Soulu S01E06 - Chaos CZ Dabing",
+        "video_id": 28106856
+      },
+      {
+        "episode_id": 35703,
+        "display_name": "Příšera ze starého Soulu S01E09 - Zvěrstvo CZ Dabing",
+        "video_id": 28106854
       }
     ],
     "prepared_not_upload_ready": [
@@ -432802,102 +432822,6 @@
     ],
     "whisper_review_pending": [
       {
-        "episode_id": 63256,
-        "source_id": -35559777420234221,
-        "series_title": "666 Park Avenue",
-        "episode_code": "S01E10",
-        "source_title": "666 Park Avenue - S1E10 The Comfort of Death SK",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 63256,
-        "source_id": -14783007150401527,
-        "series_title": "666 Park Avenue",
-        "episode_code": "S01E10",
-        "source_title": "666 Park Avenue - S01E10 - The Comfort of Death",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 63259,
-        "source_id": -27812176625369621,
-        "series_title": "666 Park Avenue",
-        "episode_code": "S01E13",
-        "source_title": "666 Park Avenue - S1E13 Lazarus: Part 1 SK",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 180897,
-        "source_id": -27797020032767389,
-        "series_title": "86: Eighty Six",
-        "episode_code": "S01E01",
-        "source_title": "86 Eighty Six - S01E01 - Undertaker [1080p, ENG TITULKY]",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 180896,
-        "source_id": -68159707716792254,
-        "series_title": "86: Eighty Six",
-        "episode_code": "S01E06",
-        "source_title": "86 Eighty Six - S01E06 - Through to the End [1080p, ENG TITULKY]",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 10929,
-        "source_id": -17455241773272969,
-        "series_title": "Afterparty",
-        "episode_code": "S01E01",
-        "source_title": "The Afterparty - S1E1 EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 10928,
-        "source_id": -49244762757510580,
-        "series_title": "Afterparty",
-        "episode_code": "S01E02",
-        "source_title": "The.Netflix.Afterparty.S01E02.WEBRip.x264-ION10",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 10925,
-        "source_id": -22030254762746633,
-        "series_title": "Afterparty",
-        "episode_code": "S01E05",
-        "source_title": "The Afterparty - S1E5 EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 125076,
-        "source_id": -2736818736612254,
-        "series_title": "Alchymie duše",
-        "episode_code": "S02E04",
-        "source_title": "Alchymie duše - S2E4 Episode 4 EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 125076,
-        "source_id": -2823884909266214,
-        "series_title": "Alchymie duše",
-        "episode_code": "S02E04",
-        "source_title": "Alchymie duše - S2E4 KO",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 125078,
-        "source_id": -29103593586630202,
-        "series_title": "Alchymie duše",
-        "episode_code": "S02E08",
-        "source_title": "Alchymie duše - S2E8 Episode 8 EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 125078,
-        "source_id": -45585683444113956,
-        "series_title": "Alchymie duše",
-        "episode_code": "S02E08",
-        "source_title": "Alchymie duše - S2E8 KO",
-        "status": "needs_whisper"
-      },
-      {
         "episode_id": 2262,
         "source_id": -36417912212501737,
         "series_title": "ALF",
@@ -432912,70 +432836,6 @@
         "episode_code": "S01E04",
         "source_title": "All or Nothing: Tottenham Hotspur - S1E4 EN",
         "status": "whisper_failed"
-      },
-      {
-        "episode_id": 83917,
-        "source_id": -70908160100327361,
-        "series_title": "Allegiance",
-        "episode_code": "S01E01",
-        "source_title": "Allegiance S01E01 1080p (FullHD)",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 83917,
-        "source_id": -61864759866595920,
-        "series_title": "Allegiance",
-        "episode_code": "S01E01",
-        "source_title": "Allegiance - S1E1 Pilot EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 83917,
-        "source_id": -29024554534166403,
-        "series_title": "Allegiance",
-        "episode_code": "S01E01",
-        "source_title": "Allegiance - S01E01 - Pilot",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 83918,
-        "source_id": -52887466875678486,
-        "series_title": "Allegiance",
-        "episode_code": "S01E02",
-        "source_title": "Allegiance - S1E2 Teamwork EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 83918,
-        "source_id": -4959489414166068,
-        "series_title": "Allegiance",
-        "episode_code": "S01E02",
-        "source_title": "Allegiance S1E2 Teamwork",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 83918,
-        "source_id": -2760724907429265,
-        "series_title": "Allegiance",
-        "episode_code": "S01E02",
-        "source_title": "Allegiance - S01E02 - Teamwork",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 83918,
-        "source_id": -71715828095941739,
-        "series_title": "Allegiance",
-        "episode_code": "S01E02",
-        "source_title": "Allegiance - S1E2 EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 83919,
-        "source_id": -42754988056681884,
-        "series_title": "Allegiance",
-        "episode_code": "S01E03",
-        "source_title": "Allegiance - S01E03 - Surreptitious Entry",
-        "status": "needs_whisper"
       },
       {
         "episode_id": 83919,
@@ -433199,6 +433059,166 @@
         "series_title": "Angela Black",
         "episode_code": "S01E04",
         "source_title": "angela.black.s01e04.1080p.web.h264-glhf",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 36177,
+        "source_id": -47021261841951542,
+        "series_title": "Angela Black",
+        "episode_code": "S01E04",
+        "source_title": "angela.black.s01e04.720p.web.h264-glhf",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 36178,
+        "source_id": -33491656711528840,
+        "series_title": "Angela Black",
+        "episode_code": "S01E05",
+        "source_title": "Angela.Black.S01E05.Episode.5.1080p.AMZN.WEB-DL.DDP2.0.H264-SDCC",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 36178,
+        "source_id": -64167857930319945,
+        "series_title": "Angela Black",
+        "episode_code": "S01E05",
+        "source_title": "Angela.Black.S01E05.1080p.STV.WEB-DL.AAC2.0.H.264-BTN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 36178,
+        "source_id": -39856482066321371,
+        "series_title": "Angela Black",
+        "episode_code": "S01E05",
+        "source_title": "angela.black.s01e05.1080p.web.h264-glhf",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 36178,
+        "source_id": -44738685478236343,
+        "series_title": "Angela Black",
+        "episode_code": "S01E05",
+        "source_title": "angela.black.s01e05.720p.web.h264-glhf",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 36048,
+        "source_id": -19168910159098858,
+        "series_title": "Angela Black",
+        "episode_code": "S01E06",
+        "source_title": "angela.black.s01e06.720p.web.h264-glhf",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 36048,
+        "source_id": -69537845797703122,
+        "series_title": "Angela Black",
+        "episode_code": "S01E06",
+        "source_title": "Angela Black - S1E6 Episode 6 EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 134758,
+        "source_id": -28849368713502142,
+        "series_title": "Auf Wiedersehen, Pet",
+        "episode_code": "S01E01",
+        "source_title": "Auf.Wiedersehen.Pet.S01E01",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 134759,
+        "source_id": -53617081562296152,
+        "series_title": "Auf Wiedersehen, Pet",
+        "episode_code": "S01E03",
+        "source_title": "Auf.Wiedersehen.Pet.S01E03",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 134760,
+        "source_id": -60907697056187849,
+        "series_title": "Auf Wiedersehen, Pet",
+        "episode_code": "S01E04",
+        "source_title": "Auf.Wiedersehen.Pet.S01E04",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 134733,
+        "source_id": -16240045904581435,
+        "series_title": "Auf Wiedersehen, Pet",
+        "episode_code": "S01E07",
+        "source_title": "Auf.Wiedersehen.Pet.S01E07",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 134761,
+        "source_id": -167305828017193,
+        "series_title": "Auf Wiedersehen, Pet",
+        "episode_code": "S01E08",
+        "source_title": "Auf.Wiedersehen.Pet.S01E08",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 134734,
+        "source_id": -53835774401990606,
+        "series_title": "Auf Wiedersehen, Pet",
+        "episode_code": "S01E09",
+        "source_title": "Auf.Wiedersehen.Pet.S01E09",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 134735,
+        "source_id": -17716466310831245,
+        "series_title": "Auf Wiedersehen, Pet",
+        "episode_code": "S01E11",
+        "source_title": "Auf.Wiedersehen.Pet.S01E11",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 134736,
+        "source_id": -31920565515811413,
+        "series_title": "Auf Wiedersehen, Pet",
+        "episode_code": "S01E13",
+        "source_title": "Auf.Wiedersehen.Pet.S01E13",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 134737,
+        "source_id": -10386079807779929,
+        "series_title": "Auf Wiedersehen, Pet",
+        "episode_code": "S02E01",
+        "source_title": "Auf.Wiedersehen.Pet.S02E01",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 134740,
+        "source_id": -35641354879592988,
+        "series_title": "Auf Wiedersehen, Pet",
+        "episode_code": "S02E04",
+        "source_title": "Auf.Wiedersehen.Pet.S02E04",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 134741,
+        "source_id": -25645832533885692,
+        "series_title": "Auf Wiedersehen, Pet",
+        "episode_code": "S02E05",
+        "source_title": "Auf.Wiedersehen.Pet.S02E05",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 134742,
+        "source_id": -66568258072030061,
+        "series_title": "Auf Wiedersehen, Pet",
+        "episode_code": "S02E06",
+        "source_title": "Auf.Wiedersehen.Pet.S02E06",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 134743,
+        "source_id": -58632227641377815,
+        "series_title": "Auf Wiedersehen, Pet",
+        "episode_code": "S02E07",
+        "source_title": "Auf.Wiedersehen.Pet.S02E07",
         "status": "needs_whisper"
       }
     ],
@@ -433657,14 +433677,14 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 19,
+    "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
-    "whisper_non_cz_needs_subtitles": 4712,
+    "whisper_non_cz_needs_subtitles": 4732,
     "whisper_confirmed_cz": 2178,
-    "needs_whisper": 49990,
-    "whisper_failed": 36
+    "whisper_failed": 36,
+    "needs_whisper": 49965
   },
   "subtitle_followup_statuses": {
     "needs_subtitle_setup_after_prehrajto_processing": 22000
