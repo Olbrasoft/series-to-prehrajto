@@ -1,29 +1,45 @@
 {
   "counts": {
     "backlog_episodes": 145113,
-    "manifest_upload_ready_episodes": 54,
-    "uploaded_episodes": 48232,
-    "prepared_source_episodes": 62831,
+    "manifest_upload_ready_episodes": 53,
+    "uploaded_episodes": 48233,
+    "prepared_source_episodes": 62636,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 40,
-    "language_whisper_attempted_sources": 40,
+    "language_audited_sources": 175,
+    "language_whisper_attempted_sources": 60,
     "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 56916,
     "whisper_review_pending_sources": 50026,
-    "subtitle_followup_sources": 22047,
-    "subtitle_followup_pending_sources": 22047
+    "subtitle_followup_sources": 22048,
+    "subtitle_followup_pending_sources": 22048
   },
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-08-01T19:31:00Z",
+      "databaseId": 30714930054,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-01T19:29:01Z",
+      "databaseId": 30714853054,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-01T19:27:24Z",
       "databaseId": 30714795018,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-status"
     },
     {
@@ -59,11 +75,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-01T19:18:33Z",
       "databaseId": 30714480767,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
@@ -161,22 +177,6 @@
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "prepare-sources"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-01T18:51:26Z",
-      "databaseId": 30713478710,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-01T18:49:02Z",
-      "databaseId": 30713387796,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
     }
   ],
   "gaps": {
@@ -216589,6 +216589,11 @@
         "episode_id": 7887,
         "display_name": "Marshals: Příběh z Yellowstonu S01E06 - Ze stínů CZ Dabing",
         "video_id": 28108808
+      },
+      {
+        "episode_id": 36219,
+        "display_name": "Parchant s ďáblem v těle S01E02 - 2. epizoda CZ Dabing",
+        "video_id": 28108841
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -432896,6 +432901,11 @@
         "episode_id": 7887,
         "display_name": "Marshals: Příběh z Yellowstonu S01E06 - Ze stínů CZ Dabing",
         "video_id": 28108808
+      },
+      {
+        "episode_id": 36219,
+        "display_name": "Parchant s ďáblem v těle S01E02 - 2. epizoda CZ Dabing",
+        "video_id": 28108841
       }
     ],
     "prepared_not_upload_ready": [
@@ -434057,7 +434067,8 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 39,
+    "ok": 59,
+    "disabled": 115,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
@@ -434067,6 +434078,6 @@
     "whisper_failed": 36
   },
   "subtitle_followup_statuses": {
-    "needs_subtitle_setup_after_prehrajto_processing": 22047
+    "needs_subtitle_setup_after_prehrajto_processing": 22048
   }
 }
