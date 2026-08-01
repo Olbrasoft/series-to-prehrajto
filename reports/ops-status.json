@@ -2,15 +2,15 @@
   "counts": {
     "backlog_episodes": 145074,
     "manifest_upload_ready_episodes": 67,
-    "uploaded_episodes": 48306,
+    "uploaded_episodes": 48310,
     "prepared_source_episodes": 62791,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 107,
-    "language_whisper_attempted_sources": 60,
+    "language_audited_sources": 40,
+    "language_whisper_attempted_sources": 40,
     "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 56845,
     "whisper_review_pending_sources": 49657,
@@ -20,10 +20,26 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-08-01T23:28:48Z",
+      "databaseId": 30723408263,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-01T23:23:31Z",
+      "databaseId": 30723237164,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-01T23:20:36Z",
       "databaseId": 30723144674,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-status"
     },
     {
@@ -43,19 +59,19 @@
       "workflowName": "prepare-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-08-01T23:18:12Z",
       "databaseId": 30723067643,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-01T23:18:04Z",
       "databaseId": 30723063237,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "sync"
     },
     {
@@ -63,15 +79,15 @@
       "createdAt": "2026-08-01T23:17:08Z",
       "databaseId": 30723033830,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "audit-language"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-01T23:16:29Z",
       "databaseId": 30723012231,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -161,22 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-01T23:05:19Z",
-      "databaseId": 30722631044,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-01T23:05:16Z",
-      "databaseId": 30722629785,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
     }
   ],
   "gaps": {
@@ -216959,6 +216959,26 @@
         "episode_id": 108870,
         "display_name": "Roswell: Nové Mexiko S04E12 - Když jde tajfun s vichřicí CZ Titulky",
         "video_id": 28113364
+      },
+      {
+        "episode_id": 32988,
+        "display_name": "Režim S01E03 - Banket kašparů CZ Dabing",
+        "video_id": 28113457
+      },
+      {
+        "episode_id": 67190,
+        "display_name": "Evropské kmeny S01E01 - 1. kapitola CZ Titulky",
+        "video_id": 28113459
+      },
+      {
+        "episode_id": 186954,
+        "display_name": "Austin a Ally S02E12 - Podivíni & povídky CZ Dabing",
+        "video_id": 28113490
+      },
+      {
+        "episode_id": 32991,
+        "display_name": "Režim S01E06 - Zatím se neradujte CZ Dabing",
+        "video_id": 28113452
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -433636,6 +433656,26 @@
         "episode_id": 108870,
         "display_name": "Roswell: Nové Mexiko S04E12 - Když jde tajfun s vichřicí CZ Titulky",
         "video_id": 28113364
+      },
+      {
+        "episode_id": 32988,
+        "display_name": "Režim S01E03 - Banket kašparů CZ Dabing",
+        "video_id": 28113457
+      },
+      {
+        "episode_id": 67190,
+        "display_name": "Evropské kmeny S01E01 - 1. kapitola CZ Titulky",
+        "video_id": 28113459
+      },
+      {
+        "episode_id": 186954,
+        "display_name": "Austin a Ally S02E12 - Podivíni & povídky CZ Dabing",
+        "video_id": 28113490
+      },
+      {
+        "episode_id": 32991,
+        "display_name": "Režim S01E06 - Zatím se neradujte CZ Dabing",
+        "video_id": 28113452
       }
     ],
     "prepared_not_upload_ready": [
@@ -434797,8 +434837,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 47,
-    "ok": 59,
+    "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
