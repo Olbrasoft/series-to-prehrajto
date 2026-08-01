@@ -1,15 +1,15 @@
 {
   "counts": {
     "backlog_episodes": 145166,
-    "manifest_upload_ready_episodes": 20,
-    "uploaded_episodes": 48190,
-    "prepared_source_episodes": 62955,
+    "manifest_upload_ready_episodes": 19,
+    "uploaded_episodes": 48192,
+    "prepared_source_episodes": 62988,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 117,
+    "language_audited_sources": 153,
     "language_whisper_attempted_sources": 60,
     "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 56949,
@@ -20,10 +20,42 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-08-01T16:54:41Z",
+      "databaseId": 30709172999,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-01T16:54:27Z",
+      "databaseId": 30709164231,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-01T16:53:41Z",
+      "databaseId": 30709138071,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-01T16:50:16Z",
+      "databaseId": 30709017932,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-01T16:48:32Z",
       "databaseId": 30708954876,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-status"
     },
     {
@@ -103,7 +135,7 @@
       "createdAt": "2026-08-01T16:29:51Z",
       "databaseId": 30708256285,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "prepare-manifest"
     },
     {
@@ -145,38 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-status"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-01T16:21:13Z",
-      "databaseId": 30707941316,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-01T16:20:07Z",
-      "databaseId": 30707900974,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-01T16:18:23Z",
-      "databaseId": 30707839540,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-01T16:13:46Z",
-      "databaseId": 30707666998,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
     }
   ],
   "gaps": {
@@ -216376,9 +216376,19 @@
         "video_id": 28106653
       },
       {
+        "episode_id": 35697,
+        "display_name": "Příšera ze starého Soulu S01E03 - Signál CZ Dabing",
+        "video_id": 28106673
+      },
+      {
         "episode_id": 35702,
         "display_name": "Příšera ze starého Soulu S01E08 - Probuzení CZ Dabing",
         "video_id": 28106658
+      },
+      {
+        "episode_id": 35699,
+        "display_name": "Příšera ze starého Soulu S01E05 - Beznaděj CZ Dabing",
+        "video_id": 28106679
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -432473,9 +432483,19 @@
         "video_id": 28106653
       },
       {
+        "episode_id": 35697,
+        "display_name": "Příšera ze starého Soulu S01E03 - Signál CZ Dabing",
+        "video_id": 28106673
+      },
+      {
         "episode_id": 35702,
         "display_name": "Příšera ze starého Soulu S01E08 - Probuzení CZ Dabing",
         "video_id": 28106658
+      },
+      {
+        "episode_id": 35699,
+        "display_name": "Příšera ze starého Soulu S01E05 - Beznaděj CZ Dabing",
+        "video_id": 28106679
       }
     ],
     "prepared_not_upload_ready": [
@@ -433638,7 +433658,7 @@
   "language_verdicts": {},
   "language_whisper_statuses": {
     "ok": 59,
-    "disabled": 57,
+    "disabled": 93,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
