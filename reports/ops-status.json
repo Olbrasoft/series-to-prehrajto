@@ -1,17 +1,17 @@
 {
   "counts": {
     "backlog_episodes": 145113,
-    "manifest_upload_ready_episodes": 100,
-    "uploaded_episodes": 48237,
+    "manifest_upload_ready_episodes": 95,
+    "uploaded_episodes": 48239,
     "prepared_source_episodes": 62449,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 410,
-    "language_whisper_attempted_sources": 43,
-    "language_pending_whisper_sources": 2624,
+    "language_audited_sources": 40,
+    "language_whisper_attempted_sources": 40,
+    "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 56896,
     "whisper_review_pending_sources": 49926,
     "subtitle_followup_sources": 22074,
@@ -20,18 +20,50 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-08-01T20:44:54Z",
-      "databaseId": 30717645330,
+      "createdAt": "2026-08-01T20:47:20Z",
+      "databaseId": 30717734844,
       "headBranch": "main",
-      "status": "pending",
-      "workflowName": "audit-language"
+      "status": "in_progress",
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-01T20:46:50Z",
+      "databaseId": 30717716310,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-08-01T20:46:03Z",
+      "databaseId": 30717688871,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-01T20:45:56Z",
+      "databaseId": 30717685062,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-01T20:44:54Z",
+      "databaseId": 30717645330,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-01T20:44:43Z",
       "databaseId": 30717638834,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -63,7 +95,7 @@
       "createdAt": "2026-08-01T20:36:57Z",
       "databaseId": 30717369800,
       "headBranch": "main",
-      "status": "queued",
+      "status": "in_progress",
       "workflowName": "prepare-manifest"
     },
     {
@@ -91,11 +123,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-01T20:31:19Z",
       "databaseId": 30717163960,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -145,38 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-01T20:26:55Z",
-      "databaseId": 30716999558,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-01T20:25:45Z",
-      "databaseId": 30716954217,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-01T20:25:42Z",
-      "databaseId": 30716951855,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-01T20:25:17Z",
-      "databaseId": 30716935682,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
     }
   ],
   "gaps": {
@@ -216611,6 +216611,16 @@
         "video_id": 28109244
       },
       {
+        "episode_id": 90037,
+        "display_name": "Slunečno, místy vraždy S01E12 - 12. epizoda CZ Dabing",
+        "video_id": 28110231
+      },
+      {
+        "episode_id": 37005,
+        "display_name": "Andromeda S02E18 - Cesta do neznáma CZ Dabing",
+        "video_id": 28110255
+      },
+      {
         "episode_id": 36999,
         "display_name": "Andromeda S02E11 - Cena za svobodu CZ Dabing",
         "video_id": 28110185
@@ -432943,6 +432953,16 @@
         "video_id": 28109244
       },
       {
+        "episode_id": 90037,
+        "display_name": "Slunečno, místy vraždy S01E12 - 12. epizoda CZ Dabing",
+        "video_id": 28110231
+      },
+      {
+        "episode_id": 37005,
+        "display_name": "Andromeda S02E18 - Cesta do neznáma CZ Dabing",
+        "video_id": 28110255
+      },
+      {
         "episode_id": 36999,
         "display_name": "Andromeda S02E11 - Cena za svobodu CZ Dabing",
         "video_id": 28110185
@@ -434107,8 +434127,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 367,
-    "ok": 42,
+    "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
