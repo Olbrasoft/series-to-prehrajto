@@ -1,29 +1,61 @@
 {
   "counts": {
     "backlog_episodes": 145276,
-    "manifest_upload_ready_episodes": 25,
-    "uploaded_episodes": 48149,
-    "prepared_source_episodes": 62893,
+    "manifest_upload_ready_episodes": 32,
+    "uploaded_episodes": 48152,
+    "prepared_source_episodes": 62795,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 145,
-    "language_whisper_attempted_sources": 60,
-    "language_pending_whisper_sources": 2604,
+    "language_audited_sources": 79,
+    "language_whisper_attempted_sources": 20,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 56950,
     "whisper_review_pending_sources": 50200,
-    "subtitle_followup_sources": 21985,
-    "subtitle_followup_pending_sources": 21985
+    "subtitle_followup_sources": 21986,
+    "subtitle_followup_pending_sources": 21986
   },
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-08-01T14:20:31Z",
+      "databaseId": 30703570362,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-01T14:18:41Z",
+      "databaseId": 30703507514,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-01T14:18:38Z",
+      "databaseId": 30703505527,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-01T14:18:35Z",
+      "databaseId": 30703504118,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-01T14:16:04Z",
       "databaseId": 30703418851,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -55,7 +87,7 @@
       "createdAt": "2026-08-01T14:03:21Z",
       "databaseId": 30702980046,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "prepare-manifest"
     },
     {
@@ -145,38 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-01T13:48:14Z",
-      "databaseId": 30702463715,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-01T13:47:19Z",
-      "databaseId": 30702433454,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-01T13:46:21Z",
-      "databaseId": 30702402520,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-01T13:43:19Z",
-      "databaseId": 30702298171,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
     }
   ],
   "gaps": {
@@ -216171,9 +216171,24 @@
         "video_id": 28104952
       },
       {
+        "episode_id": 170169,
+        "display_name": "ROJ S01E03 - Chuť CZ Titulky",
+        "video_id": 28104983
+      },
+      {
         "episode_id": 64451,
         "display_name": "Closer: Nové případy S03E10 - Pohřešovaná policistka CZ Dabing",
         "video_id": 28104934
+      },
+      {
+        "episode_id": 170167,
+        "display_name": "ROJ S01E01 - Žihadlo CZ Titulky",
+        "video_id": 28104963
+      },
+      {
+        "episode_id": 170171,
+        "display_name": "ROJ S01E05 - Rozloučení CZ Titulky",
+        "video_id": 28105000
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -432063,9 +432078,24 @@
         "video_id": 28104952
       },
       {
+        "episode_id": 170169,
+        "display_name": "ROJ S01E03 - Chuť CZ Titulky",
+        "video_id": 28104983
+      },
+      {
         "episode_id": 64451,
         "display_name": "Closer: Nové případy S03E10 - Pohřešovaná policistka CZ Dabing",
         "video_id": 28104934
+      },
+      {
+        "episode_id": 170167,
+        "display_name": "ROJ S01E01 - Žihadlo CZ Titulky",
+        "video_id": 28104963
+      },
+      {
+        "episode_id": 170171,
+        "display_name": "ROJ S01E05 - Rozloučení CZ Titulky",
+        "video_id": 28105000
       }
     ],
     "prepared_not_upload_ready": [
@@ -433227,8 +433257,8 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 85,
-    "ok": 59,
+    "disabled": 59,
+    "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
@@ -433238,6 +433268,6 @@
     "whisper_failed": 36
   },
   "subtitle_followup_statuses": {
-    "needs_subtitle_setup_after_prehrajto_processing": 21985
+    "needs_subtitle_setup_after_prehrajto_processing": 21986
   }
 }
