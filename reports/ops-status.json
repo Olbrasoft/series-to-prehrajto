@@ -1,15 +1,15 @@
 {
   "counts": {
     "backlog_episodes": 144562,
-    "manifest_upload_ready_episodes": 101,
-    "uploaded_episodes": 48781,
-    "prepared_source_episodes": 62433,
+    "manifest_upload_ready_episodes": 120,
+    "uploaded_episodes": 48782,
+    "prepared_source_episodes": 62319,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 40,
+    "language_audited_sources": 144,
     "language_whisper_attempted_sources": 40,
     "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 56856,
@@ -20,18 +20,58 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-08-02T21:47:56Z",
-      "databaseId": 30768684233,
+      "createdAt": "2026-08-02T21:53:29Z",
+      "databaseId": 30768882070,
       "headBranch": "main",
       "status": "in_progress",
-      "workflowName": "ops-status"
+      "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-08-02T21:53:26Z",
+      "databaseId": 30768879981,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-08-02T21:51:50Z",
+      "databaseId": 30768824615,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-08-02T21:50:43Z",
+      "databaseId": 30768784459,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-02T21:49:43Z",
+      "databaseId": 30768745995,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-02T21:47:56Z",
+      "databaseId": 30768684233,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-02T21:47:35Z",
       "databaseId": 30768671928,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "update-descriptions"
     },
     {
@@ -51,11 +91,11 @@
       "workflowName": "audit-language"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-02T21:39:22Z",
       "databaseId": 30768373764,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -137,46 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "failure",
-      "createdAt": "2026-08-02T21:22:58Z",
-      "databaseId": 30767757250,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-02T21:22:15Z",
-      "databaseId": 30767729078,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "refresh-backlog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-02T21:21:30Z",
-      "databaseId": 30767699631,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-02T21:21:25Z",
-      "databaseId": 30767696434,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-02T21:19:02Z",
-      "databaseId": 30767605550,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
     }
   ],
   "gaps": {
@@ -219331,6 +219331,11 @@
         "video_id": 28139316
       },
       {
+        "episode_id": 130436,
+        "display_name": "Španělská princezna S01E01 - Nový svět CZ Titulky",
+        "video_id": 28139415
+      },
+      {
         "episode_id": 130445,
         "display_name": "Španělská princezna S02E03 - Zármutek CZ Titulky",
         "video_id": 28139317
@@ -438383,6 +438388,11 @@
         "video_id": 28139316
       },
       {
+        "episode_id": 130436,
+        "display_name": "Španělská princezna S01E01 - Nový svět CZ Titulky",
+        "video_id": 28139415
+      },
+      {
         "episode_id": 130445,
         "display_name": "Španělská princezna S02E03 - Zármutek CZ Titulky",
         "video_id": 28139317
@@ -439547,6 +439557,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
+    "disabled": 104,
     "ok": 39,
     "resolve_failed": 1
   },
