@@ -1,45 +1,77 @@
 {
   "counts": {
     "backlog_episodes": 144960,
-    "manifest_upload_ready_episodes": 66,
-    "uploaded_episodes": 48384,
-    "prepared_source_episodes": 62931,
+    "manifest_upload_ready_episodes": 44,
+    "uploaded_episodes": 48390,
+    "prepared_source_episodes": 62910,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 261,
-    "language_whisper_attempted_sources": 77,
+    "language_audited_sources": 40,
+    "language_whisper_attempted_sources": 40,
     "language_pending_whisper_sources": 2624,
-    "whisper_review_sources": 56850,
-    "whisper_review_pending_sources": 49682,
+    "whisper_review_sources": 56845,
+    "whisper_review_pending_sources": 49657,
     "subtitle_followup_sources": 22118,
     "subtitle_followup_pending_sources": 22118
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-08-02T01:01:45Z",
-      "databaseId": 30726308388,
+      "createdAt": "2026-08-02T01:08:18Z",
+      "databaseId": 30726511571,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-sources"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-02T01:07:51Z",
+      "databaseId": 30726497524,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
-      "createdAt": "2026-08-02T01:01:40Z",
-      "databaseId": 30726305942,
+      "createdAt": "2026-08-02T01:07:45Z",
+      "databaseId": 30726494954,
       "headBranch": "main",
       "status": "pending",
       "workflowName": "prepare-manifest"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
+      "createdAt": "2026-08-02T01:03:01Z",
+      "databaseId": 30726349264,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-02T01:01:45Z",
+      "databaseId": 30726308388,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-08-02T01:01:40Z",
+      "databaseId": 30726305942,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-02T01:01:28Z",
       "databaseId": 30726298857,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -63,15 +95,15 @@
       "createdAt": "2026-08-02T00:55:30Z",
       "databaseId": 30726105494,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "process-whisper-review"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-02T00:55:10Z",
       "databaseId": 30726094398,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "sync"
     },
     {
@@ -83,11 +115,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-02T00:54:59Z",
       "databaseId": 30726087302,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
@@ -145,38 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-status"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-02T00:35:28Z",
-      "databaseId": 30725490170,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-02T00:30:14Z",
-      "databaseId": 30725326114,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-02T00:22:36Z",
-      "databaseId": 30725098302,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-02T00:18:12Z",
-      "databaseId": 30724966131,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
     }
   ],
   "gaps": {
@@ -217349,6 +217349,36 @@
         "episode_id": 85391,
         "display_name": "Lassie S06E29 - 29. epizoda CZ Titulky",
         "video_id": 28115953
+      },
+      {
+        "episode_id": 90916,
+        "display_name": "Frequency S01E01 - 1. epizoda CZ Titulky",
+        "video_id": 28116038
+      },
+      {
+        "episode_id": 96457,
+        "display_name": "Chobotnice S03E04 - 4. epizoda CZ Dabing",
+        "video_id": 28116029
+      },
+      {
+        "episode_id": 84350,
+        "display_name": "Lovci lebek S01E11 - 11. epizoda CZ Dabing",
+        "video_id": 28116026
+      },
+      {
+        "episode_id": 95598,
+        "display_name": "Na útěku S01E10 - 10. epizoda CZ Dabing",
+        "video_id": 28116075
+      },
+      {
+        "episode_id": 90922,
+        "display_name": "Frequency S01E07 - 7. epizoda CZ Titulky",
+        "video_id": 28116111
+      },
+      {
+        "episode_id": 59827,
+        "display_name": "Krajní meze S06E06 - Pozorovatel CZ Dabing",
+        "video_id": 28116024
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -434416,6 +434446,36 @@
         "episode_id": 85391,
         "display_name": "Lassie S06E29 - 29. epizoda CZ Titulky",
         "video_id": 28115953
+      },
+      {
+        "episode_id": 90916,
+        "display_name": "Frequency S01E01 - 1. epizoda CZ Titulky",
+        "video_id": 28116038
+      },
+      {
+        "episode_id": 96457,
+        "display_name": "Chobotnice S03E04 - 4. epizoda CZ Dabing",
+        "video_id": 28116029
+      },
+      {
+        "episode_id": 84350,
+        "display_name": "Lovci lebek S01E11 - 11. epizoda CZ Dabing",
+        "video_id": 28116026
+      },
+      {
+        "episode_id": 95598,
+        "display_name": "Na útěku S01E10 - 10. epizoda CZ Dabing",
+        "video_id": 28116075
+      },
+      {
+        "episode_id": 90922,
+        "display_name": "Frequency S01E07 - 7. epizoda CZ Titulky",
+        "video_id": 28116111
+      },
+      {
+        "episode_id": 59827,
+        "display_name": "Krajní meze S06E06 - Pozorovatel CZ Dabing",
+        "video_id": 28116024
       }
     ],
     "prepared_not_upload_ready": [
@@ -434762,166 +434822,6 @@
         "status": "whisper_failed"
       },
       {
-        "episode_id": 94029,
-        "source_id": -63118563328207880,
-        "series_title": "Big Mouth",
-        "episode_code": "S04E10",
-        "source_title": "Big Mouth - S4E10 Duch, který se vrátil EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 94031,
-        "source_id": -37239365847910405,
-        "series_title": "Big Mouth",
-        "episode_code": "S05E01",
-        "source_title": "Big Mouth - S5E1 Listopad bez leštění EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 94031,
-        "source_id": -53480061822311427,
-        "series_title": "Big Mouth",
-        "episode_code": "S05E01",
-        "source_title": "Big Mouth_S05E01_Listopad bez leštění",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 94032,
-        "source_id": -26306159512586400,
-        "series_title": "Big Mouth",
-        "episode_code": "S05E02",
-        "source_title": "Big Mouth_S05E02_Had Oběžník povstal",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 94032,
-        "source_id": -42068398586434360,
-        "series_title": "Big Mouth",
-        "episode_code": "S05E02",
-        "source_title": "Big Mouth - S5E2 Had Oběžník povstal EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 94033,
-        "source_id": -18490618430813605,
-        "series_title": "Big Mouth",
-        "episode_code": "S05E03",
-        "source_title": "Big Mouth - S5E3 Lásenky EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 94034,
-        "source_id": -18312247366751826,
-        "series_title": "Big Mouth",
-        "episode_code": "S05E04",
-        "source_title": "Big Mouth_S05E04_Zelenooký netvor",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 94034,
-        "source_id": -53130991310191087,
-        "series_title": "Big Mouth",
-        "episode_code": "S05E04",
-        "source_title": "Big Mouth - S5E4 Zelenooký netvor EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 94035,
-        "source_id": -64190972762607042,
-        "series_title": "Big Mouth",
-        "episode_code": "S05E05",
-        "source_title": "Big Mouth_S05E05_Díkůvzdání",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 94035,
-        "source_id": -39391877057478602,
-        "series_title": "Big Mouth",
-        "episode_code": "S05E05",
-        "source_title": "Big Mouth - S5E5 Díkůvzdání EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 94036,
-        "source_id": -64858262822510989,
-        "series_title": "Big Mouth",
-        "episode_code": "S05E06",
-        "source_title": "Big Mouth - S5E6 Nejlepší kámošky jsou nejlepší milenky EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 94037,
-        "source_id": -1265512475162517,
-        "series_title": "Big Mouth",
-        "episode_code": "S05E07",
-        "source_title": "Big Mouth_S05E07_Já tě tak nenávidím_",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 94037,
-        "source_id": -28073701908066164,
-        "series_title": "Big Mouth",
-        "episode_code": "S05E07",
-        "source_title": "Big Mouth - S5E7 Já tě tak nenávidím! EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 94038,
-        "source_id": -18097397069577585,
-        "series_title": "Big Mouth",
-        "episode_code": "S05E08",
-        "source_title": "Big Mouth_S05E08_Pořádné Big Mouth Vánoce",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 94038,
-        "source_id": -38825164713336330,
-        "series_title": "Big Mouth",
-        "episode_code": "S05E08",
-        "source_title": "Big Mouth - S5E8 Pořádné Big Mouth Vánoce EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 94039,
-        "source_id": -4059310321713912,
-        "series_title": "Big Mouth",
-        "episode_code": "S05E09",
-        "source_title": "Big Mouth_S05E09_Lyžovačka",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 94039,
-        "source_id": -46606710915035762,
-        "series_title": "Big Mouth",
-        "episode_code": "S05E09",
-        "source_title": "Big Mouth - S5E9 Lyžovačka EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 94040,
-        "source_id": -9661308874890007,
-        "series_title": "Big Mouth",
-        "episode_code": "S05E10",
-        "source_title": "Big Mouth_S05E10_Silvestr obnovených slibů",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 94040,
-        "source_id": -67616321818861779,
-        "series_title": "Big Mouth",
-        "episode_code": "S05E10",
-        "source_title": "Big Mouth - S5E10 Silvestr obnovených slibů EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 94041,
-        "source_id": -59899733798064779,
-        "series_title": "Big Mouth",
-        "episode_code": "S06E01",
-        "source_title": "Big Mouth - S6E1 Šmajchlbarák EN",
-        "status": "needs_whisper"
-      },
-      {
         "episode_id": 94042,
         "source_id": -5572613996006693,
         "series_title": "Big Mouth",
@@ -435119,6 +435019,166 @@
         "series_title": "Big Mouth",
         "episode_code": "S08E02",
         "source_title": "Big Mouth - S8E2 Party, pitomci a Sonicovo péro EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 94063,
+        "source_id": -56195157514723855,
+        "series_title": "Big Mouth",
+        "episode_code": "S08E03",
+        "source_title": "Big Mouth - S8E3 Proč procházíme pubertou? EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 94063,
+        "source_id": -32631795996234629,
+        "series_title": "Big Mouth",
+        "episode_code": "S08E03",
+        "source_title": "Big.Mouth.S08E03.720p.HEVC.x265-MeGusta",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 94064,
+        "source_id": -17125776954593598,
+        "series_title": "Big Mouth",
+        "episode_code": "S08E04",
+        "source_title": "Big.Mouth.S08E04.1080p.HEVC.x265-MeGusta",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 94064,
+        "source_id": -30032843363761926,
+        "series_title": "Big Mouth",
+        "episode_code": "S08E04",
+        "source_title": "Big Mouth - S8E4 Za volantem Lola Skumpyová EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 94065,
+        "source_id": -39848373491319458,
+        "series_title": "Big Mouth",
+        "episode_code": "S08E05",
+        "source_title": "Big Mouth - S8E5 Nehulím už trochu moc? EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 94065,
+        "source_id": -47969582276040,
+        "series_title": "Big Mouth",
+        "episode_code": "S08E05",
+        "source_title": "Big.Mouth.S08E05.720p.HEVC.x265-MeGusta",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 94066,
+        "source_id": -63846517605957778,
+        "series_title": "Big Mouth",
+        "episode_code": "S08E06",
+        "source_title": "Big.Mouth.S08E06.720p.HEVC.x265-MeGusta",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 94067,
+        "source_id": -34140996227450635,
+        "series_title": "Big Mouth",
+        "episode_code": "S08E07",
+        "source_title": "Big.Mouth.S08E07.1080p.HEVC.x265-MeGusta",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 94067,
+        "source_id": -35071620910058054,
+        "series_title": "Big Mouth",
+        "episode_code": "S08E07",
+        "source_title": "Big Mouth - S8E7 Trochu soucitu, sakra! EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 94068,
+        "source_id": -47427525280266161,
+        "series_title": "Big Mouth",
+        "episode_code": "S08E08",
+        "source_title": "Big Mouth - S8E8 Nadržený řečičky, strč ho tam EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 94068,
+        "source_id": -28642954461708276,
+        "series_title": "Big Mouth",
+        "episode_code": "S08E08",
+        "source_title": "Big.Mouth.S08E08.720p.HEVC.x265-MeGusta",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 94069,
+        "source_id": -43570607158947437,
+        "series_title": "Big Mouth",
+        "episode_code": "S08E09",
+        "source_title": "Big Mouth - S8E9 Všechno, co jsme vám zapomněli říct o sexu EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 94069,
+        "source_id": -70310102150196447,
+        "series_title": "Big Mouth",
+        "episode_code": "S08E09",
+        "source_title": "Big.Mouth.S08E09.720p.HEVC.x265-MeGusta",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 94070,
+        "source_id": -36257205047025126,
+        "series_title": "Big Mouth",
+        "episode_code": "S08E10",
+        "source_title": "Big Mouth - S8E10 Do neznáma EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 94070,
+        "source_id": -4675151887474522,
+        "series_title": "Big Mouth",
+        "episode_code": "S08E10",
+        "source_title": "Big.Mouth.S08E10.720p.HEVC.x265-MeGusta",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 80465,
+        "source_id": -29732273236824026,
+        "series_title": "Bleach",
+        "episode_code": "S02E01",
+        "source_title": "[Judas] Bleach - S02E01",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 80467,
+        "source_id": -10369657846266612,
+        "series_title": "Bleach",
+        "episode_code": "S02E02",
+        "source_title": "[Judas] Bleach - S02E02",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 80464,
+        "source_id": -44789061933976593,
+        "series_title": "Bleach",
+        "episode_code": "S02E03",
+        "source_title": "[Judas] Bleach - S02E03",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 80466,
+        "source_id": -57689307160717839,
+        "series_title": "Bleach",
+        "episode_code": "S02E04",
+        "source_title": "[Judas] Bleach - S02E04",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 80468,
+        "source_id": -33053864552290927,
+        "series_title": "Bleach",
+        "episode_code": "S02E05",
+        "source_title": "[Judas] Bleach - S02E05",
         "status": "needs_whisper"
       }
     ],
@@ -435577,15 +435637,14 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 184,
-    "ok": 70,
-    "resolve_failed": 7
+    "ok": 39,
+    "resolve_failed": 1
   },
   "whisper_review_statuses": {
-    "whisper_non_cz_needs_subtitles": 4966,
+    "whisper_non_cz_needs_subtitles": 4986,
     "whisper_confirmed_cz": 2202,
     "whisper_failed": 36,
-    "needs_whisper": 49646
+    "needs_whisper": 49621
   },
   "subtitle_followup_statuses": {
     "needs_subtitle_setup_after_prehrajto_processing": 22118
