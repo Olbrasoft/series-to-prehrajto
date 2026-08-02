@@ -1,17 +1,17 @@
 {
   "counts": {
     "backlog_episodes": 144633,
-    "manifest_upload_ready_episodes": 153,
-    "uploaded_episodes": 48735,
-    "prepared_source_episodes": 62204,
+    "manifest_upload_ready_episodes": 142,
+    "uploaded_episodes": 48743,
+    "prepared_source_episodes": 62216,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 20,
-    "language_whisper_attempted_sources": 20,
-    "language_pending_whisper_sources": 2624,
+    "language_audited_sources": 40,
+    "language_whisper_attempted_sources": 40,
+    "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 56879,
     "whisper_review_pending_sources": 49871,
     "subtitle_followup_sources": 22480,
@@ -20,10 +20,58 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-08-02T16:47:05Z",
+      "databaseId": 30757413062,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-02T16:46:27Z",
+      "databaseId": 30757388240,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-02T16:46:23Z",
+      "databaseId": 30757385518,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-02T16:45:53Z",
+      "databaseId": 30757366897,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-08-02T16:37:57Z",
+      "databaseId": 30757067692,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-02T16:33:19Z",
+      "databaseId": 30756895927,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-02T16:31:56Z",
       "databaseId": 30756843972,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -39,7 +87,7 @@
       "createdAt": "2026-08-02T16:31:50Z",
       "databaseId": 30756839595,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "process-whisper-review"
     },
     {
@@ -59,11 +107,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-02T16:30:58Z",
       "databaseId": 30756806573,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -83,11 +131,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-02T16:26:04Z",
       "databaseId": 30756616242,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
@@ -129,54 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-status"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-02T16:21:30Z",
-      "databaseId": 30756445351,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-02T16:20:11Z",
-      "databaseId": 30756395232,
-      "headBranch": "main",
-      "status": "pending",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-02T16:18:37Z",
-      "databaseId": 30756335840,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-02T16:12:02Z",
-      "databaseId": 30756088173,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-02T16:10:48Z",
-      "databaseId": 30756041428,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "failure",
-      "createdAt": "2026-08-02T16:10:45Z",
-      "databaseId": 30756038937,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
     }
   ],
   "gaps": {
@@ -219101,9 +219101,49 @@
         "video_id": 28135083
       },
       {
+        "episode_id": 102620,
+        "display_name": "Dirty Sexy Money S01E04 - 4. epizoda CZ Titulky",
+        "video_id": 28135258
+      },
+      {
+        "episode_id": 26509,
+        "display_name": "Právo podle Lidie Poët S02E05 - 5. epizoda CZ Titulky",
+        "video_id": 28135201
+      },
+      {
+        "episode_id": 201817,
+        "display_name": "jeen-yuhs: Trilogie o Kanye Westovi S01E02 - dějství ii: SMYSL CZ Titulky",
+        "video_id": 28135244
+      },
+      {
+        "episode_id": 113317,
+        "display_name": "Tell Me Your Secrets S01E03 - Someone Worse Than Me CZ Titulky",
+        "video_id": 28135276
+      },
+      {
+        "episode_id": 128674,
+        "display_name": "Stíny S02E05 - 5. epizoda CZ Dabing",
+        "video_id": 28135253
+      },
+      {
+        "episode_id": 128682,
+        "display_name": "Stíny S03E07 - 7. epizoda CZ Titulky",
+        "video_id": 28135288
+      },
+      {
         "episode_id": 26459,
         "display_name": "Santa Clausovi S02E06 - KAPITOLA DVANÁCTÁ: Wanga Banga Langa! CZ Dabing",
         "video_id": 28135124
+      },
+      {
+        "episode_id": 128663,
+        "display_name": "Stíny S01E01 - 1. epizoda CZ Dabing",
+        "video_id": 28135174
+      },
+      {
+        "episode_id": 128671,
+        "display_name": "Stíny S02E02 - 2. epizoda CZ Dabing",
+        "video_id": 28135270
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -437923,9 +437963,49 @@
         "video_id": 28135083
       },
       {
+        "episode_id": 102620,
+        "display_name": "Dirty Sexy Money S01E04 - 4. epizoda CZ Titulky",
+        "video_id": 28135258
+      },
+      {
+        "episode_id": 26509,
+        "display_name": "Právo podle Lidie Poët S02E05 - 5. epizoda CZ Titulky",
+        "video_id": 28135201
+      },
+      {
+        "episode_id": 201817,
+        "display_name": "jeen-yuhs: Trilogie o Kanye Westovi S01E02 - dějství ii: SMYSL CZ Titulky",
+        "video_id": 28135244
+      },
+      {
+        "episode_id": 113317,
+        "display_name": "Tell Me Your Secrets S01E03 - Someone Worse Than Me CZ Titulky",
+        "video_id": 28135276
+      },
+      {
+        "episode_id": 128674,
+        "display_name": "Stíny S02E05 - 5. epizoda CZ Dabing",
+        "video_id": 28135253
+      },
+      {
+        "episode_id": 128682,
+        "display_name": "Stíny S03E07 - 7. epizoda CZ Titulky",
+        "video_id": 28135288
+      },
+      {
         "episode_id": 26459,
         "display_name": "Santa Clausovi S02E06 - KAPITOLA DVANÁCTÁ: Wanga Banga Langa! CZ Dabing",
         "video_id": 28135124
+      },
+      {
+        "episode_id": 128663,
+        "display_name": "Stíny S01E01 - 1. epizoda CZ Dabing",
+        "video_id": 28135174
+      },
+      {
+        "episode_id": 128671,
+        "display_name": "Stíny S02E02 - 2. epizoda CZ Dabing",
+        "video_id": 28135270
       }
     ],
     "prepared_not_upload_ready": [
@@ -439087,7 +439167,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 19,
+    "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
