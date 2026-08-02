@@ -1,17 +1,17 @@
 {
   "counts": {
     "backlog_episodes": 144798,
-    "manifest_upload_ready_episodes": 55,
-    "uploaded_episodes": 48581,
+    "manifest_upload_ready_episodes": 54,
+    "uploaded_episodes": 48583,
     "prepared_source_episodes": 63015,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 238,
-    "language_whisper_attempted_sources": 79,
-    "language_pending_whisper_sources": 2624,
+    "language_audited_sources": 40,
+    "language_whisper_attempted_sources": 40,
+    "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 56885,
     "whisper_review_pending_sources": 49877,
     "subtitle_followup_sources": 22304,
@@ -20,10 +20,42 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-08-02T12:22:31Z",
+      "databaseId": 30747686781,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-02T12:22:06Z",
+      "databaseId": 30747673383,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-02T12:19:22Z",
+      "databaseId": 30747580309,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-02T12:17:49Z",
+      "databaseId": 30747530021,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-02T12:16:33Z",
       "databaseId": 30747488154,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -75,11 +107,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-08-02T12:09:14Z",
       "databaseId": 30747224596,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "sync"
     },
     {
@@ -99,11 +131,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-02T12:01:44Z",
       "databaseId": 30746961576,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -145,38 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-status"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-02T11:49:01Z",
-      "databaseId": 30746513110,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-02T11:48:47Z",
-      "databaseId": 30746503801,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-02T11:47:52Z",
-      "databaseId": 30746475559,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-02T11:43:09Z",
-      "databaseId": 30746314765,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
     }
   ],
   "gaps": {
@@ -218306,9 +218306,19 @@
         "video_id": 28129973
       },
       {
+        "episode_id": 148697,
+        "display_name": "Tunel S01E10 - 10. epizoda CZ Titulky",
+        "video_id": 28130128
+      },
+      {
         "episode_id": 148690,
         "display_name": "Tunel S01E09 - 9. epizoda CZ Titulky",
         "video_id": 28129924
+      },
+      {
+        "episode_id": 148694,
+        "display_name": "Tunel S01E15 - 15. epizoda CZ Titulky",
+        "video_id": 28130096
       },
       {
         "episode_id": 148683,
@@ -436358,9 +436368,19 @@
         "video_id": 28129973
       },
       {
+        "episode_id": 148697,
+        "display_name": "Tunel S01E10 - 10. epizoda CZ Titulky",
+        "video_id": 28130128
+      },
+      {
         "episode_id": 148690,
         "display_name": "Tunel S01E09 - 9. epizoda CZ Titulky",
         "video_id": 28129924
+      },
+      {
+        "episode_id": 148694,
+        "display_name": "Tunel S01E15 - 15. epizoda CZ Titulky",
+        "video_id": 28130096
       },
       {
         "episode_id": 148683,
@@ -437547,8 +437567,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 159,
-    "ok": 78,
+    "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
