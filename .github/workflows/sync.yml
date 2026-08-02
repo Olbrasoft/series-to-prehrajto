@@ -6,7 +6,7 @@ on:
       batch_size:
         description: "Number of episodes to upload in one run"
         required: false
-        default: "30"
+        default: "8"
       num_shards:
         description: "Total parallel shards"
         required: false
@@ -18,11 +18,11 @@ on:
       download_timeout_seconds:
         description: "Maximum seconds spent downloading one source"
         required: false
-        default: "360"
+        default: "240"
       max_episode_attempts:
         description: "Maximum episodes inspected while filling one shard batch"
         required: false
-        default: "60"
+        default: "16"
       continue_uploads:
         description: "Queue another upload batch after this one when prepared episodes remain"
         required: false
@@ -103,7 +103,7 @@ jobs:
           WHISPER_LANGUAGE_CHECK: ${{ vars.WHISPER_LANGUAGE_CHECK || '0' }}
           REQUIRE_PREPARED_DESCRIPTIONS: "0"
           REQUIRE_PREPARED_SOURCES: "1"
-          SYNC_DOWNLOAD_TIMEOUT_SECONDS: ${{ inputs.download_timeout_seconds || '360' }}
+          SYNC_DOWNLOAD_TIMEOUT_SECONDS: ${{ inputs.download_timeout_seconds || '240' }}
           SYNC_DOWNLOAD_MIN_SPEED_BYTES: "250000"
           SYNC_DOWNLOAD_SPEED_TIME_SECONDS: "90"
           SYNC_TRANSIENT_FAILURE_COOLDOWN_SECONDS: "21600"
@@ -123,8 +123,8 @@ jobs:
               ;;
           esac
           export PREHRAJTO_ACCOUNT="$UPLOAD_ACCOUNT"
-          ARGS=("--count" "${{ inputs.batch_size || '20' }}")
-          ARGS+=("--max-episode-attempts" "${{ inputs.max_episode_attempts || '60' }}")
+          ARGS=("--count" "${{ inputs.batch_size || '8' }}")
+          ARGS+=("--max-episode-attempts" "${{ inputs.max_episode_attempts || '16' }}")
           if [ "${{ inputs.allow_subtitles || 'true' }}" = "true" ]; then
             ARGS+=("--allow-subtitles")
           fi
@@ -211,10 +211,11 @@ jobs:
             if [ "$active_sync_count" -le 1 ]; then
               echo "upload-ready episodes remain and no other sync is waiting; queueing next upload batch"
               gh workflow run sync.yml \
-                -f batch_size="${{ inputs.batch_size || '20' }}" \
+                -f batch_size="${{ inputs.batch_size || '8' }}" \
                 -f num_shards="${{ inputs.num_shards || '4' }}" \
                 -f allow_subtitles="${{ inputs.allow_subtitles || 'true' }}" \
-                -f download_timeout_seconds="${{ inputs.download_timeout_seconds || '360' }}" \
+                -f download_timeout_seconds="${{ inputs.download_timeout_seconds || '240' }}" \
+                -f max_episode_attempts="${{ inputs.max_episode_attempts || '16' }}" \
                 -f continue_uploads="true"
             else
               echo "upload-ready episodes remain, but another sync is already active or queued"

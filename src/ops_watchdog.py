@@ -262,9 +262,11 @@ def main() -> int:
         queue_workflow(
             "sync",
             {
-                "batch_size": "20",
+                "batch_size": "8",
                 "num_shards": "4",
                 "allow_subtitles": "true",
+                "download_timeout_seconds": "240",
+                "max_episode_attempts": "16",
                 "continue_uploads": "true",
             },
             active=active,
