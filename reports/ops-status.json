@@ -1,17 +1,17 @@
 {
   "counts": {
     "backlog_episodes": 144751,
-    "manifest_upload_ready_episodes": 54,
-    "uploaded_episodes": 48602,
-    "prepared_source_episodes": 62891,
+    "manifest_upload_ready_episodes": 53,
+    "uploaded_episodes": 48613,
+    "prepared_source_episodes": 62825,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 112,
-    "language_whisper_attempted_sources": 73,
-    "language_pending_whisper_sources": 2604,
+    "language_audited_sources": 80,
+    "language_whisper_attempted_sources": 40,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 56885,
     "whisper_review_pending_sources": 49877,
     "subtitle_followup_sources": 22317,
@@ -20,18 +20,74 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-08-02T12:54:58Z",
-      "databaseId": 30748823294,
+      "createdAt": "2026-08-02T13:08:47Z",
+      "databaseId": 30749306371,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-02T13:08:27Z",
+      "databaseId": 30749294044,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-02T13:08:10Z",
+      "databaseId": 30749284721,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-08-02T13:08:06Z",
+      "databaseId": 30749282575,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-08-02T13:02:40Z",
+      "databaseId": 30749094464,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-02T12:56:43Z",
+      "databaseId": 30748883830,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-sources"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-02T12:56:01Z",
+      "databaseId": 30748859508,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-02T12:54:58Z",
+      "databaseId": 30748823294,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "cancelled",
       "createdAt": "2026-08-02T12:54:54Z",
       "databaseId": 30748820597,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -91,11 +147,11 @@
       "workflowName": "prepare-manifest"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-02T12:46:41Z",
       "databaseId": 30748536646,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -121,62 +177,6 @@
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "sync"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-02T12:35:18Z",
-      "databaseId": 30748137824,
-      "headBranch": "main",
-      "status": "pending",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-02T12:34:42Z",
-      "databaseId": 30748114598,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-02T12:34:40Z",
-      "databaseId": 30748113275,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-02T12:34:38Z",
-      "databaseId": 30748112366,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-02T12:33:22Z",
-      "databaseId": 30748067146,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "failure",
-      "createdAt": "2026-08-02T12:33:19Z",
-      "databaseId": 30748065250,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-02T12:32:50Z",
-      "databaseId": 30748048464,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
     }
   ],
   "gaps": {
@@ -218439,6 +218439,61 @@
         "episode_id": 143119,
         "display_name": "LOVE O2O S01E25 - 25. epizoda CZ Titulky",
         "video_id": 28130495
+      },
+      {
+        "episode_id": 160281,
+        "display_name": "Now Apocalypse S01E06 - 6. epizoda CZ Titulky",
+        "video_id": 28130872
+      },
+      {
+        "episode_id": 110977,
+        "display_name": "U Raven doma S02E04 - Přiznej se CZ Dabing",
+        "video_id": 28130916
+      },
+      {
+        "episode_id": 110981,
+        "display_name": "U Raven doma S02E10 - Až po kola CZ Dabing",
+        "video_id": 28130963
+      },
+      {
+        "episode_id": 110945,
+        "display_name": "U Raven doma S03E25 - V botě CZ Titulky",
+        "video_id": 28131009
+      },
+      {
+        "episode_id": 64118,
+        "display_name": "Tajnosti a lži S01E08 - 8. epizoda CZ Titulky",
+        "video_id": 28130821
+      },
+      {
+        "episode_id": 110982,
+        "display_name": "U Raven doma S02E11 - Nejzajímavější máma na světě CZ Dabing",
+        "video_id": 28131017
+      },
+      {
+        "episode_id": 160279,
+        "display_name": "Now Apocalypse S01E10 - 10. epizoda CZ Titulky",
+        "video_id": 28130831
+      },
+      {
+        "episode_id": 110979,
+        "display_name": "U Raven doma S02E07 - V kapse CZ Dabing",
+        "video_id": 28130871
+      },
+      {
+        "episode_id": 110983,
+        "display_name": "U Raven doma S02E12 - Sleevemore 1. část: Zamrzlý CZ Dabing",
+        "video_id": 28130908
+      },
+      {
+        "episode_id": 110987,
+        "display_name": "U Raven doma S02E17 - Říkejte mi Vic CZ Dabing",
+        "video_id": 28130952
+      },
+      {
+        "episode_id": 110943,
+        "display_name": "U Raven doma S03E22 - Úder CZ Titulky",
+        "video_id": 28131019
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -436596,6 +436651,61 @@
         "episode_id": 143119,
         "display_name": "LOVE O2O S01E25 - 25. epizoda CZ Titulky",
         "video_id": 28130495
+      },
+      {
+        "episode_id": 160281,
+        "display_name": "Now Apocalypse S01E06 - 6. epizoda CZ Titulky",
+        "video_id": 28130872
+      },
+      {
+        "episode_id": 110977,
+        "display_name": "U Raven doma S02E04 - Přiznej se CZ Dabing",
+        "video_id": 28130916
+      },
+      {
+        "episode_id": 110981,
+        "display_name": "U Raven doma S02E10 - Až po kola CZ Dabing",
+        "video_id": 28130963
+      },
+      {
+        "episode_id": 110945,
+        "display_name": "U Raven doma S03E25 - V botě CZ Titulky",
+        "video_id": 28131009
+      },
+      {
+        "episode_id": 64118,
+        "display_name": "Tajnosti a lži S01E08 - 8. epizoda CZ Titulky",
+        "video_id": 28130821
+      },
+      {
+        "episode_id": 110982,
+        "display_name": "U Raven doma S02E11 - Nejzajímavější máma na světě CZ Dabing",
+        "video_id": 28131017
+      },
+      {
+        "episode_id": 160279,
+        "display_name": "Now Apocalypse S01E10 - 10. epizoda CZ Titulky",
+        "video_id": 28130831
+      },
+      {
+        "episode_id": 110979,
+        "display_name": "U Raven doma S02E07 - V kapse CZ Dabing",
+        "video_id": 28130871
+      },
+      {
+        "episode_id": 110983,
+        "display_name": "U Raven doma S02E12 - Sleevemore 1. část: Zamrzlý CZ Dabing",
+        "video_id": 28130908
+      },
+      {
+        "episode_id": 110987,
+        "display_name": "U Raven doma S02E17 - Říkejte mi Vic CZ Dabing",
+        "video_id": 28130952
+      },
+      {
+        "episode_id": 110943,
+        "display_name": "U Raven doma S03E22 - Úder CZ Titulky",
+        "video_id": 28131019
       }
     ],
     "prepared_not_upload_ready": [
@@ -437757,8 +437867,8 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 72,
-    "disabled": 39,
+    "ok": 39,
+    "disabled": 40,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
