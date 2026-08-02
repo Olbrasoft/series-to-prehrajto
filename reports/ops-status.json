@@ -1,37 +1,85 @@
 {
   "counts": {
     "backlog_episodes": 144633,
-    "manifest_upload_ready_episodes": 115,
-    "uploaded_episodes": 48765,
-    "prepared_source_episodes": 62294,
+    "manifest_upload_ready_episodes": 107,
+    "uploaded_episodes": 48771,
+    "prepared_source_episodes": 62346,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 40,
-    "language_whisper_attempted_sources": 40,
-    "language_pending_whisper_sources": 2604,
+    "language_audited_sources": 49,
+    "language_whisper_attempted_sources": 38,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 56879,
     "whisper_review_pending_sources": 49871,
-    "subtitle_followup_sources": 22480,
-    "subtitle_followup_pending_sources": 22480
+    "subtitle_followup_sources": 22496,
+    "subtitle_followup_pending_sources": 22496
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-08-02T17:49:10Z",
-      "databaseId": 30759715771,
+      "createdAt": "2026-08-02T18:00:57Z",
+      "databaseId": 30760150199,
       "headBranch": "main",
       "status": "in_progress",
-      "workflowName": "ops-status"
+      "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-08-02T18:00:48Z",
+      "databaseId": 30760144138,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-02T17:59:23Z",
+      "databaseId": 30760086768,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-08-02T17:57:19Z",
+      "databaseId": 30760012397,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-02T17:56:09Z",
+      "databaseId": 30759970545,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-sources"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-02T17:50:56Z",
+      "databaseId": 30759781984,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-02T17:49:10Z",
+      "databaseId": 30759715771,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-02T17:48:39Z",
       "databaseId": 30759697165,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "update-descriptions"
     },
     {
@@ -39,7 +87,7 @@
       "createdAt": "2026-08-02T17:47:58Z",
       "databaseId": 30759672974,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "prepare-descriptions"
     },
     {
@@ -51,11 +99,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-02T17:47:08Z",
       "databaseId": 30759644344,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -67,11 +115,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "failure",
       "createdAt": "2026-08-02T17:42:01Z",
       "databaseId": 30759455695,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -129,54 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-02T17:32:46Z",
-      "databaseId": 30759108247,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-02T17:31:07Z",
-      "databaseId": 30759048295,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-02T17:25:54Z",
-      "databaseId": 30758855677,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-02T17:24:44Z",
-      "databaseId": 30758812863,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-02T17:24:41Z",
-      "databaseId": 30758811212,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-02T17:24:25Z",
-      "databaseId": 30758801279,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
     }
   ],
   "gaps": {
@@ -219231,9 +219231,24 @@
         "video_id": 28135955
       },
       {
+        "episode_id": 65716,
+        "display_name": "Posedlý pomstou S02E08 - Strelochnik CZ Titulky",
+        "video_id": 28136135
+      },
+      {
         "episode_id": 65705,
         "display_name": "Posedlý pomstou S01E09 - Pryč CZ Titulky",
         "video_id": 28136001
+      },
+      {
+        "episode_id": 65721,
+        "display_name": "Posedlý pomstou S02E15 - Render CZ Titulky",
+        "video_id": 28136103
+      },
+      {
+        "episode_id": 65717,
+        "display_name": "Posedlý pomstou S02E16 - Místokrál CZ Titulky",
+        "video_id": 28136140
       },
       {
         "episode_id": 65706,
@@ -219246,6 +219261,16 @@
         "video_id": 28135963
       },
       {
+        "episode_id": 65718,
+        "display_name": "Posedlý pomstou S02E13 - ACGT CZ Titulky",
+        "video_id": 28136056
+      },
+      {
+        "episode_id": 92702,
+        "display_name": "Třetí hlídka S03E12 - 12. epizoda CZ Dabing",
+        "video_id": 28136094
+      },
+      {
         "episode_id": 152583,
         "display_name": "Hodinka S01E06 - 6. epizoda CZ Dabing",
         "video_id": 28135962
@@ -219254,6 +219279,11 @@
         "episode_id": 152587,
         "display_name": "Hodinka S02E04 - 4. epizoda CZ Dabing",
         "video_id": 28136020
+      },
+      {
+        "episode_id": 148075,
+        "display_name": "Starodávné apokalypsy S01E04 - Duchové ze zaplaveného světa CZ Titulky",
+        "video_id": 28136090
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -438203,9 +438233,24 @@
         "video_id": 28135955
       },
       {
+        "episode_id": 65716,
+        "display_name": "Posedlý pomstou S02E08 - Strelochnik CZ Titulky",
+        "video_id": 28136135
+      },
+      {
         "episode_id": 65705,
         "display_name": "Posedlý pomstou S01E09 - Pryč CZ Titulky",
         "video_id": 28136001
+      },
+      {
+        "episode_id": 65721,
+        "display_name": "Posedlý pomstou S02E15 - Render CZ Titulky",
+        "video_id": 28136103
+      },
+      {
+        "episode_id": 65717,
+        "display_name": "Posedlý pomstou S02E16 - Místokrál CZ Titulky",
+        "video_id": 28136140
       },
       {
         "episode_id": 65706,
@@ -438218,6 +438263,16 @@
         "video_id": 28135963
       },
       {
+        "episode_id": 65718,
+        "display_name": "Posedlý pomstou S02E13 - ACGT CZ Titulky",
+        "video_id": 28136056
+      },
+      {
+        "episode_id": 92702,
+        "display_name": "Třetí hlídka S03E12 - 12. epizoda CZ Dabing",
+        "video_id": 28136094
+      },
+      {
         "episode_id": 152583,
         "display_name": "Hodinka S01E06 - 6. epizoda CZ Dabing",
         "video_id": 28135962
@@ -438226,6 +438281,11 @@
         "episode_id": 152587,
         "display_name": "Hodinka S02E04 - 4. epizoda CZ Dabing",
         "video_id": 28136020
+      },
+      {
+        "episode_id": 148075,
+        "display_name": "Starodávné apokalypsy S01E04 - Duchové ze zaplaveného světa CZ Titulky",
+        "video_id": 28136090
       }
     ],
     "prepared_not_upload_ready": [
@@ -439387,7 +439447,8 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 39,
+    "ok": 37,
+    "disabled": 11,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
@@ -439397,6 +439458,6 @@
     "needs_whisper": 49835
   },
   "subtitle_followup_statuses": {
-    "needs_subtitle_setup_after_prehrajto_processing": 22480
+    "needs_subtitle_setup_after_prehrajto_processing": 22496
   }
 }
