@@ -1,17 +1,17 @@
 {
   "counts": {
     "backlog_episodes": 144633,
-    "manifest_upload_ready_episodes": 106,
-    "uploaded_episodes": 48772,
-    "prepared_source_episodes": 62339,
+    "manifest_upload_ready_episodes": 108,
+    "uploaded_episodes": 48773,
+    "prepared_source_episodes": 62311,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 74,
-    "language_whisper_attempted_sources": 58,
-    "language_pending_whisper_sources": 2624,
+    "language_audited_sources": 40,
+    "language_whisper_attempted_sources": 40,
+    "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 56879,
     "whisper_review_pending_sources": 49871,
     "subtitle_followup_sources": 22496,
@@ -20,18 +20,66 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-08-02T18:14:08Z",
-      "databaseId": 30760659145,
+      "createdAt": "2026-08-02T18:22:35Z",
+      "databaseId": 30760972220,
       "headBranch": "main",
       "status": "in_progress",
-      "workflowName": "ops-watchdog"
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-02T18:21:14Z",
+      "databaseId": 30760921753,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-08-02T18:19:47Z",
+      "databaseId": 30760866054,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-02T18:17:24Z",
+      "databaseId": 30760780287,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-02T18:15:21Z",
+      "databaseId": 30760705119,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-02T18:15:03Z",
+      "databaseId": 30760691422,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-02T18:14:08Z",
+      "databaseId": 30760659145,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "cancelled",
       "createdAt": "2026-08-02T18:14:04Z",
       "databaseId": 30760656593,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -67,11 +115,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-02T18:02:13Z",
       "databaseId": 30760199596,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -91,11 +139,11 @@
       "workflowName": "prepare-manifest"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-02T17:59:23Z",
       "databaseId": 30760086768,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -129,54 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-status"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-02T17:48:39Z",
-      "databaseId": 30759697165,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-02T17:47:58Z",
-      "databaseId": 30759672974,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-02T17:47:46Z",
-      "databaseId": 30759666264,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-02T17:47:08Z",
-      "databaseId": 30759644344,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-02T17:46:23Z",
-      "databaseId": 30759618055,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "failure",
-      "createdAt": "2026-08-02T17:42:01Z",
-      "databaseId": 30759455695,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
     }
   ],
   "gaps": {
@@ -219289,6 +219289,11 @@
         "episode_id": 65707,
         "display_name": "Posedlý pomstou S02E01 - S.E.R.E CZ Titulky",
         "video_id": 28136257
+      },
+      {
+        "episode_id": 62215,
+        "display_name": "Clarice S01E06 - Jaké to je, být tak krásná? CZ Titulky",
+        "video_id": 28136511
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -438296,6 +438301,11 @@
         "episode_id": 65707,
         "display_name": "Posedlý pomstou S02E01 - S.E.R.E CZ Titulky",
         "video_id": 28136257
+      },
+      {
+        "episode_id": 62215,
+        "display_name": "Clarice S01E06 - Jaké to je, být tak krásná? CZ Titulky",
+        "video_id": 28136511
       }
     ],
     "prepared_not_upload_ready": [
@@ -439457,8 +439467,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 57,
-    "disabled": 16,
+    "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
