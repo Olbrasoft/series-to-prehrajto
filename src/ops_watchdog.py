@@ -154,7 +154,7 @@ def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--min-upload-ready", type=int, default=1000)
     ap.add_argument("--target-episodes", type=int, default=3000)
-    ap.add_argument("--emergency-episodes", type=int, default=80)
+    ap.add_argument("--emergency-episodes", type=int, default=20)
     ap.add_argument("--small-ready-target", type=int, default=1200)
     ap.add_argument("--target-series", type=int, default=240)
     ap.add_argument("--target-backlog-series", type=int, default=10000)
@@ -209,7 +209,7 @@ def main() -> int:
     )
 
     has_preparation_work = unprepared_queue_episodes > 0
-    prepare_episode_target = min(args.emergency_episodes, 500)
+    prepare_episode_target = min(args.emergency_episodes, 40)
     prepare_series_target = min(args.target_series, 80)
 
     if has_preparation_work:
@@ -218,7 +218,7 @@ def main() -> int:
             {
                 "series_limit": str(prepare_series_target),
                 "episode_limit": str(prepare_episode_target),
-                "source_limit_per_episode": "8",
+                "source_limit_per_episode": "4",
                 "use_whisper": "false",
                 "skip_export": "true",
             },

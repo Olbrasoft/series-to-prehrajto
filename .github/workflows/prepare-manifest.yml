@@ -10,11 +10,11 @@ on:
       episode_limit:
         description: "Episodes to prepare per run"
         required: false
-        default: "120"
+        default: "20"
       source_limit_per_episode:
         description: "Sources to evaluate per episode"
         required: false
-        default: "8"
+        default: "4"
       use_whisper:
         description: "Use Whisper language verification"
         required: false
@@ -71,11 +71,11 @@ jobs:
             --queue backlog/enriched-audit-queue.jsonl.gz \
             --backlog backlog/series-episodes.jsonl.gz \
             --out plans/prepared-episodes.jsonl \
-            --episode-limit "${{ inputs.episode_limit || '120' }}" \
+            --episode-limit "${{ inputs.episode_limit || '20' }}" \
             --claim-file plans/preparation-claims.jsonl \
             --claim-batch-id "$BATCH_ID" \
             --claim-shard-count 2 \
-            --claim-ttl-minutes 180 \
+            --claim-ttl-minutes 90 \
             --claim-only
           CLAIM_COUNT=$(jq -s --arg batch "$BATCH_ID" '[.[] | select(.claim_batch_id == $batch)] | length' plans/preparation-claims.jsonl)
           echo "batch_id=$BATCH_ID" >> "$GITHUB_OUTPUT"
@@ -202,14 +202,14 @@ jobs:
             "--queue" "backlog/enriched-audit-queue.jsonl.gz"
             "--backlog" "backlog/series-episodes.jsonl.gz"
             "--out" "plans/prepared-episodes.jsonl"
-            "--episode-limit" "${{ inputs.episode_limit || '120' }}"
+            "--episode-limit" "${{ inputs.episode_limit || '20' }}"
             "--claim-file" "plans/preparation-claims.jsonl"
             "--claim-batch-id" "${{ needs.claim.outputs.batch_id }}"
             "--claim-shard-index" "${{ matrix.selection_shard_index }}"
-            "--source-limit-per-episode" "${{ inputs.source_limit_per_episode || '8' }}"
+            "--source-limit-per-episode" "${{ inputs.source_limit_per_episode || '4' }}"
             "--sample-seconds" "20"
             "--live-search"
-            "--live-search-limit" "8"
+            "--live-search-limit" "${{ inputs.source_limit_per_episode || '4' }}"
             "--live-search-query-limit" "1"
             "--require-resolvable-source"
           )
@@ -299,8 +299,23 @@ jobs:
             else
               echo "sync already active or queued"
             fi
+            if ! python src/upload_queue_status.py --no-require-description --min-ready 1000; then
+              echo "prepared upload queue is still below target; queueing another small manifest preparation"
+              gh workflow run prepare-manifest.yml \
+                -f series_limit="1200" \
+                -f episode_limit="20" \
+                -f source_limit_per_episode="4" \
+                -f use_whisper="false" \
+                -f skip_export="true"
+            fi
           else
             echo "manifest has no upload-ready episodes"
+            gh workflow run prepare-manifest.yml \
+              -f series_limit="1200" \
+              -f episode_limit="20" \
+              -f source_limit_per_episode="4" \
+              -f use_whisper="false" \
+              -f skip_export="true"
           fi
 
   verify-growth:

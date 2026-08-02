@@ -223,8 +223,8 @@ jobs:
               echo "prepared upload queue is below overnight threshold; queueing background manifest preparation"
               gh workflow run prepare-manifest.yml \
                 -f series_limit="1200" \
-                -f episode_limit="120" \
-                -f source_limit_per_episode="8" \
+                -f episode_limit="20" \
+                -f source_limit_per_episode="4" \
                 -f use_whisper="false" \
                 -f skip_export="true"
             fi
@@ -232,8 +232,8 @@ jobs:
             echo "no prepared upload-ready episodes remain; queueing manifest preparation"
             gh workflow run prepare-manifest.yml \
               -f series_limit="1200" \
-              -f episode_limit="120" \
-              -f source_limit_per_episode="8" \
+              -f episode_limit="20" \
+              -f source_limit_per_episode="4" \
               -f use_whisper="false" \
               -f skip_export="true"
           fi
