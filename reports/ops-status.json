@@ -1,45 +1,109 @@
 {
   "counts": {
     "backlog_episodes": 144960,
-    "manifest_upload_ready_episodes": 27,
+    "manifest_upload_ready_episodes": 28,
     "uploaded_episodes": 48433,
-    "prepared_source_episodes": 62970,
+    "prepared_source_episodes": 62909,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 92,
+    "language_audited_sources": 137,
     "language_whisper_attempted_sources": 60,
     "language_pending_whisper_sources": 2604,
-    "whisper_review_sources": 56840,
-    "whisper_review_pending_sources": 49632,
+    "whisper_review_sources": 56901,
+    "whisper_review_pending_sources": 49952,
     "subtitle_followup_sources": 22163,
     "subtitle_followup_pending_sources": 22163
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-08-02T02:40:17Z",
-      "databaseId": 30729267624,
+      "createdAt": "2026-08-02T02:45:44Z",
+      "databaseId": 30729425961,
       "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "ops-watchdog"
+      "status": "pending",
+      "workflowName": "prepare-manifest"
     },
     {
       "conclusion": "",
-      "createdAt": "2026-08-02T02:39:46Z",
-      "databaseId": 30729251398,
+      "createdAt": "2026-08-02T02:45:37Z",
+      "databaseId": 30729422724,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "sync"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-08-02T02:45:15Z",
+      "databaseId": 30729411832,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-02T02:42:53Z",
+      "databaseId": 30729342142,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-02T02:42:45Z",
+      "databaseId": 30729338375,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-02T02:41:36Z",
+      "databaseId": 30729305632,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-02T02:41:34Z",
+      "databaseId": 30729304405,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-02T02:41:32Z",
+      "databaseId": 30729303596,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-02T02:40:17Z",
+      "databaseId": 30729267624,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "failure",
+      "createdAt": "2026-08-02T02:39:46Z",
+      "databaseId": 30729251398,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "cancelled",
       "createdAt": "2026-08-02T02:39:08Z",
       "databaseId": 30729233939,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -113,70 +177,6 @@
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-02T02:30:37Z",
-      "databaseId": 30728986030,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-02T02:30:35Z",
-      "databaseId": 30728984979,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-02T02:29:20Z",
-      "databaseId": 30728945015,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "failure",
-      "createdAt": "2026-08-02T02:29:15Z",
-      "databaseId": 30728942414,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-02T02:26:32Z",
-      "databaseId": 30728863457,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-02T02:25:35Z",
-      "databaseId": 30728835933,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-sources"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-02T02:24:08Z",
-      "databaseId": 30728792637,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-02T02:18:21Z",
-      "databaseId": 30728625359,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
     }
   ],
   "gaps": {
@@ -435236,379 +435236,379 @@
         "status": "whisper_failed"
       },
       {
-        "episode_id": 28104,
-        "source_id": -13428567874473772,
-        "series_title": "Beverly Hills 90210",
-        "episode_code": "S04E10",
-        "source_title": "Beverly Hills 90210 - S4E10 A stalo se..",
-        "status": "whisper_failed"
-      },
-      {
-        "episode_id": 49910,
-        "source_id": -49187278468511205,
-        "series_title": "Beze stopy",
-        "episode_code": "S04E16",
-        "source_title": "Beze stopy - 04x16 - Malé věci (The Little Things)",
-        "status": "whisper_failed"
-      },
-      {
-        "episode_id": 94060,
-        "source_id": -26861164873566293,
-        "series_title": "Big Mouth",
-        "episode_code": "S07E10",
-        "source_title": "Big Mouth - S7E10 Návrat do minulosti EN",
+        "episode_id": 153100,
+        "source_id": -36899972180980002,
+        "series_title": "Až po uši",
+        "episode_code": "S01E05",
+        "source_title": "Až po uši 01x05(2014)CZfil by fdl",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 94061,
-        "source_id": -71855115850163518,
-        "series_title": "Big Mouth",
-        "episode_code": "S08E01",
-        "source_title": "Big Mouth - S8E1 Techtle mechtle na plese EN",
+        "episode_id": 153100,
+        "source_id": -43567335951456935,
+        "series_title": "Až po uši",
+        "episode_code": "S01E05",
+        "source_title": "Až po uši - S1E5 5",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 94061,
-        "source_id": -68827053609713996,
-        "series_title": "Big Mouth",
-        "episode_code": "S08E01",
-        "source_title": "Big.Mouth.S08E01.720p.HEVC.x265-MeGusta",
+        "episode_id": 153101,
+        "source_id": -66364448980943781,
+        "series_title": "Až po uši",
+        "episode_code": "S01E06",
+        "source_title": "Až po uši - S1E6 6",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 94062,
-        "source_id": -55159349310376795,
-        "series_title": "Big Mouth",
-        "episode_code": "S08E02",
-        "source_title": "Big.Mouth.S08E02.1080p.HEVC.x265-MeGusta",
+        "episode_id": 153103,
+        "source_id": -11351583510848444,
+        "series_title": "Až po uši",
+        "episode_code": "S01E08",
+        "source_title": "Až po uši - S1E8 8",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 94062,
-        "source_id": -52582562611169033,
-        "series_title": "Big Mouth",
-        "episode_code": "S08E02",
-        "source_title": "Big Mouth - S8E2 Party, pitomci a Sonicovo péro EN",
+        "episode_id": 153095,
+        "source_id": -24514406873942511,
+        "series_title": "Až po uši",
+        "episode_code": "S01E10",
+        "source_title": "Až po uši S01E10 Epizoda 10",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 94063,
-        "source_id": -56195157514723855,
-        "series_title": "Big Mouth",
-        "episode_code": "S08E03",
-        "source_title": "Big Mouth - S8E3 Proč procházíme pubertou? EN",
+        "episode_id": 153095,
+        "source_id": -25457742894687549,
+        "series_title": "Až po uši",
+        "episode_code": "S01E10",
+        "source_title": "Až po uši - S1E10 10",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 94063,
-        "source_id": -32631795996234629,
-        "series_title": "Big Mouth",
-        "episode_code": "S08E03",
-        "source_title": "Big.Mouth.S08E03.720p.HEVC.x265-MeGusta",
+        "episode_id": 165255,
+        "source_id": -36819483045615761,
+        "series_title": "Až po uši",
+        "episode_code": "S01E12",
+        "source_title": "Až po uši - S1E12 12",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 94064,
-        "source_id": -17125776954593598,
-        "series_title": "Big Mouth",
-        "episode_code": "S08E04",
-        "source_title": "Big.Mouth.S08E04.1080p.HEVC.x265-MeGusta",
+        "episode_id": 39965,
+        "source_id": -34460526982238010,
+        "series_title": "Babylon 5",
+        "episode_code": "S03E15",
+        "source_title": "Babylon 5 S3 E15 - Interludes and Examinations [=Sauron=, Josetto]",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 94064,
-        "source_id": -30032843363761926,
-        "series_title": "Big Mouth",
-        "episode_code": "S08E04",
-        "source_title": "Big Mouth - S8E4 Za volantem Lola Skumpyová EN",
+        "episode_id": 39965,
+        "source_id": -70727765481617540,
+        "series_title": "Babylon 5",
+        "episode_code": "S03E15",
+        "source_title": "Babylon 5 S03E15 1080p SK",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 94065,
-        "source_id": -39848373491319458,
-        "series_title": "Big Mouth",
-        "episode_code": "S08E05",
-        "source_title": "Big Mouth - S8E5 Nehulím už trochu moc? EN",
+        "episode_id": 39965,
+        "source_id": -850996557667710,
+        "series_title": "Babylon 5",
+        "episode_code": "S03E15",
+        "source_title": "Babylon 5 S03E15 SkDab",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 94065,
-        "source_id": -47969582276040,
-        "series_title": "Big Mouth",
-        "episode_code": "S08E05",
-        "source_title": "Big.Mouth.S08E05.720p.HEVC.x265-MeGusta",
+        "episode_id": 39965,
+        "source_id": -62058546729207273,
+        "series_title": "Babylon 5",
+        "episode_code": "S03E15",
+        "source_title": "Babylon 5 - S3E15 Epizoda 15 SK",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 94066,
-        "source_id": -63846517605957778,
-        "series_title": "Big Mouth",
-        "episode_code": "S08E06",
-        "source_title": "Big.Mouth.S08E06.720p.HEVC.x265-MeGusta",
+        "episode_id": 169573,
+        "source_id": -13989217437361680,
+        "series_title": "Back",
+        "episode_code": "S01E01",
+        "source_title": "Strike Back 1x1",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 94067,
-        "source_id": -34140996227450635,
-        "series_title": "Big Mouth",
-        "episode_code": "S08E07",
-        "source_title": "Big.Mouth.S08E07.1080p.HEVC.x265-MeGusta",
+        "episode_id": 169574,
+        "source_id": -30532512731839325,
+        "series_title": "Back",
+        "episode_code": "S01E02",
+        "source_title": "The Beatles: Get Back - S1E2 EN",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 94067,
-        "source_id": -35071620910058054,
-        "series_title": "Big Mouth",
-        "episode_code": "S08E07",
-        "source_title": "Big Mouth - S8E7 Trochu soucitu, sakra! EN",
+        "episode_id": 169574,
+        "source_id": -26816861282249058,
+        "series_title": "Back",
+        "episode_code": "S01E02",
+        "source_title": "The.Beatles.Get.Back.S01E02.720p.DSNP.WEBRip.x264-GalaxyTV",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 94068,
-        "source_id": -47427525280266161,
-        "series_title": "Big Mouth",
-        "episode_code": "S08E08",
-        "source_title": "Big Mouth - S8E8 Nadržený řečičky, strč ho tam EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 94068,
-        "source_id": -28642954461708276,
-        "series_title": "Big Mouth",
-        "episode_code": "S08E08",
-        "source_title": "Big.Mouth.S08E08.720p.HEVC.x265-MeGusta",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 94069,
-        "source_id": -43570607158947437,
-        "series_title": "Big Mouth",
-        "episode_code": "S08E09",
-        "source_title": "Big Mouth - S8E9 Všechno, co jsme vám zapomněli říct o sexu EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 94069,
-        "source_id": -70310102150196447,
-        "series_title": "Big Mouth",
-        "episode_code": "S08E09",
-        "source_title": "Big.Mouth.S08E09.720p.HEVC.x265-MeGusta",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 94070,
-        "source_id": -36257205047025126,
-        "series_title": "Big Mouth",
-        "episode_code": "S08E10",
-        "source_title": "Big Mouth - S8E10 Do neznáma EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 94070,
-        "source_id": -4675151887474522,
-        "series_title": "Big Mouth",
-        "episode_code": "S08E10",
-        "source_title": "Big.Mouth.S08E10.720p.HEVC.x265-MeGusta",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 80465,
-        "source_id": -29732273236824026,
-        "series_title": "Bleach",
+        "episode_id": 169575,
+        "source_id": -24271261173523322,
+        "series_title": "Back",
         "episode_code": "S02E01",
-        "source_title": "[Judas] Bleach - S02E01",
+        "source_title": "back.s02e01.1080p.web.h264-whosnext",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 80467,
-        "source_id": -10369657846266612,
-        "series_title": "Bleach",
-        "episode_code": "S02E02",
-        "source_title": "[Judas] Bleach - S02E02",
+        "episode_id": 169575,
+        "source_id": -33314728392413765,
+        "series_title": "Back",
+        "episode_code": "S02E01",
+        "source_title": "Back S02E01 1080p",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 80464,
-        "source_id": -44789061933976593,
-        "series_title": "Bleach",
+        "episode_id": 169575,
+        "source_id": -44114541441746869,
+        "series_title": "Back",
+        "episode_code": "S02E01",
+        "source_title": "24 Hours to Hell and Back - S2E1 The Trolley Stop Café EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 169575,
+        "source_id": -36049342841905382,
+        "series_title": "Back",
+        "episode_code": "S02E01",
+        "source_title": "Strike Back - s02e01",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 169575,
+        "source_id": -54162764526215081,
+        "series_title": "Back",
+        "episode_code": "S02E01",
+        "source_title": "Strike Back - s02e01",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 169576,
+        "source_id": -51043627532438793,
+        "series_title": "Back",
         "episode_code": "S02E03",
-        "source_title": "[Judas] Bleach - S02E03",
+        "source_title": "back.s02e03.1080p.web.h264-whosnext",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 80466,
-        "source_id": -57689307160717839,
-        "series_title": "Bleach",
+        "episode_id": 169576,
+        "source_id": -14599793843178400,
+        "series_title": "Back",
+        "episode_code": "S02E03",
+        "source_title": "24 Hours to Hell and Back - S2E3 Vasi's Restaurant And Bar EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 169576,
+        "source_id": -37322494805226560,
+        "series_title": "Back",
+        "episode_code": "S02E03",
+        "source_title": "Strike Back - s02e03",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 169579,
+        "source_id": -801903230900102,
+        "series_title": "Back",
         "episode_code": "S02E04",
-        "source_title": "[Judas] Bleach - S02E04",
+        "source_title": "Back S02E04 1080p",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 80468,
-        "source_id": -33053864552290927,
-        "series_title": "Bleach",
+        "episode_id": 169579,
+        "source_id": -22103918032360811,
+        "series_title": "Back",
+        "episode_code": "S02E04",
+        "source_title": "24 Hours to Hell and Back - S2E4 Catfish Cabin EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 169579,
+        "source_id": -67593820152836577,
+        "series_title": "Back",
+        "episode_code": "S02E04",
+        "source_title": "Strike Back - s02e04",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 169577,
+        "source_id": -70283791592880871,
+        "series_title": "Back",
         "episode_code": "S02E05",
-        "source_title": "[Judas] Bleach - S02E05",
+        "source_title": "back.s02e05.1080p.web.h264-whosnext",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 80469,
-        "source_id": -4085773676256610,
-        "series_title": "Bleach",
+        "episode_id": 169577,
+        "source_id": -32832501752361820,
+        "series_title": "Back",
+        "episode_code": "S02E05",
+        "source_title": "Back S02E05 1080p",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 169577,
+        "source_id": -28833094645013034,
+        "series_title": "Back",
+        "episode_code": "S02E05",
+        "source_title": "24 Hours to Hell and Back - S2E5 Stone's Throw EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 169577,
+        "source_id": -46002385060533873,
+        "series_title": "Back",
+        "episode_code": "S02E05",
+        "source_title": "Strike Back 2x5",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 169577,
+        "source_id": -44843656165815945,
+        "series_title": "Back",
+        "episode_code": "S02E05",
+        "source_title": "Strike Back - s02e05",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 169577,
+        "source_id": -60078377951197452,
+        "series_title": "Back",
+        "episode_code": "S02E05",
+        "source_title": "Strike Back S02E05.EN.WebRip.1080p.10b.HEVC",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 169578,
+        "source_id": -66835053178950698,
+        "series_title": "Back",
         "episode_code": "S02E06",
-        "source_title": "[Judas] Bleach - S02E06",
+        "source_title": "back.s02e06.1080p.web.h264-whosnext",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 80470,
-        "source_id": -49762082754605239,
-        "series_title": "Bleach",
-        "episode_code": "S02E07",
-        "source_title": "[Judas] Bleach - S02E07",
+        "episode_id": 169578,
+        "source_id": -54333104643714731,
+        "series_title": "Back",
+        "episode_code": "S02E06",
+        "source_title": "24 Hours to Hell and Back - S2E6 Bayou On The Vine EN",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 80471,
-        "source_id": -46695131723254243,
-        "series_title": "Bleach",
-        "episode_code": "S02E08",
-        "source_title": "[Judas] Bleach - S02E08",
+        "episode_id": 169578,
+        "source_id": -12489513232714698,
+        "series_title": "Back",
+        "episode_code": "S02E06",
+        "source_title": "Strike Back 2x6",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 80472,
-        "source_id": -44742946289120645,
-        "series_title": "Bleach",
-        "episode_code": "S02E09",
-        "source_title": "[Judas] Bleach - S02E09",
+        "episode_id": 164735,
+        "source_id": -45526445436479177,
+        "series_title": "Bariéra",
+        "episode_code": "S01E01",
+        "source_title": "Bariéra_S01E01_Jiný svět",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 80473,
-        "source_id": -22596259962212298,
-        "series_title": "Bleach",
-        "episode_code": "S02E10",
-        "source_title": "[Judas] Bleach - S02E10",
+        "episode_id": 164735,
+        "source_id": -8516929408287518,
+        "series_title": "Bariéra",
+        "episode_code": "S01E01",
+        "source_title": "Bariéra_S01E01_Jiný svět",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 80474,
-        "source_id": -13609920857397191,
-        "series_title": "Bleach",
-        "episode_code": "S02E11",
-        "source_title": "[Judas] Bleach - S02E11",
+        "episode_id": 164735,
+        "source_id": -68132146934627491,
+        "series_title": "Bariéra",
+        "episode_code": "S01E01",
+        "source_title": "Bariéra_S01E01_Jiný svět",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 80475,
-        "source_id": -29319451226354815,
-        "series_title": "Bleach",
-        "episode_code": "S02E12",
-        "source_title": "[Judas] Bleach - S02E12",
+        "episode_id": 164735,
+        "source_id": -52711431830615079,
+        "series_title": "Bariéra",
+        "episode_code": "S01E01",
+        "source_title": "Bariéra - S1E1 Otro mundo DE",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 80476,
-        "source_id": -29534503979574350,
-        "series_title": "Bleach",
-        "episode_code": "S02E13",
-        "source_title": "[Judas] Bleach - S02E13",
+        "episode_id": 164735,
+        "source_id": -66813793554781654,
+        "series_title": "Bariéra",
+        "episode_code": "S01E01",
+        "source_title": "Bariéra - S1E1 ES",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 183483,
-        "source_id": -57016688942403116,
-        "series_title": "Blue",
-        "episode_code": "S01E26",
-        "source_title": "Bluey.S01E26.1080p.WEB.h264-SALT",
+        "episode_id": 164736,
+        "source_id": -43824127681755332,
+        "series_title": "Bariéra",
+        "episode_code": "S01E02",
+        "source_title": "Bariéra_S01E02_Moje sestra Sara",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 183483,
-        "source_id": -9458340112697657,
-        "series_title": "Blue",
-        "episode_code": "S01E26",
-        "source_title": "Bluey.S01E26.Pláž.1080p.WEB-DL",
+        "episode_id": 164736,
+        "source_id": -44945990723137,
+        "series_title": "Bariéra",
+        "episode_code": "S01E02",
+        "source_title": "Bariéra_S01E02_Moje sestra Sara",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 183483,
-        "source_id": -70428495807844692,
-        "series_title": "Blue",
-        "episode_code": "S01E26",
-        "source_title": "Big.Blue.S01E26.Quibbling.Rivalry.1080p.ROKU.WEB-DL.DD5.1.H.264-NTb",
+        "episode_id": 164736,
+        "source_id": -54533055245168578,
+        "series_title": "Bariéra",
+        "episode_code": "S01E02",
+        "source_title": "Bariéra_S01E02_Moje sestra Sara",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 183485,
-        "source_id": -2769181367148520,
-        "series_title": "Blue",
-        "episode_code": "S01E28",
-        "source_title": "Bluey.S01E28.Babičky.1080p.WEB-DL",
+        "episode_id": 164736,
+        "source_id": -42538372348342738,
+        "series_title": "Bariéra",
+        "episode_code": "S01E02",
+        "source_title": "Bariéra - S1E2 Mi hermana Sara EN",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 183485,
-        "source_id": -19156379471738736,
-        "series_title": "Blue",
-        "episode_code": "S01E28",
-        "source_title": "Big.Blue.S01E28.Fins.Up.1080p.ROKU.WEB-DL.DD5.1.H.264-NTb",
+        "episode_id": 164736,
+        "source_id": -57336814634976745,
+        "series_title": "Bariéra",
+        "episode_code": "S01E02",
+        "source_title": "Bariéra - S1E2 ES",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 183486,
-        "source_id": -10617661107363870,
-        "series_title": "Blue",
-        "episode_code": "S01E29",
-        "source_title": "Bluey.S01E29.Zátoka.1080p.WEB-DL",
+        "episode_id": 164736,
+        "source_id": -63022390642772736,
+        "series_title": "Bariéra",
+        "episode_code": "S01E02",
+        "source_title": "Bariéra - S1E2 IT",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 183486,
-        "source_id": -41140071285443115,
-        "series_title": "Blue",
-        "episode_code": "S01E29",
-        "source_title": "Big.Blue.S01E29.There's.no.Chair.in.Team.1080p.ROKU.WEB-DL.DD5.1.H.264-NTb",
+        "episode_id": 164737,
+        "source_id": -69997630588571815,
+        "series_title": "Bariéra",
+        "episode_code": "S01E03",
+        "source_title": "Bariéra_S01E03_Ztracené děti",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 183487,
-        "source_id": -29091337274864094,
-        "series_title": "Blue",
-        "episode_code": "S01E30",
-        "source_title": "Bluey.S01E30.Víly.1080p.WEB-DL",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183488,
-        "source_id": -1513925176598149,
-        "series_title": "Blue",
-        "episode_code": "S01E31",
-        "source_title": "Big.Blue.S01E31.Revenge.of.the.Sibs.1080p.ROKU.WEB-DL.DD5.1.H.264-NTb",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183489,
-        "source_id": -67483646094216708,
-        "series_title": "Blue",
-        "episode_code": "S01E32",
-        "source_title": "Bluey.S01E32.1080p.WEB.h264-SALT",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183489,
-        "source_id": -10318338492669138,
-        "series_title": "Blue",
-        "episode_code": "S01E32",
-        "source_title": "Bluey.S01E32.Hrbík.a.starý.moudrý.Vlkodav.1080p.WEB-DL",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183489,
-        "source_id": -3651852662091893,
-        "series_title": "Blue",
-        "episode_code": "S01E32",
-        "source_title": "Big.Blue.S01E32.Photo.Day.Disaster.1080p.ROKU.WEB-DL.DD5.1.H.264-NTb",
+        "episode_id": 164737,
+        "source_id": -25443924432491844,
+        "series_title": "Bariéra",
+        "episode_code": "S01E03",
+        "source_title": "Bariéra_S01E03_Ztracené děti",
         "status": "needs_whisper"
       }
     ],
@@ -436068,14 +436068,14 @@
   "language_verdicts": {},
   "language_whisper_statuses": {
     "ok": 59,
-    "disabled": 32,
+    "disabled": 77,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
-    "whisper_non_cz_needs_subtitles": 5006,
-    "whisper_confirmed_cz": 2202,
+    "whisper_non_cz_needs_subtitles": 4777,
+    "whisper_confirmed_cz": 2172,
     "whisper_failed": 36,
-    "needs_whisper": 49596
+    "needs_whisper": 49916
   },
   "subtitle_followup_statuses": {
     "needs_subtitle_setup_after_prehrajto_processing": 22163
