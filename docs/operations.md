@@ -8,6 +8,20 @@
 4. Run the `sync` workflow manually with a small batch size.
 5. Watch `state/sync.log` and the Přehraj.to uploaded videos page.
 
+## Upload progress verification
+
+Use `https://prehraj.to/profil/statistiky` as the authoritative upload
+progress check for each logged-in account. Record `Nahráno videí celkem`
+before any fix or monitoring window, wait or apply the fix, then read the same
+counter again for the same account. The counter is expected to increase
+immediately after successful uploads; do not treat processing state on other
+profile pages as a delay for this statistic.
+
+Check both production upload accounts separately:
+
+1. `filmy.prehrajto@email.cz`.
+2. `serialy.prehrajto@seznam.cz`.
+
 ## Candidate priority
 
 Candidates are sorted by:
