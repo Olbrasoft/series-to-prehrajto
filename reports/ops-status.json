@@ -1,17 +1,17 @@
 {
   "counts": {
     "backlog_episodes": 173992,
-    "manifest_upload_ready_episodes": 651,
-    "uploaded_episodes": 19400,
+    "manifest_upload_ready_episodes": 647,
+    "uploaded_episodes": 19401,
     "prepared_source_episodes": 60866,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 217,
-    "language_whisper_attempted_sources": 60,
-    "language_pending_whisper_sources": 2604,
+    "language_audited_sources": 20,
+    "language_whisper_attempted_sources": 20,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 56822,
     "whisper_review_pending_sources": 49584,
     "subtitle_followup_sources": 22819,
@@ -20,10 +20,34 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-08-03T20:19:07Z",
+      "databaseId": 30849666042,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-03T20:17:16Z",
+      "databaseId": 30849528018,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-03T20:17:13Z",
+      "databaseId": 30849523936,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-03T20:15:38Z",
       "databaseId": 30849405452,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -83,11 +107,11 @@
       "workflowName": "prepare-sources"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-03T20:07:58Z",
       "databaseId": 30848831026,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -153,30 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-03T19:45:47Z",
-      "databaseId": 30847175632,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-03T19:43:19Z",
-      "databaseId": 30847003825,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-03T19:43:16Z",
-      "databaseId": 30847000205,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
     }
   ],
   "gaps": {
@@ -72984,6 +72984,11 @@
         "episode_id": 49699,
         "display_name": "Super drbna S01E05 - Hra na fanty CZ Dabing",
         "video_id": 28173185
+      },
+      {
+        "episode_id": 49779,
+        "display_name": "Super drbna S02E20 - Co zbylo z J CZ Dabing",
+        "video_id": 28173306
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -145686,6 +145691,11 @@
         "episode_id": 49699,
         "display_name": "Super drbna S01E05 - Hra na fanty CZ Dabing",
         "video_id": 28173185
+      },
+      {
+        "episode_id": 49779,
+        "display_name": "Super drbna S02E20 - Co zbylo z J CZ Dabing",
+        "video_id": 28173306
       }
     ],
     "prepared_not_upload_ready": [
@@ -146847,8 +146857,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 157,
-    "ok": 59,
+    "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
