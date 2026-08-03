@@ -147,7 +147,7 @@ jobs:
           cp "$STATE" "$TMP_DIR/$STATE"
           cp "$LOG" "$TMP_DIR/$LOG"
 
-          for attempt in 1 2 3 4 5; do
+          for attempt in 1 2 3 4 5 6 7 8; do
             rm -rf .git/rebase-merge .git/rebase-apply
             git fetch origin main
             git reset --hard origin/main
@@ -170,8 +170,8 @@ jobs:
             sleep $((attempt * 2))
           done
 
-          echo "failed to push state after retries"
-          exit 1
+          echo "::warning::failed to push final state/log snapshot after retries; per-upload state pushes are best-effort and the next run will merge current main state"
+          exit 0
 
   queue-next:
     name: Queue next upload and preparation
