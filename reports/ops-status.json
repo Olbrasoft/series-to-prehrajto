@@ -1,15 +1,15 @@
 {
   "counts": {
     "backlog_episodes": 173885,
-    "manifest_upload_ready_episodes": 758,
-    "uploaded_episodes": 19469,
-    "prepared_source_episodes": 60007,
+    "manifest_upload_ready_episodes": 761,
+    "uploaded_episodes": 19480,
+    "prepared_source_episodes": 59975,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 20,
+    "language_audited_sources": 100,
     "language_whisper_attempted_sources": 20,
     "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 56822,
@@ -20,18 +20,66 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-08-03T21:43:44Z",
-      "databaseId": 30855838959,
+      "createdAt": "2026-08-03T21:51:06Z",
+      "databaseId": 30856337572,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-03T21:50:37Z",
+      "databaseId": 30856305217,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-08-03T21:50:32Z",
+      "databaseId": 30856298869,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-03T21:50:07Z",
+      "databaseId": 30856270576,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-03T21:44:59Z",
+      "databaseId": 30855927173,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "failure",
+      "createdAt": "2026-08-03T21:44:55Z",
+      "databaseId": 30855922502,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-03T21:43:44Z",
+      "databaseId": 30855838959,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "cancelled",
       "createdAt": "2026-08-03T21:43:33Z",
       "databaseId": 30855826275,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -129,54 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "refresh-backlog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-03T21:26:07Z",
-      "databaseId": 30854613836,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-03T21:25:18Z",
-      "databaseId": 30854557686,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-03T21:24:24Z",
-      "databaseId": 30854491922,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-03T21:22:27Z",
-      "databaseId": 30854348835,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-03T21:20:43Z",
-      "databaseId": 30854226479,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-03T21:19:25Z",
-      "databaseId": 30854135858,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
     }
   ],
   "gaps": {
@@ -45531,6 +45531,26 @@
         "video_id": 28174938
       },
       {
+        "episode_id": 41368,
+        "display_name": "Mentalista S07E03 - Zmrzlina s příchutí pomerančového květu CZ Dabing",
+        "video_id": 28175002
+      },
+      {
+        "episode_id": 44704,
+        "display_name": "Agenti S.H.I.E.L.D. S02E14 - Láska za časů Hydry CZ Dabing",
+        "video_id": 28175079
+      },
+      {
+        "episode_id": 44692,
+        "display_name": "Agenti S.H.I.E.L.D. S03E11 - Nový nádech CZ Titulky",
+        "video_id": 28175106
+      },
+      {
+        "episode_id": 44685,
+        "display_name": "Agenti S.H.I.E.L.D. S03E19 - Nezdařené experimenty CZ Titulky",
+        "video_id": 28175110
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -73316,6 +73336,26 @@
         "video_id": 28174962
       },
       {
+        "episode_id": 49702,
+        "display_name": "Super drbna S01E08 - Rozchod CZ Dabing",
+        "video_id": 28175003
+      },
+      {
+        "episode_id": 49794,
+        "display_name": "Super drbna S01E16 - Vše o mém bratrovi CZ Dabing",
+        "video_id": 28175046
+      },
+      {
+        "episode_id": 49710,
+        "display_name": "Super drbna S01E18 - Mnoho povyku pro nic CZ Dabing",
+        "video_id": 28175075
+      },
+      {
+        "episode_id": 49770,
+        "display_name": "Super drbna S02E11 - Archibaldův osud CZ Dabing",
+        "video_id": 28175118
+      },
+      {
         "episode_id": 44667,
         "display_name": "Agenti S.H.I.E.L.D. S04E16 - Co když... CZ Titulky",
         "video_id": 28174848
@@ -73324,6 +73364,21 @@
         "episode_id": 44671,
         "display_name": "Agenti S.H.I.E.L.D. S04E18 - Bez výčitek CZ Titulky",
         "video_id": 28174899
+      },
+      {
+        "episode_id": 44675,
+        "display_name": "Agenti S.H.I.E.L.D. S04E22 - Konec světa CZ Titulky",
+        "video_id": 28174945
+      },
+      {
+        "episode_id": 15211,
+        "display_name": "Bridgertonovi S01E06 - Šustot sukně CZ Titulky",
+        "video_id": 28175013
+      },
+      {
+        "episode_id": 15215,
+        "display_name": "Bridgertonovi S02E01 - Sukničkář s velkým S CZ Dabing",
+        "video_id": 28175078
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -118573,6 +118628,26 @@
         "video_id": 28174938
       },
       {
+        "episode_id": 41368,
+        "display_name": "Mentalista S07E03 - Zmrzlina s příchutí pomerančového květu CZ Dabing",
+        "video_id": 28175002
+      },
+      {
+        "episode_id": 44704,
+        "display_name": "Agenti S.H.I.E.L.D. S02E14 - Láska za časů Hydry CZ Dabing",
+        "video_id": 28175079
+      },
+      {
+        "episode_id": 44692,
+        "display_name": "Agenti S.H.I.E.L.D. S03E11 - Nový nádech CZ Titulky",
+        "video_id": 28175106
+      },
+      {
+        "episode_id": 44685,
+        "display_name": "Agenti S.H.I.E.L.D. S03E19 - Nezdařené experimenty CZ Titulky",
+        "video_id": 28175110
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -146358,6 +146433,26 @@
         "video_id": 28174962
       },
       {
+        "episode_id": 49702,
+        "display_name": "Super drbna S01E08 - Rozchod CZ Dabing",
+        "video_id": 28175003
+      },
+      {
+        "episode_id": 49794,
+        "display_name": "Super drbna S01E16 - Vše o mém bratrovi CZ Dabing",
+        "video_id": 28175046
+      },
+      {
+        "episode_id": 49710,
+        "display_name": "Super drbna S01E18 - Mnoho povyku pro nic CZ Dabing",
+        "video_id": 28175075
+      },
+      {
+        "episode_id": 49770,
+        "display_name": "Super drbna S02E11 - Archibaldův osud CZ Dabing",
+        "video_id": 28175118
+      },
+      {
         "episode_id": 44667,
         "display_name": "Agenti S.H.I.E.L.D. S04E16 - Co když... CZ Titulky",
         "video_id": 28174848
@@ -146366,6 +146461,21 @@
         "episode_id": 44671,
         "display_name": "Agenti S.H.I.E.L.D. S04E18 - Bez výčitek CZ Titulky",
         "video_id": 28174899
+      },
+      {
+        "episode_id": 44675,
+        "display_name": "Agenti S.H.I.E.L.D. S04E22 - Konec světa CZ Titulky",
+        "video_id": 28174945
+      },
+      {
+        "episode_id": 15211,
+        "display_name": "Bridgertonovi S01E06 - Šustot sukně CZ Titulky",
+        "video_id": 28175013
+      },
+      {
+        "episode_id": 15215,
+        "display_name": "Bridgertonovi S02E01 - Sukničkář s velkým S CZ Dabing",
+        "video_id": 28175078
       }
     ],
     "prepared_not_upload_ready": [
@@ -147527,6 +147637,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
+    "disabled": 80,
     "ok": 19,
     "resolve_failed": 1
   },
