@@ -1,17 +1,17 @@
 {
   "counts": {
     "backlog_episodes": 174579,
-    "manifest_upload_ready_episodes": 76,
-    "uploaded_episodes": 18780,
-    "prepared_source_episodes": 62623,
+    "manifest_upload_ready_episodes": 95,
+    "uploaded_episodes": 18804,
+    "prepared_source_episodes": 62627,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 120,
-    "language_whisper_attempted_sources": 45,
-    "language_pending_whisper_sources": 2604,
+    "language_audited_sources": 100,
+    "language_whisper_attempted_sources": 30,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 56842,
     "whisper_review_pending_sources": 49674,
     "subtitle_followup_sources": 22547,
@@ -20,18 +20,82 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-08-03T10:46:14Z",
-      "databaseId": 30806871720,
+      "createdAt": "2026-08-03T11:14:07Z",
+      "databaseId": 30808720714,
       "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "ops-status"
+      "status": "pending",
+      "workflowName": "prepare-manifest"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-08-03T11:13:19Z",
+      "databaseId": 30808666968,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-03T11:03:55Z",
+      "databaseId": 30808018875,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-03T11:02:49Z",
+      "databaseId": 30807946289,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-08-03T11:02:09Z",
+      "databaseId": 30807901844,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-03T11:01:57Z",
+      "databaseId": 30807889237,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-08-03T11:01:43Z",
+      "databaseId": 30807874267,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-03T10:47:52Z",
+      "databaseId": 30806975272,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-03T10:46:14Z",
+      "databaseId": 30806871720,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "cancelled",
       "createdAt": "2026-08-03T10:45:36Z",
       "databaseId": 30806830573,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -47,7 +111,7 @@
       "createdAt": "2026-08-03T10:39:06Z",
       "databaseId": 30806409065,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "sync"
     },
     {
@@ -75,11 +139,11 @@
       "workflowName": "audit-language"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-03T10:33:02Z",
       "databaseId": 30806013801,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -113,70 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "refresh-backlog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-03T10:21:04Z",
-      "databaseId": 30805216682,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-03T10:20:58Z",
-      "databaseId": 30805209915,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-03T10:19:24Z",
-      "databaseId": 30805103934,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-03T10:18:30Z",
-      "databaseId": 30805045480,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-03T10:07:39Z",
-      "databaseId": 30804290123,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-03T10:06:31Z",
-      "databaseId": 30804210521,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-03T10:05:49Z",
-      "databaseId": 30804162942,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-03T10:04:10Z",
-      "databaseId": 30804042976,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
     }
   ],
   "gaps": {
@@ -44701,6 +44701,16 @@
         "video_id": 28158827
       },
       {
+        "episode_id": 10564,
+        "display_name": "Lupin S01E04 - 4. kapitola CZ Dabing",
+        "video_id": 28158907
+      },
+      {
+        "episode_id": 12652,
+        "display_name": "Generace V S02E01 - Nový školní rok na nové škole CZ Dabing",
+        "video_id": 28159230
+      },
+      {
         "episode_id": 16465,
         "display_name": "Tučňák S01E01 - Po zavíračce CZ Dabing",
         "video_id": 28158477
@@ -44714,6 +44724,61 @@
         "episode_id": 16473,
         "display_name": "Tučňák S01E05 - Návrat domů CZ Dabing",
         "video_id": 28158935
+      },
+      {
+        "episode_id": 16477,
+        "display_name": "Tučňák S01E07 - Cylindr CZ Dabing",
+        "video_id": 28159163
+      },
+      {
+        "episode_id": 9969,
+        "display_name": "Peacemaker S01E04 - Nevojetá cesta CZ Dabing",
+        "video_id": 28159277
+      },
+      {
+        "episode_id": 9965,
+        "display_name": "Peacemaker S01E08 - Boj jako kráva CZ Dabing",
+        "video_id": 28159365
+      },
+      {
+        "episode_id": 4701,
+        "display_name": "Peacemaker S02E02 - Muž je jen tak dobrý, jako jeho pták CZ Dabing",
+        "video_id": 28159404
+      },
+      {
+        "episode_id": 4713,
+        "display_name": "Peacemaker S02E06 - Neznalost je Chris CZ Dabing",
+        "video_id": 28159471
+      },
+      {
+        "episode_id": 40284,
+        "display_name": "Smallville S07E06 - Lara CZ Dabing",
+        "video_id": 28159601
+      },
+      {
+        "episode_id": 40288,
+        "display_name": "Smallville S07E10 - Osobnost CZ Dabing",
+        "video_id": 28159764
+      },
+      {
+        "episode_id": 12489,
+        "display_name": "Co kdyby...? S01E08 - Co kdyby… Ultron vyhrál? CZ Dabing",
+        "video_id": 28159585
+      },
+      {
+        "episode_id": 12505,
+        "display_name": "Co kdyby...? S03E04 - Co kdyby... se Kačer Howard oženil? CZ Dabing",
+        "video_id": 28159637
+      },
+      {
+        "episode_id": 12497,
+        "display_name": "Co kdyby...? S03E07 - Co kdyby... se Pozorovatel ztratil? CZ Dabing",
+        "video_id": 28159707
+      },
+      {
+        "episode_id": 10565,
+        "display_name": "Lupin S01E03 - 3. kapitola CZ Dabing",
+        "video_id": 28159838
       },
       {
         "episode_id": 114182,
@@ -71641,6 +71706,11 @@
         "video_id": 28158768
       },
       {
+        "episode_id": 6638,
+        "display_name": "Mr. Bean S01E01 - Pan Bean CZ Dabing",
+        "video_id": 28159104
+      },
+      {
         "episode_id": 12691,
         "display_name": "The End of the F***ing World S01E01 - 1. díl CZ Dabing",
         "video_id": 28158504
@@ -71659,6 +71729,56 @@
         "episode_id": 4707,
         "display_name": "Peacemaker S02E04 - Musím říkat dveře? CZ Dabing",
         "video_id": 28158775
+      },
+      {
+        "episode_id": 4719,
+        "display_name": "Peacemaker S02E08 - Nelson CZ Dabing",
+        "video_id": 28158841
+      },
+      {
+        "episode_id": 15159,
+        "display_name": "Urgent S02E02 - 08:00 CZ Dabing",
+        "video_id": 28159216
+      },
+      {
+        "episode_id": 12487,
+        "display_name": "Co kdyby...? S01E07 - Co kdyby… byl Thor jedináček? CZ Dabing",
+        "video_id": 28159295
+      },
+      {
+        "episode_id": 40286,
+        "display_name": "Smallville S07E08 - Modrá CZ Dabing",
+        "video_id": 28159607
+      },
+      {
+        "episode_id": 40290,
+        "display_name": "Smallville S07E12 - Zlom CZ Dabing",
+        "video_id": 28159758
+      },
+      {
+        "episode_id": 12507,
+        "display_name": "Co kdyby...? S01E09 - Co kdyby… Pozorovatel porušil svou přísahu? CZ Dabing",
+        "video_id": 28159587
+      },
+      {
+        "episode_id": 12503,
+        "display_name": "Co kdyby...? S03E05 - Co kdyby... zrození zničilo Zemi? CZ Dabing",
+        "video_id": 28159625
+      },
+      {
+        "episode_id": 10563,
+        "display_name": "Lupin S01E01 - 1. kapitola CZ Dabing",
+        "video_id": 28159679
+      },
+      {
+        "episode_id": 40283,
+        "display_name": "Smallville S07E05 - Klapka, kamera, akce CZ Dabing",
+        "video_id": 28159789
+      },
+      {
+        "episode_id": 40287,
+        "display_name": "Smallville S07E09 - Blíženci CZ Dabing",
+        "video_id": 28159846
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -116078,6 +116198,16 @@
         "video_id": 28158827
       },
       {
+        "episode_id": 10564,
+        "display_name": "Lupin S01E04 - 4. kapitola CZ Dabing",
+        "video_id": 28158907
+      },
+      {
+        "episode_id": 12652,
+        "display_name": "Generace V S02E01 - Nový školní rok na nové škole CZ Dabing",
+        "video_id": 28159230
+      },
+      {
         "episode_id": 16465,
         "display_name": "Tučňák S01E01 - Po zavíračce CZ Dabing",
         "video_id": 28158477
@@ -116091,6 +116221,61 @@
         "episode_id": 16473,
         "display_name": "Tučňák S01E05 - Návrat domů CZ Dabing",
         "video_id": 28158935
+      },
+      {
+        "episode_id": 16477,
+        "display_name": "Tučňák S01E07 - Cylindr CZ Dabing",
+        "video_id": 28159163
+      },
+      {
+        "episode_id": 9969,
+        "display_name": "Peacemaker S01E04 - Nevojetá cesta CZ Dabing",
+        "video_id": 28159277
+      },
+      {
+        "episode_id": 9965,
+        "display_name": "Peacemaker S01E08 - Boj jako kráva CZ Dabing",
+        "video_id": 28159365
+      },
+      {
+        "episode_id": 4701,
+        "display_name": "Peacemaker S02E02 - Muž je jen tak dobrý, jako jeho pták CZ Dabing",
+        "video_id": 28159404
+      },
+      {
+        "episode_id": 4713,
+        "display_name": "Peacemaker S02E06 - Neznalost je Chris CZ Dabing",
+        "video_id": 28159471
+      },
+      {
+        "episode_id": 40284,
+        "display_name": "Smallville S07E06 - Lara CZ Dabing",
+        "video_id": 28159601
+      },
+      {
+        "episode_id": 40288,
+        "display_name": "Smallville S07E10 - Osobnost CZ Dabing",
+        "video_id": 28159764
+      },
+      {
+        "episode_id": 12489,
+        "display_name": "Co kdyby...? S01E08 - Co kdyby… Ultron vyhrál? CZ Dabing",
+        "video_id": 28159585
+      },
+      {
+        "episode_id": 12505,
+        "display_name": "Co kdyby...? S03E04 - Co kdyby... se Kačer Howard oženil? CZ Dabing",
+        "video_id": 28159637
+      },
+      {
+        "episode_id": 12497,
+        "display_name": "Co kdyby...? S03E07 - Co kdyby... se Pozorovatel ztratil? CZ Dabing",
+        "video_id": 28159707
+      },
+      {
+        "episode_id": 10565,
+        "display_name": "Lupin S01E03 - 3. kapitola CZ Dabing",
+        "video_id": 28159838
       },
       {
         "episode_id": 114182,
@@ -143018,6 +143203,11 @@
         "video_id": 28158768
       },
       {
+        "episode_id": 6638,
+        "display_name": "Mr. Bean S01E01 - Pan Bean CZ Dabing",
+        "video_id": 28159104
+      },
+      {
         "episode_id": 12691,
         "display_name": "The End of the F***ing World S01E01 - 1. díl CZ Dabing",
         "video_id": 28158504
@@ -143036,6 +143226,56 @@
         "episode_id": 4707,
         "display_name": "Peacemaker S02E04 - Musím říkat dveře? CZ Dabing",
         "video_id": 28158775
+      },
+      {
+        "episode_id": 4719,
+        "display_name": "Peacemaker S02E08 - Nelson CZ Dabing",
+        "video_id": 28158841
+      },
+      {
+        "episode_id": 15159,
+        "display_name": "Urgent S02E02 - 08:00 CZ Dabing",
+        "video_id": 28159216
+      },
+      {
+        "episode_id": 12487,
+        "display_name": "Co kdyby...? S01E07 - Co kdyby… byl Thor jedináček? CZ Dabing",
+        "video_id": 28159295
+      },
+      {
+        "episode_id": 40286,
+        "display_name": "Smallville S07E08 - Modrá CZ Dabing",
+        "video_id": 28159607
+      },
+      {
+        "episode_id": 40290,
+        "display_name": "Smallville S07E12 - Zlom CZ Dabing",
+        "video_id": 28159758
+      },
+      {
+        "episode_id": 12507,
+        "display_name": "Co kdyby...? S01E09 - Co kdyby… Pozorovatel porušil svou přísahu? CZ Dabing",
+        "video_id": 28159587
+      },
+      {
+        "episode_id": 12503,
+        "display_name": "Co kdyby...? S03E05 - Co kdyby... zrození zničilo Zemi? CZ Dabing",
+        "video_id": 28159625
+      },
+      {
+        "episode_id": 10563,
+        "display_name": "Lupin S01E01 - 1. kapitola CZ Dabing",
+        "video_id": 28159679
+      },
+      {
+        "episode_id": 40283,
+        "display_name": "Smallville S07E05 - Klapka, kamera, akce CZ Dabing",
+        "video_id": 28159789
+      },
+      {
+        "episode_id": 40287,
+        "display_name": "Smallville S07E09 - Blíženci CZ Dabing",
+        "video_id": 28159846
       }
     ],
     "prepared_not_upload_ready": [
@@ -144197,9 +144437,9 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 75,
-    "resolve_failed": 6,
-    "ok": 39
+    "disabled": 70,
+    "ok": 19,
+    "resolve_failed": 11
   },
   "whisper_review_statuses": {
     "whisper_non_cz_needs_subtitles": 4958,
