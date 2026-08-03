@@ -1,9 +1,9 @@
 {
   "counts": {
     "backlog_episodes": 173885,
-    "manifest_upload_ready_episodes": 904,
-    "uploaded_episodes": 19616,
-    "prepared_source_episodes": 59306,
+    "manifest_upload_ready_episodes": 918,
+    "uploaded_episodes": 19620,
+    "prepared_source_episodes": 59201,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
@@ -11,7 +11,7 @@
     "language_queue_sources": 2644,
     "language_audited_sources": 120,
     "language_whisper_attempted_sources": 40,
-    "language_pending_whisper_sources": 2624,
+    "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 56807,
     "whisper_review_pending_sources": 49529,
     "subtitle_followup_sources": 22930,
@@ -20,18 +20,58 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-08-03T23:39:03Z",
-      "databaseId": 30862978185,
+      "createdAt": "2026-08-03T23:43:19Z",
+      "databaseId": 30863215981,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-08-03T23:43:14Z",
+      "databaseId": 30863210654,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-03T23:41:08Z",
+      "databaseId": 30863093481,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-03T23:40:15Z",
+      "databaseId": 30863044466,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-03T23:40:12Z",
+      "databaseId": 30863041477,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-03T23:39:03Z",
+      "databaseId": 30862978185,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "cancelled",
       "createdAt": "2026-08-03T23:38:59Z",
       "databaseId": 30862974587,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -55,7 +95,7 @@
       "createdAt": "2026-08-03T23:34:09Z",
       "databaseId": 30862705313,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "sync"
     },
     {
@@ -107,11 +147,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-03T23:24:53Z",
       "databaseId": 30862167681,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -137,46 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-03T23:22:34Z",
-      "databaseId": 30862031302,
-      "headBranch": "main",
-      "status": "pending",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-03T23:20:57Z",
-      "databaseId": 30861938534,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-03T23:19:33Z",
-      "databaseId": 30861858583,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-03T23:16:04Z",
-      "databaseId": 30861666399,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "failure",
-      "createdAt": "2026-08-03T23:16:02Z",
-      "databaseId": 30861664170,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
     }
   ],
   "gaps": {
@@ -45866,6 +45866,11 @@
         "video_id": 28177260
       },
       {
+        "episode_id": 6020,
+        "display_name": "Silo S01E04 - Pravda CZ Titulky",
+        "video_id": 28177309
+      },
+      {
         "episode_id": 41817,
         "display_name": "Zlatá sedmdesátá S08E05 - Striptýz CZ Dabing",
         "video_id": 28177091
@@ -45894,6 +45899,16 @@
         "episode_id": 18229,
         "display_name": "Jack Ryan S02E01 - Náklad CZ Dabing",
         "video_id": 28177235
+      },
+      {
+        "episode_id": 18225,
+        "display_name": "Jack Ryan S03E01 - Sokol CZ Dabing",
+        "video_id": 28177296
+      },
+      {
+        "episode_id": 18217,
+        "display_name": "Jack Ryan S03E03 - Kdo běhá s vlky CZ Dabing",
+        "video_id": 28177351
       },
       {
         "episode_id": 114182,
@@ -74009,6 +74024,11 @@
         "episode_id": 17570,
         "display_name": "Jack Ryan S04E02 - Sbližování CZ Dabing",
         "video_id": 28177295
+      },
+      {
+        "episode_id": 17574,
+        "display_name": "Jack Ryan S04E06 - Ověření konceptu CZ Dabing",
+        "video_id": 28177337
       },
       {
         "episode_id": 41855,
@@ -119633,6 +119653,11 @@
         "video_id": 28177260
       },
       {
+        "episode_id": 6020,
+        "display_name": "Silo S01E04 - Pravda CZ Titulky",
+        "video_id": 28177309
+      },
+      {
         "episode_id": 41817,
         "display_name": "Zlatá sedmdesátá S08E05 - Striptýz CZ Dabing",
         "video_id": 28177091
@@ -119661,6 +119686,16 @@
         "episode_id": 18229,
         "display_name": "Jack Ryan S02E01 - Náklad CZ Dabing",
         "video_id": 28177235
+      },
+      {
+        "episode_id": 18225,
+        "display_name": "Jack Ryan S03E01 - Sokol CZ Dabing",
+        "video_id": 28177296
+      },
+      {
+        "episode_id": 18217,
+        "display_name": "Jack Ryan S03E03 - Kdo běhá s vlky CZ Dabing",
+        "video_id": 28177351
       },
       {
         "episode_id": 114182,
@@ -147776,6 +147811,11 @@
         "episode_id": 17570,
         "display_name": "Jack Ryan S04E02 - Sbližování CZ Dabing",
         "video_id": 28177295
+      },
+      {
+        "episode_id": 17574,
+        "display_name": "Jack Ryan S04E06 - Ověření konceptu CZ Dabing",
+        "video_id": 28177337
       },
       {
         "episode_id": 41855,
