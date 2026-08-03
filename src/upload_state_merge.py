@@ -38,17 +38,27 @@ def merge_upload(current: dict, incoming: dict) -> dict:
     return merged
 
 
-def merge_state(current: dict, incoming: dict) -> dict:
+def account_matches(upload: dict, upload_account: str | None) -> bool:
+    if not upload_account:
+        return True
+    return upload.get("upload_account") == upload_account
+
+
+def merge_state(current: dict, incoming: dict, *, upload_account: str | None = None) -> dict:
     merged = {"schema_version": current.get("schema_version") or incoming.get("schema_version") or 1}
 
     uploads_by_key: dict[tuple[str, int] | tuple[int, int, int], dict] = {}
     order: list[tuple[str, int] | tuple[int, int, int]] = []
     for source in (current.get("uploads") or []):
+        if not account_matches(source, upload_account):
+            continue
         key = upload_key(source)
         if key not in uploads_by_key:
             order.append(key)
         uploads_by_key[key] = source
     for source in (incoming.get("uploads") or []):
+        if not account_matches(source, upload_account):
+            continue
         key = upload_key(source)
         if key not in uploads_by_key:
             order.append(key)
@@ -93,9 +103,13 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--target", required=True, type=Path)
     parser.add_argument("--incoming", required=True, type=Path)
+    parser.add_argument("--upload-account", choices=("primary", "serialy"))
     args = parser.parse_args()
 
-    save_state(args.target, merge_state(load_state(args.target), load_state(args.incoming)))
+    save_state(
+        args.target,
+        merge_state(load_state(args.target), load_state(args.incoming), upload_account=args.upload_account),
+    )
     return 0
 
 

@@ -69,7 +69,7 @@ def push_state(reason: str) -> None:
             STATE.parent.mkdir(parents=True, exist_ok=True)
             LOG_PATH.parent.mkdir(parents=True, exist_ok=True)
             current_state = json.loads(STATE.read_text(encoding="utf-8")) if STATE.exists() and STATE.stat().st_size > 0 else {}
-            merged_state = merge_state(current_state, state_snapshot)
+            merged_state = merge_state(current_state, state_snapshot, upload_account=UPLOAD_ACCOUNT)
             STATE.write_text(json.dumps(merged_state, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
             LOG_PATH.write_bytes(log_bytes)
             subprocess.run(["git", "add", state_rel, log_rel], check=True)
