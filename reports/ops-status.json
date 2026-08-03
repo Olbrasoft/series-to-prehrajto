@@ -1,17 +1,17 @@
 {
   "counts": {
     "backlog_episodes": 174419,
-    "manifest_upload_ready_episodes": 331,
-    "uploaded_episodes": 19052,
+    "manifest_upload_ready_episodes": 321,
+    "uploaded_episodes": 19079,
     "prepared_source_episodes": 61853,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 350,
-    "language_whisper_attempted_sources": 102,
-    "language_pending_whisper_sources": 2624,
+    "language_audited_sources": 40,
+    "language_whisper_attempted_sources": 40,
+    "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 56842,
     "whisper_review_pending_sources": 49674,
     "subtitle_followup_sources": 22625,
@@ -20,18 +20,50 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-08-03T14:24:05Z",
-      "databaseId": 30822509186,
+      "createdAt": "2026-08-03T14:35:28Z",
+      "databaseId": 30823430183,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-03T14:35:22Z",
+      "databaseId": 30823420944,
       "headBranch": "main",
       "status": "pending",
       "workflowName": "prepare-manifest"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-08-03T14:35:15Z",
+      "databaseId": 30823411400,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-03T14:26:21Z",
+      "databaseId": 30822694748,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-sources"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-03T14:24:05Z",
+      "databaseId": 30822509186,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-03T14:23:26Z",
       "databaseId": 30822458116,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -55,7 +87,7 @@
       "createdAt": "2026-08-03T14:21:00Z",
       "databaseId": 30822263794,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "update-descriptions"
     },
     {
@@ -67,11 +99,11 @@
       "workflowName": "prepare-manifest"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-03T14:16:50Z",
       "databaseId": 30821936695,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "update-descriptions"
     },
     {
@@ -83,11 +115,11 @@
       "workflowName": "process-whisper-review"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-03T14:16:44Z",
       "databaseId": 30821930359,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -99,11 +131,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-03T14:10:11Z",
       "databaseId": 30821407706,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -115,11 +147,11 @@
       "workflowName": "prepare-manifest"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-03T14:06:43Z",
       "databaseId": 30821126282,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "sync"
     },
     {
@@ -145,38 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-03T13:56:41Z",
-      "databaseId": 30820312714,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-03T13:56:04Z",
-      "databaseId": 30820265015,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-03T13:55:14Z",
-      "databaseId": 30820196799,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-03T13:55:08Z",
-      "databaseId": 30820189904,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
     }
   ],
   "gaps": {
@@ -116928,86 +116928,6 @@
         "video_id": 28162052
       },
       {
-        "episode_id": 19356,
-        "display_name": "Simpsonovi S05E16 - Homer miluje Flanderse CZ Dabing",
-        "video_id": 28163532
-      },
-      {
-        "episode_id": 19337,
-        "display_name": "Simpsonovi S04E19 - Nastrčená osoba CZ Dabing",
-        "video_id": 28163274
-      },
-      {
-        "episode_id": 19341,
-        "display_name": "Simpsonovi S05E01 - Homerovo pěvecké kvarteto CZ Dabing",
-        "video_id": 28163292
-      },
-      {
-        "episode_id": 19349,
-        "display_name": "Simpsonovi S05E09 - Poslední pokušení Homera Simpsona CZ Dabing",
-        "video_id": 28163306
-      },
-      {
-        "episode_id": 19353,
-        "display_name": "Simpsonovi S05E13 - Homer a Apu CZ Dabing",
-        "video_id": 28163369
-      },
-      {
-        "episode_id": 19357,
-        "display_name": "Simpsonovi S05E17 - Bart dostane slona CZ Dabing",
-        "video_id": 28163392
-      },
-      {
-        "episode_id": 19361,
-        "display_name": "Simpsonovi S05E21 - Milenec Lady Bouvierové CZ Dabing",
-        "video_id": 28163413
-      },
-      {
-        "episode_id": 19365,
-        "display_name": "Simpsonovi S06E03 - Tentokrát o lásce CZ Dabing",
-        "video_id": 28163447
-      },
-      {
-        "episode_id": 19369,
-        "display_name": "Simpsonovi S06E07 - Bartovo děvče CZ Dabing",
-        "video_id": 28163470
-      },
-      {
-        "episode_id": 19360,
-        "display_name": "Simpsonovi S05E20 - Chlapec, který věděl příliš mnoho CZ Dabing",
-        "video_id": 28163638
-      },
-      {
-        "episode_id": 19364,
-        "display_name": "Simpsonovi S06E02 - Lízina rivalka CZ Dabing",
-        "video_id": 28163703
-      },
-      {
-        "episode_id": 19368,
-        "display_name": "Simpsonovi S06E06 - Dům plný hrůzy CZ Dabing",
-        "video_id": 28163766
-      },
-      {
-        "episode_id": 19372,
-        "display_name": "Simpsonovi S06E10 - Dědeček versus sexualní ochablost CZ Dabing",
-        "video_id": 28163798
-      },
-      {
-        "episode_id": 19376,
-        "display_name": "Simpsonovi S06E14 - Bartova kometa CZ Dabing",
-        "video_id": 28163855
-      },
-      {
-        "episode_id": 19380,
-        "display_name": "Simpsonovi S06E18 - Zrodila se hvězda CZ Dabing",
-        "video_id": 28163872
-      },
-      {
-        "episode_id": 19384,
-        "display_name": "Simpsonovi S06E22 - Kolem Springfieldu CZ Dabing",
-        "video_id": 28163910
-      },
-      {
         "episode_id": 19388,
         "display_name": "Simpsonovi S07E01 - Kdo postřelil pana Burnse? – část 2 CZ Dabing",
         "video_id": 28163949
@@ -117056,6 +116976,81 @@
         "episode_id": 19392,
         "display_name": "Simpsonovi S07E05 - Líza vegetariánkou CZ Dabing",
         "video_id": 28164058
+      },
+      {
+        "episode_id": 19396,
+        "display_name": "Simpsonovi S07E09 - Poslední šance Leváka Boba CZ Dabing",
+        "video_id": 28164082
+      },
+      {
+        "episode_id": 19400,
+        "display_name": "Simpsonovi S07E13 - Dva zlí sousedé CZ Dabing",
+        "video_id": 28164100
+      },
+      {
+        "episode_id": 19404,
+        "display_name": "Simpsonovi S07E17 - Homer ve službě CZ Dabing",
+        "video_id": 28164136
+      },
+      {
+        "episode_id": 19408,
+        "display_name": "Simpsonovi S07E21 - Dvaadvacet krátkých filmů o Springfieldu CZ Dabing",
+        "video_id": 28164152
+      },
+      {
+        "episode_id": 19412,
+        "display_name": "Simpsonovi S07E25 - Simpsonovi na prázdninách CZ Dabing",
+        "video_id": 28164171
+      },
+      {
+        "episode_id": 2040,
+        "display_name": "Simpsonovi S08E03 - Zuřící býk Homer CZ Dabing",
+        "video_id": 28164189
+      },
+      {
+        "episode_id": 2044,
+        "display_name": "Simpsonovi S08E07 - Lízino rande s blbostí CZ Dabing",
+        "video_id": 28164205
+      },
+      {
+        "episode_id": 19409,
+        "display_name": "Simpsonovi S07E22 - Zuřící dědeček a jeho reptající vnuk v prokletí pekelných ryb CZ Dabing",
+        "video_id": 28164093
+      },
+      {
+        "episode_id": 2041,
+        "display_name": "Simpsonovi S08E04 - Burnsovy otcovské lapálie CZ Dabing",
+        "video_id": 28164117
+      },
+      {
+        "episode_id": 2045,
+        "display_name": "Simpsonovi S08E08 - Hurikán Ned CZ Dabing",
+        "video_id": 28164143
+      },
+      {
+        "episode_id": 2049,
+        "display_name": "Simpsonovi S08E12 - Hora šílenství CZ Dabing",
+        "video_id": 28164172
+      },
+      {
+        "episode_id": 19413,
+        "display_name": "Simpsonovi S08E13 - Himlhergotdonerveterkrucajselement CZ Dabing",
+        "video_id": 28164185
+      },
+      {
+        "episode_id": 37477,
+        "display_name": "Simpsonovi S08E18 - Homer versus 18. doplněk Ústavy CZ Dabing",
+        "video_id": 28164199
+      },
+      {
+        "episode_id": 19425,
+        "display_name": "Simpsonovi S08E25 - Tajná válka Lízy Simpsonové CZ Dabing",
+        "video_id": 28164216
+      },
+      {
+        "episode_id": 19429,
+        "display_name": "Simpsonovi S09E04 - Speciální čarodějnický díl CZ Dabing",
+        "video_id": 28164232
       },
       {
         "episode_id": 114182,
@@ -144268,91 +144263,6 @@
         "video_id": 28162075
       },
       {
-        "episode_id": 19362,
-        "display_name": "Simpsonovi S05E22 - Tajemství úspěšného manželství CZ Dabing",
-        "video_id": 28163541
-      },
-      {
-        "episode_id": 19343,
-        "display_name": "Simpsonovi S05E03 - Homer jde studovat CZ Dabing",
-        "video_id": 28163273
-      },
-      {
-        "episode_id": 19347,
-        "display_name": "Simpsonovi S05E07 - Bartovo vnitřní dítě CZ Dabing",
-        "video_id": 28163289
-      },
-      {
-        "episode_id": 19351,
-        "display_name": "Simpsonovi S05E11 - Homer strážcem zákona CZ Dabing",
-        "video_id": 28163330
-      },
-      {
-        "episode_id": 19355,
-        "display_name": "Simpsonovi S05E15 - Hrdinný kosmonaut Homer CZ Dabing",
-        "video_id": 28163352
-      },
-      {
-        "episode_id": 19359,
-        "display_name": "Simpsonovi S05E19 - Skinner - sladký nepřítel CZ Dabing",
-        "video_id": 28163390
-      },
-      {
-        "episode_id": 19363,
-        "display_name": "Simpsonovi S06E01 - Bart temnoty CZ Dabing",
-        "video_id": 28163411
-      },
-      {
-        "episode_id": 19367,
-        "display_name": "Simpsonovi S06E05 - Návrat Leváka Boba CZ Dabing",
-        "video_id": 28163444
-      },
-      {
-        "episode_id": 19371,
-        "display_name": "Simpsonovi S06E09 - Zvrhlík Homer CZ Dabing",
-        "video_id": 28163491
-      },
-      {
-        "episode_id": 19366,
-        "display_name": "Simpsonovi S06E04 - Návštěva Drsnolandu CZ Dabing",
-        "video_id": 28163644
-      },
-      {
-        "episode_id": 19370,
-        "display_name": "Simpsonovi S06E08 - Líza - posila mužstva CZ Dabing",
-        "video_id": 28163731
-      },
-      {
-        "episode_id": 19378,
-        "display_name": "Simpsonovi S06E16 - Bart versus Austrálie CZ Dabing",
-        "video_id": 28163763
-      },
-      {
-        "episode_id": 19382,
-        "display_name": "Simpsonovi S06E20 - Dva tucty a jeden chrt CZ Dabing",
-        "video_id": 28163795
-      },
-      {
-        "episode_id": 19386,
-        "display_name": "Simpsonovi S06E24 - Trojský citrón CZ Dabing",
-        "video_id": 28163819
-      },
-      {
-        "episode_id": 19390,
-        "display_name": "Simpsonovi S07E03 - Domove, sladký domove CZ Dabing",
-        "video_id": 28163839
-      },
-      {
-        "episode_id": 19394,
-        "display_name": "Simpsonovi S07E07 - Tlouštík Homer CZ Dabing",
-        "video_id": 28163860
-      },
-      {
-        "episode_id": 19398,
-        "display_name": "Simpsonovi S07E11 - Nemáš se čím chlubit, Marge CZ Dabing",
-        "video_id": 28163878
-      },
-      {
         "episode_id": 19375,
         "display_name": "Simpsonovi S06E13 - A s Maggie jsou tři CZ Dabing",
         "video_id": 28163632
@@ -144403,6 +144313,36 @@
         "video_id": 28164046
       },
       {
+        "episode_id": 19406,
+        "display_name": "Simpsonovi S07E19 - Ryba jménem Selma CZ Dabing",
+        "video_id": 28164079
+      },
+      {
+        "episode_id": 19410,
+        "display_name": "Simpsonovi S07E23 - Mnoho Apua pro nic CZ Dabing",
+        "video_id": 28164096
+      },
+      {
+        "episode_id": 2038,
+        "display_name": "Simpsonovi S08E01 - Speciální čarodějnický díl CZ Dabing",
+        "video_id": 28164124
+      },
+      {
+        "episode_id": 2042,
+        "display_name": "Simpsonovi S08E05 - Bart po setmění CZ Dabing",
+        "video_id": 28164147
+      },
+      {
+        "episode_id": 37438,
+        "display_name": "Simpsonovi S08E14 - Představují se Itchy, Scratchy a Poochie CZ Dabing",
+        "video_id": 28164161
+      },
+      {
+        "episode_id": 37458,
+        "display_name": "Simpsonovi S08E17 - Má sestra, má chůva CZ Dabing",
+        "video_id": 28164179
+      },
+      {
         "episode_id": 19407,
         "display_name": "Simpsonovi S07E20 - Bart na cestě CZ Dabing",
         "video_id": 28164029
@@ -144411,6 +144351,36 @@
         "episode_id": 19411,
         "display_name": "Simpsonovi S07E24 - Homerpalooza CZ Dabing",
         "video_id": 28164050
+      },
+      {
+        "episode_id": 2043,
+        "display_name": "Simpsonovi S08E06 - Rozdělený Milhouse CZ Dabing",
+        "video_id": 28164080
+      },
+      {
+        "episode_id": 2047,
+        "display_name": "Simpsonovi S08E10 - Akta S CZ Dabing",
+        "video_id": 28164099
+      },
+      {
+        "episode_id": 19415,
+        "display_name": "Simpsonovi S08E15 - Homerova fóbie CZ Dabing",
+        "video_id": 28164120
+      },
+      {
+        "episode_id": 19419,
+        "display_name": "Simpsonovi S08E19 - Důvěrnosti v základní škole CZ Dabing",
+        "video_id": 28164165
+      },
+      {
+        "episode_id": 19427,
+        "display_name": "Simpsonovi S09E02 - Ředitel Skinner a seržant Skinner CZ Dabing",
+        "video_id": 28164184
+      },
+      {
+        "episode_id": 19431,
+        "display_name": "Simpsonovi S09E06 - Bart hvězdou CZ Dabing",
+        "video_id": 28164210
       }
     ],
     "prepared_not_upload_ready": [
@@ -145572,8 +145542,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 248,
-    "ok": 101,
+    "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
