@@ -6,7 +6,9 @@ from __future__ import annotations
 import argparse
 import gzip
 import json
+import os
 from collections import Counter
+from datetime import datetime, timezone
 from pathlib import Path
 
 from description_quality import is_valid_generated_description
@@ -17,6 +19,7 @@ MIN_UPLOAD_FILE_SIZE = 300 * 1024 * 1024
 # margin so upload workers do not waste batches on sources that HEAD later
 # rejects as undersized.
 MIN_PLANNED_FILE_SIZE = 350 * 1024 * 1024
+TRANSIENT_FAILURE_COOLDOWN_SECONDS = int(os.environ.get("SYNC_TRANSIENT_FAILURE_COOLDOWN_SECONDS", "21600"))
 
 
 def load_jsonl(path: Path) -> list[dict]:
@@ -102,7 +105,8 @@ def failed_availability_urls(path: Path) -> set[str]:
 def load_upload_state_exclusions() -> tuple[set[int], set[tuple[int, int, int]], set[int]]:
     uploaded_ids: set[int] = set()
     uploaded_keys: set[tuple[int, int, int]] = set()
-    burned_sources: set[int] = set()
+    unavailable_sources: set[int] = set()
+    now = datetime.now(timezone.utc)
     paths = [REPO_ROOT / "state" / "uploaded.json"]
     paths.extend(sorted((REPO_ROOT / "state").glob("uploaded-shard-*.json")))
     for path in paths:
@@ -119,9 +123,27 @@ def load_upload_state_exclusions() -> tuple[set[int], set[tuple[int, int, int]],
             if key:
                 uploaded_keys.add(key)
         for failure in state.get("failed_attempts", []):
-            if failure.get("permanent") and failure.get("source_id") is not None:
-                burned_sources.add(int(failure["source_id"]))
-    return uploaded_ids, uploaded_keys, burned_sources
+            if failure.get("source_id") is None:
+                continue
+            if failure.get("permanent"):
+                unavailable_sources.add(int(failure["source_id"]))
+                continue
+            failed_at = parse_failed_at(failure.get("failed_at"))
+            if failed_at is None:
+                continue
+            age = (now - failed_at).total_seconds()
+            if 0 <= age < TRANSIENT_FAILURE_COOLDOWN_SECONDS:
+                unavailable_sources.add(int(failure["source_id"]))
+    return uploaded_ids, uploaded_keys, unavailable_sources
+
+
+def parse_failed_at(value: str | None) -> datetime | None:
+    if not value:
+        return None
+    try:
+        return datetime.fromisoformat(value.replace("Z", "+00:00"))
+    except ValueError:
+        return None
 
 
 def description_indexes(rows: list[dict]) -> tuple[dict[int, dict], dict[int, dict]]:
