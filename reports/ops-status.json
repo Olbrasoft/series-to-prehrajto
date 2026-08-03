@@ -2,14 +2,14 @@
   "counts": {
     "backlog_episodes": 144458,
     "manifest_upload_ready_episodes": 59,
-    "uploaded_episodes": 48910,
+    "uploaded_episodes": 48911,
     "prepared_source_episodes": 62513,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 90,
+    "language_audited_sources": 40,
     "language_whisper_attempted_sources": 40,
     "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 56851,
@@ -20,18 +20,26 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-08-03T01:38:29Z",
-      "databaseId": 30777351211,
+      "createdAt": "2026-08-03T01:39:37Z",
+      "databaseId": 30777394724,
       "headBranch": "main",
-      "status": "pending",
-      "workflowName": "ops-watchdog"
+      "status": "in_progress",
+      "workflowName": "update-descriptions"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-08-03T01:38:29Z",
+      "databaseId": 30777351211,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-03T01:38:26Z",
       "databaseId": 30777349261,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -91,11 +99,11 @@
       "workflowName": "process-whisper-review"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-03T01:30:20Z",
       "databaseId": 30777016956,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -169,14 +177,6 @@
       "headBranch": "main",
       "status": "pending",
       "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-03T01:06:38Z",
-      "databaseId": 30776074441,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
     }
   ],
   "gaps": {
@@ -219979,6 +219979,11 @@
         "episode_id": 178979,
         "display_name": "The Reckoning S01E03 - 3. epizoda CZ Titulky",
         "video_id": 28143628
+      },
+      {
+        "episode_id": 11148,
+        "display_name": "Podezření S01E02 - Prostor pro pochybnosti CZ Titulky",
+        "video_id": 28143736
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -439676,6 +439681,11 @@
         "episode_id": 178979,
         "display_name": "The Reckoning S01E03 - 3. epizoda CZ Titulky",
         "video_id": 28143628
+      },
+      {
+        "episode_id": 11148,
+        "display_name": "Podezření S01E02 - Prostor pro pochybnosti CZ Titulky",
+        "video_id": 28143736
       }
     ],
     "prepared_not_upload_ready": [
@@ -440837,7 +440847,6 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 50,
     "ok": 39,
     "resolve_failed": 1
   },
