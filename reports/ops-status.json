@@ -3,13 +3,13 @@
     "backlog_episodes": 144375,
     "manifest_upload_ready_episodes": 5,
     "uploaded_episodes": 48980,
-    "prepared_source_episodes": 62684,
+    "prepared_source_episodes": 62676,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 44,
+    "language_audited_sources": 48,
     "language_whisper_attempted_sources": 40,
     "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 56847,
@@ -20,10 +20,26 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-08-03T06:05:55Z",
+      "databaseId": 30789062796,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-03T06:05:42Z",
+      "databaseId": 30789049920,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-03T06:04:43Z",
       "databaseId": 30788994613,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-status"
     },
     {
@@ -35,11 +51,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-08-03T06:04:23Z",
       "databaseId": 30788976197,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -51,11 +67,11 @@
       "workflowName": "prepare-sources"
     },
     {
-      "conclusion": "",
+      "conclusion": "failure",
       "createdAt": "2026-08-03T05:50:17Z",
       "databaseId": 30788282425,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -161,22 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-03T05:17:44Z",
-      "databaseId": 30786763179,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-03T05:15:40Z",
-      "databaseId": 30786664536,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
     }
   ],
   "gaps": {
@@ -441537,7 +441537,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 4,
+    "disabled": 8,
     "ok": 39,
     "resolve_failed": 1
   },
