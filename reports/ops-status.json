@@ -2,28 +2,52 @@
   "counts": {
     "backlog_episodes": 173992,
     "manifest_upload_ready_episodes": 647,
-    "uploaded_episodes": 19401,
-    "prepared_source_episodes": 60866,
+    "uploaded_episodes": 19403,
+    "prepared_source_episodes": 61053,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 20,
-    "language_whisper_attempted_sources": 20,
+    "language_audited_sources": 714,
+    "language_whisper_attempted_sources": 109,
     "language_pending_whisper_sources": 2624,
-    "whisper_review_sources": 56822,
-    "whisper_review_pending_sources": 49584,
-    "subtitle_followup_sources": 22819,
-    "subtitle_followup_pending_sources": 22819
+    "whisper_review_sources": 56825,
+    "whisper_review_pending_sources": 49596,
+    "subtitle_followup_sources": 22842,
+    "subtitle_followup_pending_sources": 22842
   },
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-08-03T20:21:16Z",
+      "databaseId": 30849826448,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-03T20:20:24Z",
+      "databaseId": 30849763163,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-03T20:20:21Z",
+      "databaseId": 30849758573,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-03T20:19:07Z",
       "databaseId": 30849666042,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -153,30 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-03T19:50:31Z",
-      "databaseId": 30847518418,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-03T19:48:57Z",
-      "databaseId": 30847405399,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-03T19:47:15Z",
-      "databaseId": 30847283332,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
     }
   ],
   "gaps": {
@@ -45361,6 +45361,11 @@
         "video_id": 28173213
       },
       {
+        "episode_id": 49696,
+        "display_name": "Super drbna S01E02 - Nedělní odpoledne CZ Dabing",
+        "video_id": 28173340
+      },
+      {
         "episode_id": 6025,
         "display_name": "Silo S01E09 - Útěk CZ Dabing",
         "video_id": 28173183
@@ -72989,6 +72994,11 @@
         "episode_id": 49779,
         "display_name": "Super drbna S02E20 - Co zbylo z J CZ Dabing",
         "video_id": 28173306
+      },
+      {
+        "episode_id": 44731,
+        "display_name": "Agenti S.H.I.E.L.D. S01E09 - Škody CZ Dabing",
+        "video_id": 28173352
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -118068,6 +118078,11 @@
         "video_id": 28173213
       },
       {
+        "episode_id": 49696,
+        "display_name": "Super drbna S01E02 - Nedělní odpoledne CZ Dabing",
+        "video_id": 28173340
+      },
+      {
         "episode_id": 6025,
         "display_name": "Silo S01E09 - Útěk CZ Dabing",
         "video_id": 28173183
@@ -145696,6 +145711,11 @@
         "episode_id": 49779,
         "display_name": "Super drbna S02E20 - Co zbylo z J CZ Dabing",
         "video_id": 28173306
+      },
+      {
+        "episode_id": 44731,
+        "display_name": "Agenti S.H.I.E.L.D. S01E09 - Škody CZ Dabing",
+        "video_id": 28173352
       }
     ],
     "prepared_not_upload_ready": [
@@ -146042,6 +146062,78 @@
         "status": "whisper_failed"
       },
       {
+        "episode_id": 94041,
+        "source_id": -59899733798064779,
+        "series_title": "Big Mouth",
+        "episode_code": "S06E01",
+        "source_title": "Big Mouth - S6E1 Šmajchlbarák EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 94042,
+        "source_id": -5572613996006693,
+        "series_title": "Big Mouth",
+        "episode_code": "S06E02",
+        "source_title": "Big Mouth - S6E2 Dvacet dva a ty EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 94043,
+        "source_id": -3587986277464761,
+        "series_title": "Big Mouth",
+        "episode_code": "S06E03",
+        "source_title": "Big Mouth - S6E3 Trápení s vagínou EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 94044,
+        "source_id": -22597168715816670,
+        "series_title": "Big Mouth",
+        "episode_code": "S06E04",
+        "source_title": "Big Mouth - S6E4 Test počestnosti EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 94045,
+        "source_id": -15216290753305791,
+        "series_title": "Big Mouth",
+        "episode_code": "S06E05",
+        "source_title": "Big Mouth - S6E5 Andrew si dneska mákne na kozu EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 94046,
+        "source_id": -66979763696457108,
+        "series_title": "Big Mouth",
+        "episode_code": "S06E06",
+        "source_title": "Big Mouth - S6E6 Jablečná brož EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 94047,
+        "source_id": -20932540961314520,
+        "series_title": "Big Mouth",
+        "episode_code": "S06E07",
+        "source_title": "Big Mouth - S6E7 Dadda Dia! EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 94048,
+        "source_id": -29096590141149574,
+        "series_title": "Big Mouth",
+        "episode_code": "S06E08",
+        "source_title": "Big Mouth - S6E8 Asexuální léčba EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 94049,
+        "source_id": -45863926865416788,
+        "series_title": "Big Mouth",
+        "episode_code": "S06E09",
+        "source_title": "Big Mouth - S6E9 Rodiče se zbláznili EN",
+        "status": "needs_whisper"
+      },
+      {
         "episode_id": 94050,
         "source_id": -13608906843829155,
         "series_title": "Big Mouth",
@@ -146327,78 +146419,6 @@
         "series_title": "Bleach",
         "episode_code": "S02E04",
         "source_title": "[Judas] Bleach - S02E04",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 80468,
-        "source_id": -33053864552290927,
-        "series_title": "Bleach",
-        "episode_code": "S02E05",
-        "source_title": "[Judas] Bleach - S02E05",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 80469,
-        "source_id": -4085773676256610,
-        "series_title": "Bleach",
-        "episode_code": "S02E06",
-        "source_title": "[Judas] Bleach - S02E06",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 80470,
-        "source_id": -49762082754605239,
-        "series_title": "Bleach",
-        "episode_code": "S02E07",
-        "source_title": "[Judas] Bleach - S02E07",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 80471,
-        "source_id": -46695131723254243,
-        "series_title": "Bleach",
-        "episode_code": "S02E08",
-        "source_title": "[Judas] Bleach - S02E08",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 80472,
-        "source_id": -44742946289120645,
-        "series_title": "Bleach",
-        "episode_code": "S02E09",
-        "source_title": "[Judas] Bleach - S02E09",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 80473,
-        "source_id": -22596259962212298,
-        "series_title": "Bleach",
-        "episode_code": "S02E10",
-        "source_title": "[Judas] Bleach - S02E10",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 80474,
-        "source_id": -13609920857397191,
-        "series_title": "Bleach",
-        "episode_code": "S02E11",
-        "source_title": "[Judas] Bleach - S02E11",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 80475,
-        "source_id": -29319451226354815,
-        "series_title": "Bleach",
-        "episode_code": "S02E12",
-        "source_title": "[Judas] Bleach - S02E12",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 80476,
-        "source_id": -29534503979574350,
-        "series_title": "Bleach",
-        "episode_code": "S02E13",
-        "source_title": "[Judas] Bleach - S02E13",
         "status": "needs_whisper"
       }
     ],
@@ -146857,16 +146877,17 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 19,
-    "resolve_failed": 1
+    "disabled": 605,
+    "ok": 107,
+    "resolve_failed": 2
   },
   "whisper_review_statuses": {
-    "whisper_non_cz_needs_subtitles": 5016,
+    "whisper_non_cz_needs_subtitles": 5007,
     "whisper_confirmed_cz": 2222,
     "whisper_failed": 36,
-    "needs_whisper": 49548
+    "needs_whisper": 49560
   },
   "subtitle_followup_statuses": {
-    "needs_subtitle_setup_after_prehrajto_processing": 22819
+    "needs_subtitle_setup_after_prehrajto_processing": 22842
   }
 }
