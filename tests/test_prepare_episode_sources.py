@@ -238,3 +238,37 @@ def test_source_precheck_requires_czech_audio_hint_and_upload_quality():
     assert not source_preparation.source_has_cz_audio_hint(not_czech)
     assert source_preparation.source_has_cz_audio_hint(db_czech)
     assert source_preparation.source_has_upload_quality_hint(db_czech)
+
+
+def test_episode_preparation_score_prioritizes_existing_usable_sources():
+    no_sources = {"episode_id": 1, "sources": []}
+    weak = {
+        "episode_id": 2,
+        "sources": [
+            {
+                "source_id": 20,
+                "source_title": "Example S01E02 480p",
+                "resolution_hint": "480p",
+            }
+        ],
+    }
+    usable = {
+        "episode_id": 3,
+        "sources": [
+            {
+                "source_id": 30,
+                "source_title": "Example S01E03 CZ Dabing",
+                "filesize_bytes": 900 * 1024 * 1024,
+            }
+        ],
+    }
+
+    scored = sorted(
+        [no_sources, weak, usable],
+        key=lambda episode: tuple(
+            -value for value in source_preparation.episode_preparation_score(episode)
+        ),
+    )
+
+    assert [episode["episode_id"] for episode in scored] == [3, 2, 1]
+    assert source_preparation.episode_preparation_score(usable, {30}) == (0, 0, 0, 0, 0)

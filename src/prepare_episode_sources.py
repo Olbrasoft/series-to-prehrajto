@@ -73,6 +73,33 @@ def source_precheck_score(source: dict) -> tuple[int, int, int, int]:
     return cz_bonus, quality_bonus, resolution, filesize
 
 
+def episode_preparation_score(episode: dict, burned: set[int] | None = None) -> tuple[int, int, int, int, int]:
+    burned = burned or set()
+    sources = [
+        source
+        for source in episode.get("sources") or []
+        if source.get("source_id") is not None and int(source["source_id"]) not in burned
+    ]
+    if not sources:
+        return (0, 0, 0, 0, 0)
+    best_cz = max(
+        (source_precheck_score(source) for source in sources if source_has_cz_audio_hint(source)),
+        default=(0, 0, 0, 0),
+    )
+    best_subtitle = max(
+        (source_precheck_score(source) for source in sources if source_has_cz_subtitle_hint(source)),
+        default=(0, 0, 0, 0),
+    )
+    best_quality = max((source_quality_score(source) for source in sources), default=(0, 0, 0))
+    return (
+        1 if best_cz[1] > 0 else 0,
+        1 if best_subtitle[1] > 0 else 0,
+        int(best_quality[0]),
+        int(best_quality[1]),
+        len(sources),
+    )
+
+
 def load_jsonl(path: Path) -> list[dict]:
     if not path.exists() or path.stat().st_size == 0:
         return []
@@ -1012,6 +1039,7 @@ def main() -> int:
     todo.sort(
         key=lambda episode: (
             str((latest.get(int(episode["episode_id"])) or {}).get("prepared_at") or ""),
+            tuple(-value for value in episode_preparation_score(episode, burned)),
             -int(episode.get("imdb_votes") or 0),
             -float(episode.get("imdb_rating") or 0),
             -float(episode.get("csfd_rating") or 0),
