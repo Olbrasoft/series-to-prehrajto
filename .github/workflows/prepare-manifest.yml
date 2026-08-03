@@ -178,7 +178,7 @@ jobs:
               --jq '[.[] | select(.status == "queued" or .status == "in_progress" or .status == "waiting" or .status == "pending" or .status == "requested")] | length')
             if [ "$ACTIVE_SYNC" -eq 0 ]; then
               gh workflow run sync.yml \
-                -f batch_size="30" \
+                -f batch_size="8" \
                 -f num_shards="4" \
                 -f allow_subtitles="true" \
                 -f continue_uploads="true"
@@ -292,7 +292,7 @@ jobs:
               --jq '[.[] | select(.status == "queued" or .status == "in_progress" or .status == "waiting" or .status == "pending" or .status == "requested")] | length')
             if [ "$ACTIVE_SYNC" -eq 0 ]; then
               gh workflow run sync.yml \
-                -f batch_size="30" \
+                -f batch_size="8" \
                 -f num_shards="4" \
                 -f allow_subtitles="true" \
                 -f continue_uploads="true"
