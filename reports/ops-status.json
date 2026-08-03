@@ -1,15 +1,15 @@
 {
   "counts": {
     "backlog_episodes": 174127,
-    "manifest_upload_ready_episodes": 429,
-    "uploaded_episodes": 19331,
-    "prepared_source_episodes": 61471,
+    "manifest_upload_ready_episodes": 444,
+    "uploaded_episodes": 19332,
+    "prepared_source_episodes": 61371,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 278,
+    "language_audited_sources": 354,
     "language_whisper_attempted_sources": 40,
     "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 56839,
@@ -20,18 +20,42 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-08-03T18:08:18Z",
-      "databaseId": 30839906259,
+      "createdAt": "2026-08-03T18:10:59Z",
+      "databaseId": 30840107023,
       "headBranch": "main",
-      "status": "pending",
-      "workflowName": "prepare-manifest"
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-08-03T18:10:54Z",
+      "databaseId": 30840100088,
+      "headBranch": "main",
+      "status": "queued",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-08-03T18:10:07Z",
+      "databaseId": 30840038713,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-08-03T18:08:18Z",
+      "databaseId": 30839906259,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-03T18:08:08Z",
       "databaseId": 30839893859,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-status"
     },
     {
@@ -51,11 +75,11 @@
       "workflowName": "prepare-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-03T17:54:35Z",
       "databaseId": 30838860085,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -153,30 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-03T17:32:37Z",
-      "databaseId": 30837219066,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-03T17:32:01Z",
-      "databaseId": 30837172137,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-03T17:31:19Z",
-      "databaseId": 30837118973,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
     }
   ],
   "gaps": {
@@ -45149,6 +45149,11 @@
         "episode_id": 41940,
         "display_name": "Zákon gangu S06E12 - 12. epizoda CZ Titulky",
         "video_id": 28169604
+      },
+      {
+        "episode_id": 41956,
+        "display_name": "Zákon gangu S07E02 - 2. epizoda CZ Titulky",
+        "video_id": 28169669
       },
       {
         "episode_id": 121637,
@@ -117508,6 +117513,11 @@
         "video_id": 28169604
       },
       {
+        "episode_id": 41956,
+        "display_name": "Zákon gangu S07E02 - 2. epizoda CZ Titulky",
+        "video_id": 28169669
+      },
+      {
         "episode_id": 121637,
         "display_name": "Gotham S05E01 - Rok nula CZ Dabing",
         "video_id": 28168720
@@ -146157,7 +146167,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 238,
+    "disabled": 314,
     "ok": 39,
     "resolve_failed": 1
   },
