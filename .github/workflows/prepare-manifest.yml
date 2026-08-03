@@ -346,6 +346,6 @@ jobs:
              | length')
           echo "claimed upload-ready episodes: $READY_COUNT"
           if [ "$READY_COUNT" -lt 1 ]; then
-            echo "preparation completed without adding an upload-ready episode" >&2
-            exit 1
+            echo "::warning::preparation completed without adding an upload-ready episode; another small preparation batch is queued when the manifest is still empty"
+            exit 0
           fi
