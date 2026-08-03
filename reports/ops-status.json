@@ -2,15 +2,15 @@
   "counts": {
     "backlog_episodes": 144458,
     "manifest_upload_ready_episodes": 66,
-    "uploaded_episodes": 48885,
+    "uploaded_episodes": 48886,
     "prepared_source_episodes": 62626,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 40,
-    "language_whisper_attempted_sources": 40,
+    "language_audited_sources": 20,
+    "language_whisper_attempted_sources": 20,
     "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 56851,
     "whisper_review_pending_sources": 49723,
@@ -20,10 +20,50 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-08-03T01:06:58Z",
+      "databaseId": 30776089537,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-03T01:06:38Z",
+      "databaseId": 30776074441,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-03T01:06:33Z",
+      "databaseId": 30776070513,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-03T01:01:27Z",
+      "databaseId": 30775856659,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-03T01:01:18Z",
+      "databaseId": 30775850652,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-03T01:00:10Z",
       "databaseId": 30775797631,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -71,7 +111,7 @@
       "createdAt": "2026-08-03T00:54:51Z",
       "databaseId": 30775585339,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "sync"
     },
     {
@@ -99,11 +139,11 @@
       "workflowName": "process-whisper-review"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-03T00:53:54Z",
       "databaseId": 30775545203,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -137,46 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-03T00:39:09Z",
-      "databaseId": 30774979490,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-03T00:35:16Z",
-      "databaseId": 30774830142,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-03T00:29:50Z",
-      "databaseId": 30774609555,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "failure",
-      "createdAt": "2026-08-03T00:26:20Z",
-      "databaseId": 30774483007,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-03T00:24:26Z",
-      "databaseId": 30774409208,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
     }
   ],
   "gaps": {
@@ -219854,6 +219854,11 @@
         "episode_id": 31379,
         "display_name": "Ponorka S04E03 - 3. epizoda CZ Titulky",
         "video_id": 28142865
+      },
+      {
+        "episode_id": 86715,
+        "display_name": "NCIS: Hawaiʻi S01E19 - 19. epizoda CZ Dabing",
+        "video_id": 28142959
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -439426,6 +439431,11 @@
         "episode_id": 31379,
         "display_name": "Ponorka S04E03 - 3. epizoda CZ Titulky",
         "video_id": 28142865
+      },
+      {
+        "episode_id": 86715,
+        "display_name": "NCIS: Hawaiʻi S01E19 - 19. epizoda CZ Dabing",
+        "video_id": 28142959
       }
     ],
     "prepared_not_upload_ready": [
@@ -440587,7 +440597,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 39,
+    "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
