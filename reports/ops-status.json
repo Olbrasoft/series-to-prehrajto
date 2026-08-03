@@ -1,15 +1,15 @@
 {
   "counts": {
     "backlog_episodes": 174127,
-    "manifest_upload_ready_episodes": 294,
-    "uploaded_episodes": 19240,
-    "prepared_source_episodes": 61925,
+    "manifest_upload_ready_episodes": 312,
+    "uploaded_episodes": 19246,
+    "prepared_source_episodes": 61864,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 87,
+    "language_audited_sources": 154,
     "language_whisper_attempted_sources": 20,
     "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 56842,
@@ -20,18 +20,66 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-08-03T16:19:08Z",
-      "databaseId": 30831604713,
+      "createdAt": "2026-08-03T16:21:49Z",
+      "databaseId": 30831814623,
       "headBranch": "main",
       "status": "in_progress",
-      "workflowName": "ops-watchdog"
+      "workflowName": "ops-status"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-08-03T16:21:10Z",
+      "databaseId": 30831766116,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-03T16:20:33Z",
+      "databaseId": 30831716965,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-03T16:20:27Z",
+      "databaseId": 30831709016,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-03T16:20:24Z",
+      "databaseId": 30831705339,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-03T16:20:22Z",
+      "databaseId": 30831702811,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-03T16:19:08Z",
+      "databaseId": 30831604713,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "cancelled",
       "createdAt": "2026-08-03T16:18:29Z",
       "databaseId": 30831554791,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -59,11 +107,11 @@
       "workflowName": "sync"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-03T16:05:59Z",
       "databaseId": 30830583452,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -129,54 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-03T15:50:49Z",
-      "databaseId": 30829391048,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-03T15:50:42Z",
-      "databaseId": 30829383219,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-03T15:49:06Z",
-      "databaseId": 30829260225,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-03T15:48:48Z",
-      "databaseId": 30829237085,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-03T15:37:20Z",
-      "databaseId": 30828359581,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-03T15:37:13Z",
-      "databaseId": 30828350726,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
     }
   ],
   "gaps": {
@@ -45006,6 +45006,11 @@
         "video_id": 28166298
       },
       {
+        "episode_id": 41909,
+        "display_name": "Zákon gangu S04E06 - 6. epizoda CZ Dabing",
+        "video_id": 28166380
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -72234,6 +72239,16 @@
         "episode_id": 41926,
         "display_name": "Zákon gangu S05E10 - 10. epizoda CZ Dabing",
         "video_id": 28166271
+      },
+      {
+        "episode_id": 41930,
+        "display_name": "Zákon gangu S06E01 - 1. epizoda CZ Dabing",
+        "video_id": 28166385
+      },
+      {
+        "episode_id": 41907,
+        "display_name": "Zákon gangu S04E04 - 4. epizoda CZ Dabing",
+        "video_id": 28166447
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -117078,6 +117093,21 @@
         "video_id": 28166383
       },
       {
+        "episode_id": 19628,
+        "display_name": "Simpsonovi S18E03 - Kladivo na Homera CZ Dabing",
+        "video_id": 28166408
+      },
+      {
+        "episode_id": 19632,
+        "display_name": "Simpsonovi S18E07 - Umění na špejli CZ Dabing",
+        "video_id": 28166442
+      },
+      {
+        "episode_id": 41909,
+        "display_name": "Zákon gangu S04E06 - 6. epizoda CZ Dabing",
+        "video_id": 28166380
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -144406,6 +144436,21 @@
         "episode_id": 68075,
         "display_name": "The Wire – Špína Baltimoru S04E01 - Kluci na prázdninách CZ Dabing",
         "video_id": 28166134
+      },
+      {
+        "episode_id": 41930,
+        "display_name": "Zákon gangu S06E01 - 1. epizoda CZ Dabing",
+        "video_id": 28166385
+      },
+      {
+        "episode_id": 3075,
+        "display_name": "Lucifer S01E05 - Hezké botky CZ Dabing",
+        "video_id": 28166415
+      },
+      {
+        "episode_id": 41907,
+        "display_name": "Zákon gangu S04E04 - 4. epizoda CZ Dabing",
+        "video_id": 28166447
       }
     ],
     "prepared_not_upload_ready": [
@@ -145567,7 +145612,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 67,
+    "disabled": 134,
     "ok": 19,
     "resolve_failed": 1
   },
