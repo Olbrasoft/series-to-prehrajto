@@ -1,23 +1,71 @@
 {
   "counts": {
-    "backlog_episodes": 173341,
-    "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 20215,
-    "prepared_source_episodes": 57922,
+    "backlog_episodes": 173124,
+    "manifest_upload_ready_episodes": 1004,
+    "uploaded_episodes": 20227,
+    "prepared_source_episodes": 57974,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 359,
-    "language_whisper_attempted_sources": 60,
+    "language_audited_sources": 858,
+    "language_whisper_attempted_sources": 178,
     "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 56819,
     "whisper_review_pending_sources": 49530,
-    "subtitle_followup_sources": 23021,
-    "subtitle_followup_pending_sources": 23021
+    "subtitle_followup_sources": 23025,
+    "subtitle_followup_pending_sources": 23025
   },
   "workflow_runs": [
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-04T07:24:57Z",
+      "databaseId": 30887716040,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-04T07:23:39Z",
+      "databaseId": 30887629749,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "failure",
+      "createdAt": "2026-08-04T07:22:41Z",
+      "databaseId": 30887563609,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-04T07:11:30Z",
+      "databaseId": 30886822948,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-04T07:07:19Z",
+      "databaseId": 30886549807,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-04T07:04:38Z",
+      "databaseId": 30886364902,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
     {
       "conclusion": "success",
       "createdAt": "2026-08-04T07:03:23Z",
@@ -27,19 +75,19 @@
       "workflowName": "ops-status"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-04T07:03:22Z",
       "databaseId": 30886278828,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-04T07:03:18Z",
       "databaseId": 30886274165,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -59,11 +107,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-04T07:03:03Z",
       "databaseId": 30886257837,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "refresh-backlog"
     },
     {
@@ -75,19 +123,19 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-04T06:56:37Z",
       "databaseId": 30885829933,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-04T06:56:34Z",
       "databaseId": 30885827245,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -129,54 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-04T06:30:20Z",
-      "databaseId": 30884224541,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-04T06:30:16Z",
-      "databaseId": 30884219633,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-04T06:30:13Z",
-      "databaseId": 30884215733,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-04T06:29:34Z",
-      "databaseId": 30884176421,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-sources"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-04T06:29:00Z",
-      "databaseId": 30884144227,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-04T06:22:28Z",
-      "databaseId": 30883773880,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
     }
   ],
   "gaps": {
@@ -47371,6 +47371,16 @@
         "video_id": 28185171
       },
       {
+        "episode_id": 41800,
+        "display_name": "Zlatá sedmdesátá S07E13 - Paprsek smrti CZ Dabing",
+        "video_id": 28185188
+      },
+      {
+        "episode_id": 41804,
+        "display_name": "Zlatá sedmdesátá S07E18 - Jeden muž a nemluvně CZ Dabing",
+        "video_id": 28185206
+      },
+      {
         "episode_id": 60013,
         "display_name": "ONE PIECE S01E06 - KUCHAŘ A POSKOK CZ Dabing",
         "video_id": 28185089
@@ -47384,6 +47394,26 @@
         "episode_id": 38745,
         "display_name": "24 hodin S09E09 - 19:00 - 20:00 CZ Dabing",
         "video_id": 28185150
+      },
+      {
+        "episode_id": 5809,
+        "display_name": "Řím S01E02 - Jak Titus Pullo způsobil pád Republiky CZ Titulky",
+        "video_id": 28185198
+      },
+      {
+        "episode_id": 5813,
+        "display_name": "Řím S01E06 - Egeria CZ Titulky",
+        "video_id": 28185281
+      },
+      {
+        "episode_id": 5817,
+        "display_name": "Řím S01E10 - Slavnost CZ Titulky",
+        "video_id": 28185337
+      },
+      {
+        "episode_id": 5821,
+        "display_name": "Řím S02E02 - Syn Hádův CZ Titulky",
+        "video_id": 28185388
       },
       {
         "episode_id": 114182,
@@ -77011,6 +77041,21 @@
         "video_id": 28185164
       },
       {
+        "episode_id": 41778,
+        "display_name": "Zlatá sedmdesátá S06E11 - Experiment CZ Dabing",
+        "video_id": 28185175
+      },
+      {
+        "episode_id": 41790,
+        "display_name": "Zlatá sedmdesátá S07E02 - Seznamte se, William Barnett CZ Dabing",
+        "video_id": 28185194
+      },
+      {
+        "episode_id": 41794,
+        "display_name": "Zlatá sedmdesátá S07E06 - Eric delikventem CZ Dabing",
+        "video_id": 28185219
+      },
+      {
         "episode_id": 12659,
         "display_name": "Sandman S02E11 - Vznešený příběh CZ Dabing",
         "video_id": 28185079
@@ -77034,6 +77079,21 @@
         "episode_id": 38763,
         "display_name": "24 hodin S09E03 - 13:00 - 14:00 CZ Dabing",
         "video_id": 28185169
+      },
+      {
+        "episode_id": 38743,
+        "display_name": "24 hodin S09E07 - 17:00 - 18:00 CZ Dabing",
+        "video_id": 28185185
+      },
+      {
+        "episode_id": 38747,
+        "display_name": "24 hodin S09E12 - 22:00 - 23:00 CZ Dabing",
+        "video_id": 28185213
+      },
+      {
+        "episode_id": 5815,
+        "display_name": "Řím S01E08 - Caesarion CZ Titulky",
+        "video_id": 28185282
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -124123,6 +124183,16 @@
         "video_id": 28185171
       },
       {
+        "episode_id": 41800,
+        "display_name": "Zlatá sedmdesátá S07E13 - Paprsek smrti CZ Dabing",
+        "video_id": 28185188
+      },
+      {
+        "episode_id": 41804,
+        "display_name": "Zlatá sedmdesátá S07E18 - Jeden muž a nemluvně CZ Dabing",
+        "video_id": 28185206
+      },
+      {
         "episode_id": 60013,
         "display_name": "ONE PIECE S01E06 - KUCHAŘ A POSKOK CZ Dabing",
         "video_id": 28185089
@@ -124136,6 +124206,26 @@
         "episode_id": 38745,
         "display_name": "24 hodin S09E09 - 19:00 - 20:00 CZ Dabing",
         "video_id": 28185150
+      },
+      {
+        "episode_id": 5809,
+        "display_name": "Řím S01E02 - Jak Titus Pullo způsobil pád Republiky CZ Titulky",
+        "video_id": 28185198
+      },
+      {
+        "episode_id": 5813,
+        "display_name": "Řím S01E06 - Egeria CZ Titulky",
+        "video_id": 28185281
+      },
+      {
+        "episode_id": 5817,
+        "display_name": "Řím S01E10 - Slavnost CZ Titulky",
+        "video_id": 28185337
+      },
+      {
+        "episode_id": 5821,
+        "display_name": "Řím S02E02 - Syn Hádův CZ Titulky",
+        "video_id": 28185388
       },
       {
         "episode_id": 114182,
@@ -153763,6 +153853,21 @@
         "video_id": 28185164
       },
       {
+        "episode_id": 41778,
+        "display_name": "Zlatá sedmdesátá S06E11 - Experiment CZ Dabing",
+        "video_id": 28185175
+      },
+      {
+        "episode_id": 41790,
+        "display_name": "Zlatá sedmdesátá S07E02 - Seznamte se, William Barnett CZ Dabing",
+        "video_id": 28185194
+      },
+      {
+        "episode_id": 41794,
+        "display_name": "Zlatá sedmdesátá S07E06 - Eric delikventem CZ Dabing",
+        "video_id": 28185219
+      },
+      {
         "episode_id": 12659,
         "display_name": "Sandman S02E11 - Vznešený příběh CZ Dabing",
         "video_id": 28185079
@@ -153786,6 +153891,21 @@
         "episode_id": 38763,
         "display_name": "24 hodin S09E03 - 13:00 - 14:00 CZ Dabing",
         "video_id": 28185169
+      },
+      {
+        "episode_id": 38743,
+        "display_name": "24 hodin S09E07 - 17:00 - 18:00 CZ Dabing",
+        "video_id": 28185185
+      },
+      {
+        "episode_id": 38747,
+        "display_name": "24 hodin S09E12 - 22:00 - 23:00 CZ Dabing",
+        "video_id": 28185213
+      },
+      {
+        "episode_id": 5815,
+        "display_name": "Řím S01E08 - Caesarion CZ Titulky",
+        "video_id": 28185282
       }
     ],
     "prepared_not_upload_ready": [
@@ -154947,9 +155067,9 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 299,
-    "ok": 59,
-    "resolve_failed": 1
+    "disabled": 680,
+    "ok": 171,
+    "resolve_failed": 7
   },
   "whisper_review_statuses": {
     "whisper_non_cz_needs_subtitles": 5064,
@@ -154958,6 +155078,6 @@
     "needs_whisper": 49494
   },
   "subtitle_followup_statuses": {
-    "needs_subtitle_setup_after_prehrajto_processing": 23021
+    "needs_subtitle_setup_after_prehrajto_processing": 23025
   }
 }
