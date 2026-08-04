@@ -2,28 +2,84 @@
   "counts": {
     "backlog_episodes": 172589,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 20794,
-    "prepared_source_episodes": 55975,
+    "uploaded_episodes": 20801,
+    "prepared_source_episodes": 55868,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 662,
-    "language_whisper_attempted_sources": 104,
+    "language_audited_sources": 759,
+    "language_whisper_attempted_sources": 124,
     "language_pending_whisper_sources": 2604,
-    "whisper_review_sources": 56827,
-    "whisper_review_pending_sources": 49518,
+    "whisper_review_sources": 56823,
+    "whisper_review_pending_sources": 49500,
     "subtitle_followup_sources": 23156,
     "subtitle_followup_pending_sources": 23156
   },
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-08-04T17:06:42Z",
+      "databaseId": 30932371084,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-04T17:06:36Z",
+      "databaseId": 30932364290,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-04T17:06:11Z",
+      "databaseId": 30932329436,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-04T17:05:47Z",
+      "databaseId": 30932296861,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-04T17:04:47Z",
+      "databaseId": 30932214235,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-04T17:01:31Z",
+      "databaseId": 30931944724,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-04T17:01:27Z",
+      "databaseId": 30931938867,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-04T17:00:11Z",
       "databaseId": 30931830910,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -31,7 +87,7 @@
       "createdAt": "2026-08-04T16:51:02Z",
       "databaseId": 30931105737,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "process-whisper-review"
     },
     {
@@ -43,11 +99,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-04T16:50:55Z",
       "databaseId": 30931096858,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
@@ -121,62 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-04T16:33:08Z",
-      "databaseId": 30929680793,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-04T16:24:26Z",
-      "databaseId": 30928969465,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-04T16:24:23Z",
-      "databaseId": 30928965094,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-04T16:24:20Z",
-      "databaseId": 30928962015,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-04T16:23:40Z",
-      "databaseId": 30928905023,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-04T16:23:04Z",
-      "databaseId": 30928856833,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-04T16:20:28Z",
-      "databaseId": 30928647770,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-sources"
     }
   ],
   "gaps": {
@@ -48796,6 +48796,16 @@
         "video_id": 28196169
       },
       {
+        "episode_id": 7524,
+        "display_name": "Pluribus S01E04 - Carol, prosíme tě CZ Titulky",
+        "video_id": 28196199
+      },
+      {
+        "episode_id": 7528,
+        "display_name": "Pluribus S01E08 - Ofenziva šarmem CZ Titulky",
+        "video_id": 28196229
+      },
+      {
         "episode_id": 25433,
         "display_name": "Castle na zabití S07E14 - Vzkříšení CZ Dabing",
         "video_id": 28195799
@@ -48829,6 +48839,11 @@
         "episode_id": 92961,
         "display_name": "Vincentův svět S02E06 - Čínská čtvrť CZ Dabing",
         "video_id": 28196117
+      },
+      {
+        "episode_id": 63637,
+        "display_name": "Silicon Valley S02E09 - Rozhodčí řízení CZ Dabing",
+        "video_id": 28196197
       },
       {
         "episode_id": 114182,
@@ -79901,6 +79916,16 @@
         "video_id": 28196137
       },
       {
+        "episode_id": 18046,
+        "display_name": "Kolo času S02E01 - Chuť samoty CZ Dabing",
+        "video_id": 28196217
+      },
+      {
+        "episode_id": 35482,
+        "display_name": "Luther S01E01 - 1. epizoda CZ Titulky",
+        "video_id": 28196253
+      },
+      {
         "episode_id": 63671,
         "display_name": "Silicon Valley S02E05 - Servery CZ Dabing",
         "video_id": 28195869
@@ -79924,6 +79949,16 @@
         "episode_id": 63651,
         "display_name": "Silicon Valley S05E06 - Umělá emoční inteligence CZ Dabing",
         "video_id": 28196032
+      },
+      {
+        "episode_id": 17227,
+        "display_name": "Problém tří těles S01E08 - Meditátor CZ Dabing",
+        "video_id": 28196188
+      },
+      {
+        "episode_id": 48119,
+        "display_name": "Vlčí mládě S01E12 - Zákony lovce CZ Dabing",
+        "video_id": 28196277
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -128438,6 +128473,16 @@
         "video_id": 28196169
       },
       {
+        "episode_id": 7524,
+        "display_name": "Pluribus S01E04 - Carol, prosíme tě CZ Titulky",
+        "video_id": 28196199
+      },
+      {
+        "episode_id": 7528,
+        "display_name": "Pluribus S01E08 - Ofenziva šarmem CZ Titulky",
+        "video_id": 28196229
+      },
+      {
         "episode_id": 25433,
         "display_name": "Castle na zabití S07E14 - Vzkříšení CZ Dabing",
         "video_id": 28195799
@@ -128471,6 +128516,11 @@
         "episode_id": 92961,
         "display_name": "Vincentův svět S02E06 - Čínská čtvrť CZ Dabing",
         "video_id": 28196117
+      },
+      {
+        "episode_id": 63637,
+        "display_name": "Silicon Valley S02E09 - Rozhodčí řízení CZ Dabing",
+        "video_id": 28196197
       },
       {
         "episode_id": 114182,
@@ -159543,6 +159593,16 @@
         "video_id": 28196137
       },
       {
+        "episode_id": 18046,
+        "display_name": "Kolo času S02E01 - Chuť samoty CZ Dabing",
+        "video_id": 28196217
+      },
+      {
+        "episode_id": 35482,
+        "display_name": "Luther S01E01 - 1. epizoda CZ Titulky",
+        "video_id": 28196253
+      },
+      {
         "episode_id": 63671,
         "display_name": "Silicon Valley S02E05 - Servery CZ Dabing",
         "video_id": 28195869
@@ -159566,6 +159626,16 @@
         "episode_id": 63651,
         "display_name": "Silicon Valley S05E06 - Umělá emoční inteligence CZ Dabing",
         "video_id": 28196032
+      },
+      {
+        "episode_id": 17227,
+        "display_name": "Problém tří těles S01E08 - Meditátor CZ Dabing",
+        "video_id": 28196188
+      },
+      {
+        "episode_id": 48119,
+        "display_name": "Vlčí mládě S01E12 - Zákony lovce CZ Dabing",
+        "video_id": 28196277
       }
     ],
     "prepared_not_upload_ready": [
@@ -159912,76 +159982,12 @@
         "status": "whisper_failed"
       },
       {
-        "episode_id": 183556,
-        "source_id": -71523105539997060,
-        "series_title": "Blue",
-        "episode_code": "S02E47",
-        "source_title": "Bluey.S02E47.Zmrzka.1080p.WEB-DL",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183556,
-        "source_id": -26710510762031710,
-        "series_title": "Blue",
-        "episode_code": "S02E47",
-        "source_title": "Blue S02E47 1080p",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183585,
-        "source_id": -44967499766532256,
-        "series_title": "Blue",
-        "episode_code": "S03E24",
-        "source_title": "Blue.Bluey.S03E24.Videohovor.1080p.WEB-DL",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183585,
-        "source_id": -28201606492531031,
-        "series_title": "Blue",
-        "episode_code": "S03E24",
-        "source_title": "Bluey.S03E24.Videohovor.1080p.WEB-DL",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183585,
-        "source_id": -26990664181154352,
-        "series_title": "Blue",
-        "episode_code": "S03E24",
-        "source_title": "Blue S03E24 1080p SK",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183601,
-        "source_id": -60068367738192167,
-        "series_title": "Blue",
-        "episode_code": "S03E39",
-        "source_title": "Bluey.S03E39.Cvičení.1080p.WEB-DL",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183601,
-        "source_id": -31400621327999482,
-        "series_title": "Blue",
-        "episode_code": "S03E39",
-        "source_title": "Blue S03E39 1080p SK",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 183611,
-        "source_id": -67479426555905514,
-        "series_title": "Blue",
-        "episode_code": "S03E48",
-        "source_title": "Bluey.S03E48.Ducháček.1080p.WEB-DL",
-        "status": "needs_whisper"
-      },
-      {
         "episode_id": 102596,
         "source_id": -15929065662195577,
         "series_title": "Bobovy burgery",
         "episode_code": "S01E12",
         "source_title": "Bobovy Burgery S01E12 {PlnáKvalita}",
-        "status": "needs_whisper"
+        "status": "whisper_failed"
       },
       {
         "episode_id": 102596,
@@ -159989,7 +159995,7 @@
         "series_title": "Bobovy burgery",
         "episode_code": "S01E12",
         "source_title": "+ Bobovy Burgery S01E12",
-        "status": "needs_whisper"
+        "status": "whisper_failed"
       },
       {
         "episode_id": 102596,
@@ -159997,7 +160003,7 @@
         "series_title": "Bobovy burgery",
         "episode_code": "S01E12",
         "source_title": "Bobovy-Burgery-S01E12-_Ponny_",
-        "status": "needs_whisper"
+        "status": "whisper_failed"
       },
       {
         "episode_id": 65867,
@@ -160005,7 +160011,7 @@
         "series_title": "Bobovy burgery",
         "episode_code": "S14E06",
         "source_title": "Bobovy Burgery S14E06 {PlnáKvalita}",
-        "status": "needs_whisper"
+        "status": "whisper_failed"
       },
       {
         "episode_id": 65867,
@@ -160013,7 +160019,7 @@
         "series_title": "Bobovy burgery",
         "episode_code": "S14E06",
         "source_title": "Bobovy-Burgery-S14E06-_Ponny_",
-        "status": "needs_whisper"
+        "status": "whisper_failed"
       },
       {
         "episode_id": 65867,
@@ -160021,55 +160027,7 @@
         "series_title": "Bobovy burgery",
         "episode_code": "S14E06",
         "source_title": "+ Bobovy Burgery S14E06",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 70442,
-        "source_id": -43757199749840629,
-        "series_title": "BoJack Horseman",
-        "episode_code": "S02E10",
-        "source_title": "BoJack Horseman - S2E10 Yes And EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 70443,
-        "source_id": -47280137157663051,
-        "series_title": "BoJack Horseman",
-        "episode_code": "S02E11",
-        "source_title": "BoJack Horseman - S2E11 Escape From L.A",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 70444,
-        "source_id": -24206362554736049,
-        "series_title": "BoJack Horseman",
-        "episode_code": "S02E12",
-        "source_title": "BoJack Horseman - S2E12 Out to Sea EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 70445,
-        "source_id": -67734675590892383,
-        "series_title": "BoJack Horseman",
-        "episode_code": "S03E01",
-        "source_title": "BoJack Horseman - S3E1 Start Spreading the News EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 70446,
-        "source_id": -15549523103390430,
-        "series_title": "BoJack Horseman",
-        "episode_code": "S03E02",
-        "source_title": "BoJack Horseman - S3E2 The BoJack Horseman Show EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 70447,
-        "source_id": -19026618332353044,
-        "series_title": "BoJack Horseman",
-        "episode_code": "S03E03",
-        "source_title": "BoJack Horseman - S3E3 BoJack Kills EN",
-        "status": "needs_whisper"
+        "status": "whisper_failed"
       },
       {
         "episode_id": 70448,
@@ -160269,6 +160227,118 @@
         "series_title": "BoJack Horseman",
         "episode_code": "S05E06",
         "source_title": "BoJack Horseman - S5E6 Free Churro EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 70472,
+        "source_id": -17921843694888080,
+        "series_title": "BoJack Horseman",
+        "episode_code": "S05E07",
+        "source_title": "BoJack Horseman - S5E7 INT",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 70473,
+        "source_id": -3358716484041977,
+        "series_title": "BoJack Horseman",
+        "episode_code": "S05E08",
+        "source_title": "BoJack Horseman - S5E8 Mr",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 70480,
+        "source_id": -37863442751638612,
+        "series_title": "BoJack Horseman",
+        "episode_code": "S05E09",
+        "source_title": "BoJack Horseman - S5E9 Ancient History EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 70481,
+        "source_id": -35527074409677025,
+        "series_title": "BoJack Horseman",
+        "episode_code": "S05E10",
+        "source_title": "BoJack Horseman - S5E10 Head in the Clouds EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 70477,
+        "source_id": -55027833423715634,
+        "series_title": "BoJack Horseman",
+        "episode_code": "S05E11",
+        "source_title": "BoJack Horseman - S5E11 The Showstopper EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 70478,
+        "source_id": -61446853531541944,
+        "series_title": "BoJack Horseman",
+        "episode_code": "S05E12",
+        "source_title": "BoJack Horseman - S5E12 The Stopped Show EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 70482,
+        "source_id": -43140380631119594,
+        "series_title": "BoJack Horseman",
+        "episode_code": "S06E01",
+        "source_title": "BoJack Horseman S06E01 - ENG",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 70482,
+        "source_id": -36930955969977334,
+        "series_title": "BoJack Horseman",
+        "episode_code": "S06E01",
+        "source_title": "BoJack.Horseman.S06E01.1080p.WEB.X264-AMRAP",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 70482,
+        "source_id": -41966961599221506,
+        "series_title": "BoJack Horseman",
+        "episode_code": "S06E01",
+        "source_title": "BoJack Horseman - S6E1 A Horse Walks into a Rehab EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 70484,
+        "source_id": -51838648708151422,
+        "series_title": "BoJack Horseman",
+        "episode_code": "S06E03",
+        "source_title": "BoJack Horseman S06E03 - ENG",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 70484,
+        "source_id": -10027569942933640,
+        "series_title": "BoJack Horseman",
+        "episode_code": "S06E03",
+        "source_title": "BoJack.Horseman.S06E03.1080p.WEB.X264-AMRAP",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 70484,
+        "source_id": -49881666620178813,
+        "series_title": "BoJack Horseman",
+        "episode_code": "S06E03",
+        "source_title": "BoJack Horseman - S6E3 Feel-Good Story EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 70486,
+        "source_id": -47492538957596289,
+        "series_title": "BoJack Horseman",
+        "episode_code": "S06E05",
+        "source_title": "BoJack Horseman S06E05 - ENG",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 70486,
+        "source_id": -65333805174543113,
+        "series_title": "BoJack Horseman",
+        "episode_code": "S06E05",
+        "source_title": "BoJack.Horseman.S06E05.1080p.WEB.X264-AMRAP",
         "status": "needs_whisper"
       }
     ],
@@ -160727,15 +160797,15 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 103,
-    "disabled": 558,
+    "ok": 123,
+    "disabled": 635,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
-    "whisper_non_cz_needs_subtitles": 5073,
-    "whisper_confirmed_cz": 2236,
-    "whisper_failed": 36,
-    "needs_whisper": 49482
+    "whisper_non_cz_needs_subtitles": 5081,
+    "whisper_confirmed_cz": 2242,
+    "whisper_failed": 42,
+    "needs_whisper": 49458
   },
   "subtitle_followup_statuses": {
     "needs_subtitle_setup_after_prehrajto_processing": 23156
