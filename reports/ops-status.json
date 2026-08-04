@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 172382,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 20992,
-    "prepared_source_episodes": 53510,
+    "uploaded_episodes": 20993,
+    "prepared_source_episodes": 53379,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 112,
-    "language_whisper_attempted_sources": 40,
-    "language_pending_whisper_sources": 2604,
+    "language_audited_sources": 20,
+    "language_whisper_attempted_sources": 20,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 56806,
     "whisper_review_pending_sources": 49490,
     "subtitle_followup_sources": 23223,
@@ -20,10 +20,26 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-08-04T22:31:17Z",
+      "databaseId": 30956703322,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-04T22:31:12Z",
+      "databaseId": 30956697568,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-04T22:28:46Z",
       "databaseId": 30956542376,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-status"
     },
     {
@@ -31,7 +47,7 @@
       "createdAt": "2026-08-04T22:28:34Z",
       "databaseId": 30956530127,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "prepare-manifest"
     },
     {
@@ -75,11 +91,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-04T22:22:27Z",
       "databaseId": 30956144174,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -131,11 +147,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-04T22:12:58Z",
       "databaseId": 30955528329,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -143,7 +159,7 @@
       "createdAt": "2026-08-04T22:10:33Z",
       "databaseId": 30955368528,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "sync"
     },
     {
@@ -161,22 +177,6 @@
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "prepare-sources"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-04T21:58:04Z",
-      "databaseId": 30954525088,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-04T21:57:39Z",
-      "databaseId": 30954497966,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
     }
   ],
   "gaps": {
@@ -49329,6 +49329,11 @@
         "episode_id": 15145,
         "display_name": "Urgent S01E04 - 10:00 CZ Dabing",
         "video_id": 28202171
+      },
+      {
+        "episode_id": 15149,
+        "display_name": "Urgent S01E08 - 14:00 CZ Dabing",
+        "video_id": 28202243
       },
       {
         "episode_id": 114182,
@@ -129963,6 +129968,11 @@
         "video_id": 28202171
       },
       {
+        "episode_id": 15149,
+        "display_name": "Urgent S01E08 - 14:00 CZ Dabing",
+        "video_id": 28202243
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -162707,8 +162717,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 72,
-    "ok": 39,
+    "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
