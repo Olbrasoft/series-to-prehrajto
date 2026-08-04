@@ -1,53 +1,85 @@
 {
   "counts": {
     "backlog_episodes": 173607,
-    "manifest_upload_ready_episodes": 982,
-    "uploaded_episodes": 19747,
-    "prepared_source_episodes": 59134,
+    "manifest_upload_ready_episodes": 1026,
+    "uploaded_episodes": 19777,
+    "prepared_source_episodes": 58876,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 120,
+    "language_audited_sources": 200,
     "language_whisper_attempted_sources": 40,
-    "language_pending_whisper_sources": 2604,
-    "whisper_review_sources": 56804,
-    "whisper_review_pending_sources": 49506,
+    "language_pending_whisper_sources": 2624,
+    "whisper_review_sources": 56815,
+    "whisper_review_pending_sources": 49566,
     "subtitle_followup_sources": 22947,
     "subtitle_followup_pending_sources": 22947
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-08-04T01:01:23Z",
-      "databaseId": 30867432193,
+      "createdAt": "2026-08-04T01:22:18Z",
+      "databaseId": 30868540988,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-08-04T01:04:20Z",
+      "databaseId": 30867594364,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-sources"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-04T01:03:12Z",
+      "databaseId": 30867529582,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-04T01:02:43Z",
+      "databaseId": 30867503343,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-04T01:01:23Z",
+      "databaseId": 30867432193,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-04T01:01:19Z",
       "databaseId": 30867428468,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-04T00:58:53Z",
       "databaseId": 30867286905,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-04T00:52:48Z",
       "databaseId": 30866965421,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
@@ -55,7 +87,7 @@
       "createdAt": "2026-08-04T00:52:26Z",
       "databaseId": 30866945545,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "sync"
     },
     {
@@ -115,11 +147,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-04T00:47:46Z",
       "databaseId": 30866701198,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -145,38 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-04T00:41:25Z",
-      "databaseId": 30866363884,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-04T00:41:23Z",
-      "databaseId": 30866362722,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-04T00:40:29Z",
-      "databaseId": 30866315802,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-04T00:40:24Z",
-      "databaseId": 30866311371,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
     }
   ],
   "gaps": {
@@ -46186,6 +46186,11 @@
         "video_id": 28178792
       },
       {
+        "episode_id": 14176,
+        "display_name": "Lovci zločinců S02E02 - Špatný kód CZ Dabing",
+        "video_id": 28178828
+      },
+      {
         "episode_id": 49737,
         "display_name": "Super drbna S04E05 - Boj o školu CZ Dabing",
         "video_id": 28178449
@@ -46224,6 +46229,86 @@
         "episode_id": 49785,
         "display_name": "Super drbna S05E15 - Bláznivá valentýnská láska CZ Dabing",
         "video_id": 28178743
+      },
+      {
+        "episode_id": 42340,
+        "display_name": "Expanze S05E03 - Matka CZ Dabing",
+        "video_id": 28178899
+      },
+      {
+        "episode_id": 35988,
+        "display_name": "Expanze S06E04 - Útočiště CZ Dabing",
+        "video_id": 28178914
+      },
+      {
+        "episode_id": 36812,
+        "display_name": "Sběratelé kostí S04E04 - Prst v hnízdě CZ Dabing",
+        "video_id": 28178927
+      },
+      {
+        "episode_id": 36824,
+        "display_name": "Sběratelé kostí S04E16 - Kost, která pěnila CZ Dabing",
+        "video_id": 28178947
+      },
+      {
+        "episode_id": 36936,
+        "display_name": "Sběratelé kostí S12E04 - Cena za minulost CZ Dabing",
+        "video_id": 28178972
+      },
+      {
+        "episode_id": 36944,
+        "display_name": "Sběratelé kostí S12E12 - Konec v konci CZ Dabing",
+        "video_id": 28179014
+      },
+      {
+        "episode_id": 45472,
+        "display_name": "Prolhané krásky S01E13 - Poznej své nepřátele CZ Dabing",
+        "video_id": 28179070
+      },
+      {
+        "episode_id": 45476,
+        "display_name": "Prolhané krásky S01E15 - Pokud to na poprvé nevyjde, lži znovu CZ Dabing",
+        "video_id": 28179089
+      },
+      {
+        "episode_id": 35989,
+        "display_name": "Expanze S06E05 - Proč bojujeme CZ Dabing",
+        "video_id": 28178897
+      },
+      {
+        "episode_id": 35101,
+        "display_name": "Sběratelé kostí S02E17 - Kněz na hřbitově CZ Dabing",
+        "video_id": 28178911
+      },
+      {
+        "episode_id": 36829,
+        "display_name": "Sběratelé kostí S04E19 - Fyzika věda je CZ Dabing",
+        "video_id": 28178965
+      },
+      {
+        "episode_id": 36837,
+        "display_name": "Sběratelé kostí S05E01 - Poslové ve fontáně CZ Dabing",
+        "video_id": 28179001
+      },
+      {
+        "episode_id": 36869,
+        "display_name": "Sběratelé kostí S06E11 - Kulka v hlavě CZ Dabing",
+        "video_id": 28179055
+      },
+      {
+        "episode_id": 36933,
+        "display_name": "Sběratelé kostí S12E01 - Naděje v temnotě CZ Dabing",
+        "video_id": 28179077
+      },
+      {
+        "episode_id": 36937,
+        "display_name": "Sběratelé kostí S12E05 - Lektor na roztrhání CZ Dabing",
+        "video_id": 28179107
+      },
+      {
+        "episode_id": 45473,
+        "display_name": "Prolhané krásky S01E14 - Pozor na to, co si přeješ CZ Dabing",
+        "video_id": 28179149
       },
       {
         "episode_id": 114182,
@@ -74704,6 +74789,71 @@
         "episode_id": 14187,
         "display_name": "Lovci zločinců S02E13 - Odpočet CZ Titulky",
         "video_id": 28178811
+      },
+      {
+        "episode_id": 42338,
+        "display_name": "Expanze S05E01 - Exodus CZ Dabing",
+        "video_id": 28178898
+      },
+      {
+        "episode_id": 35986,
+        "display_name": "Expanze S06E02 - Azurový drak CZ Dabing",
+        "video_id": 28178946
+      },
+      {
+        "episode_id": 35070,
+        "display_name": "Sběratelé kostí S01E08 - Dívka v lednici CZ Dabing",
+        "video_id": 28178971
+      },
+      {
+        "episode_id": 36822,
+        "display_name": "Sběratelé kostí S04E14 - Hrobník znovu na scéně CZ Dabing",
+        "video_id": 28179020
+      },
+      {
+        "episode_id": 36866,
+        "display_name": "Sběratelé kostí S06E08 - Kostra v dodávce CZ Dabing",
+        "video_id": 28179075
+      },
+      {
+        "episode_id": 36934,
+        "display_name": "Sběratelé kostí S12E02 - Mozek v robotovi CZ Dabing",
+        "video_id": 28179115
+      },
+      {
+        "episode_id": 36938,
+        "display_name": "Sběratelé kostí S12E06 - Mrtvá v kontejneru CZ Dabing",
+        "video_id": 28179155
+      },
+      {
+        "episode_id": 42347,
+        "display_name": "Expanze S05E10 - Hry Nemesis CZ Dabing",
+        "video_id": 28178907
+      },
+      {
+        "episode_id": 35099,
+        "display_name": "Sběratelé kostí S02E15 - Vraždy podle knihy CZ Dabing",
+        "video_id": 28178957
+      },
+      {
+        "episode_id": 36835,
+        "display_name": "Sběratelé kostí S04E25 - Kritik ve víně CZ Dabing",
+        "video_id": 28179004
+      },
+      {
+        "episode_id": 36867,
+        "display_name": "Sběratelé kostí S06E09 - Doktorka z fotografie CZ Dabing",
+        "video_id": 28179065
+      },
+      {
+        "episode_id": 36883,
+        "display_name": "Sběratelé kostí S07E02 - Šampionka v teráriu CZ Dabing",
+        "video_id": 28179087
+      },
+      {
+        "episode_id": 36943,
+        "display_name": "Sběratelé kostí S12E11 - Jeden den v životě CZ Dabing",
+        "video_id": 28179153
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -120608,6 +120758,11 @@
         "video_id": 28178792
       },
       {
+        "episode_id": 14176,
+        "display_name": "Lovci zločinců S02E02 - Špatný kód CZ Dabing",
+        "video_id": 28178828
+      },
+      {
         "episode_id": 49737,
         "display_name": "Super drbna S04E05 - Boj o školu CZ Dabing",
         "video_id": 28178449
@@ -120646,6 +120801,86 @@
         "episode_id": 49785,
         "display_name": "Super drbna S05E15 - Bláznivá valentýnská láska CZ Dabing",
         "video_id": 28178743
+      },
+      {
+        "episode_id": 42340,
+        "display_name": "Expanze S05E03 - Matka CZ Dabing",
+        "video_id": 28178899
+      },
+      {
+        "episode_id": 35988,
+        "display_name": "Expanze S06E04 - Útočiště CZ Dabing",
+        "video_id": 28178914
+      },
+      {
+        "episode_id": 36812,
+        "display_name": "Sběratelé kostí S04E04 - Prst v hnízdě CZ Dabing",
+        "video_id": 28178927
+      },
+      {
+        "episode_id": 36824,
+        "display_name": "Sběratelé kostí S04E16 - Kost, která pěnila CZ Dabing",
+        "video_id": 28178947
+      },
+      {
+        "episode_id": 36936,
+        "display_name": "Sběratelé kostí S12E04 - Cena za minulost CZ Dabing",
+        "video_id": 28178972
+      },
+      {
+        "episode_id": 36944,
+        "display_name": "Sběratelé kostí S12E12 - Konec v konci CZ Dabing",
+        "video_id": 28179014
+      },
+      {
+        "episode_id": 45472,
+        "display_name": "Prolhané krásky S01E13 - Poznej své nepřátele CZ Dabing",
+        "video_id": 28179070
+      },
+      {
+        "episode_id": 45476,
+        "display_name": "Prolhané krásky S01E15 - Pokud to na poprvé nevyjde, lži znovu CZ Dabing",
+        "video_id": 28179089
+      },
+      {
+        "episode_id": 35989,
+        "display_name": "Expanze S06E05 - Proč bojujeme CZ Dabing",
+        "video_id": 28178897
+      },
+      {
+        "episode_id": 35101,
+        "display_name": "Sběratelé kostí S02E17 - Kněz na hřbitově CZ Dabing",
+        "video_id": 28178911
+      },
+      {
+        "episode_id": 36829,
+        "display_name": "Sběratelé kostí S04E19 - Fyzika věda je CZ Dabing",
+        "video_id": 28178965
+      },
+      {
+        "episode_id": 36837,
+        "display_name": "Sběratelé kostí S05E01 - Poslové ve fontáně CZ Dabing",
+        "video_id": 28179001
+      },
+      {
+        "episode_id": 36869,
+        "display_name": "Sběratelé kostí S06E11 - Kulka v hlavě CZ Dabing",
+        "video_id": 28179055
+      },
+      {
+        "episode_id": 36933,
+        "display_name": "Sběratelé kostí S12E01 - Naděje v temnotě CZ Dabing",
+        "video_id": 28179077
+      },
+      {
+        "episode_id": 36937,
+        "display_name": "Sběratelé kostí S12E05 - Lektor na roztrhání CZ Dabing",
+        "video_id": 28179107
+      },
+      {
+        "episode_id": 45473,
+        "display_name": "Prolhané krásky S01E14 - Pozor na to, co si přeješ CZ Dabing",
+        "video_id": 28179149
       },
       {
         "episode_id": 114182,
@@ -149126,6 +149361,71 @@
         "episode_id": 14187,
         "display_name": "Lovci zločinců S02E13 - Odpočet CZ Titulky",
         "video_id": 28178811
+      },
+      {
+        "episode_id": 42338,
+        "display_name": "Expanze S05E01 - Exodus CZ Dabing",
+        "video_id": 28178898
+      },
+      {
+        "episode_id": 35986,
+        "display_name": "Expanze S06E02 - Azurový drak CZ Dabing",
+        "video_id": 28178946
+      },
+      {
+        "episode_id": 35070,
+        "display_name": "Sběratelé kostí S01E08 - Dívka v lednici CZ Dabing",
+        "video_id": 28178971
+      },
+      {
+        "episode_id": 36822,
+        "display_name": "Sběratelé kostí S04E14 - Hrobník znovu na scéně CZ Dabing",
+        "video_id": 28179020
+      },
+      {
+        "episode_id": 36866,
+        "display_name": "Sběratelé kostí S06E08 - Kostra v dodávce CZ Dabing",
+        "video_id": 28179075
+      },
+      {
+        "episode_id": 36934,
+        "display_name": "Sběratelé kostí S12E02 - Mozek v robotovi CZ Dabing",
+        "video_id": 28179115
+      },
+      {
+        "episode_id": 36938,
+        "display_name": "Sběratelé kostí S12E06 - Mrtvá v kontejneru CZ Dabing",
+        "video_id": 28179155
+      },
+      {
+        "episode_id": 42347,
+        "display_name": "Expanze S05E10 - Hry Nemesis CZ Dabing",
+        "video_id": 28178907
+      },
+      {
+        "episode_id": 35099,
+        "display_name": "Sběratelé kostí S02E15 - Vraždy podle knihy CZ Dabing",
+        "video_id": 28178957
+      },
+      {
+        "episode_id": 36835,
+        "display_name": "Sběratelé kostí S04E25 - Kritik ve víně CZ Dabing",
+        "video_id": 28179004
+      },
+      {
+        "episode_id": 36867,
+        "display_name": "Sběratelé kostí S06E09 - Doktorka z fotografie CZ Dabing",
+        "video_id": 28179065
+      },
+      {
+        "episode_id": 36883,
+        "display_name": "Sběratelé kostí S07E02 - Šampionka v teráriu CZ Dabing",
+        "video_id": 28179087
+      },
+      {
+        "episode_id": 36943,
+        "display_name": "Sběratelé kostí S12E11 - Jeden den v životě CZ Dabing",
+        "video_id": 28179153
       }
     ],
     "prepared_not_upload_ready": [
@@ -149472,363 +149772,363 @@
         "status": "whisper_failed"
       },
       {
-        "episode_id": 183502,
-        "source_id": -9241124262070869,
-        "series_title": "Blue",
-        "episode_code": "S01E45",
-        "source_title": "Big.Blue.S01E45.Lemo.Vs.Phil.1080p.ROKU.WEB-DL.DD5.1.H.264-NTb",
+        "episode_id": 94059,
+        "source_id": -28905150547337975,
+        "series_title": "Big Mouth",
+        "episode_code": "S07E09",
+        "source_title": "Big Mouth - S7E9 Panika v obchoďáku EN",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 183506,
-        "source_id": -41717517290831524,
-        "series_title": "Blue",
-        "episode_code": "S01E49",
-        "source_title": "Big.Blue.S01E49.Now.You.Sea.Ghosts.Now.You.Don't.1080p.ROKU.WEB-DL.DD5.1.H.264-NTb",
+        "episode_id": 94060,
+        "source_id": -26861164873566293,
+        "series_title": "Big Mouth",
+        "episode_code": "S07E10",
+        "source_title": "Big Mouth - S7E10 Návrat do minulosti EN",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 183536,
-        "source_id": -68957938465384715,
-        "series_title": "Blue",
-        "episode_code": "S02E27",
-        "source_title": "Bluey.S02E27.Dědeček.1080p.WEB-DL",
+        "episode_id": 94061,
+        "source_id": -71855115850163518,
+        "series_title": "Big Mouth",
+        "episode_code": "S08E01",
+        "source_title": "Big Mouth - S8E1 Techtle mechtle na plese EN",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 183537,
-        "source_id": -23787560625749580,
-        "series_title": "Blue",
-        "episode_code": "S02E28",
-        "source_title": "Blue S02E28 1080p",
+        "episode_id": 94061,
+        "source_id": -68827053609713996,
+        "series_title": "Big Mouth",
+        "episode_code": "S08E01",
+        "source_title": "Big.Mouth.S08E01.720p.HEVC.x265-MeGusta",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 183538,
-        "source_id": -65119342931457263,
-        "series_title": "Blue",
-        "episode_code": "S02E29",
-        "source_title": "Bluey.S02E29.Kino.1080p.WEB-DL",
+        "episode_id": 94062,
+        "source_id": -55159349310376795,
+        "series_title": "Big Mouth",
+        "episode_code": "S08E02",
+        "source_title": "Big.Mouth.S08E02.1080p.HEVC.x265-MeGusta",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 183539,
-        "source_id": -2275354533803148,
-        "series_title": "Blue",
-        "episode_code": "S02E30",
-        "source_title": "Blue S02E30 1080p",
+        "episode_id": 94062,
+        "source_id": -52582562611169033,
+        "series_title": "Big Mouth",
+        "episode_code": "S08E02",
+        "source_title": "Big Mouth - S8E2 Party, pitomci a Sonicovo péro EN",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 183542,
-        "source_id": -55370634011760117,
-        "series_title": "Blue",
-        "episode_code": "S02E33",
-        "source_title": "Bluey.S02E33.Cirkus.1080p.WEB-DL",
+        "episode_id": 94063,
+        "source_id": -56195157514723855,
+        "series_title": "Big Mouth",
+        "episode_code": "S08E03",
+        "source_title": "Big Mouth - S8E3 Proč procházíme pubertou? EN",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 183544,
-        "source_id": -47081755972354326,
-        "series_title": "Blue",
-        "episode_code": "S02E35",
-        "source_title": "Bluey.S02E35.Kavárna.1080p.WEB-DL",
+        "episode_id": 94063,
+        "source_id": -32631795996234629,
+        "series_title": "Big Mouth",
+        "episode_code": "S08E03",
+        "source_title": "Big.Mouth.S08E03.720p.HEVC.x265-MeGusta",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 183544,
-        "source_id": -35917062763394211,
-        "series_title": "Blue",
-        "episode_code": "S02E35",
-        "source_title": "Blue S02E35 1080p",
+        "episode_id": 94064,
+        "source_id": -17125776954593598,
+        "series_title": "Big Mouth",
+        "episode_code": "S08E04",
+        "source_title": "Big.Mouth.S08E04.1080p.HEVC.x265-MeGusta",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 183552,
-        "source_id": -14453956828741916,
-        "series_title": "Blue",
-        "episode_code": "S02E43",
-        "source_title": "Bluey.S02E43.Muffinka.a.límec.1080p.WEB-DL",
+        "episode_id": 94064,
+        "source_id": -30032843363761926,
+        "series_title": "Big Mouth",
+        "episode_code": "S08E04",
+        "source_title": "Big Mouth - S8E4 Za volantem Lola Skumpyová EN",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 183552,
-        "source_id": -4567487193777948,
-        "series_title": "Blue",
-        "episode_code": "S02E43",
-        "source_title": "Blue S02E43 1080p",
+        "episode_id": 94065,
+        "source_id": -39848373491319458,
+        "series_title": "Big Mouth",
+        "episode_code": "S08E05",
+        "source_title": "Big Mouth - S8E5 Nehulím už trochu moc? EN",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 183556,
-        "source_id": -71523105539997060,
-        "series_title": "Blue",
-        "episode_code": "S02E47",
-        "source_title": "Bluey.S02E47.Zmrzka.1080p.WEB-DL",
+        "episode_id": 94065,
+        "source_id": -47969582276040,
+        "series_title": "Big Mouth",
+        "episode_code": "S08E05",
+        "source_title": "Big.Mouth.S08E05.720p.HEVC.x265-MeGusta",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 183556,
-        "source_id": -26710510762031710,
-        "series_title": "Blue",
-        "episode_code": "S02E47",
-        "source_title": "Blue S02E47 1080p",
+        "episode_id": 94066,
+        "source_id": -63846517605957778,
+        "series_title": "Big Mouth",
+        "episode_code": "S08E06",
+        "source_title": "Big.Mouth.S08E06.720p.HEVC.x265-MeGusta",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 183585,
-        "source_id": -44967499766532256,
-        "series_title": "Blue",
-        "episode_code": "S03E24",
-        "source_title": "Blue.Bluey.S03E24.Videohovor.1080p.WEB-DL",
+        "episode_id": 94067,
+        "source_id": -34140996227450635,
+        "series_title": "Big Mouth",
+        "episode_code": "S08E07",
+        "source_title": "Big.Mouth.S08E07.1080p.HEVC.x265-MeGusta",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 183585,
-        "source_id": -28201606492531031,
-        "series_title": "Blue",
-        "episode_code": "S03E24",
-        "source_title": "Bluey.S03E24.Videohovor.1080p.WEB-DL",
+        "episode_id": 94067,
+        "source_id": -35071620910058054,
+        "series_title": "Big Mouth",
+        "episode_code": "S08E07",
+        "source_title": "Big Mouth - S8E7 Trochu soucitu, sakra! EN",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 183585,
-        "source_id": -26990664181154352,
-        "series_title": "Blue",
-        "episode_code": "S03E24",
-        "source_title": "Blue S03E24 1080p SK",
+        "episode_id": 94068,
+        "source_id": -47427525280266161,
+        "series_title": "Big Mouth",
+        "episode_code": "S08E08",
+        "source_title": "Big Mouth - S8E8 Nadržený řečičky, strč ho tam EN",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 183601,
-        "source_id": -60068367738192167,
-        "series_title": "Blue",
-        "episode_code": "S03E39",
-        "source_title": "Bluey.S03E39.Cvičení.1080p.WEB-DL",
+        "episode_id": 94068,
+        "source_id": -28642954461708276,
+        "series_title": "Big Mouth",
+        "episode_code": "S08E08",
+        "source_title": "Big.Mouth.S08E08.720p.HEVC.x265-MeGusta",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 183601,
-        "source_id": -31400621327999482,
-        "series_title": "Blue",
-        "episode_code": "S03E39",
-        "source_title": "Blue S03E39 1080p SK",
+        "episode_id": 94069,
+        "source_id": -43570607158947437,
+        "series_title": "Big Mouth",
+        "episode_code": "S08E09",
+        "source_title": "Big Mouth - S8E9 Všechno, co jsme vám zapomněli říct o sexu EN",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 183611,
-        "source_id": -67479426555905514,
-        "series_title": "Blue",
-        "episode_code": "S03E48",
-        "source_title": "Bluey.S03E48.Ducháček.1080p.WEB-DL",
+        "episode_id": 94069,
+        "source_id": -70310102150196447,
+        "series_title": "Big Mouth",
+        "episode_code": "S08E09",
+        "source_title": "Big.Mouth.S08E09.720p.HEVC.x265-MeGusta",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 102596,
-        "source_id": -15929065662195577,
-        "series_title": "Bobovy burgery",
-        "episode_code": "S01E12",
-        "source_title": "Bobovy Burgery S01E12 {PlnáKvalita}",
+        "episode_id": 94070,
+        "source_id": -36257205047025126,
+        "series_title": "Big Mouth",
+        "episode_code": "S08E10",
+        "source_title": "Big Mouth - S8E10 Do neznáma EN",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 102596,
-        "source_id": -20312780717498639,
-        "series_title": "Bobovy burgery",
-        "episode_code": "S01E12",
-        "source_title": "+ Bobovy Burgery S01E12",
+        "episode_id": 94070,
+        "source_id": -4675151887474522,
+        "series_title": "Big Mouth",
+        "episode_code": "S08E10",
+        "source_title": "Big.Mouth.S08E10.720p.HEVC.x265-MeGusta",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 102596,
-        "source_id": -65448275654637608,
-        "series_title": "Bobovy burgery",
-        "episode_code": "S01E12",
-        "source_title": "Bobovy-Burgery-S01E12-_Ponny_",
+        "episode_id": 80465,
+        "source_id": -29732273236824026,
+        "series_title": "Bleach",
+        "episode_code": "S02E01",
+        "source_title": "[Judas] Bleach - S02E01",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 65867,
-        "source_id": -10985697644930341,
-        "series_title": "Bobovy burgery",
-        "episode_code": "S14E06",
-        "source_title": "Bobovy Burgery S14E06 {PlnáKvalita}",
+        "episode_id": 80467,
+        "source_id": -10369657846266612,
+        "series_title": "Bleach",
+        "episode_code": "S02E02",
+        "source_title": "[Judas] Bleach - S02E02",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 65867,
-        "source_id": -5733454145751885,
-        "series_title": "Bobovy burgery",
-        "episode_code": "S14E06",
-        "source_title": "Bobovy-Burgery-S14E06-_Ponny_",
+        "episode_id": 80464,
+        "source_id": -44789061933976593,
+        "series_title": "Bleach",
+        "episode_code": "S02E03",
+        "source_title": "[Judas] Bleach - S02E03",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 65867,
-        "source_id": -42762337848325423,
-        "series_title": "Bobovy burgery",
-        "episode_code": "S14E06",
-        "source_title": "+ Bobovy Burgery S14E06",
+        "episode_id": 80466,
+        "source_id": -57689307160717839,
+        "series_title": "Bleach",
+        "episode_code": "S02E04",
+        "source_title": "[Judas] Bleach - S02E04",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 70442,
-        "source_id": -43757199749840629,
-        "series_title": "BoJack Horseman",
+        "episode_id": 80468,
+        "source_id": -33053864552290927,
+        "series_title": "Bleach",
+        "episode_code": "S02E05",
+        "source_title": "[Judas] Bleach - S02E05",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 80469,
+        "source_id": -4085773676256610,
+        "series_title": "Bleach",
+        "episode_code": "S02E06",
+        "source_title": "[Judas] Bleach - S02E06",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 80470,
+        "source_id": -49762082754605239,
+        "series_title": "Bleach",
+        "episode_code": "S02E07",
+        "source_title": "[Judas] Bleach - S02E07",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 80471,
+        "source_id": -46695131723254243,
+        "series_title": "Bleach",
+        "episode_code": "S02E08",
+        "source_title": "[Judas] Bleach - S02E08",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 80472,
+        "source_id": -44742946289120645,
+        "series_title": "Bleach",
+        "episode_code": "S02E09",
+        "source_title": "[Judas] Bleach - S02E09",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 80473,
+        "source_id": -22596259962212298,
+        "series_title": "Bleach",
         "episode_code": "S02E10",
-        "source_title": "BoJack Horseman - S2E10 Yes And EN",
+        "source_title": "[Judas] Bleach - S02E10",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 70443,
-        "source_id": -47280137157663051,
-        "series_title": "BoJack Horseman",
+        "episode_id": 80474,
+        "source_id": -13609920857397191,
+        "series_title": "Bleach",
         "episode_code": "S02E11",
-        "source_title": "BoJack Horseman - S2E11 Escape From L.A",
+        "source_title": "[Judas] Bleach - S02E11",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 70444,
-        "source_id": -24206362554736049,
-        "series_title": "BoJack Horseman",
+        "episode_id": 80475,
+        "source_id": -29319451226354815,
+        "series_title": "Bleach",
         "episode_code": "S02E12",
-        "source_title": "BoJack Horseman - S2E12 Out to Sea EN",
+        "source_title": "[Judas] Bleach - S02E12",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 70445,
-        "source_id": -67734675590892383,
-        "series_title": "BoJack Horseman",
-        "episode_code": "S03E01",
-        "source_title": "BoJack Horseman - S3E1 Start Spreading the News EN",
+        "episode_id": 80476,
+        "source_id": -29534503979574350,
+        "series_title": "Bleach",
+        "episode_code": "S02E13",
+        "source_title": "[Judas] Bleach - S02E13",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 70446,
-        "source_id": -15549523103390430,
-        "series_title": "BoJack Horseman",
-        "episode_code": "S03E02",
-        "source_title": "BoJack Horseman - S3E2 The BoJack Horseman Show EN",
+        "episode_id": 183483,
+        "source_id": -57016688942403116,
+        "series_title": "Blue",
+        "episode_code": "S01E26",
+        "source_title": "Bluey.S01E26.1080p.WEB.h264-SALT",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 70447,
-        "source_id": -19026618332353044,
-        "series_title": "BoJack Horseman",
-        "episode_code": "S03E03",
-        "source_title": "BoJack Horseman - S3E3 BoJack Kills EN",
+        "episode_id": 183483,
+        "source_id": -9458340112697657,
+        "series_title": "Blue",
+        "episode_code": "S01E26",
+        "source_title": "Bluey.S01E26.Pláž.1080p.WEB-DL",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 70448,
-        "source_id": -34409699537634350,
-        "series_title": "BoJack Horseman",
-        "episode_code": "S03E04",
-        "source_title": "BoJack Horseman - S3E4 Fish Out of Water EN",
+        "episode_id": 183483,
+        "source_id": -70428495807844692,
+        "series_title": "Blue",
+        "episode_code": "S01E26",
+        "source_title": "Big.Blue.S01E26.Quibbling.Rivalry.1080p.ROKU.WEB-DL.DD5.1.H.264-NTb",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 70449,
-        "source_id": -33321418015941053,
-        "series_title": "BoJack Horseman",
-        "episode_code": "S03E05",
-        "source_title": "BoJack Horseman - S3E5 Love And Or Marriage EN",
+        "episode_id": 183485,
+        "source_id": -2769181367148520,
+        "series_title": "Blue",
+        "episode_code": "S01E28",
+        "source_title": "Bluey.S01E28.Babičky.1080p.WEB-DL",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 70450,
-        "source_id": -59758159433473097,
-        "series_title": "BoJack Horseman",
-        "episode_code": "S03E06",
-        "source_title": "BoJack Horseman - S3E6 Brrap Brrap Pew Pew EN",
+        "episode_id": 183485,
+        "source_id": -19156379471738736,
+        "series_title": "Blue",
+        "episode_code": "S01E28",
+        "source_title": "Big.Blue.S01E28.Fins.Up.1080p.ROKU.WEB-DL.DD5.1.H.264-NTb",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 70451,
-        "source_id": -40242151437539324,
-        "series_title": "BoJack Horseman",
-        "episode_code": "S03E07",
-        "source_title": "BoJack Horseman - S3E7 Stop the Presses EN",
+        "episode_id": 183486,
+        "source_id": -10617661107363870,
+        "series_title": "Blue",
+        "episode_code": "S01E29",
+        "source_title": "Bluey.S01E29.Zátoka.1080p.WEB-DL",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 70452,
-        "source_id": -39084853314436176,
-        "series_title": "BoJack Horseman",
-        "episode_code": "S03E08",
-        "source_title": "BoJack Horseman - S3E8 Old Acquaintance EN",
+        "episode_id": 183486,
+        "source_id": -41140071285443115,
+        "series_title": "Blue",
+        "episode_code": "S01E29",
+        "source_title": "Big.Blue.S01E29.There's.no.Chair.in.Team.1080p.ROKU.WEB-DL.DD5.1.H.264-NTb",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 70454,
-        "source_id": -39965182036672105,
-        "series_title": "BoJack Horseman",
-        "episode_code": "S03E10",
-        "source_title": "BoJack Horseman - S3E10 It's You EN",
+        "episode_id": 183487,
+        "source_id": -29091337274864094,
+        "series_title": "Blue",
+        "episode_code": "S01E30",
+        "source_title": "Bluey.S01E30.Víly.1080p.WEB-DL",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 70456,
-        "source_id": -44531517404522945,
-        "series_title": "BoJack Horseman",
-        "episode_code": "S03E12",
-        "source_title": "BoJack Horseman - S3E12 That Went Well EN",
+        "episode_id": 183488,
+        "source_id": -1513925176598149,
+        "series_title": "Blue",
+        "episode_code": "S01E31",
+        "source_title": "Big.Blue.S01E31.Revenge.of.the.Sibs.1080p.ROKU.WEB-DL.DD5.1.H.264-NTb",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 70457,
-        "source_id": -11654125920141885,
-        "series_title": "BoJack Horseman",
-        "episode_code": "S04E01",
-        "source_title": "BoJack Horseman - S4E1 See Mr",
+        "episode_id": 183489,
+        "source_id": -67483646094216708,
+        "series_title": "Blue",
+        "episode_code": "S01E32",
+        "source_title": "Bluey.S01E32.1080p.WEB.h264-SALT",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 70458,
-        "source_id": -16682015168317538,
-        "series_title": "BoJack Horseman",
-        "episode_code": "S04E02",
-        "source_title": "BoJack Horseman - S4E2 The Old Sugarman Place EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 70459,
-        "source_id": -14428589336102546,
-        "series_title": "BoJack Horseman",
-        "episode_code": "S04E03",
-        "source_title": "BoJack Horseman - S4E3 Hooray! Todd Episode! EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 70460,
-        "source_id": -68135696815443653,
-        "series_title": "BoJack Horseman",
-        "episode_code": "S04E04",
-        "source_title": "BoJack Horseman - S4E4 Commence Fracking EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 70461,
-        "source_id": -47684405554753175,
-        "series_title": "BoJack Horseman",
-        "episode_code": "S04E05",
-        "source_title": "BoJack Horseman - S4E5 Thought and Prayers EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 70462,
-        "source_id": -44378327720345065,
-        "series_title": "BoJack Horseman",
-        "episode_code": "S04E06",
-        "source_title": "BoJack Horseman - S4E6 Stupid Piece of Shit EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 70463,
-        "source_id": -68838306526260347,
-        "series_title": "BoJack Horseman",
-        "episode_code": "S04E07",
-        "source_title": "BoJack Horseman - S4E7 Underground EN",
+        "episode_id": 183489,
+        "source_id": -10318338492669138,
+        "series_title": "Blue",
+        "episode_code": "S01E32",
+        "source_title": "Bluey.S01E32.Hrbík.a.starý.moudrý.Vlkodav.1080p.WEB-DL",
         "status": "needs_whisper"
       }
     ],
@@ -150287,15 +150587,15 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 80,
+    "disabled": 160,
     "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
-    "whisper_non_cz_needs_subtitles": 5070,
-    "whisper_confirmed_cz": 2228,
+    "whisper_non_cz_needs_subtitles": 5027,
+    "whisper_confirmed_cz": 2222,
     "whisper_failed": 36,
-    "needs_whisper": 49470
+    "needs_whisper": 49530
   },
   "subtitle_followup_statuses": {
     "needs_subtitle_setup_after_prehrajto_processing": 22947
