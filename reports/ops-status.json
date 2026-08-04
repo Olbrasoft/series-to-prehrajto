@@ -1,17 +1,17 @@
 {
   "counts": {
     "backlog_episodes": 173341,
-    "manifest_upload_ready_episodes": 1060,
-    "uploaded_episodes": 20080,
-    "prepared_source_episodes": 58599,
+    "manifest_upload_ready_episodes": 1051,
+    "uploaded_episodes": 20100,
+    "prepared_source_episodes": 58456,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 622,
-    "language_whisper_attempted_sources": 125,
-    "language_pending_whisper_sources": 2604,
+    "language_audited_sources": 20,
+    "language_whisper_attempted_sources": 20,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 56817,
     "whisper_review_pending_sources": 49528,
     "subtitle_followup_sources": 23021,
@@ -20,10 +20,50 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-08-04T05:34:16Z",
+      "databaseId": 30881101354,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-04T05:33:28Z",
+      "databaseId": 30881058872,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-sources"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-04T05:29:45Z",
+      "databaseId": 30880857007,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "failure",
+      "createdAt": "2026-08-04T05:19:58Z",
+      "databaseId": 30880358375,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-04T05:14:08Z",
+      "databaseId": 30880065034,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-04T05:12:53Z",
       "databaseId": 30879997571,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -35,27 +75,27 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-04T05:11:08Z",
       "databaseId": 30879906386,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-04T05:11:06Z",
       "databaseId": 30879904068,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-04T05:11:02Z",
       "databaseId": 30879901077,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -71,7 +111,7 @@
       "createdAt": "2026-08-04T05:08:48Z",
       "databaseId": 30879784187,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "sync"
     },
     {
@@ -79,15 +119,15 @@
       "createdAt": "2026-08-04T05:02:40Z",
       "databaseId": 30879457028,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "prepare-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-04T05:00:26Z",
       "databaseId": 30879338608,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "sync"
     },
     {
@@ -107,11 +147,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "failure",
       "createdAt": "2026-08-04T04:34:38Z",
       "databaseId": 30878085029,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-descriptions"
     },
     {
@@ -137,46 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-04T04:34:30Z",
-      "databaseId": 30878078191,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-04T04:34:10Z",
-      "databaseId": 30878062227,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-04T04:33:57Z",
-      "databaseId": 30878051371,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-04T04:33:33Z",
-      "databaseId": 30878031343,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-04T04:33:23Z",
-      "databaseId": 30878022275,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
     }
   ],
   "gaps": {
@@ -47031,6 +47031,36 @@
         "video_id": 28182836
       },
       {
+        "episode_id": 47480,
+        "display_name": "Živí mrtví: Počátek konce S05E12 - Ner Tamid CZ Dabing",
+        "video_id": 28182870
+      },
+      {
+        "episode_id": 47424,
+        "display_name": "Živí mrtví: Počátek konce S06E02 - Vítejte v klubu CZ Dabing",
+        "video_id": 28182918
+      },
+      {
+        "episode_id": 46068,
+        "display_name": "Cizinka S01E14 - Pátrání CZ Titulky",
+        "video_id": 28182962
+      },
+      {
+        "episode_id": 46076,
+        "display_name": "Cizinka S03E12 - Otrokář CZ Dabing",
+        "video_id": 28183042
+      },
+      {
+        "episode_id": 49284,
+        "display_name": "Cizinka S08E08 - 8. epizoda CZ Titulky",
+        "video_id": 28183082
+      },
+      {
+        "episode_id": 15340,
+        "display_name": "Cesta ven S02E01 - 1. epizoda CZ Dabing",
+        "video_id": 28183098
+      },
+      {
         "episode_id": 47465,
         "display_name": "Živí mrtví: Počátek konce S08E07 - Anton CZ Dabing",
         "video_id": 28182743
@@ -47044,6 +47074,31 @@
         "episode_id": 45757,
         "display_name": "Chuck S01E04 - Chuck a chlupáč CZ Dabing",
         "video_id": 28182791
+      },
+      {
+        "episode_id": 45761,
+        "display_name": "Chuck S01E08 - Chuck a sérum pravdy CZ Dabing",
+        "video_id": 28182872
+      },
+      {
+        "episode_id": 45765,
+        "display_name": "Chuck S01E12 - Chuck a tajná milenka CZ Dabing",
+        "video_id": 28182964
+      },
+      {
+        "episode_id": 45769,
+        "display_name": "Chuck S02E03 - Chuck a rozchod CZ Dabing",
+        "video_id": 28183011
+      },
+      {
+        "episode_id": 45825,
+        "display_name": "Chuck S02E14 - Chuck a nejlepší přítel CZ Dabing",
+        "video_id": 28183093
+      },
+      {
+        "episode_id": 47433,
+        "display_name": "Živí mrtví: Počátek konce S06E12 - Snění CZ Dabing",
+        "video_id": 28183118
       },
       {
         "episode_id": 114182,
@@ -76341,6 +76396,31 @@
         "video_id": 28182834
       },
       {
+        "episode_id": 47454,
+        "display_name": "Živí mrtví: Počátek konce S08E01 - Nezapomeň, co ti vzali CZ Dabing",
+        "video_id": 28182857
+      },
+      {
+        "episode_id": 47482,
+        "display_name": "Živí mrtví: Počátek konce S05E15 - Kanál 5 CZ Dabing",
+        "video_id": 28182908
+      },
+      {
+        "episode_id": 47426,
+        "display_name": "Živí mrtví: Počátek konce S06E05 - Zlato CZ Dabing",
+        "video_id": 28182986
+      },
+      {
+        "episode_id": 41846,
+        "display_name": "Zlatá sedmdesátá S01E03 - Nesnáším chlupy CZ Dabing",
+        "video_id": 28183014
+      },
+      {
+        "episode_id": 41850,
+        "display_name": "Zlatá sedmdesátá S01E05 - Erickova první práce CZ Dabing",
+        "video_id": 28183060
+      },
+      {
         "episode_id": 15811,
         "display_name": "Noční agent S03E10 - Smršť CZ Dabing",
         "video_id": 28182750
@@ -76359,6 +76439,26 @@
         "episode_id": 45755,
         "display_name": "Chuck S01E01 - Pilot CZ Dabing",
         "video_id": 28182821
+      },
+      {
+        "episode_id": 45759,
+        "display_name": "Chuck S01E06 - Chuck a pouštní červ CZ Dabing",
+        "video_id": 28182860
+      },
+      {
+        "episode_id": 45763,
+        "display_name": "Chuck S01E10 - Chuck a nedostižný protivník CZ Dabing",
+        "video_id": 28182939
+      },
+      {
+        "episode_id": 45767,
+        "display_name": "Chuck S02E01 - Chuck a první rande CZ Dabing",
+        "video_id": 28183012
+      },
+      {
+        "episode_id": 45771,
+        "display_name": "Chuck S02E05 - Chuck a Tom Sawyer CZ Dabing",
+        "video_id": 28183119
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -123108,6 +123208,36 @@
         "video_id": 28182836
       },
       {
+        "episode_id": 47480,
+        "display_name": "Živí mrtví: Počátek konce S05E12 - Ner Tamid CZ Dabing",
+        "video_id": 28182870
+      },
+      {
+        "episode_id": 47424,
+        "display_name": "Živí mrtví: Počátek konce S06E02 - Vítejte v klubu CZ Dabing",
+        "video_id": 28182918
+      },
+      {
+        "episode_id": 46068,
+        "display_name": "Cizinka S01E14 - Pátrání CZ Titulky",
+        "video_id": 28182962
+      },
+      {
+        "episode_id": 46076,
+        "display_name": "Cizinka S03E12 - Otrokář CZ Dabing",
+        "video_id": 28183042
+      },
+      {
+        "episode_id": 49284,
+        "display_name": "Cizinka S08E08 - 8. epizoda CZ Titulky",
+        "video_id": 28183082
+      },
+      {
+        "episode_id": 15340,
+        "display_name": "Cesta ven S02E01 - 1. epizoda CZ Dabing",
+        "video_id": 28183098
+      },
+      {
         "episode_id": 47465,
         "display_name": "Živí mrtví: Počátek konce S08E07 - Anton CZ Dabing",
         "video_id": 28182743
@@ -123121,6 +123251,31 @@
         "episode_id": 45757,
         "display_name": "Chuck S01E04 - Chuck a chlupáč CZ Dabing",
         "video_id": 28182791
+      },
+      {
+        "episode_id": 45761,
+        "display_name": "Chuck S01E08 - Chuck a sérum pravdy CZ Dabing",
+        "video_id": 28182872
+      },
+      {
+        "episode_id": 45765,
+        "display_name": "Chuck S01E12 - Chuck a tajná milenka CZ Dabing",
+        "video_id": 28182964
+      },
+      {
+        "episode_id": 45769,
+        "display_name": "Chuck S02E03 - Chuck a rozchod CZ Dabing",
+        "video_id": 28183011
+      },
+      {
+        "episode_id": 45825,
+        "display_name": "Chuck S02E14 - Chuck a nejlepší přítel CZ Dabing",
+        "video_id": 28183093
+      },
+      {
+        "episode_id": 47433,
+        "display_name": "Živí mrtví: Počátek konce S06E12 - Snění CZ Dabing",
+        "video_id": 28183118
       },
       {
         "episode_id": 114182,
@@ -152418,6 +152573,31 @@
         "video_id": 28182834
       },
       {
+        "episode_id": 47454,
+        "display_name": "Živí mrtví: Počátek konce S08E01 - Nezapomeň, co ti vzali CZ Dabing",
+        "video_id": 28182857
+      },
+      {
+        "episode_id": 47482,
+        "display_name": "Živí mrtví: Počátek konce S05E15 - Kanál 5 CZ Dabing",
+        "video_id": 28182908
+      },
+      {
+        "episode_id": 47426,
+        "display_name": "Živí mrtví: Počátek konce S06E05 - Zlato CZ Dabing",
+        "video_id": 28182986
+      },
+      {
+        "episode_id": 41846,
+        "display_name": "Zlatá sedmdesátá S01E03 - Nesnáším chlupy CZ Dabing",
+        "video_id": 28183014
+      },
+      {
+        "episode_id": 41850,
+        "display_name": "Zlatá sedmdesátá S01E05 - Erickova první práce CZ Dabing",
+        "video_id": 28183060
+      },
+      {
         "episode_id": 15811,
         "display_name": "Noční agent S03E10 - Smršť CZ Dabing",
         "video_id": 28182750
@@ -152436,6 +152616,26 @@
         "episode_id": 45755,
         "display_name": "Chuck S01E01 - Pilot CZ Dabing",
         "video_id": 28182821
+      },
+      {
+        "episode_id": 45759,
+        "display_name": "Chuck S01E06 - Chuck a pouštní červ CZ Dabing",
+        "video_id": 28182860
+      },
+      {
+        "episode_id": 45763,
+        "display_name": "Chuck S01E10 - Chuck a nedostižný protivník CZ Dabing",
+        "video_id": 28182939
+      },
+      {
+        "episode_id": 45767,
+        "display_name": "Chuck S02E01 - Chuck a první rande CZ Dabing",
+        "video_id": 28183012
+      },
+      {
+        "episode_id": 45771,
+        "display_name": "Chuck S02E05 - Chuck a Tom Sawyer CZ Dabing",
+        "video_id": 28183119
       }
     ],
     "prepared_not_upload_ready": [
@@ -153597,8 +153797,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 497,
-    "ok": 124,
+    "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
