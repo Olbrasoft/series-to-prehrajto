@@ -2,36 +2,92 @@
   "counts": {
     "backlog_episodes": 173124,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 20280,
-    "prepared_source_episodes": 57820,
+    "uploaded_episodes": 20287,
+    "prepared_source_episodes": 57783,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 132,
+    "language_audited_sources": 212,
     "language_whisper_attempted_sources": 60,
     "language_pending_whisper_sources": 2604,
-    "whisper_review_sources": 56819,
-    "whisper_review_pending_sources": 49530,
+    "whisper_review_sources": 56820,
+    "whisper_review_pending_sources": 49531,
     "subtitle_followup_sources": 23025,
     "subtitle_followup_pending_sources": 23025
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-08-04T08:14:19Z",
-      "databaseId": 30891111430,
+      "createdAt": "2026-08-04T08:18:50Z",
+      "databaseId": 30891432636,
       "headBranch": "main",
       "status": "in_progress",
-      "workflowName": "ops-watchdog"
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-04T08:18:30Z",
+      "databaseId": 30891409299,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-08-04T08:17:27Z",
+      "databaseId": 30891336180,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-04T08:16:14Z",
+      "databaseId": 30891248801,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-04T08:16:11Z",
+      "databaseId": 30891244277,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-04T08:15:46Z",
+      "databaseId": 30891214951,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-04T08:15:42Z",
+      "databaseId": 30891210687,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-04T08:14:19Z",
+      "databaseId": 30891111430,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "cancelled",
       "createdAt": "2026-08-04T08:14:14Z",
       "databaseId": 30891104771,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -91,11 +147,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-04T07:59:53Z",
       "databaseId": 30890071181,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -118,62 +174,6 @@
       "conclusion": "cancelled",
       "createdAt": "2026-08-04T07:38:31Z",
       "databaseId": 30888628544,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-04T07:27:56Z",
-      "databaseId": 30887915694,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-04T07:27:22Z",
-      "databaseId": 30887877847,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-sources"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-04T07:26:34Z",
-      "databaseId": 30887824533,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-04T07:26:29Z",
-      "databaseId": 30887819110,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-04T07:26:25Z",
-      "databaseId": 30887815339,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-04T07:26:23Z",
-      "databaseId": 30887812798,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-04T07:26:19Z",
-      "databaseId": 30887809015,
       "headBranch": "main",
       "status": "completed",
       "workflowName": "prepare-manifest"
@@ -47531,6 +47531,11 @@
         "video_id": 28186738
       },
       {
+        "episode_id": 18220,
+        "display_name": "Jack Ryan S02E06 - Persona Non Grata CZ Titulky",
+        "video_id": 28186779
+      },
+      {
         "episode_id": 46081,
         "display_name": "Cizinka S03E05 - Svoboda a whisky CZ Titulky",
         "video_id": 28186579
@@ -47554,6 +47559,16 @@
         "episode_id": 203205,
         "display_name": "Cesta ven S04E10 - 10. epizoda CZ Dabing",
         "video_id": 28186753
+      },
+      {
+        "episode_id": 41837,
+        "display_name": "Zlatá sedmdesátá S01E04 - Bitva pohlaví CZ Dabing",
+        "video_id": 28186804
+      },
+      {
+        "episode_id": 41845,
+        "display_name": "Zlatá sedmdesátá S01E08 - Satan přichází CZ Dabing",
+        "video_id": 28186841
       },
       {
         "episode_id": 114182,
@@ -77336,6 +77351,21 @@
         "video_id": 28186748
       },
       {
+        "episode_id": 56098,
+        "display_name": "Californication S07E09 - Víra, naděje, láska CZ Titulky",
+        "video_id": 28186778
+      },
+      {
+        "episode_id": 18210,
+        "display_name": "Jack Ryan S01E03 - Černá 22 CZ Titulky",
+        "video_id": 28186815
+      },
+      {
+        "episode_id": 18206,
+        "display_name": "Jack Ryan S01E08 - Inshallah CZ Titulky",
+        "video_id": 28186853
+      },
+      {
         "episode_id": 46055,
         "display_name": "Cizinka S02E02 - Teď už nejsme ve Skotsku CZ Titulky",
         "video_id": 28186581
@@ -77354,6 +77384,11 @@
         "episode_id": 15339,
         "display_name": "Cesta ven S01E10 - Ach, ta místa před námi CZ Dabing",
         "video_id": 28186757
+      },
+      {
+        "episode_id": 15343,
+        "display_name": "Cesta ven S02E03 - 3. epizoda CZ Dabing",
+        "video_id": 28186790
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -124538,11 +124573,6 @@
         "video_id": 28185571
       },
       {
-        "episode_id": 203277,
-        "display_name": "Rod Draka S03E07 - Drak v zimě CZ Dabing",
-        "video_id": 28185603
-      },
-      {
         "episode_id": 5829,
         "display_name": "Řím S02E10 - Pokud jde o tvého otce... CZ Titulky",
         "video_id": 28185669
@@ -124608,6 +124638,11 @@
         "video_id": 28186738
       },
       {
+        "episode_id": 18220,
+        "display_name": "Jack Ryan S02E06 - Persona Non Grata CZ Titulky",
+        "video_id": 28186779
+      },
+      {
         "episode_id": 46081,
         "display_name": "Cizinka S03E05 - Svoboda a whisky CZ Titulky",
         "video_id": 28186579
@@ -124631,6 +124666,16 @@
         "episode_id": 203205,
         "display_name": "Cesta ven S04E10 - 10. epizoda CZ Dabing",
         "video_id": 28186753
+      },
+      {
+        "episode_id": 41837,
+        "display_name": "Zlatá sedmdesátá S01E04 - Bitva pohlaví CZ Dabing",
+        "video_id": 28186804
+      },
+      {
+        "episode_id": 41845,
+        "display_name": "Zlatá sedmdesátá S01E08 - Satan přichází CZ Dabing",
+        "video_id": 28186841
       },
       {
         "episode_id": 114182,
@@ -154413,6 +154458,21 @@
         "video_id": 28186748
       },
       {
+        "episode_id": 56098,
+        "display_name": "Californication S07E09 - Víra, naděje, láska CZ Titulky",
+        "video_id": 28186778
+      },
+      {
+        "episode_id": 18210,
+        "display_name": "Jack Ryan S01E03 - Černá 22 CZ Titulky",
+        "video_id": 28186815
+      },
+      {
+        "episode_id": 18206,
+        "display_name": "Jack Ryan S01E08 - Inshallah CZ Titulky",
+        "video_id": 28186853
+      },
+      {
         "episode_id": 46055,
         "display_name": "Cizinka S02E02 - Teď už nejsme ve Skotsku CZ Titulky",
         "video_id": 28186581
@@ -154431,6 +154491,11 @@
         "episode_id": 15339,
         "display_name": "Cesta ven S01E10 - Ach, ta místa před námi CZ Dabing",
         "video_id": 28186757
+      },
+      {
+        "episode_id": 15343,
+        "display_name": "Cesta ven S02E03 - 3. epizoda CZ Dabing",
+        "video_id": 28186790
       }
     ],
     "prepared_not_upload_ready": [
@@ -155592,7 +155657,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 72,
+    "disabled": 152,
     "ok": 59,
     "resolve_failed": 1
   },
@@ -155600,7 +155665,7 @@
     "whisper_non_cz_needs_subtitles": 5064,
     "whisper_confirmed_cz": 2225,
     "whisper_failed": 36,
-    "needs_whisper": 49494
+    "needs_whisper": 49495
   },
   "subtitle_followup_statuses": {
     "needs_subtitle_setup_after_prehrajto_processing": 23025
