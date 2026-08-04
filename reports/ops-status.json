@@ -1,17 +1,17 @@
 {
   "counts": {
     "backlog_episodes": 173607,
-    "manifest_upload_ready_episodes": 1026,
-    "uploaded_episodes": 19793,
-    "prepared_source_episodes": 58755,
+    "manifest_upload_ready_episodes": 1033,
+    "uploaded_episodes": 19810,
+    "prepared_source_episodes": 58677,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 136,
-    "language_whisper_attempted_sources": 60,
-    "language_pending_whisper_sources": 2604,
+    "language_audited_sources": 20,
+    "language_whisper_attempted_sources": 20,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 56815,
     "whisper_review_pending_sources": 49566,
     "subtitle_followup_sources": 22947,
@@ -20,18 +20,50 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-08-04T01:36:32Z",
-      "databaseId": 30869269492,
+      "createdAt": "2026-08-04T01:56:02Z",
+      "databaseId": 30870249351,
       "headBranch": "main",
       "status": "in_progress",
-      "workflowName": "ops-status"
+      "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-08-04T01:52:19Z",
+      "databaseId": 30870062324,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-04T01:41:07Z",
+      "databaseId": 30869501640,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-04T01:39:56Z",
+      "databaseId": 30869440384,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-04T01:36:32Z",
+      "databaseId": 30869269492,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-04T01:35:13Z",
       "databaseId": 30869204482,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -91,11 +123,11 @@
       "workflowName": "audit-language"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-04T01:23:32Z",
       "databaseId": 30868603619,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -119,7 +151,7 @@
       "createdAt": "2026-08-04T01:03:12Z",
       "databaseId": 30867529582,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "prepare-descriptions"
     },
     {
@@ -142,38 +174,6 @@
       "conclusion": "success",
       "createdAt": "2026-08-04T01:01:19Z",
       "databaseId": 30867428468,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-04T00:58:53Z",
-      "databaseId": 30867286905,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-04T00:52:48Z",
-      "databaseId": 30866965421,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-04T00:52:26Z",
-      "databaseId": 30866945545,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-04T00:52:02Z",
-      "databaseId": 30866923856,
       "headBranch": "main",
       "status": "completed",
       "workflowName": "prepare-manifest"
@@ -46321,6 +46321,31 @@
         "video_id": 28179336
       },
       {
+        "episode_id": 44860,
+        "display_name": "Battlestar Galactica S01E12 - Poslední záblesk Kobolu, část 1. CZ Dabing",
+        "video_id": 28179407
+      },
+      {
+        "episode_id": 44808,
+        "display_name": "Battlestar Galactica S02E01 - Ztraceni CZ Dabing",
+        "video_id": 28179470
+      },
+      {
+        "episode_id": 44848,
+        "display_name": "Battlestar Galactica S02E15 - Jizva CZ Dabing",
+        "video_id": 28179532
+      },
+      {
+        "episode_id": 44812,
+        "display_name": "Battlestar Galactica S02E16 - Oběť CZ Dabing",
+        "video_id": 28179604
+      },
+      {
+        "episode_id": 202648,
+        "display_name": "Obi-Wan Kenobi S01E03 - ČÁST III CZ Dabing",
+        "video_id": 28179650
+      },
+      {
         "episode_id": 45437,
         "display_name": "Prolhané krásky S02E04 - Rande naslepo CZ Dabing",
         "video_id": 28179295
@@ -46339,6 +46364,26 @@
         "episode_id": 45401,
         "display_name": "Prolhané krásky S06E04 - Teď se nedívej CZ Dabing",
         "video_id": 28179413
+      },
+      {
+        "episode_id": 45417,
+        "display_name": "Prolhané krásky S06E07 - Ó bratře, kde jsi? CZ Dabing",
+        "video_id": 28179445
+      },
+      {
+        "episode_id": 44809,
+        "display_name": "Battlestar Galactica S02E02 - Údolí temnoty CZ Dabing",
+        "video_id": 28179480
+      },
+      {
+        "episode_id": 44845,
+        "display_name": "Battlestar Galactica S02E11 - Loď Znovuzrození, část 1. CZ Dabing",
+        "video_id": 28179549
+      },
+      {
+        "episode_id": 50061,
+        "display_name": "Panství Downton S06E05 - 5. epizoda CZ Dabing",
+        "video_id": 28179590
       },
       {
         "episode_id": 114182,
@@ -74921,6 +74966,26 @@
         "video_id": 28179398
       },
       {
+        "episode_id": 45506,
+        "display_name": "Prolhané krásky S06E08 - Falešné obvinění CZ Dabing",
+        "video_id": 28179420
+      },
+      {
+        "episode_id": 44846,
+        "display_name": "Battlestar Galactica S02E14 - Černý trh CZ Dabing",
+        "video_id": 28179463
+      },
+      {
+        "episode_id": 41270,
+        "display_name": "Mentalista S05E16 - Krveprolití CZ Dabing",
+        "video_id": 28179500
+      },
+      {
+        "episode_id": 41338,
+        "display_name": "Mentalista S06E02 - Rudý pták s černými křídly CZ Dabing",
+        "video_id": 28179522
+      },
+      {
         "episode_id": 45395,
         "display_name": "Prolhané krásky S01E18 - Zlé sémě CZ Dabing",
         "video_id": 28179294
@@ -74934,6 +74999,26 @@
         "episode_id": 45411,
         "display_name": "Prolhané krásky S04E13 - Hrob nového světa CZ Dabing",
         "video_id": 28179402
+      },
+      {
+        "episode_id": 45531,
+        "display_name": "Prolhané krásky S05E11 - Nikdo zde mě nemůže milovat nebo pochopit CZ Dabing",
+        "video_id": 28179439
+      },
+      {
+        "episode_id": 45459,
+        "display_name": "Prolhané krásky S06E02 - Písně o nevinnosti CZ Dabing",
+        "video_id": 28179478
+      },
+      {
+        "episode_id": 44811,
+        "display_name": "Battlestar Galactica S02E10 - Pegasus CZ Dabing",
+        "video_id": 28179544
+      },
+      {
+        "episode_id": 44847,
+        "display_name": "Battlestar Galactica S02E13 - Zjevení CZ Dabing",
+        "video_id": 28179610
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -120973,6 +121058,31 @@
         "video_id": 28179336
       },
       {
+        "episode_id": 44860,
+        "display_name": "Battlestar Galactica S01E12 - Poslední záblesk Kobolu, část 1. CZ Dabing",
+        "video_id": 28179407
+      },
+      {
+        "episode_id": 44808,
+        "display_name": "Battlestar Galactica S02E01 - Ztraceni CZ Dabing",
+        "video_id": 28179470
+      },
+      {
+        "episode_id": 44848,
+        "display_name": "Battlestar Galactica S02E15 - Jizva CZ Dabing",
+        "video_id": 28179532
+      },
+      {
+        "episode_id": 44812,
+        "display_name": "Battlestar Galactica S02E16 - Oběť CZ Dabing",
+        "video_id": 28179604
+      },
+      {
+        "episode_id": 202648,
+        "display_name": "Obi-Wan Kenobi S01E03 - ČÁST III CZ Dabing",
+        "video_id": 28179650
+      },
+      {
         "episode_id": 45437,
         "display_name": "Prolhané krásky S02E04 - Rande naslepo CZ Dabing",
         "video_id": 28179295
@@ -120991,6 +121101,26 @@
         "episode_id": 45401,
         "display_name": "Prolhané krásky S06E04 - Teď se nedívej CZ Dabing",
         "video_id": 28179413
+      },
+      {
+        "episode_id": 45417,
+        "display_name": "Prolhané krásky S06E07 - Ó bratře, kde jsi? CZ Dabing",
+        "video_id": 28179445
+      },
+      {
+        "episode_id": 44809,
+        "display_name": "Battlestar Galactica S02E02 - Údolí temnoty CZ Dabing",
+        "video_id": 28179480
+      },
+      {
+        "episode_id": 44845,
+        "display_name": "Battlestar Galactica S02E11 - Loď Znovuzrození, část 1. CZ Dabing",
+        "video_id": 28179549
+      },
+      {
+        "episode_id": 50061,
+        "display_name": "Panství Downton S06E05 - 5. epizoda CZ Dabing",
+        "video_id": 28179590
       },
       {
         "episode_id": 114182,
@@ -149573,6 +149703,26 @@
         "video_id": 28179398
       },
       {
+        "episode_id": 45506,
+        "display_name": "Prolhané krásky S06E08 - Falešné obvinění CZ Dabing",
+        "video_id": 28179420
+      },
+      {
+        "episode_id": 44846,
+        "display_name": "Battlestar Galactica S02E14 - Černý trh CZ Dabing",
+        "video_id": 28179463
+      },
+      {
+        "episode_id": 41270,
+        "display_name": "Mentalista S05E16 - Krveprolití CZ Dabing",
+        "video_id": 28179500
+      },
+      {
+        "episode_id": 41338,
+        "display_name": "Mentalista S06E02 - Rudý pták s černými křídly CZ Dabing",
+        "video_id": 28179522
+      },
+      {
         "episode_id": 45395,
         "display_name": "Prolhané krásky S01E18 - Zlé sémě CZ Dabing",
         "video_id": 28179294
@@ -149586,6 +149736,26 @@
         "episode_id": 45411,
         "display_name": "Prolhané krásky S04E13 - Hrob nového světa CZ Dabing",
         "video_id": 28179402
+      },
+      {
+        "episode_id": 45531,
+        "display_name": "Prolhané krásky S05E11 - Nikdo zde mě nemůže milovat nebo pochopit CZ Dabing",
+        "video_id": 28179439
+      },
+      {
+        "episode_id": 45459,
+        "display_name": "Prolhané krásky S06E02 - Písně o nevinnosti CZ Dabing",
+        "video_id": 28179478
+      },
+      {
+        "episode_id": 44811,
+        "display_name": "Battlestar Galactica S02E10 - Pegasus CZ Dabing",
+        "video_id": 28179544
+      },
+      {
+        "episode_id": 44847,
+        "display_name": "Battlestar Galactica S02E13 - Zjevení CZ Dabing",
+        "video_id": 28179610
       }
     ],
     "prepared_not_upload_ready": [
@@ -150747,8 +150917,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 59,
-    "disabled": 76,
+    "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
