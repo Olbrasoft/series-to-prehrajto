@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 172917,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 20563,
-    "prepared_source_episodes": 56948,
+    "uploaded_episodes": 20577,
+    "prepared_source_episodes": 56820,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 342,
-    "language_whisper_attempted_sources": 40,
-    "language_pending_whisper_sources": 2624,
+    "language_audited_sources": 220,
+    "language_whisper_attempted_sources": 60,
+    "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 56819,
     "whisper_review_pending_sources": 49530,
     "subtitle_followup_sources": 23055,
@@ -20,26 +20,82 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-08-04T11:57:07Z",
-      "databaseId": 30906968067,
+      "createdAt": "2026-08-04T12:12:43Z",
+      "databaseId": 30908089063,
       "headBranch": "main",
       "status": "in_progress",
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-04T12:12:27Z",
+      "databaseId": 30908069700,
+      "headBranch": "main",
+      "status": "completed",
       "workflowName": "update-descriptions"
     },
     {
       "conclusion": "",
-      "createdAt": "2026-08-04T11:56:47Z",
-      "databaseId": 30906944606,
+      "createdAt": "2026-08-04T12:11:36Z",
+      "databaseId": 30908008153,
       "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "ops-watchdog"
+      "status": "pending",
+      "workflowName": "prepare-descriptions"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-08-04T12:10:56Z",
+      "databaseId": 30907961300,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-04T12:10:47Z",
+      "databaseId": 30907949752,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-04T12:03:12Z",
+      "databaseId": 30907403142,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-04T11:58:11Z",
+      "databaseId": 30907040569,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-04T11:57:07Z",
+      "databaseId": 30906968067,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-04T11:56:47Z",
+      "databaseId": 30906944606,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "cancelled",
       "createdAt": "2026-08-04T11:56:42Z",
       "databaseId": 30906938191,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -51,11 +107,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-04T11:53:19Z",
       "databaseId": 30906695738,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
@@ -83,11 +139,11 @@
       "workflowName": "process-whisper-review"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-04T11:45:35Z",
       "databaseId": 30906144717,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -99,11 +155,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-04T11:44:22Z",
       "databaseId": 30906059370,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -121,62 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-04T11:39:28Z",
-      "databaseId": 30905711668,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-04T11:27:25Z",
-      "databaseId": 30904873814,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-04T11:24:30Z",
-      "databaseId": 30904683259,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-sources"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-04T11:23:46Z",
-      "databaseId": 30904634655,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-04T11:18:38Z",
-      "databaseId": 30904280611,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-04T11:18:13Z",
-      "databaseId": 30904250978,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-04T11:17:39Z",
-      "databaseId": 30904213058,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
     }
   ],
   "gaps": {
@@ -48236,6 +48236,26 @@
         "video_id": 28190968
       },
       {
+        "episode_id": 45464,
+        "display_name": "Prolhané krásky S07E12 - Ty boty jsou stvořeny pro stalking CZ Dabing",
+        "video_id": 28191004
+      },
+      {
+        "episode_id": 45512,
+        "display_name": "Prolhané krásky S07E18 - Vyber si, nebo prohraj CZ Dabing",
+        "video_id": 28191032
+      },
+      {
+        "episode_id": 44868,
+        "display_name": "Battlestar Galactica S01E03 - Dobytí Bastily CZ Dabing",
+        "video_id": 28191065
+      },
+      {
+        "episode_id": 44804,
+        "display_name": "Battlestar Galactica S01E04 - Akt lítosti CZ Dabing",
+        "video_id": 28191126
+      },
+      {
         "episode_id": 35117,
         "display_name": "Sběratelé kostí S03E12 - Dítě ve větvích CZ Dabing",
         "video_id": 28190855
@@ -48249,6 +48269,31 @@
         "episode_id": 36817,
         "display_name": "Sběratelé kostí S04E09 - Podvodník v laboratoři CZ Dabing",
         "video_id": 28190974
+      },
+      {
+        "episode_id": 36821,
+        "display_name": "Sběratelé kostí S04E13 - Vášeň na ledě CZ Dabing",
+        "video_id": 28191020
+      },
+      {
+        "episode_id": 36845,
+        "display_name": "Sběratelé kostí S05E09 - Šampion v oleji CZ Dabing",
+        "video_id": 28191053
+      },
+      {
+        "episode_id": 36865,
+        "display_name": "Sběratelé kostí S06E07 - Kráska v čokoládě CZ Dabing",
+        "video_id": 28191088
+      },
+      {
+        "episode_id": 36893,
+        "display_name": "Sběratelé kostí S07E12 - Smrt v záři reflektorů CZ Dabing",
+        "video_id": 28191125
+      },
+      {
+        "episode_id": 36905,
+        "display_name": "Sběratelé kostí S08E11 - Archeolog v zámotku CZ Dabing",
+        "video_id": 28191164
       },
       {
         "episode_id": 114182,
@@ -78746,6 +78791,16 @@
         "video_id": 28190964
       },
       {
+        "episode_id": 44842,
+        "display_name": "Battlestar Galactica S02E07 - Domov, část 2. CZ Dabing",
+        "video_id": 28191019
+      },
+      {
+        "episode_id": 44802,
+        "display_name": "Battlestar Galactica S02E09 - Let Fénixe CZ Dabing",
+        "video_id": 28191091
+      },
+      {
         "episode_id": 36819,
         "display_name": "Sběratelé kostí S04E11 - Kost, která vybuchla CZ Dabing",
         "video_id": 28190852
@@ -78769,6 +78824,21 @@
         "episode_id": 36895,
         "display_name": "Sběratelé kostí S08E01 - Budoucnost v minulosti CZ Dabing",
         "video_id": 28190978
+      },
+      {
+        "episode_id": 36935,
+        "display_name": "Sběratelé kostí S12E03 - Senior v kyselině CZ Dabing",
+        "video_id": 28191010
+      },
+      {
+        "episode_id": 36939,
+        "display_name": "Sběratelé kostí S12E07 - Tvář netvora CZ Dabing",
+        "video_id": 28191054
+      },
+      {
+        "episode_id": 45467,
+        "display_name": "Prolhané krásky S01E04 - Už mě slyšíte? CZ Dabing",
+        "video_id": 28191085
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -126723,6 +126793,26 @@
         "video_id": 28190968
       },
       {
+        "episode_id": 45464,
+        "display_name": "Prolhané krásky S07E12 - Ty boty jsou stvořeny pro stalking CZ Dabing",
+        "video_id": 28191004
+      },
+      {
+        "episode_id": 45512,
+        "display_name": "Prolhané krásky S07E18 - Vyber si, nebo prohraj CZ Dabing",
+        "video_id": 28191032
+      },
+      {
+        "episode_id": 44868,
+        "display_name": "Battlestar Galactica S01E03 - Dobytí Bastily CZ Dabing",
+        "video_id": 28191065
+      },
+      {
+        "episode_id": 44804,
+        "display_name": "Battlestar Galactica S01E04 - Akt lítosti CZ Dabing",
+        "video_id": 28191126
+      },
+      {
         "episode_id": 35117,
         "display_name": "Sběratelé kostí S03E12 - Dítě ve větvích CZ Dabing",
         "video_id": 28190855
@@ -126736,6 +126826,31 @@
         "episode_id": 36817,
         "display_name": "Sběratelé kostí S04E09 - Podvodník v laboratoři CZ Dabing",
         "video_id": 28190974
+      },
+      {
+        "episode_id": 36821,
+        "display_name": "Sběratelé kostí S04E13 - Vášeň na ledě CZ Dabing",
+        "video_id": 28191020
+      },
+      {
+        "episode_id": 36845,
+        "display_name": "Sběratelé kostí S05E09 - Šampion v oleji CZ Dabing",
+        "video_id": 28191053
+      },
+      {
+        "episode_id": 36865,
+        "display_name": "Sběratelé kostí S06E07 - Kráska v čokoládě CZ Dabing",
+        "video_id": 28191088
+      },
+      {
+        "episode_id": 36893,
+        "display_name": "Sběratelé kostí S07E12 - Smrt v záři reflektorů CZ Dabing",
+        "video_id": 28191125
+      },
+      {
+        "episode_id": 36905,
+        "display_name": "Sběratelé kostí S08E11 - Archeolog v zámotku CZ Dabing",
+        "video_id": 28191164
       },
       {
         "episode_id": 114182,
@@ -157233,6 +157348,16 @@
         "video_id": 28190964
       },
       {
+        "episode_id": 44842,
+        "display_name": "Battlestar Galactica S02E07 - Domov, část 2. CZ Dabing",
+        "video_id": 28191019
+      },
+      {
+        "episode_id": 44802,
+        "display_name": "Battlestar Galactica S02E09 - Let Fénixe CZ Dabing",
+        "video_id": 28191091
+      },
+      {
         "episode_id": 36819,
         "display_name": "Sběratelé kostí S04E11 - Kost, která vybuchla CZ Dabing",
         "video_id": 28190852
@@ -157256,6 +157381,21 @@
         "episode_id": 36895,
         "display_name": "Sběratelé kostí S08E01 - Budoucnost v minulosti CZ Dabing",
         "video_id": 28190978
+      },
+      {
+        "episode_id": 36935,
+        "display_name": "Sběratelé kostí S12E03 - Senior v kyselině CZ Dabing",
+        "video_id": 28191010
+      },
+      {
+        "episode_id": 36939,
+        "display_name": "Sběratelé kostí S12E07 - Tvář netvora CZ Dabing",
+        "video_id": 28191054
+      },
+      {
+        "episode_id": 45467,
+        "display_name": "Prolhané krásky S01E04 - Už mě slyšíte? CZ Dabing",
+        "video_id": 28191085
       }
     ],
     "prepared_not_upload_ready": [
@@ -158417,9 +158557,9 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 302,
-    "ok": 39,
-    "resolve_failed": 1
+    "disabled": 160,
+    "ok": 53,
+    "resolve_failed": 7
   },
   "whisper_review_statuses": {
     "whisper_non_cz_needs_subtitles": 5064,
