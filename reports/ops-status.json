@@ -2,15 +2,15 @@
   "counts": {
     "backlog_episodes": 172589,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 20804,
-    "prepared_source_episodes": 55521,
+    "uploaded_episodes": 20816,
+    "prepared_source_episodes": 55359,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 20,
-    "language_whisper_attempted_sources": 20,
+    "language_audited_sources": 200,
+    "language_whisper_attempted_sources": 40,
     "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 56824,
     "whisper_review_pending_sources": 49501,
@@ -20,26 +20,66 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-08-04T17:32:19Z",
-      "databaseId": 30934367173,
+      "createdAt": "2026-08-04T17:41:41Z",
+      "databaseId": 30935089188,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
-      "createdAt": "2026-08-04T17:32:12Z",
-      "databaseId": 30934357808,
+      "createdAt": "2026-08-04T17:40:48Z",
+      "databaseId": 30935023376,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "prepare-manifest"
     },
     {
+      "conclusion": "cancelled",
+      "createdAt": "2026-08-04T17:38:12Z",
+      "databaseId": 30934827754,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-04T17:33:32Z",
+      "databaseId": 30934463302,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
       "conclusion": "",
+      "createdAt": "2026-08-04T17:33:28Z",
+      "databaseId": 30934459386,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-04T17:32:19Z",
+      "databaseId": 30934367173,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-08-04T17:32:12Z",
+      "databaseId": 30934357808,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-04T17:23:08Z",
       "databaseId": 30933654281,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -51,11 +91,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-04T17:21:08Z",
       "databaseId": 30933500122,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
@@ -137,46 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-04T17:01:27Z",
-      "databaseId": 30931938867,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-04T17:00:11Z",
-      "databaseId": 30931830910,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-04T16:51:02Z",
-      "databaseId": 30931105737,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-04T16:50:58Z",
-      "databaseId": 30931100907,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-04T16:50:55Z",
-      "databaseId": 30931096858,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
     }
   ],
   "gaps": {
@@ -48856,6 +48856,46 @@
         "video_id": 28196197
       },
       {
+        "episode_id": 15812,
+        "display_name": "Noční agent S03E09 - Ruku v ruce CZ Dabing",
+        "video_id": 28196739
+      },
+      {
+        "episode_id": 15144,
+        "display_name": "Urgent S01E03 - 09:00 CZ Dabing",
+        "video_id": 28196769
+      },
+      {
+        "episode_id": 15148,
+        "display_name": "Urgent S01E07 - 13:00 CZ Dabing",
+        "video_id": 28196793
+      },
+      {
+        "episode_id": 63641,
+        "display_name": "Silicon Valley S04E07 - Patentový troll CZ Dabing",
+        "video_id": 28196657
+      },
+      {
+        "episode_id": 63657,
+        "display_name": "Silicon Valley S04E09 - Hooli-Con CZ Dabing",
+        "video_id": 28196715
+      },
+      {
+        "episode_id": 63661,
+        "display_name": "Silicon Valley S05E05 - Rozpoznávání obličeje CZ Dabing",
+        "video_id": 28196740
+      },
+      {
+        "episode_id": 17221,
+        "display_name": "Problém tří těles S01E02 - Rudé pobřeží CZ Dabing",
+        "video_id": 28196759
+      },
+      {
+        "episode_id": 17225,
+        "display_name": "Problém tří těles S01E05 - Soudný den CZ Dabing",
+        "video_id": 28196796
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -79974,6 +80014,26 @@
         "episode_id": 48123,
         "display_name": "Vlčí mládě S02E04 - Zrůda CZ Dabing",
         "video_id": 28196299
+      },
+      {
+        "episode_id": 15794,
+        "display_name": "Noční agent S02E02 - Bez připojení CZ Dabing",
+        "video_id": 28196666
+      },
+      {
+        "episode_id": 15798,
+        "display_name": "Noční agent S02E06 - Dobrý agent CZ Dabing",
+        "video_id": 28196710
+      },
+      {
+        "episode_id": 15802,
+        "display_name": "Noční agent S02E10 - Špatná investice CZ Dabing",
+        "video_id": 28196741
+      },
+      {
+        "episode_id": 15806,
+        "display_name": "Noční agent S03E04 - Orion CZ Dabing",
+        "video_id": 28196776
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -128548,6 +128608,46 @@
         "video_id": 28196197
       },
       {
+        "episode_id": 15812,
+        "display_name": "Noční agent S03E09 - Ruku v ruce CZ Dabing",
+        "video_id": 28196739
+      },
+      {
+        "episode_id": 15144,
+        "display_name": "Urgent S01E03 - 09:00 CZ Dabing",
+        "video_id": 28196769
+      },
+      {
+        "episode_id": 15148,
+        "display_name": "Urgent S01E07 - 13:00 CZ Dabing",
+        "video_id": 28196793
+      },
+      {
+        "episode_id": 63641,
+        "display_name": "Silicon Valley S04E07 - Patentový troll CZ Dabing",
+        "video_id": 28196657
+      },
+      {
+        "episode_id": 63657,
+        "display_name": "Silicon Valley S04E09 - Hooli-Con CZ Dabing",
+        "video_id": 28196715
+      },
+      {
+        "episode_id": 63661,
+        "display_name": "Silicon Valley S05E05 - Rozpoznávání obličeje CZ Dabing",
+        "video_id": 28196740
+      },
+      {
+        "episode_id": 17221,
+        "display_name": "Problém tří těles S01E02 - Rudé pobřeží CZ Dabing",
+        "video_id": 28196759
+      },
+      {
+        "episode_id": 17225,
+        "display_name": "Problém tří těles S01E05 - Soudný den CZ Dabing",
+        "video_id": 28196796
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -159666,6 +159766,26 @@
         "episode_id": 48123,
         "display_name": "Vlčí mládě S02E04 - Zrůda CZ Dabing",
         "video_id": 28196299
+      },
+      {
+        "episode_id": 15794,
+        "display_name": "Noční agent S02E02 - Bez připojení CZ Dabing",
+        "video_id": 28196666
+      },
+      {
+        "episode_id": 15798,
+        "display_name": "Noční agent S02E06 - Dobrý agent CZ Dabing",
+        "video_id": 28196710
+      },
+      {
+        "episode_id": 15802,
+        "display_name": "Noční agent S02E10 - Špatná investice CZ Dabing",
+        "video_id": 28196741
+      },
+      {
+        "episode_id": 15806,
+        "display_name": "Noční agent S03E04 - Orion CZ Dabing",
+        "video_id": 28196776
       }
     ],
     "prepared_not_upload_ready": [
@@ -160827,7 +160947,8 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 19,
+    "disabled": 160,
+    "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
