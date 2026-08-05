@@ -2,36 +2,84 @@
   "counts": {
     "backlog_episodes": 171130,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 22245,
-    "prepared_source_episodes": 50354,
+    "uploaded_episodes": 22257,
+    "prepared_source_episodes": 50360,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 20,
-    "language_whisper_attempted_sources": 20,
+    "language_audited_sources": 200,
+    "language_whisper_attempted_sources": 40,
     "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 56841,
     "whisper_review_pending_sources": 49726,
-    "subtitle_followup_sources": 23625,
-    "subtitle_followup_pending_sources": 23625
+    "subtitle_followup_sources": 23626,
+    "subtitle_followup_pending_sources": 23626
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-08-05T22:27:16Z",
-      "databaseId": 31052803296,
+      "createdAt": "2026-08-05T22:42:06Z",
+      "databaseId": 31053732715,
       "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "ops-status"
+      "status": "pending",
+      "workflowName": "sync"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-08-05T22:42:02Z",
+      "databaseId": 31053728512,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-05T22:42:02Z",
+      "databaseId": 31053727943,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-05T22:41:57Z",
+      "databaseId": 31053722844,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-05T22:35:26Z",
+      "databaseId": 31053324296,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-08-05T22:34:07Z",
+      "databaseId": 31053238769,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-05T22:27:16Z",
+      "databaseId": 31052803296,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-05T22:26:49Z",
       "databaseId": 31052773183,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -99,11 +147,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-05T22:19:06Z",
       "databaseId": 31052277139,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
@@ -129,54 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-05T22:12:02Z",
-      "databaseId": 31051813451,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-05T22:11:58Z",
-      "databaseId": 31051808954,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-05T22:10:52Z",
-      "databaseId": 31051738083,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-05T22:10:47Z",
-      "databaseId": 31051732534,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-05T22:10:46Z",
-      "databaseId": 31051731871,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-05T22:10:43Z",
-      "databaseId": 31051728578,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "sync"
     }
   ],
   "gaps": {
@@ -52326,9 +52326,39 @@
         "video_id": 28241805
       },
       {
+        "episode_id": 46120,
+        "display_name": "Cizinka S07E06 - Tam na soutoku CZ Titulky",
+        "video_id": 28241846
+      },
+      {
+        "episode_id": 46128,
+        "display_name": "Cizinka S07E09 - 9. epizoda CZ Titulky",
+        "video_id": 28241937
+      },
+      {
+        "episode_id": 46124,
+        "display_name": "Cizinka S07E12 - 12. epizoda CZ Titulky",
+        "video_id": 28241999
+      },
+      {
         "episode_id": 46129,
         "display_name": "Cizinka S07E11 - 11. epizoda CZ Titulky",
         "video_id": 28241810
+      },
+      {
+        "episode_id": 46125,
+        "display_name": "Cizinka S07E13 - 13. epizoda CZ Titulky",
+        "video_id": 28241879
+      },
+      {
+        "episode_id": 46133,
+        "display_name": "Cizinka S08E03 - 3. epizoda CZ Titulky",
+        "video_id": 28241939
+      },
+      {
+        "episode_id": 62125,
+        "display_name": "Zákon a pořádek: Útvar pro zvláštní oběti S07E05 - Tichý zabiják CZ Dabing",
+        "video_id": 28242026
       },
       {
         "episode_id": 114182,
@@ -86926,6 +86956,21 @@
         "video_id": 28241809
       },
       {
+        "episode_id": 46130,
+        "display_name": "Cizinka S07E14 - 14. epizoda CZ Titulky",
+        "video_id": 28241851
+      },
+      {
+        "episode_id": 46126,
+        "display_name": "Cizinka S07E15 - 15. epizoda CZ Titulky",
+        "video_id": 28241926
+      },
+      {
+        "episode_id": 46134,
+        "display_name": "Cizinka S08E05 - 5. epizoda CZ Dabing",
+        "video_id": 28241987
+      },
+      {
         "episode_id": 6031,
         "display_name": "Silo S02E05 - Sestup CZ Titulky",
         "video_id": 28241804
@@ -86934,6 +86979,21 @@
         "episode_id": 12259,
         "display_name": "Jen vraždy v budově S01E03 - Jak dobře znáš své sousedy? CZ Dabing",
         "video_id": 28241843
+      },
+      {
+        "episode_id": 12243,
+        "display_name": "Jen vraždy v budově S01E05 - Obrat CZ Dabing",
+        "video_id": 28241887
+      },
+      {
+        "episode_id": 46095,
+        "display_name": "Cizinka S06E03 - Střídmost CZ Titulky",
+        "video_id": 28241918
+      },
+      {
+        "episode_id": 46099,
+        "display_name": "Cizinka S06E07 - Slova ublížit nemůžou CZ Titulky",
+        "video_id": 28241986
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -138978,9 +139038,39 @@
         "video_id": 28241805
       },
       {
+        "episode_id": 46120,
+        "display_name": "Cizinka S07E06 - Tam na soutoku CZ Titulky",
+        "video_id": 28241846
+      },
+      {
+        "episode_id": 46128,
+        "display_name": "Cizinka S07E09 - 9. epizoda CZ Titulky",
+        "video_id": 28241937
+      },
+      {
+        "episode_id": 46124,
+        "display_name": "Cizinka S07E12 - 12. epizoda CZ Titulky",
+        "video_id": 28241999
+      },
+      {
         "episode_id": 46129,
         "display_name": "Cizinka S07E11 - 11. epizoda CZ Titulky",
         "video_id": 28241810
+      },
+      {
+        "episode_id": 46125,
+        "display_name": "Cizinka S07E13 - 13. epizoda CZ Titulky",
+        "video_id": 28241879
+      },
+      {
+        "episode_id": 46133,
+        "display_name": "Cizinka S08E03 - 3. epizoda CZ Titulky",
+        "video_id": 28241939
+      },
+      {
+        "episode_id": 62125,
+        "display_name": "Zákon a pořádek: Útvar pro zvláštní oběti S07E05 - Tichý zabiják CZ Dabing",
+        "video_id": 28242026
       },
       {
         "episode_id": 114182,
@@ -173578,6 +173668,21 @@
         "video_id": 28241809
       },
       {
+        "episode_id": 46130,
+        "display_name": "Cizinka S07E14 - 14. epizoda CZ Titulky",
+        "video_id": 28241851
+      },
+      {
+        "episode_id": 46126,
+        "display_name": "Cizinka S07E15 - 15. epizoda CZ Titulky",
+        "video_id": 28241926
+      },
+      {
+        "episode_id": 46134,
+        "display_name": "Cizinka S08E05 - 5. epizoda CZ Dabing",
+        "video_id": 28241987
+      },
+      {
         "episode_id": 6031,
         "display_name": "Silo S02E05 - Sestup CZ Titulky",
         "video_id": 28241804
@@ -173586,6 +173691,21 @@
         "episode_id": 12259,
         "display_name": "Jen vraždy v budově S01E03 - Jak dobře znáš své sousedy? CZ Dabing",
         "video_id": 28241843
+      },
+      {
+        "episode_id": 12243,
+        "display_name": "Jen vraždy v budově S01E05 - Obrat CZ Dabing",
+        "video_id": 28241887
+      },
+      {
+        "episode_id": 46095,
+        "display_name": "Cizinka S06E03 - Střídmost CZ Titulky",
+        "video_id": 28241918
+      },
+      {
+        "episode_id": 46099,
+        "display_name": "Cizinka S06E07 - Slova ublížit nemůžou CZ Titulky",
+        "video_id": 28241986
       }
     ],
     "prepared_not_upload_ready": [
@@ -174747,7 +174867,8 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 19,
+    "disabled": 160,
+    "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
@@ -174757,6 +174878,6 @@
     "needs_whisper": 49685
   },
   "subtitle_followup_statuses": {
-    "needs_subtitle_setup_after_prehrajto_processing": 23625
+    "needs_subtitle_setup_after_prehrajto_processing": 23626
   }
 }
