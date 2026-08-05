@@ -2,14 +2,14 @@
   "counts": {
     "backlog_episodes": 171130,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 22272,
-    "prepared_source_episodes": 50351,
+    "uploaded_episodes": 22277,
+    "prepared_source_episodes": 50355,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 100,
+    "language_audited_sources": 138,
     "language_whisper_attempted_sources": 20,
     "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 56827,
@@ -20,18 +20,66 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-08-05T23:01:04Z",
-      "databaseId": 31054877848,
+      "createdAt": "2026-08-05T23:10:13Z",
+      "databaseId": 31055416745,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-05T23:10:09Z",
+      "databaseId": 31055412456,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-05T23:09:39Z",
+      "databaseId": 31055383431,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
+      "conclusion": "success",
+      "createdAt": "2026-08-05T23:02:21Z",
+      "databaseId": 31054953069,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
       "conclusion": "",
+      "createdAt": "2026-08-05T23:02:17Z",
+      "databaseId": 31054949843,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-05T23:02:15Z",
+      "databaseId": 31054947075,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-05T23:01:04Z",
+      "databaseId": 31054877848,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "cancelled",
       "createdAt": "2026-08-05T23:00:51Z",
       "databaseId": 31054864219,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -129,54 +177,6 @@
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-05T22:42:02Z",
-      "databaseId": 31053728512,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-05T22:42:02Z",
-      "databaseId": 31053727943,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-05T22:41:57Z",
-      "databaseId": 31053722844,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-05T22:35:26Z",
-      "databaseId": 31053324296,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-05T22:34:07Z",
-      "databaseId": 31053238769,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-05T22:27:16Z",
-      "databaseId": 31052803296,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
     }
   ],
   "gaps": {
@@ -52401,6 +52401,21 @@
         "video_id": 28242168
       },
       {
+        "episode_id": 51924,
+        "display_name": "Strážce pořádku S01E04 - 4. epizoda CZ Dabing",
+        "video_id": 28242368
+      },
+      {
+        "episode_id": 25793,
+        "display_name": "Záhadné sídlo Bly S01E04 - Jak se to událo CZ Dabing",
+        "video_id": 28242354
+      },
+      {
+        "episode_id": 17273,
+        "display_name": "Ostré předměty S01E06 - Třešeň CZ Dabing",
+        "video_id": 28242436
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -87069,6 +87084,16 @@
         "episode_id": 46127,
         "display_name": "Cizinka S07E16 - 16. epizoda CZ Titulky",
         "video_id": 28242164
+      },
+      {
+        "episode_id": 31342,
+        "display_name": "Zelenáč S07E10 - Agent chaosu CZ Dabing",
+        "video_id": 28242367
+      },
+      {
+        "episode_id": 46131,
+        "display_name": "Cizinka S08E02 - 2. epizoda CZ Titulky",
+        "video_id": 28242364
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -139188,6 +139213,21 @@
         "video_id": 28242168
       },
       {
+        "episode_id": 51924,
+        "display_name": "Strážce pořádku S01E04 - 4. epizoda CZ Dabing",
+        "video_id": 28242368
+      },
+      {
+        "episode_id": 25793,
+        "display_name": "Záhadné sídlo Bly S01E04 - Jak se to událo CZ Dabing",
+        "video_id": 28242354
+      },
+      {
+        "episode_id": 17273,
+        "display_name": "Ostré předměty S01E06 - Třešeň CZ Dabing",
+        "video_id": 28242436
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -173856,6 +173896,16 @@
         "episode_id": 46127,
         "display_name": "Cizinka S07E16 - 16. epizoda CZ Titulky",
         "video_id": 28242164
+      },
+      {
+        "episode_id": 31342,
+        "display_name": "Zelenáč S07E10 - Agent chaosu CZ Dabing",
+        "video_id": 28242367
+      },
+      {
+        "episode_id": 46131,
+        "display_name": "Cizinka S08E02 - 2. epizoda CZ Titulky",
+        "video_id": 28242364
       }
     ],
     "prepared_not_upload_ready": [
@@ -175017,7 +175067,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 80,
+    "disabled": 118,
     "ok": 19,
     "resolve_failed": 1
   },
