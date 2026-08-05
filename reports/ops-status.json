@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 171198,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 22179,
+    "uploaded_episodes": 22180,
     "prepared_source_episodes": 50247,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 68,
+    "language_audited_sources": 40,
     "language_whisper_attempted_sources": 40,
-    "language_pending_whisper_sources": 2624,
+    "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 56847,
     "whisper_review_pending_sources": 49754,
     "subtitle_followup_sources": 23592,
@@ -20,26 +20,58 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-08-05T20:10:51Z",
+      "databaseId": 31042859720,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-05T20:10:50Z",
+      "databaseId": 31042858449,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-05T20:10:40Z",
+      "databaseId": 31042846131,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-05T20:08:54Z",
+      "databaseId": 31042707820,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-sources"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-05T20:03:35Z",
       "databaseId": 31042291253,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-status"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-05T20:03:04Z",
       "databaseId": 31042250446,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-08-05T20:03:00Z",
       "databaseId": 31042246020,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -79,7 +111,7 @@
       "createdAt": "2026-08-05T19:59:36Z",
       "databaseId": 31041977758,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "sync"
     },
     {
@@ -131,11 +163,11 @@
       "workflowName": "process-whisper-review"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-05T19:46:04Z",
       "databaseId": 31040942107,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -145,38 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-05T19:44:26Z",
-      "databaseId": 31040814409,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-05T19:43:31Z",
-      "databaseId": 31040745435,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-05T19:41:59Z",
-      "databaseId": 31040626271,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-05T19:35:59Z",
-      "databaseId": 31040162149,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
     }
   ],
   "gaps": {
@@ -86604,6 +86604,11 @@
         "episode_id": 118259,
         "display_name": "Kancl S01E04 - 4. epizoda CZ Dabing",
         "video_id": 28238653
+      },
+      {
+        "episode_id": 71743,
+        "display_name": "Pozůstalí S02E07 - Nejsilnější protivník CZ Dabing",
+        "video_id": 28238840
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -172926,6 +172931,11 @@
         "episode_id": 118259,
         "display_name": "Kancl S01E04 - 4. epizoda CZ Dabing",
         "video_id": 28238653
+      },
+      {
+        "episode_id": 71743,
+        "display_name": "Pozůstalí S02E07 - Nejsilnější protivník CZ Dabing",
+        "video_id": 28238840
       }
     ],
     "prepared_not_upload_ready": [
@@ -174087,7 +174097,6 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 28,
     "ok": 39,
     "resolve_failed": 1
   },
