@@ -1,45 +1,133 @@
 {
   "counts": {
-    "backlog_episodes": 171668,
+    "backlog_episodes": 171488,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 21831,
-    "prepared_source_episodes": 50001,
+    "uploaded_episodes": 21875,
+    "prepared_source_episodes": 50034,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 573,
-    "language_whisper_attempted_sources": 118,
-    "language_pending_whisper_sources": 2624,
-    "whisper_review_sources": 56866,
-    "whisper_review_pending_sources": 49797,
-    "subtitle_followup_sources": 23431,
-    "subtitle_followup_pending_sources": 23431
+    "language_audited_sources": 667,
+    "language_whisper_attempted_sources": 138,
+    "language_pending_whisper_sources": 2604,
+    "whisper_review_sources": 56871,
+    "whisper_review_pending_sources": 49818,
+    "subtitle_followup_sources": 23439,
+    "subtitle_followup_pending_sources": 23439
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-08-05T12:33:42Z",
-      "databaseId": 31006153730,
+      "createdAt": "2026-08-05T13:05:39Z",
+      "databaseId": 31008578081,
       "headBranch": "main",
       "status": "in_progress",
-      "workflowName": "ops-watchdog"
+      "workflowName": "ops-status"
     },
     {
       "conclusion": "",
-      "createdAt": "2026-08-05T12:33:36Z",
-      "databaseId": 31006146498,
+      "createdAt": "2026-08-05T13:05:10Z",
+      "databaseId": 31008538820,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-05T13:04:45Z",
+      "databaseId": 31008505201,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-05T13:04:02Z",
+      "databaseId": 31008447526,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-05T12:59:21Z",
+      "databaseId": 31008081128,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "prepare-manifest"
     },
     {
+      "conclusion": "cancelled",
+      "createdAt": "2026-08-05T12:58:24Z",
+      "databaseId": 31008006842,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
       "conclusion": "",
+      "createdAt": "2026-08-05T12:51:11Z",
+      "databaseId": 31007463056,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-05T12:46:56Z",
+      "databaseId": 31007142870,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-05T12:44:25Z",
+      "databaseId": 31006949365,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "refresh-backlog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-05T12:43:09Z",
+      "databaseId": 31006853336,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-05T12:34:57Z",
+      "databaseId": 31006243066,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-05T12:33:42Z",
+      "databaseId": 31006153730,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-05T12:33:36Z",
+      "databaseId": 31006146498,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-05T12:33:30Z",
       "databaseId": 31006138635,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "sync"
     },
     {
@@ -67,19 +155,19 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "failure",
       "createdAt": "2026-08-05T12:29:13Z",
       "databaseId": 31005817646,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-05T12:29:11Z",
       "databaseId": 31005814827,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -89,94 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-05T12:27:48Z",
-      "databaseId": 31005712438,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-05T12:17:14Z",
-      "databaseId": 31004954990,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-05T12:16:43Z",
-      "databaseId": 31004920463,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-05T12:16:41Z",
-      "databaseId": 31004917618,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-sources"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-05T12:15:32Z",
-      "databaseId": 31004835125,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-05T12:15:27Z",
-      "databaseId": 31004829213,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-05T12:13:31Z",
-      "databaseId": 31004689319,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-05T12:12:02Z",
-      "databaseId": 31004584611,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-05T12:11:26Z",
-      "databaseId": 31004543864,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-05T12:11:00Z",
-      "databaseId": 31004513991,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-05T12:09:56Z",
-      "databaseId": 31004438412,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
     }
   ],
   "gaps": {
@@ -51351,6 +51351,111 @@
         "video_id": 28227452
       },
       {
+        "episode_id": 10184,
+        "display_name": "Grimm S05E15 - Elixír mládí CZ Dabing",
+        "video_id": 28227689
+      },
+      {
+        "episode_id": 6452,
+        "display_name": "Grimm S06E05 - Jednou za sedm let CZ Titulky",
+        "video_id": 28227759
+      },
+      {
+        "episode_id": 6456,
+        "display_name": "Grimm S06E09 - Stromoví lidé CZ Dabing",
+        "video_id": 28227826
+      },
+      {
+        "episode_id": 6460,
+        "display_name": "Grimm S06E13 - Konec CZ Dabing",
+        "video_id": 28227887
+      },
+      {
+        "episode_id": 16652,
+        "display_name": "Noční recepční S01E03 - 3. epizoda CZ Dabing",
+        "video_id": 28227942
+      },
+      {
+        "episode_id": 16656,
+        "display_name": "Noční recepční S02E01 - 1. epizoda CZ Dabing",
+        "video_id": 28228044
+      },
+      {
+        "episode_id": 16660,
+        "display_name": "Noční recepční S02E05 - 5. epizoda CZ Dabing",
+        "video_id": 28228072
+      },
+      {
+        "episode_id": 5116,
+        "display_name": "Penny Dreadful S02E02 - Verbis Diablo CZ Dabing",
+        "video_id": 28228118
+      },
+      {
+        "episode_id": 7557,
+        "display_name": "Watchmen S01E02 - Válečnické umění komančských jezdců CZ Titulky",
+        "video_id": 28227686
+      },
+      {
+        "episode_id": 7561,
+        "display_name": "Watchmen S01E06 - Neobyčejná bytost CZ Titulky",
+        "video_id": 28227734
+      },
+      {
+        "episode_id": 4409,
+        "display_name": "Star Trek: Discovery S01E02 - Souboj CZ Dabing",
+        "video_id": 28227760
+      },
+      {
+        "episode_id": 4413,
+        "display_name": "Star Trek: Discovery S01E07 - Časová smyčka CZ Titulky",
+        "video_id": 28227794
+      },
+      {
+        "episode_id": 4417,
+        "display_name": "Star Trek: Discovery S01E10 - Sám proti sobě CZ Titulky",
+        "video_id": 28227853
+      },
+      {
+        "episode_id": 4421,
+        "display_name": "Star Trek: Discovery S01E14 - Válka přede mnou, válka za mnou CZ Dabing",
+        "video_id": 28227881
+      },
+      {
+        "episode_id": 9917,
+        "display_name": "Star Trek: Discovery S02E02 - Nový ráj CZ Titulky",
+        "video_id": 28227895
+      },
+      {
+        "episode_id": 9921,
+        "display_name": "Star Trek: Discovery S02E11 - Nekonečná věčnost CZ Dabing",
+        "video_id": 28227923
+      },
+      {
+        "episode_id": 52232,
+        "display_name": "Ve službách FBI S04E13 - Špína v impériu CZ Dabing",
+        "video_id": 28228248
+      },
+      {
+        "episode_id": 45796,
+        "display_name": "Chuck S04E22 - Chuck a Agent X CZ Dabing",
+        "video_id": 28228266
+      },
+      {
+        "episode_id": 135436,
+        "display_name": "Legenda Korry S01E02 - List ve větru CZ Dabing",
+        "video_id": 28228299
+      },
+      {
+        "episode_id": 102124,
+        "display_name": "Legenda Korry S01E03 - Odhalení CZ Dabing",
+        "video_id": 28228332
+      },
+      {
+        "episode_id": 9937,
+        "display_name": "Star Trek: Discovery S03E02 - Daleko od domova CZ Dabing",
+        "video_id": 28228284
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -84999,6 +85104,101 @@
         "episode_id": 105267,
         "display_name": "Vinland Saga S01E05 - 5. epizoda CZ Titulky",
         "video_id": 28227041
+      },
+      {
+        "episode_id": 67634,
+        "display_name": "Emily in Paris S04E02 - Láska na útěku CZ Dabing",
+        "video_id": 28227685
+      },
+      {
+        "episode_id": 67638,
+        "display_name": "Emily in Paris S04E05 - Optický klam CZ Dabing",
+        "video_id": 28227777
+      },
+      {
+        "episode_id": 67650,
+        "display_name": "Emily in Paris S05E07 - Druhé šance CZ Titulky",
+        "video_id": 28227805
+      },
+      {
+        "episode_id": 83962,
+        "display_name": "Městečko Broadchurch S01E04 - 4. epizoda CZ Titulky",
+        "video_id": 28227855
+      },
+      {
+        "episode_id": 83966,
+        "display_name": "Městečko Broadchurch S01E08 - 8. epizoda CZ Titulky",
+        "video_id": 28227903
+      },
+      {
+        "episode_id": 24710,
+        "display_name": "Grimm S02E03 - Temný úplněk CZ Dabing",
+        "video_id": 28227968
+      },
+      {
+        "episode_id": 10246,
+        "display_name": "Grimm S02E10 - Hodina smrti CZ Dabing",
+        "video_id": 28228036
+      },
+      {
+        "episode_id": 10242,
+        "display_name": "Grimm S02E14 - Rození Weseni CZ Dabing",
+        "video_id": 28228084
+      },
+      {
+        "episode_id": 105275,
+        "display_name": "Vinland Saga S01E13 - 13. epizoda CZ Titulky",
+        "video_id": 28227687
+      },
+      {
+        "episode_id": 105279,
+        "display_name": "Vinland Saga S01E17 - 17. epizoda CZ Titulky",
+        "video_id": 28227736
+      },
+      {
+        "episode_id": 105283,
+        "display_name": "Vinland Saga S01E23 - 23. epizoda CZ Titulky",
+        "video_id": 28227771
+      },
+      {
+        "episode_id": 105295,
+        "display_name": "Vinland Saga S02E01 - Otrok CZ Titulky",
+        "video_id": 28227802
+      },
+      {
+        "episode_id": 105287,
+        "display_name": "Vinland Saga S02E04 - Probuzení CZ Titulky",
+        "video_id": 28227832
+      },
+      {
+        "episode_id": 105299,
+        "display_name": "Vinland Saga S02E06 - Chci koně CZ Titulky",
+        "video_id": 28227868
+      },
+      {
+        "episode_id": 105303,
+        "display_name": "Vinland Saga S02E13 - 13. epizoda CZ Titulky",
+        "video_id": 28227888
+      },
+      {
+        "episode_id": 105291,
+        "display_name": "Vinland Saga S02E16 - 16. epizoda CZ Titulky",
+        "video_id": 28227920
+      },
+      {
+        "episode_id": 43130,
+        "display_name": "Zoufalé manželky S08E17 - Odpočívej v pokoji CZ Dabing",
+        "video_id": 28228221
+      },
+      {
+        "episode_id": 10230,
+        "display_name": "Grimm S03E04 - Náhodná známost CZ Titulky",
+        "video_id": 28228281
+      },
+      {
+        "episode_id": 105307,
+        "display_name": "Vinland Saga S02E23 - 23. epizoda CZ Titulky",
+        "video_id": 28228280
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -136068,6 +136268,121 @@
         "video_id": 28227452
       },
       {
+        "episode_id": 10184,
+        "display_name": "Grimm S05E15 - Elixír mládí CZ Dabing",
+        "video_id": 28227689
+      },
+      {
+        "episode_id": 6452,
+        "display_name": "Grimm S06E05 - Jednou za sedm let CZ Titulky",
+        "video_id": 28227759
+      },
+      {
+        "episode_id": 6456,
+        "display_name": "Grimm S06E09 - Stromoví lidé CZ Dabing",
+        "video_id": 28227826
+      },
+      {
+        "episode_id": 6460,
+        "display_name": "Grimm S06E13 - Konec CZ Dabing",
+        "video_id": 28227887
+      },
+      {
+        "episode_id": 16652,
+        "display_name": "Noční recepční S01E03 - 3. epizoda CZ Dabing",
+        "video_id": 28227942
+      },
+      {
+        "episode_id": 16656,
+        "display_name": "Noční recepční S02E01 - 1. epizoda CZ Dabing",
+        "video_id": 28228044
+      },
+      {
+        "episode_id": 16660,
+        "display_name": "Noční recepční S02E05 - 5. epizoda CZ Dabing",
+        "video_id": 28228072
+      },
+      {
+        "episode_id": 5116,
+        "display_name": "Penny Dreadful S02E02 - Verbis Diablo CZ Dabing",
+        "video_id": 28228118
+      },
+      {
+        "episode_id": 7557,
+        "display_name": "Watchmen S01E02 - Válečnické umění komančských jezdců CZ Titulky",
+        "video_id": 28227686
+      },
+      {
+        "episode_id": 7561,
+        "display_name": "Watchmen S01E06 - Neobyčejná bytost CZ Titulky",
+        "video_id": 28227734
+      },
+      {
+        "episode_id": 4409,
+        "display_name": "Star Trek: Discovery S01E02 - Souboj CZ Dabing",
+        "video_id": 28227760
+      },
+      {
+        "episode_id": 4413,
+        "display_name": "Star Trek: Discovery S01E07 - Časová smyčka CZ Titulky",
+        "video_id": 28227794
+      },
+      {
+        "episode_id": 4417,
+        "display_name": "Star Trek: Discovery S01E10 - Sám proti sobě CZ Titulky",
+        "video_id": 28227853
+      },
+      {
+        "episode_id": 4421,
+        "display_name": "Star Trek: Discovery S01E14 - Válka přede mnou, válka za mnou CZ Dabing",
+        "video_id": 28227881
+      },
+      {
+        "episode_id": 9917,
+        "display_name": "Star Trek: Discovery S02E02 - Nový ráj CZ Titulky",
+        "video_id": 28227895
+      },
+      {
+        "episode_id": 9921,
+        "display_name": "Star Trek: Discovery S02E11 - Nekonečná věčnost CZ Dabing",
+        "video_id": 28227923
+      },
+      {
+        "episode_id": 31668,
+        "display_name": "Odloučení S01E02 - Half Loop CZ Titulky",
+        "video_id": 28228220
+      },
+      {
+        "episode_id": 52232,
+        "display_name": "Ve službách FBI S04E13 - Špína v impériu CZ Dabing",
+        "video_id": 28228248
+      },
+      {
+        "episode_id": 45796,
+        "display_name": "Chuck S04E22 - Chuck a Agent X CZ Dabing",
+        "video_id": 28228266
+      },
+      {
+        "episode_id": 135436,
+        "display_name": "Legenda Korry S01E02 - List ve větru CZ Dabing",
+        "video_id": 28228299
+      },
+      {
+        "episode_id": 102124,
+        "display_name": "Legenda Korry S01E03 - Odhalení CZ Dabing",
+        "video_id": 28228332
+      },
+      {
+        "episode_id": 31669,
+        "display_name": "Odloučení S01E03 - Na věčnosti CZ Titulky",
+        "video_id": 28228224
+      },
+      {
+        "episode_id": 9937,
+        "display_name": "Star Trek: Discovery S03E02 - Daleko od domova CZ Dabing",
+        "video_id": 28228284
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -169716,6 +170031,111 @@
         "episode_id": 105267,
         "display_name": "Vinland Saga S01E05 - 5. epizoda CZ Titulky",
         "video_id": 28227041
+      },
+      {
+        "episode_id": 67634,
+        "display_name": "Emily in Paris S04E02 - Láska na útěku CZ Dabing",
+        "video_id": 28227685
+      },
+      {
+        "episode_id": 67638,
+        "display_name": "Emily in Paris S04E05 - Optický klam CZ Dabing",
+        "video_id": 28227777
+      },
+      {
+        "episode_id": 67650,
+        "display_name": "Emily in Paris S05E07 - Druhé šance CZ Titulky",
+        "video_id": 28227805
+      },
+      {
+        "episode_id": 83962,
+        "display_name": "Městečko Broadchurch S01E04 - 4. epizoda CZ Titulky",
+        "video_id": 28227855
+      },
+      {
+        "episode_id": 83966,
+        "display_name": "Městečko Broadchurch S01E08 - 8. epizoda CZ Titulky",
+        "video_id": 28227903
+      },
+      {
+        "episode_id": 24710,
+        "display_name": "Grimm S02E03 - Temný úplněk CZ Dabing",
+        "video_id": 28227968
+      },
+      {
+        "episode_id": 10246,
+        "display_name": "Grimm S02E10 - Hodina smrti CZ Dabing",
+        "video_id": 28228036
+      },
+      {
+        "episode_id": 10242,
+        "display_name": "Grimm S02E14 - Rození Weseni CZ Dabing",
+        "video_id": 28228084
+      },
+      {
+        "episode_id": 105275,
+        "display_name": "Vinland Saga S01E13 - 13. epizoda CZ Titulky",
+        "video_id": 28227687
+      },
+      {
+        "episode_id": 105279,
+        "display_name": "Vinland Saga S01E17 - 17. epizoda CZ Titulky",
+        "video_id": 28227736
+      },
+      {
+        "episode_id": 105283,
+        "display_name": "Vinland Saga S01E23 - 23. epizoda CZ Titulky",
+        "video_id": 28227771
+      },
+      {
+        "episode_id": 105295,
+        "display_name": "Vinland Saga S02E01 - Otrok CZ Titulky",
+        "video_id": 28227802
+      },
+      {
+        "episode_id": 105287,
+        "display_name": "Vinland Saga S02E04 - Probuzení CZ Titulky",
+        "video_id": 28227832
+      },
+      {
+        "episode_id": 105299,
+        "display_name": "Vinland Saga S02E06 - Chci koně CZ Titulky",
+        "video_id": 28227868
+      },
+      {
+        "episode_id": 105303,
+        "display_name": "Vinland Saga S02E13 - 13. epizoda CZ Titulky",
+        "video_id": 28227888
+      },
+      {
+        "episode_id": 105291,
+        "display_name": "Vinland Saga S02E16 - 16. epizoda CZ Titulky",
+        "video_id": 28227920
+      },
+      {
+        "episode_id": 43130,
+        "display_name": "Zoufalé manželky S08E17 - Odpočívej v pokoji CZ Dabing",
+        "video_id": 28228221
+      },
+      {
+        "episode_id": 10230,
+        "display_name": "Grimm S03E04 - Náhodná známost CZ Titulky",
+        "video_id": 28228281
+      },
+      {
+        "episode_id": 31667,
+        "display_name": "Odloučení S01E01 - Dobrá zpráva o pekle CZ Dabing",
+        "video_id": 28228205
+      },
+      {
+        "episode_id": 42739,
+        "display_name": "Flash S03E02 - 2. epizoda CZ Titulky",
+        "video_id": 28228262
+      },
+      {
+        "episode_id": 105307,
+        "display_name": "Vinland Saga S02E23 - 23. epizoda CZ Titulky",
+        "video_id": 28228280
       }
     ],
     "prepared_not_upload_ready": [
@@ -170877,17 +171297,17 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 455,
-    "ok": 117,
+    "disabled": 529,
+    "ok": 137,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
     "whisper_non_cz_needs_subtitles": 5137,
-    "whisper_confirmed_cz": 1932,
+    "whisper_confirmed_cz": 1916,
     "whisper_failed": 41,
-    "needs_whisper": 49756
+    "needs_whisper": 49777
   },
   "subtitle_followup_statuses": {
-    "needs_subtitle_setup_after_prehrajto_processing": 23431
+    "needs_subtitle_setup_after_prehrajto_processing": 23439
   }
 }
