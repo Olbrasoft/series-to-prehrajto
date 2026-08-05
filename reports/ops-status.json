@@ -1,15 +1,15 @@
 {
   "counts": {
-    "backlog_episodes": 171312,
+    "backlog_episodes": 171198,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 22141,
-    "prepared_source_episodes": 50183,
+    "uploaded_episodes": 22148,
+    "prepared_source_episodes": 50190,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 172,
+    "language_audited_sources": 174,
     "language_whisper_attempted_sources": 40,
     "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 56857,
@@ -20,18 +20,82 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-08-05T18:39:54Z",
-      "databaseId": 31035795034,
+      "createdAt": "2026-08-05T18:49:02Z",
+      "databaseId": 31036516333,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-08-05T18:48:56Z",
+      "databaseId": 31036509293,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-08-05T18:47:12Z",
+      "databaseId": 31036376690,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-05T18:45:50Z",
+      "databaseId": 31036270458,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-05T18:44:24Z",
+      "databaseId": 31036156696,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-05T18:41:17Z",
+      "databaseId": 31035907997,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-05T18:41:15Z",
+      "databaseId": 31035904427,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-05T18:41:13Z",
+      "databaseId": 31035901922,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-05T18:39:54Z",
+      "databaseId": 31035795034,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-05T18:38:46Z",
       "databaseId": 31035705470,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "refresh-backlog"
     },
     {
@@ -113,70 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-05T18:07:29Z",
-      "databaseId": 31033242048,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-sources"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-05T18:06:58Z",
-      "databaseId": 31033200228,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-05T18:06:49Z",
-      "databaseId": 31033190006,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-05T18:05:14Z",
-      "databaseId": 31033066075,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-05T18:04:03Z",
-      "databaseId": 31032968058,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-05T18:03:59Z",
-      "databaseId": 31032962653,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-05T18:02:24Z",
-      "databaseId": 31032837718,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-05T18:02:15Z",
-      "databaseId": 31032825009,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
     }
   ],
   "gaps": {
@@ -52026,6 +52026,16 @@
         "video_id": 28236580
       },
       {
+        "episode_id": 31308,
+        "display_name": "Zelenáč S05E08 - Obojek CZ Dabing",
+        "video_id": 28236906
+      },
+      {
+        "episode_id": 31312,
+        "display_name": "Zelenáč S05E12 - Smrtící zpráva CZ Dabing",
+        "video_id": 28237036
+      },
+      {
         "episode_id": 10265,
         "display_name": "Grimm S01E05 - Krysař CZ Titulky",
         "video_id": 28236029
@@ -52054,6 +52064,16 @@
         "episode_id": 10209,
         "display_name": "Grimm S04E06 - Dálnice plná slz CZ Dabing",
         "video_id": 28236879
+      },
+      {
+        "episode_id": 10205,
+        "display_name": "Grimm S04E10 - Tribunál CZ Dabing",
+        "video_id": 28236952
+      },
+      {
+        "episode_id": 10189,
+        "display_name": "Grimm S05E06 - Noc Wesenů CZ Titulky",
+        "video_id": 28237147
       },
       {
         "episode_id": 114182,
@@ -86414,6 +86434,21 @@
         "episode_id": 48459,
         "display_name": "Zločin S01E08 - Obstrukce CZ Titulky",
         "video_id": 28236822
+      },
+      {
+        "episode_id": 48475,
+        "display_name": "Zločin S02E13 - Co vím CZ Dabing",
+        "video_id": 28237038
+      },
+      {
+        "episode_id": 48495,
+        "display_name": "Zločin S03E02 - To, čeho se nejvíc bojíš CZ Titulky",
+        "video_id": 28237083
+      },
+      {
+        "episode_id": 48487,
+        "display_name": "Zločin S04E04 - Sen, dětský sen CZ Dabing",
+        "video_id": 28237123
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -138158,6 +138193,16 @@
         "video_id": 28236580
       },
       {
+        "episode_id": 31308,
+        "display_name": "Zelenáč S05E08 - Obojek CZ Dabing",
+        "video_id": 28236906
+      },
+      {
+        "episode_id": 31312,
+        "display_name": "Zelenáč S05E12 - Smrtící zpráva CZ Dabing",
+        "video_id": 28237036
+      },
+      {
         "episode_id": 10265,
         "display_name": "Grimm S01E05 - Krysař CZ Titulky",
         "video_id": 28236029
@@ -138186,6 +138231,16 @@
         "episode_id": 10209,
         "display_name": "Grimm S04E06 - Dálnice plná slz CZ Dabing",
         "video_id": 28236879
+      },
+      {
+        "episode_id": 10205,
+        "display_name": "Grimm S04E10 - Tribunál CZ Dabing",
+        "video_id": 28236952
+      },
+      {
+        "episode_id": 10189,
+        "display_name": "Grimm S05E06 - Noc Wesenů CZ Titulky",
+        "video_id": 28237147
       },
       {
         "episode_id": 114182,
@@ -172546,6 +172601,21 @@
         "episode_id": 48459,
         "display_name": "Zločin S01E08 - Obstrukce CZ Titulky",
         "video_id": 28236822
+      },
+      {
+        "episode_id": 48475,
+        "display_name": "Zločin S02E13 - Co vím CZ Dabing",
+        "video_id": 28237038
+      },
+      {
+        "episode_id": 48495,
+        "display_name": "Zločin S03E02 - To, čeho se nejvíc bojíš CZ Titulky",
+        "video_id": 28237083
+      },
+      {
+        "episode_id": 48487,
+        "display_name": "Zločin S04E04 - Sen, dětský sen CZ Dabing",
+        "video_id": 28237123
       }
     ],
     "prepared_not_upload_ready": [
@@ -173707,7 +173777,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 132,
+    "disabled": 134,
     "ok": 39,
     "resolve_failed": 1
   },
