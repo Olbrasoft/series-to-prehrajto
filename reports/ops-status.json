@@ -2,36 +2,84 @@
   "counts": {
     "backlog_episodes": 171999,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 21344,
-    "prepared_source_episodes": 51469,
+    "uploaded_episodes": 21364,
+    "prepared_source_episodes": 51343,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 598,
-    "language_whisper_attempted_sources": 127,
-    "language_pending_whisper_sources": 2624,
-    "whisper_review_sources": 56874,
-    "whisper_review_pending_sources": 49834,
+    "language_audited_sources": 127,
+    "language_whisper_attempted_sources": 60,
+    "language_pending_whisper_sources": 2604,
+    "whisper_review_sources": 56878,
+    "whisper_review_pending_sources": 49856,
     "subtitle_followup_sources": 23319,
     "subtitle_followup_pending_sources": 23319
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-08-05T04:12:50Z",
-      "databaseId": 30974493686,
+      "createdAt": "2026-08-05T04:32:29Z",
+      "databaseId": 30975433636,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-08-05T04:23:33Z",
+      "databaseId": 30975000921,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-08-05T04:18:12Z",
+      "databaseId": 30974742520,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-05T04:14:04Z",
+      "databaseId": 30974549014,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-05T04:14:01Z",
+      "databaseId": 30974546736,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-05T04:13:59Z",
+      "databaseId": 30974545074,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-05T04:12:50Z",
+      "databaseId": 30974493686,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-05T04:07:47Z",
       "databaseId": 30974239148,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -71,7 +119,7 @@
       "createdAt": "2026-08-05T03:47:59Z",
       "databaseId": 30973285833,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "sync"
     },
     {
@@ -83,11 +131,11 @@
       "workflowName": "prepare-manifest"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-05T03:45:25Z",
       "databaseId": 30973169510,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "sync"
     },
     {
@@ -129,54 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-05T03:34:21Z",
-      "databaseId": 30972648223,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-05T03:34:17Z",
-      "databaseId": 30972645270,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-05T03:28:56Z",
-      "databaseId": 30972375636,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-05T03:25:23Z",
-      "databaseId": 30972208338,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-05T03:24:12Z",
-      "databaseId": 30972152697,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-05T03:22:04Z",
-      "databaseId": 30972049432,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
     }
   ],
   "gaps": {
@@ -50216,6 +50216,66 @@
         "video_id": 28210121
       },
       {
+        "episode_id": 21768,
+        "display_name": "Co kdyby...? S02E02 - Co kdyby... Peter Quill napadl nejmocnější hrdiny světa? CZ Dabing",
+        "video_id": 28210540
+      },
+      {
+        "episode_id": 21772,
+        "display_name": "Co kdyby...? S02E06 - Co kdyby… Kahhori přetvořila svět? CZ Dabing",
+        "video_id": 28210613
+      },
+      {
+        "episode_id": 43196,
+        "display_name": "Zoufalé manželky S03E18 - Vztahy CZ Dabing",
+        "video_id": 28210659
+      },
+      {
+        "episode_id": 43200,
+        "display_name": "Zoufalé manželky S03E22 - Co bychom si bez tebe počali? CZ Dabing",
+        "video_id": 28210708
+      },
+      {
+        "episode_id": 43204,
+        "display_name": "Zoufalé manželky S04E02 - Úsměvy letní noci CZ Dabing",
+        "video_id": 28210749
+      },
+      {
+        "episode_id": 43268,
+        "display_name": "Zoufalé manželky S04E03 - Hry CZ Dabing",
+        "video_id": 28210807
+      },
+      {
+        "episode_id": 74109,
+        "display_name": "Když nás vidí S01E02 - 2. epizoda CZ Titulky",
+        "video_id": 28210536
+      },
+      {
+        "episode_id": 25557,
+        "display_name": "Lupin S01E09 - 9. kapitola CZ Dabing",
+        "video_id": 28210577
+      },
+      {
+        "episode_id": 60657,
+        "display_name": "Úžasná paní Maiselová S01E02 - Ya Shivu b Bolshom Dome Na Kholme CZ Dabing",
+        "video_id": 28210646
+      },
+      {
+        "episode_id": 60661,
+        "display_name": "Úžasná paní Maiselová S01E06 - Paní X v Gaslight Cafe CZ Dabing",
+        "video_id": 28210700
+      },
+      {
+        "episode_id": 60673,
+        "display_name": "Úžasná paní Maiselová S02E03 - Mučírna CZ Dabing",
+        "video_id": 28210758
+      },
+      {
+        "episode_id": 60665,
+        "display_name": "Úžasná paní Maiselová S02E04 - Dovolená! CZ Dabing",
+        "video_id": 28210796
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -82674,6 +82734,46 @@
         "episode_id": 60683,
         "display_name": "Úžasná paní Maiselová S04E02 - Billy Jones a lampy orgií CZ Dabing",
         "video_id": 28210265
+      },
+      {
+        "episode_id": 60687,
+        "display_name": "Úžasná paní Maiselová S04E08 - Jak se dostat do Canegie Hall CZ Dabing",
+        "video_id": 28210394
+      },
+      {
+        "episode_id": 43178,
+        "display_name": "Zoufalé manželky S02E18 - Všichni říkají, nedělej to CZ Dabing",
+        "video_id": 28210558
+      },
+      {
+        "episode_id": 43182,
+        "display_name": "Zoufalé manželky S03E02 - Dokonalý pár CZ Dabing",
+        "video_id": 28210674
+      },
+      {
+        "episode_id": 43186,
+        "display_name": "Zoufalé manželky S03E08 - Děti a Art CZ Dabing",
+        "video_id": 28210722
+      },
+      {
+        "episode_id": 5803,
+        "display_name": "Původní S01E18 - Velké nesnáze CZ Dabing",
+        "video_id": 28210550
+      },
+      {
+        "episode_id": 60695,
+        "display_name": "Úžasná paní Maiselová S05E08 - Princezna a prosba CZ Titulky",
+        "video_id": 28210704
+      },
+      {
+        "episode_id": 32043,
+        "display_name": "Dexter: Nová krev S01E03 - Kouřové signály CZ Dabing",
+        "video_id": 28210739
+      },
+      {
+        "episode_id": 32047,
+        "display_name": "Dexter: Nová krev S01E07 - S kůží na trh CZ Dabing",
+        "video_id": 28210788
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -132608,6 +132708,66 @@
         "video_id": 28210121
       },
       {
+        "episode_id": 21768,
+        "display_name": "Co kdyby...? S02E02 - Co kdyby... Peter Quill napadl nejmocnější hrdiny světa? CZ Dabing",
+        "video_id": 28210540
+      },
+      {
+        "episode_id": 21772,
+        "display_name": "Co kdyby...? S02E06 - Co kdyby… Kahhori přetvořila svět? CZ Dabing",
+        "video_id": 28210613
+      },
+      {
+        "episode_id": 43196,
+        "display_name": "Zoufalé manželky S03E18 - Vztahy CZ Dabing",
+        "video_id": 28210659
+      },
+      {
+        "episode_id": 43200,
+        "display_name": "Zoufalé manželky S03E22 - Co bychom si bez tebe počali? CZ Dabing",
+        "video_id": 28210708
+      },
+      {
+        "episode_id": 43204,
+        "display_name": "Zoufalé manželky S04E02 - Úsměvy letní noci CZ Dabing",
+        "video_id": 28210749
+      },
+      {
+        "episode_id": 43268,
+        "display_name": "Zoufalé manželky S04E03 - Hry CZ Dabing",
+        "video_id": 28210807
+      },
+      {
+        "episode_id": 74109,
+        "display_name": "Když nás vidí S01E02 - 2. epizoda CZ Titulky",
+        "video_id": 28210536
+      },
+      {
+        "episode_id": 25557,
+        "display_name": "Lupin S01E09 - 9. kapitola CZ Dabing",
+        "video_id": 28210577
+      },
+      {
+        "episode_id": 60657,
+        "display_name": "Úžasná paní Maiselová S01E02 - Ya Shivu b Bolshom Dome Na Kholme CZ Dabing",
+        "video_id": 28210646
+      },
+      {
+        "episode_id": 60661,
+        "display_name": "Úžasná paní Maiselová S01E06 - Paní X v Gaslight Cafe CZ Dabing",
+        "video_id": 28210700
+      },
+      {
+        "episode_id": 60673,
+        "display_name": "Úžasná paní Maiselová S02E03 - Mučírna CZ Dabing",
+        "video_id": 28210758
+      },
+      {
+        "episode_id": 60665,
+        "display_name": "Úžasná paní Maiselová S02E04 - Dovolená! CZ Dabing",
+        "video_id": 28210796
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -165066,6 +165226,46 @@
         "episode_id": 60683,
         "display_name": "Úžasná paní Maiselová S04E02 - Billy Jones a lampy orgií CZ Dabing",
         "video_id": 28210265
+      },
+      {
+        "episode_id": 60687,
+        "display_name": "Úžasná paní Maiselová S04E08 - Jak se dostat do Canegie Hall CZ Dabing",
+        "video_id": 28210394
+      },
+      {
+        "episode_id": 43178,
+        "display_name": "Zoufalé manželky S02E18 - Všichni říkají, nedělej to CZ Dabing",
+        "video_id": 28210558
+      },
+      {
+        "episode_id": 43182,
+        "display_name": "Zoufalé manželky S03E02 - Dokonalý pár CZ Dabing",
+        "video_id": 28210674
+      },
+      {
+        "episode_id": 43186,
+        "display_name": "Zoufalé manželky S03E08 - Děti a Art CZ Dabing",
+        "video_id": 28210722
+      },
+      {
+        "episode_id": 5803,
+        "display_name": "Původní S01E18 - Velké nesnáze CZ Dabing",
+        "video_id": 28210550
+      },
+      {
+        "episode_id": 60695,
+        "display_name": "Úžasná paní Maiselová S05E08 - Princezna a prosba CZ Titulky",
+        "video_id": 28210704
+      },
+      {
+        "episode_id": 32043,
+        "display_name": "Dexter: Nová krev S01E03 - Kouřové signály CZ Dabing",
+        "video_id": 28210739
+      },
+      {
+        "episode_id": 32047,
+        "display_name": "Dexter: Nová krev S01E07 - S kůží na trh CZ Dabing",
+        "video_id": 28210788
       }
     ],
     "prepared_not_upload_ready": [
@@ -166227,15 +166427,15 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 126,
-    "disabled": 471,
+    "disabled": 67,
+    "ok": 59,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
-    "whisper_non_cz_needs_subtitles": 5030,
-    "whisper_confirmed_cz": 2010,
+    "whisper_non_cz_needs_subtitles": 5026,
+    "whisper_confirmed_cz": 1996,
     "whisper_failed": 41,
-    "needs_whisper": 49793
+    "needs_whisper": 49815
   },
   "subtitle_followup_statuses": {
     "needs_subtitle_setup_after_prehrajto_processing": 23319
