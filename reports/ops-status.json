@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 171312,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 22087,
-    "prepared_source_episodes": 50232,
+    "uploaded_episodes": 22098,
+    "prepared_source_episodes": 50237,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 663,
-    "language_whisper_attempted_sources": 93,
-    "language_pending_whisper_sources": 2604,
+    "language_audited_sources": 55,
+    "language_whisper_attempted_sources": 20,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 56862,
     "whisper_review_pending_sources": 49809,
     "subtitle_followup_sources": 23537,
@@ -20,18 +20,50 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-08-05T17:10:54Z",
-      "databaseId": 31028806507,
+      "createdAt": "2026-08-05T17:25:48Z",
+      "databaseId": 31029976084,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-08-05T17:24:14Z",
+      "databaseId": 31029855998,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-05T17:22:58Z",
+      "databaseId": 31029756019,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-05T17:12:14Z",
+      "databaseId": 31028909246,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-05T17:10:54Z",
+      "databaseId": 31028806507,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "cancelled",
       "createdAt": "2026-08-05T17:10:49Z",
       "databaseId": 31028798781,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -83,11 +115,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-05T17:03:06Z",
       "databaseId": 31028188351,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -115,11 +147,11 @@
       "workflowName": "prepare-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-05T17:00:08Z",
       "databaseId": 31027943208,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -145,38 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-05T16:51:16Z",
-      "databaseId": 31027239638,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-05T16:48:06Z",
-      "databaseId": 31026990182,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-05T16:46:57Z",
-      "databaseId": 31026902075,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-05T16:45:40Z",
-      "databaseId": 31026801942,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
     }
   ],
   "gaps": {
@@ -51921,6 +51921,31 @@
         "video_id": 28233999
       },
       {
+        "episode_id": 158224,
+        "display_name": "Pád S02E04 - Mysl jest mu příbytkem CZ Titulky",
+        "video_id": 28234650
+      },
+      {
+        "episode_id": 158232,
+        "display_name": "Pád S03E06 - Po cestě pusté kráčejí CZ Dabing",
+        "video_id": 28234677
+      },
+      {
+        "episode_id": 16108,
+        "display_name": "Zelenáč S01E02 - Rychlokurz CZ Dabing",
+        "video_id": 28234742
+      },
+      {
+        "episode_id": 122601,
+        "display_name": "Pacifik S01E10 - Návrat domů CZ Titulky",
+        "video_id": 28234585
+      },
+      {
+        "episode_id": 67605,
+        "display_name": "Emily in Paris S01E02 - Vagína není chlap CZ Dabing",
+        "video_id": 28234724
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -86144,6 +86169,36 @@
         "episode_id": 6455,
         "display_name": "Grimm S06E08 - Vrať se do hrobu CZ Dabing",
         "video_id": 28234362
+      },
+      {
+        "episode_id": 71738,
+        "display_name": "Pozůstalí S01E06 - Dotaz č. 121 CZ Dabing",
+        "video_id": 28234551
+      },
+      {
+        "episode_id": 95506,
+        "display_name": "Pozůstalí S02E03 - Protisměr CZ Titulky",
+        "video_id": 28234613
+      },
+      {
+        "episode_id": 95510,
+        "display_name": "Pozůstalí S02E05 - Všechna místa obsazena CZ Titulky",
+        "video_id": 28234728
+      },
+      {
+        "episode_id": 71750,
+        "display_name": "Pozůstalí S02E06 - Čočka CZ Titulky",
+        "video_id": 28234780
+      },
+      {
+        "episode_id": 71730,
+        "display_name": "Pozůstalí S03E04 - Dobrý den, Melbourne CZ Titulky",
+        "video_id": 28234848
+      },
+      {
+        "episode_id": 6459,
+        "display_name": "Grimm S06E12 - Zerstörer přichází CZ Titulky",
+        "video_id": 28234571
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -137783,6 +137838,31 @@
         "video_id": 28233999
       },
       {
+        "episode_id": 158224,
+        "display_name": "Pád S02E04 - Mysl jest mu příbytkem CZ Titulky",
+        "video_id": 28234650
+      },
+      {
+        "episode_id": 158232,
+        "display_name": "Pád S03E06 - Po cestě pusté kráčejí CZ Dabing",
+        "video_id": 28234677
+      },
+      {
+        "episode_id": 16108,
+        "display_name": "Zelenáč S01E02 - Rychlokurz CZ Dabing",
+        "video_id": 28234742
+      },
+      {
+        "episode_id": 122601,
+        "display_name": "Pacifik S01E10 - Návrat domů CZ Titulky",
+        "video_id": 28234585
+      },
+      {
+        "episode_id": 67605,
+        "display_name": "Emily in Paris S01E02 - Vagína není chlap CZ Dabing",
+        "video_id": 28234724
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -172006,6 +172086,36 @@
         "episode_id": 6455,
         "display_name": "Grimm S06E08 - Vrať se do hrobu CZ Dabing",
         "video_id": 28234362
+      },
+      {
+        "episode_id": 71738,
+        "display_name": "Pozůstalí S01E06 - Dotaz č. 121 CZ Dabing",
+        "video_id": 28234551
+      },
+      {
+        "episode_id": 95506,
+        "display_name": "Pozůstalí S02E03 - Protisměr CZ Titulky",
+        "video_id": 28234613
+      },
+      {
+        "episode_id": 95510,
+        "display_name": "Pozůstalí S02E05 - Všechna místa obsazena CZ Titulky",
+        "video_id": 28234728
+      },
+      {
+        "episode_id": 71750,
+        "display_name": "Pozůstalí S02E06 - Čočka CZ Titulky",
+        "video_id": 28234780
+      },
+      {
+        "episode_id": 71730,
+        "display_name": "Pozůstalí S03E04 - Dobrý den, Melbourne CZ Titulky",
+        "video_id": 28234848
+      },
+      {
+        "episode_id": 6459,
+        "display_name": "Grimm S06E12 - Zerstörer přichází CZ Titulky",
+        "video_id": 28234571
       }
     ],
     "prepared_not_upload_ready": [
@@ -173167,8 +173277,8 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 570,
-    "ok": 92,
+    "disabled": 35,
+    "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
