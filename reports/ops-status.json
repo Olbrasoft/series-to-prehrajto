@@ -2,28 +2,52 @@
   "counts": {
     "backlog_episodes": 170725,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 22622,
-    "prepared_source_episodes": 50384,
+    "uploaded_episodes": 22623,
+    "prepared_source_episodes": 50383,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 261,
-    "language_whisper_attempted_sources": 75,
-    "language_pending_whisper_sources": 2624,
-    "whisper_review_sources": 56822,
-    "whisper_review_pending_sources": 49628,
+    "language_audited_sources": 40,
+    "language_whisper_attempted_sources": 40,
+    "language_pending_whisper_sources": 2604,
+    "whisper_review_sources": 56821,
+    "whisper_review_pending_sources": 49627,
     "subtitle_followup_sources": 23763,
     "subtitle_followup_pending_sources": 23763
   },
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-08-06T04:24:35Z",
+      "databaseId": 31071166288,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-06T04:16:42Z",
+      "databaseId": 31070806537,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-06T04:16:40Z",
+      "databaseId": 31070804410,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-06T04:15:32Z",
       "databaseId": 31070752542,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -35,11 +59,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-06T04:11:11Z",
       "databaseId": 31070539860,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
@@ -153,30 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-06T03:25:20Z",
-      "databaseId": 31068389351,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-06T03:21:50Z",
-      "databaseId": 31068226304,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-06T03:21:44Z",
-      "databaseId": 31068221606,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
     }
   ],
   "gaps": {
@@ -53269,6 +53269,11 @@
         "episode_id": 31337,
         "display_name": "Zelenáč S07E05 - Až do smrti CZ Dabing",
         "video_id": 28250502
+      },
+      {
+        "episode_id": 31341,
+        "display_name": "Zelenáč S07E09 - Polibek CZ Dabing",
+        "video_id": 28250646
       },
       {
         "episode_id": 114182,
@@ -141808,6 +141813,11 @@
         "video_id": 28250502
       },
       {
+        "episode_id": 31341,
+        "display_name": "Zelenáč S07E09 - Polibek CZ Dabing",
+        "video_id": 28250646
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -178517,15 +178527,14 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 186,
-    "ok": 74,
+    "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
     "whisper_non_cz_needs_subtitles": 5271,
     "whisper_confirmed_cz": 1923,
     "whisper_failed": 41,
-    "needs_whisper": 49587
+    "needs_whisper": 49586
   },
   "subtitle_followup_statuses": {
     "needs_subtitle_setup_after_prehrajto_processing": 23763
