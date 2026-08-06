@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 170725,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 22784,
-    "prepared_source_episodes": 50342,
+    "uploaded_episodes": 22807,
+    "prepared_source_episodes": 50368,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 66,
-    "language_whisper_attempted_sources": 40,
-    "language_pending_whisper_sources": 2604,
+    "language_audited_sources": 20,
+    "language_whisper_attempted_sources": 20,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 56813,
     "whisper_review_pending_sources": 49619,
     "subtitle_followup_sources": 23773,
@@ -20,18 +20,90 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-08-06T06:47:41Z",
-      "databaseId": 31078501769,
+      "createdAt": "2026-08-06T07:04:45Z",
+      "databaseId": 31079544584,
       "headBranch": "main",
       "status": "in_progress",
-      "workflowName": "ops-watchdog"
+      "workflowName": "ops-status"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-08-06T07:04:31Z",
+      "databaseId": 31079529190,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-06T07:04:31Z",
+      "databaseId": 31079528835,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "refresh-backlog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-06T06:55:31Z",
+      "databaseId": 31078970236,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-08-06T06:52:48Z",
+      "databaseId": 31078803967,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-06T06:50:54Z",
+      "databaseId": 31078690827,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-06T06:48:53Z",
+      "databaseId": 31078571994,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-06T06:48:51Z",
+      "databaseId": 31078569474,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-06T06:48:49Z",
+      "databaseId": 31078567915,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-06T06:47:41Z",
+      "databaseId": 31078501769,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "cancelled",
       "createdAt": "2026-08-06T06:47:34Z",
       "databaseId": 31078495454,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -43,11 +115,11 @@
       "workflowName": "sync"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-06T06:38:30Z",
       "databaseId": 31077967349,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -105,78 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-06T06:19:28Z",
-      "databaseId": 31076899438,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-06T06:18:50Z",
-      "databaseId": 31076865948,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-06T06:13:38Z",
-      "databaseId": 31076581701,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-06T06:08:41Z",
-      "databaseId": 31076308196,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-06T06:01:16Z",
-      "databaseId": 31075900833,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-06T05:59:42Z",
-      "databaseId": 31075806406,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-06T05:58:26Z",
-      "databaseId": 31075740788,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-06T05:45:19Z",
-      "databaseId": 31075076060,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-06T05:45:12Z",
-      "databaseId": 31075069510,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
     }
   ],
   "gaps": {
@@ -53681,6 +53681,66 @@
         "video_id": 28254861
       },
       {
+        "episode_id": 57184,
+        "display_name": "Slow Horses S05E05 - Circus CZ Titulky",
+        "video_id": 28255152
+      },
+      {
+        "episode_id": 5904,
+        "display_name": "The Morning Show S02E02 - Je to jako chřipka CZ Dabing",
+        "video_id": 28255192
+      },
+      {
+        "episode_id": 49644,
+        "display_name": "Orphan Black S01E05 - Conditions of Existence CZ Titulky",
+        "video_id": 28255237
+      },
+      {
+        "episode_id": 49648,
+        "display_name": "Orphan Black S01E09 - Unconscious Selection CZ Titulky",
+        "video_id": 28255319
+      },
+      {
+        "episode_id": 49652,
+        "display_name": "Orphan Black S02E03 - Mingling Its Own Nature with It CZ Titulky",
+        "video_id": 28255398
+      },
+      {
+        "episode_id": 57185,
+        "display_name": "Slow Horses S05E06 - Jizvy CZ Dabing",
+        "video_id": 28255160
+      },
+      {
+        "episode_id": 5905,
+        "display_name": "The Morning Show S02E03 - Laura CZ Dabing",
+        "video_id": 28255212
+      },
+      {
+        "episode_id": 64305,
+        "display_name": "Pomsta S02E03 - Sebedůvěra CZ Dabing",
+        "video_id": 28255259
+      },
+      {
+        "episode_id": 64333,
+        "display_name": "Pomsta S03E04 - Mercy CZ Titulky",
+        "video_id": 28255370
+      },
+      {
+        "episode_id": 64365,
+        "display_name": "Pomsta S03E09 - Surrender CZ Titulky",
+        "video_id": 28255413
+      },
+      {
+        "episode_id": 64393,
+        "display_name": "Pomsta S03E10 - Exodus CZ Titulky",
+        "video_id": 28255455
+      },
+      {
+        "episode_id": 64373,
+        "display_name": "Pomsta S03E12 - Endurance CZ Titulky",
+        "video_id": 28255492
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -89629,6 +89689,61 @@
         "episode_id": 45103,
         "display_name": "Jak prosté S01E09 - Na oko CZ Dabing",
         "video_id": 28254955
+      },
+      {
+        "episode_id": 5910,
+        "display_name": "The Morning Show S02E08 - Potvrzení CZ Dabing",
+        "video_id": 28255151
+      },
+      {
+        "episode_id": 45118,
+        "display_name": "Jak prosté S06E05 - Kousky CZ Dabing",
+        "video_id": 28255209
+      },
+      {
+        "episode_id": 45066,
+        "display_name": "Jak prosté S06E06 - Podej mi prst CZ Dabing",
+        "video_id": 28255289
+      },
+      {
+        "episode_id": 45082,
+        "display_name": "Jak prosté S06E09 - Nikdo nežije věčně CZ Dabing",
+        "video_id": 28255351
+      },
+      {
+        "episode_id": 45106,
+        "display_name": "Jak prosté S06E10 - Dobrodružství Ersatz Sobekneferu CZ Titulky",
+        "video_id": 28255412
+      },
+      {
+        "episode_id": 45070,
+        "display_name": "Jak prosté S06E12 - Setkání se stvořitelem CZ Dabing",
+        "video_id": 28255475
+      },
+      {
+        "episode_id": 171215,
+        "display_name": "Star Wars: Klonové války S02E07 - Děsivý odkaz CZ Dabing",
+        "video_id": 28255166
+      },
+      {
+        "episode_id": 45111,
+        "display_name": "Jak prosté S01E10 - Nedobytný trezor CZ Dabing",
+        "video_id": 28255217
+      },
+      {
+        "episode_id": 49691,
+        "display_name": "Jak prosté S02E05 - Stará historie CZ Dabing",
+        "video_id": 28255305
+      },
+      {
+        "episode_id": 45043,
+        "display_name": "Jak prosté S02E07 - Markýza CZ Dabing",
+        "video_id": 28255396
+      },
+      {
+        "episode_id": 45031,
+        "display_name": "Jak prosté S02E12 - Žena, nebo ďábel CZ Titulky",
+        "video_id": 28255470
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -143028,6 +143143,66 @@
         "video_id": 28254861
       },
       {
+        "episode_id": 57184,
+        "display_name": "Slow Horses S05E05 - Circus CZ Titulky",
+        "video_id": 28255152
+      },
+      {
+        "episode_id": 5904,
+        "display_name": "The Morning Show S02E02 - Je to jako chřipka CZ Dabing",
+        "video_id": 28255192
+      },
+      {
+        "episode_id": 49644,
+        "display_name": "Orphan Black S01E05 - Conditions of Existence CZ Titulky",
+        "video_id": 28255237
+      },
+      {
+        "episode_id": 49648,
+        "display_name": "Orphan Black S01E09 - Unconscious Selection CZ Titulky",
+        "video_id": 28255319
+      },
+      {
+        "episode_id": 49652,
+        "display_name": "Orphan Black S02E03 - Mingling Its Own Nature with It CZ Titulky",
+        "video_id": 28255398
+      },
+      {
+        "episode_id": 57185,
+        "display_name": "Slow Horses S05E06 - Jizvy CZ Dabing",
+        "video_id": 28255160
+      },
+      {
+        "episode_id": 5905,
+        "display_name": "The Morning Show S02E03 - Laura CZ Dabing",
+        "video_id": 28255212
+      },
+      {
+        "episode_id": 64305,
+        "display_name": "Pomsta S02E03 - Sebedůvěra CZ Dabing",
+        "video_id": 28255259
+      },
+      {
+        "episode_id": 64333,
+        "display_name": "Pomsta S03E04 - Mercy CZ Titulky",
+        "video_id": 28255370
+      },
+      {
+        "episode_id": 64365,
+        "display_name": "Pomsta S03E09 - Surrender CZ Titulky",
+        "video_id": 28255413
+      },
+      {
+        "episode_id": 64393,
+        "display_name": "Pomsta S03E10 - Exodus CZ Titulky",
+        "video_id": 28255455
+      },
+      {
+        "episode_id": 64373,
+        "display_name": "Pomsta S03E12 - Endurance CZ Titulky",
+        "video_id": 28255492
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -178976,6 +179151,61 @@
         "episode_id": 45103,
         "display_name": "Jak prosté S01E09 - Na oko CZ Dabing",
         "video_id": 28254955
+      },
+      {
+        "episode_id": 5910,
+        "display_name": "The Morning Show S02E08 - Potvrzení CZ Dabing",
+        "video_id": 28255151
+      },
+      {
+        "episode_id": 45118,
+        "display_name": "Jak prosté S06E05 - Kousky CZ Dabing",
+        "video_id": 28255209
+      },
+      {
+        "episode_id": 45066,
+        "display_name": "Jak prosté S06E06 - Podej mi prst CZ Dabing",
+        "video_id": 28255289
+      },
+      {
+        "episode_id": 45082,
+        "display_name": "Jak prosté S06E09 - Nikdo nežije věčně CZ Dabing",
+        "video_id": 28255351
+      },
+      {
+        "episode_id": 45106,
+        "display_name": "Jak prosté S06E10 - Dobrodružství Ersatz Sobekneferu CZ Titulky",
+        "video_id": 28255412
+      },
+      {
+        "episode_id": 45070,
+        "display_name": "Jak prosté S06E12 - Setkání se stvořitelem CZ Dabing",
+        "video_id": 28255475
+      },
+      {
+        "episode_id": 171215,
+        "display_name": "Star Wars: Klonové války S02E07 - Děsivý odkaz CZ Dabing",
+        "video_id": 28255166
+      },
+      {
+        "episode_id": 45111,
+        "display_name": "Jak prosté S01E10 - Nedobytný trezor CZ Dabing",
+        "video_id": 28255217
+      },
+      {
+        "episode_id": 49691,
+        "display_name": "Jak prosté S02E05 - Stará historie CZ Dabing",
+        "video_id": 28255305
+      },
+      {
+        "episode_id": 45043,
+        "display_name": "Jak prosté S02E07 - Markýza CZ Dabing",
+        "video_id": 28255396
+      },
+      {
+        "episode_id": 45031,
+        "display_name": "Jak prosté S02E12 - Žena, nebo ďábel CZ Titulky",
+        "video_id": 28255470
       }
     ],
     "prepared_not_upload_ready": [
@@ -180137,8 +180367,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 26,
-    "ok": 39,
+    "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
