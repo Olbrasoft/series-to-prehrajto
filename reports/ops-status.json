@@ -2,36 +2,76 @@
   "counts": {
     "backlog_episodes": 170953,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 22533,
-    "prepared_source_episodes": 50320,
+    "uploaded_episodes": 22549,
+    "prepared_source_episodes": 50326,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 609,
-    "language_whisper_attempted_sources": 106,
+    "language_audited_sources": 40,
+    "language_whisper_attempted_sources": 40,
     "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 56825,
     "whisper_review_pending_sources": 49631,
-    "subtitle_followup_sources": 23750,
-    "subtitle_followup_pending_sources": 23750
+    "subtitle_followup_sources": 23751,
+    "subtitle_followup_pending_sources": 23751
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-08-06T02:56:18Z",
-      "databaseId": 31067016956,
+      "createdAt": "2026-08-06T03:05:36Z",
+      "databaseId": 31067457745,
       "headBranch": "main",
-      "status": "pending",
-      "workflowName": "prepare-manifest"
+      "status": "in_progress",
+      "workflowName": "ops-status"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-08-06T03:02:09Z",
+      "databaseId": 31067292707,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-06T02:59:29Z",
+      "databaseId": 31067160901,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-06T02:58:38Z",
+      "databaseId": 31067123270,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-06T02:57:04Z",
+      "databaseId": 31067051455,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-08-06T02:56:18Z",
+      "databaseId": 31067016956,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-06T02:55:12Z",
       "databaseId": 31066965846,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -51,19 +91,19 @@
       "workflowName": "prepare-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-06T02:54:17Z",
       "databaseId": 31066922815,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-06T02:54:15Z",
       "databaseId": 31066921148,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -107,11 +147,11 @@
       "workflowName": "prepare-manifest"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-06T02:40:50Z",
       "databaseId": 31066301242,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -137,46 +177,6 @@
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "prepare-sources"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-06T02:23:19Z",
-      "databaseId": 31065465309,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-06T02:22:14Z",
-      "databaseId": 31065413237,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-06T02:17:21Z",
-      "databaseId": 31065184325,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-06T02:10:28Z",
-      "databaseId": 31064853289,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-06T02:09:01Z",
-      "databaseId": 31064783603,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
     }
   ],
   "gaps": {
@@ -53051,9 +53051,44 @@
         "video_id": 28248350
       },
       {
+        "episode_id": 31328,
+        "display_name": "Zelenáč S06E06 - Tajemství a lži CZ Dabing",
+        "video_id": 28248392
+      },
+      {
+        "episode_id": 31332,
+        "display_name": "Zelenáč S06E10 - Plán útěku CZ Dabing",
+        "video_id": 28248434
+      },
+      {
+        "episode_id": 31344,
+        "display_name": "Zelenáč S07E12 - Apríl CZ Dabing",
+        "video_id": 28248569
+      },
+      {
+        "episode_id": 64384,
+        "display_name": "Pomsta S03E03 - Confession CZ Titulky",
+        "video_id": 28248608
+      },
+      {
         "episode_id": 41653,
         "display_name": "Futurama S09E08 - Následky roztomilosti CZ Titulky",
         "video_id": 28248324
+      },
+      {
+        "episode_id": 10173,
+        "display_name": "Grimm S05E10 - Mapa sedmi rytířů CZ Dabing",
+        "video_id": 28248361
+      },
+      {
+        "episode_id": 31261,
+        "display_name": "Zelenáč S02E17 - Dohled CZ Dabing",
+        "video_id": 28248452
+      },
+      {
+        "episode_id": 31269,
+        "display_name": "Zelenáč S03E05 - Lockdown CZ Dabing",
+        "video_id": 28248538
       },
       {
         "episode_id": 114182,
@@ -88371,9 +88406,54 @@
         "video_id": 28248331
       },
       {
+        "episode_id": 96914,
+        "display_name": "Sedmilhářky S02E02 - Upovídaná srdce CZ Dabing",
+        "video_id": 28248378
+      },
+      {
+        "episode_id": 86910,
+        "display_name": "Archer S02E04 - Pipeline Fever CZ Dabing",
+        "video_id": 28248422
+      },
+      {
+        "episode_id": 86878,
+        "display_name": "Archer S04E13 - Sea Tunt: Part II CZ Dabing",
+        "video_id": 28248464
+      },
+      {
+        "episode_id": 30866,
+        "display_name": "Dobrý doktor S06E14 - Silné srdce CZ Dabing",
+        "video_id": 28248526
+      },
+      {
+        "episode_id": 30870,
+        "display_name": "Dobrý doktor S06E18 - Výkyv CZ Dabing",
+        "video_id": 28248588
+      },
+      {
         "episode_id": 158227,
         "display_name": "Pád S03E01 - Ticho a trýzeň CZ Dabing",
         "video_id": 28248333
+      },
+      {
+        "episode_id": 158231,
+        "display_name": "Pád S03E05 - Raněn smrtelnou vášní CZ Dabing",
+        "video_id": 28248380
+      },
+      {
+        "episode_id": 35639,
+        "display_name": "Ms. Marvel S01E06 - Nic není normální CZ Dabing",
+        "video_id": 28248431
+      },
+      {
+        "episode_id": 51967,
+        "display_name": "Strážce pořádku S06E02 - 2. epizoda CZ Titulky",
+        "video_id": 28248519
+      },
+      {
+        "episode_id": 51971,
+        "display_name": "Strážce pořádku S06E08 - 8. epizoda CZ Dabing",
+        "video_id": 28248555
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -141143,9 +141223,44 @@
         "video_id": 28248350
       },
       {
+        "episode_id": 31328,
+        "display_name": "Zelenáč S06E06 - Tajemství a lži CZ Dabing",
+        "video_id": 28248392
+      },
+      {
+        "episode_id": 31332,
+        "display_name": "Zelenáč S06E10 - Plán útěku CZ Dabing",
+        "video_id": 28248434
+      },
+      {
+        "episode_id": 31344,
+        "display_name": "Zelenáč S07E12 - Apríl CZ Dabing",
+        "video_id": 28248569
+      },
+      {
+        "episode_id": 64384,
+        "display_name": "Pomsta S03E03 - Confession CZ Titulky",
+        "video_id": 28248608
+      },
+      {
         "episode_id": 41653,
         "display_name": "Futurama S09E08 - Následky roztomilosti CZ Titulky",
         "video_id": 28248324
+      },
+      {
+        "episode_id": 10173,
+        "display_name": "Grimm S05E10 - Mapa sedmi rytířů CZ Dabing",
+        "video_id": 28248361
+      },
+      {
+        "episode_id": 31261,
+        "display_name": "Zelenáč S02E17 - Dohled CZ Dabing",
+        "video_id": 28248452
+      },
+      {
+        "episode_id": 31269,
+        "display_name": "Zelenáč S03E05 - Lockdown CZ Dabing",
+        "video_id": 28248538
       },
       {
         "episode_id": 114182,
@@ -176463,9 +176578,54 @@
         "video_id": 28248331
       },
       {
+        "episode_id": 96914,
+        "display_name": "Sedmilhářky S02E02 - Upovídaná srdce CZ Dabing",
+        "video_id": 28248378
+      },
+      {
+        "episode_id": 86910,
+        "display_name": "Archer S02E04 - Pipeline Fever CZ Dabing",
+        "video_id": 28248422
+      },
+      {
+        "episode_id": 86878,
+        "display_name": "Archer S04E13 - Sea Tunt: Part II CZ Dabing",
+        "video_id": 28248464
+      },
+      {
+        "episode_id": 30866,
+        "display_name": "Dobrý doktor S06E14 - Silné srdce CZ Dabing",
+        "video_id": 28248526
+      },
+      {
+        "episode_id": 30870,
+        "display_name": "Dobrý doktor S06E18 - Výkyv CZ Dabing",
+        "video_id": 28248588
+      },
+      {
         "episode_id": 158227,
         "display_name": "Pád S03E01 - Ticho a trýzeň CZ Dabing",
         "video_id": 28248333
+      },
+      {
+        "episode_id": 158231,
+        "display_name": "Pád S03E05 - Raněn smrtelnou vášní CZ Dabing",
+        "video_id": 28248380
+      },
+      {
+        "episode_id": 35639,
+        "display_name": "Ms. Marvel S01E06 - Nic není normální CZ Dabing",
+        "video_id": 28248431
+      },
+      {
+        "episode_id": 51967,
+        "display_name": "Strážce pořádku S06E02 - 2. epizoda CZ Titulky",
+        "video_id": 28248519
+      },
+      {
+        "episode_id": 51971,
+        "display_name": "Strážce pořádku S06E08 - 8. epizoda CZ Dabing",
+        "video_id": 28248555
       }
     ],
     "prepared_not_upload_ready": [
@@ -177627,8 +177787,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 503,
-    "ok": 105,
+    "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
@@ -177638,6 +177797,6 @@
     "needs_whisper": 49590
   },
   "subtitle_followup_statuses": {
-    "needs_subtitle_setup_after_prehrajto_processing": 23750
+    "needs_subtitle_setup_after_prehrajto_processing": 23751
   }
 }
