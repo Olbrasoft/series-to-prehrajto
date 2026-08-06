@@ -1,37 +1,77 @@
 {
   "counts": {
     "backlog_episodes": 170413,
-    "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 23002,
-    "prepared_source_episodes": 50245,
+    "manifest_upload_ready_episodes": 1009,
+    "uploaded_episodes": 23024,
+    "prepared_source_episodes": 50332,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 20,
-    "language_whisper_attempted_sources": 20,
-    "language_pending_whisper_sources": 2624,
+    "language_audited_sources": 345,
+    "language_whisper_attempted_sources": 133,
+    "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 56819,
     "whisper_review_pending_sources": 49625,
-    "subtitle_followup_sources": 23852,
-    "subtitle_followup_pending_sources": 23852
+    "subtitle_followup_sources": 23863,
+    "subtitle_followup_pending_sources": 23863
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-08-06T11:54:12Z",
-      "databaseId": 31099151969,
+      "createdAt": "2026-08-06T12:12:50Z",
+      "databaseId": 31100440357,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-06T12:12:36Z",
+      "databaseId": 31100424697,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "update-descriptions"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-08-06T12:12:20Z",
+      "databaseId": 31100406643,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-06T12:11:54Z",
+      "databaseId": 31100376586,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-06T11:58:36Z",
+      "databaseId": 31099450125,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-06T11:54:12Z",
+      "databaseId": 31099151969,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-06T11:54:09Z",
       "databaseId": 31099148455,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -43,27 +83,27 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-06T11:54:08Z",
       "databaseId": 31099147050,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-08-06T11:54:03Z",
       "databaseId": 31099141219,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-06T11:53:29Z",
       "databaseId": 31099101572,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
@@ -107,11 +147,11 @@
       "workflowName": "audit-language"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-06T11:41:33Z",
       "databaseId": 31098284058,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -137,46 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-06T11:24:37Z",
-      "databaseId": 31097142008,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-sources"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-06T11:17:54Z",
-      "databaseId": 31096693696,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-06T11:17:16Z",
-      "databaseId": 31096653160,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-06T11:16:29Z",
-      "databaseId": 31096601287,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-06T11:12:56Z",
-      "databaseId": 31096356964,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
     }
   ],
   "gaps": {
@@ -54231,6 +54231,66 @@
         "video_id": 28260319
       },
       {
+        "episode_id": 48848,
+        "display_name": "Tráva S04E02 - Sázení na koně CZ Titulky",
+        "video_id": 28260644
+      },
+      {
+        "episode_id": 48816,
+        "display_name": "Tráva S04E07 - Ano, můžu CZ Dabing",
+        "video_id": 28260738
+      },
+      {
+        "episode_id": 48856,
+        "display_name": "Tráva S04E12 - Než se znovu sejdeme CZ Dabing",
+        "video_id": 28260792
+      },
+      {
+        "episode_id": 48804,
+        "display_name": "Tráva S05E05 - Van Nuys CZ Dabing",
+        "video_id": 28260842
+      },
+      {
+        "episode_id": 48808,
+        "display_name": "Tráva S05E07 - Kde končí chodník CZ Dabing",
+        "video_id": 28260913
+      },
+      {
+        "episode_id": 48760,
+        "display_name": "Tráva S05E08 - Charakteristický klakson CZ Dabing",
+        "video_id": 28261005
+      },
+      {
+        "episode_id": 15097,
+        "display_name": "Dobrý doktor S02E08 - Historky CZ Dabing",
+        "video_id": 28260643
+      },
+      {
+        "episode_id": 45057,
+        "display_name": "Jak prosté S05E02 - Stojí za několik měst CZ Dabing",
+        "video_id": 28260739
+      },
+      {
+        "episode_id": 45061,
+        "display_name": "Jak prosté S05E16 - Fidelovy spisy CZ Dabing",
+        "video_id": 28260790
+      },
+      {
+        "episode_id": 45129,
+        "display_name": "Jak prosté S05E17 - Balada o Lady Frances CZ Dabing",
+        "video_id": 28260853
+      },
+      {
+        "episode_id": 45093,
+        "display_name": "Jak prosté S06E01 - Nekonečná schopnost snášet bolest CZ Dabing",
+        "video_id": 28260891
+      },
+      {
+        "episode_id": 45065,
+        "display_name": "Jak prosté S06E04 - Náš čas je vzácný CZ Dabing",
+        "video_id": 28260981
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -90719,6 +90779,56 @@
         "episode_id": 49683,
         "display_name": "Orphan Black S05E04 - Let the Children and Childbearers Toil CZ Titulky",
         "video_id": 28260429
+      },
+      {
+        "episode_id": 43542,
+        "display_name": "Takoví normální Američané  S03E12 - I Am Abassin Zadran CZ Titulky",
+        "video_id": 28260695
+      },
+      {
+        "episode_id": 43550,
+        "display_name": "Takoví normální Američané  S04E07 - Travel Agents CZ Titulky",
+        "video_id": 28260788
+      },
+      {
+        "episode_id": 43554,
+        "display_name": "Takoví normální Američané  S04E11 - Dinner for Seven CZ Titulky",
+        "video_id": 28260859
+      },
+      {
+        "episode_id": 43558,
+        "display_name": "Takoví normální Američané  S05E02 - Pests CZ Titulky",
+        "video_id": 28260916
+      },
+      {
+        "episode_id": 95447,
+        "display_name": "Světlo a stíny S01E05 - Ukaž mi, co jsi zač CZ Titulky",
+        "video_id": 28260641
+      },
+      {
+        "episode_id": 43603,
+        "display_name": "Takoví normální Američané  S01E03 - Gregory CZ Dabing",
+        "video_id": 28260709
+      },
+      {
+        "episode_id": 43595,
+        "display_name": "Takoví normální Američané  S01E04 - In Control CZ Dabing",
+        "video_id": 28260746
+      },
+      {
+        "episode_id": 43599,
+        "display_name": "Takoví normální Američané  S01E07 - Duty and Honor CZ Dabing",
+        "video_id": 28260796
+      },
+      {
+        "episode_id": 43575,
+        "display_name": "Takoví normální Američané  S03E01 - EST Men CZ Titulky",
+        "video_id": 28260847
+      },
+      {
+        "episode_id": 43579,
+        "display_name": "Takoví normální Američané  S03E07 - Walter Taffet CZ Titulky",
+        "video_id": 28260918
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -144668,6 +144778,66 @@
         "video_id": 28260319
       },
       {
+        "episode_id": 48848,
+        "display_name": "Tráva S04E02 - Sázení na koně CZ Titulky",
+        "video_id": 28260644
+      },
+      {
+        "episode_id": 48816,
+        "display_name": "Tráva S04E07 - Ano, můžu CZ Dabing",
+        "video_id": 28260738
+      },
+      {
+        "episode_id": 48856,
+        "display_name": "Tráva S04E12 - Než se znovu sejdeme CZ Dabing",
+        "video_id": 28260792
+      },
+      {
+        "episode_id": 48804,
+        "display_name": "Tráva S05E05 - Van Nuys CZ Dabing",
+        "video_id": 28260842
+      },
+      {
+        "episode_id": 48808,
+        "display_name": "Tráva S05E07 - Kde končí chodník CZ Dabing",
+        "video_id": 28260913
+      },
+      {
+        "episode_id": 48760,
+        "display_name": "Tráva S05E08 - Charakteristický klakson CZ Dabing",
+        "video_id": 28261005
+      },
+      {
+        "episode_id": 15097,
+        "display_name": "Dobrý doktor S02E08 - Historky CZ Dabing",
+        "video_id": 28260643
+      },
+      {
+        "episode_id": 45057,
+        "display_name": "Jak prosté S05E02 - Stojí za několik měst CZ Dabing",
+        "video_id": 28260739
+      },
+      {
+        "episode_id": 45061,
+        "display_name": "Jak prosté S05E16 - Fidelovy spisy CZ Dabing",
+        "video_id": 28260790
+      },
+      {
+        "episode_id": 45129,
+        "display_name": "Jak prosté S05E17 - Balada o Lady Frances CZ Dabing",
+        "video_id": 28260853
+      },
+      {
+        "episode_id": 45093,
+        "display_name": "Jak prosté S06E01 - Nekonečná schopnost snášet bolest CZ Dabing",
+        "video_id": 28260891
+      },
+      {
+        "episode_id": 45065,
+        "display_name": "Jak prosté S06E04 - Náš čas je vzácný CZ Dabing",
+        "video_id": 28260981
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -181156,6 +181326,56 @@
         "episode_id": 49683,
         "display_name": "Orphan Black S05E04 - Let the Children and Childbearers Toil CZ Titulky",
         "video_id": 28260429
+      },
+      {
+        "episode_id": 43542,
+        "display_name": "Takoví normální Američané  S03E12 - I Am Abassin Zadran CZ Titulky",
+        "video_id": 28260695
+      },
+      {
+        "episode_id": 43550,
+        "display_name": "Takoví normální Američané  S04E07 - Travel Agents CZ Titulky",
+        "video_id": 28260788
+      },
+      {
+        "episode_id": 43554,
+        "display_name": "Takoví normální Američané  S04E11 - Dinner for Seven CZ Titulky",
+        "video_id": 28260859
+      },
+      {
+        "episode_id": 43558,
+        "display_name": "Takoví normální Američané  S05E02 - Pests CZ Titulky",
+        "video_id": 28260916
+      },
+      {
+        "episode_id": 95447,
+        "display_name": "Světlo a stíny S01E05 - Ukaž mi, co jsi zač CZ Titulky",
+        "video_id": 28260641
+      },
+      {
+        "episode_id": 43603,
+        "display_name": "Takoví normální Američané  S01E03 - Gregory CZ Dabing",
+        "video_id": 28260709
+      },
+      {
+        "episode_id": 43595,
+        "display_name": "Takoví normální Američané  S01E04 - In Control CZ Dabing",
+        "video_id": 28260746
+      },
+      {
+        "episode_id": 43599,
+        "display_name": "Takoví normální Američané  S01E07 - Duty and Honor CZ Dabing",
+        "video_id": 28260796
+      },
+      {
+        "episode_id": 43575,
+        "display_name": "Takoví normální Američané  S03E01 - EST Men CZ Titulky",
+        "video_id": 28260847
+      },
+      {
+        "episode_id": 43579,
+        "display_name": "Takoví normální Američané  S03E07 - Walter Taffet CZ Titulky",
+        "video_id": 28260918
       }
     ],
     "prepared_not_upload_ready": [
@@ -182317,7 +182537,8 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 19,
+    "ok": 132,
+    "disabled": 212,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
@@ -182327,6 +182548,6 @@
     "needs_whisper": 49584
   },
   "subtitle_followup_statuses": {
-    "needs_subtitle_setup_after_prehrajto_processing": 23852
+    "needs_subtitle_setup_after_prehrajto_processing": 23863
   }
 }
