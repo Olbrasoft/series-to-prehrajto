@@ -2,15 +2,15 @@
   "counts": {
     "backlog_episodes": 170725,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 22698,
-    "prepared_source_episodes": 50326,
+    "uploaded_episodes": 22740,
+    "prepared_source_episodes": 50405,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 40,
-    "language_whisper_attempted_sources": 40,
+    "language_audited_sources": 112,
+    "language_whisper_attempted_sources": 60,
     "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 56818,
     "whisper_review_pending_sources": 49624,
@@ -20,10 +20,82 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-08-06T05:59:42Z",
+      "databaseId": 31075806406,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-06T05:58:26Z",
+      "databaseId": 31075740788,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-06T05:45:19Z",
+      "databaseId": 31075076060,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-06T05:45:12Z",
+      "databaseId": 31075069510,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-06T05:39:06Z",
+      "databaseId": 31074762523,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-08-06T05:37:06Z",
+      "databaseId": 31074662046,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-06T05:34:38Z",
+      "databaseId": 31074537431,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-sources"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-06T05:32:06Z",
+      "databaseId": 31074407728,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-06T05:32:04Z",
+      "databaseId": 31074405594,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-06T05:30:50Z",
       "databaseId": 31074344271,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -35,11 +107,11 @@
       "workflowName": "audit-language"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-06T05:25:52Z",
       "databaseId": 31074092789,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -91,92 +163,20 @@
       "workflowName": "prepare-manifest"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-06T05:21:37Z",
       "databaseId": 31073879810,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "sync"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-06T05:20:29Z",
       "databaseId": 31073824806,
       "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-06T05:16:30Z",
-      "databaseId": 31073641205,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-06T05:12:14Z",
-      "databaseId": 31073429117,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-06T05:11:03Z",
-      "databaseId": 31073370856,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-06T05:06:38Z",
-      "databaseId": 31073149856,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-06T05:06:35Z",
-      "databaseId": 31073147241,
-      "headBranch": "main",
       "status": "completed",
       "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-06T05:06:32Z",
-      "databaseId": 31073145049,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-06T05:05:24Z",
-      "databaseId": 31073088564,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-06T05:04:29Z",
-      "databaseId": 31073041949,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-06T04:56:35Z",
-      "databaseId": 31072657321,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
     }
   ],
   "gaps": {
@@ -53451,6 +53451,36 @@
         "video_id": 28252694
       },
       {
+        "episode_id": 45080,
+        "display_name": "Jak prosté S04E24 - Dohoda CZ Dabing",
+        "video_id": 28252844
+      },
+      {
+        "episode_id": 45056,
+        "display_name": "Jak prosté S05E07 - Bum bum na padák CZ Dabing",
+        "video_id": 28252957
+      },
+      {
+        "episode_id": 45060,
+        "display_name": "Jak prosté S05E13 - Sud po sudu CZ Dabing",
+        "video_id": 28253015
+      },
+      {
+        "episode_id": 45072,
+        "display_name": "Jak prosté S05E14 - Zničím tě v reálném životě CZ Dabing",
+        "video_id": 28253066
+      },
+      {
+        "episode_id": 45128,
+        "display_name": "Jak prosté S05E15 - Špatná strana cesty CZ Dabing",
+        "video_id": 28253113
+      },
+      {
+        "episode_id": 45068,
+        "display_name": "Jak prosté S06E14 - Skrze mlhu CZ Dabing",
+        "video_id": 28253175
+      },
+      {
         "episode_id": 15101,
         "display_name": "Dobrý doktor S02E11 - Karanténa - 2.část CZ Dabing",
         "video_id": 28252599
@@ -53459,6 +53489,86 @@
         "episode_id": 15105,
         "display_name": "Dobrý doktor S02E15 - Risk a odměna CZ Dabing",
         "video_id": 28252732
+      },
+      {
+        "episode_id": 30805,
+        "display_name": "Dobrý doktor S03E11 - Zlomenina CZ Dabing",
+        "video_id": 28252864
+      },
+      {
+        "episode_id": 30809,
+        "display_name": "Dobrý doktor S03E15 - Nevyřčené CZ Dabing",
+        "video_id": 28252951
+      },
+      {
+        "episode_id": 30821,
+        "display_name": "Dobrý doktor S04E07 - Princip neurčitosti CZ Dabing",
+        "video_id": 28252998
+      },
+      {
+        "episode_id": 30825,
+        "display_name": "Dobrý doktor S04E11 - Všichni občas blázníme CZ Dabing",
+        "video_id": 28253057
+      },
+      {
+        "episode_id": 30829,
+        "display_name": "Dobrý doktor S04E15 - Čekání CZ Dabing",
+        "video_id": 28253112
+      },
+      {
+        "episode_id": 30833,
+        "display_name": "Dobrý doktor S04E19 - Mise - 1.část CZ Dabing",
+        "video_id": 28253169
+      },
+      {
+        "episode_id": 45140,
+        "display_name": "Jak prosté S07E01 - Další dobrodružství CZ Titulky",
+        "video_id": 28253309
+      },
+      {
+        "episode_id": 45092,
+        "display_name": "Jak prosté S07E12 - Reichenbachův pád CZ Dabing",
+        "video_id": 28253386
+      },
+      {
+        "episode_id": 8332,
+        "display_name": "Dobrá znamení S01E05 - Možnost soudného dne CZ Dabing",
+        "video_id": 28253513
+      },
+      {
+        "episode_id": 12960,
+        "display_name": "Dobrá znamení S02E03 - Kapitola 3: Vím, kam mířím CZ Titulky",
+        "video_id": 28253638
+      },
+      {
+        "episode_id": 30837,
+        "display_name": "Dobrý doktor S05E03 - Míra inteligence CZ Dabing",
+        "video_id": 28253299
+      },
+      {
+        "episode_id": 30841,
+        "display_name": "Dobrý doktor S05E07 - Vypršela platnost CZ Dabing",
+        "video_id": 28253363
+      },
+      {
+        "episode_id": 30845,
+        "display_name": "Dobrý doktor S05E11 - Rodina CZ Dabing",
+        "video_id": 28253437
+      },
+      {
+        "episode_id": 30849,
+        "display_name": "Dobrý doktor S05E15 - Má cesta CZ Dabing",
+        "video_id": 28253500
+      },
+      {
+        "episode_id": 30853,
+        "display_name": "Dobrý doktor S06E01 - Afterparty CZ Dabing",
+        "video_id": 28253556
+      },
+      {
+        "episode_id": 30857,
+        "display_name": "Dobrý doktor S06E05 - Možnosti růstu CZ Dabing",
+        "video_id": 28253637
       },
       {
         "episode_id": 114182,
@@ -89181,6 +89291,36 @@
         "video_id": 28252640
       },
       {
+        "episode_id": 45126,
+        "display_name": "Jak prosté S01E16 - Tajný úkol CZ Dabing",
+        "video_id": 28252856
+      },
+      {
+        "episode_id": 45042,
+        "display_name": "Jak prosté S02E04 - Otrávené pero CZ Dabing",
+        "video_id": 28252956
+      },
+      {
+        "episode_id": 45030,
+        "display_name": "Jak prosté S02E08 - Krev není voda CZ Dabing",
+        "video_id": 28253028
+      },
+      {
+        "episode_id": 45150,
+        "display_name": "Jak prosté S02E15 - Mrtvá baletka CZ Dabing",
+        "video_id": 28253077
+      },
+      {
+        "episode_id": 45034,
+        "display_name": "Jak prosté S02E17 - Uši jako důkaz CZ Dabing",
+        "video_id": 28253118
+      },
+      {
+        "episode_id": 45038,
+        "display_name": "Jak prosté S02E24 - Velký experiment CZ Dabing",
+        "video_id": 28253179
+      },
+      {
         "episode_id": 64327,
         "display_name": "Pomsta S02E16 - Osvícení CZ Titulky",
         "video_id": 28252516
@@ -89199,6 +89339,76 @@
         "episode_id": 64383,
         "display_name": "Pomsta S03E02 - Sin CZ Titulky",
         "video_id": 28252772
+      },
+      {
+        "episode_id": 64371,
+        "display_name": "Pomsta S03E06 - Dissolution CZ Titulky",
+        "video_id": 28252898
+      },
+      {
+        "episode_id": 64367,
+        "display_name": "Pomsta S03E08 - Secrecy CZ Titulky",
+        "video_id": 28252968
+      },
+      {
+        "episode_id": 64339,
+        "display_name": "Pomsta S03E16 - Disgrace CZ Titulky",
+        "video_id": 28253008
+      },
+      {
+        "episode_id": 64391,
+        "display_name": "Pomsta S03E17 - Addiction CZ Titulky",
+        "video_id": 28253059
+      },
+      {
+        "episode_id": 45022,
+        "display_name": "Jak prosté S03E06 - Terra Pericolosa CZ Dabing",
+        "video_id": 28253294
+      },
+      {
+        "episode_id": 45026,
+        "display_name": "Jak prosté S03E11 - Proslulý klient CZ Dabing",
+        "video_id": 28253369
+      },
+      {
+        "episode_id": 45050,
+        "display_name": "Jak prosté S03E12 - Rodinné pouto CZ Dabing",
+        "video_id": 28253431
+      },
+      {
+        "episode_id": 45122,
+        "display_name": "Jak prosté S03E13 - Bolehlav CZ Dabing",
+        "video_id": 28253504
+      },
+      {
+        "episode_id": 45146,
+        "display_name": "Jak prosté S03E18 - Výhled z Olympu CZ Dabing",
+        "video_id": 28253552
+      },
+      {
+        "episode_id": 45134,
+        "display_name": "Jak prosté S03E24 - Sestup do podsvětí CZ Dabing",
+        "video_id": 28253620
+      },
+      {
+        "episode_id": 64375,
+        "display_name": "Pomsta S04E06 - Damage CZ Titulky",
+        "video_id": 28253285
+      },
+      {
+        "episode_id": 64351,
+        "display_name": "Pomsta S04E18 - Clarity CZ Titulky",
+        "video_id": 28253355
+      },
+      {
+        "episode_id": 61903,
+        "display_name": "Na seznamu smrti S01E06 - Pomíjivost CZ Dabing",
+        "video_id": 28253416
+      },
+      {
+        "episode_id": 125567,
+        "display_name": "Marvel's The Defenders S01E04 - Královský drak CZ Titulky",
+        "video_id": 28253501
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -142368,6 +142578,36 @@
         "video_id": 28252694
       },
       {
+        "episode_id": 45080,
+        "display_name": "Jak prosté S04E24 - Dohoda CZ Dabing",
+        "video_id": 28252844
+      },
+      {
+        "episode_id": 45056,
+        "display_name": "Jak prosté S05E07 - Bum bum na padák CZ Dabing",
+        "video_id": 28252957
+      },
+      {
+        "episode_id": 45060,
+        "display_name": "Jak prosté S05E13 - Sud po sudu CZ Dabing",
+        "video_id": 28253015
+      },
+      {
+        "episode_id": 45072,
+        "display_name": "Jak prosté S05E14 - Zničím tě v reálném životě CZ Dabing",
+        "video_id": 28253066
+      },
+      {
+        "episode_id": 45128,
+        "display_name": "Jak prosté S05E15 - Špatná strana cesty CZ Dabing",
+        "video_id": 28253113
+      },
+      {
+        "episode_id": 45068,
+        "display_name": "Jak prosté S06E14 - Skrze mlhu CZ Dabing",
+        "video_id": 28253175
+      },
+      {
         "episode_id": 15101,
         "display_name": "Dobrý doktor S02E11 - Karanténa - 2.část CZ Dabing",
         "video_id": 28252599
@@ -142376,6 +142616,86 @@
         "episode_id": 15105,
         "display_name": "Dobrý doktor S02E15 - Risk a odměna CZ Dabing",
         "video_id": 28252732
+      },
+      {
+        "episode_id": 30805,
+        "display_name": "Dobrý doktor S03E11 - Zlomenina CZ Dabing",
+        "video_id": 28252864
+      },
+      {
+        "episode_id": 30809,
+        "display_name": "Dobrý doktor S03E15 - Nevyřčené CZ Dabing",
+        "video_id": 28252951
+      },
+      {
+        "episode_id": 30821,
+        "display_name": "Dobrý doktor S04E07 - Princip neurčitosti CZ Dabing",
+        "video_id": 28252998
+      },
+      {
+        "episode_id": 30825,
+        "display_name": "Dobrý doktor S04E11 - Všichni občas blázníme CZ Dabing",
+        "video_id": 28253057
+      },
+      {
+        "episode_id": 30829,
+        "display_name": "Dobrý doktor S04E15 - Čekání CZ Dabing",
+        "video_id": 28253112
+      },
+      {
+        "episode_id": 30833,
+        "display_name": "Dobrý doktor S04E19 - Mise - 1.část CZ Dabing",
+        "video_id": 28253169
+      },
+      {
+        "episode_id": 45140,
+        "display_name": "Jak prosté S07E01 - Další dobrodružství CZ Titulky",
+        "video_id": 28253309
+      },
+      {
+        "episode_id": 45092,
+        "display_name": "Jak prosté S07E12 - Reichenbachův pád CZ Dabing",
+        "video_id": 28253386
+      },
+      {
+        "episode_id": 8332,
+        "display_name": "Dobrá znamení S01E05 - Možnost soudného dne CZ Dabing",
+        "video_id": 28253513
+      },
+      {
+        "episode_id": 12960,
+        "display_name": "Dobrá znamení S02E03 - Kapitola 3: Vím, kam mířím CZ Titulky",
+        "video_id": 28253638
+      },
+      {
+        "episode_id": 30837,
+        "display_name": "Dobrý doktor S05E03 - Míra inteligence CZ Dabing",
+        "video_id": 28253299
+      },
+      {
+        "episode_id": 30841,
+        "display_name": "Dobrý doktor S05E07 - Vypršela platnost CZ Dabing",
+        "video_id": 28253363
+      },
+      {
+        "episode_id": 30845,
+        "display_name": "Dobrý doktor S05E11 - Rodina CZ Dabing",
+        "video_id": 28253437
+      },
+      {
+        "episode_id": 30849,
+        "display_name": "Dobrý doktor S05E15 - Má cesta CZ Dabing",
+        "video_id": 28253500
+      },
+      {
+        "episode_id": 30853,
+        "display_name": "Dobrý doktor S06E01 - Afterparty CZ Dabing",
+        "video_id": 28253556
+      },
+      {
+        "episode_id": 30857,
+        "display_name": "Dobrý doktor S06E05 - Možnosti růstu CZ Dabing",
+        "video_id": 28253637
       },
       {
         "episode_id": 114182,
@@ -178098,6 +178418,36 @@
         "video_id": 28252640
       },
       {
+        "episode_id": 45126,
+        "display_name": "Jak prosté S01E16 - Tajný úkol CZ Dabing",
+        "video_id": 28252856
+      },
+      {
+        "episode_id": 45042,
+        "display_name": "Jak prosté S02E04 - Otrávené pero CZ Dabing",
+        "video_id": 28252956
+      },
+      {
+        "episode_id": 45030,
+        "display_name": "Jak prosté S02E08 - Krev není voda CZ Dabing",
+        "video_id": 28253028
+      },
+      {
+        "episode_id": 45150,
+        "display_name": "Jak prosté S02E15 - Mrtvá baletka CZ Dabing",
+        "video_id": 28253077
+      },
+      {
+        "episode_id": 45034,
+        "display_name": "Jak prosté S02E17 - Uši jako důkaz CZ Dabing",
+        "video_id": 28253118
+      },
+      {
+        "episode_id": 45038,
+        "display_name": "Jak prosté S02E24 - Velký experiment CZ Dabing",
+        "video_id": 28253179
+      },
+      {
         "episode_id": 64327,
         "display_name": "Pomsta S02E16 - Osvícení CZ Titulky",
         "video_id": 28252516
@@ -178116,6 +178466,76 @@
         "episode_id": 64383,
         "display_name": "Pomsta S03E02 - Sin CZ Titulky",
         "video_id": 28252772
+      },
+      {
+        "episode_id": 64371,
+        "display_name": "Pomsta S03E06 - Dissolution CZ Titulky",
+        "video_id": 28252898
+      },
+      {
+        "episode_id": 64367,
+        "display_name": "Pomsta S03E08 - Secrecy CZ Titulky",
+        "video_id": 28252968
+      },
+      {
+        "episode_id": 64339,
+        "display_name": "Pomsta S03E16 - Disgrace CZ Titulky",
+        "video_id": 28253008
+      },
+      {
+        "episode_id": 64391,
+        "display_name": "Pomsta S03E17 - Addiction CZ Titulky",
+        "video_id": 28253059
+      },
+      {
+        "episode_id": 45022,
+        "display_name": "Jak prosté S03E06 - Terra Pericolosa CZ Dabing",
+        "video_id": 28253294
+      },
+      {
+        "episode_id": 45026,
+        "display_name": "Jak prosté S03E11 - Proslulý klient CZ Dabing",
+        "video_id": 28253369
+      },
+      {
+        "episode_id": 45050,
+        "display_name": "Jak prosté S03E12 - Rodinné pouto CZ Dabing",
+        "video_id": 28253431
+      },
+      {
+        "episode_id": 45122,
+        "display_name": "Jak prosté S03E13 - Bolehlav CZ Dabing",
+        "video_id": 28253504
+      },
+      {
+        "episode_id": 45146,
+        "display_name": "Jak prosté S03E18 - Výhled z Olympu CZ Dabing",
+        "video_id": 28253552
+      },
+      {
+        "episode_id": 45134,
+        "display_name": "Jak prosté S03E24 - Sestup do podsvětí CZ Dabing",
+        "video_id": 28253620
+      },
+      {
+        "episode_id": 64375,
+        "display_name": "Pomsta S04E06 - Damage CZ Titulky",
+        "video_id": 28253285
+      },
+      {
+        "episode_id": 64351,
+        "display_name": "Pomsta S04E18 - Clarity CZ Titulky",
+        "video_id": 28253355
+      },
+      {
+        "episode_id": 61903,
+        "display_name": "Na seznamu smrti S01E06 - Pomíjivost CZ Dabing",
+        "video_id": 28253416
+      },
+      {
+        "episode_id": 125567,
+        "display_name": "Marvel's The Defenders S01E04 - Královský drak CZ Titulky",
+        "video_id": 28253501
       }
     ],
     "prepared_not_upload_ready": [
@@ -179277,8 +179697,9 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 39,
-    "resolve_failed": 1
+    "disabled": 52,
+    "ok": 58,
+    "resolve_failed": 2
   },
   "whisper_review_statuses": {
     "whisper_non_cz_needs_subtitles": 5271,
