@@ -2,44 +2,76 @@
   "counts": {
     "backlog_episodes": 170725,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 22624,
-    "prepared_source_episodes": 50339,
+    "uploaded_episodes": 22669,
+    "prepared_source_episodes": 50422,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 40,
-    "language_whisper_attempted_sources": 40,
+    "language_audited_sources": 418,
+    "language_whisper_attempted_sources": 83,
     "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 56819,
     "whisper_review_pending_sources": 49625,
-    "subtitle_followup_sources": 23763,
-    "subtitle_followup_pending_sources": 23763
+    "subtitle_followup_sources": 23773,
+    "subtitle_followup_pending_sources": 23773
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-08-06T04:35:08Z",
-      "databaseId": 31071665768,
+      "createdAt": "2026-08-06T05:05:24Z",
+      "databaseId": 31073088564,
       "headBranch": "main",
       "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-06T05:04:29Z",
+      "databaseId": 31073041949,
+      "headBranch": "main",
+      "status": "completed",
       "workflowName": "update-descriptions"
     },
     {
       "conclusion": "",
-      "createdAt": "2026-08-06T04:35:05Z",
-      "databaseId": 31071662753,
+      "createdAt": "2026-08-06T04:56:35Z",
+      "databaseId": 31072657321,
       "headBranch": "main",
       "status": "in_progress",
-      "workflowName": "audit-language"
+      "workflowName": "prepare-manifest"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-08-06T04:51:13Z",
+      "databaseId": 31072405420,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-06T04:35:08Z",
+      "databaseId": 31071665768,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-06T04:35:05Z",
+      "databaseId": 31071662753,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-06T04:34:20Z",
       "databaseId": 31071627944,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-status"
     },
     {
@@ -51,19 +83,19 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-06T04:33:50Z",
       "databaseId": 31071604479,
       "headBranch": "main",
-      "status": "queued",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-06T04:33:43Z",
       "databaseId": 31071599667,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "sync"
     },
     {
@@ -71,7 +103,7 @@
       "createdAt": "2026-08-06T04:33:26Z",
       "databaseId": 31071586011,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "prepare-descriptions"
     },
     {
@@ -83,11 +115,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-06T04:26:40Z",
       "databaseId": 31071262659,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
@@ -145,38 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-06T04:10:58Z",
-      "databaseId": 31070529141,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-06T04:09:59Z",
-      "databaseId": 31070476391,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-06T04:09:56Z",
-      "databaseId": 31070473813,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-06T04:06:59Z",
-      "databaseId": 31070331101,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "refresh-backlog"
     }
   ],
   "gaps": {
@@ -53281,6 +53281,121 @@
         "video_id": 28250847
       },
       {
+        "episode_id": 45112,
+        "display_name": "Jak prosté S01E01 - Vražda v zastoupení CZ Dabing",
+        "video_id": 28251109
+      },
+      {
+        "episode_id": 45152,
+        "display_name": "Jak prosté S01E13 - Rudý tým CZ Dabing",
+        "video_id": 28251182
+      },
+      {
+        "episode_id": 45116,
+        "display_name": "Jak prosté S01E17 - Druhá možnost CZ Dabing",
+        "video_id": 28251226
+      },
+      {
+        "episode_id": 45048,
+        "display_name": "Jak prosté S02E06 - Omyl CZ Dabing",
+        "video_id": 28251302
+      },
+      {
+        "episode_id": 45044,
+        "display_name": "Jak prosté S02E09 - Ve střehu CZ Dabing",
+        "video_id": 28251365
+      },
+      {
+        "episode_id": 45164,
+        "display_name": "Jak prosté S02E10 - Záchvěv strachu CZ Dabing",
+        "video_id": 28251407
+      },
+      {
+        "episode_id": 45032,
+        "display_name": "Jak prosté S02E13 - Rodinná záležitost CZ Dabing",
+        "video_id": 28251449
+      },
+      {
+        "episode_id": 45036,
+        "display_name": "Jak prosté S02E20 - Prázdnoty není nikdy dost CZ Dabing",
+        "video_id": 28251519
+      },
+      {
+        "episode_id": 31353,
+        "display_name": "Zelenáč S08E03 - 3. epizoda CZ Titulky",
+        "video_id": 28251098
+      },
+      {
+        "episode_id": 31357,
+        "display_name": "Zelenáč S08E07 - 7. epizoda CZ Dabing",
+        "video_id": 28251160
+      },
+      {
+        "episode_id": 68145,
+        "display_name": "Cyberpunk: Edgerunners S01E07 - Silnější CZ Dabing",
+        "video_id": 28251265
+      },
+      {
+        "episode_id": 51981,
+        "display_name": "Strážce pořádku S01E07 - 7. epizoda CZ Dabing",
+        "video_id": 28251343
+      },
+      {
+        "episode_id": 51917,
+        "display_name": "Strážce pořádku S02E08 - 8. epizoda CZ Dabing",
+        "video_id": 28251473
+      },
+      {
+        "episode_id": 51953,
+        "display_name": "Strážce pořádku S04E10 - 10. epizoda CZ Dabing",
+        "video_id": 28251583
+      },
+      {
+        "episode_id": 51929,
+        "display_name": "Strážce pořádku S05E02 - 2. epizoda CZ Dabing",
+        "video_id": 28251621
+      },
+      {
+        "episode_id": 51957,
+        "display_name": "Strážce pořádku S05E03 - 3. epizoda CZ Dabing",
+        "video_id": 28251665
+      },
+      {
+        "episode_id": 45020,
+        "display_name": "Jak prosté S03E02 - Pět oranžových korálků CZ Dabing",
+        "video_id": 28251758
+      },
+      {
+        "episode_id": 45160,
+        "display_name": "Jak prosté S03E14 - Velká zebří loupež CZ Titulky",
+        "video_id": 28251843
+      },
+      {
+        "episode_id": 45028,
+        "display_name": "Jak prosté S03E16 - Výpadky paměti CZ Dabing",
+        "video_id": 28251929
+      },
+      {
+        "episode_id": 51961,
+        "display_name": "Strážce pořádku S05E08 - 8. epizoda CZ Dabing",
+        "video_id": 28251771
+      },
+      {
+        "episode_id": 51965,
+        "display_name": "Strážce pořádku S05E13 - 13. epizoda CZ Dabing",
+        "video_id": 28251818
+      },
+      {
+        "episode_id": 51969,
+        "display_name": "Strážce pořádku S06E06 - 6. epizoda CZ Titulky",
+        "video_id": 28251852
+      },
+      {
+        "episode_id": 51973,
+        "display_name": "Strážce pořádku S06E10 - 10. epizoda CZ Dabing",
+        "video_id": 28251904
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -88829,6 +88944,116 @@
         "episode_id": 30811,
         "display_name": "Dobrý doktor S03E17 - Náprava CZ Dabing",
         "video_id": 28250443
+      },
+      {
+        "episode_id": 64374,
+        "display_name": "Pomsta S04E13 - Abduction CZ Titulky",
+        "video_id": 28251105
+      },
+      {
+        "episode_id": 64390,
+        "display_name": "Pomsta S04E15 - Bait CZ Titulky",
+        "video_id": 28251151
+      },
+      {
+        "episode_id": 64350,
+        "display_name": "Pomsta S04E16 - Retaliation CZ Titulky",
+        "video_id": 28251184
+      },
+      {
+        "episode_id": 64354,
+        "display_name": "Pomsta S04E21 - Aftermath CZ Titulky",
+        "video_id": 28251216
+      },
+      {
+        "episode_id": 61898,
+        "display_name": "Na seznamu smrti S01E01 - Engram CZ Dabing",
+        "video_id": 28251284
+      },
+      {
+        "episode_id": 61902,
+        "display_name": "Na seznamu smrti S01E05 - Rozvrat CZ Dabing",
+        "video_id": 28251367
+      },
+      {
+        "episode_id": 125566,
+        "display_name": "Marvel's The Defenders S01E03 - Nejhorší chování CZ Titulky",
+        "video_id": 28251457
+      },
+      {
+        "episode_id": 125570,
+        "display_name": "Marvel's The Defenders S01E07 - Ryba ve vězení CZ Titulky",
+        "video_id": 28251622
+      },
+      {
+        "episode_id": 30823,
+        "display_name": "Dobrý doktor S04E09 - Nezodpovědné chování u salátů CZ Dabing",
+        "video_id": 28251088
+      },
+      {
+        "episode_id": 30831,
+        "display_name": "Dobrý doktor S04E17 - Loučení CZ Dabing",
+        "video_id": 28251175
+      },
+      {
+        "episode_id": 30835,
+        "display_name": "Dobrý doktor S05E01 - Nové začátky CZ Dabing",
+        "video_id": 28251229
+      },
+      {
+        "episode_id": 30839,
+        "display_name": "Dobrý doktor S05E05 - Bláznivé město CZ Dabing",
+        "video_id": 28251286
+      },
+      {
+        "episode_id": 30843,
+        "display_name": "Dobrý doktor S05E09 - Yippee Ki-Yay CZ Dabing",
+        "video_id": 28251322
+      },
+      {
+        "episode_id": 30847,
+        "display_name": "Dobrý doktor S05E13 - Rostoucí bolesti CZ Dabing",
+        "video_id": 28251384
+      },
+      {
+        "episode_id": 30851,
+        "display_name": "Dobrý doktor S05E17 - Leina přehlídka CZ Dabing",
+        "video_id": 28251429
+      },
+      {
+        "episode_id": 30855,
+        "display_name": "Dobrý doktor S06E03 - Velké znamení CZ Dabing",
+        "video_id": 28251518
+      },
+      {
+        "episode_id": 15662,
+        "display_name": "Terapie pravdou S02E08 - Poslední drink CZ Titulky",
+        "video_id": 28251764
+      },
+      {
+        "episode_id": 133638,
+        "display_name": "OA S01E01 - Homecoming CZ Dabing",
+        "video_id": 28251817
+      },
+      {
+        "episode_id": 17930,
+        "display_name": "Nadace S01E05 - Po probuzení CZ Titulky",
+        "video_id": 28251888
+      },
+      {
+        "episode_id": 30863,
+        "display_name": "Dobrý doktor S06E11 - Dobrý chlapec CZ Dabing",
+        "video_id": 28251759
+      },
+      {
+        "episode_id": 30867,
+        "display_name": "Dobrý doktor S06E15 - Staří přátelé CZ Titulky",
+        "video_id": 28251830
+      },
+      {
+        "episode_id": 30871,
+        "display_name": "Dobrý doktor S06E19 - Poloviční opatření CZ Dabing",
+        "video_id": 28251885
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -141828,6 +142053,121 @@
         "video_id": 28250847
       },
       {
+        "episode_id": 45112,
+        "display_name": "Jak prosté S01E01 - Vražda v zastoupení CZ Dabing",
+        "video_id": 28251109
+      },
+      {
+        "episode_id": 45152,
+        "display_name": "Jak prosté S01E13 - Rudý tým CZ Dabing",
+        "video_id": 28251182
+      },
+      {
+        "episode_id": 45116,
+        "display_name": "Jak prosté S01E17 - Druhá možnost CZ Dabing",
+        "video_id": 28251226
+      },
+      {
+        "episode_id": 45048,
+        "display_name": "Jak prosté S02E06 - Omyl CZ Dabing",
+        "video_id": 28251302
+      },
+      {
+        "episode_id": 45044,
+        "display_name": "Jak prosté S02E09 - Ve střehu CZ Dabing",
+        "video_id": 28251365
+      },
+      {
+        "episode_id": 45164,
+        "display_name": "Jak prosté S02E10 - Záchvěv strachu CZ Dabing",
+        "video_id": 28251407
+      },
+      {
+        "episode_id": 45032,
+        "display_name": "Jak prosté S02E13 - Rodinná záležitost CZ Dabing",
+        "video_id": 28251449
+      },
+      {
+        "episode_id": 45036,
+        "display_name": "Jak prosté S02E20 - Prázdnoty není nikdy dost CZ Dabing",
+        "video_id": 28251519
+      },
+      {
+        "episode_id": 31353,
+        "display_name": "Zelenáč S08E03 - 3. epizoda CZ Titulky",
+        "video_id": 28251098
+      },
+      {
+        "episode_id": 31357,
+        "display_name": "Zelenáč S08E07 - 7. epizoda CZ Dabing",
+        "video_id": 28251160
+      },
+      {
+        "episode_id": 68145,
+        "display_name": "Cyberpunk: Edgerunners S01E07 - Silnější CZ Dabing",
+        "video_id": 28251265
+      },
+      {
+        "episode_id": 51981,
+        "display_name": "Strážce pořádku S01E07 - 7. epizoda CZ Dabing",
+        "video_id": 28251343
+      },
+      {
+        "episode_id": 51917,
+        "display_name": "Strážce pořádku S02E08 - 8. epizoda CZ Dabing",
+        "video_id": 28251473
+      },
+      {
+        "episode_id": 51953,
+        "display_name": "Strážce pořádku S04E10 - 10. epizoda CZ Dabing",
+        "video_id": 28251583
+      },
+      {
+        "episode_id": 51929,
+        "display_name": "Strážce pořádku S05E02 - 2. epizoda CZ Dabing",
+        "video_id": 28251621
+      },
+      {
+        "episode_id": 51957,
+        "display_name": "Strážce pořádku S05E03 - 3. epizoda CZ Dabing",
+        "video_id": 28251665
+      },
+      {
+        "episode_id": 45020,
+        "display_name": "Jak prosté S03E02 - Pět oranžových korálků CZ Dabing",
+        "video_id": 28251758
+      },
+      {
+        "episode_id": 45160,
+        "display_name": "Jak prosté S03E14 - Velká zebří loupež CZ Titulky",
+        "video_id": 28251843
+      },
+      {
+        "episode_id": 45028,
+        "display_name": "Jak prosté S03E16 - Výpadky paměti CZ Dabing",
+        "video_id": 28251929
+      },
+      {
+        "episode_id": 51961,
+        "display_name": "Strážce pořádku S05E08 - 8. epizoda CZ Dabing",
+        "video_id": 28251771
+      },
+      {
+        "episode_id": 51965,
+        "display_name": "Strážce pořádku S05E13 - 13. epizoda CZ Dabing",
+        "video_id": 28251818
+      },
+      {
+        "episode_id": 51969,
+        "display_name": "Strážce pořádku S06E06 - 6. epizoda CZ Titulky",
+        "video_id": 28251852
+      },
+      {
+        "episode_id": 51973,
+        "display_name": "Strážce pořádku S06E10 - 10. epizoda CZ Dabing",
+        "video_id": 28251904
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -177376,6 +177716,116 @@
         "episode_id": 30811,
         "display_name": "Dobrý doktor S03E17 - Náprava CZ Dabing",
         "video_id": 28250443
+      },
+      {
+        "episode_id": 64374,
+        "display_name": "Pomsta S04E13 - Abduction CZ Titulky",
+        "video_id": 28251105
+      },
+      {
+        "episode_id": 64390,
+        "display_name": "Pomsta S04E15 - Bait CZ Titulky",
+        "video_id": 28251151
+      },
+      {
+        "episode_id": 64350,
+        "display_name": "Pomsta S04E16 - Retaliation CZ Titulky",
+        "video_id": 28251184
+      },
+      {
+        "episode_id": 64354,
+        "display_name": "Pomsta S04E21 - Aftermath CZ Titulky",
+        "video_id": 28251216
+      },
+      {
+        "episode_id": 61898,
+        "display_name": "Na seznamu smrti S01E01 - Engram CZ Dabing",
+        "video_id": 28251284
+      },
+      {
+        "episode_id": 61902,
+        "display_name": "Na seznamu smrti S01E05 - Rozvrat CZ Dabing",
+        "video_id": 28251367
+      },
+      {
+        "episode_id": 125566,
+        "display_name": "Marvel's The Defenders S01E03 - Nejhorší chování CZ Titulky",
+        "video_id": 28251457
+      },
+      {
+        "episode_id": 125570,
+        "display_name": "Marvel's The Defenders S01E07 - Ryba ve vězení CZ Titulky",
+        "video_id": 28251622
+      },
+      {
+        "episode_id": 30823,
+        "display_name": "Dobrý doktor S04E09 - Nezodpovědné chování u salátů CZ Dabing",
+        "video_id": 28251088
+      },
+      {
+        "episode_id": 30831,
+        "display_name": "Dobrý doktor S04E17 - Loučení CZ Dabing",
+        "video_id": 28251175
+      },
+      {
+        "episode_id": 30835,
+        "display_name": "Dobrý doktor S05E01 - Nové začátky CZ Dabing",
+        "video_id": 28251229
+      },
+      {
+        "episode_id": 30839,
+        "display_name": "Dobrý doktor S05E05 - Bláznivé město CZ Dabing",
+        "video_id": 28251286
+      },
+      {
+        "episode_id": 30843,
+        "display_name": "Dobrý doktor S05E09 - Yippee Ki-Yay CZ Dabing",
+        "video_id": 28251322
+      },
+      {
+        "episode_id": 30847,
+        "display_name": "Dobrý doktor S05E13 - Rostoucí bolesti CZ Dabing",
+        "video_id": 28251384
+      },
+      {
+        "episode_id": 30851,
+        "display_name": "Dobrý doktor S05E17 - Leina přehlídka CZ Dabing",
+        "video_id": 28251429
+      },
+      {
+        "episode_id": 30855,
+        "display_name": "Dobrý doktor S06E03 - Velké znamení CZ Dabing",
+        "video_id": 28251518
+      },
+      {
+        "episode_id": 15662,
+        "display_name": "Terapie pravdou S02E08 - Poslední drink CZ Titulky",
+        "video_id": 28251764
+      },
+      {
+        "episode_id": 133638,
+        "display_name": "OA S01E01 - Homecoming CZ Dabing",
+        "video_id": 28251817
+      },
+      {
+        "episode_id": 17930,
+        "display_name": "Nadace S01E05 - Po probuzení CZ Titulky",
+        "video_id": 28251888
+      },
+      {
+        "episode_id": 30863,
+        "display_name": "Dobrý doktor S06E11 - Dobrý chlapec CZ Dabing",
+        "video_id": 28251759
+      },
+      {
+        "episode_id": 30867,
+        "display_name": "Dobrý doktor S06E15 - Staří přátelé CZ Titulky",
+        "video_id": 28251830
+      },
+      {
+        "episode_id": 30871,
+        "display_name": "Dobrý doktor S06E19 - Poloviční opatření CZ Dabing",
+        "video_id": 28251885
       }
     ],
     "prepared_not_upload_ready": [
@@ -178537,7 +178987,8 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 39,
+    "ok": 82,
+    "disabled": 335,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
@@ -178547,6 +178998,6 @@
     "needs_whisper": 49584
   },
   "subtitle_followup_statuses": {
-    "needs_subtitle_setup_after_prehrajto_processing": 23763
+    "needs_subtitle_setup_after_prehrajto_processing": 23773
   }
 }
