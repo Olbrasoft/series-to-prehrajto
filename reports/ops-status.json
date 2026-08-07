@@ -2,14 +2,14 @@
   "counts": {
     "backlog_episodes": 168947,
     "manifest_upload_ready_episodes": 1001,
-    "uploaded_episodes": 24429,
-    "prepared_source_episodes": 50098,
+    "uploaded_episodes": 24431,
+    "prepared_source_episodes": 49974,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 20,
+    "language_audited_sources": 180,
     "language_whisper_attempted_sources": 20,
     "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 56762,
@@ -20,10 +20,42 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-08-07T22:59:22Z",
+      "databaseId": 31225669983,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-07T22:57:28Z",
+      "databaseId": 31225567469,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-07T22:57:25Z",
+      "databaseId": 31225565353,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-07T22:57:23Z",
+      "databaseId": 31225563630,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-07T22:55:35Z",
       "databaseId": 31225467376,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -31,7 +63,7 @@
       "createdAt": "2026-08-07T22:54:22Z",
       "databaseId": 31225399114,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "prepare-manifest"
     },
     {
@@ -123,11 +155,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-07T22:31:36Z",
       "databaseId": 31224126253,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -142,38 +174,6 @@
       "conclusion": "success",
       "createdAt": "2026-08-07T22:28:42Z",
       "databaseId": 31223950246,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-07T22:28:37Z",
-      "databaseId": 31223945165,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-07T22:27:46Z",
-      "databaseId": 31223895951,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-07T22:27:22Z",
-      "databaseId": 31223873423,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-07T22:25:54Z",
-      "databaseId": 31223786173,
       "headBranch": "main",
       "status": "completed",
       "workflowName": "update-descriptions"
@@ -57766,6 +57766,11 @@
         "video_id": 28305166
       },
       {
+        "episode_id": 79104,
+        "display_name": "One Tree Hill S06E21 - 21. epizoda CZ Dabing",
+        "video_id": 28305328
+      },
+      {
         "episode_id": 48081,
         "display_name": "Bosch S05E05 - Tunelové vidění CZ Dabing",
         "video_id": 28304904
@@ -57799,6 +57804,11 @@
         "episode_id": 48253,
         "display_name": "Policejní odznak S04E07 - Bolest CZ Dabing",
         "video_id": 28305280
+      },
+      {
+        "episode_id": 14745,
+        "display_name": "Stoupenci zla S01E02 - 2. epizoda CZ Dabing",
+        "video_id": 28305325
       },
       {
         "episode_id": 114182,
@@ -155338,6 +155348,11 @@
         "video_id": 28305166
       },
       {
+        "episode_id": 79104,
+        "display_name": "One Tree Hill S06E21 - 21. epizoda CZ Dabing",
+        "video_id": 28305328
+      },
+      {
         "episode_id": 48081,
         "display_name": "Bosch S05E05 - Tunelové vidění CZ Dabing",
         "video_id": 28304904
@@ -155371,6 +155386,11 @@
         "episode_id": 48253,
         "display_name": "Policejní odznak S04E07 - Bolest CZ Dabing",
         "video_id": 28305280
+      },
+      {
+        "episode_id": 14745,
+        "display_name": "Stoupenci zla S01E02 - 2. epizoda CZ Dabing",
+        "video_id": 28305325
       },
       {
         "episode_id": 114182,
@@ -196587,6 +196607,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
+    "disabled": 160,
     "ok": 19,
     "resolve_failed": 1
   },
