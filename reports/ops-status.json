@@ -2,15 +2,15 @@
   "counts": {
     "backlog_episodes": 169539,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 23880,
-    "prepared_source_episodes": 50439,
+    "uploaded_episodes": 23881,
+    "prepared_source_episodes": 50435,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 20,
-    "language_whisper_attempted_sources": 20,
+    "language_audited_sources": 740,
+    "language_whisper_attempted_sources": 99,
     "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 56794,
     "whisper_review_pending_sources": 49494,
@@ -20,10 +20,26 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-08-07T10:54:26Z",
+      "databaseId": 31171945620,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-sources"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-07T10:54:07Z",
+      "databaseId": 31171925585,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-07T10:52:59Z",
       "databaseId": 31171847660,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "update-descriptions"
     },
     {
@@ -35,11 +51,11 @@
       "workflowName": "audit-language"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-07T10:51:46Z",
       "databaseId": 31171766369,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -161,22 +177,6 @@
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-07T10:30:28Z",
-      "databaseId": 31170348359,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-07T10:30:23Z",
-      "databaseId": 31170342476,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
     }
   ],
   "gaps": {
@@ -56424,6 +56424,11 @@
         "episode_id": 24593,
         "display_name": "Manifest S04E14 - Fata morgána CZ Titulky",
         "video_id": 28287393
+      },
+      {
+        "episode_id": 79777,
+        "display_name": "Prezident v pořadí S02E02 - Bodnutí ocasem CZ Dabing",
+        "video_id": 28287887
       },
       {
         "episode_id": 114182,
@@ -151253,6 +151258,11 @@
         "video_id": 28287393
       },
       {
+        "episode_id": 79777,
+        "display_name": "Prezident v pořadí S02E02 - Bodnutí ocasem CZ Dabing",
+        "video_id": 28287887
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -191097,7 +191107,8 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 19,
+    "disabled": 641,
+    "ok": 98,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
