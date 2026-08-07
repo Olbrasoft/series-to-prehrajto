@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 168947,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 24445,
+    "uploaded_episodes": 24447,
     "prepared_source_episodes": 49872,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 125,
-    "language_whisper_attempted_sources": 60,
-    "language_pending_whisper_sources": 2604,
+    "language_audited_sources": 20,
+    "language_whisper_attempted_sources": 20,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 56763,
     "whisper_review_pending_sources": 49315,
     "subtitle_followup_sources": 24100,
@@ -19,19 +19,35 @@
   },
   "workflow_runs": [
     {
+      "conclusion": "success",
+      "createdAt": "2026-08-07T23:19:34Z",
+      "databaseId": 31226775728,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-07T23:19:30Z",
+      "databaseId": 31226772931,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "process-whisper-review"
+    },
+    {
       "conclusion": "",
       "createdAt": "2026-08-07T23:18:52Z",
       "databaseId": 31226740949,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-07T23:18:15Z",
       "databaseId": 31226707636,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -107,11 +123,11 @@
       "workflowName": "prepare-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-07T23:10:11Z",
       "databaseId": 31226258854,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -158,22 +174,6 @@
       "conclusion": "success",
       "createdAt": "2026-08-07T23:00:33Z",
       "databaseId": 31225737701,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-07T22:59:22Z",
-      "databaseId": 31225669983,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-07T22:57:28Z",
-      "databaseId": 31225567469,
       "headBranch": "main",
       "status": "completed",
       "workflowName": "update-descriptions"
@@ -57841,9 +57841,19 @@
         "video_id": 28305614
       },
       {
+        "episode_id": 10636,
+        "display_name": "Jeho temné esence S03E08 - 8. epizoda CZ Dabing",
+        "video_id": 28305667
+      },
+      {
         "episode_id": 50781,
         "display_name": "Narcos: Mexiko S01E06 - Poslední hranice CZ Dabing",
         "video_id": 28305588
+      },
+      {
+        "episode_id": 50769,
+        "display_name": "Narcos: Mexiko S03E01 - Dvanáct kroků CZ Dabing",
+        "video_id": 28305648
       },
       {
         "episode_id": 114182,
@@ -155493,9 +155503,19 @@
         "video_id": 28305614
       },
       {
+        "episode_id": 10636,
+        "display_name": "Jeho temné esence S03E08 - 8. epizoda CZ Dabing",
+        "video_id": 28305667
+      },
+      {
         "episode_id": 50781,
         "display_name": "Narcos: Mexiko S01E06 - Poslední hranice CZ Dabing",
         "video_id": 28305588
+      },
+      {
+        "episode_id": 50769,
+        "display_name": "Narcos: Mexiko S03E01 - Dvanáct kroků CZ Dabing",
+        "video_id": 28305648
       },
       {
         "episode_id": 114182,
@@ -196747,8 +196767,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 59,
-    "disabled": 65,
+    "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
