@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 169695,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 23624,
-    "prepared_source_episodes": 50372,
+    "uploaded_episodes": 23637,
+    "prepared_source_episodes": 50297,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 20,
-    "language_whisper_attempted_sources": 20,
-    "language_pending_whisper_sources": 2624,
+    "language_audited_sources": 185,
+    "language_whisper_attempted_sources": 40,
+    "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 56795,
     "whisper_review_pending_sources": 49482,
     "subtitle_followup_sources": 23949,
@@ -20,18 +20,82 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-08-07T06:35:35Z",
-      "databaseId": 31154487069,
+      "createdAt": "2026-08-07T06:48:40Z",
+      "databaseId": 31155264775,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-07T06:48:35Z",
+      "databaseId": 31155259223,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-08-07T06:47:51Z",
+      "databaseId": 31155214497,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-07T06:38:20Z",
+      "databaseId": 31154649017,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-07T06:37:26Z",
+      "databaseId": 31154595565,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-07T06:36:52Z",
+      "databaseId": 31154562193,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-07T06:36:49Z",
+      "databaseId": 31154559185,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-07T06:36:46Z",
+      "databaseId": 31154556624,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-07T06:35:35Z",
+      "databaseId": 31154487069,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "cancelled",
       "createdAt": "2026-08-07T06:35:30Z",
       "databaseId": 31154481515,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -75,11 +139,11 @@
       "workflowName": "audit-language"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-07T06:25:42Z",
       "databaseId": 31153897273,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -113,70 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-07T06:16:16Z",
-      "databaseId": 31153359068,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-07T06:10:37Z",
-      "databaseId": 31153040074,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-07T06:05:14Z",
-      "databaseId": 31152736371,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-07T06:00:43Z",
-      "databaseId": 31152479406,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-sources"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-07T06:00:36Z",
-      "databaseId": 31152471289,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-07T06:00:32Z",
-      "databaseId": 31152467146,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-07T05:59:17Z",
-      "databaseId": 31152393089,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-07T05:59:11Z",
-      "databaseId": 31152387262,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
     }
   ],
   "gaps": {
@@ -55786,6 +55786,41 @@
         "video_id": 28280642
       },
       {
+        "episode_id": 16384,
+        "display_name": "Vetřelec: Země S01E08 - Skutečná monstra CZ Dabing",
+        "video_id": 28281049
+      },
+      {
+        "episode_id": 125572,
+        "display_name": "Modrooký samuraj S01E01 - Nečistý kov CZ Titulky",
+        "video_id": 28281104
+      },
+      {
+        "episode_id": 6244,
+        "display_name": "Manifest S01E04 - Nevyzvednutá zavazadla CZ Dabing",
+        "video_id": 28281190
+      },
+      {
+        "episode_id": 6248,
+        "display_name": "Manifest S01E08 - Není návratu CZ Dabing",
+        "video_id": 28281271
+      },
+      {
+        "episode_id": 123537,
+        "display_name": "Rodinný typ S02E05 - Návrat domů CZ Dabing",
+        "video_id": 28281067
+      },
+      {
+        "episode_id": 123541,
+        "display_name": "Rodinný typ S02E09 - Závěrečný akt CZ Dabing",
+        "video_id": 28281153
+      },
+      {
+        "episode_id": 174569,
+        "display_name": "Rodinný typ S03E04 - 4. epizoda CZ Titulky",
+        "video_id": 28281260
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -93829,6 +93864,36 @@
         "episode_id": 60059,
         "display_name": "Outer Banks S04E08 - Rodinná hrobka CZ Titulky",
         "video_id": 28280867
+      },
+      {
+        "episode_id": 16374,
+        "display_name": "Vetřelec: Země S01E03 - Proměna CZ Dabing",
+        "video_id": 28281071
+      },
+      {
+        "episode_id": 16378,
+        "display_name": "Vetřelec: Země S01E05 - Ve vesmíru vás nikdo... CZ Dabing",
+        "video_id": 28281151
+      },
+      {
+        "episode_id": 16382,
+        "display_name": "Vetřelec: Země S01E07 - Zrození CZ Dabing",
+        "video_id": 28281284
+      },
+      {
+        "episode_id": 12775,
+        "display_name": "Zámek a klíč S01E04 - Pánové klíčů CZ Dabing",
+        "video_id": 28281066
+      },
+      {
+        "episode_id": 12771,
+        "display_name": "Zámek a klíč S01E08 - Kousek zas**ného sluníčka CZ Dabing",
+        "video_id": 28281145
+      },
+      {
+        "episode_id": 6171,
+        "display_name": "Zámek a klíč S02E01 - Premiéra CZ Titulky",
+        "video_id": 28281218
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -149333,6 +149398,41 @@
         "video_id": 28280642
       },
       {
+        "episode_id": 16384,
+        "display_name": "Vetřelec: Země S01E08 - Skutečná monstra CZ Dabing",
+        "video_id": 28281049
+      },
+      {
+        "episode_id": 125572,
+        "display_name": "Modrooký samuraj S01E01 - Nečistý kov CZ Titulky",
+        "video_id": 28281104
+      },
+      {
+        "episode_id": 6244,
+        "display_name": "Manifest S01E04 - Nevyzvednutá zavazadla CZ Dabing",
+        "video_id": 28281190
+      },
+      {
+        "episode_id": 6248,
+        "display_name": "Manifest S01E08 - Není návratu CZ Dabing",
+        "video_id": 28281271
+      },
+      {
+        "episode_id": 123537,
+        "display_name": "Rodinný typ S02E05 - Návrat domů CZ Dabing",
+        "video_id": 28281067
+      },
+      {
+        "episode_id": 123541,
+        "display_name": "Rodinný typ S02E09 - Závěrečný akt CZ Dabing",
+        "video_id": 28281153
+      },
+      {
+        "episode_id": 174569,
+        "display_name": "Rodinný typ S03E04 - 4. epizoda CZ Titulky",
+        "video_id": 28281260
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -187376,6 +187476,36 @@
         "episode_id": 60059,
         "display_name": "Outer Banks S04E08 - Rodinná hrobka CZ Titulky",
         "video_id": 28280867
+      },
+      {
+        "episode_id": 16374,
+        "display_name": "Vetřelec: Země S01E03 - Proměna CZ Dabing",
+        "video_id": 28281071
+      },
+      {
+        "episode_id": 16378,
+        "display_name": "Vetřelec: Země S01E05 - Ve vesmíru vás nikdo... CZ Dabing",
+        "video_id": 28281151
+      },
+      {
+        "episode_id": 16382,
+        "display_name": "Vetřelec: Země S01E07 - Zrození CZ Dabing",
+        "video_id": 28281284
+      },
+      {
+        "episode_id": 12775,
+        "display_name": "Zámek a klíč S01E04 - Pánové klíčů CZ Dabing",
+        "video_id": 28281066
+      },
+      {
+        "episode_id": 12771,
+        "display_name": "Zámek a klíč S01E08 - Kousek zas**ného sluníčka CZ Dabing",
+        "video_id": 28281145
+      },
+      {
+        "episode_id": 6171,
+        "display_name": "Zámek a klíč S02E01 - Premiéra CZ Titulky",
+        "video_id": 28281218
       }
     ],
     "prepared_not_upload_ready": [
@@ -188537,7 +188667,8 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 19,
+    "disabled": 145,
+    "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
