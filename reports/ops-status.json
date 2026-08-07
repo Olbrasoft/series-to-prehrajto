@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 169161,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 24276,
-    "prepared_source_episodes": 50453,
+    "uploaded_episodes": 24292,
+    "prepared_source_episodes": 50476,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 197,
+    "language_audited_sources": 40,
     "language_whisper_attempted_sources": 40,
-    "language_pending_whisper_sources": 2624,
+    "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 56776,
     "whisper_review_pending_sources": 49397,
     "subtitle_followup_sources": 24053,
@@ -20,34 +20,74 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-08-07T18:02:51Z",
-      "databaseId": 31205135550,
+      "createdAt": "2026-08-07T18:18:22Z",
+      "databaseId": 31206328188,
       "headBranch": "main",
       "status": "in_progress",
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-07T18:17:23Z",
+      "databaseId": 31206254783,
+      "headBranch": "main",
+      "status": "completed",
       "workflowName": "update-descriptions"
     },
     {
       "conclusion": "",
-      "createdAt": "2026-08-07T18:02:48Z",
-      "databaseId": 31205130783,
+      "createdAt": "2026-08-07T18:16:11Z",
+      "databaseId": 31206165032,
       "headBranch": "main",
       "status": "in_progress",
-      "workflowName": "process-whisper-review"
+      "workflowName": "prepare-manifest"
     },
     {
       "conclusion": "",
-      "createdAt": "2026-08-07T18:02:45Z",
-      "databaseId": 31205127190,
+      "createdAt": "2026-08-07T18:15:54Z",
+      "databaseId": 31206143711,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-07T18:13:58Z",
+      "databaseId": 31205994065,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "audit-language"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
+      "createdAt": "2026-08-07T18:02:51Z",
+      "databaseId": 31205135550,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-07T18:02:48Z",
+      "databaseId": 31205130783,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-07T18:02:45Z",
+      "databaseId": 31205127190,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-07T18:01:46Z",
       "databaseId": 31205049776,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -59,11 +99,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-07T18:01:21Z",
       "databaseId": 31205017840,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -137,46 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-07T17:46:38Z",
-      "databaseId": 31203869876,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-07T17:46:06Z",
-      "databaseId": 31203829282,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-07T17:46:01Z",
-      "databaseId": 31203821978,
-      "headBranch": "main",
-      "status": "pending",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-07T17:46:01Z",
-      "databaseId": 31203821949,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-07T17:44:51Z",
-      "databaseId": 31203729990,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
     }
   ],
   "gaps": {
@@ -57401,6 +57401,26 @@
         "video_id": 28299190
       },
       {
+        "episode_id": 14748,
+        "display_name": "Stoupenci zla S01E05 - 5. epizoda CZ Dabing",
+        "video_id": 28299293
+      },
+      {
+        "episode_id": 14760,
+        "display_name": "Stoupenci zla S02E02 - 2. epizoda CZ Dabing",
+        "video_id": 28299336
+      },
+      {
+        "episode_id": 14764,
+        "display_name": "Stoupenci zla S02E06 - 6. epizoda CZ Dabing",
+        "video_id": 28299370
+      },
+      {
+        "episode_id": 14768,
+        "display_name": "Stoupenci zla S02E10 - 10. epizoda CZ Dabing",
+        "video_id": 28299414
+      },
+      {
         "episode_id": 52633,
         "display_name": "O.C. S04E01 - Mstitelé CZ Titulky",
         "video_id": 28298898
@@ -57414,6 +57434,31 @@
         "episode_id": 70313,
         "display_name": "Star Trek S01E29 - Operace: Vyhlazení CZ Dabing",
         "video_id": 28299022
+      },
+      {
+        "episode_id": 70301,
+        "display_name": "Star Trek S02E09 - Proměna CZ Dabing",
+        "video_id": 28299147
+      },
+      {
+        "episode_id": 70261,
+        "display_name": "Star Trek S02E12 - Smrtící roky CZ Dabing",
+        "video_id": 28299220
+      },
+      {
+        "episode_id": 70317,
+        "display_name": "Star Trek S02E22 - Byť zvána jinak CZ Dabing",
+        "video_id": 28299258
+      },
+      {
+        "episode_id": 70305,
+        "display_name": "Star Trek S02E23 - Sláva Omegy CZ Dabing",
+        "video_id": 28299332
+      },
+      {
+        "episode_id": 70265,
+        "display_name": "Star Trek S02E24 - Absolutní počítač CZ Dabing",
+        "video_id": 28299389
       },
       {
         "episode_id": 114182,
@@ -97081,6 +97126,16 @@
         "video_id": 28299116
       },
       {
+        "episode_id": 5722,
+        "display_name": "Diplomatické vztahy S02E05 - Svatá podvodnice CZ Dabing",
+        "video_id": 28299188
+      },
+      {
+        "episode_id": 5730,
+        "display_name": "Diplomatické vztahy S03E07 - Nežádoucí osoba CZ Titulky",
+        "video_id": 28299330
+      },
+      {
         "episode_id": 60587,
         "display_name": "Ray Donovan S07E05 - An Irish lullaby CZ Titulky",
         "video_id": 28298861
@@ -97089,6 +97144,31 @@
         "episode_id": 5711,
         "display_name": "Diplomatické vztahy S01E02 - Neříkejte tomu únos CZ Dabing",
         "video_id": 28298944
+      },
+      {
+        "episode_id": 100527,
+        "display_name": "Atlanta S01E10 - Kabát CZ Titulky",
+        "video_id": 28299273
+      },
+      {
+        "episode_id": 51527,
+        "display_name": "Falling Skies S01E05 - Zabíjej tiše CZ Titulky",
+        "video_id": 28299308
+      },
+      {
+        "episode_id": 51523,
+        "display_name": "Falling Skies S01E06 - Útočistě 1.část CZ Titulky",
+        "video_id": 28299369
+      },
+      {
+        "episode_id": 51507,
+        "display_name": "Falling Skies S03E02 - Vedlejší škody CZ Titulky",
+        "video_id": 28299438
+      },
+      {
+        "episode_id": 93995,
+        "display_name": "Big Mouth S03E05 - Florida CZ Titulky",
+        "video_id": 28299511
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -154208,6 +154288,26 @@
         "video_id": 28299190
       },
       {
+        "episode_id": 14748,
+        "display_name": "Stoupenci zla S01E05 - 5. epizoda CZ Dabing",
+        "video_id": 28299293
+      },
+      {
+        "episode_id": 14760,
+        "display_name": "Stoupenci zla S02E02 - 2. epizoda CZ Dabing",
+        "video_id": 28299336
+      },
+      {
+        "episode_id": 14764,
+        "display_name": "Stoupenci zla S02E06 - 6. epizoda CZ Dabing",
+        "video_id": 28299370
+      },
+      {
+        "episode_id": 14768,
+        "display_name": "Stoupenci zla S02E10 - 10. epizoda CZ Dabing",
+        "video_id": 28299414
+      },
+      {
         "episode_id": 52633,
         "display_name": "O.C. S04E01 - Mstitelé CZ Titulky",
         "video_id": 28298898
@@ -154221,6 +154321,31 @@
         "episode_id": 70313,
         "display_name": "Star Trek S01E29 - Operace: Vyhlazení CZ Dabing",
         "video_id": 28299022
+      },
+      {
+        "episode_id": 70301,
+        "display_name": "Star Trek S02E09 - Proměna CZ Dabing",
+        "video_id": 28299147
+      },
+      {
+        "episode_id": 70261,
+        "display_name": "Star Trek S02E12 - Smrtící roky CZ Dabing",
+        "video_id": 28299220
+      },
+      {
+        "episode_id": 70317,
+        "display_name": "Star Trek S02E22 - Byť zvána jinak CZ Dabing",
+        "video_id": 28299258
+      },
+      {
+        "episode_id": 70305,
+        "display_name": "Star Trek S02E23 - Sláva Omegy CZ Dabing",
+        "video_id": 28299332
+      },
+      {
+        "episode_id": 70265,
+        "display_name": "Star Trek S02E24 - Absolutní počítač CZ Dabing",
+        "video_id": 28299389
       },
       {
         "episode_id": 114182,
@@ -193888,6 +194013,16 @@
         "video_id": 28299116
       },
       {
+        "episode_id": 5722,
+        "display_name": "Diplomatické vztahy S02E05 - Svatá podvodnice CZ Dabing",
+        "video_id": 28299188
+      },
+      {
+        "episode_id": 5730,
+        "display_name": "Diplomatické vztahy S03E07 - Nežádoucí osoba CZ Titulky",
+        "video_id": 28299330
+      },
+      {
         "episode_id": 60587,
         "display_name": "Ray Donovan S07E05 - An Irish lullaby CZ Titulky",
         "video_id": 28298861
@@ -193896,6 +194031,31 @@
         "episode_id": 5711,
         "display_name": "Diplomatické vztahy S01E02 - Neříkejte tomu únos CZ Dabing",
         "video_id": 28298944
+      },
+      {
+        "episode_id": 100527,
+        "display_name": "Atlanta S01E10 - Kabát CZ Titulky",
+        "video_id": 28299273
+      },
+      {
+        "episode_id": 51527,
+        "display_name": "Falling Skies S01E05 - Zabíjej tiše CZ Titulky",
+        "video_id": 28299308
+      },
+      {
+        "episode_id": 51523,
+        "display_name": "Falling Skies S01E06 - Útočistě 1.část CZ Titulky",
+        "video_id": 28299369
+      },
+      {
+        "episode_id": 51507,
+        "display_name": "Falling Skies S03E02 - Vedlejší škody CZ Titulky",
+        "video_id": 28299438
+      },
+      {
+        "episode_id": 93995,
+        "display_name": "Big Mouth S03E05 - Florida CZ Titulky",
+        "video_id": 28299511
       }
     ],
     "prepared_not_upload_ready": [
@@ -195058,7 +195218,6 @@
   "language_verdicts": {},
   "language_whisper_statuses": {
     "ok": 39,
-    "disabled": 157,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
