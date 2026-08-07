@@ -2,36 +2,100 @@
   "counts": {
     "backlog_episodes": 169968,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 23495,
-    "prepared_source_episodes": 50306,
+    "uploaded_episodes": 23496,
+    "prepared_source_episodes": 50312,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 72,
+    "language_audited_sources": 82,
     "language_whisper_attempted_sources": 40,
     "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 56797,
     "whisper_review_pending_sources": 49484,
-    "subtitle_followup_sources": 23940,
-    "subtitle_followup_pending_sources": 23940
+    "subtitle_followup_sources": 23941,
+    "subtitle_followup_pending_sources": 23941
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-08-07T03:45:59Z",
-      "databaseId": 31145341923,
+      "createdAt": "2026-08-07T03:51:13Z",
+      "databaseId": 31145597984,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-07T03:51:08Z",
+      "databaseId": 31145593905,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-07T03:51:02Z",
+      "databaseId": 31145588337,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-07T03:50:45Z",
+      "databaseId": 31145573232,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
+      "conclusion": "cancelled",
+      "createdAt": "2026-08-07T03:50:41Z",
+      "databaseId": 31145570368,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-07T03:47:21Z",
+      "databaseId": 31145410174,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
       "conclusion": "",
+      "createdAt": "2026-08-07T03:47:18Z",
+      "databaseId": 31145408282,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-07T03:47:16Z",
+      "databaseId": 31145406822,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-07T03:45:59Z",
+      "databaseId": 31145341923,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "cancelled",
       "createdAt": "2026-08-07T03:38:43Z",
       "databaseId": 31144974353,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -113,70 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-07T03:09:49Z",
-      "databaseId": 31143498328,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-07T03:06:23Z",
-      "databaseId": 31143311067,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-07T03:03:18Z",
-      "databaseId": 31143144443,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-07T03:02:04Z",
-      "databaseId": 31143077929,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-07T03:00:37Z",
-      "databaseId": 31143000500,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-07T02:58:48Z",
-      "databaseId": 31142902901,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-07T02:52:56Z",
-      "databaseId": 31142601909,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-07T02:50:50Z",
-      "databaseId": 31142491594,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
     }
   ],
   "gaps": {
@@ -55419,6 +55419,11 @@
         "episode_id": 7812,
         "display_name": "Halo S02E01 - Svatyně CZ Dabing",
         "video_id": 28277262
+      },
+      {
+        "episode_id": 51184,
+        "display_name": "The Orville S01E06 - Krill CZ Titulky",
+        "video_id": 28277390
       },
       {
         "episode_id": 51893,
@@ -148323,6 +148328,11 @@
         "video_id": 28277262
       },
       {
+        "episode_id": 51184,
+        "display_name": "The Orville S01E06 - Krill CZ Titulky",
+        "video_id": 28277390
+      },
+      {
         "episode_id": 51893,
         "display_name": "Solo Leveling S01E12 - 12. epizoda CZ Titulky",
         "video_id": 28276832
@@ -186408,6 +186418,14 @@
         "status": "whisper_failed"
       },
       {
+        "episode_id": 100527,
+        "source_id": -5170313868933112,
+        "series_title": "Atlanta",
+        "episode_code": "S01E10",
+        "source_title": "Atlanta - S1E10 The Jacket EN",
+        "status": "needs_whisper"
+      },
+      {
         "episode_id": 28104,
         "source_id": -13428567874473772,
         "series_title": "Beverly Hills 90210",
@@ -186781,14 +186799,6 @@
         "series_title": "Bylo, nebylo",
         "episode_code": "S07E17",
         "source_title": "Bylo Nebylo S07E17 bony",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 66716,
-        "source_id": -50080567953078023,
-        "series_title": "Bylo, nebylo",
-        "episode_code": "S07E17",
-        "source_title": "Bylo Nebylo S07E17 bang",
         "status": "needs_whisper"
       }
     ],
@@ -187247,7 +187257,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 32,
+    "disabled": 42,
     "ok": 39,
     "resolve_failed": 1
   },
@@ -187258,6 +187268,6 @@
     "needs_whisper": 49442
   },
   "subtitle_followup_statuses": {
-    "needs_subtitle_setup_after_prehrajto_processing": 23940
+    "needs_subtitle_setup_after_prehrajto_processing": 23941
   }
 }
