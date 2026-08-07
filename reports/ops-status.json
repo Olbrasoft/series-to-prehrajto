@@ -2,14 +2,14 @@
   "counts": {
     "backlog_episodes": 169695,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 23638,
-    "prepared_source_episodes": 50297,
+    "uploaded_episodes": 23655,
+    "prepared_source_episodes": 50329,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 185,
+    "language_audited_sources": 40,
     "language_whisper_attempted_sources": 40,
     "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 56795,
@@ -20,26 +20,66 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-08-07T06:49:46Z",
-      "databaseId": 31155328976,
+      "createdAt": "2026-08-07T07:02:40Z",
+      "databaseId": 31156133423,
       "headBranch": "main",
       "status": "in_progress",
-      "workflowName": "update-descriptions"
+      "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
-      "createdAt": "2026-08-07T06:49:41Z",
-      "databaseId": 31155324458,
+      "createdAt": "2026-08-07T07:02:35Z",
+      "databaseId": 31156129199,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-07T06:56:55Z",
+      "databaseId": 31155772342,
       "headBranch": "main",
       "status": "in_progress",
+      "workflowName": "prepare-sources"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-07T06:53:55Z",
+      "databaseId": 31155586666,
+      "headBranch": "main",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
+      "createdAt": "2026-08-07T06:53:44Z",
+      "databaseId": 31155575443,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-07T06:49:46Z",
+      "databaseId": 31155328976,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-07T06:49:41Z",
+      "databaseId": 31155324458,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-07T06:48:40Z",
       "databaseId": 31155264775,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -59,11 +99,11 @@
       "workflowName": "prepare-manifest"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-07T06:38:20Z",
       "databaseId": 31154649017,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
@@ -137,46 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "refresh-backlog"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-07T06:31:23Z",
-      "databaseId": 31154235611,
-      "headBranch": "main",
-      "status": "pending",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-07T06:27:39Z",
-      "databaseId": 31154009062,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-07T06:25:42Z",
-      "databaseId": 31153897273,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-07T06:18:15Z",
-      "databaseId": 31153470704,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-07T06:18:11Z",
-      "databaseId": 31153467078,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
     }
   ],
   "gaps": {
@@ -55806,6 +55806,26 @@
         "video_id": 28281271
       },
       {
+        "episode_id": 6252,
+        "display_name": "Manifest S01E12 - Uprostřed ničeho CZ Dabing",
+        "video_id": 28281353
+      },
+      {
+        "episode_id": 6256,
+        "display_name": "Manifest S01E16 - Předpokládaný čas odletu CZ Dabing",
+        "video_id": 28281430
+      },
+      {
+        "episode_id": 24556,
+        "display_name": "Manifest S02E03 - Falešný horizont CZ Dabing",
+        "video_id": 28281497
+      },
+      {
+        "episode_id": 24560,
+        "display_name": "Manifest S02E07 - Nouzový východ CZ Dabing",
+        "video_id": 28281566
+      },
+      {
         "episode_id": 123537,
         "display_name": "Rodinný typ S02E05 - Návrat domů CZ Dabing",
         "video_id": 28281067
@@ -55819,6 +55839,26 @@
         "episode_id": 174569,
         "display_name": "Rodinný typ S03E04 - 4. epizoda CZ Titulky",
         "video_id": 28281260
+      },
+      {
+        "episode_id": 36201,
+        "display_name": "Misfits: Zmetci S01E04 - 4. epizoda CZ Dabing",
+        "video_id": 28281340
+      },
+      {
+        "episode_id": 36205,
+        "display_name": "Misfits: Zmetci S02E02 - 2. epizoda CZ Titulky",
+        "video_id": 28281461
+      },
+      {
+        "episode_id": 36209,
+        "display_name": "Misfits: Zmetci S02E06 - 6. epizoda CZ Dabing",
+        "video_id": 28281557
+      },
+      {
+        "episode_id": 50569,
+        "display_name": "Misfits: Zmetci S05E06 - 6. epizoda CZ Dabing",
+        "video_id": 28281632
       },
       {
         "episode_id": 114182,
@@ -93881,6 +93921,31 @@
         "video_id": 28281284
       },
       {
+        "episode_id": 125578,
+        "display_name": "Modrooký samuraj S01E07 - Nic se nezlomí CZ Dabing",
+        "video_id": 28281368
+      },
+      {
+        "episode_id": 6242,
+        "display_name": "Manifest S01E02 - Sestup CZ Dabing",
+        "video_id": 28281457
+      },
+      {
+        "episode_id": 6246,
+        "display_name": "Manifest S01E06 - Mimo radar CZ Dabing",
+        "video_id": 28281527
+      },
+      {
+        "episode_id": 6250,
+        "display_name": "Manifest S01E10 - Boční vítr CZ Dabing",
+        "video_id": 28281594
+      },
+      {
+        "episode_id": 6254,
+        "display_name": "Manifest S01E14 - Upgrade CZ Dabing",
+        "video_id": 28281656
+      },
+      {
         "episode_id": 12775,
         "display_name": "Zámek a klíč S01E04 - Pánové klíčů CZ Dabing",
         "video_id": 28281066
@@ -93899,6 +93964,26 @@
         "episode_id": 6175,
         "display_name": "Zámek a klíč S02E05 - Minulost je předehra CZ Titulky",
         "video_id": 28281326
+      },
+      {
+        "episode_id": 6183,
+        "display_name": "Zámek a klíč S03E03 - Pět minut CZ Dabing",
+        "video_id": 28281434
+      },
+      {
+        "episode_id": 6187,
+        "display_name": "Zámek a klíč S03E07 - Opona CZ Dabing",
+        "video_id": 28281503
+      },
+      {
+        "episode_id": 90127,
+        "display_name": "Jak vyrobit vraha S01E03 - 3. epizoda CZ Titulky",
+        "video_id": 28281570
+      },
+      {
+        "episode_id": 90131,
+        "display_name": "Jak vyrobit vraha S01E07 - 7. epizoda CZ Titulky",
+        "video_id": 28281634
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -149423,6 +149508,26 @@
         "video_id": 28281271
       },
       {
+        "episode_id": 6252,
+        "display_name": "Manifest S01E12 - Uprostřed ničeho CZ Dabing",
+        "video_id": 28281353
+      },
+      {
+        "episode_id": 6256,
+        "display_name": "Manifest S01E16 - Předpokládaný čas odletu CZ Dabing",
+        "video_id": 28281430
+      },
+      {
+        "episode_id": 24556,
+        "display_name": "Manifest S02E03 - Falešný horizont CZ Dabing",
+        "video_id": 28281497
+      },
+      {
+        "episode_id": 24560,
+        "display_name": "Manifest S02E07 - Nouzový východ CZ Dabing",
+        "video_id": 28281566
+      },
+      {
         "episode_id": 123537,
         "display_name": "Rodinný typ S02E05 - Návrat domů CZ Dabing",
         "video_id": 28281067
@@ -149436,6 +149541,26 @@
         "episode_id": 174569,
         "display_name": "Rodinný typ S03E04 - 4. epizoda CZ Titulky",
         "video_id": 28281260
+      },
+      {
+        "episode_id": 36201,
+        "display_name": "Misfits: Zmetci S01E04 - 4. epizoda CZ Dabing",
+        "video_id": 28281340
+      },
+      {
+        "episode_id": 36205,
+        "display_name": "Misfits: Zmetci S02E02 - 2. epizoda CZ Titulky",
+        "video_id": 28281461
+      },
+      {
+        "episode_id": 36209,
+        "display_name": "Misfits: Zmetci S02E06 - 6. epizoda CZ Dabing",
+        "video_id": 28281557
+      },
+      {
+        "episode_id": 50569,
+        "display_name": "Misfits: Zmetci S05E06 - 6. epizoda CZ Dabing",
+        "video_id": 28281632
       },
       {
         "episode_id": 114182,
@@ -187498,6 +187623,31 @@
         "video_id": 28281284
       },
       {
+        "episode_id": 125578,
+        "display_name": "Modrooký samuraj S01E07 - Nic se nezlomí CZ Dabing",
+        "video_id": 28281368
+      },
+      {
+        "episode_id": 6242,
+        "display_name": "Manifest S01E02 - Sestup CZ Dabing",
+        "video_id": 28281457
+      },
+      {
+        "episode_id": 6246,
+        "display_name": "Manifest S01E06 - Mimo radar CZ Dabing",
+        "video_id": 28281527
+      },
+      {
+        "episode_id": 6250,
+        "display_name": "Manifest S01E10 - Boční vítr CZ Dabing",
+        "video_id": 28281594
+      },
+      {
+        "episode_id": 6254,
+        "display_name": "Manifest S01E14 - Upgrade CZ Dabing",
+        "video_id": 28281656
+      },
+      {
         "episode_id": 12775,
         "display_name": "Zámek a klíč S01E04 - Pánové klíčů CZ Dabing",
         "video_id": 28281066
@@ -187516,6 +187666,26 @@
         "episode_id": 6175,
         "display_name": "Zámek a klíč S02E05 - Minulost je předehra CZ Titulky",
         "video_id": 28281326
+      },
+      {
+        "episode_id": 6183,
+        "display_name": "Zámek a klíč S03E03 - Pět minut CZ Dabing",
+        "video_id": 28281434
+      },
+      {
+        "episode_id": 6187,
+        "display_name": "Zámek a klíč S03E07 - Opona CZ Dabing",
+        "video_id": 28281503
+      },
+      {
+        "episode_id": 90127,
+        "display_name": "Jak vyrobit vraha S01E03 - 3. epizoda CZ Titulky",
+        "video_id": 28281570
+      },
+      {
+        "episode_id": 90131,
+        "display_name": "Jak vyrobit vraha S01E07 - 7. epizoda CZ Titulky",
+        "video_id": 28281634
       }
     ],
     "prepared_not_upload_ready": [
@@ -188677,7 +188847,6 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 145,
     "ok": 39,
     "resolve_failed": 1
   },
