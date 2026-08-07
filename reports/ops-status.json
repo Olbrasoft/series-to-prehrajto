@@ -1,15 +1,15 @@
 {
   "counts": {
     "backlog_episodes": 169968,
-    "manifest_upload_ready_episodes": 1003,
-    "uploaded_episodes": 23400,
-    "prepared_source_episodes": 50321,
+    "manifest_upload_ready_episodes": 1000,
+    "uploaded_episodes": 23420,
+    "prepared_source_episodes": 50323,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 81,
+    "language_audited_sources": 63,
     "language_whisper_attempted_sources": 60,
     "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 56802,
@@ -20,10 +20,66 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-08-07T02:37:46Z",
+      "databaseId": 31141812598,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-07T02:37:42Z",
+      "databaseId": 31141809182,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-08-07T02:33:50Z",
+      "databaseId": 31141609850,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-07T02:25:32Z",
+      "databaseId": 31141177885,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-07T02:25:29Z",
+      "databaseId": 31141175138,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-07T02:25:26Z",
+      "databaseId": 31141172874,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-07T02:25:22Z",
+      "databaseId": 31141169889,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-07T02:24:03Z",
       "databaseId": 31141098882,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -95,7 +151,7 @@
       "createdAt": "2026-08-07T01:46:51Z",
       "databaseId": 31139121181,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "prepare-descriptions"
     },
     {
@@ -107,11 +163,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "failure",
       "createdAt": "2026-08-07T01:45:59Z",
       "databaseId": 31139074599,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-descriptions"
     },
     {
@@ -121,62 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-07T01:45:52Z",
-      "databaseId": 31139069228,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-07T01:44:30Z",
-      "databaseId": 31138992667,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-07T01:36:54Z",
-      "databaseId": 31138587152,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-sources"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-07T01:36:25Z",
-      "databaseId": 31138561184,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-07T01:35:24Z",
-      "databaseId": 31138507531,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-07T01:27:54Z",
-      "databaseId": 31138097966,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-07T01:27:50Z",
-      "databaseId": 31138094641,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
     }
   ],
   "gaps": {
@@ -55226,6 +55226,56 @@
         "video_id": 28274954
       },
       {
+        "episode_id": 48084,
+        "display_name": "Bosch S05E08 - Hora spásy CZ Titulky",
+        "video_id": 28275638
+      },
+      {
+        "episode_id": 64240,
+        "display_name": "Legendy zítřka S06E10 - 10. epizoda CZ Titulky",
+        "video_id": 28275686
+      },
+      {
+        "episode_id": 64244,
+        "display_name": "Legendy zítřka S06E15 - 15. epizoda CZ Titulky",
+        "video_id": 28275722
+      },
+      {
+        "episode_id": 64248,
+        "display_name": "Legendy zítřka S07E04 - 4. epizoda CZ Titulky",
+        "video_id": 28275763
+      },
+      {
+        "episode_id": 76740,
+        "display_name": "Ztraceni ve vesmíru S01E08 - Trajektorie CZ Dabing",
+        "video_id": 28275811
+      },
+      {
+        "episode_id": 76748,
+        "display_name": "Ztraceni ve vesmíru S02E06 - Izolace CZ Dabing",
+        "video_id": 28275865
+      },
+      {
+        "episode_id": 48085,
+        "display_name": "Bosch S05E09 - Zadržte noc CZ Titulky",
+        "video_id": 28275670
+      },
+      {
+        "episode_id": 6557,
+        "display_name": "Pod kupolí S03E12 - Úsvit nového světa CZ Dabing",
+        "video_id": 28275776
+      },
+      {
+        "episode_id": 49605,
+        "display_name": "Miliardy S02E08 - The Kingmaker CZ Dabing",
+        "video_id": 28275853
+      },
+      {
+        "episode_id": 49581,
+        "display_name": "Miliardy S02E11 - Čas Zlaté žáby CZ Dabing",
+        "video_id": 28275885
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -92709,6 +92759,56 @@
         "episode_id": 34011,
         "display_name": "Yellowjackets S03E10 - Uzavřený kruh CZ Dabing",
         "video_id": 28274638
+      },
+      {
+        "episode_id": 48086,
+        "display_name": "Bosch S05E10 - Ten hajzl se podepsal CZ Titulky",
+        "video_id": 28275637
+      },
+      {
+        "episode_id": 64190,
+        "display_name": "Legendy zítřka S03E09 - Beebo the God of War CZ Titulky",
+        "video_id": 28275713
+      },
+      {
+        "episode_id": 64194,
+        "display_name": "Legendy zítřka S03E13 - No Country for Old Dads CZ Titulky",
+        "video_id": 28275767
+      },
+      {
+        "episode_id": 64198,
+        "display_name": "Legendy zítřka S03E17 - Guest Starring John Noble CZ Titulky",
+        "video_id": 28275818
+      },
+      {
+        "episode_id": 64218,
+        "display_name": "Legendy zítřka S05E02 - Meet the Legends CZ Titulky",
+        "video_id": 28275856
+      },
+      {
+        "episode_id": 79783,
+        "display_name": "Prezident v pořadí S02E08 - Domov CZ Dabing",
+        "video_id": 28275652
+      },
+      {
+        "episode_id": 79791,
+        "display_name": "Prezident v pořadí S02E16 - Spad CZ Dabing",
+        "video_id": 28275725
+      },
+      {
+        "episode_id": 84939,
+        "display_name": "Prezident v pořadí S03E02 - #nakloněnárovina CZ Dabing",
+        "video_id": 28275773
+      },
+      {
+        "episode_id": 84943,
+        "display_name": "Prezident v pořadí S03E06 - #kdosestará CZ Dabing",
+        "video_id": 28275821
+      },
+      {
+        "episode_id": 84947,
+        "display_name": "Prezident v pořadí S03E10 - #zacenupravdy CZ Dabing",
+        "video_id": 28275857
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -147653,6 +147753,56 @@
         "video_id": 28274954
       },
       {
+        "episode_id": 48084,
+        "display_name": "Bosch S05E08 - Hora spásy CZ Titulky",
+        "video_id": 28275638
+      },
+      {
+        "episode_id": 64240,
+        "display_name": "Legendy zítřka S06E10 - 10. epizoda CZ Titulky",
+        "video_id": 28275686
+      },
+      {
+        "episode_id": 64244,
+        "display_name": "Legendy zítřka S06E15 - 15. epizoda CZ Titulky",
+        "video_id": 28275722
+      },
+      {
+        "episode_id": 64248,
+        "display_name": "Legendy zítřka S07E04 - 4. epizoda CZ Titulky",
+        "video_id": 28275763
+      },
+      {
+        "episode_id": 76740,
+        "display_name": "Ztraceni ve vesmíru S01E08 - Trajektorie CZ Dabing",
+        "video_id": 28275811
+      },
+      {
+        "episode_id": 76748,
+        "display_name": "Ztraceni ve vesmíru S02E06 - Izolace CZ Dabing",
+        "video_id": 28275865
+      },
+      {
+        "episode_id": 48085,
+        "display_name": "Bosch S05E09 - Zadržte noc CZ Titulky",
+        "video_id": 28275670
+      },
+      {
+        "episode_id": 6557,
+        "display_name": "Pod kupolí S03E12 - Úsvit nového světa CZ Dabing",
+        "video_id": 28275776
+      },
+      {
+        "episode_id": 49605,
+        "display_name": "Miliardy S02E08 - The Kingmaker CZ Dabing",
+        "video_id": 28275853
+      },
+      {
+        "episode_id": 49581,
+        "display_name": "Miliardy S02E11 - Čas Zlaté žáby CZ Dabing",
+        "video_id": 28275885
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -185136,6 +185286,56 @@
         "episode_id": 34011,
         "display_name": "Yellowjackets S03E10 - Uzavřený kruh CZ Dabing",
         "video_id": 28274638
+      },
+      {
+        "episode_id": 48086,
+        "display_name": "Bosch S05E10 - Ten hajzl se podepsal CZ Titulky",
+        "video_id": 28275637
+      },
+      {
+        "episode_id": 64190,
+        "display_name": "Legendy zítřka S03E09 - Beebo the God of War CZ Titulky",
+        "video_id": 28275713
+      },
+      {
+        "episode_id": 64194,
+        "display_name": "Legendy zítřka S03E13 - No Country for Old Dads CZ Titulky",
+        "video_id": 28275767
+      },
+      {
+        "episode_id": 64198,
+        "display_name": "Legendy zítřka S03E17 - Guest Starring John Noble CZ Titulky",
+        "video_id": 28275818
+      },
+      {
+        "episode_id": 64218,
+        "display_name": "Legendy zítřka S05E02 - Meet the Legends CZ Titulky",
+        "video_id": 28275856
+      },
+      {
+        "episode_id": 79783,
+        "display_name": "Prezident v pořadí S02E08 - Domov CZ Dabing",
+        "video_id": 28275652
+      },
+      {
+        "episode_id": 79791,
+        "display_name": "Prezident v pořadí S02E16 - Spad CZ Dabing",
+        "video_id": 28275725
+      },
+      {
+        "episode_id": 84939,
+        "display_name": "Prezident v pořadí S03E02 - #nakloněnárovina CZ Dabing",
+        "video_id": 28275773
+      },
+      {
+        "episode_id": 84943,
+        "display_name": "Prezident v pořadí S03E06 - #kdosestará CZ Dabing",
+        "video_id": 28275821
+      },
+      {
+        "episode_id": 84947,
+        "display_name": "Prezident v pořadí S03E10 - #zacenupravdy CZ Dabing",
+        "video_id": 28275857
       }
     ],
     "prepared_not_upload_ready": [
@@ -186298,7 +186498,7 @@
   "language_verdicts": {},
   "language_whisper_statuses": {
     "ok": 59,
-    "disabled": 21,
+    "disabled": 3,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
