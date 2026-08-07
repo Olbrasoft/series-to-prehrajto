@@ -2,14 +2,14 @@
   "counts": {
     "backlog_episodes": 169968,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 23431,
-    "prepared_source_episodes": 50342,
+    "uploaded_episodes": 23432,
+    "prepared_source_episodes": 50344,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 70,
+    "language_audited_sources": 60,
     "language_whisper_attempted_sources": 60,
     "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 56802,
@@ -20,10 +20,34 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-08-07T02:49:11Z",
+      "databaseId": 31142406022,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-07T02:49:02Z",
+      "databaseId": 31142399230,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-07T02:45:47Z",
+      "databaseId": 31142231188,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-07T02:44:36Z",
       "databaseId": 31142167193,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -35,19 +59,19 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-07T02:39:03Z",
       "databaseId": 31141875483,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-07T02:39:00Z",
       "databaseId": 31141873265,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -153,30 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-07T02:05:01Z",
-      "databaseId": 31140092664,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-07T01:52:52Z",
-      "databaseId": 31139442768,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-07T01:50:47Z",
-      "databaseId": 31139331200,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
     }
   ],
   "gaps": {
@@ -55299,6 +55299,11 @@
         "episode_id": 49541,
         "display_name": "Miliardy S05E07 - Všemocný CZ Dabing",
         "video_id": 28276039
+      },
+      {
+        "episode_id": 49545,
+        "display_name": "Miliardy S05E12 - No Direction Home CZ Dabing",
+        "video_id": 28276107
       },
       {
         "episode_id": 114182,
@@ -147883,6 +147888,11 @@
         "video_id": 28276039
       },
       {
+        "episode_id": 49545,
+        "display_name": "Miliardy S05E12 - No Direction Home CZ Dabing",
+        "video_id": 28276107
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -186608,7 +186618,6 @@
   "language_verdicts": {},
   "language_whisper_statuses": {
     "ok": 59,
-    "disabled": 10,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
