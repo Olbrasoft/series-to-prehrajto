@@ -1,17 +1,17 @@
 {
   "counts": {
-    "backlog_episodes": 169695,
+    "backlog_episodes": 169539,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 23776,
-    "prepared_source_episodes": 50424,
+    "uploaded_episodes": 23782,
+    "prepared_source_episodes": 50334,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 60,
-    "language_whisper_attempted_sources": 60,
-    "language_pending_whisper_sources": 2604,
+    "language_audited_sources": 180,
+    "language_whisper_attempted_sources": 20,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 56795,
     "whisper_review_pending_sources": 49482,
     "subtitle_followup_sources": 23987,
@@ -20,10 +20,58 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-08-07T09:34:35Z",
+      "databaseId": 31166467849,
+      "headBranch": "main",
+      "status": "queued",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-07T09:34:27Z",
+      "databaseId": 31166458928,
+      "headBranch": "main",
+      "status": "queued",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-07T09:33:33Z",
+      "databaseId": 31166395379,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-07T09:33:25Z",
+      "databaseId": 31166386720,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-08-07T09:31:19Z",
+      "databaseId": 31166238886,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-07T09:26:32Z",
+      "databaseId": 31165892492,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "refresh-backlog"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-07T09:22:54Z",
       "databaseId": 31165639336,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-status"
     },
     {
@@ -43,19 +91,19 @@
       "workflowName": "prepare-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-07T09:19:06Z",
       "databaseId": 31165374492,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-07T09:18:48Z",
       "databaseId": 31165353934,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -75,19 +123,19 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-07T09:14:19Z",
       "databaseId": 31165040797,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-07T09:14:16Z",
       "databaseId": 31165037327,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -129,54 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-07T09:01:28Z",
-      "databaseId": 31164142211,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-07T09:00:51Z",
-      "databaseId": 31164098071,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-07T09:00:11Z",
-      "databaseId": 31164046528,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-07T08:57:17Z",
-      "databaseId": 31163848908,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-07T08:57:15Z",
-      "databaseId": 31163845267,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-07T08:57:13Z",
-      "databaseId": 31163843220,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
     }
   ],
   "gaps": {
@@ -56181,6 +56181,11 @@
         "video_id": 28283880
       },
       {
+        "episode_id": 12773,
+        "display_name": "Zámek a klíč S01E06 - Černé dveře CZ Dabing",
+        "video_id": 28283938
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -94566,6 +94571,16 @@
         "video_id": 28283791
       },
       {
+        "episode_id": 5066,
+        "display_name": "Legion S01E01 - Kapitola 1 CZ Titulky",
+        "video_id": 28283901
+      },
+      {
+        "episode_id": 5070,
+        "display_name": "Legion S01E07 - Kapitola 7 CZ Titulky",
+        "video_id": 28284029
+      },
+      {
         "episode_id": 52615,
         "display_name": "O.C. S02E17 - Chmurní bratři CZ Dabing",
         "video_id": 28283529
@@ -94589,6 +94604,21 @@
         "episode_id": 52627,
         "display_name": "O.C. S03E16 - Kočovník CZ Dabing",
         "video_id": 28283810
+      },
+      {
+        "episode_id": 52659,
+        "display_name": "O.C. S03E17 - Cesta CZ Dabing",
+        "video_id": 28283876
+      },
+      {
+        "episode_id": 52635,
+        "display_name": "O.C. S04E09 - Dva otcové CZ Dabing",
+        "video_id": 28283958
+      },
+      {
+        "episode_id": 5067,
+        "display_name": "Legion S01E05 - Kapitola 5 CZ Titulky",
+        "video_id": 28284014
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -150488,6 +150518,11 @@
         "video_id": 28283880
       },
       {
+        "episode_id": 12773,
+        "display_name": "Zámek a klíč S01E06 - Černé dveře CZ Dabing",
+        "video_id": 28283938
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -188873,6 +188908,16 @@
         "video_id": 28283791
       },
       {
+        "episode_id": 5066,
+        "display_name": "Legion S01E01 - Kapitola 1 CZ Titulky",
+        "video_id": 28283901
+      },
+      {
+        "episode_id": 5070,
+        "display_name": "Legion S01E07 - Kapitola 7 CZ Titulky",
+        "video_id": 28284029
+      },
+      {
         "episode_id": 52615,
         "display_name": "O.C. S02E17 - Chmurní bratři CZ Dabing",
         "video_id": 28283529
@@ -188896,6 +188941,21 @@
         "episode_id": 52627,
         "display_name": "O.C. S03E16 - Kočovník CZ Dabing",
         "video_id": 28283810
+      },
+      {
+        "episode_id": 52659,
+        "display_name": "O.C. S03E17 - Cesta CZ Dabing",
+        "video_id": 28283876
+      },
+      {
+        "episode_id": 52635,
+        "display_name": "O.C. S04E09 - Dva otcové CZ Dabing",
+        "video_id": 28283958
+      },
+      {
+        "episode_id": 5067,
+        "display_name": "Legion S01E05 - Kapitola 5 CZ Titulky",
+        "video_id": 28284014
       }
     ],
     "prepared_not_upload_ready": [
@@ -190057,7 +190117,8 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 59,
+    "disabled": 160,
+    "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
