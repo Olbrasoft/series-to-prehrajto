@@ -1,17 +1,17 @@
 {
   "counts": {
     "backlog_episodes": 168818,
-    "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 24524,
-    "prepared_source_episodes": 50269,
+    "manifest_upload_ready_episodes": 1004,
+    "uploaded_episodes": 24534,
+    "prepared_source_episodes": 50300,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 20,
-    "language_whisper_attempted_sources": 20,
-    "language_pending_whisper_sources": 2624,
+    "language_audited_sources": 84,
+    "language_whisper_attempted_sources": 40,
+    "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 56755,
     "whisper_review_pending_sources": 49267,
     "subtitle_followup_sources": 24125,
@@ -20,18 +20,74 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-08-08T00:52:26Z",
-      "databaseId": 31231262516,
+      "createdAt": "2026-08-08T01:09:28Z",
+      "databaseId": 31231978437,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-08-08T01:05:44Z",
+      "databaseId": 31231828258,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-08T00:57:14Z",
+      "databaseId": 31231462716,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-08T00:56:21Z",
+      "databaseId": 31231426333,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-sources"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-08T00:53:43Z",
+      "databaseId": 31231315414,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-08T00:53:39Z",
+      "databaseId": 31231312783,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-08T00:53:37Z",
+      "databaseId": 31231311184,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-08T00:52:26Z",
+      "databaseId": 31231262516,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-08T00:50:06Z",
       "databaseId": 31231158305,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -121,62 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-08T00:37:05Z",
-      "databaseId": 31230594978,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-08T00:34:24Z",
-      "databaseId": 31230472640,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-08T00:31:57Z",
-      "databaseId": 31230359419,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-08T00:31:55Z",
-      "databaseId": 31230357278,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-08T00:31:51Z",
-      "databaseId": 31230353697,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-08T00:31:36Z",
-      "databaseId": 31230341530,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-08T00:29:49Z",
-      "databaseId": 31230253774,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
     }
   ],
   "gaps": {
@@ -58021,6 +58021,16 @@
         "video_id": 28307463
       },
       {
+        "episode_id": 40540,
+        "display_name": "Kriminálka Las Vegas S08E07 - Sbohem a šáteček CZ Dabing",
+        "video_id": 28307552
+      },
+      {
+        "episode_id": 40696,
+        "display_name": "Kriminálka Las Vegas S09E08 - Mladík a jeho ságo CZ Dabing",
+        "video_id": 28307651
+      },
+      {
         "episode_id": 70257,
         "display_name": "Star Trek S02E04 - Zrcadlo, zrcadlo CZ Dabing",
         "video_id": 28307129
@@ -58044,6 +58054,21 @@
         "episode_id": 83801,
         "display_name": "Marvel's Agent Carter S02E09 - Velký humbuk CZ Titulky",
         "video_id": 28307478
+      },
+      {
+        "episode_id": 62537,
+        "display_name": "Dva z Queensu S01E25 - 25. epizoda CZ Dabing",
+        "video_id": 28307541
+      },
+      {
+        "episode_id": 62545,
+        "display_name": "Dva z Queensu S02E08 - 8. epizoda CZ Dabing",
+        "video_id": 28307618
+      },
+      {
+        "episode_id": 62561,
+        "display_name": "Dva z Queensu S02E24 - 24. epizoda CZ Dabing",
+        "video_id": 28307705
       },
       {
         "episode_id": 114182,
@@ -98289,6 +98314,31 @@
         "episode_id": 51502,
         "display_name": "Falling Skies S03E10 - Brazilie CZ Titulky",
         "video_id": 28307493
+      },
+      {
+        "episode_id": 79102,
+        "display_name": "One Tree Hill S06E16 - 16. epizoda CZ Dabing",
+        "video_id": 28307567
+      },
+      {
+        "episode_id": 79174,
+        "display_name": "One Tree Hill S07E19 - 19. epizoda CZ Dabing",
+        "video_id": 28307664
+      },
+      {
+        "episode_id": 79182,
+        "display_name": "One Tree Hill S08E20 - 20. epizoda CZ Dabing",
+        "video_id": 28307696
+      },
+      {
+        "episode_id": 12910,
+        "display_name": "Jeho temné esence S01E01 - Lyřino Jordánské kolegium CZ Titulky",
+        "video_id": 28307740
+      },
+      {
+        "episode_id": 12906,
+        "display_name": "Jeho temné esence S01E05 - Ztracený chlapec CZ Dabing",
+        "video_id": 28307835
       },
       {
         "episode_id": 5723,
@@ -156068,6 +156118,16 @@
         "video_id": 28307463
       },
       {
+        "episode_id": 40540,
+        "display_name": "Kriminálka Las Vegas S08E07 - Sbohem a šáteček CZ Dabing",
+        "video_id": 28307552
+      },
+      {
+        "episode_id": 40696,
+        "display_name": "Kriminálka Las Vegas S09E08 - Mladík a jeho ságo CZ Dabing",
+        "video_id": 28307651
+      },
+      {
         "episode_id": 70257,
         "display_name": "Star Trek S02E04 - Zrcadlo, zrcadlo CZ Dabing",
         "video_id": 28307129
@@ -156091,6 +156151,21 @@
         "episode_id": 83801,
         "display_name": "Marvel's Agent Carter S02E09 - Velký humbuk CZ Titulky",
         "video_id": 28307478
+      },
+      {
+        "episode_id": 62537,
+        "display_name": "Dva z Queensu S01E25 - 25. epizoda CZ Dabing",
+        "video_id": 28307541
+      },
+      {
+        "episode_id": 62545,
+        "display_name": "Dva z Queensu S02E08 - 8. epizoda CZ Dabing",
+        "video_id": 28307618
+      },
+      {
+        "episode_id": 62561,
+        "display_name": "Dva z Queensu S02E24 - 24. epizoda CZ Dabing",
+        "video_id": 28307705
       },
       {
         "episode_id": 114182,
@@ -196338,6 +196413,31 @@
         "video_id": 28307493
       },
       {
+        "episode_id": 79102,
+        "display_name": "One Tree Hill S06E16 - 16. epizoda CZ Dabing",
+        "video_id": 28307567
+      },
+      {
+        "episode_id": 79174,
+        "display_name": "One Tree Hill S07E19 - 19. epizoda CZ Dabing",
+        "video_id": 28307664
+      },
+      {
+        "episode_id": 79182,
+        "display_name": "One Tree Hill S08E20 - 20. epizoda CZ Dabing",
+        "video_id": 28307696
+      },
+      {
+        "episode_id": 12910,
+        "display_name": "Jeho temné esence S01E01 - Lyřino Jordánské kolegium CZ Titulky",
+        "video_id": 28307740
+      },
+      {
+        "episode_id": 12906,
+        "display_name": "Jeho temné esence S01E05 - Ztracený chlapec CZ Dabing",
+        "video_id": 28307835
+      },
+      {
         "episode_id": 5723,
         "display_name": "Diplomatické vztahy S02E06 - Dreadnought CZ Dabing",
         "video_id": 28307117
@@ -196762,6 +196862,22 @@
         "status": "whisper_failed"
       },
       {
+        "episode_id": 81917,
+        "source_id": -47044514215407410,
+        "series_title": "Borci z Blue Mountain State",
+        "episode_code": "S01E01",
+        "source_title": "Borci z Blue Mountain State - S01E01 - It's Called Hazing, Look It Up!",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 81917,
+        "source_id": -36088333678310397,
+        "series_title": "Borci z Blue Mountain State",
+        "episode_code": "S01E01",
+        "source_title": "Borci z Blue Mountain State - S1E1 It's Called Hazing, Look It Up! EN",
+        "status": "needs_whisper"
+      },
+      {
         "episode_id": 24693,
         "source_id": -47697067608167193,
         "series_title": "Brickleberry",
@@ -197063,22 +197179,6 @@
         "series_title": "Castle na zabití",
         "episode_code": "S04E22",
         "source_title": "Castle na zabití S04E22 ⭐GG⭐",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 25371,
-        "source_id": -11369888895700599,
-        "series_title": "Castle na zabití",
-        "episode_code": "S04E22",
-        "source_title": "Castle na zabití S04E22 ⭐Boyd",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 25371,
-        "source_id": -32761226938439955,
-        "series_title": "Castle na zabití",
-        "episode_code": "S04E22",
-        "source_title": "Castle.na.zabití.S04E22 MUI",
         "status": "needs_whisper"
       }
     ],
@@ -197537,7 +197637,8 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 19,
+    "disabled": 44,
+    "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
