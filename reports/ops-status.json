@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 168647,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 24720,
-    "prepared_source_episodes": 50505,
+    "uploaded_episodes": 24726,
+    "prepared_source_episodes": 50532,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 40,
-    "language_whisper_attempted_sources": 40,
-    "language_pending_whisper_sources": 2624,
+    "language_audited_sources": 72,
+    "language_whisper_attempted_sources": 60,
+    "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 56744,
     "whisper_review_pending_sources": 49190,
     "subtitle_followup_sources": 24167,
@@ -20,18 +20,90 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-08-08T04:31:15Z",
-      "databaseId": 31239635248,
+      "createdAt": "2026-08-08T04:40:58Z",
+      "databaseId": 31240007399,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-08T04:40:45Z",
+      "databaseId": 31239997845,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-08T04:40:41Z",
+      "databaseId": 31239995253,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-08T04:40:17Z",
+      "databaseId": 31239981356,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
+      "conclusion": "cancelled",
+      "createdAt": "2026-08-08T04:40:11Z",
+      "databaseId": 31239977720,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-08-08T04:40:02Z",
+      "databaseId": 31239970510,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-08-08T04:39:09Z",
+      "databaseId": 31239935675,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
       "conclusion": "",
+      "createdAt": "2026-08-08T04:35:16Z",
+      "databaseId": 31239791195,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-08T04:32:33Z",
+      "databaseId": 31239687984,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-08T04:31:15Z",
+      "databaseId": 31239635248,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "failure",
       "createdAt": "2026-08-08T04:25:41Z",
       "databaseId": 31239419431,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -43,19 +115,19 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-08T04:25:32Z",
       "databaseId": 31239413509,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-08T04:25:30Z",
       "databaseId": 31239411982,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -75,11 +147,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-08T04:24:16Z",
       "databaseId": 31239363244,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -105,78 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-08T04:16:26Z",
-      "databaseId": 31239073547,
-      "headBranch": "main",
-      "status": "pending",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-08T04:09:17Z",
-      "databaseId": 31238808972,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-08T04:09:14Z",
-      "databaseId": 31238807453,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-08T04:08:06Z",
-      "databaseId": 31238765434,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-08T04:08:00Z",
-      "databaseId": 31238762058,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-08T04:07:30Z",
-      "databaseId": 31238742864,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-08T04:04:04Z",
-      "databaseId": 31238613062,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-08T04:02:41Z",
-      "databaseId": 31238560638,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-08T04:02:30Z",
-      "databaseId": 31238553917,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
     }
   ],
   "gaps": {
@@ -58496,6 +58496,21 @@
         "video_id": 28311772
       },
       {
+        "episode_id": 40800,
+        "display_name": "Kriminálka Las Vegas S15E14 - Kupčení s hrůzou CZ Dabing",
+        "video_id": 28311807
+      },
+      {
+        "episode_id": 40772,
+        "display_name": "Kriminálka Las Vegas S15E18 - Koncovka CZ Titulky",
+        "video_id": 28311840
+      },
+      {
+        "episode_id": 74992,
+        "display_name": "Vidím vás S01E01 - Vítejte, přátelé CZ Dabing",
+        "video_id": 28311874
+      },
+      {
         "episode_id": 51525,
         "display_name": "Falling Skies S01E07 - Útočistě 2.část CZ Titulky",
         "video_id": 28311451
@@ -99276,6 +99291,16 @@
         "video_id": 28311768
       },
       {
+        "episode_id": 40622,
+        "display_name": "Kriminálka Las Vegas S10E08 - Smrt na bowlingu CZ Dabing",
+        "video_id": 28311815
+      },
+      {
+        "episode_id": 40782,
+        "display_name": "Kriminálka Las Vegas S11E05 - Syndrom zaneřáděného domu CZ Dabing",
+        "video_id": 28311861
+      },
+      {
         "episode_id": 70331,
         "display_name": "Star Trek S01E21 - Návrat Archonců CZ Dabing",
         "video_id": 28311438
@@ -99309,6 +99334,11 @@
         "episode_id": 40739,
         "display_name": "Kriminálka Las Vegas S09E18 - Maska CZ Dabing",
         "video_id": 28311730
+      },
+      {
+        "episode_id": 53771,
+        "display_name": "Kriminálka Las Vegas S10E02 - Město duchů CZ Dabing",
+        "video_id": 28311787
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -157523,6 +157553,21 @@
         "video_id": 28311772
       },
       {
+        "episode_id": 40800,
+        "display_name": "Kriminálka Las Vegas S15E14 - Kupčení s hrůzou CZ Dabing",
+        "video_id": 28311807
+      },
+      {
+        "episode_id": 40772,
+        "display_name": "Kriminálka Las Vegas S15E18 - Koncovka CZ Titulky",
+        "video_id": 28311840
+      },
+      {
+        "episode_id": 74992,
+        "display_name": "Vidím vás S01E01 - Vítejte, přátelé CZ Dabing",
+        "video_id": 28311874
+      },
+      {
         "episode_id": 51525,
         "display_name": "Falling Skies S01E07 - Útočistě 2.část CZ Titulky",
         "video_id": 28311451
@@ -198303,6 +198348,16 @@
         "video_id": 28311768
       },
       {
+        "episode_id": 40622,
+        "display_name": "Kriminálka Las Vegas S10E08 - Smrt na bowlingu CZ Dabing",
+        "video_id": 28311815
+      },
+      {
+        "episode_id": 40782,
+        "display_name": "Kriminálka Las Vegas S11E05 - Syndrom zaneřáděného domu CZ Dabing",
+        "video_id": 28311861
+      },
+      {
         "episode_id": 70331,
         "display_name": "Star Trek S01E21 - Návrat Archonců CZ Dabing",
         "video_id": 28311438
@@ -198336,6 +198391,11 @@
         "episode_id": 40739,
         "display_name": "Kriminálka Las Vegas S09E18 - Maska CZ Dabing",
         "video_id": 28311730
+      },
+      {
+        "episode_id": 53771,
+        "display_name": "Kriminálka Las Vegas S10E02 - Město duchů CZ Dabing",
+        "video_id": 28311787
       }
     ],
     "prepared_not_upload_ready": [
@@ -199497,7 +199557,8 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 39,
+    "ok": 59,
+    "disabled": 12,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
