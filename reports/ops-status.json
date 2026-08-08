@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 168647,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 24694,
-    "prepared_source_episodes": 50482,
+    "uploaded_episodes": 24711,
+    "prepared_source_episodes": 50505,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 4974,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 60,
-    "language_whisper_attempted_sources": 60,
-    "language_pending_whisper_sources": 2604,
+    "language_audited_sources": 40,
+    "language_whisper_attempted_sources": 40,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 56744,
     "whisper_review_pending_sources": 49190,
     "subtitle_followup_sources": 24167,
@@ -20,10 +20,74 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-08-08T04:24:19Z",
+      "databaseId": 31239365334,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-08T04:24:16Z",
+      "databaseId": 31239363244,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-08T04:24:09Z",
+      "databaseId": 31239358312,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-08T04:23:11Z",
+      "databaseId": 31239321176,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-08-08T04:17:05Z",
+      "databaseId": 31239097653,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-08T04:16:26Z",
+      "databaseId": 31239073547,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-08T04:09:17Z",
+      "databaseId": 31238808972,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-08T04:09:14Z",
+      "databaseId": 31238807453,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-08T04:08:06Z",
       "databaseId": 31238765434,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -31,7 +95,7 @@
       "createdAt": "2026-08-08T04:08:00Z",
       "databaseId": 31238762058,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "prepare-manifest"
     },
     {
@@ -99,81 +163,17 @@
       "workflowName": "prepare-sources"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-08T03:57:21Z",
       "databaseId": 31238354493,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
       "conclusion": "success",
       "createdAt": "2026-08-08T03:55:23Z",
       "databaseId": 31238283089,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-08T03:55:20Z",
-      "databaseId": 31238281333,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-08T03:55:17Z",
-      "databaseId": 31238280015,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-08T03:53:41Z",
-      "databaseId": 31238217813,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-08T03:53:38Z",
-      "databaseId": 31238215846,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-08T03:47:53Z",
-      "databaseId": 31238000428,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-08T03:43:05Z",
-      "databaseId": 31237818802,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-08T03:42:30Z",
-      "databaseId": 31237794450,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-08T03:36:17Z",
-      "databaseId": 31237569737,
       "headBranch": "main",
       "status": "completed",
       "workflowName": "update-descriptions"
@@ -58471,6 +58471,46 @@
         "video_id": 28311105
       },
       {
+        "episode_id": 79116,
+        "display_name": "One Tree Hill S02E13 - Teď umírá hrdina CZ Dabing",
+        "video_id": 28311462
+      },
+      {
+        "episode_id": 79144,
+        "display_name": "One Tree Hill S02E15 - Neotevřená pošta světu CZ Dabing",
+        "video_id": 28311546
+      },
+      {
+        "episode_id": 51525,
+        "display_name": "Falling Skies S01E07 - Útočistě 2.část CZ Titulky",
+        "video_id": 28311451
+      },
+      {
+        "episode_id": 35529,
+        "display_name": "Bosch S01E04 - Podraz CZ Dabing",
+        "video_id": 28311499
+      },
+      {
+        "episode_id": 79089,
+        "display_name": "One Tree Hill S03E01 - 1. epizoda CZ Dabing",
+        "video_id": 28311545
+      },
+      {
+        "episode_id": 79189,
+        "display_name": "One Tree Hill S03E04 - 4. epizoda CZ Titulky",
+        "video_id": 28311584
+      },
+      {
+        "episode_id": 79185,
+        "display_name": "One Tree Hill S03E06 - 6. epizoda CZ Dabing",
+        "video_id": 28311603
+      },
+      {
+        "episode_id": 79193,
+        "display_name": "One Tree Hill S03E16 - 16. epizoda CZ Dabing",
+        "video_id": 28311636
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -99179,6 +99219,51 @@
         "episode_id": 40667,
         "display_name": "Kriminálka Las Vegas S09E05 - Všechno ostatní nech plavat CZ Dabing",
         "video_id": 28311162
+      },
+      {
+        "episode_id": 70314,
+        "display_name": "Star Trek S02E06 - Stroj zkázy CZ Dabing",
+        "video_id": 28311453
+      },
+      {
+        "episode_id": 62566,
+        "display_name": "Dva z Queensu S03E04 - 4. epizoda CZ Dabing",
+        "video_id": 28311520
+      },
+      {
+        "episode_id": 40710,
+        "display_name": "Kriminálka Las Vegas S09E07 - Kdyby, třeba, možná CZ Dabing",
+        "video_id": 28311569
+      },
+      {
+        "episode_id": 53742,
+        "display_name": "Kriminálka Las Vegas S09E10 - Ještě jedna CZ Dabing",
+        "video_id": 28311642
+      },
+      {
+        "episode_id": 70331,
+        "display_name": "Star Trek S01E21 - Návrat Archonců CZ Dabing",
+        "video_id": 28311438
+      },
+      {
+        "episode_id": 62579,
+        "display_name": "Dva z Queensu S03E17 - 17. epizoda CZ Dabing",
+        "video_id": 28311468
+      },
+      {
+        "episode_id": 62699,
+        "display_name": "Dva z Queensu S05E19 - 19. epizoda CZ Dabing",
+        "video_id": 28311529
+      },
+      {
+        "episode_id": 53743,
+        "display_name": "Kriminálka Las Vegas S09E11 - Temná šichta CZ Dabing",
+        "video_id": 28311580
+      },
+      {
+        "episode_id": 40711,
+        "display_name": "Kriminálka Las Vegas S09E12 - Odzbrojený a nebezpečný CZ Dabing",
+        "video_id": 28311631
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -157368,6 +157453,46 @@
         "video_id": 28311105
       },
       {
+        "episode_id": 79116,
+        "display_name": "One Tree Hill S02E13 - Teď umírá hrdina CZ Dabing",
+        "video_id": 28311462
+      },
+      {
+        "episode_id": 79144,
+        "display_name": "One Tree Hill S02E15 - Neotevřená pošta světu CZ Dabing",
+        "video_id": 28311546
+      },
+      {
+        "episode_id": 51525,
+        "display_name": "Falling Skies S01E07 - Útočistě 2.část CZ Titulky",
+        "video_id": 28311451
+      },
+      {
+        "episode_id": 35529,
+        "display_name": "Bosch S01E04 - Podraz CZ Dabing",
+        "video_id": 28311499
+      },
+      {
+        "episode_id": 79089,
+        "display_name": "One Tree Hill S03E01 - 1. epizoda CZ Dabing",
+        "video_id": 28311545
+      },
+      {
+        "episode_id": 79189,
+        "display_name": "One Tree Hill S03E04 - 4. epizoda CZ Titulky",
+        "video_id": 28311584
+      },
+      {
+        "episode_id": 79185,
+        "display_name": "One Tree Hill S03E06 - 6. epizoda CZ Dabing",
+        "video_id": 28311603
+      },
+      {
+        "episode_id": 79193,
+        "display_name": "One Tree Hill S03E16 - 16. epizoda CZ Dabing",
+        "video_id": 28311636
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -198076,6 +198201,51 @@
         "episode_id": 40667,
         "display_name": "Kriminálka Las Vegas S09E05 - Všechno ostatní nech plavat CZ Dabing",
         "video_id": 28311162
+      },
+      {
+        "episode_id": 70314,
+        "display_name": "Star Trek S02E06 - Stroj zkázy CZ Dabing",
+        "video_id": 28311453
+      },
+      {
+        "episode_id": 62566,
+        "display_name": "Dva z Queensu S03E04 - 4. epizoda CZ Dabing",
+        "video_id": 28311520
+      },
+      {
+        "episode_id": 40710,
+        "display_name": "Kriminálka Las Vegas S09E07 - Kdyby, třeba, možná CZ Dabing",
+        "video_id": 28311569
+      },
+      {
+        "episode_id": 53742,
+        "display_name": "Kriminálka Las Vegas S09E10 - Ještě jedna CZ Dabing",
+        "video_id": 28311642
+      },
+      {
+        "episode_id": 70331,
+        "display_name": "Star Trek S01E21 - Návrat Archonců CZ Dabing",
+        "video_id": 28311438
+      },
+      {
+        "episode_id": 62579,
+        "display_name": "Dva z Queensu S03E17 - 17. epizoda CZ Dabing",
+        "video_id": 28311468
+      },
+      {
+        "episode_id": 62699,
+        "display_name": "Dva z Queensu S05E19 - 19. epizoda CZ Dabing",
+        "video_id": 28311529
+      },
+      {
+        "episode_id": 53743,
+        "display_name": "Kriminálka Las Vegas S09E11 - Temná šichta CZ Dabing",
+        "video_id": 28311580
+      },
+      {
+        "episode_id": 40711,
+        "display_name": "Kriminálka Las Vegas S09E12 - Odzbrojený a nebezpečný CZ Dabing",
+        "video_id": 28311631
       }
     ],
     "prepared_not_upload_ready": [
@@ -199237,7 +199407,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 59,
+    "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
