@@ -2,36 +2,76 @@
   "counts": {
     "backlog_episodes": 167433,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 25940,
-    "prepared_source_episodes": 46669,
+    "uploaded_episodes": 25950,
+    "prepared_source_episodes": 46687,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 40,
+    "language_audited_sources": 96,
     "language_whisper_attempted_sources": 40,
-    "language_pending_whisper_sources": 2604,
-    "whisper_review_sources": 56862,
-    "whisper_review_pending_sources": 49777,
+    "language_pending_whisper_sources": 2624,
+    "whisper_review_sources": 56863,
+    "whisper_review_pending_sources": 49780,
     "subtitle_followup_sources": 24487,
     "subtitle_followup_pending_sources": 24487
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-08-14T13:30:35Z",
-      "databaseId": 31805038839,
+      "createdAt": "2026-08-14T13:41:29Z",
+      "databaseId": 31805893389,
       "headBranch": "main",
       "status": "in_progress",
-      "workflowName": "audit-language"
+      "workflowName": "process-whisper-review"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-08-14T13:41:07Z",
+      "databaseId": 31805865694,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-14T13:32:05Z",
+      "databaseId": 31805159390,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-14T13:31:47Z",
+      "databaseId": 31805134836,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-08-14T13:31:14Z",
+      "databaseId": 31805090547,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-14T13:30:35Z",
+      "databaseId": 31805038839,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-14T13:29:54Z",
       "databaseId": 31804980780,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-status"
     },
     {
@@ -39,7 +79,7 @@
       "createdAt": "2026-08-14T13:27:59Z",
       "databaseId": 31804832839,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "prepare-descriptions"
     },
     {
@@ -59,11 +99,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-14T13:17:38Z",
       "databaseId": 31804055869,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
@@ -83,11 +123,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-14T13:17:14Z",
       "databaseId": 31804024794,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -137,46 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-14T13:07:41Z",
-      "databaseId": 31803313193,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-14T13:07:38Z",
-      "databaseId": 31803310397,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-14T13:06:33Z",
-      "databaseId": 31803228650,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-14T12:57:49Z",
-      "databaseId": 31802571030,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-14T12:57:01Z",
-      "databaseId": 31802516136,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-sources"
     }
   ],
   "gaps": {
@@ -61551,9 +61551,39 @@
         "video_id": 28481210
       },
       {
+        "episode_id": 87692,
+        "display_name": "Hráči S02E01 - Tvář týmu CZ Dabing",
+        "video_id": 28481246
+      },
+      {
+        "episode_id": 87712,
+        "display_name": "Hráči S03E08 - Alley Ups CZ Titulky",
+        "video_id": 28481297
+      },
+      {
+        "episode_id": 87728,
+        "display_name": "Hráči S04E06 - Žádná řeč CZ Dabing",
+        "video_id": 28481339
+      },
+      {
         "episode_id": 53573,
         "display_name": "Pohotovost S10E04 - Občas to nevyjde CZ Titulky",
         "video_id": 28480955
+      },
+      {
+        "episode_id": 53537,
+        "display_name": "Pohotovost S10E06 - Všeobecný prospěch CZ Dabing",
+        "video_id": 28481156
+      },
+      {
+        "episode_id": 53541,
+        "display_name": "Pohotovost S10E12 - Novorozenci CZ Dabing",
+        "video_id": 28481294
+      },
+      {
+        "episode_id": 53545,
+        "display_name": "Pohotovost S10E16 - Odpusť a zapomeň CZ Titulky",
+        "video_id": 28481402
       },
       {
         "episode_id": 114182,
@@ -105386,6 +105416,11 @@
         "video_id": 28481194
       },
       {
+        "episode_id": 57858,
+        "display_name": "iZombie S02E14 - 14. epizoda CZ Dabing",
+        "video_id": 28481254
+      },
+      {
         "episode_id": 57855,
         "display_name": "iZombie S02E15 - 15. epizoda CZ Dabing",
         "video_id": 28480954
@@ -105404,6 +105439,21 @@
         "episode_id": 57835,
         "display_name": "iZombie S03E05 - 5. epizoda CZ Dabing",
         "video_id": 28481107
+      },
+      {
+        "episode_id": 57859,
+        "display_name": "iZombie S04E06 - 6. epizoda CZ Titulky",
+        "video_id": 28481198
+      },
+      {
+        "episode_id": 57875,
+        "display_name": "iZombie S04E12 - 12. epizoda CZ Titulky",
+        "video_id": 28481344
+      },
+      {
+        "episode_id": 146303,
+        "display_name": "Královna Šarlota: Příběh Bridgertonových S01E04 - Králova opora CZ Dabing",
+        "video_id": 28481426
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -166673,9 +166723,39 @@
         "video_id": 28481210
       },
       {
+        "episode_id": 87692,
+        "display_name": "Hráči S02E01 - Tvář týmu CZ Dabing",
+        "video_id": 28481246
+      },
+      {
+        "episode_id": 87712,
+        "display_name": "Hráči S03E08 - Alley Ups CZ Titulky",
+        "video_id": 28481297
+      },
+      {
+        "episode_id": 87728,
+        "display_name": "Hráči S04E06 - Žádná řeč CZ Dabing",
+        "video_id": 28481339
+      },
+      {
         "episode_id": 53573,
         "display_name": "Pohotovost S10E04 - Občas to nevyjde CZ Titulky",
         "video_id": 28480955
+      },
+      {
+        "episode_id": 53537,
+        "display_name": "Pohotovost S10E06 - Všeobecný prospěch CZ Dabing",
+        "video_id": 28481156
+      },
+      {
+        "episode_id": 53541,
+        "display_name": "Pohotovost S10E12 - Novorozenci CZ Dabing",
+        "video_id": 28481294
+      },
+      {
+        "episode_id": 53545,
+        "display_name": "Pohotovost S10E16 - Odpusť a zapomeň CZ Titulky",
+        "video_id": 28481402
       },
       {
         "episode_id": 114182,
@@ -210508,6 +210588,11 @@
         "video_id": 28481194
       },
       {
+        "episode_id": 57858,
+        "display_name": "iZombie S02E14 - 14. epizoda CZ Dabing",
+        "video_id": 28481254
+      },
+      {
         "episode_id": 57855,
         "display_name": "iZombie S02E15 - 15. epizoda CZ Dabing",
         "video_id": 28480954
@@ -210526,6 +210611,21 @@
         "episode_id": 57835,
         "display_name": "iZombie S03E05 - 5. epizoda CZ Dabing",
         "video_id": 28481107
+      },
+      {
+        "episode_id": 57859,
+        "display_name": "iZombie S04E06 - 6. epizoda CZ Titulky",
+        "video_id": 28481198
+      },
+      {
+        "episode_id": 57875,
+        "display_name": "iZombie S04E12 - 12. epizoda CZ Titulky",
+        "video_id": 28481344
+      },
+      {
+        "episode_id": 146303,
+        "display_name": "Královna Šarlota: Příběh Bridgertonových S01E04 - Králova opora CZ Dabing",
+        "video_id": 28481426
       }
     ],
     "prepared_not_upload_ready": [
@@ -211687,13 +211787,14 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
+    "disabled": 56,
     "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
     "whisper_non_cz_needs_subtitles": 5112,
-    "whisper_confirmed_cz": 1973,
-    "needs_whisper": 49735,
+    "whisper_confirmed_cz": 1971,
+    "needs_whisper": 49738,
     "whisper_failed": 42
   },
   "subtitle_followup_statuses": {
