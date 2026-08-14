@@ -2,15 +2,15 @@
   "counts": {
     "backlog_episodes": 167028,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 26330,
-    "prepared_source_episodes": 47191,
+    "uploaded_episodes": 26332,
+    "prepared_source_episodes": 47224,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 20,
-    "language_whisper_attempted_sources": 20,
+    "language_audited_sources": 40,
+    "language_whisper_attempted_sources": 40,
     "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 56899,
     "whisper_review_pending_sources": 50031,
@@ -20,10 +20,50 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-08-14T19:52:27Z",
+      "databaseId": 31835241273,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-sources"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-14T19:52:27Z",
+      "databaseId": 31835241065,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-14T19:49:50Z",
+      "databaseId": 31835039129,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-14T19:48:30Z",
+      "databaseId": 31834940785,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-14T19:47:49Z",
+      "databaseId": 31834888071,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-14T19:47:03Z",
       "databaseId": 31834832480,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-status"
     },
     {
@@ -59,11 +99,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-14T19:38:16Z",
       "databaseId": 31834159664,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -115,11 +155,11 @@
       "workflowName": "prepare-manifest"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-14T19:31:16Z",
       "databaseId": 31833623006,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
@@ -134,46 +174,6 @@
       "conclusion": "success",
       "createdAt": "2026-08-14T19:22:34Z",
       "databaseId": 31832963396,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-14T19:21:46Z",
-      "databaseId": 31832904193,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-14T19:21:20Z",
-      "databaseId": 31832872696,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-14T19:19:36Z",
-      "databaseId": 31832745957,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-14T19:17:22Z",
-      "databaseId": 31832588301,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-14T19:16:08Z",
-      "databaseId": 31832496668,
       "headBranch": "main",
       "status": "completed",
       "workflowName": "update-descriptions"
@@ -62496,6 +62496,11 @@
         "video_id": 28488925
       },
       {
+        "episode_id": 38184,
+        "display_name": "Chicago Fire S05E02 - Skutečný budíček CZ Dabing",
+        "video_id": 28489164
+      },
+      {
         "episode_id": 12369,
         "display_name": "Ledová archa S01E10 - 994 vagonů na délku CZ Dabing",
         "video_id": 28488614
@@ -107354,6 +107359,11 @@
         "episode_id": 38119,
         "display_name": "Chicago Fire S01E12 - Operace CZ Dabing",
         "video_id": 28489126
+      },
+      {
+        "episode_id": 38127,
+        "display_name": "Chicago Fire S01E18 - Hrdina CZ Dabing",
+        "video_id": 28489245
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -169568,6 +169578,11 @@
         "video_id": 28488925
       },
       {
+        "episode_id": 38184,
+        "display_name": "Chicago Fire S05E02 - Skutečný budíček CZ Dabing",
+        "video_id": 28489164
+      },
+      {
         "episode_id": 12369,
         "display_name": "Ledová archa S01E10 - 994 vagonů na délku CZ Dabing",
         "video_id": 28488614
@@ -214426,6 +214441,11 @@
         "episode_id": 38119,
         "display_name": "Chicago Fire S01E12 - Operace CZ Dabing",
         "video_id": 28489126
+      },
+      {
+        "episode_id": 38127,
+        "display_name": "Chicago Fire S01E18 - Hrdina CZ Dabing",
+        "video_id": 28489245
       }
     ],
     "prepared_not_upload_ready": [
@@ -215587,7 +215607,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 19,
+    "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
