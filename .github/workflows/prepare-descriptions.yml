@@ -77,6 +77,10 @@ jobs:
           fi
           exit "$code"
 
+      - name: Compact descriptions
+        if: always()
+        run: python src/compact_descriptions.py plans/descriptions.jsonl --max-bytes 95000000 --keep-errors 200
+
       - name: Verify saved descriptions
         if: always()
         run: |
