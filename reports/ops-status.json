@@ -2,28 +2,52 @@
   "counts": {
     "backlog_episodes": 167595,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 25827,
-    "prepared_source_episodes": 46386,
+    "uploaded_episodes": 25828,
+    "prepared_source_episodes": 46529,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 20,
-    "language_whisper_attempted_sources": 20,
+    "language_audited_sources": 261,
+    "language_whisper_attempted_sources": 50,
     "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 56860,
     "whisper_review_pending_sources": 49764,
-    "subtitle_followup_sources": 24449,
-    "subtitle_followup_pending_sources": 24449
+    "subtitle_followup_sources": 24457,
+    "subtitle_followup_pending_sources": 24457
   },
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-08-14T11:28:26Z",
+      "databaseId": 31796350293,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-14T11:27:11Z",
+      "databaseId": 31796266953,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-14T11:27:03Z",
+      "databaseId": 31796257986,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-14T11:26:04Z",
       "databaseId": 31796192197,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -153,30 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-14T11:06:56Z",
-      "databaseId": 31794905943,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-14T11:06:52Z",
-      "databaseId": 31794902101,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-14T10:59:18Z",
-      "databaseId": 31794386827,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
     }
   ],
   "gaps": {
@@ -61284,6 +61284,11 @@
         "episode_id": 53389,
         "display_name": "Pohotovost S03E06 - Strach z létání CZ Dabing",
         "video_id": 28478035
+      },
+      {
+        "episode_id": 53393,
+        "display_name": "Pohotovost S03E11 - Noční služba CZ Dabing",
+        "video_id": 28478286
       },
       {
         "episode_id": 114182,
@@ -165843,6 +165848,11 @@
         "video_id": 28478035
       },
       {
+        "episode_id": 53393,
+        "display_name": "Pohotovost S03E11 - Noční služba CZ Dabing",
+        "video_id": 28478286
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -210557,7 +210567,8 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 19,
+    "disabled": 211,
+    "ok": 49,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
@@ -210567,6 +210578,6 @@
     "whisper_failed": 42
   },
   "subtitle_followup_statuses": {
-    "needs_subtitle_setup_after_prehrajto_processing": 24449
+    "needs_subtitle_setup_after_prehrajto_processing": 24457
   }
 }
