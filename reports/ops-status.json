@@ -2,22 +2,38 @@
   "counts": {
     "backlog_episodes": 168509,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 25571,
-    "prepared_source_episodes": 46463,
+    "uploaded_episodes": 25574,
+    "prepared_source_episodes": 46540,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 48,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 197,
-    "language_whisper_attempted_sources": 60,
+    "language_audited_sources": 504,
+    "language_whisper_attempted_sources": 108,
     "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 56815,
     "whisper_review_pending_sources": 49465,
-    "subtitle_followup_sources": 24385,
-    "subtitle_followup_pending_sources": 24385
+    "subtitle_followup_sources": 24407,
+    "subtitle_followup_pending_sources": 24407
   },
   "workflow_runs": [
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-14T07:35:20Z",
+      "databaseId": 31780507495,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-14T07:34:42Z",
+      "databaseId": 31780465574,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
     {
       "conclusion": "",
       "createdAt": "2026-08-14T07:33:27Z",
@@ -27,11 +43,11 @@
       "workflowName": "audit-language"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-14T07:32:50Z",
       "databaseId": 31780340303,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-status"
     },
     {
@@ -158,22 +174,6 @@
       "conclusion": "success",
       "createdAt": "2026-08-14T07:14:24Z",
       "databaseId": 31779167390,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-14T07:13:30Z",
-      "databaseId": 31779111960,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-14T07:12:29Z",
-      "databaseId": 31779046682,
       "headBranch": "main",
       "status": "completed",
       "workflowName": "prepare-manifest"
@@ -60651,6 +60651,16 @@
         "video_id": 28468656
       },
       {
+        "episode_id": 84632,
+        "display_name": "Anne s E na konci S01E03 - Ale co je tak tvrdohlavé jako mládí? CZ Dabing",
+        "video_id": 28468751
+      },
+      {
+        "episode_id": 76185,
+        "display_name": "Havaj 5-0 S10E18 - Ztraceni v příboji CZ Dabing",
+        "video_id": 28468768
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -103564,6 +103574,11 @@
         "episode_id": 84651,
         "display_name": "Anne s E na konci S03E09 - Temná, hrozivá temnota CZ Dabing",
         "video_id": 28468371
+      },
+      {
+        "episode_id": 71630,
+        "display_name": "Status: Nežádoucí  S02E08 - 8. epizoda CZ Dabing",
+        "video_id": 28468758
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -163933,6 +163948,16 @@
         "video_id": 28468656
       },
       {
+        "episode_id": 84632,
+        "display_name": "Anne s E na konci S01E03 - Ale co je tak tvrdohlavé jako mládí? CZ Dabing",
+        "video_id": 28468751
+      },
+      {
+        "episode_id": 76185,
+        "display_name": "Havaj 5-0 S10E18 - Ztraceni v příboji CZ Dabing",
+        "video_id": 28468768
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -206846,6 +206871,11 @@
         "episode_id": 84651,
         "display_name": "Anne s E na konci S03E09 - Temná, hrozivá temnota CZ Dabing",
         "video_id": 28468371
+      },
+      {
+        "episode_id": 71630,
+        "display_name": "Status: Nežádoucí  S02E08 - 8. epizoda CZ Dabing",
+        "video_id": 28468758
       }
     ],
     "prepared_not_upload_ready": [
@@ -208007,8 +208037,8 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 137,
-    "ok": 59,
+    "disabled": 396,
+    "ok": 107,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
@@ -208018,6 +208048,6 @@
     "needs_whisper": 49423
   },
   "subtitle_followup_statuses": {
-    "needs_subtitle_setup_after_prehrajto_processing": 24385
+    "needs_subtitle_setup_after_prehrajto_processing": 24407
   }
 }
