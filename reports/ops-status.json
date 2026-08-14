@@ -2,36 +2,68 @@
   "counts": {
     "backlog_episodes": 167227,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 26242,
-    "prepared_source_episodes": 46959,
+    "uploaded_episodes": 26243,
+    "prepared_source_episodes": 46978,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 33,
+    "language_audited_sources": 66,
     "language_whisper_attempted_sources": 20,
     "language_pending_whisper_sources": 2624,
-    "whisper_review_sources": 56890,
-    "whisper_review_pending_sources": 49942,
+    "whisper_review_sources": 56891,
+    "whisper_review_pending_sources": 49952,
     "subtitle_followup_sources": 24512,
     "subtitle_followup_pending_sources": 24512
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-08-14T17:39:52Z",
-      "databaseId": 31825026481,
+      "createdAt": "2026-08-14T17:43:51Z",
+      "databaseId": 31825337600,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-14T17:43:50Z",
+      "databaseId": 31825335605,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-08-14T17:43:45Z",
+      "databaseId": 31825328880,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-14T17:40:59Z",
+      "databaseId": 31825113965,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-14T17:39:52Z",
+      "databaseId": 31825026481,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "cancelled",
       "createdAt": "2026-08-14T17:39:50Z",
       "databaseId": 31825024058,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -39,7 +71,7 @@
       "createdAt": "2026-08-14T17:39:49Z",
       "databaseId": 31825023081,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "sync"
     },
     {
@@ -145,38 +177,6 @@
       "headBranch": "main",
       "status": "pending",
       "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-14T17:17:17Z",
-      "databaseId": 31823289068,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-14T17:17:17Z",
-      "databaseId": 31823288948,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-14T17:15:44Z",
-      "databaseId": 31823168088,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-14T17:14:16Z",
-      "databaseId": 31823054047,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
     }
   ],
   "gaps": {
@@ -106914,6 +106914,11 @@
         "episode_id": 12351,
         "display_name": "Ledová archa S02E10 - Do bílé noci CZ Dabing",
         "video_id": 28486671
+      },
+      {
+        "episode_id": 9803,
+        "display_name": "Ledová archa S03E08 - Dát se do pořádku CZ Dabing",
+        "video_id": 28486777
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -213546,6 +213551,11 @@
         "episode_id": 12351,
         "display_name": "Ledová archa S02E10 - Do bílé noci CZ Dabing",
         "video_id": 28486671
+      },
+      {
+        "episode_id": 9803,
+        "display_name": "Ledová archa S03E08 - Dát se do pořádku CZ Dabing",
+        "video_id": 28486777
       }
     ],
     "prepared_not_upload_ready": [
@@ -214707,14 +214717,14 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 13,
+    "disabled": 46,
     "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
-    "whisper_non_cz_needs_subtitles": 5064,
-    "whisper_confirmed_cz": 1884,
-    "needs_whisper": 49900,
+    "whisper_non_cz_needs_subtitles": 5061,
+    "whisper_confirmed_cz": 1878,
+    "needs_whisper": 49910,
     "whisper_failed": 42
   },
   "subtitle_followup_statuses": {
