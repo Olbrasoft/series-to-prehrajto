@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 167227,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 26164,
-    "prepared_source_episodes": 46852,
+    "uploaded_episodes": 26175,
+    "prepared_source_episodes": 46849,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 40,
-    "language_whisper_attempted_sources": 40,
-    "language_pending_whisper_sources": 2604,
+    "language_audited_sources": 20,
+    "language_whisper_attempted_sources": 20,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 56889,
     "whisper_review_pending_sources": 49919,
     "subtitle_followup_sources": 24500,
@@ -20,10 +20,42 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-08-14T16:26:10Z",
+      "databaseId": 31819313103,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-14T16:26:10Z",
+      "databaseId": 31819313004,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-14T16:20:17Z",
+      "databaseId": 31818849320,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-14T16:19:27Z",
+      "databaseId": 31818782018,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-14T16:18:13Z",
       "databaseId": 31818687766,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-status"
     },
     {
@@ -91,11 +123,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-14T16:07:56Z",
       "databaseId": 31817870160,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
@@ -145,38 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-14T15:57:28Z",
-      "databaseId": 31817021913,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-14T15:56:18Z",
-      "databaseId": 31816929556,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-14T15:55:22Z",
-      "databaseId": 31816853260,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-sources"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-14T15:50:33Z",
-      "databaseId": 31816464080,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
     }
   ],
   "gaps": {
@@ -62101,6 +62101,16 @@
         "video_id": 28484934
       },
       {
+        "episode_id": 17304,
+        "display_name": "To monstrum ve mně S01E05 - Pitka CZ Dabing",
+        "video_id": 28485110
+      },
+      {
+        "episode_id": 12360,
+        "display_name": "Ledová archa S01E01 - Nejdřív se změnilo počasí CZ Titulky",
+        "video_id": 28485167
+      },
+      {
         "episode_id": 37305,
         "display_name": "Star Trek: Hluboký Vesmír Devět S04E12 - Objekt zájmu CZ Dabing",
         "video_id": 28484792
@@ -62124,6 +62134,21 @@
         "episode_id": 37289,
         "display_name": "Star Trek: Hluboký Vesmír Devět S06E13 - Tam za těmi hvězdami CZ Dabing",
         "video_id": 28484935
+      },
+      {
+        "episode_id": 37341,
+        "display_name": "Star Trek: Hluboký Vesmír Devět S07E25 - Co po sobě zanecháš CZ Dabing",
+        "video_id": 28485054
+      },
+      {
+        "episode_id": 105193,
+        "display_name": "Lovci stínů: Nástroje smrti S03E02 - Ti, kdož vládnou CZ Titulky",
+        "video_id": 28485090
+      },
+      {
+        "episode_id": 126129,
+        "display_name": "Lovci stínů: Nástroje smrti S03E03 - Co je dole CZ Titulky",
+        "video_id": 28485135
       },
       {
         "episode_id": 114182,
@@ -106506,6 +106531,21 @@
         "video_id": 28485011
       },
       {
+        "episode_id": 15938,
+        "display_name": "Star Trek: Podivné nové světy S02E06 - Ztracen v překladu CZ Dabing",
+        "video_id": 28485047
+      },
+      {
+        "episode_id": 15942,
+        "display_name": "Star Trek: Podivné nové světy S02E10 - Hegemonie CZ Dabing",
+        "video_id": 28485095
+      },
+      {
+        "episode_id": 15946,
+        "display_name": "Star Trek: Podivné nové světy S03E04 - Hodina vesmírného dobrodružství CZ Dabing",
+        "video_id": 28485151
+      },
+      {
         "episode_id": 16779,
         "display_name": "Jednotky vesmírného nasazení S01E02 - ZACHRAŇTE EPSILON 6! CZ Dabing",
         "video_id": 28484819
@@ -106524,6 +106564,21 @@
         "episode_id": 37527,
         "display_name": "Hvězdná brána - Atlantida S01E07 - Otrávená studnice CZ Dabing",
         "video_id": 28484957
+      },
+      {
+        "episode_id": 37619,
+        "display_name": "Hvězdná brána - Atlantida S01E08 - V podzemí CZ Dabing",
+        "video_id": 28485080
+      },
+      {
+        "episode_id": 37583,
+        "display_name": "Hvězdná brána - Atlantida S01E11 - Oko bouře CZ Dabing",
+        "video_id": 28485132
+      },
+      {
+        "episode_id": 37531,
+        "display_name": "Hvězdná brána - Atlantida S01E14 - Útočiště CZ Dabing",
+        "video_id": 28485175
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -168343,6 +168398,16 @@
         "video_id": 28484934
       },
       {
+        "episode_id": 17304,
+        "display_name": "To monstrum ve mně S01E05 - Pitka CZ Dabing",
+        "video_id": 28485110
+      },
+      {
+        "episode_id": 12360,
+        "display_name": "Ledová archa S01E01 - Nejdřív se změnilo počasí CZ Titulky",
+        "video_id": 28485167
+      },
+      {
         "episode_id": 37305,
         "display_name": "Star Trek: Hluboký Vesmír Devět S04E12 - Objekt zájmu CZ Dabing",
         "video_id": 28484792
@@ -168366,6 +168431,21 @@
         "episode_id": 37289,
         "display_name": "Star Trek: Hluboký Vesmír Devět S06E13 - Tam za těmi hvězdami CZ Dabing",
         "video_id": 28484935
+      },
+      {
+        "episode_id": 37341,
+        "display_name": "Star Trek: Hluboký Vesmír Devět S07E25 - Co po sobě zanecháš CZ Dabing",
+        "video_id": 28485054
+      },
+      {
+        "episode_id": 105193,
+        "display_name": "Lovci stínů: Nástroje smrti S03E02 - Ti, kdož vládnou CZ Titulky",
+        "video_id": 28485090
+      },
+      {
+        "episode_id": 126129,
+        "display_name": "Lovci stínů: Nástroje smrti S03E03 - Co je dole CZ Titulky",
+        "video_id": 28485135
       },
       {
         "episode_id": 114182,
@@ -212748,6 +212828,21 @@
         "video_id": 28485011
       },
       {
+        "episode_id": 15938,
+        "display_name": "Star Trek: Podivné nové světy S02E06 - Ztracen v překladu CZ Dabing",
+        "video_id": 28485047
+      },
+      {
+        "episode_id": 15942,
+        "display_name": "Star Trek: Podivné nové světy S02E10 - Hegemonie CZ Dabing",
+        "video_id": 28485095
+      },
+      {
+        "episode_id": 15946,
+        "display_name": "Star Trek: Podivné nové světy S03E04 - Hodina vesmírného dobrodružství CZ Dabing",
+        "video_id": 28485151
+      },
+      {
         "episode_id": 16779,
         "display_name": "Jednotky vesmírného nasazení S01E02 - ZACHRAŇTE EPSILON 6! CZ Dabing",
         "video_id": 28484819
@@ -212766,6 +212861,21 @@
         "episode_id": 37527,
         "display_name": "Hvězdná brána - Atlantida S01E07 - Otrávená studnice CZ Dabing",
         "video_id": 28484957
+      },
+      {
+        "episode_id": 37619,
+        "display_name": "Hvězdná brána - Atlantida S01E08 - V podzemí CZ Dabing",
+        "video_id": 28485080
+      },
+      {
+        "episode_id": 37583,
+        "display_name": "Hvězdná brána - Atlantida S01E11 - Oko bouře CZ Dabing",
+        "video_id": 28485132
+      },
+      {
+        "episode_id": 37531,
+        "display_name": "Hvězdná brána - Atlantida S01E14 - Útočiště CZ Dabing",
+        "video_id": 28485175
       }
     ],
     "prepared_not_upload_ready": [
@@ -213927,7 +214037,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 39,
+    "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
