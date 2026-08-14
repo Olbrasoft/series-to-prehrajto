@@ -2,15 +2,15 @@
   "counts": {
     "backlog_episodes": 166928,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 26485,
-    "prepared_source_episodes": 47479,
+    "uploaded_episodes": 26488,
+    "prepared_source_episodes": 47493,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 61,
-    "language_whisper_attempted_sources": 60,
+    "language_audited_sources": 40,
+    "language_whisper_attempted_sources": 40,
     "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 56908,
     "whisper_review_pending_sources": 50084,
@@ -20,18 +20,58 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-08-14T22:43:09Z",
-      "databaseId": 31847699441,
+      "createdAt": "2026-08-14T22:46:10Z",
+      "databaseId": 31847894991,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-08-14T22:46:07Z",
+      "databaseId": 31847892095,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-14T22:46:07Z",
+      "databaseId": 31847891751,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-14T22:44:26Z",
+      "databaseId": 31847783591,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-sources"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-14T22:44:14Z",
+      "databaseId": 31847769587,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-14T22:43:09Z",
+      "databaseId": 31847699441,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "cancelled",
       "createdAt": "2026-08-14T22:43:06Z",
       "databaseId": 31847695352,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -47,7 +87,7 @@
       "createdAt": "2026-08-14T22:40:29Z",
       "databaseId": 31847524085,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "audit-language"
     },
     {
@@ -83,11 +123,11 @@
       "workflowName": "process-whisper-review"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-14T22:38:26Z",
       "databaseId": 31847389563,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -99,11 +139,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-08-14T22:33:36Z",
       "databaseId": 31847081373,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "sync"
     },
     {
@@ -137,46 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-14T22:30:21Z",
-      "databaseId": 31846872174,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-14T22:30:15Z",
-      "databaseId": 31846865880,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-14T22:29:08Z",
-      "databaseId": 31846789947,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-14T22:27:59Z",
-      "databaseId": 31846718485,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-14T22:24:57Z",
-      "databaseId": 31846520168,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
     }
   ],
   "gaps": {
@@ -62906,6 +62906,16 @@
         "video_id": 28493437
       },
       {
+        "episode_id": 104172,
+        "display_name": "Star Wars: Povstalci S03E19 - Dvě slunce CZ Dabing",
+        "video_id": 28493459
+      },
+      {
+        "episode_id": 93680,
+        "display_name": "Star Wars: Povstalci S04E06 - Let defenderu CZ Dabing",
+        "video_id": 28493492
+      },
+      {
         "episode_id": 37269,
         "display_name": "Star Trek: Hluboký Vesmír Devět S06E24 - Sirotek času CZ Dabing",
         "video_id": 28493257
@@ -108129,6 +108139,11 @@
         "episode_id": 38331,
         "display_name": "Chicago Fire S11E13 - 13. epizoda CZ Titulky",
         "video_id": 28493410
+      },
+      {
+        "episode_id": 38335,
+        "display_name": "Chicago Fire S12E09 - 9. epizoda CZ Titulky",
+        "video_id": 28493485
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -170753,6 +170768,16 @@
         "video_id": 28493437
       },
       {
+        "episode_id": 104172,
+        "display_name": "Star Wars: Povstalci S03E19 - Dvě slunce CZ Dabing",
+        "video_id": 28493459
+      },
+      {
+        "episode_id": 93680,
+        "display_name": "Star Wars: Povstalci S04E06 - Let defenderu CZ Dabing",
+        "video_id": 28493492
+      },
+      {
         "episode_id": 37269,
         "display_name": "Star Trek: Hluboký Vesmír Devět S06E24 - Sirotek času CZ Dabing",
         "video_id": 28493257
@@ -215976,6 +216001,11 @@
         "episode_id": 38331,
         "display_name": "Chicago Fire S11E13 - 13. epizoda CZ Titulky",
         "video_id": 28493410
+      },
+      {
+        "episode_id": 38335,
+        "display_name": "Chicago Fire S12E09 - 9. epizoda CZ Titulky",
+        "video_id": 28493485
       }
     ],
     "prepared_not_upload_ready": [
@@ -217137,8 +217167,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 59,
-    "disabled": 1,
+    "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
