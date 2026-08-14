@@ -2,15 +2,15 @@
   "counts": {
     "backlog_episodes": 167227,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 26188,
-    "prepared_source_episodes": 46900,
+    "uploaded_episodes": 26202,
+    "prepared_source_episodes": 46901,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 552,
-    "language_whisper_attempted_sources": 115,
+    "language_audited_sources": 96,
+    "language_whisper_attempted_sources": 60,
     "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 56890,
     "whisper_review_pending_sources": 49929,
@@ -20,10 +20,58 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-08-14T16:57:44Z",
+      "databaseId": 31821775406,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-14T16:57:42Z",
+      "databaseId": 31821773303,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-08-14T16:57:38Z",
+      "databaseId": 31821768628,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-14T16:56:06Z",
+      "databaseId": 31821650189,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-sources"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-14T16:51:15Z",
+      "databaseId": 31821265597,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-08-14T16:51:15Z",
+      "databaseId": 31821265596,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-14T16:49:08Z",
       "databaseId": 31821096581,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "update-descriptions"
     },
     {
@@ -31,23 +79,23 @@
       "createdAt": "2026-08-14T16:48:08Z",
       "databaseId": 31821020963,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "audit-language"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-14T16:47:20Z",
       "databaseId": 31820965452,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-14T16:47:19Z",
       "databaseId": 31820965169,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-status"
     },
     {
@@ -55,7 +103,7 @@
       "createdAt": "2026-08-14T16:46:14Z",
       "databaseId": 31820887940,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "prepare-descriptions"
     },
     {
@@ -99,11 +147,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-14T16:39:03Z",
       "databaseId": 31820335474,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -129,54 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-14T16:30:38Z",
-      "databaseId": 31819668119,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-14T16:29:33Z",
-      "databaseId": 31819577083,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-14T16:29:30Z",
-      "databaseId": 31819573885,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-14T16:29:30Z",
-      "databaseId": 31819573374,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-14T16:28:50Z",
-      "databaseId": 31819519794,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-14T16:27:26Z",
-      "databaseId": 31819412102,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
     }
   ],
   "gaps": {
@@ -62176,6 +62176,16 @@
         "video_id": 28485659
       },
       {
+        "episode_id": 17660,
+        "display_name": "Černá holubice S01E01 - Tak na lásku CZ Dabing",
+        "video_id": 28485707
+      },
+      {
+        "episode_id": 16436,
+        "display_name": "Čas čarodějnic S01E05 - 5. epizoda CZ Dabing",
+        "video_id": 28485889
+      },
+      {
         "episode_id": 126133,
         "display_name": "Lovci stínů: Nástroje smrti S03E08 - Procházka v temnotě CZ Titulky",
         "video_id": 28485512
@@ -62189,6 +62199,31 @@
         "episode_id": 126141,
         "display_name": "Lovci stínů: Nástroje smrti S03E16 - Neopouštěj mě CZ Titulky",
         "video_id": 28485642
+      },
+      {
+        "episode_id": 126145,
+        "display_name": "Lovci stínů: Nástroje smrti S03E20 - Město skla CZ Titulky",
+        "video_id": 28485734
+      },
+      {
+        "episode_id": 18005,
+        "display_name": "Star Trek: Podivné nové světy S01E02 - Děti komety CZ Dabing",
+        "video_id": 28485770
+      },
+      {
+        "episode_id": 18013,
+        "display_name": "Star Trek: Podivné nové světy S01E03 - Duch Ilyrie CZ Dabing",
+        "video_id": 28485795
+      },
+      {
+        "episode_id": 18009,
+        "display_name": "Star Trek: Podivné nové světy S01E07 - Klidná bouře CZ Dabing",
+        "video_id": 28485815
+      },
+      {
+        "episode_id": 15933,
+        "display_name": "Star Trek: Podivné nové světy S02E01 - Přerušený kruh CZ Dabing",
+        "video_id": 28485840
       },
       {
         "episode_id": 114182,
@@ -106636,6 +106671,26 @@
         "video_id": 28485593
       },
       {
+        "episode_id": 70010,
+        "display_name": "Léto, kdy jsem zkrásněla S01E07 - Letní láska CZ Dabing",
+        "video_id": 28485693
+      },
+      {
+        "episode_id": 70018,
+        "display_name": "Léto, kdy jsem zkrásněla S03E01 - Poslední sezóna CZ Dabing",
+        "video_id": 28485781
+      },
+      {
+        "episode_id": 70026,
+        "display_name": "Léto, kdy jsem zkrásněla S03E11 - Poslední CZ Dabing",
+        "video_id": 28485826
+      },
+      {
+        "episode_id": 60822,
+        "display_name": "Temná hmota S01E01 - Jsi se svým životem spokojený? CZ Titulky",
+        "video_id": 28485900
+      },
+      {
         "episode_id": 37623,
         "display_name": "Hvězdná brána - Atlantida S01E20 - V obležení, část druhá CZ Dabing",
         "video_id": 28485513
@@ -106644,6 +106699,21 @@
         "episode_id": 37587,
         "display_name": "Hvězdná brána - Atlantida S02E02 - Vetřelec CZ Dabing",
         "video_id": 28485629
+      },
+      {
+        "episode_id": 37539,
+        "display_name": "Hvězdná brána - Atlantida S03E04 - Sateda CZ Dabing",
+        "video_id": 28485689
+      },
+      {
+        "episode_id": 37603,
+        "display_name": "Hvězdná brána - Atlantida S03E13 - Bezohledný hrdina CZ Dabing",
+        "video_id": 28485814
+      },
+      {
+        "episode_id": 37547,
+        "display_name": "Hvězdná brána - Atlantida S03E14 - Rodneyho povznesení CZ Dabing",
+        "video_id": 28485863
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -168538,6 +168608,16 @@
         "video_id": 28485659
       },
       {
+        "episode_id": 17660,
+        "display_name": "Černá holubice S01E01 - Tak na lásku CZ Dabing",
+        "video_id": 28485707
+      },
+      {
+        "episode_id": 16436,
+        "display_name": "Čas čarodějnic S01E05 - 5. epizoda CZ Dabing",
+        "video_id": 28485889
+      },
+      {
         "episode_id": 126133,
         "display_name": "Lovci stínů: Nástroje smrti S03E08 - Procházka v temnotě CZ Titulky",
         "video_id": 28485512
@@ -168551,6 +168631,31 @@
         "episode_id": 126141,
         "display_name": "Lovci stínů: Nástroje smrti S03E16 - Neopouštěj mě CZ Titulky",
         "video_id": 28485642
+      },
+      {
+        "episode_id": 126145,
+        "display_name": "Lovci stínů: Nástroje smrti S03E20 - Město skla CZ Titulky",
+        "video_id": 28485734
+      },
+      {
+        "episode_id": 18005,
+        "display_name": "Star Trek: Podivné nové světy S01E02 - Děti komety CZ Dabing",
+        "video_id": 28485770
+      },
+      {
+        "episode_id": 18013,
+        "display_name": "Star Trek: Podivné nové světy S01E03 - Duch Ilyrie CZ Dabing",
+        "video_id": 28485795
+      },
+      {
+        "episode_id": 18009,
+        "display_name": "Star Trek: Podivné nové světy S01E07 - Klidná bouře CZ Dabing",
+        "video_id": 28485815
+      },
+      {
+        "episode_id": 15933,
+        "display_name": "Star Trek: Podivné nové světy S02E01 - Přerušený kruh CZ Dabing",
+        "video_id": 28485840
       },
       {
         "episode_id": 114182,
@@ -212998,6 +213103,26 @@
         "video_id": 28485593
       },
       {
+        "episode_id": 70010,
+        "display_name": "Léto, kdy jsem zkrásněla S01E07 - Letní láska CZ Dabing",
+        "video_id": 28485693
+      },
+      {
+        "episode_id": 70018,
+        "display_name": "Léto, kdy jsem zkrásněla S03E01 - Poslední sezóna CZ Dabing",
+        "video_id": 28485781
+      },
+      {
+        "episode_id": 70026,
+        "display_name": "Léto, kdy jsem zkrásněla S03E11 - Poslední CZ Dabing",
+        "video_id": 28485826
+      },
+      {
+        "episode_id": 60822,
+        "display_name": "Temná hmota S01E01 - Jsi se svým životem spokojený? CZ Titulky",
+        "video_id": 28485900
+      },
+      {
         "episode_id": 37623,
         "display_name": "Hvězdná brána - Atlantida S01E20 - V obležení, část druhá CZ Dabing",
         "video_id": 28485513
@@ -213006,6 +213131,21 @@
         "episode_id": 37587,
         "display_name": "Hvězdná brána - Atlantida S02E02 - Vetřelec CZ Dabing",
         "video_id": 28485629
+      },
+      {
+        "episode_id": 37539,
+        "display_name": "Hvězdná brána - Atlantida S03E04 - Sateda CZ Dabing",
+        "video_id": 28485689
+      },
+      {
+        "episode_id": 37603,
+        "display_name": "Hvězdná brána - Atlantida S03E13 - Bezohledný hrdina CZ Dabing",
+        "video_id": 28485814
+      },
+      {
+        "episode_id": 37547,
+        "display_name": "Hvězdná brána - Atlantida S03E14 - Rodneyho povznesení CZ Dabing",
+        "video_id": 28485863
       }
     ],
     "prepared_not_upload_ready": [
@@ -214167,8 +214307,8 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 437,
-    "ok": 114,
+    "disabled": 36,
+    "ok": 59,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
