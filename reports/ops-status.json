@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 167227,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 26177,
+    "uploaded_episodes": 26179,
     "prepared_source_episodes": 46866,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 20,
-    "language_whisper_attempted_sources": 20,
-    "language_pending_whisper_sources": 2624,
+    "language_audited_sources": 40,
+    "language_whisper_attempted_sources": 40,
+    "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 56889,
     "whisper_review_pending_sources": 49919,
     "subtitle_followup_sources": 24500,
@@ -20,18 +20,50 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-08-14T16:29:33Z",
-      "databaseId": 31819577083,
+      "createdAt": "2026-08-14T16:38:00Z",
+      "databaseId": 31820250879,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-14T16:37:58Z",
+      "databaseId": 31820248679,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-08-14T16:37:54Z",
+      "databaseId": 31820243943,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-14T16:30:38Z",
+      "databaseId": 31819668119,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-14T16:29:33Z",
+      "databaseId": 31819577083,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "cancelled",
       "createdAt": "2026-08-14T16:29:30Z",
       "databaseId": 31819573885,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -39,7 +71,7 @@
       "createdAt": "2026-08-14T16:29:30Z",
       "databaseId": 31819573374,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "sync"
     },
     {
@@ -67,11 +99,11 @@
       "workflowName": "process-whisper-review"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-14T16:27:21Z",
       "databaseId": 31819404637,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -145,38 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-14T16:09:04Z",
-      "databaseId": 31817959650,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-14T16:09:04Z",
-      "databaseId": 31817959516,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-14T16:08:45Z",
-      "databaseId": 31817933616,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-14T16:07:59Z",
-      "databaseId": 31817873843,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
     }
   ],
   "gaps": {
@@ -62114,6 +62114,16 @@
         "episode_id": 12364,
         "display_name": "Ledová archa S01E02 - Připraveni na nejhorší CZ Dabing",
         "video_id": 28485235
+      },
+      {
+        "episode_id": 12368,
+        "display_name": "Ledová archa S02E01 - Příběh dvou lokomotiv CZ Dabing",
+        "video_id": 28485319
+      },
+      {
+        "episode_id": 12356,
+        "display_name": "Ledová archa S02E02 - Znova vzplanout CZ Dabing",
+        "video_id": 28485415
       },
       {
         "episode_id": 37305,
@@ -168423,6 +168433,16 @@
         "video_id": 28485235
       },
       {
+        "episode_id": 12368,
+        "display_name": "Ledová archa S02E01 - Příběh dvou lokomotiv CZ Dabing",
+        "video_id": 28485319
+      },
+      {
+        "episode_id": 12356,
+        "display_name": "Ledová archa S02E02 - Znova vzplanout CZ Dabing",
+        "video_id": 28485415
+      },
+      {
         "episode_id": 37305,
         "display_name": "Star Trek: Hluboký Vesmír Devět S04E12 - Objekt zájmu CZ Dabing",
         "video_id": 28484792
@@ -214057,7 +214077,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 19,
+    "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
