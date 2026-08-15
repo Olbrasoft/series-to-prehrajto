@@ -2,15 +2,15 @@
   "counts": {
     "backlog_episodes": 165421,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 27990,
-    "prepared_source_episodes": 48136,
+    "uploaded_episodes": 27991,
+    "prepared_source_episodes": 48147,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 20,
-    "language_whisper_attempted_sources": 20,
+    "language_audited_sources": 40,
+    "language_whisper_attempted_sources": 40,
     "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 56900,
     "whisper_review_pending_sources": 49945,
@@ -18,6 +18,38 @@
     "subtitle_followup_pending_sources": 24977
   },
   "workflow_runs": [
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-15T21:05:57Z",
+      "databaseId": 31908488063,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-15T21:05:53Z",
+      "databaseId": 31908485610,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-15T21:05:46Z",
+      "databaseId": 31908481480,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-15T21:05:05Z",
+      "databaseId": 31908447830,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
     {
       "conclusion": "",
       "createdAt": "2026-08-15T21:04:11Z",
@@ -31,23 +63,23 @@
       "createdAt": "2026-08-15T21:04:04Z",
       "databaseId": 31908405288,
       "headBranch": "main",
-      "status": "pending",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-15T21:04:02Z",
-      "databaseId": 31908404192,
-      "headBranch": "main",
       "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
+      "createdAt": "2026-08-15T21:04:02Z",
+      "databaseId": 31908404192,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "cancelled",
       "createdAt": "2026-08-15T21:04:00Z",
       "databaseId": 31908401551,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -139,44 +171,12 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-15T20:51:11Z",
       "databaseId": 31907814441,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-15T20:50:03Z",
-      "databaseId": 31907763175,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-15T20:50:00Z",
-      "databaseId": 31907759758,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-15T20:45:47Z",
-      "databaseId": 31907571489,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-15T20:44:43Z",
-      "databaseId": 31907516048,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
     }
   ],
   "gaps": {
@@ -115646,6 +115646,11 @@
         "video_id": 28513334
       },
       {
+        "episode_id": 94298,
+        "display_name": "Trailer Park Boys S11E05 - 5. epizoda CZ Titulky",
+        "video_id": 28513607
+      },
+      {
         "episode_id": 94279,
         "display_name": "Trailer Park Boys S07E05 - 5. epizoda CZ Titulky",
         "video_id": 28513529
@@ -231018,6 +231023,11 @@
         "video_id": 28513334
       },
       {
+        "episode_id": 94298,
+        "display_name": "Trailer Park Boys S11E05 - 5. epizoda CZ Titulky",
+        "video_id": 28513607
+      },
+      {
         "episode_id": 94279,
         "display_name": "Trailer Park Boys S07E05 - 5. epizoda CZ Titulky",
         "video_id": 28513529
@@ -232187,7 +232197,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 19,
+    "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
