@@ -2,15 +2,15 @@
   "counts": {
     "backlog_episodes": 165421,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 27978,
-    "prepared_source_episodes": 48105,
+    "uploaded_episodes": 27982,
+    "prepared_source_episodes": 48117,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 40,
-    "language_whisper_attempted_sources": 40,
+    "language_audited_sources": 60,
+    "language_whisper_attempted_sources": 60,
     "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 56900,
     "whisper_review_pending_sources": 49945,
@@ -20,10 +20,34 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-08-15T20:50:03Z",
+      "databaseId": 31907763175,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-15T20:50:00Z",
+      "databaseId": 31907759758,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-15T20:45:47Z",
+      "databaseId": 31907571489,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-15T20:44:43Z",
       "databaseId": 31907516048,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -59,11 +83,11 @@
       "workflowName": "sync"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-08-15T20:41:39Z",
       "databaseId": 31907379847,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -153,30 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-15T20:33:33Z",
-      "databaseId": 31907013813,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-15T20:31:01Z",
-      "databaseId": 31906895162,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-15T20:30:58Z",
-      "databaseId": 31906892316,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "process-whisper-review"
     }
   ],
   "gaps": {
@@ -66621,6 +66621,16 @@
         "video_id": 28513341
       },
       {
+        "episode_id": 55672,
+        "display_name": "Velký lov S01E07 - Šalom, ty svině CZ Titulky",
+        "video_id": 28513360
+      },
+      {
+        "episode_id": 55684,
+        "display_name": "Velký lov S02E06 - Jenom mrtví CZ Dabing",
+        "video_id": 28513385
+      },
+      {
         "episode_id": 57901,
         "display_name": "Doktorka z Dixie S03E10 - Kabaret bude CZ Dabing",
         "video_id": 28512985
@@ -66644,6 +66654,11 @@
         "episode_id": 54677,
         "display_name": "Válečná jeptiška S02E01 - List Galatským 6:4–5 CZ Dabing",
         "video_id": 28513243
+      },
+      {
+        "episode_id": 2793,
+        "display_name": "Power S02E02 - 2. epizoda CZ Dabing",
+        "video_id": 28513391
       },
       {
         "episode_id": 114182,
@@ -115564,6 +115579,11 @@
         "episode_id": 94234,
         "display_name": "Trailer Park Boys S09E05 - 5. epizoda CZ Titulky",
         "video_id": 28513275
+      },
+      {
+        "episode_id": 94314,
+        "display_name": "Trailer Park Boys S10E03 - 3. epizoda CZ Titulky",
+        "video_id": 28513348
       },
       {
         "episode_id": 59279,
@@ -181933,6 +181953,16 @@
         "video_id": 28513341
       },
       {
+        "episode_id": 55672,
+        "display_name": "Velký lov S01E07 - Šalom, ty svině CZ Titulky",
+        "video_id": 28513360
+      },
+      {
+        "episode_id": 55684,
+        "display_name": "Velký lov S02E06 - Jenom mrtví CZ Dabing",
+        "video_id": 28513385
+      },
+      {
         "episode_id": 57901,
         "display_name": "Doktorka z Dixie S03E10 - Kabaret bude CZ Dabing",
         "video_id": 28512985
@@ -181956,6 +181986,11 @@
         "episode_id": 54677,
         "display_name": "Válečná jeptiška S02E01 - List Galatským 6:4–5 CZ Dabing",
         "video_id": 28513243
+      },
+      {
+        "episode_id": 2793,
+        "display_name": "Power S02E02 - 2. epizoda CZ Dabing",
+        "video_id": 28513391
       },
       {
         "episode_id": 114182,
@@ -230878,6 +230913,11 @@
         "video_id": 28513275
       },
       {
+        "episode_id": 94314,
+        "display_name": "Trailer Park Boys S10E03 - 3. epizoda CZ Titulky",
+        "video_id": 28513348
+      },
+      {
         "episode_id": 59279,
         "display_name": "Constantine S01E05 - 5. epizoda CZ Titulky",
         "video_id": 28512913
@@ -232067,7 +232107,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 39,
+    "ok": 59,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
