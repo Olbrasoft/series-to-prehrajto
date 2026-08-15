@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 165557,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 27759,
+    "uploaded_episodes": 27760,
     "prepared_source_episodes": 48186,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 168,
+    "language_audited_sources": 40,
     "language_whisper_attempted_sources": 40,
-    "language_pending_whisper_sources": 2624,
+    "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 56889,
     "whisper_review_pending_sources": 49867,
     "subtitle_followup_sources": 24885,
@@ -20,10 +20,50 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-08-15T15:15:27Z",
+      "databaseId": 31892203581,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-15T15:15:24Z",
+      "databaseId": 31892200380,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-15T15:15:24Z",
+      "databaseId": 31892200148,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-15T15:15:23Z",
+      "databaseId": 31892199296,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-15T15:15:20Z",
+      "databaseId": 31892196323,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-15T15:14:22Z",
       "databaseId": 31892152209,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -137,46 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-15T15:03:02Z",
-      "databaseId": 31891619178,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-15T15:02:59Z",
-      "databaseId": 31891617143,
-      "headBranch": "main",
-      "status": "pending",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-15T15:02:59Z",
-      "databaseId": 31891617052,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-15T14:56:25Z",
-      "databaseId": 31891304431,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-15T14:55:16Z",
-      "databaseId": 31891251142,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
     }
   ],
   "gaps": {
@@ -114476,6 +114476,11 @@
         "video_id": 28507599
       },
       {
+        "episode_id": 31414,
+        "display_name": "F1: Touha po vítězství S03E03 - Druhé housle neberu CZ Dabing",
+        "video_id": 28507624
+      },
+      {
         "episode_id": 52263,
         "display_name": "Jericho S01E22 - Proč bojujeme CZ Dabing",
         "video_id": 28507248
@@ -228693,6 +228698,11 @@
         "video_id": 28507599
       },
       {
+        "episode_id": 31414,
+        "display_name": "F1: Touha po vítězství S03E03 - Druhé housle neberu CZ Dabing",
+        "video_id": 28507624
+      },
+      {
         "episode_id": 52263,
         "display_name": "Jericho S01E22 - Proč bojujeme CZ Dabing",
         "video_id": 28507248
@@ -229877,7 +229887,6 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 128,
     "ok": 39,
     "resolve_failed": 1
   },
