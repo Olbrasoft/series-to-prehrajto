@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 165979,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 27441,
+    "uploaded_episodes": 27445,
     "prepared_source_episodes": 48250,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 149,
-    "language_whisper_attempted_sources": 20,
-    "language_pending_whisper_sources": 2624,
+    "language_audited_sources": 40,
+    "language_whisper_attempted_sources": 40,
+    "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 56910,
     "whisper_review_pending_sources": 50005,
     "subtitle_followup_sources": 24714,
@@ -20,10 +20,26 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-08-15T10:25:15Z",
+      "databaseId": 31879466683,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-15T10:23:03Z",
+      "databaseId": 31879374242,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-15T10:21:54Z",
       "databaseId": 31879327907,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -155,28 +171,12 @@
       "workflowName": "audit-language"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-15T10:06:43Z",
       "databaseId": 31878698932,
       "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-15T10:06:12Z",
-      "databaseId": 31878677691,
-      "headBranch": "main",
       "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-15T10:06:09Z",
-      "databaseId": 31878675044,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "sync"
+      "workflowName": "audit-language"
     }
   ],
   "gaps": {
@@ -65271,6 +65271,11 @@
         "video_id": 28502645
       },
       {
+        "episode_id": 16204,
+        "display_name": "Monarch: Odkaz monster S01E07 - Nechť se přihlásí skutečná May CZ Titulky",
+        "video_id": 28502653
+      },
+      {
         "episode_id": 37653,
         "display_name": "Star Trek: Enterprise S04E10 - Daidalos CZ Dabing",
         "video_id": 28502518
@@ -65304,6 +65309,11 @@
         "episode_id": 20617,
         "display_name": "Kriminálka Miami S07E04 - Běsnící kanibal CZ Dabing",
         "video_id": 28502631
+      },
+      {
+        "episode_id": 75217,
+        "display_name": "Záchranáři L. A. S06E04 - Zvířecí pudy CZ Titulky",
+        "video_id": 28502640
       },
       {
         "episode_id": 114182,
@@ -112869,6 +112879,16 @@
         "episode_id": 14946,
         "display_name": "Goliáš S04E07 - Zhovadilé právnické triky CZ Dabing",
         "video_id": 28502627
+      },
+      {
+        "episode_id": 117346,
+        "display_name": "Tým Škorpion S03E11 - Vánoce CZ Dabing",
+        "video_id": 28502649
+      },
+      {
+        "episode_id": 104274,
+        "display_name": "Tým Škorpion S04E19 - Vyřízený aligátor CZ Titulky",
+        "video_id": 28502673
       },
       {
         "episode_id": 14947,
@@ -177898,6 +177918,11 @@
         "video_id": 28502645
       },
       {
+        "episode_id": 16204,
+        "display_name": "Monarch: Odkaz monster S01E07 - Nechť se přihlásí skutečná May CZ Titulky",
+        "video_id": 28502653
+      },
+      {
         "episode_id": 37653,
         "display_name": "Star Trek: Enterprise S04E10 - Daidalos CZ Dabing",
         "video_id": 28502518
@@ -177931,6 +177956,11 @@
         "episode_id": 20617,
         "display_name": "Kriminálka Miami S07E04 - Běsnící kanibal CZ Dabing",
         "video_id": 28502631
+      },
+      {
+        "episode_id": 75217,
+        "display_name": "Záchranáři L. A. S06E04 - Zvířecí pudy CZ Titulky",
+        "video_id": 28502640
       },
       {
         "episode_id": 114182,
@@ -225498,6 +225528,16 @@
         "video_id": 28502627
       },
       {
+        "episode_id": 117346,
+        "display_name": "Tým Škorpion S03E11 - Vánoce CZ Dabing",
+        "video_id": 28502649
+      },
+      {
+        "episode_id": 104274,
+        "display_name": "Tým Škorpion S04E19 - Vyřízený aligátor CZ Titulky",
+        "video_id": 28502673
+      },
+      {
         "episode_id": 14947,
         "display_name": "Goliáš S04E08 - Je čas CZ Dabing",
         "video_id": 28502516
@@ -226697,8 +226737,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 129,
-    "ok": 19,
+    "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
