@@ -2,15 +2,15 @@
   "counts": {
     "backlog_episodes": 166463,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 26959,
-    "prepared_source_episodes": 47827,
+    "uploaded_episodes": 26970,
+    "prepared_source_episodes": 47821,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 20,
-    "language_whisper_attempted_sources": 20,
+    "language_audited_sources": 85,
+    "language_whisper_attempted_sources": 40,
     "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 56905,
     "whisper_review_pending_sources": 50015,
@@ -20,10 +20,42 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-08-15T04:29:45Z",
+      "databaseId": 31864561464,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-15T04:29:41Z",
+      "databaseId": 31864558785,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-15T04:25:31Z",
+      "databaseId": 31864387568,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-15T04:25:28Z",
+      "databaseId": 31864384590,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-15T04:24:28Z",
       "databaseId": 31864343461,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -31,7 +63,7 @@
       "createdAt": "2026-08-15T04:19:58Z",
       "databaseId": 31864153044,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "process-whisper-review"
     },
     {
@@ -43,11 +75,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-15T04:19:03Z",
       "databaseId": 31864116784,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
@@ -67,11 +99,11 @@
       "workflowName": "sync"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-08-15T04:16:39Z",
       "databaseId": 31864018500,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -145,38 +177,6 @@
       "headBranch": "main",
       "status": "pending",
       "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-15T04:06:52Z",
-      "databaseId": 31863588439,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-15T04:02:05Z",
-      "databaseId": 31863374156,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-15T04:01:27Z",
-      "databaseId": 31863345545,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-15T04:01:24Z",
-      "databaseId": 31863343709,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
     }
   ],
   "gaps": {
@@ -64086,6 +64086,16 @@
         "video_id": 28498780
       },
       {
+        "episode_id": 47928,
+        "display_name": "Continuum S01E10 - Endtimes CZ Titulky",
+        "video_id": 28498813
+      },
+      {
+        "episode_id": 47916,
+        "display_name": "Continuum S02E01 - Second Chances CZ Titulky",
+        "video_id": 28498855
+      },
+      {
         "episode_id": 84281,
         "display_name": "Studio S01E08 - Zlaté glóby CZ Titulky",
         "video_id": 28498761
@@ -64109,6 +64119,21 @@
         "episode_id": 5781,
         "display_name": "Na zdraví S01E18 - Nesoutěžím CZ Dabing",
         "video_id": 28498807
+      },
+      {
+        "episode_id": 23413,
+        "display_name": "Na zdraví S02E03 - Osobní záležitosti CZ Dabing",
+        "video_id": 28498817
+      },
+      {
+        "episode_id": 23425,
+        "display_name": "Na zdraví S02E15 - Coach jako třetí do party CZ Dabing",
+        "video_id": 28498828
+      },
+      {
+        "episode_id": 23429,
+        "display_name": "Na zdraví S02E19 - Coach pohřbívá zášť CZ Dabing",
+        "video_id": 28498843
       },
       {
         "episode_id": 114182,
@@ -110481,6 +110506,21 @@
         "video_id": 28498804
       },
       {
+        "episode_id": 86438,
+        "display_name": "Hodný holky S04E04 - Dave CZ Titulky",
+        "video_id": 28498825
+      },
+      {
+        "episode_id": 86442,
+        "display_name": "Hodný holky S04E08 - Rozbité hračky CZ Titulky",
+        "video_id": 28498851
+      },
+      {
+        "episode_id": 40022,
+        "display_name": "Plný dům S03E02 - 2. epizoda CZ Titulky",
+        "video_id": 28498878
+      },
+      {
         "episode_id": 86447,
         "display_name": "Hodný holky S04E14 - Díky za podporu CZ Titulky",
         "video_id": 28498763
@@ -110499,6 +110539,21 @@
         "episode_id": 40039,
         "display_name": "Plný dům S03E19 - 19. epizoda CZ Dabing",
         "video_id": 28498810
+      },
+      {
+        "episode_id": 40067,
+        "display_name": "Plný dům S04E19 - 19. epizoda CZ Titulky",
+        "video_id": 28498818
+      },
+      {
+        "episode_id": 40075,
+        "display_name": "Plný dům S05E07 - 7. epizoda CZ Titulky",
+        "video_id": 28498824
+      },
+      {
+        "episode_id": 40123,
+        "display_name": "Plný dům S07E23 - 23. epizoda CZ Dabing",
+        "video_id": 28498838
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -174303,6 +174358,16 @@
         "video_id": 28498780
       },
       {
+        "episode_id": 47928,
+        "display_name": "Continuum S01E10 - Endtimes CZ Titulky",
+        "video_id": 28498813
+      },
+      {
+        "episode_id": 47916,
+        "display_name": "Continuum S02E01 - Second Chances CZ Titulky",
+        "video_id": 28498855
+      },
+      {
         "episode_id": 84281,
         "display_name": "Studio S01E08 - Zlaté glóby CZ Titulky",
         "video_id": 28498761
@@ -174326,6 +174391,21 @@
         "episode_id": 5781,
         "display_name": "Na zdraví S01E18 - Nesoutěžím CZ Dabing",
         "video_id": 28498807
+      },
+      {
+        "episode_id": 23413,
+        "display_name": "Na zdraví S02E03 - Osobní záležitosti CZ Dabing",
+        "video_id": 28498817
+      },
+      {
+        "episode_id": 23425,
+        "display_name": "Na zdraví S02E15 - Coach jako třetí do party CZ Dabing",
+        "video_id": 28498828
+      },
+      {
+        "episode_id": 23429,
+        "display_name": "Na zdraví S02E19 - Coach pohřbívá zášť CZ Dabing",
+        "video_id": 28498843
       },
       {
         "episode_id": 114182,
@@ -220698,6 +220778,21 @@
         "video_id": 28498804
       },
       {
+        "episode_id": 86438,
+        "display_name": "Hodný holky S04E04 - Dave CZ Titulky",
+        "video_id": 28498825
+      },
+      {
+        "episode_id": 86442,
+        "display_name": "Hodný holky S04E08 - Rozbité hračky CZ Titulky",
+        "video_id": 28498851
+      },
+      {
+        "episode_id": 40022,
+        "display_name": "Plný dům S03E02 - 2. epizoda CZ Titulky",
+        "video_id": 28498878
+      },
+      {
         "episode_id": 86447,
         "display_name": "Hodný holky S04E14 - Díky za podporu CZ Titulky",
         "video_id": 28498763
@@ -220716,6 +220811,21 @@
         "episode_id": 40039,
         "display_name": "Plný dům S03E19 - 19. epizoda CZ Dabing",
         "video_id": 28498810
+      },
+      {
+        "episode_id": 40067,
+        "display_name": "Plný dům S04E19 - 19. epizoda CZ Titulky",
+        "video_id": 28498818
+      },
+      {
+        "episode_id": 40075,
+        "display_name": "Plný dům S05E07 - 7. epizoda CZ Titulky",
+        "video_id": 28498824
+      },
+      {
+        "episode_id": 40123,
+        "display_name": "Plný dům S07E23 - 23. epizoda CZ Dabing",
+        "video_id": 28498838
       }
     ],
     "prepared_not_upload_ready": [
@@ -221877,7 +221987,8 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 19,
+    "ok": 39,
+    "disabled": 45,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
