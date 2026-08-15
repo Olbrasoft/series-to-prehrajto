@@ -2,22 +2,46 @@
   "counts": {
     "backlog_episodes": 165557,
     "manifest_upload_ready_episodes": 1001,
-    "uploaded_episodes": 27797,
+    "uploaded_episodes": 27799,
     "prepared_source_episodes": 48142,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 125,
-    "language_whisper_attempted_sources": 60,
-    "language_pending_whisper_sources": 2604,
+    "language_audited_sources": 20,
+    "language_whisper_attempted_sources": 20,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 56901,
     "whisper_review_pending_sources": 49939,
     "subtitle_followup_sources": 24894,
     "subtitle_followup_pending_sources": 24894
   },
   "workflow_runs": [
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-15T16:14:46Z",
+      "databaseId": 31894972958,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-15T16:14:39Z",
+      "databaseId": 31894968769,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-15T16:10:11Z",
+      "databaseId": 31894762398,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
     {
       "conclusion": "success",
       "createdAt": "2026-08-15T16:08:57Z",
@@ -27,11 +51,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-15T16:08:17Z",
       "databaseId": 31894677977,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -43,11 +67,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-08-15T16:07:49Z",
       "databaseId": 31894654517,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -87,7 +111,7 @@
       "createdAt": "2026-08-15T16:05:58Z",
       "databaseId": 31894570846,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "sync"
     },
     {
@@ -99,11 +123,11 @@
       "workflowName": "prepare-manifest"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-15T16:05:53Z",
       "databaseId": 31894566971,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -153,30 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-15T15:57:23Z",
-      "databaseId": 31894171590,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-15T15:57:22Z",
-      "databaseId": 31894171111,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-15T15:57:19Z",
-      "databaseId": 31894169459,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-manifest"
     }
   ],
   "gaps": {
@@ -114651,6 +114651,16 @@
         "video_id": 28508532
       },
       {
+        "episode_id": 16286,
+        "display_name": "F1: Touha po vítězství S07E02 - Nejlepší nepřátelé CZ Dabing",
+        "video_id": 28508702
+      },
+      {
+        "episode_id": 16290,
+        "display_name": "F1: Touha po vítězství S07E05 - Leclercovo prokletí CZ Dabing",
+        "video_id": 28508785
+      },
+      {
         "episode_id": 16283,
         "display_name": "F1: Touha po vítězství S02E10 - Cílová vlajka CZ Dabing",
         "video_id": 28507898
@@ -229058,6 +229068,16 @@
         "video_id": 28508532
       },
       {
+        "episode_id": 16286,
+        "display_name": "F1: Touha po vítězství S07E02 - Nejlepší nepřátelé CZ Dabing",
+        "video_id": 28508702
+      },
+      {
+        "episode_id": 16290,
+        "display_name": "F1: Touha po vítězství S07E05 - Leclercovo prokletí CZ Dabing",
+        "video_id": 28508785
+      },
+      {
         "episode_id": 16283,
         "display_name": "F1: Touha po vítězství S02E10 - Cílová vlajka CZ Dabing",
         "video_id": 28507898
@@ -230257,8 +230277,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 65,
-    "ok": 59,
+    "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
