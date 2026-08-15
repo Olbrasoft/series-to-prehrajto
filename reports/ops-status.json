@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 165979,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 27465,
+    "uploaded_episodes": 27476,
     "prepared_source_episodes": 48271,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 40,
-    "language_whisper_attempted_sources": 40,
-    "language_pending_whisper_sources": 2604,
+    "language_audited_sources": 20,
+    "language_whisper_attempted_sources": 20,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 56909,
     "whisper_review_pending_sources": 50004,
     "subtitle_followup_sources": 24737,
@@ -20,18 +20,74 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-08-15T10:38:59Z",
-      "databaseId": 31880041166,
+      "createdAt": "2026-08-15T10:45:33Z",
+      "databaseId": 31880324804,
       "headBranch": "main",
       "status": "in_progress",
-      "workflowName": "ops-status"
+      "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-08-15T10:45:30Z",
+      "databaseId": 31880322777,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-15T10:44:09Z",
+      "databaseId": 31880264687,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-sources"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-15T10:42:00Z",
+      "databaseId": 31880174534,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-15T10:40:09Z",
+      "databaseId": 31880092337,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-15T10:39:51Z",
+      "databaseId": 31880081624,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-15T10:39:40Z",
+      "databaseId": 31880073826,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-15T10:38:59Z",
+      "databaseId": 31880041166,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-15T10:38:42Z",
       "databaseId": 31880033648,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -59,11 +115,11 @@
       "workflowName": "prepare-manifest"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-08-15T10:31:07Z",
       "databaseId": 31879714923,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "sync"
     },
     {
@@ -121,62 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-15T10:26:23Z",
-      "databaseId": 31879514181,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-15T10:25:15Z",
-      "databaseId": 31879466683,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-15T10:23:03Z",
-      "databaseId": 31879374242,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-15T10:21:54Z",
-      "databaseId": 31879327907,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-15T10:21:11Z",
-      "databaseId": 31879296960,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-15T10:21:01Z",
-      "databaseId": 31879290231,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-15T10:19:46Z",
-      "databaseId": 31879237143,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
     }
   ],
   "gaps": {
@@ -65336,6 +65336,26 @@
         "video_id": 28502853
       },
       {
+        "episode_id": 85224,
+        "display_name": "Grace a Frankie S07E02 - Žaloba CZ Titulky",
+        "video_id": 28502908
+      },
+      {
+        "episode_id": 85228,
+        "display_name": "Grace a Frankie S07E06 - 6. epizoda CZ Titulky",
+        "video_id": 28502934
+      },
+      {
+        "episode_id": 85232,
+        "display_name": "Grace a Frankie S07E11 - 11. epizoda CZ Titulky",
+        "video_id": 28502945
+      },
+      {
+        "episode_id": 85236,
+        "display_name": "Grace a Frankie S07E15 - 15. epizoda CZ Titulky",
+        "video_id": 28502963
+      },
+      {
         "episode_id": 75221,
         "display_name": "Záchranáři L. A. S06E08 - Tísňová linka, jaké máte touhy? CZ Titulky",
         "video_id": 28502776
@@ -65349,6 +65369,21 @@
         "episode_id": 75233,
         "display_name": "Záchranáři L. A. S07E03 - 3. epizoda CZ Titulky",
         "video_id": 28502874
+      },
+      {
+        "episode_id": 75237,
+        "display_name": "Záchranáři L. A. S07E07 - 7. epizoda CZ Titulky",
+        "video_id": 28502923
+      },
+      {
+        "episode_id": 203021,
+        "display_name": "Spider-Noir S01E06 - Jako z noční můry CZ Dabing",
+        "video_id": 28502955
+      },
+      {
+        "episode_id": 81917,
+        "display_name": "Borci z Blue Mountain State S01E01 - Říká se tomu šikana, koukej! CZ Titulky",
+        "video_id": 28502977
       },
       {
         "episode_id": 114182,
@@ -113001,6 +113036,16 @@
         "video_id": 28502889
       },
       {
+        "episode_id": 109534,
+        "display_name": "Komparz S02E04 - Chris Martin CZ Dabing",
+        "video_id": 28502914
+      },
+      {
+        "episode_id": 109530,
+        "display_name": "Komparz S02E05 - Sir Ian McKellen CZ Dabing",
+        "video_id": 28502964
+      },
+      {
         "episode_id": 48735,
         "display_name": "Sword Art Online S04E16 - 16. epizoda CZ Dabing",
         "video_id": 28502770
@@ -113029,6 +113074,16 @@
         "episode_id": 6475,
         "display_name": "Doom Patrol S01E15 - Ezekiel Patrol CZ Dabing",
         "video_id": 28502901
+      },
+      {
+        "episode_id": 109535,
+        "display_name": "Komparz S02E02 - David Bowie CZ Dabing",
+        "video_id": 28502936
+      },
+      {
+        "episode_id": 109531,
+        "display_name": "Komparz S02E06 - Robert Lindsay & Jonathan Ross CZ Dabing",
+        "video_id": 28502960
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -178083,6 +178138,26 @@
         "video_id": 28502853
       },
       {
+        "episode_id": 85224,
+        "display_name": "Grace a Frankie S07E02 - Žaloba CZ Titulky",
+        "video_id": 28502908
+      },
+      {
+        "episode_id": 85228,
+        "display_name": "Grace a Frankie S07E06 - 6. epizoda CZ Titulky",
+        "video_id": 28502934
+      },
+      {
+        "episode_id": 85232,
+        "display_name": "Grace a Frankie S07E11 - 11. epizoda CZ Titulky",
+        "video_id": 28502945
+      },
+      {
+        "episode_id": 85236,
+        "display_name": "Grace a Frankie S07E15 - 15. epizoda CZ Titulky",
+        "video_id": 28502963
+      },
+      {
         "episode_id": 75221,
         "display_name": "Záchranáři L. A. S06E08 - Tísňová linka, jaké máte touhy? CZ Titulky",
         "video_id": 28502776
@@ -178096,6 +178171,21 @@
         "episode_id": 75233,
         "display_name": "Záchranáři L. A. S07E03 - 3. epizoda CZ Titulky",
         "video_id": 28502874
+      },
+      {
+        "episode_id": 75237,
+        "display_name": "Záchranáři L. A. S07E07 - 7. epizoda CZ Titulky",
+        "video_id": 28502923
+      },
+      {
+        "episode_id": 203021,
+        "display_name": "Spider-Noir S01E06 - Jako z noční můry CZ Dabing",
+        "video_id": 28502955
+      },
+      {
+        "episode_id": 81917,
+        "display_name": "Borci z Blue Mountain State S01E01 - Říká se tomu šikana, koukej! CZ Titulky",
+        "video_id": 28502977
       },
       {
         "episode_id": 114182,
@@ -225748,6 +225838,16 @@
         "video_id": 28502889
       },
       {
+        "episode_id": 109534,
+        "display_name": "Komparz S02E04 - Chris Martin CZ Dabing",
+        "video_id": 28502914
+      },
+      {
+        "episode_id": 109530,
+        "display_name": "Komparz S02E05 - Sir Ian McKellen CZ Dabing",
+        "video_id": 28502964
+      },
+      {
         "episode_id": 48735,
         "display_name": "Sword Art Online S04E16 - 16. epizoda CZ Dabing",
         "video_id": 28502770
@@ -225776,6 +225876,16 @@
         "episode_id": 6475,
         "display_name": "Doom Patrol S01E15 - Ezekiel Patrol CZ Dabing",
         "video_id": 28502901
+      },
+      {
+        "episode_id": 109535,
+        "display_name": "Komparz S02E02 - David Bowie CZ Dabing",
+        "video_id": 28502936
+      },
+      {
+        "episode_id": 109531,
+        "display_name": "Komparz S02E06 - Robert Lindsay & Jonathan Ross CZ Dabing",
+        "video_id": 28502960
       }
     ],
     "prepared_not_upload_ready": [
@@ -226937,7 +227047,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 39,
+    "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
