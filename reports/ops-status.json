@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 166692,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 26810,
-    "prepared_source_episodes": 47746,
+    "uploaded_episodes": 26815,
+    "prepared_source_episodes": 47736,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 40,
-    "language_whisper_attempted_sources": 40,
-    "language_pending_whisper_sources": 2604,
+    "language_audited_sources": 32,
+    "language_whisper_attempted_sources": 20,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 56914,
     "whisper_review_pending_sources": 50084,
     "subtitle_followup_sources": 24626,
@@ -20,18 +20,66 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-08-15T02:48:11Z",
-      "databaseId": 31860138292,
+      "createdAt": "2026-08-15T02:56:37Z",
+      "databaseId": 31860505466,
       "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "audit-language"
+      "status": "pending",
+      "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-08-15T02:56:31Z",
+      "databaseId": 31860500675,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-15T02:56:08Z",
+      "databaseId": 31860482751,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-08-15T02:56:03Z",
+      "databaseId": 31860479927,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-15T02:55:18Z",
+      "databaseId": 31860448581,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-sources"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-15T02:50:41Z",
+      "databaseId": 31860248787,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-15T02:48:11Z",
+      "databaseId": 31860138292,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-15T02:47:50Z",
       "databaseId": 31860121208,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-status"
     },
     {
@@ -47,15 +95,15 @@
       "createdAt": "2026-08-15T02:45:34Z",
       "databaseId": 31860022954,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "sync"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-08-15T02:45:34Z",
       "databaseId": 31860022883,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -115,11 +163,11 @@
       "workflowName": "prepare-manifest"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-15T02:32:55Z",
       "databaseId": 31859477369,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
@@ -129,54 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-15T02:24:43Z",
-      "databaseId": 31859115814,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-15T02:24:13Z",
-      "databaseId": 31859094422,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-15T02:23:48Z",
-      "databaseId": 31859075795,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-15T02:23:43Z",
-      "databaseId": 31859072078,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-15T02:22:37Z",
-      "databaseId": 31859024541,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-15T02:22:33Z",
-      "databaseId": 31859021630,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
     }
   ],
   "gaps": {
@@ -63736,6 +63736,26 @@
         "video_id": 28497741
       },
       {
+        "episode_id": 64941,
+        "display_name": "Cizinec S01E05 - 5. díl CZ Titulky",
+        "video_id": 28497760
+      },
+      {
+        "episode_id": 107713,
+        "display_name": "Podruhé mě neoklameš S01E04 - 4. díl CZ Dabing",
+        "video_id": 28497803
+      },
+      {
+        "episode_id": 107717,
+        "display_name": "Podruhé mě neoklameš S01E08 - 8. díl CZ Dabing",
+        "video_id": 28497824
+      },
+      {
+        "episode_id": 53065,
+        "display_name": "Poslední loď S01E03 - Počítání mrtvých CZ Dabing",
+        "video_id": 28497850
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -109714,6 +109734,11 @@
         "episode_id": 84278,
         "display_name": "Studio S01E05 - Válka CZ Titulky",
         "video_id": 28497755
+      },
+      {
+        "episode_id": 84282,
+        "display_name": "Studio S01E09 - CinemaCon CZ Titulky",
+        "video_id": 28497782
       },
       {
         "episode_id": 38131,
@@ -173208,6 +173233,26 @@
         "video_id": 28497741
       },
       {
+        "episode_id": 64941,
+        "display_name": "Cizinec S01E05 - 5. díl CZ Titulky",
+        "video_id": 28497760
+      },
+      {
+        "episode_id": 107713,
+        "display_name": "Podruhé mě neoklameš S01E04 - 4. díl CZ Dabing",
+        "video_id": 28497803
+      },
+      {
+        "episode_id": 107717,
+        "display_name": "Podruhé mě neoklameš S01E08 - 8. díl CZ Dabing",
+        "video_id": 28497824
+      },
+      {
+        "episode_id": 53065,
+        "display_name": "Poslední loď S01E03 - Počítání mrtvých CZ Dabing",
+        "video_id": 28497850
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -219188,6 +219233,11 @@
         "video_id": 28497755
       },
       {
+        "episode_id": 84282,
+        "display_name": "Studio S01E09 - CinemaCon CZ Titulky",
+        "video_id": 28497782
+      },
+      {
         "episode_id": 38131,
         "display_name": "Chicago Fire S01E23 - Nech ji jít CZ Dabing",
         "video_id": 28497603
@@ -220387,7 +220437,8 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 39,
+    "disabled": 12,
+    "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
