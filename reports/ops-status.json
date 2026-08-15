@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 165421,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 27921,
+    "uploaded_episodes": 27926,
     "prepared_source_episodes": 47960,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 40,
-    "language_whisper_attempted_sources": 40,
-    "language_pending_whisper_sources": 2604,
+    "language_audited_sources": 20,
+    "language_whisper_attempted_sources": 20,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 56898,
     "whisper_review_pending_sources": 49936,
     "subtitle_followup_sources": 24953,
@@ -20,10 +20,42 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-08-15T19:01:24Z",
+      "databaseId": 31902745403,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-15T19:01:21Z",
+      "databaseId": 31902742409,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-15T19:01:21Z",
+      "databaseId": 31902742351,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-15T18:56:18Z",
+      "databaseId": 31902505897,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-15T18:55:12Z",
       "databaseId": 31902457695,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -91,11 +123,11 @@
       "workflowName": "prepare-manifest"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-08-15T18:50:00Z",
       "databaseId": 31902213076,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "sync"
     },
     {
@@ -115,11 +147,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-15T18:43:55Z",
       "databaseId": 31901929082,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -145,38 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-15T18:41:53Z",
-      "databaseId": 31901835099,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-15T18:41:05Z",
-      "databaseId": 31901796141,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-15T18:37:41Z",
-      "databaseId": 31901637638,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-15T18:35:42Z",
-      "databaseId": 31901550058,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
     }
   ],
   "gaps": {
@@ -66466,6 +66466,16 @@
         "video_id": 28511635
       },
       {
+        "episode_id": 94288,
+        "display_name": "Trailer Park Boys S08E03 - 3. epizoda CZ Titulky",
+        "video_id": 28511665
+      },
+      {
+        "episode_id": 94292,
+        "display_name": "Trailer Park Boys S08E07 - 7. epizoda CZ Titulky",
+        "video_id": 28511710
+      },
+      {
         "episode_id": 16313,
         "display_name": "F1: Touha po vítězství S08E08 - Říkejte mi Chucky CZ Dabing",
         "video_id": 28511188
@@ -66489,6 +66499,16 @@
         "episode_id": 55825,
         "display_name": "V zajetí kouzel S03E08 CZ Dabing",
         "video_id": 28511538
+      },
+      {
+        "episode_id": 55833,
+        "display_name": "V zajetí kouzel S04E03 - Posel špatných zpráv CZ Dabing",
+        "video_id": 28511650
+      },
+      {
+        "episode_id": 55841,
+        "display_name": "V zajetí kouzel S04E10 - Třpytivá zbroj CZ Dabing",
+        "video_id": 28511732
       },
       {
         "episode_id": 114182,
@@ -115309,6 +115329,11 @@
         "episode_id": 57903,
         "display_name": "Doktorka z Dixie S03E12 - Měl jsem být kovboj CZ Dabing",
         "video_id": 28511568
+      },
+      {
+        "episode_id": 56751,
+        "display_name": "Hell on Wheels S03E02 - Eminent Domain CZ Titulky",
+        "video_id": 28511748
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -181493,6 +181518,16 @@
         "video_id": 28511635
       },
       {
+        "episode_id": 94288,
+        "display_name": "Trailer Park Boys S08E03 - 3. epizoda CZ Titulky",
+        "video_id": 28511665
+      },
+      {
+        "episode_id": 94292,
+        "display_name": "Trailer Park Boys S08E07 - 7. epizoda CZ Titulky",
+        "video_id": 28511710
+      },
+      {
         "episode_id": 16313,
         "display_name": "F1: Touha po vítězství S08E08 - Říkejte mi Chucky CZ Dabing",
         "video_id": 28511188
@@ -181516,6 +181551,16 @@
         "episode_id": 55825,
         "display_name": "V zajetí kouzel S03E08 CZ Dabing",
         "video_id": 28511538
+      },
+      {
+        "episode_id": 55833,
+        "display_name": "V zajetí kouzel S04E03 - Posel špatných zpráv CZ Dabing",
+        "video_id": 28511650
+      },
+      {
+        "episode_id": 55841,
+        "display_name": "V zajetí kouzel S04E10 - Třpytivá zbroj CZ Dabing",
+        "video_id": 28511732
       },
       {
         "episode_id": 114182,
@@ -230336,6 +230381,11 @@
         "episode_id": 57903,
         "display_name": "Doktorka z Dixie S03E12 - Měl jsem být kovboj CZ Dabing",
         "video_id": 28511568
+      },
+      {
+        "episode_id": 56751,
+        "display_name": "Hell on Wheels S03E02 - Eminent Domain CZ Titulky",
+        "video_id": 28511748
       }
     ],
     "prepared_not_upload_ready": [
@@ -231497,7 +231547,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 39,
+    "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
