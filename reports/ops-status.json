@@ -2,15 +2,15 @@
   "counts": {
     "backlog_episodes": 166463,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 27071,
+    "uploaded_episodes": 27079,
     "prepared_source_episodes": 47897,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 184,
-    "language_whisper_attempted_sources": 60,
+    "language_audited_sources": 40,
+    "language_whisper_attempted_sources": 40,
     "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 56899,
     "whisper_review_pending_sources": 49969,
@@ -20,18 +20,58 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-08-15T05:40:50Z",
-      "databaseId": 31867544699,
+      "createdAt": "2026-08-15T05:45:47Z",
+      "databaseId": 31867750226,
       "headBranch": "main",
-      "status": "pending",
-      "workflowName": "audit-language"
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-08-15T05:45:24Z",
+      "databaseId": 31867734050,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-sources"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-15T05:43:12Z",
+      "databaseId": 31867641703,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-15T05:43:11Z",
+      "databaseId": 31867641429,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-15T05:41:18Z",
+      "databaseId": 31867562599,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-15T05:40:50Z",
+      "databaseId": 31867544699,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-15T05:40:07Z",
       "databaseId": 31867511212,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-status"
     },
     {
@@ -75,11 +115,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-15T05:34:13Z",
       "databaseId": 31867269823,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -137,46 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-15T05:21:19Z",
-      "databaseId": 31866738958,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-15T05:20:38Z",
-      "databaseId": 31866713243,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-15T05:20:38Z",
-      "databaseId": 31866713229,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-15T05:19:39Z",
-      "databaseId": 31866671592,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-15T05:19:31Z",
-      "databaseId": 31866667053,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
     }
   ],
   "gaps": {
@@ -64396,6 +64396,16 @@
         "video_id": 28499449
       },
       {
+        "episode_id": 94144,
+        "display_name": "Veliká S03E04 - 4. epizoda CZ Dabing",
+        "video_id": 28499581
+      },
+      {
+        "episode_id": 55860,
+        "display_name": "Terminátor: Příběh Sáry Connorové S01E03 - Turek CZ Dabing",
+        "video_id": 28499604
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -111059,6 +111069,36 @@
         "episode_id": 103927,
         "display_name": "Ve jménu našeho Pána S04E01 - Předehra CZ Dabing",
         "video_id": 28499542
+      },
+      {
+        "episode_id": 47918,
+        "display_name": "Continuum S02E05 - Second Opinion CZ Titulky",
+        "video_id": 28499589
+      },
+      {
+        "episode_id": 103931,
+        "display_name": "Ve jménu našeho Pána S04E05 - Pamatuj na Hospodina CZ Dabing",
+        "video_id": 28499580
+      },
+      {
+        "episode_id": 51019,
+        "display_name": "Forever S01E02 - 2. epizoda CZ Titulky",
+        "video_id": 28499596
+      },
+      {
+        "episode_id": 51023,
+        "display_name": "Forever S01E13 - 13. epizoda CZ Dabing",
+        "video_id": 28499609
+      },
+      {
+        "episode_id": 51011,
+        "display_name": "Forever S01E16 - 16. epizoda CZ Dabing",
+        "video_id": 28499615
+      },
+      {
+        "episode_id": 51015,
+        "display_name": "Forever S01E21 - 21. epizoda CZ Dabing",
+        "video_id": 28499620
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -175173,6 +175213,16 @@
         "video_id": 28499449
       },
       {
+        "episode_id": 94144,
+        "display_name": "Veliká S03E04 - 4. epizoda CZ Dabing",
+        "video_id": 28499581
+      },
+      {
+        "episode_id": 55860,
+        "display_name": "Terminátor: Příběh Sáry Connorové S01E03 - Turek CZ Dabing",
+        "video_id": 28499604
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -221836,6 +221886,36 @@
         "episode_id": 103927,
         "display_name": "Ve jménu našeho Pána S04E01 - Předehra CZ Dabing",
         "video_id": 28499542
+      },
+      {
+        "episode_id": 47918,
+        "display_name": "Continuum S02E05 - Second Opinion CZ Titulky",
+        "video_id": 28499589
+      },
+      {
+        "episode_id": 103931,
+        "display_name": "Ve jménu našeho Pána S04E05 - Pamatuj na Hospodina CZ Dabing",
+        "video_id": 28499580
+      },
+      {
+        "episode_id": 51019,
+        "display_name": "Forever S01E02 - 2. epizoda CZ Titulky",
+        "video_id": 28499596
+      },
+      {
+        "episode_id": 51023,
+        "display_name": "Forever S01E13 - 13. epizoda CZ Dabing",
+        "video_id": 28499609
+      },
+      {
+        "episode_id": 51011,
+        "display_name": "Forever S01E16 - 16. epizoda CZ Dabing",
+        "video_id": 28499615
+      },
+      {
+        "episode_id": 51015,
+        "display_name": "Forever S01E21 - 21. epizoda CZ Dabing",
+        "video_id": 28499620
       }
     ],
     "prepared_not_upload_ready": [
@@ -222997,8 +223077,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 124,
-    "ok": 59,
+    "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
