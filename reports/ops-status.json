@@ -2,36 +2,92 @@
   "counts": {
     "backlog_episodes": 165557,
     "manifest_upload_ready_episodes": 1001,
-    "uploaded_episodes": 27799,
-    "prepared_source_episodes": 48142,
+    "uploaded_episodes": 27805,
+    "prepared_source_episodes": 48137,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 20,
-    "language_whisper_attempted_sources": 20,
+    "language_audited_sources": 149,
+    "language_whisper_attempted_sources": 40,
     "language_pending_whisper_sources": 2624,
-    "whisper_review_sources": 56901,
-    "whisper_review_pending_sources": 49939,
+    "whisper_review_sources": 56902,
+    "whisper_review_pending_sources": 49940,
     "subtitle_followup_sources": 24894,
     "subtitle_followup_pending_sources": 24894
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-08-15T16:14:46Z",
-      "databaseId": 31894972958,
+      "createdAt": "2026-08-15T16:20:43Z",
+      "databaseId": 31895248491,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-15T16:20:11Z",
+      "databaseId": 31895223753,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-08-15T16:18:47Z",
+      "databaseId": 31895159883,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-15T16:16:47Z",
+      "databaseId": 31895069283,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-15T16:16:46Z",
+      "databaseId": 31895068805,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-15T16:15:56Z",
+      "databaseId": 31895029999,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-15T16:15:52Z",
+      "databaseId": 31895027563,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-15T16:14:46Z",
+      "databaseId": 31894972958,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "cancelled",
       "createdAt": "2026-08-15T16:14:39Z",
       "databaseId": 31894968769,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -91,11 +147,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-15T16:06:16Z",
       "databaseId": 31894584341,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
@@ -121,62 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-15T16:05:53Z",
-      "databaseId": 31894566971,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-15T16:05:11Z",
-      "databaseId": 31894533595,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-15T16:04:39Z",
-      "databaseId": 31894509633,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-15T16:03:11Z",
-      "databaseId": 31894442888,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-15T16:00:43Z",
-      "databaseId": 31894325124,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-15T15:58:41Z",
-      "databaseId": 31894229477,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-15T15:58:22Z",
-      "databaseId": 31894214932,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
     }
   ],
   "gaps": {
@@ -66196,6 +66196,21 @@
         "video_id": 28508617
       },
       {
+        "episode_id": 77560,
+        "display_name": "Virgin River S04E05 - Nouzové volání CZ Dabing",
+        "video_id": 28508866
+      },
+      {
+        "episode_id": 77564,
+        "display_name": "Virgin River S04E09 - Nečekané zprávy CZ Titulky",
+        "video_id": 28508891
+      },
+      {
+        "episode_id": 44605,
+        "display_name": "Skladiště 13 S01E06 - Saracénská páteř CZ Dabing",
+        "video_id": 28508870
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -114699,6 +114714,21 @@
         "episode_id": 16303,
         "display_name": "F1: Touha po vítězství S06E08 - Forza Ferrari CZ Dabing",
         "video_id": 28508339
+      },
+      {
+        "episode_id": 16306,
+        "display_name": "F1: Touha po vítězství S08E01 - Nový děcka na trati CZ Dabing",
+        "video_id": 28508875
+      },
+      {
+        "episode_id": 16287,
+        "display_name": "F1: Touha po vítězství S07E03 - Hledá se nová jednička CZ Dabing",
+        "video_id": 28508862
+      },
+      {
+        "episode_id": 16291,
+        "display_name": "F1: Touha po vítězství S07E09 - Pod novým vedením CZ Dabing",
+        "video_id": 28508902
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -180613,6 +180643,21 @@
         "video_id": 28508617
       },
       {
+        "episode_id": 77560,
+        "display_name": "Virgin River S04E05 - Nouzové volání CZ Dabing",
+        "video_id": 28508866
+      },
+      {
+        "episode_id": 77564,
+        "display_name": "Virgin River S04E09 - Nečekané zprávy CZ Titulky",
+        "video_id": 28508891
+      },
+      {
+        "episode_id": 44605,
+        "display_name": "Skladiště 13 S01E06 - Saracénská páteř CZ Dabing",
+        "video_id": 28508870
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -229116,6 +229161,21 @@
         "episode_id": 16303,
         "display_name": "F1: Touha po vítězství S06E08 - Forza Ferrari CZ Dabing",
         "video_id": 28508339
+      },
+      {
+        "episode_id": 16306,
+        "display_name": "F1: Touha po vítězství S08E01 - Nový děcka na trati CZ Dabing",
+        "video_id": 28508875
+      },
+      {
+        "episode_id": 16287,
+        "display_name": "F1: Touha po vítězství S07E03 - Hledá se nová jednička CZ Dabing",
+        "video_id": 28508862
+      },
+      {
+        "episode_id": 16291,
+        "display_name": "F1: Touha po vítězství S07E09 - Pod novým vedením CZ Dabing",
+        "video_id": 28508902
       }
     ],
     "prepared_not_upload_ready": [
@@ -229486,6 +229546,134 @@
         "status": "needs_whisper"
       },
       {
+        "episode_id": 28146,
+        "source_id": -59136283983183565,
+        "series_title": "Beverly Hills 90210",
+        "episode_code": "S05E21",
+        "source_title": "Beverly Hills, 90210 - s05e21",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 28149,
+        "source_id": -43182730534313323,
+        "series_title": "Beverly Hills 90210",
+        "episode_code": "S05E24",
+        "source_title": "Beverly Hills, 90210 - s05e24",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 28156,
+        "source_id": -55153055433838721,
+        "series_title": "Beverly Hills 90210",
+        "episode_code": "S05E31",
+        "source_title": "Beverly Hills, 90210 - s05e31",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 28156,
+        "source_id": -927197825029157,
+        "series_title": "Beverly Hills 90210",
+        "episode_code": "S05E31",
+        "source_title": "Beverly Hills 90210 - S5E31 P.S",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 28157,
+        "source_id": -2289776383750993,
+        "series_title": "Beverly Hills 90210",
+        "episode_code": "S06E01",
+        "source_title": "Beverly Hills, 90210 - s06e01",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 28158,
+        "source_id": -34113276823697295,
+        "series_title": "Beverly Hills 90210",
+        "episode_code": "S06E02",
+        "source_title": "Beverly Hills, 90210 - s06e02",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 28159,
+        "source_id": -1658294023389482,
+        "series_title": "Beverly Hills 90210",
+        "episode_code": "S06E03",
+        "source_title": "Beverly Hills, 90210 6x3",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 28159,
+        "source_id": -299281830664669,
+        "series_title": "Beverly Hills 90210",
+        "episode_code": "S06E03",
+        "source_title": "Beverly Hills, 90210 - s06e03",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 28160,
+        "source_id": -71597064764609876,
+        "series_title": "Beverly Hills 90210",
+        "episode_code": "S06E04",
+        "source_title": "Beverly Hills, 90210 - s06e04",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 28161,
+        "source_id": -43899602632444357,
+        "series_title": "Beverly Hills 90210",
+        "episode_code": "S06E05",
+        "source_title": "Beverly Hills, 90210 - s06e05",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 28162,
+        "source_id": -27920765100427783,
+        "series_title": "Beverly Hills 90210",
+        "episode_code": "S06E06",
+        "source_title": "Beverly Hills, 90210 6x6",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 28162,
+        "source_id": -20879698761802995,
+        "series_title": "Beverly Hills 90210",
+        "episode_code": "S06E06",
+        "source_title": "Beverly Hills, 90210 - s06e06",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 28165,
+        "source_id": -42927694031850795,
+        "series_title": "Beverly Hills 90210",
+        "episode_code": "S06E09",
+        "source_title": "Beverly Hills, 90210 - s06e09",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 28173,
+        "source_id": -20332760630596114,
+        "series_title": "Beverly Hills 90210",
+        "episode_code": "S06E17",
+        "source_title": "beverly-hills-90210-6x17-objevi-se-a-hned-zmizi-dvd-rip-xvid-multidub-spb",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 28174,
+        "source_id": -43451422489754803,
+        "series_title": "Beverly Hills 90210",
+        "episode_code": "S06E18",
+        "source_title": "beverly-hills-90210-6x18-zapadly-snehem-dvd-rip-xvid-multidub-spb",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 28175,
+        "source_id": -21082737469853586,
+        "series_title": "Beverly Hills 90210",
+        "episode_code": "S06E19",
+        "source_title": "beverly-hills-90210-6x19-nancyina-volba-dvd-rip-xvid-multidub-spb",
+        "status": "needs_whisper"
+      },
+      {
         "episode_id": 49910,
         "source_id": -49187278468511205,
         "series_title": "Beze stopy",
@@ -229691,134 +229879,6 @@
         "series_title": "Bořiči mýtů",
         "episode_code": "S06E11",
         "source_title": "Borici Mytu 06x11 - Air Plane Hour",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 97578,
-        "source_id": -51338123488233003,
-        "series_title": "Bořiči mýtů",
-        "episode_code": "S06E11",
-        "source_title": "Borici mytu 06x11 (122) Viral-Hour.avi",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 97579,
-        "source_id": -56096808671258612,
-        "series_title": "Bořiči mýtů",
-        "episode_code": "S06E12",
-        "source_title": "Bořiči mýtů S06E12 MythBusters S06E12",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 97579,
-        "source_id": -59068350313914232,
-        "series_title": "Bořiči mýtů",
-        "episode_code": "S06E12",
-        "source_title": "Borici Mytu 06x12 - James Bond Special 1",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 97579,
-        "source_id": -34697013484858880,
-        "series_title": "Bořiči mýtů",
-        "episode_code": "S06E12",
-        "source_title": "Borici mytu 06x12 (123) Phone-Book-Friction.avi",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 97580,
-        "source_id": -52442390888150887,
-        "series_title": "Bořiči mýtů",
-        "episode_code": "S06E13",
-        "source_title": "Bořiči mýtů S06E13 MythBusters S06E13",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 97580,
-        "source_id": -53011717308182224,
-        "series_title": "Bořiči mýtů",
-        "episode_code": "S06E13",
-        "source_title": "Borici Mytu 06x13 - Olověný balon",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 97580,
-        "source_id": -18647045452457992,
-        "series_title": "Bořiči mýtů",
-        "episode_code": "S06E13",
-        "source_title": "Borici mytu 06x13 (124) Water-Stun-Gun.avi",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 97581,
-        "source_id": -47716413341303655,
-        "series_title": "Bořiči mýtů",
-        "episode_code": "S06E14",
-        "source_title": "Bořiči mýtů - S6E14 14",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 97581,
-        "source_id": -33963058047321736,
-        "series_title": "Bořiči mýtů",
-        "episode_code": "S06E14",
-        "source_title": "Borici Mytu 06x14 -Letadlo na běžícím pásu",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 97581,
-        "source_id": -12908065949691674,
-        "series_title": "Bořiči mýtů",
-        "episode_code": "S06E14",
-        "source_title": "Borici mytu 06x14 (125) Blind-Driving.avi",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 97582,
-        "source_id": -56229104370740216,
-        "series_title": "Bořiči mýtů",
-        "episode_code": "S06E15",
-        "source_title": "Bořiči mýtů - S6E15 15",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 97582,
-        "source_id": -8820514334201999,
-        "series_title": "Bořiči mýtů",
-        "episode_code": "S06E15",
-        "source_title": "Borici Mytu 06x15 - James Bond Special 2",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 97582,
-        "source_id": -17512517121028305,
-        "series_title": "Bořiči mýtů",
-        "episode_code": "S06E15",
-        "source_title": "Borici mytu 06x15 (126) Ninjas-2.avi",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 97584,
-        "source_id": -11795888465651773,
-        "series_title": "Bořiči mýtů",
-        "episode_code": "S06E17",
-        "source_title": "Bořiči mýtů S06E17 MythBusters S06E17",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 97584,
-        "source_id": -54592773938128377,
-        "series_title": "Bořiči mýtů",
-        "episode_code": "S06E17",
-        "source_title": "Bořiči mýtů - S6E17 17",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 97584,
-        "source_id": -58489626162635940,
-        "series_title": "Bořiči mýtů",
-        "episode_code": "S06E17",
-        "source_title": "Borici Mytu 06x17 - MacGyver Special",
         "status": "needs_whisper"
       }
     ],
@@ -230277,14 +230337,15 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 19,
+    "disabled": 109,
+    "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
     "whisper_non_cz_needs_subtitles": 5061,
     "whisper_confirmed_cz": 1901,
     "whisper_failed": 42,
-    "needs_whisper": 49897
+    "needs_whisper": 49898
   },
   "subtitle_followup_statuses": {
     "needs_subtitle_setup_after_prehrajto_processing": 24894
