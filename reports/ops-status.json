@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 165979,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 27417,
-    "prepared_source_episodes": 48234,
+    "uploaded_episodes": 27435,
+    "prepared_source_episodes": 48232,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 96,
-    "language_whisper_attempted_sources": 40,
-    "language_pending_whisper_sources": 2604,
+    "language_audited_sources": 83,
+    "language_whisper_attempted_sources": 20,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 56910,
     "whisper_review_pending_sources": 50005,
     "subtitle_followup_sources": 24714,
@@ -20,10 +20,58 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-08-15T10:19:46Z",
+      "databaseId": 31879237143,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-15T10:19:42Z",
+      "databaseId": 31879234513,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-15T10:19:03Z",
+      "databaseId": 31879210540,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-15T10:17:20Z",
+      "databaseId": 31879140751,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-08-15T10:16:13Z",
+      "databaseId": 31879094212,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-15T10:13:13Z",
+      "databaseId": 31878970741,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-15T10:12:02Z",
       "databaseId": 31878922841,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -43,11 +91,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-08-15T10:09:32Z",
       "databaseId": 31878815759,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -75,11 +123,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-15T10:06:43Z",
       "databaseId": 31878699288,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -87,7 +135,7 @@
       "createdAt": "2026-08-15T10:06:43Z",
       "databaseId": 31878698932,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "audit-language"
     },
     {
@@ -129,54 +177,6 @@
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-15T10:04:01Z",
-      "databaseId": 31878583477,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-15T10:02:50Z",
-      "databaseId": 31878534723,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-15T10:02:47Z",
-      "databaseId": 31878533077,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-15T10:01:42Z",
-      "databaseId": 31878486914,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-15T09:57:54Z",
-      "databaseId": 31878321515,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-15T09:56:42Z",
-      "databaseId": 31878273532,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
     }
   ],
   "gaps": {
@@ -65241,6 +65241,56 @@
         "video_id": 28502526
       },
       {
+        "episode_id": 53232,
+        "display_name": "Dirk Gently's Holistic Detective Agency S02E10 - 10. epizoda CZ Titulky",
+        "video_id": 28502540
+      },
+      {
+        "episode_id": 33924,
+        "display_name": "Teror S01E03 - 3. epizoda CZ Dabing",
+        "video_id": 28502551
+      },
+      {
+        "episode_id": 33928,
+        "display_name": "Teror S01E07 - 7. epizoda CZ Dabing",
+        "video_id": 28502574
+      },
+      {
+        "episode_id": 33936,
+        "display_name": "Teror S02E04 - 4. epizoda CZ Dabing",
+        "video_id": 28502599
+      },
+      {
+        "episode_id": 37653,
+        "display_name": "Star Trek: Enterprise S04E10 - Daidalos CZ Dabing",
+        "video_id": 28502518
+      },
+      {
+        "episode_id": 37701,
+        "display_name": "Star Trek: Enterprise S04E16 - Postižení CZ Titulky",
+        "video_id": 28502544
+      },
+      {
+        "episode_id": 37657,
+        "display_name": "Star Trek: Enterprise S04E18 - V zemi za zrcadlem, část první CZ Titulky",
+        "video_id": 28502563
+      },
+      {
+        "episode_id": 37677,
+        "display_name": "Star Trek: Enterprise S04E20 - Přízraky CZ Titulky",
+        "video_id": 28502585
+      },
+      {
+        "episode_id": 3317,
+        "display_name": "Kriminálka Miami S04E18 - Cvičná vražda CZ Dabing",
+        "video_id": 28502603
+      },
+      {
+        "episode_id": 20593,
+        "display_name": "Kriminálka Miami S06E01 - Nalezený syn CZ Dabing",
+        "video_id": 28502619
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -112786,9 +112836,49 @@
         "video_id": 28502315
       },
       {
+        "episode_id": 14926,
+        "display_name": "Goliáš S02E01 - La Mano CZ Dabing",
+        "video_id": 28502523
+      },
+      {
+        "episode_id": 14930,
+        "display_name": "Goliáš S02E05 - Kdo je Gabriel? CZ Dabing",
+        "video_id": 28502549
+      },
+      {
+        "episode_id": 14938,
+        "display_name": "Goliáš S03E07 - Vědomý rozchod CZ Dabing",
+        "video_id": 28502588
+      },
+      {
         "episode_id": 14947,
         "display_name": "Goliáš S04E08 - Je čas CZ Dabing",
         "video_id": 28502516
+      },
+      {
+        "episode_id": 135499,
+        "display_name": "Tým Škorpion S01E09 - Základní součást darebáka CZ Titulky",
+        "video_id": 28502537
+      },
+      {
+        "episode_id": 135503,
+        "display_name": "Tým Škorpion S02E09 - USA vs. OSN vs. Velká Británie CZ Dabing",
+        "video_id": 28502552
+      },
+      {
+        "episode_id": 104243,
+        "display_name": "Tým Škorpion S04E04 - Nukleární děti v kostce CZ Titulky",
+        "video_id": 28502578
+      },
+      {
+        "episode_id": 104275,
+        "display_name": "Tým Škorpion S04E21 - Černý pasažér CZ Titulky",
+        "video_id": 28502601
+      },
+      {
+        "episode_id": 48707,
+        "display_name": "Sword Art Online S01E15 - 15. epizoda CZ Titulky",
+        "video_id": 28502622
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -177748,6 +177838,56 @@
         "video_id": 28502526
       },
       {
+        "episode_id": 53232,
+        "display_name": "Dirk Gently's Holistic Detective Agency S02E10 - 10. epizoda CZ Titulky",
+        "video_id": 28502540
+      },
+      {
+        "episode_id": 33924,
+        "display_name": "Teror S01E03 - 3. epizoda CZ Dabing",
+        "video_id": 28502551
+      },
+      {
+        "episode_id": 33928,
+        "display_name": "Teror S01E07 - 7. epizoda CZ Dabing",
+        "video_id": 28502574
+      },
+      {
+        "episode_id": 33936,
+        "display_name": "Teror S02E04 - 4. epizoda CZ Dabing",
+        "video_id": 28502599
+      },
+      {
+        "episode_id": 37653,
+        "display_name": "Star Trek: Enterprise S04E10 - Daidalos CZ Dabing",
+        "video_id": 28502518
+      },
+      {
+        "episode_id": 37701,
+        "display_name": "Star Trek: Enterprise S04E16 - Postižení CZ Titulky",
+        "video_id": 28502544
+      },
+      {
+        "episode_id": 37657,
+        "display_name": "Star Trek: Enterprise S04E18 - V zemi za zrcadlem, část první CZ Titulky",
+        "video_id": 28502563
+      },
+      {
+        "episode_id": 37677,
+        "display_name": "Star Trek: Enterprise S04E20 - Přízraky CZ Titulky",
+        "video_id": 28502585
+      },
+      {
+        "episode_id": 3317,
+        "display_name": "Kriminálka Miami S04E18 - Cvičná vražda CZ Dabing",
+        "video_id": 28502603
+      },
+      {
+        "episode_id": 20593,
+        "display_name": "Kriminálka Miami S06E01 - Nalezený syn CZ Dabing",
+        "video_id": 28502619
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -225293,9 +225433,49 @@
         "video_id": 28502315
       },
       {
+        "episode_id": 14926,
+        "display_name": "Goliáš S02E01 - La Mano CZ Dabing",
+        "video_id": 28502523
+      },
+      {
+        "episode_id": 14930,
+        "display_name": "Goliáš S02E05 - Kdo je Gabriel? CZ Dabing",
+        "video_id": 28502549
+      },
+      {
+        "episode_id": 14938,
+        "display_name": "Goliáš S03E07 - Vědomý rozchod CZ Dabing",
+        "video_id": 28502588
+      },
+      {
         "episode_id": 14947,
         "display_name": "Goliáš S04E08 - Je čas CZ Dabing",
         "video_id": 28502516
+      },
+      {
+        "episode_id": 135499,
+        "display_name": "Tým Škorpion S01E09 - Základní součást darebáka CZ Titulky",
+        "video_id": 28502537
+      },
+      {
+        "episode_id": 135503,
+        "display_name": "Tým Škorpion S02E09 - USA vs. OSN vs. Velká Británie CZ Dabing",
+        "video_id": 28502552
+      },
+      {
+        "episode_id": 104243,
+        "display_name": "Tým Škorpion S04E04 - Nukleární děti v kostce CZ Titulky",
+        "video_id": 28502578
+      },
+      {
+        "episode_id": 104275,
+        "display_name": "Tým Škorpion S04E21 - Černý pasažér CZ Titulky",
+        "video_id": 28502601
+      },
+      {
+        "episode_id": 48707,
+        "display_name": "Sword Art Online S01E15 - 15. epizoda CZ Titulky",
+        "video_id": 28502622
       }
     ],
     "prepared_not_upload_ready": [
@@ -226457,8 +226637,8 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 56,
-    "ok": 39,
+    "disabled": 63,
+    "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
