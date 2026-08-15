@@ -2,14 +2,14 @@
   "counts": {
     "backlog_episodes": 165557,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 27863,
-    "prepared_source_episodes": 48061,
+    "uploaded_episodes": 27867,
+    "prepared_source_episodes": 48025,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 64,
+    "language_audited_sources": 88,
     "language_whisper_attempted_sources": 40,
     "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 56902,
@@ -20,18 +20,34 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-08-15T17:35:11Z",
-      "databaseId": 31898725191,
+      "createdAt": "2026-08-15T17:37:51Z",
+      "databaseId": 31898851874,
       "headBranch": "main",
       "status": "in_progress",
-      "workflowName": "update-descriptions"
+      "workflowName": "ops-status"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-08-15T17:36:37Z",
+      "databaseId": 31898793995,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-15T17:35:11Z",
+      "databaseId": 31898725191,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-15T17:34:01Z",
       "databaseId": 31898669852,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -47,7 +63,7 @@
       "createdAt": "2026-08-15T17:33:55Z",
       "databaseId": 31898664632,
       "headBranch": "main",
-      "status": "pending",
+      "status": "queued",
       "workflowName": "prepare-manifest"
     },
     {
@@ -139,11 +155,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-15T17:21:22Z",
       "databaseId": 31898068010,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -161,22 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-15T17:18:26Z",
-      "databaseId": 31897927355,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-15T17:18:05Z",
-      "databaseId": 31897912314,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
     }
   ],
   "gaps": {
@@ -66356,6 +66356,11 @@
         "video_id": 28510007
       },
       {
+        "episode_id": 2792,
+        "display_name": "Power S02E03 - 3. epizoda CZ Titulky",
+        "video_id": 28510259
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -115019,6 +115024,21 @@
         "episode_id": 55851,
         "display_name": "V zajetí kouzel S05E08 - Zahradní vražda CZ Dabing",
         "video_id": 28509965
+      },
+      {
+        "episode_id": 77538,
+        "display_name": "Virgin River S02E03 - Ráno poté CZ Dabing",
+        "video_id": 28510258
+      },
+      {
+        "episode_id": 55855,
+        "display_name": "V zajetí kouzel S05E12 - Odvaha CZ Dabing",
+        "video_id": 28510252
+      },
+      {
+        "episode_id": 77527,
+        "display_name": "Virgin River S01E02 - Ztráty CZ Dabing",
+        "video_id": 28510297
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -181093,6 +181113,11 @@
         "video_id": 28510007
       },
       {
+        "episode_id": 2792,
+        "display_name": "Power S02E03 - 3. epizoda CZ Titulky",
+        "video_id": 28510259
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -229756,6 +229781,21 @@
         "episode_id": 55851,
         "display_name": "V zajetí kouzel S05E08 - Zahradní vražda CZ Dabing",
         "video_id": 28509965
+      },
+      {
+        "episode_id": 77538,
+        "display_name": "Virgin River S02E03 - Ráno poté CZ Dabing",
+        "video_id": 28510258
+      },
+      {
+        "episode_id": 55855,
+        "display_name": "V zajetí kouzel S05E12 - Odvaha CZ Dabing",
+        "video_id": 28510252
+      },
+      {
+        "episode_id": 77527,
+        "display_name": "Virgin River S01E02 - Ztráty CZ Dabing",
+        "video_id": 28510297
       }
     ],
     "prepared_not_upload_ready": [
@@ -230917,7 +230957,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 24,
+    "disabled": 48,
     "ok": 39,
     "resolve_failed": 1
   },
