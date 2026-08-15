@@ -2,15 +2,15 @@
   "counts": {
     "backlog_episodes": 165557,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 27770,
-    "prepared_source_episodes": 48099,
+    "uploaded_episodes": 27775,
+    "prepared_source_episodes": 48111,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 20,
-    "language_whisper_attempted_sources": 20,
+    "language_audited_sources": 52,
+    "language_whisper_attempted_sources": 40,
     "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 56901,
     "whisper_review_pending_sources": 49939,
@@ -20,10 +20,34 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-08-15T15:33:36Z",
+      "databaseId": 31893056988,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-15T15:33:32Z",
+      "databaseId": 31893053381,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-15T15:29:08Z",
+      "databaseId": 31892841459,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "cancelled",
       "createdAt": "2026-08-15T15:28:25Z",
       "databaseId": 31892807140,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -35,11 +59,11 @@
       "workflowName": "sync"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-15T15:27:57Z",
       "databaseId": 31892786128,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -79,7 +103,7 @@
       "createdAt": "2026-08-15T15:18:17Z",
       "databaseId": 31892333772,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "process-whisper-review"
     },
     {
@@ -107,11 +131,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-15T15:16:33Z",
       "databaseId": 31892254394,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -147,36 +171,12 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-15T15:15:20Z",
       "databaseId": 31892196323,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-15T15:14:22Z",
-      "databaseId": 31892152209,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-15T15:12:59Z",
-      "databaseId": 31892086921,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "refresh-backlog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-15T15:06:55Z",
-      "databaseId": 31891801701,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
     }
   ],
   "gaps": {
@@ -66121,6 +66121,21 @@
         "video_id": 28507909
       },
       {
+        "episode_id": 77536,
+        "display_name": "Virgin River S02E01 - Nové začátky CZ Dabing",
+        "video_id": 28507951
+      },
+      {
+        "episode_id": 77540,
+        "display_name": "Virgin River S02E05 - Nejde zapomenout CZ Dabing",
+        "video_id": 28508006
+      },
+      {
+        "episode_id": 46569,
+        "display_name": "Heuréka – město divů S03E04 - Časová smyčka CZ Dabing",
+        "video_id": 28507930
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -114546,6 +114561,11 @@
         "video_id": 28507794
       },
       {
+        "episode_id": 31422,
+        "display_name": "F1: Touha po vítězství S04E01 - Souboj titánů CZ Dabing",
+        "video_id": 28507917
+      },
+      {
         "episode_id": 16283,
         "display_name": "F1: Touha po vítězství S02E10 - Cílová vlajka CZ Dabing",
         "video_id": 28507898
@@ -114554,6 +114574,11 @@
         "episode_id": 31419,
         "display_name": "F1: Touha po vítězství S03E08 - Ničeho nelituju CZ Dabing",
         "video_id": 28507933
+      },
+      {
+        "episode_id": 31423,
+        "display_name": "F1: Touha po vítězství S04E02 - Eso v rukávu CZ Dabing",
+        "video_id": 28507973
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -180393,6 +180418,21 @@
         "video_id": 28507909
       },
       {
+        "episode_id": 77536,
+        "display_name": "Virgin River S02E01 - Nové začátky CZ Dabing",
+        "video_id": 28507951
+      },
+      {
+        "episode_id": 77540,
+        "display_name": "Virgin River S02E05 - Nejde zapomenout CZ Dabing",
+        "video_id": 28508006
+      },
+      {
+        "episode_id": 46569,
+        "display_name": "Heuréka – město divů S03E04 - Časová smyčka CZ Dabing",
+        "video_id": 28507930
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -228818,6 +228858,11 @@
         "video_id": 28507794
       },
       {
+        "episode_id": 31422,
+        "display_name": "F1: Touha po vítězství S04E01 - Souboj titánů CZ Dabing",
+        "video_id": 28507917
+      },
+      {
         "episode_id": 16283,
         "display_name": "F1: Touha po vítězství S02E10 - Cílová vlajka CZ Dabing",
         "video_id": 28507898
@@ -228826,6 +228871,11 @@
         "episode_id": 31419,
         "display_name": "F1: Touha po vítězství S03E08 - Ničeho nelituju CZ Dabing",
         "video_id": 28507933
+      },
+      {
+        "episode_id": 31423,
+        "display_name": "F1: Touha po vítězství S04E02 - Eso v rukávu CZ Dabing",
+        "video_id": 28507973
       }
     ],
     "prepared_not_upload_ready": [
@@ -229180,6 +229230,14 @@
         "status": "needs_whisper"
       },
       {
+        "episode_id": 28035,
+        "source_id": -3070882230101551,
+        "series_title": "Beverly Hills 90210",
+        "episode_code": "S01E20",
+        "source_title": "Beverly.Hills.90210.S01.E20.1080p.WEB-DL.AAC2.0.H.264-",
+        "status": "needs_whisper"
+      },
+      {
         "episode_id": 49910,
         "source_id": -49187278468511205,
         "series_title": "Beze stopy",
@@ -229521,14 +229579,6 @@
         "series_title": "Bořiči mýtů",
         "episode_code": "S06E17",
         "source_title": "Borici mytu 06x17 (128) Motorcycle-Flip.avi",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 97585,
-        "source_id": -730203236888688,
-        "series_title": "Bořiči mýtů",
-        "episode_code": "S06E18",
-        "source_title": "Bořiči mýtů - S6E18 18",
         "status": "needs_whisper"
       }
     ],
@@ -229987,7 +230037,8 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 19,
+    "ok": 39,
+    "disabled": 12,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
