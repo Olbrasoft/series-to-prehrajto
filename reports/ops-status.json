@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 166463,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 26943,
+    "uploaded_episodes": 26959,
     "prepared_source_episodes": 47827,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 60,
-    "language_whisper_attempted_sources": 60,
-    "language_pending_whisper_sources": 2604,
+    "language_audited_sources": 20,
+    "language_whisper_attempted_sources": 20,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 56905,
     "whisper_review_pending_sources": 50015,
     "subtitle_followup_sources": 24630,
@@ -20,10 +20,42 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-08-15T04:24:28Z",
+      "databaseId": 31864343461,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-15T04:19:58Z",
+      "databaseId": 31864153044,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-15T04:19:07Z",
+      "databaseId": 31864119064,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-15T04:19:03Z",
+      "databaseId": 31864116784,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-15T04:17:57Z",
       "databaseId": 31864071642,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -59,11 +91,11 @@
       "workflowName": "prepare-manifest"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-15T04:12:00Z",
       "databaseId": 31863812001,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -83,11 +115,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-15T04:11:31Z",
       "databaseId": 31863792033,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -145,38 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-15T04:01:21Z",
-      "databaseId": 31863341741,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-15T04:00:55Z",
-      "databaseId": 31863324334,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-15T04:00:53Z",
-      "databaseId": 31863321726,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-15T04:00:53Z",
-      "databaseId": 31863321691,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
     }
   ],
   "gaps": {
@@ -64076,6 +64076,41 @@
         "video_id": 28498737
       },
       {
+        "episode_id": 60924,
+        "display_name": "Ospalá díra S04E01 - Columbia CZ Titulky",
+        "video_id": 28498759
+      },
+      {
+        "episode_id": 47912,
+        "display_name": "Continuum S01E03 - Wasting Time CZ Titulky",
+        "video_id": 28498780
+      },
+      {
+        "episode_id": 84281,
+        "display_name": "Studio S01E08 - Zlaté glóby CZ Titulky",
+        "video_id": 28498761
+      },
+      {
+        "episode_id": 5765,
+        "display_name": "Na zdraví S01E02 - Samovy ženy CZ Dabing",
+        "video_id": 28498773
+      },
+      {
+        "episode_id": 5769,
+        "display_name": "Na zdraví S01E06 - Kterákoliv kamarádka Diany CZ Titulky",
+        "video_id": 28498781
+      },
+      {
+        "episode_id": 5773,
+        "display_name": "Na zdraví S01E10 - Řetěz neúspěchu CZ Dabing",
+        "video_id": 28498794
+      },
+      {
+        "episode_id": 5781,
+        "display_name": "Na zdraví S01E18 - Nesoutěžím CZ Dabing",
+        "video_id": 28498807
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -110419,6 +110454,51 @@
         "episode_id": 86443,
         "display_name": "Hodný holky S04E09 - Polévka z pytlíku CZ Titulky",
         "video_id": 28498715
+      },
+      {
+        "episode_id": 110286,
+        "display_name": "Stále v kurzu S04E08 - Čarodějnice týdne CZ Dabing",
+        "video_id": 28498757
+      },
+      {
+        "episode_id": 100666,
+        "display_name": "Stále v kurzu S05E02 - Největší fanoušek CZ Dabing",
+        "video_id": 28498770
+      },
+      {
+        "episode_id": 86414,
+        "display_name": "Hodný holky S02E02 - Pozor, děti CZ Titulky",
+        "video_id": 28498775
+      },
+      {
+        "episode_id": 86418,
+        "display_name": "Hodný holky S02E09 - Naposled CZ Titulky",
+        "video_id": 28498791
+      },
+      {
+        "episode_id": 86422,
+        "display_name": "Hodný holky S02E13 - King CZ Titulky",
+        "video_id": 28498804
+      },
+      {
+        "episode_id": 86447,
+        "display_name": "Hodný holky S04E14 - Díky za podporu CZ Titulky",
+        "video_id": 28498763
+      },
+      {
+        "episode_id": 114719,
+        "display_name": "Clickbait S01E05 - Reportér CZ Titulky",
+        "video_id": 28498784
+      },
+      {
+        "episode_id": 40007,
+        "display_name": "Plný dům S02E06 - 6. epizoda CZ Titulky",
+        "video_id": 28498800
+      },
+      {
+        "episode_id": 40039,
+        "display_name": "Plný dům S03E19 - 19. epizoda CZ Dabing",
+        "video_id": 28498810
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -174213,6 +174293,41 @@
         "video_id": 28498737
       },
       {
+        "episode_id": 60924,
+        "display_name": "Ospalá díra S04E01 - Columbia CZ Titulky",
+        "video_id": 28498759
+      },
+      {
+        "episode_id": 47912,
+        "display_name": "Continuum S01E03 - Wasting Time CZ Titulky",
+        "video_id": 28498780
+      },
+      {
+        "episode_id": 84281,
+        "display_name": "Studio S01E08 - Zlaté glóby CZ Titulky",
+        "video_id": 28498761
+      },
+      {
+        "episode_id": 5765,
+        "display_name": "Na zdraví S01E02 - Samovy ženy CZ Dabing",
+        "video_id": 28498773
+      },
+      {
+        "episode_id": 5769,
+        "display_name": "Na zdraví S01E06 - Kterákoliv kamarádka Diany CZ Titulky",
+        "video_id": 28498781
+      },
+      {
+        "episode_id": 5773,
+        "display_name": "Na zdraví S01E10 - Řetěz neúspěchu CZ Dabing",
+        "video_id": 28498794
+      },
+      {
+        "episode_id": 5781,
+        "display_name": "Na zdraví S01E18 - Nesoutěžím CZ Dabing",
+        "video_id": 28498807
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -220556,6 +220671,51 @@
         "episode_id": 86443,
         "display_name": "Hodný holky S04E09 - Polévka z pytlíku CZ Titulky",
         "video_id": 28498715
+      },
+      {
+        "episode_id": 110286,
+        "display_name": "Stále v kurzu S04E08 - Čarodějnice týdne CZ Dabing",
+        "video_id": 28498757
+      },
+      {
+        "episode_id": 100666,
+        "display_name": "Stále v kurzu S05E02 - Největší fanoušek CZ Dabing",
+        "video_id": 28498770
+      },
+      {
+        "episode_id": 86414,
+        "display_name": "Hodný holky S02E02 - Pozor, děti CZ Titulky",
+        "video_id": 28498775
+      },
+      {
+        "episode_id": 86418,
+        "display_name": "Hodný holky S02E09 - Naposled CZ Titulky",
+        "video_id": 28498791
+      },
+      {
+        "episode_id": 86422,
+        "display_name": "Hodný holky S02E13 - King CZ Titulky",
+        "video_id": 28498804
+      },
+      {
+        "episode_id": 86447,
+        "display_name": "Hodný holky S04E14 - Díky za podporu CZ Titulky",
+        "video_id": 28498763
+      },
+      {
+        "episode_id": 114719,
+        "display_name": "Clickbait S01E05 - Reportér CZ Titulky",
+        "video_id": 28498784
+      },
+      {
+        "episode_id": 40007,
+        "display_name": "Plný dům S02E06 - 6. epizoda CZ Titulky",
+        "video_id": 28498800
+      },
+      {
+        "episode_id": 40039,
+        "display_name": "Plný dům S03E19 - 19. epizoda CZ Dabing",
+        "video_id": 28498810
       }
     ],
     "prepared_not_upload_ready": [
@@ -221717,7 +221877,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 59,
+    "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
