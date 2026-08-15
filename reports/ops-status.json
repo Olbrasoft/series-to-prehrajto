@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 166463,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 27039,
+    "uploaded_episodes": 27041,
     "prepared_source_episodes": 47856,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 40,
-    "language_whisper_attempted_sources": 40,
-    "language_pending_whisper_sources": 2604,
+    "language_audited_sources": 20,
+    "language_whisper_attempted_sources": 20,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 56907,
     "whisper_review_pending_sources": 50017,
     "subtitle_followup_sources": 24660,
@@ -20,10 +20,26 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-08-15T05:19:39Z",
+      "databaseId": 31866671592,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-15T05:19:31Z",
+      "databaseId": 31866667053,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
       "createdAt": "2026-08-15T05:18:24Z",
       "databaseId": 31866621773,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
@@ -35,11 +51,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-15T05:18:21Z",
       "databaseId": 31866619702,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -99,11 +115,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-15T05:08:18Z",
       "databaseId": 31866194170,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -161,22 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-15T05:03:27Z",
-      "databaseId": 31865991471,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-15T05:02:22Z",
-      "databaseId": 31865945617,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
     }
   ],
   "gaps": {
@@ -64314,6 +64314,16 @@
         "episode_id": 86417,
         "display_name": "Hodný holky S02E05 - Všechno musí jít CZ Titulky",
         "video_id": 28499300
+      },
+      {
+        "episode_id": 102076,
+        "display_name": "Quantico S02E12 - 12. epizoda CZ Titulky",
+        "video_id": 28499383
+      },
+      {
+        "episode_id": 86425,
+        "display_name": "Hodný holky S03E04 - Jádro přežití CZ Titulky",
+        "video_id": 28499382
       },
       {
         "episode_id": 114182,
@@ -174933,6 +174943,16 @@
         "video_id": 28499300
       },
       {
+        "episode_id": 102076,
+        "display_name": "Quantico S02E12 - 12. epizoda CZ Titulky",
+        "video_id": 28499383
+      },
+      {
+        "episode_id": 86425,
+        "display_name": "Hodný holky S03E04 - Jádro přežití CZ Titulky",
+        "video_id": 28499382
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -222677,7 +222697,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 39,
+    "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
