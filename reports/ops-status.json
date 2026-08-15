@@ -2,8 +2,8 @@
   "counts": {
     "backlog_episodes": 166463,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 27010,
-    "prepared_source_episodes": 47861,
+    "uploaded_episodes": 27022,
+    "prepared_source_episodes": 47873,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
@@ -11,7 +11,7 @@
     "language_queue_sources": 2644,
     "language_audited_sources": 40,
     "language_whisper_attempted_sources": 40,
-    "language_pending_whisper_sources": 2624,
+    "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 56907,
     "whisper_review_pending_sources": 50017,
     "subtitle_followup_sources": 24660,
@@ -20,18 +20,58 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-08-15T05:02:22Z",
-      "databaseId": 31865945617,
+      "createdAt": "2026-08-15T05:06:32Z",
+      "databaseId": 31866123403,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-08-15T05:06:08Z",
+      "databaseId": 31866104471,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-15T05:05:42Z",
+      "databaseId": 31866086381,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-15T05:03:31Z",
+      "databaseId": 31865993590,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-15T05:03:27Z",
+      "databaseId": 31865991471,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-15T05:02:22Z",
+      "databaseId": 31865945617,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "cancelled",
       "createdAt": "2026-08-15T05:02:17Z",
       "databaseId": 31865942416,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -115,11 +155,11 @@
       "workflowName": "process-whisper-review"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-15T04:56:34Z",
       "databaseId": 31865691857,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -137,46 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-15T04:49:59Z",
-      "databaseId": 31865409139,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-15T04:48:17Z",
-      "databaseId": 31865339742,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-sources"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-15T04:46:48Z",
-      "databaseId": 31865278582,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-15T04:44:41Z",
-      "databaseId": 31865185685,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-15T04:43:15Z",
-      "databaseId": 31865127372,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
     }
   ],
   "gaps": {
@@ -64241,9 +64241,44 @@
         "video_id": 28499217
       },
       {
+        "episode_id": 51032,
+        "display_name": "Forever S01E12 - 12. epizoda CZ Titulky",
+        "video_id": 28499231
+      },
+      {
+        "episode_id": 51028,
+        "display_name": "Forever S01E14 - 14. epizoda CZ Titulky",
+        "video_id": 28499246
+      },
+      {
+        "episode_id": 51012,
+        "display_name": "Forever S01E17 - 17. epizoda CZ Dabing",
+        "video_id": 28499252
+      },
+      {
         "episode_id": 100649,
         "display_name": "Stále v kurzu S02E03 - Důvěřuj procesu CZ Dabing",
         "video_id": 28499213
+      },
+      {
+        "episode_id": 100653,
+        "display_name": "Stále v kurzu S02E07 - Na trhu CZ Dabing",
+        "video_id": 28499227
+      },
+      {
+        "episode_id": 100661,
+        "display_name": "Stále v kurzu S03E06 - Poslední par CZ Dabing",
+        "video_id": 28499242
+      },
+      {
+        "episode_id": 110289,
+        "display_name": "Stále v kurzu S04E02 - Dívky z obálky CZ Dabing",
+        "video_id": 28499248
+      },
+      {
+        "episode_id": 110285,
+        "display_name": "Stále v kurzu S04E07 - Křtiny CZ Dabing",
+        "video_id": 28499259
       },
       {
         "episode_id": 114182,
@@ -110751,9 +110786,34 @@
         "video_id": 28499154
       },
       {
+        "episode_id": 12930,
+        "display_name": "Manhunt S02E07 - Erik CZ Dabing",
+        "video_id": 28499219
+      },
+      {
+        "episode_id": 12926,
+        "display_name": "Manhunt S02E10 - Lovecká sezóna CZ Dabing",
+        "video_id": 28499244
+      },
+      {
+        "episode_id": 99874,
+        "display_name": "Jeden den S01E06 - 6. díl CZ Dabing",
+        "video_id": 28499255
+      },
+      {
         "episode_id": 60907,
         "display_name": "Ospalá díra S03E04 - Sestry Millsovy CZ Titulky",
         "video_id": 28499212
+      },
+      {
+        "episode_id": 60915,
+        "display_name": "Ospalá díra S03E13 - Temné zrcadlo CZ Titulky",
+        "video_id": 28499226
+      },
+      {
+        "episode_id": 60919,
+        "display_name": "Ospalá díra S03E17 - Delaware CZ Titulky",
+        "video_id": 28499243
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -174713,9 +174773,44 @@
         "video_id": 28499217
       },
       {
+        "episode_id": 51032,
+        "display_name": "Forever S01E12 - 12. epizoda CZ Titulky",
+        "video_id": 28499231
+      },
+      {
+        "episode_id": 51028,
+        "display_name": "Forever S01E14 - 14. epizoda CZ Titulky",
+        "video_id": 28499246
+      },
+      {
+        "episode_id": 51012,
+        "display_name": "Forever S01E17 - 17. epizoda CZ Dabing",
+        "video_id": 28499252
+      },
+      {
         "episode_id": 100649,
         "display_name": "Stále v kurzu S02E03 - Důvěřuj procesu CZ Dabing",
         "video_id": 28499213
+      },
+      {
+        "episode_id": 100653,
+        "display_name": "Stále v kurzu S02E07 - Na trhu CZ Dabing",
+        "video_id": 28499227
+      },
+      {
+        "episode_id": 100661,
+        "display_name": "Stále v kurzu S03E06 - Poslední par CZ Dabing",
+        "video_id": 28499242
+      },
+      {
+        "episode_id": 110289,
+        "display_name": "Stále v kurzu S04E02 - Dívky z obálky CZ Dabing",
+        "video_id": 28499248
+      },
+      {
+        "episode_id": 110285,
+        "display_name": "Stále v kurzu S04E07 - Křtiny CZ Dabing",
+        "video_id": 28499259
       },
       {
         "episode_id": 114182,
@@ -221223,9 +221318,34 @@
         "video_id": 28499154
       },
       {
+        "episode_id": 12930,
+        "display_name": "Manhunt S02E07 - Erik CZ Dabing",
+        "video_id": 28499219
+      },
+      {
+        "episode_id": 12926,
+        "display_name": "Manhunt S02E10 - Lovecká sezóna CZ Dabing",
+        "video_id": 28499244
+      },
+      {
+        "episode_id": 99874,
+        "display_name": "Jeden den S01E06 - 6. díl CZ Dabing",
+        "video_id": 28499255
+      },
+      {
         "episode_id": 60907,
         "display_name": "Ospalá díra S03E04 - Sestry Millsovy CZ Titulky",
         "video_id": 28499212
+      },
+      {
+        "episode_id": 60915,
+        "display_name": "Ospalá díra S03E13 - Temné zrcadlo CZ Titulky",
+        "video_id": 28499226
+      },
+      {
+        "episode_id": 60919,
+        "display_name": "Ospalá díra S03E17 - Delaware CZ Titulky",
+        "video_id": 28499243
       }
     ],
     "prepared_not_upload_ready": [
