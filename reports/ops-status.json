@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 163769,
     "manifest_upload_ready_episodes": 1003,
-    "uploaded_episodes": 29639,
+    "uploaded_episodes": 29646,
     "prepared_source_episodes": 48070,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 109,
+    "language_audited_sources": 40,
     "language_whisper_attempted_sources": 40,
-    "language_pending_whisper_sources": 2624,
+    "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 56852,
     "whisper_review_pending_sources": 49700,
     "subtitle_followup_sources": 25310,
@@ -20,10 +20,58 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-08-16T23:00:30Z",
+      "databaseId": 31977908376,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-16T23:00:26Z",
+      "databaseId": 31977905089,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-08-16T22:58:28Z",
+      "databaseId": 31977810667,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-16T22:58:27Z",
+      "databaseId": 31977810455,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-16T22:57:49Z",
+      "databaseId": 31977784888,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-16T22:57:47Z",
+      "databaseId": 31977783244,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-16T22:56:42Z",
       "databaseId": 31977736183,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -51,11 +99,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-16T22:52:27Z",
       "databaseId": 31977539312,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -129,54 +177,6 @@
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "prepare-sources"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-16T22:41:42Z",
-      "databaseId": 31977042642,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-16T22:39:56Z",
-      "databaseId": 31976962497,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-16T22:39:54Z",
-      "databaseId": 31976960684,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-16T22:39:54Z",
-      "databaseId": 31976960365,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-16T22:39:44Z",
-      "databaseId": 31976952485,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-16T22:39:24Z",
-      "databaseId": 31976935785,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
     }
   ],
   "gaps": {
@@ -70801,9 +70801,19 @@
         "video_id": 28551750
       },
       {
+        "episode_id": 59500,
+        "display_name": "4400 S03E06 - Dnes mám promoci CZ Titulky",
+        "video_id": 28551923
+      },
+      {
         "episode_id": 103673,
         "display_name": "Farscape S03E14 - Neomezené možnosti - Daidalos požaduje… CZ Dabing",
         "video_id": 28551732
+      },
+      {
+        "episode_id": 18085,
+        "display_name": "Bojovník S01E08 - Na myšlení nám neplatí dost CZ Dabing",
+        "video_id": 28551905
       },
       {
         "episode_id": 114182,
@@ -123896,9 +123906,34 @@
         "video_id": 28551730
       },
       {
+        "episode_id": 68014,
+        "display_name": "Posel ztracených duší S05E07 - Obchod s ďáblem CZ Dabing",
+        "video_id": 28551870
+      },
+      {
+        "episode_id": 13746,
+        "display_name": "Xena S06E15 - K Heliconu a zpět CZ Titulky",
+        "video_id": 28551943
+      },
+      {
         "episode_id": 103675,
         "display_name": "Farscape S03E16 - Anděl mstivý CZ Dabing",
         "video_id": 28551722
+      },
+      {
+        "episode_id": 13675,
+        "display_name": "Xena S03E10 - Brk je mocnější než... CZ Dabing",
+        "video_id": 28551838
+      },
+      {
+        "episode_id": 13683,
+        "display_name": "Xena S03E18 - Ploutve, krásky, drahokam CZ Dabing",
+        "video_id": 28551921
+      },
+      {
+        "episode_id": 13703,
+        "display_name": "Xena S04E16 - Cesta CZ Dabing",
+        "video_id": 28551963
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -194418,9 +194453,19 @@
         "video_id": 28551750
       },
       {
+        "episode_id": 59500,
+        "display_name": "4400 S03E06 - Dnes mám promoci CZ Titulky",
+        "video_id": 28551923
+      },
+      {
         "episode_id": 103673,
         "display_name": "Farscape S03E14 - Neomezené možnosti - Daidalos požaduje… CZ Dabing",
         "video_id": 28551732
+      },
+      {
+        "episode_id": 18085,
+        "display_name": "Bojovník S01E08 - Na myšlení nám neplatí dost CZ Dabing",
+        "video_id": 28551905
       },
       {
         "episode_id": 114182,
@@ -247513,9 +247558,34 @@
         "video_id": 28551730
       },
       {
+        "episode_id": 68014,
+        "display_name": "Posel ztracených duší S05E07 - Obchod s ďáblem CZ Dabing",
+        "video_id": 28551870
+      },
+      {
+        "episode_id": 13746,
+        "display_name": "Xena S06E15 - K Heliconu a zpět CZ Titulky",
+        "video_id": 28551943
+      },
+      {
         "episode_id": 103675,
         "display_name": "Farscape S03E16 - Anděl mstivý CZ Dabing",
         "video_id": 28551722
+      },
+      {
+        "episode_id": 13675,
+        "display_name": "Xena S03E10 - Brk je mocnější než... CZ Dabing",
+        "video_id": 28551838
+      },
+      {
+        "episode_id": 13683,
+        "display_name": "Xena S03E18 - Ploutve, krásky, drahokam CZ Dabing",
+        "video_id": 28551921
+      },
+      {
+        "episode_id": 13703,
+        "display_name": "Xena S04E16 - Cesta CZ Dabing",
+        "video_id": 28551963
       }
     ],
     "prepared_not_upload_ready": [
@@ -248678,7 +248748,6 @@
   "language_verdicts": {},
   "language_whisper_statuses": {
     "ok": 39,
-    "disabled": 69,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
