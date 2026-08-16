@@ -2,14 +2,14 @@
   "counts": {
     "backlog_episodes": 164761,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 28588,
-    "prepared_source_episodes": 48322,
+    "uploaded_episodes": 28590,
+    "prepared_source_episodes": 48311,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 97,
+    "language_audited_sources": 120,
     "language_whisper_attempted_sources": 20,
     "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 56892,
@@ -20,18 +20,50 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-08-16T03:42:18Z",
-      "databaseId": 31924879504,
+      "createdAt": "2026-08-16T03:44:48Z",
+      "databaseId": 31924976173,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-16T03:44:07Z",
+      "databaseId": 31924949968,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
+      "conclusion": "success",
+      "createdAt": "2026-08-16T03:43:25Z",
+      "databaseId": 31924923588,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
       "conclusion": "",
+      "createdAt": "2026-08-16T03:43:21Z",
+      "databaseId": 31924921810,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-16T03:42:18Z",
+      "databaseId": 31924879504,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "cancelled",
       "createdAt": "2026-08-16T03:42:15Z",
       "databaseId": 31924877194,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -145,38 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-16T03:20:38Z",
-      "databaseId": 31924012694,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-16T03:20:16Z",
-      "databaseId": 31923998834,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-16T03:18:38Z",
-      "databaseId": 31923934968,
-      "headBranch": "main",
-      "status": "pending",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-16T03:16:56Z",
-      "databaseId": 31923870580,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
     }
   ],
   "gaps": {
@@ -68169,6 +68169,16 @@
         "episode_id": 39433,
         "display_name": "Pokémon S15E38 - Piplup, Pansage a setkání všech dob! CZ Dabing",
         "video_id": 28523753
+      },
+      {
+        "episode_id": 65552,
+        "display_name": "Tokyo Vice S01E01 - Díl 1 CZ Dabing",
+        "video_id": 28523949
+      },
+      {
+        "episode_id": 38953,
+        "display_name": "Pokémon S15E39 - Expedice na ostrov Onixů! CZ Dabing",
+        "video_id": 28523948
       },
       {
         "episode_id": 114182,
@@ -186533,6 +186543,16 @@
         "video_id": 28523753
       },
       {
+        "episode_id": 65552,
+        "display_name": "Tokyo Vice S01E01 - Díl 1 CZ Dabing",
+        "video_id": 28523949
+      },
+      {
+        "episode_id": 38953,
+        "display_name": "Pokémon S15E39 - Expedice na ostrov Onixů! CZ Dabing",
+        "video_id": 28523948
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -238167,7 +238187,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 77,
+    "disabled": 100,
     "ok": 19,
     "resolve_failed": 1
   },
