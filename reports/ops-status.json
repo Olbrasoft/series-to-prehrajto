@@ -2,14 +2,14 @@
   "counts": {
     "backlog_episodes": 164473,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 29002,
-    "prepared_source_episodes": 48595,
+    "uploaded_episodes": 29012,
+    "prepared_source_episodes": 48608,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 205,
+    "language_audited_sources": 239,
     "language_whisper_attempted_sources": 51,
     "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 56869,
@@ -20,10 +20,66 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-08-16T08:21:34Z",
+      "databaseId": 31936252649,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-16T08:21:30Z",
+      "databaseId": 31936250277,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-16T08:19:33Z",
+      "databaseId": 31936166102,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-16T08:18:36Z",
+      "databaseId": 31936128417,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-16T08:18:32Z",
+      "databaseId": 31936124990,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-08-16T08:18:31Z",
+      "databaseId": 31936124567,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-16T08:18:31Z",
+      "databaseId": 31936124233,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-16T08:17:23Z",
       "databaseId": 31936077164,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -59,11 +115,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-08-16T08:12:51Z",
       "databaseId": 31935881886,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -121,62 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-16T08:07:37Z",
-      "databaseId": 31935657068,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-16T08:06:54Z",
-      "databaseId": 31935627113,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-16T08:06:50Z",
-      "databaseId": 31935624805,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-16T08:06:50Z",
-      "databaseId": 31935624594,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-16T08:06:03Z",
-      "databaseId": 31935592015,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-16T08:05:55Z",
-      "databaseId": 31935587304,
-      "headBranch": "main",
-      "status": "pending",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-16T08:04:59Z",
-      "databaseId": 31935543989,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
     }
   ],
   "gaps": {
@@ -69211,6 +69211,16 @@
         "video_id": 28531257
       },
       {
+        "episode_id": 59560,
+        "display_name": "Dům loutek S01E03 - 3. epizoda CZ Titulky",
+        "video_id": 28531310
+      },
+      {
+        "episode_id": 59572,
+        "display_name": "Dům loutek S01E06 - 6. epizoda CZ Dabing",
+        "video_id": 28531360
+      },
+      {
         "episode_id": 109057,
         "display_name": "Chůva k pohledání S03E19 - 19. epizoda CZ Dabing",
         "video_id": 28531233
@@ -69224,6 +69234,21 @@
         "episode_id": 145845,
         "display_name": "Zlé sestry S01E04 - Malá Becka CZ Titulky",
         "video_id": 28531286
+      },
+      {
+        "episode_id": 35933,
+        "display_name": "Had S01E03 - 3. epizoda CZ Dabing",
+        "video_id": 28531323
+      },
+      {
+        "episode_id": 64681,
+        "display_name": "Mr. & Mrs. Smith S01E02 - Druhé rande CZ Titulky",
+        "video_id": 28531386
+      },
+      {
+        "episode_id": 64685,
+        "display_name": "Mr. & Mrs. Smith S01E07 - Nevěra CZ Titulky",
+        "video_id": 28531414
       },
       {
         "episode_id": 114182,
@@ -120711,9 +120736,34 @@
         "video_id": 28531241
       },
       {
+        "episode_id": 136478,
+        "display_name": "Pozlacený věk S01E08 - V závětří Newportu CZ Dabing",
+        "video_id": 28531294
+      },
+      {
+        "episode_id": 140102,
+        "display_name": "Pozlacený věk S02E02 - Lest CZ Dabing",
+        "video_id": 28531359
+      },
+      {
+        "episode_id": 140106,
+        "display_name": "Pozlacený věk S02E07 - Zázrakům není nikdy konec CZ Dabing",
+        "video_id": 28531412
+      },
+      {
         "episode_id": 67439,
         "display_name": "Spravedlnost v krvi  S12E08 - 8. epizoda CZ Dabing",
         "video_id": 28531249
+      },
+      {
+        "episode_id": 67595,
+        "display_name": "Spravedlnost v krvi  S13E03 - 3. epizoda CZ Dabing",
+        "video_id": 28531293
+      },
+      {
+        "episode_id": 75087,
+        "display_name": "Spravedlnost v krvi  S13E16 - 16. epizoda CZ Dabing",
+        "video_id": 28531364
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -189643,6 +189693,16 @@
         "video_id": 28531257
       },
       {
+        "episode_id": 59560,
+        "display_name": "Dům loutek S01E03 - 3. epizoda CZ Titulky",
+        "video_id": 28531310
+      },
+      {
+        "episode_id": 59572,
+        "display_name": "Dům loutek S01E06 - 6. epizoda CZ Dabing",
+        "video_id": 28531360
+      },
+      {
         "episode_id": 109057,
         "display_name": "Chůva k pohledání S03E19 - 19. epizoda CZ Dabing",
         "video_id": 28531233
@@ -189656,6 +189716,21 @@
         "episode_id": 145845,
         "display_name": "Zlé sestry S01E04 - Malá Becka CZ Titulky",
         "video_id": 28531286
+      },
+      {
+        "episode_id": 35933,
+        "display_name": "Had S01E03 - 3. epizoda CZ Dabing",
+        "video_id": 28531323
+      },
+      {
+        "episode_id": 64681,
+        "display_name": "Mr. & Mrs. Smith S01E02 - Druhé rande CZ Titulky",
+        "video_id": 28531386
+      },
+      {
+        "episode_id": 64685,
+        "display_name": "Mr. & Mrs. Smith S01E07 - Nevěra CZ Titulky",
+        "video_id": 28531414
       },
       {
         "episode_id": 114182,
@@ -241143,9 +241218,34 @@
         "video_id": 28531241
       },
       {
+        "episode_id": 136478,
+        "display_name": "Pozlacený věk S01E08 - V závětří Newportu CZ Dabing",
+        "video_id": 28531294
+      },
+      {
+        "episode_id": 140102,
+        "display_name": "Pozlacený věk S02E02 - Lest CZ Dabing",
+        "video_id": 28531359
+      },
+      {
+        "episode_id": 140106,
+        "display_name": "Pozlacený věk S02E07 - Zázrakům není nikdy konec CZ Dabing",
+        "video_id": 28531412
+      },
+      {
         "episode_id": 67439,
         "display_name": "Spravedlnost v krvi  S12E08 - 8. epizoda CZ Dabing",
         "video_id": 28531249
+      },
+      {
+        "episode_id": 67595,
+        "display_name": "Spravedlnost v krvi  S13E03 - 3. epizoda CZ Dabing",
+        "video_id": 28531293
+      },
+      {
+        "episode_id": 75087,
+        "display_name": "Spravedlnost v krvi  S13E16 - 16. epizoda CZ Dabing",
+        "video_id": 28531364
       }
     ],
     "prepared_not_upload_ready": [
@@ -242307,7 +242407,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 154,
+    "disabled": 188,
     "ok": 50,
     "resolve_failed": 1
   },
