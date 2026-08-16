@@ -2,14 +2,14 @@
   "counts": {
     "backlog_episodes": 163769,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 29590,
-    "prepared_source_episodes": 48320,
+    "uploaded_episodes": 29591,
+    "prepared_source_episodes": 48296,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 40,
+    "language_audited_sources": 106,
     "language_whisper_attempted_sources": 40,
     "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 56863,
@@ -20,10 +20,26 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-08-16T22:06:41Z",
+      "databaseId": 31975432227,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-16T22:06:37Z",
+      "databaseId": 31975428445,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-16T22:05:51Z",
       "databaseId": 31975389990,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "update-descriptions"
     },
     {
@@ -35,11 +51,11 @@
       "workflowName": "audit-language"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-16T22:05:24Z",
       "databaseId": 31975369284,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "update-descriptions"
     },
     {
@@ -51,11 +67,11 @@
       "workflowName": "ops-status"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-16T22:04:25Z",
       "databaseId": 31975322052,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -67,11 +83,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-08-16T22:04:22Z",
       "databaseId": 31975319643,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -161,22 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-16T21:49:45Z",
-      "databaseId": 31974631427,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-16T21:49:41Z",
-      "databaseId": 31974628265,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
     }
   ],
   "gaps": {
@@ -123654,6 +123654,11 @@
         "episode_id": 4139,
         "display_name": "Superman a Lois S01E15 - Poslední synové Kryptonu CZ Dabing",
         "video_id": 28550643
+      },
+      {
+        "episode_id": 4155,
+        "display_name": "Superman a Lois S02E01 - Co je skryto CZ Dabing",
+        "video_id": 28550682
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -247026,6 +247031,11 @@
         "episode_id": 4139,
         "display_name": "Superman a Lois S01E15 - Poslední synové Kryptonu CZ Dabing",
         "video_id": 28550643
+      },
+      {
+        "episode_id": 4155,
+        "display_name": "Superman a Lois S02E01 - Co je skryto CZ Dabing",
+        "video_id": 28550682
       }
     ],
     "prepared_not_upload_ready": [
@@ -248187,6 +248197,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
+    "disabled": 66,
     "ok": 39,
     "resolve_failed": 1
   },
