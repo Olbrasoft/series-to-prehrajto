@@ -2,14 +2,14 @@
   "counts": {
     "backlog_episodes": 164473,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 28868,
-    "prepared_source_episodes": 48493,
+    "uploaded_episodes": 28873,
+    "prepared_source_episodes": 48508,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 40,
+    "language_audited_sources": 117,
     "language_whisper_attempted_sources": 40,
     "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 56867,
@@ -20,18 +20,74 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-08-16T06:42:12Z",
-      "databaseId": 31932050986,
+      "createdAt": "2026-08-16T06:46:03Z",
+      "databaseId": 31932206483,
       "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "ops-watchdog"
+      "status": "pending",
+      "workflowName": "prepare-manifest"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-08-16T06:45:56Z",
+      "databaseId": 31932201366,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-16T06:44:17Z",
+      "databaseId": 31932132602,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-16T06:43:17Z",
+      "databaseId": 31932093461,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-16T06:43:14Z",
+      "databaseId": 31932091849,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-16T06:43:13Z",
+      "databaseId": 31932090619,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-08-16T06:43:00Z",
+      "databaseId": 31932080579,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-16T06:42:12Z",
+      "databaseId": 31932050986,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "cancelled",
       "createdAt": "2026-08-16T06:42:06Z",
       "databaseId": 31932047697,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -121,62 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-16T06:18:46Z",
-      "databaseId": 31931113956,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-16T06:17:33Z",
-      "databaseId": 31931064699,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-16T06:16:26Z",
-      "databaseId": 31931020876,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-16T06:16:24Z",
-      "databaseId": 31931019393,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-16T06:16:21Z",
-      "databaseId": 31931016838,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-16T06:15:48Z",
-      "databaseId": 31930995307,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-16T06:15:44Z",
-      "databaseId": 31930992386,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
     }
   ],
   "gaps": {
@@ -68886,6 +68886,16 @@
         "video_id": 28528566
       },
       {
+        "episode_id": 67532,
+        "display_name": "Spravedlnost v krvi  S07E17 - 17. epizoda CZ Titulky",
+        "video_id": 28528865
+      },
+      {
+        "episode_id": 51813,
+        "display_name": "Nikita S01E03 - Zabijte Jill CZ Dabing",
+        "video_id": 28528861
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -120044,6 +120054,21 @@
         "episode_id": 90691,
         "display_name": "Hvězdná brána - Hluboký vesmír S01E18 - Zrádce CZ Titulky",
         "video_id": 28528752
+      },
+      {
+        "episode_id": 64682,
+        "display_name": "Mr. & Mrs. Smith S01E03 - První dovolená CZ Dabing",
+        "video_id": 28528858
+      },
+      {
+        "episode_id": 64686,
+        "display_name": "Mr. & Mrs. Smith S01E06 - Vztahová terapie (Nazí a vyděšení) CZ Dabing",
+        "video_id": 28528902
+      },
+      {
+        "episode_id": 90699,
+        "display_name": "Hvězdná brána - Hluboký vesmír S02E06 - Pokus a omyl CZ Dabing",
+        "video_id": 28528867
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -188648,6 +188673,16 @@
         "video_id": 28528566
       },
       {
+        "episode_id": 67532,
+        "display_name": "Spravedlnost v krvi  S07E17 - 17. epizoda CZ Titulky",
+        "video_id": 28528865
+      },
+      {
+        "episode_id": 51813,
+        "display_name": "Nikita S01E03 - Zabijte Jill CZ Dabing",
+        "video_id": 28528861
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -239806,6 +239841,21 @@
         "episode_id": 90691,
         "display_name": "Hvězdná brána - Hluboký vesmír S01E18 - Zrádce CZ Titulky",
         "video_id": 28528752
+      },
+      {
+        "episode_id": 64682,
+        "display_name": "Mr. & Mrs. Smith S01E03 - První dovolená CZ Dabing",
+        "video_id": 28528858
+      },
+      {
+        "episode_id": 64686,
+        "display_name": "Mr. & Mrs. Smith S01E06 - Vztahová terapie (Nazí a vyděšení) CZ Dabing",
+        "video_id": 28528902
+      },
+      {
+        "episode_id": 90699,
+        "display_name": "Hvězdná brána - Hluboký vesmír S02E06 - Pokus a omyl CZ Dabing",
+        "video_id": 28528867
       }
     ],
     "prepared_not_upload_ready": [
@@ -240967,6 +241017,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
+    "disabled": 77,
     "ok": 39,
     "resolve_failed": 1
   },
