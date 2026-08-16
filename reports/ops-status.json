@@ -2,14 +2,14 @@
   "counts": {
     "backlog_episodes": 164091,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 29341,
-    "prepared_source_episodes": 49132,
+    "uploaded_episodes": 29342,
+    "prepared_source_episodes": 49107,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 119,
+    "language_audited_sources": 199,
     "language_whisper_attempted_sources": 40,
     "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 56860,
@@ -20,10 +20,34 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-08-16T14:59:42Z",
+      "databaseId": 31954318102,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-16T14:59:37Z",
+      "databaseId": 31954314761,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-16T14:58:15Z",
+      "databaseId": 31954250998,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-16T14:57:03Z",
       "databaseId": 31954194272,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -59,11 +83,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-08-16T14:55:48Z",
       "databaseId": 31954136589,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -153,30 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-16T14:42:46Z",
-      "databaseId": 31953506771,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-16T14:42:42Z",
-      "databaseId": 31953504219,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-16T14:40:24Z",
-      "databaseId": 31953392177,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
     }
   ],
   "gaps": {
@@ -122409,6 +122409,11 @@
         "episode_id": 43491,
         "display_name": "Policie Chicago S10E04 - 4. epizoda CZ Titulky",
         "video_id": 28540473
+      },
+      {
+        "episode_id": 43503,
+        "display_name": "Policie Chicago S11E11 - 11. epizoda CZ Titulky",
+        "video_id": 28540719
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -244536,6 +244541,11 @@
         "episode_id": 43491,
         "display_name": "Policie Chicago S10E04 - 4. epizoda CZ Titulky",
         "video_id": 28540473
+      },
+      {
+        "episode_id": 43503,
+        "display_name": "Policie Chicago S11E11 - 11. epizoda CZ Titulky",
+        "video_id": 28540719
       }
     ],
     "prepared_not_upload_ready": [
@@ -245697,7 +245707,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 79,
+    "disabled": 159,
     "ok": 39,
     "resolve_failed": 1
   },
