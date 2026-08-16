@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 164226,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 29184,
+    "uploaded_episodes": 29185,
     "prepared_source_episodes": 48881,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 624,
-    "language_whisper_attempted_sources": 129,
-    "language_pending_whisper_sources": 2624,
+    "language_audited_sources": 40,
+    "language_whisper_attempted_sources": 40,
+    "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 56882,
     "whisper_review_pending_sources": 49884,
     "subtitle_followup_sources": 25146,
@@ -20,10 +20,42 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-08-16T11:15:36Z",
+      "databaseId": 31943845284,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-16T11:15:34Z",
+      "databaseId": 31943842726,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-16T11:15:34Z",
+      "databaseId": 31943842701,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-16T11:12:20Z",
+      "databaseId": 31943696605,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-16T11:11:12Z",
       "databaseId": 31943645153,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -71,7 +103,7 @@
       "createdAt": "2026-08-16T11:06:53Z",
       "databaseId": 31943453181,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "audit-language"
     },
     {
@@ -115,11 +147,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-08-16T11:03:59Z",
       "databaseId": 31943326693,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "sync"
     },
     {
@@ -142,38 +174,6 @@
       "conclusion": "success",
       "createdAt": "2026-08-16T11:01:40Z",
       "databaseId": 31943225311,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-16T11:01:36Z",
-      "databaseId": 31943222546,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-16T11:00:32Z",
-      "databaseId": 31943171594,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-16T11:00:28Z",
-      "databaseId": 31943168529,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-16T10:58:35Z",
-      "databaseId": 31943082473,
       "headBranch": "main",
       "status": "completed",
       "workflowName": "update-descriptions"
@@ -121586,6 +121586,11 @@
         "video_id": 28535288
       },
       {
+        "episode_id": 43310,
+        "display_name": "Policie Chicago S03E19 - Kdybychom byli normální CZ Dabing",
+        "video_id": 28535722
+      },
+      {
         "episode_id": 95399,
         "display_name": "Mr Inbetween S01E02 - 2. epizoda CZ Titulky",
         "video_id": 28535048
@@ -242928,6 +242933,11 @@
         "video_id": 28535288
       },
       {
+        "episode_id": 43310,
+        "display_name": "Policie Chicago S03E19 - Kdybychom byli normální CZ Dabing",
+        "video_id": 28535722
+      },
+      {
         "episode_id": 95399,
         "display_name": "Mr Inbetween S01E02 - 2. epizoda CZ Titulky",
         "video_id": 28535048
@@ -244127,8 +244137,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 495,
-    "ok": 128,
+    "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
