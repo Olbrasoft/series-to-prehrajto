@@ -2,28 +2,84 @@
   "counts": {
     "backlog_episodes": 163769,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 29693,
-    "prepared_source_episodes": 47982,
+    "uploaded_episodes": 29698,
+    "prepared_source_episodes": 47881,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 60,
-    "language_whisper_attempted_sources": 60,
+    "language_audited_sources": 120,
+    "language_whisper_attempted_sources": 40,
     "language_pending_whisper_sources": 2604,
-    "whisper_review_sources": 56849,
-    "whisper_review_pending_sources": 49682,
+    "whisper_review_sources": 56853,
+    "whisper_review_pending_sources": 49707,
     "subtitle_followup_sources": 25310,
     "subtitle_followup_pending_sources": 25310
   },
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-08-16T23:37:57Z",
+      "databaseId": 31979674105,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-16T23:37:53Z",
+      "databaseId": 31979671530,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-16T23:37:47Z",
+      "databaseId": 31979668383,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-16T23:37:28Z",
+      "databaseId": 31979655736,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-16T23:37:13Z",
+      "databaseId": 31979643286,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-16T23:35:41Z",
+      "databaseId": 31979571647,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-16T23:31:33Z",
+      "databaseId": 31979376352,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-16T23:30:26Z",
       "databaseId": 31979321398,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -35,11 +91,11 @@
       "workflowName": "sync"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-08-16T23:30:22Z",
       "databaseId": 31979318226,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -51,11 +107,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-16T23:29:49Z",
       "databaseId": 31979289702,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -121,62 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-16T23:18:06Z",
-      "databaseId": 31978741317,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-16T23:18:06Z",
-      "databaseId": 31978741251,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-16T23:17:29Z",
-      "databaseId": 31978713099,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-16T23:17:23Z",
-      "databaseId": 31978709446,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-16T23:16:44Z",
-      "databaseId": 31978678807,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-16T23:15:31Z",
-      "databaseId": 31978622472,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-16T23:11:07Z",
-      "databaseId": 31978416987,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
     }
   ],
   "gaps": {
@@ -70906,6 +70906,16 @@
         "video_id": 28552764
       },
       {
+        "episode_id": 46204,
+        "display_name": "Dark Matter S01E10 - Episode Ten CZ Titulky",
+        "video_id": 28552799
+      },
+      {
+        "episode_id": 46212,
+        "display_name": "Dark Matter S02E04 - We Were Family CZ Titulky",
+        "video_id": 28552899
+      },
+      {
         "episode_id": 13649,
         "display_name": "Xena S02E09 - Koleda slunovratu CZ Dabing",
         "video_id": 28552574
@@ -70934,6 +70944,16 @@
         "episode_id": 52969,
         "display_name": "Ghosts S04E05 - 5. epizoda CZ Titulky",
         "video_id": 28552769
+      },
+      {
+        "episode_id": 119509,
+        "display_name": "Sněží! S01E07 - Crack CZ Dabing",
+        "video_id": 28552804
+      },
+      {
+        "episode_id": 119513,
+        "display_name": "Sněží! S02E01 - 1. epizoda CZ Dabing",
+        "video_id": 28552831
       },
       {
         "episode_id": 114182,
@@ -124169,6 +124189,11 @@
         "episode_id": 168587,
         "display_name": "Život S01E06 - Hmyz CZ Dabing",
         "video_id": 28552768
+      },
+      {
+        "episode_id": 168591,
+        "display_name": "Život S01E10 - Primáti CZ Dabing",
+        "video_id": 28552800
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -194793,6 +194818,16 @@
         "video_id": 28552764
       },
       {
+        "episode_id": 46204,
+        "display_name": "Dark Matter S01E10 - Episode Ten CZ Titulky",
+        "video_id": 28552799
+      },
+      {
+        "episode_id": 46212,
+        "display_name": "Dark Matter S02E04 - We Were Family CZ Titulky",
+        "video_id": 28552899
+      },
+      {
         "episode_id": 13649,
         "display_name": "Xena S02E09 - Koleda slunovratu CZ Dabing",
         "video_id": 28552574
@@ -194821,6 +194856,16 @@
         "episode_id": 52969,
         "display_name": "Ghosts S04E05 - 5. epizoda CZ Titulky",
         "video_id": 28552769
+      },
+      {
+        "episode_id": 119509,
+        "display_name": "Sněží! S01E07 - Crack CZ Dabing",
+        "video_id": 28552804
+      },
+      {
+        "episode_id": 119513,
+        "display_name": "Sněží! S02E01 - 1. epizoda CZ Dabing",
+        "video_id": 28552831
       },
       {
         "episode_id": 114182,
@@ -248056,6 +248101,11 @@
         "episode_id": 168587,
         "display_name": "Život S01E06 - Hmyz CZ Dabing",
         "video_id": 28552768
+      },
+      {
+        "episode_id": 168591,
+        "display_name": "Život S01E10 - Primáti CZ Dabing",
+        "video_id": 28552800
       }
     ],
     "prepared_not_upload_ready": [
@@ -248698,67 +248748,67 @@
         "status": "whisper_failed"
       },
       {
-        "episode_id": 89252,
-        "source_id": -50458483389219231,
-        "series_title": "Castlevania",
-        "episode_code": "S01E01",
-        "source_title": "Castlevania - S1E1 Witchbottle EN",
+        "episode_id": 25398,
+        "source_id": -70653325870979023,
+        "series_title": "Castle na zabití",
+        "episode_code": "S06E02",
+        "source_title": "Castle na zabití 06x02  +++",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 89252,
-        "source_id": -33455874949181824,
-        "series_title": "Castlevania",
-        "episode_code": "S01E01",
-        "source_title": "Castlevania - S01E01 - Witchbottle",
+        "episode_id": 25398,
+        "source_id": -6135709016664286,
+        "series_title": "Castle na zabití",
+        "episode_code": "S06E02",
+        "source_title": "Castle na zabití 06x02 +SaŠa+",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 89253,
-        "source_id": -46248325254050812,
-        "series_title": "Castlevania",
-        "episode_code": "S01E02",
-        "source_title": "Castlevania.S01E02.Necropolis.1080p.NF.WEB-DL.DDP5.1.H.264-",
+        "episode_id": 25398,
+        "source_id": -20306247636230180,
+        "series_title": "Castle na zabití",
+        "episode_code": "S06E02",
+        "source_title": "Castle na zabití 06x02 ⭐GG⭐",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 89253,
-        "source_id": -54601494794558649,
-        "series_title": "Castlevania",
-        "episode_code": "S01E02",
-        "source_title": "Castlevania.S01E02.1080p.BluRay.x265-RARBG",
+        "episode_id": 25398,
+        "source_id": -9677269063134067,
+        "series_title": "Castle na zabití",
+        "episode_code": "S06E02",
+        "source_title": "Castle.na.zabití.06x02 MUI",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 89254,
-        "source_id": -32384134316673294,
-        "series_title": "Castlevania",
-        "episode_code": "S01E03",
-        "source_title": "Castlevania.S01E03.Labyrinth.1080p.NF.WEB-DL.DDP5.1.Atmos.H.264-",
+        "episode_id": 25400,
+        "source_id": -37391703368427409,
+        "series_title": "Castle na zabití",
+        "episode_code": "S06E04",
+        "source_title": "Castle.na.zabití.06x04.~~",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 89254,
-        "source_id": -18442913298347562,
-        "series_title": "Castlevania",
-        "episode_code": "S01E03",
-        "source_title": "Castlevania_S01E03_Labyrint",
+        "episode_id": 25400,
+        "source_id": -3686704716233672,
+        "series_title": "Castle na zabití",
+        "episode_code": "S06E04",
+        "source_title": "Castle na zabití 06x04   ByDejvy",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 89254,
-        "source_id": -32135141123634525,
-        "series_title": "Castlevania",
-        "episode_code": "S01E03",
-        "source_title": "Castlevania.S01E03.1080p.BluRay.x265-RARBG",
+        "episode_id": 25400,
+        "source_id": -35316316296741051,
+        "series_title": "Castle na zabití",
+        "episode_code": "S06E04",
+        "source_title": "Castle na zabití 06x04  +++",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 89255,
-        "source_id": -62650770771249485,
-        "series_title": "Castlevania",
-        "episode_code": "S01E04",
-        "source_title": "Castlevania.S01E04.Monument.1080p.NF.WEB-DL.DDP5.1.Atmos.H.264-",
+        "episode_id": 25400,
+        "source_id": -7271596902625537,
+        "series_title": "Castle na zabití",
+        "episode_code": "S06E04",
+        "source_title": "Castle na zabití 06x04 +SaŠa+",
         "status": "needs_whisper"
       }
     ],
@@ -249217,14 +249267,15 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 59,
+    "disabled": 80,
+    "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
-    "whisper_non_cz_needs_subtitles": 5053,
-    "whisper_confirmed_cz": 2114,
+    "whisper_non_cz_needs_subtitles": 5047,
+    "whisper_confirmed_cz": 2099,
     "whisper_failed": 42,
-    "needs_whisper": 49640
+    "needs_whisper": 49665
   },
   "subtitle_followup_statuses": {
     "needs_subtitle_setup_after_prehrajto_processing": 25310
