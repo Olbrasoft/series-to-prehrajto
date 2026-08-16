@@ -2,28 +2,44 @@
   "counts": {
     "backlog_episodes": 163769,
     "manifest_upload_ready_episodes": 1003,
-    "uploaded_episodes": 29635,
+    "uploaded_episodes": 29639,
     "prepared_source_episodes": 48070,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 89,
-    "language_whisper_attempted_sources": 20,
+    "language_audited_sources": 109,
+    "language_whisper_attempted_sources": 40,
     "language_pending_whisper_sources": 2624,
-    "whisper_review_sources": 56864,
-    "whisper_review_pending_sources": 49765,
+    "whisper_review_sources": 56852,
+    "whisper_review_pending_sources": 49700,
     "subtitle_followup_sources": 25310,
     "subtitle_followup_pending_sources": 25310
   },
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-08-16T22:56:42Z",
+      "databaseId": 31977736183,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-16T22:55:32Z",
+      "databaseId": 31977682751,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-16T22:54:27Z",
       "databaseId": 31977634135,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -91,11 +107,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-16T22:48:06Z",
       "databaseId": 31977336926,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
@@ -161,22 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-16T22:39:20Z",
-      "databaseId": 31976932798,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-16T22:38:47Z",
-      "databaseId": 31976909016,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
     }
   ],
   "gaps": {
@@ -70796,6 +70796,16 @@
         "video_id": 28551177
       },
       {
+        "episode_id": 59528,
+        "display_name": "4400 S02E12 - Pátá stránka CZ Titulky",
+        "video_id": 28551750
+      },
+      {
+        "episode_id": 103673,
+        "display_name": "Farscape S03E14 - Neomezené možnosti - Daidalos požaduje… CZ Dabing",
+        "video_id": 28551732
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -123879,6 +123889,16 @@
         "episode_id": 119503,
         "display_name": "Sněží! S01E01 - Pilot CZ Dabing",
         "video_id": 28551365
+      },
+      {
+        "episode_id": 103674,
+        "display_name": "Farscape S03E15 - Neomezené možnosti - … Ikaros poslouchá CZ Dabing",
+        "video_id": 28551730
+      },
+      {
+        "episode_id": 103675,
+        "display_name": "Farscape S03E16 - Anděl mstivý CZ Dabing",
+        "video_id": 28551722
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -194393,6 +194413,16 @@
         "video_id": 28551177
       },
       {
+        "episode_id": 59528,
+        "display_name": "4400 S02E12 - Pátá stránka CZ Titulky",
+        "video_id": 28551750
+      },
+      {
+        "episode_id": 103673,
+        "display_name": "Farscape S03E14 - Neomezené možnosti - Daidalos požaduje… CZ Dabing",
+        "video_id": 28551732
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -247476,6 +247506,16 @@
         "episode_id": 119503,
         "display_name": "Sněží! S01E01 - Pilot CZ Dabing",
         "video_id": 28551365
+      },
+      {
+        "episode_id": 103674,
+        "display_name": "Farscape S03E15 - Neomezené možnosti - … Ikaros poslouchá CZ Dabing",
+        "video_id": 28551730
+      },
+      {
+        "episode_id": 103675,
+        "display_name": "Farscape S03E16 - Anděl mstivý CZ Dabing",
+        "video_id": 28551722
       }
     ],
     "prepared_not_upload_ready": [
@@ -247798,102 +247838,6 @@
         "status": "whisper_failed"
       },
       {
-        "episode_id": 56529,
-        "source_id": -33827268943142460,
-        "series_title": "Babylon Berlín",
-        "episode_code": "S01E01",
-        "source_title": "Babylon Berlín - S1E1 Episode 1 EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 56543,
-        "source_id": -45304921263000869,
-        "series_title": "Babylon Berlín",
-        "episode_code": "S01E04",
-        "source_title": "Babylon Berlín - S1E4 Episode 4 EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 56509,
-        "source_id": -65337712108371078,
-        "series_title": "Babylon Berlín",
-        "episode_code": "S01E06",
-        "source_title": "Babylon Berlín - S1E6 Episode 6 EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 56510,
-        "source_id": -68724238378262409,
-        "series_title": "Babylon Berlín",
-        "episode_code": "S01E07",
-        "source_title": "Babylon Berlín - S1E7 Episode 7 EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 56512,
-        "source_id": -70691507056058186,
-        "series_title": "Babylon Berlín",
-        "episode_code": "S02E01",
-        "source_title": "Babylon Berlín S02E01",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 56512,
-        "source_id": -48699688041637947,
-        "series_title": "Babylon Berlín",
-        "episode_code": "S02E01",
-        "source_title": "Babylon Berlín - S2E1 Episode 1 EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 56513,
-        "source_id": -21192058544688808,
-        "series_title": "Babylon Berlín",
-        "episode_code": "S02E02",
-        "source_title": "Babylon Berlín S02E02",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 56513,
-        "source_id": -12721234202390704,
-        "series_title": "Babylon Berlín",
-        "episode_code": "S02E02",
-        "source_title": "Babylon Berlín - S2E2 Episode 2 EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 56514,
-        "source_id": -48079540535783054,
-        "series_title": "Babylon Berlín",
-        "episode_code": "S02E03",
-        "source_title": "Babylon Berlín S02E03",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 56516,
-        "source_id": -54839534860102029,
-        "series_title": "Babylon Berlín",
-        "episode_code": "S02E05",
-        "source_title": "Babylon Berlín S02E05",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 56516,
-        "source_id": -68740476416683116,
-        "series_title": "Babylon Berlín",
-        "episode_code": "S02E05",
-        "source_title": "Babylon Berlín - S2E5 Episode 5 DE",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 56520,
-        "source_id": -41698757348604545,
-        "series_title": "Babylon Berlín",
-        "episode_code": "S02E07",
-        "source_title": "Babylon Berlín S02E07",
-        "status": "needs_whisper"
-      },
-      {
         "episode_id": 49910,
         "source_id": -49187278468511205,
         "series_title": "Beze stopy",
@@ -248180,6 +248124,102 @@
         "episode_code": "S05E01",
         "source_title": "Bull - S5E1 My Corona SK",
         "status": "whisper_failed"
+      },
+      {
+        "episode_id": 127624,
+        "source_id": -33166513284687071,
+        "series_title": "Bull",
+        "episode_code": "S05E04",
+        "source_title": "Bull - S5E4 The Ex Factor EN",
+        "status": "whisper_failed"
+      },
+      {
+        "episode_id": 127629,
+        "source_id": -32418560082034659,
+        "series_title": "Bull",
+        "episode_code": "S06E01",
+        "source_title": "Bull - S6E1 Gone EN",
+        "status": "whisper_failed"
+      },
+      {
+        "episode_id": 127633,
+        "source_id": -56148696178700847,
+        "series_title": "Bull",
+        "episode_code": "S06E07",
+        "source_title": "Bull - S6E7 Confidence Man EN",
+        "status": "whisper_failed"
+      },
+      {
+        "episode_id": 56093,
+        "source_id": -57284646370539064,
+        "series_title": "Californication",
+        "episode_code": "S06E11",
+        "source_title": "Californication - S6E11 The Abby EN",
+        "status": "whisper_failed"
+      },
+      {
+        "episode_id": 25398,
+        "source_id": -70653325870979023,
+        "series_title": "Castle na zabití",
+        "episode_code": "S06E02",
+        "source_title": "Castle na zabití 06x02  +++",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 25398,
+        "source_id": -6135709016664286,
+        "series_title": "Castle na zabití",
+        "episode_code": "S06E02",
+        "source_title": "Castle na zabití 06x02 +SaŠa+",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 25398,
+        "source_id": -20306247636230180,
+        "series_title": "Castle na zabití",
+        "episode_code": "S06E02",
+        "source_title": "Castle na zabití 06x02 ⭐GG⭐",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 25398,
+        "source_id": -9677269063134067,
+        "series_title": "Castle na zabití",
+        "episode_code": "S06E02",
+        "source_title": "Castle.na.zabití.06x02 MUI",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 25400,
+        "source_id": -37391703368427409,
+        "series_title": "Castle na zabití",
+        "episode_code": "S06E04",
+        "source_title": "Castle.na.zabití.06x04.~~",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 25400,
+        "source_id": -3686704716233672,
+        "series_title": "Castle na zabití",
+        "episode_code": "S06E04",
+        "source_title": "Castle na zabití 06x04   ByDejvy",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 25400,
+        "source_id": -35316316296741051,
+        "series_title": "Castle na zabití",
+        "episode_code": "S06E04",
+        "source_title": "Castle na zabití 06x04  +++",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 25400,
+        "source_id": -7271596902625537,
+        "series_title": "Castle na zabití",
+        "episode_code": "S06E04",
+        "source_title": "Castle na zabití 06x04 +SaŠa+",
+        "status": "needs_whisper"
       }
     ],
     "subtitle_followup_pending": [
@@ -248637,15 +248677,15 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
+    "ok": 39,
     "disabled": 69,
-    "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
-    "whisper_non_cz_needs_subtitles": 5042,
-    "whisper_confirmed_cz": 2057,
+    "whisper_non_cz_needs_subtitles": 5047,
+    "whisper_confirmed_cz": 2105,
     "whisper_failed": 42,
-    "needs_whisper": 49723
+    "needs_whisper": 49658
   },
   "subtitle_followup_statuses": {
     "needs_subtitle_setup_after_prehrajto_processing": 25310
