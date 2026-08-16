@@ -1,15 +1,15 @@
 {
   "counts": {
     "backlog_episodes": 165421,
-    "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 28176,
-    "prepared_source_episodes": 48118,
+    "manifest_upload_ready_episodes": 1001,
+    "uploaded_episodes": 28177,
+    "prepared_source_episodes": 48083,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 20,
+    "language_audited_sources": 164,
     "language_whisper_attempted_sources": 20,
     "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 56896,
@@ -18,6 +18,30 @@
     "subtitle_followup_pending_sources": 24994
   },
   "workflow_runs": [
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-16T00:02:45Z",
+      "databaseId": 31916263588,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-16T00:02:26Z",
+      "databaseId": 31916251714,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-15T23:58:06Z",
+      "databaseId": 31916064704,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
     {
       "conclusion": "success",
       "createdAt": "2026-08-15T23:56:51Z",
@@ -35,11 +59,11 @@
       "workflowName": "audit-language"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-15T23:56:29Z",
       "databaseId": 31916002541,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -47,7 +71,7 @@
       "createdAt": "2026-08-15T23:56:26Z",
       "databaseId": 31916000504,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "prepare-manifest"
     },
     {
@@ -55,7 +79,7 @@
       "createdAt": "2026-08-15T23:56:26Z",
       "databaseId": 31916000233,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "sync"
     },
     {
@@ -123,11 +147,11 @@
       "workflowName": "sync"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-15T23:47:43Z",
       "databaseId": 31915639680,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -153,30 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-15T23:43:09Z",
-      "databaseId": 31915450774,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-15T23:43:05Z",
-      "databaseId": 31915448589,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-15T23:42:36Z",
-      "databaseId": 31915428484,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-sources"
     }
   ],
   "gaps": {
@@ -67149,6 +67149,11 @@
         "episode_id": 93689,
         "display_name": "Alias S03E02 - Dědictví CZ Titulky",
         "video_id": 28517010
+      },
+      {
+        "episode_id": 93693,
+        "display_name": "Alias S03E08 - Bod zlomu CZ Titulky",
+        "video_id": 28517174
       },
       {
         "episode_id": 114182,
@@ -183453,6 +183458,11 @@
         "video_id": 28517010
       },
       {
+        "episode_id": 93693,
+        "display_name": "Alias S03E08 - Bod zlomu CZ Titulky",
+        "video_id": 28517174
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -234047,6 +234057,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
+    "disabled": 144,
     "ok": 19,
     "resolve_failed": 1
   },
