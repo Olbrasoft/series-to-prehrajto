@@ -2,28 +2,60 @@
   "counts": {
     "backlog_episodes": 164761,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 28803,
-    "prepared_source_episodes": 48417,
+    "uploaded_episodes": 28804,
+    "prepared_source_episodes": 48436,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 78,
+    "language_audited_sources": 129,
     "language_whisper_attempted_sources": 20,
     "language_pending_whisper_sources": 2624,
-    "whisper_review_sources": 56881,
-    "whisper_review_pending_sources": 49914,
+    "whisper_review_sources": 56883,
+    "whisper_review_pending_sources": 49916,
     "subtitle_followup_sources": 25086,
     "subtitle_followup_pending_sources": 25086
   },
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-08-16T05:50:23Z",
+      "databaseId": 31929949054,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-16T05:49:53Z",
+      "databaseId": 31929925905,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-16T05:49:47Z",
+      "databaseId": 31929923164,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-16T05:49:43Z",
+      "databaseId": 31929921316,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-16T05:48:41Z",
       "databaseId": 31929879170,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -59,11 +91,11 @@
       "workflowName": "audit-language"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-08-16T05:48:15Z",
       "databaseId": 31929863461,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -131,11 +163,11 @@
       "workflowName": "prepare-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-16T05:34:50Z",
       "databaseId": 31929338942,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -145,38 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-16T05:34:15Z",
-      "databaseId": 31929318178,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-16T05:33:14Z",
-      "databaseId": 31929280219,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-16T05:31:32Z",
-      "databaseId": 31929213906,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-16T05:27:19Z",
-      "databaseId": 31929044810,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
     }
   ],
   "gaps": {
@@ -119681,6 +119681,11 @@
         "video_id": 28527348
       },
       {
+        "episode_id": 75942,
+        "display_name": "Nemocnice New Amsterdam S05E02 - 2. epizoda CZ Dabing",
+        "video_id": 28527394
+      },
+      {
         "episode_id": 101595,
         "display_name": "Legenda jménem Vox Machina S02E03 - Potopená hrobka CZ Titulky",
         "video_id": 28526776
@@ -239118,6 +239123,11 @@
         "video_id": 28527348
       },
       {
+        "episode_id": 75942,
+        "display_name": "Nemocnice New Amsterdam S05E02 - 2. epizoda CZ Dabing",
+        "video_id": 28527394
+      },
+      {
         "episode_id": 101595,
         "display_name": "Legenda jménem Vox Machina S02E03 - Potopená hrobka CZ Titulky",
         "video_id": 28526776
@@ -240317,14 +240327,14 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 58,
+    "disabled": 109,
     "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
     "whisper_non_cz_needs_subtitles": 5071,
     "whisper_confirmed_cz": 1896,
-    "needs_whisper": 49872,
+    "needs_whisper": 49874,
     "whisper_failed": 42
   },
   "subtitle_followup_statuses": {
