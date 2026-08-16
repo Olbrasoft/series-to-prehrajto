@@ -2,14 +2,14 @@
   "counts": {
     "backlog_episodes": 163769,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 29659,
-    "prepared_source_episodes": 48067,
+    "uploaded_episodes": 29661,
+    "prepared_source_episodes": 48024,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 106,
+    "language_audited_sources": 171,
     "language_whisper_attempted_sources": 40,
     "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 56852,
@@ -20,18 +20,42 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-08-16T23:08:11Z",
-      "databaseId": 31978279755,
+      "createdAt": "2026-08-16T23:08:57Z",
+      "databaseId": 31978313257,
       "headBranch": "main",
       "status": "pending",
-      "workflowName": "prepare-manifest"
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-16T23:08:32Z",
+      "databaseId": 31978294540,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-08-16T23:08:16Z",
+      "databaseId": 31978283198,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-16T23:08:11Z",
+      "databaseId": 31978279755,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-16T23:07:28Z",
       "databaseId": 31978244588,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -153,30 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-16T22:57:49Z",
-      "databaseId": 31977784888,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-16T22:57:47Z",
-      "databaseId": 31977783244,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-16T22:56:42Z",
-      "databaseId": 31977736183,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
     }
   ],
   "gaps": {
@@ -70816,6 +70816,11 @@
         "video_id": 28552221
       },
       {
+        "episode_id": 59512,
+        "display_name": "4400 S04E02 - Mám sám strach CZ Titulky",
+        "video_id": 28552301
+      },
+      {
         "episode_id": 103673,
         "display_name": "Farscape S03E14 - Neomezené možnosti - Daidalos požaduje… CZ Dabing",
         "video_id": 28551732
@@ -70834,6 +70839,11 @@
         "episode_id": 43517,
         "display_name": "Policie Chicago S12E12 - 12. epizoda CZ Titulky",
         "video_id": 28552123
+      },
+      {
+        "episode_id": 43521,
+        "display_name": "Policie Chicago S12E15 - 15. epizoda CZ Titulky",
+        "video_id": 28552293
       },
       {
         "episode_id": 114182,
@@ -194533,6 +194543,11 @@
         "video_id": 28552221
       },
       {
+        "episode_id": 59512,
+        "display_name": "4400 S04E02 - Mám sám strach CZ Titulky",
+        "video_id": 28552301
+      },
+      {
         "episode_id": 103673,
         "display_name": "Farscape S03E14 - Neomezené možnosti - Daidalos požaduje… CZ Dabing",
         "video_id": 28551732
@@ -194551,6 +194566,11 @@
         "episode_id": 43517,
         "display_name": "Policie Chicago S12E12 - 12. epizoda CZ Titulky",
         "video_id": 28552123
+      },
+      {
+        "episode_id": 43521,
+        "display_name": "Policie Chicago S12E15 - 15. epizoda CZ Titulky",
+        "video_id": 28552293
       },
       {
         "episode_id": 114182,
@@ -248877,7 +248897,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 66,
+    "disabled": 131,
     "ok": 39,
     "resolve_failed": 1
   },
