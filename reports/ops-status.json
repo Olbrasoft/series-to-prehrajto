@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 163769,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 29666,
+    "uploaded_episodes": 29667,
     "prepared_source_episodes": 48024,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 40,
-    "language_whisper_attempted_sources": 40,
-    "language_pending_whisper_sources": 2604,
+    "language_audited_sources": 20,
+    "language_whisper_attempted_sources": 20,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 56852,
     "whisper_review_pending_sources": 49700,
     "subtitle_followup_sources": 25310,
@@ -20,10 +20,50 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-08-16T23:18:06Z",
+      "databaseId": 31978741317,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-16T23:18:06Z",
+      "databaseId": 31978741251,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-16T23:17:29Z",
+      "databaseId": 31978713099,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-08-16T23:17:23Z",
+      "databaseId": 31978709446,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-16T23:16:44Z",
+      "databaseId": 31978678807,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-16T23:15:31Z",
       "databaseId": 31978622472,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -95,7 +135,7 @@
       "createdAt": "2026-08-16T23:07:25Z",
       "databaseId": 31978242692,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "sync"
     },
     {
@@ -123,57 +163,17 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-16T23:05:10Z",
       "databaseId": 31978130538,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
       "conclusion": "success",
       "createdAt": "2026-08-16T23:05:01Z",
       "databaseId": 31978123183,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-16T23:04:59Z",
-      "databaseId": 31978121557,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-16T23:03:15Z",
-      "databaseId": 31978037814,
-      "headBranch": "main",
-      "status": "pending",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-16T23:01:38Z",
-      "databaseId": 31977963225,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-16T23:01:33Z",
-      "databaseId": 31977959469,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-16T23:00:30Z",
-      "databaseId": 31977908376,
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-watchdog"
@@ -70829,6 +70829,11 @@
         "episode_id": 59520,
         "display_name": "4400 S04E10 - Jeden z nás CZ Dabing",
         "video_id": 28552472
+      },
+      {
+        "episode_id": 27900,
+        "display_name": "Kaleidoskop S01E04 - Modrá CZ Dabing",
+        "video_id": 28552524
       },
       {
         "episode_id": 103673,
@@ -194583,6 +194588,11 @@
         "video_id": 28552472
       },
       {
+        "episode_id": 27900,
+        "display_name": "Kaleidoskop S01E04 - Modrá CZ Dabing",
+        "video_id": 28552524
+      },
+      {
         "episode_id": 103673,
         "display_name": "Farscape S03E14 - Neomezené možnosti - Daidalos požaduje… CZ Dabing",
         "video_id": 28551732
@@ -248947,7 +248957,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 39,
+    "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
