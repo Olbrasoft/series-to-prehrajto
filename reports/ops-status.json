@@ -2,15 +2,15 @@
   "counts": {
     "backlog_episodes": 163196,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 30146,
+    "uploaded_episodes": 30147,
     "prepared_source_episodes": 47854,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 60,
-    "language_whisper_attempted_sources": 60,
+    "language_audited_sources": 40,
+    "language_whisper_attempted_sources": 40,
     "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 56837,
     "whisper_review_pending_sources": 49697,
@@ -20,10 +20,42 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-08-17T06:47:21Z",
+      "databaseId": 32003056127,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-17T06:46:17Z",
+      "databaseId": 32002986847,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-17T06:46:13Z",
+      "databaseId": 32002982517,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-17T06:46:00Z",
+      "databaseId": 32002967702,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-17T06:45:09Z",
       "databaseId": 32002907829,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -59,11 +91,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-17T06:39:12Z",
       "databaseId": 32002518325,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -145,38 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-17T06:22:10Z",
-      "databaseId": 32001372500,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-17T06:20:43Z",
-      "databaseId": 32001271176,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-17T06:20:39Z",
-      "databaseId": 32001266224,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-17T06:19:49Z",
-      "databaseId": 32001200624,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "refresh-backlog"
     }
   ],
   "gaps": {
@@ -126396,6 +126396,11 @@
         "video_id": 28561561
       },
       {
+        "episode_id": 49526,
+        "display_name": "Defiance S02E09 - Painted from Memory CZ Titulky",
+        "video_id": 28561607
+      },
+      {
         "episode_id": 10791,
         "display_name": "ted S02E05 - Meč v kameni CZ Dabing",
         "video_id": 28561166
@@ -252548,6 +252553,11 @@
         "video_id": 28561561
       },
       {
+        "episode_id": 49526,
+        "display_name": "Defiance S02E09 - Painted from Memory CZ Titulky",
+        "video_id": 28561607
+      },
+      {
         "episode_id": 10791,
         "display_name": "ted S02E05 - Meč v kameni CZ Dabing",
         "video_id": 28561166
@@ -253747,7 +253757,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 59,
+    "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
