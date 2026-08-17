@@ -2,15 +2,15 @@
   "counts": {
     "backlog_episodes": 163196,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 30290,
-    "prepared_source_episodes": 48006,
+    "uploaded_episodes": 30296,
+    "prepared_source_episodes": 48024,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 259,
-    "language_whisper_attempted_sources": 94,
+    "language_audited_sources": 20,
+    "language_whisper_attempted_sources": 20,
     "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 56847,
     "whisper_review_pending_sources": 49747,
@@ -20,18 +20,74 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-08-17T08:42:02Z",
-      "databaseId": 32011602084,
+      "createdAt": "2026-08-17T08:47:02Z",
+      "databaseId": 32012000890,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-17T08:46:25Z",
+      "databaseId": 32011953992,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-08-17T08:46:16Z",
+      "databaseId": 32011941382,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-17T08:45:05Z",
+      "databaseId": 32011845333,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-17T08:43:25Z",
+      "databaseId": 32011710678,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-17T08:43:14Z",
+      "databaseId": 32011696589,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-17T08:43:11Z",
+      "databaseId": 32011692887,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-17T08:42:02Z",
+      "databaseId": 32011602084,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "cancelled",
       "createdAt": "2026-08-17T08:41:58Z",
       "databaseId": 32011596572,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -75,11 +131,11 @@
       "workflowName": "prepare-manifest"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-17T08:29:23Z",
       "databaseId": 32010605721,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -121,62 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-17T08:24:54Z",
-      "databaseId": 32010256395,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-17T08:19:45Z",
-      "databaseId": 32009839623,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-17T08:19:45Z",
-      "databaseId": 32009839620,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-17T08:17:56Z",
-      "databaseId": 32009696398,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-17T08:16:39Z",
-      "databaseId": 32009593260,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-17T08:15:33Z",
-      "databaseId": 32009506756,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-17T08:13:31Z",
-      "databaseId": 32009343509,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
     }
   ],
   "gaps": {
@@ -72421,6 +72421,11 @@
         "video_id": 28563647
       },
       {
+        "episode_id": 55364,
+        "display_name": "MacGyver S01E20 - Útěk CZ Titulky",
+        "video_id": 28563686
+      },
+      {
         "episode_id": 73945,
         "display_name": "Dragon Ball Super S01E10 - 10. epizoda CZ Titulky",
         "video_id": 28563496
@@ -127141,6 +127146,21 @@
         "video_id": 28563570
       },
       {
+        "episode_id": 77850,
+        "display_name": "A-Team S02E09 - 9. epizoda CZ Dabing",
+        "video_id": 28563636
+      },
+      {
+        "episode_id": 77878,
+        "display_name": "A-Team S02E11 - 11. epizoda CZ Dabing",
+        "video_id": 28563682
+      },
+      {
+        "episode_id": 77830,
+        "display_name": "A-Team S02E14 - 14. epizoda CZ Titulky",
+        "video_id": 28563709
+      },
+      {
         "episode_id": 140823,
         "display_name": "Daisy Jones & the Six S01E08 - Stopa 8: Asi jsme to zvládli CZ Dabing",
         "video_id": 28563497
@@ -127154,6 +127174,16 @@
         "episode_id": 50827,
         "display_name": "Lidé S01E07 - Episode #1.7 CZ Dabing",
         "video_id": 28563630
+      },
+      {
+        "episode_id": 50831,
+        "display_name": "Lidé S02E02 - Episode #2.2 CZ Dabing",
+        "video_id": 28563666
+      },
+      {
+        "episode_id": 82855,
+        "display_name": "Hanna S01E02 - Kamarádka CZ Dabing",
+        "video_id": 28563687
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -199293,6 +199323,11 @@
         "video_id": 28563647
       },
       {
+        "episode_id": 55364,
+        "display_name": "MacGyver S01E20 - Útěk CZ Titulky",
+        "video_id": 28563686
+      },
+      {
         "episode_id": 73945,
         "display_name": "Dragon Ball Super S01E10 - 10. epizoda CZ Titulky",
         "video_id": 28563496
@@ -254013,6 +254048,21 @@
         "video_id": 28563570
       },
       {
+        "episode_id": 77850,
+        "display_name": "A-Team S02E09 - 9. epizoda CZ Dabing",
+        "video_id": 28563636
+      },
+      {
+        "episode_id": 77878,
+        "display_name": "A-Team S02E11 - 11. epizoda CZ Dabing",
+        "video_id": 28563682
+      },
+      {
+        "episode_id": 77830,
+        "display_name": "A-Team S02E14 - 14. epizoda CZ Titulky",
+        "video_id": 28563709
+      },
+      {
         "episode_id": 140823,
         "display_name": "Daisy Jones & the Six S01E08 - Stopa 8: Asi jsme to zvládli CZ Dabing",
         "video_id": 28563497
@@ -254026,6 +254076,16 @@
         "episode_id": 50827,
         "display_name": "Lidé S01E07 - Episode #1.7 CZ Dabing",
         "video_id": 28563630
+      },
+      {
+        "episode_id": 50831,
+        "display_name": "Lidé S02E02 - Episode #2.2 CZ Dabing",
+        "video_id": 28563666
+      },
+      {
+        "episode_id": 82855,
+        "display_name": "Hanna S01E02 - Kamarádka CZ Dabing",
+        "video_id": 28563687
       }
     ],
     "prepared_not_upload_ready": [
@@ -255187,8 +255247,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 165,
-    "ok": 93,
+    "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
