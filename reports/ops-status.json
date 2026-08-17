@@ -2,22 +2,46 @@
   "counts": {
     "backlog_episodes": 162621,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 30691,
-    "prepared_source_episodes": 48579,
+    "uploaded_episodes": 30693,
+    "prepared_source_episodes": 48599,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 64,
-    "language_whisper_attempted_sources": 60,
-    "language_pending_whisper_sources": 2604,
+    "language_audited_sources": 20,
+    "language_whisper_attempted_sources": 20,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 56810,
     "whisper_review_pending_sources": 49550,
     "subtitle_followup_sources": 25620,
     "subtitle_followup_pending_sources": 25620
   },
   "workflow_runs": [
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-17T15:20:44Z",
+      "databaseId": 32042030042,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-17T15:20:04Z",
+      "databaseId": 32041995112,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-17T15:19:47Z",
+      "databaseId": 32041980022,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
     {
       "conclusion": "",
       "createdAt": "2026-08-17T15:19:15Z",
@@ -31,7 +55,7 @@
       "createdAt": "2026-08-17T15:18:36Z",
       "databaseId": 32041916826,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
@@ -51,11 +75,11 @@
       "workflowName": "process-whisper-review"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-17T15:17:21Z",
       "databaseId": 32041853401,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -67,11 +91,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-08-17T15:17:17Z",
       "databaseId": 32041850412,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -123,11 +147,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-17T15:08:54Z",
       "databaseId": 32041406680,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -153,30 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-status"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-17T15:06:56Z",
-      "databaseId": 32041296571,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "failure",
-      "createdAt": "2026-08-17T15:06:27Z",
-      "databaseId": 32041271058,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-17T15:05:47Z",
-      "databaseId": 32041233938,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-descriptions"
     }
   ],
   "gaps": {
@@ -129159,6 +129159,16 @@
         "episode_id": 104515,
         "display_name": "Drsný šerif S06E10 - Loučení CZ Dabing",
         "video_id": 28571158
+      },
+      {
+        "episode_id": 79410,
+        "display_name": "Schodiště S01E08 - Zlatíčka pro každého CZ Dabing",
+        "video_id": 28571309
+      },
+      {
+        "episode_id": 105591,
+        "display_name": "Doteky osudu S01E04 - Tajemství prstenu CZ Dabing",
+        "video_id": 28571314
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -258036,6 +258046,16 @@
         "episode_id": 104515,
         "display_name": "Drsný šerif S06E10 - Loučení CZ Dabing",
         "video_id": 28571158
+      },
+      {
+        "episode_id": 79410,
+        "display_name": "Schodiště S01E08 - Zlatíčka pro každého CZ Dabing",
+        "video_id": 28571309
+      },
+      {
+        "episode_id": 105591,
+        "display_name": "Doteky osudu S01E04 - Tajemství prstenu CZ Dabing",
+        "video_id": 28571314
       }
     ],
     "prepared_not_upload_ready": [
@@ -259197,8 +259217,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 4,
-    "ok": 59,
+    "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
