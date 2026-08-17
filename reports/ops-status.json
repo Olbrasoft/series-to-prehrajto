@@ -2,15 +2,15 @@
   "counts": {
     "backlog_episodes": 163196,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 30221,
-    "prepared_source_episodes": 47944,
+    "uploaded_episodes": 30232,
+    "prepared_source_episodes": 47963,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 20,
-    "language_whisper_attempted_sources": 20,
+    "language_audited_sources": 48,
+    "language_whisper_attempted_sources": 40,
     "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 56847,
     "whisper_review_pending_sources": 49747,
@@ -20,10 +20,74 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-08-17T07:58:52Z",
+      "databaseId": 32008195132,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-17T07:58:48Z",
+      "databaseId": 32008190538,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-17T07:58:44Z",
+      "databaseId": 32008185842,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-08-17T07:58:44Z",
+      "databaseId": 32008185554,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-08-17T07:57:42Z",
+      "databaseId": 32008109278,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-17T07:55:21Z",
+      "databaseId": 32007937689,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-sources"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-17T07:53:37Z",
+      "databaseId": 32007806975,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-17T07:53:34Z",
+      "databaseId": 32007802481,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-17T07:52:38Z",
       "databaseId": 32007735466,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -75,11 +139,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-08-17T07:45:39Z",
       "databaseId": 32007227380,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -107,76 +171,12 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-17T07:39:40Z",
       "databaseId": 32006789786,
       "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-17T07:38:22Z",
-      "databaseId": 32006697089,
-      "headBranch": "main",
       "status": "completed",
       "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-17T07:38:22Z",
-      "databaseId": 32006697017,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-17T07:35:00Z",
-      "databaseId": 32006451125,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-17T07:32:39Z",
-      "databaseId": 32006277974,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-17T07:31:16Z",
-      "databaseId": 32006177349,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-17T07:31:12Z",
-      "databaseId": 32006173194,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-17T07:29:59Z",
-      "databaseId": 32006076934,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-17T07:24:54Z",
-      "databaseId": 32005701601,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
     }
   ],
   "gaps": {
@@ -72251,6 +72251,26 @@
         "video_id": 28562775
       },
       {
+        "episode_id": 91884,
+        "display_name": "Dr. Stone S03E07 - 7. epizoda CZ Titulky",
+        "video_id": 28562805
+      },
+      {
+        "episode_id": 91888,
+        "display_name": "Dr. Stone S03E11 - 11. epizoda CZ Titulky",
+        "video_id": 28562836
+      },
+      {
+        "episode_id": 91892,
+        "display_name": "Dr. Stone S03E15 - 15. epizoda CZ Titulky",
+        "video_id": 28562865
+      },
+      {
+        "episode_id": 91896,
+        "display_name": "Dr. Stone S03E19 - 19. epizoda CZ Titulky",
+        "video_id": 28562897
+      },
+      {
         "episode_id": 49521,
         "display_name": "Defiance S02E04 - Beasts of Burden CZ Titulky",
         "video_id": 28562703
@@ -72259,6 +72279,16 @@
         "episode_id": 49525,
         "display_name": "Defiance S02E08 - Slouching Towards Bethlehem CZ Titulky",
         "video_id": 28562756
+      },
+      {
+        "episode_id": 49529,
+        "display_name": "Defiance S03E01 - The World We Seize CZ Titulky",
+        "video_id": 28562803
+      },
+      {
+        "episode_id": 63541,
+        "display_name": "Za hranicí S01E05 - Půda CZ Titulky",
+        "video_id": 28562867
       },
       {
         "episode_id": 114182,
@@ -126801,6 +126831,21 @@
         "video_id": 28562782
       },
       {
+        "episode_id": 50830,
+        "display_name": "Lidé S02E01 - Episode #2.1 CZ Dabing",
+        "video_id": 28562817
+      },
+      {
+        "episode_id": 82854,
+        "display_name": "Hanna S01E01 - Les CZ Titulky",
+        "video_id": 28562855
+      },
+      {
+        "episode_id": 82858,
+        "display_name": "Hanna S01E05 - Město CZ Dabing",
+        "video_id": 28562902
+      },
+      {
         "episode_id": 63539,
         "display_name": "Za hranicí S01E03 - Čas CZ Dabing",
         "video_id": 28562690
@@ -126809,6 +126854,16 @@
         "episode_id": 63543,
         "display_name": "Za hranicí S01E07 - Neznámo CZ Titulky",
         "video_id": 28562731
+      },
+      {
+        "episode_id": 63547,
+        "display_name": "Za hranicí S02E02 - Stopy do neznáma CZ Dabing",
+        "video_id": 28562801
+      },
+      {
+        "episode_id": 6435,
+        "display_name": "FUBAR S01E06 - Pokerová spojka CZ Dabing",
+        "video_id": 28562858
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -198778,6 +198833,26 @@
         "video_id": 28562775
       },
       {
+        "episode_id": 91884,
+        "display_name": "Dr. Stone S03E07 - 7. epizoda CZ Titulky",
+        "video_id": 28562805
+      },
+      {
+        "episode_id": 91888,
+        "display_name": "Dr. Stone S03E11 - 11. epizoda CZ Titulky",
+        "video_id": 28562836
+      },
+      {
+        "episode_id": 91892,
+        "display_name": "Dr. Stone S03E15 - 15. epizoda CZ Titulky",
+        "video_id": 28562865
+      },
+      {
+        "episode_id": 91896,
+        "display_name": "Dr. Stone S03E19 - 19. epizoda CZ Titulky",
+        "video_id": 28562897
+      },
+      {
         "episode_id": 49521,
         "display_name": "Defiance S02E04 - Beasts of Burden CZ Titulky",
         "video_id": 28562703
@@ -198786,6 +198861,16 @@
         "episode_id": 49525,
         "display_name": "Defiance S02E08 - Slouching Towards Bethlehem CZ Titulky",
         "video_id": 28562756
+      },
+      {
+        "episode_id": 49529,
+        "display_name": "Defiance S03E01 - The World We Seize CZ Titulky",
+        "video_id": 28562803
+      },
+      {
+        "episode_id": 63541,
+        "display_name": "Za hranicí S01E05 - Půda CZ Titulky",
+        "video_id": 28562867
       },
       {
         "episode_id": 114182,
@@ -253328,6 +253413,21 @@
         "video_id": 28562782
       },
       {
+        "episode_id": 50830,
+        "display_name": "Lidé S02E01 - Episode #2.1 CZ Dabing",
+        "video_id": 28562817
+      },
+      {
+        "episode_id": 82854,
+        "display_name": "Hanna S01E01 - Les CZ Titulky",
+        "video_id": 28562855
+      },
+      {
+        "episode_id": 82858,
+        "display_name": "Hanna S01E05 - Město CZ Dabing",
+        "video_id": 28562902
+      },
+      {
         "episode_id": 63539,
         "display_name": "Za hranicí S01E03 - Čas CZ Dabing",
         "video_id": 28562690
@@ -253336,6 +253436,16 @@
         "episode_id": 63543,
         "display_name": "Za hranicí S01E07 - Neznámo CZ Titulky",
         "video_id": 28562731
+      },
+      {
+        "episode_id": 63547,
+        "display_name": "Za hranicí S02E02 - Stopy do neznáma CZ Dabing",
+        "video_id": 28562801
+      },
+      {
+        "episode_id": 6435,
+        "display_name": "FUBAR S01E06 - Pokerová spojka CZ Dabing",
+        "video_id": 28562858
       }
     ],
     "prepared_not_upload_ready": [
@@ -254497,7 +254607,8 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 19,
+    "disabled": 8,
+    "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
