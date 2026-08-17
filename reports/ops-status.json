@@ -2,36 +2,44 @@
   "counts": {
     "backlog_episodes": 162447,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 30867,
-    "prepared_source_episodes": 48579,
+    "uploaded_episodes": 30869,
+    "prepared_source_episodes": 48706,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 60,
-    "language_whisper_attempted_sources": 40,
+    "language_audited_sources": 242,
+    "language_whisper_attempted_sources": 97,
     "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 56792,
     "whisper_review_pending_sources": 49455,
-    "subtitle_followup_sources": 25733,
-    "subtitle_followup_pending_sources": 25733
+    "subtitle_followup_sources": 25781,
+    "subtitle_followup_pending_sources": 25781
   },
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-08-17T21:25:41Z",
+      "databaseId": 32071038800,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-17T21:22:18Z",
       "databaseId": 32070741540,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-17T21:21:41Z",
       "databaseId": 32070689123,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -169,14 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-17T21:08:36Z",
-      "databaseId": 32069554733,
-      "headBranch": "main",
-      "status": "pending",
-      "workflowName": "audit-language"
     }
   ],
   "gaps": {
@@ -130039,6 +130039,16 @@
         "episode_id": 2247,
         "display_name": "ALF S03E07 - Odhalení (1. část) CZ Dabing",
         "video_id": 28577443
+      },
+      {
+        "episode_id": 49094,
+        "display_name": "Fauda S04E09 - 9. epizoda CZ Titulky",
+        "video_id": 28577649
+      },
+      {
+        "episode_id": 2251,
+        "display_name": "ALF S03E11 - Samota tíží CZ Dabing",
+        "video_id": 28577659
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -259796,6 +259806,16 @@
         "episode_id": 2247,
         "display_name": "ALF S03E07 - Odhalení (1. část) CZ Dabing",
         "video_id": 28577443
+      },
+      {
+        "episode_id": 49094,
+        "display_name": "Fauda S04E09 - 9. epizoda CZ Titulky",
+        "video_id": 28577649
+      },
+      {
+        "episode_id": 2251,
+        "display_name": "ALF S03E11 - Samota tíží CZ Dabing",
+        "video_id": 28577659
       }
     ],
     "prepared_not_upload_ready": [
@@ -260957,8 +260977,9 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 20,
-    "ok": 39,
+    "ok": 95,
+    "disabled": 145,
+    "sample_failed": 1,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
@@ -260968,6 +260989,6 @@
     "needs_whisper": 49413
   },
   "subtitle_followup_statuses": {
-    "needs_subtitle_setup_after_prehrajto_processing": 25733
+    "needs_subtitle_setup_after_prehrajto_processing": 25781
   }
 }
