@@ -2,15 +2,15 @@
   "counts": {
     "backlog_episodes": 163196,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 30275,
-    "prepared_source_episodes": 48002,
+    "uploaded_episodes": 30290,
+    "prepared_source_episodes": 48006,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 162,
-    "language_whisper_attempted_sources": 74,
+    "language_audited_sources": 259,
+    "language_whisper_attempted_sources": 94,
     "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 56847,
     "whisper_review_pending_sources": 49747,
@@ -20,18 +20,58 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-08-17T08:32:18Z",
-      "databaseId": 32010835133,
+      "createdAt": "2026-08-17T08:42:02Z",
+      "databaseId": 32011602084,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-08-17T08:41:58Z",
+      "databaseId": 32011596572,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-08-17T08:37:26Z",
+      "databaseId": 32011245535,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-17T08:37:25Z",
+      "databaseId": 32011245157,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-17T08:33:23Z",
+      "databaseId": 32010923946,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-17T08:32:18Z",
+      "databaseId": 32010835133,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "cancelled",
       "createdAt": "2026-08-17T08:32:13Z",
       "databaseId": 32010827854,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -83,11 +123,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-17T08:24:54Z",
       "databaseId": 32010256395,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
@@ -119,7 +159,7 @@
       "createdAt": "2026-08-17T08:16:39Z",
       "databaseId": 32009593260,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "audit-language"
     },
     {
@@ -134,46 +174,6 @@
       "conclusion": "success",
       "createdAt": "2026-08-17T08:13:31Z",
       "databaseId": 32009343509,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-17T08:12:54Z",
-      "databaseId": 32009294177,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-17T08:12:04Z",
-      "databaseId": 32009230687,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-17T08:10:54Z",
-      "databaseId": 32009138993,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-17T08:10:49Z",
-      "databaseId": 32009131864,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-17T08:10:35Z",
-      "databaseId": 32009114102,
       "headBranch": "main",
       "status": "completed",
       "workflowName": "prepare-manifest"
@@ -72396,6 +72396,56 @@
         "video_id": 28563293
       },
       {
+        "episode_id": 126668,
+        "display_name": "Čtyři roční období S01E04 - Plážový bar CZ Dabing",
+        "video_id": 28563498
+      },
+      {
+        "episode_id": 203036,
+        "display_name": "Čtyři roční období S02E02 - 2. epizoda CZ Dabing",
+        "video_id": 28563524
+      },
+      {
+        "episode_id": 203040,
+        "display_name": "Čtyři roční období S02E08 - 8. epizoda CZ Dabing",
+        "video_id": 28563542
+      },
+      {
+        "episode_id": 55368,
+        "display_name": "MacGyver S01E13 - Konec žáru CZ Dabing",
+        "video_id": 28563591
+      },
+      {
+        "episode_id": 55352,
+        "display_name": "MacGyver S01E18 - Ošklivé káčátko CZ Titulky",
+        "video_id": 28563647
+      },
+      {
+        "episode_id": 73945,
+        "display_name": "Dragon Ball Super S01E10 - 10. epizoda CZ Titulky",
+        "video_id": 28563496
+      },
+      {
+        "episode_id": 104533,
+        "display_name": "Déšť S01E02 - Zůstat pohromadě CZ Titulky",
+        "video_id": 28563532
+      },
+      {
+        "episode_id": 104537,
+        "display_name": "Déšť S01E06 - Mít přátele nablízku CZ Titulky",
+        "video_id": 28563583
+      },
+      {
+        "episode_id": 104545,
+        "display_name": "Déšť S02E01 - Vyhýbej se kontaktu CZ Titulky",
+        "video_id": 28563623
+      },
+      {
+        "episode_id": 104541,
+        "display_name": "Déšť S02E06 - Přežije ten nejlepší CZ Titulky",
+        "video_id": 28563654
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -127079,6 +127129,31 @@
         "episode_id": 140819,
         "display_name": "Daisy Jones & the Six S01E04 - Stopa 4: Viděl jsem světlo CZ Dabing",
         "video_id": 28563398
+      },
+      {
+        "episode_id": 77826,
+        "display_name": "A-Team S01E12 - Bestie z břicha Boeingu CZ Dabing",
+        "video_id": 28563509
+      },
+      {
+        "episode_id": 77874,
+        "display_name": "A-Team S02E03 - Jediný kostel ve městě CZ Dabing",
+        "video_id": 28563570
+      },
+      {
+        "episode_id": 140823,
+        "display_name": "Daisy Jones & the Six S01E08 - Stopa 8: Asi jsme to zvládli CZ Dabing",
+        "video_id": 28563497
+      },
+      {
+        "episode_id": 50823,
+        "display_name": "Lidé S01E03 - Episode #1.3 CZ Dabing",
+        "video_id": 28563554
+      },
+      {
+        "episode_id": 50827,
+        "display_name": "Lidé S01E07 - Episode #1.7 CZ Dabing",
+        "video_id": 28563630
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -199193,6 +199268,56 @@
         "video_id": 28563293
       },
       {
+        "episode_id": 126668,
+        "display_name": "Čtyři roční období S01E04 - Plážový bar CZ Dabing",
+        "video_id": 28563498
+      },
+      {
+        "episode_id": 203036,
+        "display_name": "Čtyři roční období S02E02 - 2. epizoda CZ Dabing",
+        "video_id": 28563524
+      },
+      {
+        "episode_id": 203040,
+        "display_name": "Čtyři roční období S02E08 - 8. epizoda CZ Dabing",
+        "video_id": 28563542
+      },
+      {
+        "episode_id": 55368,
+        "display_name": "MacGyver S01E13 - Konec žáru CZ Dabing",
+        "video_id": 28563591
+      },
+      {
+        "episode_id": 55352,
+        "display_name": "MacGyver S01E18 - Ošklivé káčátko CZ Titulky",
+        "video_id": 28563647
+      },
+      {
+        "episode_id": 73945,
+        "display_name": "Dragon Ball Super S01E10 - 10. epizoda CZ Titulky",
+        "video_id": 28563496
+      },
+      {
+        "episode_id": 104533,
+        "display_name": "Déšť S01E02 - Zůstat pohromadě CZ Titulky",
+        "video_id": 28563532
+      },
+      {
+        "episode_id": 104537,
+        "display_name": "Déšť S01E06 - Mít přátele nablízku CZ Titulky",
+        "video_id": 28563583
+      },
+      {
+        "episode_id": 104545,
+        "display_name": "Déšť S02E01 - Vyhýbej se kontaktu CZ Titulky",
+        "video_id": 28563623
+      },
+      {
+        "episode_id": 104541,
+        "display_name": "Déšť S02E06 - Přežije ten nejlepší CZ Titulky",
+        "video_id": 28563654
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -253876,6 +254001,31 @@
         "episode_id": 140819,
         "display_name": "Daisy Jones & the Six S01E04 - Stopa 4: Viděl jsem světlo CZ Dabing",
         "video_id": 28563398
+      },
+      {
+        "episode_id": 77826,
+        "display_name": "A-Team S01E12 - Bestie z břicha Boeingu CZ Dabing",
+        "video_id": 28563509
+      },
+      {
+        "episode_id": 77874,
+        "display_name": "A-Team S02E03 - Jediný kostel ve městě CZ Dabing",
+        "video_id": 28563570
+      },
+      {
+        "episode_id": 140823,
+        "display_name": "Daisy Jones & the Six S01E08 - Stopa 8: Asi jsme to zvládli CZ Dabing",
+        "video_id": 28563497
+      },
+      {
+        "episode_id": 50823,
+        "display_name": "Lidé S01E03 - Episode #1.3 CZ Dabing",
+        "video_id": 28563554
+      },
+      {
+        "episode_id": 50827,
+        "display_name": "Lidé S01E07 - Episode #1.7 CZ Dabing",
+        "video_id": 28563630
       }
     ],
     "prepared_not_upload_ready": [
@@ -255037,8 +255187,8 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 88,
-    "ok": 73,
+    "disabled": 165,
+    "ok": 93,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
