@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 162972,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 30477,
-    "prepared_source_episodes": 48203,
+    "uploaded_episodes": 30494,
+    "prepared_source_episodes": 48199,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 40,
-    "language_whisper_attempted_sources": 40,
-    "language_pending_whisper_sources": 2604,
+    "language_audited_sources": 35,
+    "language_whisper_attempted_sources": 20,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 56847,
     "whisper_review_pending_sources": 49749,
     "subtitle_followup_sources": 25547,
@@ -20,18 +20,50 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-08-17T11:11:19Z",
-      "databaseId": 32023725432,
+      "createdAt": "2026-08-17T11:21:22Z",
+      "databaseId": 32024532662,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-08-17T11:21:18Z",
+      "databaseId": 32024527293,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-17T11:19:21Z",
+      "databaseId": 32024376260,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-17T11:12:29Z",
+      "databaseId": 32023822596,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-17T11:11:19Z",
+      "databaseId": 32023725432,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "cancelled",
       "createdAt": "2026-08-17T11:10:06Z",
       "databaseId": 32023616498,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -51,11 +83,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-17T11:08:28Z",
       "databaseId": 32023481291,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -91,11 +123,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-17T11:03:46Z",
       "databaseId": 32023103673,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
@@ -142,38 +174,6 @@
       "conclusion": "cancelled",
       "createdAt": "2026-08-17T11:01:18Z",
       "databaseId": 32022911378,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-17T11:00:47Z",
-      "databaseId": 32022868409,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-17T11:00:42Z",
-      "databaseId": 32022861481,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-17T10:59:43Z",
-      "databaseId": 32022777350,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-17T10:58:23Z",
-      "databaseId": 32022675404,
       "headBranch": "main",
       "status": "completed",
       "workflowName": "prepare-manifest"
@@ -72891,6 +72891,26 @@
         "video_id": 28566909
       },
       {
+        "episode_id": 104492,
+        "display_name": "Drsný šerif S03E07 - 25 obyvatel CZ Dabing",
+        "video_id": 28566948
+      },
+      {
+        "episode_id": 119836,
+        "display_name": "Drsný šerif S03E08 - Sklizeň CZ Titulky",
+        "video_id": 28566974
+      },
+      {
+        "episode_id": 119832,
+        "display_name": "Drsný šerif S04E06 - Vrať se, jitřenko CZ Titulky",
+        "video_id": 28567034
+      },
+      {
+        "episode_id": 104520,
+        "display_name": "Drsný šerif S05E01 - Mlha, která se nezvedá CZ Dabing",
+        "video_id": 28567074
+      },
+      {
         "episode_id": 35781,
         "display_name": "Odstřelovač S01E05 - Strom svobody CZ Titulky",
         "video_id": 28566810
@@ -72904,6 +72924,31 @@
         "episode_id": 111453,
         "display_name": "Odstřelovač S03E12 - Anděl strážný CZ Dabing",
         "video_id": 28566895
+      },
+      {
+        "episode_id": 111449,
+        "display_name": "Odstřelovač S03E13 - Konečná CZ Dabing",
+        "video_id": 28566946
+      },
+      {
+        "episode_id": 126669,
+        "display_name": "Čtyři roční období S01E05 - Rodinný víkend CZ Dabing",
+        "video_id": 28566982
+      },
+      {
+        "episode_id": 126665,
+        "display_name": "Čtyři roční období S01E08 - Pohřeb CZ Dabing",
+        "video_id": 28567012
+      },
+      {
+        "episode_id": 203037,
+        "display_name": "Čtyři roční období S02E04 - 4. epizoda CZ Dabing",
+        "video_id": 28567028
+      },
+      {
+        "episode_id": 203041,
+        "display_name": "Čtyři roční období S02E06 - 6. epizoda CZ Dabing",
+        "video_id": 28567052
       },
       {
         "episode_id": 114182,
@@ -128086,9 +128131,49 @@
         "video_id": 28566869
       },
       {
+        "episode_id": 17282,
+        "display_name": "Nevina S01E08 - 8. díl CZ Titulky",
+        "video_id": 28566934
+      },
+      {
+        "episode_id": 202930,
+        "display_name": "Doktoři S01E01 - První den (Pilot) CZ Dabing",
+        "video_id": 28566990
+      },
+      {
+        "episode_id": 105318,
+        "display_name": "Doktoři S02E03 - Tři slova CZ Dabing",
+        "video_id": 28567029
+      },
+      {
+        "episode_id": 105322,
+        "display_name": "Doktoři S02E08 - Srdce v bedně CZ Dabing",
+        "video_id": 28567062
+      },
+      {
         "episode_id": 55427,
         "display_name": "MacGyver S01E02 - Zlatý trojúhelník CZ Dabing",
         "video_id": 28566821
+      },
+      {
+        "episode_id": 55443,
+        "display_name": "MacGyver S01E15 - Nepřítel uvnitř CZ Dabing",
+        "video_id": 28566929
+      },
+      {
+        "episode_id": 35475,
+        "display_name": "MacGyver S02E17 - Agent Jack Dalton CZ Dabing",
+        "video_id": 28566980
+      },
+      {
+        "episode_id": 35479,
+        "display_name": "MacGyver S02E21 - MacGyver musí zemřít CZ Dabing",
+        "video_id": 28567040
+      },
+      {
+        "episode_id": 55459,
+        "display_name": "MacGyver S03E05 - Oheň a led CZ Dabing",
+        "video_id": 28567067
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -200698,6 +200783,26 @@
         "video_id": 28566909
       },
       {
+        "episode_id": 104492,
+        "display_name": "Drsný šerif S03E07 - 25 obyvatel CZ Dabing",
+        "video_id": 28566948
+      },
+      {
+        "episode_id": 119836,
+        "display_name": "Drsný šerif S03E08 - Sklizeň CZ Titulky",
+        "video_id": 28566974
+      },
+      {
+        "episode_id": 119832,
+        "display_name": "Drsný šerif S04E06 - Vrať se, jitřenko CZ Titulky",
+        "video_id": 28567034
+      },
+      {
+        "episode_id": 104520,
+        "display_name": "Drsný šerif S05E01 - Mlha, která se nezvedá CZ Dabing",
+        "video_id": 28567074
+      },
+      {
         "episode_id": 35781,
         "display_name": "Odstřelovač S01E05 - Strom svobody CZ Titulky",
         "video_id": 28566810
@@ -200711,6 +200816,31 @@
         "episode_id": 111453,
         "display_name": "Odstřelovač S03E12 - Anděl strážný CZ Dabing",
         "video_id": 28566895
+      },
+      {
+        "episode_id": 111449,
+        "display_name": "Odstřelovač S03E13 - Konečná CZ Dabing",
+        "video_id": 28566946
+      },
+      {
+        "episode_id": 126669,
+        "display_name": "Čtyři roční období S01E05 - Rodinný víkend CZ Dabing",
+        "video_id": 28566982
+      },
+      {
+        "episode_id": 126665,
+        "display_name": "Čtyři roční období S01E08 - Pohřeb CZ Dabing",
+        "video_id": 28567012
+      },
+      {
+        "episode_id": 203037,
+        "display_name": "Čtyři roční období S02E04 - 4. epizoda CZ Dabing",
+        "video_id": 28567028
+      },
+      {
+        "episode_id": 203041,
+        "display_name": "Čtyři roční období S02E06 - 6. epizoda CZ Dabing",
+        "video_id": 28567052
       },
       {
         "episode_id": 114182,
@@ -255893,9 +256023,49 @@
         "video_id": 28566869
       },
       {
+        "episode_id": 17282,
+        "display_name": "Nevina S01E08 - 8. díl CZ Titulky",
+        "video_id": 28566934
+      },
+      {
+        "episode_id": 202930,
+        "display_name": "Doktoři S01E01 - První den (Pilot) CZ Dabing",
+        "video_id": 28566990
+      },
+      {
+        "episode_id": 105318,
+        "display_name": "Doktoři S02E03 - Tři slova CZ Dabing",
+        "video_id": 28567029
+      },
+      {
+        "episode_id": 105322,
+        "display_name": "Doktoři S02E08 - Srdce v bedně CZ Dabing",
+        "video_id": 28567062
+      },
+      {
         "episode_id": 55427,
         "display_name": "MacGyver S01E02 - Zlatý trojúhelník CZ Dabing",
         "video_id": 28566821
+      },
+      {
+        "episode_id": 55443,
+        "display_name": "MacGyver S01E15 - Nepřítel uvnitř CZ Dabing",
+        "video_id": 28566929
+      },
+      {
+        "episode_id": 35475,
+        "display_name": "MacGyver S02E17 - Agent Jack Dalton CZ Dabing",
+        "video_id": 28566980
+      },
+      {
+        "episode_id": 35479,
+        "display_name": "MacGyver S02E21 - MacGyver musí zemřít CZ Dabing",
+        "video_id": 28567040
+      },
+      {
+        "episode_id": 55459,
+        "display_name": "MacGyver S03E05 - Oheň a led CZ Dabing",
+        "video_id": 28567067
       }
     ],
     "prepared_not_upload_ready": [
@@ -257057,7 +257227,8 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 39,
+    "disabled": 15,
+    "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
