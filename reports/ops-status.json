@@ -2,14 +2,14 @@
   "counts": {
     "backlog_episodes": 162972,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 30427,
-    "prepared_source_episodes": 48145,
+    "uploaded_episodes": 30429,
+    "prepared_source_episodes": 48163,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 103,
+    "language_audited_sources": 170,
     "language_whisper_attempted_sources": 40,
     "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 56847,
@@ -20,26 +20,50 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-08-17T10:30:51Z",
-      "databaseId": 32020515744,
+      "createdAt": "2026-08-17T10:32:17Z",
+      "databaseId": 32020628006,
       "headBranch": "main",
       "status": "pending",
-      "workflowName": "ops-watchdog"
+      "workflowName": "prepare-manifest"
     },
     {
       "conclusion": "",
-      "createdAt": "2026-08-17T10:30:21Z",
-      "databaseId": 32020472188,
+      "createdAt": "2026-08-17T10:31:33Z",
+      "databaseId": 32020567755,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-17T10:31:29Z",
+      "databaseId": 32020562524,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-17T10:30:51Z",
+      "databaseId": 32020515744,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
+      "createdAt": "2026-08-17T10:30:21Z",
+      "databaseId": 32020472188,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "cancelled",
       "createdAt": "2026-08-17T10:30:17Z",
       "databaseId": 32020465261,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -153,30 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-status"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-17T10:11:12Z",
-      "databaseId": 32018938235,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-17T10:11:09Z",
-      "databaseId": 32018934387,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-17T10:11:07Z",
-      "databaseId": 32018931450,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
     }
   ],
   "gaps": {
@@ -72781,6 +72781,11 @@
         "video_id": 28566118
       },
       {
+        "episode_id": 91889,
+        "display_name": "Dr. Stone S03E12 - 12. epizoda CZ Titulky",
+        "video_id": 28566240
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -127799,6 +127804,11 @@
         "episode_id": 55370,
         "display_name": "MacGyver S05E13 - Žij a uč se! CZ Dabing",
         "video_id": 28565950
+      },
+      {
+        "episode_id": 55422,
+        "display_name": "MacGyver S07E06 - Živí mrtví CZ Dabing",
+        "video_id": 28566232
       },
       {
         "episode_id": 91887,
@@ -200338,6 +200348,11 @@
         "video_id": 28566118
       },
       {
+        "episode_id": 91889,
+        "display_name": "Dr. Stone S03E12 - 12. epizoda CZ Titulky",
+        "video_id": 28566240
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -255358,6 +255373,11 @@
         "video_id": 28565950
       },
       {
+        "episode_id": 55422,
+        "display_name": "MacGyver S07E06 - Živí mrtví CZ Dabing",
+        "video_id": 28566232
+      },
+      {
         "episode_id": 91887,
         "display_name": "Dr. Stone S03E10 - 10. epizoda CZ Titulky",
         "video_id": 28565800
@@ -256557,7 +256577,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 63,
+    "disabled": 130,
     "ok": 39,
     "resolve_failed": 1
   },
