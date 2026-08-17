@@ -2,14 +2,14 @@
   "counts": {
     "backlog_episodes": 163342,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 30087,
+    "uploaded_episodes": 30095,
     "prepared_source_episodes": 47801,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 66,
+    "language_audited_sources": 40,
     "language_whisper_attempted_sources": 40,
     "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 56846,
@@ -20,10 +20,58 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-08-17T05:52:05Z",
+      "databaseId": 31999417427,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-17T05:52:01Z",
+      "databaseId": 31999412761,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-08-17T05:51:27Z",
+      "databaseId": 31999378488,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-17T05:51:27Z",
+      "databaseId": 31999378229,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-17T05:49:23Z",
+      "databaseId": 31999255393,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-sources"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-17T05:47:48Z",
+      "databaseId": 31999160904,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-17T05:46:36Z",
       "databaseId": 31999092416,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -55,7 +103,7 @@
       "createdAt": "2026-08-17T05:44:20Z",
       "databaseId": 31998952256,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "audit-language"
     },
     {
@@ -83,11 +131,11 @@
       "workflowName": "process-whisper-review"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-17T05:43:19Z",
       "databaseId": 31998892456,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -95,7 +143,7 @@
       "createdAt": "2026-08-17T05:42:27Z",
       "databaseId": 31998840770,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "prepare-descriptions"
     },
     {
@@ -129,54 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-17T05:30:44Z",
-      "databaseId": 31998150323,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-17T05:30:44Z",
-      "databaseId": 31998150317,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-17T05:27:45Z",
-      "databaseId": 31997979085,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-17T05:27:41Z",
-      "databaseId": 31997975017,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-17T05:26:32Z",
-      "databaseId": 31997913525,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-17T05:22:44Z",
-      "databaseId": 31997690225,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
     }
   ],
   "gaps": {
@@ -71926,9 +71926,29 @@
         "video_id": 28560337
       },
       {
+        "episode_id": 140824,
+        "display_name": "Daisy Jones & the Six S01E09 - Stopa 9: Jako by to bylo poprvé CZ Dabing",
+        "video_id": 28560366
+      },
+      {
+        "episode_id": 50824,
+        "display_name": "Lidé S01E04 - Episode #1.4 CZ Titulky",
+        "video_id": 28560403
+      },
+      {
         "episode_id": 46225,
         "display_name": "Dark Matter S01E07 - Episode Seven CZ Titulky",
         "video_id": 28560308
+      },
+      {
+        "episode_id": 46209,
+        "display_name": "Dark Matter S02E01 - Welcome to Your New Home CZ Titulky",
+        "video_id": 28560353
+      },
+      {
+        "episode_id": 46213,
+        "display_name": "Dark Matter S02E05 - We Voted Not to Space You CZ Titulky",
+        "video_id": 28560391
       },
       {
         "episode_id": 114182,
@@ -126139,6 +126159,26 @@
         "episode_id": 8726,
         "display_name": "Sedm smrtelných hříchů S01E08 - Děsivý pronásledovatel CZ Titulky",
         "video_id": 28560303
+      },
+      {
+        "episode_id": 8730,
+        "display_name": "Sedm smrtelných hříchů S01E12 - Hrůzostrašný kanovník CZ Titulky",
+        "video_id": 28560350
+      },
+      {
+        "episode_id": 54714,
+        "display_name": "Mrtví jako já S02E01 - Čekání na klauna CZ Dabing",
+        "video_id": 28560430
+      },
+      {
+        "episode_id": 69099,
+        "display_name": "Columbo S06E02 - Staromódní vražda CZ Dabing",
+        "video_id": 28560316
+      },
+      {
+        "episode_id": 69051,
+        "display_name": "Columbo S10E11 - Vražedné stopy CZ Dabing",
+        "video_id": 28560438
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -197783,9 +197823,29 @@
         "video_id": 28560337
       },
       {
+        "episode_id": 140824,
+        "display_name": "Daisy Jones & the Six S01E09 - Stopa 9: Jako by to bylo poprvé CZ Dabing",
+        "video_id": 28560366
+      },
+      {
+        "episode_id": 50824,
+        "display_name": "Lidé S01E04 - Episode #1.4 CZ Titulky",
+        "video_id": 28560403
+      },
+      {
         "episode_id": 46225,
         "display_name": "Dark Matter S01E07 - Episode Seven CZ Titulky",
         "video_id": 28560308
+      },
+      {
+        "episode_id": 46209,
+        "display_name": "Dark Matter S02E01 - Welcome to Your New Home CZ Titulky",
+        "video_id": 28560353
+      },
+      {
+        "episode_id": 46213,
+        "display_name": "Dark Matter S02E05 - We Voted Not to Space You CZ Titulky",
+        "video_id": 28560391
       },
       {
         "episode_id": 114182,
@@ -251996,6 +252056,26 @@
         "episode_id": 8726,
         "display_name": "Sedm smrtelných hříchů S01E08 - Děsivý pronásledovatel CZ Titulky",
         "video_id": 28560303
+      },
+      {
+        "episode_id": 8730,
+        "display_name": "Sedm smrtelných hříchů S01E12 - Hrůzostrašný kanovník CZ Titulky",
+        "video_id": 28560350
+      },
+      {
+        "episode_id": 54714,
+        "display_name": "Mrtví jako já S02E01 - Čekání na klauna CZ Dabing",
+        "video_id": 28560430
+      },
+      {
+        "episode_id": 69099,
+        "display_name": "Columbo S06E02 - Staromódní vražda CZ Dabing",
+        "video_id": 28560316
+      },
+      {
+        "episode_id": 69051,
+        "display_name": "Columbo S10E11 - Vražedné stopy CZ Dabing",
+        "video_id": 28560438
       }
     ],
     "prepared_not_upload_ready": [
@@ -253157,7 +253237,6 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 26,
     "ok": 39,
     "resolve_failed": 1
   },
