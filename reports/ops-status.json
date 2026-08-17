@@ -2,14 +2,14 @@
   "counts": {
     "backlog_episodes": 162526,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 30836,
-    "prepared_source_episodes": 48578,
+    "uploaded_episodes": 30837,
+    "prepared_source_episodes": 48502,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 73,
+    "language_audited_sources": 110,
     "language_whisper_attempted_sources": 40,
     "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 56792,
@@ -19,6 +19,30 @@
   },
   "workflow_runs": [
     {
+      "conclusion": "success",
+      "createdAt": "2026-08-17T20:31:37Z",
+      "databaseId": 32066258626,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-17T20:31:31Z",
+      "databaseId": 32066249344,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-17T20:31:26Z",
+      "databaseId": 32066241780,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
       "conclusion": "",
       "createdAt": "2026-08-17T20:30:53Z",
       "databaseId": 32066193416,
@@ -27,19 +51,19 @@
       "workflowName": "sync"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-08-17T20:30:51Z",
       "databaseId": 32066190657,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-17T20:30:31Z",
       "databaseId": 32066162235,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -150,30 +174,6 @@
       "conclusion": "cancelled",
       "createdAt": "2026-08-17T20:16:29Z",
       "databaseId": 32064911421,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-17T20:16:28Z",
-      "databaseId": 32064909305,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-17T20:16:28Z",
-      "databaseId": 32064909249,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-17T20:15:50Z",
-      "databaseId": 32064851244,
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-watchdog"
@@ -73799,6 +73799,11 @@
         "episode_id": 21788,
         "display_name": "Odkaz S04E05 - Myslela jsem, že budeš mít větší radost CZ Dabing",
         "video_id": 28576738
+      },
+      {
+        "episode_id": 21792,
+        "display_name": "Odkaz S04E09 - Nemůžu tě zastavit CZ Titulky",
+        "video_id": 28576790
       },
       {
         "episode_id": 114182,
@@ -203403,6 +203408,11 @@
         "video_id": 28576738
       },
       {
+        "episode_id": 21792,
+        "display_name": "Odkaz S04E09 - Nemůžu tě zastavit CZ Titulky",
+        "video_id": 28576790
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -260647,8 +260657,8 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
+    "disabled": 70,
     "ok": 39,
-    "disabled": 33,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
