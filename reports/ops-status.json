@@ -2,36 +2,60 @@
   "counts": {
     "backlog_episodes": 163196,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 30185,
-    "prepared_source_episodes": 47932,
+    "uploaded_episodes": 30195,
+    "prepared_source_episodes": 47925,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 69,
-    "language_whisper_attempted_sources": 60,
+    "language_audited_sources": 40,
+    "language_whisper_attempted_sources": 40,
     "language_pending_whisper_sources": 2604,
-    "whisper_review_sources": 56847,
-    "whisper_review_pending_sources": 49747,
+    "whisper_review_sources": 56838,
+    "whisper_review_pending_sources": 49698,
     "subtitle_followup_sources": 25503,
     "subtitle_followup_pending_sources": 25503
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-08-17T07:23:28Z",
-      "databaseId": 32005595231,
+      "createdAt": "2026-08-17T07:29:59Z",
+      "databaseId": 32006076934,
       "headBranch": "main",
-      "status": "pending",
-      "workflowName": "prepare-manifest"
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-17T07:24:54Z",
+      "databaseId": 32005701601,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-08-17T07:23:50Z",
+      "databaseId": 32005621753,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-17T07:23:28Z",
+      "databaseId": 32005595231,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-17T07:22:55Z",
       "databaseId": 32005556455,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-status"
     },
     {
@@ -67,19 +91,19 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-17T07:20:06Z",
       "databaseId": 32005352027,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-17T07:20:03Z",
       "databaseId": 32005348855,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -123,11 +147,11 @@
       "workflowName": "prepare-manifest"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-17T07:07:47Z",
       "databaseId": 32004445793,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -150,30 +174,6 @@
       "conclusion": "success",
       "createdAt": "2026-08-17T07:04:11Z",
       "databaseId": 32004192513,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-17T06:57:32Z",
-      "databaseId": 32003737014,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-17T06:57:28Z",
-      "databaseId": 32003733314,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-17T06:56:22Z",
-      "databaseId": 32003658247,
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-watchdog"
@@ -72166,6 +72166,11 @@
         "video_id": 28562137
       },
       {
+        "episode_id": 77884,
+        "display_name": "A-Team S03E05 - 5. epizoda CZ Titulky",
+        "video_id": 28562194
+      },
+      {
         "episode_id": 32857,
         "display_name": "Hotel Continental S01E01 - Bratři ve zbrani CZ Titulky",
         "video_id": 28562118
@@ -72174,6 +72179,21 @@
         "episode_id": 36189,
         "display_name": "Stařík v utajení S01E01 - Starý musí z kola ven CZ Dabing",
         "video_id": 28562149
+      },
+      {
+        "episode_id": 97589,
+        "display_name": "Stařík v utajení S01E07 - Srdečné pozdravy z Russian Hillu CZ Dabing",
+        "video_id": 28562179
+      },
+      {
+        "episode_id": 102705,
+        "display_name": "Stařík v utajení S02E01 - Orientační týden CZ Dabing",
+        "video_id": 28562230
+      },
+      {
+        "episode_id": 102709,
+        "display_name": "Stařík v utajení S02E05 - Díkůvzdání CZ Dabing",
+        "video_id": 28562254
       },
       {
         "episode_id": 114182,
@@ -126626,9 +126646,39 @@
         "video_id": 28562123
       },
       {
+        "episode_id": 141998,
+        "display_name": "Dotkni se mých ran S01E10 - O dívce, která lhala CZ Titulky",
+        "video_id": 28562178
+      },
+      {
+        "episode_id": 73962,
+        "display_name": "Dragon Ball Super S01E11 - 11. epizoda CZ Titulky",
+        "video_id": 28562218
+      },
+      {
+        "episode_id": 73946,
+        "display_name": "Dragon Ball Super S01E12 - 12. epizoda CZ Titulky",
+        "video_id": 28562237
+      },
+      {
+        "episode_id": 104534,
+        "display_name": "Déšť S01E03 - Vyhnout se městu CZ Titulky",
+        "video_id": 28562267
+      },
+      {
         "episode_id": 97587,
         "display_name": "Stařík v utajení S01E06 - Náš člověk v Sacramentu CZ Dabing",
         "video_id": 28562119
+      },
+      {
+        "episode_id": 102707,
+        "display_name": "Stařík v utajení S02E03 - Rodinný víkend CZ Dabing",
+        "video_id": 28562147
+      },
+      {
+        "episode_id": 102711,
+        "display_name": "Stařík v utajení S02E07 - Skupinový projekt CZ Dabing",
+        "video_id": 28562225
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -198513,6 +198563,11 @@
         "video_id": 28562137
       },
       {
+        "episode_id": 77884,
+        "display_name": "A-Team S03E05 - 5. epizoda CZ Titulky",
+        "video_id": 28562194
+      },
+      {
         "episode_id": 32857,
         "display_name": "Hotel Continental S01E01 - Bratři ve zbrani CZ Titulky",
         "video_id": 28562118
@@ -198521,6 +198576,21 @@
         "episode_id": 36189,
         "display_name": "Stařík v utajení S01E01 - Starý musí z kola ven CZ Dabing",
         "video_id": 28562149
+      },
+      {
+        "episode_id": 97589,
+        "display_name": "Stařík v utajení S01E07 - Srdečné pozdravy z Russian Hillu CZ Dabing",
+        "video_id": 28562179
+      },
+      {
+        "episode_id": 102705,
+        "display_name": "Stařík v utajení S02E01 - Orientační týden CZ Dabing",
+        "video_id": 28562230
+      },
+      {
+        "episode_id": 102709,
+        "display_name": "Stařík v utajení S02E05 - Díkůvzdání CZ Dabing",
+        "video_id": 28562254
       },
       {
         "episode_id": 114182,
@@ -252973,9 +253043,39 @@
         "video_id": 28562123
       },
       {
+        "episode_id": 141998,
+        "display_name": "Dotkni se mých ran S01E10 - O dívce, která lhala CZ Titulky",
+        "video_id": 28562178
+      },
+      {
+        "episode_id": 73962,
+        "display_name": "Dragon Ball Super S01E11 - 11. epizoda CZ Titulky",
+        "video_id": 28562218
+      },
+      {
+        "episode_id": 73946,
+        "display_name": "Dragon Ball Super S01E12 - 12. epizoda CZ Titulky",
+        "video_id": 28562237
+      },
+      {
+        "episode_id": 104534,
+        "display_name": "Déšť S01E03 - Vyhnout se městu CZ Titulky",
+        "video_id": 28562267
+      },
+      {
         "episode_id": 97587,
         "display_name": "Stařík v utajení S01E06 - Náš člověk v Sacramentu CZ Dabing",
         "video_id": 28562119
+      },
+      {
+        "episode_id": 102707,
+        "display_name": "Stařík v utajení S02E03 - Rodinný víkend CZ Dabing",
+        "video_id": 28562147
+      },
+      {
+        "episode_id": 102711,
+        "display_name": "Stařík v utajení S02E07 - Skupinový projekt CZ Dabing",
+        "video_id": 28562225
       }
     ],
     "prepared_not_upload_ready": [
@@ -253610,22 +253710,6 @@
         "status": "whisper_failed"
       },
       {
-        "episode_id": 78324,
-        "source_id": -34436441167351064,
-        "series_title": "C.B. Strike",
-        "episode_code": "S06E02",
-        "source_title": "CB Strike s06e02",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 78334,
-        "source_id": -49936571383429103,
-        "series_title": "C.B. Strike",
-        "episode_code": "S06E04",
-        "source_title": "CB Strike s06e04",
-        "status": "needs_whisper"
-      },
-      {
         "episode_id": 56093,
         "source_id": -57284646370539064,
         "series_title": "Californication",
@@ -253634,51 +253718,67 @@
         "status": "whisper_failed"
       },
       {
-        "episode_id": 25398,
-        "source_id": -70653325870979023,
-        "series_title": "Castle na zabití",
-        "episode_code": "S06E02",
-        "source_title": "Castle na zabití 06x02  +++",
+        "episode_id": 89263,
+        "source_id": -47570003399470170,
+        "series_title": "Castlevania",
+        "episode_code": "S02E04",
+        "source_title": "Castlevania.S02E04.Broken.Mast.1080p.NF.WEB-DL.DDP5.1.Atmos.H.264-",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 25398,
-        "source_id": -6135709016664286,
-        "series_title": "Castle na zabití",
-        "episode_code": "S06E02",
-        "source_title": "Castle na zabití 06x02 +SaŠa+",
+        "episode_id": 89263,
+        "source_id": -67767134769981858,
+        "series_title": "Castlevania",
+        "episode_code": "S02E04",
+        "source_title": "Castlevania - S2E4 Broken Mast EN",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 25398,
-        "source_id": -20306247636230180,
-        "series_title": "Castle na zabití",
-        "episode_code": "S06E02",
-        "source_title": "Castle na zabití 06x02 ⭐GG⭐",
+        "episode_id": 89256,
+        "source_id": -41501336265363596,
+        "series_title": "Castlevania",
+        "episode_code": "S02E06",
+        "source_title": "Castlevania.S02E06.The.River.1080p.NF.WEB-DL.DDP5.1.Atmos.H.264-",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 25398,
-        "source_id": -9677269063134067,
-        "series_title": "Castle na zabití",
-        "episode_code": "S06E02",
-        "source_title": "Castle.na.zabití.06x02 MUI",
+        "episode_id": 89256,
+        "source_id": -59437110179332115,
+        "series_title": "Castlevania",
+        "episode_code": "S02E06",
+        "source_title": "Castlevania - S2E6 The River EN",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 25400,
-        "source_id": -37391703368427409,
-        "series_title": "Castle na zabití",
-        "episode_code": "S06E04",
-        "source_title": "Castle.na.zabití.06x04.~~",
+        "episode_id": 89256,
+        "source_id": -28301364913575963,
+        "series_title": "Castlevania",
+        "episode_code": "S02E06",
+        "source_title": "Castlevania S2E6 The River",
         "status": "needs_whisper"
       },
       {
-        "episode_id": 25400,
-        "source_id": -3686704716233672,
-        "series_title": "Castle na zabití",
-        "episode_code": "S06E04",
-        "source_title": "Castle na zabití 06x04   ByDejvy",
+        "episode_id": 89261,
+        "source_id": -15381372885753158,
+        "series_title": "Castlevania",
+        "episode_code": "S02E07",
+        "source_title": "Castlevania.S02E07.For.Love.1080p.NF.WEB-DL.DDP5.1.Atmos.H.264-",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 89261,
+        "source_id": -43248388361299552,
+        "series_title": "Castlevania",
+        "episode_code": "S02E07",
+        "source_title": "Castlevania - S2E7 For Love EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 89261,
+        "source_id": -58591278033409385,
+        "series_title": "Castlevania",
+        "episode_code": "S02E07",
+        "source_title": "Castlevania.S02E07.For.Love.1080p.NF.WEB-DL.DDP5.1.Atmos.H.264-",
         "status": "needs_whisper"
       }
     ],
@@ -254137,15 +254237,14 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 59,
-    "disabled": 9,
+    "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
-    "whisper_non_cz_needs_subtitles": 5041,
-    "whisper_confirmed_cz": 2059,
+    "whisper_non_cz_needs_subtitles": 5067,
+    "whisper_confirmed_cz": 2073,
     "whisper_failed": 42,
-    "needs_whisper": 49705
+    "needs_whisper": 49656
   },
   "subtitle_followup_statuses": {
     "needs_subtitle_setup_after_prehrajto_processing": 25503
