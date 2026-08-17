@@ -2,14 +2,14 @@
   "counts": {
     "backlog_episodes": 162972,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 30465,
-    "prepared_source_episodes": 48192,
+    "uploaded_episodes": 30467,
+    "prepared_source_episodes": 48185,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 20,
+    "language_audited_sources": 53,
     "language_whisper_attempted_sources": 20,
     "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 56847,
@@ -20,18 +20,74 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-08-17T10:59:43Z",
-      "databaseId": 32022777350,
+      "createdAt": "2026-08-17T11:02:02Z",
+      "databaseId": 32022968902,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-17T11:01:57Z",
+      "databaseId": 32022961054,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-08-17T11:01:38Z",
+      "databaseId": 32022936000,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-17T11:01:21Z",
+      "databaseId": 32022915129,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
+      "conclusion": "cancelled",
+      "createdAt": "2026-08-17T11:01:18Z",
+      "databaseId": 32022911378,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-17T11:00:47Z",
+      "databaseId": 32022868409,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
       "conclusion": "",
+      "createdAt": "2026-08-17T11:00:42Z",
+      "databaseId": 32022861481,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-17T10:59:43Z",
+      "databaseId": 32022777350,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "cancelled",
       "createdAt": "2026-08-17T10:58:23Z",
       "databaseId": 32022675404,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -39,7 +95,7 @@
       "createdAt": "2026-08-17T10:58:23Z",
       "databaseId": 32022674609,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "sync"
     },
     {
@@ -121,62 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-17T10:43:36Z",
-      "databaseId": 32021513945,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-17T10:42:46Z",
-      "databaseId": 32021447179,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-17T10:42:44Z",
-      "databaseId": 32021444150,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-17T10:42:42Z",
-      "databaseId": 32021441810,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-17T10:42:03Z",
-      "databaseId": 32021391913,
-      "headBranch": "main",
-      "status": "pending",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-17T10:41:40Z",
-      "databaseId": 32021361693,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-17T10:41:36Z",
-      "databaseId": 32021357324,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "sync"
     }
   ],
   "gaps": {
@@ -72831,6 +72831,11 @@
         "video_id": 28566718
       },
       {
+        "episode_id": 119820,
+        "display_name": "Drsný šerif S02E03 - Obvyklí podezřelí CZ Dabing",
+        "video_id": 28566740
+      },
+      {
         "episode_id": 91905,
         "display_name": "Dr. Stone S04E07 - 7. epizoda CZ Titulky",
         "video_id": 28566517
@@ -128029,6 +128034,11 @@
         "episode_id": 203035,
         "display_name": "Čtyři roční období S02E03 - 3. epizoda CZ Dabing",
         "video_id": 28566728
+      },
+      {
+        "episode_id": 203039,
+        "display_name": "Čtyři roční období S02E05 - 5. epizoda CZ Dabing",
+        "video_id": 28566748
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -200578,6 +200588,11 @@
         "video_id": 28566718
       },
       {
+        "episode_id": 119820,
+        "display_name": "Drsný šerif S02E03 - Obvyklí podezřelí CZ Dabing",
+        "video_id": 28566740
+      },
+      {
         "episode_id": 91905,
         "display_name": "Dr. Stone S04E07 - 7. epizoda CZ Titulky",
         "video_id": 28566517
@@ -255776,6 +255791,11 @@
         "episode_id": 203035,
         "display_name": "Čtyři roční období S02E03 - 3. epizoda CZ Dabing",
         "video_id": 28566728
+      },
+      {
+        "episode_id": 203039,
+        "display_name": "Čtyři roční období S02E05 - 5. epizoda CZ Dabing",
+        "video_id": 28566748
       }
     ],
     "prepared_not_upload_ready": [
@@ -256937,6 +256957,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
+    "disabled": 33,
     "ok": 19,
     "resolve_failed": 1
   },
