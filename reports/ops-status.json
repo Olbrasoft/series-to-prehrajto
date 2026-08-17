@@ -2,14 +2,14 @@
   "counts": {
     "backlog_episodes": 163196,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 30243,
-    "prepared_source_episodes": 47972,
+    "uploaded_episodes": 30250,
+    "prepared_source_episodes": 47991,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 96,
+    "language_audited_sources": 113,
     "language_whisper_attempted_sources": 74,
     "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 56847,
@@ -20,18 +20,50 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-08-17T08:10:54Z",
-      "databaseId": 32009138993,
+      "createdAt": "2026-08-17T08:15:33Z",
+      "databaseId": 32009506756,
       "headBranch": "main",
       "status": "in_progress",
-      "workflowName": "ops-watchdog"
+      "workflowName": "ops-status"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-08-17T08:13:31Z",
+      "databaseId": 32009343509,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-17T08:12:54Z",
+      "databaseId": 32009294177,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-17T08:12:04Z",
+      "databaseId": 32009230687,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-17T08:10:54Z",
+      "databaseId": 32009138993,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "cancelled",
       "createdAt": "2026-08-17T08:10:49Z",
       "databaseId": 32009131864,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -107,11 +139,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-17T07:58:48Z",
       "databaseId": 32008190538,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -145,38 +177,6 @@
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "prepare-sources"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-17T07:53:37Z",
-      "databaseId": 32007806975,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-17T07:53:34Z",
-      "databaseId": 32007802481,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-17T07:52:38Z",
-      "databaseId": 32007735466,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-17T07:49:27Z",
-      "databaseId": 32007501892,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
     }
   ],
   "gaps": {
@@ -72316,6 +72316,31 @@
         "video_id": 28563032
       },
       {
+        "episode_id": 91920,
+        "display_name": "Dr. Stone S04E14 - 14. epizoda CZ Titulky",
+        "video_id": 28563104
+      },
+      {
+        "episode_id": 91912,
+        "display_name": "Dr. Stone S04E15 - 15. epizoda CZ Titulky",
+        "video_id": 28563127
+      },
+      {
+        "episode_id": 91916,
+        "display_name": "Dr. Stone S04E21 - 21. epizoda CZ Titulky",
+        "video_id": 28563151
+      },
+      {
+        "episode_id": 6441,
+        "display_name": "FUBAR S02E04 - Astronautem proti své vůli CZ Dabing",
+        "video_id": 28563107
+      },
+      {
+        "episode_id": 6445,
+        "display_name": "FUBAR S02E06 - Penny Possum Pizzapokalypsa CZ Titulky",
+        "video_id": 28563143
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -126919,6 +126944,16 @@
         "episode_id": 141999,
         "display_name": "Dotkni se mých ran S01E11 - Ošklivé káčátko CZ Titulky",
         "video_id": 28563048
+      },
+      {
+        "episode_id": 104034,
+        "display_name": "Sláva S01E05 - 5. díl CZ Titulky",
+        "video_id": 28563110
+      },
+      {
+        "episode_id": 73951,
+        "display_name": "Dragon Ball Super S01E14 - 14. epizoda CZ Titulky",
+        "video_id": 28563102
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -198953,6 +198988,31 @@
         "video_id": 28563032
       },
       {
+        "episode_id": 91920,
+        "display_name": "Dr. Stone S04E14 - 14. epizoda CZ Titulky",
+        "video_id": 28563104
+      },
+      {
+        "episode_id": 91912,
+        "display_name": "Dr. Stone S04E15 - 15. epizoda CZ Titulky",
+        "video_id": 28563127
+      },
+      {
+        "episode_id": 91916,
+        "display_name": "Dr. Stone S04E21 - 21. epizoda CZ Titulky",
+        "video_id": 28563151
+      },
+      {
+        "episode_id": 6441,
+        "display_name": "FUBAR S02E04 - Astronautem proti své vůli CZ Dabing",
+        "video_id": 28563107
+      },
+      {
+        "episode_id": 6445,
+        "display_name": "FUBAR S02E06 - Penny Possum Pizzapokalypsa CZ Titulky",
+        "video_id": 28563143
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -253556,6 +253616,16 @@
         "episode_id": 141999,
         "display_name": "Dotkni se mých ran S01E11 - Ošklivé káčátko CZ Titulky",
         "video_id": 28563048
+      },
+      {
+        "episode_id": 104034,
+        "display_name": "Sláva S01E05 - 5. díl CZ Titulky",
+        "video_id": 28563110
+      },
+      {
+        "episode_id": 73951,
+        "display_name": "Dragon Ball Super S01E14 - 14. epizoda CZ Titulky",
+        "video_id": 28563102
       }
     ],
     "prepared_not_upload_ready": [
@@ -254717,8 +254787,8 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
+    "disabled": 39,
     "ok": 73,
-    "disabled": 22,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
