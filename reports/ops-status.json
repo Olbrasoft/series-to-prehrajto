@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 163342,
     "manifest_upload_ready_episodes": 1001,
-    "uploaded_episodes": 29985,
-    "prepared_source_episodes": 47586,
+    "uploaded_episodes": 29986,
+    "prepared_source_episodes": 47601,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 40,
-    "language_whisper_attempted_sources": 40,
-    "language_pending_whisper_sources": 2604,
+    "language_audited_sources": 43,
+    "language_whisper_attempted_sources": 20,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 56844,
     "whisper_review_pending_sources": 49744,
     "subtitle_followup_sources": 25450,
@@ -20,18 +20,42 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-08-17T03:47:53Z",
-      "databaseId": 31992303222,
+      "createdAt": "2026-08-17T03:55:16Z",
+      "databaseId": 31992696984,
       "headBranch": "main",
       "status": "in_progress",
-      "workflowName": "audit-language"
+      "workflowName": "prepare-sources"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-08-17T03:55:10Z",
+      "databaseId": 31992690597,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-17T03:48:30Z",
+      "databaseId": 31992336215,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-17T03:47:53Z",
+      "databaseId": 31992303222,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-17T03:47:27Z",
       "databaseId": 31992280626,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-status"
     },
     {
@@ -153,30 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-status"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-17T03:20:38Z",
-      "databaseId": 31990850073,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-17T03:20:35Z",
-      "databaseId": 31990847175,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-17T03:20:32Z",
-      "databaseId": 31990844452,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
     }
   ],
   "gaps": {
@@ -125591,6 +125591,11 @@
         "video_id": 28557647
       },
       {
+        "episode_id": 69050,
+        "display_name": "Columbo S03E06 - Dobrá pověst nadevše CZ Titulky",
+        "video_id": 28557746
+      },
+      {
         "episode_id": 43419,
         "display_name": "Policie Chicago S06E18 - Tohle město CZ Titulky",
         "video_id": 28557245
@@ -250938,6 +250943,11 @@
         "video_id": 28557647
       },
       {
+        "episode_id": 69050,
+        "display_name": "Columbo S03E06 - Dobrá pověst nadevše CZ Titulky",
+        "video_id": 28557746
+      },
+      {
         "episode_id": 43419,
         "display_name": "Policie Chicago S06E18 - Tohle město CZ Titulky",
         "video_id": 28557245
@@ -252137,7 +252147,8 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 39,
+    "disabled": 23,
+    "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
