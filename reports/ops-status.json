@@ -2,15 +2,15 @@
   "counts": {
     "backlog_episodes": 163567,
     "manifest_upload_ready_episodes": 1001,
-    "uploaded_episodes": 29921,
+    "uploaded_episodes": 29923,
     "prepared_source_episodes": 47283,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 85,
-    "language_whisper_attempted_sources": 60,
+    "language_audited_sources": 40,
+    "language_whisper_attempted_sources": 40,
     "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 56839,
     "whisper_review_pending_sources": 49719,
@@ -20,10 +20,34 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-08-17T03:00:08Z",
+      "databaseId": 31989721986,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-17T03:00:02Z",
+      "databaseId": 31989715819,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-17T02:56:58Z",
+      "databaseId": 31989560962,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-sources"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-17T02:53:29Z",
       "databaseId": 31989378511,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-status"
     },
     {
@@ -39,7 +63,7 @@
       "createdAt": "2026-08-17T02:49:04Z",
       "databaseId": 31989158933,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "sync"
     },
     {
@@ -67,11 +91,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-17T02:47:24Z",
       "databaseId": 31989075446,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -153,30 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-17T02:26:33Z",
-      "databaseId": 31987988745,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-17T02:26:13Z",
-      "databaseId": 31987972701,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-17T02:26:09Z",
-      "databaseId": 31987969528,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
     }
   ],
   "gaps": {
@@ -125309,6 +125309,16 @@
         "episode_id": 76911,
         "display_name": "Dawsonův svět S02E07 - Celou noc CZ Dabing",
         "video_id": 28556560
+      },
+      {
+        "episode_id": 76879,
+        "display_name": "Dawsonův svět S02E21 - Změny CZ Dabing",
+        "video_id": 28556618
+      },
+      {
+        "episode_id": 15275,
+        "display_name": "Slizoun Pete S01E06 - 6. epizoda CZ Titulky",
+        "video_id": 28556678
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -250336,6 +250346,16 @@
         "episode_id": 76911,
         "display_name": "Dawsonův svět S02E07 - Celou noc CZ Dabing",
         "video_id": 28556560
+      },
+      {
+        "episode_id": 76879,
+        "display_name": "Dawsonův svět S02E21 - Změny CZ Dabing",
+        "video_id": 28556618
+      },
+      {
+        "episode_id": 15275,
+        "display_name": "Slizoun Pete S01E06 - 6. epizoda CZ Titulky",
+        "video_id": 28556678
       }
     ],
     "prepared_not_upload_ready": [
@@ -251497,8 +251517,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 59,
-    "disabled": 25,
+    "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
