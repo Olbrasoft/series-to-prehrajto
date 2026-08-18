@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 162027,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 31349,
-    "prepared_source_episodes": 48285,
+    "uploaded_episodes": 31362,
+    "prepared_source_episodes": 48287,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 40,
-    "language_whisper_attempted_sources": 40,
-    "language_pending_whisper_sources": 2604,
+    "language_audited_sources": 49,
+    "language_whisper_attempted_sources": 20,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 56794,
     "whisper_review_pending_sources": 49466,
     "subtitle_followup_sources": 25919,
@@ -20,10 +20,42 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-08-18T04:26:59Z",
+      "databaseId": 32099183815,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-18T04:26:55Z",
+      "databaseId": 32099180087,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-18T04:21:32Z",
+      "databaseId": 32098850183,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-18T04:21:18Z",
+      "databaseId": 32098835590,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "cancelled",
       "createdAt": "2026-08-18T04:20:35Z",
       "databaseId": 32098791120,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -35,11 +67,11 @@
       "workflowName": "sync"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-18T04:20:22Z",
       "databaseId": 32098778570,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -75,11 +107,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-18T04:15:43Z",
       "databaseId": 32098485201,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -145,38 +177,6 @@
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "sync"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-18T04:04:52Z",
-      "databaseId": 32097805934,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-18T04:04:35Z",
-      "databaseId": 32097789117,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-18T04:03:31Z",
-      "databaseId": 32097720499,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-18T03:58:59Z",
-      "databaseId": 32097436334,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
     }
   ],
   "gaps": {
@@ -75076,9 +75076,39 @@
         "video_id": 28584299
       },
       {
+        "episode_id": 10560,
+        "display_name": "Půlnoční klub S01E01 - Závěrečná kapitola CZ Dabing",
+        "video_id": 28584336
+      },
+      {
+        "episode_id": 7428,
+        "display_name": "Půlnoční klub S01E09 - Věčný nepřítel CZ Dabing",
+        "video_id": 28584380
+      },
+      {
+        "episode_id": 54900,
+        "display_name": "Marcella S01E04 - 4. epizoda CZ Titulky",
+        "video_id": 28584408
+      },
+      {
+        "episode_id": 54904,
+        "display_name": "Marcella S01E08 - 8. epizoda CZ Titulky",
+        "video_id": 28584426
+      },
+      {
         "episode_id": 42221,
         "display_name": "S.W.A.T. S03E11 - Zlej polda CZ Dabing",
         "video_id": 28584298
+      },
+      {
+        "episode_id": 42225,
+        "display_name": "S.W.A.T. S03E16 - Výbušné spiknutí CZ Dabing",
+        "video_id": 28584333
+      },
+      {
+        "episode_id": 42229,
+        "display_name": "S.W.A.T. S03E20 - Rebelové CZ Dabing",
+        "video_id": 28584383
       },
       {
         "episode_id": 114182,
@@ -132441,6 +132471,16 @@
         "video_id": 28584311
       },
       {
+        "episode_id": 42274,
+        "display_name": "S.W.A.T. S08E04 - Protokol SEPULVEDA CZ Dabing",
+        "video_id": 28584341
+      },
+      {
+        "episode_id": 42278,
+        "display_name": "S.W.A.T. S08E08 - Vlevo od výbuchu CZ Dabing",
+        "video_id": 28584375
+      },
+      {
         "episode_id": 72219,
         "display_name": "Z deníků Robokata S01E10 - Perimetr CZ Titulky",
         "video_id": 28584296
@@ -132449,6 +132489,31 @@
         "episode_id": 64399,
         "display_name": "Citadela S02E06 - Vysočina CZ Titulky",
         "video_id": 28584320
+      },
+      {
+        "episode_id": 42139,
+        "display_name": "S.W.A.T. S01E03 - Rodina CZ Titulky",
+        "video_id": 28584334
+      },
+      {
+        "episode_id": 42143,
+        "display_name": "S.W.A.T. S01E07 - Smrt s ručením omezeným CZ Dabing",
+        "video_id": 28584356
+      },
+      {
+        "episode_id": 42147,
+        "display_name": "S.W.A.T. S01E12 - Kontaminace CZ Dabing",
+        "video_id": 28584368
+      },
+      {
+        "episode_id": 42151,
+        "display_name": "S.W.A.T. S01E16 - Odplata CZ Titulky",
+        "video_id": 28584388
+      },
+      {
+        "episode_id": 42155,
+        "display_name": "S.W.A.T. S01E20 - Vendeta CZ Dabing",
+        "video_id": 28584414
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -207243,9 +207308,39 @@
         "video_id": 28584299
       },
       {
+        "episode_id": 10560,
+        "display_name": "Půlnoční klub S01E01 - Závěrečná kapitola CZ Dabing",
+        "video_id": 28584336
+      },
+      {
+        "episode_id": 7428,
+        "display_name": "Půlnoční klub S01E09 - Věčný nepřítel CZ Dabing",
+        "video_id": 28584380
+      },
+      {
+        "episode_id": 54900,
+        "display_name": "Marcella S01E04 - 4. epizoda CZ Titulky",
+        "video_id": 28584408
+      },
+      {
+        "episode_id": 54904,
+        "display_name": "Marcella S01E08 - 8. epizoda CZ Titulky",
+        "video_id": 28584426
+      },
+      {
         "episode_id": 42221,
         "display_name": "S.W.A.T. S03E11 - Zlej polda CZ Dabing",
         "video_id": 28584298
+      },
+      {
+        "episode_id": 42225,
+        "display_name": "S.W.A.T. S03E16 - Výbušné spiknutí CZ Dabing",
+        "video_id": 28584333
+      },
+      {
+        "episode_id": 42229,
+        "display_name": "S.W.A.T. S03E20 - Rebelové CZ Dabing",
+        "video_id": 28584383
       },
       {
         "episode_id": 114182,
@@ -264608,6 +264703,16 @@
         "video_id": 28584311
       },
       {
+        "episode_id": 42274,
+        "display_name": "S.W.A.T. S08E04 - Protokol SEPULVEDA CZ Dabing",
+        "video_id": 28584341
+      },
+      {
+        "episode_id": 42278,
+        "display_name": "S.W.A.T. S08E08 - Vlevo od výbuchu CZ Dabing",
+        "video_id": 28584375
+      },
+      {
         "episode_id": 72219,
         "display_name": "Z deníků Robokata S01E10 - Perimetr CZ Titulky",
         "video_id": 28584296
@@ -264616,6 +264721,31 @@
         "episode_id": 64399,
         "display_name": "Citadela S02E06 - Vysočina CZ Titulky",
         "video_id": 28584320
+      },
+      {
+        "episode_id": 42139,
+        "display_name": "S.W.A.T. S01E03 - Rodina CZ Titulky",
+        "video_id": 28584334
+      },
+      {
+        "episode_id": 42143,
+        "display_name": "S.W.A.T. S01E07 - Smrt s ručením omezeným CZ Dabing",
+        "video_id": 28584356
+      },
+      {
+        "episode_id": 42147,
+        "display_name": "S.W.A.T. S01E12 - Kontaminace CZ Dabing",
+        "video_id": 28584368
+      },
+      {
+        "episode_id": 42151,
+        "display_name": "S.W.A.T. S01E16 - Odplata CZ Titulky",
+        "video_id": 28584388
+      },
+      {
+        "episode_id": 42155,
+        "display_name": "S.W.A.T. S01E20 - Vendeta CZ Dabing",
+        "video_id": 28584414
       }
     ],
     "prepared_not_upload_ready": [
@@ -265777,7 +265907,8 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 39,
+    "disabled": 29,
+    "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
