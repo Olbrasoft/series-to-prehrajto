@@ -2,36 +2,84 @@
   "counts": {
     "backlog_episodes": 161634,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 31803,
-    "prepared_source_episodes": 48061,
+    "uploaded_episodes": 31812,
+    "prepared_source_episodes": 48084,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 287,
-    "language_whisper_attempted_sources": 41,
-    "language_pending_whisper_sources": 2624,
-    "whisper_review_sources": 56798,
-    "whisper_review_pending_sources": 49489,
-    "subtitle_followup_sources": 26103,
-    "subtitle_followup_pending_sources": 26103
+    "language_audited_sources": 60,
+    "language_whisper_attempted_sources": 60,
+    "language_pending_whisper_sources": 2604,
+    "whisper_review_sources": 56779,
+    "whisper_review_pending_sources": 49390,
+    "subtitle_followup_sources": 26108,
+    "subtitle_followup_pending_sources": 26108
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-08-18T11:03:09Z",
-      "databaseId": 32129801969,
+      "createdAt": "2026-08-18T11:08:31Z",
+      "databaseId": 32130250327,
       "headBranch": "main",
       "status": "in_progress",
-      "workflowName": "ops-watchdog"
+      "workflowName": "audit-language"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-08-18T11:08:29Z",
+      "databaseId": 32130248375,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-18T11:07:55Z",
+      "databaseId": 32130202624,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-18T11:06:21Z",
+      "databaseId": 32130072398,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-08-18T11:04:35Z",
+      "databaseId": 32129922512,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-18T11:04:25Z",
+      "databaseId": 32129906529,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-18T11:03:09Z",
+      "databaseId": 32129801969,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "cancelled",
       "createdAt": "2026-08-18T11:03:05Z",
       "databaseId": 32129795806,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -91,11 +139,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-18T10:56:31Z",
       "databaseId": 32129245019,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -126,54 +174,6 @@
       "conclusion": "success",
       "createdAt": "2026-08-18T10:49:36Z",
       "databaseId": 32128672359,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-18T10:49:33Z",
-      "databaseId": 32128668958,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-18T10:49:33Z",
-      "databaseId": 32128668829,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-18T10:48:05Z",
-      "databaseId": 32128547815,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-18T10:48:03Z",
-      "databaseId": 32128544123,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-sources"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-18T10:48:02Z",
-      "databaseId": 32128542686,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-18T10:46:50Z",
-      "databaseId": 32128443955,
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-watchdog"
@@ -76206,6 +76206,21 @@
         "video_id": 28591076
       },
       {
+        "episode_id": 76396,
+        "display_name": "Spiderman S01E13 - Den Chameleona CZ Dabing",
+        "video_id": 28591101
+      },
+      {
+        "episode_id": 76344,
+        "display_name": "Spiderman S02E04 - Případ mutantů CZ Dabing",
+        "video_id": 28591121
+      },
+      {
+        "episode_id": 76348,
+        "display_name": "Spiderman S02E08 - Souboj lovců CZ Titulky",
+        "video_id": 28591141
+      },
+      {
         "episode_id": 102457,
         "display_name": "Jiný život S01E01 - Napříč vesmírem CZ Dabing",
         "video_id": 28590992
@@ -76219,6 +76234,16 @@
         "episode_id": 102465,
         "display_name": "Jiný život S01E10 - Ahoj CZ Dabing",
         "video_id": 28591079
+      },
+      {
+        "episode_id": 102469,
+        "display_name": "Jiný život S02E03 - Můj největší nepřítel CZ Dabing",
+        "video_id": 28591104
+      },
+      {
+        "episode_id": 102473,
+        "display_name": "Jiný život S02E07 - Nikdy tě neopustím CZ Dabing",
+        "video_id": 28591128
       },
       {
         "episode_id": 114182,
@@ -134716,9 +134741,29 @@
         "video_id": 28591062
       },
       {
+        "episode_id": 35590,
+        "display_name": "Twisted Metal S02E09 - VAVAVUM CZ Dabing",
+        "video_id": 28591085
+      },
+      {
+        "episode_id": 17766,
+        "display_name": "Anatomie skandálu S01E06 - 6. epizoda CZ Dabing",
+        "video_id": 28591110
+      },
+      {
         "episode_id": 28283,
         "display_name": "Beverly Hills 90210 S10E09 - 9. epizoda CZ Dabing",
         "video_id": 28590987
+      },
+      {
+        "episode_id": 28287,
+        "display_name": "Beverly Hills 90210 S10E13 - 13. epizoda CZ Dabing",
+        "video_id": 28591070
+      },
+      {
+        "episode_id": 28291,
+        "display_name": "Beverly Hills 90210 S10E17 - 17. epizoda CZ Dabing",
+        "video_id": 28591118
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -210643,6 +210688,21 @@
         "video_id": 28591076
       },
       {
+        "episode_id": 76396,
+        "display_name": "Spiderman S01E13 - Den Chameleona CZ Dabing",
+        "video_id": 28591101
+      },
+      {
+        "episode_id": 76344,
+        "display_name": "Spiderman S02E04 - Případ mutantů CZ Dabing",
+        "video_id": 28591121
+      },
+      {
+        "episode_id": 76348,
+        "display_name": "Spiderman S02E08 - Souboj lovců CZ Titulky",
+        "video_id": 28591141
+      },
+      {
         "episode_id": 102457,
         "display_name": "Jiný život S01E01 - Napříč vesmírem CZ Dabing",
         "video_id": 28590992
@@ -210656,6 +210716,16 @@
         "episode_id": 102465,
         "display_name": "Jiný život S01E10 - Ahoj CZ Dabing",
         "video_id": 28591079
+      },
+      {
+        "episode_id": 102469,
+        "display_name": "Jiný život S02E03 - Můj největší nepřítel CZ Dabing",
+        "video_id": 28591104
+      },
+      {
+        "episode_id": 102473,
+        "display_name": "Jiný život S02E07 - Nikdy tě neopustím CZ Dabing",
+        "video_id": 28591128
       },
       {
         "episode_id": 114182,
@@ -269153,9 +269223,29 @@
         "video_id": 28591062
       },
       {
+        "episode_id": 35590,
+        "display_name": "Twisted Metal S02E09 - VAVAVUM CZ Dabing",
+        "video_id": 28591085
+      },
+      {
+        "episode_id": 17766,
+        "display_name": "Anatomie skandálu S01E06 - 6. epizoda CZ Dabing",
+        "video_id": 28591110
+      },
+      {
         "episode_id": 28283,
         "display_name": "Beverly Hills 90210 S10E09 - 9. epizoda CZ Dabing",
         "video_id": 28590987
+      },
+      {
+        "episode_id": 28287,
+        "display_name": "Beverly Hills 90210 S10E13 - 13. epizoda CZ Dabing",
+        "video_id": 28591070
+      },
+      {
+        "episode_id": 28291,
+        "display_name": "Beverly Hills 90210 S10E17 - 17. epizoda CZ Dabing",
+        "video_id": 28591118
       }
     ],
     "prepared_not_upload_ready": [
@@ -269478,68 +269568,12 @@
         "status": "whisper_failed"
       },
       {
-        "episode_id": 170693,
-        "source_id": -32307426644354451,
-        "series_title": "Bewitched",
-        "episode_code": "S01E23",
-        "source_title": "Bewitched.S01E23.Red.Light.Green.Light.Imprint.Black.and.White",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 170697,
-        "source_id": -33078787895135797,
-        "series_title": "Bewitched",
-        "episode_code": "S02E35",
-        "source_title": "Bewitched S02E35",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 170694,
-        "source_id": -11396035707213901,
-        "series_title": "Bewitched",
-        "episode_code": "S03E07",
-        "source_title": "Bewitched.S03E07.Twitch.or.Treat.Imprint",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 170692,
-        "source_id": -54553125024661491,
-        "series_title": "Bewitched",
-        "episode_code": "S06E20",
-        "source_title": "Bewitched.S06E20.Super.Arthur.Imprint.1080p.BluRay.FLAC2.0.H.264-BTN",
-        "status": "needs_whisper"
-      },
-      {
         "episode_id": 49910,
         "source_id": -49187278468511205,
         "series_title": "Beze stopy",
         "episode_code": "S04E16",
         "source_title": "Beze stopy - 04x16 - Malé věci (The Little Things)",
         "status": "whisper_failed"
-      },
-      {
-        "episode_id": 36264,
-        "source_id": -45007114934304720,
-        "series_title": "Bludné kruhy",
-        "episode_code": "S01E01",
-        "source_title": "Bludné kruhy - S1E1 Episode 1 EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 36266,
-        "source_id": -38990440423199398,
-        "series_title": "Bludné kruhy",
-        "episode_code": "S01E03",
-        "source_title": "Bludné kruhy - S1E3 Episode 3 EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 36050,
-        "source_id": -70824721718948611,
-        "series_title": "Bludné kruhy",
-        "episode_code": "S01E06",
-        "source_title": "I know this much is true (Bludné kruhy) S01E06",
-        "status": "needs_whisper"
       },
       {
         "episode_id": 102596,
@@ -269854,11 +269888,67 @@
         "status": "whisper_failed"
       },
       {
-        "episode_id": 71752,
-        "source_id": -69563771764768290,
-        "series_title": "Candy",
-        "episode_code": "S01E02",
-        "source_title": "Candy.S01E02.1080p.DSNP.WEB-DL.DDP5.1.H.264.HUN.ENG-PTHD",
+        "episode_id": 38337,
+        "source_id": -15517758040953237,
+        "series_title": "Chicago Fire",
+        "episode_code": "S12E11",
+        "source_title": "Chicago.Fire.S12E11.720p.x264-FENiX",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 38337,
+        "source_id": -40597544223179552,
+        "series_title": "Chicago Fire",
+        "episode_code": "S12E11",
+        "source_title": "Chicago Fire - S12E11 Inside Man EN",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 38338,
+        "source_id": -70572708326739047,
+        "series_title": "Chicago Fire",
+        "episode_code": "S12E12",
+        "source_title": "Chicago.Fire.S12E12.1080p.WEB.h264-ELEANOR",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 38338,
+        "source_id": -58596472990164478,
+        "series_title": "Chicago Fire",
+        "episode_code": "S12E12",
+        "source_title": "Chicago Fire S12E12 Under Pressure 1080p AMZN WEB-DL DDP5 1 H 264-FLUX",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 38338,
+        "source_id": -30033963316763655,
+        "series_title": "Chicago Fire",
+        "episode_code": "S12E12",
+        "source_title": "Chicago Fire S12E12 Under Pressure 720p AMZN WEB-DL DDP5 1 H 264-FLUX",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 38338,
+        "source_id": -25093940503128215,
+        "series_title": "Chicago Fire",
+        "episode_code": "S12E12",
+        "source_title": "Chicago.Fire.S12E12.720p.x264-FENiX",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 38339,
+        "source_id": -47717933317274379,
+        "series_title": "Chicago Fire",
+        "episode_code": "S12E13",
+        "source_title": "Chicago.Fire.S12E13.1080p.WEB.h264-ELEANOR",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 38339,
+        "source_id": -42101119151018616,
+        "series_title": "Chicago Fire",
+        "episode_code": "S12E13",
+        "source_title": "Chicago.Fire.S12E13.720p.x264-FENiX",
         "status": "needs_whisper"
       }
     ],
@@ -270317,17 +270407,16 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 246,
-    "ok": 40,
-    "resolve_failed": 1
+    "ok": 58,
+    "resolve_failed": 2
   },
   "whisper_review_statuses": {
-    "whisper_non_cz_needs_subtitles": 5210,
+    "whisper_non_cz_needs_subtitles": 5290,
     "whisper_confirmed_cz": 2099,
     "whisper_failed": 42,
-    "needs_whisper": 49447
+    "needs_whisper": 49348
   },
   "subtitle_followup_statuses": {
-    "needs_subtitle_setup_after_prehrajto_processing": 26103
+    "needs_subtitle_setup_after_prehrajto_processing": 26108
   }
 }
