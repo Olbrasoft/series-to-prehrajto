@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 161049,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 32384,
+    "uploaded_episodes": 32386,
     "prepared_source_episodes": 49235,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 171,
-    "language_whisper_attempted_sources": 97,
-    "language_pending_whisper_sources": 2604,
+    "language_audited_sources": 20,
+    "language_whisper_attempted_sources": 20,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 56746,
     "whisper_review_pending_sources": 49304,
     "subtitle_followup_sources": 26188,
@@ -20,18 +20,42 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-08-18T23:10:12Z",
-      "databaseId": 32196012680,
+      "createdAt": "2026-08-18T23:15:33Z",
+      "databaseId": 32196397584,
       "headBranch": "main",
       "status": "in_progress",
-      "workflowName": "update-descriptions"
+      "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-08-18T23:15:30Z",
+      "databaseId": 32196394935,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-18T23:15:30Z",
+      "databaseId": 32196394257,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-18T23:10:12Z",
+      "databaseId": 32196012680,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-18T23:09:41Z",
       "databaseId": 32195972868,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -59,11 +83,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-18T23:07:19Z",
       "databaseId": 32195804296,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -107,11 +131,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-08-18T23:05:00Z",
       "databaseId": 32195630985,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "sync"
     },
     {
@@ -153,30 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-18T23:00:01Z",
-      "databaseId": 32195257136,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-18T22:58:53Z",
-      "databaseId": 32195175372,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-18T22:55:41Z",
-      "databaseId": 32194938721,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
     }
   ],
   "gaps": {
@@ -137586,6 +137586,16 @@
         "video_id": 28607680
       },
       {
+        "episode_id": 39898,
+        "display_name": "Babylon 5 S05E09 - 9. epizoda CZ Dabing",
+        "video_id": 28607777
+      },
+      {
+        "episode_id": 39902,
+        "display_name": "Babylon 5 S05E13 - 13. epizoda CZ Dabing",
+        "video_id": 28607898
+      },
+      {
         "episode_id": 25775,
         "display_name": "Červený trpaslík S10E04 - Zapletení CZ Dabing",
         "video_id": 28607297
@@ -274928,6 +274938,16 @@
         "video_id": 28607680
       },
       {
+        "episode_id": 39898,
+        "display_name": "Babylon 5 S05E09 - 9. epizoda CZ Dabing",
+        "video_id": 28607777
+      },
+      {
+        "episode_id": 39902,
+        "display_name": "Babylon 5 S05E13 - 13. epizoda CZ Dabing",
+        "video_id": 28607898
+      },
+      {
         "episode_id": 25775,
         "display_name": "Červený trpaslík S10E04 - Zapletení CZ Dabing",
         "video_id": 28607297
@@ -276127,8 +276147,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 74,
-    "ok": 96,
+    "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
