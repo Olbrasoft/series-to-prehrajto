@@ -2,36 +2,68 @@
   "counts": {
     "backlog_episodes": 161049,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 32414,
-    "prepared_source_episodes": 49266,
+    "uploaded_episodes": 32416,
+    "prepared_source_episodes": 49262,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 40,
+    "language_audited_sources": 83,
     "language_whisper_attempted_sources": 40,
     "language_pending_whisper_sources": 2604,
-    "whisper_review_sources": 56745,
-    "whisper_review_pending_sources": 49303,
+    "whisper_review_sources": 56744,
+    "whisper_review_pending_sources": 49302,
     "subtitle_followup_sources": 26188,
     "subtitle_followup_pending_sources": 26188
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-08-18T23:33:39Z",
-      "databaseId": 32197687036,
+      "createdAt": "2026-08-18T23:35:52Z",
+      "databaseId": 32197838237,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-08-18T23:35:49Z",
+      "databaseId": 32197833932,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-18T23:34:42Z",
+      "databaseId": 32197758012,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-18T23:34:38Z",
+      "databaseId": 32197752931,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-18T23:33:39Z",
+      "databaseId": 32197687036,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "cancelled",
       "createdAt": "2026-08-18T23:28:37Z",
       "databaseId": 32197328802,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -145,38 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-18T23:15:33Z",
-      "databaseId": 32196397584,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-18T23:15:30Z",
-      "databaseId": 32196394935,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-18T23:15:30Z",
-      "databaseId": 32196394257,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-18T23:10:12Z",
-      "databaseId": 32196012680,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
     }
   ],
   "gaps": {
@@ -77696,6 +77696,11 @@
         "video_id": 28608462
       },
       {
+        "episode_id": 128380,
+        "display_name": "Dobrý boj S01E07 - Ne až tak velká porota CZ Dabing",
+        "video_id": 28608529
+      },
+      {
         "episode_id": 3689,
         "display_name": "Kráska a zvíře S01E04 - Základní instinkt CZ Titulky",
         "video_id": 28608152
@@ -137774,6 +137779,11 @@
         "episode_id": 158955,
         "display_name": "Ochránce S01E10 - 10. epizoda CZ Dabing",
         "video_id": 28608498
+      },
+      {
+        "episode_id": 158963,
+        "display_name": "Ochránce S02E08 - 8. epizoda CZ Titulky",
+        "video_id": 28608566
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -215188,6 +215198,11 @@
         "video_id": 28608462
       },
       {
+        "episode_id": 128380,
+        "display_name": "Dobrý boj S01E07 - Ne až tak velká porota CZ Dabing",
+        "video_id": 28608529
+      },
+      {
         "episode_id": 3689,
         "display_name": "Kráska a zvíře S01E04 - Základní instinkt CZ Titulky",
         "video_id": 28608152
@@ -275266,6 +275281,11 @@
         "episode_id": 158955,
         "display_name": "Ochránce S01E10 - 10. epizoda CZ Dabing",
         "video_id": 28608498
+      },
+      {
+        "episode_id": 158963,
+        "display_name": "Ochránce S02E08 - 8. epizoda CZ Titulky",
+        "video_id": 28608566
       }
     ],
     "prepared_not_upload_ready": [
@@ -276427,6 +276447,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
+    "disabled": 43,
     "ok": 39,
     "resolve_failed": 1
   },
@@ -276434,7 +276455,7 @@
     "whisper_non_cz_needs_subtitles": 5343,
     "whisper_confirmed_cz": 2099,
     "whisper_failed": 103,
-    "needs_whisper": 49200
+    "needs_whisper": 49199
   },
   "subtitle_followup_statuses": {
     "needs_subtitle_setup_after_prehrajto_processing": 26188
