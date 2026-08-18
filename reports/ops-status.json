@@ -1,17 +1,17 @@
 {
   "counts": {
-    "backlog_episodes": 162244,
+    "backlog_episodes": 162027,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 31280,
-    "prepared_source_episodes": 48340,
+    "uploaded_episodes": 31286,
+    "prepared_source_episodes": 48368,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 40,
-    "language_whisper_attempted_sources": 40,
-    "language_pending_whisper_sources": 2604,
+    "language_audited_sources": 38,
+    "language_whisper_attempted_sources": 20,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 56793,
     "whisper_review_pending_sources": 49465,
     "subtitle_followup_sources": 25874,
@@ -20,18 +20,66 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-08-18T03:21:59Z",
-      "databaseId": 32095207120,
+      "createdAt": "2026-08-18T03:26:32Z",
+      "databaseId": 32095484267,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-18T03:26:04Z",
+      "databaseId": 32095459069,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-08-18T03:25:57Z",
+      "databaseId": 32095450814,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-18T03:24:28Z",
+      "databaseId": 32095360175,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "refresh-backlog"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-08-18T03:24:25Z",
+      "databaseId": 32095356614,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-18T03:23:06Z",
+      "databaseId": 32095275999,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-18T03:21:59Z",
+      "databaseId": 32095207120,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "cancelled",
       "createdAt": "2026-08-18T03:21:54Z",
       "databaseId": 32095202179,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -43,11 +91,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-18T03:19:19Z",
       "databaseId": 32095046902,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -107,11 +155,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-18T03:10:47Z",
       "databaseId": 32094538835,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -129,54 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-18T03:07:44Z",
-      "databaseId": 32094348001,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-18T03:07:37Z",
-      "databaseId": 32094341060,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-18T03:07:33Z",
-      "databaseId": 32094336791,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-18T03:06:24Z",
-      "databaseId": 32094262078,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-18T02:58:12Z",
-      "databaseId": 32093747113,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-18T02:57:02Z",
-      "databaseId": 32093677193,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
     }
   ],
   "gaps": {
@@ -74911,6 +74911,21 @@
         "video_id": 28583303
       },
       {
+        "episode_id": 105748,
+        "display_name": "Dobrá práce S01E11 - Láska po mém boku CZ Titulky",
+        "video_id": 28583539
+      },
+      {
+        "episode_id": 72213,
+        "display_name": "Z deníků Robokata S01E02 - Oční kontakt CZ Titulky",
+        "video_id": 28583526
+      },
+      {
+        "episode_id": 64397,
+        "display_name": "Citadela S02E04 - Nerozum CZ Titulky",
+        "video_id": 28583544
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -132104,6 +132119,21 @@
         "episode_id": 133171,
         "display_name": "Eric S01E02 - 2. díl CZ Dabing",
         "video_id": 28583395
+      },
+      {
+        "episode_id": 35874,
+        "display_name": "Berlín S01E07 - Jediná panna na Západě CZ Dabing",
+        "video_id": 28583528
+      },
+      {
+        "episode_id": 185470,
+        "display_name": "Kouzelníci z Waverly S03E09 - Kouzelníci vs. vlkodlaci CZ Dabing",
+        "video_id": 28583555
+      },
+      {
+        "episode_id": 2223,
+        "display_name": "ALF S02E09 - Noční vlak CZ Dabing",
+        "video_id": 28583527
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -206733,6 +206763,21 @@
         "video_id": 28583303
       },
       {
+        "episode_id": 105748,
+        "display_name": "Dobrá práce S01E11 - Láska po mém boku CZ Titulky",
+        "video_id": 28583539
+      },
+      {
+        "episode_id": 72213,
+        "display_name": "Z deníků Robokata S01E02 - Oční kontakt CZ Titulky",
+        "video_id": 28583526
+      },
+      {
+        "episode_id": 64397,
+        "display_name": "Citadela S02E04 - Nerozum CZ Titulky",
+        "video_id": 28583544
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -263926,6 +263971,21 @@
         "episode_id": 133171,
         "display_name": "Eric S01E02 - 2. díl CZ Dabing",
         "video_id": 28583395
+      },
+      {
+        "episode_id": 35874,
+        "display_name": "Berlín S01E07 - Jediná panna na Západě CZ Dabing",
+        "video_id": 28583528
+      },
+      {
+        "episode_id": 185470,
+        "display_name": "Kouzelníci z Waverly S03E09 - Kouzelníci vs. vlkodlaci CZ Dabing",
+        "video_id": 28583555
+      },
+      {
+        "episode_id": 2223,
+        "display_name": "ALF S02E09 - Noční vlak CZ Dabing",
+        "video_id": 28583527
       }
     ],
     "prepared_not_upload_ready": [
@@ -265087,7 +265147,8 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 39,
+    "disabled": 18,
+    "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
