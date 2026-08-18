@@ -2,36 +2,60 @@
   "counts": {
     "backlog_episodes": 161397,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 32055,
-    "prepared_source_episodes": 48309,
+    "uploaded_episodes": 32068,
+    "prepared_source_episodes": 48337,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 80,
-    "language_whisper_attempted_sources": 80,
-    "language_pending_whisper_sources": 2624,
-    "whisper_review_sources": 56749,
-    "whisper_review_pending_sources": 49301,
+    "language_audited_sources": 40,
+    "language_whisper_attempted_sources": 40,
+    "language_pending_whisper_sources": 2604,
+    "whisper_review_sources": 56764,
+    "whisper_review_pending_sources": 49316,
     "subtitle_followup_sources": 26116,
     "subtitle_followup_pending_sources": 26116
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-08-18T14:44:48Z",
-      "databaseId": 32150219160,
+      "createdAt": "2026-08-18T14:51:29Z",
+      "databaseId": 32150899550,
       "headBranch": "main",
-      "status": "pending",
-      "workflowName": "audit-language"
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-08-18T14:50:36Z",
+      "databaseId": 32150814123,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-sources"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-18T14:45:41Z",
+      "databaseId": 32150313515,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-18T14:44:48Z",
+      "databaseId": 32150219160,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-18T14:44:00Z",
       "databaseId": 32150138066,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-status"
     },
     {
@@ -131,11 +155,11 @@
       "workflowName": "process-whisper-review"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-18T14:35:35Z",
       "databaseId": 32149280568,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -153,30 +177,6 @@
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "sync"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-18T14:34:25Z",
-      "databaseId": 32149155986,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-18T14:29:35Z",
-      "databaseId": 32148652199,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-18T14:24:17Z",
-      "databaseId": 32148113485,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
     }
   ],
   "gaps": {
@@ -76841,6 +76841,26 @@
         "video_id": 28595304
       },
       {
+        "episode_id": 70152,
+        "display_name": "PC rebelové S04E08 - 8. epizoda CZ Dabing",
+        "video_id": 28595327
+      },
+      {
+        "episode_id": 70156,
+        "display_name": "PC rebelové S04E10 - 10. epizoda CZ Dabing",
+        "video_id": 28595349
+      },
+      {
+        "episode_id": 12800,
+        "display_name": "Temné léto S01E07 - Tunel CZ Titulky",
+        "video_id": 28595365
+      },
+      {
+        "episode_id": 12796,
+        "display_name": "Temné léto S01E08 - Stadion CZ Titulky",
+        "video_id": 28595386
+      },
+      {
         "episode_id": 76345,
         "display_name": "Spiderman S02E05 - Pomsta mutantů CZ Titulky",
         "video_id": 28595254
@@ -76854,6 +76874,26 @@
         "episode_id": 76373,
         "display_name": "Spiderman S04E07 - Královna upírů CZ Dabing",
         "video_id": 28595307
+      },
+      {
+        "episode_id": 64809,
+        "display_name": "Quantum Leap S01E05 - 5. epizoda CZ Titulky",
+        "video_id": 28595320
+      },
+      {
+        "episode_id": 64813,
+        "display_name": "Quantum Leap S02E01 - 1. epizoda CZ Titulky",
+        "video_id": 28595331
+      },
+      {
+        "episode_id": 64817,
+        "display_name": "Quantum Leap S02E06 - 6. epizoda CZ Titulky",
+        "video_id": 28595353
+      },
+      {
+        "episode_id": 64833,
+        "display_name": "Quantum Leap S03E02 - 2. epizoda CZ Titulky",
+        "video_id": 28595397
       },
       {
         "episode_id": 114182,
@@ -135976,9 +136016,34 @@
         "video_id": 28595259
       },
       {
+        "episode_id": 25778,
+        "display_name": "Červený trpaslík S11E01 - Zlatý dvacátý CZ Dabing",
+        "video_id": 28595330
+      },
+      {
+        "episode_id": 25782,
+        "display_name": "Červený trpaslík S11E05 - Kryze CZ Dabing",
+        "video_id": 28595354
+      },
+      {
+        "episode_id": 25786,
+        "display_name": "Červený trpaslík S12E03 - Časová vlna CZ Dabing",
+        "video_id": 28595402
+      },
+      {
         "episode_id": 78615,
         "display_name": "Stíny nad jezerem S01E06 - 6. epizoda CZ Dabing",
         "video_id": 28595256
+      },
+      {
+        "episode_id": 78619,
+        "display_name": "Stíny nad jezerem S02E01 - 1. epizoda CZ Titulky",
+        "video_id": 28595318
+      },
+      {
+        "episode_id": 76399,
+        "display_name": "Spiderman S01E10 - Spiderman v kůži vetřelce - 3. část CZ Dabing",
+        "video_id": 28595412
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -212538,6 +212603,26 @@
         "video_id": 28595304
       },
       {
+        "episode_id": 70152,
+        "display_name": "PC rebelové S04E08 - 8. epizoda CZ Dabing",
+        "video_id": 28595327
+      },
+      {
+        "episode_id": 70156,
+        "display_name": "PC rebelové S04E10 - 10. epizoda CZ Dabing",
+        "video_id": 28595349
+      },
+      {
+        "episode_id": 12800,
+        "display_name": "Temné léto S01E07 - Tunel CZ Titulky",
+        "video_id": 28595365
+      },
+      {
+        "episode_id": 12796,
+        "display_name": "Temné léto S01E08 - Stadion CZ Titulky",
+        "video_id": 28595386
+      },
+      {
         "episode_id": 76345,
         "display_name": "Spiderman S02E05 - Pomsta mutantů CZ Titulky",
         "video_id": 28595254
@@ -212551,6 +212636,26 @@
         "episode_id": 76373,
         "display_name": "Spiderman S04E07 - Královna upírů CZ Dabing",
         "video_id": 28595307
+      },
+      {
+        "episode_id": 64809,
+        "display_name": "Quantum Leap S01E05 - 5. epizoda CZ Titulky",
+        "video_id": 28595320
+      },
+      {
+        "episode_id": 64813,
+        "display_name": "Quantum Leap S02E01 - 1. epizoda CZ Titulky",
+        "video_id": 28595331
+      },
+      {
+        "episode_id": 64817,
+        "display_name": "Quantum Leap S02E06 - 6. epizoda CZ Titulky",
+        "video_id": 28595353
+      },
+      {
+        "episode_id": 64833,
+        "display_name": "Quantum Leap S03E02 - 2. epizoda CZ Titulky",
+        "video_id": 28595397
       },
       {
         "episode_id": 114182,
@@ -271673,9 +271778,34 @@
         "video_id": 28595259
       },
       {
+        "episode_id": 25778,
+        "display_name": "Červený trpaslík S11E01 - Zlatý dvacátý CZ Dabing",
+        "video_id": 28595330
+      },
+      {
+        "episode_id": 25782,
+        "display_name": "Červený trpaslík S11E05 - Kryze CZ Dabing",
+        "video_id": 28595354
+      },
+      {
+        "episode_id": 25786,
+        "display_name": "Červený trpaslík S12E03 - Časová vlna CZ Dabing",
+        "video_id": 28595402
+      },
+      {
         "episode_id": 78615,
         "display_name": "Stíny nad jezerem S01E06 - 6. epizoda CZ Dabing",
         "video_id": 28595256
+      },
+      {
+        "episode_id": 78619,
+        "display_name": "Stíny nad jezerem S02E01 - 1. epizoda CZ Titulky",
+        "video_id": 28595318
+      },
+      {
+        "episode_id": 76399,
+        "display_name": "Spiderman S01E10 - Spiderman v kůži vetřelce - 3. část CZ Dabing",
+        "video_id": 28595412
       }
     ],
     "prepared_not_upload_ready": [
@@ -272331,7 +272461,7 @@
         "series_title": "Chirurgové",
         "episode_code": "S07E21",
         "source_title": "Chirurgové (Grey's Anatomy) – S07E21",
-        "status": "whisper_failed"
+        "status": "needs_whisper"
       },
       {
         "episode_id": 56256,
@@ -272339,7 +272469,7 @@
         "series_title": "Chirurgové",
         "episode_code": "S07E22",
         "source_title": "Chirurgové (Grey's Anatomy) – S07E22",
-        "status": "whisper_failed"
+        "status": "needs_whisper"
       },
       {
         "episode_id": 56257,
@@ -272347,7 +272477,7 @@
         "series_title": "Chirurgové",
         "episode_code": "S08E01",
         "source_title": "Chirurgové (Grey's Anatomy) – S08E01",
-        "status": "whisper_failed"
+        "status": "needs_whisper"
       },
       {
         "episode_id": 56258,
@@ -272355,7 +272485,7 @@
         "series_title": "Chirurgové",
         "episode_code": "S08E02",
         "source_title": "Chirurgové (Grey's Anatomy) – S08E02",
-        "status": "whisper_failed"
+        "status": "needs_whisper"
       },
       {
         "episode_id": 56259,
@@ -272363,7 +272493,7 @@
         "series_title": "Chirurgové",
         "episode_code": "S08E03",
         "source_title": "Chirurgové (Grey's Anatomy) – S08E03",
-        "status": "whisper_failed"
+        "status": "needs_whisper"
       },
       {
         "episode_id": 56260,
@@ -272371,7 +272501,7 @@
         "series_title": "Chirurgové",
         "episode_code": "S08E04",
         "source_title": "Chirurgové (Grey's Anatomy) – S08E04",
-        "status": "whisper_failed"
+        "status": "needs_whisper"
       },
       {
         "episode_id": 56261,
@@ -272379,7 +272509,7 @@
         "series_title": "Chirurgové",
         "episode_code": "S08E05",
         "source_title": "Chirurgové (Grey's Anatomy) – S08E05",
-        "status": "whisper_failed"
+        "status": "needs_whisper"
       }
     ],
     "subtitle_followup_pending": [
@@ -272837,14 +272967,14 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "resolve_failed": 61,
-    "ok": 19
+    "ok": 39,
+    "resolve_failed": 1
   },
   "whisper_review_statuses": {
     "whisper_non_cz_needs_subtitles": 5349,
     "whisper_confirmed_cz": 2099,
-    "whisper_failed": 103,
-    "needs_whisper": 49198
+    "whisper_failed": 43,
+    "needs_whisper": 49273
   },
   "subtitle_followup_statuses": {
     "needs_subtitle_setup_after_prehrajto_processing": 26116
