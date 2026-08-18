@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 161634,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 31683,
-    "prepared_source_episodes": 48093,
+    "uploaded_episodes": 31694,
+    "prepared_source_episodes": 48073,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 389,
-    "language_whisper_attempted_sources": 69,
-    "language_pending_whisper_sources": 2624,
+    "language_audited_sources": 64,
+    "language_whisper_attempted_sources": 40,
+    "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 56798,
     "whisper_review_pending_sources": 49489,
     "subtitle_followup_sources": 26058,
@@ -20,18 +20,50 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-08-18T09:22:12Z",
-      "databaseId": 32121230836,
+      "createdAt": "2026-08-18T09:33:49Z",
+      "databaseId": 32122252245,
       "headBranch": "main",
       "status": "in_progress",
-      "workflowName": "update-descriptions"
+      "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-08-18T09:33:46Z",
+      "databaseId": 32122248379,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-18T09:33:46Z",
+      "databaseId": 32122248185,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-18T09:28:49Z",
+      "databaseId": 32121810262,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-18T09:22:12Z",
+      "databaseId": 32121230836,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-18T09:21:29Z",
       "databaseId": 32121169024,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -43,11 +75,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-18T09:20:45Z",
       "databaseId": 32121104772,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -67,11 +99,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-18T09:19:45Z",
       "databaseId": 32121013170,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -99,11 +131,11 @@
       "workflowName": "prepare-manifest"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-08-18T09:17:48Z",
       "databaseId": 32120846692,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "sync"
     },
     {
@@ -145,38 +177,6 @@
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-18T09:08:08Z",
-      "databaseId": 32119982490,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-18T09:08:04Z",
-      "databaseId": 32119976783,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-18T09:06:59Z",
-      "databaseId": 32119881899,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-18T09:06:55Z",
-      "databaseId": 32119876218,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
     }
   ],
   "gaps": {
@@ -75901,6 +75901,16 @@
         "video_id": 28589078
       },
       {
+        "episode_id": 53008,
+        "display_name": "Mr. Mercedes S01E04 - 4. epizoda CZ Titulky",
+        "video_id": 28589126
+      },
+      {
+        "episode_id": 53004,
+        "display_name": "Mr. Mercedes S01E06 - 6. epizoda CZ Titulky",
+        "video_id": 28589203
+      },
+      {
         "episode_id": 28205,
         "display_name": "Beverly Hills 90210 S07E18 - 18. epizoda CZ Dabing",
         "video_id": 28588877
@@ -75934,6 +75944,11 @@
         "episode_id": 28245,
         "display_name": "Beverly Hills 90210 S08E27 - 27. epizoda CZ Dabing",
         "video_id": 28589077
+      },
+      {
+        "episode_id": 28249,
+        "display_name": "Beverly Hills 90210 S09E01 - 1. epizoda CZ Dabing",
+        "video_id": 28589116
       },
       {
         "episode_id": 114182,
@@ -134101,6 +134116,26 @@
         "video_id": 28589000
       },
       {
+        "episode_id": 28266,
+        "display_name": "Beverly Hills 90210 S09E18 - 18. epizoda CZ Dabing",
+        "video_id": 28589107
+      },
+      {
+        "episode_id": 28274,
+        "display_name": "Beverly Hills 90210 S09E26 - 26. epizoda CZ Dabing",
+        "video_id": 28589171
+      },
+      {
+        "episode_id": 28278,
+        "display_name": "Beverly Hills 90210 S10E04 - 4. epizoda CZ Dabing",
+        "video_id": 28589221
+      },
+      {
+        "episode_id": 28282,
+        "display_name": "Beverly Hills 90210 S10E08 - 8. epizoda CZ Dabing",
+        "video_id": 28589320
+      },
+      {
         "episode_id": 28067,
         "display_name": "Beverly Hills 90210 S03E02 - 2. epizoda CZ Titulky",
         "video_id": 28588882
@@ -134119,6 +134154,26 @@
         "episode_id": 28099,
         "display_name": "Beverly Hills 90210 S04E05 - 5. epizoda CZ Dabing",
         "video_id": 28589087
+      },
+      {
+        "episode_id": 28103,
+        "display_name": "Beverly Hills 90210 S04E09 - 9. epizoda CZ Titulky",
+        "video_id": 28589132
+      },
+      {
+        "episode_id": 28111,
+        "display_name": "Beverly Hills 90210 S04E17 - 17. epizoda CZ Titulky",
+        "video_id": 28589209
+      },
+      {
+        "episode_id": 28115,
+        "display_name": "Beverly Hills 90210 S04E21 - 21. epizoda CZ Titulky",
+        "video_id": 28589256
+      },
+      {
+        "episode_id": 28119,
+        "display_name": "Beverly Hills 90210 S04E25 - 25. epizoda CZ Titulky",
+        "video_id": 28589323
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -209738,6 +209793,16 @@
         "video_id": 28589078
       },
       {
+        "episode_id": 53008,
+        "display_name": "Mr. Mercedes S01E04 - 4. epizoda CZ Titulky",
+        "video_id": 28589126
+      },
+      {
+        "episode_id": 53004,
+        "display_name": "Mr. Mercedes S01E06 - 6. epizoda CZ Titulky",
+        "video_id": 28589203
+      },
+      {
         "episode_id": 28205,
         "display_name": "Beverly Hills 90210 S07E18 - 18. epizoda CZ Dabing",
         "video_id": 28588877
@@ -209771,6 +209836,11 @@
         "episode_id": 28245,
         "display_name": "Beverly Hills 90210 S08E27 - 27. epizoda CZ Dabing",
         "video_id": 28589077
+      },
+      {
+        "episode_id": 28249,
+        "display_name": "Beverly Hills 90210 S09E01 - 1. epizoda CZ Dabing",
+        "video_id": 28589116
       },
       {
         "episode_id": 114182,
@@ -267938,6 +268008,26 @@
         "video_id": 28589000
       },
       {
+        "episode_id": 28266,
+        "display_name": "Beverly Hills 90210 S09E18 - 18. epizoda CZ Dabing",
+        "video_id": 28589107
+      },
+      {
+        "episode_id": 28274,
+        "display_name": "Beverly Hills 90210 S09E26 - 26. epizoda CZ Dabing",
+        "video_id": 28589171
+      },
+      {
+        "episode_id": 28278,
+        "display_name": "Beverly Hills 90210 S10E04 - 4. epizoda CZ Dabing",
+        "video_id": 28589221
+      },
+      {
+        "episode_id": 28282,
+        "display_name": "Beverly Hills 90210 S10E08 - 8. epizoda CZ Dabing",
+        "video_id": 28589320
+      },
+      {
         "episode_id": 28067,
         "display_name": "Beverly Hills 90210 S03E02 - 2. epizoda CZ Titulky",
         "video_id": 28588882
@@ -267956,6 +268046,26 @@
         "episode_id": 28099,
         "display_name": "Beverly Hills 90210 S04E05 - 5. epizoda CZ Dabing",
         "video_id": 28589087
+      },
+      {
+        "episode_id": 28103,
+        "display_name": "Beverly Hills 90210 S04E09 - 9. epizoda CZ Titulky",
+        "video_id": 28589132
+      },
+      {
+        "episode_id": 28111,
+        "display_name": "Beverly Hills 90210 S04E17 - 17. epizoda CZ Titulky",
+        "video_id": 28589209
+      },
+      {
+        "episode_id": 28115,
+        "display_name": "Beverly Hills 90210 S04E21 - 21. epizoda CZ Titulky",
+        "video_id": 28589256
+      },
+      {
+        "episode_id": 28119,
+        "display_name": "Beverly Hills 90210 S04E25 - 25. epizoda CZ Titulky",
+        "video_id": 28589323
       }
     ],
     "prepared_not_upload_ready": [
@@ -269117,8 +269227,8 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 68,
-    "disabled": 320,
+    "disabled": 24,
+    "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
