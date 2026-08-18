@@ -2,14 +2,14 @@
   "counts": {
     "backlog_episodes": 162027,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 31407,
-    "prepared_source_episodes": 48126,
+    "uploaded_episodes": 31408,
+    "prepared_source_episodes": 48040,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 40,
+    "language_audited_sources": 93,
     "language_whisper_attempted_sources": 40,
     "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 56794,
@@ -20,6 +20,30 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-08-18T05:15:29Z",
+      "databaseId": 32102184410,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-18T05:15:24Z",
+      "databaseId": 32102179745,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-18T05:11:52Z",
+      "databaseId": 32101946726,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
       "createdAt": "2026-08-18T05:11:01Z",
       "databaseId": 32101893686,
       "headBranch": "main",
@@ -27,11 +51,11 @@
       "workflowName": "audit-language"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-18T05:10:15Z",
       "databaseId": 32101844562,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-status"
     },
     {
@@ -87,7 +111,7 @@
       "createdAt": "2026-08-18T05:02:02Z",
       "databaseId": 32101325238,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "prepare-manifest"
     },
     {
@@ -103,15 +127,15 @@
       "createdAt": "2026-08-18T05:00:48Z",
       "databaseId": 32101249921,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "sync"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-18T04:58:34Z",
       "databaseId": 32101104324,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -153,30 +177,6 @@
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "prepare-sources"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-18T04:45:40Z",
-      "databaseId": 32100315538,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-18T04:45:20Z",
-      "databaseId": 32100293267,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-18T04:44:53Z",
-      "databaseId": 32100264211,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
     }
   ],
   "gaps": {
@@ -132701,6 +132701,11 @@
         "video_id": 28585016
       },
       {
+        "episode_id": 105750,
+        "display_name": "Dobrá práce S01E13 - Neopětovaná láska CZ Titulky",
+        "video_id": 28585082
+      },
+      {
         "episode_id": 42163,
         "display_name": "S.W.A.T. S02E06 - Nikdy víc CZ Dabing",
         "video_id": 28584753
@@ -265158,6 +265163,11 @@
         "video_id": 28585016
       },
       {
+        "episode_id": 105750,
+        "display_name": "Dobrá práce S01E13 - Neopětovaná láska CZ Titulky",
+        "video_id": 28585082
+      },
+      {
         "episode_id": 42163,
         "display_name": "S.W.A.T. S02E06 - Nikdy víc CZ Dabing",
         "video_id": 28584753
@@ -266357,6 +266367,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
+    "disabled": 53,
     "ok": 39,
     "resolve_failed": 1
   },
