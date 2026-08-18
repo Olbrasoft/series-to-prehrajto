@@ -2,8 +2,8 @@
   "counts": {
     "backlog_episodes": 161222,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 32107,
-    "prepared_source_episodes": 48379,
+    "uploaded_episodes": 32108,
+    "prepared_source_episodes": 48394,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
@@ -12,18 +12,66 @@
     "language_audited_sources": 40,
     "language_whisper_attempted_sources": 40,
     "language_pending_whisper_sources": 2624,
-    "whisper_review_sources": 56743,
-    "whisper_review_pending_sources": 49295,
+    "whisper_review_sources": 56754,
+    "whisper_review_pending_sources": 49306,
     "subtitle_followup_sources": 26116,
     "subtitle_followup_pending_sources": 26116
   },
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-08-18T15:43:19Z",
+      "databaseId": 32156163704,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-18T15:43:19Z",
+      "databaseId": 32156163584,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-18T15:42:37Z",
+      "databaseId": 32156092327,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-18T15:42:20Z",
+      "databaseId": 32156061932,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-18T15:42:16Z",
+      "databaseId": 32156056166,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-18T15:42:14Z",
+      "databaseId": 32156051842,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "",
       "createdAt": "2026-08-18T15:41:45Z",
       "databaseId": 32156005930,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
@@ -35,11 +83,11 @@
       "workflowName": "prepare-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-18T15:40:59Z",
       "databaseId": 32155929549,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -129,54 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-18T15:15:45Z",
-      "databaseId": 32153383296,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "refresh-backlog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-18T15:13:16Z",
-      "databaseId": 32153123902,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-18T15:11:30Z",
-      "databaseId": 32152943751,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-18T15:10:50Z",
-      "databaseId": 32152875387,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-18T15:10:21Z",
-      "databaseId": 32152827887,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-18T15:09:55Z",
-      "databaseId": 32152783124,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
     }
   ],
   "gaps": {
@@ -76934,6 +76934,11 @@
         "episode_id": 87764,
         "display_name": "Detektiv Endeavour Morse S06E02 - Autonehoda CZ Dabing",
         "video_id": 28596286
+      },
+      {
+        "episode_id": 157460,
+        "display_name": "Goblin S01E02 - 2. epizoda CZ Titulky",
+        "video_id": 28596413
       },
       {
         "episode_id": 64889,
@@ -212893,6 +212898,11 @@
         "video_id": 28596286
       },
       {
+        "episode_id": 157460,
+        "display_name": "Goblin S01E02 - 2. epizoda CZ Titulky",
+        "video_id": 28596413
+      },
+      {
         "episode_id": 64889,
         "display_name": "Quantum Leap S03E14 - 14. epizoda CZ Titulky",
         "video_id": 28596002
@@ -273363,8 +273373,8 @@
   "whisper_review_statuses": {
     "whisper_non_cz_needs_subtitles": 5349,
     "whisper_confirmed_cz": 2099,
-    "whisper_failed": 123,
-    "needs_whisper": 49172
+    "whisper_failed": 83,
+    "needs_whisper": 49223
   },
   "subtitle_followup_statuses": {
     "needs_subtitle_setup_after_prehrajto_processing": 26116
