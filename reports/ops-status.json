@@ -1,15 +1,15 @@
 {
   "counts": {
     "backlog_episodes": 162244,
-    "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 31246,
-    "prepared_source_episodes": 48400,
+    "manifest_upload_ready_episodes": 1002,
+    "uploaded_episodes": 31248,
+    "prepared_source_episodes": 48325,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 2629,
+    "language_audited_sources": 2691,
     "language_whisper_attempted_sources": 398,
     "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 56793,
@@ -20,10 +20,42 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-08-18T02:57:02Z",
+      "databaseId": 32093677193,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-18T02:56:21Z",
+      "databaseId": 32093638219,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-sources"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-18T02:53:41Z",
+      "databaseId": 32093479038,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-18T02:51:46Z",
+      "databaseId": 32093366877,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-18T02:49:48Z",
       "databaseId": 32093248886,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-status"
     },
     {
@@ -39,7 +71,7 @@
       "createdAt": "2026-08-18T02:46:19Z",
       "databaseId": 32093044327,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "sync"
     },
     {
@@ -47,7 +79,7 @@
       "createdAt": "2026-08-18T02:46:19Z",
       "databaseId": 32093044222,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "prepare-manifest"
     },
     {
@@ -67,11 +99,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-18T02:39:41Z",
       "databaseId": 32092639927,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -135,7 +167,7 @@
       "createdAt": "2026-08-18T02:27:25Z",
       "databaseId": 32091897678,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "audit-language"
     },
     {
@@ -145,38 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-18T02:26:05Z",
-      "databaseId": 32091817956,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-18T02:26:02Z",
-      "databaseId": 32091814692,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-18T02:25:57Z",
-      "databaseId": 32091809204,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-18T02:22:45Z",
-      "databaseId": 32091616227,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
     }
   ],
   "gaps": {
@@ -74779,6 +74779,16 @@
         "episode_id": 48868,
         "display_name": "Okupovaná kolonie S01E10 - Gateway CZ Titulky",
         "video_id": 28582978
+      },
+      {
+        "episode_id": 48872,
+        "display_name": "Okupovaná kolonie S02E04 - Panopticon CZ Titulky",
+        "video_id": 28583017
+      },
+      {
+        "episode_id": 48876,
+        "display_name": "Okupovaná kolonie S02E08 - Good Intentions CZ Titulky",
+        "video_id": 28583054
       },
       {
         "episode_id": 2233,
@@ -206433,6 +206443,16 @@
         "video_id": 28582978
       },
       {
+        "episode_id": 48872,
+        "display_name": "Okupovaná kolonie S02E04 - Panopticon CZ Titulky",
+        "video_id": 28583017
+      },
+      {
+        "episode_id": 48876,
+        "display_name": "Okupovaná kolonie S02E08 - Good Intentions CZ Titulky",
+        "video_id": 28583054
+      },
+      {
         "episode_id": 2233,
         "display_name": "ALF S02E19 - Pes v domě CZ Dabing",
         "video_id": 28582664
@@ -264747,7 +264767,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 2231,
+    "disabled": 2293,
     "ok": 396,
     "sample_failed": 1,
     "resolve_failed": 1
