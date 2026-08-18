@@ -2,14 +2,14 @@
   "counts": {
     "backlog_episodes": 161837,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 31554,
-    "prepared_source_episodes": 48159,
+    "uploaded_episodes": 31557,
+    "prepared_source_episodes": 48138,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 69,
+    "language_audited_sources": 111,
     "language_whisper_attempted_sources": 20,
     "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 56794,
@@ -20,10 +20,34 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-08-18T07:31:54Z",
+      "databaseId": 32111878013,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-18T07:29:09Z",
+      "databaseId": 32111657262,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-18T07:29:04Z",
+      "databaseId": 32111651246,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-18T07:27:57Z",
       "databaseId": 32111564654,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -31,7 +55,7 @@
       "createdAt": "2026-08-18T07:27:53Z",
       "databaseId": 32111559842,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "prepare-manifest"
     },
     {
@@ -123,11 +147,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-18T07:14:07Z",
       "databaseId": 32110468118,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -153,30 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-18T07:10:39Z",
-      "databaseId": 32110204345,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-18T07:10:38Z",
-      "databaseId": 32110202816,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-18T07:10:34Z",
-      "databaseId": 32110197408,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
     }
   ],
   "gaps": {
@@ -75591,6 +75591,11 @@
         "video_id": 28586929
       },
       {
+        "episode_id": 42441,
+        "display_name": "Knight Rider S04E01 - Přízrak CZ Titulky",
+        "video_id": 28587040
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -133474,6 +133479,16 @@
         "episode_id": 106859,
         "display_name": "Pán času S02E08 - 8. epizoda CZ Dabing",
         "video_id": 28587122
+      },
+      {
+        "episode_id": 106863,
+        "display_name": "Pán času S03E04 - 4. epizoda CZ Titulky",
+        "video_id": 28587180
+      },
+      {
+        "episode_id": 42503,
+        "display_name": "Knight Rider S01E02 - Smrtící manévry CZ Dabing",
+        "video_id": 28587286
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -208783,6 +208798,11 @@
         "video_id": 28586929
       },
       {
+        "episode_id": 42441,
+        "display_name": "Knight Rider S04E01 - Přízrak CZ Titulky",
+        "video_id": 28587040
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -266666,6 +266686,16 @@
         "episode_id": 106859,
         "display_name": "Pán času S02E08 - 8. epizoda CZ Dabing",
         "video_id": 28587122
+      },
+      {
+        "episode_id": 106863,
+        "display_name": "Pán času S03E04 - 4. epizoda CZ Titulky",
+        "video_id": 28587180
+      },
+      {
+        "episode_id": 42503,
+        "display_name": "Knight Rider S01E02 - Smrtící manévry CZ Dabing",
+        "video_id": 28587286
       }
     ],
     "prepared_not_upload_ready": [
@@ -267827,7 +267857,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 49,
+    "disabled": 91,
     "ok": 19,
     "resolve_failed": 1
   },
