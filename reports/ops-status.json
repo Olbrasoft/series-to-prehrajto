@@ -2,14 +2,14 @@
   "counts": {
     "backlog_episodes": 161049,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 32289,
-    "prepared_source_episodes": 49098,
+    "uploaded_episodes": 32290,
+    "prepared_source_episodes": 49108,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 728,
+    "language_audited_sources": 776,
     "language_whisper_attempted_sources": 122,
     "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 56750,
@@ -20,10 +20,50 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-08-18T21:45:40Z",
+      "databaseId": 32189389894,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-18T21:45:37Z",
+      "databaseId": 32189386061,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-18T21:45:37Z",
+      "databaseId": 32189385883,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-18T21:43:38Z",
+      "databaseId": 32189211497,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-sources"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-18T21:42:08Z",
+      "databaseId": 32189083139,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-18T21:40:53Z",
       "databaseId": 32188976509,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -99,11 +139,11 @@
       "workflowName": "prepare-manifest"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-08-18T21:31:14Z",
       "databaseId": 32188141405,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "sync"
     },
     {
@@ -137,46 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-18T21:22:32Z",
-      "databaseId": 32187379056,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-18T21:21:19Z",
-      "databaseId": 32187274810,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-18T21:21:15Z",
-      "databaseId": 32187269250,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-18T21:19:16Z",
-      "databaseId": 32187094876,
-      "headBranch": "main",
-      "status": "pending",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-18T21:19:03Z",
-      "databaseId": 32187077205,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
     }
   ],
   "gaps": {
@@ -137111,6 +137111,11 @@
         "video_id": 28605284
       },
       {
+        "episode_id": 52382,
+        "display_name": "Tajemství Pravdy S01E12 - Home CZ Titulky",
+        "video_id": 28605484
+      },
+      {
         "episode_id": 81431,
         "display_name": "Lidé zítřka S01E15 - Nepřítel mého nepřítele CZ Dabing",
         "video_id": 28604885
@@ -273978,6 +273983,11 @@
         "video_id": 28605284
       },
       {
+        "episode_id": 52382,
+        "display_name": "Tajemství Pravdy S01E12 - Home CZ Titulky",
+        "video_id": 28605484
+      },
+      {
         "episode_id": 81431,
         "display_name": "Lidé zítřka S01E15 - Nepřítel mého nepřítele CZ Dabing",
         "video_id": 28604885
@@ -275177,7 +275187,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 606,
+    "disabled": 654,
     "ok": 101,
     "resolve_failed": 21
   },
