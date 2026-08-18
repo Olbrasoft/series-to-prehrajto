@@ -2,14 +2,14 @@
   "counts": {
     "backlog_episodes": 161222,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 32248,
-    "prepared_source_episodes": 48974,
+    "uploaded_episodes": 32251,
+    "prepared_source_episodes": 49007,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 540,
+    "language_audited_sources": 559,
     "language_whisper_attempted_sources": 86,
     "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 56749,
@@ -19,6 +19,62 @@
   },
   "workflow_runs": [
     {
+      "conclusion": "",
+      "createdAt": "2026-08-18T20:40:50Z",
+      "databaseId": 32183603540,
+      "headBranch": "main",
+      "status": "queued",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-18T20:40:46Z",
+      "databaseId": 32183597850,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-18T20:40:44Z",
+      "databaseId": 32183594866,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-18T20:40:17Z",
+      "databaseId": 32183550704,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-18T20:39:59Z",
+      "databaseId": 32183519235,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-18T20:38:49Z",
+      "databaseId": 32183408292,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-18T20:31:56Z",
+      "databaseId": 32182765720,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
       "conclusion": "success",
       "createdAt": "2026-08-18T20:30:38Z",
       "databaseId": 32182644288,
@@ -27,19 +83,19 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-18T20:30:09Z",
       "databaseId": 32182596548,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-08-18T20:30:06Z",
       "databaseId": 32182590989,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -87,7 +143,7 @@
       "createdAt": "2026-08-18T20:26:07Z",
       "databaseId": 32182222970,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "queued",
       "workflowName": "prepare-manifest"
     },
     {
@@ -118,62 +174,6 @@
       "conclusion": "success",
       "createdAt": "2026-08-18T20:15:52Z",
       "databaseId": 32181281153,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-18T20:15:49Z",
-      "databaseId": 32181276851,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-18T20:15:49Z",
-      "databaseId": 32181276781,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-18T20:15:23Z",
-      "databaseId": 32181238930,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-18T20:14:05Z",
-      "databaseId": 32181115632,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-18T20:12:40Z",
-      "databaseId": 32180984528,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-18T20:11:11Z",
-      "databaseId": 32180847115,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-18T20:07:29Z",
-      "databaseId": 32180491021,
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-watchdog"
@@ -77291,6 +77291,16 @@
         "video_id": 28602888
       },
       {
+        "episode_id": 39932,
+        "display_name": "Babylon 5 S01E15 - Grál CZ Dabing",
+        "video_id": 28603124
+      },
+      {
+        "episode_id": 39948,
+        "display_name": "Babylon 5 S01E22 - Zámotek CZ Dabing",
+        "video_id": 28603467
+      },
+      {
         "episode_id": 81425,
         "display_name": "Lidé zítřka S01E05 - V pasti CZ Dabing",
         "video_id": 28601648
@@ -136929,6 +136939,11 @@
         "episode_id": 90502,
         "display_name": "Unforgotten S06E04 - 4. epizoda CZ Titulky",
         "video_id": 28602953
+      },
+      {
+        "episode_id": 158958,
+        "display_name": "Ochránce S02E03 - 3. epizoda CZ Dabing",
+        "video_id": 28603474
       },
       {
         "episode_id": 87747,
@@ -213953,6 +213968,16 @@
         "video_id": 28602888
       },
       {
+        "episode_id": 39932,
+        "display_name": "Babylon 5 S01E15 - Grál CZ Dabing",
+        "video_id": 28603124
+      },
+      {
+        "episode_id": 39948,
+        "display_name": "Babylon 5 S01E22 - Zámotek CZ Dabing",
+        "video_id": 28603467
+      },
+      {
         "episode_id": 81425,
         "display_name": "Lidé zítřka S01E05 - V pasti CZ Dabing",
         "video_id": 28601648
@@ -273593,6 +273618,11 @@
         "video_id": 28602953
       },
       {
+        "episode_id": 158958,
+        "display_name": "Ochránce S02E03 - 3. epizoda CZ Dabing",
+        "video_id": 28603474
+      },
+      {
         "episode_id": 87747,
         "display_name": "Detektiv Endeavour Morse S03E03 - Kořist CZ Dabing",
         "video_id": 28602467
@@ -274767,7 +274797,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 454,
+    "disabled": 473,
     "ok": 65,
     "resolve_failed": 21
   },
