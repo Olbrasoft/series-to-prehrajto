@@ -2,14 +2,14 @@
   "counts": {
     "backlog_episodes": 161222,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 32237,
-    "prepared_source_episodes": 48940,
+    "uploaded_episodes": 32246,
+    "prepared_source_episodes": 48974,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 463,
+    "language_audited_sources": 540,
     "language_whisper_attempted_sources": 86,
     "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 56749,
@@ -19,6 +19,38 @@
   },
   "workflow_runs": [
     {
+      "conclusion": "",
+      "createdAt": "2026-08-18T20:26:11Z",
+      "databaseId": 32182231172,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-18T20:26:07Z",
+      "databaseId": 32182222970,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-18T20:19:11Z",
+      "databaseId": 32181586323,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-18T20:17:56Z",
+      "databaseId": 32181472310,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
       "conclusion": "success",
       "createdAt": "2026-08-18T20:16:36Z",
       "databaseId": 32181350061,
@@ -27,11 +59,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-18T20:15:52Z",
       "databaseId": 32181281153,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -43,11 +75,11 @@
       "workflowName": "sync"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-08-18T20:15:49Z",
       "databaseId": 32181276781,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -75,11 +107,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-18T20:11:11Z",
       "databaseId": 32180847115,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -145,38 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-18T20:04:28Z",
-      "databaseId": 32180208311,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-18T20:04:28Z",
-      "databaseId": 32180207018,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-18T20:04:25Z",
-      "databaseId": 32180203716,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-18T20:04:25Z",
-      "databaseId": 32180203639,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
     }
   ],
   "gaps": {
@@ -77286,6 +77286,11 @@
         "video_id": 28602094
       },
       {
+        "episode_id": 39888,
+        "display_name": "Babylon 5 S01E07 - Dobrý cizinec, mrtvý cizinec CZ Dabing",
+        "video_id": 28602888
+      },
+      {
         "episode_id": 81425,
         "display_name": "Lidé zítřka S01E05 - V pasti CZ Dabing",
         "video_id": 28601648
@@ -77309,6 +77314,21 @@
         "episode_id": 203001,
         "display_name": "The Boroughs S01E06 - Stříbrná vzpoura CZ Dabing",
         "video_id": 28602177
+      },
+      {
+        "episode_id": 76457,
+        "display_name": "Pravidla zasnoubení S02E14 - 14. epizoda CZ Dabing",
+        "video_id": 28602595
+      },
+      {
+        "episode_id": 76497,
+        "display_name": "Pravidla zasnoubení S03E01 - 1. epizoda CZ Dabing",
+        "video_id": 28602658
+      },
+      {
+        "episode_id": 76485,
+        "display_name": "Pravidla zasnoubení S03E04 - 4. epizoda CZ Dabing",
+        "video_id": 28602893
       },
       {
         "episode_id": 114182,
@@ -136889,6 +136909,31 @@
         "episode_id": 70151,
         "display_name": "PC rebelové S04E07 - 7. epizoda CZ Dabing",
         "video_id": 28601026
+      },
+      {
+        "episode_id": 90482,
+        "display_name": "Unforgotten S03E02 - 2. epizoda CZ Titulky",
+        "video_id": 28602416
+      },
+      {
+        "episode_id": 90494,
+        "display_name": "Unforgotten S05E03 - 3. epizoda CZ Titulky",
+        "video_id": 28602621
+      },
+      {
+        "episode_id": 90498,
+        "display_name": "Unforgotten S05E06 - 6. epizoda CZ Titulky",
+        "video_id": 28602778
+      },
+      {
+        "episode_id": 87747,
+        "display_name": "Detektiv Endeavour Morse S03E03 - Kořist CZ Dabing",
+        "video_id": 28602467
+      },
+      {
+        "episode_id": 87751,
+        "display_name": "Detektiv Endeavour Morse S04E03 - Zmizelý CZ Titulky",
+        "video_id": 28602769
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -213893,6 +213938,11 @@
         "video_id": 28602094
       },
       {
+        "episode_id": 39888,
+        "display_name": "Babylon 5 S01E07 - Dobrý cizinec, mrtvý cizinec CZ Dabing",
+        "video_id": 28602888
+      },
+      {
         "episode_id": 81425,
         "display_name": "Lidé zítřka S01E05 - V pasti CZ Dabing",
         "video_id": 28601648
@@ -213916,6 +213966,21 @@
         "episode_id": 203001,
         "display_name": "The Boroughs S01E06 - Stříbrná vzpoura CZ Dabing",
         "video_id": 28602177
+      },
+      {
+        "episode_id": 76457,
+        "display_name": "Pravidla zasnoubení S02E14 - 14. epizoda CZ Dabing",
+        "video_id": 28602595
+      },
+      {
+        "episode_id": 76497,
+        "display_name": "Pravidla zasnoubení S03E01 - 1. epizoda CZ Dabing",
+        "video_id": 28602658
+      },
+      {
+        "episode_id": 76485,
+        "display_name": "Pravidla zasnoubení S03E04 - 4. epizoda CZ Dabing",
+        "video_id": 28602893
       },
       {
         "episode_id": 114182,
@@ -273496,6 +273561,31 @@
         "episode_id": 70151,
         "display_name": "PC rebelové S04E07 - 7. epizoda CZ Dabing",
         "video_id": 28601026
+      },
+      {
+        "episode_id": 90482,
+        "display_name": "Unforgotten S03E02 - 2. epizoda CZ Titulky",
+        "video_id": 28602416
+      },
+      {
+        "episode_id": 90494,
+        "display_name": "Unforgotten S05E03 - 3. epizoda CZ Titulky",
+        "video_id": 28602621
+      },
+      {
+        "episode_id": 90498,
+        "display_name": "Unforgotten S05E06 - 6. epizoda CZ Titulky",
+        "video_id": 28602778
+      },
+      {
+        "episode_id": 87747,
+        "display_name": "Detektiv Endeavour Morse S03E03 - Kořist CZ Dabing",
+        "video_id": 28602467
+      },
+      {
+        "episode_id": 87751,
+        "display_name": "Detektiv Endeavour Morse S04E03 - Zmizelý CZ Titulky",
+        "video_id": 28602769
       }
     ],
     "prepared_not_upload_ready": [
@@ -274657,7 +274747,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 377,
+    "disabled": 454,
     "ok": 65,
     "resolve_failed": 21
   },
