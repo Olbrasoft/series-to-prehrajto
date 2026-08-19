@@ -2,14 +2,14 @@
   "counts": {
     "backlog_episodes": 160638,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 32726,
-    "prepared_source_episodes": 48793,
+    "uploaded_episodes": 32733,
+    "prepared_source_episodes": 48717,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 76,
+    "language_audited_sources": 132,
     "language_whisper_attempted_sources": 20,
     "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 56741,
@@ -20,18 +20,82 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-08-19T04:07:32Z",
-      "databaseId": 32214598068,
+      "createdAt": "2026-08-19T04:13:18Z",
+      "databaseId": 32214953181,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-19T04:13:17Z",
+      "databaseId": 32214951434,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-08-19T04:13:13Z",
+      "databaseId": 32214947199,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-19T04:12:11Z",
+      "databaseId": 32214883433,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-08-19T04:12:11Z",
+      "databaseId": 32214883360,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-19T04:11:18Z",
+      "databaseId": 32214828002,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-19T04:08:41Z",
+      "databaseId": 32214667058,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-19T04:08:38Z",
+      "databaseId": 32214663008,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-19T04:07:32Z",
+      "databaseId": 32214598068,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "cancelled",
       "createdAt": "2026-08-19T04:04:46Z",
       "databaseId": 32214430176,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -107,76 +171,12 @@
       "workflowName": "prepare-sources"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-19T03:52:43Z",
       "databaseId": 32213702561,
       "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-19T03:51:18Z",
-      "databaseId": 32213620384,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-19T03:50:08Z",
-      "databaseId": 32213551047,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-19T03:48:17Z",
-      "databaseId": 32213444475,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-19T03:47:14Z",
-      "databaseId": 32213383290,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-19T03:46:48Z",
-      "databaseId": 32213359030,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-19T03:45:09Z",
-      "databaseId": 32213258576,
-      "headBranch": "main",
-      "status": "pending",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-19T03:39:42Z",
-      "databaseId": 32212933814,
-      "headBranch": "main",
       "status": "completed",
       "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-19T03:39:42Z",
-      "databaseId": 32212933639,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
     }
   ],
   "gaps": {
@@ -78501,6 +78501,11 @@
         "video_id": 28615145
       },
       {
+        "episode_id": 54004,
+        "display_name": "Protiúder S05E03 - 3. epizoda CZ Dabing",
+        "video_id": 28615175
+      },
+      {
         "episode_id": 76537,
         "display_name": "Pravidla zasnoubení S07E08 - 8. epizoda CZ Dabing",
         "video_id": 28614925
@@ -78519,6 +78524,16 @@
         "episode_id": 142973,
         "display_name": "Znuděný k smrti S02E03 - 3. epizoda CZ Dabing",
         "video_id": 28615013
+      },
+      {
+        "episode_id": 128377,
+        "display_name": "Dobrý boj S01E03 - Schtupův seznam CZ Dabing",
+        "video_id": 28615065
+      },
+      {
+        "episode_id": 128381,
+        "display_name": "Dobrý boj S01E08 - Reddick v Boseman CZ Dabing",
+        "video_id": 28615219
       },
       {
         "episode_id": 114182,
@@ -139306,6 +139321,16 @@
         "video_id": 28614991
       },
       {
+        "episode_id": 73214,
+        "display_name": "Zavolejte porodní sestřičky S04E01 - 1. epizoda CZ Dabing",
+        "video_id": 28615083
+      },
+      {
+        "episode_id": 73222,
+        "display_name": "Zavolejte porodní sestřičky S05E02 - 2. epizoda CZ Dabing",
+        "video_id": 28615216
+      },
+      {
         "episode_id": 76343,
         "display_name": "Spiderman S02E03 - Vodní muž CZ Titulky",
         "video_id": 28614919
@@ -139334,6 +139359,16 @@
         "episode_id": 80235,
         "display_name": "The Mindy Project S06E09 - 9. epizoda CZ Titulky",
         "video_id": 28615127
+      },
+      {
+        "episode_id": 15635,
+        "display_name": "Nenasytná S02E02 - Mrtvá CZ Dabing",
+        "video_id": 28615140
+      },
+      {
+        "episode_id": 15639,
+        "display_name": "Nenasytná S02E07 - Po brazilsku CZ Dabing",
+        "video_id": 28615212
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -217553,6 +217588,11 @@
         "video_id": 28615145
       },
       {
+        "episode_id": 54004,
+        "display_name": "Protiúder S05E03 - 3. epizoda CZ Dabing",
+        "video_id": 28615175
+      },
+      {
         "episode_id": 76537,
         "display_name": "Pravidla zasnoubení S07E08 - 8. epizoda CZ Dabing",
         "video_id": 28614925
@@ -217571,6 +217611,16 @@
         "episode_id": 142973,
         "display_name": "Znuděný k smrti S02E03 - 3. epizoda CZ Dabing",
         "video_id": 28615013
+      },
+      {
+        "episode_id": 128377,
+        "display_name": "Dobrý boj S01E03 - Schtupův seznam CZ Dabing",
+        "video_id": 28615065
+      },
+      {
+        "episode_id": 128381,
+        "display_name": "Dobrý boj S01E08 - Reddick v Boseman CZ Dabing",
+        "video_id": 28615219
       },
       {
         "episode_id": 114182,
@@ -278358,6 +278408,16 @@
         "video_id": 28614991
       },
       {
+        "episode_id": 73214,
+        "display_name": "Zavolejte porodní sestřičky S04E01 - 1. epizoda CZ Dabing",
+        "video_id": 28615083
+      },
+      {
+        "episode_id": 73222,
+        "display_name": "Zavolejte porodní sestřičky S05E02 - 2. epizoda CZ Dabing",
+        "video_id": 28615216
+      },
+      {
         "episode_id": 76343,
         "display_name": "Spiderman S02E03 - Vodní muž CZ Titulky",
         "video_id": 28614919
@@ -278386,6 +278446,16 @@
         "episode_id": 80235,
         "display_name": "The Mindy Project S06E09 - 9. epizoda CZ Titulky",
         "video_id": 28615127
+      },
+      {
+        "episode_id": 15635,
+        "display_name": "Nenasytná S02E02 - Mrtvá CZ Dabing",
+        "video_id": 28615140
+      },
+      {
+        "episode_id": 15639,
+        "display_name": "Nenasytná S02E07 - Po brazilsku CZ Dabing",
+        "video_id": 28615212
       }
     ],
     "prepared_not_upload_ready": [
@@ -279547,7 +279617,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 56,
+    "disabled": 112,
     "ok": 19,
     "resolve_failed": 1
   },
