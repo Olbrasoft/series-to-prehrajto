@@ -2,14 +2,14 @@
   "counts": {
     "backlog_episodes": 159786,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 33570,
-    "prepared_source_episodes": 49479,
+    "uploaded_episodes": 33571,
+    "prepared_source_episodes": 49494,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 570,
+    "language_audited_sources": 602,
     "language_whisper_attempted_sources": 91,
     "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 56747,
@@ -20,18 +20,34 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-08-19T16:12:05Z",
-      "databaseId": 32274551225,
+      "createdAt": "2026-08-19T16:15:10Z",
+      "databaseId": 32274847877,
       "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "update-descriptions"
+      "status": "pending",
+      "workflowName": "prepare-manifest"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-08-19T16:14:15Z",
+      "databaseId": 32274755354,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-19T16:12:05Z",
+      "databaseId": 32274551225,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-19T16:10:54Z",
       "databaseId": 32274438278,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -55,7 +71,7 @@
       "createdAt": "2026-08-19T16:10:42Z",
       "databaseId": 32274418172,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "prepare-manifest"
     },
     {
@@ -87,7 +103,7 @@
       "createdAt": "2026-08-19T16:06:24Z",
       "databaseId": 32274000385,
       "headBranch": "main",
-      "status": "pending",
+      "status": "queued",
       "workflowName": "prepare-descriptions"
     },
     {
@@ -115,11 +131,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-19T15:58:33Z",
       "databaseId": 32273220890,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -161,22 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-19T15:45:11Z",
-      "databaseId": 32271926370,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-19T15:44:16Z",
-      "databaseId": 32271837605,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
     }
   ],
   "gaps": {
@@ -80619,6 +80619,11 @@
         "episode_id": 80609,
         "display_name": "Herkules S06E03 - Rebel s příčinou CZ Dabing",
         "video_id": 28630583
+      },
+      {
+        "episode_id": 80613,
+        "display_name": "Herkules S06E07 - Ošklivá zábava CZ Dabing",
+        "video_id": 28630686
       },
       {
         "episode_id": 114182,
@@ -223893,6 +223898,11 @@
         "video_id": 28630583
       },
       {
+        "episode_id": 80613,
+        "display_name": "Herkules S06E07 - Ošklivá zábava CZ Dabing",
+        "video_id": 28630686
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -287987,7 +287997,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 479,
+    "disabled": 511,
     "ok": 90,
     "resolve_failed": 1
   },
