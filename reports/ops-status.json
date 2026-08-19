@@ -2,44 +2,60 @@
   "counts": {
     "backlog_episodes": 160442,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 32867,
-    "prepared_source_episodes": 48708,
+    "uploaded_episodes": 32869,
+    "prepared_source_episodes": 48800,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 373,
-    "language_whisper_attempted_sources": 20,
+    "language_audited_sources": 374,
+    "language_whisper_attempted_sources": 37,
     "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 56741,
     "whisper_review_pending_sources": 49307,
-    "subtitle_followup_sources": 26240,
-    "subtitle_followup_pending_sources": 26240
+    "subtitle_followup_sources": 26264,
+    "subtitle_followup_pending_sources": 26264
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-08-19T06:19:36Z",
-      "databaseId": 32222939946,
+      "createdAt": "2026-08-19T06:21:20Z",
+      "databaseId": 32223062873,
       "headBranch": "main",
       "status": "pending",
       "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
-      "createdAt": "2026-08-19T06:19:30Z",
-      "databaseId": 32222933884,
+      "createdAt": "2026-08-19T06:20:39Z",
+      "databaseId": 32223014669,
       "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "update-descriptions"
+      "status": "pending",
+      "workflowName": "process-whisper-review"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-08-19T06:19:36Z",
+      "databaseId": 32222939946,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-19T06:19:30Z",
+      "databaseId": 32222933884,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-19T06:18:18Z",
       "databaseId": 32222850596,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -158,22 +174,6 @@
       "conclusion": "success",
       "createdAt": "2026-08-19T06:06:23Z",
       "databaseId": 32222023465,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-19T05:59:53Z",
-      "databaseId": 32221565116,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-19T05:58:43Z",
-      "databaseId": 32221487751,
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-watchdog"
@@ -78866,6 +78866,11 @@
         "video_id": 28617500
       },
       {
+        "episode_id": 43044,
+        "display_name": "Odložené případy S03E13 - Debut CZ Dabing",
+        "video_id": 28617589
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -140039,6 +140044,11 @@
         "episode_id": 73219,
         "display_name": "Zavolejte porodní sestřičky S04E06 - 6. epizoda CZ Dabing",
         "video_id": 28617458
+      },
+      {
+        "episode_id": 54038,
+        "display_name": "Protiúder S07E08 - 8. epizoda CZ Dabing",
+        "video_id": 28617591
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -218623,6 +218633,11 @@
         "video_id": 28617500
       },
       {
+        "episode_id": 43044,
+        "display_name": "Odložené případy S03E13 - Debut CZ Dabing",
+        "video_id": 28617589
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -279796,6 +279811,11 @@
         "episode_id": 73219,
         "display_name": "Zavolejte porodní sestřičky S04E06 - 6. epizoda CZ Dabing",
         "video_id": 28617458
+      },
+      {
+        "episode_id": 54038,
+        "display_name": "Protiúder S07E08 - 8. epizoda CZ Dabing",
+        "video_id": 28617591
       }
     ],
     "prepared_not_upload_ready": [
@@ -280957,8 +280977,8 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 353,
-    "ok": 19,
+    "disabled": 337,
+    "ok": 36,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
@@ -280968,6 +280988,6 @@
     "whisper_failed": 103
   },
   "subtitle_followup_statuses": {
-    "needs_subtitle_setup_after_prehrajto_processing": 26240
+    "needs_subtitle_setup_after_prehrajto_processing": 26264
   }
 }
