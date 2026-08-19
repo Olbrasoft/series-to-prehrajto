@@ -2,14 +2,14 @@
   "counts": {
     "backlog_episodes": 160442,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 32931,
-    "prepared_source_episodes": 48917,
+    "uploaded_episodes": 32940,
+    "prepared_source_episodes": 48923,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 545,
+    "language_audited_sources": 558,
     "language_whisper_attempted_sources": 56,
     "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 56742,
@@ -20,18 +20,50 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-08-19T07:12:26Z",
-      "databaseId": 32226759990,
+      "createdAt": "2026-08-19T07:18:21Z",
+      "databaseId": 32227207311,
       "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "ops-watchdog"
+      "status": "pending",
+      "workflowName": "prepare-manifest"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-08-19T07:17:30Z",
+      "databaseId": 32227144690,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-19T07:16:10Z",
+      "databaseId": 32227045524,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-19T07:13:35Z",
+      "databaseId": 32226848183,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-19T07:12:26Z",
+      "databaseId": 32226759990,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "cancelled",
       "createdAt": "2026-08-19T07:12:21Z",
       "databaseId": 32226752598,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -145,38 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-19T06:47:52Z",
-      "databaseId": 32224937274,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-19T06:47:23Z",
-      "databaseId": 32224901317,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-19T06:47:11Z",
-      "databaseId": 32224887793,
-      "headBranch": "main",
-      "status": "pending",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-19T06:46:45Z",
-      "databaseId": 32224858169,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
     }
   ],
   "gaps": {
@@ -79026,6 +79026,26 @@
         "video_id": 28618474
       },
       {
+        "episode_id": 185664,
+        "display_name": "V jako Victoria S01E18 - Jak natočit film CZ Dabing",
+        "video_id": 28618625
+      },
+      {
+        "episode_id": 185616,
+        "display_name": "V jako Victoria S02E09 - Tori týrá pana učitele CZ Dabing",
+        "video_id": 28618652
+      },
+      {
+        "episode_id": 185628,
+        "display_name": "V jako Victoria S03E11 - Šílená Ponnie CZ Dabing",
+        "video_id": 28618679
+      },
+      {
+        "episode_id": 54009,
+        "display_name": "Protiúder S03E03 - 3. epizoda CZ Dabing",
+        "video_id": 28618627
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -140359,6 +140379,31 @@
         "episode_id": 126247,
         "display_name": "The Capture S02E05 - 5. epizoda CZ Titulky",
         "video_id": 28618568
+      },
+      {
+        "episode_id": 81558,
+        "display_name": "Boruto: Naruto Next Generations S01E10 - 10. epizoda CZ Titulky",
+        "video_id": 28618623
+      },
+      {
+        "episode_id": 81550,
+        "display_name": "Boruto: Naruto Next Generations S01E13 - 13. epizoda CZ Titulky",
+        "video_id": 28618654
+      },
+      {
+        "episode_id": 81602,
+        "display_name": "Boruto: Naruto Next Generations S01E18 - 18. epizoda CZ Titulky",
+        "video_id": 28618675
+      },
+      {
+        "episode_id": 81546,
+        "display_name": "Boruto: Naruto Next Generations S01E27 - 27. epizoda CZ Titulky",
+        "video_id": 28618686
+      },
+      {
+        "episode_id": 176923,
+        "display_name": "The Capture S03E02 - 2. epizoda CZ Titulky",
+        "video_id": 28618629
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -219103,6 +219148,26 @@
         "video_id": 28618474
       },
       {
+        "episode_id": 185664,
+        "display_name": "V jako Victoria S01E18 - Jak natočit film CZ Dabing",
+        "video_id": 28618625
+      },
+      {
+        "episode_id": 185616,
+        "display_name": "V jako Victoria S02E09 - Tori týrá pana učitele CZ Dabing",
+        "video_id": 28618652
+      },
+      {
+        "episode_id": 185628,
+        "display_name": "V jako Victoria S03E11 - Šílená Ponnie CZ Dabing",
+        "video_id": 28618679
+      },
+      {
+        "episode_id": 54009,
+        "display_name": "Protiúder S03E03 - 3. epizoda CZ Dabing",
+        "video_id": 28618627
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -280436,6 +280501,31 @@
         "episode_id": 126247,
         "display_name": "The Capture S02E05 - 5. epizoda CZ Titulky",
         "video_id": 28618568
+      },
+      {
+        "episode_id": 81558,
+        "display_name": "Boruto: Naruto Next Generations S01E10 - 10. epizoda CZ Titulky",
+        "video_id": 28618623
+      },
+      {
+        "episode_id": 81550,
+        "display_name": "Boruto: Naruto Next Generations S01E13 - 13. epizoda CZ Titulky",
+        "video_id": 28618654
+      },
+      {
+        "episode_id": 81602,
+        "display_name": "Boruto: Naruto Next Generations S01E18 - 18. epizoda CZ Titulky",
+        "video_id": 28618675
+      },
+      {
+        "episode_id": 81546,
+        "display_name": "Boruto: Naruto Next Generations S01E27 - 27. epizoda CZ Titulky",
+        "video_id": 28618686
+      },
+      {
+        "episode_id": 176923,
+        "display_name": "The Capture S03E02 - 2. epizoda CZ Titulky",
+        "video_id": 28618629
       }
     ],
     "prepared_not_upload_ready": [
@@ -281597,7 +281687,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 489,
+    "disabled": 502,
     "ok": 55,
     "resolve_failed": 1
   },
