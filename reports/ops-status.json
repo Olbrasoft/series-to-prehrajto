@@ -2,36 +2,84 @@
   "counts": {
     "backlog_episodes": 159786,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 33607,
-    "prepared_source_episodes": 49533,
+    "uploaded_episodes": 33615,
+    "prepared_source_episodes": 49535,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 782,
+    "language_audited_sources": 795,
     "language_whisper_attempted_sources": 116,
     "language_pending_whisper_sources": 2604,
-    "whisper_review_sources": 56747,
-    "whisper_review_pending_sources": 49334,
+    "whisper_review_sources": 56746,
+    "whisper_review_pending_sources": 49333,
     "subtitle_followup_sources": 26389,
     "subtitle_followup_pending_sources": 26389
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-08-19T17:08:29Z",
-      "databaseId": 32279901167,
+      "createdAt": "2026-08-19T17:15:03Z",
+      "databaseId": 32280518823,
       "headBranch": "main",
       "status": "in_progress",
-      "workflowName": "update-descriptions"
+      "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-08-19T17:14:56Z",
+      "databaseId": 32280507863,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-19T17:09:53Z",
+      "databaseId": 32280031260,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-08-19T17:09:37Z",
+      "databaseId": 32280006901,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-19T17:09:37Z",
+      "databaseId": 32280006518,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-19T17:09:05Z",
+      "databaseId": 32279958465,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-19T17:08:29Z",
+      "databaseId": 32279901167,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-19T17:08:13Z",
       "databaseId": 32279876729,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-status"
     },
     {
@@ -129,54 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-19T16:56:51Z",
-      "databaseId": 32278810234,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-19T16:55:33Z",
-      "databaseId": 32278690608,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-19T16:53:44Z",
-      "databaseId": 32278516873,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-19T16:52:28Z",
-      "databaseId": 32278397032,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-19T16:52:23Z",
-      "databaseId": 32278388977,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-19T16:47:42Z",
-      "databaseId": 32277942367,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-sources"
     }
   ],
   "gaps": {
@@ -80711,9 +80711,24 @@
         "video_id": 28631918
       },
       {
+        "episode_id": 42572,
+        "display_name": "Médium S05E07 - Nutné zlo CZ Dabing",
+        "video_id": 28632023
+      },
+      {
         "episode_id": 70653,
         "display_name": "V utajení S02E01 - 1. epizoda CZ Dabing",
         "video_id": 28631915
+      },
+      {
+        "episode_id": 70657,
+        "display_name": "V utajení S02E04 - 4. epizoda CZ Dabing",
+        "video_id": 28631959
+      },
+      {
+        "episode_id": 70661,
+        "display_name": "V utajení S02E07 - 7. epizoda CZ Dabing",
+        "video_id": 28632115
       },
       {
         "episode_id": 114182,
@@ -143736,9 +143751,34 @@
         "video_id": 28631753
       },
       {
+        "episode_id": 5954,
+        "display_name": "Star Trek: Akademie Hvězdné flotily S01E02 - Beta Test CZ Dabing",
+        "video_id": 28631954
+      },
+      {
+        "episode_id": 12722,
+        "display_name": "Star Trek: Akademie Hvězdné flotily S01E05 - Série Acclimation Mil CZ Dabing",
+        "video_id": 28632059
+      },
+      {
         "episode_id": 80607,
         "display_name": "Herkules S06E01 - Posedlý CZ Titulky",
         "video_id": 28631763
+      },
+      {
+        "episode_id": 68191,
+        "display_name": "Devil May Cry S01E03 - V cestu lesnatou a sráznou CZ Dabing",
+        "video_id": 28631988
+      },
+      {
+        "episode_id": 68195,
+        "display_name": "Devil May Cry S01E07 - U brány do Ráje CZ Dabing",
+        "video_id": 28632061
+      },
+      {
+        "episode_id": 184763,
+        "display_name": "Devil May Cry S02E03 - Panter, lev a vlk CZ Dabing",
+        "video_id": 28632129
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -224168,9 +224208,24 @@
         "video_id": 28631918
       },
       {
+        "episode_id": 42572,
+        "display_name": "Médium S05E07 - Nutné zlo CZ Dabing",
+        "video_id": 28632023
+      },
+      {
         "episode_id": 70653,
         "display_name": "V utajení S02E01 - 1. epizoda CZ Dabing",
         "video_id": 28631915
+      },
+      {
+        "episode_id": 70657,
+        "display_name": "V utajení S02E04 - 4. epizoda CZ Dabing",
+        "video_id": 28631959
+      },
+      {
+        "episode_id": 70661,
+        "display_name": "V utajení S02E07 - 7. epizoda CZ Dabing",
+        "video_id": 28632115
       },
       {
         "episode_id": 114182,
@@ -287193,9 +287248,34 @@
         "video_id": 28631753
       },
       {
+        "episode_id": 5954,
+        "display_name": "Star Trek: Akademie Hvězdné flotily S01E02 - Beta Test CZ Dabing",
+        "video_id": 28631954
+      },
+      {
+        "episode_id": 12722,
+        "display_name": "Star Trek: Akademie Hvězdné flotily S01E05 - Série Acclimation Mil CZ Dabing",
+        "video_id": 28632059
+      },
+      {
         "episode_id": 80607,
         "display_name": "Herkules S06E01 - Posedlý CZ Titulky",
         "video_id": 28631763
+      },
+      {
+        "episode_id": 68191,
+        "display_name": "Devil May Cry S01E03 - V cestu lesnatou a sráznou CZ Dabing",
+        "video_id": 28631988
+      },
+      {
+        "episode_id": 68195,
+        "display_name": "Devil May Cry S01E07 - U brány do Ráje CZ Dabing",
+        "video_id": 28632061
+      },
+      {
+        "episode_id": 184763,
+        "display_name": "Devil May Cry S02E03 - Panter, lev a vlk CZ Dabing",
+        "video_id": 28632129
       }
     ],
     "prepared_not_upload_ready": [
@@ -288357,14 +288437,14 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 666,
+    "disabled": 679,
     "ok": 115,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
     "whisper_non_cz_needs_subtitles": 5317,
     "whisper_confirmed_cz": 2096,
-    "needs_whisper": 49231,
+    "needs_whisper": 49230,
     "whisper_failed": 103
   },
   "subtitle_followup_statuses": {
