@@ -2,14 +2,14 @@
   "counts": {
     "backlog_episodes": 160442,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 32916,
-    "prepared_source_episodes": 48841,
+    "uploaded_episodes": 32920,
+    "prepared_source_episodes": 48839,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 411,
+    "language_audited_sources": 434,
     "language_whisper_attempted_sources": 37,
     "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 56742,
@@ -20,18 +20,42 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-08-19T07:00:42Z",
-      "databaseId": 32225858250,
+      "createdAt": "2026-08-19T07:02:55Z",
+      "databaseId": 32226031498,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-08-19T07:02:51Z",
+      "databaseId": 32226025716,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-19T07:01:51Z",
+      "databaseId": 32225949266,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-19T07:00:42Z",
+      "databaseId": 32225858250,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "cancelled",
       "createdAt": "2026-08-19T06:57:34Z",
       "databaseId": 32225624907,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -153,30 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-19T06:31:28Z",
-      "databaseId": 32223772526,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-19T06:31:27Z",
-      "databaseId": 32223772464,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-19T06:31:00Z",
-      "databaseId": 32223739215,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
     }
   ],
   "gaps": {
@@ -78996,6 +78996,21 @@
         "video_id": 28618382
       },
       {
+        "episode_id": 11057,
+        "display_name": "Willow S01E05 - Divohvozd CZ Dabing",
+        "video_id": 28618401
+      },
+      {
+        "episode_id": 9589,
+        "display_name": "Willow S01E08 - Děti šarkana CZ Titulky",
+        "video_id": 28618431
+      },
+      {
+        "episode_id": 54013,
+        "display_name": "Protiúder S02E05 - 5. epizoda CZ Dabing",
+        "video_id": 28618450
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -140284,6 +140299,11 @@
         "episode_id": 170875,
         "display_name": "Zavolejte porodní sestřičky S13E01 - 1. epizoda CZ Dabing",
         "video_id": 28618367
+      },
+      {
+        "episode_id": 170879,
+        "display_name": "Zavolejte porodní sestřičky S13E05 - 5. epizoda CZ Dabing",
+        "video_id": 28618402
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -218998,6 +219018,21 @@
         "video_id": 28618382
       },
       {
+        "episode_id": 11057,
+        "display_name": "Willow S01E05 - Divohvozd CZ Dabing",
+        "video_id": 28618401
+      },
+      {
+        "episode_id": 9589,
+        "display_name": "Willow S01E08 - Děti šarkana CZ Titulky",
+        "video_id": 28618431
+      },
+      {
+        "episode_id": 54013,
+        "display_name": "Protiúder S02E05 - 5. epizoda CZ Dabing",
+        "video_id": 28618450
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -280286,6 +280321,11 @@
         "episode_id": 170875,
         "display_name": "Zavolejte porodní sestřičky S13E01 - 1. epizoda CZ Dabing",
         "video_id": 28618367
+      },
+      {
+        "episode_id": 170879,
+        "display_name": "Zavolejte porodní sestřičky S13E05 - 5. epizoda CZ Dabing",
+        "video_id": 28618402
       }
     ],
     "prepared_not_upload_ready": [
@@ -281447,7 +281487,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 374,
+    "disabled": 397,
     "ok": 36,
     "resolve_failed": 1
   },
