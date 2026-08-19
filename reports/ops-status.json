@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 160638,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 32784,
-    "prepared_source_episodes": 48873,
+    "uploaded_episodes": 32797,
+    "prepared_source_episodes": 48891,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 355,
-    "language_whisper_attempted_sources": 49,
-    "language_pending_whisper_sources": 2604,
+    "language_audited_sources": 20,
+    "language_whisper_attempted_sources": 20,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 56741,
     "whisper_review_pending_sources": 49306,
     "subtitle_followup_sources": 26240,
@@ -20,18 +20,74 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-08-19T05:00:23Z",
-      "databaseId": 32217807092,
+      "createdAt": "2026-08-19T05:08:37Z",
+      "databaseId": 32218318922,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-19T05:08:13Z",
+      "databaseId": 32218294485,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-08-19T05:08:10Z",
+      "databaseId": 32218291773,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-19T05:08:10Z",
+      "databaseId": 32218291757,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-08-19T05:04:36Z",
+      "databaseId": 32218065291,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-19T05:01:33Z",
+      "databaseId": 32217881820,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-19T05:01:17Z",
+      "databaseId": 32217865493,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-19T05:00:23Z",
+      "databaseId": 32217807092,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "cancelled",
       "createdAt": "2026-08-19T05:00:19Z",
       "databaseId": 32217801822,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -83,11 +139,11 @@
       "workflowName": "prepare-manifest"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-08-19T04:51:50Z",
       "databaseId": 32217289887,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "sync"
     },
     {
@@ -115,68 +171,12 @@
       "workflowName": "prepare-sources"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-19T04:46:57Z",
       "databaseId": 32217002743,
       "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-19T04:45:42Z",
-      "databaseId": 32216927426,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-19T04:45:35Z",
-      "databaseId": 32216921332,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-19T04:45:00Z",
-      "databaseId": 32216881639,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-19T04:44:57Z",
-      "databaseId": 32216878550,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-19T04:43:51Z",
-      "databaseId": 32216809955,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-19T04:43:46Z",
-      "databaseId": 32216805570,
-      "headBranch": "main",
       "status": "completed",
       "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-19T04:43:42Z",
-      "databaseId": 32216800912,
-      "headBranch": "main",
-      "status": "pending",
-      "workflowName": "prepare-descriptions"
     }
   ],
   "gaps": {
@@ -78641,6 +78641,26 @@
         "video_id": 28616164
       },
       {
+        "episode_id": 98504,
+        "display_name": "Znovu 20 S03E09 - Letní pátek CZ Dabing",
+        "video_id": 28616213
+      },
+      {
+        "episode_id": 104184,
+        "display_name": "Znovu 20 S05E04 - Talentovaný pan Ridley CZ Dabing",
+        "video_id": 28616246
+      },
+      {
+        "episode_id": 104196,
+        "display_name": "Znovu 20 S05E05 - Titanic se potápí CZ Dabing",
+        "video_id": 28616275
+      },
+      {
+        "episode_id": 104188,
+        "display_name": "Znovu 20 S06E08 - Odhalení CZ Dabing",
+        "video_id": 28616319
+      },
+      {
         "episode_id": 124681,
         "display_name": "Dobrý boj S06E08 - Konec hraní her CZ Dabing",
         "video_id": 28616098
@@ -78664,6 +78684,21 @@
         "episode_id": 5973,
         "display_name": "The Walking Dead: Dead City S02E05 - 5. epizoda CZ Titulky",
         "video_id": 28616193
+      },
+      {
+        "episode_id": 12949,
+        "display_name": "Cross S01E07 - Všechno nejlepší CZ Dabing",
+        "video_id": 28616215
+      },
+      {
+        "episode_id": 7993,
+        "display_name": "Cross S02E03 - Krmit CZ Titulky",
+        "video_id": 28616248
+      },
+      {
+        "episode_id": 7997,
+        "display_name": "Cross S02E07 - Protřídit CZ Dabing",
+        "video_id": 28616297
       },
       {
         "episode_id": 114182,
@@ -139616,6 +139651,21 @@
         "video_id": 28616191
       },
       {
+        "episode_id": 77294,
+        "display_name": "The Deuce: Špína Manhattanu S03E07 - 7. epizoda CZ Titulky",
+        "video_id": 28616236
+      },
+      {
+        "episode_id": 126238,
+        "display_name": "The Capture S01E02 - Vojaček CZ Titulky",
+        "video_id": 28616288
+      },
+      {
+        "episode_id": 126242,
+        "display_name": "The Capture S01E03 - Lanýžový prase CZ Titulky",
+        "video_id": 28616336
+      },
+      {
         "episode_id": 128383,
         "display_name": "Dobrý boj S01E10 - Chaos CZ Dabing",
         "video_id": 28616090
@@ -139624,6 +139674,21 @@
         "episode_id": 121303,
         "display_name": "Dobrý boj S02E04 - 4. epizoda CZ Titulky",
         "video_id": 28616160
+      },
+      {
+        "episode_id": 121307,
+        "display_name": "Dobrý boj S02E08 - 8. epizoda CZ Titulky",
+        "video_id": 28616222
+      },
+      {
+        "episode_id": 123603,
+        "display_name": "Dobrý boj S03E03 - 3. epizoda CZ Dabing",
+        "video_id": 28616283
+      },
+      {
+        "episode_id": 123607,
+        "display_name": "Dobrý boj S03E07 - 7. epizoda CZ Dabing",
+        "video_id": 28616323
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -217983,6 +218048,26 @@
         "video_id": 28616164
       },
       {
+        "episode_id": 98504,
+        "display_name": "Znovu 20 S03E09 - Letní pátek CZ Dabing",
+        "video_id": 28616213
+      },
+      {
+        "episode_id": 104184,
+        "display_name": "Znovu 20 S05E04 - Talentovaný pan Ridley CZ Dabing",
+        "video_id": 28616246
+      },
+      {
+        "episode_id": 104196,
+        "display_name": "Znovu 20 S05E05 - Titanic se potápí CZ Dabing",
+        "video_id": 28616275
+      },
+      {
+        "episode_id": 104188,
+        "display_name": "Znovu 20 S06E08 - Odhalení CZ Dabing",
+        "video_id": 28616319
+      },
+      {
         "episode_id": 124681,
         "display_name": "Dobrý boj S06E08 - Konec hraní her CZ Dabing",
         "video_id": 28616098
@@ -218006,6 +218091,21 @@
         "episode_id": 5973,
         "display_name": "The Walking Dead: Dead City S02E05 - 5. epizoda CZ Titulky",
         "video_id": 28616193
+      },
+      {
+        "episode_id": 12949,
+        "display_name": "Cross S01E07 - Všechno nejlepší CZ Dabing",
+        "video_id": 28616215
+      },
+      {
+        "episode_id": 7993,
+        "display_name": "Cross S02E03 - Krmit CZ Titulky",
+        "video_id": 28616248
+      },
+      {
+        "episode_id": 7997,
+        "display_name": "Cross S02E07 - Protřídit CZ Dabing",
+        "video_id": 28616297
       },
       {
         "episode_id": 114182,
@@ -278958,6 +279058,21 @@
         "video_id": 28616191
       },
       {
+        "episode_id": 77294,
+        "display_name": "The Deuce: Špína Manhattanu S03E07 - 7. epizoda CZ Titulky",
+        "video_id": 28616236
+      },
+      {
+        "episode_id": 126238,
+        "display_name": "The Capture S01E02 - Vojaček CZ Titulky",
+        "video_id": 28616288
+      },
+      {
+        "episode_id": 126242,
+        "display_name": "The Capture S01E03 - Lanýžový prase CZ Titulky",
+        "video_id": 28616336
+      },
+      {
         "episode_id": 128383,
         "display_name": "Dobrý boj S01E10 - Chaos CZ Dabing",
         "video_id": 28616090
@@ -278966,6 +279081,21 @@
         "episode_id": 121303,
         "display_name": "Dobrý boj S02E04 - 4. epizoda CZ Titulky",
         "video_id": 28616160
+      },
+      {
+        "episode_id": 121307,
+        "display_name": "Dobrý boj S02E08 - 8. epizoda CZ Titulky",
+        "video_id": 28616222
+      },
+      {
+        "episode_id": 123603,
+        "display_name": "Dobrý boj S03E03 - 3. epizoda CZ Dabing",
+        "video_id": 28616283
+      },
+      {
+        "episode_id": 123607,
+        "display_name": "Dobrý boj S03E07 - 7. epizoda CZ Dabing",
+        "video_id": 28616323
       }
     ],
     "prepared_not_upload_ready": [
@@ -280127,8 +280257,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 306,
-    "ok": 48,
+    "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
