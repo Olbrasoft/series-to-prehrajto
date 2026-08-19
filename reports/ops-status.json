@@ -2,14 +2,14 @@
   "counts": {
     "backlog_episodes": 160638,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 32735,
+    "uploaded_episodes": 32738,
     "prepared_source_episodes": 48717,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 132,
+    "language_audited_sources": 20,
     "language_whisper_attempted_sources": 20,
     "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 56741,
@@ -20,18 +20,42 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-08-19T04:15:37Z",
-      "databaseId": 32215107089,
+      "createdAt": "2026-08-19T04:22:55Z",
+      "databaseId": 32215553641,
       "headBranch": "main",
       "status": "pending",
-      "workflowName": "audit-language"
+      "workflowName": "process-whisper-review"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-08-19T04:22:34Z",
+      "databaseId": 32215532426,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-19T04:16:58Z",
+      "databaseId": 32215190913,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-19T04:15:37Z",
+      "databaseId": 32215107089,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-19T04:15:09Z",
       "databaseId": 32215075286,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-status"
     },
     {
@@ -99,11 +123,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-19T04:08:38Z",
       "databaseId": 32214663008,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -153,30 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-19T03:55:32Z",
-      "databaseId": 32213874339,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-19T03:54:55Z",
-      "databaseId": 32213834144,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-19T03:54:52Z",
-      "databaseId": 32213831425,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
     }
   ],
   "gaps": {
@@ -78541,6 +78541,11 @@
         "video_id": 28615281
       },
       {
+        "episode_id": 121309,
+        "display_name": "Dobrý boj S02E10 - 10. epizoda CZ Dabing",
+        "video_id": 28615315
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -139339,6 +139344,16 @@
         "episode_id": 73226,
         "display_name": "Zavolejte porodní sestřičky S05E06 - 6. epizoda CZ Dabing",
         "video_id": 28615275
+      },
+      {
+        "episode_id": 73234,
+        "display_name": "Zavolejte porodní sestřičky S06E05 - 5. epizoda CZ Dabing",
+        "video_id": 28615324
+      },
+      {
+        "episode_id": 73238,
+        "display_name": "Zavolejte porodní sestřičky S07E01 - 1. epizoda CZ Dabing",
+        "video_id": 28615392
       },
       {
         "episode_id": 76343,
@@ -217638,6 +217653,11 @@
         "video_id": 28615281
       },
       {
+        "episode_id": 121309,
+        "display_name": "Dobrý boj S02E10 - 10. epizoda CZ Dabing",
+        "video_id": 28615315
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -278438,6 +278458,16 @@
         "video_id": 28615275
       },
       {
+        "episode_id": 73234,
+        "display_name": "Zavolejte porodní sestřičky S06E05 - 5. epizoda CZ Dabing",
+        "video_id": 28615324
+      },
+      {
+        "episode_id": 73238,
+        "display_name": "Zavolejte porodní sestřičky S07E01 - 1. epizoda CZ Dabing",
+        "video_id": 28615392
+      },
+      {
         "episode_id": 76343,
         "display_name": "Spiderman S02E03 - Vodní muž CZ Titulky",
         "video_id": 28614919
@@ -279637,7 +279667,6 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 112,
     "ok": 19,
     "resolve_failed": 1
   },
