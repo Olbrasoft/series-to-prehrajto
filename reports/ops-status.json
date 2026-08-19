@@ -2,14 +2,14 @@
   "counts": {
     "backlog_episodes": 159608,
     "manifest_upload_ready_episodes": 1003,
-    "uploaded_episodes": 33782,
-    "prepared_source_episodes": 47754,
+    "uploaded_episodes": 33783,
+    "prepared_source_episodes": 47617,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 3250,
+    "language_audited_sources": 3320,
     "language_whisper_attempted_sources": 359,
     "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 56746,
@@ -19,6 +19,38 @@
   },
   "workflow_runs": [
     {
+      "conclusion": "",
+      "createdAt": "2026-08-19T23:31:31Z",
+      "databaseId": 32313607488,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-19T23:31:27Z",
+      "databaseId": 32313603175,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-19T23:31:27Z",
+      "databaseId": 32313603152,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-19T23:30:07Z",
+      "databaseId": 32313504130,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
       "conclusion": "success",
       "createdAt": "2026-08-19T23:28:44Z",
       "databaseId": 32313407556,
@@ -27,11 +59,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-19T23:28:24Z",
       "databaseId": 32313384859,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -75,11 +107,11 @@
       "workflowName": "sync"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-08-19T23:18:26Z",
       "databaseId": 32312681263,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -145,38 +177,6 @@
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-19T23:07:05Z",
-      "databaseId": 32311860039,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-19T23:06:47Z",
-      "databaseId": 32311838017,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-19T23:06:36Z",
-      "databaseId": 32311823901,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-19T23:05:08Z",
-      "databaseId": 32311717521,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-descriptions"
     }
   ],
   "gaps": {
@@ -81159,6 +81159,11 @@
         "episode_id": 42553,
         "display_name": "Médium S07E05 - Neposlušná ruka CZ Dabing",
         "video_id": 28641044
+      },
+      {
+        "episode_id": 42612,
+        "display_name": "Médium S04E11 - Vražednice CZ Dabing",
+        "video_id": 28641275
       },
       {
         "episode_id": 114182,
@@ -225493,6 +225498,11 @@
         "video_id": 28641044
       },
       {
+        "episode_id": 42612,
+        "display_name": "Médium S04E11 - Vražednice CZ Dabing",
+        "video_id": 28641275
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -290107,7 +290117,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 2891,
+    "disabled": 2961,
     "ok": 354,
     "resolve_failed": 5
   },
