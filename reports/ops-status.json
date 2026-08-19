@@ -2,14 +2,14 @@
   "counts": {
     "backlog_episodes": 159671,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 33647,
-    "prepared_source_episodes": 49061,
+    "uploaded_episodes": 33650,
+    "prepared_source_episodes": 49020,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 1108,
+    "language_audited_sources": 1159,
     "language_whisper_attempted_sources": 116,
     "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 56746,
@@ -20,10 +20,34 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-08-19T18:38:19Z",
+      "databaseId": 32288463261,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-19T18:38:15Z",
+      "databaseId": 32288457633,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-19T18:31:20Z",
+      "databaseId": 32287806379,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-19T18:30:04Z",
       "databaseId": 32287681595,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -35,11 +59,11 @@
       "workflowName": "sync"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-08-19T18:30:00Z",
       "databaseId": 32287675348,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -153,30 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-19T18:10:26Z",
-      "databaseId": 32285832212,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-19T18:09:38Z",
-      "databaseId": 32285752893,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-19T18:08:58Z",
-      "databaseId": 32285691325,
-      "headBranch": "main",
-      "status": "pending",
-      "workflowName": "audit-language"
     }
   ],
   "gaps": {
@@ -80796,6 +80796,11 @@
         "video_id": 28634166
       },
       {
+        "episode_id": 67724,
+        "display_name": "To je vražda, napsala S03E20 - Volební boj CZ Dabing",
+        "video_id": 28634460
+      },
+      {
         "episode_id": 56533,
         "display_name": "Babylon Berlín S03E01 - 1. epizoda CZ Titulky",
         "video_id": 28633839
@@ -143936,9 +143941,19 @@
         "video_id": 28634300
       },
       {
+        "episode_id": 135150,
+        "display_name": "Město patří nám S01E04 - 4. epizoda CZ Dabing",
+        "video_id": 28634519
+      },
+      {
         "episode_id": 70663,
         "display_name": "V utajení S02E09 - 9. epizoda CZ Dabing",
         "video_id": 28634004
+      },
+      {
+        "episode_id": 70703,
+        "display_name": "V utajení S05E02 - 2. epizoda CZ Titulky",
+        "video_id": 28634566
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -224453,6 +224468,11 @@
         "video_id": 28634166
       },
       {
+        "episode_id": 67724,
+        "display_name": "To je vražda, napsala S03E20 - Volební boj CZ Dabing",
+        "video_id": 28634460
+      },
+      {
         "episode_id": 56533,
         "display_name": "Babylon Berlín S03E01 - 1. epizoda CZ Titulky",
         "video_id": 28633839
@@ -287593,9 +287613,19 @@
         "video_id": 28634300
       },
       {
+        "episode_id": 135150,
+        "display_name": "Město patří nám S01E04 - 4. epizoda CZ Dabing",
+        "video_id": 28634519
+      },
+      {
         "episode_id": 70663,
         "display_name": "V utajení S02E09 - 9. epizoda CZ Dabing",
         "video_id": 28634004
+      },
+      {
+        "episode_id": 70703,
+        "display_name": "V utajení S05E02 - 2. epizoda CZ Titulky",
+        "video_id": 28634566
       }
     ],
     "prepared_not_upload_ready": [
@@ -288757,7 +288787,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 992,
+    "disabled": 1043,
     "ok": 115,
     "resolve_failed": 1
   },
