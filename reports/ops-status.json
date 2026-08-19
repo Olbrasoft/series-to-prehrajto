@@ -2,14 +2,14 @@
   "counts": {
     "backlog_episodes": 159994,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 33469,
-    "prepared_source_episodes": 49268,
+    "uploaded_episodes": 33470,
+    "prepared_source_episodes": 49286,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 58,
+    "language_audited_sources": 98,
     "language_whisper_attempted_sources": 20,
     "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 56747,
@@ -20,10 +20,34 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-08-19T14:09:39Z",
+      "databaseId": 32262350764,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-19T14:09:14Z",
+      "databaseId": 32262310758,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-19T14:09:10Z",
+      "databaseId": 32262303411,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-19T14:08:08Z",
       "databaseId": 32262202504,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -31,7 +55,7 @@
       "createdAt": "2026-08-19T14:08:03Z",
       "databaseId": 32262194519,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "prepare-manifest"
     },
     {
@@ -51,11 +75,11 @@
       "workflowName": "sync"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-19T13:54:14Z",
       "databaseId": 32260795366,
       "headBranch": "main",
-      "status": "queued",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -153,30 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-19T13:46:14Z",
-      "databaseId": 32260001582,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-19T13:45:33Z",
-      "databaseId": 32259934135,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-19T13:44:44Z",
-      "databaseId": 32259852298,
-      "headBranch": "main",
-      "status": "pending",
-      "workflowName": "prepare-descriptions"
     }
   ],
   "gaps": {
@@ -143049,6 +143049,11 @@
         "episode_id": 92607,
         "display_name": "The Agency S01E02 - Dřevěná kachnička CZ Dabing",
         "video_id": 28628053
+      },
+      {
+        "episode_id": 150663,
+        "display_name": "Scény z manželského života S01E02 - Poli CZ Dabing",
+        "video_id": 28628077
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -285816,6 +285821,11 @@
         "episode_id": 92607,
         "display_name": "The Agency S01E02 - Dřevěná kachnička CZ Dabing",
         "video_id": 28628053
+      },
+      {
+        "episode_id": 150663,
+        "display_name": "Scény z manželského života S01E02 - Poli CZ Dabing",
+        "video_id": 28628077
       }
     ],
     "prepared_not_upload_ready": [
@@ -286322,6 +286332,22 @@
         "status": "needs_whisper"
       },
       {
+        "episode_id": 105365,
+        "source_id": -7553260082083580,
+        "series_title": "Beze stopy",
+        "episode_code": "S01E11",
+        "source_title": "Beze.stopy.01x11.~~",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 105365,
+        "source_id": -29795593705052929,
+        "series_title": "Beze stopy",
+        "episode_code": "S01E11",
+        "source_title": "Beze stopy 01x11   ByDejvy",
+        "status": "needs_whisper"
+      },
+      {
         "episode_id": 49834,
         "source_id": -66545087917532015,
         "series_title": "Beze stopy",
@@ -286335,6 +286361,22 @@
         "series_title": "Beze stopy",
         "episode_code": "S01E12",
         "source_title": "Beze stopy 01x12   ByDejvy",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 49891,
+        "source_id": -34320938095187885,
+        "series_title": "Beze stopy",
+        "episode_code": "S01E13",
+        "source_title": "Beze.stopy.01x13.~~",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 49891,
+        "source_id": -49632001804162708,
+        "series_title": "Beze stopy",
+        "episode_code": "S01E13",
+        "source_title": "Beze stopy 01x13   ByDejvy",
         "status": "needs_whisper"
       },
       {
@@ -286354,6 +286396,22 @@
         "status": "needs_whisper"
       },
       {
+        "episode_id": 49892,
+        "source_id": -22273704726397274,
+        "series_title": "Beze stopy",
+        "episode_code": "S01E16",
+        "source_title": "Beze.stopy.01x16.~~",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 49892,
+        "source_id": -30338807500860224,
+        "series_title": "Beze stopy",
+        "episode_code": "S01E16",
+        "source_title": "Beze stopy 01x16   ByDejvy",
+        "status": "needs_whisper"
+      },
+      {
         "episode_id": 49840,
         "source_id": -49262298481423615,
         "series_title": "Beze stopy",
@@ -286367,6 +286425,22 @@
         "series_title": "Beze stopy",
         "episode_code": "S01E19",
         "source_title": "Beze stopy 01x19   ByDejvy",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 49839,
+        "source_id": -55293943069246964,
+        "series_title": "Beze stopy",
+        "episode_code": "S01E20",
+        "source_title": "Beze.stopy.01x20.~~",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 49839,
+        "source_id": -6707216783509388,
+        "series_title": "Beze stopy",
+        "episode_code": "S01E20",
+        "source_title": "Beze stopy 01x20   ByDejvy",
         "status": "needs_whisper"
       },
       {
@@ -286456,70 +286530,6 @@
         "episode_code": "S01E12",
         "source_title": "+ Bobovy Burgery S01E12",
         "status": "whisper_failed"
-      },
-      {
-        "episode_id": 102596,
-        "source_id": -65448275654637608,
-        "series_title": "Bobovy burgery",
-        "episode_code": "S01E12",
-        "source_title": "Bobovy-Burgery-S01E12-_Ponny_",
-        "status": "whisper_failed"
-      },
-      {
-        "episode_id": 65867,
-        "source_id": -10985697644930341,
-        "series_title": "Bobovy burgery",
-        "episode_code": "S14E06",
-        "source_title": "Bobovy Burgery S14E06 {PlnáKvalita}",
-        "status": "whisper_failed"
-      },
-      {
-        "episode_id": 65867,
-        "source_id": -5733454145751885,
-        "series_title": "Bobovy burgery",
-        "episode_code": "S14E06",
-        "source_title": "Bobovy-Burgery-S14E06-_Ponny_",
-        "status": "whisper_failed"
-      },
-      {
-        "episode_id": 65867,
-        "source_id": -42762337848325423,
-        "series_title": "Bobovy burgery",
-        "episode_code": "S14E06",
-        "source_title": "+ Bobovy Burgery S14E06",
-        "status": "whisper_failed"
-      },
-      {
-        "episode_id": 171410,
-        "source_id": -37752549763071622,
-        "series_title": "Breathe",
-        "episode_code": "S01E01",
-        "source_title": "Breathe - S1E1 The Promise EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 171412,
-        "source_id": -42794834192146654,
-        "series_title": "Breathe",
-        "episode_code": "S01E03",
-        "source_title": "Breathe - S1E3 Safety First EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 171414,
-        "source_id": -6394160158499688,
-        "series_title": "Breathe",
-        "episode_code": "S01E05",
-        "source_title": "Breathe - S1E5 Bad Fish EN",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 171416,
-        "source_id": -22007825568655573,
-        "series_title": "Breathe",
-        "episode_code": "S01E07",
-        "source_title": "Breathe - S1E7 It's in the eyes EN",
-        "status": "needs_whisper"
       }
     ],
     "subtitle_followup_pending": [
@@ -286977,7 +286987,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 38,
+    "disabled": 78,
     "ok": 19,
     "resolve_failed": 1
   },
