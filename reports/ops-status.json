@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 160638,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 32687,
-    "prepared_source_episodes": 48868,
+    "uploaded_episodes": 32699,
+    "prepared_source_episodes": 48875,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 63,
-    "language_whisper_attempted_sources": 20,
-    "language_pending_whisper_sources": 2624,
+    "language_audited_sources": 40,
+    "language_whisper_attempted_sources": 40,
+    "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 56742,
     "whisper_review_pending_sources": 49307,
     "subtitle_followup_sources": 26240,
@@ -20,18 +20,58 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-08-19T03:38:33Z",
-      "databaseId": 32212869681,
+      "createdAt": "2026-08-19T03:47:14Z",
+      "databaseId": 32213383290,
       "headBranch": "main",
       "status": "in_progress",
-      "workflowName": "ops-watchdog"
+      "workflowName": "audit-language"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-08-19T03:46:48Z",
+      "databaseId": 32213359030,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-19T03:45:09Z",
+      "databaseId": 32213258576,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-19T03:39:42Z",
+      "databaseId": 32212933814,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-19T03:39:42Z",
+      "databaseId": 32212933639,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-19T03:38:33Z",
+      "databaseId": 32212869681,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "cancelled",
       "createdAt": "2026-08-19T03:38:29Z",
       "databaseId": 32212865803,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -43,11 +83,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-19T03:33:51Z",
       "databaseId": 32212590124,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -115,11 +155,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-19T03:21:38Z",
       "databaseId": 32211851583,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -137,46 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-status"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-19T03:17:52Z",
-      "databaseId": 32211633752,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-19T03:16:35Z",
-      "databaseId": 32211559970,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-19T03:15:27Z",
-      "databaseId": 32211493383,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-19T03:15:23Z",
-      "databaseId": 32211489687,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-19T03:10:28Z",
-      "databaseId": 32211192820,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
     }
   ],
   "gaps": {
@@ -78401,6 +78401,16 @@
         "video_id": 28614632
       },
       {
+        "episode_id": 176924,
+        "display_name": "The Capture S03E03 - 3. epizoda CZ Titulky",
+        "video_id": 28614653
+      },
+      {
+        "episode_id": 70344,
+        "display_name": "Patrick Melrose S01E03 - Jistá naděje CZ Titulky",
+        "video_id": 28614685
+      },
+      {
         "episode_id": 76505,
         "display_name": "Pravidla zasnoubení S03E13 - 13. epizoda CZ Dabing",
         "video_id": 28614558
@@ -78414,6 +78424,31 @@
         "episode_id": 63341,
         "display_name": "Řád S01E03 - Úvod do etiky (1) CZ Dabing",
         "video_id": 28614627
+      },
+      {
+        "episode_id": 63329,
+        "display_name": "Řád S01E05 - Návrat domů (1) CZ Dabing",
+        "video_id": 28614642
+      },
+      {
+        "episode_id": 63345,
+        "display_name": "Řád S01E10 - Závěrečná zkouška (2) CZ Dabing",
+        "video_id": 28614664
+      },
+      {
+        "episode_id": 80185,
+        "display_name": "The Mindy Project S04E08 - 8. epizoda CZ Titulky",
+        "video_id": 28614681
+      },
+      {
+        "episode_id": 17349,
+        "display_name": "Stane se něco hrozně špatného S01E02 - Jáma pro nevěstu CZ Dabing",
+        "video_id": 28614703
+      },
+      {
+        "episode_id": 17353,
+        "display_name": "Stane se něco hrozně špatného S01E07 - Něco živého, něco ne, něco kradeného, něco rudého CZ Dabing",
+        "video_id": 28614729
       },
       {
         "episode_id": 114182,
@@ -139121,6 +139156,21 @@
         "video_id": 28614593
       },
       {
+        "episode_id": 25774,
+        "display_name": "Červený trpaslík S10E03 - Citróny CZ Dabing",
+        "video_id": 28614654
+      },
+      {
+        "episode_id": 93038,
+        "display_name": "Epizody  S01E01 - Epizoda 1 CZ Titulky",
+        "video_id": 28614695
+      },
+      {
+        "episode_id": 93050,
+        "display_name": "Epizody  S05E06 - 6. epizoda CZ Titulky",
+        "video_id": 28614707
+      },
+      {
         "episode_id": 30787,
         "display_name": "Tým SEAL S07E04 - Heroes and Criminals CZ Dabing",
         "video_id": 28614554
@@ -139139,6 +139189,16 @@
         "episode_id": 76539,
         "display_name": "Pravidla zasnoubení S02E09 - 9. epizoda CZ Dabing",
         "video_id": 28614636
+      },
+      {
+        "episode_id": 39911,
+        "display_name": "Babylon 5 S05E22 - 22. epizoda CZ Dabing",
+        "video_id": 28614657
+      },
+      {
+        "episode_id": 118487,
+        "display_name": "Válka ve Vietnamu S01E01 - Déja vu (1858 - 1961) CZ Dabing",
+        "video_id": 28614701
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -217258,6 +217318,16 @@
         "video_id": 28614632
       },
       {
+        "episode_id": 176924,
+        "display_name": "The Capture S03E03 - 3. epizoda CZ Titulky",
+        "video_id": 28614653
+      },
+      {
+        "episode_id": 70344,
+        "display_name": "Patrick Melrose S01E03 - Jistá naděje CZ Titulky",
+        "video_id": 28614685
+      },
+      {
         "episode_id": 76505,
         "display_name": "Pravidla zasnoubení S03E13 - 13. epizoda CZ Dabing",
         "video_id": 28614558
@@ -217271,6 +217341,31 @@
         "episode_id": 63341,
         "display_name": "Řád S01E03 - Úvod do etiky (1) CZ Dabing",
         "video_id": 28614627
+      },
+      {
+        "episode_id": 63329,
+        "display_name": "Řád S01E05 - Návrat domů (1) CZ Dabing",
+        "video_id": 28614642
+      },
+      {
+        "episode_id": 63345,
+        "display_name": "Řád S01E10 - Závěrečná zkouška (2) CZ Dabing",
+        "video_id": 28614664
+      },
+      {
+        "episode_id": 80185,
+        "display_name": "The Mindy Project S04E08 - 8. epizoda CZ Titulky",
+        "video_id": 28614681
+      },
+      {
+        "episode_id": 17349,
+        "display_name": "Stane se něco hrozně špatného S01E02 - Jáma pro nevěstu CZ Dabing",
+        "video_id": 28614703
+      },
+      {
+        "episode_id": 17353,
+        "display_name": "Stane se něco hrozně špatného S01E07 - Něco živého, něco ne, něco kradeného, něco rudého CZ Dabing",
+        "video_id": 28614729
       },
       {
         "episode_id": 114182,
@@ -277978,6 +278073,21 @@
         "video_id": 28614593
       },
       {
+        "episode_id": 25774,
+        "display_name": "Červený trpaslík S10E03 - Citróny CZ Dabing",
+        "video_id": 28614654
+      },
+      {
+        "episode_id": 93038,
+        "display_name": "Epizody  S01E01 - Epizoda 1 CZ Titulky",
+        "video_id": 28614695
+      },
+      {
+        "episode_id": 93050,
+        "display_name": "Epizody  S05E06 - 6. epizoda CZ Titulky",
+        "video_id": 28614707
+      },
+      {
         "episode_id": 30787,
         "display_name": "Tým SEAL S07E04 - Heroes and Criminals CZ Dabing",
         "video_id": 28614554
@@ -277996,6 +278106,16 @@
         "episode_id": 76539,
         "display_name": "Pravidla zasnoubení S02E09 - 9. epizoda CZ Dabing",
         "video_id": 28614636
+      },
+      {
+        "episode_id": 39911,
+        "display_name": "Babylon 5 S05E22 - 22. epizoda CZ Dabing",
+        "video_id": 28614657
+      },
+      {
+        "episode_id": 118487,
+        "display_name": "Válka ve Vietnamu S01E01 - Déja vu (1858 - 1961) CZ Dabing",
+        "video_id": 28614701
       }
     ],
     "prepared_not_upload_ready": [
@@ -279157,8 +279277,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 43,
-    "ok": 19,
+    "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
