@@ -2,14 +2,14 @@
   "counts": {
     "backlog_episodes": 159994,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 33485,
-    "prepared_source_episodes": 49291,
+    "uploaded_episodes": 33486,
+    "prepared_source_episodes": 49307,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 133,
+    "language_audited_sources": 169,
     "language_whisper_attempted_sources": 20,
     "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 56747,
@@ -20,18 +20,42 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-08-19T14:23:10Z",
-      "databaseId": 32263694581,
+      "createdAt": "2026-08-19T14:24:15Z",
+      "databaseId": 32263803829,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-19T14:24:10Z",
+      "databaseId": 32263794661,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-19T14:23:59Z",
+      "databaseId": 32263775223,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
+      "createdAt": "2026-08-19T14:23:10Z",
+      "databaseId": 32263694581,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "cancelled",
       "createdAt": "2026-08-19T14:23:04Z",
       "databaseId": 32263685163,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -153,30 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-19T14:08:03Z",
-      "databaseId": 32262194519,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-19T14:05:58Z",
-      "databaseId": 32261991455,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-19T14:05:58Z",
-      "databaseId": 32261991057,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "sync"
     }
   ],
   "gaps": {
@@ -80394,6 +80394,11 @@
         "episode_id": 12720,
         "display_name": "Star Trek: Akademie Hvězdné flotily S01E09 - Třístá noc CZ Dabing",
         "video_id": 28628263
+      },
+      {
+        "episode_id": 12728,
+        "display_name": "Star Trek: Akademie Hvězdné flotily S01E10 - Rubikon CZ Dabing",
+        "video_id": 28628311
       },
       {
         "episode_id": 13001,
@@ -223243,6 +223248,11 @@
         "video_id": 28628263
       },
       {
+        "episode_id": 12728,
+        "display_name": "Star Trek: Akademie Hvězdné flotily S01E10 - Rubikon CZ Dabing",
+        "video_id": 28628311
+      },
+      {
         "episode_id": 13001,
         "display_name": "Ďáblova hodina S01E04 - Po bouři CZ Titulky",
         "video_id": 28628211
@@ -287137,7 +287147,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 113,
+    "disabled": 149,
     "ok": 19,
     "resolve_failed": 1
   },
