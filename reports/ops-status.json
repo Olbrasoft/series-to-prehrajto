@@ -2,22 +2,46 @@
   "counts": {
     "backlog_episodes": 159786,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 33536,
-    "prepared_source_episodes": 49400,
+    "uploaded_episodes": 33539,
+    "prepared_source_episodes": 49412,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 740,
-    "language_whisper_attempted_sources": 117,
-    "language_pending_whisper_sources": 2624,
+    "language_audited_sources": 84,
+    "language_whisper_attempted_sources": 40,
+    "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 56747,
     "whisper_review_pending_sources": 49336,
-    "subtitle_followup_sources": 26357,
-    "subtitle_followup_pending_sources": 26357
+    "subtitle_followup_sources": 26358,
+    "subtitle_followup_pending_sources": 26358
   },
   "workflow_runs": [
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-19T15:39:41Z",
+      "databaseId": 32271385610,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-19T15:39:36Z",
+      "databaseId": 32271377826,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-19T15:30:09Z",
+      "databaseId": 32270429081,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
     {
       "conclusion": "success",
       "createdAt": "2026-08-19T15:28:49Z",
@@ -27,11 +51,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-19T15:27:48Z",
       "databaseId": 32270193479,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -103,7 +127,7 @@
       "createdAt": "2026-08-19T15:20:54Z",
       "databaseId": 32269504308,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "sync"
     },
     {
@@ -115,11 +139,11 @@
       "workflowName": "prepare-manifest"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-19T15:20:12Z",
       "databaseId": 32269433872,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
@@ -150,30 +174,6 @@
       "conclusion": "success",
       "createdAt": "2026-08-19T15:11:47Z",
       "databaseId": 32268584324,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-19T15:11:05Z",
-      "databaseId": 32268511762,
-      "headBranch": "main",
-      "status": "pending",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-19T15:10:04Z",
-      "databaseId": 32268406683,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-19T15:09:49Z",
-      "databaseId": 32268381128,
       "headBranch": "main",
       "status": "completed",
       "workflowName": "update-descriptions"
@@ -80529,6 +80529,21 @@
         "episode_id": 83317,
         "display_name": "Herkules S03E08 - Princ Herkules CZ Titulky",
         "video_id": 28629514
+      },
+      {
+        "episode_id": 80565,
+        "display_name": "Herkules S03E16 - Ztracené město CZ Dabing",
+        "video_id": 28629687
+      },
+      {
+        "episode_id": 80569,
+        "display_name": "Herkules S03E22 - Atlantis CZ Dabing",
+        "video_id": 28629784
+      },
+      {
+        "episode_id": 80577,
+        "display_name": "Herkules S04E09 - Kdybych měla kladivo CZ Dabing",
+        "video_id": 28629885
       },
       {
         "episode_id": 114182,
@@ -223633,6 +223648,21 @@
         "video_id": 28629514
       },
       {
+        "episode_id": 80565,
+        "display_name": "Herkules S03E16 - Ztracené město CZ Dabing",
+        "video_id": 28629687
+      },
+      {
+        "episode_id": 80569,
+        "display_name": "Herkules S03E22 - Atlantis CZ Dabing",
+        "video_id": 28629784
+      },
+      {
+        "episode_id": 80577,
+        "display_name": "Herkules S04E09 - Kdybych měla kladivo CZ Dabing",
+        "video_id": 28629885
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -287647,8 +287677,8 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 623,
-    "ok": 116,
+    "disabled": 44,
+    "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
@@ -287658,6 +287688,6 @@
     "whisper_failed": 103
   },
   "subtitle_followup_statuses": {
-    "needs_subtitle_setup_after_prehrajto_processing": 26357
+    "needs_subtitle_setup_after_prehrajto_processing": 26358
   }
 }
