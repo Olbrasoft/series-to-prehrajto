@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 159065,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 34321,
+    "uploaded_episodes": 34322,
     "prepared_source_episodes": 47147,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 375,
-    "language_whisper_attempted_sources": 81,
-    "language_pending_whisper_sources": 2624,
+    "language_audited_sources": 40,
+    "language_whisper_attempted_sources": 40,
+    "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 56646,
     "whisper_review_pending_sources": 48839,
     "subtitle_followup_sources": 26647,
@@ -20,18 +20,42 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-08-20T14:20:49Z",
-      "databaseId": 32379582309,
+      "createdAt": "2026-08-20T14:24:54Z",
+      "databaseId": 32379987948,
       "headBranch": "main",
       "status": "in_progress",
-      "workflowName": "update-descriptions"
+      "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-08-20T14:24:49Z",
+      "databaseId": 32379979301,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-20T14:22:13Z",
+      "databaseId": 32379720782,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-20T14:20:49Z",
+      "databaseId": 32379582309,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-20T14:20:20Z",
       "databaseId": 32379531866,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -71,7 +95,7 @@
       "createdAt": "2026-08-20T14:15:24Z",
       "databaseId": 32379035518,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "audit-language"
     },
     {
@@ -99,11 +123,11 @@
       "workflowName": "process-whisper-review"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-20T14:14:14Z",
       "databaseId": 32378915546,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -127,7 +151,7 @@
       "createdAt": "2026-08-20T14:12:49Z",
       "databaseId": 32378773182,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "sync"
     },
     {
@@ -150,30 +174,6 @@
       "conclusion": "success",
       "createdAt": "2026-08-20T14:00:14Z",
       "databaseId": 32377518091,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-20T13:56:31Z",
-      "databaseId": 32377152773,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-20T13:56:28Z",
-      "databaseId": 32377147574,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-20T13:55:22Z",
-      "databaseId": 32377037009,
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-watchdog"
@@ -147309,6 +147309,11 @@
         "episode_id": 30619,
         "display_name": "Pobřežní hlídka S09E03 - Žraloci, lži a video CZ Dabing",
         "video_id": 28660986
+      },
+      {
+        "episode_id": 30623,
+        "display_name": "Pobřežní hlídka S09E07 - Horká letní noc CZ Dabing",
+        "video_id": 28661171
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -294336,6 +294341,11 @@
         "episode_id": 30619,
         "display_name": "Pobřežní hlídka S09E03 - Žraloci, lži a video CZ Dabing",
         "video_id": 28660986
+      },
+      {
+        "episode_id": 30623,
+        "display_name": "Pobřežní hlídka S09E07 - Horká letní noc CZ Dabing",
+        "video_id": 28661171
       }
     ],
     "prepared_not_upload_ready": [
@@ -295497,8 +295507,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 80,
-    "disabled": 294,
+    "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
