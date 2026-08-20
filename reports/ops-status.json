@@ -2,36 +2,68 @@
   "counts": {
     "backlog_episodes": 158953,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 34433,
-    "prepared_source_episodes": 46649,
+    "uploaded_episodes": 34434,
+    "prepared_source_episodes": 46598,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 60,
+    "language_audited_sources": 101,
     "language_whisper_attempted_sources": 60,
     "language_pending_whisper_sources": 2604,
-    "whisper_review_sources": 56634,
-    "whisper_review_pending_sources": 48774,
+    "whisper_review_sources": 56639,
+    "whisper_review_pending_sources": 48799,
     "subtitle_followup_sources": 26712,
     "subtitle_followup_pending_sources": 26712
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-08-20T17:49:50Z",
-      "databaseId": 32399777526,
+      "createdAt": "2026-08-20T17:51:08Z",
+      "databaseId": 32399900906,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-08-20T17:51:05Z",
+      "databaseId": 32399895299,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-20T17:51:04Z",
+      "databaseId": 32399894533,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-20T17:51:02Z",
+      "databaseId": 32399890731,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-20T17:49:50Z",
+      "databaseId": 32399777526,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "cancelled",
       "createdAt": "2026-08-20T17:49:47Z",
       "databaseId": 32399773150,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -144,38 +176,6 @@
       "databaseId": 32398517875,
       "headBranch": "main",
       "status": "in_progress",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-20T17:35:24Z",
-      "databaseId": 32398445886,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-20T17:35:21Z",
-      "databaseId": 32398441292,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-20T17:35:21Z",
-      "databaseId": 32398441177,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-20T17:34:48Z",
-      "databaseId": 32398387934,
-      "headBranch": "main",
-      "status": "completed",
       "workflowName": "prepare-manifest"
     }
   ],
@@ -82794,6 +82794,11 @@
         "episode_id": 99993,
         "display_name": "Vraždy na Shetlandech S05E05 - Zpackaný únos CZ Dabing",
         "video_id": 28665624
+      },
+      {
+        "episode_id": 98917,
+        "display_name": "Vraždy na Shetlandech S05E06 - Nezvyklí pachatelé CZ Dabing",
+        "video_id": 28665744
       },
       {
         "episode_id": 114182,
@@ -230383,6 +230388,11 @@
         "video_id": 28665624
       },
       {
+        "episode_id": 98917,
+        "display_name": "Vraždy na Shetlandech S05E06 - Nezvyklí pachatelé CZ Dabing",
+        "video_id": 28665744
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -296618,13 +296628,14 @@
   "language_verdicts": {},
   "language_whisper_statuses": {
     "ok": 59,
+    "disabled": 41,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
-    "whisper_non_cz_needs_subtitles": 5711,
+    "whisper_non_cz_needs_subtitles": 5691,
     "whisper_confirmed_cz": 2149,
     "whisper_failed": 125,
-    "needs_whisper": 48649
+    "needs_whisper": 48674
   },
   "subtitle_followup_statuses": {
     "needs_subtitle_setup_after_prehrajto_processing": 26712
