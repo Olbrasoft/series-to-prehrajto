@@ -2,8 +2,8 @@
   "counts": {
     "backlog_episodes": 158778,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 34558,
-    "prepared_source_episodes": 46876,
+    "uploaded_episodes": 34560,
+    "prepared_source_episodes": 46869,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
@@ -12,26 +12,50 @@
     "language_audited_sources": 40,
     "language_whisper_attempted_sources": 40,
     "language_pending_whisper_sources": 2604,
-    "whisper_review_sources": 56634,
-    "whisper_review_pending_sources": 48774,
+    "whisper_review_sources": 56616,
+    "whisper_review_pending_sources": 48681,
     "subtitle_followup_sources": 26744,
     "subtitle_followup_pending_sources": 26744
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-08-20T21:44:47Z",
-      "databaseId": 32420936507,
+      "createdAt": "2026-08-20T21:46:29Z",
+      "databaseId": 32421076948,
       "headBranch": "main",
       "status": "in_progress",
-      "workflowName": "update-descriptions"
+      "workflowName": "prepare-sources"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-08-20T21:45:49Z",
+      "databaseId": 32421023766,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-20T21:45:45Z",
+      "databaseId": 32421017888,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-20T21:44:47Z",
+      "databaseId": 32420936507,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-20T21:44:23Z",
       "databaseId": 32420904596,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -51,11 +75,11 @@
       "workflowName": "sync"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-08-20T21:43:29Z",
       "databaseId": 32420829650,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -131,11 +155,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-20T21:34:50Z",
       "databaseId": 32420110443,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -153,30 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-20T21:29:14Z",
-      "databaseId": 32419639288,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-20T21:29:14Z",
-      "databaseId": 32419638919,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-20T21:28:26Z",
-      "databaseId": 32419571853,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
     }
   ],
   "gaps": {
@@ -83086,6 +83086,11 @@
         "video_id": 28670860
       },
       {
+        "episode_id": 48396,
+        "display_name": "Paní ministryně S01E01 - Nabídka, která se neodmítá CZ Titulky",
+        "video_id": 28670898
+      },
+      {
         "episode_id": 60405,
         "display_name": "Private Practice S04E01 - 1. epizoda CZ Titulky",
         "video_id": 28670555
@@ -148479,6 +148484,11 @@
         "episode_id": 60426,
         "display_name": "Private Practice S04E22 - 22. epizoda CZ Titulky",
         "video_id": 28670874
+      },
+      {
+        "episode_id": 60354,
+        "display_name": "Private Practice S05E08 - 8. epizoda CZ Titulky",
+        "video_id": 28670908
       },
       {
         "episode_id": 30651,
@@ -231298,6 +231308,11 @@
         "video_id": 28670860
       },
       {
+        "episode_id": 48396,
+        "display_name": "Paní ministryně S01E01 - Nabídka, která se neodmítá CZ Titulky",
+        "video_id": 28670898
+      },
+      {
         "episode_id": 60405,
         "display_name": "Private Practice S04E01 - 1. epizoda CZ Titulky",
         "video_id": 28670555
@@ -296693,6 +296708,11 @@
         "video_id": 28670874
       },
       {
+        "episode_id": 60354,
+        "display_name": "Private Practice S05E08 - 8. epizoda CZ Titulky",
+        "video_id": 28670908
+      },
+      {
         "episode_id": 30651,
         "display_name": "Pobřežní hlídka S10E13 - 13. epizoda CZ Dabing",
         "video_id": 28670540
@@ -297871,10 +297891,10 @@
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
-    "whisper_non_cz_needs_subtitles": 5711,
+    "whisper_non_cz_needs_subtitles": 5786,
     "whisper_confirmed_cz": 2149,
     "whisper_failed": 125,
-    "needs_whisper": 48649
+    "needs_whisper": 48556
   },
   "subtitle_followup_statuses": {
     "needs_subtitle_setup_after_prehrajto_processing": 26744
