@@ -2,14 +2,14 @@
   "counts": {
     "backlog_episodes": 158953,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 34413,
-    "prepared_source_episodes": 47105,
+    "uploaded_episodes": 34415,
+    "prepared_source_episodes": 47016,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 20,
+    "language_audited_sources": 100,
     "language_whisper_attempted_sources": 20,
     "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 56643,
@@ -20,10 +20,42 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-08-20T17:03:08Z",
+      "databaseId": 32395438097,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-20T17:03:04Z",
+      "databaseId": 32395430799,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-20T16:57:48Z",
+      "databaseId": 32394936647,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-20T16:57:44Z",
+      "databaseId": 32394930379,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-20T16:56:32Z",
       "databaseId": 32394817204,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -59,11 +91,11 @@
       "workflowName": "sync"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-08-20T16:51:27Z",
       "databaseId": 32394344856,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -142,38 +174,6 @@
       "conclusion": "success",
       "createdAt": "2026-08-20T16:33:59Z",
       "databaseId": 32392709212,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-20T16:33:12Z",
-      "databaseId": 32392633142,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-20T16:33:08Z",
-      "databaseId": 32392625777,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-20T16:31:56Z",
-      "databaseId": 32392511915,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-20T16:31:52Z",
-      "databaseId": 32392505839,
       "headBranch": "main",
       "status": "completed",
       "workflowName": "prepare-manifest"
@@ -82716,6 +82716,11 @@
         "video_id": 28664690
       },
       {
+        "episode_id": 12736,
+        "display_name": "Čmuchalové S02E06 - 6. epizoda CZ Dabing",
+        "video_id": 28664810
+      },
+      {
         "episode_id": 55229,
         "display_name": "Vražda S01E03 - 3. epizoda CZ Dabing",
         "video_id": 28663929
@@ -147729,6 +147734,11 @@
         "episode_id": 98910,
         "display_name": "Vraždy na Shetlandech S04E06 - Utajený syn CZ Dabing",
         "video_id": 28664620
+      },
+      {
+        "episode_id": 99990,
+        "display_name": "Vraždy na Shetlandech S05E02 - Stříbrný miláček CZ Dabing",
+        "video_id": 28664706
       },
       {
         "episode_id": 78331,
@@ -230203,6 +230213,11 @@
         "video_id": 28664690
       },
       {
+        "episode_id": 12736,
+        "display_name": "Čmuchalové S02E06 - 6. epizoda CZ Dabing",
+        "video_id": 28664810
+      },
+      {
         "episode_id": 55229,
         "display_name": "Vražda S01E03 - 3. epizoda CZ Dabing",
         "video_id": 28663929
@@ -295218,6 +295233,11 @@
         "video_id": 28664620
       },
       {
+        "episode_id": 99990,
+        "display_name": "Vraždy na Shetlandech S05E02 - Stříbrný miláček CZ Dabing",
+        "video_id": 28664706
+      },
+      {
         "episode_id": 78331,
         "display_name": "C.B. Strike S04E03 - 3. epizoda CZ Titulky",
         "video_id": 28663920
@@ -296417,6 +296437,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
+    "disabled": 80,
     "ok": 19,
     "resolve_failed": 1
   },
