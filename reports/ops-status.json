@@ -1,17 +1,17 @@
 {
   "counts": {
     "backlog_episodes": 158778,
-    "manifest_upload_ready_episodes": 1010,
-    "uploaded_episodes": 34598,
-    "prepared_source_episodes": 46686,
+    "manifest_upload_ready_episodes": 1011,
+    "uploaded_episodes": 34599,
+    "prepared_source_episodes": 46699,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 404,
-    "language_whisper_attempted_sources": 95,
-    "language_pending_whisper_sources": 2624,
+    "language_audited_sources": 40,
+    "language_whisper_attempted_sources": 40,
+    "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 56616,
     "whisper_review_pending_sources": 48683,
     "subtitle_followup_sources": 26764,
@@ -20,10 +20,26 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-08-20T23:35:04Z",
+      "databaseId": 32429256293,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-20T23:33:41Z",
+      "databaseId": 32429158807,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-20T23:32:36Z",
       "databaseId": 32429083520,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -55,7 +71,7 @@
       "createdAt": "2026-08-20T23:28:34Z",
       "databaseId": 32428801797,
       "headBranch": "main",
-      "status": "pending",
+      "status": "queued",
       "workflowName": "prepare-manifest"
     },
     {
@@ -83,11 +99,11 @@
       "workflowName": "process-whisper-review"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-20T23:27:30Z",
       "databaseId": 32428728440,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -147,11 +163,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-20T23:11:17Z",
       "databaseId": 32427579342,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -161,22 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-20T23:10:38Z",
-      "databaseId": 32427531554,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-20T23:09:37Z",
-      "databaseId": 32427455740,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
     }
   ],
   "gaps": {
@@ -83189,6 +83189,11 @@
         "episode_id": 12737,
         "display_name": "Čmuchalové S02E04 - 4. epizoda CZ Dabing",
         "video_id": 28672360
+      },
+      {
+        "episode_id": 186501,
+        "display_name": "Hodně štěstí, Charlie S03E08 - Slavný den, 2. část CZ Dabing",
+        "video_id": 28673315
       },
       {
         "episode_id": 114182,
@@ -231603,6 +231608,11 @@
         "video_id": 28672360
       },
       {
+        "episode_id": 186501,
+        "display_name": "Hodně štěstí, Charlie S03E08 - Slavný den, 2. část CZ Dabing",
+        "video_id": 28673315
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -298267,8 +298277,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 309,
-    "ok": 94,
+    "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
