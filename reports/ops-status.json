@@ -2,8 +2,8 @@
   "counts": {
     "backlog_episodes": 159154,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 34183,
-    "prepared_source_episodes": 47241,
+    "uploaded_episodes": 34185,
+    "prepared_source_episodes": 47258,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
@@ -12,18 +12,50 @@
     "language_audited_sources": 40,
     "language_whisper_attempted_sources": 40,
     "language_pending_whisper_sources": 2604,
-    "whisper_review_sources": 56680,
-    "whisper_review_pending_sources": 49013,
+    "whisper_review_sources": 56661,
+    "whisper_review_pending_sources": 48914,
     "subtitle_followup_sources": 26603,
     "subtitle_followup_pending_sources": 26603
   },
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-08-20T10:02:34Z",
+      "databaseId": 32356939707,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-20T10:00:54Z",
+      "databaseId": 32356801010,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-20T10:00:51Z",
+      "databaseId": 32356796658,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-20T10:00:49Z",
+      "databaseId": 32356793307,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-20T09:59:37Z",
       "databaseId": 32356687855,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -145,38 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-status"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-20T09:42:59Z",
-      "databaseId": 32355292698,
-      "headBranch": "main",
-      "status": "pending",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-20T09:42:46Z",
-      "databaseId": 32355274839,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-20T09:42:46Z",
-      "databaseId": 32355274627,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-20T09:33:27Z",
-      "databaseId": 32354480083,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
     }
   ],
   "gaps": {
@@ -82166,6 +82166,11 @@
         "video_id": 28655296
       },
       {
+        "episode_id": 13905,
+        "display_name": "Pobřežní hlídka S01E19 - Žraločí derby CZ Dabing",
+        "video_id": 28655360
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -146579,6 +146584,11 @@
         "episode_id": 14002,
         "display_name": "Pobřežní hlídka S06E04 - Koncert v zátoce CZ Titulky",
         "video_id": 28654644
+      },
+      {
+        "episode_id": 14006,
+        "display_name": "Pobřežní hlídka S06E09 - Zakázaný ráj (1. část) CZ Titulky",
+        "video_id": 28655253
       },
       {
         "episode_id": 67883,
@@ -228503,6 +228513,11 @@
         "video_id": 28655296
       },
       {
+        "episode_id": 13905,
+        "display_name": "Pobřežní hlídka S01E19 - Žraločí derby CZ Dabing",
+        "video_id": 28655360
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -292918,6 +292933,11 @@
         "video_id": 28654644
       },
       {
+        "episode_id": 14006,
+        "display_name": "Pobřežní hlídka S06E09 - Zakázaný ráj (1. část) CZ Titulky",
+        "video_id": 28655253
+      },
+      {
         "episode_id": 67883,
         "display_name": "To je vražda, napsala S12E20 - Dvojí hra pod Jižním křížem CZ Dabing",
         "video_id": 28654523
@@ -294121,10 +294141,10 @@
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
-    "whisper_non_cz_needs_subtitles": 5518,
+    "whisper_non_cz_needs_subtitles": 5598,
     "whisper_confirmed_cz": 2149,
     "whisper_failed": 125,
-    "needs_whisper": 48888
+    "needs_whisper": 48789
   },
   "subtitle_followup_statuses": {
     "needs_subtitle_setup_after_prehrajto_processing": 26603
