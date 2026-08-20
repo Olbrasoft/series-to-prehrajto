@@ -3,21 +3,45 @@
     "backlog_episodes": 158861,
     "manifest_upload_ready_episodes": 1000,
     "uploaded_episodes": 34473,
-    "prepared_source_episodes": 46499,
+    "prepared_source_episodes": 46411,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 99,
+    "language_audited_sources": 145,
     "language_whisper_attempted_sources": 60,
     "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 56639,
-    "whisper_review_pending_sources": 48803,
+    "whisper_review_pending_sources": 48804,
     "subtitle_followup_sources": 26728,
     "subtitle_followup_pending_sources": 26728
   },
   "workflow_runs": [
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-20T19:15:17Z",
+      "databaseId": 32407666896,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-20T19:15:15Z",
+      "databaseId": 32407663506,
+      "headBranch": "main",
+      "status": "queued",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-20T19:15:11Z",
+      "databaseId": 32407657045,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
     {
       "conclusion": "",
       "createdAt": "2026-08-20T19:14:57Z",
@@ -59,19 +83,19 @@
       "workflowName": "prepare-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-20T19:12:57Z",
       "databaseId": 32407453717,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-08-20T19:12:53Z",
       "databaseId": 32407448775,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -153,30 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-20T18:53:25Z",
-      "databaseId": 32405662266,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-sources"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-20T18:47:47Z",
-      "databaseId": 32405148364,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-20T18:47:45Z",
-      "databaseId": 32405145098,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
     }
   ],
   "gaps": {
@@ -296234,11 +296234,11 @@
         "status": "whisper_failed"
       },
       {
-        "episode_id": 132593,
-        "source_id": -27218324801119594,
+        "episode_id": 132592,
+        "source_id": -69477544063698605,
         "series_title": "Brave New World",
-        "episode_code": "S01E04",
-        "source_title": "Brave New World S01E04 - ENG",
+        "episode_code": "S01E03",
+        "source_title": "Brave New World S01E03 - ENG",
         "status": "needs_whisper"
       },
       {
@@ -296538,6 +296538,14 @@
         "status": "whisper_failed"
       },
       {
+        "episode_id": 155747,
+        "source_id": -4025718367058667,
+        "series_title": "Cestování červí dírou s Morganem Freemanem",
+        "episode_code": "S01E01",
+        "source_title": "Cestování červí dírou s Morganem Freemanem 01x01 - Existuje stvořitel (by Nexsus)",
+        "status": "needs_whisper"
+      },
+      {
         "episode_id": 56254,
         "source_id": -59514815803122524,
         "series_title": "Chirurgové",
@@ -296551,14 +296559,6 @@
         "series_title": "Chirurgové",
         "episode_code": "S07E21",
         "source_title": "Chirurgové (Grey's Anatomy) – S07E21",
-        "status": "whisper_failed"
-      },
-      {
-        "episode_id": 56256,
-        "source_id": -50323602737151014,
-        "series_title": "Chirurgové",
-        "episode_code": "S07E22",
-        "source_title": "Chirurgové (Grey's Anatomy) – S07E22",
         "status": "whisper_failed"
       }
     ],
@@ -297017,15 +297017,15 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 39,
+    "disabled": 85,
     "ok": 59,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
     "whisper_non_cz_needs_subtitles": 5690,
-    "whisper_confirmed_cz": 2146,
+    "whisper_confirmed_cz": 2145,
     "whisper_failed": 125,
-    "needs_whisper": 48678
+    "needs_whisper": 48679
   },
   "subtitle_followup_statuses": {
     "needs_subtitle_setup_after_prehrajto_processing": 26728
