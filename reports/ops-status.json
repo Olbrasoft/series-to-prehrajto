@@ -2,14 +2,14 @@
   "counts": {
     "backlog_episodes": 158953,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 34382,
-    "prepared_source_episodes": 46994,
+    "uploaded_episodes": 34384,
+    "prepared_source_episodes": 46996,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 40,
+    "language_audited_sources": 46,
     "language_whisper_attempted_sources": 40,
     "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 56643,
@@ -20,18 +20,50 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-08-20T15:43:40Z",
-      "databaseId": 32387853262,
+      "createdAt": "2026-08-20T15:55:50Z",
+      "databaseId": 32389054062,
       "headBranch": "main",
       "status": "in_progress",
-      "workflowName": "ops-status"
+      "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-08-20T15:48:55Z",
+      "databaseId": 32388372030,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-sources"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-20T15:44:40Z",
+      "databaseId": 32387951742,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-20T15:44:32Z",
+      "databaseId": 32387938829,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-20T15:43:40Z",
+      "databaseId": 32387853262,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-20T15:43:17Z",
       "databaseId": 32387815990,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -145,38 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-20T15:24:02Z",
-      "databaseId": 32385895392,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-20T15:23:19Z",
-      "databaseId": 32385822907,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-20T15:23:19Z",
-      "databaseId": 32385822813,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-20T15:22:49Z",
-      "databaseId": 32385773397,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
     }
   ],
   "gaps": {
@@ -82676,6 +82676,11 @@
         "video_id": 28662901
       },
       {
+        "episode_id": 89881,
+        "display_name": "Nezvěstní S01E07 - Návrat do hotelu Eden CZ Dabing",
+        "video_id": 28663286
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -147574,6 +147579,11 @@
         "episode_id": 157598,
         "display_name": "Lakers: Vzestup dynastie S01E02 - 2. epizoda CZ Titulky",
         "video_id": 28663062
+      },
+      {
+        "episode_id": 157602,
+        "display_name": "Lakers: Vzestup dynastie S02E02 - 2. epizoda CZ Titulky",
+        "video_id": 28663268
       },
       {
         "episode_id": 30671,
@@ -230008,6 +230018,11 @@
         "video_id": 28662901
       },
       {
+        "episode_id": 89881,
+        "display_name": "Nezvěstní S01E07 - Návrat do hotelu Eden CZ Dabing",
+        "video_id": 28663286
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -294908,6 +294923,11 @@
         "video_id": 28663062
       },
       {
+        "episode_id": 157602,
+        "display_name": "Lakers: Vzestup dynastie S02E02 - 2. epizoda CZ Titulky",
+        "video_id": 28663268
+      },
+      {
         "episode_id": 30671,
         "display_name": "Pobřežní hlídka S11E11 - 11. epizoda CZ Dabing",
         "video_id": 28662555
@@ -296107,6 +296127,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
+    "disabled": 6,
     "ok": 39,
     "resolve_failed": 1
   },
