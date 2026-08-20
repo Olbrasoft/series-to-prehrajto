@@ -2,22 +2,46 @@
   "counts": {
     "backlog_episodes": 159065,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 34351,
-    "prepared_source_episodes": 47164,
+    "uploaded_episodes": 34353,
+    "prepared_source_episodes": 47096,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 20,
-    "language_whisper_attempted_sources": 20,
-    "language_pending_whisper_sources": 2624,
+    "language_audited_sources": 99,
+    "language_whisper_attempted_sources": 40,
+    "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 56647,
-    "whisper_review_pending_sources": 48841,
+    "whisper_review_pending_sources": 48845,
     "subtitle_followup_sources": 26647,
     "subtitle_followup_pending_sources": 26647
   },
   "workflow_runs": [
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-20T15:09:40Z",
+      "databaseId": 32384457432,
+      "headBranch": "main",
+      "status": "queued",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-20T15:08:51Z",
+      "databaseId": 32384379139,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-20T14:56:02Z",
+      "databaseId": 32383107032,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
     {
       "conclusion": "success",
       "createdAt": "2026-08-20T14:54:43Z",
@@ -35,19 +59,19 @@
       "workflowName": "process-whisper-review"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-20T14:54:36Z",
       "databaseId": 32382963474,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-20T14:53:46Z",
       "databaseId": 32382879277,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -153,30 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-20T14:32:23Z",
-      "databaseId": 32380736484,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-20T14:32:19Z",
-      "databaseId": 32380730055,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-20T14:31:07Z",
-      "databaseId": 32380610775,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
     }
   ],
   "gaps": {
@@ -147459,6 +147459,16 @@
         "episode_id": 30643,
         "display_name": "Pobřežní hlídka S10E05 - 5. epizoda CZ Dabing",
         "video_id": 28661951
+      },
+      {
+        "episode_id": 30647,
+        "display_name": "Pobřežní hlídka S10E09 - 9. epizoda CZ Dabing",
+        "video_id": 28662046
+      },
+      {
+        "episode_id": 30663,
+        "display_name": "Pobřežní hlídka S11E03 - 3. epizoda CZ Titulky",
+        "video_id": 28662363
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -294636,6 +294646,16 @@
         "episode_id": 30643,
         "display_name": "Pobřežní hlídka S10E05 - 5. epizoda CZ Dabing",
         "video_id": 28661951
+      },
+      {
+        "episode_id": 30647,
+        "display_name": "Pobřežní hlídka S10E09 - 9. epizoda CZ Dabing",
+        "video_id": 28662046
+      },
+      {
+        "episode_id": 30663,
+        "display_name": "Pobřežní hlídka S11E03 - 3. epizoda CZ Titulky",
+        "video_id": 28662363
       }
     ],
     "prepared_not_upload_ready": [
@@ -294941,6 +294961,38 @@
       }
     ],
     "whisper_review_pending": [
+      {
+        "episode_id": 56671,
+        "source_id": -12461874440336749,
+        "series_title": "Alex Rider",
+        "episode_code": "S02E07",
+        "source_title": "Alex.Rider.S02E07.Assassin.720p.AMZN.WEB-DL.DDP5.1.H.264-MZABI",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 56671,
+        "source_id": -20199353058696450,
+        "series_title": "Alex Rider",
+        "episode_code": "S02E07",
+        "source_title": "Alex.Rider.S02E07.1080p.WEBRip.x265-RARBG",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 56675,
+        "source_id": -35619040106619616,
+        "series_title": "Alex Rider",
+        "episode_code": "S03E03",
+        "source_title": "Alex Rider S03E03 Enemy 1080p AMZN WEB-DL DDP5 1 H 264-FLUX",
+        "status": "needs_whisper"
+      },
+      {
+        "episode_id": 56677,
+        "source_id": -60726041324003679,
+        "series_title": "Alex Rider",
+        "episode_code": "S03E05",
+        "source_title": "Alex Rider S03E05 Revenge 1080p AMZN WEB-DL DDP5 1 H 264-FLUX",
+        "status": "needs_whisper"
+      },
       {
         "episode_id": 175038,
         "source_id": -11151980550350308,
@@ -295307,38 +295359,6 @@
         "series_title": "Chirurgové",
         "episode_code": "S07E21",
         "source_title": "Chirurgové (Grey's Anatomy) – S07E21",
-        "status": "whisper_failed"
-      },
-      {
-        "episode_id": 56256,
-        "source_id": -50323602737151014,
-        "series_title": "Chirurgové",
-        "episode_code": "S07E22",
-        "source_title": "Chirurgové (Grey's Anatomy) – S07E22",
-        "status": "whisper_failed"
-      },
-      {
-        "episode_id": 56257,
-        "source_id": -57235569892845375,
-        "series_title": "Chirurgové",
-        "episode_code": "S08E01",
-        "source_title": "Chirurgové (Grey's Anatomy) – S08E01",
-        "status": "whisper_failed"
-      },
-      {
-        "episode_id": 56258,
-        "source_id": -55733822280244712,
-        "series_title": "Chirurgové",
-        "episode_code": "S08E02",
-        "source_title": "Chirurgové (Grey's Anatomy) – S08E02",
-        "status": "whisper_failed"
-      },
-      {
-        "episode_id": 56259,
-        "source_id": -62170039906391954,
-        "series_title": "Chirurgové",
-        "episode_code": "S08E03",
-        "source_title": "Chirurgové (Grey's Anatomy) – S08E03",
         "status": "whisper_failed"
       }
     ],
@@ -295797,14 +295817,15 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 19,
+    "disabled": 59,
+    "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
-    "whisper_non_cz_needs_subtitles": 5657,
+    "whisper_non_cz_needs_subtitles": 5653,
     "whisper_confirmed_cz": 2149,
-    "whisper_failed": 125,
-    "needs_whisper": 48716
+    "needs_whisper": 48720,
+    "whisper_failed": 125
   },
   "subtitle_followup_statuses": {
     "needs_subtitle_setup_after_prehrajto_processing": 26647
