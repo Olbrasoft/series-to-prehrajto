@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 159065,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 34336,
-    "prepared_source_episodes": 47115,
+    "uploaded_episodes": 34346,
+    "prepared_source_episodes": 47166,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 102,
-    "language_whisper_attempted_sources": 20,
-    "language_pending_whisper_sources": 2624,
+    "language_audited_sources": 48,
+    "language_whisper_attempted_sources": 40,
+    "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 56647,
     "whisper_review_pending_sources": 48841,
     "subtitle_followup_sources": 26647,
@@ -20,18 +20,50 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-08-20T14:36:02Z",
-      "databaseId": 32381104495,
+      "createdAt": "2026-08-20T14:46:10Z",
+      "databaseId": 32382119347,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "queued",
       "workflowName": "update-descriptions"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-08-20T14:45:37Z",
+      "databaseId": 32382063988,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-20T14:45:17Z",
+      "databaseId": 32382029366,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-20T14:43:55Z",
+      "databaseId": 32381891762,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-20T14:36:02Z",
+      "databaseId": 32381104495,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-20T14:35:13Z",
       "databaseId": 32381019812,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -67,11 +99,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-20T14:32:19Z",
       "databaseId": 32380730055,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -131,11 +163,11 @@
       "workflowName": "prepare-manifest"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-20T14:22:13Z",
       "databaseId": 32379720782,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
@@ -145,38 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-20T14:20:20Z",
-      "databaseId": 32379531866,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-20T14:19:36Z",
-      "databaseId": 32379454569,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-20T14:19:31Z",
-      "databaseId": 32379445178,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-20T14:18:16Z",
-      "databaseId": 32379320845,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
     }
   ],
   "gaps": {
@@ -82546,6 +82546,21 @@
         "video_id": 28661509
       },
       {
+        "episode_id": 104300,
+        "display_name": "Kyle XY S01E08 - 8. epizoda CZ Titulky",
+        "video_id": 28661562
+      },
+      {
+        "episode_id": 3644,
+        "display_name": "Dračí princ S01E04 - Krvežízniví CZ Dabing",
+        "video_id": 28661608
+      },
+      {
+        "episode_id": 3668,
+        "display_name": "Dračí princ S04E01 - Oslava znovuzrození CZ Dabing",
+        "video_id": 28661637
+      },
+      {
         "episode_id": 78333,
         "display_name": "C.B. Strike S06E03 - 3. epizoda CZ Titulky",
         "video_id": 28661333
@@ -82564,6 +82579,21 @@
         "episode_id": 153725,
         "display_name": "StartUp S02E02 - 2. epizoda CZ Titulky",
         "video_id": 28661499
+      },
+      {
+        "episode_id": 57045,
+        "display_name": "The Fosters S02E15 - 15. epizoda CZ Titulky",
+        "video_id": 28661602
+      },
+      {
+        "episode_id": 57049,
+        "display_name": "The Fosters S03E03 - 3. epizoda CZ Titulky",
+        "video_id": 28661647
+      },
+      {
+        "episode_id": 57065,
+        "display_name": "The Fosters S03E19 - 19. epizoda CZ Titulky",
+        "video_id": 28661719
       },
       {
         "episode_id": 114182,
@@ -147381,9 +147411,29 @@
         "video_id": 28661522
       },
       {
+        "episode_id": 65730,
+        "display_name": "Vláda S03E06 - Synové minulosti CZ Dabing",
+        "video_id": 28661568
+      },
+      {
+        "episode_id": 65758,
+        "display_name": "Vláda S03E10 - Volby CZ Titulky",
+        "video_id": 28661628
+      },
+      {
+        "episode_id": 89878,
+        "display_name": "Nezvěstní S01E03 - Schůze CZ Dabing",
+        "video_id": 28661686
+      },
+      {
         "episode_id": 30627,
         "display_name": "Pobřežní hlídka S09E11 - Dvojí nebezpečí CZ Dabing",
         "video_id": 28661381
+      },
+      {
+        "episode_id": 30631,
+        "display_name": "Pobřežní hlídka S09E15 - Láska v oblacích CZ Dabing",
+        "video_id": 28661556
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -229648,6 +229698,21 @@
         "video_id": 28661509
       },
       {
+        "episode_id": 104300,
+        "display_name": "Kyle XY S01E08 - 8. epizoda CZ Titulky",
+        "video_id": 28661562
+      },
+      {
+        "episode_id": 3644,
+        "display_name": "Dračí princ S01E04 - Krvežízniví CZ Dabing",
+        "video_id": 28661608
+      },
+      {
+        "episode_id": 3668,
+        "display_name": "Dračí princ S04E01 - Oslava znovuzrození CZ Dabing",
+        "video_id": 28661637
+      },
+      {
         "episode_id": 78333,
         "display_name": "C.B. Strike S06E03 - 3. epizoda CZ Titulky",
         "video_id": 28661333
@@ -229666,6 +229731,21 @@
         "episode_id": 153725,
         "display_name": "StartUp S02E02 - 2. epizoda CZ Titulky",
         "video_id": 28661499
+      },
+      {
+        "episode_id": 57045,
+        "display_name": "The Fosters S02E15 - 15. epizoda CZ Titulky",
+        "video_id": 28661602
+      },
+      {
+        "episode_id": 57049,
+        "display_name": "The Fosters S03E03 - 3. epizoda CZ Titulky",
+        "video_id": 28661647
+      },
+      {
+        "episode_id": 57065,
+        "display_name": "The Fosters S03E19 - 19. epizoda CZ Titulky",
+        "video_id": 28661719
       },
       {
         "episode_id": 114182,
@@ -294483,9 +294563,29 @@
         "video_id": 28661522
       },
       {
+        "episode_id": 65730,
+        "display_name": "Vláda S03E06 - Synové minulosti CZ Dabing",
+        "video_id": 28661568
+      },
+      {
+        "episode_id": 65758,
+        "display_name": "Vláda S03E10 - Volby CZ Titulky",
+        "video_id": 28661628
+      },
+      {
+        "episode_id": 89878,
+        "display_name": "Nezvěstní S01E03 - Schůze CZ Dabing",
+        "video_id": 28661686
+      },
+      {
         "episode_id": 30627,
         "display_name": "Pobřežní hlídka S09E11 - Dvojí nebezpečí CZ Dabing",
         "video_id": 28661381
+      },
+      {
+        "episode_id": 30631,
+        "display_name": "Pobřežní hlídka S09E15 - Láska v oblacích CZ Dabing",
+        "video_id": 28661556
       }
     ],
     "prepared_not_upload_ready": [
@@ -295647,8 +295747,8 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 82,
-    "ok": 19,
+    "disabled": 8,
+    "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
