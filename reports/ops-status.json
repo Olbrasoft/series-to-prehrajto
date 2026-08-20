@@ -2,14 +2,14 @@
   "counts": {
     "backlog_episodes": 158861,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 34467,
-    "prepared_source_episodes": 46538,
+    "uploaded_episodes": 34469,
+    "prepared_source_episodes": 46551,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 97,
+    "language_audited_sources": 107,
     "language_whisper_attempted_sources": 40,
     "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 56639,
@@ -20,26 +20,42 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-08-20T18:55:46Z",
-      "databaseId": 32405879491,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-20T18:55:25Z",
-      "databaseId": 32405848481,
+      "createdAt": "2026-08-20T18:58:46Z",
+      "databaseId": 32406150689,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-08-20T18:58:43Z",
+      "databaseId": 32406145057,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-20T18:55:46Z",
+      "databaseId": 32405879491,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-20T18:55:25Z",
+      "databaseId": 32405848481,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "cancelled",
       "createdAt": "2026-08-20T18:55:23Z",
       "databaseId": 32405844334,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -161,22 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-20T18:34:51Z",
-      "databaseId": 32403971320,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-20T18:33:37Z",
-      "databaseId": 32403858828,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
     }
   ],
   "gaps": {
@@ -148016,6 +148016,11 @@
         "video_id": 28667127
       },
       {
+        "episode_id": 63782,
+        "display_name": "Magnum S06E15 - Zloději na palubě CZ Dabing",
+        "video_id": 28667164
+      },
+      {
         "episode_id": 106367,
         "display_name": "Huangovi v Americe S03E11 - Čistý štít CZ Dabing",
         "video_id": 28666370
@@ -148039,6 +148044,11 @@
         "episode_id": 98895,
         "display_name": "Vraždy na Shetlandech S02E03 - Temné vody - 1. část CZ Dabing",
         "video_id": 28666670
+      },
+      {
+        "episode_id": 98915,
+        "display_name": "Vraždy na Shetlandech S06E05 - Sebevražda CZ Dabing",
+        "video_id": 28667174
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -295773,6 +295783,11 @@
         "video_id": 28667127
       },
       {
+        "episode_id": 63782,
+        "display_name": "Magnum S06E15 - Zloději na palubě CZ Dabing",
+        "video_id": 28667164
+      },
+      {
         "episode_id": 106367,
         "display_name": "Huangovi v Americe S03E11 - Čistý štít CZ Dabing",
         "video_id": 28666370
@@ -295796,6 +295811,11 @@
         "episode_id": 98895,
         "display_name": "Vraždy na Shetlandech S02E03 - Temné vody - 1. část CZ Dabing",
         "video_id": 28666670
+      },
+      {
+        "episode_id": 98915,
+        "display_name": "Vraždy na Shetlandech S06E05 - Sebevražda CZ Dabing",
+        "video_id": 28667174
       }
     ],
     "prepared_not_upload_ready": [
@@ -296957,7 +296977,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 57,
+    "disabled": 67,
     "ok": 39,
     "resolve_failed": 1
   },
