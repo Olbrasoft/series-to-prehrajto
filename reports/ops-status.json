@@ -2,28 +2,76 @@
   "counts": {
     "backlog_episodes": 158861,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 34454,
-    "prepared_source_episodes": 46621,
+    "uploaded_episodes": 34458,
+    "prepared_source_episodes": 46602,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 20,
-    "language_whisper_attempted_sources": 20,
+    "language_audited_sources": 80,
+    "language_whisper_attempted_sources": 40,
     "language_pending_whisper_sources": 2624,
-    "whisper_review_sources": 56643,
-    "whisper_review_pending_sources": 48823,
+    "whisper_review_sources": 56634,
+    "whisper_review_pending_sources": 48777,
     "subtitle_followup_sources": 26728,
     "subtitle_followup_pending_sources": 26728
   },
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-08-20T18:33:37Z",
+      "databaseId": 32403858828,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-20T18:33:34Z",
+      "databaseId": 32403854215,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-20T18:33:34Z",
+      "databaseId": 32403854135,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-20T18:33:29Z",
+      "databaseId": 32403847087,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-20T18:28:08Z",
+      "databaseId": 32403350891,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-20T18:28:04Z",
+      "databaseId": 32403344784,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-20T18:26:41Z",
       "databaseId": 32403217054,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -31,7 +79,7 @@
       "createdAt": "2026-08-20T18:20:45Z",
       "databaseId": 32402672988,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "process-whisper-review"
     },
     {
@@ -55,15 +103,15 @@
       "createdAt": "2026-08-20T18:17:05Z",
       "databaseId": 32402334904,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "prepare-manifest"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-08-20T18:17:05Z",
       "databaseId": 32402334873,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "sync"
     },
     {
@@ -115,11 +163,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-20T18:11:14Z",
       "databaseId": 32401792158,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
@@ -129,54 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-20T18:10:08Z",
-      "databaseId": 32401687313,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-20T18:10:03Z",
-      "databaseId": 32401679966,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-20T18:09:20Z",
-      "databaseId": 32401615814,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-20T18:07:29Z",
-      "databaseId": 32401450242,
-      "headBranch": "main",
-      "status": "pending",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-20T18:05:25Z",
-      "databaseId": 32401258816,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-20T18:04:12Z",
-      "databaseId": 32401142022,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
     }
   ],
   "gaps": {
@@ -82846,6 +82846,16 @@
         "video_id": 28666509
       },
       {
+        "episode_id": 8028,
+        "display_name": "Lockwood a spol. S01E06 - Neptal ses CZ Dabing",
+        "video_id": 28666574
+      },
+      {
+        "episode_id": 98488,
+        "display_name": "Primal S01E08 - Sabat prokletých CZ Titulky",
+        "video_id": 28666631
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -147961,6 +147971,11 @@
         "video_id": 28666277
       },
       {
+        "episode_id": 63830,
+        "display_name": "Magnum S05E10 - Luther Gillis - Případ 001 CZ Dabing",
+        "video_id": 28666559
+      },
+      {
         "episode_id": 106367,
         "display_name": "Huangovi v Americe S03E11 - Čistý štít CZ Dabing",
         "video_id": 28666370
@@ -147974,6 +147989,11 @@
         "episode_id": 106379,
         "display_name": "Huangovi v Americe S03E23 - Tohle nejsme my CZ Dabing",
         "video_id": 28666496
+      },
+      {
+        "episode_id": 98899,
+        "display_name": "Vraždy na Shetlandech S02E01 - Černý krkavec - 1. část CZ Dabing",
+        "video_id": 28666564
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -230538,6 +230558,16 @@
         "video_id": 28666509
       },
       {
+        "episode_id": 8028,
+        "display_name": "Lockwood a spol. S01E06 - Neptal ses CZ Dabing",
+        "video_id": 28666574
+      },
+      {
+        "episode_id": 98488,
+        "display_name": "Primal S01E08 - Sabat prokletých CZ Titulky",
+        "video_id": 28666631
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -295653,6 +295683,11 @@
         "video_id": 28666277
       },
       {
+        "episode_id": 63830,
+        "display_name": "Magnum S05E10 - Luther Gillis - Případ 001 CZ Dabing",
+        "video_id": 28666559
+      },
+      {
         "episode_id": 106367,
         "display_name": "Huangovi v Americe S03E11 - Čistý štít CZ Dabing",
         "video_id": 28666370
@@ -295666,6 +295701,11 @@
         "episode_id": 106379,
         "display_name": "Huangovi v Americe S03E23 - Tohle nejsme my CZ Dabing",
         "video_id": 28666496
+      },
+      {
+        "episode_id": 98899,
+        "display_name": "Vraždy na Shetlandech S02E01 - Černý krkavec - 1. část CZ Dabing",
+        "video_id": 28666564
       }
     ],
     "prepared_not_upload_ready": [
@@ -296044,54 +296084,6 @@
         "status": "whisper_failed"
       },
       {
-        "episode_id": 140597,
-        "source_id": -33865701229726509,
-        "series_title": "Breathe: Into the Shadows",
-        "episode_code": "S01E02",
-        "source_title": "Breathe-Into.the.Shadows.S01E02.Filthy.720p.AMZN.WEB-Rip.6CH.x264.Esub-BonsaiHD",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 140598,
-        "source_id": -50179823583287004,
-        "series_title": "Breathe: Into the Shadows",
-        "episode_code": "S01E04",
-        "source_title": "Breathe-Into.the.Shadows.S01E04.Mind.Games.720p.AMZN.WEB-Rip.6CH.x264.Esub-BonsaiHD",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 140600,
-        "source_id": -4638040676656784,
-        "series_title": "Breathe: Into the Shadows",
-        "episode_code": "S01E06",
-        "source_title": "Breathe-Into.the.Shadows.S01E06.Turning.Point.720p.AMZN.WEB-Rip.6CH.x264.Esub-BonsaiHD",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 140602,
-        "source_id": -47608380959067430,
-        "series_title": "Breathe: Into the Shadows",
-        "episode_code": "S01E08",
-        "source_title": "Breathe-Into.the.Shadows.S01E08.Bad.Uncle.720p.AMZN.WEB-Rip.6CH.x264.Esub-BonsaiHD",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 140608,
-        "source_id": -66517200531339548,
-        "series_title": "Breathe: Into the Shadows",
-        "episode_code": "S01E10",
-        "source_title": "Breathe-Into.the.Shadows.S01E10.1996.720p.AMZN.WEB-Rip.6CH.x264.Esub-BonsaiHD",
-        "status": "needs_whisper"
-      },
-      {
-        "episode_id": 140605,
-        "source_id": -20214721838590657,
-        "series_title": "Breathe: Into the Shadows",
-        "episode_code": "S01E12",
-        "source_title": "Breathe-into.The.Shadows.S01E12.C-16.720p.AMZN.WEB-Rip.6CH.x264.Esub-BonsaiHD",
-        "status": "needs_whisper"
-      },
-      {
         "episode_id": 24693,
         "source_id": -47697067608167193,
         "series_title": "Brickleberry",
@@ -296369,6 +296361,54 @@
         "series_title": "Chirurgové",
         "episode_code": "S07E20",
         "source_title": "Chirurgové (Grey's Anatomy) – S07E20",
+        "status": "whisper_failed"
+      },
+      {
+        "episode_id": 56255,
+        "source_id": -22875583173178308,
+        "series_title": "Chirurgové",
+        "episode_code": "S07E21",
+        "source_title": "Chirurgové (Grey's Anatomy) – S07E21",
+        "status": "whisper_failed"
+      },
+      {
+        "episode_id": 56256,
+        "source_id": -50323602737151014,
+        "series_title": "Chirurgové",
+        "episode_code": "S07E22",
+        "source_title": "Chirurgové (Grey's Anatomy) – S07E22",
+        "status": "whisper_failed"
+      },
+      {
+        "episode_id": 56257,
+        "source_id": -57235569892845375,
+        "series_title": "Chirurgové",
+        "episode_code": "S08E01",
+        "source_title": "Chirurgové (Grey's Anatomy) – S08E01",
+        "status": "whisper_failed"
+      },
+      {
+        "episode_id": 56258,
+        "source_id": -55733822280244712,
+        "series_title": "Chirurgové",
+        "episode_code": "S08E02",
+        "source_title": "Chirurgové (Grey's Anatomy) – S08E02",
+        "status": "whisper_failed"
+      },
+      {
+        "episode_id": 56259,
+        "source_id": -62170039906391954,
+        "series_title": "Chirurgové",
+        "episode_code": "S08E03",
+        "source_title": "Chirurgové (Grey's Anatomy) – S08E03",
+        "status": "whisper_failed"
+      },
+      {
+        "episode_id": 56260,
+        "source_id": -43031112546707824,
+        "series_title": "Chirurgové",
+        "episode_code": "S08E04",
+        "source_title": "Chirurgové (Grey's Anatomy) – S08E04",
         "status": "whisper_failed"
       }
     ],
@@ -296827,14 +296867,15 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 19,
+    "disabled": 40,
+    "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
-    "whisper_non_cz_needs_subtitles": 5671,
+    "whisper_non_cz_needs_subtitles": 5708,
     "whisper_confirmed_cz": 2149,
     "whisper_failed": 125,
-    "needs_whisper": 48698
+    "needs_whisper": 48652
   },
   "subtitle_followup_statuses": {
     "needs_subtitle_setup_after_prehrajto_processing": 26728
