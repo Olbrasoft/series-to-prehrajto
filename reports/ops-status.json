@@ -2,14 +2,14 @@
   "counts": {
     "backlog_episodes": 158953,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 34398,
-    "prepared_source_episodes": 47180,
+    "uploaded_episodes": 34403,
+    "prepared_source_episodes": 47155,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 20,
+    "language_audited_sources": 42,
     "language_whisper_attempted_sources": 20,
     "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 56643,
@@ -20,18 +20,50 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-08-20T16:31:56Z",
-      "databaseId": 32392511915,
+      "createdAt": "2026-08-20T16:40:31Z",
+      "databaseId": 32393320372,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-08-20T16:33:59Z",
+      "databaseId": 32392709212,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-20T16:33:12Z",
+      "databaseId": 32392633142,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-20T16:33:08Z",
+      "databaseId": 32392625777,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-20T16:31:56Z",
+      "databaseId": 32392511915,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "cancelled",
       "createdAt": "2026-08-20T16:31:52Z",
       "databaseId": 32392505839,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -99,11 +131,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-20T16:18:25Z",
       "databaseId": 32391246298,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -145,38 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-20T16:13:32Z",
-      "databaseId": 32390783510,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-20T16:13:28Z",
-      "databaseId": 32390776878,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-20T16:12:57Z",
-      "databaseId": 32390724182,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-20T16:12:54Z",
-      "databaseId": 32390719191,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "sync"
     }
   ],
   "gaps": {
@@ -82711,6 +82711,11 @@
         "video_id": 28663980
       },
       {
+        "episode_id": 80985,
+        "display_name": "Huangovi v Americe S01E03 - Vyhýbání CZ Dabing",
+        "video_id": 28664407
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -147694,6 +147699,26 @@
         "episode_id": 69987,
         "display_name": "Vražda na samém konci světa S01E03 - 3. epizoda CZ Titulky",
         "video_id": 28664050
+      },
+      {
+        "episode_id": 57047,
+        "display_name": "The Fosters S03E01 - 1. epizoda CZ Titulky",
+        "video_id": 28664257
+      },
+      {
+        "episode_id": 57051,
+        "display_name": "The Fosters S03E05 - 5. epizoda CZ Titulky",
+        "video_id": 28664314
+      },
+      {
+        "episode_id": 57099,
+        "display_name": "The Fosters S04E14 - 14. epizoda CZ Titulky",
+        "video_id": 28664369
+      },
+      {
+        "episode_id": 57111,
+        "display_name": "The Fosters S04E16 - 16. epizoda CZ Titulky",
+        "video_id": 28664428
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -230123,6 +230148,11 @@
         "video_id": 28663980
       },
       {
+        "episode_id": 80985,
+        "display_name": "Huangovi v Americe S01E03 - Vyhýbání CZ Dabing",
+        "video_id": 28664407
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -295106,6 +295136,26 @@
         "episode_id": 69987,
         "display_name": "Vražda na samém konci světa S01E03 - 3. epizoda CZ Titulky",
         "video_id": 28664050
+      },
+      {
+        "episode_id": 57047,
+        "display_name": "The Fosters S03E01 - 1. epizoda CZ Titulky",
+        "video_id": 28664257
+      },
+      {
+        "episode_id": 57051,
+        "display_name": "The Fosters S03E05 - 5. epizoda CZ Titulky",
+        "video_id": 28664314
+      },
+      {
+        "episode_id": 57099,
+        "display_name": "The Fosters S04E14 - 14. epizoda CZ Titulky",
+        "video_id": 28664369
+      },
+      {
+        "episode_id": 57111,
+        "display_name": "The Fosters S04E16 - 16. epizoda CZ Titulky",
+        "video_id": 28664428
       }
     ],
     "prepared_not_upload_ready": [
@@ -296267,6 +296317,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
+    "disabled": 22,
     "ok": 19,
     "resolve_failed": 1
   },
