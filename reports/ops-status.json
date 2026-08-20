@@ -2,15 +2,15 @@
   "counts": {
     "backlog_episodes": 159154,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 34228,
+    "uploaded_episodes": 34231,
     "prepared_source_episodes": 47060,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 60,
-    "language_whisper_attempted_sources": 60,
+    "language_audited_sources": 40,
+    "language_whisper_attempted_sources": 40,
     "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 56661,
     "whisper_review_pending_sources": 48946,
@@ -20,10 +20,34 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-08-20T11:51:57Z",
+      "databaseId": 32365900909,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-20T11:48:07Z",
+      "databaseId": 32365587084,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-20T11:48:03Z",
+      "databaseId": 32365581623,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-20T11:47:18Z",
       "databaseId": 32365518015,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -95,7 +119,7 @@
       "createdAt": "2026-08-20T11:41:12Z",
       "databaseId": 32365014895,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "audit-language"
     },
     {
@@ -123,11 +147,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-20T11:39:36Z",
       "databaseId": 32364883636,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -150,30 +174,6 @@
       "conclusion": "success",
       "createdAt": "2026-08-20T11:38:30Z",
       "databaseId": 32364793905,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-20T11:38:24Z",
-      "databaseId": 32364786709,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-20T11:30:07Z",
-      "databaseId": 32364106819,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-20T11:29:08Z",
-      "databaseId": 32364028118,
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-watchdog"
@@ -82286,6 +82286,16 @@
         "video_id": 28657519
       },
       {
+        "episode_id": 137044,
+        "display_name": "Taskmaster S17E07 - 7. epizoda CZ Titulky",
+        "video_id": 28657627
+      },
+      {
+        "episode_id": 30581,
+        "display_name": "Pobřežní hlídka S07E09 - Pohřbeni CZ Titulky",
+        "video_id": 28657549
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -146839,6 +146849,11 @@
         "episode_id": 13887,
         "display_name": "Pobřežní hlídka S01E01 - Panika na Malibu Beach CZ Dabing",
         "video_id": 28656263
+      },
+      {
+        "episode_id": 30626,
+        "display_name": "Pobřežní hlídka S09E10 - Vodní tanec CZ Dabing",
+        "video_id": 28657548
       },
       {
         "episode_id": 46119,
@@ -228848,6 +228863,16 @@
         "video_id": 28657519
       },
       {
+        "episode_id": 137044,
+        "display_name": "Taskmaster S17E07 - 7. epizoda CZ Titulky",
+        "video_id": 28657627
+      },
+      {
+        "episode_id": 30581,
+        "display_name": "Pobřežní hlídka S07E09 - Pohřbeni CZ Titulky",
+        "video_id": 28657549
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -293403,6 +293428,11 @@
         "video_id": 28656263
       },
       {
+        "episode_id": 30626,
+        "display_name": "Pobřežní hlídka S09E10 - Vodní tanec CZ Dabing",
+        "video_id": 28657548
+      },
+      {
         "episode_id": 46119,
         "display_name": "Cizinka S07E05 - Singapur CZ Titulky",
         "video_id": 28657540
@@ -294567,7 +294597,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 59,
+    "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
