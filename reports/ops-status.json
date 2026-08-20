@@ -2,28 +2,52 @@
   "counts": {
     "backlog_episodes": 159184,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 34154,
-    "prepared_source_episodes": 47171,
+    "uploaded_episodes": 34155,
+    "prepared_source_episodes": 47184,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 60,
+    "language_audited_sources": 100,
     "language_whisper_attempted_sources": 60,
     "language_pending_whisper_sources": 2604,
-    "whisper_review_sources": 56671,
-    "whisper_review_pending_sources": 48964,
+    "whisper_review_sources": 56675,
+    "whisper_review_pending_sources": 48988,
     "subtitle_followup_sources": 26594,
     "subtitle_followup_pending_sources": 26594
   },
   "workflow_runs": [
     {
+      "conclusion": "success",
+      "createdAt": "2026-08-20T09:16:25Z",
+      "databaseId": 32353036476,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
       "conclusion": "",
+      "createdAt": "2026-08-20T09:16:22Z",
+      "databaseId": 32353031507,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-20T09:16:18Z",
+      "databaseId": 32353025398,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-20T09:15:12Z",
       "databaseId": 32352928652,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -91,11 +115,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-08-20T09:09:54Z",
       "databaseId": 32352469988,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -153,30 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-20T08:59:39Z",
-      "databaseId": 32351588108,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-20T08:58:28Z",
-      "databaseId": 32351488999,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-20T08:54:34Z",
-      "databaseId": 32351155739,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
     }
   ],
   "gaps": {
@@ -146451,6 +146451,11 @@
         "video_id": 28654298
       },
       {
+        "episode_id": 13938,
+        "display_name": "Pobřežní hlídka S03E07 - Point Doom CZ Dabing",
+        "video_id": 28654326
+      },
+      {
         "episode_id": 32527,
         "display_name": "FBI S01E20 - Co leží pod povrchem CZ Dabing",
         "video_id": 28653991
@@ -292643,6 +292648,11 @@
         "video_id": 28654298
       },
       {
+        "episode_id": 13938,
+        "display_name": "Pobřežní hlídka S03E07 - Point Doom CZ Dabing",
+        "video_id": 28654326
+      },
+      {
         "episode_id": 32527,
         "display_name": "FBI S01E20 - Co leží pod povrchem CZ Dabing",
         "video_id": 28653991
@@ -293828,13 +293838,14 @@
   "language_verdicts": {},
   "language_whisper_statuses": {
     "ok": 59,
+    "disabled": 40,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
-    "whisper_non_cz_needs_subtitles": 5558,
+    "whisper_non_cz_needs_subtitles": 5538,
     "whisper_confirmed_cz": 2149,
     "whisper_failed": 125,
-    "needs_whisper": 48839
+    "needs_whisper": 48863
   },
   "subtitle_followup_statuses": {
     "needs_subtitle_setup_after_prehrajto_processing": 26594
