@@ -1,37 +1,69 @@
 {
   "counts": {
     "backlog_episodes": 159184,
-    "manifest_upload_ready_episodes": 1004,
+    "manifest_upload_ready_episodes": 1005,
     "uploaded_episodes": 34127,
-    "prepared_source_episodes": 48159,
+    "prepared_source_episodes": 48065,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 20,
-    "language_whisper_attempted_sources": 20,
-    "language_pending_whisper_sources": 2624,
-    "whisper_review_sources": 56695,
-    "whisper_review_pending_sources": 49085,
+    "language_audited_sources": 139,
+    "language_whisper_attempted_sources": 40,
+    "language_pending_whisper_sources": 2604,
+    "whisper_review_sources": 56690,
+    "whisper_review_pending_sources": 49061,
     "subtitle_followup_sources": 26561,
     "subtitle_followup_pending_sources": 26561
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-08-20T06:59:08Z",
-      "databaseId": 32341923169,
+      "createdAt": "2026-08-20T07:15:52Z",
+      "databaseId": 32343203227,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-20T07:15:50Z",
+      "databaseId": 32343201036,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
+      "createdAt": "2026-08-20T07:00:24Z",
+      "databaseId": 32342018297,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-20T07:00:19Z",
+      "databaseId": 32342011624,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-20T06:59:08Z",
+      "databaseId": 32341923169,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-20T06:59:05Z",
       "databaseId": 32341918936,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -59,11 +91,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-20T06:54:45Z",
       "databaseId": 32341605706,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
@@ -83,11 +115,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-20T06:49:44Z",
       "databaseId": 32341233556,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -145,38 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-20T06:44:59Z",
-      "databaseId": 32340896531,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-20T06:41:27Z",
-      "databaseId": 32340646142,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-20T06:40:22Z",
-      "databaseId": 32340571555,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-20T06:37:11Z",
-      "databaseId": 32340349494,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
     }
   ],
   "gaps": {
@@ -292702,6 +292702,14 @@
     ],
     "whisper_review_pending": [
       {
+        "episode_id": 179794,
+        "source_id": -61623974112691836,
+        "series_title": "Aaron Hernandez: V mysli vraha",
+        "episode_code": "S01E02",
+        "source_title": "Aaron Hernandez: V mysli vraha - S1E2 Episode 2 EN",
+        "status": "needs_whisper"
+      },
+      {
         "episode_id": 175038,
         "source_id": -11151980550350308,
         "series_title": "All or Nothing: Tottenham Hotspur",
@@ -293091,14 +293099,6 @@
         "series_title": "Chirurgové",
         "episode_code": "S08E03",
         "source_title": "Chirurgové (Grey's Anatomy) – S08E03",
-        "status": "whisper_failed"
-      },
-      {
-        "episode_id": 56260,
-        "source_id": -43031112546707824,
-        "series_title": "Chirurgové",
-        "episode_code": "S08E04",
-        "source_title": "Chirurgové (Grey's Anatomy) – S08E04",
         "status": "whisper_failed"
       }
     ],
@@ -293557,14 +293557,15 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 19,
+    "disabled": 99,
+    "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
-    "whisper_non_cz_needs_subtitles": 5461,
+    "whisper_non_cz_needs_subtitles": 5480,
     "whisper_confirmed_cz": 2149,
-    "whisper_failed": 125,
-    "needs_whisper": 48960
+    "needs_whisper": 48936,
+    "whisper_failed": 125
   },
   "subtitle_followup_statuses": {
     "needs_subtitle_setup_after_prehrajto_processing": 26561
