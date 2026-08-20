@@ -2,7 +2,7 @@
   "counts": {
     "backlog_episodes": 159154,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 34237,
+    "uploaded_episodes": 34241,
     "prepared_source_episodes": 47090,
     "description_series": 60,
     "description_episodes": 753,
@@ -11,7 +11,7 @@
     "language_queue_sources": 2644,
     "language_audited_sources": 40,
     "language_whisper_attempted_sources": 40,
-    "language_pending_whisper_sources": 2624,
+    "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 56661,
     "whisper_review_pending_sources": 48946,
     "subtitle_followup_sources": 26616,
@@ -20,10 +20,66 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-08-20T12:09:47Z",
+      "databaseId": 32367411582,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-20T12:09:44Z",
+      "databaseId": 32367407034,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-20T12:09:43Z",
+      "databaseId": 32367406623,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-20T12:09:42Z",
+      "databaseId": 32367405345,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-20T12:07:22Z",
+      "databaseId": 32367203011,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-20T12:03:58Z",
+      "databaseId": 32366915611,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-20T12:03:55Z",
+      "databaseId": 32366911744,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-20T12:02:45Z",
       "databaseId": 32366814413,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -35,11 +91,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-20T11:58:55Z",
       "databaseId": 32366476224,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -63,7 +119,7 @@
       "createdAt": "2026-08-20T11:57:00Z",
       "databaseId": 32366317436,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "prepare-manifest"
     },
     {
@@ -83,11 +139,11 @@
       "workflowName": "prepare-manifest"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-08-20T11:56:21Z",
       "databaseId": 32366266282,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "sync"
     },
     {
@@ -121,62 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-20T11:47:18Z",
-      "databaseId": 32365518015,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-20T11:46:39Z",
-      "databaseId": 32365467846,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-sources"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-20T11:46:32Z",
-      "databaseId": 32365458477,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-20T11:45:32Z",
-      "databaseId": 32365376637,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-20T11:44:17Z",
-      "databaseId": 32365272071,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-20T11:44:13Z",
-      "databaseId": 32365266285,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-20T11:43:09Z",
-      "databaseId": 32365176219,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
     }
   ],
   "gaps": {
@@ -82301,6 +82301,11 @@
         "video_id": 28658139
       },
       {
+        "episode_id": 63732,
+        "display_name": "Magnum S02E05 - Vzpomínky jsou nekonečné (1) CZ Dabing",
+        "video_id": 28658289
+      },
+      {
         "episode_id": 30581,
         "display_name": "Pobřežní hlídka S07E09 - Pohřbeni CZ Titulky",
         "video_id": 28657549
@@ -82309,6 +82314,11 @@
         "episode_id": 30593,
         "display_name": "Pobřežní hlídka S07E21 - Zlaté dívky CZ Titulky",
         "video_id": 28657703
+      },
+      {
+        "episode_id": 30597,
+        "display_name": "Pobřežní hlídka S08E03 - Volba CZ Titulky",
+        "video_id": 28658170
       },
       {
         "episode_id": 114182,
@@ -146876,6 +146886,11 @@
         "video_id": 28657722
       },
       {
+        "episode_id": 30634,
+        "display_name": "Pobřežní hlídka S09E18 - V návalu hněvu CZ Dabing",
+        "video_id": 28658225
+      },
+      {
         "episode_id": 46119,
         "display_name": "Cizinka S07E05 - Singapur CZ Titulky",
         "video_id": 28657540
@@ -146889,6 +146904,11 @@
         "episode_id": 13895,
         "display_name": "Pobřežní hlídka S01E09 - Vyhlídková loď CZ Dabing",
         "video_id": 28658206
+      },
+      {
+        "episode_id": 13903,
+        "display_name": "Pobřežní hlídka S01E17 - Hadí oka CZ Dabing",
+        "video_id": 28658293
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -228908,6 +228928,11 @@
         "video_id": 28658139
       },
       {
+        "episode_id": 63732,
+        "display_name": "Magnum S02E05 - Vzpomínky jsou nekonečné (1) CZ Dabing",
+        "video_id": 28658289
+      },
+      {
         "episode_id": 30581,
         "display_name": "Pobřežní hlídka S07E09 - Pohřbeni CZ Titulky",
         "video_id": 28657549
@@ -228916,6 +228941,11 @@
         "episode_id": 30593,
         "display_name": "Pobřežní hlídka S07E21 - Zlaté dívky CZ Titulky",
         "video_id": 28657703
+      },
+      {
+        "episode_id": 30597,
+        "display_name": "Pobřežní hlídka S08E03 - Volba CZ Titulky",
+        "video_id": 28658170
       },
       {
         "episode_id": 114182,
@@ -293483,6 +293513,11 @@
         "video_id": 28657722
       },
       {
+        "episode_id": 30634,
+        "display_name": "Pobřežní hlídka S09E18 - V návalu hněvu CZ Dabing",
+        "video_id": 28658225
+      },
+      {
         "episode_id": 46119,
         "display_name": "Cizinka S07E05 - Singapur CZ Titulky",
         "video_id": 28657540
@@ -293496,6 +293531,11 @@
         "episode_id": 13895,
         "display_name": "Pobřežní hlídka S01E09 - Vyhlídková loď CZ Dabing",
         "video_id": 28658206
+      },
+      {
+        "episode_id": 13903,
+        "display_name": "Pobřežní hlídka S01E17 - Hadí oka CZ Dabing",
+        "video_id": 28658293
       }
     ],
     "prepared_not_upload_ready": [
