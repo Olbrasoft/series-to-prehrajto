@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 158953,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 34409,
+    "uploaded_episodes": 34413,
     "prepared_source_episodes": 47105,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 97,
-    "language_whisper_attempted_sources": 60,
-    "language_pending_whisper_sources": 2604,
+    "language_audited_sources": 20,
+    "language_whisper_attempted_sources": 20,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 56643,
     "whisper_review_pending_sources": 48823,
     "subtitle_followup_sources": 26685,
@@ -20,10 +20,34 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-08-20T16:56:32Z",
+      "databaseId": 32394817204,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-20T16:52:39Z",
+      "databaseId": 32394456106,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-20T16:52:37Z",
+      "databaseId": 32394452149,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-20T16:51:31Z",
       "databaseId": 32394350416,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -75,11 +99,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-20T16:45:09Z",
       "databaseId": 32393758595,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -153,30 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-20T16:30:22Z",
-      "databaseId": 32392361241,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-20T16:30:21Z",
-      "databaseId": 32392361000,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-20T16:23:58Z",
-      "databaseId": 32391764297,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
     }
   ],
   "gaps": {
@@ -82706,6 +82706,16 @@
         "video_id": 28664546
       },
       {
+        "episode_id": 6492,
+        "display_name": "Čmuchalové S01E02 - 2. epizoda CZ Dabing",
+        "video_id": 28664608
+      },
+      {
+        "episode_id": 6496,
+        "display_name": "Čmuchalové S01E06 - 6. epizoda CZ Dabing",
+        "video_id": 28664690
+      },
+      {
         "episode_id": 55229,
         "display_name": "Vražda S01E03 - 3. epizoda CZ Dabing",
         "video_id": 28663929
@@ -82729,6 +82739,11 @@
         "episode_id": 80961,
         "display_name": "Huangovi v Americe S02E10 - Skutečný Santa CZ Dabing",
         "video_id": 28664576
+      },
+      {
+        "episode_id": 80981,
+        "display_name": "Huangovi v Americe S03E07 - Zkrocení otců CZ Dabing",
+        "video_id": 28664647
       },
       {
         "episode_id": 114182,
@@ -147709,6 +147724,11 @@
         "episode_id": 98898,
         "display_name": "Vraždy na Shetlandech S03E03 - Tajnosti a lži CZ Dabing",
         "video_id": 28664512
+      },
+      {
+        "episode_id": 98910,
+        "display_name": "Vraždy na Shetlandech S04E06 - Utajený syn CZ Dabing",
+        "video_id": 28664620
       },
       {
         "episode_id": 78331,
@@ -230173,6 +230193,16 @@
         "video_id": 28664546
       },
       {
+        "episode_id": 6492,
+        "display_name": "Čmuchalové S01E02 - 2. epizoda CZ Dabing",
+        "video_id": 28664608
+      },
+      {
+        "episode_id": 6496,
+        "display_name": "Čmuchalové S01E06 - 6. epizoda CZ Dabing",
+        "video_id": 28664690
+      },
+      {
         "episode_id": 55229,
         "display_name": "Vražda S01E03 - 3. epizoda CZ Dabing",
         "video_id": 28663929
@@ -230196,6 +230226,11 @@
         "episode_id": 80961,
         "display_name": "Huangovi v Americe S02E10 - Skutečný Santa CZ Dabing",
         "video_id": 28664576
+      },
+      {
+        "episode_id": 80981,
+        "display_name": "Huangovi v Americe S03E07 - Zkrocení otců CZ Dabing",
+        "video_id": 28664647
       },
       {
         "episode_id": 114182,
@@ -295178,6 +295213,11 @@
         "video_id": 28664512
       },
       {
+        "episode_id": 98910,
+        "display_name": "Vraždy na Shetlandech S04E06 - Utajený syn CZ Dabing",
+        "video_id": 28664620
+      },
+      {
         "episode_id": 78331,
         "display_name": "C.B. Strike S04E03 - 3. epizoda CZ Titulky",
         "video_id": 28663920
@@ -296377,8 +296417,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 37,
-    "ok": 59,
+    "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
