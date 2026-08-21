@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 158474,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 34951,
-    "prepared_source_episodes": 46342,
+    "uploaded_episodes": 34961,
+    "prepared_source_episodes": 46353,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 142,
-    "language_whisper_attempted_sources": 40,
-    "language_pending_whisper_sources": 2604,
+    "language_audited_sources": 20,
+    "language_whisper_attempted_sources": 20,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 56609,
     "whisper_review_pending_sources": 48683,
     "subtitle_followup_sources": 26833,
@@ -20,18 +20,42 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-08-21T05:43:41Z",
-      "databaseId": 32451613569,
+      "createdAt": "2026-08-21T05:53:22Z",
+      "databaseId": 32452224253,
       "headBranch": "main",
-      "status": "pending",
-      "workflowName": "audit-language"
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-08-21T05:48:30Z",
+      "databaseId": 32451916590,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-sources"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-21T05:44:13Z",
+      "databaseId": 32451648667,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-21T05:43:41Z",
+      "databaseId": 32451613569,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-21T05:42:59Z",
       "databaseId": 32451570928,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-status"
     },
     {
@@ -107,19 +131,19 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-21T05:39:36Z",
       "databaseId": 32451359526,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-21T05:39:34Z",
       "databaseId": 32451356814,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -153,30 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-21T05:25:36Z",
-      "databaseId": 32450499454,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-21T05:25:33Z",
-      "databaseId": 32450496803,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-21T05:25:22Z",
-      "databaseId": 32450486579,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
     }
   ],
   "gaps": {
@@ -84071,6 +84071,36 @@
         "video_id": 28680504
       },
       {
+        "episode_id": 32520,
+        "display_name": "FBI S01E13 - Parťáci ve zločinu CZ Dabing",
+        "video_id": 28680867
+      },
+      {
+        "episode_id": 32524,
+        "display_name": "FBI S01E17 - Apex CZ Dabing",
+        "video_id": 28680937
+      },
+      {
+        "episode_id": 32532,
+        "display_name": "FBI S02E03 - Americký idol CZ Dabing",
+        "video_id": 28681087
+      },
+      {
+        "episode_id": 125073,
+        "display_name": "Alchymie duše S01E19 - 19. epizoda CZ Titulky",
+        "video_id": 28680865
+      },
+      {
+        "episode_id": 87613,
+        "display_name": "Rod Guinnessů S01E05 - 5. díl CZ Titulky",
+        "video_id": 28680961
+      },
+      {
+        "episode_id": 35761,
+        "display_name": "Pochybná dohoda S01E07 - Milovník koček CZ Titulky",
+        "video_id": 28681040
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -150456,9 +150486,29 @@
         "video_id": 28680635
       },
       {
+        "episode_id": 78982,
+        "display_name": "Zachraň mě S04E11 - 11. epizoda CZ Titulky",
+        "video_id": 28680866
+      },
+      {
+        "episode_id": 79014,
+        "display_name": "Zachraň mě S04E13 - 13. epizoda CZ Titulky",
+        "video_id": 28680932
+      },
+      {
+        "episode_id": 78962,
+        "display_name": "Zachraň mě S05E01 - 1. epizoda CZ Titulky",
+        "video_id": 28681021
+      },
+      {
         "episode_id": 125059,
         "display_name": "Alchymie duše S01E05 - 5. epizoda CZ Titulky",
         "video_id": 28680858
+      },
+      {
+        "episode_id": 125063,
+        "display_name": "Alchymie duše S01E09 - 9. epizoda CZ Titulky",
+        "video_id": 28680900
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -234248,6 +234298,36 @@
         "video_id": 28680504
       },
       {
+        "episode_id": 32520,
+        "display_name": "FBI S01E13 - Parťáci ve zločinu CZ Dabing",
+        "video_id": 28680867
+      },
+      {
+        "episode_id": 32524,
+        "display_name": "FBI S01E17 - Apex CZ Dabing",
+        "video_id": 28680937
+      },
+      {
+        "episode_id": 32532,
+        "display_name": "FBI S02E03 - Americký idol CZ Dabing",
+        "video_id": 28681087
+      },
+      {
+        "episode_id": 125073,
+        "display_name": "Alchymie duše S01E19 - 19. epizoda CZ Titulky",
+        "video_id": 28680865
+      },
+      {
+        "episode_id": 87613,
+        "display_name": "Rod Guinnessů S01E05 - 5. díl CZ Titulky",
+        "video_id": 28680961
+      },
+      {
+        "episode_id": 35761,
+        "display_name": "Pochybná dohoda S01E07 - Milovník koček CZ Titulky",
+        "video_id": 28681040
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -300633,9 +300713,29 @@
         "video_id": 28680635
       },
       {
+        "episode_id": 78982,
+        "display_name": "Zachraň mě S04E11 - 11. epizoda CZ Titulky",
+        "video_id": 28680866
+      },
+      {
+        "episode_id": 79014,
+        "display_name": "Zachraň mě S04E13 - 13. epizoda CZ Titulky",
+        "video_id": 28680932
+      },
+      {
+        "episode_id": 78962,
+        "display_name": "Zachraň mě S05E01 - 1. epizoda CZ Titulky",
+        "video_id": 28681021
+      },
+      {
         "episode_id": 125059,
         "display_name": "Alchymie duše S01E05 - 5. epizoda CZ Titulky",
         "video_id": 28680858
+      },
+      {
+        "episode_id": 125063,
+        "display_name": "Alchymie duše S01E09 - 9. epizoda CZ Titulky",
+        "video_id": 28680900
       }
     ],
     "prepared_not_upload_ready": [
@@ -301797,8 +301897,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 102,
-    "ok": 39,
+    "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
