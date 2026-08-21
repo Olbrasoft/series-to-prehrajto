@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 158778,
     "manifest_upload_ready_episodes": 1001,
-    "uploaded_episodes": 34631,
+    "uploaded_episodes": 34632,
     "prepared_source_episodes": 46862,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 40,
-    "language_whisper_attempted_sources": 40,
-    "language_pending_whisper_sources": 2604,
+    "language_audited_sources": 20,
+    "language_whisper_attempted_sources": 20,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 56601,
     "whisper_review_pending_sources": 48606,
     "subtitle_followup_sources": 26766,
@@ -20,18 +20,42 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-08-21T00:23:38Z",
-      "databaseId": 32432484760,
+      "createdAt": "2026-08-21T00:24:52Z",
+      "databaseId": 32432565125,
       "headBranch": "main",
       "status": "pending",
-      "workflowName": "ops-watchdog"
+      "workflowName": "process-whisper-review"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-08-21T00:24:14Z",
+      "databaseId": 32432523543,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "refresh-backlog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-21T00:24:03Z",
+      "databaseId": 32432511388,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-21T00:23:38Z",
+      "databaseId": 32432484760,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-21T00:22:45Z",
       "databaseId": 32432424194,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -75,11 +99,11 @@
       "workflowName": "prepare-manifest"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-21T00:17:34Z",
       "databaseId": 32432090148,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -153,30 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-21T00:01:59Z",
-      "databaseId": 32431068966,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-21T00:01:56Z",
-      "databaseId": 32431065941,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-21T00:01:54Z",
-      "databaseId": 32431063441,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
     }
   ],
   "gaps": {
@@ -83274,6 +83274,11 @@
         "episode_id": 17464,
         "display_name": "Zlatá devadesátá S02E05 - Co je to láska? CZ Titulky",
         "video_id": 28674349
+      },
+      {
+        "episode_id": 106365,
+        "display_name": "Huangovi v Americe S03E09 - Jak být Američanem CZ Dabing",
+        "video_id": 28674358
       },
       {
         "episode_id": 114182,
@@ -231853,6 +231858,11 @@
         "video_id": 28674349
       },
       {
+        "episode_id": 106365,
+        "display_name": "Huangovi v Americe S03E09 - Jak být Američanem CZ Dabing",
+        "video_id": 28674358
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -298597,7 +298607,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 39,
+    "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
