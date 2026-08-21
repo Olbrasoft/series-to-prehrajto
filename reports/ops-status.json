@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 158474,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 34905,
+    "uploaded_episodes": 34907,
     "prepared_source_episodes": 46569,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 108,
-    "language_whisper_attempted_sources": 40,
-    "language_pending_whisper_sources": 2604,
+    "language_audited_sources": 20,
+    "language_whisper_attempted_sources": 20,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 56606,
     "whisper_review_pending_sources": 48669,
     "subtitle_followup_sources": 26824,
@@ -20,18 +20,34 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-08-21T04:53:24Z",
-      "databaseId": 32448535584,
+      "createdAt": "2026-08-21T04:54:04Z",
+      "databaseId": 32448573671,
       "headBranch": "main",
-      "status": "pending",
-      "workflowName": "ops-watchdog"
+      "status": "in_progress",
+      "workflowName": "update-descriptions"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-08-21T04:54:01Z",
+      "databaseId": 32448571087,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-21T04:53:24Z",
+      "databaseId": 32448535584,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-21T04:52:59Z",
       "databaseId": 32448507979,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -158,22 +174,6 @@
       "conclusion": "success",
       "createdAt": "2026-08-21T04:36:32Z",
       "databaseId": 32447542199,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-21T04:35:24Z",
-      "databaseId": 32447477598,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-21T04:31:50Z",
-      "databaseId": 32447270655,
       "headBranch": "main",
       "status": "completed",
       "workflowName": "update-descriptions"
@@ -83956,6 +83956,11 @@
         "video_id": 28679743
       },
       {
+        "episode_id": 82537,
+        "display_name": "Will Trent S01E06 - Mám si dojít pro alobalovou čapku? CZ Titulky",
+        "video_id": 28679783
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -150229,6 +150234,11 @@
         "episode_id": 127991,
         "display_name": "River S01E05 - 5. epizoda CZ Dabing",
         "video_id": 28679723
+      },
+      {
+        "episode_id": 16495,
+        "display_name": "Na seznamu smrti: Temný vlk S01E01 - Neochvějné odhodlání CZ Dabing",
+        "video_id": 28679761
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -233903,6 +233913,11 @@
         "video_id": 28679743
       },
       {
+        "episode_id": 82537,
+        "display_name": "Will Trent S01E06 - Mám si dojít pro alobalovou čapku? CZ Titulky",
+        "video_id": 28679783
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -300176,6 +300191,11 @@
         "episode_id": 127991,
         "display_name": "River S01E05 - 5. epizoda CZ Dabing",
         "video_id": 28679723
+      },
+      {
+        "episode_id": 16495,
+        "display_name": "Na seznamu smrti: Temný vlk S01E01 - Neochvějné odhodlání CZ Dabing",
+        "video_id": 28679761
       }
     ],
     "prepared_not_upload_ready": [
@@ -301337,8 +301357,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 68,
-    "ok": 39,
+    "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
