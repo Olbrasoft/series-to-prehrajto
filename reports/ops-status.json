@@ -2,15 +2,15 @@
   "counts": {
     "backlog_episodes": 157681,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 35701,
-    "prepared_source_episodes": 46071,
+    "uploaded_episodes": 35704,
+    "prepared_source_episodes": 46069,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 130,
-    "language_whisper_attempted_sources": 40,
+    "language_audited_sources": 197,
+    "language_whisper_attempted_sources": 55,
     "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 56608,
     "whisper_review_pending_sources": 48638,
@@ -20,10 +20,34 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-08-21T20:54:15Z",
+      "databaseId": 32525897867,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-21T20:54:11Z",
+      "databaseId": 32525892424,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-21T20:51:44Z",
+      "databaseId": 32525694144,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-21T20:50:33Z",
       "databaseId": 32525595213,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -43,11 +67,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-08-21T20:45:59Z",
       "databaseId": 32525221578,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -153,30 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-21T20:38:59Z",
-      "databaseId": 32524631029,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-21T20:38:49Z",
-      "databaseId": 32524616084,
-      "headBranch": "main",
-      "status": "pending",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-21T20:32:46Z",
-      "databaseId": 32524095112,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
     }
   ],
   "gaps": {
@@ -85931,6 +85931,16 @@
         "video_id": 28700910
       },
       {
+        "episode_id": 53200,
+        "display_name": "V pasti S01E01 - 1. epizoda CZ Titulky",
+        "video_id": 28701154
+      },
+      {
+        "episode_id": 53196,
+        "display_name": "V pasti S01E05 - 5. epizoda CZ Dabing",
+        "video_id": 28701181
+      },
+      {
         "episode_id": 118069,
         "display_name": "Profesionální lháři S02E07 - Spadnout až na dno CZ Titulky",
         "video_id": 28700659
@@ -154209,6 +154219,11 @@
         "episode_id": 118087,
         "display_name": "Profesionální lháři S04E02 - 2. epizoda CZ Dabing",
         "video_id": 28701133
+      },
+      {
+        "episode_id": 52367,
+        "display_name": "Sherlock Holmes S07E02 - Umírající detektiv CZ Titulky",
+        "video_id": 28701160
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -239858,6 +239873,16 @@
         "video_id": 28700910
       },
       {
+        "episode_id": 53200,
+        "display_name": "V pasti S01E01 - 1. epizoda CZ Titulky",
+        "video_id": 28701154
+      },
+      {
+        "episode_id": 53196,
+        "display_name": "V pasti S01E05 - 5. epizoda CZ Dabing",
+        "video_id": 28701181
+      },
+      {
         "episode_id": 118069,
         "display_name": "Profesionální lháři S02E07 - Spadnout až na dno CZ Titulky",
         "video_id": 28700659
@@ -308136,6 +308161,11 @@
         "episode_id": 118087,
         "display_name": "Profesionální lháři S04E02 - 2. epizoda CZ Dabing",
         "video_id": 28701133
+      },
+      {
+        "episode_id": 52367,
+        "display_name": "Sherlock Holmes S07E02 - Umírající detektiv CZ Titulky",
+        "video_id": 28701160
       }
     ],
     "prepared_not_upload_ready": [
@@ -309297,9 +309327,9 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 90,
+    "disabled": 142,
     "ok": 39,
-    "resolve_failed": 1
+    "resolve_failed": 16
   },
   "whisper_review_statuses": {
     "whisper_non_cz_needs_subtitles": 5821,
