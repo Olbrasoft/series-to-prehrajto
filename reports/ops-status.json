@@ -2,14 +2,14 @@
   "counts": {
     "backlog_episodes": 157815,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 35588,
-    "prepared_source_episodes": 46511,
+    "uploaded_episodes": 35589,
+    "prepared_source_episodes": 46453,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 80,
+    "language_audited_sources": 119,
     "language_whisper_attempted_sources": 40,
     "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 56607,
@@ -20,10 +20,66 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-08-21T17:18:05Z",
+      "databaseId": 32507438846,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-21T17:18:01Z",
+      "databaseId": 32507432744,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-21T17:17:19Z",
+      "databaseId": 32507371252,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-21T17:17:15Z",
+      "databaseId": 32507365808,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-21T17:17:05Z",
+      "databaseId": 32507350211,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-08-21T17:17:02Z",
+      "databaseId": 32507345138,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-21T17:17:02Z",
+      "databaseId": 32507344954,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-21T17:15:52Z",
       "databaseId": 32507245229,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -121,62 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-21T17:02:44Z",
-      "databaseId": 32506078694,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-21T17:02:24Z",
-      "databaseId": 32506049317,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-21T17:02:21Z",
-      "databaseId": 32506045305,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-21T17:02:21Z",
-      "databaseId": 32506045134,
-      "headBranch": "main",
-      "status": "pending",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-21T17:01:59Z",
-      "databaseId": 32506012833,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-21T17:01:55Z",
-      "databaseId": 32506007096,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-21T16:50:46Z",
-      "databaseId": 32505036744,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
     }
   ],
   "gaps": {
@@ -153606,6 +153606,11 @@
         "video_id": 28696732
       },
       {
+        "episode_id": 116158,
+        "display_name": "The Keepers S01E01 - 1. epizoda CZ Titulky",
+        "video_id": 28696819
+      },
+      {
         "episode_id": 77023,
         "display_name": "Cena za lidskost S03E01 - 1. epizoda CZ Dabing",
         "video_id": 28695789
@@ -306968,6 +306973,11 @@
         "video_id": 28696732
       },
       {
+        "episode_id": 116158,
+        "display_name": "The Keepers S01E01 - 1. epizoda CZ Titulky",
+        "video_id": 28696819
+      },
+      {
         "episode_id": 77023,
         "display_name": "Cena za lidskost S03E01 - 1. epizoda CZ Dabing",
         "video_id": 28695789
@@ -308167,7 +308177,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 40,
+    "disabled": 79,
     "ok": 39,
     "resolve_failed": 1
   },
