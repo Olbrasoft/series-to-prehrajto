@@ -1,17 +1,17 @@
 {
   "counts": {
     "backlog_episodes": 157602,
-    "manifest_upload_ready_episodes": 1025,
-    "uploaded_episodes": 35722,
-    "prepared_source_episodes": 45821,
+    "manifest_upload_ready_episodes": 1046,
+    "uploaded_episodes": 35726,
+    "prepared_source_episodes": 45832,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
     "language_audited_sources": 40,
-    "language_whisper_attempted_sources": 40,
-    "language_pending_whisper_sources": 2604,
+    "language_whisper_attempted_sources": 20,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 56603,
     "whisper_review_pending_sources": 48613,
     "subtitle_followup_sources": 27055,
@@ -20,10 +20,26 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-08-21T21:29:43Z",
+      "databaseId": 32528758683,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-21T21:25:40Z",
+      "databaseId": 32528445168,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-21T21:24:34Z",
       "databaseId": 32528358473,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -47,7 +63,7 @@
       "createdAt": "2026-08-21T21:19:17Z",
       "databaseId": 32527943373,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "prepare-manifest"
     },
     {
@@ -139,11 +155,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-21T21:07:40Z",
       "databaseId": 32526998622,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -161,22 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-21T21:06:36Z",
-      "databaseId": 32526911915,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-21T21:06:20Z",
-      "databaseId": 32526891410,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
     }
   ],
   "gaps": {
@@ -239998,11 +239998,6 @@
         "video_id": 28701521
       },
       {
-        "episode_id": 19637,
-        "display_name": "Simpsonovi S18E12 - Malá velká holka CZ Dabing",
-        "video_id": 28701593
-      },
-      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -308303,9 +308298,9 @@
         "video_id": 28701538
       },
       {
-        "episode_id": 19498,
-        "display_name": "Simpsonovi S12E03 - Napravení šíleného klauna CZ Dabing",
-        "video_id": 28701632
+        "episode_id": 19514,
+        "display_name": "Simpsonovi S12E19 - Vzhůru do Svatoparku! CZ Dabing",
+        "video_id": 28701689
       },
       {
         "episode_id": 132163,
@@ -308316,6 +308311,16 @@
         "episode_id": 132171,
         "display_name": "Zločiny z vřesovišť S11E04 - Vzdušnou čarou CZ Dabing",
         "video_id": 28701573
+      },
+      {
+        "episode_id": 19507,
+        "display_name": "Simpsonovi S12E12 - Bratrovražedný tenis CZ Dabing",
+        "video_id": 28701677
+      },
+      {
+        "episode_id": 19511,
+        "display_name": "Simpsonovi S12E16 - Konec šikany ve Springfieldu CZ Dabing",
+        "video_id": 28701716
       }
     ],
     "prepared_not_upload_ready": [
@@ -309477,7 +309482,8 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 39,
+    "disabled": 20,
+    "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
