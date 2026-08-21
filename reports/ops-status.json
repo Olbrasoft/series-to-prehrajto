@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 157815,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 35547,
+    "uploaded_episodes": 35548,
     "prepared_source_episodes": 46449,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 148,
-    "language_whisper_attempted_sources": 48,
-    "language_pending_whisper_sources": 2624,
+    "language_audited_sources": 40,
+    "language_whisper_attempted_sources": 40,
+    "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 56607,
     "whisper_review_pending_sources": 48637,
     "subtitle_followup_sources": 26966,
@@ -19,11 +19,27 @@
   },
   "workflow_runs": [
     {
+      "conclusion": "success",
+      "createdAt": "2026-08-21T16:13:20Z",
+      "databaseId": 32501806807,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-21T16:13:16Z",
+      "databaseId": 32501801153,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "process-whisper-review"
+    },
+    {
       "conclusion": "",
       "createdAt": "2026-08-21T16:12:50Z",
       "databaseId": 32501761958,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
@@ -35,11 +51,11 @@
       "workflowName": "prepare-manifest"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-21T16:12:01Z",
       "databaseId": 32501691589,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -79,7 +95,7 @@
       "createdAt": "2026-08-21T16:09:58Z",
       "databaseId": 32501506891,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "audit-language"
     },
     {
@@ -147,11 +163,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-21T15:59:52Z",
       "databaseId": 32500602330,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -161,22 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-21T15:59:09Z",
-      "databaseId": 32500539688,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-21T15:58:49Z",
-      "databaseId": 32500509154,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
     }
   ],
   "gaps": {
@@ -85549,6 +85549,11 @@
         "episode_id": 140989,
         "display_name": "Stalo se v Montaně S01E11 - Nikomu nevěř CZ Dabing",
         "video_id": 28695176
+      },
+      {
+        "episode_id": 140993,
+        "display_name": "Stalo se v Montaně S01E15 - Zkažená rodina CZ Dabing",
+        "video_id": 28695252
       },
       {
         "episode_id": 114182,
@@ -238708,6 +238713,11 @@
         "video_id": 28695176
       },
       {
+        "episode_id": 140993,
+        "display_name": "Stalo se v Montaně S01E15 - Zkažená rodina CZ Dabing",
+        "video_id": 28695252
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -307757,8 +307767,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 47,
-    "disabled": 100,
+    "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
