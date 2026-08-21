@@ -2,22 +2,46 @@
   "counts": {
     "backlog_episodes": 158331,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 35052,
-    "prepared_source_episodes": 46401,
+    "uploaded_episodes": 35054,
+    "prepared_source_episodes": 46392,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 463,
+    "language_audited_sources": 514,
     "language_whisper_attempted_sources": 108,
     "language_pending_whisper_sources": 2604,
-    "whisper_review_sources": 56610,
-    "whisper_review_pending_sources": 48673,
+    "whisper_review_sources": 56611,
+    "whisper_review_pending_sources": 48674,
     "subtitle_followup_sources": 26880,
     "subtitle_followup_pending_sources": 26880
   },
   "workflow_runs": [
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-21T07:26:03Z",
+      "databaseId": 32458606216,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-21T07:25:28Z",
+      "databaseId": 32458563130,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-21T07:25:19Z",
+      "databaseId": 32458551464,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
     {
       "conclusion": "success",
       "createdAt": "2026-08-21T07:24:09Z",
@@ -27,11 +51,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-21T07:24:00Z",
       "databaseId": 32458455783,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -43,11 +67,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-08-21T07:22:54Z",
       "databaseId": 32458373669,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -153,30 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-21T07:02:30Z",
-      "databaseId": 32456894289,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-21T07:02:27Z",
-      "databaseId": 32456891849,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-21T07:01:16Z",
-      "databaseId": 32456801494,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
     }
   ],
   "gaps": {
@@ -84326,6 +84326,11 @@
         "video_id": 28683849
       },
       {
+        "episode_id": 48373,
+        "display_name": "Paní ministryně S02E21 - Ztráta spojení CZ Titulky",
+        "video_id": 28683911
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -150959,6 +150964,11 @@
         "episode_id": 72546,
         "display_name": "Homecoming S02E02 - Obryně CZ Dabing",
         "video_id": 28683838
+      },
+      {
+        "episode_id": 72550,
+        "display_name": "Homecoming S02E07 - Znovu CZ Dabing",
+        "video_id": 28683902
       },
       {
         "episode_id": 78999,
@@ -235008,6 +235018,11 @@
         "video_id": 28683849
       },
       {
+        "episode_id": 48373,
+        "display_name": "Paní ministryně S02E21 - Ztráta spojení CZ Titulky",
+        "video_id": 28683911
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -301643,6 +301658,11 @@
         "video_id": 28683838
       },
       {
+        "episode_id": 72550,
+        "display_name": "Homecoming S02E07 - Znovu CZ Dabing",
+        "video_id": 28683902
+      },
+      {
         "episode_id": 78999,
         "display_name": "Zachraň mě S04E10 - 10. epizoda CZ Titulky",
         "video_id": 28683799
@@ -302807,14 +302827,14 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 355,
+    "disabled": 406,
     "ok": 107,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
     "whisper_non_cz_needs_subtitles": 5788,
     "whisper_confirmed_cz": 2149,
-    "needs_whisper": 48548,
+    "needs_whisper": 48549,
     "whisper_failed": 125
   },
   "subtitle_followup_statuses": {
