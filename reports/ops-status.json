@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 157815,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 35549,
-    "prepared_source_episodes": 46468,
+    "uploaded_episodes": 35557,
+    "prepared_source_episodes": 46499,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 67,
+    "language_audited_sources": 73,
     "language_whisper_attempted_sources": 40,
-    "language_pending_whisper_sources": 2604,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 56607,
     "whisper_review_pending_sources": 48637,
     "subtitle_followup_sources": 26966,
@@ -20,18 +20,66 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-08-21T16:16:09Z",
-      "databaseId": 32502049164,
+      "createdAt": "2026-08-21T16:30:02Z",
+      "databaseId": 32503228264,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-08-21T16:29:59Z",
+      "databaseId": 32503223011,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-21T16:29:59Z",
+      "databaseId": 32503222860,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-21T16:28:28Z",
+      "databaseId": 32503098120,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-21T16:20:24Z",
+      "databaseId": 32502409784,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-21T16:17:15Z",
+      "databaseId": 32502143139,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-21T16:16:09Z",
+      "databaseId": 32502049164,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-21T16:14:42Z",
       "databaseId": 32501922252,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -51,11 +99,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-21T16:13:16Z",
       "databaseId": 32501801153,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
@@ -83,11 +131,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-08-21T16:11:58Z",
       "databaseId": 32501686226,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "sync"
     },
     {
@@ -115,11 +163,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-21T16:09:58Z",
       "databaseId": 32501506891,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -129,54 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-status"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-21T16:06:50Z",
-      "databaseId": 32501229273,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-21T16:04:52Z",
-      "databaseId": 32501052590,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-21T16:03:47Z",
-      "databaseId": 32500955562,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-21T16:01:51Z",
-      "databaseId": 32500787363,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-21T16:00:36Z",
-      "databaseId": 32500672033,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-21T16:00:31Z",
-      "databaseId": 32500664166,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
     }
   ],
   "gaps": {
@@ -85531,6 +85531,21 @@
         "video_id": 28695232
       },
       {
+        "episode_id": 3760,
+        "display_name": "Devious Maids S03E03 - 3. epizoda CZ Titulky",
+        "video_id": 28695452
+      },
+      {
+        "episode_id": 3764,
+        "display_name": "Devious Maids S03E07 - 7. epizoda CZ Titulky",
+        "video_id": 28695498
+      },
+      {
+        "episode_id": 3768,
+        "display_name": "Devious Maids S03E11 - 11. epizoda CZ Titulky",
+        "video_id": 28695544
+      },
+      {
         "episode_id": 35413,
         "display_name": "V plamenech S01E02 - Otrava CZ Dabing",
         "video_id": 28694835
@@ -85554,6 +85569,21 @@
         "episode_id": 140993,
         "display_name": "Stalo se v Montaně S01E15 - Zkažená rodina CZ Dabing",
         "video_id": 28695252
+      },
+      {
+        "episode_id": 143317,
+        "display_name": "Stalo se v Montaně S03E04 - Mrtvolný komfort CZ Titulky",
+        "video_id": 28695344
+      },
+      {
+        "episode_id": 143321,
+        "display_name": "Stalo se v Montaně S03E09 - Na každém šprochu pravdy trochu CZ Titulky",
+        "video_id": 28695392
+      },
+      {
+        "episode_id": 77025,
+        "display_name": "Cena za lidskost S03E02 - 2. epizoda CZ Dabing",
+        "video_id": 28695445
       },
       {
         "episode_id": 114182,
@@ -153416,6 +153446,11 @@
         "video_id": 28695240
       },
       {
+        "episode_id": 94522,
+        "display_name": "Můj život s Walterovic kluky S02E07 - Do sedla! CZ Dabing",
+        "video_id": 28695342
+      },
+      {
         "episode_id": 8163,
         "display_name": "Dave S01E04 - 4. epizoda CZ Titulky",
         "video_id": 28694899
@@ -153449,6 +153484,11 @@
         "episode_id": 140979,
         "display_name": "Stalo se v Montaně S01E01 - Pilot CZ Dabing",
         "video_id": 28695180
+      },
+      {
+        "episode_id": 143315,
+        "display_name": "Stalo se v Montaně S03E02 - Lesy jsou krásné, temné a hluboké CZ Titulky",
+        "video_id": 28695360
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -238698,6 +238738,21 @@
         "video_id": 28695232
       },
       {
+        "episode_id": 3760,
+        "display_name": "Devious Maids S03E03 - 3. epizoda CZ Titulky",
+        "video_id": 28695452
+      },
+      {
+        "episode_id": 3764,
+        "display_name": "Devious Maids S03E07 - 7. epizoda CZ Titulky",
+        "video_id": 28695498
+      },
+      {
+        "episode_id": 3768,
+        "display_name": "Devious Maids S03E11 - 11. epizoda CZ Titulky",
+        "video_id": 28695544
+      },
+      {
         "episode_id": 35413,
         "display_name": "V plamenech S01E02 - Otrava CZ Dabing",
         "video_id": 28694835
@@ -238721,6 +238776,21 @@
         "episode_id": 140993,
         "display_name": "Stalo se v Montaně S01E15 - Zkažená rodina CZ Dabing",
         "video_id": 28695252
+      },
+      {
+        "episode_id": 143317,
+        "display_name": "Stalo se v Montaně S03E04 - Mrtvolný komfort CZ Titulky",
+        "video_id": 28695344
+      },
+      {
+        "episode_id": 143321,
+        "display_name": "Stalo se v Montaně S03E09 - Na každém šprochu pravdy trochu CZ Titulky",
+        "video_id": 28695392
+      },
+      {
+        "episode_id": 77025,
+        "display_name": "Cena za lidskost S03E02 - 2. epizoda CZ Dabing",
+        "video_id": 28695445
       },
       {
         "episode_id": 114182,
@@ -306583,6 +306653,11 @@
         "video_id": 28695240
       },
       {
+        "episode_id": 94522,
+        "display_name": "Můj život s Walterovic kluky S02E07 - Do sedla! CZ Dabing",
+        "video_id": 28695342
+      },
+      {
         "episode_id": 8163,
         "display_name": "Dave S01E04 - 4. epizoda CZ Titulky",
         "video_id": 28694899
@@ -306616,6 +306691,11 @@
         "episode_id": 140979,
         "display_name": "Stalo se v Montaně S01E01 - Pilot CZ Dabing",
         "video_id": 28695180
+      },
+      {
+        "episode_id": 143315,
+        "display_name": "Stalo se v Montaně S03E02 - Lesy jsou krásné, temné a hluboké CZ Titulky",
+        "video_id": 28695360
       }
     ],
     "prepared_not_upload_ready": [
@@ -307777,7 +307857,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 27,
+    "disabled": 33,
     "ok": 39,
     "resolve_failed": 1
   },
