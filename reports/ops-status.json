@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 158474,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 34859,
-    "prepared_source_episodes": 46840,
+    "uploaded_episodes": 34875,
+    "prepared_source_episodes": 46856,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 56,
-    "language_whisper_attempted_sources": 40,
-    "language_pending_whisper_sources": 2604,
+    "language_audited_sources": 20,
+    "language_whisper_attempted_sources": 20,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 56606,
     "whisper_review_pending_sources": 48638,
     "subtitle_followup_sources": 26813,
@@ -20,18 +20,66 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-08-21T03:48:14Z",
-      "databaseId": 32444670886,
+      "createdAt": "2026-08-21T03:57:59Z",
+      "databaseId": 32445230981,
       "headBranch": "main",
       "status": "in_progress",
-      "workflowName": "audit-language"
+      "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-08-21T03:54:50Z",
+      "databaseId": 32445051036,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-sources"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-21T03:50:46Z",
+      "databaseId": 32444820145,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-21T03:50:46Z",
+      "databaseId": 32444819887,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-08-21T03:50:38Z",
+      "databaseId": 32444811759,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-21T03:48:39Z",
+      "databaseId": 32444694287,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-21T03:48:14Z",
+      "databaseId": 32444670886,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-21T03:47:35Z",
       "databaseId": 32444634758,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-status"
     },
     {
@@ -59,11 +107,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-08-21T03:42:43Z",
       "databaseId": 32444349338,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -99,11 +147,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-21T03:35:08Z",
       "databaseId": 32443904391,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -129,54 +177,6 @@
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-21T03:30:17Z",
-      "databaseId": 32443611166,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-21T03:30:14Z",
-      "databaseId": 32443608252,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-21T03:30:12Z",
-      "databaseId": 32443605946,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-21T03:29:27Z",
-      "databaseId": 32443561926,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-21T03:29:27Z",
-      "databaseId": 32443561833,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-21T03:29:02Z",
-      "databaseId": 32443537944,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
     }
   ],
   "gaps": {
@@ -83836,9 +83836,64 @@
         "video_id": 28678332
       },
       {
+        "episode_id": 79000,
+        "display_name": "Zachraň mě S02E04 - 4. epizoda CZ Titulky",
+        "video_id": 28678385
+      },
+      {
+        "episode_id": 57344,
+        "display_name": "Nashville S05E21 - 21. epizoda CZ Titulky",
+        "video_id": 28678441
+      },
+      {
+        "episode_id": 57356,
+        "display_name": "Nashville S06E08 - 8. epizoda CZ Titulky",
+        "video_id": 28678507
+      },
+      {
+        "episode_id": 57360,
+        "display_name": "Nashville S06E11 - 11. epizoda CZ Titulky",
+        "video_id": 28678551
+      },
+      {
+        "episode_id": 57364,
+        "display_name": "Nashville S06E12 - 12. epizoda CZ Titulky",
+        "video_id": 28678578
+      },
+      {
         "episode_id": 128305,
         "display_name": "První krev S01E08 - První zrada CZ Titulky",
         "video_id": 28678339
+      },
+      {
+        "episode_id": 60409,
+        "display_name": "Private Practice S04E05 - 5. epizoda CZ Titulky",
+        "video_id": 28678402
+      },
+      {
+        "episode_id": 80529,
+        "display_name": "Vis a vis S04E04 - Máma CZ Titulky",
+        "video_id": 28678436
+      },
+      {
+        "episode_id": 80533,
+        "display_name": "Vis a vis S04E08 - Příval břečky CZ Titulky",
+        "video_id": 28678468
+      },
+      {
+        "episode_id": 8025,
+        "display_name": "Lockwood a spol. S01E03 - Doubt Thou The Stars CZ Dabing",
+        "video_id": 28678510
+      },
+      {
+        "episode_id": 8029,
+        "display_name": "Lockwood a spol. S01E07 - Poblázněný CZ Dabing",
+        "video_id": 28678556
+      },
+      {
+        "episode_id": 146673,
+        "display_name": "Dororo S01E03 - 3. epizoda CZ Titulky",
+        "video_id": 28678596
       },
       {
         "episode_id": 114182,
@@ -149991,6 +150046,11 @@
         "video_id": 28678343
       },
       {
+        "episode_id": 102226,
+        "display_name": "Badmintonový sen S01E03 - 3. epizoda CZ Titulky",
+        "video_id": 28678404
+      },
+      {
         "episode_id": 8027,
         "display_name": "Lockwood a spol. S01E05 - Smrt se blíží CZ Dabing",
         "video_id": 28678326
@@ -149999,6 +150059,26 @@
         "episode_id": 98479,
         "display_name": "Primal S01E10 - Otrokyně škorpióna CZ Titulky",
         "video_id": 28678371
+      },
+      {
+        "episode_id": 146671,
+        "display_name": "Dororo S01E01 - 1. epizoda CZ Titulky",
+        "video_id": 28678398
+      },
+      {
+        "episode_id": 146675,
+        "display_name": "Dororo S01E06 - 6. epizoda CZ Titulky",
+        "video_id": 28678420
+      },
+      {
+        "episode_id": 146679,
+        "display_name": "Dororo S01E10 - 10. epizoda CZ Titulky",
+        "video_id": 28678452
+      },
+      {
+        "episode_id": 69771,
+        "display_name": "Marvel's Runaways S01E01 - Shledání CZ Titulky",
+        "video_id": 28678497
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -233553,9 +233633,64 @@
         "video_id": 28678332
       },
       {
+        "episode_id": 79000,
+        "display_name": "Zachraň mě S02E04 - 4. epizoda CZ Titulky",
+        "video_id": 28678385
+      },
+      {
+        "episode_id": 57344,
+        "display_name": "Nashville S05E21 - 21. epizoda CZ Titulky",
+        "video_id": 28678441
+      },
+      {
+        "episode_id": 57356,
+        "display_name": "Nashville S06E08 - 8. epizoda CZ Titulky",
+        "video_id": 28678507
+      },
+      {
+        "episode_id": 57360,
+        "display_name": "Nashville S06E11 - 11. epizoda CZ Titulky",
+        "video_id": 28678551
+      },
+      {
+        "episode_id": 57364,
+        "display_name": "Nashville S06E12 - 12. epizoda CZ Titulky",
+        "video_id": 28678578
+      },
+      {
         "episode_id": 128305,
         "display_name": "První krev S01E08 - První zrada CZ Titulky",
         "video_id": 28678339
+      },
+      {
+        "episode_id": 60409,
+        "display_name": "Private Practice S04E05 - 5. epizoda CZ Titulky",
+        "video_id": 28678402
+      },
+      {
+        "episode_id": 80529,
+        "display_name": "Vis a vis S04E04 - Máma CZ Titulky",
+        "video_id": 28678436
+      },
+      {
+        "episode_id": 80533,
+        "display_name": "Vis a vis S04E08 - Příval břečky CZ Titulky",
+        "video_id": 28678468
+      },
+      {
+        "episode_id": 8025,
+        "display_name": "Lockwood a spol. S01E03 - Doubt Thou The Stars CZ Dabing",
+        "video_id": 28678510
+      },
+      {
+        "episode_id": 8029,
+        "display_name": "Lockwood a spol. S01E07 - Poblázněný CZ Dabing",
+        "video_id": 28678556
+      },
+      {
+        "episode_id": 146673,
+        "display_name": "Dororo S01E03 - 3. epizoda CZ Titulky",
+        "video_id": 28678596
       },
       {
         "episode_id": 114182,
@@ -299708,6 +299843,11 @@
         "video_id": 28678343
       },
       {
+        "episode_id": 102226,
+        "display_name": "Badmintonový sen S01E03 - 3. epizoda CZ Titulky",
+        "video_id": 28678404
+      },
+      {
         "episode_id": 8027,
         "display_name": "Lockwood a spol. S01E05 - Smrt se blíží CZ Dabing",
         "video_id": 28678326
@@ -299716,6 +299856,26 @@
         "episode_id": 98479,
         "display_name": "Primal S01E10 - Otrokyně škorpióna CZ Titulky",
         "video_id": 28678371
+      },
+      {
+        "episode_id": 146671,
+        "display_name": "Dororo S01E01 - 1. epizoda CZ Titulky",
+        "video_id": 28678398
+      },
+      {
+        "episode_id": 146675,
+        "display_name": "Dororo S01E06 - 6. epizoda CZ Titulky",
+        "video_id": 28678420
+      },
+      {
+        "episode_id": 146679,
+        "display_name": "Dororo S01E10 - 10. epizoda CZ Titulky",
+        "video_id": 28678452
+      },
+      {
+        "episode_id": 69771,
+        "display_name": "Marvel's Runaways S01E01 - Shledání CZ Titulky",
+        "video_id": 28678497
       }
     ],
     "prepared_not_upload_ready": [
@@ -300877,8 +301037,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 16,
-    "ok": 39,
+    "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
