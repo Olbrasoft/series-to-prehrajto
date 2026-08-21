@@ -2,15 +2,15 @@
   "counts": {
     "backlog_episodes": 158143,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 35197,
-    "prepared_source_episodes": 46213,
+    "uploaded_episodes": 35201,
+    "prepared_source_episodes": 46233,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 365,
-    "language_whisper_attempted_sources": 114,
+    "language_audited_sources": 92,
+    "language_whisper_attempted_sources": 40,
     "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 56611,
     "whisper_review_pending_sources": 48676,
@@ -20,10 +20,42 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-08-21T09:53:52Z",
+      "databaseId": 32470072688,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-21T09:53:49Z",
+      "databaseId": 32470067599,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-21T09:50:36Z",
+      "databaseId": 32469809412,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-sources"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-21T09:50:03Z",
+      "databaseId": 32469764250,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-21T09:48:47Z",
       "databaseId": 32469666381,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -39,7 +71,7 @@
       "createdAt": "2026-08-21T09:45:57Z",
       "databaseId": 32469443418,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "audit-language"
     },
     {
@@ -59,11 +91,11 @@
       "workflowName": "prepare-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-08-21T09:43:31Z",
       "databaseId": 32469251680,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -91,11 +123,11 @@
       "workflowName": "process-whisper-review"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-21T09:42:18Z",
       "databaseId": 32469154671,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -107,11 +139,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-21T09:39:57Z",
       "databaseId": 32468970274,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -145,38 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-21T09:31:16Z",
-      "databaseId": 32468286171,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-21T09:31:12Z",
-      "databaseId": 32468279788,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-21T09:30:17Z",
-      "databaseId": 32468201265,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-21T09:23:01Z",
-      "databaseId": 32467620173,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
     }
   ],
   "gaps": {
@@ -84651,6 +84651,11 @@
         "video_id": 28686658
       },
       {
+        "episode_id": 15136,
+        "display_name": "Sektor S04E04 - 1000 mladíků, 1 Marilyn CZ Dabing",
+        "video_id": 28686735
+      },
+      {
         "episode_id": 57345,
         "display_name": "Nashville S05E22 - 22. epizoda CZ Titulky",
         "video_id": 28686411
@@ -84679,6 +84684,16 @@
         "episode_id": 110213,
         "display_name": "Mladí Titáni do toho! S04E08 - Vítězná šňůra, část 1 CZ Titulky",
         "video_id": 28686605
+      },
+      {
+        "episode_id": 172365,
+        "display_name": "Hírámandí: Démanty na prodej S01E04 - Álamzéb: Nevinný pěšák CZ Titulky",
+        "video_id": 28686652
+      },
+      {
+        "episode_id": 172369,
+        "display_name": "Hírámandí: Démanty na prodej S01E08 - Hírámandí: Labutí píseň CZ Titulky",
+        "video_id": 28686711
       },
       {
         "episode_id": 114182,
@@ -151649,6 +151664,11 @@
         "episode_id": 32550,
         "display_name": "FBI S03E02 - Bezdůvodné pochyby CZ Dabing",
         "video_id": 28686649
+      },
+      {
+        "episode_id": 32554,
+        "display_name": "FBI S03E06 - Odhalení CZ Dabing",
+        "video_id": 28686704
       },
       {
         "episode_id": 57279,
@@ -236058,6 +236078,11 @@
         "video_id": 28686658
       },
       {
+        "episode_id": 15136,
+        "display_name": "Sektor S04E04 - 1000 mladíků, 1 Marilyn CZ Dabing",
+        "video_id": 28686735
+      },
+      {
         "episode_id": 57345,
         "display_name": "Nashville S05E22 - 22. epizoda CZ Titulky",
         "video_id": 28686411
@@ -236086,6 +236111,16 @@
         "episode_id": 110213,
         "display_name": "Mladí Titáni do toho! S04E08 - Vítězná šňůra, část 1 CZ Titulky",
         "video_id": 28686605
+      },
+      {
+        "episode_id": 172365,
+        "display_name": "Hírámandí: Démanty na prodej S01E04 - Álamzéb: Nevinný pěšák CZ Titulky",
+        "video_id": 28686652
+      },
+      {
+        "episode_id": 172369,
+        "display_name": "Hírámandí: Démanty na prodej S01E08 - Hírámandí: Labutí píseň CZ Titulky",
+        "video_id": 28686711
       },
       {
         "episode_id": 114182,
@@ -303058,6 +303093,11 @@
         "video_id": 28686649
       },
       {
+        "episode_id": 32554,
+        "display_name": "FBI S03E06 - Odhalení CZ Dabing",
+        "video_id": 28686704
+      },
+      {
         "episode_id": 57279,
         "display_name": "Nashville S03E09 - 9. epizoda CZ Titulky",
         "video_id": 28686416
@@ -304257,8 +304297,8 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 251,
-    "ok": 113,
+    "disabled": 52,
+    "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
