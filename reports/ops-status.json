@@ -1,17 +1,17 @@
 {
   "counts": {
     "backlog_episodes": 157602,
-    "manifest_upload_ready_episodes": 1037,
-    "uploaded_episodes": 35743,
-    "prepared_source_episodes": 45715,
+    "manifest_upload_ready_episodes": 1044,
+    "uploaded_episodes": 35744,
+    "prepared_source_episodes": 45637,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 81,
-    "language_whisper_attempted_sources": 40,
-    "language_pending_whisper_sources": 2604,
+    "language_audited_sources": 20,
+    "language_whisper_attempted_sources": 20,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 56603,
     "whisper_review_pending_sources": 48613,
     "subtitle_followup_sources": 27093,
@@ -20,10 +20,26 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-08-21T21:53:34Z",
+      "databaseId": 32530580512,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-21T21:52:20Z",
+      "databaseId": 32530488122,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-21T21:51:06Z",
       "databaseId": 32530399814,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -71,7 +87,7 @@
       "createdAt": "2026-08-21T21:46:01Z",
       "databaseId": 32530024663,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "prepare-manifest"
     },
     {
@@ -91,11 +107,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-21T21:39:43Z",
       "databaseId": 32529540791,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -155,28 +171,12 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-21T21:31:37Z",
       "databaseId": 32528911029,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-21T21:31:37Z",
-      "databaseId": 32528910741,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-21T21:30:56Z",
-      "databaseId": 32528857936,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
     }
   ],
   "gaps": {
@@ -154329,6 +154329,11 @@
         "episode_id": 149523,
         "display_name": "Trosečnice S02E02 - Den třicátý čtvrtý / Den dvanáctý CZ Dabing",
         "video_id": 28702035
+      },
+      {
+        "episode_id": 130266,
+        "display_name": "Zločiny z vřesovišť S01E01 - Skryté hlubiny CZ Dabing",
+        "video_id": 28702099
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -308376,6 +308381,11 @@
         "episode_id": 149523,
         "display_name": "Trosečnice S02E02 - Den třicátý čtvrtý / Den dvanáctý CZ Dabing",
         "video_id": 28702035
+      },
+      {
+        "episode_id": 130266,
+        "display_name": "Zločiny z vřesovišť S01E01 - Skryté hlubiny CZ Dabing",
+        "video_id": 28702099
       }
     ],
     "prepared_not_upload_ready": [
@@ -309537,8 +309547,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 41,
-    "ok": 39,
+    "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
