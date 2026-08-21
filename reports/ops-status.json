@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 157815,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 35524,
+    "uploaded_episodes": 35526,
     "prepared_source_episodes": 46412,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 60,
-    "language_whisper_attempted_sources": 60,
-    "language_pending_whisper_sources": 2624,
+    "language_audited_sources": 40,
+    "language_whisper_attempted_sources": 40,
+    "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 56607,
     "whisper_review_pending_sources": 48637,
     "subtitle_followup_sources": 26965,
@@ -20,18 +20,50 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-08-21T15:44:17Z",
-      "databaseId": 32499219778,
+      "createdAt": "2026-08-21T15:50:26Z",
+      "databaseId": 32499771250,
       "headBranch": "main",
       "status": "pending",
-      "workflowName": "update-descriptions"
+      "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-08-21T15:50:24Z",
+      "databaseId": 32499768914,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-21T15:50:20Z",
+      "databaseId": 32499763139,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-21T15:48:36Z",
+      "databaseId": 32499609707,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-sources"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-21T15:44:17Z",
+      "databaseId": 32499219778,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-21T15:44:15Z",
       "databaseId": 32499216540,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "update-descriptions"
     },
     {
@@ -47,15 +79,15 @@
       "createdAt": "2026-08-21T15:43:53Z",
       "databaseId": 32499181581,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "audit-language"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-21T15:43:37Z",
       "databaseId": 32499158363,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-status"
     },
     {
@@ -83,11 +115,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-08-21T15:42:12Z",
       "databaseId": 32499030271,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -95,7 +127,7 @@
       "createdAt": "2026-08-21T15:42:10Z",
       "databaseId": 32499027480,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "sync"
     },
     {
@@ -123,11 +155,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-21T15:37:17Z",
       "databaseId": 32498586867,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -142,38 +174,6 @@
       "conclusion": "success",
       "createdAt": "2026-08-21T15:21:55Z",
       "databaseId": 32497192311,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-21T15:21:54Z",
-      "databaseId": 32497191455,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-21T15:20:48Z",
-      "databaseId": 32497089137,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-21T15:20:25Z",
-      "databaseId": 32497055706,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-21T15:19:53Z",
-      "databaseId": 32497005310,
       "headBranch": "main",
       "status": "completed",
       "workflowName": "prepare-manifest"
@@ -85466,6 +85466,11 @@
         "video_id": 28694444
       },
       {
+        "episode_id": 114520,
+        "display_name": "Caprica S01E05 - Tam je další obloha CZ Titulky",
+        "video_id": 28694737
+      },
+      {
         "episode_id": 112293,
         "display_name": "Královna slz S01E15 - 15. epizoda CZ Titulky",
         "video_id": 28693915
@@ -85499,6 +85504,11 @@
         "episode_id": 26345,
         "display_name": "Dave S03E10 - 10. epizoda CZ Titulky",
         "video_id": 28694563
+      },
+      {
+        "episode_id": 161125,
+        "display_name": "Čistě platonicky S02E08 - Tajemství mladého Darcyho CZ Titulky",
+        "video_id": 28694722
       },
       {
         "episode_id": 114182,
@@ -238508,6 +238518,11 @@
         "video_id": 28694444
       },
       {
+        "episode_id": 114520,
+        "display_name": "Caprica S01E05 - Tam je další obloha CZ Titulky",
+        "video_id": 28694737
+      },
+      {
         "episode_id": 112293,
         "display_name": "Královna slz S01E15 - 15. epizoda CZ Titulky",
         "video_id": 28693915
@@ -238541,6 +238556,11 @@
         "episode_id": 26345,
         "display_name": "Dave S03E10 - 10. epizoda CZ Titulky",
         "video_id": 28694563
+      },
+      {
+        "episode_id": 161125,
+        "display_name": "Čistě platonicky S02E08 - Tajemství mladého Darcyho CZ Titulky",
+        "video_id": 28694722
       },
       {
         "episode_id": 114182,
@@ -307527,7 +307547,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 59,
+    "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
