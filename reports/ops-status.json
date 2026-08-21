@@ -2,14 +2,14 @@
   "counts": {
     "backlog_episodes": 158474,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 34895,
-    "prepared_source_episodes": 46611,
+    "uploaded_episodes": 34905,
+    "prepared_source_episodes": 46569,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 40,
+    "language_audited_sources": 108,
     "language_whisper_attempted_sources": 40,
     "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 56606,
@@ -20,18 +20,82 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-08-21T04:46:39Z",
-      "databaseId": 32448129757,
+      "createdAt": "2026-08-21T04:53:24Z",
+      "databaseId": 32448535584,
       "headBranch": "main",
       "status": "pending",
-      "workflowName": "audit-language"
+      "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-08-21T04:52:59Z",
+      "databaseId": 32448507979,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-21T04:52:51Z",
+      "databaseId": 32448500196,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-21T04:52:51Z",
+      "databaseId": 32448499915,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-08-21T04:52:17Z",
+      "databaseId": 32448467422,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-21T04:50:48Z",
+      "databaseId": 32448378920,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-sources"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-08-21T04:50:26Z",
+      "databaseId": 32448357059,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-21T04:46:59Z",
+      "databaseId": 32448150944,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-21T04:46:39Z",
+      "databaseId": 32448129757,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-21T04:45:57Z",
       "databaseId": 32448090604,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-status"
     },
     {
@@ -59,11 +123,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-21T04:39:34Z",
       "databaseId": 32447712680,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -75,11 +139,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-08-21T04:39:00Z",
       "databaseId": 32447682558,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -113,70 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-21T04:31:46Z",
-      "databaseId": 32447266630,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-21T04:30:40Z",
-      "databaseId": 32447203246,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-21T04:30:38Z",
-      "databaseId": 32447200889,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-21T04:30:37Z",
-      "databaseId": 32447200316,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-21T04:24:05Z",
-      "databaseId": 32446813758,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-21T04:19:22Z",
-      "databaseId": 32446527470,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-21T04:19:19Z",
-      "databaseId": 32446524638,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-21T04:18:05Z",
-      "databaseId": 32446450990,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
     }
   ],
   "gaps": {
@@ -83926,9 +83926,34 @@
         "video_id": 28679617
       },
       {
+        "episode_id": 110192,
+        "display_name": "Mladí Titáni do toho! S03E32 - Hatmatilka CZ Titulky",
+        "video_id": 28679658
+      },
+      {
+        "episode_id": 110224,
+        "display_name": "Mladí Titáni do toho! S04E26 - Horká salátová voda CZ Titulky",
+        "video_id": 28679701
+      },
+      {
+        "episode_id": 110228,
+        "display_name": "Mladí Titáni do toho! S04E37 - Liga Spravedlnosti hledá talent 1+2 CZ Titulky",
+        "video_id": 28679763
+      },
+      {
         "episode_id": 69785,
         "display_name": "Marvel's Runaways S01E05 - Království CZ Titulky",
         "video_id": 28679529
+      },
+      {
+        "episode_id": 69789,
+        "display_name": "Marvel's Runaways S01E09 - Soudný den CZ Titulky",
+        "video_id": 28679662
+      },
+      {
+        "episode_id": 82533,
+        "display_name": "Will Trent S01E02 - Jsem celkem všímavý CZ Titulky",
+        "video_id": 28679743
       },
       {
         "episode_id": 114182,
@@ -150161,6 +150186,16 @@
         "video_id": 28679545
       },
       {
+        "episode_id": 125082,
+        "display_name": "Alchymie duše S02E05 - 5. epizoda CZ Titulky",
+        "video_id": 28679632
+      },
+      {
+        "episode_id": 171090,
+        "display_name": "Půlnoční evangelium S01E04 - Oslepen svým koncem CZ Titulky",
+        "video_id": 28679774
+      },
+      {
         "episode_id": 164499,
         "display_name": "Mumbai Diaries S02E06 - 6. epizoda CZ Titulky",
         "video_id": 28679500
@@ -150179,6 +150214,21 @@
         "episode_id": 82539,
         "display_name": "Will Trent S01E08 - Dvě stě dolarů a lístek na autobus CZ Titulky",
         "video_id": 28679615
+      },
+      {
+        "episode_id": 82543,
+        "display_name": "Will Trent S01E12 - Kromě všeho se nic nezměnilo CZ Titulky",
+        "video_id": 28679647
+      },
+      {
+        "episode_id": 127987,
+        "display_name": "River S01E01 - 1. epizoda CZ Dabing",
+        "video_id": 28679685
+      },
+      {
+        "episode_id": 127991,
+        "display_name": "River S01E05 - 5. epizoda CZ Dabing",
+        "video_id": 28679723
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -233823,9 +233873,34 @@
         "video_id": 28679617
       },
       {
+        "episode_id": 110192,
+        "display_name": "Mladí Titáni do toho! S03E32 - Hatmatilka CZ Titulky",
+        "video_id": 28679658
+      },
+      {
+        "episode_id": 110224,
+        "display_name": "Mladí Titáni do toho! S04E26 - Horká salátová voda CZ Titulky",
+        "video_id": 28679701
+      },
+      {
+        "episode_id": 110228,
+        "display_name": "Mladí Titáni do toho! S04E37 - Liga Spravedlnosti hledá talent 1+2 CZ Titulky",
+        "video_id": 28679763
+      },
+      {
         "episode_id": 69785,
         "display_name": "Marvel's Runaways S01E05 - Království CZ Titulky",
         "video_id": 28679529
+      },
+      {
+        "episode_id": 69789,
+        "display_name": "Marvel's Runaways S01E09 - Soudný den CZ Titulky",
+        "video_id": 28679662
+      },
+      {
+        "episode_id": 82533,
+        "display_name": "Will Trent S01E02 - Jsem celkem všímavý CZ Titulky",
+        "video_id": 28679743
       },
       {
         "episode_id": 114182,
@@ -300058,6 +300133,16 @@
         "video_id": 28679545
       },
       {
+        "episode_id": 125082,
+        "display_name": "Alchymie duše S02E05 - 5. epizoda CZ Titulky",
+        "video_id": 28679632
+      },
+      {
+        "episode_id": 171090,
+        "display_name": "Půlnoční evangelium S01E04 - Oslepen svým koncem CZ Titulky",
+        "video_id": 28679774
+      },
+      {
         "episode_id": 164499,
         "display_name": "Mumbai Diaries S02E06 - 6. epizoda CZ Titulky",
         "video_id": 28679500
@@ -300076,6 +300161,21 @@
         "episode_id": 82539,
         "display_name": "Will Trent S01E08 - Dvě stě dolarů a lístek na autobus CZ Titulky",
         "video_id": 28679615
+      },
+      {
+        "episode_id": 82543,
+        "display_name": "Will Trent S01E12 - Kromě všeho se nic nezměnilo CZ Titulky",
+        "video_id": 28679647
+      },
+      {
+        "episode_id": 127987,
+        "display_name": "River S01E01 - 1. epizoda CZ Dabing",
+        "video_id": 28679685
+      },
+      {
+        "episode_id": 127991,
+        "display_name": "River S01E05 - 5. epizoda CZ Dabing",
+        "video_id": 28679723
       }
     ],
     "prepared_not_upload_ready": [
@@ -301237,6 +301337,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
+    "disabled": 68,
     "ok": 39,
     "resolve_failed": 1
   },
