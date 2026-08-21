@@ -2,14 +2,14 @@
   "counts": {
     "backlog_episodes": 157815,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 35583,
-    "prepared_source_episodes": 46534,
+    "uploaded_episodes": 35585,
+    "prepared_source_episodes": 46502,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 74,
+    "language_audited_sources": 125,
     "language_whisper_attempted_sources": 20,
     "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 56607,
@@ -20,26 +20,58 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-08-21T17:02:48Z",
-      "databaseId": 32506084709,
+      "createdAt": "2026-08-21T17:03:44Z",
+      "databaseId": 32506169395,
       "headBranch": "main",
       "status": "pending",
       "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
-      "createdAt": "2026-08-21T17:02:44Z",
-      "databaseId": 32506078694,
+      "createdAt": "2026-08-21T17:03:19Z",
+      "databaseId": 32506130881,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "prepare-manifest"
     },
     {
+      "conclusion": "success",
+      "createdAt": "2026-08-21T17:03:14Z",
+      "databaseId": 32506124122,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
       "conclusion": "",
+      "createdAt": "2026-08-21T17:03:10Z",
+      "databaseId": 32506116823,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-21T17:02:48Z",
+      "databaseId": 32506084709,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-08-21T17:02:44Z",
+      "databaseId": 32506078694,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "cancelled",
       "createdAt": "2026-08-21T17:02:24Z",
       "databaseId": 32506049317,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -59,11 +91,11 @@
       "workflowName": "sync"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-21T17:01:59Z",
       "databaseId": 32506012833,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -123,11 +155,11 @@
       "workflowName": "prepare-manifest"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-21T16:46:12Z",
       "databaseId": 32504640641,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -145,38 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-21T16:44:51Z",
-      "databaseId": 32504519229,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-21T16:43:19Z",
-      "databaseId": 32504383628,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-21T16:41:49Z",
-      "databaseId": 32504251968,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-21T16:33:03Z",
-      "databaseId": 32503491547,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
     }
   ],
   "gaps": {
@@ -85666,6 +85666,11 @@
         "video_id": 28696477
       },
       {
+        "episode_id": 92113,
+        "display_name": "The Muppet Show S04E07 - 7. epizoda CZ Titulky",
+        "video_id": 28696514
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -153619,6 +153624,11 @@
         "episode_id": 92071,
         "display_name": "The Muppet Show S02E06 - 6. epizoda CZ Titulky",
         "video_id": 28696452
+      },
+      {
+        "episode_id": 92083,
+        "display_name": "The Muppet Show S02E18 - 18. epizoda CZ Titulky",
+        "video_id": 28696493
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -239003,6 +239013,11 @@
         "video_id": 28696477
       },
       {
+        "episode_id": 92113,
+        "display_name": "The Muppet Show S04E07 - 7. epizoda CZ Titulky",
+        "video_id": 28696514
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -306956,6 +306971,11 @@
         "episode_id": 92071,
         "display_name": "The Muppet Show S02E06 - 6. epizoda CZ Titulky",
         "video_id": 28696452
+      },
+      {
+        "episode_id": 92083,
+        "display_name": "The Muppet Show S02E18 - 18. epizoda CZ Titulky",
+        "video_id": 28696493
       }
     ],
     "prepared_not_upload_ready": [
@@ -308117,7 +308137,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 54,
+    "disabled": 105,
     "ok": 19,
     "resolve_failed": 1
   },
