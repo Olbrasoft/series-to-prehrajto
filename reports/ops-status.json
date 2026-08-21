@@ -2,14 +2,14 @@
   "counts": {
     "backlog_episodes": 157815,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 35548,
-    "prepared_source_episodes": 46449,
+    "uploaded_episodes": 35549,
+    "prepared_source_episodes": 46468,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 40,
+    "language_audited_sources": 67,
     "language_whisper_attempted_sources": 40,
     "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 56607,
@@ -18,6 +18,30 @@
     "subtitle_followup_pending_sources": 26966
   },
   "workflow_runs": [
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-21T16:16:09Z",
+      "databaseId": 32502049164,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-21T16:14:42Z",
+      "databaseId": 32501922252,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-21T16:14:38Z",
+      "databaseId": 32501916920,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
     {
       "conclusion": "success",
       "createdAt": "2026-08-21T16:13:20Z",
@@ -35,19 +59,19 @@
       "workflowName": "process-whisper-review"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-21T16:12:50Z",
       "databaseId": 32501761958,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-08-21T16:12:45Z",
       "databaseId": 32501755414,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -147,33 +171,9 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-21T16:00:31Z",
       "databaseId": 32500664166,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-21T15:59:56Z",
-      "databaseId": 32500608033,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-21T15:59:52Z",
-      "databaseId": 32500602330,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-21T15:59:09Z",
-      "databaseId": 32500539881,
       "headBranch": "main",
       "status": "completed",
       "workflowName": "prepare-manifest"
@@ -153411,6 +153411,11 @@
         "video_id": 28695161
       },
       {
+        "episode_id": 94514,
+        "display_name": "Můj život s Walterovic kluky S02E04 - Dívej se jinam CZ Dabing",
+        "video_id": 28695240
+      },
+      {
         "episode_id": 8163,
         "display_name": "Dave S01E04 - 4. epizoda CZ Titulky",
         "video_id": 28694899
@@ -306573,6 +306578,11 @@
         "video_id": 28695161
       },
       {
+        "episode_id": 94514,
+        "display_name": "Můj život s Walterovic kluky S02E04 - Dívej se jinam CZ Dabing",
+        "video_id": 28695240
+      },
+      {
         "episode_id": 8163,
         "display_name": "Dave S01E04 - 4. epizoda CZ Titulky",
         "video_id": 28694899
@@ -307767,6 +307777,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
+    "disabled": 27,
     "ok": 39,
     "resolve_failed": 1
   },
