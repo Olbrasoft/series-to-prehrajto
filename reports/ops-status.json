@@ -1,17 +1,17 @@
 {
   "counts": {
     "backlog_episodes": 156911,
-    "manifest_upload_ready_episodes": 1090,
-    "uploaded_episodes": 36519,
-    "prepared_source_episodes": 45298,
+    "manifest_upload_ready_episodes": 1095,
+    "uploaded_episodes": 36520,
+    "prepared_source_episodes": 45208,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 454,
-    "language_whisper_attempted_sources": 125,
-    "language_pending_whisper_sources": 2604,
+    "language_audited_sources": 20,
+    "language_whisper_attempted_sources": 20,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 56601,
     "whisper_review_pending_sources": 48596,
     "subtitle_followup_sources": 27322,
@@ -20,10 +20,26 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-08-22T11:29:41Z",
+      "databaseId": 32570426498,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-22T11:28:57Z",
+      "databaseId": 32570394741,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
       "createdAt": "2026-08-22T11:28:13Z",
       "databaseId": 32570361276,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
@@ -39,7 +55,7 @@
       "createdAt": "2026-08-22T11:28:09Z",
       "databaseId": 32570359036,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "prepare-manifest"
     },
     {
@@ -51,11 +67,11 @@
       "workflowName": "sync"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-22T11:27:45Z",
       "databaseId": 32570342339,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -155,25 +171,9 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-22T11:06:10Z",
       "databaseId": 32569379944,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-22T11:05:52Z",
-      "databaseId": 32569367258,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-22T11:05:48Z",
-      "databaseId": 32569364187,
       "headBranch": "main",
       "status": "completed",
       "workflowName": "audit-language"
@@ -158124,6 +158124,11 @@
         "episode_id": 11127,
         "display_name": "Příběhy nekonečna S01E05 - Kontrola CZ Titulky",
         "video_id": 28714639
+      },
+      {
+        "episode_id": 148623,
+        "display_name": "Díky, další S01E03 - #Ghosting CZ Dabing",
+        "video_id": 28714708
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -315966,6 +315971,11 @@
         "episode_id": 11127,
         "display_name": "Příběhy nekonečna S01E05 - Kontrola CZ Titulky",
         "video_id": 28714639
+      },
+      {
+        "episode_id": 148623,
+        "display_name": "Díky, další S01E03 - #Ghosting CZ Dabing",
+        "video_id": 28714708
       }
     ],
     "prepared_not_upload_ready": [
@@ -317127,8 +317137,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 329,
-    "ok": 124,
+    "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
