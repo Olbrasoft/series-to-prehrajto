@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 156531,
     "manifest_upload_ready_episodes": 1002,
-    "uploaded_episodes": 36830,
+    "uploaded_episodes": 36831,
     "prepared_source_episodes": 45356,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 72,
-    "language_whisper_attempted_sources": 60,
-    "language_pending_whisper_sources": 2604,
+    "language_audited_sources": 20,
+    "language_whisper_attempted_sources": 20,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 56592,
     "whisper_review_pending_sources": 48548,
     "subtitle_followup_sources": 27411,
@@ -20,18 +20,42 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-08-22T20:01:29Z",
-      "databaseId": 32595456952,
+      "createdAt": "2026-08-22T20:04:54Z",
+      "databaseId": 32595623867,
       "headBranch": "main",
       "status": "in_progress",
-      "workflowName": "update-descriptions"
+      "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-08-22T20:04:48Z",
+      "databaseId": 32595619058,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-22T20:03:32Z",
+      "databaseId": 32595558064,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-22T20:01:29Z",
+      "databaseId": 32595456952,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-22T20:00:30Z",
       "databaseId": 32595403288,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -79,7 +103,7 @@
       "createdAt": "2026-08-22T19:57:06Z",
       "databaseId": 32595231949,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "sync"
     },
     {
@@ -153,30 +177,6 @@
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "prepare-sources"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-22T19:42:14Z",
-      "databaseId": 32594498105,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-22T19:41:00Z",
-      "databaseId": 32594436118,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-22T19:39:33Z",
-      "databaseId": 32594361541,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
     }
   ],
   "gaps": {
@@ -88544,6 +88544,11 @@
         "episode_id": 45148,
         "display_name": "Jak prosté S05E08 - Jak se dělá omáčka CZ Dabing",
         "video_id": 28721137
+      },
+      {
+        "episode_id": 45088,
+        "display_name": "Jak prosté S06E21 - Cokoli zůstane, jakkoli je to nepravděpodobné CZ Dabing",
+        "video_id": 28721191
       },
       {
         "episode_id": 59893,
@@ -247738,6 +247743,11 @@
         "video_id": 28721137
       },
       {
+        "episode_id": 45088,
+        "display_name": "Jak prosté S06E21 - Cokoli zůstane, jakkoli je to nepravděpodobné CZ Dabing",
+        "video_id": 28721191
+      },
+      {
         "episode_id": 59893,
         "display_name": "Prozíravost S02E13 - 13. epizoda CZ Dabing",
         "video_id": 28720444
@@ -319827,9 +319837,8 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 58,
-    "disabled": 12,
-    "resolve_failed": 2
+    "ok": 19,
+    "resolve_failed": 1
   },
   "whisper_review_statuses": {
     "whisper_non_cz_needs_subtitles": 5873,
