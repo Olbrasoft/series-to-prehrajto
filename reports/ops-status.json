@@ -2,22 +2,46 @@
   "counts": {
     "backlog_episodes": 156627,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 36718,
+    "uploaded_episodes": 36719,
     "prepared_source_episodes": 45358,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 64,
+    "language_audited_sources": 40,
     "language_whisper_attempted_sources": 40,
-    "language_pending_whisper_sources": 2624,
+    "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 56587,
     "whisper_review_pending_sources": 48523,
     "subtitle_followup_sources": 27366,
     "subtitle_followup_pending_sources": 27366
   },
   "workflow_runs": [
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-22T16:10:10Z",
+      "databaseId": 32583894681,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-22T16:10:06Z",
+      "databaseId": 32583890123,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-22T16:09:07Z",
+      "databaseId": 32583843262,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
     {
       "conclusion": "success",
       "createdAt": "2026-08-22T16:07:56Z",
@@ -35,11 +59,11 @@
       "workflowName": "process-whisper-review"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-22T16:07:20Z",
       "databaseId": 32583753621,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -59,11 +83,11 @@
       "workflowName": "prepare-manifest"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-08-22T16:07:16Z",
       "databaseId": 32583750806,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -79,7 +103,7 @@
       "createdAt": "2026-08-22T16:06:57Z",
       "databaseId": 32583735238,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "sync"
     },
     {
@@ -103,7 +127,7 @@
       "createdAt": "2026-08-22T16:05:40Z",
       "databaseId": 32583671851,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "audit-language"
     },
     {
@@ -153,30 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-22T15:57:57Z",
-      "databaseId": 32583279866,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-22T15:57:22Z",
-      "databaseId": 32583253537,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-22T15:56:41Z",
-      "databaseId": 32583220111,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
     }
   ],
   "gaps": {
@@ -88269,6 +88269,11 @@
         "episode_id": 40228,
         "display_name": "Smallville S04E20 - Evan CZ Dabing",
         "video_id": 28718278
+      },
+      {
+        "episode_id": 43228,
+        "display_name": "Zoufalé manželky S05E11 - Každý potřebuje domov CZ Dabing",
+        "video_id": 28718407
       },
       {
         "episode_id": 15209,
@@ -246903,6 +246908,11 @@
         "video_id": 28718278
       },
       {
+        "episode_id": 43228,
+        "display_name": "Zoufalé manželky S05E11 - Každý potřebuje domov CZ Dabing",
+        "video_id": 28718407
+      },
+      {
         "episode_id": 15209,
         "display_name": "Bridgertonovi S01E04 - Věc cti CZ Dabing",
         "video_id": 28717791
@@ -318708,7 +318718,6 @@
   "language_verdicts": {},
   "language_whisper_statuses": {
     "ok": 39,
-    "disabled": 24,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
