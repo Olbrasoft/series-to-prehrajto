@@ -1,16 +1,16 @@
 {
   "counts": {
     "backlog_episodes": 156755,
-    "manifest_upload_ready_episodes": 1033,
-    "uploaded_episodes": 36567,
+    "manifest_upload_ready_episodes": 1032,
+    "uploaded_episodes": 36580,
     "prepared_source_episodes": 45321,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 289,
-    "language_whisper_attempted_sources": 110,
+    "language_audited_sources": 40,
+    "language_whisper_attempted_sources": 40,
     "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 56587,
     "whisper_review_pending_sources": 48523,
@@ -20,10 +20,66 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-08-22T12:45:56Z",
+      "databaseId": 32573876715,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-22T12:45:10Z",
+      "databaseId": 32573840918,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-22T12:44:40Z",
+      "databaseId": 32573817034,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-22T12:44:09Z",
+      "databaseId": 32573792705,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-22T12:44:09Z",
+      "databaseId": 32573792568,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-08-22T12:41:50Z",
+      "databaseId": 32573688817,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-22T12:33:28Z",
+      "databaseId": 32573311584,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-22T12:32:21Z",
       "databaseId": 32573263450,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -35,11 +91,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-22T12:29:37Z",
       "databaseId": 32573132714,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -121,62 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-22T12:16:43Z",
-      "databaseId": 32572556382,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-22T12:15:38Z",
-      "databaseId": 32572509425,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-22T12:13:58Z",
-      "databaseId": 32572430727,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "refresh-backlog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-22T12:12:02Z",
-      "databaseId": 32572342776,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-22T12:10:59Z",
-      "databaseId": 32572293215,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-22T12:10:48Z",
-      "databaseId": 32572285691,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-22T12:10:45Z",
-      "databaseId": 32572283602,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
     }
   ],
   "gaps": {
@@ -87966,6 +87966,41 @@
         "video_id": 28715334
       },
       {
+        "episode_id": 59368,
+        "display_name": "Seinfeld S02E06 - 6. epizoda CZ Titulky",
+        "video_id": 28715575
+      },
+      {
+        "episode_id": 59376,
+        "display_name": "Seinfeld S03E03 - 3. epizoda CZ Titulky",
+        "video_id": 28715590
+      },
+      {
+        "episode_id": 59336,
+        "display_name": "Seinfeld S03E09 - 9. epizoda CZ Titulky",
+        "video_id": 28715613
+      },
+      {
+        "episode_id": 59340,
+        "display_name": "Seinfeld S03E22 - 22. epizoda CZ Titulky",
+        "video_id": 28715689
+      },
+      {
+        "episode_id": 11105,
+        "display_name": "Ví o tobě S01E01 - Náhodná setkání CZ Titulky",
+        "video_id": 28715528
+      },
+      {
+        "episode_id": 62649,
+        "display_name": "Dva z Queensu S07E18 - 18. epizoda CZ Dabing",
+        "video_id": 28715580
+      },
+      {
+        "episode_id": 40801,
+        "display_name": "Kriminálka Las Vegas S12E13 - Měla vlasy samou loknu CZ Dabing",
+        "video_id": 28715623
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -158329,6 +158364,36 @@
         "episode_id": 53986,
         "display_name": "Wentworth S09E01 - 1. epizoda CZ Titulky",
         "video_id": 28715526
+      },
+      {
+        "episode_id": 79210,
+        "display_name": "One Tree Hill S08E13 - 13. epizoda CZ Dabing",
+        "video_id": 28715557
+      },
+      {
+        "episode_id": 40754,
+        "display_name": "Kriminálka Las Vegas S15E12 - Mrtvý les CZ Dabing",
+        "video_id": 28715586
+      },
+      {
+        "episode_id": 35770,
+        "display_name": "Neskutečná Anna S01E03 - Dvě mouchy jednou kreditkou CZ Dabing",
+        "video_id": 28715637
+      },
+      {
+        "episode_id": 53763,
+        "display_name": "Kriminálka Las Vegas S12E20 - Znovu a lépe CZ Dabing",
+        "video_id": 28715534
+      },
+      {
+        "episode_id": 40703,
+        "display_name": "Kriminálka Las Vegas S14E16 - Vražedné tahy CZ Dabing",
+        "video_id": 28715592
+      },
+      {
+        "episode_id": 40779,
+        "display_name": "Kriminálka Las Vegas S14E18 - Nezvaný CZ Dabing",
+        "video_id": 28715641
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -246013,6 +246078,41 @@
         "video_id": 28715334
       },
       {
+        "episode_id": 59368,
+        "display_name": "Seinfeld S02E06 - 6. epizoda CZ Titulky",
+        "video_id": 28715575
+      },
+      {
+        "episode_id": 59376,
+        "display_name": "Seinfeld S03E03 - 3. epizoda CZ Titulky",
+        "video_id": 28715590
+      },
+      {
+        "episode_id": 59336,
+        "display_name": "Seinfeld S03E09 - 9. epizoda CZ Titulky",
+        "video_id": 28715613
+      },
+      {
+        "episode_id": 59340,
+        "display_name": "Seinfeld S03E22 - 22. epizoda CZ Titulky",
+        "video_id": 28715689
+      },
+      {
+        "episode_id": 11105,
+        "display_name": "Ví o tobě S01E01 - Náhodná setkání CZ Titulky",
+        "video_id": 28715528
+      },
+      {
+        "episode_id": 62649,
+        "display_name": "Dva z Queensu S07E18 - 18. epizoda CZ Dabing",
+        "video_id": 28715580
+      },
+      {
+        "episode_id": 40801,
+        "display_name": "Kriminálka Las Vegas S12E13 - Měla vlasy samou loknu CZ Dabing",
+        "video_id": 28715623
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -316376,6 +316476,36 @@
         "episode_id": 53986,
         "display_name": "Wentworth S09E01 - 1. epizoda CZ Titulky",
         "video_id": 28715526
+      },
+      {
+        "episode_id": 79210,
+        "display_name": "One Tree Hill S08E13 - 13. epizoda CZ Dabing",
+        "video_id": 28715557
+      },
+      {
+        "episode_id": 40754,
+        "display_name": "Kriminálka Las Vegas S15E12 - Mrtvý les CZ Dabing",
+        "video_id": 28715586
+      },
+      {
+        "episode_id": 35770,
+        "display_name": "Neskutečná Anna S01E03 - Dvě mouchy jednou kreditkou CZ Dabing",
+        "video_id": 28715637
+      },
+      {
+        "episode_id": 53763,
+        "display_name": "Kriminálka Las Vegas S12E20 - Znovu a lépe CZ Dabing",
+        "video_id": 28715534
+      },
+      {
+        "episode_id": 40703,
+        "display_name": "Kriminálka Las Vegas S14E16 - Vražedné tahy CZ Dabing",
+        "video_id": 28715592
+      },
+      {
+        "episode_id": 40779,
+        "display_name": "Kriminálka Las Vegas S14E18 - Nezvaný CZ Dabing",
+        "video_id": 28715641
       }
     ],
     "prepared_not_upload_ready": [
@@ -317537,8 +317667,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 109,
-    "disabled": 179,
+    "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
