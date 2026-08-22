@@ -3,13 +3,13 @@
     "backlog_episodes": 156531,
     "manifest_upload_ready_episodes": 1002,
     "uploaded_episodes": 36830,
-    "prepared_source_episodes": 45385,
+    "prepared_source_episodes": 45374,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 60,
+    "language_audited_sources": 66,
     "language_whisper_attempted_sources": 60,
     "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 56592,
@@ -20,10 +20,26 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-08-22T19:58:14Z",
+      "databaseId": 32595286984,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-22T19:58:11Z",
+      "databaseId": 32595284511,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-22T19:57:09Z",
       "databaseId": 32595233939,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -31,7 +47,7 @@
       "createdAt": "2026-08-22T19:57:09Z",
       "databaseId": 32595233829,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
@@ -161,22 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-22T19:38:24Z",
-      "databaseId": 32594301441,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-22T19:37:55Z",
-      "databaseId": 32594276428,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
     }
   ],
   "gaps": {
@@ -319828,6 +319828,7 @@
   "language_verdicts": {},
   "language_whisper_statuses": {
     "ok": 58,
+    "disabled": 6,
     "resolve_failed": 2
   },
   "whisper_review_statuses": {
