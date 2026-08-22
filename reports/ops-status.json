@@ -1,23 +1,63 @@
 {
   "counts": {
     "backlog_episodes": 156627,
-    "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 36756,
-    "prepared_source_episodes": 45314,
+    "manifest_upload_ready_episodes": 1015,
+    "uploaded_episodes": 36762,
+    "prepared_source_episodes": 45261,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 20,
-    "language_whisper_attempted_sources": 20,
+    "language_audited_sources": 339,
+    "language_whisper_attempted_sources": 88,
     "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 56601,
     "whisper_review_pending_sources": 48596,
-    "subtitle_followup_sources": 27370,
-    "subtitle_followup_pending_sources": 27370
+    "subtitle_followup_sources": 27392,
+    "subtitle_followup_pending_sources": 27392
   },
   "workflow_runs": [
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-22T17:28:19Z",
+      "databaseId": 32587827104,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-22T17:28:16Z",
+      "databaseId": 32587824346,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-22T17:28:16Z",
+      "databaseId": 32587824267,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-22T17:28:02Z",
+      "databaseId": 32587811566,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-22T17:20:07Z",
+      "databaseId": 32587415788,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
     {
       "conclusion": "",
       "createdAt": "2026-08-22T17:18:40Z",
@@ -27,11 +67,11 @@
       "workflowName": "process-whisper-review"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-22T17:18:13Z",
       "databaseId": 32587320626,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -39,7 +79,7 @@
       "createdAt": "2026-08-22T17:18:10Z",
       "databaseId": 32587317477,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "prepare-manifest"
     },
     {
@@ -107,11 +147,11 @@
       "workflowName": "prepare-manifest"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-08-22T17:15:14Z",
       "databaseId": 32587171967,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "sync"
     },
     {
@@ -137,46 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-22T17:05:44Z",
-      "databaseId": 32586695164,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-22T17:05:43Z",
-      "databaseId": 32586694251,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-22T17:05:43Z",
-      "databaseId": 32586694222,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-22T17:05:03Z",
-      "databaseId": 32586660110,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-22T17:05:00Z",
-      "databaseId": 32586657911,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
     }
   ],
   "gaps": {
@@ -88386,6 +88386,16 @@
         "video_id": 28719286
       },
       {
+        "episode_id": 5128,
+        "display_name": "Penny Dreadful S03E04 - List trávy CZ Titulky",
+        "video_id": 28719327
+      },
+      {
+        "episode_id": 48476,
+        "display_name": "Zločin S03E03 - Sedmnáct CZ Dabing",
+        "video_id": 28719396
+      },
+      {
         "episode_id": 7437,
         "display_name": "Lupin S02E03 - 3. kapitola CZ Dabing",
         "video_id": 28719073
@@ -88404,6 +88414,16 @@
         "episode_id": 43193,
         "display_name": "Zoufalé manželky S03E15 - Všechny ty maličkosti, co děláte spolu CZ Dabing",
         "video_id": 28719283
+      },
+      {
+        "episode_id": 43233,
+        "display_name": "Zoufalé manželky S05E17 - Příběh o Lucy a Jessie CZ Dabing",
+        "video_id": 28719331
+      },
+      {
+        "episode_id": 43257,
+        "display_name": "Zoufalé manželky S07E14 - Stíny minulosti CZ Dabing",
+        "video_id": 28719373
       },
       {
         "episode_id": 114182,
@@ -159096,6 +159116,11 @@
         "video_id": 28719272
       },
       {
+        "episode_id": 60690,
+        "display_name": "Úžasná paní Maiselová S05E03 - (Tiskové) chyby a trupy CZ Dabing",
+        "video_id": 28719380
+      },
+      {
         "episode_id": 51599,
         "display_name": "One Punch Man S01E02 - 2. epizoda CZ Titulky",
         "video_id": 28719076
@@ -159104,6 +159129,11 @@
         "episode_id": 14179,
         "display_name": "Lovci zločinců S02E04 - Zabiják CZ Titulky",
         "video_id": 28719189
+      },
+      {
+        "episode_id": 44823,
+        "display_name": "Battlestar Galactica S03E14 - Paní Kingová CZ Dabing",
+        "video_id": 28719348
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -247208,6 +247238,16 @@
         "video_id": 28719286
       },
       {
+        "episode_id": 5128,
+        "display_name": "Penny Dreadful S03E04 - List trávy CZ Titulky",
+        "video_id": 28719327
+      },
+      {
+        "episode_id": 48476,
+        "display_name": "Zločin S03E03 - Sedmnáct CZ Dabing",
+        "video_id": 28719396
+      },
+      {
         "episode_id": 7437,
         "display_name": "Lupin S02E03 - 3. kapitola CZ Dabing",
         "video_id": 28719073
@@ -247226,6 +247266,16 @@
         "episode_id": 43193,
         "display_name": "Zoufalé manželky S03E15 - Všechny ty maličkosti, co děláte spolu CZ Dabing",
         "video_id": 28719283
+      },
+      {
+        "episode_id": 43233,
+        "display_name": "Zoufalé manželky S05E17 - Příběh o Lucy a Jessie CZ Dabing",
+        "video_id": 28719331
+      },
+      {
+        "episode_id": 43257,
+        "display_name": "Zoufalé manželky S07E14 - Stíny minulosti CZ Dabing",
+        "video_id": 28719373
       },
       {
         "episode_id": 114182,
@@ -317918,6 +317968,11 @@
         "video_id": 28719272
       },
       {
+        "episode_id": 60690,
+        "display_name": "Úžasná paní Maiselová S05E03 - (Tiskové) chyby a trupy CZ Dabing",
+        "video_id": 28719380
+      },
+      {
         "episode_id": 51599,
         "display_name": "One Punch Man S01E02 - 2. epizoda CZ Titulky",
         "video_id": 28719076
@@ -317926,6 +317981,11 @@
         "episode_id": 14179,
         "display_name": "Lovci zločinců S02E04 - Zabiják CZ Titulky",
         "video_id": 28719189
+      },
+      {
+        "episode_id": 44823,
+        "display_name": "Battlestar Galactica S03E14 - Paní Kingová CZ Dabing",
+        "video_id": 28719348
       }
     ],
     "prepared_not_upload_ready": [
@@ -319087,7 +319147,8 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 19,
+    "disabled": 251,
+    "ok": 87,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
@@ -319097,6 +319158,6 @@
     "needs_whisper": 48471
   },
   "subtitle_followup_statuses": {
-    "needs_subtitle_setup_after_prehrajto_processing": 27370
+    "needs_subtitle_setup_after_prehrajto_processing": 27392
   }
 }
