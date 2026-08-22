@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 156627,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 36753,
+    "uploaded_episodes": 36755,
     "prepared_source_episodes": 45277,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 60,
-    "language_whisper_attempted_sources": 60,
-    "language_pending_whisper_sources": 2604,
+    "language_audited_sources": 20,
+    "language_whisper_attempted_sources": 20,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 56597,
     "whisper_review_pending_sources": 48572,
     "subtitle_followup_sources": 27370,
@@ -20,18 +20,42 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-08-22T17:15:17Z",
-      "databaseId": 32587175718,
+      "createdAt": "2026-08-22T17:16:39Z",
+      "databaseId": 32587244156,
       "headBranch": "main",
       "status": "pending",
       "workflowName": "ops-watchdog"
     },
     {
+      "conclusion": "success",
+      "createdAt": "2026-08-22T17:16:27Z",
+      "databaseId": 32587235645,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
       "conclusion": "",
+      "createdAt": "2026-08-22T17:16:25Z",
+      "databaseId": 32587233867,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-22T17:15:17Z",
+      "databaseId": 32587175718,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-22T17:15:17Z",
       "databaseId": 32587175610,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -59,11 +83,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-22T17:06:46Z",
       "databaseId": 32586745124,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -150,30 +174,6 @@
       "conclusion": "success",
       "createdAt": "2026-08-22T16:59:40Z",
       "databaseId": 32586383818,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-22T16:58:35Z",
-      "databaseId": 32586329034,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-22T16:58:31Z",
-      "databaseId": 32586325839,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-22T16:57:03Z",
-      "databaseId": 32586252143,
       "headBranch": "main",
       "status": "completed",
       "workflowName": "update-descriptions"
@@ -88381,6 +88381,11 @@
         "video_id": 28719133
       },
       {
+        "episode_id": 10168,
+        "display_name": "Grimm S05E20 - Zlá noc CZ Titulky",
+        "video_id": 28719286
+      },
+      {
         "episode_id": 7437,
         "display_name": "Lupin S02E03 - 3. kapitola CZ Dabing",
         "video_id": 28719073
@@ -159079,6 +159084,11 @@
         "episode_id": 56626,
         "display_name": "Glee S05E15 - Mlácení CZ Titulky",
         "video_id": 28719243
+      },
+      {
+        "episode_id": 60666,
+        "display_name": "Úžasná paní Maiselová S02E08 - Někdy CZ Dabing",
+        "video_id": 28719272
       },
       {
         "episode_id": 51599,
@@ -247188,6 +247198,11 @@
         "video_id": 28719133
       },
       {
+        "episode_id": 10168,
+        "display_name": "Grimm S05E20 - Zlá noc CZ Titulky",
+        "video_id": 28719286
+      },
+      {
         "episode_id": 7437,
         "display_name": "Lupin S02E03 - 3. kapitola CZ Dabing",
         "video_id": 28719073
@@ -317888,6 +317903,11 @@
         "video_id": 28719243
       },
       {
+        "episode_id": 60666,
+        "display_name": "Úžasná paní Maiselová S02E08 - Někdy CZ Dabing",
+        "video_id": 28719272
+      },
+      {
         "episode_id": 51599,
         "display_name": "One Punch Man S01E02 - 2. epizoda CZ Titulky",
         "video_id": 28719076
@@ -319057,7 +319077,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 59,
+    "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
