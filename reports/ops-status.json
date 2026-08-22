@@ -2,22 +2,46 @@
   "counts": {
     "backlog_episodes": 156627,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 36711,
-    "prepared_source_episodes": 45359,
+    "uploaded_episodes": 36714,
+    "prepared_source_episodes": 45362,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 40,
-    "language_whisper_attempted_sources": 40,
+    "language_audited_sources": 60,
+    "language_whisper_attempted_sources": 60,
     "language_pending_whisper_sources": 2604,
-    "whisper_review_sources": 56601,
-    "whisper_review_pending_sources": 48596,
+    "whisper_review_sources": 56592,
+    "whisper_review_pending_sources": 48548,
     "subtitle_followup_sources": 27366,
     "subtitle_followup_pending_sources": 27366
   },
   "workflow_runs": [
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-22T15:48:35Z",
+      "databaseId": 32582815005,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-22T15:43:01Z",
+      "databaseId": 32582532992,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-sources"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-22T15:42:48Z",
+      "databaseId": 32582522122,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
     {
       "conclusion": "success",
       "createdAt": "2026-08-22T15:41:35Z",
@@ -27,11 +51,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-22T15:41:18Z",
       "databaseId": 32582445331,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -153,30 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-22T15:27:29Z",
-      "databaseId": 32581749752,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-22T15:27:27Z",
-      "databaseId": 32581747503,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-22T15:27:10Z",
-      "databaseId": 32581733954,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
     }
   ],
   "gaps": {
@@ -88251,6 +88251,11 @@
         "video_id": 28717905
       },
       {
+        "episode_id": 40356,
+        "display_name": "Smallville S03E06 - Obrazy z minulosti CZ Dabing",
+        "video_id": 28717998
+      },
+      {
         "episode_id": 15209,
         "display_name": "Bridgertonovi S01E04 - Věc cti CZ Dabing",
         "video_id": 28717791
@@ -88264,6 +88269,11 @@
         "episode_id": 51609,
         "display_name": "One Punch Man S01E03 - 3. epizoda CZ Titulky",
         "video_id": 28717952
+      },
+      {
+        "episode_id": 6029,
+        "display_name": "Silo S02E04 - Harmonium CZ Dabing",
+        "video_id": 28718002
       },
       {
         "episode_id": 114182,
@@ -158839,6 +158849,11 @@
         "episode_id": 59426,
         "display_name": "Seinfeld S06E17 - 17. epizoda CZ Titulky",
         "video_id": 28717906
+      },
+      {
+        "episode_id": 31406,
+        "display_name": "NEPORAZITELNÝ S04E03 - MUSÍM NA VZDUCH CZ Dabing",
+        "video_id": 28717970
       },
       {
         "episode_id": 59383,
@@ -246848,6 +246863,11 @@
         "video_id": 28717905
       },
       {
+        "episode_id": 40356,
+        "display_name": "Smallville S03E06 - Obrazy z minulosti CZ Dabing",
+        "video_id": 28717998
+      },
+      {
         "episode_id": 15209,
         "display_name": "Bridgertonovi S01E04 - Věc cti CZ Dabing",
         "video_id": 28717791
@@ -246861,6 +246881,11 @@
         "episode_id": 51609,
         "display_name": "One Punch Man S01E03 - 3. epizoda CZ Titulky",
         "video_id": 28717952
+      },
+      {
+        "episode_id": 6029,
+        "display_name": "Silo S02E04 - Harmonium CZ Dabing",
+        "video_id": 28718002
       },
       {
         "episode_id": 114182,
@@ -317438,6 +317463,11 @@
         "video_id": 28717906
       },
       {
+        "episode_id": 31406,
+        "display_name": "NEPORAZITELNÝ S04E03 - MUSÍM NA VZDUCH CZ Dabing",
+        "video_id": 28717970
+      },
+      {
         "episode_id": 59383,
         "display_name": "Seinfeld S04E05 - 5. epizoda CZ Titulky",
         "video_id": 28717707
@@ -318637,14 +318667,14 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 39,
-    "resolve_failed": 1
+    "ok": 58,
+    "resolve_failed": 2
   },
   "whisper_review_statuses": {
-    "whisper_non_cz_needs_subtitles": 5834,
+    "whisper_non_cz_needs_subtitles": 5873,
     "whisper_confirmed_cz": 2171,
-    "whisper_failed": 125,
-    "needs_whisper": 48471
+    "whisper_failed": 126,
+    "needs_whisper": 48422
   },
   "subtitle_followup_statuses": {
     "needs_subtitle_setup_after_prehrajto_processing": 27366
