@@ -1,37 +1,77 @@
 {
   "counts": {
     "backlog_episodes": 157048,
-    "manifest_upload_ready_episodes": 1100,
-    "uploaded_episodes": 36365,
-    "prepared_source_episodes": 45393,
+    "manifest_upload_ready_episodes": 1103,
+    "uploaded_episodes": 36372,
+    "prepared_source_episodes": 45402,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 40,
-    "language_whisper_attempted_sources": 40,
+    "language_audited_sources": 115,
+    "language_whisper_attempted_sources": 60,
     "language_pending_whisper_sources": 2624,
-    "whisper_review_sources": 56600,
-    "whisper_review_pending_sources": 48583,
+    "whisper_review_sources": 56608,
+    "whisper_review_pending_sources": 48623,
     "subtitle_followup_sources": 27285,
     "subtitle_followup_pending_sources": 27285
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-08-22T08:26:37Z",
-      "databaseId": 32562294198,
+      "createdAt": "2026-08-22T08:34:35Z",
+      "databaseId": 32562649762,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-08-22T08:34:31Z",
+      "databaseId": 32562646627,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-22T08:34:31Z",
+      "databaseId": 32562646623,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-22T08:27:44Z",
+      "databaseId": 32562341360,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-22T08:27:41Z",
+      "databaseId": 32562339217,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-22T08:26:37Z",
+      "databaseId": 32562294198,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "cancelled",
       "createdAt": "2026-08-22T08:25:40Z",
       "databaseId": 32562249683,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -67,11 +107,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-22T08:19:32Z",
       "databaseId": 32561979718,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
@@ -91,11 +131,11 @@
       "workflowName": "prepare-manifest"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-08-22T08:19:05Z",
       "databaseId": 32561961563,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "sync"
     },
     {
@@ -134,46 +174,6 @@
       "conclusion": "success",
       "createdAt": "2026-08-22T08:12:15Z",
       "databaseId": 32561657446,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-22T08:09:26Z",
-      "databaseId": 32561528684,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-22T08:08:33Z",
-      "databaseId": 32561488719,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-22T08:08:26Z",
-      "databaseId": 32561483845,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-22T08:08:22Z",
-      "databaseId": 32561481408,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-22T08:07:22Z",
-      "databaseId": 32561438386,
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-watchdog"
@@ -87471,6 +87471,16 @@
         "video_id": 28712088
       },
       {
+        "episode_id": 52820,
+        "display_name": "Van Helsing S04E12 - Tři stránky CZ Titulky",
+        "video_id": 28712155
+      },
+      {
+        "episode_id": 71156,
+        "display_name": "Wynonna Earp S04E06 - 6. epizoda CZ Titulky",
+        "video_id": 28712217
+      },
+      {
         "episode_id": 1177,
         "display_name": "Můj malý Pony: Přátelství je magické S02E21 - Dračí výprava CZ Dabing",
         "video_id": 28711953
@@ -87499,6 +87509,16 @@
         "episode_id": 7237,
         "display_name": "Nad ránem S01E08 - Uspokojení CZ Dabing",
         "video_id": 28712074
+      },
+      {
+        "episode_id": 180237,
+        "display_name": "Pán času S01E02 - Ďáblův akord CZ Dabing",
+        "video_id": 28712149
+      },
+      {
+        "episode_id": 52805,
+        "display_name": "Van Helsing S03E05 - Pěkná oprátka CZ Titulky",
+        "video_id": 28712184
       },
       {
         "episode_id": 114182,
@@ -157336,6 +157356,11 @@
         "video_id": 28712107
       },
       {
+        "episode_id": 1138,
+        "display_name": "Můj malý Pony: Přátelství je magické S01E08 - Dvakrát měř, jednou řež CZ Dabing",
+        "video_id": 28712136
+      },
+      {
         "episode_id": 1143,
         "display_name": "Můj malý Pony: Přátelství je magické S01E13 - Lístkový závod CZ Dabing",
         "video_id": 28711952
@@ -157359,6 +157384,16 @@
         "episode_id": 1131,
         "display_name": "Můj malý Pony: Přátelství je magické S01E01 - Přátelství je magické (1) CZ Dabing",
         "video_id": 28712100
+      },
+      {
+        "episode_id": 7235,
+        "display_name": "Nad ránem S01E06 - 5318008 CZ Dabing",
+        "video_id": 28712133
+      },
+      {
+        "episode_id": 7231,
+        "display_name": "Nad ránem S01E02 - Pitomče! CZ Dabing",
+        "video_id": 28712203
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -244548,6 +244583,16 @@
         "video_id": 28712088
       },
       {
+        "episode_id": 52820,
+        "display_name": "Van Helsing S04E12 - Tři stránky CZ Titulky",
+        "video_id": 28712155
+      },
+      {
+        "episode_id": 71156,
+        "display_name": "Wynonna Earp S04E06 - 6. epizoda CZ Titulky",
+        "video_id": 28712217
+      },
+      {
         "episode_id": 1177,
         "display_name": "Můj malý Pony: Přátelství je magické S02E21 - Dračí výprava CZ Dabing",
         "video_id": 28711953
@@ -244576,6 +244621,16 @@
         "episode_id": 7237,
         "display_name": "Nad ránem S01E08 - Uspokojení CZ Dabing",
         "video_id": 28712074
+      },
+      {
+        "episode_id": 180237,
+        "display_name": "Pán času S01E02 - Ďáblův akord CZ Dabing",
+        "video_id": 28712149
+      },
+      {
+        "episode_id": 52805,
+        "display_name": "Van Helsing S03E05 - Pěkná oprátka CZ Titulky",
+        "video_id": 28712184
       },
       {
         "episode_id": 114182,
@@ -314413,6 +314468,11 @@
         "video_id": 28712107
       },
       {
+        "episode_id": 1138,
+        "display_name": "Můj malý Pony: Přátelství je magické S01E08 - Dvakrát měř, jednou řež CZ Dabing",
+        "video_id": 28712136
+      },
+      {
         "episode_id": 1143,
         "display_name": "Můj malý Pony: Přátelství je magické S01E13 - Lístkový závod CZ Dabing",
         "video_id": 28711952
@@ -314436,6 +314496,16 @@
         "episode_id": 1131,
         "display_name": "Můj malý Pony: Přátelství je magické S01E01 - Přátelství je magické (1) CZ Dabing",
         "video_id": 28712100
+      },
+      {
+        "episode_id": 7235,
+        "display_name": "Nad ránem S01E06 - 5318008 CZ Dabing",
+        "video_id": 28712133
+      },
+      {
+        "episode_id": 7231,
+        "display_name": "Nad ránem S01E02 - Pitomče! CZ Dabing",
+        "video_id": 28712203
       }
     ],
     "prepared_not_upload_ready": [
@@ -315597,14 +315667,15 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 39,
+    "disabled": 55,
+    "ok": 59,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
-    "whisper_non_cz_needs_subtitles": 5846,
-    "whisper_confirmed_cz": 2171,
+    "whisper_non_cz_needs_subtitles": 5824,
+    "whisper_confirmed_cz": 2161,
     "whisper_failed": 125,
-    "needs_whisper": 48458
+    "needs_whisper": 48498
   },
   "subtitle_followup_statuses": {
     "needs_subtitle_setup_after_prehrajto_processing": 27285
