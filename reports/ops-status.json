@@ -1,29 +1,53 @@
 {
   "counts": {
     "backlog_episodes": 157447,
-    "manifest_upload_ready_episodes": 1076,
-    "uploaded_episodes": 36002,
-    "prepared_source_episodes": 45569,
+    "manifest_upload_ready_episodes": 1079,
+    "uploaded_episodes": 36005,
+    "prepared_source_episodes": 45568,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 493,
-    "language_whisper_attempted_sources": 102,
-    "language_pending_whisper_sources": 2604,
+    "language_audited_sources": 41,
+    "language_whisper_attempted_sources": 20,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 56609,
-    "whisper_review_pending_sources": 48626,
+    "whisper_review_pending_sources": 48627,
     "subtitle_followup_sources": 27133,
     "subtitle_followup_pending_sources": 27133
   },
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-08-22T02:32:44Z",
+      "databaseId": 32546545287,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-22T02:31:34Z",
+      "databaseId": 32546491439,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-22T02:31:31Z",
+      "databaseId": 32546489239,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-22T02:30:30Z",
       "databaseId": 32546443858,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -153,30 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-22T02:02:59Z",
-      "databaseId": 32545169988,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-22T02:02:57Z",
-      "databaseId": 32545168382,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-22T02:02:39Z",
-      "databaseId": 32545154128,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-descriptions"
     }
   ],
   "gaps": {
@@ -86616,6 +86616,16 @@
         "video_id": 28706435
       },
       {
+        "episode_id": 183340,
+        "display_name": "Tučňáci z Madagaskaru  S02E30 - Pravda bolí CZ Dabing",
+        "video_id": 28706475
+      },
+      {
+        "episode_id": 140165,
+        "display_name": "Přítelkyně S01E05 - 5. díl CZ Dabing",
+        "video_id": 28706442
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -155539,6 +155549,11 @@
         "episode_id": 183398,
         "display_name": "Tučňáci z Madagaskaru  S02E32 - Rádce zrádce CZ Dabing",
         "video_id": 28706434
+      },
+      {
+        "episode_id": 183342,
+        "display_name": "Tučňáci z Madagaskaru  S02E39 - Operace: Šejk se vzpírá CZ Titulky",
+        "video_id": 28706474
       },
       {
         "episode_id": 118411,
@@ -241878,6 +241893,16 @@
         "video_id": 28706435
       },
       {
+        "episode_id": 183340,
+        "display_name": "Tučňáci z Madagaskaru  S02E30 - Pravda bolí CZ Dabing",
+        "video_id": 28706475
+      },
+      {
+        "episode_id": 140165,
+        "display_name": "Přítelkyně S01E05 - 5. díl CZ Dabing",
+        "video_id": 28706442
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -310803,6 +310828,11 @@
         "video_id": 28706434
       },
       {
+        "episode_id": 183342,
+        "display_name": "Tučňáci z Madagaskaru  S02E39 - Operace: Šejk se vzpírá CZ Titulky",
+        "video_id": 28706474
+      },
+      {
         "episode_id": 118411,
         "display_name": "Marvel Zombie S01E03 - Díl 3. CZ Dabing",
         "video_id": 28706433
@@ -311967,15 +311997,15 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 391,
-    "ok": 101,
+    "disabled": 21,
+    "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
-    "whisper_non_cz_needs_subtitles": 5829,
+    "whisper_non_cz_needs_subtitles": 5828,
     "whisper_confirmed_cz": 2154,
     "whisper_failed": 125,
-    "needs_whisper": 48501
+    "needs_whisper": 48502
   },
   "subtitle_followup_statuses": {
     "needs_subtitle_setup_after_prehrajto_processing": 27133
