@@ -1,17 +1,17 @@
 {
   "counts": {
     "backlog_episodes": 156627,
-    "manifest_upload_ready_episodes": 1015,
-    "uploaded_episodes": 36763,
-    "prepared_source_episodes": 45261,
+    "manifest_upload_ready_episodes": 1003,
+    "uploaded_episodes": 36770,
+    "prepared_source_episodes": 45307,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 339,
-    "language_whisper_attempted_sources": 88,
-    "language_pending_whisper_sources": 2624,
+    "language_audited_sources": 43,
+    "language_whisper_attempted_sources": 40,
+    "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 56601,
     "whisper_review_pending_sources": 48596,
     "subtitle_followup_sources": 27392,
@@ -20,18 +20,42 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-08-22T17:30:24Z",
-      "databaseId": 32587932350,
+      "createdAt": "2026-08-22T17:38:34Z",
+      "databaseId": 32588348306,
       "headBranch": "main",
       "status": "in_progress",
-      "workflowName": "update-descriptions"
+      "workflowName": "audit-language"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-08-22T17:37:53Z",
+      "databaseId": 32588313492,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-22T17:36:42Z",
+      "databaseId": 32588253631,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-22T17:30:24Z",
+      "databaseId": 32587932350,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-22T17:29:46Z",
       "databaseId": 32587897785,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -55,7 +79,7 @@
       "createdAt": "2026-08-22T17:28:16Z",
       "databaseId": 32587824346,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "prepare-manifest"
     },
     {
@@ -87,7 +111,7 @@
       "createdAt": "2026-08-22T17:18:40Z",
       "databaseId": 32587343711,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "process-whisper-review"
     },
     {
@@ -99,11 +123,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-22T17:18:10Z",
       "databaseId": 32587317477,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -115,11 +139,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-22T17:17:41Z",
       "databaseId": 32587295585,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -139,11 +163,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-22T17:16:25Z",
       "databaseId": 32587233867,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
@@ -153,30 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-22T17:15:17Z",
-      "databaseId": 32587175610,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-22T17:15:14Z",
-      "databaseId": 32587172260,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-22T17:15:14Z",
-      "databaseId": 32587171967,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
     }
   ],
   "gaps": {
@@ -88426,6 +88426,16 @@
         "video_id": 28719373
       },
       {
+        "episode_id": 52229,
+        "display_name": "Ve službách FBI S04E12 - Vysoká hra CZ Dabing",
+        "video_id": 28719438
+      },
+      {
+        "episode_id": 135437,
+        "display_name": "Legenda Korry S01E04 - Hlas v temné noci CZ Dabing",
+        "video_id": 28719466
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -159121,6 +159131,16 @@
         "video_id": 28719380
       },
       {
+        "episode_id": 40206,
+        "display_name": "Smallville S02E17 - Strom života CZ Titulky",
+        "video_id": 28719419
+      },
+      {
+        "episode_id": 43210,
+        "display_name": "Zoufalé manželky S04E09 - Něco se blíží CZ Dabing",
+        "video_id": 28719462
+      },
+      {
         "episode_id": 51599,
         "display_name": "One Punch Man S01E02 - 2. epizoda CZ Titulky",
         "video_id": 28719076
@@ -159139,6 +159159,21 @@
         "episode_id": 60483,
         "display_name": "Malcolm v nesnázích S04E15 - 15. epizoda CZ Titulky",
         "video_id": 28719426
+      },
+      {
+        "episode_id": 60467,
+        "display_name": "Malcolm v nesnázích S06E05 - 5. epizoda CZ Titulky",
+        "video_id": 28719448
+      },
+      {
+        "episode_id": 56615,
+        "display_name": "Glee S04E16 - Svár CZ Titulky",
+        "video_id": 28719463
+      },
+      {
+        "episode_id": 56619,
+        "display_name": "Glee S04E20 - Zhasnutá světla CZ Titulky",
+        "video_id": 28719492
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -247283,6 +247318,16 @@
         "video_id": 28719373
       },
       {
+        "episode_id": 52229,
+        "display_name": "Ve službách FBI S04E12 - Vysoká hra CZ Dabing",
+        "video_id": 28719438
+      },
+      {
+        "episode_id": 135437,
+        "display_name": "Legenda Korry S01E04 - Hlas v temné noci CZ Dabing",
+        "video_id": 28719466
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -317978,6 +318023,16 @@
         "video_id": 28719380
       },
       {
+        "episode_id": 40206,
+        "display_name": "Smallville S02E17 - Strom života CZ Titulky",
+        "video_id": 28719419
+      },
+      {
+        "episode_id": 43210,
+        "display_name": "Zoufalé manželky S04E09 - Něco se blíží CZ Dabing",
+        "video_id": 28719462
+      },
+      {
         "episode_id": 51599,
         "display_name": "One Punch Man S01E02 - 2. epizoda CZ Titulky",
         "video_id": 28719076
@@ -317996,6 +318051,21 @@
         "episode_id": 60483,
         "display_name": "Malcolm v nesnázích S04E15 - 15. epizoda CZ Titulky",
         "video_id": 28719426
+      },
+      {
+        "episode_id": 60467,
+        "display_name": "Malcolm v nesnázích S06E05 - 5. epizoda CZ Titulky",
+        "video_id": 28719448
+      },
+      {
+        "episode_id": 56615,
+        "display_name": "Glee S04E16 - Svár CZ Titulky",
+        "video_id": 28719463
+      },
+      {
+        "episode_id": 56619,
+        "display_name": "Glee S04E20 - Zhasnutá světla CZ Titulky",
+        "video_id": 28719492
       }
     ],
     "prepared_not_upload_ready": [
@@ -319157,8 +319227,8 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 251,
-    "ok": 87,
+    "disabled": 3,
+    "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
