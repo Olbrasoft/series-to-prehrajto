@@ -1,23 +1,55 @@
 {
   "counts": {
-    "backlog_episodes": 157228,
-    "manifest_upload_ready_episodes": 1116,
-    "uploaded_episodes": 36268,
-    "prepared_source_episodes": 45387,
+    "backlog_episodes": 157048,
+    "manifest_upload_ready_episodes": 1119,
+    "uploaded_episodes": 36269,
+    "prepared_source_episodes": 45313,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 110,
-    "language_whisper_attempted_sources": 60,
-    "language_pending_whisper_sources": 2604,
+    "language_audited_sources": 70,
+    "language_whisper_attempted_sources": 20,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 56599,
     "whisper_review_pending_sources": 48569,
     "subtitle_followup_sources": 27234,
     "subtitle_followup_pending_sources": 27234
   },
   "workflow_runs": [
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-22T06:16:59Z",
+      "databaseId": 32556562279,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-22T06:15:26Z",
+      "databaseId": 32556492915,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-22T06:15:22Z",
+      "databaseId": 32556490113,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-22T06:15:10Z",
+      "databaseId": 32556480085,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "refresh-backlog"
+    },
     {
       "conclusion": "success",
       "createdAt": "2026-08-22T06:14:13Z",
@@ -35,11 +67,11 @@
       "workflowName": "process-whisper-review"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-22T06:13:05Z",
       "databaseId": 32556383651,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -55,7 +87,7 @@
       "createdAt": "2026-08-22T06:13:02Z",
       "databaseId": 32556380985,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "prepare-manifest"
     },
     {
@@ -145,38 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-22T05:58:38Z",
-      "databaseId": 32555738396,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-22T05:58:29Z",
-      "databaseId": 32555731760,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-22T05:58:29Z",
-      "databaseId": 32555731559,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-22T05:57:31Z",
-      "databaseId": 32555691308,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
     }
   ],
   "gaps": {
@@ -87264,6 +87264,11 @@
         "episode_id": 82157,
         "display_name": "Troufalky S02E01 - Armáda feministek CZ Dabing",
         "video_id": 28710133
+      },
+      {
+        "episode_id": 82161,
+        "display_name": "Troufalky S02E05 - Hrdě si vykračovat CZ Dabing",
+        "video_id": 28710212
       },
       {
         "episode_id": 114182,
@@ -243858,6 +243863,11 @@
         "video_id": 28710133
       },
       {
+        "episode_id": 82161,
+        "display_name": "Troufalky S02E05 - Hrdě si vykračovat CZ Dabing",
+        "video_id": 28710212
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -314628,7 +314638,7 @@
   "language_verdicts": {},
   "language_whisper_statuses": {
     "disabled": 50,
-    "ok": 59,
+    "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
