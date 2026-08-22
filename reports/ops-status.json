@@ -2,15 +2,15 @@
   "counts": {
     "backlog_episodes": 157602,
     "manifest_upload_ready_episodes": 1044,
-    "uploaded_episodes": 35847,
+    "uploaded_episodes": 35853,
     "prepared_source_episodes": 45398,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 220,
-    "language_whisper_attempted_sources": 60,
+    "language_audited_sources": 40,
+    "language_whisper_attempted_sources": 40,
     "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 56608,
     "whisper_review_pending_sources": 48618,
@@ -20,10 +20,50 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-08-22T00:10:24Z",
+      "databaseId": 32539452885,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-22T00:10:21Z",
+      "databaseId": 32539450300,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-22T00:10:21Z",
+      "databaseId": 32539449907,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-22T00:08:23Z",
+      "databaseId": 32539337508,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-22T00:04:37Z",
+      "databaseId": 32539126895,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-22T00:03:24Z",
       "databaseId": 32539058483,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -43,11 +83,11 @@
       "workflowName": "process-whisper-review"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-21T23:57:41Z",
       "databaseId": 32538724923,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -67,11 +107,11 @@
       "workflowName": "prepare-manifest"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-08-21T23:55:54Z",
       "databaseId": 32538622247,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "sync"
     },
     {
@@ -137,46 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-21T23:46:10Z",
-      "databaseId": 32538058133,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-21T23:45:41Z",
-      "databaseId": 32538029053,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-21T23:45:41Z",
-      "databaseId": 32538028863,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-21T23:45:38Z",
-      "databaseId": 32538026193,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-21T23:45:38Z",
-      "databaseId": 32538025878,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
     }
   ],
   "gaps": {
@@ -86221,6 +86221,16 @@
         "video_id": 28704193
       },
       {
+        "episode_id": 75552,
+        "display_name": "MacGyver S02E06 - Pekelný oheň (Proudový motor) CZ Titulky",
+        "video_id": 28704330
+      },
+      {
+        "episode_id": 75496,
+        "display_name": "MacGyver S02E12 - Setkání s Duchem (Mac) CZ Dabing",
+        "video_id": 28704431
+      },
+      {
         "episode_id": 75521,
         "display_name": "MacGyver S02E21 - Přítel v nouzi (Vítr) CZ Dabing",
         "video_id": 28704194
@@ -86229,6 +86239,11 @@
         "episode_id": 75497,
         "display_name": "MacGyver S02E17 - Atómová exkurze (Bomba) CZ Dabing",
         "video_id": 28704319
+      },
+      {
+        "episode_id": 75513,
+        "display_name": "MacGyver S02E18 - Útok ve vzduchu (Letadlo) CZ Dabing",
+        "video_id": 28704400
       },
       {
         "episode_id": 114182,
@@ -154791,6 +154806,16 @@
         "video_id": 28704268
       },
       {
+        "episode_id": 75498,
+        "display_name": "MacGyver S01E11 - Nůžky CZ Dabing",
+        "video_id": 28704352
+      },
+      {
+        "episode_id": 75510,
+        "display_name": "MacGyver S01E12 - Šroubovák CZ Dabing",
+        "video_id": 28704454
+      },
+      {
         "episode_id": 75523,
         "display_name": "MacGyver S02E22 - Oblast 51 CZ Dabing",
         "video_id": 28704177
@@ -154799,6 +154824,11 @@
         "episode_id": 75511,
         "display_name": "MacGyver S02E23 - MacGyver a MacGyver CZ Titulky",
         "video_id": 28704255
+      },
+      {
+        "episode_id": 75503,
+        "display_name": "MacGyver S02E03 - Červená pěst (Kolo rulety) CZ Dabing",
+        "video_id": 28704337
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -240738,6 +240768,16 @@
         "video_id": 28704193
       },
       {
+        "episode_id": 75552,
+        "display_name": "MacGyver S02E06 - Pekelný oheň (Proudový motor) CZ Titulky",
+        "video_id": 28704330
+      },
+      {
+        "episode_id": 75496,
+        "display_name": "MacGyver S02E12 - Setkání s Duchem (Mac) CZ Dabing",
+        "video_id": 28704431
+      },
+      {
         "episode_id": 75521,
         "display_name": "MacGyver S02E21 - Přítel v nouzi (Vítr) CZ Dabing",
         "video_id": 28704194
@@ -240746,6 +240786,11 @@
         "episode_id": 75497,
         "display_name": "MacGyver S02E17 - Atómová exkurze (Bomba) CZ Dabing",
         "video_id": 28704319
+      },
+      {
+        "episode_id": 75513,
+        "display_name": "MacGyver S02E18 - Útok ve vzduchu (Letadlo) CZ Dabing",
+        "video_id": 28704400
       },
       {
         "episode_id": 114182,
@@ -309308,6 +309353,16 @@
         "video_id": 28704268
       },
       {
+        "episode_id": 75498,
+        "display_name": "MacGyver S01E11 - Nůžky CZ Dabing",
+        "video_id": 28704352
+      },
+      {
+        "episode_id": 75510,
+        "display_name": "MacGyver S01E12 - Šroubovák CZ Dabing",
+        "video_id": 28704454
+      },
+      {
         "episode_id": 75523,
         "display_name": "MacGyver S02E22 - Oblast 51 CZ Dabing",
         "video_id": 28704177
@@ -309316,6 +309371,11 @@
         "episode_id": 75511,
         "display_name": "MacGyver S02E23 - MacGyver a MacGyver CZ Titulky",
         "video_id": 28704255
+      },
+      {
+        "episode_id": 75503,
+        "display_name": "MacGyver S02E03 - Červená pěst (Kolo rulety) CZ Dabing",
+        "video_id": 28704337
       }
     ],
     "prepared_not_upload_ready": [
@@ -310477,9 +310537,8 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 59,
-    "resolve_failed": 1,
-    "disabled": 160
+    "ok": 39,
+    "resolve_failed": 1
   },
   "whisper_review_statuses": {
     "whisper_non_cz_needs_subtitles": 5836,
