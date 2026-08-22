@@ -2,22 +2,46 @@
   "counts": {
     "backlog_episodes": 156627,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 36717,
+    "uploaded_episodes": 36718,
     "prepared_source_episodes": 45358,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 44,
-    "language_whisper_attempted_sources": 20,
+    "language_audited_sources": 64,
+    "language_whisper_attempted_sources": 40,
     "language_pending_whisper_sources": 2624,
-    "whisper_review_sources": 56601,
-    "whisper_review_pending_sources": 48596,
+    "whisper_review_sources": 56587,
+    "whisper_review_pending_sources": 48523,
     "subtitle_followup_sources": 27366,
     "subtitle_followup_pending_sources": 27366
   },
   "workflow_runs": [
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-22T16:04:36Z",
+      "databaseId": 32583617276,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-22T16:03:14Z",
+      "databaseId": 32583550022,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-22T15:59:50Z",
+      "databaseId": 32583374622,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
     {
       "conclusion": "success",
       "createdAt": "2026-08-22T15:58:27Z",
@@ -27,11 +51,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-22T15:58:00Z",
       "databaseId": 32583282024,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -107,11 +131,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-22T15:49:43Z",
       "databaseId": 32582871374,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
@@ -153,30 +177,6 @@
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "prepare-sources"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-22T15:42:48Z",
-      "databaseId": 32582522122,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-22T15:41:35Z",
-      "databaseId": 32582460557,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-22T15:41:18Z",
-      "databaseId": 32582445331,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
     }
   ],
   "gaps": {
@@ -88264,6 +88264,11 @@
         "episode_id": 40348,
         "display_name": "Smallville S04E19 - Ztráta paměti CZ Dabing",
         "video_id": 28718185
+      },
+      {
+        "episode_id": 40228,
+        "display_name": "Smallville S04E20 - Evan CZ Dabing",
+        "video_id": 28718278
       },
       {
         "episode_id": 15209,
@@ -246893,6 +246898,11 @@
         "video_id": 28718185
       },
       {
+        "episode_id": 40228,
+        "display_name": "Smallville S04E20 - Evan CZ Dabing",
+        "video_id": 28718278
+      },
+      {
         "episode_id": 15209,
         "display_name": "Bridgertonovi S01E04 - Věc cti CZ Dabing",
         "video_id": 28717791
@@ -318697,15 +318707,15 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
+    "ok": 39,
     "disabled": 24,
-    "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
-    "whisper_non_cz_needs_subtitles": 5834,
+    "whisper_non_cz_needs_subtitles": 5893,
     "whisper_confirmed_cz": 2171,
-    "whisper_failed": 125,
-    "needs_whisper": 48471
+    "whisper_failed": 126,
+    "needs_whisper": 48397
   },
   "subtitle_followup_statuses": {
     "needs_subtitle_setup_after_prehrajto_processing": 27366
