@@ -2,28 +2,76 @@
   "counts": {
     "backlog_episodes": 156755,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 36647,
-    "prepared_source_episodes": 45368,
+    "uploaded_episodes": 36659,
+    "prepared_source_episodes": 45393,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 20,
-    "language_whisper_attempted_sources": 20,
+    "language_audited_sources": 40,
+    "language_whisper_attempted_sources": 40,
     "language_pending_whisper_sources": 2624,
-    "whisper_review_sources": 56601,
-    "whisper_review_pending_sources": 48596,
+    "whisper_review_sources": 56592,
+    "whisper_review_pending_sources": 48548,
     "subtitle_followup_sources": 27352,
     "subtitle_followup_pending_sources": 27352
   },
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-08-22T14:28:10Z",
+      "databaseId": 32578790363,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-22T14:28:08Z",
+      "databaseId": 32578788486,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-22T14:28:07Z",
+      "databaseId": 32578788405,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-08-22T14:24:22Z",
+      "databaseId": 32578605173,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-22T14:20:39Z",
+      "databaseId": 32578422615,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-22T14:20:35Z",
+      "databaseId": 32578419075,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-22T14:19:26Z",
       "databaseId": 32578361420,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -31,7 +79,7 @@
       "createdAt": "2026-08-22T14:18:27Z",
       "databaseId": 32578313441,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "process-whisper-review"
     },
     {
@@ -91,11 +139,11 @@
       "workflowName": "prepare-manifest"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-08-22T14:15:08Z",
       "databaseId": 32578152370,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "sync"
     },
     {
@@ -129,54 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-22T14:05:41Z",
-      "databaseId": 32577685842,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-22T14:03:56Z",
-      "databaseId": 32577597203,
-      "headBranch": "main",
-      "status": "pending",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-22T14:03:49Z",
-      "databaseId": 32577592016,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-22T14:03:49Z",
-      "databaseId": 32577591960,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-22T14:01:11Z",
-      "databaseId": 32577463545,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-22T14:00:07Z",
-      "databaseId": 32577402773,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
     }
   ],
   "gaps": {
@@ -88106,6 +88106,16 @@
         "video_id": 28716977
       },
       {
+        "episode_id": 14184,
+        "display_name": "Lovci zločinců S02E10 - Bezpečnostní schránka CZ Dabing",
+        "video_id": 28717036
+      },
+      {
+        "episode_id": 41668,
+        "display_name": "Zlatá sedmdesátá S04E20 - Časy minulé CZ Dabing",
+        "video_id": 28717069
+      },
+      {
         "episode_id": 59365,
         "display_name": "Seinfeld S02E03 - 3. epizoda CZ Titulky",
         "video_id": 28716846
@@ -88134,6 +88144,16 @@
         "episode_id": 59389,
         "display_name": "Seinfeld S04E08 - 8. epizoda CZ Titulky",
         "video_id": 28716926
+      },
+      {
+        "episode_id": 59393,
+        "display_name": "Seinfeld S04E20 - 20. epizoda CZ Titulky",
+        "video_id": 28717007
+      },
+      {
+        "episode_id": 59417,
+        "display_name": "Seinfeld S04E23 - 23. epizoda CZ Titulky",
+        "video_id": 28717025
       },
       {
         "episode_id": 114182,
@@ -158579,6 +158599,26 @@
         "episode_id": 111306,
         "display_name": "Velká láska S01E05 - Aférka CZ Dabing",
         "video_id": 28716828
+      },
+      {
+        "episode_id": 59366,
+        "display_name": "Seinfeld S02E04 - 4. epizoda CZ Titulky",
+        "video_id": 28717018
+      },
+      {
+        "episode_id": 59330,
+        "display_name": "Seinfeld S02E11 - 11. epizoda CZ Titulky",
+        "video_id": 28717055
+      },
+      {
+        "episode_id": 59334,
+        "display_name": "Seinfeld S03E06 - 6. epizoda CZ Titulky",
+        "video_id": 28717082
+      },
+      {
+        "episode_id": 59363,
+        "display_name": "Seinfeld S01E04 - 4. epizoda CZ Titulky",
+        "video_id": 28717060
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -246403,6 +246443,16 @@
         "video_id": 28716977
       },
       {
+        "episode_id": 14184,
+        "display_name": "Lovci zločinců S02E10 - Bezpečnostní schránka CZ Dabing",
+        "video_id": 28717036
+      },
+      {
+        "episode_id": 41668,
+        "display_name": "Zlatá sedmdesátá S04E20 - Časy minulé CZ Dabing",
+        "video_id": 28717069
+      },
+      {
         "episode_id": 59365,
         "display_name": "Seinfeld S02E03 - 3. epizoda CZ Titulky",
         "video_id": 28716846
@@ -246431,6 +246481,16 @@
         "episode_id": 59389,
         "display_name": "Seinfeld S04E08 - 8. epizoda CZ Titulky",
         "video_id": 28716926
+      },
+      {
+        "episode_id": 59393,
+        "display_name": "Seinfeld S04E20 - 20. epizoda CZ Titulky",
+        "video_id": 28717007
+      },
+      {
+        "episode_id": 59417,
+        "display_name": "Seinfeld S04E23 - 23. epizoda CZ Titulky",
+        "video_id": 28717025
       },
       {
         "episode_id": 114182,
@@ -316878,9 +316938,34 @@
         "video_id": 28716828
       },
       {
-        "episode_id": 181586,
-        "display_name": "Simpsonovi S36E17 - Prázdný bazén plný citů CZ Dabing",
-        "video_id": 28716966
+        "episode_id": 59366,
+        "display_name": "Seinfeld S02E04 - 4. epizoda CZ Titulky",
+        "video_id": 28717018
+      },
+      {
+        "episode_id": 59330,
+        "display_name": "Seinfeld S02E11 - 11. epizoda CZ Titulky",
+        "video_id": 28717055
+      },
+      {
+        "episode_id": 59334,
+        "display_name": "Seinfeld S03E06 - 6. epizoda CZ Titulky",
+        "video_id": 28717082
+      },
+      {
+        "episode_id": 10851,
+        "display_name": "Griffinovi S17E15 - Otec na baterky CZ Dabing",
+        "video_id": 28717023
+      },
+      {
+        "episode_id": 42907,
+        "display_name": "Flash S01E15 - Není čas CZ Titulky",
+        "video_id": 28717039
+      },
+      {
+        "episode_id": 59363,
+        "display_name": "Seinfeld S01E04 - 4. epizoda CZ Titulky",
+        "video_id": 28717060
       }
     ],
     "prepared_not_upload_ready": [
@@ -318042,14 +318127,14 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 19,
-    "resolve_failed": 1
+    "ok": 38,
+    "resolve_failed": 2
   },
   "whisper_review_statuses": {
-    "whisper_non_cz_needs_subtitles": 5834,
+    "whisper_non_cz_needs_subtitles": 5873,
     "whisper_confirmed_cz": 2171,
-    "whisper_failed": 125,
-    "needs_whisper": 48471
+    "whisper_failed": 126,
+    "needs_whisper": 48422
   },
   "subtitle_followup_statuses": {
     "needs_subtitle_setup_after_prehrajto_processing": 27352
