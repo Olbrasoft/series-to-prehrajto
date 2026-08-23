@@ -2,22 +2,38 @@
   "counts": {
     "backlog_episodes": 155983,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 37426,
+    "uploaded_episodes": 37427,
     "prepared_source_episodes": 45866,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 62,
-    "language_whisper_attempted_sources": 60,
-    "language_pending_whisper_sources": 2604,
+    "language_audited_sources": 20,
+    "language_whisper_attempted_sources": 20,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 56546,
     "whisper_review_pending_sources": 48310,
     "subtitle_followup_sources": 27515,
     "subtitle_followup_pending_sources": 27515
   },
   "workflow_runs": [
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-23T08:23:17Z",
+      "databaseId": 32628124320,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-23T08:22:44Z",
+      "databaseId": 32628101120,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
     {
       "conclusion": "",
       "createdAt": "2026-08-23T08:21:46Z",
@@ -27,11 +43,11 @@
       "workflowName": "prepare-manifest"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-23T08:21:35Z",
       "databaseId": 32628050339,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -107,11 +123,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-23T08:08:59Z",
       "databaseId": 32627476475,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -161,22 +177,6 @@
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-23T08:05:49Z",
-      "databaseId": 32627335904,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-23T08:05:45Z",
-      "databaseId": 32627333275,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
     }
   ],
   "gaps": {
@@ -90024,6 +90024,11 @@
         "episode_id": 49041,
         "display_name": "Ve výkonu služby S06E01 - 1. epizoda CZ Dabing",
         "video_id": 28732781
+      },
+      {
+        "episode_id": 14741,
+        "display_name": "Da Vinciho démoni S03E08 - La Confessione Della Macchina CZ Titulky",
+        "video_id": 28732901
       },
       {
         "episode_id": 114182,
@@ -252138,6 +252143,11 @@
         "video_id": 28732781
       },
       {
+        "episode_id": 14741,
+        "display_name": "Da Vinciho démoni S03E08 - La Confessione Della Macchina CZ Titulky",
+        "video_id": 28732901
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -325667,8 +325677,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 59,
-    "disabled": 2,
+    "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
