@@ -2,15 +2,15 @@
   "counts": {
     "backlog_episodes": 155856,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 37516,
-    "prepared_source_episodes": 45888,
+    "uploaded_episodes": 37520,
+    "prepared_source_episodes": 45897,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 41,
-    "language_whisper_attempted_sources": 40,
+    "language_audited_sources": 61,
+    "language_whisper_attempted_sources": 60,
     "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 56537,
     "whisper_review_pending_sources": 48261,
@@ -20,10 +20,66 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-08-23T10:46:26Z",
+      "databaseId": 32634671345,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-23T10:46:23Z",
+      "databaseId": 32634669160,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-23T10:46:23Z",
+      "databaseId": 32634669158,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-23T10:46:16Z",
+      "databaseId": 32634661629,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-23T10:45:18Z",
+      "databaseId": 32634617501,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-sources"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-23T10:40:57Z",
+      "databaseId": 32634414332,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-23T10:40:18Z",
+      "databaseId": 32634382323,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-23T10:39:26Z",
       "databaseId": 32634341956,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-status"
     },
     {
@@ -67,11 +123,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-23T10:33:53Z",
       "databaseId": 32634093291,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
@@ -121,62 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-23T10:32:39Z",
-      "databaseId": 32634038609,
-      "headBranch": "main",
-      "status": "pending",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-23T10:27:34Z",
-      "databaseId": 32633806039,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-23T10:26:27Z",
-      "databaseId": 32633758955,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-23T10:21:12Z",
-      "databaseId": 32633516291,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-23T10:21:08Z",
-      "databaseId": 32633513101,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-23T10:20:06Z",
-      "databaseId": 32633466598,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-23T10:18:50Z",
-      "databaseId": 32633409233,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
     }
   ],
   "gaps": {
@@ -90241,6 +90241,11 @@
         "video_id": 28735747
       },
       {
+        "episode_id": 3740,
+        "display_name": "Devious Maids S01E09 - 9. epizoda CZ Titulky",
+        "video_id": 28735923
+      },
+      {
         "episode_id": 12365,
         "display_name": "Ledová archa S01E07 - Vesmír je lhostejný CZ Dabing",
         "video_id": 28735187
@@ -90264,6 +90269,11 @@
         "episode_id": 140981,
         "display_name": "Stalo se v Montaně S01E03 - Velký Rick CZ Dabing",
         "video_id": 28735684
+      },
+      {
+        "episode_id": 94521,
+        "display_name": "Můj život s Walterovic kluky S02E06 - Po plese CZ Dabing",
+        "video_id": 28735885
       },
       {
         "episode_id": 114182,
@@ -162831,6 +162841,11 @@
         "video_id": 28735790
       },
       {
+        "episode_id": 58986,
+        "display_name": "Záměna  S04E18 - 18. epizoda CZ Titulky",
+        "video_id": 28735861
+      },
+      {
         "episode_id": 53443,
         "display_name": "Pohotovost S05E19 - Svěcení jara CZ Dabing",
         "video_id": 28735197
@@ -162844,6 +162859,11 @@
         "episode_id": 53511,
         "display_name": "Pohotovost S09E22 - Kisangani CZ Dabing",
         "video_id": 28735510
+      },
+      {
+        "episode_id": 53531,
+        "display_name": "Pohotovost S10E01 - Co dál? CZ Dabing",
+        "video_id": 28735742
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -252803,6 +252823,11 @@
         "video_id": 28735747
       },
       {
+        "episode_id": 3740,
+        "display_name": "Devious Maids S01E09 - 9. epizoda CZ Titulky",
+        "video_id": 28735923
+      },
+      {
         "episode_id": 12365,
         "display_name": "Ledová archa S01E07 - Vesmír je lhostejný CZ Dabing",
         "video_id": 28735187
@@ -252826,6 +252851,11 @@
         "episode_id": 140981,
         "display_name": "Stalo se v Montaně S01E03 - Velký Rick CZ Dabing",
         "video_id": 28735684
+      },
+      {
+        "episode_id": 94521,
+        "display_name": "Můj život s Walterovic kluky S02E06 - Po plese CZ Dabing",
+        "video_id": 28735885
       },
       {
         "episode_id": 114182,
@@ -325393,6 +325423,11 @@
         "video_id": 28735790
       },
       {
+        "episode_id": 58986,
+        "display_name": "Záměna  S04E18 - 18. epizoda CZ Titulky",
+        "video_id": 28735861
+      },
+      {
         "episode_id": 53443,
         "display_name": "Pohotovost S05E19 - Svěcení jara CZ Dabing",
         "video_id": 28735197
@@ -325406,6 +325441,11 @@
         "episode_id": 53511,
         "display_name": "Pohotovost S09E22 - Kisangani CZ Dabing",
         "video_id": 28735510
+      },
+      {
+        "episode_id": 53531,
+        "display_name": "Pohotovost S10E01 - Co dál? CZ Dabing",
+        "video_id": 28735742
       }
     ],
     "prepared_not_upload_ready": [
@@ -326567,8 +326607,8 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
+    "ok": 59,
     "disabled": 1,
-    "ok": 39,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
