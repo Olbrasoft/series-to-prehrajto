@@ -2,15 +2,15 @@
   "counts": {
     "backlog_episodes": 155856,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 37528,
+    "uploaded_episodes": 37532,
     "prepared_source_episodes": 45921,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 301,
-    "language_whisper_attempted_sources": 74,
+    "language_audited_sources": 20,
+    "language_whisper_attempted_sources": 20,
     "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 56529,
     "whisper_review_pending_sources": 48213,
@@ -20,26 +20,58 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-08-23T11:14:14Z",
-      "databaseId": 32635972357,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-23T11:13:41Z",
-      "databaseId": 32635946814,
+      "createdAt": "2026-08-23T11:18:25Z",
+      "databaseId": 32636169976,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-08-23T11:18:24Z",
+      "databaseId": 32636169101,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-23T11:17:01Z",
+      "databaseId": 32636106779,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-23T11:17:01Z",
+      "databaseId": 32636106752,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-23T11:14:14Z",
+      "databaseId": 32635972357,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-23T11:13:41Z",
+      "databaseId": 32635946814,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "cancelled",
       "createdAt": "2026-08-23T11:13:35Z",
       "databaseId": 32635942146,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -99,11 +131,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-23T11:06:31Z",
       "databaseId": 32635610255,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -142,38 +174,6 @@
       "conclusion": "success",
       "createdAt": "2026-08-23T11:05:48Z",
       "databaseId": 32635571977,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-23T11:05:44Z",
-      "databaseId": 32635568684,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-23T11:04:44Z",
-      "databaseId": 32635523157,
-      "headBranch": "main",
-      "status": "pending",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-23T10:57:30Z",
-      "databaseId": 32635176077,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-23T10:56:47Z",
-      "databaseId": 32635144505,
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-watchdog"
@@ -162904,6 +162904,26 @@
         "episode_id": 53635,
         "display_name": "Pohotovost S13E07 - Dětská skládačka CZ Dabing",
         "video_id": 28736661
+      },
+      {
+        "episode_id": 58990,
+        "display_name": "Záměna  S05E02 - 2. epizoda CZ Titulky",
+        "video_id": 28736888
+      },
+      {
+        "episode_id": 58998,
+        "display_name": "Záměna  S05E08 - 8. epizoda CZ Titulky",
+        "video_id": 28736948
+      },
+      {
+        "episode_id": 87723,
+        "display_name": "Hráči S04E07 - Děcka jsou v pohodě CZ Dabing",
+        "video_id": 28736895
+      },
+      {
+        "episode_id": 15935,
+        "display_name": "Star Trek: Podivné nové světy S02E02 - Ke hvězdám přes překážky CZ Dabing",
+        "video_id": 28736966
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -325526,6 +325546,26 @@
         "episode_id": 53635,
         "display_name": "Pohotovost S13E07 - Dětská skládačka CZ Dabing",
         "video_id": 28736661
+      },
+      {
+        "episode_id": 58990,
+        "display_name": "Záměna  S05E02 - 2. epizoda CZ Titulky",
+        "video_id": 28736888
+      },
+      {
+        "episode_id": 58998,
+        "display_name": "Záměna  S05E08 - 8. epizoda CZ Titulky",
+        "video_id": 28736948
+      },
+      {
+        "episode_id": 87723,
+        "display_name": "Hráči S04E07 - Děcka jsou v pohodě CZ Dabing",
+        "video_id": 28736895
+      },
+      {
+        "episode_id": 15935,
+        "display_name": "Star Trek: Podivné nové světy S02E02 - Ke hvězdám přes překážky CZ Dabing",
+        "video_id": 28736966
       }
     ],
     "prepared_not_upload_ready": [
@@ -326687,8 +326727,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 227,
-    "ok": 73,
+    "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
