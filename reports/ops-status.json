@@ -2,36 +2,68 @@
   "counts": {
     "backlog_episodes": 155983,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 37398,
-    "prepared_source_episodes": 45851,
+    "uploaded_episodes": 37399,
+    "prepared_source_episodes": 45831,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 40,
-    "language_whisper_attempted_sources": 40,
-    "language_pending_whisper_sources": 2604,
-    "whisper_review_sources": 56542,
-    "whisper_review_pending_sources": 48286,
-    "subtitle_followup_sources": 27506,
-    "subtitle_followup_pending_sources": 27506
+    "language_audited_sources": 46,
+    "language_whisper_attempted_sources": 20,
+    "language_pending_whisper_sources": 2624,
+    "whisper_review_sources": 56546,
+    "whisper_review_pending_sources": 48310,
+    "subtitle_followup_sources": 27514,
+    "subtitle_followup_pending_sources": 27514
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-08-23T07:49:31Z",
-      "databaseId": 32626599250,
+      "createdAt": "2026-08-23T07:53:26Z",
+      "databaseId": 32626778294,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-08-23T07:53:22Z",
+      "databaseId": 32626775896,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-23T07:50:46Z",
+      "databaseId": 32626658196,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-23T07:50:42Z",
+      "databaseId": 32626655161,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-23T07:49:31Z",
+      "databaseId": 32626599250,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "cancelled",
       "createdAt": "2026-08-23T07:49:28Z",
       "databaseId": 32626596966,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -59,11 +91,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-23T07:43:41Z",
       "databaseId": 32626334835,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -115,11 +147,11 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-23T07:36:23Z",
       "databaseId": 32626006674,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -145,38 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-23T07:30:22Z",
-      "databaseId": 32625739739,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-23T07:30:14Z",
-      "databaseId": 32625732320,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-23T07:30:11Z",
-      "databaseId": 32625730036,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-23T07:30:11Z",
-      "databaseId": 32625729890,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
     }
   ],
   "gaps": {
@@ -89964,6 +89964,11 @@
         "episode_id": 36809,
         "display_name": "Star Trek: Voyager S01E01 - Ochránce CZ Dabing",
         "video_id": 28731930
+      },
+      {
+        "episode_id": 76129,
+        "display_name": "Havaj 5-0 S05E22 - Smrtící jízda CZ Dabing",
+        "video_id": 28732065
       },
       {
         "episode_id": 114182,
@@ -251938,6 +251943,11 @@
         "video_id": 28731930
       },
       {
+        "episode_id": 76129,
+        "display_name": "Havaj 5-0 S05E22 - Smrtící jízda CZ Dabing",
+        "video_id": 28732065
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -325387,16 +325397,17 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 39,
+    "disabled": 26,
+    "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
-    "whisper_non_cz_needs_subtitles": 6084,
-    "whisper_confirmed_cz": 2172,
+    "whisper_non_cz_needs_subtitles": 6065,
+    "whisper_confirmed_cz": 2171,
     "whisper_failed": 126,
-    "needs_whisper": 48160
+    "needs_whisper": 48184
   },
   "subtitle_followup_statuses": {
-    "needs_subtitle_setup_after_prehrajto_processing": 27506
+    "needs_subtitle_setup_after_prehrajto_processing": 27514
   }
 }
