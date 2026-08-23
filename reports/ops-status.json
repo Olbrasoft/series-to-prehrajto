@@ -2,28 +2,60 @@
   "counts": {
     "backlog_episodes": 155856,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 37532,
-    "prepared_source_episodes": 45921,
+    "uploaded_episodes": 37533,
+    "prepared_source_episodes": 45868,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 20,
+    "language_audited_sources": 53,
     "language_whisper_attempted_sources": 20,
     "language_pending_whisper_sources": 2624,
-    "whisper_review_sources": 56529,
-    "whisper_review_pending_sources": 48213,
+    "whisper_review_sources": 56537,
+    "whisper_review_pending_sources": 48261,
     "subtitle_followup_sources": 27568,
     "subtitle_followup_pending_sources": 27568
   },
   "workflow_runs": [
     {
+      "conclusion": "success",
+      "createdAt": "2026-08-23T11:19:35Z",
+      "databaseId": 32636221227,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
       "conclusion": "",
+      "createdAt": "2026-08-23T11:19:32Z",
+      "databaseId": 32636218762,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-23T11:19:31Z",
+      "databaseId": 32636218650,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-23T11:19:27Z",
+      "databaseId": 32636215709,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-23T11:18:25Z",
       "databaseId": 32636169976,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -35,11 +67,11 @@
       "workflowName": "process-whisper-review"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-08-23T11:17:01Z",
       "databaseId": 32636106779,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -145,38 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-status"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-23T11:06:12Z",
-      "databaseId": 32635593014,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-23T11:06:09Z",
-      "databaseId": 32635590300,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-23T11:06:09Z",
-      "databaseId": 32635590299,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-23T11:05:48Z",
-      "databaseId": 32635571977,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
     }
   ],
   "gaps": {
@@ -162916,6 +162916,11 @@
         "video_id": 28736948
       },
       {
+        "episode_id": 54746,
+        "display_name": "Mozart in the Jungle S01E02 - 2. epizoda CZ Titulky",
+        "video_id": 28737002
+      },
+      {
         "episode_id": 87723,
         "display_name": "Hráči S04E07 - Děcka jsou v pohodě CZ Dabing",
         "video_id": 28736895
@@ -325558,6 +325563,11 @@
         "video_id": 28736948
       },
       {
+        "episode_id": 54746,
+        "display_name": "Mozart in the Jungle S01E02 - 2. epizoda CZ Titulky",
+        "video_id": 28737002
+      },
+      {
         "episode_id": 87723,
         "display_name": "Hráči S04E07 - Děcka jsou v pohodě CZ Dabing",
         "video_id": 28736895
@@ -326727,14 +326737,15 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
+    "disabled": 33,
     "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
-    "whisper_non_cz_needs_subtitles": 6135,
-    "whisper_confirmed_cz": 2181,
+    "whisper_non_cz_needs_subtitles": 6101,
+    "whisper_confirmed_cz": 2175,
     "whisper_failed": 126,
-    "needs_whisper": 48087
+    "needs_whisper": 48135
   },
   "subtitle_followup_statuses": {
     "needs_subtitle_setup_after_prehrajto_processing": 27568
