@@ -2,36 +2,76 @@
   "counts": {
     "backlog_episodes": 156121,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 37263,
-    "prepared_source_episodes": 45792,
+    "uploaded_episodes": 37264,
+    "prepared_source_episodes": 45804,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 20,
+    "language_audited_sources": 21,
     "language_whisper_attempted_sources": 20,
     "language_pending_whisper_sources": 2624,
-    "whisper_review_sources": 56552,
-    "whisper_review_pending_sources": 48336,
+    "whisper_review_sources": 56561,
+    "whisper_review_pending_sources": 48385,
     "subtitle_followup_sources": 27479,
     "subtitle_followup_pending_sources": 27479
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-08-23T04:51:57Z",
-      "databaseId": 32618916267,
+      "createdAt": "2026-08-23T04:53:35Z",
+      "databaseId": 32618982546,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-08-23T04:53:30Z",
+      "databaseId": 32618979323,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-23T04:53:05Z",
+      "databaseId": 32618962568,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-23T04:53:03Z",
+      "databaseId": 32618960763,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-23T04:53:01Z",
+      "databaseId": 32618959533,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-23T04:51:57Z",
+      "databaseId": 32618916267,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "cancelled",
       "createdAt": "2026-08-23T04:51:54Z",
       "databaseId": 32618913793,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -137,46 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "sync"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-23T04:32:06Z",
-      "databaseId": 32618112667,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-23T04:28:53Z",
-      "databaseId": 32617974972,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-23T04:27:44Z",
-      "databaseId": 32617927813,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-23T04:27:39Z",
-      "databaseId": 32617924690,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-23T04:24:23Z",
-      "databaseId": 32617790858,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
     }
   ],
   "gaps": {
@@ -89604,6 +89604,11 @@
         "episode_id": 6876,
         "display_name": "For All Mankind S04E08 - Odkaz CZ Titulky",
         "video_id": 28728684
+      },
+      {
+        "episode_id": 16732,
+        "display_name": "Tajná invaze S01E04 - Milovaná CZ Dabing",
+        "video_id": 28728723
       },
       {
         "episode_id": 48221,
@@ -250903,6 +250908,11 @@
         "video_id": 28728684
       },
       {
+        "episode_id": 16732,
+        "display_name": "Tajná invaze S01E04 - Milovaná CZ Dabing",
+        "video_id": 28728723
+      },
+      {
         "episode_id": 48221,
         "display_name": "Policejní odznak S02E03 - Parťáci CZ Dabing",
         "video_id": 28728325
@@ -324037,14 +324047,15 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
+    "disabled": 1,
     "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
-    "whisper_non_cz_needs_subtitles": 6045,
+    "whisper_non_cz_needs_subtitles": 6005,
     "whisper_confirmed_cz": 2171,
     "whisper_failed": 126,
-    "needs_whisper": 48210
+    "needs_whisper": 48259
   },
   "subtitle_followup_statuses": {
     "needs_subtitle_setup_after_prehrajto_processing": 27479
