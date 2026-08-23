@@ -1,29 +1,53 @@
 {
   "counts": {
     "backlog_episodes": 155983,
-    "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 37457,
-    "prepared_source_episodes": 45921,
+    "manifest_upload_ready_episodes": 1007,
+    "uploaded_episodes": 37460,
+    "prepared_source_episodes": 45943,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 40,
-    "language_whisper_attempted_sources": 40,
+    "language_audited_sources": 237,
+    "language_whisper_attempted_sources": 87,
     "language_pending_whisper_sources": 2604,
-    "whisper_review_sources": 56542,
-    "whisper_review_pending_sources": 48286,
-    "subtitle_followup_sources": 27519,
-    "subtitle_followup_pending_sources": 27519
+    "whisper_review_sources": 56546,
+    "whisper_review_pending_sources": 48310,
+    "subtitle_followup_sources": 27525,
+    "subtitle_followup_pending_sources": 27525
   },
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-08-23T09:14:05Z",
+      "databaseId": 32630439129,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "refresh-backlog"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-23T09:14:04Z",
+      "databaseId": 32630438498,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-23T09:14:02Z",
+      "databaseId": 32630436640,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-23T09:12:59Z",
       "databaseId": 32630387674,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -153,30 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-23T08:54:56Z",
-      "databaseId": 32629541648,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-23T08:50:43Z",
-      "databaseId": 32629351352,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-23T08:50:43Z",
-      "databaseId": 32629351349,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-manifest"
     }
   ],
   "gaps": {
@@ -90086,6 +90086,11 @@
         "video_id": 28734018
       },
       {
+        "episode_id": 37360,
+        "display_name": "Star Trek: Hluboký Vesmír Devět S03E18 - Hlasy v hlavě CZ Dabing",
+        "video_id": 28734046
+      },
+      {
         "episode_id": 37573,
         "display_name": "Hvězdná brána - Atlantida S05E08 - Královna CZ Dabing",
         "video_id": 28733523
@@ -90109,6 +90114,11 @@
         "episode_id": 53533,
         "display_name": "Pohotovost S10E02 - Ztracený CZ Dabing",
         "video_id": 28733860
+      },
+      {
+        "episode_id": 53609,
+        "display_name": "Pohotovost S11E20 - Jsi tady CZ Dabing",
+        "video_id": 28733983
       },
       {
         "episode_id": 114182,
@@ -162514,6 +162524,11 @@
         "episode_id": 170690,
         "display_name": "Bewitched S01E01 - 1. epizoda CZ Titulky",
         "video_id": 28733873
+      },
+      {
+        "episode_id": 170694,
+        "display_name": "Bewitched S03E07 - 7. epizoda CZ Titulky",
+        "video_id": 28734028
       },
       {
         "episode_id": 37563,
@@ -252353,6 +252368,11 @@
         "video_id": 28734018
       },
       {
+        "episode_id": 37360,
+        "display_name": "Star Trek: Hluboký Vesmír Devět S03E18 - Hlasy v hlavě CZ Dabing",
+        "video_id": 28734046
+      },
+      {
         "episode_id": 37573,
         "display_name": "Hvězdná brána - Atlantida S05E08 - Královna CZ Dabing",
         "video_id": 28733523
@@ -252376,6 +252396,11 @@
         "episode_id": 53533,
         "display_name": "Pohotovost S10E02 - Ztracený CZ Dabing",
         "video_id": 28733860
+      },
+      {
+        "episode_id": 53609,
+        "display_name": "Pohotovost S11E20 - Jsi tady CZ Dabing",
+        "video_id": 28733983
       },
       {
         "episode_id": 114182,
@@ -324783,6 +324808,11 @@
         "video_id": 28733873
       },
       {
+        "episode_id": 170694,
+        "display_name": "Bewitched S03E07 - 7. epizoda CZ Titulky",
+        "video_id": 28734028
+      },
+      {
         "episode_id": 37563,
         "display_name": "Hvězdná brána - Atlantida S04E16 - Trojice CZ Dabing",
         "video_id": 28733524
@@ -325977,16 +326007,17 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 39,
+    "disabled": 150,
+    "ok": 86,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
-    "whisper_non_cz_needs_subtitles": 6084,
-    "whisper_confirmed_cz": 2172,
+    "whisper_non_cz_needs_subtitles": 6065,
+    "whisper_confirmed_cz": 2171,
     "whisper_failed": 126,
-    "needs_whisper": 48160
+    "needs_whisper": 48184
   },
   "subtitle_followup_statuses": {
-    "needs_subtitle_setup_after_prehrajto_processing": 27519
+    "needs_subtitle_setup_after_prehrajto_processing": 27525
   }
 }
