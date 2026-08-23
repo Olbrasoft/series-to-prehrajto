@@ -2,14 +2,14 @@
   "counts": {
     "backlog_episodes": 155856,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 37533,
-    "prepared_source_episodes": 45868,
+    "uploaded_episodes": 37535,
+    "prepared_source_episodes": 45797,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 53,
+    "language_audited_sources": 84,
     "language_whisper_attempted_sources": 20,
     "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 56537,
@@ -19,6 +19,30 @@
   },
   "workflow_runs": [
     {
+      "conclusion": "",
+      "createdAt": "2026-08-23T11:23:26Z",
+      "databaseId": 32636404447,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-23T11:22:40Z",
+      "databaseId": 32636369283,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-23T11:20:48Z",
+      "databaseId": 32636280024,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
       "conclusion": "success",
       "createdAt": "2026-08-23T11:19:35Z",
       "databaseId": 32636221227,
@@ -27,11 +51,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-23T11:19:32Z",
       "databaseId": 32636218762,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -43,11 +67,11 @@
       "workflowName": "audit-language"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-08-23T11:19:27Z",
       "databaseId": 32636215709,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -153,30 +177,6 @@
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-23T11:06:43Z",
-      "databaseId": 32635618038,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-23T11:06:31Z",
-      "databaseId": 32635610255,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-23T11:06:19Z",
-      "databaseId": 32635599711,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
     }
   ],
   "gaps": {
@@ -90296,6 +90296,11 @@
         "video_id": 28736501
       },
       {
+        "episode_id": 49192,
+        "display_name": "Jsem do tebe blázen  S01E12 - 12. epizoda CZ Dabing",
+        "video_id": 28737023
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -162919,6 +162924,11 @@
         "episode_id": 54746,
         "display_name": "Mozart in the Jungle S01E02 - 2. epizoda CZ Titulky",
         "video_id": 28737002
+      },
+      {
+        "episode_id": 54750,
+        "display_name": "Mozart in the Jungle S01E07 - 7. epizoda CZ Titulky",
+        "video_id": 28737039
       },
       {
         "episode_id": 87723,
@@ -252943,6 +252953,11 @@
         "video_id": 28736501
       },
       {
+        "episode_id": 49192,
+        "display_name": "Jsem do tebe blázen  S01E12 - 12. epizoda CZ Dabing",
+        "video_id": 28737023
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -325568,6 +325583,11 @@
         "video_id": 28737002
       },
       {
+        "episode_id": 54750,
+        "display_name": "Mozart in the Jungle S01E07 - 7. epizoda CZ Titulky",
+        "video_id": 28737039
+      },
+      {
         "episode_id": 87723,
         "display_name": "Hráči S04E07 - Děcka jsou v pohodě CZ Dabing",
         "video_id": 28736895
@@ -326737,7 +326757,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 33,
+    "disabled": 64,
     "ok": 19,
     "resolve_failed": 1
   },
