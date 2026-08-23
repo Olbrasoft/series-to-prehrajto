@@ -2,8 +2,8 @@
   "counts": {
     "backlog_episodes": 155856,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 37524,
-    "prepared_source_episodes": 45917,
+    "uploaded_episodes": 37527,
+    "prepared_source_episodes": 45950,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
@@ -11,7 +11,7 @@
     "language_queue_sources": 2644,
     "language_audited_sources": 40,
     "language_whisper_attempted_sources": 40,
-    "language_pending_whisper_sources": 2604,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 56537,
     "whisper_review_pending_sources": 48261,
     "subtitle_followup_sources": 27560,
@@ -20,18 +20,82 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-08-23T10:57:30Z",
-      "databaseId": 32635176077,
+      "createdAt": "2026-08-23T11:06:31Z",
+      "databaseId": 32635610255,
       "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "update-descriptions"
+      "status": "queued",
+      "workflowName": "audit-language"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-08-23T11:06:19Z",
+      "databaseId": 32635599711,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-status"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-23T11:06:12Z",
+      "databaseId": 32635593014,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-23T11:06:09Z",
+      "databaseId": 32635590300,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-23T11:06:09Z",
+      "databaseId": 32635590299,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-23T11:05:48Z",
+      "databaseId": 32635571977,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-08-23T11:05:44Z",
+      "databaseId": 32635568684,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-23T11:04:44Z",
+      "databaseId": 32635523157,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-23T10:57:30Z",
+      "databaseId": 32635176077,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-23T10:56:47Z",
       "databaseId": 32635144505,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -43,19 +107,19 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-08-23T10:56:20Z",
       "databaseId": 32635122361,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-08-23T10:56:20Z",
       "databaseId": 32635121883,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "sync"
     },
     {
@@ -75,11 +139,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-23T10:47:20Z",
       "databaseId": 32634710875,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
@@ -110,70 +174,6 @@
       "conclusion": "success",
       "createdAt": "2026-08-23T10:46:16Z",
       "databaseId": 32634661629,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-23T10:45:18Z",
-      "databaseId": 32634617501,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-sources"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-23T10:40:57Z",
-      "databaseId": 32634414332,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-23T10:40:18Z",
-      "databaseId": 32634382323,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-23T10:39:26Z",
-      "databaseId": 32634341956,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-23T10:38:20Z",
-      "databaseId": 32634293074,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-23T10:36:30Z",
-      "databaseId": 32634211077,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-23T10:35:15Z",
-      "databaseId": 32634154535,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-23T10:34:22Z",
-      "databaseId": 32634115381,
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-watchdog"
@@ -90291,6 +90291,11 @@
         "video_id": 28736349
       },
       {
+        "episode_id": 92105,
+        "display_name": "The Muppet Show S03E16 - 16. epizoda CZ Titulky",
+        "video_id": 28736501
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -162884,6 +162889,16 @@
         "episode_id": 53543,
         "display_name": "Pohotovost S10E14 - Sebeovládání CZ Dabing",
         "video_id": 28736073
+      },
+      {
+        "episode_id": 53595,
+        "display_name": "Pohotovost S11E06 - Čas smrti CZ Dabing",
+        "video_id": 28736279
+      },
+      {
+        "episode_id": 53623,
+        "display_name": "Pohotovost S12E12 - Sporná rozhodnutí CZ Dabing",
+        "video_id": 28736461
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -252893,6 +252908,11 @@
         "video_id": 28736349
       },
       {
+        "episode_id": 92105,
+        "display_name": "The Muppet Show S03E16 - 16. epizoda CZ Titulky",
+        "video_id": 28736501
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -325486,6 +325506,16 @@
         "episode_id": 53543,
         "display_name": "Pohotovost S10E14 - Sebeovládání CZ Dabing",
         "video_id": 28736073
+      },
+      {
+        "episode_id": 53595,
+        "display_name": "Pohotovost S11E06 - Čas smrti CZ Dabing",
+        "video_id": 28736279
+      },
+      {
+        "episode_id": 53623,
+        "display_name": "Pohotovost S12E12 - Sporná rozhodnutí CZ Dabing",
+        "video_id": 28736461
       }
     ],
     "prepared_not_upload_ready": [
