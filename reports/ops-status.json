@@ -2,8 +2,8 @@
   "counts": {
     "backlog_episodes": 156121,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 37240,
-    "prepared_source_episodes": 45769,
+    "uploaded_episodes": 37249,
+    "prepared_source_episodes": 45782,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
@@ -11,7 +11,7 @@
     "language_queue_sources": 2644,
     "language_audited_sources": 40,
     "language_whisper_attempted_sources": 40,
-    "language_pending_whisper_sources": 2624,
+    "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 56561,
     "whisper_review_pending_sources": 48385,
     "subtitle_followup_sources": 27479,
@@ -20,18 +20,58 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-08-23T04:27:44Z",
-      "databaseId": 32617927813,
+      "createdAt": "2026-08-23T04:37:06Z",
+      "databaseId": 32618311937,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-08-23T04:37:01Z",
+      "databaseId": 32618309079,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-23T04:32:06Z",
+      "databaseId": 32618112957,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-08-23T04:32:06Z",
+      "databaseId": 32618112667,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-23T04:28:53Z",
+      "databaseId": 32617974972,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-23T04:27:44Z",
+      "databaseId": 32617927813,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "cancelled",
       "createdAt": "2026-08-23T04:27:39Z",
       "databaseId": 32617924690,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -47,7 +87,7 @@
       "createdAt": "2026-08-23T04:23:40Z",
       "databaseId": 32617762771,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "process-whisper-review"
     },
     {
@@ -59,19 +99,19 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-23T04:22:57Z",
       "databaseId": 32617731858,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-23T04:22:55Z",
       "databaseId": 32617730565,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -137,46 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-23T04:15:40Z",
-      "databaseId": 32617427471,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "audit-language"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-23T04:14:41Z",
-      "databaseId": 32617381821,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-status"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-23T04:12:52Z",
-      "databaseId": 32617307193,
-      "headBranch": "main",
-      "status": "pending",
-      "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-23T04:12:07Z",
-      "databaseId": 32617277202,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-23T04:10:59Z",
-      "databaseId": 32617231109,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
     }
   ],
   "gaps": {
@@ -89576,6 +89576,31 @@
         "video_id": 28728136
       },
       {
+        "episode_id": 33988,
+        "display_name": "Yellowjackets S01E07 - Bez kompasu CZ Dabing",
+        "video_id": 28728327
+      },
+      {
+        "episode_id": 40792,
+        "display_name": "Kriminálka Las Vegas S15E07 - Cesta k nápravě CZ Titulky",
+        "video_id": 28728397
+      },
+      {
+        "episode_id": 48221,
+        "display_name": "Policejní odznak S02E03 - Parťáci CZ Dabing",
+        "video_id": 28728325
+      },
+      {
+        "episode_id": 48257,
+        "display_name": "Policejní odznak S04E11 - Tisíc smrtí CZ Dabing",
+        "video_id": 28728357
+      },
+      {
+        "episode_id": 62533,
+        "display_name": "Dva z Queensu S01E21 - 21. epizoda CZ Dabing",
+        "video_id": 28728400
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -161464,6 +161489,26 @@
         "episode_id": 24575,
         "display_name": "Manifest S03E09 - Duch CZ Dabing",
         "video_id": 28728250
+      },
+      {
+        "episode_id": 50074,
+        "display_name": "Panství Downton S04E02 - 2. epizoda CZ Dabing",
+        "video_id": 28728333
+      },
+      {
+        "episode_id": 35170,
+        "display_name": "Kazatel S01E06 - Sundowner CZ Dabing",
+        "video_id": 28728395
+      },
+      {
+        "episode_id": 30799,
+        "display_name": "Dobrý doktor S03E05 - První meta, druhá meta CZ Dabing",
+        "video_id": 28728332
+      },
+      {
+        "episode_id": 52603,
+        "display_name": "O.C. S02E05 - Zimní ples CZ Titulky",
+        "video_id": 28728394
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -250758,6 +250803,31 @@
         "video_id": 28728136
       },
       {
+        "episode_id": 33988,
+        "display_name": "Yellowjackets S01E07 - Bez kompasu CZ Dabing",
+        "video_id": 28728327
+      },
+      {
+        "episode_id": 40792,
+        "display_name": "Kriminálka Las Vegas S15E07 - Cesta k nápravě CZ Titulky",
+        "video_id": 28728397
+      },
+      {
+        "episode_id": 48221,
+        "display_name": "Policejní odznak S02E03 - Parťáci CZ Dabing",
+        "video_id": 28728325
+      },
+      {
+        "episode_id": 48257,
+        "display_name": "Policejní odznak S04E11 - Tisíc smrtí CZ Dabing",
+        "video_id": 28728357
+      },
+      {
+        "episode_id": 62533,
+        "display_name": "Dva z Queensu S01E21 - 21. epizoda CZ Dabing",
+        "video_id": 28728400
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -322646,6 +322716,26 @@
         "episode_id": 24575,
         "display_name": "Manifest S03E09 - Duch CZ Dabing",
         "video_id": 28728250
+      },
+      {
+        "episode_id": 50074,
+        "display_name": "Panství Downton S04E02 - 2. epizoda CZ Dabing",
+        "video_id": 28728333
+      },
+      {
+        "episode_id": 35170,
+        "display_name": "Kazatel S01E06 - Sundowner CZ Dabing",
+        "video_id": 28728395
+      },
+      {
+        "episode_id": 30799,
+        "display_name": "Dobrý doktor S03E05 - První meta, druhá meta CZ Dabing",
+        "video_id": 28728332
+      },
+      {
+        "episode_id": 52603,
+        "display_name": "O.C. S02E05 - Zimní ples CZ Titulky",
+        "video_id": 28728394
       }
     ],
     "prepared_not_upload_ready": [
