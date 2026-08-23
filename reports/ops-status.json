@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 156461,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 37033,
+    "uploaded_episodes": 37034,
     "prepared_source_episodes": 45462,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 429,
-    "language_whisper_attempted_sources": 101,
-    "language_pending_whisper_sources": 2604,
+    "language_audited_sources": 20,
+    "language_whisper_attempted_sources": 20,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 56569,
     "whisper_review_pending_sources": 48425,
     "subtitle_followup_sources": 27455,
@@ -20,10 +20,34 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-08-23T00:24:30Z",
+      "databaseId": 32607771434,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-23T00:24:25Z",
+      "databaseId": 32607767265,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "refresh-backlog"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-23T00:23:58Z",
+      "databaseId": 32607745411,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-23T00:23:03Z",
       "databaseId": 32607705509,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -59,11 +83,11 @@
       "workflowName": "prepare-manifest"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-23T00:17:19Z",
       "databaseId": 32607459584,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -150,30 +174,6 @@
       "conclusion": "success",
       "createdAt": "2026-08-23T00:01:51Z",
       "databaseId": 32606800687,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-23T00:00:49Z",
-      "databaseId": 32606753902,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-23T00:00:35Z",
-      "databaseId": 32606740917,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-23T00:00:33Z",
-      "databaseId": 32606739963,
       "headBranch": "main",
       "status": "completed",
       "workflowName": "update-descriptions"
@@ -160479,6 +160479,11 @@
         "episode_id": 35599,
         "display_name": "Jmenuju se Earl S01E06 - Nejkrásnější krásná princezna CZ Dabing",
         "video_id": 28724535
+      },
+      {
+        "episode_id": 35603,
+        "display_name": "Jmenuju se Earl S01E10 - Vánoce, lži a tajemství CZ Dabing",
+        "video_id": 28724569
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -320676,6 +320681,11 @@
         "episode_id": 35599,
         "display_name": "Jmenuju se Earl S01E06 - Nejkrásnější krásná princezna CZ Dabing",
         "video_id": 28724535
+      },
+      {
+        "episode_id": 35603,
+        "display_name": "Jmenuju se Earl S01E10 - Vánoce, lži a tajemství CZ Dabing",
+        "video_id": 28724569
       }
     ],
     "prepared_not_upload_ready": [
@@ -321837,8 +321847,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 328,
-    "ok": 100,
+    "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
