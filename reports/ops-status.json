@@ -1,15 +1,15 @@
 {
   "counts": {
     "backlog_episodes": 156121,
-    "manifest_upload_ready_episodes": 1001,
-    "uploaded_episodes": 37208,
-    "prepared_source_episodes": 45723,
+    "manifest_upload_ready_episodes": 1000,
+    "uploaded_episodes": 37220,
+    "prepared_source_episodes": 45750,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 92,
+    "language_audited_sources": 43,
     "language_whisper_attempted_sources": 20,
     "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 56565,
@@ -20,18 +20,66 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-08-23T03:52:00Z",
-      "databaseId": 32616415340,
+      "createdAt": "2026-08-23T04:04:14Z",
+      "databaseId": 32616934714,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-08-23T04:04:10Z",
+      "databaseId": 32616931917,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-08-23T03:57:23Z",
+      "databaseId": 32616638469,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-23T03:57:23Z",
+      "databaseId": 32616638168,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-23T03:54:57Z",
+      "databaseId": 32616536167,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-sources"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-23T03:53:09Z",
+      "databaseId": 32616463165,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-23T03:52:00Z",
+      "databaseId": 32616415340,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "cancelled",
       "createdAt": "2026-08-23T03:51:55Z",
       "databaseId": 32616411592,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -51,19 +99,19 @@
       "workflowName": "ops-watchdog"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-23T03:48:25Z",
       "databaseId": 32616266671,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-23T03:47:56Z",
       "databaseId": 32616246798,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -83,19 +131,19 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-23T03:46:45Z",
       "databaseId": 32616199196,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-23T03:46:42Z",
       "databaseId": 32616197276,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -129,54 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-23T03:36:27Z",
-      "databaseId": 32615777291,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-23T03:36:27Z",
-      "databaseId": 32615777126,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-23T03:33:29Z",
-      "databaseId": 32615648303,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-23T03:31:02Z",
-      "databaseId": 32615545058,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-23T03:27:58Z",
-      "databaseId": 32615416170,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "refresh-backlog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-23T03:26:06Z",
-      "databaseId": 32615338566,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
     }
   ],
   "gaps": {
@@ -89496,6 +89496,46 @@
         "video_id": 28727435
       },
       {
+        "episode_id": 6084,
+        "display_name": "Po životě S01E05 - 5. epizoda CZ Titulky",
+        "video_id": 28727750
+      },
+      {
+        "episode_id": 70332,
+        "display_name": "Služka S01E02 - Poníci CZ Dabing",
+        "video_id": 28727787
+      },
+      {
+        "episode_id": 4248,
+        "display_name": "Titans S04E09 - Hele vole, kde mám Gara? CZ Dabing",
+        "video_id": 28727837
+      },
+      {
+        "episode_id": 44504,
+        "display_name": "Jmenuju se Earl S03E17 - Podpantoflák CZ Dabing",
+        "video_id": 28727865
+      },
+      {
+        "episode_id": 59397,
+        "display_name": "Seinfeld S04E19 - 19. epizoda CZ Titulky",
+        "video_id": 28727748
+      },
+      {
+        "episode_id": 59421,
+        "display_name": "Seinfeld S06E10 - 10. epizoda CZ Titulky",
+        "video_id": 28727782
+      },
+      {
+        "episode_id": 28541,
+        "display_name": "Můj přítel Monk S03E13 - Pan Monk v dopravní zácpě CZ Dabing",
+        "video_id": 28727812
+      },
+      {
+        "episode_id": 60589,
+        "display_name": "Ray Donovan S07E07 - The transfer agent CZ Dabing",
+        "video_id": 28727858
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -161304,6 +161344,26 @@
         "episode_id": 60055,
         "display_name": "Outer Banks S04E10 - Modrá koruna CZ Dabing",
         "video_id": 28727622
+      },
+      {
+        "episode_id": 48790,
+        "display_name": "Tráva S08E13 - Je čas, část druhá CZ Dabing",
+        "video_id": 28727751
+      },
+      {
+        "episode_id": 6558,
+        "display_name": "Pod kupolí S03E13 - Nepřítel mezi námi CZ Dabing",
+        "video_id": 28727788
+      },
+      {
+        "episode_id": 6215,
+        "display_name": "Soumrak templářů S01E10 - Vidíte modrou? CZ Titulky",
+        "video_id": 28727775
+      },
+      {
+        "episode_id": 59379,
+        "display_name": "Seinfeld S03E16 - 16. epizoda CZ Titulky",
+        "video_id": 28727885
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -250518,6 +250578,46 @@
         "video_id": 28727435
       },
       {
+        "episode_id": 6084,
+        "display_name": "Po životě S01E05 - 5. epizoda CZ Titulky",
+        "video_id": 28727750
+      },
+      {
+        "episode_id": 70332,
+        "display_name": "Služka S01E02 - Poníci CZ Dabing",
+        "video_id": 28727787
+      },
+      {
+        "episode_id": 4248,
+        "display_name": "Titans S04E09 - Hele vole, kde mám Gara? CZ Dabing",
+        "video_id": 28727837
+      },
+      {
+        "episode_id": 44504,
+        "display_name": "Jmenuju se Earl S03E17 - Podpantoflák CZ Dabing",
+        "video_id": 28727865
+      },
+      {
+        "episode_id": 59397,
+        "display_name": "Seinfeld S04E19 - 19. epizoda CZ Titulky",
+        "video_id": 28727748
+      },
+      {
+        "episode_id": 59421,
+        "display_name": "Seinfeld S06E10 - 10. epizoda CZ Titulky",
+        "video_id": 28727782
+      },
+      {
+        "episode_id": 28541,
+        "display_name": "Můj přítel Monk S03E13 - Pan Monk v dopravní zácpě CZ Dabing",
+        "video_id": 28727812
+      },
+      {
+        "episode_id": 60589,
+        "display_name": "Ray Donovan S07E07 - The transfer agent CZ Dabing",
+        "video_id": 28727858
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -322326,6 +322426,26 @@
         "episode_id": 60055,
         "display_name": "Outer Banks S04E10 - Modrá koruna CZ Dabing",
         "video_id": 28727622
+      },
+      {
+        "episode_id": 48790,
+        "display_name": "Tráva S08E13 - Je čas, část druhá CZ Dabing",
+        "video_id": 28727751
+      },
+      {
+        "episode_id": 6558,
+        "display_name": "Pod kupolí S03E13 - Nepřítel mezi námi CZ Dabing",
+        "video_id": 28727788
+      },
+      {
+        "episode_id": 6215,
+        "display_name": "Soumrak templářů S01E10 - Vidíte modrou? CZ Titulky",
+        "video_id": 28727775
+      },
+      {
+        "episode_id": 59379,
+        "display_name": "Seinfeld S03E16 - 16. epizoda CZ Titulky",
+        "video_id": 28727885
       }
     ],
     "prepared_not_upload_ready": [
@@ -323487,7 +323607,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 72,
+    "disabled": 23,
     "ok": 19,
     "resolve_failed": 1
   },
