@@ -2,14 +2,14 @@
   "counts": {
     "backlog_episodes": 156461,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 37009,
+    "uploaded_episodes": 37010,
     "prepared_source_episodes": 45444,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 57,
+    "language_audited_sources": 71,
     "language_whisper_attempted_sources": 40,
     "language_pending_whisper_sources": 2604,
     "whisper_review_sources": 56579,
@@ -20,18 +20,42 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-08-22T23:59:28Z",
-      "databaseId": 32606686041,
+      "createdAt": "2026-08-23T00:00:49Z",
+      "databaseId": 32606753902,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
+      "createdAt": "2026-08-23T00:00:35Z",
+      "databaseId": 32606740917,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-23T00:00:33Z",
+      "databaseId": 32606739963,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-22T23:59:28Z",
+      "databaseId": 32606686041,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "cancelled",
       "createdAt": "2026-08-22T23:59:24Z",
       "databaseId": 32606683246,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -147,36 +171,12 @@
       "workflowName": "prepare-manifest"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-22T23:46:02Z",
       "databaseId": 32606098617,
       "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-22T23:44:35Z",
-      "databaseId": 32606030825,
-      "headBranch": "main",
       "status": "completed",
       "workflowName": "prepare-manifest"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-22T23:43:08Z",
-      "databaseId": 32605967630,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-22T23:42:50Z",
-      "databaseId": 32605956201,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-sources"
     }
   ],
   "gaps": {
@@ -89019,6 +89019,11 @@
         "episode_id": 7573,
         "display_name": "Oddělení Q S01E09 - 9. epizoda CZ Dabing",
         "video_id": 28724005
+      },
+      {
+        "episode_id": 35601,
+        "display_name": "Jmenuju se Earl S01E08 - Joy se vdává CZ Dabing",
+        "video_id": 28724106
       },
       {
         "episode_id": 114182,
@@ -249103,6 +249108,11 @@
         "video_id": 28724005
       },
       {
+        "episode_id": 35601,
+        "display_name": "Jmenuju se Earl S01E08 - Joy se vdává CZ Dabing",
+        "video_id": 28724106
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -321607,7 +321617,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 17,
+    "disabled": 31,
     "ok": 39,
     "resolve_failed": 1
   },
