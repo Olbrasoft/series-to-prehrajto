@@ -1,37 +1,61 @@
 {
   "counts": {
     "backlog_episodes": 155983,
-    "manifest_upload_ready_episodes": 1005,
-    "uploaded_episodes": 37334,
-    "prepared_source_episodes": 45919,
+    "manifest_upload_ready_episodes": 1004,
+    "uploaded_episodes": 37335,
+    "prepared_source_episodes": 45918,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 40,
-    "language_whisper_attempted_sources": 40,
+    "language_audited_sources": 60,
+    "language_whisper_attempted_sources": 60,
     "language_pending_whisper_sources": 2604,
-    "whisper_review_sources": 56552,
-    "whisper_review_pending_sources": 48336,
+    "whisper_review_sources": 56547,
+    "whisper_review_pending_sources": 48311,
     "subtitle_followup_sources": 27496,
     "subtitle_followup_pending_sources": 27496
   },
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-08-23T06:25:49Z",
-      "databaseId": 32622901550,
+      "createdAt": "2026-08-23T06:32:37Z",
+      "databaseId": 32623201106,
       "headBranch": "main",
       "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
+      "conclusion": "success",
+      "createdAt": "2026-08-23T06:26:59Z",
+      "databaseId": 32622951598,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
       "conclusion": "",
+      "createdAt": "2026-08-23T06:26:55Z",
+      "databaseId": 32622949448,
+      "headBranch": "main",
+      "status": "in_progress",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-23T06:25:49Z",
+      "databaseId": 32622901550,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "ops-watchdog"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-23T06:20:18Z",
       "databaseId": 32622667877,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
@@ -153,30 +177,6 @@
       "headBranch": "main",
       "status": "pending",
       "workflowName": "prepare-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-23T06:05:58Z",
-      "databaseId": 32622040228,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "cancelled",
-      "createdAt": "2026-08-23T06:05:56Z",
-      "databaseId": 32622038265,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "sync"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-23T06:05:56Z",
-      "databaseId": 32622038161,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
     }
   ],
   "gaps": {
@@ -161896,6 +161896,11 @@
         "video_id": 28730283
       },
       {
+        "episode_id": 53622,
+        "display_name": "Pohotovost S12E11 - Když ne teď CZ Dabing",
+        "video_id": 28730444
+      },
+      {
         "episode_id": 62695,
         "display_name": "Dva z Queensu S05E10 - 10. epizoda CZ Dabing",
         "video_id": 28729721
@@ -323548,6 +323553,11 @@
         "video_id": 28730283
       },
       {
+        "episode_id": 53622,
+        "display_name": "Pohotovost S12E11 - Když ne teď CZ Dabing",
+        "video_id": 28730444
+      },
+      {
         "episode_id": 62695,
         "display_name": "Dva z Queensu S05E10 - 10. epizoda CZ Dabing",
         "video_id": 28729721
@@ -324747,14 +324757,14 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "ok": 39,
+    "ok": 59,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
-    "whisper_non_cz_needs_subtitles": 6045,
+    "whisper_non_cz_needs_subtitles": 6065,
     "whisper_confirmed_cz": 2171,
     "whisper_failed": 126,
-    "needs_whisper": 48210
+    "needs_whisper": 48185
   },
   "subtitle_followup_statuses": {
     "needs_subtitle_setup_after_prehrajto_processing": 27496
