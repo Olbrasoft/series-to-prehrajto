@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 155856,
     "manifest_upload_ready_episodes": 1004,
-    "uploaded_episodes": 37461,
+    "uploaded_episodes": 37463,
     "prepared_source_episodes": 45941,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 269,
-    "language_whisper_attempted_sources": 107,
-    "language_pending_whisper_sources": 2604,
+    "language_audited_sources": 20,
+    "language_whisper_attempted_sources": 20,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 56537,
     "whisper_review_pending_sources": 48261,
     "subtitle_followup_sources": 27525,
@@ -20,10 +20,26 @@
   "workflow_runs": [
     {
       "conclusion": "",
+      "createdAt": "2026-08-23T09:19:36Z",
+      "databaseId": 32630688984,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "process-whisper-review"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-23T09:19:24Z",
+      "databaseId": 32630680681,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "",
       "createdAt": "2026-08-23T09:18:48Z",
       "databaseId": 32630652978,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "ops-watchdog"
     },
     {
@@ -43,11 +59,11 @@
       "workflowName": "process-whisper-review"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-23T09:17:46Z",
       "databaseId": 32630608522,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-watchdog"
     },
     {
@@ -131,11 +147,11 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-23T09:09:07Z",
       "databaseId": 32630203421,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -161,22 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-23T09:07:07Z",
-      "databaseId": 32630112177,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "process-whisper-review"
-    },
-    {
-      "conclusion": "",
-      "createdAt": "2026-08-23T09:06:42Z",
-      "databaseId": 32630091990,
-      "headBranch": "main",
-      "status": "in_progress",
-      "workflowName": "prepare-descriptions"
     }
   ],
   "gaps": {
@@ -90091,6 +90091,11 @@
         "video_id": 28734046
       },
       {
+        "episode_id": 37364,
+        "display_name": "Star Trek: Hluboký Vesmír Devět S03E22 - Průzkumníci CZ Dabing",
+        "video_id": 28734130
+      },
+      {
         "episode_id": 37573,
         "display_name": "Hvězdná brána - Atlantida S05E08 - Královna CZ Dabing",
         "video_id": 28733523
@@ -90119,6 +90124,11 @@
         "episode_id": 53609,
         "display_name": "Pohotovost S11E20 - Jsi tady CZ Dabing",
         "video_id": 28733983
+      },
+      {
+        "episode_id": 53621,
+        "display_name": "Pohotovost S12E10 - Vánoce CZ Dabing",
+        "video_id": 28734086
       },
       {
         "episode_id": 114182,
@@ -252378,6 +252388,11 @@
         "video_id": 28734046
       },
       {
+        "episode_id": 37364,
+        "display_name": "Star Trek: Hluboký Vesmír Devět S03E22 - Průzkumníci CZ Dabing",
+        "video_id": 28734130
+      },
+      {
         "episode_id": 37573,
         "display_name": "Hvězdná brána - Atlantida S05E08 - Královna CZ Dabing",
         "video_id": 28733523
@@ -252406,6 +252421,11 @@
         "episode_id": 53609,
         "display_name": "Pohotovost S11E20 - Jsi tady CZ Dabing",
         "video_id": 28733983
+      },
+      {
+        "episode_id": 53621,
+        "display_name": "Pohotovost S12E10 - Vánoce CZ Dabing",
+        "video_id": 28734086
       },
       {
         "episode_id": 114182,
@@ -326017,8 +326037,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 162,
-    "ok": 106,
+    "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
