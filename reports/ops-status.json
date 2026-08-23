@@ -2,16 +2,16 @@
   "counts": {
     "backlog_episodes": 156121,
     "manifest_upload_ready_episodes": 1000,
-    "uploaded_episodes": 37304,
-    "prepared_source_episodes": 45903,
+    "uploaded_episodes": 37315,
+    "prepared_source_episodes": 45900,
     "description_series": 60,
     "description_episodes": 753,
     "description_errors": 24,
     "language_audit_rows": 0,
     "language_queue_sources": 2644,
-    "language_audited_sources": 68,
-    "language_whisper_attempted_sources": 40,
-    "language_pending_whisper_sources": 2604,
+    "language_audited_sources": 20,
+    "language_whisper_attempted_sources": 20,
+    "language_pending_whisper_sources": 2624,
     "whisper_review_sources": 56565,
     "whisper_review_pending_sources": 48409,
     "subtitle_followup_sources": 27479,
@@ -20,26 +20,74 @@
   "workflow_runs": [
     {
       "conclusion": "",
-      "createdAt": "2026-08-23T05:42:00Z",
-      "databaseId": 32620999530,
+      "createdAt": "2026-08-23T05:52:58Z",
+      "databaseId": 32621469023,
       "headBranch": "main",
-      "status": "pending",
-      "workflowName": "audit-language"
+      "status": "in_progress",
+      "workflowName": "ops-watchdog"
     },
     {
       "conclusion": "",
-      "createdAt": "2026-08-23T05:41:44Z",
-      "databaseId": 32620988535,
+      "createdAt": "2026-08-23T05:52:41Z",
+      "databaseId": 32621457576,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "sync"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-23T05:52:41Z",
+      "databaseId": 32621457445,
+      "headBranch": "main",
+      "status": "pending",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "cancelled",
+      "createdAt": "2026-08-23T05:48:10Z",
+      "databaseId": 32621264421,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "prepare-manifest"
+    },
+    {
+      "conclusion": "",
+      "createdAt": "2026-08-23T05:47:28Z",
+      "databaseId": 32621233428,
       "headBranch": "main",
       "status": "in_progress",
+      "workflowName": "prepare-sources"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-23T05:42:35Z",
+      "databaseId": 32621023292,
+      "headBranch": "main",
+      "status": "completed",
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
+      "createdAt": "2026-08-23T05:42:00Z",
+      "databaseId": 32620999530,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "audit-language"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-08-23T05:41:44Z",
+      "databaseId": 32620988535,
+      "headBranch": "main",
+      "status": "completed",
+      "workflowName": "update-descriptions"
+    },
+    {
+      "conclusion": "success",
       "createdAt": "2026-08-23T05:41:43Z",
       "databaseId": 32620988183,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "ops-status"
     },
     {
@@ -51,19 +99,19 @@
       "workflowName": "update-descriptions"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-23T05:40:29Z",
       "databaseId": 32620937757,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "process-whisper-review"
     },
     {
-      "conclusion": "",
+      "conclusion": "success",
       "createdAt": "2026-08-23T05:40:26Z",
       "databaseId": 32620935988,
       "headBranch": "main",
-      "status": "in_progress",
+      "status": "completed",
       "workflowName": "audit-language"
     },
     {
@@ -71,7 +119,7 @@
       "createdAt": "2026-08-23T05:40:19Z",
       "databaseId": 32620931013,
       "headBranch": "main",
-      "status": "pending",
+      "status": "in_progress",
       "workflowName": "prepare-descriptions"
     },
     {
@@ -107,11 +155,11 @@
       "workflowName": "sync"
     },
     {
-      "conclusion": "",
+      "conclusion": "cancelled",
       "createdAt": "2026-08-23T05:39:47Z",
       "databaseId": 32620907120,
       "headBranch": "main",
-      "status": "pending",
+      "status": "completed",
       "workflowName": "prepare-manifest"
     },
     {
@@ -129,54 +177,6 @@
       "headBranch": "main",
       "status": "completed",
       "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-23T05:25:09Z",
-      "databaseId": 32620298385,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-23T05:24:11Z",
-      "databaseId": 32620259702,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-23T05:24:05Z",
-      "databaseId": 32620255599,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-23T05:23:37Z",
-      "databaseId": 32620237962,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "update-descriptions"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-23T05:22:34Z",
-      "databaseId": 32620195311,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "ops-watchdog"
-    },
-    {
-      "conclusion": "success",
-      "createdAt": "2026-08-23T05:22:30Z",
-      "databaseId": 32620193365,
-      "headBranch": "main",
-      "status": "completed",
-      "workflowName": "prepare-manifest"
     }
   ],
   "gaps": {
@@ -89736,6 +89736,41 @@
         "video_id": 28729638
       },
       {
+        "episode_id": 71376,
+        "display_name": "Dobrá manželka S04E17 - 17. epizoda CZ Dabing",
+        "video_id": 28729720
+      },
+      {
+        "episode_id": 71300,
+        "display_name": "Dobrá manželka S05E16 - 16. epizoda CZ Dabing",
+        "video_id": 28729778
+      },
+      {
+        "episode_id": 71380,
+        "display_name": "Dobrá manželka S06E10 - 10. epizoda CZ Dabing",
+        "video_id": 28729824
+      },
+      {
+        "episode_id": 53324,
+        "display_name": "Carnival Row S02E07 - Návrat CZ Dabing",
+        "video_id": 28729881
+      },
+      {
+        "episode_id": 150477,
+        "display_name": "For All Mankind S05E08 - Odvážný nový svět CZ Titulky",
+        "video_id": 28729715
+      },
+      {
+        "episode_id": 59541,
+        "display_name": "Godless S01E01 - 1. epizoda CZ Titulky",
+        "video_id": 28729752
+      },
+      {
+        "episode_id": 35773,
+        "display_name": "Neskutečná Anna S01E06 - Pochybní přátelé CZ Dabing",
+        "video_id": 28729802
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -161784,6 +161819,26 @@
         "episode_id": 18231,
         "display_name": "Nedostatek důkazů S01E08 - Rozsudek CZ Titulky",
         "video_id": 28729349
+      },
+      {
+        "episode_id": 53498,
+        "display_name": "Pohotovost S08E09 - Quo Vadis? CZ Dabing",
+        "video_id": 28729727
+      },
+      {
+        "episode_id": 62695,
+        "display_name": "Dva z Queensu S05E10 - 10. epizoda CZ Dabing",
+        "video_id": 28729721
+      },
+      {
+        "episode_id": 62631,
+        "display_name": "Dva z Queensu S06E23 - 23. epizoda CZ Dabing",
+        "video_id": 28729811
+      },
+      {
+        "episode_id": 62655,
+        "display_name": "Dva z Queensu S08E02 - 2. epizoda CZ Dabing",
+        "video_id": 28729882
       }
     ],
     "uploaded_not_marked_description_updated": [
@@ -251238,6 +251293,41 @@
         "video_id": 28729638
       },
       {
+        "episode_id": 71376,
+        "display_name": "Dobrá manželka S04E17 - 17. epizoda CZ Dabing",
+        "video_id": 28729720
+      },
+      {
+        "episode_id": 71300,
+        "display_name": "Dobrá manželka S05E16 - 16. epizoda CZ Dabing",
+        "video_id": 28729778
+      },
+      {
+        "episode_id": 71380,
+        "display_name": "Dobrá manželka S06E10 - 10. epizoda CZ Dabing",
+        "video_id": 28729824
+      },
+      {
+        "episode_id": 53324,
+        "display_name": "Carnival Row S02E07 - Návrat CZ Dabing",
+        "video_id": 28729881
+      },
+      {
+        "episode_id": 150477,
+        "display_name": "For All Mankind S05E08 - Odvážný nový svět CZ Titulky",
+        "video_id": 28729715
+      },
+      {
+        "episode_id": 59541,
+        "display_name": "Godless S01E01 - 1. epizoda CZ Titulky",
+        "video_id": 28729752
+      },
+      {
+        "episode_id": 35773,
+        "display_name": "Neskutečná Anna S01E06 - Pochybní přátelé CZ Dabing",
+        "video_id": 28729802
+      },
+      {
         "episode_id": 114182,
         "display_name": "Three-body S01E30 - 30. epizoda CZ Titulky",
         "video_id": 27840276
@@ -323286,6 +323376,26 @@
         "episode_id": 18231,
         "display_name": "Nedostatek důkazů S01E08 - Rozsudek CZ Titulky",
         "video_id": 28729349
+      },
+      {
+        "episode_id": 53498,
+        "display_name": "Pohotovost S08E09 - Quo Vadis? CZ Dabing",
+        "video_id": 28729727
+      },
+      {
+        "episode_id": 62695,
+        "display_name": "Dva z Queensu S05E10 - 10. epizoda CZ Dabing",
+        "video_id": 28729721
+      },
+      {
+        "episode_id": 62631,
+        "display_name": "Dva z Queensu S06E23 - 23. epizoda CZ Dabing",
+        "video_id": 28729811
+      },
+      {
+        "episode_id": 62655,
+        "display_name": "Dva z Queensu S08E02 - 2. epizoda CZ Dabing",
+        "video_id": 28729882
       }
     ],
     "prepared_not_upload_ready": [
@@ -324447,8 +324557,7 @@
   },
   "language_verdicts": {},
   "language_whisper_statuses": {
-    "disabled": 28,
-    "ok": 39,
+    "ok": 19,
     "resolve_failed": 1
   },
   "whisper_review_statuses": {
